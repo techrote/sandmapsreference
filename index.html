@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SANDMAPS gallery</title>
+<style>
+:root{color-scheme:light dark;font:15px/1.45 system-ui,sans-serif}
+body{margin:auto;padding:1rem;max-width:1500px}
+header,form{display:flex;flex-wrap:wrap;align-items:baseline;gap:.7rem;margin-bottom:.7rem}
+h1,h2,p{margin:0}h1{margin-right:auto;font-size:1.55rem}h2{font-size:1rem}
+label{display:grid;gap:.2rem}label:first-child{flex:1 1 15rem}
+input,select,button{font:inherit;padding:.35rem}button{align-self:end}
+#results{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,245px),1fr));gap:.75rem}
+article{border:1px solid GrayText;border-radius:.4rem;overflow:hidden}article div{padding:.55rem}
+img{display:block;width:100%;height:auto;background:#293039}small{display:block;margin-top:.35rem}
+#status{margin-bottom:.65rem}a{color:LinkText}
+</style>
+<header><h1>SANDMAPS gallery</h1><a href="https://github.com/techrote/sandmapsreference/wiki">Wiki</a></header>
+<form id="filters" role="search">
+<label>Search<input id="q" type="search" placeholder="Title, terrain, mood, caption…"></label>
+<label>Category<select id="theme"><option value="">All categories</option></select></label>
+<label>Tag<select id="tag"><option value="">All tags</option></select></label>
+<label>Group<select id="group"><option value="">All groups</option></select></label>
+<button type="reset">Clear</button>
+</form>
+<p id="status" role="status">Loading artwork metadata…</p>
+<main id="results"></main>
+<script type="module">
+const source = 'https://raw.githubusercontent.com/techrote/sandmapsreference/main/';
+const form = document.querySelector('#filters');
+const status = document.querySelector('#status');
+const results = document.querySelector('#results');
+const fields = ['q', 'theme', 'tag', 'group'];
+const label = value => value.replaceAll('_', ' ');
+const normalize = value => label(value.toLowerCase()).replaceAll('-', ' ');
+
+function addOptions(name, values) {
+  const select = document.getElementById(name);
+  for (const value of [...new Set(values)].filter(Boolean).sort()) {
+    select.add(new Option(label(value), value));
+  }
+}
+
+function card(item) {
+  const panel = document.createElement('article');
+  const link = document.createElement('a');
+  link.href = new URL(item.curated_path, source).href;
+  const image = document.createElement('img');
+  image.src = link.href;
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  image.width = item.width;
+  image.height = item.height;
+  image.alt = item.visual_description;
+  link.append(image);
+  const content = document.createElement('div');
+  const title = document.createElement('h2');
+  title.textContent = label(item.title);
+  const description = document.createElement('p');
+  description.textContent = item.visual_description;
+  const tags = document.createElement('small');
+  tags.textContent = item.classification_tags.join(' · ');
+  content.append(title, description, tags);
+  if (item.source_caption || item.artwork_brief) {
+    const details = document.createElement('details');
+    const summary = document.createElement('summary');
+    summary.textContent = 'Source notes';
+    details.append(summary);
+    for (const note of [item.source_caption, item.artwork_brief].filter(Boolean)) {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = note.text;
+      details.append(paragraph);
+    }
+    content.append(details);
+  }
+  panel.append(link, content);
+  return panel;
+}
+
+try {
+  const response = await fetch(source + '_catalogue/catalogue.json');
+  if (!response.ok) throw new Error('Catalogue unavailable');
+  const {images} = await response.json();
+  addOptions('theme', images.map(item => item.theme));
+  addOptions('tag', images.flatMap(item => item.classification_tags));
+  addOptions('group', images.map(item => item.group_id));
+  const searchable = images.map(item => [item, normalize([
+    item.title, item.record_id, item.curated_path, item.content, item.vibe,
+    item.visual_description, item.source_caption?.text, item.artwork_brief?.text,
+    ...item.classification_tags,
+  ].join(' '))]);
+
+  function render() {
+    const params = new URLSearchParams();
+    for (const field of fields) {
+      const value = document.getElementById(field).value.trim();
+      if (value) params.set(field, value);
+    }
+    const query = params.toString();
+    history.replaceState(null, '', location.pathname + (query ? '?' + query : ''));
+    const words = normalize(params.get('q') || '').split(/\s+/).filter(Boolean);
+    const matches = searchable.filter(([item, text]) =>
+      (!params.has('theme') || item.theme === params.get('theme')) &&
+      (!params.has('tag') || item.classification_tags.includes(params.get('tag'))) &&
+      (!params.has('group') || item.group_id === params.get('group')) &&
+      words.every(word => text.includes(word))
+    );
+    status.textContent = matches.length
+      ? matches.length + ' of ' + images.length + ' artworks'
+      : 'No artworks match. Clear or change a filter.';
+    results.replaceChildren(...matches.map(([item]) => card(item)));
+  }
+
+  const initial = new URLSearchParams(location.search);
+  for (const field of fields) {
+    if (initial.has(field)) document.getElementById(field).value = initial.get(field);
+  }
+  form.addEventListener('input', render);
+  form.addEventListener('submit', event => event.preventDefault());
+  form.addEventListener('reset', () => setTimeout(render, 0));
+  render();
+} catch {
+  status.textContent = 'Could not load artwork metadata. Refresh to retry, or browse the wiki.';
+}
+</script>
