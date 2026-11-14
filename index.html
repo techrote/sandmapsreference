@@ -10,7 +10,7 @@ header,form{display:flex;flex-wrap:wrap;align-items:baseline;gap:.7rem;margin-bo
 h1,h2,p{margin:0}h1{margin-right:auto;font-size:1.55rem}h2{font-size:1rem}
 label{display:grid;gap:.2rem}label:first-child{flex:1 1 15rem}
 input,select,button{font:inherit;padding:.35rem}button{align-self:end}
-#results{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,245px),1fr));gap:.75rem}
+#results{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%, var(--thumbnail-width, 245px)),1fr));gap:.75rem}
 article{border:1px solid GrayText;border-radius:.4rem;overflow:hidden}article div{padding:.55rem}
 img{display:block;width:100%;height:auto;background:#293039}small{display:block;margin-top:.35rem}
 #status{margin-bottom:.65rem}a{color:LinkText}
@@ -21,6 +21,12 @@ img{display:block;width:100%;height:auto;background:#293039}small{display:block;
 <label>Category<select id="theme"><option value="">All categories</option></select></label>
 <label>Tag<select id="tag"><option value="">All tags</option></select></label>
 <label>Group<select id="group"><option value="">All groups</option></select></label>
+<label>Thumbnail size<select id="size">
+<option value="small">Small</option>
+<option value="medium" selected>Medium</option>
+<option value="large">Large</option>
+<option value="extra-large">Extra large</option>
+</select></label>
 <button type="reset">Clear</button>
 </form>
 <p id="status" role="status">Loading artwork metadata…</p>
@@ -30,7 +36,8 @@ const source = 'https://raw.githubusercontent.com/techrote/sandmapsreference/mai
 const form = document.querySelector('#filters');
 const status = document.querySelector('#status');
 const results = document.querySelector('#results');
-const fields = ['q', 'theme', 'tag', 'group'];
+const fields = ['q', 'theme', 'tag', 'group', 'size'];
+const sizeWidths = {small: 160, medium: 245, large: 340, 'extra-large': 480};
 const label = value => value.replaceAll('_', ' ');
 const normalize = value => label(value.toLowerCase()).replaceAll('-', ' ');
 
@@ -94,8 +101,10 @@ try {
     const params = new URLSearchParams();
     for (const field of fields) {
       const value = document.getElementById(field).value.trim();
-      if (value) params.set(field, value);
+      if (value && !(field === 'size' && value === 'medium')) params.set(field, value);
     }
+    const width = sizeWidths[params.get('size')] || sizeWidths.medium;
+    results.style.setProperty('--thumbnail-width', width + 'px');
     const query = params.toString();
     history.replaceState(null, '', location.pathname + (query ? '?' + query : ''));
     const words = normalize(params.get('q') || '').split(/\s+/).filter(Boolean);
@@ -113,9 +122,22 @@ try {
 
   const initial = new URLSearchParams(location.search);
   for (const field of fields) {
-    if (initial.has(field)) document.getElementById(field).value = initial.get(field);
+    if (initial.has(field) && (field !== 'size' || Object.hasOwn(sizeWidths, initial.get(field)))) {
+      document.getElementById(field).value = initial.get(field);
+    }
   }
-  form.addEventListener('input', render);
+  form.addEventListener('input', event => {
+    if (event.target.id === 'size') {
+      const size = event.target.value;
+      const params = new URLSearchParams(location.search);
+      if (size === 'medium') params.delete('size');
+      else params.set('size', size);
+      results.style.setProperty('--thumbnail-width', sizeWidths[size] + 'px');
+      history.replaceState(null, '', location.pathname + (params.size ? '?' + params : ''));
+    } else {
+      render();
+    }
+  });
   form.addEventListener('submit', event => event.preventDefault());
   form.addEventListener('reset', () => setTimeout(render, 0));
   render();
