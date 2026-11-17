@@ -1,4 +1,15 @@
 {
+  "rework_b": {
+    "date": "2026-11-17",
+    "scope": "physical terrain geometry and lab architecture",
+    "baseline_head": "1088e49b2537a9c7805b1a5efe263b203141ddc5",
+    "baseline_rectangles": 27428,
+    "baseline_reachable_clearance_centres": 649989,
+    "notes": "Six distinct botanical root/vascular strata, eleven individually dressed functional labs, five root-framed cross-portals; clearances cut and verified after detail geometry",
+    "changed_final_material_cells": 124091,
+    "after_rectangles": 31408,
+    "all_exact_waypoints_from_original": true
+  },
   "source_public_id": "techn-0021",
   "source_key": "batch1/image-0058",
   "target": [
@@ -6,11 +17,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 27428,
+  "rectangles": 31408,
   "rectangle_budget": 32768,
-  "json_bytes": 503158,
+  "json_bytes": 574876,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1067751,
+  "stamped_cells": 1126461,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -40,36 +51,36 @@
     127
   ],
   "material_counts": {
-    "0": 1029401,
+    "0": 970691,
     "39": 5664,
-    "40": 118109,
-    "42": 56026,
+    "40": 117183,
+    "42": 62581,
     "49": 124801,
-    "50": 29603,
-    "52": 9182,
-    "53": 106659,
-    "54": 70196,
-    "58": 64801,
-    "62": 51138,
-    "65": 19357,
-    "77": 4056,
-    "78": 2502,
-    "79": 9672,
-    "80": 608,
+    "50": 37157,
+    "52": 37299,
+    "53": 111650,
+    "54": 89027,
+    "58": 60800,
+    "62": 61107,
+    "65": 18582,
+    "77": 6071,
+    "78": 2312,
+    "79": 10878,
+    "80": 335,
     "100": 145411,
-    "101": 181656,
-    "119": 13715,
-    "120": 9496,
-    "121": 5603,
+    "101": 161099,
+    "119": 20215,
+    "120": 8664,
+    "121": 5320,
     "122": 4869,
-    "123": 16784,
-    "127": 17843
+    "123": 14887,
+    "127": 20549
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 649989,
+  "connected_clearance_centres": 611228,
   "spawn": [
     369,
     95

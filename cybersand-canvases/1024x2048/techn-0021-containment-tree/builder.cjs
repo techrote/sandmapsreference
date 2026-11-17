@@ -149,6 +149,121 @@ for(let k=0;k<9;k++){
  disk(l+12,y+17,7,M.PHOSPHOR);disk(r-12,y+16,7,k%3?M.CYAN:M.AMBER);
 }
 
+
+/* Reworker B: differentiated bio-industrial stations and connected arboreal
+   morphology. Drawn as actual CyberSand materials, not a preview overlay.
+   All portals and protected 19x15 flight lanes are cut again downstream. */
+function fan(x,y,span,height,a,b){
+ const spread=[[-.92,-.25],[-.73,-.91],[-.3,-1.24],[.25,-1.31],[.76,-.75],[1,-.2]];
+ for(let i=0;i<spread.length;i++){
+  const [dx,dy]=spread[i],bx=x+dx*span*.48,by=y+dy*height*.52,tx=x+dx*span,ty=y+dy*height;
+  line(x,y,bx,by,a,9-i%3);line(bx,by,tx,ty,i%2?b:a,4+i%2);
+  poly([[tx-12,ty],[tx-6,ty-16],[tx+10,ty-11],[tx+14,ty+4],[tx,ty+14]],b);
+  disk(tx+(i%2?4:-4),ty-6,4+i%3,M.PHOSPHOR);
+ }
+}
+function stairVein(x,y,sign,len,a,b){
+ line(x,y,x+sign*32,y-35,a,11);
+ line(x+sign*32,y-35,x+sign*len,y-74,a,6);
+ line(x+sign*len,y-74,x+sign*(len+19),y-100,b,3);
+ for(let k=0;k<5;k++)disk(x+sign*(len-8+k*5),y-76+(k%2)*3,3+(k%2),b);
+}
+// Differentiated canopy/vascular/root strata: interrupted trunk now opens into
+// sideways root-fans and organic load-bearing forks around traversable portals.
+fan(474,624,65,72,M.VERDIGRIS,M.MOSS);
+fan(546,869,66,84,M.COPPER,M.VERDIGRIS);
+fan(482,1022,58,87,M.VERDIGRIS,M.CYAN);
+fan(540,1235,69,93,M.BRONZE,M.COPPER);
+fan(480,1482,78,97,M.COPPER,M.MOSS);
+fan(544,1802,84,112,M.MOSS,M.VERDIGRIS);
+stairVein(481,748,-1,72,M.COPPER,M.PHOSPHOR);
+stairVein(546,1164,1,65,M.VERDIGRIS,M.CYAN);
+stairVein(477,1717,-1,67,M.COPPER,M.AMBER);
+// Continuous anatomical detail across the long straight trunk runs.
+poly([[465,1060],[453,1091],[457,1179],[481,1223],[493,1173],[487,1067]],M.VERDIGRIS);
+poly([[554,1047],[567,1075],[566,1173],[546,1212],[537,1169]],M.BRONZE);
+for(let j=0;j<6;j++){
+  const yy=1081+j*17;
+  rect(466+(j%3)*3,yy,17,4,j%2?M.PHOSPHOR:M.COPPER);
+  rect(542-(j%3)*2,yy+5,14,4,j%2?M.AMBER:M.BRASS);
+}
+// Five crossing portals require distinct branching surrounds, but leave full
+// horizontal x398..633, y +/-31 air-clear for physical free flight.
+for(const [i,y] of [490,922,1318,1576,1890].entries()){
+  const shift=(i%2?12:-13);
+  line(513+shift,y-100,455+shift,y-41,M.COPPER,10);
+  line(513+shift,y-100,566+shift,y-44,M.VERDIGRIS,8);
+  line(454+shift,y+42,512+shift,y+99,M.COPPER,8);
+  line(567+shift,y+45,512+shift,y+99,M.VERDIGRIS,9);
+  line(453+shift,y-38,569+shift,y-38,i%2?M.BRONZE:M.COPPER,5);
+  line(454+shift,y+41,568+shift,y+41,i%2?M.COPPER:M.STEEL,5);
+  for(let t=0;t<5;t++){
+    rect(461+shift+t*24,y-45,10,5,t%2?M.AMBER:M.PHOSPHOR);
+    rect(465+shift+t*23,y+43,9,4,t%2?M.CYAN:M.BRASS);
+  }
+}
+// Each lab gets real architectural articulation tied to its individual purpose.
+// A single outer service spine provides coherent infrastructure while unique
+// roof, equipment, fenestration and support treatments separate 11 districts.
+function refineStation(r,side){
+ const x=side==="L"?23:717,y=r.y,h=r.h,w=side==="L"?291:283, id=r.mode;
+ const odd=id%2, sx=x+53;
+ // Irregular individually stepped arch lintels and internal suspension rails.
+ poly([[x+32,y+37],[x+52,y+25-id%3*7],[x+84,y+17+(id%2)*6],
+       [x+144,y+23],[x+207,y+23+id%3*5],[x+229,y+41]],odd?M.IRON:M.BRONZE);
+ rect(x+45,y+48,21+(id%3)*17,4,M.BRASS);
+ line(x+36,y+60,x+36,y+h-60,odd?M.VERDIGRIS:M.COPPER,5);
+ for(let t=0;t<4;t++){let yy=y+63+t*(h-126)/3;rect(x+33,yy,10,4,t%2?M.IRON:M.BRASS);}
+ const ry=y+h-64;
+ switch(id){
+ case 0: // quarantine canopy
+   poly([[sx,y+101],[sx+32,y+83],[sx+129,y+84],[sx+169,y+110]],M.BRASS);
+   for(let k=0;k<5;k++)disk(sx+15+k*29,y+112+(k%2)*7,5,M.PHOSPHOR);
+   break;
+ case 1: // spore feed manifold
+   rect(sx,y+92,184,9,M.COPPER);
+   for(let k=0;k<4;k++)line(sx+19+k*43,y+101,sx+19+k*43,y+135,M.VERDIGRIS,4);
+   break;
+ case 2: // inspection trays and optical boom
+   poly([[sx+18,y+117],[sx+41,y+92],[sx+95,y+101],[sx+116,y+125]],M.STEEL);
+   for(let k=0;k<5;k++)rect(sx+k*32,ry,26,6,k%2?M.BRASS:M.COPPER);
+   break;
+ case 3: // stepped resin catchment
+   poly([[sx+15,ry],[sx+30,ry+12],[sx+160,ry+12],[sx+173,ry]],M.BRONZE);
+   for(let k=0;k<3;k++)line(sx+25+k*58,y+105,sx+25+k*58,y+150,M.AMBER,5);
+   break;
+ case 4: // descending rhizome wall
+   for(let k=0;k<5;k++){let xx=sx+8+k*37;line(xx,y+99,xx-12+(k%2)*24,ry,odd?M.MOSS:M.COPPER,5);disk(xx,y+98,6,M.PHOSPHOR);}
+   break;
+ case 5: // hanging seed vault rows
+   rect(sx+6,y+94,177,7,M.STEEL);
+   for(let k=0;k<6;k++){let xx=sx+16+k*29;line(xx,y+101,xx,y+146,M.BRASS,3);disk(xx,y+149,6,M.MOSS);}
+   break;
+ case 6: // observation gantry
+   for(let k=0;k<4;k++)line(sx+k*26,y+107,sx+14+k*26,y+137,M.BRASS,4);
+   rect(sx+126,ry,70,9,M.COPPER);
+   break;
+ case 7: // biocore instrumentation
+   rect(sx,y+94,177,10,M.BRASS);
+   for(let k=0;k<4;k++)line(sx+17+k*43,y+104,sx+17+k*43,y+137,M.VERDIGRIS,4);
+   break;
+ case 8: // isolation baffles
+   for(let k=0;k<4;k++)poly([[sx+k*48,y+91],[sx+18+k*48,y+75],[sx+35+k*48,y+96],[sx+20+k*48,y+115]],M.STEEL);
+   break;
+ case 9: // lumen grid power buses
+   for(let k=0;k<4;k++){let xx=sx+9+k*41;line(xx,y+118,xx+25,y+95,M.CYAN,3);rect(xx,ry,32,6,M.COPPER);}
+   break;
+ case 10: // return sump intake
+   poly([[sx,ry],[sx+20,ry-21],[sx+50,ry-9],[sx+153,ry-9],[sx+172,ry-19],[sx+183,ry],[sx+177,ry+10],[sx+10,ry+10]],M.STEEL);
+   for(let k=0;k<4;k++)rect(sx+13+k*41,ry+1,25,4,M.AMBER);
+   break;
+ }
+ const edge=side==="L"?x+15:x+w-15,dir=side==="L"?1:-1;
+ line(edge,y+h-43,edge+dir*(20+id%3*5),y+h-21,odd?M.COPPER:M.STEEL,6);
+}
+left.forEach(r=>refineStation(r,"L"));
+right.forEach(r=>refineStation(r,"R"));
+
 // Deliberate collision-safe corridors, access portals and trans-bole openings.
 // Last-pass cuts are deliberate no-build clearance masks and never secretly substituted waypoint anchors.
 rect(343,22,74,2000,M.AIR);rect(608,22,78,2000,M.AIR);
@@ -167,6 +282,27 @@ const destinations=[
  ["ROOT RETURN",[514,1890]],["DEEP EXIT",[368,1994]]
 ];
 const spawn=[369,95];
+
+/* Distinct open biological passageways between trunk segments. These are
+   solid upper/lower framing details, not blocked navigation crossings:
+   a >=46-cell uninterrupted central passage is retained in each frame. */
+for(const [i,y] of [490,922,1318,1576,1890].entries()){
+ const top=i%2?M.COPPER:M.VERDIGRIS,bottom=i%2?M.STEEL:M.BRONZE;
+ // Broken upper/lower sheath creates a believable service portal instead of
+ // two abruptly sliced trunk stumps. A 50px-tall unobstructed core remains.
+ rect(435,y-30,151,4,top);
+ rect(441,y+28,147,4,bottom);
+ for(let j=0;j<6;j++){
+   const xx=449+j*25;
+   rect(xx,y-29,7,3,j%2?M.AMBER:M.PHOSPHOR);
+   rect(xx+4,y+29,7,3,j%2?M.CYAN:M.BRASS);
+ }
+ // Root sockets above/below (no vertical wall is allowed in the lane).
+ line(437,y-30,449,y-39,top,4);
+ line(585,y-29,573,y-40,top,4);
+ line(442,y+31,456,y+39,bottom,4);
+ line(590,y+31,576,y+39,bottom,4);
+}
 // Fully closed exterior frame; always leave room-side portals intact.
 rect(0,0,9,H,M.BASALT);rect(W-9,0,9,H,M.BASALT);rect(0,H-9,W,9,M.BASALT);
 // Conservative full non-air collision mask, 19x15 actor centre clearance.
@@ -200,8 +336,8 @@ function zstored(data){let arr=[Uint8Array.from([120,1])],s1=1,s2=0;for(let p=0;
 return cat([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk("IHDR",Uint8Array.from([...u32(pw),...u32(ph),8,3,0,0,0])),chunk("PLTE",palette),chunk("IDAT",zstored(raw)),chunk("IEND",new Uint8Array())]);
 }
 const png=pngRegion(0,0,W,H,2);
-const details={upper:pngRegion(192,115,640,640,1),lower:pngRegion(191,1295,640,640,1)};
-const evidence={source_public_id:"techn-0021",source_key:"batch1/image-0058",target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,stamped_cells:stamped,material_cells_verified:A.length,mismatches,used_material_ids:Object.keys(hist).map(Number).sort((a,b)=>a-b),material_counts:hist,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,actual_native_godot_rapier_qualification:"NOT EXECUTED",original_reference_pixel_comparison:"NOT EXECUTED: GitHub binary image connector refuses PNG bytes",original_dimensions:"UNVERIFIED"};
+const details={upper:pngRegion(192,115,640,640,1),middle:pngRegion(191,715,640,640,1),lower:pngRegion(191,1295,640,640,1)};
+const evidence={rework_b:{date:'2026-11-17',scope:'physical terrain geometry and lab architecture',baseline_head:'1088e49b2537a9c7805b1a5efe263b203141ddc5',baseline_rectangles:27428,baseline_reachable_clearance_centres:649989,notes:'Six distinct botanical root/vascular strata, eleven individually dressed functional labs, five root-framed cross-portals; clearances cut and verified after detail geometry'},source_public_id:"techn-0021",source_key:"batch1/image-0058",target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,stamped_cells:stamped,material_cells_verified:A.length,mismatches,used_material_ids:Object.keys(hist).map(Number).sort((a,b)=>a-b),material_counts:hist,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,actual_native_godot_rapier_qualification:"NOT EXECUTED",original_reference_pixel_comparison:"NOT EXECUTED: GitHub binary image connector refuses PNG bytes",original_dimensions:"UNVERIFIED"};
 return {json,png,details,evidence};
 }
 module.exports={generate};
