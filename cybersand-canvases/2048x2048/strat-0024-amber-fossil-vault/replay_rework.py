@@ -6,7 +6,6 @@ Uses no source-image pixels. Exact material-cell PNGs are deterministic by palet
 """
 import json, hashlib
 from pathlib import Path
-from collections import Counter
 import numpy as np
 from PIL import Image
 from scipy import ndimage
@@ -57,7 +56,7 @@ def main():
     root=int(labels[470,460]);assert root>0
     bad=[d['name'] for d in report['destinations'] if int(labels[d['point'][1],d['point'][0]])!=root]
     assert not bad, f'Unreachable exact 19x15 destinations: {bad}'
-    hist=Counter(str(int(k)):int(v) for k,v in zip(*np.unique(new,return_counts=True)))
+    hist={str(int(k)):int(v) for k,v in zip(*np.unique(new,return_counts=True))}
     allowed={p['id'] for p in json.loads((ROOT/'material-palette.json').read_text()) if p.get('valid')}
     assert set(map(int,hist)).issubset(allowed)
     palette={int(p['id']):p['rgba'][:3] for p in json.loads((ROOT/'material-palette.json').read_text())}
