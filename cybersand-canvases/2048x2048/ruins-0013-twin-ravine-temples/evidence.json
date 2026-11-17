@@ -18,9 +18,9 @@
       2048
     ],
     "cells": 4194304,
-    "rectangles": 14400,
+    "rectangles": 14356,
     "rectangle_cap": 32768,
-    "json_bytes": 275852,
+    "json_bytes": 275012,
     "json_cap": 1048576,
     "reconstruction_mismatches": 0,
     "rectangle_overlaps": 0
@@ -189,7 +189,7 @@
             19,
             15
           ],
-          "connected_centres": 2147121,
+          "connected_centres": 2152140,
           "exact_sites_connected": 20
         },
         {
@@ -197,7 +197,7 @@
             23,
             19
           ],
-          "connected_centres": 2095230,
+          "connected_centres": 2100641,
           "exact_sites_connected": 20
         },
         {
@@ -205,7 +205,7 @@
             31,
             27
           ],
-          "connected_centres": 1992550,
+          "connected_centres": 1998608,
           "exact_sites_connected": 20
         }
       ],
@@ -296,14 +296,14 @@
   },
   "materials": {
     "histogram": {
-      "0": 2438248,
+      "0": 2441214,
       "38": 23802,
-      "40": 171910,
+      "40": 169066,
       "41": 123346,
-      "42": 198942,
+      "42": 198270,
       "49": 50030,
       "52": 4799,
-      "100": 233402,
+      "100": 233952,
       "101": 949825
     },
     "allowed_static_solid_ids": [
@@ -325,9 +325,9 @@
   "evidence": [
     {
       "file": "twin-ravine-temples-preview.png",
-      "blob_sha": "7d253538b71429c9dd450fcb3badd6cd8f88d97b",
+      "blob_sha": "c8048bc5b43b8a0e8f65718ddc64d7279f84fca3",
       "size_bytes": 525480,
-      "crc32": "36a66a28",
+      "crc32": "5d8f0a08",
       "extent": [
         1024,
         1024
@@ -344,9 +344,9 @@
     },
     {
       "file": "temples-material-2048.png",
-      "blob_sha": "5cbbce40e7df2799643763a29d9284d7d2c8ce50",
+      "blob_sha": "bf1ad222a92385f50176ece08e64bf7aa8808ce8",
       "size_bytes": 2099488,
-      "crc32": "d6e68982",
+      "crc32": "9db92eb9",
       "extent": [
         2048,
         2048
@@ -439,9 +439,9 @@
     },
     {
       "file": "temples-detail-bridge-east-anchor.png",
-      "blob_sha": "0511e8323d2cf3b050148497dcb33248acda4355",
+      "blob_sha": "1aa63f33a73e5795c6f644ed384a4809be25e788",
       "size_bytes": 131722,
-      "crc32": "e1723cc8",
+      "crc32": "02b310bb",
       "extent": [
         512,
         512
@@ -458,9 +458,9 @@
     },
     {
       "file": "temples-detail-east-bypass.png",
-      "blob_sha": "4b01718ee69c8dbf0453e5693c0ea68eac808a60",
+      "blob_sha": "50bb6feb61b22f4bc63a6dcd3e81d53b4bdfcec3",
       "size_bytes": 131722,
-      "crc32": "7df42086",
+      "crc32": "d9961058",
       "extent": [
         512,
         512
@@ -553,7 +553,7 @@
     }
   ],
   "determinism": {
-    "repeated_generation": "Two independent executions produced byte-identical JSON and all 12 material-cell PNGs (retested)",
+    "repeated_generation": "R2B-P1 final two independent generator executions byte-identical: ordered JSON + all 12 PNGs",
     "png_integrity": "12/12 indexed PNGs: CRC, zlib stored blocks, Adler32, IEND and 7,864,320 displayed pixels independently checked; zero mismatches",
     "source_overlay_used": false
   },
@@ -637,8 +637,8 @@
   },
   "rework_p1": {
     "assigned_starting_head": "85c3ef0166004cd9480d3b1b933d51045d2e19f2",
-    "scope": "P1 rooted forked west buttresses, unequal masonry shrine thresholds, short broad eroded eastern guardian and crown, grounded undercroft piers, irregular living bridge hangers and eastern terraces",
-    "real_changed_material_cells": 128145,
+    "scope": "Three thick rooted west buttresses, unequal worn shrine thresholds, shorter mossy ridge guardian, two provably grounded lower spandrel piers plus solid-only weathered shoulder recolouring, single living bridge rhythm and crown/terrace shapes",
+    "real_changed_material_cells": 124629,
     "whole_plane_tested": 4194304,
     "bridge_four_neighbour_component_cells": 1726673,
     "bridge_probes_4connected": [
@@ -666,6 +666,7 @@
     "whole_chimney_and_undercroft_empty": true,
     "source_preview_compared": true,
     "original_full_png_pixel_parity": "UNVERIFIED",
-    "native": "NOT RUN"
+    "native": "NOT RUN",
+    "floating_pier_reconciliation": "Post-review rejected two hanging undercroft blocks, kept only two piers physically connected to main eastern solid mass; 3,516 final cells revised relative to first P1 draft."
   }
 }
