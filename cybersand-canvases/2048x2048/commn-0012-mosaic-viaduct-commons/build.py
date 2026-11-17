@@ -407,10 +407,28 @@ for xx,yy,w,h,m in overlay['edits']:
     arr[yy:yy+h,xx:xx+w]=m
 runs+=overlay['edits']
 assert len(runs)==19357
+# Reworker C's focus is inhabitable civic mass and exact operational clearance.
+# C stamps are deterministic, replayable, and ONLY applied after B's verified plane.
+assert hashlib.sha256(arr.tobytes()).hexdigest()=='e9d31f0fb6e813e0d22ac3849d1b4cb60fabdd505b64bf508b3ed23e8459fc6a'
+before_c=arr.copy()
+c_overlay=json.loads((ROOT/'rework-c-append.json').read_text())
+assert c_overlay['source_head']=='a757285d7495a3c2bcf6a740a9c2de6da193939b'
+assert c_overlay['baseline_sha256']=='e9d31f0fb6e813e0d22ac3849d1b4cb60fabdd505b64bf508b3ed23e8459fc6a'
+assert len(c_overlay['edits'])==1963
+for xx,yy,w,h,m in c_overlay['edits']:
+    assert all(isinstance(n,int) and not isinstance(n,bool) for n in (xx,yy,w,h,m))
+    assert 0<=xx<W and 0<=yy<H and 0<w<=W-xx and 0<h<=H-yy
+    assert m in (0,38,40,41,42,48,49,52,53,57,58,62,66,77,79,81,97,98,100,119,120,127)
+    arr[yy:yy+h,xx:xx+w]=m
+runs+=c_overlay['edits']
+assert len(runs)==21320
+c_changed=int(np.count_nonzero(before_c!=arr))
+assert c_changed==94013
+assert int(np.count_nonzero(arr==WATER))==43916
 checks=[validate_routes(arr,19,15),validate_routes(arr,7,7)]
 print('reworked route checks',json.dumps(checks))
 assert all(c['reachable']==len(DEST) for c in checks), 'Conservative exact-site traversal check failed'
-assert hashlib.sha256(arr.tobytes()).hexdigest()=='e9d31f0fb6e813e0d22ac3849d1b4cb60fabdd505b64bf508b3ed23e8459fc6a'
+assert hashlib.sha256(arr.tobytes()).hexdigest()=='237ec6fb387c813babc1893d924d9e07f60cb94998fcbc304273bde3e7913661'
 assert len(runs)<=32768, f'Rectangle budget exceeded: {len(runs)}'
 rec=np.zeros((H,W),np.uint8)
 for xx,yy,w,h,m in runs:rec[yy:yy+h,xx:xx+w]=m
@@ -427,18 +445,23 @@ wrapped['starting_setup']=setup
 json_text=json.dumps(wrapped,separators=(',',':'))+'\n'
 assert len(json_text.encode())<1048576, f'JSON size > budget: {len(json_text)}'
 (ROOT/'setup-mosaic-viaduct-commons.json').write_text(json_text)
-# RGB material preview uses exact palette catalogue IDs. Small stable grain is display-only.
+# Deterministic exact-cell indexed PNG, no source pixels / noise / overlays.
+# The small portable writer intentionally matches committed PNG byte-for-byte,
+# independent of Pillow/libpng compression-version differences.
+from png_fixed import encode_indexed_png
 materials=json.loads((ROOT/'material-palette.json').read_text())
 pal=np.zeros((256,3),dtype=np.uint8)
-for item in materials:pal[int(item['id'])]=item['rgba'][:3]
-# Pixel-exact material palette; no source bitmap, procedural render grain, or overlays.
-rgb=pal[arr]
-render=Image.fromarray(rgb)
-render.save(ROOT/'preview.png')
-render.resize((1024,1024),Image.Resampling.NEAREST).save(ROOT/'overview.png')
-for label,region in {'viaduct':(450,600,962,1112),'civic':(768,844,1280,1356),
-                     'gardens':(850,1400,1362,1912)}.items():
-    render.crop(region).save(ROOT/('detail-'+label+'.png'))
+for item in materials:
+    pal[int(item['id'])]=item['rgba'][:3]
+def save_material_png(name, plane):
+    assert plane.dtype==np.uint8 and plane.ndim==2
+    h,w=plane.shape
+    (ROOT/name).write_bytes(encode_indexed_png(plane.ravel(),w,h,pal))
+save_material_png('preview.png',arr)
+save_material_png('overview.png',arr[::2,::2].copy())
+for label,(x0,y0,x1,y1) in {'viaduct':(450,600,962,1112),'civic':(768,844,1280,1356),
+                            'gardens':(850,1400,1362,1912)}.items():
+    save_material_png('detail-'+label+'.png',arr[y0:y1,x0:x1].copy())
 
 proof={
  'title':'Mosaic Viaduct Commons — Shared City on the Arches',
@@ -454,7 +477,7 @@ proof={
  'connectivity':checks,'materials':{str(k):int(v) for k,v in zip(*np.unique(arr,return_counts=True))},
  'native_runtime':'NOT exercised; requires Windows 11 Godot/Rapier Workbench load, actor-input, progression, save/reopen',
  'source_visual':'Artwork identified by catalogue SHA/path but original bitmap could not be fetched for side-by-side inspection; fidelity is thematic and geometric only, NOT exact visual fidelity verified',
- 'render_method':'lossless 8-bit palette-colour PNG from the final material-cell plane; no source artwork or display-only grain',
+ 'render_method':'byte-deterministic indexed PNG from exact final material IDs and accepted palette; no source artwork or display-only texture',
  'representation':'current CyberSand generated-start-v1 with valid starting_setup.edits rectangle overlay',
  'rework':{
    "worker": "B",
@@ -475,6 +498,19 @@ proof={
    ]
  }
 }
-(ROOT/'evidence.json').write_text(json.dumps(proof,indent=2)+'\n')
+proof['rework_c']={
+    'worker':'C','starting_head':'a757285d7495a3c2bcf6a740a9c2de6da193939b',
+    'starting_material_hash':'e9d31f0fb6e813e0d22ac3849d1b4cb60fabdd505b64bf508b3ed23e8459fc6a',
+    'changed_cells':c_changed,'additional_edits':len(c_overlay['edits']),
+    'restored_air_cells':c_overlay['route_protection']['protected_air_cells_restored'],
+    'protected_original_route_centres':c_overlay['route_protection']['protected_centres'],
+    'exact_19x15_destinations':checks[0]['reachable'],
+    'water_cells':int(np.count_nonzero(arr==WATER)),
+    'source_png_visual':'UNVERIFIED','native':'NOT TESTED'
+}
+proof['png_sha256']={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in
+    ['preview.png','overview.png','detail-viaduct.png','detail-civic.png','detail-gardens.png']}
+# Exact JSON and PNG bytes are deterministic on rebuild; preserve stable key order.
+(ROOT/'evidence.json').write_text(json.dumps(proof,separators=(',',':'),ensure_ascii=False)+'\n')
 print(json.dumps({'rectangles':len(runs),'json_bytes':len(json_text.encode()),'plane_sha':material_hash,
  'reachable':checks[0]['reachable'],'destinations':len(DEST)},indent=2))
