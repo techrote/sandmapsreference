@@ -296,7 +296,9 @@ function buildCyberSand(base, template, palette) {
  label("LIFT",972,1771,3,M.amber);
  label("HYDRAULIC",1268,1808,2,M.cyan);
 
+ require("./rework-r2-geometry.js")({rect,poly,ellipse,line,label,M});
  const spawn=[730,370],marks=[
+  ["Glazed Flight Control Pod",[1915,440]],["Control Pod Access",[1840,443]],["Overhead Hoist Station",[1240,350]],["Freight Throughway",[1170,1850]],
   ["A3 Control Gallery",[445,417]],["East Flight Control",[1745,456]],
   ["Upper Nose Overlook",[813,470]],["West Crane Rail",[718,386]],
   ["East Crane Rail",[1317,386]],["Booster West",[710,716]],
@@ -382,6 +384,9 @@ function buildCyberSand(base, template, palette) {
   return o;
  }
  const districtCrops=[
+  {name:"roof-truss",origin:[205,95],size:[1650,285],pngBase64:pngCrop(205,95,1650,285)},
+  {name:"glazed-pod",origin:[1668,276],size:[380,405],pngBase64:pngCrop(1668,276,380,405)},
+  {name:"west-cliff",origin:[0,330],size:[420,810],pngBase64:pngCrop(0,330,420,810)},
   {name:"rocket-gantry",origin:[705,285],size:[660,720],pngBase64:pngCrop(705,285,660,720)},
   {name:"west-fabrication",origin:[185,790],size:[510,650],pngBase64:pngCrop(185,790,510,650)},
   {name:"east-metrology",origin:[1367,790],size:[510,650],pngBase64:pngCrop(1367,790,510,650)},
@@ -403,12 +408,14 @@ function buildEvidence(o,palette){
    artwork_path:"artwork/works_yards/batch1/orbital_assembly_hangars-rocket_assembly_hall-cool_precision.png",
    artwork_git_blob:"167c7873e9637cb3930fe7504a0e463cbfe8983e",
    artwork_sha256:"033534dc0971a8250f27a7d9a91e60af6230559a872107505f574c33e1420fef",
-   original_dimensions:[1536,1024],bitmap_decoded:false,source_key:"batch1/image-0052",legacy_record_id:"image-0052"
+   original_dimensions:[1536,1024],bitmap_decoded:false,
+    source_preview_verified:true,source_preview_blob:"0b7872f4869c70dd2463f58dda48bfeda0d1e315",
+    comparison_scope:"actual committed JPEG preview only; full source PNG pixels not inspected",source_key:"batch1/image-0052",legacy_record_id:"image-0052"
   },
   engine:{
    repo:"techrote/cybersand",main_sha:"018bd09503d7f079ddac52e225c2f7daf8d678bf",
    representation:"cybersand-generated-start-v1 / Workbench starting_setup version 2",
-   material_manifest:"frozen prior accepted material-palette.json",
+   material_manifest:"native/include/cybersand/material.hpp@018bd095 plus committed palette",
    midge_hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96"
   },
   static:{
@@ -423,7 +430,7 @@ function buildEvidence(o,palette){
    district_crops:o.districtCrops.map(c=>({file:"crop-"+c.name+".png",origin:c.origin,size:c.size,scale:"1:1",source:"actual-material-plane"}))
   },
   reproducibility:{builder:"build.js",seed:23071,runtime:"Node.js 22+, built-in modules only"},
-  unqualified:["native Godot/Rapier loading","native rectangle/actor admission","physical Windows NVIDIA","actor input and simulation","save/reopen","side-by-side source bitmap pixel review"],
+  unqualified:["native Godot/Rapier loading","native rectangle/actor admission","physical Windows NVIDIA","actor input and simulation","save/reopen","full-resolution original-PNG pixel parity (JPEG preview compared)"],
   status:"Draft / HOLD — owner acceptance required"
  };
 }
