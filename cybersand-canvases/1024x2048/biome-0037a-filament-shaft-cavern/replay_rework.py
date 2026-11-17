@@ -10,7 +10,13 @@ raw=subprocess.check_output(["git","show",f"{p['baseline_commit']}:{rel}/setup-f
 baseline=json.loads(raw)
 assert baseline["extent"]==p["extent"]
 assert len(baseline["edits"])==p["baseline_rectangles"]
-rebuild=dict(baseline,edits=baseline["edits"]+p["patches"])
+stage_a=baseline["edits"]+p["patches"]
+c=json.loads((here/"rework_c_patch.json").read_text())
+assert c["baseline_head"]=="b9268544e32ceeffa26cdfb9b95c9773ef0bcf84"
+assert c["baseline_edit_count"]==len(stage_a)
+assert c["world_extent"]==baseline["extent"]
+assert c["patch_rectangles"]==len(c["patches"])
+rebuild=dict(baseline,edits=stage_a+c["patches"])
 out=here/"setup-filament-shaft-cavern.json"
 a=argparse.ArgumentParser()
 a.add_argument("--write",action="store_true",help="Replace setup JSON with the deterministic rebuild")
@@ -19,4 +25,4 @@ if args.write:
  out.write_text(json.dumps(rebuild,separators=(",",":")))
 else:
  assert json.loads(out.read_text())==rebuild,"Committed setup disagrees with baseline+patches"
- print(f"PASS: {len(rebuild['edits'])} rectangles / {len(p['patches'])} rework overlays")
+ print(f"PASS: {len(rebuild['edits'])} rectangles / {len(p['patches'])} A and {len(c['patches'])} C overlays")

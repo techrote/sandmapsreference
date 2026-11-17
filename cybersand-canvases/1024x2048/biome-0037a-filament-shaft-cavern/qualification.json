@@ -13,9 +13,9 @@
     1024,
     2048
   ],
-  "rectangles": 29103,
+  "rectangles": 30476,
   "max_rectangles": 32768,
-  "json_bytes": 526235,
+  "json_bytes": 550855,
   "max_json_bytes": 1048576,
   "cell_count": 2097152,
   "cell_mismatches": 0,
@@ -131,7 +131,7 @@
       "reachable": true
     }
   ],
-  "reachable_clearance_cells": 952932,
+  "reachable_clearance_cells": 929961,
   "water_cells": 35688,
   "materials": [
     0,
@@ -164,5 +164,62 @@
     "preview": "rendered directly from final material grid; 512x1024 full overview and two native-resolution 512x512 crops",
     "native": "NOT TESTED; physical Workbench/Rapier/material catalogue/actor hash admission and save/reopen remain required",
     "reference": "Original binary PNG could not be fetched or visually compared; source fidelity remains unverified"
+  },
+  "rework_c": {
+    "worker": "C",
+    "baseline_head": "b9268544e32ceeffa26cdfb9b95c9773ef0bcf84",
+    "reference": "artwork/living_landscapes/batch2/filament_shaft_cavern.png",
+    "source_blob": "9364b59479bb2eaf4d2a2924abb501ed8d9e26e3",
+    "source_pixels_seen": false,
+    "source_comparison": "SOURCE-UNVERIFIED: binary source content inaccessible",
+    "changed_material_cells": 40356,
+    "added_rectangles": 1373,
+    "final_stored_rectangles": 30476,
+    "final_compressed_rectangles": 25417,
+    "final_json_bytes": 550855,
+    "full_grid_cells": 2097152,
+    "independent_replay_mismatches": 0,
+    "water_modified_cells": 0,
+    "water_cells": 35688,
+    "final_material_histogram": {
+      "0": 1261921,
+      "3": 35688,
+      "38": 28820,
+      "42": 119879,
+      "49": 156620,
+      "62": 2400,
+      "77": 17153,
+      "78": 707,
+      "79": 411,
+      "97": 24954,
+      "100": 284444,
+      "101": 129164,
+      "122": 19716,
+      "127": 15275
+    },
+    "clearance_19x15": {
+      "envelope": [
+        19,
+        15
+      ],
+      "reached": 15,
+      "component": 929961
+    },
+    "clearance_23x19": {
+      "envelope": [
+        23,
+        19
+      ],
+      "reached": 15,
+      "component": 870517
+    },
+    "native": "NATIVE-UNTESTED: Godot/Rapier/installed bridge and physical Windows acceptance not exercised",
+    "overview": "filament-shaft-cavern-preview.png",
+    "native_crops": [
+      "filament-shaft-cavern-detail-upper.png",
+      "filament-shaft-cavern-detail-lamina.png",
+      "filament-shaft-cavern-detail-lower.png",
+      "filament-shaft-cavern-detail-shaft.png"
+    ]
   }
 }

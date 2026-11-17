@@ -18,6 +18,8 @@ def colorize(index):
     for m,c in palette.items():rgb[index==m]=c
     return Image.fromarray(rgb,"RGB")
 colorize(a[1::2,1::2]).save(here/"filament-shaft-cavern-preview.png")
-colorize(a[470:982,0:512]).save(here/"filament-shaft-cavern-detail-upper.png")
-colorize(a[1110:1622,512:1024]).save(here/"filament-shaft-cavern-detail-lower.png")
-print(f"PASS: {w}x{h} material cells; {len(s['edits'])} rectangles; overview and two 512x512 crops rebuilt")
+colorize(a[430:942,0:512]).save(here/"filament-shaft-cavern-detail-upper.png")
+colorize(a[895:1407,512:1024]).save(here/"filament-shaft-cavern-detail-lower.png")
+colorize(a[775:1287,0:512]).save(here/"filament-shaft-cavern-detail-lamina.png")
+colorize(a[1120:1632,312:824]).save(here/"filament-shaft-cavern-detail-shaft.png")
+print(f"PASS: {w}x{h} material cells; {len(s['edits'])} rectangles; overview and four native 512x512 district crops rebuilt")
