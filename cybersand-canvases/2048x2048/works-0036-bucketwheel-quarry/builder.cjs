@@ -75,6 +75,20 @@ for(const y of [290,600,675,930,1060,1400,1425,1570,1780,1815])for(let x=70;x<19
 for(let x=720;x<1290;x+=95){line(x,490+(x-560)*.18,x,540+(x-560)*.18,M.CABLE,3);}
 for(let x=240;x<600;x+=75){rect(x,278,6,13,M.WHITE);rect(x-8,270,22,9,M.AMBER);}
 for(let x=1430;x<1810;x+=75){rect(x,336,6,15,M.WHITE);rect(x-8,330,22,7,M.CYAN);}
+/* Second-pass geological texturing is entirely in-place recolour:
+ * finer bedding, iron seams and amber ore flecks add reference-like density
+ * without changing any collision bits in the already-constructed level. */
+const rockIds=new Set([M.LIMESTONE,M.GRANITE,M.TERRACOTTA,M.EARTH,M.BASALT,M.FIREBRICK,M.RAMMED,M.SLATE]);
+function inRock(x,y,w,h,newmat){x=Math.floor(x);y=Math.floor(y);w=Math.floor(w);h=Math.floor(h);for(let yy=Math.max(0,y);yy<Math.min(H,y+h);yy++)for(let xx=Math.max(0,x);xx<Math.min(W,x+w);xx++){let idx=yy*W+xx;if(rockIds.has(A[idx]))A[idx]=newmat;}}
+for(let i=0;i<1250;i++){let side=i%2===0,rx=side?Math.floor(rnd()*710):1320+Math.floor(rnd()*728),ry=430+Math.floor(rnd()*1480),ww=5+Math.floor(rnd()*39),hh=(i%5===0)?4:2;
+  const palette=[M.LIMESTONE,M.SLATE,M.TERRACOTTA,M.COPPER,M.GRANITE,M.RAMMED,M.FIREBRICK,M.QUARTZ];
+  inRock(rx,ry,ww,hh,palette[Math.floor(rnd()*palette.length)]);}
+for(let i=0;i<240;i++){let rx=Math.floor(rnd()*W),ry=380+Math.floor(rnd()*1550);if(i%3===0)inRock(rx,ry,3,13,M.RUST);else inRock(rx,ry,13,3,i%2?M.QUARTZ:M.COPPER);}
+for(let i=0;i<40;i++){let side=i%2===0,rx=side?Math.floor(rnd()*220):1790+Math.floor(rnd()*230),ry=500+Math.floor(rnd()*1400);inRock(rx,ry,95+Math.floor(rnd()*100),2,i%3?M.SLATE:M.LIMESTONE);}
+/* Small suspended gantries, service sensors and hazard windows. */
+for(let x=750;x<1220;x+=95){rect(x,440+(x-560)*.175,5,18,M.IRON);rect(x-3,440+(x-560)*.175,13,5,M.WHITE);}
+for(let x=850;x<1200;x+=52){let yy=1504+((x/52)|0)%4;rect(x,yy,5,8,M.STEEL);}
+for(let i=0;i<14;i++){let x=870+i*23,y=1542+(i%3)*2;rect(x,y,13,5,i%4?M.IRON:M.HAZARD);}
 const destinations=[
 {name:'Upper Ore Administration',at:[645,245]},
 {name:'Eastern Lift Control',at:[1530,295]},
