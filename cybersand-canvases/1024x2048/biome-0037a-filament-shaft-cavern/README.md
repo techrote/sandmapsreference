@@ -17,8 +17,8 @@ The design translates the **filament shaft** theme of the selected repository ar
 `setup-filament-shaft-cavern.json` is plain Workbench **starting setup v2**, containing authentic `extent`, `actors`, `edits`, response and liquid-policy fields. No unsupported generator wrapper or fake extension is involved.
 
 - Exact canvas: 1024×2048.
-- Rectangle runs: **29103 / 32768**.
-- JSON bytes: **526235 / 1048576**.
+- Rectangle runs: **30724 / 32768**.
+- JSON bytes: **555613 / 1048576**.
 - Exact material-cell reconstruction: **0 mismatches / 2097152 cells**.
 - 19×15 conservative Midge free-space clearance: **15/15 destinations reachable**.
 - Lower contained reservoir: 35688 real water material cells.
@@ -52,3 +52,13 @@ Starting HEAD `b9268544e32ceeffa26cdfb9b95c9773ef0bcf84`, Shepherd `CANVAS-REWOR
 **Evidence:** `rework_c_patch.json` is replayed after the original A overlay by `replay_rework.py`; `rebuild_preview.py` reconstructs the exact full map and four 1:1 512×512 crops. Committed PNGs: `filament-shaft-cavern-preview.png` (512×1024 overview sampled from 1024×2048 cells); `filament-shaft-cavern-detail-upper.png` (x0,y430); `filament-shaft-cavern-detail-lamina.png` (x0,y775); `filament-shaft-cavern-detail-lower.png` (x512,y895); `filament-shaft-cavern-detail-shaft.png` (x312,y1120). RGB values derive from `palette.json`.
 
 **HOLD:** original `biome-0037a` PNG pixels could not be retrieved, so source comparison remains **UNVERIFIED**. Native Godot/CyberDemoBridge/Rapier import/install, real Midge flight/collision, Water simulation, installed rectangle-capacity readback, and save/reopen were **NOT TESTED**. Independent reviewer/owner acceptance required. No merge or Ready.
+
+## Reworker C — targeted C2 composition repair (2026-11-17)
+
+**Starting HEAD:** `fbe9abfbdc00d3583eb4cb48b22933b36c466869`, Shepherd's explicit `CANVAS-REWORK-C: 1 @ fbe9abfbdc00d3583eb4cb48b22933b36c466869`. The lowest remaining left oval room now has an irregular **roof-rooted shale keel** (x≈102–230, y1588–1707) and a distinctive **bank-rooted west geological spur** (x20–140, y1672–1782), changing its complete roof-to-floor silhouette rather than cloning more filament sprays. The redundant floating guide at x346–456/y1269–1311 has been erased from the shaft. Existing upper fissure, lamina, focal ring, semantic targets, spawn and all Water cells are preserved. After reviewing a first native-cell crop, the overly regular keel striations were reduced and both rock contours made less mechanically smooth.
+
+**Exact new result:** **15,573 changed material cells**; `248` authored C2 overlay rectangles, **30,724 / 32,768** final stored edits, **25,520** final native-style coalesced non-air runs, **555,613 / 1,048,576 bytes**. All **2,097,152** cells replay exactly from the stored edits and deterministic overlay; **35,688 Water cells, zero changed**. Legal stable solids only added (IDs 100,49,42), removal to empty ID 0; no Stone powder. **15/15 exact original Midge destinations** reached from spawn (512,107), with 19×15 and 23×19 conservative clearance; 31×27 also 15/15. Static clearance is not native flight behavior.
+
+**Reproduction and real-cell gallery:** `generate_rework_c2.py` regenerates the bounded overlay `rework_c2_patch.json`; `replay_rework.py` replays A→C→C2; `rebuild_preview.py` renders from the final material-cell plane. [Overview](filament-shaft-cavern-preview.png), [upper fissure](filament-shaft-cavern-detail-upper.png), [lamina](filament-shaft-cavern-detail-lamina.png), [luminous core](filament-shaft-cavern-detail-lower.png), [shaft](filament-shaft-cavern-detail-shaft.png), [deep left cavity](filament-shaft-cavern-detail-deep.png). The overview is sampled 2:1; five detail crops are **native 1 cell = 1 pixel, 512×512**.
+
+**Draft / HOLD:** original Git source image `biome-0037a` at blob `9364b59479bb2eaf4d2a2924abb501ed8d9e26e3` remains **SOURCE-UNVERIFIED** because real original pixels were inaccessible. The Water reservoir is enclosed and its gameplay intent unconfirmed. Installed bridge rectangle limit, Godot/Rapier actual import and Midge flight/collision, dynamic Water and save/reopen are **NATIVE-UNTESTED**. No native/physical acceptance or source-fidelity pass claimed.

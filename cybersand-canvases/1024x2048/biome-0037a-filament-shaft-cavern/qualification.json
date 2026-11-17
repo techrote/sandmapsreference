@@ -13,9 +13,9 @@
     1024,
     2048
   ],
-  "rectangles": 30476,
+  "rectangles": 30724,
   "max_rectangles": 32768,
-  "json_bytes": 550855,
+  "json_bytes": 555613,
   "max_json_bytes": 1048576,
   "cell_count": 2097152,
   "cell_mismatches": 0,
@@ -131,7 +131,7 @@
       "reachable": true
     }
   ],
-  "reachable_clearance_cells": 929961,
+  "reachable_clearance_cells": 913306,
   "water_cells": 35688,
   "materials": [
     0,
@@ -220,6 +220,96 @@
       "filament-shaft-cavern-detail-lamina.png",
       "filament-shaft-cavern-detail-lower.png",
       "filament-shaft-cavern-detail-shaft.png"
+    ]
+  },
+  "rework_c2": {
+    "worker": "C",
+    "baseline_head": "fbe9abfbdc00d3583eb4cb48b22933b36c466869",
+    "original_source_blob": "9364b59479bb2eaf4d2a2924abb501ed8d9e26e3",
+    "source_pixels_seen": false,
+    "source_comparison": "SOURCE-UNVERIFIED",
+    "changed_material_cells": 15573,
+    "added_rectangles": 248,
+    "final_stored_rectangles": 30724,
+    "final_compressed_rectangles": 25520,
+    "final_json_bytes": 555613,
+    "full_grid_cells": 2097152,
+    "full_grid_mismatches": 0,
+    "material_histogram": {
+      "0": 1251138,
+      "3": 35688,
+      "38": 28816,
+      "42": 118594,
+      "49": 164528,
+      "62": 2268,
+      "77": 17052,
+      "78": 707,
+      "79": 411,
+      "97": 24739,
+      "100": 289760,
+      "101": 128586,
+      "122": 19672,
+      "127": 15193
+    },
+    "material_cell_transitions": {
+      "62→0": 132,
+      "77→0": 77,
+      "42→0": 822,
+      "127→0": 60,
+      "97→0": 19,
+      "38→0": 4,
+      "101→0": 578,
+      "0→100": 5686,
+      "97→100": 191,
+      "42→100": 2,
+      "127→100": 4,
+      "100→49": 567,
+      "0→49": 6699,
+      "0→42": 90,
+      "77→49": 24,
+      "97→49": 5,
+      "42→49": 551,
+      "122→49": 44,
+      "127→49": 18
+    },
+    "water_cells": 35688,
+    "water_changed_cells": 0,
+    "clearance_19x15": {
+      "envelope": [
+        19,
+        15
+      ],
+      "reached": 15,
+      "component": 913306,
+      "missed": []
+    },
+    "clearance_23x19": {
+      "envelope": [
+        23,
+        19
+      ],
+      "reached": 15,
+      "component": 855926,
+      "missed": []
+    },
+    "clearance_31x27": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reached": 15,
+      "component": 761506,
+      "missed": []
+    },
+    "art_self_review": "First deep-district crop showed mechanically regular lamina and smooth triangular edges; second pass replaced them with sparse strata and rougher asymmetric bank geometry",
+    "native": "NATIVE-UNTESTED: no compatible installed Workbench/bridge and save/reopen tests",
+    "overview": "filament-shaft-cavern-preview.png",
+    "native_crops": [
+      "filament-shaft-cavern-detail-upper.png",
+      "filament-shaft-cavern-detail-lamina.png",
+      "filament-shaft-cavern-detail-lower.png",
+      "filament-shaft-cavern-detail-shaft.png",
+      "filament-shaft-cavern-detail-deep.png"
     ]
   }
 }

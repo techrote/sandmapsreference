@@ -16,7 +16,12 @@ assert c["baseline_head"]=="b9268544e32ceeffa26cdfb9b95c9773ef0bcf84"
 assert c["baseline_edit_count"]==len(stage_a)
 assert c["world_extent"]==baseline["extent"]
 assert c["patch_rectangles"]==len(c["patches"])
-rebuild=dict(baseline,edits=stage_a+c["patches"])
+c2=json.loads((here/"rework_c2_patch.json").read_text())
+assert c2["baseline_head"]=="fbe9abfbdc00d3583eb4cb48b22933b36c466869"
+assert c2["baseline_edit_count"]==len(stage_a)+len(c["patches"])
+assert c2["world_extent"]==baseline["extent"]
+assert c2["patch_rectangles"]==len(c2["patches"])
+rebuild=dict(baseline,edits=stage_a+c["patches"]+c2["patches"])
 out=here/"setup-filament-shaft-cavern.json"
 a=argparse.ArgumentParser()
 a.add_argument("--write",action="store_true",help="Replace setup JSON with the deterministic rebuild")
@@ -25,4 +30,4 @@ if args.write:
  out.write_text(json.dumps(rebuild,separators=(",",":")))
 else:
  assert json.loads(out.read_text())==rebuild,"Committed setup disagrees with baseline+patches"
- print(f"PASS: {len(rebuild['edits'])} rectangles / {len(p['patches'])} A and {len(c['patches'])} C overlays")
+ print(f"PASS: {len(rebuild['edits'])} rectangles / {len(p['patches'])} A, {len(c['patches'])} C and {len(c2['patches'])} C2 overlays")
