@@ -1,0 +1,228 @@
+{
+  "source": {
+    "public_id": "techn-0034a",
+    "path": "artwork/technical_interiors/batch2/cable_lined_slate_shaft.png",
+    "blob_sha": "8906342981a73357d990a90bdd5329bb79f19eea",
+    "sha256": "ebd293fb79f0b703a94530c5c967141e4fc7ad7fec17376c6edb29ac7741bb31",
+    "dimensions": [
+      1672,
+      941
+    ]
+  },
+  "engine_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+  "source_grid": [
+    1024,
+    2048
+  ],
+  "seed": 34063,
+  "rectangles": 18668,
+  "rectangle_capacity_source": 32768,
+  "setup_json_bytes": 340008,
+  "setup_byte_limit": 1048576,
+  "stamped_non_air_cells": 1227105,
+  "exactly_reconstructed_cells": 2097152,
+  "reconstruction_mismatches": 0,
+  "conservative_actor_envelope": [
+    19,
+    15
+  ],
+  "actor_hull": [
+    4,
+    3
+  ],
+  "spawn": [
+    515,
+    88
+  ],
+  "clearance_centres_connected": 702665,
+  "sites": [
+    {
+      "name": "UPPER CROSSBEAM",
+      "point": [
+        515,
+        178
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "WEST SWITCHGEAR",
+      "point": [
+        295,
+        204
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "AMBER BOOTH",
+      "point": [
+        756,
+        280
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "WEST FAN INSPECTION",
+      "point": [
+        290,
+        526
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "WEST BYPASS",
+      "point": [
+        358,
+        880
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "PERFORATED LEDGER",
+      "point": [
+        739,
+        807
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "LEDGER VIEWING WELL",
+      "point": [
+        572,
+        949
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "OPEN VOID",
+      "point": [
+        564,
+        1156
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "WEST CABLE EXCHANGE",
+      "point": [
+        298,
+        1300
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "EAST BYPASS",
+      "point": [
+        684,
+        1400
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "MID SERVICE TRUSS",
+      "point": [
+        516,
+        1547
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "RECLAMATION PLANT",
+      "point": [
+        764,
+        1658
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "LOW TROLLEY",
+      "point": [
+        517,
+        1756
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "WEST TALUS",
+      "point": [
+        324,
+        1900
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "DEEP EXIT",
+      "point": [
+        519,
+        1983
+      ],
+      "clear": true,
+      "reachable": true
+    }
+  ],
+  "material_semantics": "All nonzero IDs are native Solid, immovable, RuleKernel::None at recorded accepted main",
+  "material_ids": [
+    0,
+    39,
+    40,
+    41,
+    49,
+    50,
+    52,
+    53,
+    57,
+    58,
+    59,
+    62,
+    65,
+    68,
+    79,
+    100,
+    101,
+    119,
+    120
+  ],
+  "material_histogram": {
+    "0": 870047,
+    "39": 78127,
+    "40": 280526,
+    "41": 85805,
+    "49": 281379,
+    "50": 170305,
+    "52": 10120,
+    "53": 17174,
+    "57": 5896,
+    "58": 2043,
+    "59": 8712,
+    "62": 11572,
+    "65": 14620,
+    "68": 1699,
+    "79": 4894,
+    "100": 212562,
+    "101": 39196,
+    "119": 1323,
+    "120": 1152
+  },
+  "artifacts": {
+    "setup-techn-0034a-slate-shaft.json": "583d1f4d5d6fdda4021fda0951f1606d18940cbcd63d5eeea49b5cb8f495bff8",
+    "slate-shaft-full-1024x2048.png": "3d7233fba2b77c65977761117fb93462e44009d2df4c244cc79e286f2fe60047",
+    "detail-upper-640.png": "b9902c743d89be29d0cef71de6e69ec76d1d328a8a48a64b0f1a7a7ed0757707",
+    "detail-ledger-640.png": "f737a7d1e110b963943855195620614b8cb15428dfcf1509d65f1fedfdc51e50",
+    "detail-lower-640.png": "6dbbe7427381decf47703f1c03f6714ddaf4e28c283bdddb7cf1e64e1fff8935"
+  },
+  "native_workbench": "NOT EXECUTED (no Godot/GDExtension/native Rapier runtime in authoring runner)",
+  "native_installed_rectangle_limit": "UNVERIFIED: requires physical bridge handshake",
+  "source_review": "Exact original PNG decoded and compared with source-derived material-cell previews"
+}
