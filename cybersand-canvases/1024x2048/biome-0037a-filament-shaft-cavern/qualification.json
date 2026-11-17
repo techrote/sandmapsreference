@@ -35,7 +35,7 @@
     "101": "Obsidian Solid/None",
     "122": "QuartzCrystal Solid/None"
   },
-  "art": "Genuine JPEG reference used: contiguous left pale porous wall, asymmetrical apertures, visible ladder and broad shelf, enlarged vertical navigable vault. Lower biome extension is interpretive, not exact full-original-pixel fidelity.",
+  "art": "Source JPEG directly inspected and compared to actual material-grid overview/crops. Complete pale LEFT-wall filament body; distinct fine rooted pores; wall-integrated ladder and shelf, multiple grounded lower geological return routes. Lower half interpretive, not source PNG pixel parity.",
   "gallery": [
     [
       "filament-shaft-cavern-preview.png",
@@ -100,26 +100,26 @@
       2048
     ],
     "complete_cells": 2097152,
-    "rectangles": 9514,
+    "rectangles": 11111,
     "max_rectangles": 32768,
-    "json_bytes": 175606,
+    "json_bytes": 204439,
     "max_json_bytes": 1048576,
     "final_cell_mismatches": 0,
-    "changed_cells_from_archived_r1": 795392,
-    "nonempty_cells": 689491,
+    "changed_cells_from_archived_r1": 779976,
+    "nonempty_cells": 717812,
     "water_cells": 35688,
     "water_changed_cells": 0,
     "material_histogram": {
-      "0": 1407661,
+      "0": 1379340,
       "3": 35688,
-      "38": 39990,
-      "42": 32237,
-      "49": 45138,
-      "62": 3592,
-      "99": 175631,
-      "100": 217293,
+      "38": 35146,
+      "42": 28445,
+      "49": 69060,
+      "62": 3111,
+      "99": 162998,
+      "100": 244705,
       "101": 119792,
-      "122": 20130
+      "122": 18867
     },
     "allowlist": [
       0,
@@ -284,7 +284,7 @@
           15
         ],
         "spawn_exact": true,
-        "component_centres": 1237115,
+        "component_centres": 1168018,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -294,7 +294,7 @@
           19
         ],
         "spawn_exact": true,
-        "component_centres": 1194700,
+        "component_centres": 1122344,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -304,19 +304,42 @@
           27
         ],
         "spawn_exact": true,
-        "component_centres": 1123214,
+        "component_centres": 1045020,
         "r2_exact": 13,
         "legacy_exact": 15
       }
     ],
     "upper_tissue_components": [
-      204571
+      190350
     ],
-    "connected_primary_tissue_cells": 204571,
-    "tissue_cells": 204571,
+    "connected_primary_tissue_cells": 190350,
+    "tissue_cells": 190350,
     "primary_tissue_fraction": 1,
     "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)"
   },
-  "native": "NATIVE-UNTESTED: installed Workbench/CyberDemoBridge/Rapier load, materials, real movement/collision, simulation, save/reopen and actual native 4096/32768-capacity readback not exercised",
-  "disposition": "DRAFT/HOLD: Shepherd and owner review outstanding"
+  "native": "NATIVE-UNTESTED: no Godot native engine install, material readback, Midge collision/input, Water progression or save/reopen; legacy bridge capacity 4096 would reject 11111 rectangles; accepted-main source offers 32768.",
+  "disposition": "DRAFT / HOLD — exact-head independent Shepherd source and technical re-review required; no owner acceptance",
+  "rework_round_2_finishing": {
+    "assignment": "CANVAS-REWORK-A: 12 @ eddddcec7f3f13a4ef71d9d27152d00c6b88ff43",
+    "starting_head": "eddddcec7f3f13a4ef71d9d27152d00c6b88ff43",
+    "changed_cells_from_prior_r2": 141293,
+    "actual_cell_implementation": true,
+    "upper_connected_tissue_cells": 190350,
+    "new_route_passages": [
+      "west upper-root canyon y≈1345",
+      "west mid diagonal chute y≈1512",
+      "west deep return y≈1694",
+      "east upper overhang gallery y≈1330",
+      "east lower gallery y≈1716"
+    ],
+    "ladder": "west wall integrated x466..487 y574..1016, real fly-through transfer gap y786..864",
+    "generated_png_count": 7,
+    "png_decoded_cell_samples": 2097152,
+    "png_palette_mismatches": 0,
+    "png_material_index_mismatches": 0,
+    "exact_original_png_pixel_parity": "UNVERIFIED",
+    "native_installed_bridge": "NATIVE-UNTESTED",
+    "legacy_4096_capacity_compatible": false,
+    "accepted_32768_source_limit": true
+  }
 }

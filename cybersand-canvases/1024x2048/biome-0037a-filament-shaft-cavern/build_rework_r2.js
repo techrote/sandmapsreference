@@ -177,6 +177,167 @@ function buildR2(baseline) {
       for(let xx=x-span;xx<=x+span;xx++)pix(xx,y,100);
     }
   }
+
+/* R2 finishing: source-driven pale filament branching; wall-attached ladder; purposeful
+   lower interpretive geologic route network. Every operation alters material cells. */
+function finishR2(a,W,H,id,pix,rect,ellipse,capsule) {
+  // Branching cavities: subtract slender tributaries from existing pores, instead
+  // of another row of complete oval cavities. The main cave matrix remains continuous.
+  const voidBranch=(pts,r)=>{for(let i=1;i<pts.length;i++)
+    capsule(pts[i-1][0],pts[i-1][1],pts[i][0],pts[i][1],Math.max(3,r*.63-i*.6),0);};
+  for(const [pts,r] of [
+    [[[126,64],[152,83],[183,94],[217,86]],12],
+    [[[238,107],[224,70],[237,42]],9],
+    [[[83,273],[120,254],[160,233]],11],
+    [[[316,306],[339,272],[363,255]],10],
+    [[[89,452],[108,476],[121,512]],10],
+    [[[233,490],[257,475],[281,448]],11],
+    [[[319,530],[340,554],[371,569]],10],
+    [[[91,691],[119,714],[146,726],[163,749]],12],
+    [[[242,712],[262,741],[288,754]],9],
+    [[[335,903],[367,910],[387,928]],9]
+  ])voidBranch(pts,r);
+  // Anchored root/filament ribs thread through some voids, with bifurcations
+  // and without regular platform pitch. Steel is used only for the ladder.
+  const filament=(points,r,m=99)=>{
+    for(let i=1;i<points.length;i++)
+      capsule(points[i-1][0],points[i-1][1],points[i][0],points[i][1],
+        Math.max(3,r-1.1*i),m);
+  };
+  for(const [p,r] of [
+    [[[30,115],[70,134],[106,156],[125,165]],5],
+    [[[73,136],[89,105],[110,90]],4],
+    [[[35,335],[86,348],[123,369],[154,388]],5],
+    [[[86,348],[111,322],[129,301]],4],
+    [[[35,551],[73,574],[103,599],[130,614]],5],
+    [[[74,577],[91,543],[110,527]],4],
+    [[[34,750],[72,776],[105,803],[132,815]],5],
+    [[[74,777],[89,745],[116,726]],4],
+    [[[31,907],[73,915],[112,904]],5]
+  ])filament(p,r);
+  // Tiny lace perforations are genuinely cut from existing solid, not drawn
+  // as an opaque PNG effect. Multi-scale offset avoids regular hole rows.
+  for(let k=0;k<51;k++){
+    const x=46+(k*83+Math.floor(17*Math.sin(k*2.61)))%376;
+    const y=54+(k*197+Math.floor(23*Math.sin(k*.79)))%883;
+    const rx=4+(k*7)%10,ry=7+(k*11)%17;
+    if(a[id(x,y)]===99 || a[id(x,y)]===38 || a[id(x,y)]===122)
+      ellipse(x,y,rx,ry,0,k*1.73);
+  }
+  // Remove the former isolated central-vault ladder and its separate foot.
+  // This airspace is restored as authentic open flight volume.
+  rect(539,590,47,428,0);
+  // A left-cliff cutback creates an accessible service shaft immediately next
+  // to the porous wall; its undulating edge avoids a rectangular drilled trench.
+  for(let y=578;y<=1017;y++){
+    const edge=Math.round(449+8*Math.sin(y/76)+4*Math.sin(y/21));
+    for(let x=edge;x<520;x++)if(a[id(x,y)]!==3)pix(x,y,0);
+    for(let x=edge-4;x<edge;x++)
+      if(a[id(x,y)]!==0 && a[id(x,y)]!==3)pix(x,y,y<960?99:38);
+  }
+  // Ladder ~24 px outboard of the eroded cave face. Its right edge at x487
+  // leaves the exact legacy midshaft location (512,854) a 31x27-clear centre.
+  for(let y=574;y<=1016;y++){
+    for(let x=466;x<=468;x++)pix(x,y,62);
+    for(let x=485;x<=487;x++)pix(x,y,62);
+    if(y%23<3)for(let x=469;x<485;x++)pix(x,y,62);
+  }
+  // Four cliff-tied brackets, never a free-floating prop.
+  // A framed access portal breaks the ladder where the lower porous cave
+  // enters the open shaft; the rest remains visibly wall-tied.
+  rect(460,786,32,79,0);
+  capsule(323,823,537,823,37,0);
+  for(const y of [632,741,946]){
+    const edge=Math.round(449+8*Math.sin(y/76)+4*Math.sin(y/21));
+    for(let yy=y;yy<y+5;yy++)for(let x=edge-7;x<=467;x++)pix(x,yy,49);
+  }
+  // The final landing actually joins the old broad shelf; keep its broad
+  // east flight bypass, rather than closing the vault with a full-width deck.
+  for(let x=457;x<502;x++)for(let y=1012;y<1019;y++)pix(x,y,y<1015?62:49);
+  // Lower HALF: west-rooted massive stratified buttresses and asymmetric
+  // nested fly-through cuts. Source's lower geology is adapted, not claimed
+  // as literal full-PNG parity.
+  const gauss=(y,c,s)=>Math.exp(-Math.pow((y-c)/s,2));
+  for(let y=1140;y<1834;y++){
+    let reach=147+274*gauss(y,1318,105)+144*gauss(y,1516,87)+211*gauss(y,1717,102);
+    reach+=26*Math.sin(y/73)+9*Math.sin(y/18);
+    reach=Math.max(80,Math.min(486,Math.round(reach)));
+    for(let x=18;x<reach;x++){
+      const edge=x>reach-10,shale=Math.sin(y/47+x/91)>1.10;
+      pix(x,y,edge?38:(shale?49:100));
+    }
+  }
+  // Distinct passage A: high canyon hollow and long mouth to central air.
+  ellipse(145,1345,118,113,0,.43);
+  capsule(188,1349,318,1323,38,0);
+  capsule(302,1328,513,1338,38,0);
+  capsule(115,1412,193,1459,32,0);
+  // Distinct passage B: diagonal midwall chute, joining the same lower
+  // flight vault by a separate aperture and sheltered balcony.
+  capsule(164,1507,275,1530,39,0);
+  capsule(265,1530,480,1512,33,0);
+  ellipse(176,1547,56,58,0,2.12);
+  // Distinct passage C: bottom return, wider than any tested actor hull.
+  ellipse(143,1694,102,116,0,2.17);
+  capsule(180,1697,318,1672,41,0);
+  capsule(307,1675,526,1704,40,0);
+  capsule(166,1737,246,1773,36,0);
+  // Rooted west ledges are geological shelves, not hovering timbers.
+  for(const [y,xmax] of [[1413,405],[1583,357],[1797,419]]){
+    for(let x=19;x<xmax;x++){
+      const top=y+Math.round(4*Math.sin(x/38)+2*Math.sin(x/11));
+      for(let yy=top;yy<top+10;yy++)if(yy<1840&&a[id(x,yy)]!==0)
+        pix(x,yy,yy<top+3?38:49);
+    }
+  }
+  // East asymmetry: two natural cliff-rooted overhangs, with genuine windows.
+  for(let y=1234;y<1450;y++){
+    let tip=974-306*gauss(y,1334,74)+13*Math.sin(y/27);
+    for(let x=Math.max(560,Math.round(tip));x<1006;x++){
+      if(a[id(x,y)]===3)continue;
+      pix(x,y,x<tip+13?38:49);
+    }
+  }
+  capsule(760,1321,933,1330,31,0); // real east-face gallery
+  ellipse(891,1372,64,29,0,1.84); // irregular daylit throat
+  for(let y=1656;y<1817;y++){
+    const tip=981-265*gauss(y,1733,55)+11*Math.sin(y/21);
+    for(let x=Math.max(624,Math.round(tip));x<1006;x++)pix(x,y,x<tip+12?38:100);
+  }
+  capsule(779,1716,935,1710,39,0);
+  capsule(804,1735,775,1775,27,0);
+  // Root two naturally separated filament islands back to their mother wall.
+  // Small 8-cell-wide tissue bridges cross existing pore necks without blocking
+  // the named 31x27 operational airspaces or hiding a blocked waypoint.
+  capsule(220,38,254,38,8,99);
+  capsule(107,489,141,489,8,99);
+  // Nonrepeating east-side landing, attached to the main cliff mass.
+  for(let x=780;x<1006;x++){
+    const top=1584+Math.round(6*Math.sin(x/48)+2*Math.sin(x/17));
+    for(let y=top;y<top+13;y++)if(a[id(x,y)]!==0)
+      pix(x,y,y<top+4?38:49);
+  }
+  // Remove strictly isolated 1–4-cell pale chips left by the branching
+  // subtractive carver: these are stray solid collision needles, not geology.
+  const nTop=W*960, touched=new Uint8Array(nTop), wave=new Int32Array(nTop);
+  const isTissue=m=>m===38||m===99||m===122;
+  for(let seed=0;seed<nTop;seed++){
+    if(touched[seed]||!isTissue(a[seed]))continue;
+    let first=0,last=1;wave[0]=seed;touched[seed]=1;
+    while(first<last){
+      const at=wave[first++],x=at%W,y=at/W|0;
+      for(const nx of [at-1,at+1,at-W,at+W]){
+        if(nx<0||nx>=nTop||touched[nx]||!isTissue(a[nx]))continue;
+        const xx=nx%W,yy=nx/W|0;
+        if(Math.abs(xx-x)+Math.abs(yy-y)!==1)continue;
+        touched[nx]=1;wave[last++]=nx;
+      }
+    }
+    if(last<=4)for(let j=0;j<last;j++)a[wave[j]]=0;
+  }
+}
+
+  finishR2(a,W,H,id,pix,rect,ellipse,capsule);
   // Reserved exact historical flight sites are not renumbered or proximity-waived.
   // Real accessible volume is checked independently by the qualification step.
   const stable=new Set([0,3,38,42,49,62,66,99,100,101,122]);
