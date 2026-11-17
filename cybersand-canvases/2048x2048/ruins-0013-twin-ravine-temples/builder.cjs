@@ -45,21 +45,47 @@ poly([[370,397],[387,249],[411,121],[462,104],[483,271],[535,438],[480,559],[461
 line(439,304,355,203,M.BASALT,28);line(421,259,270,166,M.BASALT,27);line(467,279,576,171,M.BASALT,31);line(480,340,620,272,M.BASALT,21);
 line(455,465,323,698,M.GRANITE,18);line(478,491,550,677,M.BASALT,21);line(437,458,264,619,M.BASALT,16);
 for(let i=0;i<34;i++){let a=i*2.399963,r=Math.sqrt(i/34)*204;disk(429+Math.cos(a)*r,104+Math.sin(a)*r*.56,31+i%5*9,i%7===0?M.COBBLE:M.MOSS)}
-for(let i=0;i<11;i++){let x=427+(i-5)*19;strut(x,389,x+(i-5)*45,720+(i%3)*77,i%3===0?M.BASALT:M.SLATE,8+i%4*3);strut(x+(i-5)*45,724+(i%3)*77,x+(i-5)*70,892+(i%5)*38,M.MOSS,5+i%3*3)}
+// R2B-P1: source-shaped eccentric thick roots in place of eleven parallel comb-struts.
+const forks=[
+ [[449,396],[409,510],[345,635],[299,737],[248,809]],
+ [[466,431],[505,536],[552,639],[584,730],[608,831]],
+ [[425,407],[381,531],[333,584],[275,675],[231,765]]
+];
+for(let k=0;k<forks.length;k++){
+ let q=forks[k];
+ for(let i=0;i<q.length-1;i++){let a=q[i],b=q[i+1];line(a[0],a[1],b[0],b[1],i%2?M.GRANITE:M.BASALT,26-i*3+(k===1?4:0));}
+ for(let i=1;i<q.length-1;i++){let [x,y]=q[i];disk(x,y,15-i*2+(k===2?3:0),M.GRANITE);}
+ let p=q[2];line(p[0],p[1],p[0]+(k===1?85:-72),p[1]+95+(k%2)*28,M.BASALT,16);
+ line(q[3][0],q[3][1],q[3][0]+(k===1?-63:61),q[3][1]+56,M.MOSS,9);
+}
+for(let [x,y,X,Y,w] of [[405,519,324,585,11],[349,651,272,729,10],[511,532,566,578,12],[554,661,638,726,11],[375,541,421,609,9]]){
+ line(x,y,X,Y,M.MOSS,w);disk(X,Y,7,M.MOSS);
+}
 // Right guardian is ONE integral eroded rock monolith rooted to the ridge.
-poly([[1615,507],[1637,405],[1640,316],[1664,272],[1701,260],[1732,321],[1772,434],[1786,548],[1745,603],[1673,590]],M.GRANITE);
-poly([[1638,433],[1642,331],[1673,298],[1716,315],[1740,377],[1759,454],[1735,488],[1676,473]],M.LIME);
-rect(1658,379,21,15,M.OBSIDIAN);rect(1709,379,21,15,M.OBSIDIAN);
-poly([[1690,393],[1675,440],[1705,446]],M.SLATE);rect(1661,463,65,9,M.OBSIDIAN);
-for(let i=0;i<9;i++)strut(1617+i*17,323,1603+i*20,260-(i%3)*17,M.MOSS,5);
+// R2B-P1: broad, short, ridge-embedded guardian with broken moss crown.
+poly([[1587,550],[1602,477],[1627,432],[1643,367],[1674,357],[1693,338],[1725,347],[1750,368],[1783,401],[1802,465],[1810,530],[1776,588],[1746,613],[1642,595]],M.GRANITE);
+poly([[1619,481],[1648,395],[1691,369],[1736,378],[1772,416],[1790,477],[1768,541],[1681,545],[1622,527]],M.LIME);
+poly([[1632,491],[1656,418],[1699,384],[1741,413],[1727,466],[1751,533],[1695,566],[1635,541]],M.GRANITE);
+for(let [x,y,r] of [[1626,392,13],[1660,368,12],[1701,352,16],[1749,375,10],[1780,409,12]])disk(x,y,r,M.MOSS);
+line(1650,452,1673,445,M.SLATE,8);line(1725,440,1743,450,M.SLATE,7);
+line(1699,462,1688,511,M.SLATE,6);line(1688,511,1710,520,M.GRANITE,6);
+line(1668,541,1701,548,M.SLATE,5);
+for(let [x,y,X,Y] of [[1620,489,1598,525],[1638,419,1618,451],[1772,440,1801,480],[1763,551,1795,578],[1716,364,1736,340]])strut(x,y,X,Y,M.MOSS,6);
+
 // Smaller east tree on ledge; the guardian and tree are physically connected.
 line(1890,480,1890,257,M.BASALT,25);line(1890,330,1832,278,M.BASALT,16);line(1890,340,1963,280,M.BASALT,16);
 for(let i=0;i<19;i++){let a=i*2.399963,r=Math.sqrt(i/19)*96;disk(1889+Math.cos(a)*r,251+Math.sin(a)*r*.6,22+i%4*6,M.MOSS)}
 // ONE living bridge in mid-high ravine: narrow, uneven, moss, tension/root hangers.
 const bp=[[735,666],[805,670],[879,679],[950,693],[1016,703],[1070,705],[1138,694],[1214,685],[1296,669],[1377,660],[1455,650],[1548,647]];
 for(let i=0;i<bp.length-1;i++){let [x,y]=bp[i],[X,Y]=bp[i+1];line(x,y,X,Y,M.COBBLE,18);line(x,y-6,X,Y-6,M.MOSS,6);line(x,y+8,X,Y+8,M.SLATE,5)}
-for(let i=0;i<bp.length;i++){let [x,y]=bp[i];line(x,y+10,x+(i%2?12:-9),y+40+i%3*8,M.MOSS,4);if(i%2)line(x+8,y+37,x+24,y+67,M.COBBLE,3)}
-for(let i=0;i<9;i++){let x=817+i*71,y=674+Math.sin(i/8*Math.PI)*26;line(x,y+13,x+14,y+30,M.MOSS,4);line(x+14,y+30,x+67,y+15,M.COBBLE,3)}
+// Sparse branched living-root pendants replace formulaic V-hanger rhythm.
+for(let [x,y,dx,dy,w] of [[803,671,-13,48,6],[908,685,34,71,8],[1006,704,-18,37,5],[1139,694,28,63,7],[1293,670,-36,46,6],[1441,653,18,44,5]]){
+ line(x,y+8,x+dx,y+dy,M.MOSS,w);
+ line(x+dx,y+dy,x+dx+(dx<0?-13:12),y+dy+22,M.COBBLE,Math.max(3,w-3));
+ if(w>6)line(x+dx*.55,y+dy*.6,x+dx*.55-25,y+dy*.6+17,M.MOSS,4);
+}
+for(let [x,y,X,Y] of [[855,680,911,713],[931,693,1001,719],[1106,709,1170,698],[1219,696,1285,687]])line(x,y,X,Y,M.MOSS,4);
+
 line(703,615,751,663,M.BASALT,15);line(1460,655,1561,583,M.BASALT,16);
 // A lower *spur* stays attached to east terrain instead of a second suspended deck.
 poly([[1553,1476],[1475,1479],[1375,1521],[1308,1553],[1305,1566],[1380,1567],[1450,1540],[1545,1519]],M.BASALT);
@@ -101,15 +127,18 @@ rect(676,1774,220,94,M.AIR);rect(1455,1776,265,99,M.AIR);
    line(x+w-9,y+43,x+w-16,y+76+(k%4)*7,M.MOSS,4);
    for(let j=0;j<5;j++)stain(x+16+j*16+(k*3%5),y-10,10+(j%3)*2,3,j%2?M.LIME:M.SLATE);
  }
- // Weathered embedded ridge guardian: broken stone facets rather than a bright emoticon mask.
- stain(1643,317,115,167,M.GRANITE);
- for(let i=0;i<15;i++){let gx=1641+(i*31)%112,gy=328+(i*43)%143;strut(gx,gy,gx+7+(i%3)*6,gy+6,M.LIME,2+i%3)}
- rect(1658,379,21,15,M.GRANITE);rect(1709,379,21,15,M.GRANITE);
- rect(1661,463,65,9,M.GRANITE);rect(1657,372,9,13,M.OBSIDIAN);
- rect(1718,377,12,9,M.OBSIDIAN);line(1668,453,1684,459,M.SLATE,4);
- line(1684,459,1720,454,M.SLATE,4);
- strut(1633,360,1619,383,M.MOSS,5);strut(1736,339,1760,361,M.MOSS,5);
- // Supported asymmetrical stone-and-vine tufts, not random flecks in the flying void.
+ // Uneven patina and chips rather than regular flat cartoon-face glyphs.
+stain(1629,395,160,148,M.GRANITE);
+poly([[1641,410],[1670,398],[1687,409],[1671,439],[1647,447]],M.LIME);
+poly([[1724,399],[1754,417],[1767,443],[1736,435]],M.SLATE);
+line(1653,462,1678,453,M.SLATE,6);
+line(1725,459,1747,464,M.SLATE,5);
+line(1698,465,1687,492,M.SLATE,4);
+line(1687,492,1694,507,M.SLATE,4);
+line(1664,540,1688,547,M.SLATE,5);line(1706,543,1729,535,M.SLATE,4);
+for(let [x,y,X,Y] of [[1607,506,1625,480],[1634,408,1644,379],[1761,409,1784,427],[1770,517,1795,550]])strut(x,y,X,Y,M.MOSS,5);
+
+// Supported asymmetrical stone-and-vine tufts, not random flecks in the flying void.
  for(let i=0;i<28;i++){let x=170+(i*47)%510,y=330+(i*139)%1220;
    if(A[(y|0)*W+(x|0)]!==0){let X=x+8+(i%3)*5,Y=y-14-(i%4)*7;line(x,y,X,Y,M.MOSS,3);disk(X,Y,4+i%4,M.MOSS)}
  }
@@ -120,6 +149,36 @@ rect(676,1774,220,94,M.AIR);rect(1455,1776,265,99,M.AIR);
  // pre-existing root span to the new cantilevered east-bank masonry.
  line(1391,657,1492,653,M.COBBLE,18);
  line(1394,645,1495,641,M.MOSS,6);
+
+// R2B-P1 source-inspired, supported shrine voussoirs. These are drawn after the
+// main corridor cuts; geometric portal aperture and operational centres are tested.
+poly([[181,521],[237,521],[224,534],[211,555],[199,574],[181,579]],M.COBBLE);
+poly([[408,521],[452,521],[452,583],[442,560],[430,539]],M.GRANITE);
+poly([[348,784],[406,784],[388,803],[377,825],[361,847],[348,853]],M.GRANITE);
+poly([[582,784],[610,783],[610,835],[598,815],[585,800]],M.COBBLE);
+for(let [x,y,w] of [[171,496,288],[330,754,273]])for(let j=0;j<5;j++){
+ let xx=x+j*(w/5);rect(xx,y-(j%3)*4,w/5-4,6+(j%2)*4,j%3?M.SLATE:M.COBBLE);
+}
+for(let [x,y,X,Y] of [[184,544,172,590],[216,523,193,542],[450,548,475,583],[360,804,343,850],[402,783,419,806],[592,795,616,829]])line(x,y,X,Y,M.MOSS,5);
+// Stable stone weathering, applied to existing solids only.
+for(let [x,y,w,h] of [[165,490,310,9],[325,757,295,10],[153,660,332,7],[333,905,280,8],[1555,734,420,16],[1539,810,440,16],[1590,844,270,11]])stain(x,y,w,h,M.COBBLE);
+for(let [x,y,w] of [[165,494,120],[323,765,173],[1438,739,126],[1758,745,206],[1576,816,159],[1780,818,193]])stain(x,y,w,6,M.MOSS);
+// Grounded buttress piers terminate strictly BELOW the y757..805 open service
+// tunnel; no ornamental blocks in exterior x1992..2047 chimney.
+for(let [x,y,w,h] of [[1461,811,40,64],[1577,811,25,53],[1700,812,35,58],[1864,812,40,54]]){
+ poly([[x,y],[x+w,y],[x+w+11,y+h],[x-13,y+h]],M.GRANITE);
+ line(x-8,y+h-1,x+w+10,y+h-2,M.MOSS,5);
+}
+// Organic multi-level canopy serration and small shadows, no geometric polka-dots.
+for(let [x,y,r] of [[302,75,31],[349,52,25],[492,42,28],[551,93,37],[612,113,22],[239,144,23]])disk(x,y,r,M.MOSS);
+for(let [x,y,X,Y] of [[306,93,327,83],[364,61,380,75],[471,93,493,87],[533,130,552,119],[583,86,596,104],[274,165,292,154],
+ [373,101,408,93],[458,52,478,67],[521,59,540,74]]){
+ strut(x,y,X,Y,M.SLATE,4);strut(X,Y,X+12,Y-7,M.MOSS,5);
+}
+// Distinct, solid-rooted terraced ledges rather than isolated line fragments.
+for(let [x,y,X,Y] of [[1840,870,1934,859],[1727,1015,1852,1010],[1760,1121,1946,1127],[1687,1406,1833,1397]]){
+ strut(x,y,X,Y,M.COBBLE,8);strut(x,y-6,X-13,Y-7,M.MOSS,4);
+}
 const spawn=[1024,454],loc=[
 ['Upper Open Ravine',[1024,454]],['West Upper Shrine',[315,590]],['West Upper Threshold',[604,589]],['West Root Landing',[491,850]],['West Deep Root Niche',[347,1137]],['West Middle Exit',[751,1141]],['West Terrace Chapel',[469,1367]],['West Lower Return',[596,1718]],
 ['Living Bridge West Air',[837,619]],['Living Bridge Mid-Air',[1050,617]],['Living Bridge East Air',[1450,613]],
