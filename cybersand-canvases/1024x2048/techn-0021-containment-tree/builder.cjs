@@ -98,6 +98,44 @@ for(let i=0;i<18;i++){let y=78+i*110;let l=Math.round(le(y)),r=Math.round(re(y))
 rect(l-21,y,36,7,M.IRON);rect(r-12,y+13,35,7,M.STEEL);
 if(i%3===0){rect(l-26,y-16,4,18,M.VERDIGRIS);rect(r+18,y-10,5,24,M.AMBER);}
 }
+
+/* Independent visual repair: geological/biological relief between distinct
+   rooms. Protected flight corridors and portals are deliberately cut afterwards. */
+const wallGlyphs=[
+[133,457,42,M.MOSS,M.AMBER],[871,567,38,M.COPPER,M.CYAN],
+[135,790,49,M.VERDIGRIS,M.PHOSPHOR],[890,930,42,M.SLATE,M.MAGENTA],
+[124,1115,45,M.GRANITE,M.AMBER],[883,1280,44,M.COPPER,M.URANIUM],
+[130,1452,48,M.BASALT,M.MAGENTA],[874,1649,47,M.VERDIGRIS,M.CYAN],
+[140,1769,35,M.COPPER,M.AMBER],[880,2013,34,M.SLATE,M.PHOSPHOR]];
+for(const [cx,cy,rad,body,light] of wallGlyphs){
+ disk(cx,cy,rad+10,M.IRON);disk(cx,cy,rad,body);disk(cx,cy,rad-13,M.OBSIDIAN);
+ ring(cx,cy,rad+5,M.BRASS,3);
+ for(let k=0;k<7;k++){let a=k*6.283185/7;disk(cx+(rad-25)*Math.cos(a),cy+(rad-25)*Math.sin(a),4+k%3,light);}
+}
+const fanSpecs=[[490,590,-1,M.MOSS],[542,824,1,M.COPPER],[477,1064,-1,M.CYAN],
+[545,1232,1,M.PHOSPHOR],[477,1423,-1,M.MAGENTA],[547,1753,1,M.COPPER]];
+for(const [x,y,d,t] of fanSpecs){
+ for(let k=0;k<7;k++){
+  let theta=-.85+k*.275,L=24+k*5,xx=x+d*(25+L*Math.cos(theta)),yy=y+L*Math.sin(theta);
+  line(x,y,xx,yy,k%2?M.COPPER:t,3);disk(xx,yy,4,t);
+ }
+}
+// Outside-airshaft rootwork; accents are structurally grounded in cliff stone.
+for(let k=0;k<37;k++){
+ let y=82+k*52,left=k%2===0,x=left?(48+(k*21%150)):(807+(k*29%146));
+ if(A[y*W+x]!==M.AIR){
+   let tip=x+(left?1:-1)*(20+k%4*9),ty=y+10+k%3*4;
+   line(x,y,tip,ty,k%5===0?M.PHOSPHOR:(y<1060?M.VERDIGRIS:M.COPPER),4);
+   disk(tip,ty,4+k%4,k%3===0?M.URANIUM:M.MOSS);
+ }
+}
+for(let k=0;k<9;k++){
+ let y=175+k*203,l=Math.round(le(y)),r=Math.round(re(y));
+ line(l-18,y-25,l+29,y+30,k%2?M.MOSS:M.VERDIGRIS,5);
+ line(r+18,y-32,r-21,y+37,k%2?M.COPPER:M.VERDIGRIS,5);
+ disk(l+12,y+17,7,M.PHOSPHOR);disk(r-12,y+16,7,k%3?M.CYAN:M.AMBER);
+}
+
 // Deliberate collision-safe corridors, access portals and trans-bole openings.
 // Last-pass cuts are deliberate no-build clearance masks and never secretly substituted waypoint anchors.
 rect(343,22,74,2000,M.AIR);rect(608,22,78,2000,M.AIR);
