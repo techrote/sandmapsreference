@@ -1,5 +1,5 @@
 {
-  "title": "Amber Fossil Vault \u2014 The Ancient Silence",
+  "title": "Amber Fossil Vault — The Ancient Silence",
   "public_id": "strat-0024",
   "source_path": "artwork/rock_ice_caverns/batch1/amber_fossil_vault-fossil_skeleton-ancient_silence.png",
   "source_blob_sha": "5a02202f041d1db3f78cea822019ba844dfc721c",
@@ -10,13 +10,13 @@
     2048,
     2048
   ],
-  "rectangle_count": 24943,
-  "json_bytes": 479181,
+  "rectangle_count": 27958,
+  "json_bytes": 535498,
   "rectangle_budget": 32768,
   "json_budget": 1048576,
   "authored_cells": 4194304,
-  "plane_sha256": "5104f4227e83d48b7b224d4b625e3dc637bbcfd662ac06e92c9ee031cd146ef2",
-  "reconstructed_sha256": "5104f4227e83d48b7b224d4b625e3dc637bbcfd662ac06e92c9ee031cd146ef2",
+  "plane_sha256": "4c2a93272905b1b28f460a1bbac7b25b95fe39a281081fd482e242ec96c60334",
+  "reconstructed_sha256": "4c2a93272905b1b28f460a1bbac7b25b95fe39a281081fd482e242ec96c60334",
   "major_destinations": 17,
   "destinations": [
     {
@@ -140,30 +140,59 @@
     }
   ],
   "materials": {
-    "0": 2589924,
+    "0": 2479108,
     "3": 11952,
     "38": 53103,
-    "40": 109410,
-    "49": 18460,
-    "52": 96208,
-    "53": 10468,
-    "56": 34365,
-    "62": 74087,
-    "66": 4816,
-    "71": 12408,
-    "72": 20602,
-    "77": 2619,
-    "79": 51342,
+    "40": 134062,
+    "49": 35479,
+    "52": 107978,
+    "53": 17295,
+    "56": 42069,
+    "62": 92892,
+    "66": 5275,
+    "71": 12147,
+    "72": 35315,
+    "77": 6960,
+    "79": 56179,
+    "80": 374,
     "98": 19995,
-    "100": 438477,
-    "101": 443692,
+    "100": 431875,
+    "101": 439392,
     "107": 52939,
-    "119": 63066,
-    "122": 1280,
-    "124": 85091
+    "119": 73752,
+    "122": 1229,
+    "124": 84934
   },
   "native_execution": "Not run in this environment; native Workbench install/actor operation/save-reopen pending owner qualification.",
   "visual_reference": "The original binary artwork was identified by catalogue and SHA but not directly decoded in this environment; compositional comparison to original remains pending.",
   "representation": "CyberSand generated-start v1 with valid Workbench starting_setup rectangle overlay on a retained empty substrate",
-  "preview": "Direct RGB rendering of reconstructed material-cell grid, not source-image pixels"
+  "preview": "Direct indexed-palette rendering from exact amended material grid, reproducing original ±2 rock graining; the overview samples true material cells without source-image pixels.",
+  "rework": {
+    "identifier": "CANVAS-REWORK-A/PR-6",
+    "input_head": "3302306cd2136172f363b3f4dbcf812a2f55a86c",
+    "original_rectangle_count": 24943,
+    "added_rectangle_count": 3015,
+    "actual_material_cells_changed": 125631,
+    "total_stamped_cell_operations": 1730518,
+    "midge_clearance": [
+      19,
+      15
+    ],
+    "original_actor_spawn": [
+      460,
+      470
+    ],
+    "connected_clearance_centres": 1846105,
+    "exact_destinations_reachable": 17,
+    "hidden_waypoint_offsets": 0,
+    "source_reference_pixel_comparison": "UNVERIFIED - source binary not decoded",
+    "runtime_native_validation": "NOT EXECUTED",
+    "technical_note": "Original fossil anatomy retained. Additive rock-strata/scaffold/field-analysis/dig-tram repairs appended in exact stamped edit order.",
+    "preview_crops": [
+      "detail-upper-access.png",
+      "detail-fossil-nave.png",
+      "detail-lower-excavation.png"
+    ],
+    "deterministic_replay": "python3 build.py && python3 replay_rework.py"
+  }
 }

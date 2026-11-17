@@ -44,7 +44,7 @@ The generated-start format preserves the known empty-baseline generation substra
 | Material rectangle count | **24943 / 32,768** |
 | Serialized generated-start JSON | **479181 / 1,048,576 bytes** |
 | Exact reconstructed material cells | **4,194,304 / 4,194,304** |
-| Material-plane SHA-256 | `5104f4227e83d48b7b224d4b625e3dc637bbcfd662ac06e92c9ee031cd146ef2` |
+| Material-plane SHA-256 | `4c2a93272905b1b28f460a1bbac7b25b95fe39a281081fd482e242ec96c60334` |
 | Named destinations reachable | **17 / 17** at 19×15 envelope; 17/17 at 7×7 |
 | Native Workbench / Godot / Rapier | **NOT executed in this environment** |
 
@@ -53,3 +53,17 @@ The Midge hull is 4×3 in the accepted engine definition; the 19×15 clearance c
 ## Owner review gate
 
 Keep this PR **Draft/HOLD** until independent reference visual review and genuine Windows 11 Godot/Rapier Workbench install, actor input, progression, and save/reopen acceptance. Do not merge or promote Ready autonomously.
+
+## Reworker A — layered archaeology and functional excavation repair
+
+**Repair input:** `3302306cd2136172f363b3f4dbcf812a2f55a86c` (PR #6); **target remains 2048×2048**; **Draft / HOLD**. The original fossil skull, backbone, ribs, long tail and central open flight nave are retained rather than replaced. This pass changes **125,631 final material cells** and adds **3,015 non-destructive material rectangles**.
+
+The material-grid repair adds (1) stratigraphic transects and irregular rock/talus shelves at perimeter faces, (2) an independently supported upper-left bone-research platform with service ladder and analysis consoles, (3) a braced upper-right hoist with suspended calibrated instrument gear, (4) a western dig-gallery support/lift zone beneath the skull, (5) a differently equipped eastern survey/microscopy bay, and (6) an actual undercroft sample tram/service bay with gantry and geological coring support. These are real, collidable 2D material cells, not PNG-only effects. Deliberately omitted: a solid floor across the fossil nave, global geometric noise and uncontrolled dynamic materials.
+
+**Exact final static checks:** 27,958 / 32,768 rectangles; 535,498 / 1,048,576 JSON bytes; 1,730,518 total stamped-cell operations; 4,194,304 material cells reconstructed with SHA-256 `4c2a93272905b1b28f460a1bbac7b25b95fe39a281081fd482e242ec96c60334`; 1,846,105 connected 19×15 clearance centers; **17/17 named destinations directly legal and reachable from Midge spawn [460,470]**. No approximate/nearest-anchor waiver. The existing Water basin remains physically bounded and no new reactive liquid or spreading Plant cells were introduced. Source-level material IDs are listed in evidence; actual CyberDemoBridge/native acceptance has **not** been tested.
+
+**Reproducibility:** Start from this directory and run `python3 build.py && python3 replay_rework.py` (Python, NumPy, Pillow, SciPy). `build.py` recreates the frozen, deterministic baseline; `replay_rework.py` verifies its plane hash, appends only committed `rework_patch.json` rectangles, validates complete reconstruction, exact Midge-envelope reachability, native-enum-sourced valid palette IDs, budgets, and regenerates the JSON, overview, full-resolution preview, three native-cell district crops and evidence receipt. The replay is also idempotent when its patch is already present.
+
+**Preview evidence:** `preview.png` (2048×2048), `overview.png` (1024×1024 true material-cell sampling), `detail-upper-access.png` (768×512), `detail-fossil-nave.png` (1024×512), `detail-lower-excavation.png` (1024×512). All are actual material-grid renders. The material texture has the same stable ±2 rock-grain arithmetic as the original generator. Different PNG compression streams are not evidence of a material mismatch.
+
+**Unresolved:** the exact original `strat-0024` reference PNG cannot be decoded with the currently available connector (blob provenance verified, pixel-level fidelity **unverified**). No Godot/CyberDemoBridge/Rapier or Windows Workbench install, movement, simulation or save/reopen has occurred; **native qualification remains untested**. Keep Draft/HOLD pending independent Shepherd review and owner acceptance.
