@@ -8,7 +8,7 @@
 - Original artwork path: `artwork/works_yards/batch1/orbital_assembly_hangars-rocket_assembly_hall-cool_precision.png`.
 - Source Git blob SHA: `167c7873e9637cb3930fe7504a0e463cbfe8983e`.
 - Catalogue source SHA-256: `033534dc0971a8250f27a7d9a91e60af6230559a872107505f574c33e1420fef`.
-- Source key `batch1/image-????`: see `catalogue.json` entry for canonical key (do not infer from filename).
+- Source key: `batch1/image-0052`; legacy record ID: `image-0052`.
 - Source dimensions reported in catalogue: **1536×1024**.
 - CyberSand accepted engine/schema authority: [main at 018bd09503d7f079ddac52e225c2f7daf8d678bf](https://github.com/techrote/cybersand/tree/018bd09503d7f079ddac52e225c2f7daf8d678bf).
 - **Original bitmap was not decoded in this run** because the available GitHub binary read endpoint did not expose its pixels. The map was designed using the catalogue's detailed visual description, source caption and tags. It is **not** claimed as a verified side-by-side pixel-faithful adaptation.
