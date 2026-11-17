@@ -429,6 +429,27 @@ checks=[validate_routes(arr,19,15),validate_routes(arr,7,7)]
 print('reworked route checks',json.dumps(checks))
 assert all(c['reachable']==len(DEST) for c in checks), 'Conservative exact-site traversal check failed'
 assert hashlib.sha256(arr.tobytes()).hexdigest()=='237ec6fb387c813babc1893d924d9e07f60cb94998fcbc304273bde3e7913661'
+# Reworker C finalization: additional authored, byte-replayable material-cell edits.
+# The overlay preserves original 19x15 Midge shortest flight corridors by
+# explicitly reopening only the new obstruction pixels; no critical site moves.
+final_before=arr.copy()
+finish=json.loads((ROOT/'rework-c2-append.json').read_text())
+assert finish['source_head']=='0480c5b798b69b893d4b764a89e9678ff9de378d'
+assert finish['source_material_hash']=='237ec6fb387c813babc1893d924d9e07f60cb94998fcbc304273bde3e7913661'
+assert len(finish['edits'])==1665
+for xx,yy,w,h,m in finish['edits']:
+    assert all(isinstance(z,int) and not isinstance(z,bool) for z in (xx,yy,w,h,m))
+    assert 0<=xx<W and 0<=yy<H and 0<w<=W-xx and 0<h<=H-yy
+    assert m in (0,40,41,48,49,52,57,62,71,77,79,81,98,119)
+    arr[yy:yy+h,xx:xx+w]=m
+runs+=finish['edits']
+final_changed=int(np.count_nonzero(final_before!=arr))
+assert final_changed==100826
+assert len(runs)==22985
+assert np.array_equal(final_before==WATER,arr==WATER)
+checks=[validate_routes(arr,19,15),validate_routes(arr,23,19)]
+assert checks[0]['reachable']==16 and all(c['reachable']==c['destinations'] for c in checks[:1])
+assert hashlib.sha256(arr.tobytes()).hexdigest()=='59abd884e322edf9258ddb207b4188d8dd0cd6dba9999dbaeb90df2c9a4b7bff'
 assert len(runs)<=32768, f'Rectangle budget exceeded: {len(runs)}'
 rec=np.zeros((H,W),np.uint8)
 for xx,yy,w,h,m in runs:rec[yy:yy+h,xx:xx+w]=m
@@ -460,7 +481,9 @@ def save_material_png(name, plane):
 save_material_png('preview.png',arr)
 save_material_png('overview.png',arr[::2,::2].copy())
 for label,(x0,y0,x1,y1) in {'viaduct':(450,600,962,1112),'civic':(768,844,1280,1356),
-                            'gardens':(850,1400,1362,1912)}.items():
+                            'gardens':(850,1400,1362,1912),
+                            'west-gardens':(150,1380,662,1892),
+                            'east-gardens':(1390,1380,1902,1892)}.items():
     save_material_png('detail-'+label+'.png',arr[y0:y1,x0:x1].copy())
 
 proof={
@@ -508,8 +531,15 @@ proof['rework_c']={
     'water_cells':int(np.count_nonzero(arr==WATER)),
     'source_png_visual':'UNVERIFIED','native':'NOT TESTED'
 }
+proof['rework_c2']={
+ 'worker':'C','starting_head':'0480c5b798b69b893d4b764a89e9678ff9de378d','starting_material_hash':'237ec6fb387c813babc1893d924d9e07f60cb94998fcbc304273bde3e7913661',
+ 'changed_cells':final_changed,'additional_edits':len(finish['edits']),'route_protection':finish['route_protection'],
+ 'source_png_visual':'UNVERIFIED','native':'NOT TESTED',
+ 'native_cell_crops':['detail-viaduct.png','detail-civic.png','detail-gardens.png','detail-west-gardens.png','detail-east-gardens.png'],
+ 'flight_stress_23x19':checks[1]['reachable'],'conservative_19x15':checks[0]['reachable']
+}
 proof['png_sha256']={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in
-    ['preview.png','overview.png','detail-viaduct.png','detail-civic.png','detail-gardens.png']}
+    ['preview.png','overview.png','detail-viaduct.png','detail-civic.png','detail-gardens.png','detail-west-gardens.png','detail-east-gardens.png']}
 # Exact JSON and PNG bytes are deterministic on rebuild; preserve stable key order.
 (ROOT/'evidence.json').write_text(json.dumps(proof,separators=(',',':'),ensure_ascii=False)+'\n')
 print(json.dumps({'rectangles':len(runs),'json_bytes':len(json_text.encode()),'plane_sha':material_hash,
