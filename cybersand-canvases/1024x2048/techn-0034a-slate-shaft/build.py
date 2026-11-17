@@ -260,6 +260,76 @@ for y,xa,xb in [
 # Floor connection: from left talus and right maintenance skirt to the outlet.
 poly([(270,1852),(391,1836),(469,1871),(467,1938),(373,1952),(271,1915)],"AIR")
 poly([(578,1882),(696,1840),(788,1872),(758,1945),(623,1955)],"AIR")
+# VISUAL REPAIR PASS 1 (direct comparison with source blob above):
+# Replace flat repeated shale faceting with densely jointed clustered rock cuts.
+# All these face details remain deep in the already-solid west/east country rock;
+# they are spatially grouped around the reference's distinct hardware masses.
+stone_clusters=[
+ (80,322,175,290,72),(824,362,171,278,68),
+ (84,726,170,330,83),(813,1022,185,377,87),
+ (90,1490,170,301,72),(802,180,180,250,50)]
+for left,top,ww,hh,count in stone_clusters:
+    for k in range(count):
+        cx=left+R.randrange(ww)
+        cy=top+R.randrange(hh)
+        xhalf=R.randint(9,24) if k%5 else R.randint(23,41)
+        yhalf=R.randint(11,28) if k%7 else R.randint(24,42)
+        if cx-xhalf<15 or cx+xhalf>1007: continue
+        bg="SLATE" if (cy<700 and k%3==0) else ("GRANITE" if k%4 else "COBBLE")
+        # Deliberate fissure facets, thick outlines only where mass survives.
+        poly([(cx-xhalf,cy-3),(cx-xhalf//3,cy-yhalf),(cx+xhalf//2,cy-yhalf//2),
+              (cx+xhalf,cy+4),(cx+xhalf//3,cy+yhalf),(cx-xhalf//2,cy+yhalf//2)],"IRON")
+        poly([(cx-xhalf+4,cy-4),(cx-xhalf//3+2,cy-yhalf+4),
+              (cx+xhalf//2-2,cy-yhalf//2+3),(cx+xhalf-4,cy+4),
+              (cx+xhalf//3,cy+yhalf-4),(cx-xhalf//2+2,cy+yhalf//2-3)],bg)
+# Full-length ladder in the source's west-of-centre cut, copper rails firmly
+# grounded with occasional rock-anchored brackets, not isolated light pixels.
+# Occupies ONLY the left edge of the broad bypass and leaves a >35-cell air lane.
+for y0,y1 in [(260,455),(471,967)]:
+    box(338,y0,342,y1,"COPPER")
+    box(355,y0,359,y1,"COPPER")
+    for yy in range(y0+13,y1-7,19):
+        box(341,yy,356,yy+2,"BRASS")
+    for yy in range(y0+38,y1-12,84):
+        seg([(326,yy-14),(338,yy)],"STEEL",4)
+# Two uniquely shaped control trunk looms embedded in the country rock.
+seg([(203,705),(246,741),(249,809),(222,865),(249,937),(202,987)],"COPPER",7)
+seg([(192,706),(236,737),(234,812),(211,860),(232,945)],"RUSTED",3)
+for yy in (761,809,862,935):
+    box(198,yy,216,yy+9,"AMBER")
+seg([(832,991),(810,1081),(838,1197),(809,1298),(826,1440)],"RUSTED",11)
+seg([(840,992),(818,1086),(845,1191),(817,1300),(832,1437)],"COPPER",4)
+for xx,yy in [(840,1010),(818,1084),(846,1188),(816,1296),(835,1402)]:
+    ring(xx,yy,9,9,"BRASS",3)
+# Four one-off cantilever service decks. Their brackets are physically
+# connected to the cliff wall. No perspective tops; every shelf is XY-only.
+for x0,x1,y,side in [
+ (276,329,742,"W"),(701,779,1059,"E"),
+ (270,330,1478,"W"),(700,775,1728,"E")]:
+    seg([(x0,y),(x1,y)],"STEEL",9)
+    seg([(x0+(6 if side=="W" else 10),y+16),
+         (x1-(4 if side=="W" else 10),y+3)],"IRON",5)
+    for xx in range(x0+7,x1-5,19):
+        seg([(xx,y-14),(xx,y-3)],"BRASS",2)
+# Geological impact details and assembly hardware, tightly packed around the
+# opening and subtly asymmetric; no cloned circles or arbitrary free particles.
+for xx,yy in [(273,339),(731,492),(277,1037),(726,1379),(289,1774),(741,1855)]:
+    seg([(xx-15,yy-10),(xx+13,yy+8),(xx+36,yy+8)],"COPPER",4)
+    oval(xx+33,yy+8,4,4,"AMBER")
+# An anchored inspection gantry gives the lower deep exit an authored purpose;
+# preserve 50+ clear cells between the two halves for the Midge descent.
+seg([(320,1952),(459,1943)],"STEEL",9)
+seg([(570,1948),(696,1951)],"STEEL",9)
+seg([(330,1969),(456,1944)],"IRON",4)
+seg([(572,1948),(687,1972)],"IRON",4)
+for x in (363,415,610,666):
+    seg([(x,1948),(x,1933)],"BRASS",3)
+# Negative space at lower exit is now framed by a hanging maintenance collar.
+seg([(401,2000),(463,1999)],"RUSTED",7)
+seg([(578,1999),(625,2002)],"RUSTED",7)
+for xx in (408,451,585,610):
+    box(xx,1985,xx+5,1996,"AMBER")
+
 # Deliberately predeclared actual flight/inspection sites, all near the
 # functional apparatus, not on the apparatus's occupied cells.
 SPAWN=(515,88)
