@@ -12,7 +12,7 @@
 
 ## Artifacts and offline regeneration
 
-The playable artifact is **setup-mosaic-viaduct-commons.json**, a generated-start v1 manifest with unchanged verified empty GEN-007 recipe provenance and a strict starting Setup-v2 containing 7,608 actual non-overlapping coalesced material rectangles. The PNG files are only previews.
+The playable artifact is **setup-mosaic-viaduct-commons.json**, a generated-start v1 manifest with unchanged verified empty GEN-007 recipe provenance and a strict starting Setup-v2 containing 7,863 actual non-overlapping coalesced material rectangles. The PNG files are only previews.
 
 With Node 20+ in this folder run **node build-r2.cjs** followed by **node verify-r2.cjs**. build-r2.cjs is the deterministic source of truth for 4,194,304 material cells and indexed PNGs; verify-r2.cjs is a separate JSON/PNG/material actor-envelope checker using Node's native zlib. Legacy **python build.py** now forwards to the Node R2 generator; the old R1 authoring program remains available in archival main. Neither generator requires network access, image services or third-party packages. Frozen material-palette.json and generated-start template remain in this folder.
 
@@ -30,19 +30,31 @@ All gallery PNG pixel indices are sampled from the *same final 2048² grid* and 
 | Gate | Exact static result |
 |---|---|
 | Dimension / material-plane cells | 2048×2048 / 4,194,304 |
-| Rectangles / Setup native constructor capacity | **7,608 / 32,768** |
-| Manifest / 1 MiB limit | **150,270 / 1,048,576 bytes** |
-| Physical material and Empty cells | 1,268,041 / 2,926,263 |
+| Rectangles / Setup native constructor capacity | **7,863 / 32,768** |
+| Manifest / 1 MiB limit | **152,210 / 1,048,576 bytes** |
+| Physical material and Empty cells | 1,289,475 / 2,904,829 |
 | Full independent cell replay | 4,194,304 / 4,194,304; no mismatch |
-| SHA-256 of material plane | e813e22edb7da8752245bcebff5eb835670e4d4c580f73adbd7d3b8ec4ac052b |
+| SHA-256 of material plane | fcdab739ad94aae88ceaf1fc565951ba8afa7533c13876f81990b892ca7a1318 |
 | Initially dynamic/movable materials | None (old 43,916 Water cells removed) |
 | Valid native solid material identifiers | 30, all immovable, 2 Combustible without ignition |
-| Exact 19×15 strict hull-centre 4-neighbour BFS | **16/16 named sites**; 2,405,124 connected centres |
-| Exact 23×19 conservative sensitivity | **16/16**; 2,317,984 connected centres |
-| 31×27 extra sensitivity (not admission floor) | **15/16**, East underpass not connected, though its centre is clear |
+| Exact 19×15 strict hull-centre 4-neighbour BFS | **16/16 named sites**; 2,370,337 connected centres |
+| Exact 23×19 conservative sensitivity | **16/16**; 2,276,913 connected centres |
+| 31×27 extra sensitivity (not admission floor) | **16/16**, all exact named sites connected |
 
 Actor remains the original Midge definition/hash and exact spawn (404,502), actual hull **4×3**. All original 16 named coordinates remain exact with no nearest-waypoint substitution; their R1 names are *position regression labels*, not a claim the retired ring/arcade exhibits are still present. Primary outdoor route, upper/library egress, public stair maintenance opening, lower lateral corridor and descending access shafts are actual unobstructed cells.
 
-Exact engine authority checked: techrote/cybersand main 018bd09503d7f079ddac52e225c2f7daf8d678bf, godot/scripts/workbench_setup.gd, native/include/cybersand/material.hpp and godot/authoring/flyers/midge.json. The 32,768 construction capacity applies to the source-matched native bridge. **Without its capability method, Setup.native_rectangle_budget() falls back to 4,096; this 7,608-rectangle map can be rejected by an older installed runtime.**
+Exact engine authority checked: techrote/cybersand main 018bd09503d7f079ddac52e225c2f7daf8d678bf, godot/scripts/workbench_setup.gd, native/include/cybersand/material.hpp and godot/authoring/flyers/midge.json. The 32,768 construction capacity applies to the source-matched native bridge. **Without its capability method, Setup.native_rectangle_budget() falls back to 4,096; this 7,863-rectangle map can be rejected by an older installed runtime.**
 
 **NATIVE-UNTESTED:** no source-matched Godot/GDExtension/Rapier installation was present, so runtime native admission/capability readback, live Midge input, impact/collision, bounded simulation and fresh-process save/reopen remain external acceptance gates. Static BFS does not prove piloting dynamics. Shepherd independently reviews exact final HEAD. **Do not merge, Ready-promote, auto-merge, or edit any historical source or other PR.**
+
+## Shepherd-assigned R2C finishing pass — 17 November 2026
+
+Starting source HEAD: `362f86f0ea18b2e49ae8301a14c562310f87df1b`. This bounded follow-on responds to the genuine JPEG-source fidelity and technical reviews of the previous R2 commit. The earlier historical 'initial R2' statistics in REWORK-R2.md remain a record of the *previous* pass, not the final values here.
+
+- **Stairs:** replaced thin periodically striped floating treads and sparse posts with uneven stone-mass risers, four differentiated public landings and a single stepped retaining spine. Existing air access is retained via a designed shaded civic opening, not by relocating a Midge destination.
+- **Sails:** moved three real terracotta fabric roofs down over usable civic terraces and added hard-surface legible anchors. These are physical cells, not image overlays.
+- **Tiles and rooms:** replaced large random-colour checker tiling with narrow ivory/cobalt floral bands, smaller differentiated glazing and occupied frontage. The exact Midge spawn remains open; an initial glass-window placement that trapped the spawn was rejected during iteration.
+- **Tree:** replaced repeated ellipse/dot crown stamps with irregular overlapping polygon silhouettes attached to the original right-rooted trunk. No active plant growth, powder supports or ignition sources were introduced.
+- **Buried corridor:** strengthened continuously identifiable masonry roof and gallery bays, with intentional large access shafts; a 31×27-compatible east maintenance chimney is true Empty air rather than a substituted waypoint.
+
+**Final static receipts:** 2048×2048 = 4,194,304 material cells, 7,863 non-overlapping coalesced five-field rectangles (limit 32,768), 152,210 JSON bytes (limit 1,048,576), 1,289,475 occupied and 2,904,829 Empty, 369,139 material IDs changed from assigned HEAD, SHA-256 `fcdab739ad94aae88ceaf1fc565951ba8afa7533c13876f81990b892ca7a1318`. Independently reconstructed every JSON rectangle/cell against the new builder grid, zero mismatches. All 28 used non-Empty materials are valid non-movable accepted native solids; combustible ID(s) 97 remain unignited. Authored actor, exact spawn, 16 positional targets and native generator provenance are unchanged. Exact zero-offset four-neighbour rectangular actor-centre connectivity: 19×15 **16/16** (2,370,337 centres), 23×19 **16/16** (2,276,913), 31×27 **16/16** (2,132,661); no nearest-point waiver. Current loaded bridge capacity not interrogated: older fallback remains 4,096, which would reject 7863 rectangles. The output PNGs are real material-index PNGs rendered from the reconstructed grid, and the committed independent validator `node verify-r2.cjs` is provided for fresh local reproduction; it was not executed inside the GitHub connector environment. **NATIVE-UNTESTED** (Godot/GDExtension/Rapier admission, flight/collision/simulation, fresh-process save/reopen). Genuine committed JPEG is retained untouched; previous independent reviewers directly inspected it, while this execution could not decode the binary through the connector. Full original PNG pixel parity remains **UNVERIFIED**.

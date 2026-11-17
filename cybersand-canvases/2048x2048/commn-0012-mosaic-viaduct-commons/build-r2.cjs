@@ -10,7 +10,23 @@ function canvas(){
  const L=(x,y,xx,yy,t,m)=>{let dx=Math.abs(xx-x),dy=Math.abs(yy-y),sx=x<xx?1:-1,sy=y<yy?1:-1,e=dx-dy,j=0;for(;;){R(x-(t>>1),y-(t>>1),t,t,m);if(x===xx&&y===yy)break;let f=e*2;if(f>-dy){e-=dy;x+=sx}if(f<dx){e+=dx;y+=sy}if(++j>6000)throw Error("line")}};
  const P=(p,m)=>{let ys=p.map(v=>v[1]);for(let y=Math.max(0,Math.floor(Math.min(...ys)));y<Math.min(H,Math.ceil(Math.max(...ys)));y++){let xs=[];for(let i=0;i<p.length;i++){let a=p[i],b=p[(i+1)%p.length],z=y+.5;if((a[1]<=z&&b[1]>z)||(b[1]<=z&&a[1]>z))xs.push(a[0]+(z-a[1])*(b[0]-a[0])/(b[1]-a[1]))}xs.sort((a,b)=>a-b);for(let i=0;i+1<xs.length;i+=2)R(Math.ceil(xs[i]),y,Math.floor(xs[i+1])-Math.ceil(xs[i])+1,1,m)}};
  const E=(cx,cy,rx,ry,m)=>{for(let dy=-ry;dy<=ry;dy++){let q=Math.floor(rx*Math.sqrt(Math.max(0,1-(dy/ry)**2)));R(cx-q,cy+dy,2*q+1,1,m)}};
- const T=(x,y,w,h)=>{R(x,y,w,h,M.TILE);for(let j=3;j<h-4;j+=16)for(let i=3;i<w-4;i+=16){let k=((i/16|0)*7+(j/16|0)*11)%9;R(x+i,y+j,13,13,[M.CGLASS,M.GLASS,M.PLASTER,M.GLASSBLOCK,M.CYAN,M.PLASTER,M.MARBLE,M.CGLASS,M.TILE][k])}};
+
+ // Source's narrow blue-and-ivory botanical tiles, not a multicolour checkerboard.
+ const T=(x,y,w,h)=>{
+  R(x,y,w,h,M.PLASTER);
+  for(let xx=0;xx<w;xx+=38){
+   R(x+xx,y,6,h,M.TILE);R(x+xx+2,y,2,h,M.CYAN);
+   for(let yy=18;yy<h-15;yy+=37){
+    let cx=x+xx+20,cy=y+yy+((xx/38|0)%2?6:0);if(cx+10>=x+w)continue;
+    R(cx-9,cy-12,18,25,M.CGLASS);R(cx-6,cy-8,12,17,M.PLASTER);
+    R(cx-2,cy-14,4,9,M.TILE);R(cx-2,cy+6,4,8,M.TILE);
+    R(cx-9,cy-2,7,4,M.TILE);R(cx+2,cy-2,7,4,M.TILE);
+    R(cx-3,cy-3,6,6,M.CYAN);
+   }
+  }
+  R(x,y,w,4,M.CGLASS);R(x,y+h-5,w,5,M.COBBLE);
+ };
+
  const BULB=(x,y)=>{R(x-4,y,8,48,M.IRON);R(x-13,y-4,26,7,M.BRASS);R(x-9,y+8,18,19,M.AMBER);R(x-5,y+12,10,11,M.WHITE)};
  // GEOLOGY: sectioned ground below intact, illuminated civic underpass, not a flood pool.
  P([[0,1842],[160,1865],[450,1880],[950,1895],[1460,1880],[1890,1858],[2048,1840],[2048,2048],[0,2048]],M.EARTH);
@@ -44,15 +60,32 @@ function canvas(){
  for(let x of [661,760,916]){R(x,747,14,75,M.LIME);R(x-6,748,29,10,M.BRASS)}
  R(675,790,263,10,M.SLATE);R(675,799,262,4,M.CYAN);
  for(let x of [381,640]){R(x,482,8,156,M.BRASS);R(x+2,497,3,114,M.COPPER)}
- // Three orange civic shade sails—not a chain of random triangles or suspended signboards.
- for(let [x,y,xx,yy] of [[549,355,842,413],[829,405,1192,452],[1014,464,1291,484]]){
-  L(x,y-14,xx,yy-14,4,M.IRON);P([[x,y],[xx,yy],[xx-61,yy+48],[x+67,y+29]],M.TERRA);
-  L(x+67,y+29,xx-61,yy+48,4,M.BRASS);R(x-4,y-36,8,71,M.STEEL)}
+
+ // Three actual suspended terracotta sail roofs with fixed supports to foot landings.
+ for(let [x,y,w,ground] of [[770,1004,216,1203],[1100,928,231,1135],[1480,841,203,1053]]){
+  const xx=x+w;
+  P([[x,y+8],[xx,y+23],[xx-21,y+49],[x+28,y+34]],M.TERRA);
+  L(x,y+8,xx,y+23,3,M.BRASS);L(x+28,y+34,xx-21,y+49,3,M.AMBER);
+  R(x-4,y-3,8,ground-y+12,M.STEEL);R(xx-6,y+19,8,ground-y-16,M.IRON);
+  R(x-11,ground+1,23,9,M.COBBLE);R(xx-13,ground+1,26,10,M.COBBLE);
+ }
+
  // STEPPED PUBLIC PROMENADE: long asymmetrical rising run, terrace edges remain side elevation.
  R(711,1214,1263,23,M.COBBLE);R(714,1212,1256,5,M.MARBLE);
- for(let i=0;i<11;i++){let x=734+i*100,y=1216-i*22;R(x,y,187,19,M.LIME);R(x,y,187,5,M.MARBLE);R(x,y+8,187,5,M.BRASS);R(x+6,y+17,185,5,M.TERRA);
-  if(i%3===0){R(x+151,y+18,13,42,M.LIME);R(x+148,y+26,18,7,M.COBBLE)}
-  if(i%2)R(x+17,y-7,57,7,M.TILE)}
+
+ // Four broad asymmetric public flights with stone-mass risers and landing backfill.
+ for(let i=0;i<11;i++){
+  let x=734+i*100,y=1216-i*22,k=[144,159,133,171,147,178,156,169,151,175,139][i];
+  R(x,y,k,22,M.LIME);R(x,y,k,6,M.MARBLE);
+  R(x+3,y+20,Math.min(k-7,116),27+(i%3)*9,M.COBBLE);
+  R(x+14,y+46,Math.min(k-25,88),18+(i%2)*12,M.PLASTER);
+  R(x+7,y+21,k-15,4,i%3?M.TERRA:M.SLATE);
+ }
+ for(let [x,y,w,d] of [[736,1250,227,38],[1012,1179,250,37],[1340,1089,264,37],[1640,1009,302,38]]){
+  R(x,y,w,d,M.LIME);R(x,y,w,7,M.MARBLE);R(x+10,y+17,w-20,9,M.COBBLE);
+  for(let t=17;t<w-15;t+=47)R(x+t,y+29,29,4,M.SLATE);
+ }
+
  R(1690,948,310,25,M.MARBLE);R(1690,959,310,7,M.BRASS);
  R(1515,1025,480,23,M.COBBLE);R(1515,1025,480,5,M.MARBLE);
  R(711,1267,1201,17,M.LIME);R(711,1267,1201,5,M.BRASS);
@@ -66,9 +99,24 @@ function canvas(){
  // Roots + broad asymmetric inert mosaic foliage, grounded to the rightmost civic planter.
  P([[1595,1105],[1576,994],[1546,851],[1554,818],[1583,814],[1610,902],[1637,1060],[1648,1105]],M.BRONZE);
  for(let [x,y,xx,yy,t] of [[1572,867,1395,719,15],[1560,862,1298,694,13],[1587,836,1750,698,18],[1601,844,1911,751,13],[1551,826,1434,631,12],[1631,928,1730,774,11]])L(x,y,xx,yy,t,M.COBBLE);
- const crown=[[1394,688,94,55],[1460,622,114,71],[1609,657,131,71],[1747,670,109,67],[1856,734,99,56],[1554,752,119,61],[1310,744,76,46],[1742,766,89,43]];
- crown.forEach(([x,y,rx,ry],s)=>{E(x,y,rx,ry,M.MOSSSTONE);E(x-17,y-11,rx-15,ry-13,M.MOSS);
-  for(let j=0;j<7;j++){let xx=x+Math.round(Math.sin(s*.92+j*2.1)*rx*.67),yy=y+Math.round(Math.cos(s*.7+j*1.85)*ry*.48);E(xx,yy,Math.max(6,rx/7|0),Math.max(7,ry/5|0),[M.MOSS,M.VERDI,M.MOSSSTONE,M.PLANK][j%4])}});
+
+ // Sculpted, interwoven canopy and open edge; deliberately no repeated ellipses.
+ const crownPolygons=[
+  [42,[[1242,745],[1220,711],[1259,672],[1307,659],[1330,626],[1395,633],[1414,674],[1469,693],[1495,749],[1445,791],[1370,775],[1303,793]]],
+  [97,[[1379,672],[1393,629],[1434,592],[1480,606],[1523,576],[1570,612],[1636,617],[1662,657],[1624,718],[1559,713],[1496,747],[1444,718]]],
+  [42,[[1549,674],[1566,623],[1607,595],[1657,606],[1693,642],[1755,638],[1799,680],[1767,727],[1697,751],[1614,726]]],
+  [97,[[1687,718],[1705,674],[1754,648],[1811,659],[1862,686],[1890,736],[1940,747],[1926,787],[1858,793],[1818,821],[1768,794],[1719,778]]],
+  [42,[[1434,764],[1469,731],[1511,739],[1542,710],[1584,732],[1609,775],[1576,804],[1520,811],[1488,786]]],
+  [97,[[1602,748],[1642,714],[1691,744],[1737,713],[1790,746],[1798,791],[1762,811],[1719,797],[1671,834],[1628,811]]]
+ ];
+ for(let [m,p] of crownPolygons){P(p,m);for(let i=0;i<p.length;i+=2){
+  let a=p[i],b=p[(i+1)%p.length];L(a[0],a[1],Math.round((a[0]+b[0])/2),Math.round((a[1]+b[1])/2),3,M.VERDI)
+ }}
+ for(let [x,y,xx,yy] of [[1302,716,1283,683],[1384,687,1345,625],[1473,642,1456,588],
+  [1522,664,1492,604],[1627,658,1646,590],[1714,678,1754,632],
+  [1808,722,1854,664],[1887,760,1942,726],[1545,763,1510,818],
+  [1712,763,1752,810]])L(x,y,xx,yy,5,M.MOSSSTONE);
+
  R(1480,1105,262,27,M.LIME);R(1480,1105,262,5,M.MARBLE);
  for(let [x,y,xx,yy] of [[1603,1036,1507,1107],[1633,1053,1691,1106],[1616,1070,1565,1113]])L(x,y,xx,yy,12,M.BRONZE);
  // Functional planting beds, pattern and public benches. Static moss stone only.
@@ -87,12 +135,12 @@ function canvas(){
  R(610,469,150,200,M.AIR);
  // Civic stair/service skylight: a real 82-cell-wide air corridor through the structural landing.
  R(965,1193,82,111,M.AIR);
- // FIDELITY ITERATION 2: grounded human-scale furnishing, extra complex civic masonry,
- // continuous stair framing and source blue-tile/terracotta colour hierarchy.
- for(let i=0;i<11;i++){let x=734+i*100,y=1216-i*22;
-   R(x+172,y+20,8,43,M.LIME);R(x+171,y+25,10,5,M.BRASS);
-   if(i%3===1){L(x+164,y+23,x+193,y+52,4,M.COBBLE);R(x+179,y+50,33,5,M.MARBLE)}
+
+ // Differentiated landings instead of sparse repeated pole-and-stripe treads.
+ for(let [x,y] of [[758,1227],[1031,1152],[1352,1070],[1670,974]]){
+  R(x,y,27,8,M.BRASS);R(x+6,y-10,6,10,M.IRON);
  }
+
  // Irregular civic balcony flowerbeds and pale lintels: hard inert support, no growing plants.
  for(let [x,y,w] of [[375,713,62],[526,698,98],[89,844,92],[541,1126,93]]){
   R(x,y,w,10,M.TERRA);R(x,y+9,w,10,M.BRICK);
@@ -119,6 +167,41 @@ function canvas(){
  // Additional 31x27 accessible maintenance lift opening (underpass connection), not proxy waypoint.
  R(1472,1548,134,91,M.AIR);
  
+
+
+ // R2C artistic self-critique: the stair still read as separate islands. Add a
+ // physically connected retaining stringer beneath the rising public terraces.
+ for(let i=0;i<12;i++){
+  let sx=729+i*100,sy=1283-i*23;
+  R(sx,sy-13,107,27,M.LIME);R(sx,sy-13,107,5,M.MARBLE);
+  if(i%3===2)R(sx+11,sy+6,51,4,M.SLATE);
+ }
+  // Continuous built dry corridor: structural roof and lit bay details, never air wallpaper.
+ for(let [x,w] of [[130,463],[805,245],[1240,420],[1840,94]]){
+  R(x,1597,w,15,M.COBBLE);R(x+7,1600,w-14,5,M.PLASTER);
+  for(let xx=x+19;xx<x+w-19;xx+=77){
+   R(xx,1631,7,40,M.LIME);R(xx-4,1627,15,7,M.BRASS);
+   R(xx+16,1636,36,8,M.CGLASS);R(xx+18,1646,32,3,M.CYAN);
+  }
+ }
+ for(let [x,y,w] of [[162,1741,182],[422,1758,169],[812,1744,153],[1232,1754,146],[1861,1746,93]]){
+  R(x,y,w,10,M.COBBLE);R(x+3,y+10,9,42,M.LIME);
+  R(x+w-13,y+10,10,42,M.LIME);R(x+16,y+13,w-32,4,M.BRASS);
+ }
+ // Deliberate open utility shafts supporting a 31x27 Midge flight sensitivity.
+ R(1490,1433,89,321,M.AIR);R(1480,1435,10,100,M.PLASTER);R(1579,1435,9,103,M.PLASTER);
+ R(1490,1756,89,9,M.MARBLE);
+ for(let [x,y,w,h] of [[387,598,52,29],[454,591,73,35],[537,598,51,29],
+                         [392,994,41,38],[469,990,63,42],[558,997,38,35]]){
+  R(x-7,y-8,w+14,h+16,M.TILE);R(x,y,w,h,M.CGLASS);
+  R(x+5,y+5,w-10,h-10,M.DGLASS);
+  R(x+(w>>1)-2,y+6,4,h-12,M.WHITE);
+ }
+ // Operable under-sail portal through central landing, broad enough for the full hull.
+ R(1160,1023,270,115,M.AIR);
+ R(1151,1035,9,55,M.PLASTER);// Side clearance of the shaded civic lane remains visibly open to east sky.
+ R(1410,981,104,158,M.AIR);
+ R(1514,1029,8,63,M.LIME);
  // PROTECTED_ANCHORS: source-led genuine air clearances at named operational sites.
  for(let [n,x,y] of TARGETS){R(x-19,y-16,39,33,M.AIR)}
  return G;

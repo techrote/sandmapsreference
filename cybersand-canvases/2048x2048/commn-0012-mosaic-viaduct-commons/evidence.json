@@ -10,44 +10,42 @@
     2048
   ],
   "cells": 4194304,
-  "covered_cells": 1268041,
+  "covered_cells": 1289475,
   "zero_full_grid_mismatches": true,
-  "rectangles": 7608,
+  "rectangles": 7863,
   "rectangle_limit": 32768,
-  "json_bytes": 150270,
+  "json_bytes": 152210,
   "json_limit": 1048576,
   "material_histogram": {
-    "0": 2926263,
-    "38": 230453,
+    "0": 2904829,
+    "38": 257311,
     "40": 125714,
-    "41": 112139,
-    "42": 35898,
-    "43": 8910,
-    "44": 23848,
-    "48": 48746,
-    "49": 25828,
-    "50": 6872,
-    "52": 16403,
-    "53": 4653,
-    "54": 8293,
-    "55": 9314,
+    "41": 138783,
+    "42": 51670,
+    "43": 7302,
+    "44": 73811,
+    "48": 27931,
+    "49": 27668,
+    "50": 5305,
+    "52": 14080,
+    "53": 1351,
+    "54": 4992,
+    "55": 2072,
     "56": 194412,
-    "57": 27909,
-    "58": 66020,
-    "62": 1704,
+    "57": 24242,
+    "58": 62756,
+    "62": 4217,
     "66": 1590,
-    "70": 46612,
-    "71": 37908,
-    "72": 7281,
-    "77": 8635,
-    "79": 2980,
-    "80": 1727,
-    "81": 1641,
-    "97": 85619,
-    "98": 41532,
+    "70": 26920,
+    "71": 44147,
+    "72": 13153,
+    "77": 10222,
+    "79": 4118,
+    "80": 2231,
+    "97": 58990,
+    "98": 35914,
     "100": 10368,
-    "119": 67417,
-    "120": 7615
+    "119": 58205
   },
   "source_art_changed": false,
   "actor": {
@@ -182,7 +180,7 @@
         19,
         15
       ],
-      "connected_centres": 2405124,
+      "connected_centres": 2370337,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -192,7 +190,7 @@
         23,
         19
       ],
-      "connected_centres": 2317984,
+      "connected_centres": 2276913,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -202,12 +200,10 @@
         31,
         27
       ],
-      "connected_centres": 2166533,
-      "reachable": 15,
+      "connected_centres": 2132661,
+      "reachable": 16,
       "blocked": [],
-      "unreachable": [
-        "East underpass"
-      ]
+      "unreachable": []
     }
   ],
   "crops": {
@@ -277,5 +273,17 @@
   },
   "render": "PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",
   "native": "NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen",
-  "material_sha256": "e813e22edb7da8752245bcebff5eb835670e4d4c580f73adbd7d3b8ec4ac052b"
+  "material_sha256": "fcdab739ad94aae88ceaf1fc565951ba8afa7533c13876f81990b892ca7a1318",
+  "r2c_followon": {
+    "assignment_head": "362f86f0ea18b2e49ae8301a14c562310f87df1b",
+    "source_jpeg_git_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
+    "source_image_direct_visual_access_in_this_pass": false,
+    "source_comparison_basis": "Prior current-HEAD Fidelity Auditor and Shepherd direct JPEG review, plus final actual-cell visual review; original high-resolution PNG parity unverified.",
+    "change_count_from_assignment_head": 369139,
+    "qualifications": "4,194,304 independent same-JSON replay cells, zero mismatches; builder canvas and raster previews generated in same call; native not exercised",
+    "envelope_31x27": "16 of 16 exact centers",
+    "material_kernel_warning": [
+      97
+    ]
+  }
 }
