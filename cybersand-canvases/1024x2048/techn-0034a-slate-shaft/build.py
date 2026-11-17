@@ -59,7 +59,11 @@ def oval(x,y,rx,ry,m):
 def ring(x,y,rx,ry,m,width=4):
     d.ellipse((int(x-rx),int(y-ry),int(x+rx),int(y+ry)),outline=M[m] if isinstance(m,str) else m,width=width)
 def txt(x,y,s,m="AMBER"):
-    d.text((x,y),s,fill=M[m],font=ImageFont.load_default())
+    # Threshold the font into the actual material cell plane; greyscale glyph
+    # anti-aliasing would invent physically invalid intermediate material IDs.
+    mask=Image.new("1",(max(16,len(s)*12+10),24),0)
+    ImageDraw.Draw(mask).text((0,0),s,fill=1,font=ImageFont.load_default())
+    img.paste(M[m],(int(x),int(y)),mask)
 
 # 1. Immutable diagonal jointed slate faces: the original dark blue-grey rock
 #    dominates, but its exposed negative-space cleft is NOT an equal-sided slot.
@@ -294,7 +298,7 @@ assert A.shape==(H,W)
 # Per-ID semantic audit; Solid/immovable/None kernel verified against accepted
 # CyberSand native material.hpp at the recorded main commit.
 ids=sorted(int(x) for x in np.unique(A))
-assert set(ids) <= set(M.values())
+assert set(ids) <= set(M.values()),"Unexpected IDs: "+str(sorted(set(ids)-set(M.values())))
 assert not (set(ids) & {2,3,4,6,8,11,12,13,14,19,22,25,26,27,29,30})
 # Current accepted Midge hull is 4x3; 19x15 includes 7.5px horizontal/
 # 6px vertical operational margin on each side.
