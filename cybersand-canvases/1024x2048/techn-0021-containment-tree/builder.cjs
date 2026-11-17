@@ -107,10 +107,23 @@ const wallGlyphs=[
 [124,1115,45,M.GRANITE,M.AMBER],[883,1280,44,M.COPPER,M.URANIUM],
 [130,1452,48,M.BASALT,M.MAGENTA],[874,1649,47,M.VERDIGRIS,M.CYAN],
 [140,1769,35,M.COPPER,M.AMBER],[880,2013,34,M.SLATE,M.PHOSPHOR]];
-for(const [cx,cy,rad,body,light] of wallGlyphs){
- disk(cx,cy,rad+10,M.IRON);disk(cx,cy,rad,body);disk(cx,cy,rad-13,M.OBSIDIAN);
- ring(cx,cy,rad+5,M.BRASS,3);
- for(let k=0;k<7;k++){let a=k*6.283185/7;disk(cx+(rad-25)*Math.cos(a),cy+(rad-25)*Math.sin(a),4+k%3,light);}
+for(let gi=0;gi<wallGlyphs.length;gi++){
+ const [cx,cy,rad,body,light]=wallGlyphs[gi];
+ if(gi%4===0){ // fossilized cellular wheel
+   disk(cx,cy,rad+8,M.IRON);disk(cx,cy,rad,body);disk(cx,cy,rad-14,M.OBSIDIAN);
+   ring(cx,cy,rad+5,M.BRASS,3);for(let k=0;k<7;k++){let a=k*6.283185/7;disk(cx+(rad-25)*Math.cos(a),cy+(rad-25)*Math.sin(a),4+k%3,light);}
+ }else if(gi%4===1){ // faceted rhizome crystal
+   poly([[cx-rad,cy-10],[cx-rad/2,cy-rad],[cx+rad/3,cy-rad+8],[cx+rad,cy-9],[cx+rad/2,cy+rad],[cx-rad/2,cy+rad/2]],body);
+   poly([[cx-rad+9,cy-8],[cx-rad/2,cy-rad+10],[cx+rad/3,cy-rad+17],[cx+rad-11,cy-7],[cx+rad/2,cy+rad-9],[cx-rad/2,cy+rad/2-5]],M.OBSIDIAN);
+   for(let k=0;k<6;k++){let t=k/5;line(cx-rad*.66+t*rad*1.5,cy-rad*.38,cx-rad*.55+t*rad*1.2,cy+rad*.45,k%2?light:M.VERDIGRIS,3);}
+ }else if(gi%4===2){ // compound biomembrane / pearly egg cluster
+   for(let k=0;k<5;k++){let a=k*1.256;disk(cx+rad*.45*Math.cos(a),cy+rad*.45*Math.sin(a),rad*.42,body);}
+   disk(cx,cy,rad*.50,M.OBSIDIAN);for(let k=0;k<8;k++){let a=k*.785;disk(cx+rad*.25*Math.cos(a),cy+rad*.25*Math.sin(a),6,light);}
+ }else{ // asymmetric root-fan relief, not another circular exhibit
+   line(cx,cy-rad,cx,cy+rad,M.IRON,6);
+   for(let k=0;k<9;k++){let yy=cy-rad+k*rad*.24,dir=k%2?-1:1,xx=cx+dir*(18+((k*7)%27));
+      line(cx,yy,xx,yy+10,body,5);line(xx,yy+10,xx+dir*10,yy+20,light,3);disk(xx+dir*10,yy+20,4,light);}
+ }
 }
 const fanSpecs=[[490,590,-1,M.MOSS],[542,824,1,M.COPPER],[477,1064,-1,M.CYAN],
 [545,1232,1,M.PHOSPHOR],[477,1423,-1,M.MAGENTA],[547,1753,1,M.COPPER]];
