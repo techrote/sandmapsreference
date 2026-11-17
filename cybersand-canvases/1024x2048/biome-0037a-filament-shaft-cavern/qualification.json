@@ -13,9 +13,9 @@
     1024,
     2048
   ],
-  "rectangles": 16636,
+  "rectangles": 29103,
   "max_rectangles": 32768,
-  "json_bytes": 307500,
+  "json_bytes": 526235,
   "max_json_bytes": 1048576,
   "cell_count": 2097152,
   "cell_mismatches": 0,
@@ -131,7 +131,7 @@
       "reachable": true
     }
   ],
-  "reachable_clearance_cells": 968285,
+  "reachable_clearance_cells": 952932,
   "water_cells": 35688,
   "materials": [
     0,
@@ -150,5 +150,19 @@
     127
   ],
   "native_runtime": "UNTESTED: no Godot/CyberDemoBridge toolchain available",
-  "source_fidelity": "UNTESTED: selected original PNG binary not available through GitHub connector"
+  "source_fidelity": "UNTESTED: selected original PNG binary not available through GitHub connector",
+  "rework": {
+    "worker": "A",
+    "baseline_head": "d20c42cd9d1058e0aed5779b8ec68d495b4994c6",
+    "assignment_head": "d20c42cd9d1058e0aed5779b8ec68d495b4994c6",
+    "source_visual_inspection": false,
+    "changed_material_cells": 110701,
+    "added_rectangle_overlays": 12467,
+    "geometry_repair": "irregular cavern roof lobes; three auxiliary side-channel galleries; stratified mineral lamination; region-specific mineral/organic landmarks; partial removal of repeated portal accents; central root side spines",
+    "clearance": "independent 19x15 cell occupancy integral-image BFS (all non-air material blocked)",
+    "reconstruction": "reapplied all original rectangles and patch overlays; exact 0 mismatches",
+    "preview": "rendered directly from final material grid; 512x1024 full overview and two native-resolution 512x512 crops",
+    "native": "NOT TESTED; physical Workbench/Rapier/material catalogue/actor hash admission and save/reopen remain required",
+    "reference": "Original binary PNG could not be fetched or visually compared; source fidelity remains unverified"
+  }
 }

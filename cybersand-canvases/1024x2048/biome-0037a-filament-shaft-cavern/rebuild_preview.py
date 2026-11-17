@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
-"""Rebuild exact material-plane preview from the committed CyberSand v2 setup."""
+"""Render committed CyberSand Setup-v2 cell state, with native-resolution district crops."""
 from pathlib import Path
 from PIL import Image
 import numpy as np, json
 here=Path(__file__).resolve().parent
 s=json.loads((here/"setup-filament-shaft-cavern.json").read_text())
 w,h=s["extent"]
-assert (w,h)==(1024,2048),s["extent"]
+assert (w,h)==(1024,2048)
 assert len(s["edits"])<=32768
 a=np.zeros((h,w),dtype=np.uint8)
 for x,y,dx,dy,m in s["edits"]:
-    assert x>=0 and y>=0 and dx>0 and dy>0 and x+dx<=w and y+dy<=h
+    assert 0<=x<w and 0<=y<h and 0<dx<=w-x and 0<dy<=h-y
     a[y:y+dy,x:x+dx]=m
 palette={int(k):v for k,v in json.loads((here/"palette.json").read_text()).items()}
-render=np.zeros((h//2,w//2,3),dtype=np.uint8)
-sample=a[1::2,1::2]
-for m,c in palette.items():render[sample==m]=c
-Image.fromarray(render,"RGB").save(here/"filament-shaft-cavern-preview-rebuilt.png")
-print("Rebuilt %sx%s from %s committed rectangles" % (w,h,len(s["edits"])))
+def colorize(index):
+    rgb=np.zeros((*index.shape,3),dtype=np.uint8)
+    for m,c in palette.items():rgb[index==m]=c
+    return Image.fromarray(rgb,"RGB")
+colorize(a[1::2,1::2]).save(here/"filament-shaft-cavern-preview.png")
+colorize(a[470:982,0:512]).save(here/"filament-shaft-cavern-detail-upper.png")
+colorize(a[1110:1622,512:1024]).save(here/"filament-shaft-cavern-detail-lower.png")
+print(f"PASS: {w}x{h} material cells; {len(s['edits'])} rectangles; overview and two 512x512 crops rebuilt")
