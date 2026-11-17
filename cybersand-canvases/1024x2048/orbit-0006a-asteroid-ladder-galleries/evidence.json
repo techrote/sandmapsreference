@@ -5,9 +5,9 @@
     2048
   ],
   "seed": 620029,
-  "rectangles": 17145,
+  "rectangles": 17098,
   "rectangle_budget": 32768,
-  "json_bytes": 312391,
+  "json_bytes": 311512,
   "json_byte_budget": 1048576,
   "material_cells_verified": 2097152,
   "material_mismatches": 0,
@@ -232,8 +232,8 @@
   ],
   "material_counts": {
     "0": 1177527,
-    "13": 53687,
-    "40": 105063,
+    "38": 27751,
+    "40": 130999,
     "49": 94356,
     "50": 125112,
     "53": 38287,
@@ -441,6 +441,22 @@
       "purpose": "Connect original exact site to principal connected flight airspace"
     }
   ],
+  "material_semantics_audit": {
+    "native_source": "techrote/cybersand@018bd09503d7f079ddac52e225c2f7daf8d678bf/native/include/cybersand/material.hpp",
+    "native_header_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+    "basis": "All nonempty final IDs independently checked as native Solid, immovable, RuleKernel::None; Stone 13 is Powder, movable, DensityMotion::Down",
+    "stone_13_cells_before": 53687,
+    "stone_13_cells_after": 0,
+    "powder_liquid_gas_agent_cells_after": 0,
+    "material_cell_replacements": {
+      "Stone13_to_LimestoneBlock38": 27751,
+      "Stone13_to_GraniteBlock40": 25936
+    },
+    "changed_material_cells": 53687,
+    "changed_solid_air_occupancy_cells": 0,
+    "rock_strata": "upper y368-626 limestone; lower y1350-1561 granite; rock chips limestone; distinct basalt and slate bands retained",
+    "native_material_admission": "NOT EXECUTED"
+  },
   "native_qualification": "NOT EXECUTED",
   "original_reference_visual_comparison": "NOT EXECUTED: source PNG binary inaccessible"
 }

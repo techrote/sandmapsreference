@@ -2,14 +2,14 @@
 /* Deterministic map-cell authoring and evidence renderer. */
 const generate = function generate(){
 const W=1024,H=2048,SEED=620029,A=new Uint8Array(W*H);
-const M={AIR:0,STONE:13,SLATE:49,LIME:38,GRANITE:40,BRICK:43,TERRA:48,IRON:50,COPPER:53,EARTH:56,INDUSTRIAL:57,CONCRETE:58,STEEL:62,RUST:65,GRATE:66,PIPE:68,CABLE:74,HAZARD:76,CYAN:77,MAGENTA:78,AMBER:79,WHITE:80,BASALT:100,OBSIDIAN:101,RAMMED:109,BRASS:119,QUARTZ:122,GLASS:120};
+const M={AIR:0,SLATE:49,LIME:38,GRANITE:40,BRICK:43,TERRA:48,IRON:50,COPPER:53,EARTH:56,INDUSTRIAL:57,CONCRETE:58,STEEL:62,RUST:65,GRATE:66,PIPE:68,CABLE:74,HAZARD:76,CYAN:77,MAGENTA:78,AMBER:79,WHITE:80,BASALT:100,OBSIDIAN:101,RAMMED:109,BRASS:119,QUARTZ:122,GLASS:120};
 let seed=SEED;function rnd(){seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;}
 function rect(x,y,w,h,m){x=Math.floor(x);y=Math.floor(y);w=Math.ceil(w);h=Math.ceil(h);let l=Math.max(x,0),r=Math.min(x+w,W),t=Math.max(y,0),b=Math.min(y+h,H);if(l>=r||t>=b)return;for(let j=t;j<b;j++)A.fill(m,j*W+l,j*W+r);}
 function poly(p,m){let ya=Math.max(0,Math.floor(Math.min(...p.map(q=>q[1])))),yb=Math.min(H-1,Math.ceil(Math.max(...p.map(q=>q[1]))));for(let y=ya;y<=yb;y++){let xs=[];for(let j=0;j<p.length;j++){let a=p[j],b=p[(j+1)%p.length];if((a[1]<=y&&b[1]>y)||(b[1]<=y&&a[1]>y))xs.push(a[0]+(y-a[1])*(b[0]-a[0])/(b[1]-a[1]));}xs.sort((a,b)=>a-b);for(let k=0;k+1<xs.length;k+=2)rect(xs[k],y,xs[k+1]-xs[k]+1,1,m);}}
 function line(x0,y0,x1,y1,m,w=3){const n=Math.ceil(Math.hypot(x1-x0,y1-y0)/Math.max(1,w*.6));for(let i=0;i<=n;i++){let t=i/n;rect(x0+(x1-x0)*t-w/2,y0+(y1-y0)*t-w/2,w,w,m);}}
 function disk(cx,cy,r,m){for(let y=Math.max(0,Math.ceil(cy-r));y<Math.min(H,Math.ceil(cy+r));y++){let dx=Math.sqrt(Math.max(0,r*r-(y-cy)*(y-cy)));rect(cx-dx,y,2*dx+1,1,m);}}
 function ring(cx,cy,r,m,w){for(let k=0;k<180;k++){let a=k*Math.PI/90,b=(k+1)*Math.PI/90;line(cx+r*Math.cos(a),cy+r*Math.sin(a),cx+r*Math.cos(b),cy+r*Math.sin(b),m,w);}}
-const rockset=new Set([M.STONE,M.SLATE,M.LIME,M.GRANITE,M.BRICK,M.TERRA,M.EARTH,M.BASALT,M.RAMMED]);
+const rockset=new Set([M.SLATE,M.LIME,M.GRANITE,M.BRICK,M.TERRA,M.EARTH,M.BASALT,M.RAMMED]);
 function rock(x,y,w,h,m){let l=Math.max(0,x|0),t=Math.max(0,y|0),r=Math.min(W,l+w),b=Math.min(H,t+h);for(let j=t;j<b;j++)for(let i=l;i<r;i++){let k=j*W+i;if(rockset.has(A[k]))A[k]=m;}}
 const font={A:"010101111101101",B:"110101110101110",C:"011100100100011",D:"110101101101110",E:"111100110100111",F:"111100110100100",G:"011100101101011",H:"101101111101101",I:"111010010010111",J:"011001001101010",K:"101101110101101",L:"100100100100111",M:"101111111101101",N:"101111111111101",O:"010101101101010",P:"110101110100100",Q:"010101101111011",R:"110101110101101",S:"011100010001110",T:"111010010010010",U:"101101101101111",V:"101101101101010",W:"101101111111101",X:"101101010101101",Y:"101101010010010",Z:"111001010100111","0":"111101101101111","1":"010110010010111","2":"110001010100111","3":"110001010001110","4":"101101111001001","5":"111100110001110","6":"011100110101010","7":"111001010010010","8":"010101010101010","9":"010101011001110","-":"000000111000000"," ":"000000000000000"};
 function label(x,y,s,m=M.CYAN,scale=2){for(const c of s){const g=font[c]||font[" "];for(let i=0;i<15;i++)if(g[i]==="1")rect(x+(i%3)*scale,y+((i/3)|0)*scale,scale,scale,m);x+=4*scale;}}
@@ -18,12 +18,15 @@ function deck(x,y,w,color=M.AMBER){rect(x,y,w,10,M.STEEL);rect(x,y+10,w,7,M.RUST
 function truss(x1,y1,x2,y2){line(x1,y1,x2,y2,M.STEEL,6);line(x1,y1+16,x2,y2+16,M.RUST,5);let n=Math.floor(Math.hypot(x2-x1,y2-y1)/28);for(let i=0;i<n;i++){let t=i/n,s=(i+1)/n;line(x1+(x2-x1)*t,y1+(y2-y1)*t+16,x1+(x2-x1)*s,y1+(y2-y1)*s,M.COPPER,3);}}
 
 function frame(x,y,w,h,m=M.STEEL,t=9){rect(x,y,w,t,m);rect(x,y+h-t,w,t,m);rect(x,y,t,h,m);rect(x+w-t,y,t,h,m);}
+// Correct current native material physics: Stone (13) is a falling POWDER,
+ // not static bedrock. Use immobile LimestoneBlock (38) / GraniteBlock (40)
+ // for geological strata; all other displayed terrain remains native Solid.
 const rockL=[[0,0],[356,0],[371,90],[337,160],[378,234],[341,304],[387,365],[360,433],[402,509],[362,585],[398,657],[365,734],[393,823],[348,914],[387,996],[353,1081],[398,1159],[354,1236],[386,1307],[354,1384],[401,1461],[365,1554],[397,1637],[364,1728],[393,1813],[365,1901],[396,1988],[361,2048],[0,2048]];
 poly(rockL,M.GRANITE);
-for(const [y0,y1,m] of [[0,182,M.SLATE],[182,368,M.BASALT],[368,627,M.STONE],[627,876,M.SLATE],[876,1122,M.GRANITE],[1122,1350,M.BASALT],[1350,1562,M.STONE],[1562,1800,M.SLATE],[1800,2048,M.GRANITE]])for(let y=y0;y<y1;y++){let xmax=Math.min(300,280+16*Math.sin(y*.015));rect(0,y,xmax,1,m);}
+for(const [y0,y1,m] of [[0,182,M.SLATE],[182,368,M.BASALT],[368,627,M.LIME],[627,876,M.SLATE],[876,1122,M.GRANITE],[1122,1350,M.BASALT],[1350,1562,M.GRANITE],[1562,1800,M.SLATE],[1800,2048,M.GRANITE]])for(let y=y0;y<y1;y++){let xmax=Math.min(300,280+16*Math.sin(y*.015));rect(0,y,xmax,1,m);}
 poly([[982,0],[1024,0],[1024,2048],[961,2048],[940,1946],[975,1820],[929,1700],[971,1578],[925,1458],[956,1320],[917,1205],[952,1084],[923,960],[965,849],[936,725],[969,596],[931,473],[969,358],[944,247],[983,126]],M.BASALT);
-for(let i=0;i<870;i++){let x=Math.floor(rnd()*337),y=Math.floor(rnd()*H),w=3+Math.floor(rnd()*32),h=1+Math.floor(rnd()*5);let k=y*W+x;if(A[k])rect(x,y,w,h,[M.GRANITE,M.SLATE,M.BASALT,M.STONE,M.QUARTZ][i%5]);}
-for(let i=0;i<185;i++){let y=Math.floor(rnd()*H),x=944+Math.floor(rnd()*67);rect(x,y,12+Math.floor(rnd()*27),1+Math.floor(rnd()*7),[M.STONE,M.SLATE,M.GRANITE][i%3]);}
+for(let i=0;i<870;i++){let x=Math.floor(rnd()*337),y=Math.floor(rnd()*H),w=3+Math.floor(rnd()*32),h=1+Math.floor(rnd()*5);let k=y*W+x;if(A[k])rect(x,y,w,h,[M.GRANITE,M.SLATE,M.BASALT,M.LIME,M.QUARTZ][i%5]);}
+for(let i=0;i<185;i++){let y=Math.floor(rnd()*H),x=944+Math.floor(rnd()*67);rect(x,y,12+Math.floor(rnd()*27),1+Math.floor(rnd()*7),[M.LIME,M.SLATE,M.GRANITE][i%3]);}
 for(let j=0;j<22;j++){let y=45+j*90,x=277+Math.floor(rnd()*75);poly([[x-30,y],[x+10,y-11],[x+45,y+20],[x+5,y+43]],j%4?M.SLATE:M.OBSIDIAN);line(x+10,y+7,x+48,y+29,j%3?M.COPPER:M.QUARTZ,4);}
 const galleries=[[36,98,306,186,"SURVEY 01"],[43,378,310,204,"CORE 02"],[30,660,318,181,"DRILL 03"],[48,933,287,201,"FOSSIL 04"],[39,1204,318,196,"STRESS 05"],[29,1493,323,207,"SEAM 06"],[42,1809,316,201,"ANCHOR 07"]];
 for(let j=0;j<galleries.length;j++){const [x,y,w,h,name]=galleries[j];rect(x,y,w,h,M.IRON);rect(x+9,y+12,w-18,h-24,M.CONCRETE);rect(x+22,y+29,w-44,h-54,M.AIR);rect(x+25,y+24,w-49,5,M.RUST);rect(x+27,y+h-28,w-55,10,M.STEEL);rect(x+27,y+h-18,w-55,3,M.AMBER);for(let k=0;k<4;k++)rect(x+33+k*52,y+17,19,4,M.COPPER);sign(x+37,y+44,name);rect(x+43,y+h-90,76,47,M.IRON);rect(x+49,y+h-84,64,33,M.OBSIDIAN);for(let k=0;k<8;k++)rect(x+53+k*7,y+h-79+(k%3)*6,4,16,k%2?M.CYAN:M.AMBER);if(j%2===0){disk(x+160,y+h-64,25,M.RUST);ring(x+160,y+h-64,22,M.COPPER,5);disk(x+160,y+h-64,9,M.CYAN);}else{for(let k=0;k<5;k++){rect(x+136+k*20,y+h-76,15,38,k%2?M.STEEL:M.BASALT);rect(x+140+k*20,y+h-70,8,27,k%2?M.CYAN:M.AMBER);}}for(let k=0;k<5;k++)rect(x+52+k*38,y+h-41,18,5,k%2?M.COPPER:M.STEEL);}
@@ -94,7 +97,7 @@ let mismatch=0;for(let i=0;i<A.length;i++)if(A[i]!==check[i])mismatch++;if(misma
 const policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
 const setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.5}}],next_id:2,selected:1,edits,response:"LA-SELECTIVE",liquid_policy:policy,normalize:false,rule_radius:2,source:[],material:2,brush:8,fire:false};
 const json=JSON.stringify(setup)+"\n";if(edits.length>32768||json.length>1048576)throw Error("Budget "+edits.length+", "+json.length);
-const palette=new Uint8Array(256*3),colors={0:[8,12,20],13:[113,114,119],38:[187,180,157],40:[105,111,118],43:[159,95,71],48:[171,103,69],49:[61,77,96],50:[69,73,77],53:[186,114,68],56:[135,99,80],57:[94,103,115],58:[116,126,130],62:[137,148,157],65:[117,65,50],66:[81,91,100],68:[98,121,126],74:[83,70,99],76:[235,181,50],77:[52,239,220],78:[244,70,178],79:[252,179,61],80:[235,242,243],100:[49,55,66],101:[25,31,42],109:[164,119,84],119:[207,162,73],120:[75,166,180],122:[221,231,240]};
+const palette=new Uint8Array(256*3),colors={0:[8,12,20],38:[187,180,157],40:[105,111,118],43:[159,95,71],48:[171,103,69],49:[61,77,96],50:[69,73,77],53:[186,114,68],56:[135,99,80],57:[94,103,115],58:[116,126,130],62:[137,148,157],65:[117,65,50],66:[81,91,100],68:[98,121,126],74:[83,70,99],76:[235,181,50],77:[52,239,220],78:[244,70,178],79:[252,179,61],80:[235,242,243],100:[49,55,66],101:[25,31,42],109:[164,119,84],119:[207,162,73],120:[75,166,180],122:[221,231,240]};
 for(let i=0;i<256;i++)palette.set(colors[i]||[22,23,28],i*3);
 const PW=512,PH=1024,raw=new Uint8Array((PW+1)*PH);for(let y=0;y<PH;y++){raw[y*(PW+1)]=0;for(let x=0;x<PW;x++)raw[y*(PW+1)+x+1]=A[(y*2)*W+x*2];}
 function u32(n){return [(n>>>24)&255,(n>>>16)&255,(n>>>8)&255,n&255];}
@@ -122,12 +125,26 @@ const crops={
   "asteroid-ladder-galleries-detail-lower.png":nativeCrop(20,1450,500,580)
 };
 const counts={};for(const x of A)counts[x]=(counts[x]||0)+1;
+// Prevent a future artistic edit from silently introducing powder, fluid,
+// growing/combustible or otherwise mobile construction materials.
+const stable=new Set([0,38,40,49,50,53,57,58,62,65,74,77,78,79,100,101,119,120,122]);
+for(const [id,n] of Object.entries(counts))if(!stable.has(+id))throw Error("Non-stable native material "+id+" cells="+n);
 return {json,png,crops,stats:{source_public_id:"orbit-0006a",target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,material_cells_verified:A.length,material_mismatches:mismatch,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,material_counts:counts,png_dimensions:[PW,PH],png_bytes:png.length,preview_crops:[
 {path:"asteroid-ladder-galleries-detail-survey-core.png",origin:[30,85],extent:[485,570],pixel_scale:"1:1"},
 {path:"asteroid-ladder-galleries-detail-pod-mast.png",origin:[520,550],extent:[465,610],pixel_scale:"1:1"},
 {path:"asteroid-ladder-galleries-detail-lower.png",origin:[20,1450],extent:[500,580],pixel_scale:"1:1"}
 ],anchor_relocations:[{"name":"Core Drill","previous":[159,515],"final":[260,467],"reason":"Lift inspection station above the solid drill rack"},{"name":"Drill Stacks","previous":[180,760],"final":[252,739],"reason":"Clear upper aisle beside the drill stack, not inside machinery"},{"name":"Fossil Hall","previous":[155,1065],"final":[248,1021],"reason":"Open exhibition airspace beside fossil and microscope cabinets"},{"name":"Stress Laboratory","previous":[160,1322],"final":[261,1290],"reason":"Clear overhead instrument inspection lane"},{"name":"Seam Gallery","previous":[155,1590],"final":[255,1584],"reason":"Clear aisle free of isolated decorative fragments"},{"name":"Anchor Winch","previous":[162,1935],"final":[263,1858],"reason":"Upper winch observation aisle above the solid wheel"},{"name":"Pod B","previous":[846,677],"final":[810,631],"reason":"Upper pod inspection aisle, above the solid lower gantry"},{"name":"Pod C","previous":[846,1016],"final":[840,982],"reason":"Unobstructed upper pod lane outside steel instrument frame"},{"name":"Pod E","previous":[833,1758],"final":[835,1713],"reason":"Upper pod aisle above crossing copper rig"},{"name":"Ladder Mast Upper","previous":[618,474],"final":[580,474],"reason":"West-side accessible ladder-platform standoff, not inside rail"},{"name":"Ladder Mast Lower","previous":[628,1485],"final":[580,1485],"reason":"West-side lower mast standoff, preserving continuous rail"}],
 geometry_repairs:[{site:"Survey Gallery",kind:"service hatch",rectangle:[126,163,100,24],purpose:"Connect original exact site to principal connected flight airspace"}],
+material_semantics_audit:{
+native_source:"techrote/cybersand@018bd09503d7f079ddac52e225c2f7daf8d678bf/native/include/cybersand/material.hpp",
+native_header_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+basis:"All nonempty final IDs independently checked as native Solid, immovable, RuleKernel::None; Stone 13 is Powder, movable, DensityMotion::Down",
+stone_13_cells_before:53687,stone_13_cells_after:0,powder_liquid_gas_agent_cells_after:0,
+material_cell_replacements:{"Stone13_to_LimestoneBlock38":27751,"Stone13_to_GraniteBlock40":25936},
+changed_material_cells:53687,changed_solid_air_occupancy_cells:0,
+rock_strata:"upper y368-626 limestone; lower y1350-1561 granite; rock chips limestone; distinct basalt and slate bands retained",
+native_material_admission:"NOT EXECUTED"
+},
 native_qualification:"NOT EXECUTED",original_reference_visual_comparison:"NOT EXECUTED: source PNG binary inaccessible"}};
 };
 module.exports={generate};

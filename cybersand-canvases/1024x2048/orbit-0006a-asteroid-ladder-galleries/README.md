@@ -31,6 +31,17 @@ The prior canvas had a **false-positive 16/16 navigation receipt**: a hidden ±9
 
 Unchanged exact centres: Survey Gallery `[133,174]` (now connected after the hatch); Pod A `[849,316]`; Pod D `[844,1367]`; Tether Reel `[541,1027]`; Lower Exit `[517,1999]`. The final declared centres are not advertised as the unchanged original centres: their deliberate changes are recorded here and in `evidence.json`.
 
+## Native material-state correctness repair (17 November 2026)
+
+A subsequent independent review found **53,687 cells of ID 13 / Stone**, which CyberSand's accepted native material catalogue classifies as **Powder**, **movable**, `RuleKernel::Stone` and `DensityMotion::Down`—not immobile rock. This would let gravity alter the geological wall structure after starting the simulation, invalidating any static-only route certification.
+
+The deterministic builder now forbids Stone 13 and other non-stable materials outright. **53,687 final material cells** changed, with **no air/solid occupancy changes**:
+- **27,751 cells:** Stone 13 → native stable **LimestoneBlock 38**, especially the light mid-upper asteroid stratum and rock inclusions.
+- **25,936 cells:** Stone 13 → native stable **GraniteBlock 40**, especially the darker lower deep-rock band.
+- BasaltColumns 100, Slate 49, surrounding walls, all seven excavations, five pods, mast, gantries, equipment, Survey service hatch and Midge spawn are preserved.
+- **Remaining Stone/powder/liquid/gas/agent cells: 0.** All final nonempty IDs were checked against `techrote/cybersand@018bd09503d7f079ddac52e225c2f7daf8d678bf/native/include/cybersand/material.hpp`: native `MaterialState::Solid`, non-movable and no active rule kernel. This is a source-level audit, **not** an installed-binary admission test.
+- The committed overview and three original-resolution crops were regenerated from the rebuilt material-cell grid. The two main replaced geological bands remain distinct, with all travel airspace untouched.
+
 ## Reproduce and load
 Requires Node.js. From this directory:
 ```sh
@@ -41,14 +52,14 @@ The committed builder uses a fixed seed and the final `A` material plane. Its fu
 - `asteroid-ladder-galleries-detail-pod-mast.png`: pod/mast crossing (origin 520,550; 465×610).
 - `asteroid-ladder-galleries-detail-lower.png`: lower excavation galleries (origin 20,1450; 500×580).
 
-Install the Setup-v2 JSON as a named Workbench starting setup under Godot `user://workbench/`. Select it in a CyberSand build whose native `workbench_start_rectangle_capacity()` admits at least **17145** rectangles; older binaries may cap at 4,096.
+Install the Setup-v2 JSON as a named Workbench starting setup under Godot `user://workbench/`. Select it in a CyberSand build whose native `workbench_start_rectangle_capacity()` admits at least **17098** rectangles; older binaries may cap at 4,096.
 
 ## Exact-HEAD static qualification
 - Target extent **1024×2048**; current CyberSand Setup-v2 allows sides 512–2048 in multiples of 64 (source reference `techrote/cybersand@018bd09503d7f079ddac52e225c2f7daf8d678bf`).
-- Rectangle edits **17145/32,768**; UTF-8 JSON **312391/1,048,576** bytes.
+- Rectangle edits **17098/32,768**; UTF-8 JSON **311512/1,048,576** bytes.
 - Exact full-plane material serialization independently reconstructed **2097152/2097152** cells; author reconstruction mismatches **0** and independent material histogram matches.
 - Conservative **19×15** all-non-air collision-envelope BFS independently ran from selected Midge spawn **[528,93]**: **723803** connected legal flight centres; **16/16 exact final declared anchors**, **zero hidden offsets**.
-- The 100×24 Survey service hatch changes **329** final material cells from solid to air; all other terrain remains preserved.
+- The earlier 100×24 Survey service hatch remains intact (329 cells previously opened). This repair changes **53,687 material IDs** without changing any solid/air occupancy or destination position.
 - **NOT RUN:** Godot/CyberDemoBridge native material/actor hash admission, installed DLL/SO rectangle capacity, Rapier progression, input/collision, and Workbench save/reopen. Source-image visual comparison is also **UNVERIFIED**. Static success must not be described as physical Workbench acceptance.
 
 **Status:** Draft / HOLD; return repaired exact HEAD to Shepherd for independent review.
