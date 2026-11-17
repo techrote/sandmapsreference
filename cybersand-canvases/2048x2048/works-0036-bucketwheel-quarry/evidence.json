@@ -1,0 +1,255 @@
+{
+  "source_public_id": "works-0036",
+  "target": [
+    2048,
+    2048
+  ],
+  "seed": 360081,
+  "rectangles": 13658,
+  "rectangle_budget": 32768,
+  "json_bytes": 262013,
+  "json_byte_budget": 1048576,
+  "material_cells_verified": 4194304,
+  "air_cells": 2102979,
+  "clearance_envelope": [
+    19,
+    15
+  ],
+  "nav_component_cells": 1651365,
+  "spawn": [
+    785,
+    325
+  ],
+  "waypoints": [
+    {
+      "name": "Upper Ore Administration",
+      "intended": [
+        645,
+        245
+      ],
+      "reachable": true,
+      "point": [
+        645,
+        245
+      ],
+      "offset": 0
+    },
+    {
+      "name": "Eastern Lift Control",
+      "intended": [
+        1530,
+        295
+      ],
+      "reachable": true,
+      "point": [
+        1530,
+        295
+      ],
+      "offset": 0
+    },
+    {
+      "name": "North Conveyor",
+      "intended": [
+        920,
+        390
+      ],
+      "reachable": true,
+      "point": [
+        920,
+        390
+      ],
+      "offset": 0
+    },
+    {
+      "name": "West Overburden Terrace",
+      "intended": [
+        625,
+        715
+      ],
+      "reachable": true,
+      "point": [
+        625,
+        715
+      ],
+      "offset": 0
+    },
+    {
+      "name": "East Processing Bench",
+      "intended": [
+        1460,
+        780
+      ],
+      "reachable": true,
+      "point": [
+        1410,
+        780
+      ],
+      "offset": 50
+    },
+    {
+      "name": "Wheel Inspection Approach",
+      "intended": [
+        780,
+        1045
+      ],
+      "reachable": true,
+      "point": [
+        780,
+        1045
+      ],
+      "offset": 0
+    },
+    {
+      "name": "Excavator Gantry",
+      "intended": [
+        1430,
+        890
+      ],
+      "reachable": true,
+      "point": [
+        1410,
+        860
+      ],
+      "offset": 36
+    },
+    {
+      "name": "West Crusher Yard",
+      "intended": [
+        465,
+        1165
+      ],
+      "reachable": true,
+      "point": [
+        465,
+        1165
+      ],
+      "offset": 0
+    },
+    {
+      "name": "Middle Pit Airspace",
+      "intended": [
+        815,
+        870
+      ],
+      "reachable": true,
+      "point": [
+        810,
+        850
+      ],
+      "offset": 21
+    },
+    {
+      "name": "Lower West Ramp",
+      "intended": [
+        775,
+        1605
+      ],
+      "reachable": true,
+      "point": [
+        775,
+        1605
+      ],
+      "offset": 0
+    },
+    {
+      "name": "Deep Ore Exposure",
+      "intended": [
+        1060,
+        1685
+      ],
+      "reachable": true,
+      "point": [
+        1060,
+        1685
+      ],
+      "offset": 0
+    },
+    {
+      "name": "East Sorting Gallery",
+      "intended": [
+        1530,
+        1225
+      ],
+      "reachable": true,
+      "point": [
+        1530,
+        1225
+      ],
+      "offset": 0
+    },
+    {
+      "name": "South Service Transit",
+      "intended": [
+        1070,
+        1740
+      ],
+      "reachable": true,
+      "point": [
+        1070,
+        1740
+      ],
+      "offset": 0
+    },
+    {
+      "name": "Eastern Ore Terrace",
+      "intended": [
+        1455,
+        1540
+      ],
+      "reachable": true,
+      "point": [
+        1455,
+        1540
+      ],
+      "offset": 0
+    }
+  ],
+  "material_counts": {
+    "0": 2102979,
+    "38": 110885,
+    "40": 121762,
+    "48": 200206,
+    "49": 75629,
+    "50": 58651,
+    "53": 15479,
+    "56": 368942,
+    "57": 23347,
+    "62": 222017,
+    "64": 5236,
+    "65": 133003,
+    "68": 11250,
+    "74": 936,
+    "76": 540,
+    "77": 10684,
+    "79": 25565,
+    "80": 1189,
+    "100": 135168,
+    "101": 87142,
+    "104": 159468,
+    "109": 314896,
+    "119": 1854,
+    "122": 7476
+  },
+  "png_bytes": 1050528,
+  "native_qualification": "NOT EXECUTED",
+  "reference_visual_comparison": "NOT EXECUTED: binary reference image inaccessible in this runtime",
+  "source": {
+    "public_id": "works-0036",
+    "source_key": "batch1/image-0081",
+    "path": "artwork/works_yards/batch1/terraced_orefields-bucketwheel_quarry-dry_magnitude.png",
+    "git_blob_sha": "a96b91af219962dd219ffe3b8ea48f2d0668eda9",
+    "sha256": "9307625500b4026ad09e24c3fc953da2a37a855ad4eea76869863900931ccc59",
+    "source_pixel_dimensions": "not independently verified"
+  },
+  "exact_cybersand_commit": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+  "static_checks": {
+    "serialized_runs_equal_material_plane": true,
+    "all_14_destinations_reachable_at_19x15": true,
+    "rectangles_within_budget": true,
+    "bytes_within_budget": true
+  },
+  "caveats": [
+    "No Godot/native runtime executed in this run",
+    "No independent raw reference-image visual comparison available"
+  ]
+}
