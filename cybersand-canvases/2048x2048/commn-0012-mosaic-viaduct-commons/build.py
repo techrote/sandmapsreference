@@ -419,8 +419,8 @@ material_hash=hashlib.sha256(arr.tobytes()).hexdigest()
 assert material_hash==hashlib.sha256(rec.tobytes()).hexdigest()
 setup=json.loads((ROOT/'base-setup.json').read_text())
 setup['actors']=[{'hash':'c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96',
- 'id':1,'model':'midge','options':{'boost_multiplier':1.5,'budget':20.0,'inertia_multiplier':1.0,
- 'mass_multiplier':1.0,'thrust_multiplier':1.0,'torque_multiplier':1.0},'spawn':[404.0,502.0]}]
+ 'id':1,'model':'midge','options':{'boost_multiplier':1.5,'budget':20,'inertia_multiplier':1,
+ 'mass_multiplier':1,'thrust_multiplier':1,'torque_multiplier':1},'spawn':[404,502]}]
 setup['selected']=1;setup['next_id']=2;setup['edits']=runs
 wrapped=json.loads((ROOT/'generated-start-template.json').read_text())
 wrapped['starting_setup']=setup
@@ -454,8 +454,26 @@ proof={
  'connectivity':checks,'materials':{str(k):int(v) for k,v in zip(*np.unique(arr,return_counts=True))},
  'native_runtime':'NOT exercised; requires Windows 11 Godot/Rapier Workbench load, actor-input, progression, save/reopen',
  'source_visual':'Artwork identified by catalogue SHA/path but original bitmap could not be fetched for side-by-side inspection; fidelity is thematic and geometric only, NOT exact visual fidelity verified',
- 'render_method':'full RGB PNG computed from authored material cells and CyberSand colour palette, no source pixels or overlay image',
- 'representation':'current CyberSand generated-start-v1 with valid starting_setup.edits rectangle overlay'
+ 'render_method':'lossless 8-bit palette-colour PNG from the final material-cell plane; no source artwork or display-only grain',
+ 'representation':'current CyberSand generated-start-v1 with valid starting_setup.edits rectangle overlay',
+ 'rework':{
+   "worker": "B",
+   "baseline_head": "d36ba7ea59e1fdc511c1b9d717f549e007fa58cd",
+   "baseline_material_hash": "1127b5d58ecd6a32d22ad255652b698d5fc7d1a7ec25087a825eb7fc2acbe23d",
+   "changed_cells": 144204,
+   "added_rectangles": 1331,
+   "exact_anchors_reachable": 16,
+   "water_cells_preserved": 43916,
+   "source_png_visual": "UNVERIFIED",
+   "godot_rapier_native": "NOT TESTED",
+   "reference_fidelity": "UNVERIFIED",
+   "material_enumeration": "all used IDs within current verified native source enum; native runtime admission not tested",
+   "native_pixel_crop_names": [
+     "detail-viaduct.png",
+     "detail-civic.png",
+     "detail-gardens.png"
+   ]
+ }
 }
 (ROOT/'evidence.json').write_text(json.dumps(proof,indent=2)+'\n')
 print(json.dumps({'rectangles':len(runs),'json_bytes':len(json_text.encode()),'plane_sha':material_hash,

@@ -58,7 +58,7 @@ The overlay was conservatively clipped around the original 19×15 shortest-route
 
 ### Exact-HEAD static requalification
 - Source and PR baseline: `d36ba7ea59e1fdc511c1b9d717f549e007fa58cd`, material-plane SHA-256 `1127b5d58ecd6a32d22ad255652b698d5fc7d1a7ec25087a825eb7fc2acbe23d`.
-- Revised extent: **2048×2048**; **19,357 / 32,768** 5-field rectangle stamps; JSON **376,178 / 1,048,576 bytes**; changed material cells **144,204**.
+- Revised extent: **2048×2048**; **19,357 / 32,768** 5-field rectangle stamps; JSON **376,164 / 1,048,576 bytes**; changed material cells **144,204**.
 - Reconstructed cell plane: **4,194,304/4,194,304**; exact SHA-256 `e9d31f0fb6e813e0d22ac3849d1b4cb60fabdd505b64bf508b3ed23e8459fc6a`; zero unsupported/pseudo material IDs.
 - Conservative 19×15 all-non-air-blocking Midge occupancy: **16/16 original final declared anchors** connected from spawn [404,502], **617,620** connected legal centres, no substitute waypoints. 7×7 route check: **16/16**, 980,001 centres.
 - Dynamic Water: **43,916** original cells retained, zero changed Water cells.
