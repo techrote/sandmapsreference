@@ -89,7 +89,7 @@ rect(91,1585,50,113,M.IRON);rect(99,1593,35,67,M.OBSIDIAN);
 for(let j=0;j<9;j++)rect(103+j*3,1599+(j%4)*10,2,29,j%2?M.CYAN:M.AMBER);
 ring(165,1705,28,M.COPPER,7);disk(165,1705,10,M.CYAN);
 // Sealed archive: multiple independently framed glass cells.
-for(let i=0;i<3;i++){let x=731+i*33;rect(x,1642,28,87,M.IRON);rect(x+5,1648,18,71,M.GLASS);rect(x+9,1660+(i%2)*12,9,31,M.CYAN);rect(x+5,1720,18,6,M.BRASS);}
+for(let i=0;i<3;i++){let x=731+i*33,w=i===2?20:28;rect(x,1642,w,87,M.IRON);rect(x+5,1648,w-10,71,M.GLASS);rect(x+9,1660+(i%2)*12,Math.max(4,w-19),31,M.CYAN);rect(x+5,1720,w-10,6,M.BRASS);}
 // Lower vault: broken segmented sarcophagus casing.
 rect(84,1928,107,60,M.RUST);rect(92,1936,91,45,M.OBSIDIAN);
 for(let j=0;j<6;j++)rect(98+j*14,1941,8,34,j%3?M.GRANITE:M.BRASS);
@@ -109,6 +109,11 @@ for(const [x,y,w,h,name,side] of bays){let cy=y+Math.floor(h*.65);if(side==="L")
 // Two narrow open ventilation routes through shaft maintain continuity around the large mechanical reel.
 // Open continuous walking/flying aisles through otherwise obstructive right-hand storage racks.
 for(const j of [5,7,9,11]){const [x,y,w,h]=bays[j],cy=y+Math.floor(h*.65);rect(x+48,cy-18,w-76,41,M.AIR);}
+// Restore usable service access to the three original functional destination sites.
+// Upper Intake: open lower scanner aisle while preserving elevated index bar.
+rect(810,180,50,36,M.AIR);
+// Reel Hall: remove a brass cassette spur that clipped the Midge envelope.
+rect(204,1651,12,12,M.AIR);
 rect(366,19,35,2009,M.AIR);rect(631,19,35,2009,M.AIR);
 rect(503,79,30,63,M.AIR);for(const yy of [184,482,871,1115,1574,1895])rect(400,yy,254,49,M.AIR);const spawn=[518,107];
 const destinations=[
@@ -124,9 +129,9 @@ const nav=new Uint8Array(A.length);
 for(let y=7;y<H-7;y++)for(let x=9;x<W-9;x++){let x0=x-9,x1=x+10,y0=y-7,y1=y+8;let n=sat[y1*(W+1)+x1]-sat[y0*(W+1)+x1]-sat[y1*(W+1)+x0]+sat[y0*(W+1)+x0];if(n===0)nav[y*W+x]=1;}
 let p=spawn[1]*W+spawn[0];if(!nav[p])throw Error("Spawn blocked, center="+A[p]);
 const q=new Int32Array(A.length),seen=new Uint8Array(A.length);q[0]=p;seen[p]=1;let count=1;for(let i=0;i<count;i++){let j=q[i],x=j%W,y=(j/W)|0;for(const d of [-W,-1,1,W]){if(d===-W&&y===0||d===-1&&x===0||d===1&&x===W-1||d===W&&y===H-1)continue;let k=j+d;if(nav[k]&&!seen[k]){seen[k]=1;q[count++]=k;}}}
-const waypoints=[];
-for(const [name,[x,y]] of destinations){let best=null,d2=1e9;for(let dy=-99;dy<=99;dy+=3)for(let dx=-99;dx<=99;dx+=3){let xx=x+dx,yy=y+dy;if(xx<10||yy<8||xx>=W-10||yy>=H-8)continue;let dd=dx*dx+dy*dy;if(dd>=d2)continue;if(seen[yy*W+xx]){d2=dd;best=[xx,yy];}}waypoints.push({name,intended:[x,y],reachable:!!best,point:best,offset:best?Math.round(Math.sqrt(d2)):null});}
-const failed=waypoints.filter(x=>!x.reachable||x.offset>105);if(failed.length)throw Error("Waypoints "+JSON.stringify(failed));
+const waypoints=destinations.map(([name,[x,y]])=>({name,intended:[x,y],reachable:!!seen[y*W+x],point:[x,y],offset:0}));
+const failed=waypoints.filter(w=>!w.reachable);
+if(failed.length)throw Error("Blocked exact-site 19x15 Midge anchors (no surrogate positions allowed): "+JSON.stringify(failed));
 const edits=[];let open=new Map();
 for(let y=0;y<H;y++){let cur=new Map(),row=y*W,x=0;while(x<W){let m=A[row+x],start=x++;while(x<W&&A[row+x]===m)x++;if(!m)continue;let key=start+":"+(x-start)+":"+m,j=open.get(key);if(j!==undefined&&edits[j][1]+edits[j][3]===y){edits[j][3]++;cur.set(key,j);}else{let k=edits.length;edits.push([start,y,x-start,1,m]);cur.set(key,k);}}open=cur;}
 const check=new Uint8Array(A.length);for(const [x,y,w,h,m] of edits)for(let yy=y;yy<y+h;yy++)check.fill(m,yy*W+x,yy*W+x+w);
@@ -144,7 +149,16 @@ function crc(a){let c=0xffffffff;for(let i=0;i<a.length;i++)c=ct[(c^a[i])&255]^(
 function chunk(t,d){let a=join([Uint8Array.from([...t].map(ch=>ch.charCodeAt(0))),d]);return join([Uint8Array.from(u32(d.length)),a,Uint8Array.from(u32(crc(a)))]);}
 function stored(a){let out=[Uint8Array.from([120,1])],s1=1,s2=0;for(let p=0;p<a.length;){let n=Math.min(65535,a.length-p),b=new Uint8Array(n+5);b[0]=p+n===a.length?1:0;b[1]=n&255;b[2]=n>>>8;b[3]=(~n)&255;b[4]=((~n)>>>8)&255;for(let i=0;i<n;i++){let v=a[p+i];b[i+5]=v;s1+=v;if(s1>=65521)s1-=65521;s2+=s1;if(s2>=65521)s2-=65521;}out.push(b);p+=n;}out.push(Uint8Array.from(u32(((s2<<16)|s1)>>>0)));return join(out);}
 const png=join([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk("IHDR",Uint8Array.from([...u32(PW),...u32(PH),8,3,0,0,0])),chunk("PLTE",palette),chunk("IDAT",stored(raw)),chunk("IEND",new Uint8Array())]);
+// Native-cell district evidence, rendered from exactly the same material grid as JSON.
+function renderNativeCrop(x0,y0,pw=512,ph=512){
+ if(x0<0||y0<0||x0+pw>W||y0+ph>H)throw Error("Crop outside world");
+ const scan=new Uint8Array((pw+1)*ph);
+ for(let y=0;y<ph;y++)scan.set(A.subarray((y0+y)*W+x0,(y0+y)*W+x0+pw),y*(pw+1)+1);
+ return join([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk("IHDR",Uint8Array.from([...u32(pw),...u32(ph),8,3,0,0,0])),chunk("PLTE",palette),chunk("IDAT",stored(scan)),chunk("IEND",new Uint8Array())]);
+}
+const cropSpecs={upper_intake:[512,0,512,512],reel_hall:[112,1408,512,512],sealed_05:[512,1480,512,512]};
+const crops={};for(const [name,xywh] of Object.entries(cropSpecs))crops[name]=renderNativeCrop(...xywh);
 const counts={};for(const x of A)counts[x]=(counts[x]||0)+1;
-return {json,png,stats:{source_public_id:"techn-0031a",target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,material_cells_verified:A.length,material_mismatches:mismatch,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,material_counts:counts,png_dimensions:[PW,PH],png_bytes:png.length,native_qualification:"NOT EXECUTED",original_reference_visual_comparison:"NOT EXECUTED: source PNG binary inaccessible"}};
+return {json,png,crops,stats:{source_public_id:"techn-0031a",target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,material_cells_verified:A.length,material_mismatches:mismatch,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,material_counts:counts,png_dimensions:[PW,PH],png_bytes:png.length,crop_regions:cropSpecs,crop_png_bytes:Object.fromEntries(Object.entries(crops).map(([k,p])=>[k,p.length])),native_qualification:"NOT EXECUTED",original_reference_visual_comparison:"NOT EXECUTED: source PNG binary inaccessible"}};
 };
 module.exports={generate};

@@ -5,9 +5,9 @@
     2048
   ],
   "seed": 310118,
-  "rectangles": 9091,
+  "rectangles": 9076,
   "rectangle_budget": 32768,
-  "json_bytes": 167602,
+  "json_bytes": 167332,
   "json_byte_budget": 1048576,
   "material_cells_verified": 2097152,
   "material_mismatches": 0,
@@ -15,7 +15,7 @@
     19,
     15
   ],
-  "connected_clearance_centres": 723602,
+  "connected_clearance_centres": 725506,
   "spawn": [
     518,
     107
@@ -29,10 +29,10 @@
       ],
       "reachable": true,
       "point": [
-        803,
+        833,
         194
       ],
-      "offset": 30
+      "offset": 0
     },
     {
       "name": "Catalog 01",
@@ -185,10 +185,10 @@
       ],
       "reachable": true,
       "point": [
-        220,
+        217,
         1660
       ],
-      "offset": 3
+      "offset": 0
     },
     {
       "name": "Sealed 05",
@@ -198,10 +198,10 @@
       ],
       "reachable": true,
       "point": [
-        834,
+        828,
         1724
       ],
-      "offset": 6
+      "offset": 0
     },
     {
       "name": "Lower Vault",
@@ -244,26 +244,26 @@
     }
   ],
   "material_counts": {
-    "0": 1042744,
-    "38": 99240,
+    "0": 1044346,
+    "38": 99195,
     "40": 70801,
-    "48": 29948,
+    "48": 29897,
     "49": 70575,
-    "50": 30028,
-    "53": 36849,
+    "50": 29948,
+    "53": 36756,
     "57": 110078,
     "58": 97937,
-    "62": 52647,
-    "65": 45846,
+    "62": 52437,
+    "65": 45646,
     "68": 1193,
     "74": 10671,
-    "77": 12952,
+    "77": 12827,
     "79": 6162,
     "100": 155257,
-    "101": 55151,
+    "101": 54791,
     "109": 135842,
-    "119": 23381,
-    "120": 3179,
+    "119": 23118,
+    "120": 3004,
     "122": 6671
   },
   "png_dimensions": [
@@ -271,6 +271,31 @@
     1024
   ],
   "png_bytes": 526200,
+  "crop_regions": {
+    "upper_intake": [
+      512,
+      0,
+      512,
+      512
+    ],
+    "reel_hall": [
+      112,
+      1408,
+      512,
+      512
+    ],
+    "sealed_05": [
+      512,
+      1480,
+      512,
+      512
+    ]
+  },
+  "crop_png_bytes": {
+    "upper_intake": 263524,
+    "reel_hall": 263524,
+    "sealed_05": 263524
+  },
   "native_qualification": "NOT EXECUTED",
   "original_reference_visual_comparison": "NOT EXECUTED: source PNG binary inaccessible"
 }
