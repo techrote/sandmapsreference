@@ -99,6 +99,9 @@ function buildCyberSand(base, template, palette) {
  rect(545,263,10,1370,M.steel);rect(657,263,9,1370,M.steel);
  rect(1375,263,9,1370,M.steel);rect(1483,263,9,1370,M.steel);
  for(let y=280;y<1600;y+=32){rect(545,y,8,8,M.amber);rect(1484,y,7,8,M.cyan);rect(619,y,6,8,M.iron);rect(1411,y,6,8,M.iron);}
+ // Physical Midge portals across lift rails: broad, deliberate clearings on each storey.
+ for(const y of floors){rect(638,y+72,47,93,M.air);rect(1360,y+72,51,93,M.air);
+  rect(537,y+72,29,93,M.air);rect(1474,y+72,30,93,M.air);}
  // Exposed balconies: small railings, open maneuvering space around central vehicle.
  for(const y of floors.map(n=>n+212)){
   rect(670,y-5,172,17,M.iron);rect(1205,y-5,170,17,M.iron);
@@ -144,6 +147,7 @@ function buildCyberSand(base, template, palette) {
  rect(887,1375,273,49,M.iron);rect(905,1388,239,22,M.corr);
  for(const x of [918,993,1068]){poly([[x,1418],[x+60,1418],[x+75,1533],[x-16,1533]],M.iron);
   poly([[x+12,1425],[x+48,1425],[x+61,1520],[x,1520]],M.rust);rect(x+16,1509,38,8,M.brass);}
+ // Deliberate maintenance passage notches, plus service masts.
  // Crane side masts, maintenance platforms and access lights.
  for(const x of [775,1262]){rect(x,422,13,1028,M.corr);
   for(let y=455;y<1440;y+=72){rect(x-11,y,34,10,M.iron);rect(x+3,y+12,7,38,M.brass);}}
@@ -161,6 +165,13 @@ function buildCyberSand(base, template, palette) {
  rect(223,199,192,75,M.iron);rect(234,208,171,57,M.slate);label("A-3",252,214,8,M.white);
  rect(1564,199,236,75,M.iron);rect(1574,209,215,57,M.slate);label("ORBITAL",1590,225,4,M.cyan);
  for(let x=450;x<=1640;x+=95){rect(x,160,52,7,M.white);rect(x+8,166,35,5,M.cyan);}
+ // Clear unobstructed horizontal transit across piers in the lower undercroft.
+ for(let x=210;x<1820;x+=176)rect(x-12,1835,54,83,M.air);
+ // Assembly-stage precision markings over rocket's existing solid skin.
+ for(let y=683;y<1320;y+=92){
+  rect(1018,y,16,5,M.brass);rect(1042,y,13,5,M.iron);
+  rect(962,y+35,7,26,M.steel);rect(1082,y+35,7,26,M.brass);
+ }
  // Mineral/steel visual texture only in cutaway rock and basement, never in flight corridors.
  for(let i=0;i<410;i++){let x,y;if(i<225){x=rand()<.5?12+rand()*75:1960+rand()*75;y=160+rand()*1700;}
   else{x=120+rand()*1800;y=1983+rand()*64;}
@@ -168,12 +179,12 @@ function buildCyberSand(base, template, palette) {
  for(let x=246;x<1800;x+=210){rect(x,1795,12,32,M.brass);rect(x-16,1825,45,10,M.amber);rect(x-10,1834,32,3,M.white);}
  const spawn=[730,370],marks=[
   ["A3 Control Gallery",[445,417]],["East Flight Control",[1745,456]],
-  ["Upper Nose Overlook",[814,486]],["West Crane Rail",[718,386]],
+  ["Upper Nose Overlook",[813,470]],["West Crane Rail",[718,386]],
   ["East Crane Rail",[1317,386]],["Booster West",[710,716]],
-  ["Booster East",[1335,716]],["Fabrication West",[448,1030]],
-  ["Metrology East",[1710,1030]],["Port Engine Deck",[714,1290]],
+  ["Booster East",[1335,716]],["Fabrication West",[447,1026]],
+  ["Metrology East",[1709,1026]],["Port Engine Deck",[714,1290]],
   ["Starboard Engine Deck",[1345,1290]],["West Lower Lab",[438,1568]],
-  ["East Lower Lab",[1731,1568]],["Lift Shaft West",[603,1628]],
+  ["East Lower Lab",[1730,1501]],["Lift Shaft West",[603,1628]],
   ["Lift Shaft East",[1440,1628]],["Lower Service West",[820,1850]],
   ["Lower Service East",[1220,1850]]
  ];
@@ -188,6 +199,10 @@ function buildCyberSand(base, template, palette) {
  }
  for(const p of active.values())edits.push(p);
  edits.sort((a,b)=>a[1]-b[1]||a[0]-b[0]);
+ // Exact 4,194,304-cell reconstruction from the actual serialized edit rectangle stream.
+ const reconstructed=new Uint8Array(W*H);
+ for(const [x,y,w,h,m] of edits)for(let yy=y;yy<y+h;yy++)reconstructed.fill(m,yy*W+x,yy*W+x+w);
+ let mismatches=0;for(let i=0;i<cells.length;i++)if(cells[i]!==reconstructed[i])mismatches++;
  // Conservative exact 19x15 full-kernel clearance via two passes of occupancy prefix sums.
  const horizontal=new Uint16Array(W*H),blocked=new Uint8Array(W*H);
  for(let y=0;y<H;y++){const pref=new Uint16Array(W+1),off=y*W;
@@ -234,7 +249,8 @@ function buildCyberSand(base, template, palette) {
   pngBase64+=alpha[(v>>>18)&63]+alpha[(v>>>12)&63]+(i+1<bytes.length?alpha[(v>>>6)&63]:"=")+(i+2<bytes.length?alpha[v&63]:"=");}
  const counts={};for(const m of cells)counts[m]=(counts[m]||0)+1;
  return {json,pngBase64,rectangleCount:edits.length,jsonBytes:json.length,pngBytes:bytes.length,
-  destinations:marksResult,reachable:marksResult.filter(x=>x.reachable).length,componentCells:tail,materialCounts:counts,extent:[W,H],seed:SEED,source:"works-0023"};
+  destinations:marksResult,reachable:marksResult.filter(x=>x.reachable).length,componentCells:tail,
+  reconstructionMismatches:mismatches,materialCounts:counts,extent:[W,H],seed:SEED,source:"works-0023"};
 }
 if(typeof module!=="undefined"&&typeof require==="function"&&require.main===module){
  const fs=require("fs"),base=JSON.parse(fs.readFileSync("base-setup.json")),
@@ -243,7 +259,8 @@ if(typeof module!=="undefined"&&typeof require==="function"&&require.main===modu
  fs.writeFileSync("setup-works-0023-cliffcut-rocket-hall.json",o.json);
  fs.writeFileSync("preview.png",Buffer.from(o.pngBase64,"base64"));
  fs.writeFileSync("evidence.json",JSON.stringify({extent:o.extent,rectangle_count:o.rectangleCount,
-  json_bytes:o.jsonBytes,reachable:o.reachable,destinations:o.destinations,material_counts:o.materialCounts,
+  json_bytes:o.jsonBytes,reachable:o.reachable,destinations:o.destinations,
+  reconstruction_mismatches:o.reconstructionMismatches,material_counts:o.materialCounts,
   seed:o.seed},null,2)+"\n");
  console.log(o.rectangleCount+" rectangles; "+o.jsonBytes+" bytes; "+o.reachable+"/"+o.destinations.length+" reachable");
 }
