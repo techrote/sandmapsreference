@@ -1,12 +1,11 @@
 # SANDMAPS artwork reference
 
-319 distinct PNGs in seven curated theme folders. The files retain their original resolution and bytes.
+439 original PNGs from two batches, organised by category and batch. The catalogue assigns every artwork a permanent public ID. Confirmed variants share the category code and number and use letter suffixes.
 
-- [HTML index](index.html) with artwork links, visual descriptions, tags and group membership. Open it locally after cloning.
-- [Image metadata](_catalogue/catalogue.json) maps the curated record IDs to PNG paths and includes dimensions, SHA-256, classifications and source text.
-- [Group metadata](_catalogue/groups.json) gives each shared-title family's rationale and member paths.
-- Theme folders: [Coastal](coastal/), [Industrial](industrial/), [Material physics](material_physics/), [Organic](organic/), [Ruins](ruins/), [Science fiction](scifi/), [Subterranean](subterranean/).
+- [Browse the gallery](https://techrote.github.io/sandmapsreference/) with ID search, thumbnail sizing, and category, tag, group and batch filters.
+- [Local HTML index](index.html) works from a clone and opens the original images.
+- [Catalogue](catalogue.json) contains image paths, hashes, categories, tags, groups and per-image source text.
+- [ID ledger](public-ids.json) and [source map](source-map.json) connect public IDs to stable source keys and original PNGs.
+- [Groups and variants](groups.json) and [tag distribution](TAG_DISTRIBUTION.md) describe how the collection is organised.
 
-## Source text
-
-304 artworks have image-specific captions or refinement notes recovered from the exports. Each record also has the curator's visual description. The first coastal artwork has a written assignment brief. The exports did not include original image-generation tool prompts, so the catalogue represents them as null. The written brief, source caption and visual description have separate fields.
+The originals retain their source bytes. Per-image captions and the recovered artwork brief are recorded separately from generation prompts.
