@@ -497,7 +497,14 @@ proof={
  'exact_material_cells':W*H,'material_hash':material_hash,
  'reconstructed_material_hash':hashlib.sha256(rec.tobytes()).hexdigest(),
  'destinations':[{'name':name,'point':[x,y]} for name,(x,y) in DEST],
- 'connectivity':checks,'materials':{str(k):int(v) for k,v in zip(*np.unique(arr,return_counts=True))},
+ 'connectivity':[
+    {'envelope':check['envelope'],'component_cells':check['component_cells'],
+     'reachable':check['reachable'],'destinations':check['destinations'],
+     'unreachable':[{'name':bad[0],'point':[bad[1],bad[2]],
+                     'clear':bool(bad[4]),'reachable':False}
+                    for bad in check['unreachable']]}
+    for check in checks],
+ 'materials':{str(k):int(v) for k,v in zip(*np.unique(arr,return_counts=True))},
  'native_runtime':'NOT exercised; requires Windows 11 Godot/Rapier Workbench load, actor-input, progression, save/reopen',
  'source_visual':'Artwork identified by catalogue SHA/path but original bitmap could not be fetched for side-by-side inspection; fidelity is thematic and geometric only, NOT exact visual fidelity verified',
  'render_method':'byte-deterministic indexed PNG from exact final material IDs and accepted palette; no source artwork or display-only texture',
@@ -531,15 +538,24 @@ proof['rework_c']={
     'water_cells':int(np.count_nonzero(arr==WATER)),
     'source_png_visual':'UNVERIFIED','native':'NOT TESTED'
 }
-proof['rework_c2']={
- 'worker':'C','starting_head':'0480c5b798b69b893d4b764a89e9678ff9de378d','starting_material_hash':'237ec6fb387c813babc1893d924d9e07f60cb94998fcbc304273bde3e7913661',
- 'changed_cells':final_changed,'additional_edits':len(finish['edits']),'route_protection':finish['route_protection'],
- 'source_png_visual':'UNVERIFIED','native':'NOT TESTED',
- 'native_cell_crops':['detail-viaduct.png','detail-civic.png','detail-gardens.png','detail-west-gardens.png','detail-east-gardens.png'],
- 'flight_stress_23x19':checks[1]['reachable'],'conservative_19x15':checks[0]['reachable']
-}
 proof['png_sha256']={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in
     ['preview.png','overview.png','detail-viaduct.png','detail-civic.png','detail-gardens.png','detail-west-gardens.png','detail-east-gardens.png']}
+proof['rework_c2']={
+ 'worker':'C',
+ 'starting_head':'0480c5b798b69b893d4b764a89e9678ff9de378d',
+ 'starting_plane_sha256':'237ec6fb387c813babc1893d924d9e07f60cb94998fcbc304273bde3e7913661',
+ 'changed_cells':final_changed,
+ 'additional_edits':len(finish['edits']),
+ 'water_cells_unchanged':int(np.count_nonzero(arr==WATER)),
+ 'full_grid_replay_equivalent':bool(np.array_equal(rec,arr)),
+ 'source_png_visual':'SOURCE-UNVERIFIED',
+ 'native':'NOT TESTED',
+ 'route_protection':finish['route_protection'],
+ 'flight_stress_23x19':checks[1]['reachable'],
+ 'conservative_19x15':checks[0]['reachable'],
+ 'local_art':'roundel tension web, asymmetric civic amphitheatre and reading kiosk, western and eastern anchored garden rooms, visibly repaired viaduct landing',
+ 'crops':['detail-viaduct.png','detail-civic.png','detail-gardens.png','detail-west-gardens.png','detail-east-gardens.png']
+}
 # Exact JSON and PNG bytes are deterministic on rebuild; preserve stable key order.
 (ROOT/'evidence.json').write_text(json.dumps(proof,separators=(',',':'),ensure_ascii=False)+'\n')
 print(json.dumps({'rectangles':len(runs),'json_bytes':len(json_text.encode()),'plane_sha':material_hash,
