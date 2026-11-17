@@ -392,10 +392,25 @@ def runs_of(a):
         opened=active
     return runs
 
-checks=[validate_routes(arr,19,15),validate_routes(arr,7,7)]
-print('route checks',json.dumps(checks))
-assert all(c['reachable']==len(DEST) for c in checks), 'Conservative traversal check failed'
+# Reworker B authored-delta overlay. Every stamp is a true material-cell edit,
+# not a screenshot decoration. Preserve the independently qualified baseline.
 runs=runs_of(arr)
+assert len(runs)==18026
+assert hashlib.sha256(arr.tobytes()).hexdigest()=='1127b5d58ecd6a32d22ad255652b698d5fc7d1a7ec25087a825eb7fc2acbe23d'
+overlay=json.loads((ROOT/'rework-append.json').read_text())
+assert overlay['source_head']=='d36ba7ea59e1fdc511c1b9d717f549e007fa58cd' and overlay['baseline_sha256']=='1127b5d58ecd6a32d22ad255652b698d5fc7d1a7ec25087a825eb7fc2acbe23d'
+for xx,yy,w,h,m in overlay['edits']:
+    assert all(isinstance(n,int) and not isinstance(n,bool) for n in (xx,yy,w,h,m))
+    assert 0<=xx<W and 0<=yy<H and 0<w<=W-xx and 0<h<=H-yy
+    assert m in (0,3,38,40,41,42,48,49,52,53,56,57,58,62,66,71,72,77,78,79,80,81,97,98,100,101,119,120,127)
+    assert m!=3 # preserve original water; no new dynamic material
+    arr[yy:yy+h,xx:xx+w]=m
+runs+=overlay['edits']
+assert len(runs)==19357
+checks=[validate_routes(arr,19,15),validate_routes(arr,7,7)]
+print('reworked route checks',json.dumps(checks))
+assert all(c['reachable']==len(DEST) for c in checks), 'Conservative exact-site traversal check failed'
+assert hashlib.sha256(arr.tobytes()).hexdigest()=='e9d31f0fb6e813e0d22ac3849d1b4cb60fabdd505b64bf508b3ed23e8459fc6a'
 assert len(runs)<=32768, f'Rectangle budget exceeded: {len(runs)}'
 rec=np.zeros((H,W),np.uint8)
 for xx,yy,w,h,m in runs:rec[yy:yy+h,xx:xx+w]=m
@@ -416,13 +431,14 @@ assert len(json_text.encode())<1048576, f'JSON size > budget: {len(json_text)}'
 materials=json.loads((ROOT/'material-palette.json').read_text())
 pal=np.zeros((256,3),dtype=np.uint8)
 for item in materials:pal[int(item['id'])]=item['rgba'][:3]
+# Pixel-exact material palette; no source bitmap, procedural render grain, or overlays.
 rgb=pal[arr]
-ys,xs=np.indices((H,W))
-shade=(((xs*7+ys*11+(xs//17)*5)%5)-2).astype(np.int16)
-stable=~np.isin(arr,[AIR,WATER,CYAN,MAGENTA,AMBER,WHITE,QUARTZ,PHOS])
-rgb=np.clip(rgb.astype(np.int16)+stable[:,:,None]*shade[:,:,None],0,255).astype(np.uint8)
-Image.fromarray(rgb).save(ROOT/'preview.png')
-Image.fromarray(rgb).resize((1024,1024),Image.Resampling.LANCZOS).save(ROOT/'overview.png')
+render=Image.fromarray(rgb)
+render.save(ROOT/'preview.png')
+render.resize((1024,1024),Image.Resampling.NEAREST).save(ROOT/'overview.png')
+for label,region in {'viaduct':(450,600,962,1112),'civic':(768,844,1280,1356),
+                     'gardens':(850,1400,1362,1912)}.items():
+    render.crop(region).save(ROOT/('detail-'+label+'.png'))
 
 proof={
  'title':'Mosaic Viaduct Commons — Shared City on the Arches',

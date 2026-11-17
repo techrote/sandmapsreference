@@ -48,3 +48,21 @@ See `evidence.json` for exact generated counts, output hash, and the 16 named ro
 **Native qualification is NOT complete**: this run did not execute a physical Windows 11 Godot/Rapier Workbench, the live actor controls, real simulation progression, or save/reopen. **Direct original-reference image comparison also remains outstanding** because the artwork's PNG bytes could not be retrieved. These are explicit independent-review and owner-acceptance gates, not silently claimed passes.
 
 **Do not merge or promote Ready.** The shepherd should review this exact HEAD and either commission rework or mark it for owner playtesting after the remaining gates.
+
+
+## Reworker B — architectural/civic repair (d36ba7ea59e1 baseline)
+
+The original six-arch viaduct, paired wings, centre roundel, basin, selected Midge, and 16 named coordinates are retained. This iteration repairs **real material cells** with a deterministic additive overlay (`rework-append.json`, 1,331 bounded stamps) rather than merely recolouring a screenshot. The edits give the previously repetitive arch courses asymmetrical stone-repair, pilaster, pennant and buttress grammar; articulate the west/east shopfronts with distinct roofs and window bays; tie the large suspended commemorative roundel to civil infrastructure; add a public court pavilion, colonnade and market details; and give the lower gardens and service/water infrastructure more functional spatial hierarchy.
+
+The overlay was conservatively clipped around the original 19×15 shortest-route tree joining the selected spawn and **all 16 exact named anchors**; the resulting full-grid geometry was independently recomputed after editing. No hidden nearest-point substitution. Original contained Water occupancy is unchanged, and only pre-existing supported palette material IDs were authored.
+
+### Exact-HEAD static requalification
+- Source and PR baseline: `d36ba7ea59e1fdc511c1b9d717f549e007fa58cd`, material-plane SHA-256 `1127b5d58ecd6a32d22ad255652b698d5fc7d1a7ec25087a825eb7fc2acbe23d`.
+- Revised extent: **2048×2048**; **19,357 / 32,768** 5-field rectangle stamps; JSON **376,178 / 1,048,576 bytes**; changed material cells **144,204**.
+- Reconstructed cell plane: **4,194,304/4,194,304**; exact SHA-256 `e9d31f0fb6e813e0d22ac3849d1b4cb60fabdd505b64bf508b3ed23e8459fc6a`; zero unsupported/pseudo material IDs.
+- Conservative 19×15 all-non-air-blocking Midge occupancy: **16/16 original final declared anchors** connected from spawn [404,502], **617,620** connected legal centres, no substitute waypoints. 7×7 route check: **16/16**, 980,001 centres.
+- Dynamic Water: **43,916** original cells retained, zero changed Water cells.
+- The full-resolution `preview.png`, 1024² `overview.png`, and native **512×512** `detail-viaduct.png`, `detail-civic.png`, `detail-gardens.png` all directly depict the final material cell plane.
+- Reproduce with `python build.py` (requires NumPy, Pillow and SciPy); the builder asserts both exact baseline/final grid hashes, rectangle count, and 16/16 conservative route reachability.
+
+**Evidence limits:** Actual original-source PNG visual comparison remains **UNVERIFIED**; no Godot/CyberDemoBridge native admission, installed DLL capacity, Rapier actor flight/collision, live simulation progression, or save/reopen was exercised. Static-cell admission does not imply physical Windows acceptance. Retain **Draft / HOLD** pending Shepherd and owner review.
