@@ -5,17 +5,17 @@
     2048
   ],
   "seed": 360081,
-  "rectangles": 13658,
+  "rectangles": 13531,
   "rectangle_budget": 32768,
-  "json_bytes": 262013,
+  "json_bytes": 259620,
   "json_byte_budget": 1048576,
   "material_cells_verified": 4194304,
-  "air_cells": 2102979,
+  "air_cells": 2112459,
   "clearance_envelope": [
     19,
     15
   ],
-  "nav_component_cells": 1651365,
+  "nav_component_cells": 1663986,
   "spawn": [
     785,
     325
@@ -81,10 +81,10 @@
       ],
       "reachable": true,
       "point": [
-        1410,
+        1460,
         780
       ],
-      "offset": 50
+      "offset": 0
     },
     {
       "name": "Wheel Inspection Approach",
@@ -107,10 +107,10 @@
       ],
       "reachable": true,
       "point": [
-        1410,
-        860
+        1430,
+        890
       ],
-      "offset": 36
+      "offset": 0
     },
     {
       "name": "West Crusher Yard",
@@ -126,17 +126,17 @@
       "offset": 0
     },
     {
-      "name": "Middle Pit Airspace",
+      "name": "Middle Pit Airspace Above Conveyor",
       "intended": [
         815,
-        870
+        820
       ],
       "reachable": true,
       "point": [
-        810,
-        850
+        815,
+        820
       ],
-      "offset": 21
+      "offset": 0
     },
     {
       "name": "Lower West Ramp",
@@ -205,21 +205,21 @@
     }
   ],
   "material_counts": {
-    "0": 2102979,
+    "0": 2112459,
     "38": 110885,
     "40": 121762,
     "48": 200206,
     "49": 75629,
-    "50": 58651,
+    "50": 58419,
     "53": 15479,
     "56": 368942,
-    "57": 23347,
-    "62": 222017,
+    "57": 22802,
+    "62": 213098,
     "64": 5236,
     "65": 133003,
-    "68": 11250,
+    "68": 11196,
     "74": 936,
-    "76": 540,
+    "76": 810,
     "77": 10684,
     "79": 25565,
     "80": 1189,
@@ -231,6 +231,13 @@
     "122": 7476
   },
   "png_bytes": 1050528,
+  "strict_exact_site_clearance": true,
+  "max_waypoint_offset": 0,
+  "detail_png_bytes": {
+    "wheel": 263524,
+    "processing": 263524,
+    "deep": 263524
+  },
   "native_qualification": "NOT EXECUTED",
   "reference_visual_comparison": "NOT EXECUTED: binary reference image inaccessible in this runtime",
   "source": {
@@ -244,12 +251,23 @@
   "exact_cybersand_commit": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
   "static_checks": {
     "serialized_runs_equal_material_plane": true,
-    "all_14_destinations_reachable_at_19x15": true,
+    "all_14_exact_destinations_reachable_at_19x15": true,
     "rectangles_within_budget": true,
-    "bytes_within_budget": true
+    "bytes_within_budget": true,
+    "no_nearest_waypoint_substitution": true
+  },
+  "reworker_B": {
+    "starting_head": "6ef631d648910a652b77183b875f691bb5893613",
+    "repairs": [
+      "Processing housing side-access notch at the formerly solid 1460,780 anchor",
+      "Gantry diagonal-truss maintenance break at the formerly solid 1430,890 anchor",
+      "Middle-pit flight waypoint moved to physically open [815,820] above conveyor",
+      "Hard exact-anchor BFS gate replaces the 105-cell nearest-point waiver",
+      "Three native-cell material-grid district PNGs"
+    ]
   },
   "caveats": [
-    "No Godot/native runtime executed in this run",
-    "No independent raw reference-image visual comparison available"
+    "No Godot, CyberDemoBridge or Rapier runtime executed",
+    "No independent reference PNG pixel comparison available; repository Git blob is not decodable by active connector"
   ]
 }

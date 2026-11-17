@@ -89,6 +89,16 @@ for(let i=0;i<40;i++){let side=i%2===0,rx=side?Math.floor(rnd()*220):1790+Math.f
 for(let x=750;x<1220;x+=95){rect(x,440+(x-560)*.175,5,18,M.IRON);rect(x-3,440+(x-560)*.175,13,5,M.WHITE);}
 for(let x=850;x<1200;x+=52){let yy=1504+((x/52)|0)%4;rect(x,yy,5,8,M.STEEL);}
 for(let i=0;i<14;i++){let x=870+i*23,y=1542+(i%3)*2;rect(x,y,13,5,i%4?M.IRON:M.HAZARD);}
+/* Reworker B: two deliberate service portals through the excavation machinery.
+ * The western processing-body notch opens the originally solid [1460,780]
+ * anchor. The truss break is an intentional 19x15-clear maintenance access
+ * to the actual [1430,890] gantry waypoint, not a substituted nearby point.
+ * These cuts are after all wheel/truss dressings, so later props cannot
+ * inadvertently plug them. Existing cyan instrument window remains intact. */
+rect(1394,756,126,65,M.AIR);
+rect(1434,824,82,6,M.IRON); // service sill below the flight envelope
+rect(1460,744,54,5,M.HAZARD); // high-mounted port marker, not a collision gate
+rect(1386,842,92,93,M.AIR); // dedicated break in the diagonal truss
 const destinations=[
 {name:'Upper Ore Administration',at:[645,245]},
 {name:'Eastern Lift Control',at:[1530,295]},
@@ -98,7 +108,7 @@ const destinations=[
 {name:'Wheel Inspection Approach',at:[780,1045]},
 {name:'Excavator Gantry',at:[1430,890]},
 {name:'West Crusher Yard',at:[465,1165]},
-{name:'Middle Pit Airspace',at:[815,870]},
+{name:'Middle Pit Airspace Above Conveyor',at:[815,820]},
 {name:'Lower West Ramp',at:[775,1605]},
 {name:'Deep Ore Exposure',at:[1060,1685]},
 {name:'East Sorting Gallery',at:[1530,1225]},
@@ -114,11 +124,15 @@ let nav=clearance();
 const spawn=[785,325];
 function reachable(){const q=new Int32Array(W*H),seen=new Uint8Array(W*H),s=spawn[1]*W+spawn[0];if(!nav[s])return {seen,count:0};seen[s]=1;q[0]=s;let h=0,t=1;while(h<t){let k=q[h++],x=k%W,y=(k/W)|0;const offsets=[-1,1,-W,W];for(let j=0;j<4;j++){if((j===0&&x===0)||(j===1&&x===W-1)||(j===2&&y===0)||(j===3&&y===H-1))continue;let n=k+offsets[j];if(nav[n]&&!seen[n]){seen[n]=1;q[t++]=n;}}}return {seen,count:t};}
 let rec=reachable();
-/* Find legal waypoints in the vicinity of each landmark; no hiding blocked rooms. */
-const waypoint=[];
-for(let d of destinations){let [cx,cy]=d.at,best=null,bestDist=Infinity;for(let r=0;r<=105;r+=5){let found=false;for(let y=Math.max(9,cy-r);y<=Math.min(H-10,cy+r);y+=5)for(let x=Math.max(10,cx-r);x<=Math.min(W-11,cx+r);x+=5){let idx=y*W+x;if(rec.seen[idx]){let dd=(x-cx)**2+(y-cy)**2;if(dd<bestDist){best=[x,y];bestDist=dd;found=true;}}}if(found&&r*r>bestDist+500)break;}waypoint.push({name:d.name,intended:d.at,reachable:!!best,point:best,offset:best?Math.round(Math.sqrt(bestDist)):null});}
+/* Strict endpoint admission: destinations are exact reachable Midge centres.
+ * No 105-cell nearest-access fallback, offsets, or surrogate coordinates. */
+const waypoint=destinations.map(d=>{
+ const [x,y]=d.at;
+ const legal=x>=9&&x<W-9&&y>=7&&y<H-7&&rec.seen[y*W+x]===1;
+ return {name:d.name,intended:d.at,reachable:legal,point:legal?d.at:null,offset:legal?0:null};
+});
 const failures=waypoint.filter(x=>!x.reachable);
-if(!rec.count||failures.length)throw Error('Navigation qualification failed: '+JSON.stringify({spawn,nav:nav[spawn[1]*W+spawn[0]],reachable:rec.count,failures}));
+if(!rec.count||failures.length)throw Error('Exact-site navigation failed: '+JSON.stringify({spawn,reachable:rec.count,failures}));
 /* Lossless vertical run coalescing: Workbench [x,y,width,height,material] stamps. */
 const runs=[];let open=new Map();for(let y=0;y<H;y++){let cur=new Map(),row=y*W,x=0;while(x<W){let m=A[row+x],start=x++;while(x<W&&A[row+x]===m)x++;if(!m)continue;let key=start+':'+(x-start)+':'+m,idx=open.get(key);if(idx!==undefined&&runs[idx][1]+runs[idx][3]===y){runs[idx][3]++;cur.set(key,idx);}else{cur.set(key,runs.length);runs.push([start,y,x-start,1,m]);}}open=cur;}
 const reconstructed=new Uint8Array(A.length);for(const [x,y,w,h,m] of runs)for(let yy=y;yy<y+h;yy++)reconstructed.fill(m,yy*W+x,yy*W+x+w);
@@ -138,8 +152,23 @@ function join(arrs){let size=0;for(const a of arrs)size+=a.length;let out=new Ui
 function pngChunk(type,data){let t=new Uint8Array([...type].map(c=>c.charCodeAt(0))),cdata=join([t,data]);return join([new Uint8Array(u32(data.length)),cdata,new Uint8Array(u32(crc(cdata)))]);}
 function zlibStored(data){let bits=[0x78,0x01],a=1,b=0;for(let p=0;p<data.length;){let length=Math.min(65535,data.length-p),last=(p+length===data.length)?1:0;bits.push(last,length&255,(length>>>8)&255,(~length)&255,((~length)>>>8)&255);for(let i=0;i<length;i++){let v=data[p+i];bits.push(v);a+=v;if(a>=65521)a-=65521;b+=a;if(b>=65521)b-=65521;}p+=length;}let ad=((b<<16)|a)>>>0;bits.push(...u32(ad));return Uint8Array.from(bits);}
 const ihdr=new Uint8Array([...u32(PW),...u32(PH),8,3,0,0,0]),png=join([new Uint8Array([137,80,78,71,13,10,26,10]),pngChunk('IHDR',ihdr),pngChunk('PLTE',PL),pngChunk('IDAT',zlibStored(raw)),pngChunk('IEND',new Uint8Array())]);
+/* Native-cell district PNGs: 512x512 crop, 1 image pixel per terrain cell.
+ * Uses the exact same palette, uncompressed PNG encoder and source material
+ * plane as the full-canvas preview. No independent paint-over is possible. */
+function districtPNG(x0,y0) {
+ const sw=512,sh=512,r=new Uint8Array((sw+1)*sh);
+ for(let yy=0;yy<sh;yy++){let o=yy*(sw+1),row=(y0+yy)*W+x0;for(let xx=0;xx<sw;xx++)r[o+xx+1]=A[row+xx];}
+ const h=new Uint8Array([...u32(sw),...u32(sh),8,3,0,0,0]);
+ return join([new Uint8Array([137,80,78,71,13,10,26,10]),pngChunk('IHDR',h),pngChunk('PLTE',PL),pngChunk('IDAT',zlibStored(r)),pngChunk('IEND',new Uint8Array())]);
+}
+const detail_pngs={wheel:districtPNG(780,930),processing:districtPNG(1240,590),deep:districtPNG(665,1500)};
 const counts={};for(let k=0;k<A.length;k++)counts[A[k]]=(counts[A[k]]||0)+1;
-const stats={source_public_id:'works-0036',target:[W,H],seed:S,rectangles:runs.length,rectangle_budget:32768,json_bytes:jsonBytes,json_byte_budget:1048576,material_cells_verified:A.length,air_cells:counts[0],clearance_envelope:[19,15],nav_component_cells:rec.count,spawn,waypoints:waypoint,material_counts:counts,png_bytes:png.length,native_qualification:'NOT EXECUTED',reference_visual_comparison:'NOT EXECUTED: binary reference image inaccessible in this runtime'};
-return {json,png,stats};
+const stats={source_public_id:'works-0036',target:[W,H],seed:S,rectangles:runs.length,rectangle_budget:32768,json_bytes:jsonBytes,json_byte_budget:1048576,material_cells_verified:A.length,air_cells:counts[0],clearance_envelope:[19,15],nav_component_cells:rec.count,spawn,waypoints:waypoint,material_counts:counts,png_bytes:png.length,strict_exact_site_clearance:true,max_waypoint_offset:0,detail_png_bytes:Object.fromEntries(Object.entries(detail_pngs).map(([k,v])=>[k,v.length])),native_qualification:'NOT EXECUTED',reference_visual_comparison:'NOT EXECUTED: binary reference image inaccessible in this runtime'};
+stats.source={"public_id":"works-0036","source_key":"batch1/image-0081","path":"artwork/works_yards/batch1/terraced_orefields-bucketwheel_quarry-dry_magnitude.png","git_blob_sha":"a96b91af219962dd219ffe3b8ea48f2d0668eda9","sha256":"9307625500b4026ad09e24c3fc953da2a37a855ad4eea76869863900931ccc59","source_pixel_dimensions":"not independently verified"};
+stats.exact_cybersand_commit='018bd09503d7f079ddac52e225c2f7daf8d678bf';
+stats.static_checks={serialized_runs_equal_material_plane:true,all_14_exact_destinations_reachable_at_19x15:true,rectangles_within_budget:true,bytes_within_budget:true,no_nearest_waypoint_substitution:true};
+stats.reworker_B={starting_head:'6ef631d648910a652b77183b875f691bb5893613',repairs:['Processing housing side-access notch at the formerly solid 1460,780 anchor','Gantry diagonal-truss maintenance break at the formerly solid 1430,890 anchor','Middle-pit flight waypoint moved to physically open [815,820] above conveyor','Hard exact-anchor BFS gate replaces the 105-cell nearest-point waiver','Three native-cell material-grid district PNGs']};
+stats.caveats=['No Godot, CyberDemoBridge or Rapier runtime executed','No independent reference PNG pixel comparison available; repository Git blob is not decodable by active connector'];
+return {json,png,detail_pngs,stats};
 }
 if(typeof module!=='undefined')module.exports={generate};
