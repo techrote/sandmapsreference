@@ -165,7 +165,14 @@ for(let [x,y,w,h] of [[165,490,310,9],[325,757,295,10],[153,660,332,7],[333,905,
 for(let [x,y,w] of [[165,494,120],[323,765,173],[1438,739,126],[1758,745,206],[1576,816,159],[1780,818,193]])stain(x,y,w,6,M.MOSS);
 // Grounded buttress piers terminate strictly BELOW the y757..805 open service
 // tunnel; no ornamental blocks in exterior x1992..2047 chimney.
-for(let [x,y,w,h] of [[1461,811,40,64],[1577,811,25,53],[1700,812,35,58],[1864,812,40,54]]){
+// The first two east-undercroft shoulder districts are existing, sometimes
+// detached stone: retint ONLY original stone here rather than add floating piers.
+for(let [x,y,w,h] of [[1461,811,40,64],[1577,811,25,53]]){
+ stain(x,y,w,h,M.GRANITE);stain(x,y+h-8,w+3,7,M.MOSS);
+}
+// Downstream piers physically join the lower eastern ridge in the final
+// four-neighbour cell grid; keep the entire air passage above y805 untouched.
+for(let [x,y,w,h] of [[1700,812,35,58],[1864,812,40,54]]){
  poly([[x,y],[x+w,y],[x+w+11,y+h],[x-13,y+h]],M.GRANITE);
  line(x-8,y+h-1,x+w+10,y+h-2,M.MOSS,5);
 }
