@@ -265,9 +265,9 @@ poly([(578,1882),(696,1840),(788,1872),(758,1945),(623,1955)],"AIR")
 # All these face details remain deep in the already-solid west/east country rock;
 # they are spatially grouped around the reference's distinct hardware masses.
 stone_clusters=[
- (80,322,175,290,30),(824,362,171,278,29),
- (84,726,170,330,35),(813,1022,185,377,37),
- (90,1490,170,301,30),(802,180,180,250,21)]
+ (80,322,175,290,19),(824,362,171,278,18),
+ (84,726,170,330,22),(813,1022,185,377,22),
+ (90,1490,170,301,18),(802,180,180,250,13)]
 for left,top,ww,hh,count in stone_clusters:
     for k in range(count):
         cx=left+R.randrange(ww)
