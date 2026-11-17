@@ -24,4 +24,19 @@ The source is a *horizontally distributed urban civic plaza*: asymmetric masonry
 
 ## Handoff and role coordination
 
-Initial PR commit only carries this rework brief and the embedded exact source preview. **No new material-state edit has yet been made.** The assigned Reworker C should implement and qualify subsequent commits *on this same PR branch*. Shepherd must review final HEAD, and owner acceptance controls merge.
+Initial PR commit only carries this rework brief and the embedded exact source preview. **The subsequent source-led actual-cell reconstruction has now been implemented; see this handoff.** The assigned Reworker C should implement and qualify subsequent commits *on this same PR branch*. Shepherd must review final HEAD, and owner acceptance controls merge.
+
+
+## R2 source-led actual-cell repair — Reworker C, 17 November 2026
+
+**Assigned starting HEAD** 42ea7c415f749fe595dd035b54610a575e23f93d. Genuine committed JPEG source blob 8cf59bbba8c4a4037924490b7d158872be876abd **visually inspected** beside the original R1 actual-cell overview and regenerated R2 native-cell gallery. The original full-resolution PNG is unchanged, and **full-resolution pixel parity is unverified**.
+
+**Before → after:** giant unrelated mechanical roundel/six cloned viaduct arches/equivalent houses/large unsupported water pool → source-led left tiled asymmetric civic building with inhabited rooms and balcony, orange source sails, right-rising supported public stairs, enormous right-rooted multi-lobe tree/canopy, populated market platforms, and continuous lit dry underground civic artery. No artificial solid-coloured sky; empty flight space is native dark Empty.
+
+**Two art+gameplay iterations actually tested:** initial reconstruction found an upper-room structural column snag; opened an intentional 150-cell-wide egress. A stair overlook also failed exact clearance; inserted a source-plausible 82-cell service stair air opening. Further detail added civic shops, tree twigs, conduits, stairs supports, material-cell furnishings, and underpass archive; the first iteration accidentally bridged the eastern vertical shaft with a copper conduit, cutting the exact East-underpass graph. The cross-shaft segment was removed and the complete grid rebuilt; 19×15 and 23×19 reachability returned to 16/16, with no moved or proxy coordinates.
+
+**Exact static counts:** 2,287,869/4,194,304 changed cells from archived baseline; 7,608/32,768 rectangles, 150,270/1,048,576 JSON bytes, 1,268,041 final occupied cells, 2,926,263 air cells, original 43,916 Water cells removed. SHA-256 e813e22edb7da8752245bcebff5eb835670e4d4c580f73adbd7d3b8ec4ac052b. All materials validated as legal immovable solid IDs against current engine, no powder supports. One combustible foliage/wood family without startup ignition is retained as physical material rather than uncontrolled growth. Full 4,194,304-cell independent rectangle replay and same-grid indexed-PNG generation. Actual Midge hull 4×3, original unchanged spawn/hash and 16 original exact coordinates: 16/16 clear/connectable at strict 19×15 and 23×19; 31×27 extra stress: 15/16 (east underpass remains a larger-envelope limitation). No hidden nearest-point substitution.
+
+**Direct image evidence**: [true-cell full PNG](preview.png), [overview](overview.png), [civic facade](detail-civic.png), [canopy](detail-gardens.png), [public steps](crop-stair-plaza.png), [underground corridor](crop-buried-corridor.png), with four more native-cell crops. All originals remain preserved.
+
+**NATIVE-UNTESTED**, no source-matched physical Godot/Rapier Workbench runtime, actual collision/pilot/stream/save-reopen, or installed native bridge 32,768-capability readback. The 4,096 fallback is lower than 7,608. Independent Shepherd/source-fidelity review and owner native acceptance remain required. Draft/HOLD.
