@@ -365,7 +365,7 @@ setup=dict(version=2,extent=[W,H],
  source=[],material=2,brush=8,fire=False)
 raw_json=(json.dumps(setup,separators=(",",":"))+"\n").encode()
 assert len(raw_json)<=1048576,"Unsupported 1MiB generated-start setup "+str(len(raw_json))
-assert len(policy)==49 and len(setup)==14
+assert len(policy)==55 and len(setup)==14, "Expected native policy vector length 55; got "+str(len(policy))
 slug="techn-0034a-slate-shaft"
 json_name="setup-"+slug+".json"
 (ROOT/json_name).write_bytes(raw_json)
