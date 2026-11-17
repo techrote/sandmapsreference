@@ -285,7 +285,9 @@ for left,top,ww,hh,count in stone_clusters:
 # Full-length ladder in the source's west-of-centre cut, copper rails firmly
 # grounded with occasional rock-anchored brackets, not isolated light pixels.
 # Occupies ONLY the left edge of the broad bypass and leaves a >35-cell air lane.
-for y0,y1 in [(260,455),(471,967)]:
+# Breaks at fan service portal (y~516) and bypass transverse portal (y~880)
+# are real traversable ladder landings, not a hidden nearest-point waiver.
+for y0,y1 in [(260,455),(471,489),(555,847),(919,967)]:
     box(338,y0,342,y1,"COPPER")
     box(355,y0,359,y1,"COPPER")
     for yy in range(y0+13,y1-7,19):
