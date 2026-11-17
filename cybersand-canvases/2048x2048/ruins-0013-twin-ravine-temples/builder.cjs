@@ -2,112 +2,87 @@
 /* Reproducible source-to-material-cell geometry for the CyberSand ruins-0013 canvas. */
 const template={"version":2,"extent":[2048,2048],"actors":[{"id":1,"model":"midge","hash":"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96","spawn":[785,325],"options":{"budget":20,"mass_multiplier":1,"inertia_multiplier":1,"thrust_multiplier":1,"torque_multiplier":1,"boost_multiplier":1.5}}],"next_id":2,"selected":1,"edits":[],"response":"LA-SELECTIVE","liquid_policy":[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],"normalize":false,"rule_radius":2,"source":[],"material":2,"brush":8,"fire":false};
 function generate(base){
-const W=2048,H=2048,SEED=1556133,A=new Uint8Array(W*H),M={AIR:0,WALL:58,WATER:3,LIME:38,GRANITE:40,COBBLE:41,MOSS:42,TERRA:48,SLATE:49,BRONZE:52,VERD:54,CYAN:77,AMBER:79,MARBLE:98,BASALT:100,OBSIDIAN:101,QUARTZ:122,PHOS:127};let sd=SEED;
+const W=2048,H=2048,SEED=20261117,A=new Uint8Array(W*H),M={AIR:0,WALL:58,WATER:3,LIME:38,GRANITE:40,COBBLE:41,MOSS:42,TERRA:48,SLATE:49,BRONZE:52,VERD:54,CYAN:77,AMBER:79,MARBLE:98,BASALT:100,OBSIDIAN:101,QUARTZ:122,PHOS:127};let sd=SEED;
 const rand=()=>{sd=(Math.imul(sd,1664525)+1013904223)>>>0;return sd/4294967296};
 function rect(x,y,w,h,m){let l=Math.max(0,x|0),r=Math.min(W,Math.ceil(x+w)),t=Math.max(0,y|0),b=Math.min(H,Math.ceil(y+h));for(let yy=t;yy<b;yy++)if(r>l)A.fill(m,yy*W+l,yy*W+r)}
 function poly(p,m){let lo=Math.max(0,Math.min(...p.map(a=>a[1]))|0),hi=Math.min(H-1,Math.ceil(Math.max(...p.map(a=>a[1]))));for(let y=lo;y<=hi;y++){let xx=[];for(let i=0;i<p.length;i++){let a=p[i],b=p[(i+1)%p.length];if((a[1]<=y&&b[1]>y)||(b[1]<=y&&a[1]>y))xx.push(a[0]+(y-a[1])*(b[0]-a[0])/(b[1]-a[1]));}xx.sort((a,b)=>a-b);for(let j=0;j+1<xx.length;j+=2)rect(xx[j],y,xx[j+1]-xx[j]+1,1,m)}}
 function line(x,y,X,Y,m,w=5){let n=Math.max(1,Math.abs(X-x),Math.abs(Y-y));for(let i=0;i<=n;i+=Math.max(1,w*.55)){let f=i/n;rect(x+(X-x)*f-w/2,y+(Y-y)*f-w/2,w,w,m)}}
 function disk(cx,cy,R,m){for(let y=Math.max(0,(cy-R)|0);y<Math.min(H,cy+R);y++){let dx=Math.sqrt(Math.max(0,R*R-(cy-y)**2));rect(cx-dx,y,2*dx+1,1,m)}}
 function ring(x,y,R,m,w=6){for(let i=0,N=185;i<N;i++){let a=i*2*Math.PI/N,b=(i+1)*2*Math.PI/N;line(x+R*Math.cos(a),y+R*Math.sin(a),x+R*Math.cos(b),y+R*Math.sin(b),m,w)}}
-// Orthographic natural sandstone/rock face with open central canyon.
-poly([[0,0],[850,0],[810,185],[782,342],[825,533],[775,690],[816,898],[785,1068],[829,1280],[778,1510],[825,1690],[795,2048],[0,2048]],M.BASALT);
-poly([[1181,0],[2048,0],[2048,2048],[1218,2048],[1192,1741],[1247,1580],[1200,1380],[1244,1220],[1190,981],[1244,767],[1204,583],[1243,400],[1181,0]],M.BASALT);
-for(let y=65;y<2005;y+=96){rect(0,y,604,7,M.GRANITE);rect(1455,y+42,593,7,M.MOSS)}
-poly([[0,0],[828,0],[760,90],[700,137],[584,110],[495,170],[394,151],[277,195],[177,158],[0,187]],M.OBSIDIAN);
-poly([[1200,0],[2048,0],[2048,197],[1921,137],[1834,205],[1720,156],[1621,195],[1515,126],[1354,149],[1250,80]],M.OBSIDIAN);
-for(let i=0;i<70;i++){let left=i%2===0,x=left?rand()*785:1245+rand()*785,y=65+rand()*185;line(x,y,x+(left?1:-1)*(10+rand()*43),y+20+rand()*116,i%4?M.MOSS:M.OBSIDIAN,7+i%4*3)}
-function temple(x,y,w,h,left){rect(x-28,y-39,w+56,23,M.SLATE);rect(x-10,y-15,w+20,h+25,M.GRANITE);rect(x,y,w,h,M.LIME);rect(x+20,y+31,w-40,h-58,M.AIR);for(let i=0;i<5;i++){let px=x+51+i*(w-102)/4;rect(px-14,y+30,28,h-64,M.LIME);rect(px-20,y+22,40,14,M.MARBLE);rect(px-19,y+h-54,38,15,M.SLATE)}rect(x+17,y+h-27,w-34,14,M.SLATE);for(let i=0;i<9;i++)rect(x+i*w/9,y-66,17,26,i%3?M.COBBLE:M.MOSS);if(left)rect(x+w-110,y+91,177,116,M.AIR);else rect(x-69,y+91,177,116,M.AIR);for(let i=0;i<3;i++){let px=x+95+i*178;rect(px,y+68,49,35,M.OBSIDIAN);rect(px+10,y+76,29,15,i%2?M.AMBER:M.CYAN)}}
-temple(98,312,610,288,true);temple(1335,325,610,290,false);
-for(let [x,y,w,h] of [[67,228,120,342],[666,232,115,340],[1266,224,113,360],[1870,236,112,345]]){rect(x,y,w,h,M.GRANITE);rect(x+9,y+14,w-18,h-28,M.LIME);rect(x+34,y+65,w-68,h-125,M.AIR);rect(x-13,y-21,w+26,24,M.MARBLE);rect(x+15,y+h-27,w-30,13,M.BRONZE)}
-for(let side=0;side<2;side++)for(let j=0;j<4;j++){let x=side?1405:98,y=[708,1039,1370,1695][j]+(side?19:0),w=550,h=239;rect(x,y,w,h,M.GRANITE);rect(x+11,y+12,w-22,h-24,M.LIME);rect(x+30,y+29,w-60,h-58,M.AIR);rect(x+21,y+h-29,w-42,16,M.SLATE);rect(x+34,y+52,w-68,7,M.BRONZE);for(let k=0;k<4;k++){let px=x+54+k*142;rect(px-11,y+69,22,67,M.MARBLE);rect(px-16,y+61,32,12,M.COBBLE);rect(px-12,y+h-81,24,31,M.LIME)}for(let k=0;k<3;k++){let px=x+85+k*157;ring(px,y+101,18,M.MOSS,6);disk(px,y+101,6,M.CYAN)}if(side===0)rect(x+w-95,y+82,160,102,M.AIR);else rect(x-60,y+82,160,102,M.AIR)}
-// Twin huge guardian faces inset into side temples.
-for(let side=0;side<2;side++){let x=side?1675:369,y=1160;disk(x,y,122,M.MOSS);ring(x,y,118,M.GRANITE,12);poly([[x-92,y-62],[x-44,y-111],[x+47,y-111],[x+93,y-62],[x+71,y+101],[x-77,y+101]],M.LIME);for(let d of [-43,43]){disk(x+d,y-18,23,M.OBSIDIAN);rect(x+d-17,y-19,34,8,M.CYAN)}poly([[x,y-4],[x-22,y+39],[x+19,y+39]],M.GRANITE);rect(x-40,y+64,80,14,M.OBSIDIAN);for(let i=0;i<6;i++)rect(x-32+i*13,y+64,5,12,M.MARBLE);for(let i=0;i<7;i++)line(x-75+i*22,y-108,x-90+i*20,y-153-i%3*19,M.MOSS,6)}
-// Three bridge decks, root trusses, outcrops and mineral wisps.
-for(let [y,v] of [[641,M.BRONZE],[1298,M.MOSS],[1793,M.GRANITE]]){rect(735,y,582,19,M.SLATE);rect(735,y+19,582,12,M.GRANITE);rect(739,y-6,575,6,v);for(let x=750;x<1300;x+=56){rect(x,y+8,29,5,M.COBBLE);rect(x+9,y+21,10,8,M.MOSS)}}
-for(let x=773;x<1296;x+=55){line(x,671,x+27,703,M.BRONZE,6);line(x+27,703,x+55,671,M.MOSS,6);rect(x,1278,8,20,M.BRONZE)}
-poly([[925,951],[946,813],[967,960],[997,879],[1021,951]],M.QUARTZ);
-poly([[1030,1635],[1055,1495],[1090,1622],[1132,1550],[1145,1642]],M.MOSS);
-for(let i=0;i<38;i++){let x=860+rand()*330,y=911+rand()*794;if(Math.abs(y-1298)>91)line(x,y,x+5+rand()*21,y-12-rand()*36,i%4?M.QUARTZ:M.PHOS,5)}
-for(let i=0;i<3700;i++){let left=i%2===0,x=left?rand()*601:1447+rand()*601,y=100+rand()*1870;if(A[(y|0)*W+(x|0)]!==0)rect(x,y,3+rand()*19,2+rand()*6,i%31===0?M.PHOS:i%6?M.MOSS:M.BRONZE)}
-for(let i=0;i<500;i++){let x=i%2?1395+rand()*590:60+rand()*590,y=220+rand()*1600;if(A[(y|0)*W+(x|0)]!==0)rect(x,y,3+rand()*5,2,M.MARBLE)}
-// Sealed water in bottom basin with stone overbridge.
-rect(844,1884,396,150,M.WALL);rect(860,1891,364,129,M.AIR);rect(864,1918,357,102,M.WATER);rect(867,1911,347,7,M.CYAN);
-poly([[849,1880],[908,1849],[959,1880]],M.QUARTZ);poly([[1093,1880],[1169,1838],[1236,1880]],M.MOSS);rect(0,1994,W,54,M.OBSIDIAN);
-// Final portals, generous clearance in every named room, and bypass shafts.
-rect(650,356,194,1580,M.AIR);rect(1209,360,196,1575,M.AIR);
-for(let y of [471,785,1117,1454,1750,1858]){rect(270,y-59,665,118,M.AIR);rect(1130,y-59,666,118,M.AIR)}
-// Reconnect all three bridge decks to lateral buttresses; shaft bypass exists outside both ends.
-for(let [y,v] of [[641,M.BRONZE],[1298,M.MOSS],[1793,M.GRANITE]]){rect(740,y,579,19,M.SLATE);rect(740,y+19,579,12,M.GRANITE);rect(745,y-6,569,6,v)}
-// Keep shaft bypass clear without cutting causeway ends. Left x650..735 / right x1320..1400.
-rect(653,575,79,1280,M.AIR);rect(1324,575,75,1280,M.AIR);
-// Water perimeter below waterline is solid after all opening cuts.
-rect(840,1915,24,111,M.WALL);rect(1221,1915,22,111,M.WALL);rect(843,2020,398,17,M.WALL);
 
-// Reworker B: post-portal tectonics and sculptural restoration. The late AIR
-// portals below this pass cannot erase the new monuments or decorative strata.
-function solidRect(x,y,w,h,m){let l=Math.max(0,Math.floor(x)),r=Math.min(W,Math.ceil(x+w)),t=Math.max(0,Math.floor(y)),b=Math.min(H,Math.ceil(y+h));for(let yy=t;yy<b;yy++)for(let xx=l;xx<r;xx++){let k=yy*W+xx,v=A[k];if(v!==M.AIR&&v!==M.WATER&&v!==M.WALL)A[k]=m}}
-function solidLine(x,y,X,Y,m,w=6){let n=Math.max(1,Math.ceil(Math.hypot(X-x,Y-y)/Math.max(2,w*.45)));for(let i=0;i<=n;i++){let f=i/n;solidRect(x+(X-x)*f-w/2,y+(Y-y)*f-w/2,w,w,m)}}
-function solidDisk(x,y,r,m){for(let yy=Math.max(0,Math.floor(y-r));yy<Math.min(H,y+r);yy++){let d=Math.sqrt(Math.max(0,r*r-(yy-y)**2));solidRect(x-d,yy,2*d+1,1,m)}}
-// West: branching rooted ossuary; East: oblique gilded observatory.
-// Texture is painted only on existing SOLID cells, preserving original airways.
-for(let i=0;i<24;i++){let y=240+i*72,origin=65+(i*47)%280;solidLine(0,y+25,origin+445,y-41-(i%4)*17,i%4?M.SLATE:M.GRANITE,5+i%3*3);solidLine(2048,y+17,1514-(i%5)*21,y+54+(i%3)*18,i%3?M.OBSIDIAN:M.BRONZE,5+i%4*2)}
-for(let i=0;i<35;i++){let bx=105+(i*53)%470,by=186+(i*91)%1760;solidLine(bx,by,bx+16+(i%5)*9,by+52+(i%7)*9,M.MOSS,6+(i%3)*3);solidLine(bx+16,by+52,bx-11-(i%5)*8,by+81+(i%3)*14,i%4?M.MOSS:M.PHOS,4);let ex=1985-(i*47)%470,ey=220+(i*83)%1680;solidLine(ex,ey,ex-43-(i%4)*13,ey-26-(i%3)*17,i%3?M.MARBLE:M.AMBER,5)}
-for(let i=0;i<8;i++){let westY=710+i*154,eastY=765+i*149;solidLine(75,westY,612,westY-35+(i%3)*21,i%2?M.MOSS:M.GRANITE,9);solidLine(1428,eastY,1950,eastY+38-(i%3)*25,i%2?M.AMBER:M.COBBLE,8)}
-// Eroded rock pockets remove material, rather than creating fake decoration.
-for(let i=0;i<5;i++){let y=962+i*192;poly([[67,y],[105,y-25],[140,y+6],[117,y+34],[70,y+39]],M.AIR);poly([[1985,y+11],[1946,y-7],[1915,y+36],[1950,y+57],[1986,y+42]],M.AIR)}
-// Left round elder guardian; right faceted sun oracle. Dramatic readable
-// landmark silhouettes are erected AFTER the old broad 665x118 air cuts.
-disk(818,1074,112,M.GRANITE);ring(818,1074,110,M.MOSS,13);
-poly([[753,1033],[777,995],[847,986],[889,1028],[883,1143],[837,1190],[777,1176],[748,1125]],M.LIME);
-for(let ox of [-34,35]){let e=818+ox;poly([[e-24,1060],[e-4,1051],[e+24,1059],[e+10,1070],[e-14,1072]],M.OBSIDIAN);line(e-23,1048,e+18,1045,M.SLATE,7);rect(e-5,1059,10,4,M.PHOS)}
-poly([[815,1074],[800,1121],[839,1129]],M.GRANITE);line(777,1150,850,1157,M.OBSIDIAN,9);
-for(let i=0;i<11;i++)line(751+i*13,1011,733+i*15,957-(i%4)*13,i%3?M.MOSS:M.PHOS,5+i%3);
-poly([[1212,1044],[1242,1022],[1311,1080],[1352,1144],[1327,1223],[1277,1272],[1215,1296],[1152,1260],[1111,1185],[1128,1108]],M.SLATE);
-poly([[1185,1045],[1233,986],[1281,1050],[1320,1114],[1288,1245],[1236,1291],[1167,1242],[1143,1120]],M.MARBLE);
-for(let ox of [-32,33]){poly([[1233+ox-21,1134],[1233+ox+18,1123],[1233+ox+12,1145],[1233+ox-15,1154]],M.OBSIDIAN);disk(1233+ox,1140,7,M.AMBER)}
-poly([[1229,1158],[1208,1213],[1254,1217]],M.BRONZE);line(1193,1235,1274,1234,M.OBSIDIAN,11);
-for(let i=0;i<7;i++){line(1168+i*22,1063,1156+i*24,999-(i%3)*22,M.BRONZE,5);line(1176+i*18,1273,1158+i*20,1309+(i%4)*18,M.MOSS,5)}
-
-// Guardian roots are anchored at the near edge of each cliff, leaving the
-// 19x15 right bypass shaft x1324..1399 functionally open at every crossing.
-line(695,1025,758,1040,M.MOSS,14);line(701,1025,768,1088,M.GRANITE,8);
-line(703,1197,752,1163,M.MOSS,13);line(725,1218,790,1176,M.GRANITE,8);
-line(1318,1080,1340,1090,M.BRONZE,7);
-line(1336,1212,1310,1206,M.MOSS,10);
-line(1334,1271,1304,1250,M.SLATE,7);
-// Cracked, chiselled stone facial surfaces, uneven jaw plates and asymmetry.
-for(let i=0;i<6;i++){let x=771+i*17;line(x,1152,x+2+(i%2)*4,1165,M.GRANITE,3)}
-line(754,1023,777,1013,M.OBSIDIAN,5);line(856,1008,881,1045,M.GRANITE,6);
-line(786,1100,772,1131,M.OBSIDIAN,4);line(862,1090,882,1126,M.MOSS,5);
-line(790,1174,767,1191,M.MOSS,5);line(842,1175,858,1194,M.SLATE,5);
-line(1205,1057,1241,1073,M.BRONZE,5);line(1268,1079,1292,1110,M.BRONZE,7);
-line(1166,1180,1190,1196,M.OBSIDIAN,4);line(1280,1177,1304,1221,M.SLATE,5);
-for(let i=0;i<5;i++){let x=1203+i*17;rect(x,1234+(i%2)*3,8,12,M.BRONZE)}
-poly([[1200,1087],[1229,1057],[1254,1085],[1237,1105]],M.SLATE);
-// Restore clearance at two original inspection portals.
-rect(679,1096,45,43,M.AIR);rect(1344,1096,43,43,M.AIR);
-// Three crossings: distinct parapet grammars, diagonal tension trusses, gaps.
-for(let j=0;j<3;j++){let y=[641,1298,1793][j];for(let x=780;x<1292;x+=71){let bend=(x*3+j*17)%29;line(x,y+30,x+34+bend/3,y+68+j*8,j===1?M.MOSS:M.BRONZE,4+j);line(x+34+bend/3,y+68+j*8,x+70,y+30,j===2?M.COBBLE:M.MOSS,4)}}
-rect(797,624,141,9,M.MARBLE);rect(945,622,100,11,M.COBBLE);rect(1106,625,144,8,M.BRONZE);rect(967,623,40,11,M.AIR);
-rect(829,1283,141,10,M.MOSS);rect(994,1286,88,7,M.BRONZE);rect(1111,1279,117,13,M.MOSS);rect(930,1289,37,9,M.AIR);
-rect(766,1778,136,11,M.COBBLE);rect(925,1777,131,11,M.SLATE);rect(1092,1779,185,9,M.MOSS);rect(1045,1783,46,12,M.AIR);
-for(let i=0;i<9;i++){let x=747+i*14;line(x,1340,x-12-i%3*4,1395+i%4*12,M.MOSS,5);line(1224+i*9,1830,1205+i*10,1881+i%3*7,i%2?M.BRONZE:M.MOSS,5)}
-for(let p of [[[891,1503],[907,1415],[923,1494],[953,1440],[970,1518]],[[1080,893],[1105,826],[1119,911],[1154,854],[1160,934]]])poly(p,M.QUARTZ);
-// Localized exhibit treatments rather than copied wall ornaments.
-for(let [x,y,r,m] of [[265,1570,38,M.MOSS],[314,1855,30,M.MARBLE],[1710,818,41,M.AMBER],[1750,1520,30,M.QUARTZ]]){ring(x,y,r,m,7);disk(x,y,Math.max(5,r/5),M.OBSIDIAN)}
-for(let i=0;i<23;i++){let x=145+(i*61)%430,y=710+(i*113)%1190;solidDisk(x,y,7+i%7,M.COBBLE);let X=1483+(i*73)%380,Y=726+(i*137)%1180;solidRect(X,Y,18+i%5*4,3+i%3,M.AMBER)}
-solidLine(845,1882,1240,1882,M.GRANITE,5);
-// A deliberately broken third bridge gives the basin lookout an actual
-// unobstructed vertical flight shaft, rather than a nearby proxy waypoint.
-rect(1042,1705,44,177,M.AIR);
-// End Reworker B geometry pass.
-
+/* R2: source-JPEG-observed rooted asymmetric cliff sanctuaries; all art is actual cells.
+   No overlay, no procedural copy of R1's repeated corridor bands. */
+function stain(x,y,w,h,m){let l=Math.max(0,Math.floor(x)),r=Math.min(W,Math.ceil(x+w)),t=Math.max(0,Math.floor(y)),b=Math.min(H,Math.ceil(y+h));for(let yy=t;yy<b;yy++)for(let xx=l;xx<r;xx++){let k=yy*W+xx;if(A[k]!==0&&A[k]!==3)A[k]=m}}
+function strut(x,y,X,Y,m,w=5){let n=Math.ceil(Math.hypot(X-x,Y-y)/Math.max(2,w/2));for(let i=0;i<=n;i++){let f=i/n;stain(x+(X-x)*f-w/2,y+(Y-y)*f-w/2,w,w,m)}}
+function room(x,y,w,h){rect(x-14,y-16,w+28,15,M.COBBLE);rect(x,y,w,h,M.AIR);rect(x-8,y+h,w+16,12,M.SLATE)}
+function steps(x,y,n,dx,dy,sgn=1){for(let k=0;k<n;k++){rect(x+k*dx*sgn,y+k*dy,dx+2,9,M.COBBLE);rect(x+k*dx*sgn,y+k*dy+9,dx+2,4,M.MOSS)}}
+// West cliff is huge and old; eastern ridge is narrower and set lower.
+poly([[0,300],[207,305],[257,240],[401,264],[498,361],[565,357],[681,468],[777,586],[806,756],[774,876],[840,990],[780,1163],[799,1295],[741,1452],[777,1581],[697,1755],[812,1913],[890,2048],[0,2048]],M.BASALT);
+poly([[0,348],[170,357],[260,299],[360,331],[461,381],[590,444],[700,555],[747,642],[761,801],[720,935],[780,1052],[740,1231],[693,1445],[730,1629],[655,1800],[750,2048],[0,2048]],M.GRANITE);
+poly([[0,404],[138,399],[251,354],[386,429],[518,454],[615,560],[691,675],[712,869],[666,1002],[690,1204],[626,1444],[665,1550],[600,1826],[715,2048],[0,2048]],M.OBSIDIAN);
+poly([[1753,365],[1862,379],[1931,346],[2048,382],[2048,2048],[1552,2048],[1538,1868],[1586,1674],[1487,1517],[1535,1338],[1455,1191],[1520,990],[1452,847],[1496,706],[1485,603],[1590,480],[1660,449]],M.BASALT);
+poly([[1789,423],[1894,407],[2048,410],[2048,2048],[1618,2048],[1600,1820],[1658,1601],[1543,1478],[1589,1306],[1528,1141],[1602,961],[1533,860],[1577,703],[1570,614],[1665,527]],M.GRANITE);
+poly([[1838,469],[1942,449],[2048,455],[2048,2048],[1690,2048],[1696,1834],[1691,1592],[1654,1443],[1701,1280],[1661,1097],[1712,940],[1691,766],[1717,618],[1787,538]],M.OBSIDIAN);
+poly([[704,2048],[776,1899],[843,1919],[917,1874],[994,1910],[1084,1870],[1164,1915],[1260,1881],[1328,1903],[1436,1844],[1539,1907],[1597,2048]],M.BASALT);
+poly([[731,2048],[854,1977],[994,1984],[1205,1962],[1368,1998],[1510,1939],[1589,2048]],M.OBSIDIAN);
+// Authentic stone weathering is limited to occupied rock cells.
+for(let i=0;i<18;i++){let y=336+i*95;strut(25,y,675-(i%4)*21,y-31+(i%5)*11,i%4===0?M.COBBLE:M.MOSS,3+i%3);strut(1695+(i%4)*13,y+62,2026,y+17-(i%4)*14,i%4?M.SLATE:M.BRONZE,3+i%3)}
+for(let i=0;i<800;i++){let x=i%3?25+rand()*750:1500+rand()*525,y=320+rand()*1595,k=(y|0)*W+(x|0);if(A[k]===M.BASALT||A[k]===M.GRANITE||A[k]===M.OBSIDIAN)stain(x,y,5+i%5*5,2,i%7===0?M.MOSS:i%3===0?M.LIME:M.SLATE)}
+// Unlike the R1 grid, caves have different extents and heights.
+room(164,503,310,154);room(325,766,299,142);room(171,1059,350,169);room(315,1312,327,146);room(153,1657,371,156);
+room(1669,548,290,163);room(1665,878,297,130);room(1675,1151,280,152);room(1715,1602,260,149);
+for(let p of [[405,577,467,80],[548,819,338,96],[464,1112,407,99],[554,1367,352,99],[443,1716,401,92],[1433,591,335,105],[1429,922,341,96],[1401,1197,395,114],[1445,1668,354,108]])rect(...p,M.AIR);
+// Deep flights are really joined via caves/portals and not point-search cheats.
+rect(631,564,123,324,M.AIR);rect(676,820,238,84,M.AIR);
+rect(1552,579,115,332,M.AIR);rect(1431,865,248,92,M.AIR);
+rect(665,1245,134,360,M.AIR);rect(653,1552,226,72,M.AIR);
+rect(1550,1215,118,392,M.AIR);rect(1449,1535,233,82,M.AIR);
+// Distinctive stepped village stone, deliberately not an identical layer every 300 px.
+for(let [x,y,n,dx,dy,s] of [[70,690,8,52,29,1],[188,992,7,53,27,1],[75,1490,8,49,19,1],[1940,767,7,49,27,-1],[1942,1377,6,52,23,-1]])steps(x,y,n,dx,dy,s);
+for(let [x,y,w] of [[55,691,275],[120,995,246],[315,1273,184],[85,1488,335],[179,1814,466],[1725,736,310],[1680,1084,292],[1728,1467,314]]){stain(x,y,w,8,M.LIME);stain(x,y+8,w,4,M.MOSS)}
+// Large old west tree: mature crown, interlocked trunk/root buttresses wrapping carved stone.
+poly([[370,397],[387,249],[411,121],[462,104],[483,271],[535,438],[480,559],[461,600],[432,495],[403,425]],M.BASALT);
+line(439,304,355,203,M.BASALT,28);line(421,259,270,166,M.BASALT,27);line(467,279,576,171,M.BASALT,31);line(480,340,620,272,M.BASALT,21);
+line(455,465,323,698,M.GRANITE,18);line(478,491,550,677,M.BASALT,21);line(437,458,264,619,M.BASALT,16);
+for(let i=0;i<34;i++){let a=i*2.399963,r=Math.sqrt(i/34)*204;disk(429+Math.cos(a)*r,104+Math.sin(a)*r*.56,31+i%5*9,i%7===0?M.COBBLE:M.MOSS)}
+for(let i=0;i<11;i++){let x=427+(i-5)*19;strut(x,389,x+(i-5)*45,720+(i%3)*77,i%3===0?M.BASALT:M.SLATE,8+i%4*3);strut(x+(i-5)*45,724+(i%3)*77,x+(i-5)*70,892+(i%5)*38,M.MOSS,5+i%3*3)}
+// Right guardian is ONE integral eroded rock monolith rooted to the ridge.
+poly([[1615,507],[1637,405],[1640,316],[1664,272],[1701,260],[1732,321],[1772,434],[1786,548],[1745,603],[1673,590]],M.GRANITE);
+poly([[1638,433],[1642,331],[1673,298],[1716,315],[1740,377],[1759,454],[1735,488],[1676,473]],M.LIME);
+rect(1658,379,21,15,M.OBSIDIAN);rect(1709,379,21,15,M.OBSIDIAN);
+poly([[1690,393],[1675,440],[1705,446]],M.SLATE);rect(1661,463,65,9,M.OBSIDIAN);
+for(let i=0;i<9;i++)strut(1617+i*17,323,1603+i*20,260-(i%3)*17,M.MOSS,5);
+// Smaller east tree on ledge; the guardian and tree are physically connected.
+line(1890,480,1890,257,M.BASALT,25);line(1890,330,1832,278,M.BASALT,16);line(1890,340,1963,280,M.BASALT,16);
+for(let i=0;i<19;i++){let a=i*2.399963,r=Math.sqrt(i/19)*96;disk(1889+Math.cos(a)*r,251+Math.sin(a)*r*.6,22+i%4*6,M.MOSS)}
+// ONE living bridge in mid-high ravine: narrow, uneven, moss, tension/root hangers.
+const bp=[[735,666],[805,670],[879,679],[950,693],[1016,703],[1070,705],[1138,694],[1214,685],[1296,669],[1377,660],[1455,650],[1548,647]];
+for(let i=0;i<bp.length-1;i++){let [x,y]=bp[i],[X,Y]=bp[i+1];line(x,y,X,Y,M.COBBLE,18);line(x,y-6,X,Y-6,M.MOSS,6);line(x,y+8,X,Y+8,M.SLATE,5)}
+for(let i=0;i<bp.length;i++){let [x,y]=bp[i];line(x,y+10,x+(i%2?12:-9),y+40+i%3*8,M.MOSS,4);if(i%2)line(x+8,y+37,x+24,y+67,M.COBBLE,3)}
+for(let i=0;i<9;i++){let x=817+i*71,y=674+Math.sin(i/8*Math.PI)*26;line(x,y+13,x+14,y+30,M.MOSS,4);line(x+14,y+30,x+67,y+15,M.COBBLE,3)}
+line(703,615,751,663,M.BASALT,15);line(1460,655,1561,583,M.BASALT,16);
+// A lower *spur* stays attached to east terrain instead of a second suspended deck.
+poly([[1553,1476],[1475,1479],[1375,1521],[1308,1553],[1305,1566],[1380,1567],[1450,1540],[1545,1519]],M.BASALT);
+line(1329,1547,1491,1514,M.MOSS,7);line(1391,1548,1422,1627,M.SLATE,6);
+for(let i=0;i<7;i++)line(1401+i*17,1546,1404+i*17,1583+(i%3)*14,M.MOSS,3);
+// Old inscribed reliefs, relief stone thresholds and lateral root tendrils.
+for(let [x,y] of [[246,558],[400,818],[315,1118],[433,1380],[1779,610],[1810,931],[1791,1240],[1828,1676]]){rect(x-15,y-10,30,5,M.MARBLE);rect(x-10,y-5,20,44,M.COBBLE);rect(x-4,y+9,8,12,M.OBSIDIAN);rect(x-16,y+39,32,5,M.SLATE)}
+for(let i=0;i<26;i++){let x=115+(i*37)%510,y=465+(i*193)%1270;strut(x,y,x+(i%2?28:-21),y+33+i%3*12,M.MOSS,3+i%3)}
+// Final authoring clearance (REAL air corridors, entire portals), carving late material flecks too.
+for(let p of [[380,557,489,108],[530,827,358,82],[464,1115,410,86],[545,1367,350,90],[440,1702,403,93],[1426,593,371,79],[1426,919,394,87],[1396,1204,409,93],[1444,1669,366,94]])rect(...p,M.AIR);
+for(let p of [[180,521,272,127],[347,784,263,110],[187,1074,317,144],[329,1328,292,115],[168,1680,339,117],[1686,566,254,134],[1684,894,258,108],[1696,1170,247,116],[1736,1622,229,116]])rect(...p,M.AIR);
+// The bridge is continuous, but side-cliff shafts allow a flyable loop around it.
+rect(626,566,114,341,M.AIR);rect(658,824,237,105,M.AIR);
+rect(1560,580,112,352,M.AIR);rect(1429,873,269,113,M.AIR);
+rect(655,1246,119,388,M.AIR);rect(644,1566,244,95,M.AIR);
+rect(1550,1208,109,431,M.AIR);rect(1432,1524,267,94,M.AIR);
+rect(676,1774,220,94,M.AIR);rect(1455,1776,265,99,M.AIR);
+// Open flight vault, not an unreachable body of black under the composition.
 const spawn=[1024,454],loc=[
-['West Crown Sanctuary',[450,471]],['East Crown Sanctuary',[1590,471]],['Upper Sky Ravine',[1024,454]],
-['West Root Gallery',[455,785]],['East Sun Gallery',[1588,785]],['High Ravine Overlook',[1080,1038]],
-['West Moss Archive',[456,1117]],['East Oracle Archive',[1593,1117]],['West Guardian Portal',[701,1117]],['East Guardian Portal',[1365,1117]],
-['Midspan Bridge Overlook',[1024,1233]],['West Relics Gallery',[450,1454]],['East Relics Gallery',[1591,1454]],
-['West Lower Sanctuary',[451,1750]],['East Root Crypt',[1589,1750]],['Lower Bridge Outlook',[1022,1732]],['Moonwater Basin Outlook',[1062,1858]]
+['Upper Open Ravine',[1024,454]],['West Upper Shrine',[315,590]],['West Upper Threshold',[604,589]],['West Root Landing',[491,850]],['West Deep Root Niche',[347,1137]],['West Middle Exit',[751,1141]],['West Terrace Chapel',[469,1367]],['West Lower Return',[596,1718]],
+['Living Bridge West Air',[837,619]],['Living Bridge Mid-Air',[1050,617]],['Living Bridge East Air',[1450,613]],
+['East Sun Sanctuary',[1811,619]],['East High Lookout',[1790,930]],['East Eroded Archive',[1808,1216]],['East Lower Crypt',[1840,1695]],['East Lower Air Exit',[1600,1697]],
+['East Root Spur',[1387,1460]],['Vertical Central Ravine',[1100,1121]],['Lower Ravine Flight',[1090,1600]],['Valley Floor Return',[1050,1844]]
 ].map(([name,point])=>({name,point}));
 // Full 19x15 actor-envelope erosion, component connectivity.
 const integral=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;integral[(y+1)*(W+1)+x+1]=integral[y*(W+1)+x+1]+s}}
@@ -132,13 +107,22 @@ function chunk(tag,data){let a=Uint8Array.from([...tag].map(c=>c.charCodeAt(0)))
 function zlib(d){let parts=[Uint8Array.from([120,1])],a=1,b=0;for(let k=0;k<d.length;){let len=Math.min(65535,d.length-k),last=k+len===d.length;parts.push(Uint8Array.from([last?1:0,len&255,(len>>>8)&255,(~len)&255,((~len)>>>8)&255]),d.subarray(k,k+len));for(let j=k;j<k+len;j++){a=(a+d[j])%65521;b=(b+a)%65521}k+=len}parts.push(Uint8Array.from(U(((b<<16)|a)>>>0)));return join(parts)}
 let png=join([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk('IHDR',Uint8Array.from([...U(pw),...U(ph),4,3,0,0,0])),chunk('PLTE',pl),chunk('IDAT',zlib(raw)),chunk('IEND',new Uint8Array())]);
 
-function nativeCrop(left,top){
- const w=512,h=512,scan=new Uint8Array((w/2+1)*h);
+function nativeCrop(left,top,w=512,h=512){
+ const scan=new Uint8Array((w/2+1)*h);
  for(let yy=0;yy<h;yy++)for(let xx=0;xx<w;xx+=2){let v=A[(top+yy)*W+left+xx],u=A[(top+yy)*W+left+xx+1];scan[yy*(w/2+1)+1+xx/2]=(map[v]<<4)|map[u]}
  return join([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk('IHDR',Uint8Array.from([...U(w),...U(h),4,3,0,0,0])),chunk('PLTE',pl),chunk('IDAT',zlib(scan)),chunk('IEND',new Uint8Array())]);
 }
-const details={'temples-detail-west-crown.png':nativeCrop(155,180),'temples-detail-guardian-bridges.png':nativeCrop(740,845),'temples-detail-east-oracle.png':nativeCrop(1420,960),'temples-detail-moonwater.png':nativeCrop(790,1536)};
+const details={
+'temples-material-2048.png':nativeCrop(0,0,2048,2048),
+'temples-detail-west-tree.png':nativeCrop(125,35),
+'temples-detail-west-shrine.png':nativeCrop(100,475),
+'temples-detail-living-bridge.png':nativeCrop(753,445),
+'temples-detail-east-guardian.png':nativeCrop(1512,207),
+'temples-detail-east-crypt.png':nativeCrop(1490,1135),
+'temples-detail-root-passages.png':nativeCrop(214,1240),
+'temples-detail-lower-ravine.png':nativeCrop(803,1510)
+};
 let counts={};for(let v of A)counts[v]=(counts[v]||0)+1;
-return {json,png,details,stats:{source_id:'ruins-0013',extent:[W,H],seed:SEED,rectangle_count:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,png_bytes:png.length,cell_reconstruction:W*H,clearance_envelope:[19,15],reachable_destinations:loc.length,destinations:loc,waypoint_adjustments:adjustments,air_component_cells:t,spawn,material_counts:counts,native_runtime:'NOT RUN',source_visual_review:'NOT RUN — binary original unavailable in this environment'}};
+return {json,png,details,stats:{source_id:'ruins-0013',extent:[W,H],seed:SEED,rectangle_count:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,png_bytes:png.length,cell_reconstruction:W*H,clearance_envelope:[19,15],reachable_destinations:loc.length,destinations:loc,waypoint_adjustments:adjustments,air_component_cells:t,spawn,material_counts:counts,native_runtime:'NOT RUN',source_visual_review:'Genuine gh-pages JPEG preview visually inspected; full-resolution original PNG parity UNVERIFIED'}};
 }
 if(typeof module!=='undefined')module.exports={generate,template};

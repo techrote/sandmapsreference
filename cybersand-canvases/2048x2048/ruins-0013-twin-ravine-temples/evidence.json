@@ -1,281 +1,513 @@
 {
-  "source_id": "ruins-0013",
-  "extent": [
-    2048,
-    2048
-  ],
-  "seed": 1556133,
-  "rectangle_count": 28733,
-  "rectangle_budget": 32768,
-  "json_bytes": 545894,
-  "json_byte_budget": 1048576,
-  "png_bytes": 525480,
-  "cell_reconstruction": 4194304,
-  "clearance_envelope": [
-    19,
-    15
-  ],
-  "reachable_destinations": 17,
-  "destinations": [
-    {
-      "name": "West Crown Sanctuary",
-      "point": [
-        450,
-        471
-      ]
+  "state": "DRAFT/HOLD; NOT native/owner accepted",
+  "worker": "Canvas Reworker B",
+  "starting_head": "1e80acc80fa9efb3437ef82ff936a726eb56591c",
+  "engine_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+  "source": {
+    "catalogue_id": "ruins-0013",
+    "original_png_path": "artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png",
+    "original_png_blob": "0611d05df37b443a411c1ebf9dba663082e25975",
+    "source_jpeg_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
+    "visual_inspection": "Actual committed JPEG directly viewed and compared with emitted material-cell full-map and district crops",
+    "original_png_pixel_parity": "UNVERIFIED"
+  },
+  "format": {
+    "version": 2,
+    "extent": [
+      2048,
+      2048
+    ],
+    "cells": 4194304,
+    "rectangles": 13387,
+    "rectangle_cap": 32768,
+    "json_bytes": 256936,
+    "json_cap": 1048576,
+    "reconstruction_mismatches": 0,
+    "rectangle_overlaps": 0
+  },
+  "actor": {
+    "model": "midge",
+    "authored_hull": [
+      4,
+      3
+    ],
+    "spawn": [
+      1024,
+      454
+    ],
+    "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "exact_named_sites": [
+      {
+        "name": "Upper Open Ravine",
+        "point": [
+          1024,
+          454
+        ]
+      },
+      {
+        "name": "West Upper Shrine",
+        "point": [
+          315,
+          590
+        ]
+      },
+      {
+        "name": "West Upper Threshold",
+        "point": [
+          604,
+          589
+        ]
+      },
+      {
+        "name": "West Root Landing",
+        "point": [
+          491,
+          850
+        ]
+      },
+      {
+        "name": "West Deep Root Niche",
+        "point": [
+          347,
+          1137
+        ]
+      },
+      {
+        "name": "West Middle Exit",
+        "point": [
+          751,
+          1141
+        ]
+      },
+      {
+        "name": "West Terrace Chapel",
+        "point": [
+          469,
+          1367
+        ]
+      },
+      {
+        "name": "West Lower Return",
+        "point": [
+          596,
+          1718
+        ]
+      },
+      {
+        "name": "Living Bridge West Air",
+        "point": [
+          837,
+          619
+        ]
+      },
+      {
+        "name": "Living Bridge Mid-Air",
+        "point": [
+          1050,
+          617
+        ]
+      },
+      {
+        "name": "Living Bridge East Air",
+        "point": [
+          1450,
+          613
+        ]
+      },
+      {
+        "name": "East Sun Sanctuary",
+        "point": [
+          1811,
+          619
+        ]
+      },
+      {
+        "name": "East High Lookout",
+        "point": [
+          1790,
+          930
+        ]
+      },
+      {
+        "name": "East Eroded Archive",
+        "point": [
+          1808,
+          1216
+        ]
+      },
+      {
+        "name": "East Lower Crypt",
+        "point": [
+          1840,
+          1695
+        ]
+      },
+      {
+        "name": "East Lower Air Exit",
+        "point": [
+          1600,
+          1697
+        ]
+      },
+      {
+        "name": "East Root Spur",
+        "point": [
+          1387,
+          1460
+        ]
+      },
+      {
+        "name": "Vertical Central Ravine",
+        "point": [
+          1100,
+          1121
+        ]
+      },
+      {
+        "name": "Lower Ravine Flight",
+        "point": [
+          1090,
+          1600
+        ]
+      },
+      {
+        "name": "Valley Floor Return",
+        "point": [
+          1050,
+          1844
+        ]
+      }
+    ],
+    "site_count": 20,
+    "nearest_point_fallback": false,
+    "clearance": {
+      "fully_in_bounds": true,
+      "search": "four-neighbour BFS; integral-image rectangle occupancy; every nonempty cell blocks",
+      "envelopes": [
+        {
+          "size": [
+            19,
+            15
+          ],
+          "connected_centres": 2184360,
+          "exact_sites_connected": 20
+        },
+        {
+          "size": [
+            23,
+            19
+          ],
+          "connected_centres": 2137970,
+          "exact_sites_connected": 20
+        },
+        {
+          "size": [
+            31,
+            27
+          ],
+          "connected_centres": 2046793,
+          "exact_sites_connected": 20
+        }
+      ],
+      "archival_regressions": {
+        "previous_exact_sites": [
+          [
+            450,
+            471
+          ],
+          [
+            1590,
+            471
+          ],
+          [
+            1024,
+            454
+          ],
+          [
+            455,
+            785
+          ],
+          [
+            1588,
+            785
+          ],
+          [
+            1080,
+            1038
+          ],
+          [
+            456,
+            1117
+          ],
+          [
+            1593,
+            1117
+          ],
+          [
+            701,
+            1117
+          ],
+          [
+            1365,
+            1117
+          ],
+          [
+            1024,
+            1233
+          ],
+          [
+            450,
+            1454
+          ],
+          [
+            1591,
+            1454
+          ],
+          [
+            451,
+            1750
+          ],
+          [
+            1589,
+            1750
+          ],
+          [
+            1022,
+            1732
+          ],
+          [
+            1062,
+            1858
+          ]
+        ],
+        "connected_at_19x15": 12,
+        "blocked_old_indices_zero_based": [
+          0,
+          1,
+          7,
+          8,
+          11
+        ],
+        "interpretation": "Intentionally displaced R1 positions, not proxy target substitutions. New 20 functional R2 destinations all exact and connected."
+      }
+    }
+  },
+  "materials": {
+    "histogram": {
+      "0": 2447515,
+      "38": 37150,
+      "40": 131783,
+      "41": 79540,
+      "42": 180739,
+      "49": 78464,
+      "52": 6229,
+      "100": 243844,
+      "101": 989040
     },
+    "allowed_static_solid_ids": [
+      38,
+      40,
+      41,
+      42,
+      49,
+      52,
+      100,
+      101
+    ],
+    "physics": "All placed non-empty IDs verified against current accepted main native/include/cybersand/material.hpp: MaterialState::Solid, movable false, valid true, RuleKernel::None.",
+    "water_retained": 0,
+    "water_removal": "Removed 26,928 historical Water cells from R1's non-source-shaped boxed pool, which is absent from the original composition.",
+    "reactive_growth_powder_ids": [],
+    "unsupported_ids": []
+  },
+  "evidence": [
     {
-      "name": "East Crown Sanctuary",
-      "point": [
-        1590,
-        471
-      ]
-    },
-    {
-      "name": "Upper Sky Ravine",
-      "point": [
+      "file": "twin-ravine-temples-preview.png",
+      "blob_sha": "010c3e671e47919521f6d0835fefc885a1199acb",
+      "size_bytes": 525480,
+      "crc32": "63bd2d9b",
+      "extent": [
         1024,
-        454
-      ]
+        1024
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sample_step": 2,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "West Root Gallery",
-      "point": [
-        455,
-        785
-      ]
+      "file": "temples-material-2048.png",
+      "blob_sha": "49a03725f04b99cf19c172b788ee9ae203627f18",
+      "size_bytes": 2099488,
+      "crc32": "babe6e55",
+      "extent": [
+        2048,
+        2048
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "East Sun Gallery",
-      "point": [
-        1588,
-        785
-      ]
+      "file": "temples-detail-west-tree.png",
+      "blob_sha": "2b038b81c428e500b3b357feb5d088ccc9426b5f",
+      "size_bytes": 131722,
+      "crc32": "b4eb9a0c",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        125,
+        35
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "High Ravine Overlook",
-      "point": [
-        1080,
-        1038
-      ]
+      "file": "temples-detail-west-shrine.png",
+      "blob_sha": "839342dbc107d49131401c5804e88a97b725747e",
+      "size_bytes": 131722,
+      "crc32": "c8dd3134",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        100,
+        475
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "West Moss Archive",
-      "point": [
-        456,
-        1117
-      ]
+      "file": "temples-detail-living-bridge.png",
+      "blob_sha": "9b7460a1fe5f008188edff43b0ad10f48f892d1a",
+      "size_bytes": 131722,
+      "crc32": "a77b63bc",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        753,
+        445
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "East Oracle Archive",
-      "point": [
-        1593,
-        1117
-      ]
+      "file": "temples-detail-east-guardian.png",
+      "blob_sha": "adc0249a2302c953288aee5c784fcc8c28f9e2d1",
+      "size_bytes": 131722,
+      "crc32": "96f40b38",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        1512,
+        207
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "West Guardian Portal",
-      "point": [
-        701,
-        1117
-      ]
+      "file": "temples-detail-east-crypt.png",
+      "blob_sha": "5ef258efc4347d8a853f022e3a4a8b5f59680443",
+      "size_bytes": 131722,
+      "crc32": "f4b4f6e1",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        1490,
+        1135
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "East Guardian Portal",
-      "point": [
-        1365,
-        1117
-      ]
+      "file": "temples-detail-root-passages.png",
+      "blob_sha": "e6ee8b63456744a0145bc005dff4ae05d51bad51",
+      "size_bytes": 131722,
+      "crc32": "4fc82e3d",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        214,
+        1240
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "Midspan Bridge Overlook",
-      "point": [
-        1024,
-        1233
-      ]
-    },
-    {
-      "name": "West Relics Gallery",
-      "point": [
-        450,
-        1454
-      ]
-    },
-    {
-      "name": "East Relics Gallery",
-      "point": [
-        1591,
-        1454
-      ]
-    },
-    {
-      "name": "West Lower Sanctuary",
-      "point": [
-        451,
-        1750
-      ]
-    },
-    {
-      "name": "East Root Crypt",
-      "point": [
-        1589,
-        1750
-      ]
-    },
-    {
-      "name": "Lower Bridge Outlook",
-      "point": [
-        1022,
-        1732
-      ]
-    },
-    {
-      "name": "Moonwater Basin Outlook",
-      "point": [
-        1062,
-        1858
-      ]
+      "file": "temples-detail-lower-ravine.png",
+      "blob_sha": "a324851e8de1c6626a469c89ad20fa1f3e0fe0ea",
+      "size_bytes": 131722,
+      "crc32": "e77f6c11",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        803,
+        1510
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     }
   ],
-  "waypoint_adjustments": [],
-  "air_component_cells": 1620906,
-  "spawn": [
-    1024,
-    454
-  ],
-  "material_counts": {
-    "0": 2078890,
-    "3": 26928,
-    "38": 174574,
-    "40": 221325,
-    "41": 26721,
-    "42": 277568,
-    "49": 175615,
-    "52": 71097,
-    "58": 12991,
-    "77": 3460,
-    "79": 11475,
-    "98": 66127,
-    "100": 631606,
-    "101": 387565,
-    "122": 18811,
-    "127": 9551
+  "determinism": {
+    "repeated_generation": "two identical JSON and nine byte-identical PNG files",
+    "png_integrity": "9/9 CRC and deflate block checks passed, exact material-to-pixel parity zero mismatches",
+    "source_overlay_used": false
   },
-  "native_runtime": "NOT RUN",
-  "source_visual_review": "NOT RUN — binary original unavailable in this environment",
-  "repair": {
-    "worker": "Canvas Reworker B",
-    "from_head": "4290ae939e0792566ff753b05639c0b20bda2ea0",
-    "exact_centres_enforced": true,
-    "nearest_waypoint_fallback": false,
-    "independent_reconstruction_cells": 4194304,
-    "independent_reconstruction_histogram": {
-      "0": 2078890,
-      "3": 26928,
-      "38": 174574,
-      "40": 221325,
-      "41": 26721,
-      "42": 277568,
-      "49": 175615,
-      "52": 71097,
-      "58": 12991,
-      "77": 3460,
-      "79": 11475,
-      "98": 66127,
-      "100": 631606,
-      "101": 387565,
-      "122": 18811,
-      "127": 9551
-    },
-    "independent_air_component_centres": 1620906,
-    "independent_exact_destination_count": 17,
-    "referenced_artwork_visual_comparison": "NOT RUN",
-    "godot_native_runtime": "NOT RUN",
-    "method": "Separate raster reconstruction + 19x15 all-non-air-blocking occupancy integral and four-neighbour flood"
+  "native": {
+    "godot_import": "NOT RUN",
+    "native_rectangle_capacity_readback": "NOT RUN",
+    "actor_input_collision": "NOT RUN",
+    "simulation": "NOT RUN",
+    "save_reopen": "NOT RUN"
   },
-  "variant": "Reworked root-bound guardian reliefs, asymmetrical regions, differentiated bridge structures, real material-cell PNG and native district crops; evidence PNG publication repaired without changing terrain",
-  "png_integrity": {
-    "repair_reason": "P0: all five previously committed PNG Git blobs contained invalid IDAT CRC and malformed/truncated chunk stream; regenerated directly from unchanged setup-v2 material cell plane",
-    "source_head": "ed6420f352c50dc86cbbd89be2e558d26bcbae0f",
-    "setup_json_git_blob": "6f8dfc7c46abb6f420dd502f8bb64ace07f1d271",
-    "material_grid_crc32": "2226ba4e",
-    "material_geometry_changed": false,
-    "encoder": "PNG 4-bit indexed, filter 0, single IDAT with zlib stored-deflate; CRC32/Adler32 verified",
-    "verified_pngs": {
-      "twin-ravine-temples-preview.png": {
-        "width": 1024,
-        "height": 1024,
-        "bytes": 525480,
-        "file_crc32": "5a10eb2c",
-        "idat_crc32": "8eba7f2d",
-        "verified_pixels": 1048576,
-        "origin": [
-          0,
-          0
-        ],
-        "sample_step": 2,
-        "git_blob": "ea7f61594da843b41c5e403405dff8fb5c74f79c"
-      },
-      "temples-detail-west-crown.png": {
-        "width": 512,
-        "height": 512,
-        "bytes": 131722,
-        "file_crc32": "e25586df",
-        "idat_crc32": "de7e765c",
-        "verified_pixels": 262144,
-        "origin": [
-          155,
-          180
-        ],
-        "sample_step": 1,
-        "git_blob": "7c6901e1b60c479e59c49e1800be754ba55e9081"
-      },
-      "temples-detail-guardian-bridges.png": {
-        "width": 512,
-        "height": 512,
-        "bytes": 131722,
-        "file_crc32": "860c4212",
-        "idat_crc32": "0166bfa4",
-        "verified_pixels": 262144,
-        "origin": [
-          740,
-          845
-        ],
-        "sample_step": 1,
-        "git_blob": "adf5e1ad85f0987b92c45e17af670bd2b9b8faa6"
-      },
-      "temples-detail-east-oracle.png": {
-        "width": 512,
-        "height": 512,
-        "bytes": 131722,
-        "file_crc32": "1bfb465f",
-        "idat_crc32": "11b1e683",
-        "verified_pixels": 262144,
-        "origin": [
-          1420,
-          960
-        ],
-        "sample_step": 1,
-        "git_blob": "9b8b4378d022f925206bda14b1de63338c232c1f"
-      },
-      "temples-detail-moonwater.png": {
-        "width": 512,
-        "height": 512,
-        "bytes": 131722,
-        "file_crc32": "7e421434",
-        "idat_crc32": "d4edd595",
-        "verified_pixels": 262144,
-        "origin": [
-          790,
-          1536
-        ],
-        "sample_step": 1,
-        "git_blob": "891f7dd0256a670d65e6235a5eebbff341ca8cf8"
-      }
-    },
-    "validation": "Independent chunk CRC/IEND/no-trailing and decoded exact material-pixel comparison of all five PNGs; revalidate Git blob after commit.",
-    "native_runtime": "NOT RUN",
-    "source_visual_review": "NOT RUN — original image not decoded",
-    "verify_script": "verify-png.cjs"
-  }
+  "limitations": [
+    "Schematic material-cell rendering, not photorealistic or full-resolution source PNG parity",
+    "R1 landmarks and five old positional waypoints deliberately superseded; legacy static 12/17 only",
+    "No source-matched native Godot/CyberDemoBridge/Rapier available in this execution"
+  ]
 }

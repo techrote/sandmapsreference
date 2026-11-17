@@ -1,5 +1,15 @@
+# R2 implementation receipt (17 Nov 2026)
+
+**Source-led material-cell repair complete for independent audit; Draft/HOLD, NOT native/owner accepted.** PR #14 starting head `1e80acc80fa9efb3437ef82ff936a726eb56591c`. Deterministic builder seed 20261117. Full extent 2048x2048, 13387 coalesced non-overlapping rectangles, 256936 bytes, 20/20 exact named destinations reachable in fully-in-bounds 19x15, 23x19 and 31x27 static clearance. 9 genuine material-grid PNGs, zero CRC/pixel mismatches. Original source JPEG blob `adfb56729b2c443a513892fbe803718dc8b71e52` directly viewed. Original PNG full-resolution parity unverified; source-matched native gameplay/installation/save-reopen NOT RUN.
+
+**Actual geometry delivered:** singular anchored irregular moss/root bridge, much larger rooted west temple and tree canopy, independent small right sanctuary with stone guardian physically integrated on the east ledge, stepped terraces, distinct lower cave route system and offset eastern spur. Removed R1's 3 stiff viaducts, detached faces, repetitive 5-tier rooms and rectangular water tank. Reconstructed all 4,194,304 cells; do not interpret positional losses of five retired R1 destinations as substitutions. See README and evidence.json for source-vs-output and exact static gates.
+
+**Original source and archived history remain unchanged.**
+
+---
+
 # Canvas R2 — RUINS-0013 Twin Ravine Temples
-**State: SEED ONLY. No new authored material-cell map has been committed on this branch yet.**
+**Historical seed brief follows; R2 implementation above supersedes its seed-only status.**
 **Worker: B exclusively (after completion of WORKS-0023 PR #13); PR must remain Draft / HOLD.**
 
 ## Provenance and authority

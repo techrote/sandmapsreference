@@ -1,61 +1,76 @@
-# Twin Ravine Temples — CyberSand 2048×2048
+# Twin Ravine Temples - source-led R2 CyberSand canvas
 
-**DRAFT / HOLD · owner playtest required · never merge without approval.**
+**2048 x 2048 | DRAFT / HOLD | NOT native or owner accepted.** This R2 exists only on PR #14's branch. Archived R1 was merged into main for historical preservation, not acceptance.
 
-Original reference: [artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png](https://github.com/techrote/sandmapsreference/blob/main/artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png) · public ID **ruins-0013** · source key **batch1/image-0212** · Git blob **0611d05df37b443a411c1ebf9dba663082e25975** · original SHA-256 **47f4039fb0547f6799b0e3b445a12869e1a7dc5904c68e1725d2ba2d52aa5bdb**. Original image dimensions and direct pixel comparison could not be independently verified in this run because the binary source was unavailable to the generator; the title, catalogue identity and geometry are the sourced visual premise.
+## Reference provenance and composition
 
-The 2048² level interprets the reference's twin ravine shrines as **two separate cliff-bound temple wings**, with guardian reliefs, root-bound mineral ledges, three masonry/root crossings, conservative flying bypass shafts, underground galleries and a contained turquoise moonwater basin. 2D orthographic geometry only. The original reference PNG is not used as scenery, engine background or actual material pixels.
+- Public catalogue ID: `ruins-0013`, source key `batch1/image-0212`.
+- Genuine source: `artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png` (Git blob `0611d05df37b443a411c1ebf9dba663082e25975`).
+- **Genuinely visually inspected** unaltered source JPEG derivative: `source-reference-preview.jpg` (Git blob `adfb56729b2c443a513892fbe803718dc8b71e52`). Direct visual comparison with the true-grid output; **full-resolution PNG pixel parity unverified**.
 
-## Loading
+| Original source JPEG | Exact authored material-cell world (2048 x 2048 PNG) |
+|---|---|
+| ![Original source JPEG](./source-reference-preview.jpg) | ![Actual authored material cells](./temples-material-2048.png) |
 
-1. Copy `setup-twin-ravine-temples.json` into the Workbench setup location: `%APPDATA%\\Godot\\app_userdata\\Cyber Sand Reference Sandbox\\workbench\\` on Windows (verify the installed Workbench user-data path).
-2. Open Workbench and select the start `twin-ravine-temples`. Install into the Workbench and play as the selected Midge.
-3. Do not treat static material rendering as a native test: exercise Godot, Rapier, actor control and save/reopen on physical Windows 11.
+The source's big rooted west cliff, smaller east guardian shrine, one suspended root crossing and open central sky define the actual authored geometry. The R1 mirrored five-tier gallery format, floating masks, three viaducts and artificial boxed moonwater pool are gone. The west contains two unequal shrine rooms, deep root chambers and eccentric stepped terraces; the east contains one integral carved ridge guardian, distinct eroded rooms, a small crown tree and a lower rooted spur. Open sky and air routes occupy the asymmetric inter-cliff gap down to the genuine valley floor.
 
-## Static qualification
+## Actual map evidence
 
-- CyberSand authority: [accepted main `018bd09503d7f079ddac52e225c2f7daf8d678bf`](https://github.com/techrote/cybersand/tree/018bd09503d7f079ddac52e225c2f7daf8d678bf).
-- Real Workbench setup-v2 extent: **2048×2048**; the material plane is reconstructed losslessly from 5-field rectangle edits.
-- 28,733 rectangles / 32,768; 545,894 UTF-8 JSON bytes / 1,048,576.
-- Conservative **19×15** actor clearance: 17/17 **original exact centres** reached; spawn 1024, 454. Waypoint substitutions: **none**; any unreachable site makes the builder fail. Independent recheck: 1,620,906 connected legal Midge centres.
-- Full material-equivalence check: 4,194,304 / 4,194,304 cells.
-- Stable structural materials predominate; actual Water is retained inside a reinforced basin with solid liner. No spreading live Plant/Fungus components.
+**West canopy and roots** - native 512 x 512 material cells
 
-## Reproducibility
+![West canopy and roots](./temples-detail-west-tree.png)
 
-Run `node -e "const fs=require('fs'),{generate,template}=require('./builder.cjs');const r=generate(template);fs.writeFileSync('setup-twin-ravine-temples.json',r.json);fs.writeFileSync('twin-ravine-temples-preview.png',r.png);for(const [name,png] of Object.entries(r.details))fs.writeFileSync(name,png);console.log(r.stats)"` from this directory with Node 18+.
+**West shrine threshold** - native 512 x 512 material cells
 
-The receipt contains additional independent verification not overwritten by the deterministic authoring command. The committed PNG is a **1024×1024, 4-bit indexed material-cell preview** sampled from the exact 2048² authored array; it is not a tracing or AI-generated image. See `evidence.json` for collision clearance, waypoints and budget evidence.
+![West shrine threshold](./temples-detail-west-shrine.png)
 
-**Unqualified:** direct visual fidelity against the original PNG, physical Godot/native/Rapier launch, actor input/collision, simulation progression, and save/reopen. These require owner/independent validation and must not be described as passed.
+**Living bridge** - native 512 x 512 material cells
 
-## Reworker B substantive geometry repair — 17 November 2026
+![Living bridge](./temples-detail-living-bridge.png)
 
-Original review [PR #4](https://github.com/techrote/sandmapsreference/pull/4#issuecomment-6938539932), starting HEAD `4290ae939e0792566ff753b05639c0b20bda2ea0`. This remains a **Draft / HOLD** research canvas. The deterministic builder was materially revised rather than painting a more attractive preview over unchanged terrain.
+**East integrated stone guardian** - native 512 x 512 material cells
 
-- Created **large, asymmetric chiseled guardian projections** after the original giant air-route punches (which previously erased much of the small guardian carvings). One is a rooted calcite elder with a broken jaw and moss crown; the other is a faceted sun oracle with bronze features. The original half-ruined gallery reliefs remain as older embedded fragments. Short roots and tendrils are kept out of the conservative service shaft clearance.
-- Differentiated west/east cliff ornament language: west has irregular root/fossil seams and moss strata; east uses angular bronze, amber and obsidian tracery. Created eroded exterior alcoves and diverse native material props.
-- Gave all three crossings distinguishable parapets, braces, intentionally broken segments and suspended tension roots; cut a **true open-air passage through the third bridge** to keep the Moonwater Basin lookout at its original exact location.
-- Restored the two guardian portal envelopes and replaced the old ±80-cell *nearest destination substitution* with a hard assertion on all 17 named exact coordinates.
-- Replaced unsupported/unverified material **1** (formerly used as the basin liner) with Workbench's documented **Hard Wall 58**; all **26,928 original Water cells** remain retained in the lower basin. This replacement is source-code-grounded, **not** a substitute for actual native material qualification.
-- Fixed the overview sampler's second-pixel horizontal stride from +4 to +2 to represent the intended adjacent 2×-downsampled material cell. The PNG is a real authored-cell render, not a repaint.
+![East integrated stone guardian](./temples-detail-east-guardian.png)
 
-### Repaired PNG review gallery
+**East lower sanctuaries** - native 512 x 512 material cells
 
-![Upper western crown, native 512×512 material cells](./temples-detail-west-crown.png)
+![East lower sanctuaries](./temples-detail-east-crypt.png)
 
-![Guardian sculptures / central crossing, native 512×512 material cells](./temples-detail-guardian-bridges.png)
+**Lower root passages** - native 512 x 512 material cells
 
-![Eastern oracle district, native 512×512 material cells](./temples-detail-east-oracle.png)
+![Lower root passages](./temples-detail-root-passages.png)
 
-![Moonwater basin district, native 512×512 material cells](./temples-detail-moonwater.png)
+**Ravine floor and return** - native 512 x 512 material cells
 
-Static requalification used the current exact JSON plus an **independent second** 4,194,304-cell reconstruction/histogram and full 19×15 four-neighbour conservative reachability scan: 1,620,906 connected legal centres and **17/17 original declared exact sites**, no offsets. The repaired JSON is 545,894 bytes, 28,733 rectangles. The committed PNG and four native-cell crops all derive from the final authored cell array.
+![Ravine floor and return](./temples-detail-lower-ravine.png)
 
-**Still not qualified:** pixel-accurate original source-art similarity (original binary not directly inspected), native Godot/CyberDemoBridge/Rapier input or progression, installed material-ID/actor-definition hashes, physical collision checks or Workbench save/reopen. Owner and independent Shepherd acceptance remain required.
+A separate 1024 x 1024 diagnostic downsample is `twin-ravine-temples-preview.png`. All nine PNGs are reconstructed from **the same committed Setup-v2 material plane**, not AI-generated illustration or an original image pasted on top.
 
-## Evidence-integrity repair (17 November 2026)
+## Static admission - accepted CyberSand main `018bd09503d7f079ddac52e225c2f7daf8d678bf`
 
-Following the Shepherd's P0 finding, all five published material-cell PNGs were replaced **as binary Git blobs** with deterministic 4-bit indexed PNGs reconstructed from the **unchanged** committed Setup-v2 material plane (`ed6420f352c50dc86cbbd89be2e558d26bcbae0f`, setup blob `6f8dfc7c46abb6f420dd502f8bb64ace07f1d271`). This is an evidence-only correction; the terrain edits, actor, clearance coordinates, material catalogue, 2048² extent and previous static qualification were not modified. The regenerated overview samples exact cells at 2× intervals; all four 512×512 district crops are 1:1. Run `node verify-png.cjs` to independently check PNG signatures, all chunk CRCs, IHDR, PLTE, IEND/no trailing bytes, zlib decode, and every displayed material pixel against the committed setup. The regenerated binaries were additionally checked after GitHub upload.
+| Gate | Exact result |
+|---|---|
+| Setup-v2 extent | 2048 x 2048 = 4,194,304 cells |
+| Rectangle records | 13387 / 32,768 |
+| Serialized JSON | 256936 / 1,048,576 bytes |
+| Final grid replay vs deterministic builder | 0 mismatches, no overlapping/out-of-bounds records |
+| Stable material law | IDs 0, 38, 40, 41, 42, 49, 52, 100, 101; no reactive, powder, growing or Water cells |
+| Midge actual hull | 4 x 3; unchanged spawn [1024,454] |
+| Exact named R2 operational sites | 20/20 connected at 19x15, 23x19 and 31x27 clearance |
+| Fully-in-bounds connected legal centres | 2,184,360 (19x15); 2,137,970 (23x19); 2,046,793 (31x27) |
+| R1 exact positional regressions | 12/17 retained, 5 intentionally superseded by redesigned shrines; no waiver or nearest site substitution |
+| PNG integrity and material parity | 9/9 CRC/zlib/IEND pass; zero displayed pixel mismatches |
+| Native runtime / save-reopen | **NATIVE-UNTESTED** |
 
-**Still HOLD:** original source PNG was not decoded for pixel comparison; Godot/native/Rapier install, play/input, simulation and save/reopen were not executed.
+Meaningful operational centres and complete material histogram are in `evidence.json`. These clearance counts use only *fully-in-bounds* actor envelopes, four-neighbour BFS and every nonempty cell as an obstacle. Actual movement/thrust/rotational collision and native installed setup are **not** proven by these static checks.
+
+## Rebuild and verify
+
+Use Node 18+ in this folder:
+
+```powershell
+node -e "const fs=require('fs'),{generate,template}=require('./builder.cjs');const r=generate(template);fs.writeFileSync('setup-twin-ravine-temples.json',r.json);fs.writeFileSync('twin-ravine-temples-preview.png',r.png);for(const [name,png] of Object.entries(r.details))fs.writeFileSync(name,png)"
+node verify-r2.cjs
+```
+
+The run is deterministic with seed 20261117. Existing PR #14 branch only; original source JPEG/PNG, CyberSand engine and archived main remain untouched. The JSON is a standalone Workbench Setup-v2 start with the preserved actor model/hash and spawn; install into a source-matched native Workbench to complete physical evaluation. No Godot, Rapier movement, long simulation or save/reopen was exercised.
