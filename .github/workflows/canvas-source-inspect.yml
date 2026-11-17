@@ -1,39 +1,36 @@
-name: Canvas reference pixel inspection
+name: Tall Canvas source and cell qualification
 on:
   push:
     branches:
       - cybersand-canvas/1024x2048/techn-0034a-slate-shaft-20261117
     paths:
       - .github/workflows/canvas-source-inspect.yml
+      - cybersand-canvases/1024x2048/techn-0034a-slate-shaft/build.py
 permissions:
-  contents: read
+  contents: write
 jobs:
-  decode-original:
+  build-review:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
           lfs: true
-      - name: Verify source and emit review thumbnail
+          persist-credentials: true
+      - name: Build exact-source material-cell terrain
         shell: bash
         run: |
-          python3 -m pip install --quiet Pillow
-          python3 - <<'PY'
-          import base64,hashlib,io,subprocess
-          from PIL import Image
-          from pathlib import Path
-          p=Path('artwork/technical_interiors/batch2/cable_lined_slate_shaft.png')
-          raw=p.read_bytes()
-          sha=subprocess.check_output(['git','rev-parse','HEAD:'+str(p)],text=True).strip()
-          source=Image.open(io.BytesIO(raw)); source.load()
-          print('SOURCE_PATH='+str(p))
-          print('SOURCE_BLOB_SHA='+sha)
-          print('SOURCE_SHA256='+hashlib.sha256(raw).hexdigest())
-          print('SOURCE_DIMENSIONS='+str(source.size[0])+'x'+str(source.size[1]))
-          source=source.convert('RGB')
-          source.thumbnail((600,900),resample=Image.Resampling.LANCZOS)
-          out=io.BytesIO();source.save(out,format='JPEG',quality=73,optimize=True,subsampling=0)
-          print('THUMB_DIMENSIONS='+str(source.size[0])+'x'+str(source.size[1]))
-          print('REF_JPEG='+base64.b64encode(out.getvalue()).decode())
-          PY
+          python3 -m pip install --quiet Pillow numpy
+          python3 cybersand-canvases/1024x2048/techn-0034a-slate-shaft/build.py
+      - name: Source-matched build artifact commit
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cybersand-canvases/1024x2048/techn-0034a-slate-shaft/
+          if git diff --cached --quiet; then
+            echo "No generated differences"
+          else
+            git commit -m "Build exact CyberSand 1024x2048 source-matched canvas and evidence"
+            git push
+          fi
