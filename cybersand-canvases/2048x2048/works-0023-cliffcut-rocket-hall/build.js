@@ -177,6 +177,125 @@ function buildCyberSand(base, template, palette) {
   else{x=120+rand()*1800;y=1983+rand()*64;}
   rect(x,y,3+(rand()*10|0),3,i%7===0?M.obsi:(i%3===0?M.granite:M.slate));}
  for(let x=246;x<1800;x+=210){rect(x,1795,12,32,M.brass);rect(x-16,1825,45,10,M.amber);rect(x-10,1834,32,3,M.white);}
+
+ // P1 actual-cell industrial repair. All fixtures are cold, static, no new dynamic material rules.
+ function forklift(x,y,s){rect(x,y,90*s,21*s,M.iron);rect(x+7*s,y+5*s,67*s,7*s,M.amber);
+  rect(x+13*s,y-23*s,29*s,26*s,M.steel);rect(x+18*s,y-19*s,18*s,16*s,M.dark);
+  rect(x+77*s,y-50*s,7*s,53*s,M.corr);rect(x+77*s,y-51*s,44*s,6*s,M.brass);
+  for(let dx of [20,68]){ellipse(x+dx*s,y+22*s,13*s,13*s,M.iron);ellipse(x+dx*s,y+22*s,5*s,5*s,M.cyan);}
+ }
+ function optic(x,y){rect(x-3,y-10,100,11,M.corr);rect(x+11,y-39,5,33,M.steel);
+  rect(x+58,y-37,7,28,M.steel);rect(x+18,y-61,40,23,M.iron);
+  rect(x+21,y-57,32,12,M.cyan);rect(x+45,y-64,15,13,M.white);
+  rect(x+30,y-3,40,5,M.brass);}
+ function mill(x,y){rect(x,y,113,15,M.iron);rect(x+10,y-49,10,49,M.brass);
+  rect(x+92,y-68,9,68,M.corr);rect(x+15,y-69,85,9,M.steel);
+  rect(x+28,y-62,25,17,M.iron);rect(x+37,y-48,7,24,M.amber);
+  rect(x+60,y-7,32,6,M.cyan);}
+ function gauge(x,y){ellipse(x,y,30,30,M.iron);ellipse(x,y,22,22,M.dark);
+  for(let a=0;a<12;a++){const t=a*Math.PI/6;line(x+15*Math.cos(t),y+15*Math.sin(t),x+21*Math.cos(t),y+21*Math.sin(t),2,M.white);}
+  rect(x-5,y-5,10,10,M.amber);rect(x-2,y-31,4,17,M.cyan);}
+ const westProgram=["LIFT","FORM","JIG","PRESS","ENGINE"];
+ const eastProgram=["CONTROL","OPTICS","METRO","SENSOR","PAYLOAD"];
+ for(let k=0;k<5;k++){const y=floors[k];
+  // Replace identical repetitive display banks inside each room, retain shell, slabs, lift portals.
+  rect(211,y+33,325,160,M.air);rect(1510,y+33,319,161,M.air);
+  label(westProgram[k],230,y+13,2,M.phos);
+  label(eastProgram[k],1540,y+13,2,M.cyan);
+  rect(226,y+38,290,5,M.corr);rect(1530,y+38,278,5,M.steel);
+  for(let x=235;x<510;x+=64){rect(x,y+41,5,18,M.brass);rect(x+16,y+37,20,4,k%2?M.cyan:M.amber);}
+  for(let x=1543;x<1806;x+=79){rect(x,y+41,4,13,M.brass);rect(x+11,y+37,25,4,M.cyan);}
+  if(k===0){ // gantry receiving / flight telemetry
+   rect(259,y+62,226,12,M.iron);rect(293,y+74,14,55,M.steel);
+   rect(495,y+74,12,38,M.brass);rect(272,y+95,56,13,M.hazard);
+   rect(242,y+151,118,10,M.corr);rect(253,y+162,83,22,M.iron);
+   for(let x=264;x<342;x+=24)ellipse(x,y+187,8,8,M.brass);
+   rect(1538,y+66,162,57,M.iron);rect(1546,y+75,146,40,M.dark);
+   for(let x=1552;x<1685;x+=25)rect(x,y+83,18,8,x%2?M.cyan:M.phos);
+   rect(1571,y+169,100,21,M.corr);rect(1580,y+166,80,7,M.cyan);
+   rect(1800,y+104,13,74,M.steel);rect(1798,y+99,20,9,M.amber);
+  } else if(k===1){ // plate mill / vacuum optics
+   mill(256,y+167);rect(378,y+159,83,11,M.corr);
+   for(let x=385;x<462;x+=21)ellipse(x,y+175,8,9,M.steel);
+   rect(498,y+105,12,94,M.iron);rect(474,y+100,57,10,M.hazard);
+   rect(1522,y+95,68,90,M.iron);rect(1531,y+102,50,73,M.dark);
+   rect(1538,y+121,35,7,M.phos);rect(1554,y+145,4,25,M.cyan);
+   optic(1643,y+174);gauge(1771,y+95);
+  } else if(k===2){ // booster jig / metrology bay
+   rect(246,y+88,124,12,M.corr);rect(247,y+99,10,95,M.steel);
+   rect(358,y+100,9,93,M.steel);rect(251,y+187,122,10,M.iron);
+   ellipse(306,y+151,49,31,M.steel);ellipse(306,y+151,40,23,M.dark);
+   rect(274,y+147,64,6,M.amber);rect(391,y+170,20,26,M.corr);
+   rect(1548,y+68,184,11,M.steel);rect(1560,y+80,10,54,M.iron);
+   rect(1708,y+81,9,54,M.iron);rect(1585,y+105,106,9,M.cyan);
+   for(let x=1588;x<1704;x+=23)rect(x,y+116,7,13,M.brass);
+   optic(1569,y+184);gauge(1770,y+110);
+  } else if(k===3){ // punch press / vibration analysis
+   rect(256,y+79,94,13,M.iron);rect(268,y+93,11,91,M.corr);
+   rect(328,y+93,10,89,M.corr);rect(285,y+118,39,28,M.steel);
+   rect(294,y+146,21,14,M.amber);rect(266,y+186,84,12,M.iron);
+   mill(396,y+189);
+   rect(1555,y+71,104,63,M.iron);rect(1563,y+80,87,47,M.dark);
+   for(let j=0;j<6;j++)line(1568+j*14,y+110,1575+j*14,y+93+(j%3)*7,2,M.cyan);
+   rect(1717,y+166,100,21,M.corr);rect(1726,y+155,76,10,M.steel);
+   gauge(1772,y+98);
+  } else { // engine rig / payload clean room
+   rect(258,y+85,120,9,M.corr);rect(275,y+94,11,63,M.brass);
+   rect(354,y+95,10,49,M.iron);ellipse(314,y+160,50,35,M.iron);
+   ellipse(314,y+160,36,24,M.rust);rect(299,y+154,30,11,M.steel);
+   rect(245,y+193,144,7,M.hazard);
+   rect(1533,y+89,106,10,M.corr);rect(1533,y+99,9,95,M.iron);
+   rect(1626,y+99,10,95,M.iron);rect(1553,y+115,64,57,M.dark);
+   rect(1556,y+120,58,6,M.cyan);rect(1557,y+156,55,5,M.amber);
+   optic(1760,y+189);rect(1792,y+150,25,39,M.steel);
+  }
+ }
+ // Preserve complete actor clearance into the metrology inspection site.
+ // 33px open horizontal service aisle leaves the optical bench and ceiling jig recognizable.
+ rect(1500,860+149,267,35,M.air);
+ // Multiple rocket service tiers: nose optics, umbilical bus, protected avionics and cold engine skirt.
+ poly([[1018,520],[1031,520],[1043,577],[1007,577]],M.dark);
+ rect(1015,528,19,32,M.cyan);rect(1020,535,10,14,M.glass);
+ for(let y of [701,827,953,1090,1225]){
+  rect(927,y,21,7,M.brass);rect(1099,y,21,7,M.brass);
+  rect(945,y+7,13,31,M.corr);rect(1087,y+7,11,31,M.corr);
+  rect(952,y+17,19,8,M.hazard);rect(1077,y+17,18,7,M.hazard);
+ }
+ rect(983,700,82,56,M.iron);rect(994,711,60,34,M.dark);
+ for(let x=1001;x<1052;x+=15)rect(x,716,9,22,M.cyan);
+ rect(978,766,91,6,M.brass);
+ ellipse(1025,895,42,35,M.corr);ellipse(1025,895,30,23,M.dark);
+ for(let x=1004;x<1051;x+=15)rect(x,884,8,23,M.cyan);
+ rect(911,877,26,43,M.iron);rect(1110,877,26,43,M.iron);
+ rect(918,892,19,9,M.amber);rect(1110,892,19,9,M.amber);
+ rect(984,1083,80,54,M.iron);
+ for(let x=993;x<1052;x+=13)for(let y=1090;y<1127;y+=8)rect(x,y,8,4,M.dark);
+ rect(998,1141,58,8,M.cyan);
+ for(let x of [925,973,1021,1069,1114]){rect(x,1377,9,39,M.corr);
+  rect(x-7,1409,23,7,M.amber);}
+ for(let x of [854,1168]){rect(x,921,22,33,M.iron);rect(x+4,928,14,8,M.cyan);
+  rect(x+7,955,7,15,M.brass);}
+ // Cold undercroft equipment: the roof rail intentionally breaks at both lift outlets.
+ for(const [a,b] of [[205,535],[682,1360],[1510,1820]])rect(a,1810,b-a,7,M.corr);
+ for(let x=244;x<1770;x+=165)if((x<530||x>690&&x<1360||x>1510)){rect(x,1817,13,12,M.brass);rect(x+3,1829,7,9,M.amber);}
+ forklift(294,1903,1);forklift(1460,1903,1);
+ rect(523,1877,95,13,M.steel);rect(535,1890,9,42,M.corr);
+ rect(603,1890,9,42,M.corr);rect(548,1902,53,17,M.rust);
+ rect(536,1922,91,8,M.amber);
+ for(let x=668;x<768;x+=24){ellipse(x,1918,11,11,M.iron);ellipse(x,1918,5,5,M.brass);}
+ rect(662,1903,110,7,M.corr);
+ rect(928,1802,185,12,M.iron);
+ for(let x=947;x<1115;x+=38)rect(x,1814,8,18,M.brass);
+ rect(1027,1815,14,26,M.steel);rect(1008,1832,52,10,M.hazard);
+ rect(938,1905,151,7,M.steel);rect(945,1915,138,20,M.iron);
+ for(let x=959;x<1080;x+=22)rect(x,1920,12,8,M.cyan);
+ rect(1282,1879,105,10,M.corr);rect(1295,1889,9,46,M.iron);
+ rect(1375,1889,8,46,M.iron);rect(1317,1890,41,23,M.rust);
+ rect(1323,1918,29,13,M.brass);
+ label("TRANSFER",325,1808,3,M.white);
+ label("LIFT",972,1771,3,M.amber);
+ label("HYDRAULIC",1268,1808,2,M.cyan);
+
  const spawn=[730,370],marks=[
   ["A3 Control Gallery",[445,417]],["East Flight Control",[1745,456]],
   ["Upper Nose Overlook",[813,470]],["West Crane Rail",[718,386]],
@@ -247,20 +366,75 @@ function buildCyberSand(base, template, palette) {
  const alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
  let pngBase64="";for(let i=0;i<bytes.length;i+=3){const a=bytes[i],b=bytes[i+1]||0,c=bytes[i+2]||0,v=(a<<16)|(b<<8)|c;
   pngBase64+=alpha[(v>>>18)&63]+alpha[(v>>>12)&63]+(i+1<bytes.length?alpha[(v>>>6)&63]:"=")+(i+2<bytes.length?alpha[v&63]:"=");}
+
+ function pngCrop(rx,ry,rw,rh){
+  const s=new Uint8Array(rh*(rw+1));for(let y=0;y<rh;y++)s.set(cells.subarray((ry+y)*W+rx,(ry+y)*W+rx+rw),y*(rw+1)+1);
+  const z=[0x78,1];let a=1,b=0;
+  for(let off=0;off<s.length;){const n=Math.min(65535,s.length-off),last=off+n===s.length;
+   z.push(last?1:0,n&255,n>>8,(~n)&255,((~n)>>8)&255);
+   for(let j=0;j<n;j++){const v=s[off+j];z.push(v);a=(a+v)%65521;b=(b+a)%65521;}off+=n;
+  }
+  z.push(...be(((b<<16)|a)>>>0));
+  const v=[137,80,78,71,13,10,26,10,...chunk("IHDR",Uint8Array.from([...be(rw),...be(rh),8,3,0,0,0])),
+   ...chunk("PLTE",colors),...chunk("IDAT",Uint8Array.from(z)),...chunk("IEND",new Uint8Array(0))];
+  let o="";for(let i=0;i<v.length;i+=3){const a=v[i],b=v[i+1]||0,c=v[i+2]||0,t=a<<16|b<<8|c;
+   o+=alpha[t>>>18&63]+alpha[t>>>12&63]+(i+1<v.length?alpha[t>>>6&63]:"=")+(i+2<v.length?alpha[t&63]:"=");}
+  return o;
+ }
+ const districtCrops=[
+  {name:"rocket-gantry",origin:[705,285],size:[660,720],pngBase64:pngCrop(705,285,660,720)},
+  {name:"west-fabrication",origin:[185,790],size:[510,650],pngBase64:pngCrop(185,790,510,650)},
+  {name:"east-metrology",origin:[1367,790],size:[510,650],pngBase64:pngCrop(1367,790,510,650)},
+  {name:"undercroft",origin:[280,1580],size:[1490,460],pngBase64:pngCrop(280,1580,1490,460)}
+ ];
+
  const counts={};for(const m of cells)counts[m]=(counts[m]||0)+1;
- return {json,pngBase64,rectangleCount:edits.length,jsonBytes:json.length,pngBytes:bytes.length,
+ return {json,pngBase64,districtCrops,rectangleCount:edits.length,jsonBytes:json.length,pngBytes:bytes.length,
   destinations:marksResult,reachable:marksResult.filter(x=>x.reachable).length,componentCells:tail,
   reconstructionMismatches:mismatches,materialCounts:counts,extent:[W,H],seed:SEED,source:"works-0023"};
 }
+
+function buildEvidence(o,palette){
+ const active=Object.keys(o.materialCounts).map(Number).filter(id=>o.materialCounts[id]>0&&id!==0);
+ const invalid=active.filter(id=>{const p=palette.find(x=>x.id===id);return !p||!p.valid||p.state!=="Solid"||p.movable||p.rule_kernel!=="None";});
+ return {
+  reference:{
+   public_id:"works-0023",title:"orbital_assembly_hangars-rocket_assembly_hall-cool_precision",
+   artwork_path:"artwork/works_yards/batch1/orbital_assembly_hangars-rocket_assembly_hall-cool_precision.png",
+   artwork_git_blob:"167c7873e9637cb3930fe7504a0e463cbfe8983e",
+   artwork_sha256:"033534dc0971a8250f27a7d9a91e60af6230559a872107505f574c33e1420fef",
+   original_dimensions:[1536,1024],bitmap_decoded:false,source_key:"batch1/image-0052",legacy_record_id:"image-0052"
+  },
+  engine:{
+   repo:"techrote/cybersand",main_sha:"018bd09503d7f079ddac52e225c2f7daf8d678bf",
+   representation:"cybersand-generated-start-v1 / Workbench starting_setup version 2",
+   material_manifest:"frozen prior accepted material-palette.json",
+   midge_hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96"
+  },
+  static:{
+   extent:o.extent,cells:4194304,rectangles:o.rectangleCount,rectangle_limit:32768,
+   json_bytes:o.jsonBytes,json_limit:1048576,
+   exact_reconstruction_cells:4194304,reconstruction_mismatches:o.reconstructionMismatches,
+   envelope:[19,15],component_cells:o.componentCells,destinations:o.destinations,
+   reachable:o.reachable,material_cell_counts:o.materialCounts,
+   material_physics:{checked_against:"material-palette.json (frozen accepted CyberSand enum)",
+    active_ids:active,non_solid_or_dynamic_active_ids:invalid,all_active_terrain_solid_and_inert:invalid.length===0},
+   preview:{size:[512,512],source:"actual-material-plane",scale:"downsample 4:1"},
+   district_crops:o.districtCrops.map(c=>({file:"crop-"+c.name+".png",origin:c.origin,size:c.size,scale:"1:1",source:"actual-material-plane"}))
+  },
+  reproducibility:{builder:"build.js",seed:23071,runtime:"Node.js 22+, built-in modules only"},
+  unqualified:["native Godot/Rapier loading","native rectangle/actor admission","physical Windows NVIDIA","actor input and simulation","save/reopen","side-by-side source bitmap pixel review"],
+  status:"Draft / HOLD — owner acceptance required"
+ };
+}
+
 if(typeof module!=="undefined"&&typeof require==="function"&&require.main===module){
  const fs=require("fs"),base=JSON.parse(fs.readFileSync("base-setup.json")),
   template=JSON.parse(fs.readFileSync("generated-start-template.json")),
   palette=JSON.parse(fs.readFileSync("material-palette.json")),o=buildCyberSand(base,template,palette);
  fs.writeFileSync("setup-works-0023-cliffcut-rocket-hall.json",o.json);
  fs.writeFileSync("preview.png",Buffer.from(o.pngBase64,"base64"));
- fs.writeFileSync("evidence.json",JSON.stringify({extent:o.extent,rectangle_count:o.rectangleCount,
-  json_bytes:o.jsonBytes,reachable:o.reachable,destinations:o.destinations,
-  reconstruction_mismatches:o.reconstructionMismatches,material_counts:o.materialCounts,
-  seed:o.seed},null,2)+"\n");
+ for(const c of o.districtCrops)fs.writeFileSync("crop-"+c.name+".png",Buffer.from(c.pngBase64,"base64"));
+ fs.writeFileSync("evidence.json",JSON.stringify(buildEvidence(o,palette),null,2)+"\n");
  console.log(o.rectangleCount+" rectangles; "+o.jsonBytes+" bytes; "+o.reachable+"/"+o.destinations.length+" reachable");
 }

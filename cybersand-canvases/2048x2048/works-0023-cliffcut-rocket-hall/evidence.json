@@ -26,9 +26,9 @@
       2048
     ],
     "cells": 4194304,
-    "rectangles": 7464,
+    "rectangles": 10344,
     "rectangle_limit": 32768,
-    "json_bytes": 147496,
+    "json_bytes": 201600,
     "json_limit": 1048576,
     "exact_reconstruction_cells": 4194304,
     "reconstruction_mismatches": 0,
@@ -36,7 +36,7 @@
       19,
       15
     ],
-    "component_cells": 1098167,
+    "component_cells": 1044221,
     "destinations": [
       {
         "name": "A3 Control Gallery",
@@ -194,25 +194,50 @@
     ],
     "reachable": 17,
     "material_cell_counts": {
-      "0": 1869926,
+      "0": 1908076,
       "40": 81504,
       "49": 254260,
-      "50": 334761,
+      "50": 341664,
       "58": 119641,
-      "62": 318958,
-      "63": 74243,
-      "64": 201471,
-      "65": 25073,
-      "70": 29370,
-      "71": 1704,
-      "72": 69472,
-      "76": 27668,
-      "77": 9105,
-      "79": 42074,
-      "100": 700591,
+      "62": 324817,
+      "63": 52645,
+      "64": 204416,
+      "65": 22704,
+      "70": 27665,
+      "71": 1268,
+      "72": 26383,
+      "76": 31708,
+      "77": 15977,
+      "79": 39054,
+      "100": 700387,
       "101": 1188,
-      "119": 29113,
-      "127": 4182
+      "119": 39926,
+      "127": 1021
+    },
+    "material_physics": {
+      "checked_against": "material-palette.json (frozen accepted CyberSand enum)",
+      "active_ids": [
+        40,
+        49,
+        50,
+        58,
+        62,
+        63,
+        64,
+        65,
+        70,
+        71,
+        72,
+        76,
+        77,
+        79,
+        100,
+        101,
+        119,
+        127
+      ],
+      "non_solid_or_dynamic_active_ids": [],
+      "all_active_terrain_solid_and_inert": true
     },
     "preview": {
       "size": [
@@ -221,15 +246,70 @@
       ],
       "source": "actual-material-plane",
       "scale": "downsample 4:1"
-    }
+    },
+    "district_crops": [
+      {
+        "file": "crop-rocket-gantry.png",
+        "origin": [
+          705,
+          285
+        ],
+        "size": [
+          660,
+          720
+        ],
+        "scale": "1:1",
+        "source": "actual-material-plane"
+      },
+      {
+        "file": "crop-west-fabrication.png",
+        "origin": [
+          185,
+          790
+        ],
+        "size": [
+          510,
+          650
+        ],
+        "scale": "1:1",
+        "source": "actual-material-plane"
+      },
+      {
+        "file": "crop-east-metrology.png",
+        "origin": [
+          1367,
+          790
+        ],
+        "size": [
+          510,
+          650
+        ],
+        "scale": "1:1",
+        "source": "actual-material-plane"
+      },
+      {
+        "file": "crop-undercroft.png",
+        "origin": [
+          280,
+          1580
+        ],
+        "size": [
+          1490,
+          460
+        ],
+        "scale": "1:1",
+        "source": "actual-material-plane"
+      }
+    ]
   },
   "reproducibility": {
     "builder": "build.js",
     "seed": 23071,
-    "runtime": "Node.js, built-in modules only"
+    "runtime": "Node.js 22+, built-in modules only"
   },
   "unqualified": [
     "native Godot/Rapier loading",
+    "native rectangle/actor admission",
     "physical Windows NVIDIA",
     "actor input and simulation",
     "save/reopen",
