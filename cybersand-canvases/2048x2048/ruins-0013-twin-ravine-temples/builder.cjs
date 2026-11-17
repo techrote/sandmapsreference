@@ -2,7 +2,7 @@
 /* Reproducible source-to-material-cell geometry for the CyberSand ruins-0013 canvas. */
 const template={"version":2,"extent":[2048,2048],"actors":[{"id":1,"model":"midge","hash":"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96","spawn":[785,325],"options":{"budget":20,"mass_multiplier":1,"inertia_multiplier":1,"thrust_multiplier":1,"torque_multiplier":1,"boost_multiplier":1.5}}],"next_id":2,"selected":1,"edits":[],"response":"LA-SELECTIVE","liquid_policy":[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],"normalize":false,"rule_radius":2,"source":[],"material":2,"brush":8,"fire":false};
 function generate(base){
-const W=2048,H=2048,SEED=1556133,A=new Uint8Array(W*H),M={AIR:0,WALL:1,WATER:3,LIME:38,GRANITE:40,COBBLE:41,MOSS:42,TERRA:48,SLATE:49,BRONZE:52,VERD:54,CYAN:77,AMBER:79,MARBLE:98,BASALT:100,OBSIDIAN:101,QUARTZ:122,PHOS:127};let sd=SEED;
+const W=2048,H=2048,SEED=1556133,A=new Uint8Array(W*H),M={AIR:0,WALL:58,WATER:3,LIME:38,GRANITE:40,COBBLE:41,MOSS:42,TERRA:48,SLATE:49,BRONZE:52,VERD:54,CYAN:77,AMBER:79,MARBLE:98,BASALT:100,OBSIDIAN:101,QUARTZ:122,PHOS:127};let sd=SEED;
 const rand=()=>{sd=(Math.imul(sd,1664525)+1013904223)>>>0;return sd/4294967296};
 function rect(x,y,w,h,m){let l=Math.max(0,x|0),r=Math.min(W,Math.ceil(x+w)),t=Math.max(0,y|0),b=Math.min(H,Math.ceil(y+h));for(let yy=t;yy<b;yy++)if(r>l)A.fill(m,yy*W+l,yy*W+r)}
 function poly(p,m){let lo=Math.max(0,Math.min(...p.map(a=>a[1]))|0),hi=Math.min(H-1,Math.ceil(Math.max(...p.map(a=>a[1]))));for(let y=lo;y<=hi;y++){let xx=[];for(let i=0;i<p.length;i++){let a=p[i],b=p[(i+1)%p.length];if((a[1]<=y&&b[1]>y)||(b[1]<=y&&a[1]>y))xx.push(a[0]+(y-a[1])*(b[0]-a[0])/(b[1]-a[1]));}xx.sort((a,b)=>a-b);for(let j=0;j+1<xx.length;j+=2)rect(xx[j],y,xx[j+1]-xx[j]+1,1,m)}}
@@ -42,6 +42,66 @@ for(let [y,v] of [[641,M.BRONZE],[1298,M.MOSS],[1793,M.GRANITE]]){rect(740,y,579
 rect(653,575,79,1280,M.AIR);rect(1324,575,75,1280,M.AIR);
 // Water perimeter below waterline is solid after all opening cuts.
 rect(840,1915,24,111,M.WALL);rect(1221,1915,22,111,M.WALL);rect(843,2020,398,17,M.WALL);
+
+// Reworker B: post-portal tectonics and sculptural restoration. The late AIR
+// portals below this pass cannot erase the new monuments or decorative strata.
+function solidRect(x,y,w,h,m){let l=Math.max(0,Math.floor(x)),r=Math.min(W,Math.ceil(x+w)),t=Math.max(0,Math.floor(y)),b=Math.min(H,Math.ceil(y+h));for(let yy=t;yy<b;yy++)for(let xx=l;xx<r;xx++){let k=yy*W+xx,v=A[k];if(v!==M.AIR&&v!==M.WATER&&v!==M.WALL)A[k]=m}}
+function solidLine(x,y,X,Y,m,w=6){let n=Math.max(1,Math.ceil(Math.hypot(X-x,Y-y)/Math.max(2,w*.45)));for(let i=0;i<=n;i++){let f=i/n;solidRect(x+(X-x)*f-w/2,y+(Y-y)*f-w/2,w,w,m)}}
+function solidDisk(x,y,r,m){for(let yy=Math.max(0,Math.floor(y-r));yy<Math.min(H,y+r);yy++){let d=Math.sqrt(Math.max(0,r*r-(yy-y)**2));solidRect(x-d,yy,2*d+1,1,m)}}
+// West: branching rooted ossuary; East: oblique gilded observatory.
+// Texture is painted only on existing SOLID cells, preserving original airways.
+for(let i=0;i<24;i++){let y=240+i*72,origin=65+(i*47)%280;solidLine(0,y+25,origin+445,y-41-(i%4)*17,i%4?M.SLATE:M.GRANITE,5+i%3*3);solidLine(2048,y+17,1514-(i%5)*21,y+54+(i%3)*18,i%3?M.OBSIDIAN:M.BRONZE,5+i%4*2)}
+for(let i=0;i<35;i++){let bx=105+(i*53)%470,by=186+(i*91)%1760;solidLine(bx,by,bx+16+(i%5)*9,by+52+(i%7)*9,M.MOSS,6+(i%3)*3);solidLine(bx+16,by+52,bx-11-(i%5)*8,by+81+(i%3)*14,i%4?M.MOSS:M.PHOS,4);let ex=1985-(i*47)%470,ey=220+(i*83)%1680;solidLine(ex,ey,ex-43-(i%4)*13,ey-26-(i%3)*17,i%3?M.MARBLE:M.AMBER,5)}
+for(let i=0;i<8;i++){let westY=710+i*154,eastY=765+i*149;solidLine(75,westY,612,westY-35+(i%3)*21,i%2?M.MOSS:M.GRANITE,9);solidLine(1428,eastY,1950,eastY+38-(i%3)*25,i%2?M.AMBER:M.COBBLE,8)}
+// Eroded rock pockets remove material, rather than creating fake decoration.
+for(let i=0;i<5;i++){let y=962+i*192;poly([[67,y],[105,y-25],[140,y+6],[117,y+34],[70,y+39]],M.AIR);poly([[1985,y+11],[1946,y-7],[1915,y+36],[1950,y+57],[1986,y+42]],M.AIR)}
+// Left round elder guardian; right faceted sun oracle. Dramatic readable
+// landmark silhouettes are erected AFTER the old broad 665x118 air cuts.
+disk(818,1074,112,M.GRANITE);ring(818,1074,110,M.MOSS,13);
+poly([[753,1033],[777,995],[847,986],[889,1028],[883,1143],[837,1190],[777,1176],[748,1125]],M.LIME);
+for(let ox of [-34,35]){let e=818+ox;poly([[e-24,1060],[e-4,1051],[e+24,1059],[e+10,1070],[e-14,1072]],M.OBSIDIAN);line(e-23,1048,e+18,1045,M.SLATE,7);rect(e-5,1059,10,4,M.PHOS)}
+poly([[815,1074],[800,1121],[839,1129]],M.GRANITE);line(777,1150,850,1157,M.OBSIDIAN,9);
+for(let i=0;i<11;i++)line(751+i*13,1011,733+i*15,957-(i%4)*13,i%3?M.MOSS:M.PHOS,5+i%3);
+poly([[1212,1044],[1242,1022],[1311,1080],[1352,1144],[1327,1223],[1277,1272],[1215,1296],[1152,1260],[1111,1185],[1128,1108]],M.SLATE);
+poly([[1185,1045],[1233,986],[1281,1050],[1320,1114],[1288,1245],[1236,1291],[1167,1242],[1143,1120]],M.MARBLE);
+for(let ox of [-32,33]){poly([[1233+ox-21,1134],[1233+ox+18,1123],[1233+ox+12,1145],[1233+ox-15,1154]],M.OBSIDIAN);disk(1233+ox,1140,7,M.AMBER)}
+poly([[1229,1158],[1208,1213],[1254,1217]],M.BRONZE);line(1193,1235,1274,1234,M.OBSIDIAN,11);
+for(let i=0;i<7;i++){line(1168+i*22,1063,1156+i*24,999-(i%3)*22,M.BRONZE,5);line(1176+i*18,1273,1158+i*20,1309+(i%4)*18,M.MOSS,5)}
+
+// Guardian roots are anchored at the near edge of each cliff, leaving the
+// 19x15 right bypass shaft x1324..1399 functionally open at every crossing.
+line(695,1025,758,1040,M.MOSS,14);line(701,1025,768,1088,M.GRANITE,8);
+line(703,1197,752,1163,M.MOSS,13);line(725,1218,790,1176,M.GRANITE,8);
+line(1318,1080,1340,1090,M.BRONZE,7);
+line(1336,1212,1310,1206,M.MOSS,10);
+line(1334,1271,1304,1250,M.SLATE,7);
+// Cracked, chiselled stone facial surfaces, uneven jaw plates and asymmetry.
+for(let i=0;i<6;i++){let x=771+i*17;line(x,1152,x+2+(i%2)*4,1165,M.GRANITE,3)}
+line(754,1023,777,1013,M.OBSIDIAN,5);line(856,1008,881,1045,M.GRANITE,6);
+line(786,1100,772,1131,M.OBSIDIAN,4);line(862,1090,882,1126,M.MOSS,5);
+line(790,1174,767,1191,M.MOSS,5);line(842,1175,858,1194,M.SLATE,5);
+line(1205,1057,1241,1073,M.BRONZE,5);line(1268,1079,1292,1110,M.BRONZE,7);
+line(1166,1180,1190,1196,M.OBSIDIAN,4);line(1280,1177,1304,1221,M.SLATE,5);
+for(let i=0;i<5;i++){let x=1203+i*17;rect(x,1234+(i%2)*3,8,12,M.BRONZE)}
+poly([[1200,1087],[1229,1057],[1254,1085],[1237,1105]],M.SLATE);
+// Restore clearance at two original inspection portals.
+rect(679,1096,45,43,M.AIR);rect(1344,1096,43,43,M.AIR);
+// Three crossings: distinct parapet grammars, diagonal tension trusses, gaps.
+for(let j=0;j<3;j++){let y=[641,1298,1793][j];for(let x=780;x<1292;x+=71){let bend=(x*3+j*17)%29;line(x,y+30,x+34+bend/3,y+68+j*8,j===1?M.MOSS:M.BRONZE,4+j);line(x+34+bend/3,y+68+j*8,x+70,y+30,j===2?M.COBBLE:M.MOSS,4)}}
+rect(797,624,141,9,M.MARBLE);rect(945,622,100,11,M.COBBLE);rect(1106,625,144,8,M.BRONZE);rect(967,623,40,11,M.AIR);
+rect(829,1283,141,10,M.MOSS);rect(994,1286,88,7,M.BRONZE);rect(1111,1279,117,13,M.MOSS);rect(930,1289,37,9,M.AIR);
+rect(766,1778,136,11,M.COBBLE);rect(925,1777,131,11,M.SLATE);rect(1092,1779,185,9,M.MOSS);rect(1045,1783,46,12,M.AIR);
+for(let i=0;i<9;i++){let x=747+i*14;line(x,1340,x-12-i%3*4,1395+i%4*12,M.MOSS,5);line(1224+i*9,1830,1205+i*10,1881+i%3*7,i%2?M.BRONZE:M.MOSS,5)}
+for(let p of [[[891,1503],[907,1415],[923,1494],[953,1440],[970,1518]],[[1080,893],[1105,826],[1119,911],[1154,854],[1160,934]]])poly(p,M.QUARTZ);
+// Localized exhibit treatments rather than copied wall ornaments.
+for(let [x,y,r,m] of [[265,1570,38,M.MOSS],[314,1855,30,M.MARBLE],[1710,818,41,M.AMBER],[1750,1520,30,M.QUARTZ]]){ring(x,y,r,m,7);disk(x,y,Math.max(5,r/5),M.OBSIDIAN)}
+for(let i=0;i<23;i++){let x=145+(i*61)%430,y=710+(i*113)%1190;solidDisk(x,y,7+i%7,M.COBBLE);let X=1483+(i*73)%380,Y=726+(i*137)%1180;solidRect(X,Y,18+i%5*4,3+i%3,M.AMBER)}
+solidLine(845,1882,1240,1882,M.GRANITE,5);
+// A deliberately broken third bridge gives the basin lookout an actual
+// unobstructed vertical flight shaft, rather than a nearby proxy waypoint.
+rect(1042,1705,44,177,M.AIR);
+// End Reworker B geometry pass.
+
 const spawn=[1024,454],loc=[
 ['West Crown Sanctuary',[450,471]],['East Crown Sanctuary',[1590,471]],['Upper Sky Ravine',[1024,454]],
 ['West Root Gallery',[455,785]],['East Sun Gallery',[1588,785]],['High Ravine Overlook',[1080,1038]],
@@ -54,23 +114,31 @@ const integral=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let 
 const allowed=new Uint8Array(W*H);for(let y=7;y<H-7;y++)for(let x=9;x<W-9;x++){let a=x-9,b=x+10,c=y-7,d=y+8;if(!(integral[d*(W+1)+b]-integral[c*(W+1)+b]-integral[d*(W+1)+a]+integral[c*(W+1)+a]))allowed[y*W+x]=1}
 const seen=new Uint8Array(W*H),q=new Int32Array(W*H),src=spawn[1]*W+spawn[0];if(!allowed[src])throw Error('Spawn blocked');seen[src]=1;q[0]=src;let h=0,t=1;
 while(h<t){let k=q[h++],x=k%W,y=(k/W)|0;if(x>0&&allowed[k-1]&&!seen[k-1]){seen[k-1]=1;q[t++]=k-1}if(x<W-1&&allowed[k+1]&&!seen[k+1]){seen[k+1]=1;q[t++]=k+1}if(y>0&&allowed[k-W]&&!seen[k-W]){seen[k-W]=1;q[t++]=k-W}if(y<H-1&&allowed[k+W]&&!seen[k+W]){seen[k+W]=1;q[t++]=k+W}}
-let adjustments=[];for(let d of loc){let [px,py]=d.point;if(seen[py*W+px])continue;let best=null,dist=Infinity;for(let dy=-80;dy<=80;dy+=4)for(let dx=-80;dx<=80;dx+=4){let x=px+dx,y=py+dy;if(x<20||y<20||x>W-20||y>H-20)continue;if(seen[y*W+x]&&dx*dx+dy*dy<dist){best=[x,y];dist=dx*dx+dy*dy}}if(best){adjustments.push({name:d.name,nominal:d.point,qualified:best,distance:Math.round(Math.sqrt(dist))});d.point=best}}
-const failures=loc.filter(d=>!seen[d.point[1]*W+d.point[0]]);if(failures.length)throw Error('Clearance unreachable '+JSON.stringify(failures));
+const adjustments=[];
+const failures=loc.filter(d=>{let [x,y]=d.point;return !seen[y*W+x]});
+if(failures.length)throw Error('Exact named destination blocked '+JSON.stringify(failures));
 const edits=[];let prev=new Map();for(let y=0;y<H;y++){let curr=new Map(),row=y*W,x=0;while(x<W){let v=A[row+x],start=x++;while(x<W&&A[row+x]===v)x++;if(!v)continue;let key=start+':'+(x-start)+':'+v,idx=prev.get(key);if(idx!==undefined&&edits[idx][1]+edits[idx][3]===y){edits[idx][3]++;curr.set(key,idx)}else{curr.set(key,edits.length);edits.push([start,y,x-start,1,v])}}prev=curr}
 const restored=new Uint8Array(A.length);for(let [x,y,w,ht,v] of edits)for(let row=y;row<y+ht;row++)restored.fill(v,row*W+x,row*W+x+w);for(let i=0;i<A.length;i++)if(A[i]!==restored[i])throw Error('Exact-cell reconstruction failed '+i);
 const setup={...base,extent:[W,H],actors:[{...base.actors[0],spawn}],next_id:2,selected:1,edits},json=JSON.stringify(setup)+'\n';if(edits.length>32768||json.length>1048576)throw Error('Budget exceeded '+edits.length+'/'+json.length);
 // Compact PNG with 4-bit indexed palette. Two sampled real cell IDs per byte.
-const mids=[0,1,3,38,40,41,42,49,52,77,79,98,100,101,122,127];
+const mids=[0,58,3,38,40,41,42,49,52,77,79,98,100,101,122,127];
 const colors=[[24,22,44],[74,75,78],[24,168,190],[215,188,138],[139,129,132],[161,143,123],[86,127,89],[76,83,102],[182,128,74],[46,238,225],[244,188,67],[230,218,181],[65,54,81],[35,28,43],[218,229,230],[176,245,173]];
 const pl=new Uint8Array(colors.flat()),map=new Uint8Array(256);mids.forEach((m,i)=>map[m]=i);
 let pw=1024,ph=1024,raw=new Uint8Array((pw/2+1)*ph);
-for(let y=0;y<ph;y++)for(let x=0;x<pw;x+=2){let a=map[A[(y*2)*W+x*2]],b=map[A[(y*2)*W+x*2+4]];raw[y*(pw/2+1)+1+x/2]=(a<<4)|b}
+for(let y=0;y<ph;y++)for(let x=0;x<pw;x+=2){let a=map[A[(y*2)*W+x*2]],b=map[A[(y*2)*W+x*2+2]];raw[y*(pw/2+1)+1+x/2]=(a<<4)|b}
 const U=n=>[(n>>>24)&255,(n>>>16)&255,(n>>>8)&255,n&255],table=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let i=0;i<8;i++)c=c&1?0xedb88320^(c>>>1):c>>>1;table[n]=c>>>0}
 function join(xs){let out=new Uint8Array(xs.reduce((s,x)=>s+x.length,0)),o=0;for(let x of xs){out.set(x,o);o+=x.length}return out}
 function chunk(tag,data){let a=Uint8Array.from([...tag].map(c=>c.charCodeAt(0))),b=join([a,data]),crc=0xffffffff;for(let v of b)crc=table[(crc^v)&255]^(crc>>>8);return join([Uint8Array.from(U(data.length)),b,Uint8Array.from(U((crc^0xffffffff)>>>0))])}
 function zlib(d){let parts=[Uint8Array.from([120,1])],a=1,b=0;for(let k=0;k<d.length;){let len=Math.min(65535,d.length-k),last=k+len===d.length;parts.push(Uint8Array.from([last?1:0,len&255,(len>>>8)&255,(~len)&255,((~len)>>>8)&255]),d.subarray(k,k+len));for(let j=k;j<k+len;j++){a=(a+d[j])%65521;b=(b+a)%65521}k+=len}parts.push(Uint8Array.from(U(((b<<16)|a)>>>0)));return join(parts)}
 let png=join([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk('IHDR',Uint8Array.from([...U(pw),...U(ph),4,3,0,0,0])),chunk('PLTE',pl),chunk('IDAT',zlib(raw)),chunk('IEND',new Uint8Array())]);
+
+function nativeCrop(left,top){
+ const w=512,h=512,scan=new Uint8Array((w/2+1)*h);
+ for(let yy=0;yy<h;yy++)for(let xx=0;xx<w;xx+=2){let v=A[(top+yy)*W+left+xx],u=A[(top+yy)*W+left+xx+1];scan[yy*(w/2+1)+1+xx/2]=(map[v]<<4)|map[u]}
+ return join([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk('IHDR',Uint8Array.from([...U(w),...U(h),4,3,0,0,0])),chunk('PLTE',pl),chunk('IDAT',zlib(scan)),chunk('IEND',new Uint8Array())]);
+}
+const details={'temples-detail-west-crown.png':nativeCrop(155,180),'temples-detail-guardian-bridges.png':nativeCrop(740,845),'temples-detail-east-oracle.png':nativeCrop(1420,960),'temples-detail-moonwater.png':nativeCrop(790,1536)};
 let counts={};for(let v of A)counts[v]=(counts[v]||0)+1;
-return {json,png,stats:{source_id:'ruins-0013',extent:[W,H],seed:SEED,rectangle_count:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,png_bytes:png.length,cell_reconstruction:W*H,clearance_envelope:[19,15],reachable_destinations:loc.length,destinations:loc,waypoint_adjustments:adjustments,air_component_cells:t,spawn,material_counts:counts,native_runtime:'NOT RUN',source_visual_review:'NOT RUN — binary original unavailable in this environment'}};
+return {json,png,details,stats:{source_id:'ruins-0013',extent:[W,H],seed:SEED,rectangle_count:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,png_bytes:png.length,cell_reconstruction:W*H,clearance_envelope:[19,15],reachable_destinations:loc.length,destinations:loc,waypoint_adjustments:adjustments,air_component_cells:t,spawn,material_counts:counts,native_runtime:'NOT RUN',source_visual_review:'NOT RUN — binary original unavailable in this environment'}};
 }
 if(typeof module!=='undefined')module.exports={generate,template};
