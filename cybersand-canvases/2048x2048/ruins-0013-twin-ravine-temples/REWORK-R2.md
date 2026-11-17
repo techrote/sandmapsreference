@@ -1,4 +1,22 @@
-# R2 implementation receipt (17 Nov 2026)
+# R2B independent Shepherd remediation — 17 November 2026
+
+**Parent reviewed HEAD:** \`abb91db611255eaa914117805bb7126d3e664243\` on existing Draft/HOLD PR #14. **Result is a real 2048×2048 material-cell change**, not a new conversion or source-art overlay.
+
+**P0 reproduced.** The old final JSON bridge material (1070,705) was a detached 26,282-cell island extending x740..1454; it did not contact the physical east/west banks. Anchors drawn earlier had been erased by later shaft AIR cuts. We moved the final bridge seams and bank roots after the last destructive carve. An additional right-deck seam is necessary: without it, an east bridge piece remains disconnected despite a misleading coarse solid-component check.
+
+**P0 repaired and independently proved from ordered, packed final cells.** Bridge (1070,705), west anchor (586,745), right deck seam (1455,655), east root (1580,680), east stone bank (1770,730) are all in the same **1,726,790-cell 8-neighbour solid component**. Only seven remaining non-Empty components exist; the largest other fragment is 15,962 cells (pre-existing eastern spur). Final art is physically painted in admitted stable materials and no fake raster/overlay is used.
+
+**Level topology tradeoff, explicitly reviewable.** A continuous inert-Solid span permanently joining two grounded canyon banks creates a separation of the lower flyable ravine in 2D. Our real-geometry solution retains both physical bridge attachment and all 20 functional air sites by using an eastern 56-cell open-air chimney (x1992..2047, y251..850) linking a 49-cell-high undercroft (x1435..2047, y757..805) beneath a cantilevered upper east temple. All six exact bypass checkpoints remain reachable at 19×15, 23×19 and 31×27. This is a conscious visual departure from the source's fully supported right bank and **must be assessed by independent source-fidelity review**, not silently accepted.
+
+**P1 actual-cell art:** all nine major west/east stone thresholds acquire differing asymmetric spandrels, moss-supported lintels and irregular wear. Guardian stone is muted and eroded with narrower asymmetric eyes and chiselled features. Small rooted vegetation clusters supplement terrace edges rather than spraying obstructive hazards into navigable air. Original asymmetrical west/east silhouettes, single bridge, central open sky and valley return remain. Side-on orthographic gameplay-plane representation unchanged.
+
+**Static exact-gate receipt:** accepted engine main \`018bd09503d7f079ddac52e225c2f7daf8d678bf\`, 2048² / 4,194,304 cells; **15,734/32,768** rectangles; **299,950/1,048,576** JSON bytes; **0 overlap / out-of-bounds / replay mismatch**; stable IDs \`38,40,41,42,49,52,100,101\` as Solid/immovable/RuleKernel::None; Midge hull 4×3 and spawn (1024,454). Exact R2 destinations **20/20** at 19×15, 23×19, 31×27; safe-centre components **2,147,401 / 2,095,406 / 1,992,845**, no nearest-point fallback. Historical R1 coordinates **12/17 nominal** retained, five explicitly superseded; at 31×27 stress **11/17**. **12/12 binary-valid indexed PNGs** and **7,864,320** real cell-pixels checked, 0 mismatches; two deterministic generations matched. Native Godot / CyberDemoBridge / Rapier load, actor input and save/reopen **NOT RUN**.
+
+**Direct source verification:** unaltered genuinely fetched \`source-reference-preview.jpg\` JPEG (blob \`adfb56729b2c443a513892fbe803718dc8b71e52\`) directly compared against true-grid overview, root landings and guardian/cave crops. Source full-resolution original PNG parity **UNVERIFIED**. **Draft/HOLD. Do not merge or mark Ready.**
+
+---
+
+# Historical R2-first-pass receipt (17 Nov 2026; superseded by the R2B figures above)
 
 **Source-led material-cell repair complete for independent audit; Draft/HOLD, NOT native/owner accepted.** PR #14 starting head `1e80acc80fa9efb3437ef82ff936a726eb56591c`. Deterministic builder seed 20261117. Full extent 2048x2048, 13387 coalesced non-overlapping rectangles, 256936 bytes, 20/20 exact named destinations reachable in fully-in-bounds 19x15, 23x19 and 31x27 static clearance. 9 genuine material-grid PNGs, zero CRC/pixel mismatches. Original source JPEG blob `adfb56729b2c443a513892fbe803718dc8b71e52` directly viewed. Original PNG full-resolution parity unverified; source-matched native gameplay/installation/save-reopen NOT RUN.
 

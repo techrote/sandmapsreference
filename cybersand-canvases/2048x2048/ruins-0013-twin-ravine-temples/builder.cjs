@@ -78,6 +78,48 @@ rect(655,1246,119,388,M.AIR);rect(644,1566,244,95,M.AIR);
 rect(1550,1208,109,431,M.AIR);rect(1432,1524,267,94,M.AIR);
 rect(676,1774,220,94,M.AIR);rect(1455,1776,265,99,M.AIR);
 // Open flight vault, not an unreachable body of black under the composition.
+
+ // R2B-P0/P1 (final ordered cells): source-style root bridge now genuinely meets BOTH cliffs.
+ // A separate east outside-air chimney joins an undercut crypt arcade, preserving the required
+ // Midge air loop without severing the single material-connected suspension crossing.
+ line(742,668,678,693,M.COBBLE,18);line(678,693,586,745,M.GRANITE,20);
+ line(1453,652,1580,677,M.COBBLE,18);line(1580,677,1712,705,M.GRANITE,21);
+ line(1712,705,1773,725,M.BASALT,24);
+ line(742,657,675,680,M.MOSS,6);line(676,683,587,732,M.MOSS,6);
+ line(1451,642,1577,666,M.MOSS,6);line(1577,666,1721,693,M.MOSS,6);
+ for(let [x,y,X,Y] of [[623,720,599,753],[653,698,631,746],[1586,686,1570,733],[1620,698,1600,752],[1704,703,1732,744]])line(x,y,X,Y,M.MOSS,4);
+ // The east cap overhangs a 49-cell clear service cave; an exterior 56-cell air chimney
+ // admits flyers above the smaller shrine. This is deliberate 2D topology, not pass-through rock.
+ rect(1435,757,613,49,M.AIR);rect(1992,251,56,600,M.AIR);
+ // Hand-shaped voussoirs and rooted spandrels vary each threshold, avoiding gallery repetition.
+ const arches=[[164,503,310,154],[325,766,299,142],[171,1059,350,169],[315,1312,327,146],[153,1657,371,156],[1669,548,290,163],[1665,878,297,130],[1675,1151,280,152],[1715,1602,260,149]];
+ for(let k=0;k<arches.length;k++){let [x,y,w,h]=arches[k],tl=18+(k*7)%24,tr=18+(k*11)%25;
+   poly([[x-2,y-3],[x+tl+18,y-7],[x+tl,y+20],[x+10,y+46+(k%3)*6],[x-2,y+58]],M.GRANITE);
+   poly([[x+w+3,y-3],[x+w-tr-19,y-8],[x+w-tr,y+21],[x+w-9,y+41+(k%4)*7],[x+w+3,y+60]],M.COBBLE);
+   line(x+18,y+1,x+w-21,y+2+(k%3)*4,M.COBBLE,7);
+   line(x+7,y+52,x+15,y+74+(k%3)*8,M.MOSS,4);
+   line(x+w-9,y+43,x+w-16,y+76+(k%4)*7,M.MOSS,4);
+   for(let j=0;j<5;j++)stain(x+16+j*16+(k*3%5),y-10,10+(j%3)*2,3,j%2?M.LIME:M.SLATE);
+ }
+ // Weathered embedded ridge guardian: broken stone facets rather than a bright emoticon mask.
+ stain(1643,317,115,167,M.GRANITE);
+ for(let i=0;i<15;i++){let gx=1641+(i*31)%112,gy=328+(i*43)%143;strut(gx,gy,gx+7+(i%3)*6,gy+6,M.LIME,2+i%3)}
+ rect(1658,379,21,15,M.GRANITE);rect(1709,379,21,15,M.GRANITE);
+ rect(1661,463,65,9,M.GRANITE);rect(1657,372,9,13,M.OBSIDIAN);
+ rect(1718,377,12,9,M.OBSIDIAN);line(1668,453,1684,459,M.SLATE,4);
+ line(1684,459,1720,454,M.SLATE,4);
+ strut(1633,360,1619,383,M.MOSS,5);strut(1736,339,1760,361,M.MOSS,5);
+ // Supported asymmetrical stone-and-vine tufts, not random flecks in the flying void.
+ for(let i=0;i<28;i++){let x=170+(i*47)%510,y=330+(i*139)%1220;
+   if(A[(y|0)*W+(x|0)]!==0){let X=x+8+(i%3)*5,Y=y-14-(i%4)*7;line(x,y,X,Y,M.MOSS,3);disk(X,Y,4+i%4,M.MOSS)}
+ }
+ for(let i=0;i<16;i++){let x=1600+(i*43)%380,y=470+(i*137)%1250;
+   if(A[(y|0)*W+(x|0)]!==0)line(x,y,x-8-(i%3)*5,y-12-(i%4)*7,M.MOSS,3)}
+
+ // Final seam repair on the actual right bridge deck: connect the last continuous
+ // pre-existing root span to the new cantilevered east-bank masonry.
+ line(1391,657,1492,653,M.COBBLE,18);
+ line(1394,645,1495,641,M.MOSS,6);
 const spawn=[1024,454],loc=[
 ['Upper Open Ravine',[1024,454]],['West Upper Shrine',[315,590]],['West Upper Threshold',[604,589]],['West Root Landing',[491,850]],['West Deep Root Niche',[347,1137]],['West Middle Exit',[751,1141]],['West Terrace Chapel',[469,1367]],['West Lower Return',[596,1718]],
 ['Living Bridge West Air',[837,619]],['Living Bridge Mid-Air',[1050,617]],['Living Bridge East Air',[1450,613]],
@@ -117,6 +159,9 @@ const details={
 'temples-detail-west-tree.png':nativeCrop(125,35),
 'temples-detail-west-shrine.png':nativeCrop(100,475),
 'temples-detail-living-bridge.png':nativeCrop(753,445),
+'temples-detail-bridge-west-anchor.png':nativeCrop(420,550),
+'temples-detail-bridge-east-anchor.png':nativeCrop(1380,545),
+'temples-detail-east-bypass.png':nativeCrop(1536,640),
 'temples-detail-east-guardian.png':nativeCrop(1512,207),
 'temples-detail-east-crypt.png':nativeCrop(1490,1135),
 'temples-detail-root-passages.png':nativeCrop(214,1240),
