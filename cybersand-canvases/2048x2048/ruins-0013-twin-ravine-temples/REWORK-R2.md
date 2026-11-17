@@ -1,3 +1,17 @@
+## R2B-P1 targeted source-art follow-on — 17 November 2026
+
+**Assigned parent HEAD:** `85c3ef0166004cd9480d3b1b933d51045d2e19f2` on PR #14. The Shepherd's four-neighbour bridge repair acceptance remains valid: the **single continuous 1,726,673-cell solid structural component** still contains the west attachment, centre span, eastern seam and both rooted banks. This follow-on changed **128,145 actual material cells**, without altering source art, accepted CyberSand main, archived history, or source identity.
+
+**Specific artistic changes:** Replaced eleven repeated radiating tree-root spokes with three thick asymmetrically forked west root buttresses and unequal branching tendrils. The first two west shrine entrances now have asymmetrical weathered stone voussoirs, broken lintels, differentiated chipped thresholds and rooted detail rather than identical flat black mouths. The east guardian is shorter, wider, ridge-embedded, chipped and moss-crowned rather than a pointed decorative mask. Unequal physically supported piers and vegetated courses articulate the visible lower east spandrel. The bridge's mechanically repeated hanging V roots are replaced with fewer variable forks; source-shaped western crown shadows and eastern terrace details are added. All compositions remain strict orthographic side elevation.
+
+**Proven static gates:** Setup-v2 2048×2048 (4,194,304 cells), **14,400/32,768** coalesced nonoverlapping rectangles, **275,852/1,048,576** JSON bytes. Zero invalid/unsupported/reactive/powder/liquid material IDs: only 38, 40, 41, 42, 49, 52, 100 and 101 as accepted-main inert Solid / RuleKernel::None. 20/20 exact named sites connected at Midge-envelope 19×15, 23×19, 31×27, fully in-bounds; connected legal-centre counts **2,147,121 / 2,095,230 / 1,992,550**. No positional workaround. Every cell of the x1435..2047/y757..805 49-high undercroft and x1992..2047/y251..850 56-wide chimney remains Empty. The nine solid bridge probes' parent claim is superseded by actual four-neighbour five-probe verification: (1070,705), (586,745), (1455,655), (1580,680), (1770,730).
+
+**Rebuilt grid evidence:** deterministic Setup-v2 and all **12 genuine cell-grid PNGs** regenerated. Independent binary CRC, stored-deflate, Adler32/IEND and exact material pixel readback validated **7,864,320 rendered cells**, zero mismatches. Double generation byte-identical. Directly compared unchanged repository source JPEG (blob `adfb56729b2c443a513892fbe803718dc8b71e52`) with actual-cell overview and affected district crops; original full-resolution PNG pixel parity remains **UNVERIFIED**.
+
+**Outstanding:** True full-resolution original-PNG parity, independent final artistic review, native Godot/CyberDemoBridge/Rapier install/actor input/collision, bounded simulation and fresh-process save/reopen are **NOT TESTED**. The right-bank undercroft and exterior chimney deliberately weaken the reference's continuous cliff silhouette to preserve reachable lower flight with a solid-connected crossing; this tradeoff remains for owner and Shepherd review. The square lower valley is artistic interpretation of a landscape preview, not direct-pixel reconstruction. **DRAFT / HOLD — no owner acceptance.**
+
+---
+
 # R2B independent Shepherd remediation — 17 November 2026
 
 **Parent reviewed HEAD:** \`abb91db611255eaa914117805bb7126d3e664243\` on existing Draft/HOLD PR #14. **Result is a real 2048×2048 material-cell change**, not a new conversion or source-art overlay.

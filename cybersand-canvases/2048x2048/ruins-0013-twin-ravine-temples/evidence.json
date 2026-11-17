@@ -8,7 +8,7 @@
     "original_png_path": "artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png",
     "original_png_blob": "0611d05df37b443a411c1ebf9dba663082e25975",
     "source_jpeg_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
-    "visual_inspection": "Original committed gh-pages source JPEG directly viewed versus final true-grid overview, 1:1 bridge landing/guardian/temple crops; full original PNG parity UNVERIFIED",
+    "visual_inspection": "Unmodified genuine gh-pages JPEG source (blob adfb56729b2c443a513892fbe803718dc8b71e52) viewed beside current real material-cell overview and native-cell crops. Original full PNG pixels UNVERIFIED.",
     "original_png_pixel_parity": "UNVERIFIED"
   },
   "format": {
@@ -18,9 +18,9 @@
       2048
     ],
     "cells": 4194304,
-    "rectangles": 15734,
+    "rectangles": 14400,
     "rectangle_cap": 32768,
-    "json_bytes": 299950,
+    "json_bytes": 275852,
     "json_cap": 1048576,
     "reconstruction_mismatches": 0,
     "rectangle_overlaps": 0
@@ -189,7 +189,7 @@
             19,
             15
           ],
-          "connected_centres": 2147401,
+          "connected_centres": 2147121,
           "exact_sites_connected": 20
         },
         {
@@ -197,7 +197,7 @@
             23,
             19
           ],
-          "connected_centres": 2095406,
+          "connected_centres": 2095230,
           "exact_sites_connected": 20
         },
         {
@@ -205,7 +205,7 @@
             31,
             27
           ],
-          "connected_centres": 1992845,
+          "connected_centres": 1992550,
           "exact_sites_connected": 20
         }
       ],
@@ -296,15 +296,15 @@
   },
   "materials": {
     "histogram": {
-      "0": 2441402,
-      "38": 24265,
-      "40": 157879,
-      "41": 111504,
-      "42": 192816,
-      "49": 75769,
-      "52": 5279,
-      "100": 237524,
-      "101": 947866
+      "0": 2438248,
+      "38": 23802,
+      "40": 171910,
+      "41": 123346,
+      "42": 198942,
+      "49": 50030,
+      "52": 4799,
+      "100": 233402,
+      "101": 949825
     },
     "allowed_static_solid_ids": [
       38,
@@ -325,9 +325,9 @@
   "evidence": [
     {
       "file": "twin-ravine-temples-preview.png",
-      "blob_sha": "622a8c8a93cea88296f90fbff11f986fd2ff1716",
+      "blob_sha": "7d253538b71429c9dd450fcb3badd6cd8f88d97b",
       "size_bytes": 525480,
-      "crc32": "a798e8fa",
+      "crc32": "36a66a28",
       "extent": [
         1024,
         1024
@@ -344,9 +344,9 @@
     },
     {
       "file": "temples-material-2048.png",
-      "blob_sha": "843804ba7abb81bfc9b0377a9a31ebfb76644fb1",
+      "blob_sha": "5cbbce40e7df2799643763a29d9284d7d2c8ce50",
       "size_bytes": 2099488,
-      "crc32": "6dd70f41",
+      "crc32": "d6e68982",
       "extent": [
         2048,
         2048
@@ -363,9 +363,9 @@
     },
     {
       "file": "temples-detail-west-tree.png",
-      "blob_sha": "546c925806a1e42fbfd281327a40e4b5d12f5899",
+      "blob_sha": "3097d69f2c72925d26aebe0bcdb50e6d5059043a",
       "size_bytes": 131722,
-      "crc32": "e74547d8",
+      "crc32": "509c9e3f",
       "extent": [
         512,
         512
@@ -382,9 +382,9 @@
     },
     {
       "file": "temples-detail-west-shrine.png",
-      "blob_sha": "0ab0797bf6c53666442dbe981103b0089aecb7c3",
+      "blob_sha": "263d4eaf72d857095ef564bfca274c28f0c24746",
       "size_bytes": 131722,
-      "crc32": "7e82bd9c",
+      "crc32": "8b4b811d",
       "extent": [
         512,
         512
@@ -401,9 +401,9 @@
     },
     {
       "file": "temples-detail-living-bridge.png",
-      "blob_sha": "9b7460a1fe5f008188edff43b0ad10f48f892d1a",
+      "blob_sha": "0e6329bc01a80dd984d5a1bd2ae4a24489ba2cc7",
       "size_bytes": 131722,
-      "crc32": "a77b63bc",
+      "crc32": "102f4dec",
       "extent": [
         512,
         512
@@ -420,9 +420,9 @@
     },
     {
       "file": "temples-detail-bridge-west-anchor.png",
-      "blob_sha": "5ae39b83aaef1668137c1c7bab85ecba4c251c4c",
+      "blob_sha": "900b98df9fa84260180ab4442cf167bdef7dad10",
       "size_bytes": 131722,
-      "crc32": "5048d325",
+      "crc32": "c10c6673",
       "extent": [
         512,
         512
@@ -439,9 +439,9 @@
     },
     {
       "file": "temples-detail-bridge-east-anchor.png",
-      "blob_sha": "98b64adcba384b5a4fa85bb55e0652aa9c318e0f",
+      "blob_sha": "0511e8323d2cf3b050148497dcb33248acda4355",
       "size_bytes": 131722,
-      "crc32": "1a4738d9",
+      "crc32": "e1723cc8",
       "extent": [
         512,
         512
@@ -458,9 +458,9 @@
     },
     {
       "file": "temples-detail-east-bypass.png",
-      "blob_sha": "37d8f25eeebda7f2dfbf8f2950e4902b1460a1ea",
+      "blob_sha": "4b01718ee69c8dbf0453e5693c0ea68eac808a60",
       "size_bytes": 131722,
-      "crc32": "baf38002",
+      "crc32": "7df42086",
       "extent": [
         512,
         512
@@ -477,9 +477,9 @@
     },
     {
       "file": "temples-detail-east-guardian.png",
-      "blob_sha": "b596df3909a1ac9fb5c152ea3b09e727f02b99cf",
+      "blob_sha": "c41e97f8045ba50f0e8e42e25cca0ef1227d6f7c",
       "size_bytes": 131722,
-      "crc32": "1ea1df58",
+      "crc32": "4304fa2f",
       "extent": [
         512,
         512
@@ -496,9 +496,9 @@
     },
     {
       "file": "temples-detail-east-crypt.png",
-      "blob_sha": "e94841da7e336899ab1848bc2abdc41afcbecc0d",
+      "blob_sha": "a4307e73ec5c8680f7c03c70e9f632c7e8f6756e",
       "size_bytes": 131722,
-      "crc32": "f51ce1aa",
+      "crc32": "974f73a1",
       "extent": [
         512,
         512
@@ -553,8 +553,8 @@
     }
   ],
   "determinism": {
-    "repeated_generation": "two independent executions emitted byte-identical JSON and twelve byte-identical material-cell PNGs",
-    "png_integrity": "12/12 indexed PNGs: chunk CRC, stored-deflate LEN/NLEN and Adler-32, IEND and 7,864,320 true material pixels independently checked; zero mismatches",
+    "repeated_generation": "Two independent executions produced byte-identical JSON and all 12 material-cell PNGs (retested)",
+    "png_integrity": "12/12 indexed PNGs: CRC, zlib stored blocks, Adler32, IEND and 7,864,320 displayed pixels independently checked; zero mismatches",
     "source_overlay_used": false
   },
   "native": {
@@ -571,7 +571,7 @@
     "Native Godot/CyberDemoBridge/Rapier import, capacity, movement/collision, simulation and save/reopen remain NATIVE-UNTESTED"
   ],
   "bridge_and_air_topology": {
-    "repaired_from_head": "abb91db611255eaa914117805bb7126d3e664243",
+    "repaired_from_head": "85c3ef0166004cd9480d3b1b933d51045d2e19f2",
     "solid_probe": [
       1070,
       705
@@ -589,7 +589,7 @@
       730
     ],
     "same_eight_neighbour_nonempty_component": true,
-    "bridge_component_cells": 1726790,
+    "bridge_component_cells": 1726673,
     "disconnected_solid_components": 7,
     "largest_other_component_cells": 15962,
     "flyable_east_wall_bypass": {
@@ -632,6 +632,40 @@
         ]
       ]
     },
-    "comment": "Intentional open-air east route solves the 2D solid-span separation; review source-fidelity compromise of cantilevered upper east cap."
+    "comment": "Intentional open-air east route solves the 2D solid-span separation; review source-fidelity compromise of cantilevered upper east cap.",
+    "same_four_neighbour_nonempty_component": true
+  },
+  "rework_p1": {
+    "assigned_starting_head": "85c3ef0166004cd9480d3b1b933d51045d2e19f2",
+    "scope": "P1 rooted forked west buttresses, unequal masonry shrine thresholds, short broad eroded eastern guardian and crown, grounded undercroft piers, irregular living bridge hangers and eastern terraces",
+    "real_changed_material_cells": 128145,
+    "whole_plane_tested": 4194304,
+    "bridge_four_neighbour_component_cells": 1726673,
+    "bridge_probes_4connected": [
+      [
+        1070,
+        705
+      ],
+      [
+        586,
+        745
+      ],
+      [
+        1455,
+        655
+      ],
+      [
+        1580,
+        680
+      ],
+      [
+        1770,
+        730
+      ]
+    ],
+    "whole_chimney_and_undercroft_empty": true,
+    "source_preview_compared": true,
+    "original_full_png_pixel_parity": "UNVERIFIED",
+    "native": "NOT RUN"
   }
 }
