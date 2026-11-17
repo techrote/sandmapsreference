@@ -53,3 +53,9 @@ Original review [PR #4](https://github.com/techrote/sandmapsreference/pull/4#iss
 Static requalification used the current exact JSON plus an **independent second** 4,194,304-cell reconstruction/histogram and full 19×15 four-neighbour conservative reachability scan: 1,620,906 connected legal centres and **17/17 original declared exact sites**, no offsets. The repaired JSON is 545,894 bytes, 28,733 rectangles. The committed PNG and four native-cell crops all derive from the final authored cell array.
 
 **Still not qualified:** pixel-accurate original source-art similarity (original binary not directly inspected), native Godot/CyberDemoBridge/Rapier input or progression, installed material-ID/actor-definition hashes, physical collision checks or Workbench save/reopen. Owner and independent Shepherd acceptance remain required.
+
+## Evidence-integrity repair (17 November 2026)
+
+Following the Shepherd's P0 finding, all five published material-cell PNGs were replaced **as binary Git blobs** with deterministic 4-bit indexed PNGs reconstructed from the **unchanged** committed Setup-v2 material plane (`ed6420f352c50dc86cbbd89be2e558d26bcbae0f`, setup blob `6f8dfc7c46abb6f420dd502f8bb64ace07f1d271`). This is an evidence-only correction; the terrain edits, actor, clearance coordinates, material catalogue, 2048² extent and previous static qualification were not modified. The regenerated overview samples exact cells at 2× intervals; all four 512×512 district crops are 1:1. Run `node verify-png.cjs` to independently check PNG signatures, all chunk CRCs, IHDR, PLTE, IEND/no trailing bytes, zlib decode, and every displayed material pixel against the committed setup. The regenerated binaries were additionally checked after GitHub upload.
+
+**Still HOLD:** original source PNG was not decoded for pixel comparison; Godot/native/Rapier install, play/input, simulation and save/reopen were not executed.

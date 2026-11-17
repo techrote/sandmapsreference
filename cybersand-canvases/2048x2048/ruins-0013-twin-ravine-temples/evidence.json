@@ -193,5 +193,89 @@
     "godot_native_runtime": "NOT RUN",
     "method": "Separate raster reconstruction + 19x15 all-non-air-blocking occupancy integral and four-neighbour flood"
   },
-  "variant": "Reworked root-bound guardian reliefs, asymmetrical regions, differentiated bridge structures, real material-cell PNG and native district crops"
+  "variant": "Reworked root-bound guardian reliefs, asymmetrical regions, differentiated bridge structures, real material-cell PNG and native district crops; evidence PNG publication repaired without changing terrain",
+  "png_integrity": {
+    "repair_reason": "P0: all five previously committed PNG Git blobs contained invalid IDAT CRC and malformed/truncated chunk stream; regenerated directly from unchanged setup-v2 material cell plane",
+    "source_head": "ed6420f352c50dc86cbbd89be2e558d26bcbae0f",
+    "setup_json_git_blob": "6f8dfc7c46abb6f420dd502f8bb64ace07f1d271",
+    "material_grid_crc32": "2226ba4e",
+    "material_geometry_changed": false,
+    "encoder": "PNG 4-bit indexed, filter 0, single IDAT with zlib stored-deflate; CRC32/Adler32 verified",
+    "verified_pngs": {
+      "twin-ravine-temples-preview.png": {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 525480,
+        "file_crc32": "5a10eb2c",
+        "idat_crc32": "8eba7f2d",
+        "verified_pixels": 1048576,
+        "origin": [
+          0,
+          0
+        ],
+        "sample_step": 2,
+        "git_blob": "ea7f61594da843b41c5e403405dff8fb5c74f79c"
+      },
+      "temples-detail-west-crown.png": {
+        "width": 512,
+        "height": 512,
+        "bytes": 131722,
+        "file_crc32": "e25586df",
+        "idat_crc32": "de7e765c",
+        "verified_pixels": 262144,
+        "origin": [
+          155,
+          180
+        ],
+        "sample_step": 1,
+        "git_blob": "7c6901e1b60c479e59c49e1800be754ba55e9081"
+      },
+      "temples-detail-guardian-bridges.png": {
+        "width": 512,
+        "height": 512,
+        "bytes": 131722,
+        "file_crc32": "860c4212",
+        "idat_crc32": "0166bfa4",
+        "verified_pixels": 262144,
+        "origin": [
+          740,
+          845
+        ],
+        "sample_step": 1,
+        "git_blob": "adf5e1ad85f0987b92c45e17af670bd2b9b8faa6"
+      },
+      "temples-detail-east-oracle.png": {
+        "width": 512,
+        "height": 512,
+        "bytes": 131722,
+        "file_crc32": "1bfb465f",
+        "idat_crc32": "11b1e683",
+        "verified_pixels": 262144,
+        "origin": [
+          1420,
+          960
+        ],
+        "sample_step": 1,
+        "git_blob": "9b8b4378d022f925206bda14b1de63338c232c1f"
+      },
+      "temples-detail-moonwater.png": {
+        "width": 512,
+        "height": 512,
+        "bytes": 131722,
+        "file_crc32": "7e421434",
+        "idat_crc32": "d4edd595",
+        "verified_pixels": 262144,
+        "origin": [
+          790,
+          1536
+        ],
+        "sample_step": 1,
+        "git_blob": "891f7dd0256a670d65e6235a5eebbff341ca8cf8"
+      }
+    },
+    "validation": "Independent chunk CRC/IEND/no-trailing and decoded exact material-pixel comparison of all five PNGs; revalidate Git blob after commit.",
+    "native_runtime": "NOT RUN",
+    "source_visual_review": "NOT RUN — original image not decoded",
+    "verify_script": "verify-png.cjs"
+  }
 }
