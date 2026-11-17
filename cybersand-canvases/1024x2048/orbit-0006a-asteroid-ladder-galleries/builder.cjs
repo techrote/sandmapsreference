@@ -60,17 +60,33 @@ rect(448,45,57,1960,M.AIR);
 for(const y of [212,468,746,1033,1305,1593,1910])rect(335,y,277,46,M.AIR);
 for(const y of [312,653,998,1367,1751])rect(492,y,289,52,M.AIR);
 rect(0,0,11,H,M.BASALT);rect(W-11,0,11,H,M.BASALT);rect(0,2040,W,8,M.BASALT);
+// Reworker B: targeted Survey Gallery service hatch. The previously isolated
+// x=133,y=174 flight station now connects to the main gallery airspace without
+// deleting the lower survey equipment or the station's ring landmark.
+rect(126,163,100,24,M.AIR);
 const spawn=[528,93];
-const destinations=[["Survey Gallery",[133,174]],["Core Drill",[159,515]],["Drill Stacks",[180,760]],["Fossil Hall",[155,1065]],["Stress Laboratory",[160,1322]],["Seam Gallery",[155,1590]],["Anchor Winch",[162,1935]],["Pod A",[849,316]],["Pod B",[846,677]],["Pod C",[846,1016]],["Pod D",[844,1367]],["Pod E",[833,1758]],["Ladder Mast Upper",[618,474]],["Ladder Mast Lower",[628,1485]],["Tether Reel",[541,1027]],["Lower Exit",[517,1999]]];
+// Intentionally placed clear-air inspection stations, not equipment or rail centres.
+// Historical anchor locations and explanations are in README/evidence.
+const destinations=[
+["Survey Gallery",[133,174]],["Core Drill",[260,467]],["Drill Stacks",[252,739]],
+["Fossil Hall",[248,1021]],["Stress Laboratory",[261,1290]],["Seam Gallery",[255,1584]],
+["Anchor Winch",[263,1858]],["Pod A",[849,316]],["Pod B",[810,631]],
+["Pod C",[840,982]],["Pod D",[844,1367]],["Pod E",[835,1713]],
+["Ladder Mast Upper",[580,474]],["Ladder Mast Lower",[580,1485]],
+["Tether Reel",[541,1027]],["Lower Exit",[517,1999]]];
 
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
 const nav=new Uint8Array(A.length);
 for(let y=7;y<H-7;y++)for(let x=9;x<W-9;x++){let x0=x-9,x1=x+10,y0=y-7,y1=y+8;let n=sat[y1*(W+1)+x1]-sat[y0*(W+1)+x1]-sat[y1*(W+1)+x0]+sat[y0*(W+1)+x0];if(n===0)nav[y*W+x]=1;}
 let p=spawn[1]*W+spawn[0];if(!nav[p])throw Error("Spawn blocked, center="+A[p]);
 const q=new Int32Array(A.length),seen=new Uint8Array(A.length);q[0]=p;seen[p]=1;let count=1;for(let i=0;i<count;i++){let j=q[i],x=j%W,y=(j/W)|0;for(const d of [-W,-1,1,W]){if(d===-W&&y===0||d===-1&&x===0||d===1&&x===W-1||d===W&&y===H-1)continue;let k=j+d;if(nav[k]&&!seen[k]){seen[k]=1;q[count++]=k;}}}
-const waypoints=[];
-for(const [name,[x,y]] of destinations){let best=null,d2=1e9;for(let dy=-99;dy<=99;dy+=3)for(let dx=-99;dx<=99;dx+=3){let xx=x+dx,yy=y+dy;if(xx<10||yy<8||xx>=W-10||yy>=H-8)continue;let dd=dx*dx+dy*dy;if(dd>=d2)continue;if(seen[yy*W+xx]){d2=dd;best=[xx,yy];}}waypoints.push({name,intended:[x,y],reachable:!!best,point:best,offset:best?Math.round(Math.sqrt(d2)):null});}
-const failed=waypoints.filter(x=>!x.reachable||x.offset>105);if(failed.length)throw Error("Waypoints "+JSON.stringify(failed));
+// Exact-centre conservative 19x15 clearance: no nearest-point search or
+// distance tolerance. A blocked or disconnected destination fails the build.
+const waypoints=destinations.map(([name,[x,y]])=>({
+name,intended:[x,y],point:[x,y],reachable:!!seen[y*W+x],offset:0
+}));
+const failed=waypoints.filter(x=>!x.reachable);
+if(failed.length)throw Error("Exact waypoint clearance/connectivity failure: "+JSON.stringify(failed));
 const edits=[];let open=new Map();
 for(let y=0;y<H;y++){let cur=new Map(),row=y*W,x=0;while(x<W){let m=A[row+x],start=x++;while(x<W&&A[row+x]===m)x++;if(!m)continue;let key=start+":"+(x-start)+":"+m,j=open.get(key);if(j!==undefined&&edits[j][1]+edits[j][3]===y){edits[j][3]++;cur.set(key,j);}else{let k=edits.length;edits.push([start,y,x-start,1,m]);cur.set(key,k);}}open=cur;}
 const check=new Uint8Array(A.length);for(const [x,y,w,h,m] of edits)for(let yy=y;yy<y+h;yy++)check.fill(m,yy*W+x,yy*W+x+w);
@@ -88,7 +104,30 @@ function crc(a){let c=0xffffffff;for(let i=0;i<a.length;i++)c=ct[(c^a[i])&255]^(
 function chunk(t,d){let a=join([Uint8Array.from([...t].map(ch=>ch.charCodeAt(0))),d]);return join([Uint8Array.from(u32(d.length)),a,Uint8Array.from(u32(crc(a)))]);}
 function stored(a){let out=[Uint8Array.from([120,1])],s1=1,s2=0;for(let p=0;p<a.length;){let n=Math.min(65535,a.length-p),b=new Uint8Array(n+5);b[0]=p+n===a.length?1:0;b[1]=n&255;b[2]=n>>>8;b[3]=(~n)&255;b[4]=((~n)>>>8)&255;for(let i=0;i<n;i++){let v=a[p+i];b[i+5]=v;s1+=v;if(s1>=65521)s1-=65521;s2+=s1;if(s2>=65521)s2-=65521;}out.push(b);p+=n;}out.push(Uint8Array.from(u32(((s2<<16)|s1)>>>0)));return join(out);}
 const png=join([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk("IHDR",Uint8Array.from([...u32(PW),...u32(PH),8,3,0,0,0])),chunk("PLTE",palette),chunk("IDAT",stored(raw)),chunk("IEND",new Uint8Array())]);
+
+function nativeCrop(x0,y0,w,h){
+  const pixels=new Uint8Array((w+1)*h);
+  for(let cy=0;cy<h;cy++){
+    const offset=cy*(w+1);pixels[offset]=0;
+    for(let cx=0;cx<w;cx++)pixels[offset+cx+1]=A[(y0+cy)*W+x0+cx];
+  }
+  return join([Uint8Array.from([137,80,78,71,13,10,26,10]),
+    chunk("IHDR",Uint8Array.from([...u32(w),...u32(h),8,3,0,0,0])),
+    chunk("PLTE",palette),chunk("IDAT",stored(pixels)),
+    chunk("IEND",new Uint8Array())]);
+}
+const crops={
+  "asteroid-ladder-galleries-detail-survey-core.png":nativeCrop(30,85,485,570),
+  "asteroid-ladder-galleries-detail-pod-mast.png":nativeCrop(520,550,465,610),
+  "asteroid-ladder-galleries-detail-lower.png":nativeCrop(20,1450,500,580)
+};
 const counts={};for(const x of A)counts[x]=(counts[x]||0)+1;
-return {json,png,stats:{source_public_id:"orbit-0006a",target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,material_cells_verified:A.length,material_mismatches:mismatch,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,material_counts:counts,png_dimensions:[PW,PH],png_bytes:png.length,native_qualification:"NOT EXECUTED",original_reference_visual_comparison:"NOT EXECUTED: source PNG binary inaccessible"}};
+return {json,png,crops,stats:{source_public_id:"orbit-0006a",target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,material_cells_verified:A.length,material_mismatches:mismatch,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,material_counts:counts,png_dimensions:[PW,PH],png_bytes:png.length,preview_crops:[
+{path:"asteroid-ladder-galleries-detail-survey-core.png",origin:[30,85],extent:[485,570],pixel_scale:"1:1"},
+{path:"asteroid-ladder-galleries-detail-pod-mast.png",origin:[520,550],extent:[465,610],pixel_scale:"1:1"},
+{path:"asteroid-ladder-galleries-detail-lower.png",origin:[20,1450],extent:[500,580],pixel_scale:"1:1"}
+],anchor_relocations:[{"name":"Core Drill","previous":[159,515],"final":[260,467],"reason":"Lift inspection station above the solid drill rack"},{"name":"Drill Stacks","previous":[180,760],"final":[252,739],"reason":"Clear upper aisle beside the drill stack, not inside machinery"},{"name":"Fossil Hall","previous":[155,1065],"final":[248,1021],"reason":"Open exhibition airspace beside fossil and microscope cabinets"},{"name":"Stress Laboratory","previous":[160,1322],"final":[261,1290],"reason":"Clear overhead instrument inspection lane"},{"name":"Seam Gallery","previous":[155,1590],"final":[255,1584],"reason":"Clear aisle free of isolated decorative fragments"},{"name":"Anchor Winch","previous":[162,1935],"final":[263,1858],"reason":"Upper winch observation aisle above the solid wheel"},{"name":"Pod B","previous":[846,677],"final":[810,631],"reason":"Upper pod inspection aisle, above the solid lower gantry"},{"name":"Pod C","previous":[846,1016],"final":[840,982],"reason":"Unobstructed upper pod lane outside steel instrument frame"},{"name":"Pod E","previous":[833,1758],"final":[835,1713],"reason":"Upper pod aisle above crossing copper rig"},{"name":"Ladder Mast Upper","previous":[618,474],"final":[580,474],"reason":"West-side accessible ladder-platform standoff, not inside rail"},{"name":"Ladder Mast Lower","previous":[628,1485],"final":[580,1485],"reason":"West-side lower mast standoff, preserving continuous rail"}],
+geometry_repairs:[{site:"Survey Gallery",kind:"service hatch",rectangle:[126,163,100,24],purpose:"Connect original exact site to principal connected flight airspace"}],
+native_qualification:"NOT EXECUTED",original_reference_visual_comparison:"NOT EXECUTED: source PNG binary inaccessible"}};
 };
 module.exports={generate};
