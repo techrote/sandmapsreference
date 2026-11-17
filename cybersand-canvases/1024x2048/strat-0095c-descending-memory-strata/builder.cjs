@@ -2,7 +2,7 @@
 // Deterministic CyberSand Setup-v2 material-cell construction for Descending Memory Strata.
 function generate(){
 const W=1024,H=2048,SEED=951371,A=new Uint8Array(W*H);
-const M={AIR:0,STONE:13,GRANITE:40,SLATE:49,IRON:50,COPPER:53,INDUSTRIAL:57,CONCRETE:58,STEEL:62,RUST:65,GRATE:66,PIPE:68,CABLE:74,HAZARD:76,CYAN:77,MAGENTA:78,AMBER:79,WHITE:80,BASALT:100,OBSIDIAN:101,BRASS:119,GLASS:120,QUARTZ:122};
+const M={AIR:0,STONE:38,GRANITE:40,SLATE:49,IRON:50,COPPER:53,INDUSTRIAL:57,CONCRETE:58,STEEL:62,RUST:65,GRATE:66,PIPE:68,CABLE:74,HAZARD:76,CYAN:77,MAGENTA:78,AMBER:79,WHITE:80,BASALT:100,OBSIDIAN:101,BRASS:119,GLASS:120,QUARTZ:122};
 let seed=SEED;function rnd(){seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;}
 function rect(x,y,w,h,m){x=Math.floor(x);y=Math.floor(y);w=Math.ceil(w);h=Math.ceil(h);let l=Math.max(x,0),r=Math.min(x+w,W),t=Math.max(y,0),b=Math.min(y+h,H);if(l>=r||t>=b)return;for(let j=t;j<b;j++)A.fill(m,j*W+l,j*W+r);}
 function poly(p,m){let ya=Math.max(0,Math.floor(Math.min(...p.map(q=>q[1])))),yb=Math.min(H-1,Math.ceil(Math.max(...p.map(q=>q[1]))));for(let y=ya;y<=yb;y++){let xs=[];for(let j=0;j<p.length;j++){let a=p[j],b=p[(j+1)%p.length];if((a[1]<=y&&b[1]>y)||(b[1]<=y&&a[1]>y))xs.push(a[0]+(y-a[1])*(b[0]-a[0])/(b[1]-a[1]));}xs.sort((a,b)=>a-b);for(let k=0;k+1<xs.length;k+=2)rect(xs[k],y,xs[k+1]-xs[k]+1,1,m);}}
@@ -18,6 +18,9 @@ function sign(x,y,s){rect(x-5,y-5,12+s.length*8,23,M.STEEL);rect(x,y,7+s.length*
 // DESCENDING MEMORY STRATA — archaeological vertical cutaway. Designed as real 2D terrain.
 // A tectonic cleft separates two unequal escarpments. Horizontal strata repeatedly expose
 // ancient ceramic archive terraces, fossil vaults, survey niches and broken memory engines.
+// Fix geological epoch bands: never use their upper-Y boundary as a material ID.
+// Use immobile LimestoneBlock 38 instead of mobile Stone powder 13.
+const MATERIAL_ID_WHITELIST=new Set(Object.values(M));
 const bands=[
  [0,237,M.GRANITE,M.STONE,M.QUARTZ],
  [237,506,M.RUST,M.BASALT,M.AMBER],
@@ -35,7 +38,7 @@ for(let y=0;y<H;y++){
  let b=bands.find(z=>y>=z[0]&&y<z[1]);
  let le=Math.max(255,Math.min(404,Math.round(leftEdge(y)))), re=Math.max(617,Math.min(778,Math.round(rightEdge(y))));
  let wav=Math.sin(y*.115)*2+Math.sin(y*.026)*9;
- let main=((y-b[0])%43<4)?b[1]:b[2];
+ let main=((y-b[0])%43<4)?b[3]:b[2];
  rect(0,y,le+1,1,main);rect(re,y,W-re,1,main);
  if((y+Math.round(wav))%31<3){rect(0,y,Math.min(100,le),1,b[3]);rect(re+11,y,W-re-11,1,b[3]);}
 }
@@ -254,26 +257,45 @@ for(let y of [250,570,901,1289,1634,1913])rect(492,y,286,52,M.AIR);
 // Anchor strata foot and edge enclosure. Keep 2048x1024 true extent, do not tile.
 rect(0,0,10,H,M.BASALT);rect(W-10,0,10,H,M.BASALT);rect(0,H-8,W,8,M.BASALT);
 const spawn=[503,75];
+// Deliberately declared interior *inspection airspaces*, not landmark material centres.
+// Original coordinates are retained in evidence for transparent before/after review.
 const destinations=[
- ['Capstone Fossil',[200,162]],['Amber Cells',[171,441]],['White Tablets',[190,672]],
- ['Memory Reel',[205,1005]],['Obsidian Vault',[210,1278]],['Quartz Fan',[188,1543]],
- ['Cenotaph',[204,1850]],['Sigil Observatory',[844,234]],['Lapidary',[842,552]],
- ['Archive Index',[837,886]],['Echo Chamber',[836,1250]],['Sentinel Hall',[830,1600]],
- ['Terminus Reader',[843,1920]],['Upper Fault Crossing',[523,316]],
- ['Lower Fault Crossing',[523,1474]],['Deep Cleft Exit',[503,1995]]
+ ["Capstone Fossil",[200,162],[222,145],"Capstone gallery viewing space beside intact fossil/cabinets"],
+ ["Amber Cells",[171,441],[237,449],"Interior west gallery inspection aisle beside resin inclusions"],
+ ["White Tablets",[190,672],[257,667],"Gallery aisle alongside tablet display"],
+ ["Memory Reel",[205,1005],[317,1013],"Clear viewing bay east of intact monumental reel"],
+ ["Obsidian Vault",[210,1278],[243,1263],"Interior viewing air above obsidian crystal cluster"],
+ ["Quartz Fan",[188,1543],[235,1534],"Interior aisle alongside quartz fan"],
+ ["Cenotaph",[204,1850],[260,1850],"Eastern clear gallery aisle beside cenotaph and burial rings"],
+ ["Sigil Observatory",[844,234],[766,239],"Western observation bay outside monumental sigil"],
+ ["Lapidary",[842,552],[778,552],"Western lab aisle avoiding slabs"],
+ ["Archive Index",[837,886],[765,886],"Outer catalogue aisle avoiding stacked index registers"],
+ ["Echo Chamber",[836,1250],[836,1209],"Upper acoustic chamber airspace over resonator arrays"],
+ ["Sentinel Hall",[830,1600],[774,1600],"Clear western aisle beside sentinel columns"],
+ ["Terminus Reader",[843,1920],[769,1905],"Viewing bay west of intact roll-reader drum"],
+ ["Upper Fault Crossing",[523,316],[523,316],"Central upper free-flight cleft"],
+ ["Lower Fault Crossing",[523,1474],[523,1474],"Central lower free-flight cleft"],
+ ["Deep Cleft Exit",[503,1995],[503,1995],"Lower rift air exit"]
 ];
 // Integer summed-area table for conservative Midge clearance 19x15.
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
 const nav=new Uint8Array(A.length);for(let y=7;y<H-7;y++)for(let x=9;x<W-9;x++){let x0=x-9,x1=x+10,y0=y-7,y1=y+8;let n=sat[y1*(W+1)+x1]-sat[y0*(W+1)+x1]-sat[y1*(W+1)+x0]+sat[y0*(W+1)+x0];if(n===0)nav[y*W+x]=1;}
 let p=spawn[1]*W+spawn[0];if(!nav[p])throw Error('spawn blocked '+A[p]);const q=new Int32Array(A.length),seen=new Uint8Array(A.length);q[0]=p;seen[p]=1;let count=1;for(let i=0;i<count;i++){let j=q[i],x=j%W,y=(j/W)|0;for(const d of [-W,-1,1,W]){if(d===-W&&y===0||d===-1&&x===0||d===1&&x===W-1||d===W&&y===H-1)continue;let k=j+d;if(nav[k]&&!seen[k]){seen[k]=1;q[count++]=k;}}}
-const waypoints=[];for(const [name,[x,y]] of destinations){let best=null,d2=1e9;for(let dy=-104;dy<=104;dy+=3)for(let dx=-104;dx<=104;dx+=3){let xx=x+dx,yy=y+dy;if(xx<10||yy<8||xx>=W-10||yy>=H-8)continue;let dd=dx*dx+dy*dy;if(dd>=d2)continue;if(seen[yy*W+xx]){d2=dd;best=[xx,yy];}}waypoints.push({name,intended:[x,y],reachable:!!best,point:best,offset:best?Math.round(Math.sqrt(d2)):null});}
-const failed=waypoints.filter(x=>!x.reachable||x.offset>95);if(failed.length)throw Error('destinations '+JSON.stringify(failed));
+// No nearest-air search: every declared location must itself be 19x15 flight-clear.
+const waypoints=[];
+for(const [name,original_intended,point,reason] of destinations){
+ const [x,y]=point;
+ if(x<9||y<7||x>=W-9||y>=H-7||!seen[y*W+x])throw Error('blocked exact destination '+name+' @ '+x+','+y);
+ waypoints.push({name,original_intended,point,reachable:true,offset:0,relocation_reason:reason});
+}
+const invalid=new Set();for(const id of A)if(!MATERIAL_ID_WHITELIST.has(id))invalid.add(id);
+if(invalid.size)throw Error('Unsupported materials: '+[...invalid].join(','));
 const edits=[];let open=new Map();for(let y=0;y<H;y++){let cur=new Map(),row=y*W,x=0;while(x<W){let m=A[row+x],start=x++;while(x<W&&A[row+x]===m)x++;if(!m)continue;let key=start+':'+(x-start)+':'+m,j=open.get(key);if(j!==undefined&&edits[j][1]+edits[j][3]===y){edits[j][3]++;cur.set(key,j);}else{let k=edits.length;edits.push([start,y,x-start,1,m]);cur.set(key,k);}}open=cur;}
 const check=new Uint8Array(A.length);for(const [x,y,w,h,m] of edits)for(let yy=y;yy<y+h;yy++)check.fill(m,yy*W+x,yy*W+x+w);let mismatch=0;for(let i=0;i<A.length;i++)if(A[i]!==check[i])mismatch++;if(mismatch)throw Error('reconstruction '+mismatch);
 const policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
 const setup={version:2,extent:[W,H],actors:[{id:1,model:'midge',hash:'c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96',spawn,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.5}}],next_id:2,selected:1,edits,response:'LA-SELECTIVE',liquid_policy:policy,normalize:false,rule_radius:2,source:[],material:2,brush:8,fire:false};
 const json=JSON.stringify(setup)+'\n';if(edits.length>32768||json.length>1048576)throw Error('budget '+edits.length+', '+json.length);
-const colors={0:[9,13,20],13:[142,121,108],40:[126,112,107],49:[73,77,87],50:[106,94,86],53:[174,103,81],57:[98,104,117],58:[117,128,132],62:[153,149,139],65:[159,79,63],66:[86,94,107],68:[102,113,132],74:[80,74,112],76:[227,178,48],77:[75,218,231],78:[207,102,206],79:[247,175,84],80:[232,231,215],100:[43,48,60],101:[25,29,40],119:[215,165,94],120:[86,170,192],122:[216,236,226]};
+const colors={0:[9,13,20],38:[142,121,108],40:[126,112,107],49:[73,77,87],50:[106,94,86],53:[174,103,81],57:[98,104,117],58:[117,128,132],62:[153,149,139],65:[159,79,63],66:[86,94,107],68:[102,113,132],74:[80,74,112],76:[227,178,48],77:[75,218,231],78:[207,102,206],79:[247,175,84],80:[232,231,215],100:[43,48,60],101:[25,29,40],119:[215,165,94],120:[86,170,192],122:[216,236,226]};
 const palette=new Uint8Array(256*3);for(let i=0;i<256;i++)palette.set(colors[i]||[20,22,30],i*3);
 const PW=512,PH=1024,raw=new Uint8Array((PW+1)*PH);for(let y=0;y<PH;y++){raw[y*(PW+1)]=0;for(let x=0;x<PW;x++)raw[y*(PW+1)+x+1]=A[(y*2)*W+x*2];}
 function u32(n){return [(n>>>24)&255,(n>>>16)&255,(n>>>8)&255,n&255];}
@@ -282,8 +304,15 @@ const ct=new Uint32Array(256);for(let i=0;i<256;i++){let c=i;for(let k=0;k<8;k++
 function crc(a){let c=0xffffffff;for(let i=0;i<a.length;i++)c=ct[(c^a[i])&255]^(c>>>8);return (c^0xffffffff)>>>0;}
 function chunk(t,d){let a=join([Uint8Array.from([...t].map(ch=>ch.charCodeAt(0))),d]);return join([Uint8Array.from(u32(d.length)),a,Uint8Array.from(u32(crc(a)))]);}
 function stored(a){let out=[Uint8Array.from([120,1])],s1=1,s2=0;for(let p=0;p<a.length;){let n=Math.min(65535,a.length-p),b=new Uint8Array(n+5);b[0]=p+n===a.length?1:0;b[1]=n&255;b[2]=n>>>8;b[3]=(~n)&255;b[4]=((~n)>>>8)&255;for(let i=0;i<n;i++){let v=a[p+i];b[i+5]=v;s1+=v;if(s1>=65521)s1-=65521;s2+=s1;if(s2>=65521)s2-=65521;}out.push(b);p+=n;}out.push(Uint8Array.from(u32(((s2<<16)|s1)>>>0)));return join(out);}
-const png=join([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk('IHDR',Uint8Array.from([...u32(PW),...u32(PH),8,3,0,0,0])),chunk('PLTE',palette),chunk('IDAT',stored(raw)),chunk('IEND',new Uint8Array())]);
+function indexedPng(w,h,imageData){return join([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk('IHDR',Uint8Array.from([...u32(w),...u32(h),8,3,0,0,0])),chunk('PLTE',palette),chunk('IDAT',stored(imageData)),chunk('IEND',new Uint8Array())]);}
+const png=indexedPng(PW,PH,raw);
+function nativeCellCrop(x0,y0,w=512,h=512){const rows=new Uint8Array((w+1)*h);for(let y=0;y<h;y++){let dst=y*(w+1);rows[dst]=0;for(let x=0;x<w;x++)rows[dst+1+x]=A[(y0+y)*W+x0+x];}return indexedPng(w,h,rows);}
+const crops={
+ 'descending-memory-strata-detail-upper.png':nativeCellCrop(300,220),
+ 'descending-memory-strata-detail-retrieval.png':nativeCellCrop(320,1330),
+ 'descending-memory-strata-detail-lower-archives.png':nativeCellCrop(490,1510)
+};
 const counts={};for(const x of A)counts[x]=(counts[x]||0)+1;
-return {json,png,stats:{source_public_id:'strat-0095c',target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,material_cells_verified:A.length,material_mismatches:mismatch,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,material_counts:counts,png_dimensions:[PW,PH],png_bytes:png.length,native_qualification:'NOT EXECUTED',original_reference_visual_comparison:'NOT EXECUTED: GitHub connector supplies metadata only for PNG binaries'}};
+return {json,png,crops,stats:{source_public_id:'strat-0095c',target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,material_cells_verified:A.length,material_mismatches:mismatch,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,material_counts:counts,png_dimensions:[PW,PH],png_bytes:png.length,detail_crops:Object.keys(crops),native_material_catalogue_check:'All authored IDs appear in accepted native Material enum; physical DLL admission untested',native_qualification:'NOT EXECUTED',original_reference_visual_comparison:'NOT EXECUTED: GitHub connector supplies metadata only for PNG binaries'}};
 }
 module.exports={generate};

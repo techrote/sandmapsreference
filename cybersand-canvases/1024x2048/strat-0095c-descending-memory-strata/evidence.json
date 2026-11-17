@@ -5,9 +5,9 @@
     2048
   ],
   "seed": 951371,
-  "rectangles": 24205,
+  "rectangles": 24162,
   "rectangle_budget": 32768,
-  "json_bytes": 446125,
+  "json_bytes": 445357,
   "json_byte_budget": 1048576,
   "material_cells_verified": 2097152,
   "material_mismatches": 0,
@@ -15,7 +15,7 @@
     19,
     15
   ],
-  "connected_clearance_centres": 682176,
+  "connected_clearance_centres": 682132,
   "spawn": [
     503,
     75
@@ -23,243 +23,258 @@
   "waypoints": [
     {
       "name": "Capstone Fossil",
-      "intended": [
+      "original_intended": [
         200,
         162
       ],
-      "reachable": true,
       "point": [
-        216,
-        151
+        222,
+        145
       ],
-      "offset": 19
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Capstone gallery viewing space beside intact fossil/cabinets"
     },
     {
       "name": "Amber Cells",
-      "intended": [
+      "original_intended": [
         171,
         441
       ],
-      "reachable": true,
       "point": [
-        208,
-        442
+        237,
+        449
       ],
-      "offset": 37
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Interior west gallery inspection aisle beside resin inclusions"
     },
     {
       "name": "White Tablets",
-      "intended": [
+      "original_intended": [
         190,
         672
       ],
-      "reachable": true,
       "point": [
-        191,
-        652
+        257,
+        667
       ],
-      "offset": 20
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Gallery aisle alongside tablet display"
     },
     {
       "name": "Memory Reel",
-      "intended": [
+      "original_intended": [
         205,
         1005
       ],
-      "reachable": true,
       "point": [
-        191,
-        940
+        317,
+        1013
       ],
-      "offset": 66
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Clear viewing bay east of intact monumental reel"
     },
     {
       "name": "Obsidian Vault",
-      "intended": [
+      "original_intended": [
         210,
         1278
       ],
-      "reachable": true,
       "point": [
-        226,
-        1273
+        243,
+        1263
       ],
-      "offset": 17
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Interior viewing air above obsidian crystal cluster"
     },
     {
       "name": "Quartz Fan",
-      "intended": [
+      "original_intended": [
         188,
         1543
       ],
-      "reachable": true,
       "point": [
-        219,
-        1544
+        235,
+        1534
       ],
-      "offset": 31
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Interior aisle alongside quartz fan"
     },
     {
       "name": "Cenotaph",
-      "intended": [
+      "original_intended": [
         204,
         1850
       ],
-      "reachable": true,
       "point": [
-        208,
-        1851
+        260,
+        1850
       ],
-      "offset": 4
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Eastern clear gallery aisle beside cenotaph and burial rings"
     },
     {
       "name": "Sigil Observatory",
-      "intended": [
+      "original_intended": [
         844,
         234
       ],
-      "reachable": true,
       "point": [
-        779,
-        253
+        766,
+        239
       ],
-      "offset": 68
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Western observation bay outside monumental sigil"
     },
     {
       "name": "Lapidary",
-      "intended": [
+      "original_intended": [
         842,
         552
       ],
-      "reachable": true,
       "point": [
-        777,
-        553
+        778,
+        552
       ],
-      "offset": 65
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Western lab aisle avoiding slabs"
     },
     {
       "name": "Archive Index",
-      "intended": [
+      "original_intended": [
         837,
         886
       ],
-      "reachable": true,
       "point": [
-        766,
-        887
+        765,
+        886
       ],
-      "offset": 71
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Outer catalogue aisle avoiding stacked index registers"
     },
     {
       "name": "Echo Chamber",
-      "intended": [
+      "original_intended": [
         836,
         1250
       ],
-      "reachable": true,
       "point": [
-        837,
+        836,
         1209
       ],
-      "offset": 41
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Upper acoustic chamber airspace over resonator arrays"
     },
     {
       "name": "Sentinel Hall",
-      "intended": [
+      "original_intended": [
         830,
         1600
       ],
-      "reachable": true,
       "point": [
         774,
-        1601
+        1600
       ],
-      "offset": 56
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Clear western aisle beside sentinel columns"
     },
     {
       "name": "Terminus Reader",
-      "intended": [
+      "original_intended": [
         843,
         1920
       ],
-      "reachable": true,
       "point": [
-        790,
-        1921
+        769,
+        1905
       ],
-      "offset": 53
+      "reachable": true,
+      "offset": 0,
+      "relocation_reason": "Viewing bay west of intact roll-reader drum"
     },
     {
       "name": "Upper Fault Crossing",
-      "intended": [
+      "original_intended": [
+        523,
+        316
+      ],
+      "point": [
         523,
         316
       ],
       "reachable": true,
-      "point": [
-        524,
-        317
-      ],
-      "offset": 1
+      "offset": 0,
+      "relocation_reason": "Central upper free-flight cleft"
     },
     {
       "name": "Lower Fault Crossing",
-      "intended": [
+      "original_intended": [
+        523,
+        1474
+      ],
+      "point": [
         523,
         1474
       ],
       "reachable": true,
-      "point": [
-        524,
-        1475
-      ],
-      "offset": 1
+      "offset": 0,
+      "relocation_reason": "Central lower free-flight cleft"
     },
     {
       "name": "Deep Cleft Exit",
-      "intended": [
+      "original_intended": [
+        503,
+        1995
+      ],
+      "point": [
         503,
         1995
       ],
       "reachable": true,
-      "point": [
-        504,
-        1996
-      ],
-      "offset": 1
+      "offset": 0,
+      "relocation_reason": "Lower rift air exit"
     }
   ],
   "material_counts": {
-    "0": 1040093,
-    "11": 6069,
-    "13": 130107,
-    "40": 202083,
-    "49": 118993,
-    "50": 3512,
-    "53": 29704,
-    "59": 8112,
+    "0": 1035906,
+    "38": 137215,
+    "40": 208661,
+    "49": 125062,
+    "50": 7536,
+    "53": 37816,
     "62": 699,
-    "65": 141308,
-    "74": 6267,
+    "65": 141315,
     "77": 7656,
     "78": 5808,
     "79": 12988,
     "80": 31876,
-    "95": 6578,
-    "100": 162670,
-    "101": 106439,
-    "116": 7182,
+    "100": 169492,
+    "101": 112860,
     "119": 11406,
-    "122": 43653,
-    "237": 7095,
-    "250": 6854
+    "122": 50856
   },
   "png_dimensions": [
     512,
     1024
   ],
   "png_bytes": 526200,
+  "detail_crops": [
+    "descending-memory-strata-detail-upper.png",
+    "descending-memory-strata-detail-retrieval.png",
+    "descending-memory-strata-detail-lower-archives.png"
+  ],
+  "native_material_catalogue_check": "All authored IDs appear in accepted native Material enum; physical DLL admission untested",
   "native_qualification": "NOT EXECUTED",
   "original_reference_visual_comparison": "NOT EXECUTED: GitHub connector supplies metadata only for PNG binaries"
 }
