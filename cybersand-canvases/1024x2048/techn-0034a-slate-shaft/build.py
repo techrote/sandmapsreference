@@ -68,9 +68,9 @@ def txt(x,y,s,m="AMBER"):
 # 1. Immutable diagonal jointed slate faces: the original dark blue-grey rock
 #    dominates, but its exposed negative-space cleft is NOT an equal-sided slot.
 def le(y):
-    return 375+35*math.sin(y/173+0.5)+16*math.sin(y/39)+18*math.sin(y/401)
+    return 416+35*math.sin(y/173+0.5)+16*math.sin(y/39)+18*math.sin(y/401)
 def re(y):
-    return 649+32*math.sin(y/221+2.1)+21*math.sin(y/61+0.4)-14*math.sin(y/510)
+    return 612+32*math.sin(y/221+2.1)+21*math.sin(y/61+0.4)-14*math.sin(y/510)
 for y in range(H):
     a=int(le(y)); b=int(re(y))
     deep=y>1390
@@ -106,6 +106,28 @@ for trace in [
     seg(trace,"COPPER",4)
     for x,y in trace[1:-1]: oval(x,y,4,4,"AMBER")
 
+# VISUAL REPAIR PASS 1 (direct comparison with source blob above):
+# Replace flat repeated shale faceting with densely jointed clustered rock cuts.
+# All these face details remain deep in the already-solid west/east country rock;
+# they are spatially grouped around the reference's distinct hardware masses.
+stone_clusters=[
+ (80,322,175,290,19),(824,362,171,278,18),
+ (84,726,170,330,22),(813,1022,185,377,22),
+ (90,1490,170,301,18),(802,180,180,250,13)]
+for left,top,ww,hh,count in stone_clusters:
+    for k in range(count):
+        cx=left+R.randrange(ww)
+        cy=top+R.randrange(hh)
+        xhalf=R.randint(9,24) if k%5 else R.randint(23,41)
+        yhalf=R.randint(11,28) if k%7 else R.randint(24,42)
+        if cx-xhalf<15 or cx+xhalf>1007: continue
+        bg="SLATE" if (cy<700 and k%3==0) else ("GRANITE" if k%4 else "COBBLE")
+        # Deliberate fissure facets, thick outlines only where mass survives.
+        poly([(cx-xhalf,cy-3),(cx-xhalf//3,cy-yhalf),(cx+xhalf//2,cy-yhalf//2),
+              (cx+xhalf,cy+4),(cx+xhalf//3,cy+yhalf),(cx-xhalf//2,cy+yhalf//2)],"IRON")
+        poly([(cx-xhalf+4,cy-4),(cx-xhalf//3+2,cy-yhalf+4),
+              (cx+xhalf//2-2,cy-yhalf//2+3),(cx+xhalf-4,cy+4),
+              (cx+xhalf//3,cy+yhalf-4),(cx-xhalf//2+2,cy+yhalf//2-3)],bg)
 # 2. Six different functional excavations, all intentionally irregular.
 def excavation(x,y,w,h,kind):
     pts=[(x+29,y+6),(x+w-43,y-11),(x+w+4,y+39),(x+w-13,y+h-22),
@@ -201,12 +223,12 @@ for y,x0,x1 in [(997,270,440),(1005,591,740),(1588,300,446),(1601,617,791)]:
 # Lower reference's miniature trolley: anchored in the lower crossing.
 seg([(318,1787),(455,1782)],"STEEL",9)
 seg([(586,1781),(725,1775)],"STEEL",9)
-box(481,1792,544,1819,"COPPER")
-box(489,1799,538,1814,"IRON")
-for x in (492,537):
-    oval(x,1822,9,9,"STEEL")
-    oval(x,1822,4,4,"OBSIDIAN")
-txt(493,1800,"C-7")
+box(371,1757,434,1784,"COPPER")
+box(379,1764,428,1779,"IRON")
+for x in (382,427):
+    oval(x,1787,9,9,"STEEL")
+    oval(x,1787,4,4,"OBSIDIAN")
+txt(383,1765,"C-7")
 # Geological apron at bottom (no water and no loose powders).
 poly([(0,1921),(89,1916),(190,1970),(268,2037),(268,2047),(0,2047)],"SANDSTONE")
 poly([(779,2038),(806,1952),(914,1911),(1023,1924),(1023,2047)],"GRANITE")
@@ -260,28 +282,12 @@ for y,xa,xb in [
 # Floor connection: from left talus and right maintenance skirt to the outlet.
 poly([(270,1852),(391,1836),(469,1871),(467,1938),(373,1952),(271,1915)],"AIR")
 poly([(578,1882),(696,1840),(788,1872),(758,1945),(623,1955)],"AIR")
-# VISUAL REPAIR PASS 1 (direct comparison with source blob above):
-# Replace flat repeated shale faceting with densely jointed clustered rock cuts.
-# All these face details remain deep in the already-solid west/east country rock;
-# they are spatially grouped around the reference's distinct hardware masses.
-stone_clusters=[
- (80,322,175,290,19),(824,362,171,278,18),
- (84,726,170,330,22),(813,1022,185,377,22),
- (90,1490,170,301,18),(802,180,180,250,13)]
-for left,top,ww,hh,count in stone_clusters:
-    for k in range(count):
-        cx=left+R.randrange(ww)
-        cy=top+R.randrange(hh)
-        xhalf=R.randint(9,24) if k%5 else R.randint(23,41)
-        yhalf=R.randint(11,28) if k%7 else R.randint(24,42)
-        if cx-xhalf<15 or cx+xhalf>1007: continue
-        bg="SLATE" if (cy<700 and k%3==0) else ("GRANITE" if k%4 else "COBBLE")
-        # Deliberate fissure facets, thick outlines only where mass survives.
-        poly([(cx-xhalf,cy-3),(cx-xhalf//3,cy-yhalf),(cx+xhalf//2,cy-yhalf//2),
-              (cx+xhalf,cy+4),(cx+xhalf//3,cy+yhalf),(cx-xhalf//2,cy+yhalf//2)],"IRON")
-        poly([(cx-xhalf+4,cy-4),(cx-xhalf//3+2,cy-yhalf+4),
-              (cx+xhalf//2-2,cy-yhalf//2+3),(cx+xhalf-4,cy+4),
-              (cx+xhalf//3,cy+yhalf-4),(cx-xhalf//2+2,cy+yhalf//2-3)],bg)
+# Carve an original-reference-inspired dedicated upper ladder/service slot.
+# Deliberately connect this deep notch to the real West Switch loft and
+# continue it into the west bypass, while leaving a 48-cell air lane next
+# to the metal rungs so Midge can fly here rather than facing a fake shaft.
+box(327,252,407,456,"AIR")
+box(350,218,449,266,"AIR")
 # Full-length ladder in the source's west-of-centre cut, copper rails firmly
 # grounded with occasional rock-anchored brackets, not isolated light pixels.
 # Occupies ONLY the left edge of the broad bypass and leaves a >35-cell air lane.
@@ -326,11 +332,8 @@ seg([(330,1969),(456,1944)],"IRON",4)
 seg([(572,1948),(687,1972)],"IRON",4)
 for x in (363,415,610,666):
     seg([(x,1948),(x,1933)],"BRASS",3)
-# Negative space at lower exit is now framed by a hanging maintenance collar.
-seg([(401,2000),(463,1999)],"RUSTED",7)
-seg([(578,1999),(625,2002)],"RUSTED",7)
-for xx in (408,451,585,610):
-    box(xx,1985,xx+5,1996,"AMBER")
+# The suspended lower terminal lights were removed: disconnected chips of
+# solid material are collision hazards, not meaningful lower-exit details.
 
 # Deliberately predeclared actual flight/inspection sites, all near the
 # functional apparatus, not on the apparatus's occupied cells.
