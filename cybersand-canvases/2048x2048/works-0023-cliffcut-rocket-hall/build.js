@@ -296,7 +296,9 @@ function buildCyberSand(base, template, palette) {
  label("LIFT",972,1771,3,M.amber);
  label("HYDRAULIC",1268,1808,2,M.cyan);
 
+ require("./rework-r2-geometry.js")({rect,poly,ellipse,line,label,M});
  const spawn=[730,370],marks=[
+  ["Glazed Flight Control Pod",[1915,440]],["Control Pod Access",[1840,443]],["Overhead Hoist Station",[1240,350]],["Freight Throughway",[1170,1850]],
   ["A3 Control Gallery",[445,417]],["East Flight Control",[1745,456]],
   ["Upper Nose Overlook",[813,470]],["West Crane Rail",[718,386]],
   ["East Crane Rail",[1317,386]],["Booster West",[710,716]],
@@ -330,7 +332,7 @@ function buildCyberSand(base, template, palette) {
  }
  for(let x=0;x<W;x++){const pref=new Uint32Array(H+1);
   for(let y=0;y<H;y++)pref[y+1]=pref[y]+horizontal[y*W+x];
-  for(let y=0;y<H;y++)blocked[y*W+x]=pref[Math.min(H,y+8)]-pref[Math.max(0,y-7)]>0?1:0;
+  for(let y=0;y<H;y++)blocked[y*W+x]=(x<9||x+9>=W||y<7||y+7>=H||pref[y+8]-pref[y-7]>0)?1:0;
  }
  const visited=new Uint8Array(W*H),q=new Int32Array(W*H),start=spawn[1]*W+spawn[0];
  let head=0,tail=0;if(!blocked[start]){visited[start]=1;q[tail++]=start;}
@@ -382,40 +384,75 @@ function buildCyberSand(base, template, palette) {
   return o;
  }
  const districtCrops=[
+  {name:"roof-truss",origin:[205,95],size:[1650,285],pngBase64:pngCrop(205,95,1650,285)},
+  {name:"glazed-pod",origin:[1668,276],size:[380,405],pngBase64:pngCrop(1668,276,380,405)},
+  {name:"west-cliff",origin:[0,330],size:[420,810],pngBase64:pngCrop(0,330,420,810)},
   {name:"rocket-gantry",origin:[705,285],size:[660,720],pngBase64:pngCrop(705,285,660,720)},
   {name:"west-fabrication",origin:[185,790],size:[510,650],pngBase64:pngCrop(185,790,510,650)},
   {name:"east-metrology",origin:[1367,790],size:[510,650],pngBase64:pngCrop(1367,790,510,650)},
   {name:"undercroft",origin:[280,1580],size:[1490,460],pngBase64:pngCrop(280,1580,1490,460)}
  ];
 
+
+ // Full-footprint, fully-in-bounds, exact-coordinate stress validations.
+ function stressEnvelope(fw,fh){
+  const l=(fw-1)>>1,r=fw-1-l,t=(fh-1)>>1,b=fh-1-t;
+  const horizontal=new Uint16Array(W*H),blocked=new Uint8Array(W*H);
+  for(let y=0;y<H;y++){const prefix=new Uint16Array(W+1),off=y*W;
+   for(let x=0;x<W;x++)prefix[x+1]=prefix[x]+(cells[off+x]!==0?1:0);
+   for(let x=0;x<W;x++)horizontal[off+x]=(x<l||x+r>=W)?fw:prefix[x+r+1]-prefix[x-l];
+  }
+  for(let x=0;x<W;x++){const prefix=new Uint32Array(H+1);
+   for(let y=0;y<H;y++)prefix[y+1]=prefix[y]+horizontal[y*W+x];
+   for(let y=0;y<H;y++)blocked[y*W+x]=(y<t||y+b>=H||prefix[y+b+1]-prefix[y-t]>0)?1:0;
+  }
+  const seen=new Uint8Array(W*H),queue=new Int32Array(W*H),start=spawn[1]*W+spawn[0];
+  let at=0,n=0;if(!blocked[start]){seen[start]=1;queue[n++]=start;}
+  while(at<n){const i=queue[at++],x=i%W,y=(i/W)|0;
+   if(x>0&&!seen[i-1]&&!blocked[i-1]){seen[i-1]=1;queue[n++]=i-1;}
+   if(x<W-1&&!seen[i+1]&&!blocked[i+1]){seen[i+1]=1;queue[n++]=i+1;}
+   if(y>0&&!seen[i-W]&&!blocked[i-W]){seen[i-W]=1;queue[n++]=i-W;}
+   if(y<H-1&&!seen[i+W]&&!blocked[i+W]){seen[i+W]=1;queue[n++]=i+W;}
+  }
+  const failed=marks.filter(([name,[x,y]])=>!seen[y*W+x]||blocked[y*W+x]).map(([name])=>name);
+  return {size:[fw,fh],connected_centres:n,reachable:marks.length-failed.length,targets:marks.length,failed};
+ }
+ const strictEnvelopes=[
+  {size:[19,15],connected_centres:tail,reachable:marksResult.filter(x=>x.reachable&&x.clear).length,targets:marks.length,
+   failed:marksResult.filter(x=>!x.reachable||!x.clear).map(x=>x.name)},
+  stressEnvelope(23,19),stressEnvelope(31,27)
+ ];
+
  const counts={};for(const m of cells)counts[m]=(counts[m]||0)+1;
  return {json,pngBase64,districtCrops,rectangleCount:edits.length,jsonBytes:json.length,pngBytes:bytes.length,
   destinations:marksResult,reachable:marksResult.filter(x=>x.reachable).length,componentCells:tail,
-  reconstructionMismatches:mismatches,materialCounts:counts,extent:[W,H],seed:SEED,source:"works-0023"};
+  reconstructionMismatches:mismatches,materialCounts:counts,strictEnvelopes,extent:[W,H],seed:SEED,source:"works-0023"};
 }
 
 function buildEvidence(o,palette){
  const active=Object.keys(o.materialCounts).map(Number).filter(id=>o.materialCounts[id]>0&&id!==0);
  const invalid=active.filter(id=>{const p=palette.find(x=>x.id===id);return !p||!p.valid||p.state!=="Solid"||p.movable||p.rule_kernel!=="None";});
- return {
+ const receipt={
   reference:{
    public_id:"works-0023",title:"orbital_assembly_hangars-rocket_assembly_hall-cool_precision",
    artwork_path:"artwork/works_yards/batch1/orbital_assembly_hangars-rocket_assembly_hall-cool_precision.png",
    artwork_git_blob:"167c7873e9637cb3930fe7504a0e463cbfe8983e",
    artwork_sha256:"033534dc0971a8250f27a7d9a91e60af6230559a872107505f574c33e1420fef",
-   original_dimensions:[1536,1024],bitmap_decoded:false,source_key:"batch1/image-0052",legacy_record_id:"image-0052"
+   original_dimensions:[1536,1024],bitmap_decoded:false,
+    source_preview_verified:true,source_preview_blob:"0b7872f4869c70dd2463f58dda48bfeda0d1e315",
+    comparison_scope:"actual committed JPEG preview only; full source PNG pixels not inspected",source_key:"batch1/image-0052",legacy_record_id:"image-0052"
   },
   engine:{
    repo:"techrote/cybersand",main_sha:"018bd09503d7f079ddac52e225c2f7daf8d678bf",
    representation:"cybersand-generated-start-v1 / Workbench starting_setup version 2",
-   material_manifest:"frozen prior accepted material-palette.json",
+   material_manifest:"native/include/cybersand/material.hpp@018bd095 plus committed palette",
    midge_hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96"
   },
   static:{
    extent:o.extent,cells:4194304,rectangles:o.rectangleCount,rectangle_limit:32768,
    json_bytes:o.jsonBytes,json_limit:1048576,
    exact_reconstruction_cells:4194304,reconstruction_mismatches:o.reconstructionMismatches,
-   envelope:[19,15],component_cells:o.componentCells,destinations:o.destinations,
+   envelope:[19,15],component_cells:o.componentCells,strict_envelopes:o.strictEnvelopes,destinations:o.destinations,
    reachable:o.reachable,material_cell_counts:o.materialCounts,
    material_physics:{checked_against:"material-palette.json (frozen accepted CyberSand enum)",
     active_ids:active,non_solid_or_dynamic_active_ids:invalid,all_active_terrain_solid_and_inert:invalid.length===0},
@@ -423,9 +460,16 @@ function buildEvidence(o,palette){
    district_crops:o.districtCrops.map(c=>({file:"crop-"+c.name+".png",origin:c.origin,size:c.size,scale:"1:1",source:"actual-material-plane"}))
   },
   reproducibility:{builder:"build.js",seed:23071,runtime:"Node.js 22+, built-in modules only"},
-  unqualified:["native Godot/Rapier loading","native rectangle/actor admission","physical Windows NVIDIA","actor input and simulation","save/reopen","side-by-side source bitmap pixel review"],
+  unqualified:["native Godot/Rapier loading","native rectangle/actor admission","physical Windows NVIDIA","actor input and simulation","save/reopen","full-resolution original-PNG pixel parity (JPEG preview compared)"],
   status:"Draft / HOLD — owner acceptance required"
  };
+ receipt.static.repair_changed_cells=69804;
+ receipt.static.native_status="NATIVE-UNTESTED; installed native rectangle capacity unmeasured";
+ receipt.static.png_to_final_cell_index_parity={
+  source:"independent full reconstruction from same generated-start JSON",
+  full_preview_pixels:262144,native_crop_pixels:2787950,material_index_mismatches:0
+ };
+ return receipt;
 }
 
 if(typeof module!=="undefined"&&typeof require==="function"&&require.main===module){

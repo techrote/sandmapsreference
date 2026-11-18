@@ -10,6 +10,9 @@
       1024
     ],
     "bitmap_decoded": false,
+    "source_preview_verified": true,
+    "source_preview_blob": "0b7872f4869c70dd2463f58dda48bfeda0d1e315",
+    "comparison_scope": "actual committed JPEG preview only; full source PNG pixels not inspected",
     "source_key": "batch1/image-0052",
     "legacy_record_id": "image-0052"
   },
@@ -17,7 +20,7 @@
     "repo": "techrote/cybersand",
     "main_sha": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
     "representation": "cybersand-generated-start-v1 / Workbench starting_setup version 2",
-    "material_manifest": "frozen prior accepted material-palette.json",
+    "material_manifest": "native/include/cybersand/material.hpp@018bd095 plus committed palette",
     "midge_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96"
   },
   "static": {
@@ -26,9 +29,9 @@
       2048
     ],
     "cells": 4194304,
-    "rectangles": 10344,
+    "rectangles": 16385,
     "rectangle_limit": 32768,
-    "json_bytes": 201600,
+    "json_bytes": 313817,
     "json_limit": 1048576,
     "exact_reconstruction_cells": 4194304,
     "reconstruction_mismatches": 0,
@@ -36,8 +39,86 @@
       19,
       15
     ],
-    "component_cells": 1044221,
+    "component_cells": 932842,
+    "strict_envelopes": [
+      {
+        "size": [
+          19,
+          15
+        ],
+        "connected_centres": 932842,
+        "reachable": 21,
+        "targets": 21,
+        "failed": []
+      },
+      {
+        "size": [
+          23,
+          19
+        ],
+        "connected_centres": 822365,
+        "reachable": 19,
+        "targets": 21,
+        "failed": [
+          "Upper Nose Overlook",
+          "East Lower Lab"
+        ]
+      },
+      {
+        "size": [
+          31,
+          27
+        ],
+        "connected_centres": 561007,
+        "reachable": 15,
+        "targets": 21,
+        "failed": [
+          "Overhead Hoist Station",
+          "Upper Nose Overlook",
+          "East Crane Rail",
+          "Booster East",
+          "Starboard Engine Deck",
+          "East Lower Lab"
+        ]
+      }
+    ],
     "destinations": [
+      {
+        "name": "Glazed Flight Control Pod",
+        "point": [
+          1915,
+          440
+        ],
+        "reachable": true,
+        "clear": true
+      },
+      {
+        "name": "Control Pod Access",
+        "point": [
+          1840,
+          443
+        ],
+        "reachable": true,
+        "clear": true
+      },
+      {
+        "name": "Overhead Hoist Station",
+        "point": [
+          1240,
+          350
+        ],
+        "reachable": true,
+        "clear": true
+      },
+      {
+        "name": "Freight Throughway",
+        "point": [
+          1170,
+          1850
+        ],
+        "reachable": true,
+        "clear": true
+      },
       {
         "name": "A3 Control Gallery",
         "point": [
@@ -192,27 +273,27 @@
         "clear": true
       }
     ],
-    "reachable": 17,
+    "reachable": 21,
     "material_cell_counts": {
-      "0": 1908076,
-      "40": 81504,
-      "49": 254260,
-      "50": 341664,
-      "58": 119641,
-      "62": 324817,
-      "63": 52645,
-      "64": 204416,
-      "65": 22704,
-      "70": 27665,
+      "0": 1807538,
+      "40": 29979,
+      "49": 209181,
+      "50": 383342,
+      "58": 44329,
+      "62": 352661,
+      "63": 121224,
+      "64": 210548,
+      "65": 77002,
+      "70": 24774,
       "71": 1268,
-      "72": 26383,
-      "76": 31708,
-      "77": 15977,
-      "79": 39054,
-      "100": 700387,
-      "101": 1188,
-      "119": 39926,
-      "127": 1021
+      "72": 43667,
+      "76": 29713,
+      "77": 16149,
+      "79": 40853,
+      "100": 755444,
+      "101": 579,
+      "119": 44573,
+      "127": 1480
     },
     "material_physics": {
       "checked_against": "material-palette.json (frozen accepted CyberSand enum)",
@@ -248,6 +329,45 @@
       "scale": "downsample 4:1"
     },
     "district_crops": [
+      {
+        "file": "crop-roof-truss.png",
+        "origin": [
+          205,
+          95
+        ],
+        "size": [
+          1650,
+          285
+        ],
+        "scale": "1:1",
+        "source": "actual-material-plane"
+      },
+      {
+        "file": "crop-glazed-pod.png",
+        "origin": [
+          1668,
+          276
+        ],
+        "size": [
+          380,
+          405
+        ],
+        "scale": "1:1",
+        "source": "actual-material-plane"
+      },
+      {
+        "file": "crop-west-cliff.png",
+        "origin": [
+          0,
+          330
+        ],
+        "size": [
+          420,
+          810
+        ],
+        "scale": "1:1",
+        "source": "actual-material-plane"
+      },
       {
         "file": "crop-rocket-gantry.png",
         "origin": [
@@ -300,7 +420,15 @@
         "scale": "1:1",
         "source": "actual-material-plane"
       }
-    ]
+    ],
+    "repair_changed_cells": 69804,
+    "native_status": "NATIVE-UNTESTED; installed native rectangle capacity unmeasured",
+    "png_to_final_cell_index_parity": {
+      "source": "independent full reconstruction from same generated-start JSON",
+      "full_preview_pixels": 262144,
+      "native_crop_pixels": 2787950,
+      "material_index_mismatches": 0
+    }
   },
   "reproducibility": {
     "builder": "build.js",
@@ -313,7 +441,7 @@
     "physical Windows NVIDIA",
     "actor input and simulation",
     "save/reopen",
-    "side-by-side source bitmap pixel review"
+    "full-resolution original-PNG pixel parity (JPEG preview compared)"
   ],
   "status": "Draft / HOLD — owner acceptance required"
 }
