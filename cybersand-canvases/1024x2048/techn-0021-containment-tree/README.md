@@ -1,3 +1,19 @@
+## CURRENT R2B13 — Midge-scale joined inhabited biosphere (18 November 2026)
+
+**Draft / HOLD · B rework delivered from assigned `1dd459e5aea4d2e5475992fe077621d04edc4a79` · independent re-audit required · NATIVE-UNTESTED.** This is an incremental repair on the existing PR, not a new source conversion, and no files in the source artwork archive, other PRs or engine were touched.
+
+**Actual material cells:** 69,938 changed relative to R2B12 (3,518 added, 4,223 excavated, 62,197 reclassified). Added two more horizontally connected supported gallery tiers with unequal west culture / specimen inspection / east analytical bays, real backed thresholds and transfer braces; gave central roof-hung organism irregular material tissue and five uneven apertures. The source-reference JPEG and source PNG remain unchanged. The upper lab/dome/tree core is source-derived; the deep west resin and east annular geology are purposeful EXTRAPOLATION. Original source-PNG pixel parity was not freshly checked in this run.
+
+**Current committed generation:** source-controlled `builder.cjs` deterministically emits **1024×2048**, **22,713 / 32,768** legal five-field rectangles, **415,848 / 1,048,576** Setup-v2 bytes, **1,215,321** non-Empty physical cells, no bad IDs or overlapping edits. Exact original 24/24 named Midge destinations pass 19×15, 23×19 and 31×27 conservative full-bounds centre clearance; gantry west (370,930) to east (742,931) remains **373 steps** at all three envelopes. All six existing structural support probes remain in the same 1,178,609-cell cardinal solid foundation component. Real input/collision, Rapier, installed bridge capacity, simulation and fresh-process save/reopen have **not** been run.
+
+**Reconstruction/evidence:** twice regenerated Setup JSON and *all nine* saved material-index PNGs deterministically. Independent in-run PNG chunk CRC32, stored-zlib/Adler32, full-grid indexed pixel parity passed **5,488,640 / 5,488,640 pixels** (includes full 1024×2048 material PNG, seven native 640×640 crops and overview), not merely the author's preview. `rebuild.cjs --verify` enumerates **all nine** images; a standalone installed Node CLI was not executed, so that environment-specific gate remains open. `evidence.json` contains current R2B13 and intact historical R2B12 metrics.
+
+**Native assessment: NATIVE-UNTESTED.** Draft/HOLD; no Ready, merge, auto-merge or owner acceptance.
+
+[Current complete native-grid PNG](containment-tree-full-1to1.png) · [source JPEG](source-reference-preview.jpg) · [true middle 1:1 crop](containment-tree-detail-middle.png) · [archive 1:1](containment-tree-detail-archive-west.png) · [return gallery 1:1](containment-tree-detail-return-east.png)
+
+---
+
 ## CURRENT R2B12 — decisive source-scale research connection and new carved service caverns (18 November 2026)
 
 **Draft / HOLD; no owner acceptance or merge.** Shepherd's exclusive exact-HEAD assignment: `CANVAS-REWORK-B: 15 @ c71cddfa28fef009f2b13a685df477ee79564b15`. This R2B12 record supersedes all earlier "CURRENT R2B11" headings retained below as explicit historical provenance. Source and engine files remain unmodified; native acceptance is **NATIVE-UNTESTED**.

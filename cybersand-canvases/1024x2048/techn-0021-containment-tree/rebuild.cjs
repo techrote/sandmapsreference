@@ -11,6 +11,9 @@ const outputs={
  'containment-tree-detail-lower.png':Buffer.from(r.details.lower),
  'containment-tree-detail-west.png':Buffer.from(r.details.west),
  'containment-tree-detail-east.png':Buffer.from(r.details.east),
+ 'containment-tree-full-1to1.png':Buffer.from(r.fullMap),
+ 'containment-tree-detail-archive-west.png':Buffer.from(r.details.archiveWest),
+ 'containment-tree-detail-return-east.png':Buffer.from(r.details.returnEast),
  'evidence.json':Buffer.from(JSON.stringify(r.evidence,null,2)+'\n','utf8'),
 };
 let bad=0;
