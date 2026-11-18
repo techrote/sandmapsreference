@@ -356,6 +356,95 @@ if(r3Changed!==93351||grid.reduce((a,v)=>a+(v===3),0)!==6525)throw Error("R3 art
  if(!R6_STRUCTURAL.all_seven_major_probes_anchored)throw Error("R6 loses primary rooted structure");
  if(R6_STRUCTURAL.unanchored_over_1000.length>1)throw Error("R6 introduces a large unsupported assembly");
 
+
+ // R7 ORIGINAL INDUSTRIAL: a visibly failed shear plane and legible process nodes.
+ // Guard formerly vacant 31x27-designed flight lanes; an existing solid can be
+ // recut or repainted, but previously clear protected openings remain clear.
+ const R7_prior=grid.slice();
+ function r7ProtectedArt(paint){
+   let previous=grid.slice();paint();
+   for(let i=0;i<grid.length;i++)if(R3_PROTECT[i]&&previous[i]===0&&grid[i]!==0)grid[i]=0;
+ }
+ r7ProtectedArt(()=>{
+   // Main broken counterweight: remove the circular right quarter as a *large*
+   // diagonal shear zone, retain the grounded rear left load and arrest seat.
+   r5Poly([[455,420],[537,417],[537,477],[502,480],[474,454]],0);
+   r5Poly([[470,478],[507,475],[536,518],[527,568],[486,579],[447,549],[479,520]],0);
+   r5Poly([[288,474],[312,434],[355,418],[437,422],[464,447],[459,484],[474,500],[446,553],[348,573],[301,541]],65);
+   r5Poly([[304,466],[348,430],[436,435],[453,451],[446,486],[461,504],[439,540],[349,557],[317,523]],130);
+   r5Poly([[438,450],[466,451],[448,492],[470,515],[442,552],[429,529],[437,499],[425,477]],50);
+   line(435,443,453,472,9,119);
+   line(450,478,437,508,8,76);
+   line(440,517,457,540,6,69);
+   line(338,536,391,559,10,62);
+   line(317,497,351,530,8,119);
+   // Open-to-air broken offside attachment and dislocated captured wedge.
+   r5Poly([[484,521],[515,529],[516,556],[490,575],[473,555]],58);
+   line(475,552,506,572,8,76);
+   for(let y of [461,492,527,551]){box(326,y,11,7,62);box(415,y+4,8,5,119);}
+   // Cable path: loaded western strand and a clearly broken east-ended strand.
+   line(367,332,372,383,5,68);line(372,382,390,411,8,68);
+   box(390,402,21,13,62);line(398,410,406,426,7,119);
+   line(434,333,450,363,5,69);line(450,363,464,373,5,69);
+   line(478,392,493,405,4,69);line(496,408,501,416,3,76);
+   // Crush flange and structural impact: unequal seat planes and bent stop.
+   box(327,649,125,9,50);line(346,638,397,603,11,62);
+   line(389,632,447,592,10,58);box(327,679,146,13,65);
+ });
+ r7ProtectedArt(()=>{
+   // Ore workface: distinct inlet throat, twin crusher jaws and binned output.
+   r5Poly([[301,876],[352,886],[374,910],[365,927],[341,910],[315,905]],58);
+   box(346,916,12,43,50);line(357,947,386,977,8,65);
+   frame(362,966,78,74,7,62);box(373,978,56,46,130);
+   for(let k=0;k<4;k++){line(377,984+k*11,411,1000+k*8,4,k%2?119:65);}
+   box(379,1036,12,48,68);
+   // Two unpowered discharge mouths are *separated by a flight aperture*.
+   box(393,1073,80,8,65);box(396,1085,10,22,50);
+   r5Poly([[400,1093],[441,1093],[452,1103],[420,1112]],119);
+   box(558,1073,73,8,65);box(621,1082,12,31,50);
+   r5Poly([[558,1093],[603,1093],[617,1103],[581,1112]],119);
+   // Right product/waste bins distinctly aligned under its own downpipes.
+   box(680,1163,10,31,68);box(713,1163,10,31,68);
+   r5Poly([[667,1203],[731,1203],[722,1240],[683,1240]],50);
+   r5Poly([[679,1209],[721,1209],[714,1229],[689,1229]],119);
+   box(664,1239,71,10,62);
+   // A separated, bolted return chute to the subsequent rail switching tier.
+   box(689,1300,69,10,58);line(734,1288,745,1304,7,65);
+ });
+ r7ProtectedArt(()=>{
+   // Freight: the single rail cart now has a serviceable, clearly delimited
+   // loading platform, two stop buffers and an aimed (terminated) ore hood.
+   box(261,1555,79,9,62);box(274,1564,13,43,58);
+   box(260,1519,82,7,65);box(259,1527,7,26,50);
+   box(321,1527,9,27,50);box(266,1534,47,12,130);
+   box(285,1546,6,8,77);box(319,1499,20,21,76);
+   box(480,1496,17,28,50);box(471,1494,30,7,76);
+   box(390,1365,66,10,62);
+   box(398,1375,7,35,68);box(449,1375,7,35,68);
+   r5Poly([[402,1413],[455,1413],[445,1446],[412,1446]],50);
+   r5Poly([[412,1418],[447,1418],[438,1435],[421,1435]],119);
+   box(414,1447,34,5,76); // interrupted hoist: flyer can pass beneath
+   // The approach is continuous up to the mandated open central flyer portal.
+   box(302,1580,54,8,58);line(312,1587,337,1615,7,62);
+ });
+ r7ProtectedArt(()=>{
+   // Quench service: dry, rooted processing gantry approaching *left end* of
+   // the intact sealed tank without touching any Water or the bounding shell.
+   box(639,1797,67,10,62);box(660,1790,10,11,119);
+   line(702,1803,721,1818,7,65);box(707,1820,35,8,58);
+   line(729,1828,743,1841,6,62);box(741,1838,10,28,65);
+   box(738,1865,32,6,119);box(721,1870,23,5,62);
+   box(676,1772,8,24,68);box(680,1763,25,9,62);
+   // Safe control threshold with return-side inspection lamp.
+   frame(693,1734,52,31,4,58);box(702,1742,33,8,77);
+   box(689,1767,37,6,65);
+ });
+ let R7_CHANGED=0,R7_WATER_CHANGES=0;
+ for(let i=0;i<grid.length;i++)if(grid[i]!==R7_prior[i]){R7_CHANGED++;if(grid[i]===3||R7_prior[i]===3)R7_WATER_CHANGES++;}
+ if(R7_WATER_CHANGES!==0||grid.reduce((n,m)=>n+(m===3),0)!==6525)throw Error("R7 Water identities changed");
+ const R7_STRUCTURAL=r4Audit();
+ if(R7_STRUCTURAL.unanchored_over_1000.length>1)throw Error("R7 introduced detached major fixture "+JSON.stringify(R7_STRUCTURAL.unanchored_over_1000));
+
  if(grid.reduce((a,m)=>a+(m===3),0)!==6525)throw Error("R4 Water conservation failure");
 
 const HIST={};let occupied=0;for(const m of grid){HIST[m]=(HIST[m]||0)+1;if(m){occupied++;if(!INERT.has(m)&&m!==3)throw Error("Non-inert unexpected material "+m);}}
@@ -425,6 +514,7 @@ let crops=[
 let images=[],imageChecks=[];for(let [name,x,y,w,h] of crops){let png=pngFromGrid(x,y,w,h);images.push({name,bytes:png});imageChecks.push({name,sha256:sha256(png),...verifyPng(png,x,y,w,h)});}
 const gridSha=sha256(grid),setupSha=sha256(bytes(setupString));
 const receipt={r5_original_finish:{artistic_brief:"broken sheave / heavy skewed counterweight / anchored arrest / readable crusher manifold / staged freight wagon / split quench lookouts",actual_changed_cells:r5Changed,physical_Water_cells_unchanged:6525,old_r4_unanchored_over_1000:R4_STRUCTURAL.unanchored_over_1000.length,structural:R5_STRUCTURAL,flight_routes:"all 11 named sites must pass three conservative exact-hull envelope tests; primary-throat obstruction guarantees terminal bypass only",reproducibility:"fixed seed, full cell replay and PNG indexed material parity validated by builder"},r6_finishing:{review_authority:"Shepherd and Fidelity art REWORK exact R5 HEAD",changed_cells:r6Changed,water_cells_changed:r6LiquidChanged,structural:R6_STRUCTURAL,creative_repairs:"asymmetric sheared weight, broken terminal cables and compressed catch; segmented gravity sorting with receiving bin; single wagon loading station; supported quench-transfer threshold",protected:"all exact sites and conservative hull sizes; physical water unchanged",known_static_separation:"1306-cell east control enclosure remains an intentionally non-loadbearing fixed fixture",render:"six material-ID PNGs and complete replay generated from identical grid",native:"NATIVE-UNTESTED - installed binary/rectangle cap and dynamic validation unknown"},r4_support_rework:{ops:R4_BRIDGES.map(b=>b[0]),changed_cells:r4Changed,prior_protected_corridor_cells_changed:r4ProtectedChanged,structural:R4_STRUCTURAL,flight_crossovers:"Some old straight route-guide segments are interrupted by engineered support; exact whole-hull connectivity retested"},schema:"cybersand-original-industrial-vertical-qualification-v1",engine_accepted_main:ENGINE,creator:"original-industrial-vertical",originality:"original from authored plan; no source/reference image used",seed_decimal:SEED>>>0,extent:[W,H],cells:grid.length,nonempty:occupied,nonempty_materials:HIST,grid_sha256:gridSha,setup_sha256:setupSha,setup_bytes:bytes(setupString).length,setup_bytes_excluding_lf:bytes(setupString).length,setup_file_bytes_including_lf:bytes(setupString+"\n").length,edit_rectangles:edits.length,rectangle_budget_source:32768,default_no_bridge_capacity:4096,installed_bridge_capacity:"UNKNOWN - do not assert native load",edit_budget:32768,full_cell_replay:"PASS",edit_overlap_count:0,rectangle_work_estimate:work,generated_start_work_limit:Math.min(64*W*H,32000000),material_laws:"all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",flight_checks:flight,alternative_main_throat_block:{rect:[420,983,665,1006],terminal_reachable:true,reachable_centers:alt.count},sites:SITES,routes:ROUTES,image_checks:imageChecks,art_rework:{review_authority:"Shepherd and Fidelity REWORK comments on prior exact head",previous_head:"39644a3a6b0a0500b01faca6c075e08d2054d539",original_cell_changes:r3Changed,operation_records:ART_OPS.length,preservation:"all original exact 11 destinations, three flyable spines and Water 6525 cells retained",districts:"asymmetric severed counterweight/catch; twin ore hoppers/transfer; distinct switch yard/cargo cradle; irregular foundry galleries; furnace-to-quench infrastructure",production_scope:"Only fixed inert physical cells; no runtime physics edits"},native_status:"NATIVE-UNTESTED: no CyberDemoBridge binary or Godot runtime supplied; dynamic inspect_interaction IDs, world install, Rapier input/collision, physics, fresh-process save/reopen unproven",approval:"DRAFT/HOLD - independent Shepherd and owner acceptance outstanding"};
+receipt.r7_industrial_finish={review_authority:"independent exact-R6 Fidelity REWORK and Shepherd conditional static HOLD",changed_material_cells:R7_CHANGED,water_cells_changed:R7_WATER_CHANGES,structural:R7_STRUCTURAL,changes:"large diagonal failure shear and offset captured scrap; crusher-to-twin-terminated-feed and bins; single wagon with loading bay and rail buffers; dry salvage-to-quench service gantry",geometry:"strict orthographic 1024x2048 material-ID cells; exact all-11 19x15,23x19,31x27 navigation tests",native:"NATIVE-UNTESTED"};
 const rec=JSON.stringify(receipt,null,2)+"\n";
 let readme=[
 "# Severed Counterweight | original industrial vertical canvas",
@@ -518,8 +608,9 @@ let readme=[
 "**Completion marker:** `ORIGINAL-CANVAS-INDUSTRIAL-VERTICAL: <current-head-sha>` (replace placeholder with actual PR HEAD in PR description).",
 ""
 ].join("\n");
+readme+="\n\n## R7 original industrial corrective finish (18 November 2026)\n\nIndependent exact-R6 Fidelity REWORK identified a still-drumlike load, ambiguous crusher handoff, off-target wagon loading, and an isolated quench handling link. This pass removes a large diagonal sheared region from the counterweight and offsets captured scrap while preserving the rooted arrest; emphasizes the crushing workface and deliberately separated flight-clear discharge mouths with aligned bins; adds the ONE cart's stop-buffered service landing and a distinct overhead transfer termination; and provides a short dry cantilever to the quench walkway. All solids are static accepted inert material cells; none imply animated transport. Protected previously empty primary flight channels and every original Water cell. Actual R6-to-R7 changed cells: "+R7_CHANGED+". Rooted major supports: 7/7. Exact conservative 11/11 all-sites reachability is checked at all three hull sizes by the builder; terminal-only obstruction bypass is not universal site redundancy. Source bridge 32,768 vs unverified installed bridge capacity; native NATIVE-UNTESTED. The original partly circular outer shell and segmented process gaps remain transparent artistic/runtime limitations.\n";
 const data=[{name:"setup-severed-counterweight.json",text:setupString+"\n"},{name:"qualification.json",text:rec},{name:"README.md",text:readme},...images];
-return{root:ROOT,data,metrics:{r6Changed,edits:edits.length,setupBytes:bytes(setupString).length,gridSha,setupSha,materialHistogram:HIST,images:imageChecks,flight:flight.map(v=>({footprint:v.footprint,reachable:v.reachable_sites,centers:v.reachable_centers})),alternativeCenters:alt.count}};
+return{root:ROOT,data,metrics:{r7Changed:R7_CHANGED,r7LiquidChanged:R7_WATER_CHANGES,r6Changed,edits:edits.length,setupBytes:bytes(setupString).length,gridSha,setupSha,materialHistogram:HIST,images:imageChecks,flight:flight.map(v=>({footprint:v.footprint,reachable:v.reachable_sites,centers:v.reachable_centers})),alternativeCenters:alt.count}};
 };
 if(typeof module!=='undefined') module.exports=build;
 if(typeof require!=='undefined'&&typeof module!=='undefined'&&require.main===module){const fs=require('node:fs'),path=require('node:path');const output=build();for(const item of output.data){const dest=path.join(__dirname,item.name);fs.writeFileSync(dest,item.bytes?Buffer.from(item.bytes):item.text);}console.log(JSON.stringify(output.metrics,null,2));}

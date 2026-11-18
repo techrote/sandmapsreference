@@ -43,11 +43,11 @@ Connectivity is proven from the **exact Midge spawn** to **each exact site** at 
 
 `build.cjs` is a fixed-seed, dependency-free Node.js builder. Run `node build.cjs` from any directory: it rebuilds `setup-severed-counterweight.json`, `qualification.json` and all full-resolution material-identity indexed PNGs in its own directory, then reopens/decodes every generated PNG in memory to check chunk CRC, zlib, Adler-32, IEND and per-cell ID parity. The source grid is reconstructed from hand-authored geometric primitives and exact route masks, never derived from a source image or compressed/reprojected reference PNG.
 
-**JSON format:** ordinary Workbench Setup-v2, not a fabricated generated-start receipt. Ordered, nonoverlapping, vertically coalesced rectangular edits exactly reconstruct the 2097152 source cells. JSON bytes 186196 / 1,048,576, 10179 rectangles / 32,768 source max, 948067 painted cell writes in a 32000000 theoretical work envelope.
+**JSON format:** ordinary Workbench Setup-v2, not a fabricated generated-start receipt. Ordered, nonoverlapping, vertically coalesced rectangular edits exactly reconstruct the 2097152 source cells. JSON bytes 195915 / 1,048,576, 10719 rectangles / 32,768 source max, 950643 painted cell writes in a 32000000 theoretical work envelope.
 
-**SHA-256 identity:** material grid `fe86695ae3d9529bb3b39566328baffd5a78965ab44c293bd8ba48c66306ccd2`; JSON `c50f385fa8f967831db89fed0c26820755dcb28c528719d2bd7aef154d9b9f4c`.
+**SHA-256 identity:** material grid `babf12715f05ed2b919db1b790a3879492f58da9de8aa49687a9559518403341`; JSON `6088093e6b5a6e5c42c9750cf3fc72515022657524e04bfd0c5383940771b700`.
 
-**Physically fixed materials:** `38:1242 40:95383 50:50785 58:165055 62:113346 64:2381 65:86666 68:18737 69:11523 72:3162 73:9145 76:16937 77:3402 78:424 79:5170 100:184304 101:91359 119:23166 120:1435 130:52924 131:4996`. All are accepted-main Solid/non-movable/RuleKernel::None; only Water (3) is dynamic, within the walled lower quench basin. Visual metal pipes and LEDs are material cells, not sprite decals.
+**Physically fixed materials:** `38:1242 40:95383 50:52329 58:165071 62:113097 64:2381 65:85290 68:20150 69:11910 72:3162 73:9145 76:16829 77:3714 78:424 79:4970 100:184304 101:91029 119:22891 120:1435 130:54595 131:4767`. All are accepted-main Solid/non-movable/RuleKernel::None; only Water (3) is dynamic, within the walled lower quench basin. Visual metal pipes and LEDs are material cells, not sprite decals.
 
 **Render evidence:** `overview.png` is the complete 1024x2048 material map; the five numbered crops are native 1:1 unresampled windows of that *same cell grid*. These are palette-identity PNGs, **not** Godot screenshots, not AI concept art, and not a claim that the native renderer has been tested.
 
@@ -125,3 +125,8 @@ Use the engine SHA above. Rebuild/load the matching extension, query `CyberDemoB
 Created solely for the `original/industrial-vertical` lane in `techrote/sandmapsreference`. No existing canvas, GitHub image, reference artwork, PR branch or CyberSand source was altered. Source files in `techrote/cybersand` were inspected only for schema/material/actor technical admission.
 
 **Completion marker:** `ORIGINAL-CANVAS-INDUSTRIAL-VERTICAL: <current-head-sha>` (replace placeholder with actual PR HEAD in PR description).
+
+
+## R7 original industrial corrective finish (18 November 2026)
+
+Independent exact-R6 Fidelity REWORK identified a still-drumlike load, ambiguous crusher handoff, off-target wagon loading, and an isolated quench handling link. This pass removes a large diagonal sheared region from the counterweight and offsets captured scrap while preserving the rooted arrest; emphasizes the crushing workface and deliberately separated flight-clear discharge mouths with aligned bins; adds the ONE cart's stop-buffered service landing and a distinct overhead transfer termination; and provides a short dry cantilever to the quench walkway. All solids are static accepted inert material cells; none imply animated transport. Protected previously empty primary flight channels and every original Water cell. Actual R6-to-R7 changed cells: 39404. Rooted major supports: 7/7. Exact conservative 11/11 all-sites reachability is checked at all three hull sizes by the builder; terminal-only obstruction bypass is not universal site redundancy. Source bridge 32,768 vs unverified installed bridge capacity; native NATIVE-UNTESTED. The original partly circular outer shell and segmented process gaps remain transparent artistic/runtime limitations.
