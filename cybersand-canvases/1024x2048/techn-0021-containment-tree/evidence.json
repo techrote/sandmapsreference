@@ -15,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 21930,
+  "rectangles": 21535,
   "rectangle_budget": 32768,
-  "json_bytes": 402846,
+  "json_bytes": 395528,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1285230,
+  "stamped_cells": 1282700,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -47,34 +47,34 @@
     127
   ],
   "material_counts": {
-    "0": 811922,
+    "0": 814452,
     "39": 6151,
-    "40": 130575,
-    "42": 126726,
+    "40": 130557,
+    "42": 123719,
     "49": 161005,
-    "50": 41128,
-    "52": 21366,
-    "53": 133194,
-    "54": 118402,
-    "58": 41978,
-    "62": 58654,
+    "50": 41107,
+    "52": 23442,
+    "53": 136368,
+    "54": 116522,
+    "58": 41826,
+    "62": 62616,
     "65": 3637,
     "77": 2313,
-    "79": 9037,
-    "100": 212503,
-    "101": 149783,
-    "119": 15903,
+    "79": 9435,
+    "100": 212495,
+    "101": 145616,
+    "119": 18185,
     "120": 17488,
     "121": 4688,
-    "122": 6321,
-    "123": 12401,
-    "127": 11977
+    "122": 7413,
+    "123": 9450,
+    "127": 8667
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 460145,
+  "connected_clearance_centres": 450752,
   "spawn": [
     369,
     95
@@ -317,7 +317,7 @@
         19,
         15
       ],
-      "legal_connected_centres": 460145,
+      "legal_connected_centres": 450752,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -327,7 +327,7 @@
         23,
         19
       ],
-      "legal_connected_centres": 419049,
+      "legal_connected_centres": 412896,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -337,7 +337,7 @@
         31,
         27
       ],
-      "legal_connected_centres": 347818,
+      "legal_connected_centres": 339781,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -401,69 +401,31 @@
       "step": 1
     }
   },
-  "rework_b3": {
+  "rework_b5": {
     "date": "2026-11-18",
-    "assigned_head": "04a7f0570029eb68151763044f0cf1464e31b672",
+    "worker": "B",
+    "assigned_head": "14bd348782645d7188d221f6c408724f3870d8e4",
     "source_jpeg_blob": "64d7df6352b12d1aa57ce85f4925a722705bba1d",
     "source_jpeg_actually_viewed": true,
-    "original_full_png_parity": "UNVERIFIED",
-    "exact_material_changes": 203895,
-    "source_derived_upper": "dominant three-chamber bioheart, broadened rooted canopy, west domed research/lift, east distinct vial wing, continuous guarded transit service deck with deliberate portals",
-    "newly_extrapolated_deep": "non-repeating rooted assay chamber and protected geological / return-service districts",
+    "original_source_png_parity": "UNVERIFIED",
+    "physical_cells_changed": 99850,
+    "source_derived": "single broad luminous porous bioheart with rooted buttresses, compact upper containment and asymmetrical assay/vial wings",
+    "newly_extrapolated": "deep root geology/service route beyond the reference",
+    "upper_observation_transfer": "real central supported source-derived observation deck at y804; lower service transfer y980 has Midge through-shafts",
+    "conservative_clearances": "24/24 exact endpoints 19x15,23x19,31x27",
+    "installed_bridge_capacity": "UNMEASURED; source cap 32768, legacy fallback 4096",
     "native": "NATIVE-UNTESTED"
   },
   "last_rework": {
     "worker": "B",
-    "assigned_head": "c6e46c3fddf6d67aed3a3f401ec7c1ebf825a1dc",
-    "scope": "Compact source-derived horizontal lab district; branching canopy; physically supported guarded deck retaining portal shafts; unlike assay/vial annexes; extrapolated deep rhizome",
-    "physical_cells_changed": 96959,
-    "rectangles": 21930,
-    "json_bytes": 402846,
-    "nonempty_cells": 1285230,
-    "source_original_png_parity": "UNVERIFIED",
+    "assigned_head": "14bd348782645d7188d221f6c408724f3870d8e4",
+    "scope": "source-led one-heart silhouette and rooted upper observation transfer",
+    "physical_cells_changed": 99850,
+    "rectangles": 21535,
+    "json_bytes": 395528,
+    "nonempty_cells": 1282700,
+    "source_jpeg": "AUTHENTIC VIEWED",
+    "original_png": "UNVERIFIED",
     "native": "NATIVE-UNTESTED"
-  },
-  "rework_b4": {
-    "date": "2026-11-18",
-    "assigned_head": "c6e46c3fddf6d67aed3a3f401ec7c1ebf825a1dc",
-    "scope": "Compact source-derived horizontal lab district; branching canopy; physically supported guarded deck retaining portal shafts; unlike assay/vial annexes; extrapolated deep rhizome",
-    "source_jpeg_seen": true,
-    "source_jpeg_sha": "64d7df6352b12d1aa57ce85f4925a722705bba1d",
-    "original_png_parity": "UNVERIFIED",
-    "physical_cells_changed": 96959,
-    "rectangles": 21930,
-    "json_bytes": 402846,
-    "occupied_cells": 1285230,
-    "full_grid_replay": "PASS",
-    "exact_sites": "24/24 at three conservative envelopes",
-    "deck_structural_component": 1215416,
-    "probes": [
-      {
-        "x": 150,
-        "y": 984,
-        "solid": 62,
-        "connected": true
-      },
-      {
-        "x": 600,
-        "y": 984,
-        "solid": 62,
-        "connected": true
-      },
-      {
-        "x": 885,
-        "y": 984,
-        "solid": 62,
-        "connected": true
-      },
-      {
-        "x": 800,
-        "y": 1010,
-        "solid": 65,
-        "connected": true
-      }
-    ],
-    "pngs": "Regenerated from identical final cells",
-    "standalone_Node_and_native": "UNTESTED"
   }
 }

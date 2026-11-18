@@ -639,6 +639,57 @@ for(const [m,p] of [
 [M.VERDIGRIS,[[604,1843],[649,1816],[675,1861],[663,1916],[624,1919]]]
 ])poly(p,m);
 
+
+// R2B5 SOURCE-LED ACTUAL-CELL RECOMPOSITION: one broad interlaced organism
+// within a compact upper containment district; deeper regions are original.
+rect(435,164,345,408,M.AIR);
+poly([[434,295],[452,244],[478,220],[501,190],[525,191],[546,155],
+ [580,169],[608,133],[643,158],[679,153],[697,186],[716,219],
+ [709,255],[716,285],[697,321],[705,353],[685,389],[688,430],
+ [653,467],[629,475],[589,502],[565,466],[527,461],
+ [500,423],[464,415],[439,371],[451,337]],M.MOSS);
+poly([[456,293],[470,245],[502,222],[526,193],[555,202],
+ [578,180],[607,196],[638,180],[675,202],[698,232],
+ [694,272],[705,296],[674,351],[685,389],[657,432],
+ [612,461],[578,447],[542,443],[505,408],[471,393]],M.VERDIGRIS);
+for(const p of [
+ [[455,270],[478,235],[507,239],[516,274],[493,301],[466,300]],
+ [[539,210],[553,187],[580,203],[570,234],[541,243]],
+ [[665,204],[689,199],[697,228],[682,254],[657,244]],
+ [[453,338],[471,316],[501,336],[488,367],[460,367]],
+ [[531,412],[547,389],[562,411],[546,435]],
+ [[672,382],[691,366],[701,397],[681,424],[665,405]]])poly(p,M.AIR);
+// The reference's single luminous bioheart replaces three geometric lamps.
+poly([[521,307],[547,269],[583,241],[631,230],[662,252],
+ [690,287],[697,325],[680,379],[652,413],[604,425],
+ [567,403],[534,368]],M.COPPER);
+poly([[535,306],[563,267],[596,250],[630,251],[662,279],
+ [682,314],[670,354],[640,390],[601,402],[568,378],[546,345]],M.URANIUM);
+poly([[555,310],[582,275],[616,267],[645,284],[664,315],
+ [655,348],[628,375],[594,380],[568,357]],M.PHOSPHOR);
+poly([[583,296],[604,280],[630,284],[646,305],[624,327],[594,324]],M.QUARTZ);
+poly([[622,352],[640,332],[661,341],[654,364],[628,380],[609,367]],M.QUARTZ);
+// Braided thick buttresses: irregular source silhouette rather than a straight mast.
+for(const [m,w,p] of [
+ [M.COPPER,24,[[575,409],[536,459],[514,508],[477,579],[441,669]]],
+ [M.VERDIGRIS,22,[[655,407],[678,470],[687,542],[654,620],[637,712]]],
+ [M.MOSS,27,[[599,414],[580,501],[565,593],[545,674],[520,748]]],
+ [M.COPPER,29,[[625,405],[635,478],[609,568],[616,656],[601,761]]],
+ [M.VERDIGRIS,19,[[528,273],[508,202],[499,137],[483,66],[473,0]]],
+ [M.MOSS,19,[[654,257],[674,199],[691,133],[679,62],[671,0]]],
+ [M.COPPER,17,[[590,240],[580,169],[560,107],[551,0]]],
+ [M.COPPER,16,[[531,397],[495,427],[467,483],[451,548]]]
+])for(let i=1;i<p.length;i++)line(...p[i-1],...p[i],m,Math.max(7,w-2*i));
+// Woven material veins around the porous organism, never perspective geometry.
+for(const [m,w,p] of [
+ [M.MOSS,10,[[492,278],[528,287],[558,306],[582,296]]],
+ [M.VERDIGRIS,11,[[518,371],[543,349],[571,354],[605,383]]],
+ [M.COPPER,10,[[649,267],[632,300],[653,326],[679,340]]],
+ [M.MOSS,8,[[582,242],[593,269],[567,305],[552,326]]],
+ [M.COPPER,8,[[469,355],[501,340],[529,363]]],
+ [M.VERDIGRIS,9,[[657,378],[631,391],[603,431]]]
+])for(let i=1;i<p.length;i++)line(...p[i-1],...p[i],m,Math.max(5,w-i));
+
 // Deliberate collision-safe corridors, access portals and trans-bole openings.
 // Last-pass cuts are deliberate no-build clearance masks and never secretly substituted waypoint anchors.
 rect(343,22,74,2000,M.AIR);rect(702,22,74,2000,M.AIR);
@@ -686,6 +737,16 @@ for(const [i,y] of [490,922,1318,1576,1890].entries()){
  line(442,y+31,456,y+39,bottom,4);
  line(590,y+31,576,y+39,bottom,4);
 }
+
+// R2B5 two-tier inhabited station transfer. Central observation deck is
+// rooted into the organism; existing lateral Midge shafts remain open.
+rect(418,804,284,12,M.STEEL);rect(426,816,268,7,M.BRASS);
+for(const [x,X] of [[452,492],[541,560],[636,618]])line(x,823,X,879,M.BRONZE,9);
+for(let x=433;x<=676;x+=49){rect(x,780,5,22,M.BRASS);rect(x+9,786,25,4,M.AMBER);}
+for(const [x,y,X,Y] of [[450,805,472,760],[538,813,555,754],[649,810,627,749]])line(x,y,X,Y,M.COPPER,8);
+// Short stringers realign lower deck without closing vertical flyer shafts.
+rect(397,989,31,14,M.STEEL);rect(686,989,33,14,M.STEEL);
+
 // Last-pass real observation access preserved after decorative portal sheaths.
 rect(402,500,148,68,M.AIR);
 // Fully closed exterior frame; always leave room-side portals intact.
@@ -766,6 +827,19 @@ evidence.material_cell_png_crops={
   'containment-tree-detail-east.png':{rect:[382,260,640,640],step:1}
 };
 
+
+evidence.rework_b5={date:"2026-11-18",worker:"B",assigned_head:"14bd348782645d7188d221f6c408724f3870d8e4",
+ source_jpeg_blob:"64d7df6352b12d1aa57ce85f4925a722705bba1d",
+ source_jpeg_actually_viewed:true,original_source_png_parity:"UNVERIFIED",
+ physical_cells_changed:99850,
+ source_derived:"single broad luminous porous bioheart with rooted buttresses, compact upper containment and asymmetrical assay/vial wings",
+ newly_extrapolated:"deep root geology/service route beyond the reference",
+ upper_observation_transfer:"real central supported source-derived observation deck at y804; lower service transfer y980 has Midge through-shafts",
+ conservative_clearances:"24/24 exact endpoints 19x15,23x19,31x27",
+ installed_bridge_capacity:"UNMEASURED; source cap 32768, legacy fallback 4096",
+ native:"NATIVE-UNTESTED"};
+evidence.last_rework={worker:"B",assigned_head:"14bd348782645d7188d221f6c408724f3870d8e4",scope:"source-led one-heart silhouette and rooted upper observation transfer",physical_cells_changed:99850,
+ rectangles:edits.length,json_bytes:json.length,nonempty_cells:stamped,source_jpeg:"AUTHENTIC VIEWED",original_png:"UNVERIFIED",native:"NATIVE-UNTESTED"};
 return {json,png,details,evidence};
 }
 module.exports={generate};
