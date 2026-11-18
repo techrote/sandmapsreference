@@ -78,3 +78,7 @@ Starting source HEAD: `362f86f0ea18b2e49ae8301a14c562310f87df1b`. This bounded f
 | Native import/bridge capacity, simulation, input/collision, save/reopen | **NATIVE-UNTESTED**; source max 32,768, old installed fallback 4,096 |
 
 Reference image is the unchanged committed genuine JPEG; original large PNG direct parity remains **UNVERIFIED**. The old 7,863-rectangle/152,210-byte receipts above document predecessor HEAD, **not** the current artifact. No owner acceptance or Ready/merge.
+
+
+### 18 November 2026 Reworker A structural geometry
+`build-r2.cjs` deterministically applies `finish-r2a.cjs` after previous R2B layers. Rebuild the committed Setup/PNG/evidence from one authored material plane. See the R2A section of `REWORK-R2.md`; original source preserved, native untested.

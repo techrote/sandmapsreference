@@ -10,42 +10,42 @@
     2048
   ],
   "cells": 4194304,
-  "covered_cells": 1191548,
+  "covered_cells": 1332928,
   "zero_full_grid_mismatches": true,
-  "rectangles": 7508,
+  "rectangles": 8042,
   "rectangle_limit": 32768,
-  "json_bytes": 145339,
+  "json_bytes": 155686,
   "json_limit": 1048576,
   "material_histogram": {
-    "0": 3002756,
-    "38": 215778,
-    "40": 125714,
-    "41": 126686,
+    "0": 2861376,
+    "38": 271396,
+    "40": 128978,
+    "41": 159666,
     "42": 51670,
-    "43": 5802,
-    "44": 83488,
-    "48": 23883,
-    "49": 32943,
-    "50": 2250,
+    "43": 5798,
+    "44": 88169,
+    "48": 23598,
+    "49": 36580,
+    "50": 2229,
     "52": 11598,
-    "53": 1149,
-    "54": 4874,
+    "53": 5144,
+    "54": 5426,
     "55": 2072,
     "56": 194412,
-    "57": 16632,
-    "58": 42847,
-    "62": 4217,
+    "57": 15453,
+    "58": 36764,
+    "62": 5800,
     "66": 998,
-    "70": 25154,
-    "71": 42257,
-    "72": 11470,
-    "77": 8520,
-    "79": 2243,
-    "80": 1457,
-    "97": 58743,
-    "98": 34657,
+    "70": 26897,
+    "71": 42380,
+    "72": 17222,
+    "77": 8301,
+    "79": 2783,
+    "80": 1336,
+    "97": 58699,
+    "98": 58116,
     "100": 10368,
-    "119": 49666
+    "119": 61075
   },
   "source_art_changed": false,
   "actor": {
@@ -180,7 +180,7 @@
         19,
         15
       ],
-      "connected_centres": 2547576,
+      "connected_centres": 2365749,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -190,7 +190,7 @@
         23,
         19
       ],
-      "connected_centres": 2474690,
+      "connected_centres": 2289071,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -200,7 +200,7 @@
         31,
         27
       ],
-      "connected_centres": 2299280,
+      "connected_centres": 2131652,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -272,8 +272,8 @@
     ]
   },
   "render": "PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",
-  "native": "NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen",
-  "material_sha256": "5b94f810cc5a43476f59abf3ffc3b207ff73b3ec4672655a18e585e950ced390",
+  "native": "NATIVE-UNTESTED; source allows 32768 rectangles, older installed bridge may cap at 4096",
+  "material_sha256": "e1d39ca9fea8795ff8e7b2a4922823ea5c22f469d56198e14db5f5c846d40f07",
   "rework_r2b": {
     "starting_head": "c74610365b21c6dd7f88c9f339084905fab1a1f7",
     "changed_material_cells": 268733,
@@ -284,5 +284,56 @@
     "source_original_png_parity": "UNVERIFIED",
     "native": "NATIVE-UNTESTED",
     "installed_rectangle_capability": "UNMEASURED; older 4,096 fallback insufficient"
+  },
+  "rework_r2a": {
+    "starting_head": "3f8c73756eb92a49d4eb97df3449bdfb8933bcba",
+    "changed_material_cells": 236051,
+    "material_sha256": "e1d39ca9fea8795ff8e7b2a4922823ea5c22f469d56198e14db5f5c846d40f07",
+    "source_jpeg_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
+    "source_full_png_parity": "UNVERIFIED",
+    "clearance": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "connected_centres": 2365749,
+        "reachable": 16,
+        "blocked": [],
+        "unreachable": []
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "connected_centres": 2289071,
+        "reachable": 16,
+        "blocked": [],
+        "unreachable": []
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "connected_centres": 2131652,
+        "reachable": 16,
+        "blocked": [],
+        "unreachable": []
+      }
+    ],
+    "alternate_obstacle_test": {
+      "envelope": [
+        31,
+        27
+      ],
+      "connected_centres": 2119356,
+      "reachable": 16,
+      "blocked": [],
+      "unreachable": []
+    },
+    "source_character": "source-JPEG-derived civic facade/terrace/tree/sails; original skyline unpainted",
+    "native": "NATIVE-UNTESTED; installed capacity unmeasured"
   }
 }
