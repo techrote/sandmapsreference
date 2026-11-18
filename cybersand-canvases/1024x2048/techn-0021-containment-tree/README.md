@@ -1,3 +1,26 @@
+## CURRENT R2B12 — decisive source-scale research connection and new carved service caverns (18 November 2026)
+
+**Draft / HOLD; no owner acceptance or merge.** Shepherd's exclusive exact-HEAD assignment: `CANVAS-REWORK-B: 15 @ c71cddfa28fef009f2b13a685df477ee79564b15`. This R2B12 record supersedes all earlier "CURRENT R2B11" headings retained below as explicit historical provenance. Source and engine files remain unmodified; native acceptance is **NATIVE-UNTESTED**.
+
+**Actual original inspected:** unchanged 640×360 `source-reference-preview.jpg` (Git blob `64d7df6352b12d1aa57ce85f4925a722705bba1d`), viewed directly and compared against the preceding physical grid. The **source-derived** compact upper facility is the unequal western geodesic dome and human-scale lab bays, porous luminous hanging specimen, deliberately authored 2-level steel/stone inspection gallery, and eastern vertically vialled lab wing. The world below that vignette contains **new extrapolated** landscape: western rooted resin mine, eastern annular sampling/return plant, deep geological shelves and linked flying routes; it is NOT a stretched image or duplicated source.
+
+**Exactly 235,205 real material-cell identities changed at the approved old HEAD**, comprising 27,661 additions, 91,761 excavations and 115,783 reclassifications. Structural treatment deliberately restores the previous source-root cardinal support paths and preserves the entire former strict 31×27 connected actor-hull union. Source-derived upper working levels and their central banks are visibly more continuous; west and east y≈740–1250 transitions are new distinctly excavated geology/service architecture, not a repeated instrument tower. Genuine native 1:1 cropped views and full-grid material index PNG are committed beside this README. Further artistic fidelity judgment must be independent.
+
+### Exact final static proof
+- Actual extent **1024×2048 = 2,097,152 cells**, 22,187 positive five-field non-overlapping valid material rectangles (limit 32,768), **405,647 UTF-8 Setup-v2 bytes** (limit 1,048,576), **1,216,026 occupied cells** and all other cells native Empty. Full ordered replay / histogram matches, no overlaps.
+- Authored Midge remains exact original **(369,95)**, 4×3 actual hull. All **24/24 exact named destinations** reachable at **19×15** (501,421 legal connected centres), **23×19** (459,057), and **31×27** (381,387), fully in bounds, cardinal BFS, no tolerance or nearest-site fallback. Pairwise West (370,930) → East (742,931) direct shortest gantry **373 steps in every envelope**.
+- All six authenticated structural probes share the **1,181,801-cell** deep-footing cardinal solid component. **66 other detached immovable components / 34,225 cells** remain; includes canopy-hung specimens and isolated gallery objects, some larger than small decoration, and **require independent functional classification**, not blanket structural PASS.
+- Original 640×360 JPEG reviewed; full untouched original source PNG pixels **UNVERIFIED**. Accepted main source supports 32,768 rectangles but **installed CyberDemoBridge capacity UNMEASURED**, legacy fallback 4,096 would refuse this setup. No Godot/Rapier install, actor physical input/collision, simulation, fresh-process save/reopen: **NATIVE-UNTESTED**.
+
+### Authentic, same-grid material PNG evidence
+- [Full 1024×2048 indexed material-cell plane, **1:1**](containment-tree-full-1to1.png) and [2:1 whole-world overview](containment-tree-preview.png).
+- Native 1:1 640×640 [organism and upper lab](containment-tree-detail-upper.png), [inspection gallery](containment-tree-detail-middle.png), [lower rooted geology](containment-tree-detail-lower.png), [west dome](containment-tree-detail-west.png), [east vial wing](containment-tree-detail-east.png), [west resin excavation](containment-tree-detail-archive-west.png), [east annular return plant](containment-tree-detail-return-east.png).
+- Independently decoded and checked CRC32, stored-zlib Adler32 and material-ID exact parity for **5,488,640/5,488,640 PNG pixels, zero mismatches**, including every material cell of the full-size map; two isolated generator evaluations gave 11 byte-identical outputs. Native game render/Workbench playtest **not** implied.
+
+[Deterministic source](builder.cjs) · [Setup-v2](setup-containment-tree.json) · [evidence receipt](evidence.json) · [standalone verifier](verify-r2.cjs)
+
+---
+
 ## CURRENT R2B11 — scale-first physical-cell biosphere composition and functional finishing (18 November 2026)
 
 **Existing Draft/HOLD PR only · B Shepherd assignment `CANVAS-REWORK-B: 15 @ f0a1729a2c7357ba3e553849858392277d7bdb96` · NO merge/Ready/owner acceptance · NATIVE-UNTESTED.** This section supersedes all historical “CURRENT R2B10/R2B9” headings retained below as archival chronology.

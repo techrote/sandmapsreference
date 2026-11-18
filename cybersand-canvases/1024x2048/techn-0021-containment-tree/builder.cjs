@@ -1076,6 +1076,246 @@ let r2b11Stats={changed:0,added:0,removed:0,recolored:0};
  for(let y=0;y<H;y++){let z=0;for(let x=0;x<W;x++){let j=y*P+x;z+=diff[j];diff[j]=z+(y?diff[j-P]:0);let k=ix(x,y);if(diff[j]>0&&!prev[k])A[k]=0;}}
  for(let i=0;i<A.length;i++)if(A[i]!==prev[i]){r2b11Stats.changed++;if(!prev[i])r2b11Stats.added++;else if(!A[i])r2b11Stats.removed++;else r2b11Stats.recolored++;}
 })();
+
+// R2B12: major source-local horizontal physical station re-organisation.
+// Preserve the exact organ-to-ground structure; new lower districts are
+// deliberately EXTRAPOLATED geological/vault gameplay, not resized source art.
+let r2b12Stats={changed:0,added:0,removed:0,recolored:0};
+const R2B12_BASE=A.slice();
+(function(){
+ const old=A.slice(),ix=(x,y)=>y*W+x;
+ function oval(cx,cy,rx,ry,id){for(let y=Math.max(0,Math.floor(cy-ry));y<=Math.min(H-1,Math.ceil(cy+ry));y++){
+ let q=(y-cy)/ry;if(Math.abs(q)>1)continue;let dx=rx*Math.sqrt(1-q*q);rect(cx-dx,y,2*dx+1,1,id);}}
+ function arch(x,y,w,h,mat){
+ poly([[x,y+22],[x+30,y-12],[x+w-38,y-12],[x+w,y+24],[x+w,y+h-9],
+ [x+w-15,y+h+8],[x+16,y+h+8],[x,y+h-9]],mat);
+ poly([[x+15,y+29],[x+38,y+6],[x+w-47,y+6],[x+w-15,y+29],
+ [x+w-16,y+h-18],[x+16,y+h-18]],M.AIR);
+ rect(x+8,y+h-16,w-16,13,M.STEEL);rect(x+13,y+h-3,w-26,5,M.BRASS);
+ }
+ // West domed wing continues as TWO usable, supported, smaller-scale
+ // research rooms above a continuous loading gallery, not three icon screens.
+ arch(89,533,229,159,M.CONCRETE);
+ for(const [x,w]of [[117,44],[181,47],[250,38]]){
+ rect(x,559,w,32,M.GLASSBLOCK);rect(x+6,564,w-12,21,M.OBSIDIAN);
+ rect(x+13,575,w-26,5,M.CYAN);rect(x+10,635,5,28,M.STEEL);
+ rect(x+18,643,w-20,5,M.BRASS);}
+ rect(110,670,187,9,M.STEEL);
+ // East lower vial return gets different lab-scale bays and real supports.
+ arch(790,547,198,150,M.CONCRETE);
+ for(const [x,hh]of [[818,48],[872,68],[937,38]]){
+ rect(x,566,26,hh,M.GLASSBLOCK);rect(x+5,571,16,hh-11,M.OBSIDIAN);
+ oval(x+13,586,6,10,M.PHOSPHOR);rect(x+9,633,7,46,M.STEEL);}
+ // Broaden existing observation connection into ONE recognisable roofed,
+ // rail-equipped station body, retaining the original organism/root spine.
+ arch(310,596,469,118,M.CONCRETE);
+ for(const [x,w]of [[332,77],[431,86],[538,75],[630,72],[724,39]]){
+ rect(x,627,w,56,M.AIR);rect(x+5,670,w-10,8,M.STEEL);
+ rect(x+9,641,w-18,7,M.BRASS);
+ for(let k=0;k<2;k++)rect(x+15+k*30,653,5,16,M.IRON);
+ }
+ rect(318,698,453,13,M.STEEL);rect(325,711,440,6,M.BRASS);
+ // Cross-braces join the gallery to two distinct banks/old footing; real
+ // Midge flight shafts remain clear via the final 31x27 no-build mask.
+ for(const [x,y,X,Y]of [[314,708,284,771],[390,703,367,772],
+ [483,709,500,780],[585,706,616,785],[695,704,702,788],[771,704,807,770]])
+ line(x,y,X,Y,M.STEEL,11);
+ // Four lower canopy-side inspection booths have real roof, walls, doors.
+ for(const [x,y,w,h]of [[320,786,90,51],[430,787,86,54],[559,783,99,56],[678,784,85,53]]){
+ rect(x,y,w,8,M.CONCRETE);rect(x+5,y+8,w-10,h-16,M.AIR);
+ rect(x,y+h-9,w,9,M.STEEL);rect(x+13,y+20,7,19,M.BRONZE);
+ rect(x+26,y+27,w-48,5,M.CYAN);}
+ // Preserve the authentic continuous root skeleton and all old structural
+ // anchors in the centre; the added surrounding building never cuts it.
+ for(let y=350;y<1260;y++)for(let x=399;x<799;x++){
+ let k=ix(x,y);if(old[k]&&!A[k])A[k]=old[k];}
+ // Above this point is the local SOURCE-derived station. Below it former
+ // overly tall facade towers become independent rooted geological galleries.
+ for(let y=750;y<1255;y++)for(let x=80;x<257;x++){
+ let k=ix(x,y);if(old[k]&&A[k]&&A[k]!==M.STEEL&&A[k]!==M.BRASS){
+ let t=Math.sin(x*.027+y*.020)+.29*Math.cos(x*.073-y*.041);
+ A[k]=t>.4?M.GRANITE:t<-.5?M.BASALT:M.SLATE;}}
+ for(let y=755;y<1250;y++)for(let x=848;x<984;x++){
+ let k=ix(x,y);if(old[k]&&A[k]&&A[k]!==M.STEEL&&A[k]!==M.BRASS){
+ let t=Math.sin(x*.027+y*.019)+.38*Math.cos(y*.053);
+ A[k]=t>.5?M.BASALT:t<-.35?M.GRANITE:M.SLATE;}}
+ // Geologically excavated WESTERN root archive: three unequal connected
+ // vaults and real supported service shelves, *not* symbolic lab screens.
+ for(const [cx,cy,rx,ry]of [[164,852,67,57],[176,1036,65,70],[153,1180,61,46]]){
+ oval(cx,cy,rx+11,ry+8,M.GRANITE);oval(cx,cy,rx,ry,M.AIR);
+ line(cx-rx+5,cy+ry-8,cx+rx-6,cy+ry-8,M.STEEL,10);
+ for(let xx=cx-rx+18;xx<cx+rx-17;xx+=43){
+ rect(xx,cy+ry-36,19,27,M.BRONZE);rect(xx+7,cy+ry-29,6,9,M.AMBER);}}
+ // Separate EASTERN service return: pump drum basins, vaulted galleries,
+ // anchored mineral consoles; all immobile, with no uncontrolled chemistry.
+ for(const [cx,cy,rx,ry]of [[922,825,48,46],[917,1034,57,61],[919,1188,43,31]]){
+ oval(cx,cy,rx+11,ry+9,M.BASALT);oval(cx,cy,rx,ry,M.AIR);
+ rect(cx-rx+4,cy+ry-11,2*rx-8,11,M.STEEL);
+ for(let xx=cx-rx+14;xx<cx+rx-14;xx+=40){
+ rect(xx,cy+ry-42,20,30,M.COPPER);oval(xx+10,cy+ry-31,7,12,M.CYAN);}}
+ // Alternating LOWER extrapolated mineral/root service terraces, materially
+ // and spatially distinct, tied down rather than floating prop shelves.
+ for(const [x,y,w,h]of [[147,1321,163,15],[189,1460,130,14],
+ [399,1624,138,13],[519,1739,132,14],[818,1856,148,15]]){
+ rect(x,y,w,h,M.GRANITE);rect(x+11,y-4,w-22,4,M.BRASS);
+ for(let xx=x+16;xx<x+w-10;xx+=59)line(xx,y+h,xx+18,y+h+41,M.GRANITE,12);}
+ // Old cardinal material load paths within outer geological ribs and the
+ // six actual structural probes must not be amputated by new galleries.
+ for(let y=740;y<1270;y++)for(const [a,b]of [[26,92],[239,317],[782,852],[981,1017]])
+ for(let x=a;x<b;x++){let k=ix(x,y);if(old[k]&&!A[k])A[k]=old[k];}
+ for(const [cx,cy]of [[600,808],[615,385],[450,800],[930,500],[600,984],[610,2035]])
+ for(let y=Math.max(0,cy-12);y<Math.min(H,cy+13);y++)
+ for(let x=Math.max(0,cx-12);x<Math.min(W,cx+13);x++){
+ let k=ix(x,y);if(old[k]&&!A[k])A[k]=old[k];}
+ // Protect EVERY cell under the exact original, spawn-connected, fully
+ // in-bounds 31x27 hull union. This is stronger than testing sites alone:
+ // any new paint that obstructs an existing legal centre is discarded.
+ const P=W+1,S=new Int32Array((H+1)*P),hx=15,hy=13;
+ for(let y=0;y<H;y++){let sum=0;for(let x=0;x<W;x++){
+ sum+=old[ix(x,y)]?1:0;S[(y+1)*P+x+1]=S[y*P+x+1]+sum;}}
+ const legal=new Uint8Array(A.length);
+ for(let y=hy;y<H-hy;y++)for(let x=hx;x<W-hx;x++){
+ let l=x-hx,r=x+hx+1,t=y-hy,b=y+hy+1;
+ if(!(S[b*P+r]-S[t*P+r]-S[b*P+l]+S[t*P+l]))legal[ix(x,y)]=1;}
+ const vis=new Uint8Array(A.length),Q=new Int32Array(A.length),sp=ix(369,95);
+ if(!legal[sp])throw Error('R2B12 exact old spawn blocked');
+ vis[sp]=1;Q[0]=sp;let n=1;
+ for(let i=0;i<n;i++){let p=Q[i],x=p%W,y=(p/W)|0;
+ for(const d of [-W,-1,1,W]){
+ if((d===-W&&y===0)||(d===-1&&x===0)||(d===1&&x===W-1)||(d===W&&y===H-1))continue;
+ let k=p+d;if(legal[k]&&!vis[k]){vis[k]=1;Q[n++]=k;}}}
+ const D=new Int32Array((H+1)*P);
+ for(let i=0;i<n;i++){let p=Q[i],x=p%W,y=(p/W)|0;
+ D[(y-hy)*P+x-hx]++;D[(y-hy)*P+x+hx+1]--;
+ D[(y+hy+1)*P+x-hx]--;D[(y+hy+1)*P+x+hx+1]++;}
+ for(let y=0;y<H;y++){let sum=0;for(let x=0;x<W;x++){
+ let j=y*P+x;sum+=D[j];D[j]=sum+(y?D[j-P]:0);
+ let k=ix(x,y);if(D[j]>0&&!old[k])A[k]=0;}}
+ for(let k=0;k<A.length;k++)if(A[k]!==old[k]){
+ r2b12Stats.changed++;if(!old[k])r2b12Stats.added++;
+ else if(!A[k])r2b12Stats.removed++;else r2b12Stats.recolored++;}
+})();
+
+
+// R2B12b: tear down the inherited lower icon-tower presentation. This region
+// is extrapolated new world: two accessible, differently structured caverns,
+// not vertical copies of the compact above-ground source.
+let r2b12bStats={changed:0,added:0,removed:0,recolored:0};
+(function(){
+ const old=A.slice(),at=(x,y)=>y*W+x;
+ // WEST: one tall pillared resin excavation with continuous staggered
+ // refinery landings and a natural sloping roof, joined to flyer access.
+ poly([[90,774],[144,737],[271,754],[318,819],[322,1157],
+ [279,1215],[115,1212],[89,1166]],M.GRANITE);
+ poly([[112,806],[154,774],[262,791],[297,835],[299,1115],
+ [271,1171],[124,1174],[106,1142]],M.AIR);
+ for(const [x,y,w]of [[122,882,159],[156,994,132],[119,1110,178]]){
+  rect(x,y,w,12,M.STEEL);rect(x+7,y+12,w-14,6,M.BRASS);
+  for(let xx=x+14;xx<x+w-12;xx+=40){
+   rect(xx,y-26,5,24,M.IRON);
+   rect(xx+9,y-14,20,5,M.AMBER);
+  }
+ }
+ for(const [x,y,X,Y,w]of [[123,892,113,1000,15],[271,898,284,1005,12],
+ [159,1010,137,1116,13],[283,1005,267,1117,13],
+ [146,776,169,854,14],[271,788,251,868,13]]){
+  line(x,y,X,Y,M.CONCRETE,w);
+ }
+ // Root-tissue spillway and resin distillation are functionally different.
+ for(const [x,y]of [[171,828],[228,938],[175,1059]]){
+  poly([[x-21,y+25],[x-25,y-16],[x-6,y-32],
+    [x+19,y-24],[x+27,y+19],[x+12,y+31]],M.BRONZE);
+  poly([[x-13,y+14],[x-14,y-8],[x-1,y-19],
+    [x+12,y-12],[x+16,y+11],[x+7,y+19]],M.OBSIDIAN);
+  rect(x-6,y-9,10,22,M.AMBER);
+ }
+ // Actual passage from west archive to the preserved original flight shaft,
+ // maintaining named station entrances and original exact locations.
+ rect(272,959,112,65,M.AIR);
+ rect(278,1090,110,59,M.AIR);
+ // EAST: vast counterbalanced utility cistern/return gallery, distinct from
+ // west rooted arches. Real structural tier and central annular processor.
+ poly([[831,749],[890,729],[980,774],[1006,823],
+       [1003,1168],[982,1232],[854,1217],[819,1152]],M.BASALT);
+ poly([[851,783],[892,766],[966,797],[985,839],
+       [985,1149],[960,1201],[866,1188],[845,1128]],M.AIR);
+ for(const [x,y,w]of [[858,861,117],[853,1005,133],[861,1144,115]]){
+  rect(x,y,w,12,M.STEEL);rect(x+8,y+12,w-16,5,M.BRASS);
+  for(let xx=x+19;xx<x+w-13;xx+=39){
+    rect(xx,y-23,6,22,M.IRON);rect(xx+12,y-15,19,4,M.CYAN);
+  }
+ }
+ // Circular grounded chemical sample plant but no actual liquids/reactions.
+ ring(920,941,48,M.BRONZE,8);ring(920,941,35,M.STEEL,5);
+ disk(920,941,16,M.OBSIDIAN);disk(920,941,6,M.CYAN);
+ line(920,987,920,1005,M.STEEL,11);
+ for(const [x,y,X,Y]of [[860,772,871,855],[966,800,965,868],
+ [856,1017,861,1143],[974,1018,963,1141]]){
+ line(x,y,X,Y,M.CONCRETE,14);}
+ rect(767,1099,102,64,M.AIR);
+ rect(769,956,103,67,M.AIR);
+ // Preserve rock/steel outer ribs, plus every old solid under six known
+ // structural load-bearing probes.
+ for(let y=740;y<1260;y++)for(const [l,r]of [[20,92],[298,330],[797,850],[982,1022]]){
+  for(let x=l;x<r;x++){let k=at(x,y);if(old[k]&&!A[k])A[k]=old[k];}}
+ for(const [x,y]of [[600,808],[615,385],[450,800],[930,500],[600,984],[610,2035]]){
+  for(let j=Math.max(0,y-11);j<Math.min(H,y+12);j++)
+  for(let i=Math.max(0,x-11);i<Math.min(W,x+12);i++){
+   const k=at(i,j);if(old[k]&&!A[k])A[k]=old[k];}}
+ // Preserve all previously connected 31x27-centre footprints under any
+ // added solid; this cannot create an invented proximity/site fallback.
+ const P=W+1,S=new Int32Array((H+1)*P),hx=15,hy=13;
+ for(let y=0;y<H;y++){let run=0;for(let x=0;x<W;x++){
+ run+=old[at(x,y)]?1:0;S[(y+1)*P+x+1]=S[y*P+x+1]+run;}}
+ const legal=new Uint8Array(A.length);
+ for(let y=hy;y<H-hy;y++)for(let x=hx;x<W-hx;x++){
+ let l=x-hx,r=x+hx+1,t=y-hy,b=y+hy+1;
+ if(!(S[b*P+r]-S[t*P+r]-S[b*P+l]+S[t*P+l]))legal[at(x,y)]=1;}
+ const vis=new Uint8Array(A.length),Q=new Int32Array(A.length),sp=at(369,95);vis[sp]=1;Q[0]=sp;let n=1;
+ for(let i=0;i<n;i++){let p=Q[i],x=p%W,y=(p/W)|0;
+ for(const d of [-W,-1,1,W]){
+ if((d===-W&&y===0)||(d===-1&&x===0)||(d===1&&x===W-1)||(d===W&&y===H-1))continue;
+ let k=p+d;if(legal[k]&&!vis[k]){vis[k]=1;Q[n++]=k;}}}
+ const D=new Int32Array((H+1)*P);
+ for(let i=0;i<n;i++){let p=Q[i],x=p%W,y=(p/W)|0;
+ D[(y-hy)*P+x-hx]++;D[(y-hy)*P+x+hx+1]--;
+ D[(y+hy+1)*P+x-hx]--;D[(y+hy+1)*P+x+hx+1]++;}
+ for(let y=0;y<H;y++){let run=0;for(let x=0;x<W;x++){
+ let j=y*P+x;run+=D[j];D[j]=run+(y?D[j-P]:0);
+ let k=at(x,y);if(D[j]>0&&!old[k])A[k]=0;}}
+ for(let i=0;i<A.length;i++)if(A[i]!==old[i]){
+ r2b12bStats.changed++;if(!old[i])r2b12bStats.added++;
+ else if(!A[i])r2b12bStats.removed++;else r2b12bStats.recolored++;}
+})();
+
+
+(function(){
+ // Retain six sturdy cardinal paths from the original grounded structural
+ // component, tracking actual 4-neighbour old solids rather than drawing
+ // unsupported "support" art. Only previously occupied cells may be restored.
+ const old=R2B12_BASE,root=2035*W+610,from=old[root];
+ if(!from)throw Error('R2B12 original rooted footing absent');
+ const par=new Int32Array(A.length);par.fill(-1);
+ const q=new Int32Array(A.length);q[0]=root;par[root]=root;let count=1;
+ for(let k=0;k<count;k++){let p=q[k],x=p%W,y=(p/W)|0;
+  for(const d of [-W,-1,1,W]){
+   if((d===-W&&y===0)||(d===-1&&x===0)||(d===1&&x===W-1)||(d===W&&y===H-1))continue;
+   let z=p+d;if(old[z]&&par[z]===-1){par[z]=p;q[count++]=z;}
+  }
+ }
+ for(const [x,y] of [[600,808],[615,385],[450,800],[930,500],[600,984],[610,2035]]){
+  let p=y*W+x;if(par[p]===-1)throw Error('R2B12 old support route absent '+x+','+y);
+  while(p!==root){
+   const px=p%W,py=(p/W)|0;
+   for(let yy=Math.max(0,py-4);yy<=Math.min(H-1,py+4);yy++)
+   for(let xx=Math.max(0,px-4);xx<=Math.min(W-1,px+4);xx++){
+    const k=yy*W+xx;if(old[k]&&!A[k])A[k]=old[k];}
+   p=par[p];
+  }
+ }
+ r2b12bStats.support_path_repaired=true;
+})();
+
 // Conservative full non-air collision mask, 19x15 actor centre clearance.
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
 const nav=new Uint8Array(A.length);
@@ -1107,7 +1347,8 @@ function zstored(data){let arr=[Uint8Array.from([120,1])],s1=1,s2=0;for(let p=0;
 return cat([Uint8Array.from([137,80,78,71,13,10,26,10]),chunk("IHDR",Uint8Array.from([...u32(pw),...u32(ph),8,3,0,0,0])),chunk("PLTE",palette),chunk("IDAT",zstored(raw)),chunk("IEND",new Uint8Array())]);
 }
 const png=pngRegion(0,0,W,H,2);
-const details={upper:pngRegion(192,115,640,640,1),middle:pngRegion(191,715,640,640,1),lower:pngRegion(191,1295,640,640,1),west:pngRegion(35,90,640,640,1),east:pngRegion(382,260,640,640,1)};
+const fullMap=pngRegion(0,0,W,H,1);
+const details={upper:pngRegion(192,115,640,640,1),middle:pngRegion(191,715,640,640,1),lower:pngRegion(191,1295,640,640,1),west:pngRegion(35,90,640,640,1),east:pngRegion(382,260,640,640,1),archiveWest:pngRegion(30,750,640,640,1),returnEast:pngRegion(384,750,640,640,1)};
 const evidence={rework_b:{date:'2026-11-17',scope:'physical terrain geometry and lab architecture',baseline_head:'1088e49b2537a9c7805b1a5efe263b203141ddc5',baseline_rectangles:27428,baseline_reachable_clearance_centres:649989,notes:'Six distinct botanical root/vascular strata, eleven individually dressed functional labs, five root-framed cross-portals; clearances cut and verified after detail geometry'},source_public_id:"techn-0021",source_key:"batch1/image-0058",target:[W,H],seed:SEED,rectangles:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,stamped_cells:stamped,material_cells_verified:A.length,mismatches,used_material_ids:Object.keys(hist).map(Number).sort((a,b)=>a-b),material_counts:hist,clearance_envelope:[19,15],connected_clearance_centres:count,spawn,waypoints,actual_native_godot_rapier_qualification:"NOT EXECUTED",original_reference_pixel_comparison:"NOT EXECUTED: GitHub binary image connector refuses PNG bytes",original_dimensions:"UNVERIFIED"};
 
 function envelopeAudit(w,h){
@@ -1145,7 +1386,10 @@ evidence.material_cell_png_crops={
   'containment-tree-detail-middle.png':{rect:[191,715,640,640],step:1},
   'containment-tree-detail-lower.png':{rect:[191,1295,640,640],step:1},
   'containment-tree-detail-west.png':{rect:[35,90,640,640],step:1},
-  'containment-tree-detail-east.png':{rect:[382,260,640,640],step:1}
+  'containment-tree-detail-east.png':{rect:[382,260,640,640],step:1},
+  'containment-tree-full-1to1.png':{rect:[0,0,1024,2048],step:1},
+  'containment-tree-detail-archive-west.png':{rect:[30,750,640,640],step:1},
+  'containment-tree-detail-return-east.png':{rect:[384,750,640,640],step:1}
 };
 
 
@@ -1232,9 +1476,29 @@ evidence.structural_support={...evidence.structural_support,solid_component_cell
   source:'authentic 640x360 committed JPEG visually inspected; original large PNG UNVERIFIED',
   original_connected_31x27_hull:'preserved complete union',native:'NATIVE-UNTESTED; installed bridge unmeasured'};
  evidence.last_rework=evidence.rework_b11;
+const currentB12={worker:"B",date:"2026-11-18",assigned_head:"c71cddfa28fef009f2b13a685df477ee79564b15",
+  scope:"scale-first source-core horizontal research gallery macro reconstruction and new west resin excavation/east return-pump cavern",
+  physical_cells_changed:0,added_cells:0,excavated_cells:0,reclassified_cells:0,
+  extent:[W,H],rectangles:edits.length,json_bytes:json.length,occupied_cells:stamped,
+  exact_sites:"24/24 at 19x15, 23x19 and 31x27, unchanged original coordinates",
+  gantry_steps:evidence.gantry_pairwise_steps.map(a=>a.steps),
+  previous_31x27_air_union:"ALL previous connected legal-centre hull footprints preserved",
+  structural_probes:"6/6 connected to deep root at (610,2035) by cardinal full-solid BFS",
+  genuine_source:"unchanged committed source JPEG visually inspected, full-size original PNG pixel parity unverified",
+  source_derived:"compact upper horizontal dome, organism, research gallery, asymmetric east vial wing",
+  extrapolated:"western root-resin excavation, eastern counterbalanced service plant, lower geological returns",
+  installed_bridge:"UNMEASURED: accepted source 32768; legacy fallback 4096",
+  native:"NATIVE-UNTESTED: no physical Workbench/Godot/Rapier input/collision/simulation/fresh-process save-reopen"};
+for(let i=0;i<A.length;i++){
+  if(A[i]===R2B12_BASE[i])continue;
+  currentB12.physical_cells_changed++;
+  if(!R2B12_BASE[i])currentB12.added_cells++;
+  else if(!A[i])currentB12.excavated_cells++;
+  else currentB12.reclassified_cells++;
+}
+evidence.rework_b12=currentB12;
+evidence.last_rework=currentB12;
 
-
-
-return {json,png,details,evidence};
+return {json,png,fullMap,details,evidence};
 }
 module.exports={generate};

@@ -15,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 22800,
+  "rectangles": 22187,
   "rectangle_budget": 32768,
-  "json_bytes": 417561,
+  "json_bytes": 405647,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1280126,
+  "stamped_cells": 1216026,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -47,34 +47,34 @@
     127
   ],
   "material_counts": {
-    "0": 817026,
-    "39": 5100,
-    "40": 133030,
-    "42": 110863,
-    "49": 148879,
-    "50": 39481,
-    "52": 23385,
-    "53": 109804,
-    "54": 110276,
-    "58": 95396,
-    "62": 89415,
-    "65": 2026,
-    "77": 3094,
-    "79": 10433,
-    "100": 197827,
-    "101": 126917,
-    "119": 26437,
-    "120": 17047,
+    "0": 881126,
+    "39": 3085,
+    "40": 127550,
+    "42": 103106,
+    "49": 145421,
+    "50": 29447,
+    "52": 28432,
+    "53": 89978,
+    "54": 101812,
+    "58": 101642,
+    "62": 87694,
+    "65": 1067,
+    "77": 4252,
+    "79": 7465,
+    "100": 183612,
+    "101": 125655,
+    "119": 30745,
+    "120": 15950,
     "121": 5453,
-    "122": 5384,
-    "123": 5175,
-    "127": 14704
+    "122": 4705,
+    "123": 4524,
+    "127": 14431
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 490602,
+  "connected_clearance_centres": 501421,
   "spawn": [
     369,
     95
@@ -317,7 +317,7 @@
         19,
         15
       ],
-      "legal_connected_centres": 490602,
+      "legal_connected_centres": 501421,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -327,7 +327,7 @@
         23,
         19
       ],
-      "legal_connected_centres": 448928,
+      "legal_connected_centres": 459057,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -337,7 +337,7 @@
         31,
         27
       ],
-      "legal_connected_centres": 369147,
+      "legal_connected_centres": 381387,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -399,6 +399,33 @@
         640
       ],
       "step": 1
+    },
+    "containment-tree-full-1to1.png": {
+      "rect": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-archive-west.png": {
+      "rect": [
+        30,
+        750,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-return-east.png": {
+      "rect": [
+        384,
+        750,
+        640,
+        640
+      ],
+      "step": 1
     }
   },
   "rework_b5": {
@@ -419,28 +446,32 @@
   "last_rework": {
     "worker": "B",
     "date": "2026-11-18",
-    "assigned_head": "f0a1729a2c7357ba3e553849858392277d7bdb96",
-    "scope": "compact source-derived horizontal biosphere with physically backed connective gallery, unlike west/east laboratories; 3 grounded new deep scientific destinations",
-    "changed": 212472,
-    "added": 48108,
-    "removed": 55748,
-    "recolored": 108616,
+    "assigned_head": "c71cddfa28fef009f2b13a685df477ee79564b15",
+    "scope": "scale-first source-core horizontal research gallery macro reconstruction and new west resin excavation/east return-pump cavern",
+    "physical_cells_changed": 235205,
+    "added_cells": 27661,
+    "excavated_cells": 91761,
+    "reclassified_cells": 115783,
     "extent": [
       1024,
       2048
     ],
-    "rectangles": 22800,
-    "json_bytes": 417561,
-    "occupied_cells": 1280126,
-    "exact_sites": "24/24 at 19x15,23x19,31x27",
+    "rectangles": 22187,
+    "json_bytes": 405647,
+    "occupied_cells": 1216026,
+    "exact_sites": "24/24 at 19x15, 23x19 and 31x27, unchanged original coordinates",
     "gantry_steps": [
       373,
       373,
       373
     ],
-    "source": "authentic 640x360 committed JPEG visually inspected; original large PNG UNVERIFIED",
-    "original_connected_31x27_hull": "preserved complete union",
-    "native": "NATIVE-UNTESTED; installed bridge unmeasured"
+    "previous_31x27_air_union": "ALL previous connected legal-centre hull footprints preserved",
+    "structural_probes": "6/6 connected to deep root at (610,2035) by cardinal full-solid BFS",
+    "genuine_source": "unchanged committed source JPEG visually inspected, full-size original PNG pixel parity unverified",
+    "source_derived": "compact upper horizontal dome, organism, research gallery, asymmetric east vial wing",
+    "extrapolated": "western root-resin excavation, eastern counterbalanced service plant, lower geological returns",
+    "installed_bridge": "UNMEASURED: accepted source 32768; legacy fallback 4096",
+    "native": "NATIVE-UNTESTED: no physical Workbench/Godot/Rapier input/collision/simulation/fresh-process save-reopen"
   },
   "rework_b6": {
     "worker": "B",
@@ -500,9 +531,9 @@
     "native": "NATIVE-UNTESTED"
   },
   "structural_support": {
-    "solid_component_cells": 1253287,
-    "solid_components": 46,
-    "largest_component_cells": 1253287,
+    "solid_component_cells": 1181801,
+    "solid_components": 67,
+    "largest_component_cells": 1181801,
     "probes": [
       [
         600,
@@ -593,9 +624,9 @@
       1024,
       2048
     ],
-    "rectangles": 22800,
-    "json_bytes": 417561,
-    "solid_components": 46,
+    "rectangles": 22187,
+    "json_bytes": 405647,
+    "solid_components": 67,
     "structural_probes": "6/6 cardinal rooted",
     "source_jpeg": "authentic committed 640x360 directly viewed",
     "original_png": "full-resolution source-PNG parity UNVERIFIED",
@@ -621,9 +652,9 @@
       1024,
       2048
     ],
-    "rectangles": 22800,
-    "json_bytes": 417561,
-    "occupied_cells": 1280126,
+    "rectangles": 22187,
+    "json_bytes": 405647,
+    "occupied_cells": 1216026,
     "exact_sites": "24/24 at all 3 conservative hulls",
     "gantry_steps": [
       373,
@@ -647,9 +678,9 @@
       1024,
       2048
     ],
-    "rectangles": 22800,
-    "json_bytes": 417561,
-    "occupied_cells": 1280126,
+    "rectangles": 22187,
+    "json_bytes": 405647,
+    "occupied_cells": 1216026,
     "exact_sites": "24/24 at 19x15,23x19,31x27",
     "gantry_steps": [
       373,
@@ -659,5 +690,35 @@
     "source": "authentic 640x360 committed JPEG visually inspected; original large PNG UNVERIFIED",
     "original_connected_31x27_hull": "preserved complete union",
     "native": "NATIVE-UNTESTED; installed bridge unmeasured"
+  },
+  "rework_b12": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "c71cddfa28fef009f2b13a685df477ee79564b15",
+    "scope": "scale-first source-core horizontal research gallery macro reconstruction and new west resin excavation/east return-pump cavern",
+    "physical_cells_changed": 235205,
+    "added_cells": 27661,
+    "excavated_cells": 91761,
+    "reclassified_cells": 115783,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22187,
+    "json_bytes": 405647,
+    "occupied_cells": 1216026,
+    "exact_sites": "24/24 at 19x15, 23x19 and 31x27, unchanged original coordinates",
+    "gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "previous_31x27_air_union": "ALL previous connected legal-centre hull footprints preserved",
+    "structural_probes": "6/6 connected to deep root at (610,2035) by cardinal full-solid BFS",
+    "genuine_source": "unchanged committed source JPEG visually inspected, full-size original PNG pixel parity unverified",
+    "source_derived": "compact upper horizontal dome, organism, research gallery, asymmetric east vial wing",
+    "extrapolated": "western root-resin excavation, eastern counterbalanced service plant, lower geological returns",
+    "installed_bridge": "UNMEASURED: accepted source 32768; legacy fallback 4096",
+    "native": "NATIVE-UNTESTED: no physical Workbench/Godot/Rapier input/collision/simulation/fresh-process save-reopen"
   }
 }

@@ -17,6 +17,8 @@ assert.strictEqual(stampArea,evidence.stamped_cells);
 const hist={};for(const id of A)hist[id]=(hist[id]||0)+1;
 assert.deepStrictEqual(hist,evidence.material_counts);
 assert.strictEqual(evidence.mismatches,0);
+assert.strictEqual(evidence.rework_b12.physical_cells_changed,235205);
+assert.strictEqual(evidence.rework_b12.added_cells + evidence.rework_b12.excavated_cells + evidence.rework_b12.reclassified_cells, evidence.rework_b12.physical_cells_changed);
 const crcT=Array.from({length:256},(_,i)=>{let c=i;for(let k=0;k<8;k++)c=(c&1)?(0xedb88320^(c>>>1)):(c>>>1);return c>>>0;});
 const crc=buf=>{let c=0xffffffff;for(const b of buf)c=crcT[(c^b)&255]^(c>>>8);return (c^0xffffffff)>>>0;};
 const specs=[
@@ -25,7 +27,10 @@ const specs=[
  ['containment-tree-detail-middle.png',191,715,1,640,640],
  ['containment-tree-detail-lower.png',191,1295,1,640,640],
  ['containment-tree-detail-west.png',35,90,1,640,640],
- ['containment-tree-detail-east.png',382,260,1,640,640]
+ ['containment-tree-detail-east.png',382,260,1,640,640],
+ ['containment-tree-full-1to1.png',0,0,1,1024,2048],
+ ['containment-tree-detail-archive-west.png',30,750,1,640,640],
+ ['containment-tree-detail-return-east.png',384,750,1,640,640]
 ];
 let compared=0;
 for(const [path,sx,sy,step,expectedW,expectedH] of specs){
