@@ -345,6 +345,94 @@ function buildMegaCanvas() {
   // outside all three main horizontal actor flight levels.
   R(641,1859,13,122,mat.STEEL); R(1396,1859,13,122,mat.STEEL);
   R(633,1939,28,12,mat.IRON);R(1388,1939,28,12,mat.IRON);
+
+  // CREATOR R4: after operational cuts, reconnect the macro architecture to
+  // genuine solid load paths and make the civic and dock functions legible.
+  // Recheck exact Midge 31x27 target centres after this final cell operation.
+  for(const [x,y,X,Y,t,m] of [
+    [500,105,641,635,18,mat.STEEL],[641,635,613,843,15,mat.IRON],
+    [641,635,554,680,15,mat.STEEL],[120,383,116,1392,18,mat.STEEL],
+    [116,619,197,619,14,mat.IRON],[116,1081,213,1081,14,mat.IRON],
+    [124,1360,271,1423,16,mat.IRON],
+    [1546,91,1392,641,19,mat.STEEL],
+    [1392,641,1467,817,15,mat.IRON],[1392,641,1460,682,15,mat.IRON],
+    [1942,351,1940,1486,19,mat.STEEL],
+    [1890,638,1940,638,14,mat.IRON],[1845,1190,1940,1190,15,mat.IRON],
+    [817,1237,668,1607,21,mat.STEEL],[1210,1234,1418,1645,23,mat.STEEL],
+    [746,1417,683,1530,12,mat.IRON],[1317,1431,1385,1546,12,mat.IRON]
+  ])L(x,y,X,Y,t,m);
+  // West freight/foundry: asymmetrical supported decks; active portals stay
+  // clear of foundry chamber, west skyline and vertical lift site centres.
+  for(const [x,y,w] of [[166,661,111],[490,674,114],[174,827,127],
+    [477,839,117],[169,1105,131],[495,1146,120],
+    [170,1245,128],[513,1276,103]]) {
+    R(x,y,w,12,mat.STEEL);R(x+7,y+3,w-14,5,mat.IRON);
+  }
+  for(const [x,y,w,h] of [[184,688,67,76],[540,709,51,67],
+    [201,853,65,66],[506,876,78,57],[192,1123,82,69],
+    [516,1171,71,63],[188,1268,67,49]]) {
+    R(x,y,7,h,mat.IRON);R(x+w-7,y,7,h,mat.IRON);
+    R(x,y,w,8,mat.STEEL);R(x+14,y+15,w-28,14,mat.BLUE);
+    R(x+17,y+18,w-34,5,mat.GLASSBLOCK);
+  }
+  for(const [x,y,X,Y] of [[202,762,202,816],[582,780,582,831],
+    [195,1192,195,1240]])L(x,y,X,Y,10,mat.IRON);
+  // East surveillance: long offset signal-gallery terraces, irregular glazed
+  // observation booths, and real roof-to-bastion counterbracing.
+  for(const [x,y,w] of [[1399,652,107],[1762,654,125],
+    [1427,850,105],[1781,839,96],[1409,1142,108],[1759,1163,128]]){
+    R(x,y,w,10,mat.IRON);R(x+10,y+2,w-20,6,mat.BLUE);
+  }
+  for(const [x,y,w] of [[1416,687,68],[1793,693,71],[1451,879,65],
+    [1801,867,50],[1438,1184,70],[1773,1193,81]]){
+    R(x,y,7,49,mat.STEEL);R(x+w-7,y,7,49,mat.STEEL);
+    R(x+7,y+6,w-14,11,mat.GLASSBLOCK);
+    R(x+11,y+24,9,9,mat.SIGNAL);
+  }
+  // Central fracture: dominant unequal sheared load-bearing left spindle and
+  // offset counterweight; keep actor-centre wound x~1047 openly flyable.
+  P([[857,318],[907,336],[946,405],[927,503],[963,552],
+     [946,618],[928,698],[891,733],[876,692],[894,595],
+     [866,523],[880,452]],mat.STEEL);
+  P([[875,340],[902,359],[920,405],[906,462],[889,427]],mat.OBSIDIAN);
+  L(887,433,953,577,18,mat.IRON);L(878,589,934,670,14,mat.ZINC);
+  P([[1181,345],[1241,297],[1265,366],[1227,439],[1201,501],
+    [1247,573],[1221,673],[1180,689],[1160,632],[1185,561],
+    [1168,479],[1200,409]],mat.STEEL);
+  L(1238,336,1284,279,20,mat.IRON);L(1185,622,1152,696,17,mat.IRON);
+  R(899,383,11,59,mat.ZINC);R(1202,406,13,68,mat.BLUE);
+  // Site-clear market approaches: supported transition thresholds outside
+  // y934-1047, with true load path into halo and wing buttresses.
+  L(686,1076,759,1125,16,mat.STEEL);
+  L(1343,1076,1281,1122,17,mat.IRON);
+  L(706,1324,765,1387,15,mat.STEEL);
+  L(1333,1327,1267,1388,16,mat.STEEL);
+  // Crown retains negative space but gains recognisable divided parliament.
+  P([[823,147],[901,126],[951,157],[941,191],[860,204]],mat.STEEL);
+  P([[1098,145],[1197,137],[1246,176],[1180,210],[1105,191]],mat.IRON);
+  R(866,163,52,17,mat.GLASSBLOCK);R(1151,160,37,18,mat.BLUE);
+  L(876,204,854,284,12,mat.IRON);
+  L(1175,201,1197,277,12,mat.IRON);
+  // Distinctive side-elevation cutter freighter with a raised bridge, nose
+  // hardpoint, asymmetric engines, walkable dock infrastructure.
+  P([[887,1805],[923,1766],[1028,1757],[1096,1792],[1116,1825],
+    [1040,1834],[958,1828]],mat.STEEL);
+  R(946,1782,110,18,mat.GLASSBLOCK);
+  L(941,1817,1098,1817,9,mat.IRON);
+  P([[528,1832],[565,1807],[604,1811],[628,1841],
+    [614,1870],[565,1882]],mat.IRON);
+  P([[1375,1819],[1443,1803],[1498,1837],[1502,1869],
+    [1465,1886],[1402,1866]],mat.STEEL);
+  for(const [x,y] of [[1458,1839],[1471,1851]])R(x,y,9,9,mat.BLUE);
+  L(660,1886,1406,1886,17,mat.IRON);
+  L(702,1886,672,1935,13,mat.STEEL);
+  L(1359,1886,1382,1936,13,mat.STEEL);
+  L(599,1660,599,1785,13,mat.STEEL);
+  L(1506,1660,1506,1801,14,mat.IRON);
+  R(562,792,14,9,mat.SIGNAL);
+  R(1445,903,23,8,mat.QUARTZ);
+  R(1435,1871,21,7,mat.GLASSBLOCK);
+
   // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
