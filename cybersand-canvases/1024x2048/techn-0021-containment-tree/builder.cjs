@@ -287,6 +287,189 @@ for(let i=0;i<3;i++){let xx=799+i*46;rect(xx,1473,33,57,M.BRONZE);rect(xx+5,1477
 line(820,261,800,16,M.VERDIGRIS,13);
 rect(789,0,26,43,M.SLATE);
 
+
+// R2C — source-led organism and functional-ecology reconstruction, physical cells.
+// Genuine source core is the upper/biosphere district; y>1000 is original,
+// functionally connected subterranean extrapolation, NOT vertically stretched art.
+// Replace prior little two-bulb crown and uniform-stalk geometry at its source.
+rect(430,143,345,484,M.AIR);
+// A broad asymmetric one-piece organic membrane, with distinct bony and soft rims.
+poly([[443,260],[471,216],[504,206],[519,158],[567,174],[611,131],
+ [648,161],[693,164],[735,193],[768,242],[757,280],[784,322],
+ [761,359],[722,412],[684,454],[628,462],[599,491],[557,438],
+ [526,435],[486,395],[448,367],[462,319]],M.MOSS);
+poly([[454,273],[491,227],[538,221],[551,183],[594,206],[638,169],
+ [687,211],[725,216],[747,262],[726,306],[751,336],[712,381],
+ [693,422],[643,429],[613,448],[580,407],[542,407],[468,351]],M.VERDIGRIS);
+poly([[479,269],[512,239],[551,250],[581,217],[629,199],[661,229],
+ [703,246],[715,297],[685,349],[701,397],[654,411],
+ [622,378],[578,400],[532,373],[493,351]],M.COPPER);
+// Physical porous lacunae. Jagged, irregular holes permit readable large-scale
+// branch silhouette; smaller off-axis pores carry a stronger mid-scale language.
+const pores=[
+ [[468,271],[484,249],[515,248],[525,277],[502,303],[474,299]],
+ [[539,267],[563,232],[591,237],[594,264],[570,289]],
+ [[623,207],[646,191],[672,210],[670,244],[638,260]],
+ [[697,266],[720,263],[737,289],[705,316],[682,301]],
+ [[484,326],[510,316],[532,330],[522,356],[489,356]],
+ [[554,317],[573,293],[594,315],[581,344],[562,342]],
+ [[598,376],[614,347],[638,351],[647,378],[625,398]],
+ [[704,349],[730,334],[746,346],[717,374],[697,373]],
+ [[555,386],[570,369],[586,388],[569,409],[546,405]]];
+for(const p of pores)poly(p,M.AIR);
+// An unusually large off-centre irregular bioluminescent biological heart,
+// not an indexed pair of circles or an all-solid rectangle.
+poly([[592,285],[615,254],[652,243],[682,255],[718,288],
+ [721,328],[701,375],[668,407],[635,396],[608,377],
+ [580,356],[578,315]],M.VERDIGRIS);
+poly([[600,299],[625,272],[661,259],[686,279],[701,311],
+ [692,353],[670,383],[643,385],[612,365],[590,335]],M.URANIUM);
+poly([[613,301],[646,270],[671,279],[690,311],[675,337],
+ [683,356],[647,373],[612,349],[599,325]],M.PHOSPHOR);
+poly([[633,296],[653,281],[667,299],[654,319],[628,314]],M.QUARTZ);
+for(const [m,p] of [
+ [M.URANIUM,[[592,320],[605,311],[616,324],[612,342],[598,349]]],
+ [M.QUARTZ,[[662,346],[677,335],[683,349],[671,367],[653,364]]],
+ [M.VERDIGRIS,[[701,313],[715,301],[728,324],[714,341],[699,337]]]
+])poly(p,m);
+// Irregular bounded vascular woven ribs: no repeated radius fans or detached
+// pixel confetti. Rooted to the envelope and into the lower axial system.
+for(const [m,w,p] of [
+ [M.COPPER,13,[[619,384],[578,395],[535,412],[512,438]]],
+ [M.MOSS,17,[[678,386],[716,416],[731,455]]],
+ [M.VERDIGRIS,14,[[590,315],[566,276],[543,235]]],
+ [M.COPPER,11,[[687,290],[715,263],[750,254]]],
+ [M.MOSS,17,[[628,270],[610,233],[599,199]]],
+ [M.COPPER,12,[[672,372],[690,403],[675,461]]]
+])for(let i=1;i<p.length;i++)line(...p[i-1],...p[i],m,Math.max(7,w-i));
+// Roof-root attachment (actual connected canopy, not suspended art).
+for(const [x,y,xx,yy,w] of [
+ [454,0,482,245,20],[533,0,554,194,14],[626,0,628,171,19],
+ [743,0,755,242,15],[794,0,759,302,17]
+])line(x,y,xx,yy,M.OBSIDIAN,w);
+// Three substantial drifting differentiated trunks, not one ruler-straight
+// column. Branched together into the source's deep organism foundation.
+const axes=[
+ [M.COPPER,34,[[581,421],[559,530],[584,653],[550,790],[577,919],
+ [552,1074],[574,1217],[546,1399],[579,1580],[567,1760],[603,1950],[607,2041]]],
+ [M.VERDIGRIS,42,[[649,400],[650,547],[623,680],[652,824],[623,1003],
+ [650,1159],[613,1324],[648,1520],[613,1683],[644,1858],[610,2041]]],
+ [M.MOSS,32,[[689,403],[715,531],[681,688],[699,809],[670,973],
+ [689,1136],[668,1290],[685,1468],[651,1617],[681,1736],[664,1903],[611,2041]]]];
+for(const [m,w,p] of axes){
+ for(let i=1;i<p.length;i++){
+  line(...p[i-1],...p[i],m,Math.max(23,w+(i%3)*3-4));
+  if(i%3===2)line(p[i-1][0]+3,p[i-1][1],p[i][0]-2,p[i][1],M.COPPER,5);
+ }
+}
+for(const [m,w,p] of [
+ [M.COPPER,31,[[562,727],[520,755],[466,813],[425,853]]],
+ [M.MOSS,34,[[684,833],[730,774],[771,736],[813,705]]],
+ [M.VERDIGRIS,34,[[562,1155],[518,1210],[475,1237],[430,1261]]],
+ [M.COPPER,37,[[663,1268],[710,1324],[748,1395],[823,1454]]],
+ [M.MOSS,31,[[568,1518],[528,1586],[464,1640],[420,1707]]],
+ [M.COPPER,39,[[660,1746],[715,1802],[751,1885],[832,1938]]],
+ [M.VERDIGRIS,34,[[613,1905],[537,1963],[464,2009],[380,2044]]]
+])for(let i=1;i<p.length;i++)line(...p[i-1],...p[i],m,Math.max(17,w-i*3));
+// Biological siphon pockets, with cavities varied by district and asymmetry,
+// not repeated rings. Distinct source glows follow rooted vascular contact.
+const vessels=[
+ [M.MOSS,[[556,698],[581,676],[625,705],[636,755],[601,786],[557,761]],
+          [[580,726],[598,712],[621,735],[614,756],[587,763]]],
+ [M.COPPER,[[599,1082],[650,1044],[689,1089],[672,1182],[632,1192],[587,1144]],
+            [[614,1113],[642,1091],[665,1118],[651,1152],[620,1145]]],
+ [M.VERDIGRIS,[[562,1436],[611,1402],[677,1443],[672,1531],[624,1556],[571,1517]],
+               [[587,1473],[623,1451],[655,1470],[652,1501],[608,1512]]],
+ [M.MOSS,[[570,1789],[624,1769],[695,1813],[691,1893],[644,1911],[578,1865]],
+          [[605,1831],[644,1806],[676,1839],[662,1873],[627,1864]]]];
+for(const [m,outer,inner] of vessels){poly(outer,m);poly(inner,M.AIR);}
+for(const [m,p] of [
+ [M.URANIUM,[[539,692],[557,680],[576,696],[569,715],[546,718]]],
+ [M.PHOSPHOR,[[684,841],[706,822],[724,833],[712,853],[688,858]]],
+ [M.URANIUM,[[657,1351],[682,1348],[696,1366],[676,1390],[653,1377]]],
+ [M.PHOSPHOR,[[538,1641],[559,1614],[580,1638],[570,1658],[548,1654]]]
+])poly(p,m);
+// Two architecturally distinct functional chambers outside the source core:
+// a west organic resin assay grotto and east specialist vial manifold; each has
+// thick real walls, clear purpose and connected low-level floor structure.
+rect(122,1086,253,194,M.AIR);
+poly([[138,1135],[181,1096],[285,1102],[359,1147],[365,1238],
+ [344,1268],[160,1268],[129,1239]],M.GRANITE);
+poly([[154,1147],[187,1119],[287,1121],[336,1157],[343,1226],
+ [328,1245],[176,1248],[148,1225]],M.AIR);
+rect(152,1247,195,14,M.STEEL);rect(161,1261,181,8,M.BRASS);
+poly([[171,1243],[177,1204],[191,1188],[213,1192],[230,1212],[232,1244]],M.COPPER);
+poly([[182,1227],[190,1206],[213,1209],[218,1229]],M.OBSIDIAN);
+for(const [x,y] of [[268,1179],[303,1189],[327,1174]]){line(x,1241,x-10,y,M.VERDIGRIS,9);line(x-10,y,x-28,y-17,M.MOSS,7);}
+rect(150,1137,13,107,M.BASALT);rect(338,1159,11,88,M.BASALT);
+rect(786,770,238,192,M.AIR);
+poly([[789,814],[820,780],[979,788],[1013,826],[1024,852],
+ [1024,956],[806,957],[786,939]],M.CONCRETE);
+poly([[802,830],[828,801],[961,808],[990,835],[1008,868],
+ [1008,922],[803,923]],M.AIR);
+rect(800,925,219,16,M.STEEL);rect(813,941,187,7,M.BRASS);
+for(const [x,w,h] of [[836,38,72],[887,50,96],[955,37,61]]){
+ rect(x,831,w,h,M.GLASSBLOCK);rect(x+5,837,w-10,h-12,M.OBSIDIAN);
+ poly([[x+12,859],[x+w/2,846],[x+w-13,863],[x+w-13,879],
+ [x+w/2,892],[x+11,876]],M.URANIUM);
+ rect(x-5,830,6,h+2,M.COPPER);rect(x+w,834,5,h,M.COPPER);
+}
+line(813,914,812,815,M.IRON,8);line(1006,919,996,821,M.IRON,8);
+// Unique accessible lower root-processing/service alcoves, fully supported,
+// no recycled windows or sparse floating striped ledges.
+for(const [m,p] of [
+ [M.BASALT,[[429,1274],[463,1238],[503,1252],[524,1290],[487,1321],[439,1312]]],
+ [M.OBSIDIAN,[[736,1513],[771,1504],[814,1545],[789,1592],[742,1587],[724,1552]]],
+ [M.GRANITE,[[455,1803],[498,1772],[543,1799],[530,1847],[481,1850],[449,1822]]]
+])poly(p,m);
+for(const [x,y,w] of [[438,1334,120],[639,1587,98],[465,1880,99]]){
+ rect(x,y,w,10,M.STEEL);rect(x+8,y+10,w-20,8,M.BRASS);
+ line(x+10,y+12,x+25,y+58,M.BRONZE,8);
+ line(x+w-12,y+10,x+w-31,y+62,M.BRONZE,8);
+}
+
+// R2C self-critique: the first reconstruction retained polygonal empty sockets
+// and disconnected-looking service shelves. Interweave organic vein ribs and
+// give transfer decks physically traceable rooted/braced support.
+for(const [m,w,p] of [
+ [M.MOSS,6,[[486,269],[500,271],[523,291]]],
+ [M.COPPER,7,[[540,257],[564,269],[586,260]]],
+ [M.MOSS,5,[[623,209],[646,232],[667,228]]],
+ [M.VERDIGRIS,8,[[686,272],[701,294],[728,286]]],
+ [M.MOSS,6,[[485,340],[509,346],[532,340]]],
+ [M.VERDIGRIS,6,[[555,321],[570,331],[591,320]]],
+ [M.MOSS,7,[[608,363],[623,380],[641,377]]],
+ [M.COPPER,6,[[705,350],[721,352],[738,347]]]
+])for(let i=1;i<p.length;i++)line(...p[i-1],...p[i],m,w);
+for(const [m,w,p] of [
+ [M.COPPER,11,[[306,952],[290,989],[257,1004]]],
+ [M.BRONZE,12,[[478,949],[499,985],[563,1002]]],
+ [M.MOSS,15,[[641,961],[674,988],[721,1000]]],
+ [M.STEEL,12,[[440,1336],[464,1376],[484,1435]]],
+ [M.STEEL,11,[[465,1886],[493,1926],[539,1967]]]
+])for(let i=1;i<p.length;i++)line(...p[i-1],...p[i],m,w);
+// Bottom-right return vault is a crescent chemical collection and geological
+// service chamber, not a mirrored bank of four specimen-window lab modules.
+rect(778,1743,246,214,M.AIR);
+poly([[778,1791],[819,1746],[929,1742],[993,1781],[1024,1826],
+ [1024,1949],[962,1955],[848,1942],[789,1901]],M.BASALT);
+poly([[800,1811],[835,1773],[932,1768],[977,1796],[1009,1836],
+ [1008,1914],[954,1930],[850,1919],[805,1892]],M.AIR);
+rect(807,1918,200,16,M.STEEL);rect(821,1935,183,7,M.BRASS);
+for(const [xx,yy,rr] of [[839,1866,24],[911,1855,29],[982,1870,18]]){
+ poly([[xx-rr,yy-4],[xx-rr+7,yy-rr],[xx+rr-5,yy-rr+4],
+ [xx+rr,yy+rr-8],[xx+6,yy+rr],[xx-rr+4,yy+rr-6]],M.BRONZE);
+ poly([[xx-rr+8,yy-4],[xx-rr+12,yy-rr+9],[xx+rr-13,yy-rr+10],
+ [xx+rr-9,yy+rr-13],[xx+6,yy+rr-11],[xx-rr+10,yy+rr-12]],M.OBSIDIAN);
+ rect(xx-6,yy-6,13,8,M.URANIUM);
+}
+line(817,1908,808,1825,M.COPPER,8);line(1001,1913,986,1820,M.IRON,9);
+// Wide source-derived overhead canopy rest zone remains free of unsafe loose
+// leaves; deep geology is extrapolated and none of this uses powder or liquid.
+
+// The builder's existing late in-bounds actual Midge portal masks are retained
+// verbatim and applied AFTER this authored geometry; no waypoint relocation.
+
 // Deliberate collision-safe corridors, access portals and trans-bole openings.
 // Last-pass cuts are deliberate no-build clearance masks and never secretly substituted waypoint anchors.
 rect(343,22,74,2000,M.AIR);rect(702,22,74,2000,M.AIR);
@@ -397,6 +580,7 @@ function envelopeAudit(w,h){
 const audits=[[19,15],[23,19],[31,27]].map(([w,h])=>envelopeAudit(w,h));
 if(audits.some(a=>a.failed.length))throw Error('Exact Midge site clearance failure: '+JSON.stringify(audits));
 evidence.rework_b={date:'2026-11-18',scope:'second substantive source-led organism canopy and differentiated districts / gantry / lower rhizome repair',starting_head:'134b4dadf74a3df45362d92d6c869c21ecf814b2',source_jpeg_seen:true,original_png_pixels_verified:false,archival_merged_baseline_unvalidated:true,notes:'Historical source is 640x360 landscape; this tall 1024x2048 adaptation preserves the visible source complex at a deliberately scaled upper district and authors coherent older root/service levels below; not stretched screenshot or repeated organism.'};
+evidence.rework_c={"date":"2026-11-18","assigned_head":"c40e9b4dff051e833316c38a3c885781a332aece","source_jpeg_blob":"64d7df6352b12d1aa57ce85f4925a722705bba1d","source_jpeg_actually_viewed":true,"original_full_png_parity":"UNVERIFIED","source_derived":"upper local one-specimen biosphere: dome, lift, vial wing and guarded gantry","newly_extrapolated":"older deep rhizome, assay grotto, rooted geology and return services below","repairs":"porous integrated crown/bright off-centre bioheart, multiple drifting supported trunks, asymmetrical scientific districts, braced transfers, distinctive service vault, secondary vein polish","native":"NATIVE-UNTESTED"};
 evidence.clearance_envelopes=audits;
 evidence.waypoints=destinations.map(([name,point])=>({name,point,clear:true,reachable:true}));
 evidence.actual_native_godot_rapier_qualification='NATIVE-UNTESTED: compatible installed binary, Midge input/collision/simulation and save/reopen not exercised.';

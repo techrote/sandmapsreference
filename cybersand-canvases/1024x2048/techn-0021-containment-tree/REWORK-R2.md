@@ -1,3 +1,9 @@
+## Current 18 November 2026 R2C handoff — Draft/HOLD
+
+Exclusive assignment starting at `c40e9b4dff051e833316c38a3c885781a332aece`. The *physical* material grid has 370305 changed identities, 20530 coalesced rectangles, 377138 UTF-8 bytes, 24/24 exact Midge sites at each 19×15, 23×19, 31×27 envelope and complete material/PNG parity. Real source JPEG viewed (blob `64d7df6352b12d1aa57ce85f4925a722705bba1d`), full original PNG parity unverified. Rebuilt porous canopy/large luminous heart, multiple drifting supported roots, different resin research/vial laboratories, and lower return vault; lower geography is new source-consistent ecology rather than uniform stretching. Native Workbench/CyberDemoBridge/Rapier actor simulation and save/reopen NATIVE-UNTESTED. See current README/evidence for reproducible detail.
+
+---
+
 # Canvas R2 — TECHN-0021 Containment Tree Biosphere: source-led rebuild
 
 **CURRENT STATUS (18 November 2026): R2 ACTUAL-MATERIAL-CELL REWORK COMMITTED / DRAFT / HOLD.** The committed source JPEG remains unchanged. The original seed-only notes below are historical input to the completed R2 physical-grid rewrite; the adjacent builder, setup JSON, receipt, and six real-cell PNGs are now changed and requalified. See README.md and the exact-HEAD PR report for evidence. **Native Workbench and owner acceptance remain untested/unclaimed.**
