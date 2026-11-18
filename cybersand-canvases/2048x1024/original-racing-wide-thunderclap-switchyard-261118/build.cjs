@@ -433,6 +433,42 @@ function buildWideCanvas() {
   P([[1955,527],[1999,516],[2024,539],[2002,559],[1973,553]],mat.CONCRETE);
   L(1832,822,1928,819,10,mat.STEEL);R(1881,817,24,10,mat.BLUE);
 
+
+  // R7: true-cell high/low operational course finishing, grounded support and broad Midge clearances.
+  // Consolidate peripheral R6 banks into actually alternating S-turns; all inert Solid native IDs.
+  P([[678,695],[691,702],[715,706],[737,724],[758,737],[759,746],[684,746]],mat.BASALT);
+  L(691,687,691,717,15,mat.STEEL);
+  R(699,715,20,11,mat.BLUE);
+  R(830,777,55,40,mat.BASALT);
+  P([[830,778],[844,758],[869,758],[885,779]],mat.CONCRETE);
+  R(852,775,24,8,mat.BLUE);
+  L(859,800,859,836,13,mat.IRON);
+  P([[1284,701],[1296,705],[1324,714],[1351,733],[1377,737],[1378,745],[1284,745]],mat.BASALT);
+  L(1312,635,1314,724,14,mat.IRON);
+  R(1337,729,23,9,mat.BLUE);
+  R(1467,779,101,34,mat.BASALT);
+  P([[1467,779],[1486,772],[1529,771],[1568,784]],mat.CONCRETE);
+  L(1520,794,1520,836,15,mat.STEEL);
+  R(1498,784,35,7,mat.BLUE);
+  // Genuine cliff-tied western fork, supported east Iris approach and rooted high saw.
+  L(410,681,329,656,14,mat.STEEL);
+  L(329,656,310,686,16,mat.CONCRETE);
+  R(356,662,31,8,mat.ZINC);
+  L(1240,360,1355,129,10,mat.IRON);
+  R(1266,307,24,9,mat.BLUE);
+  L(689,259,660,191,10,mat.STEEL);
+  L(660,191,634,199,12,mat.IRON);
+  R(612,190,28,8,mat.BLUE);
+  // Inhabited Glassstorm loading apron and visible service/underpass thresholds.
+  R(1455,587,84,12,mat.STEEL);
+  R(1470,578,50,10,mat.BLUE);
+  L(1495,590,1495,619,11,mat.IRON);
+  R(1492,568,18,8,mat.SIGNAL);
+  L(460,670,482,639,9,mat.ZINC);
+  R(451,650,24,9,mat.BLUE);
+  L(1810,610,1864,558,12,mat.STEEL);
+  R(1842,563,31,8,mat.BLUE);
+
     // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -485,7 +521,13 @@ function buildWideCanvas() {
     ["Drift engineering",700,640],
     ["Iris structural crown",1007,191],
     ["Glassstorm anchored service span",1500,620],
-    ["East braking jaw",2005,335]
+    ["East braking jaw",2005,335],
+    ["West entry rail",410,681],
+    ["West slalom floor rooted",859,795],
+    ["Iris east tension anchorage",1240,360],
+    ["East slalom roof rooted",1314,713],
+    ["East slalom floor rooted",1520,803],
+    ["Canyon overhead root",660,191]
   ];
   for(const [name,x,y] of supportSites){
     if(!grounded[y*W+x])throw Error("STRUCTURAL_SUPPORT_FAIL "+name+" ("+x+","+y+")");
@@ -528,6 +570,34 @@ function buildWideCanvas() {
     return {size:w,sites:sites.map(s=>[s[0],!!seen[s[2]*W+s[1]]])};
   }
   const reachable={};for(const [fw,fh] of [[19,15],[23,19],[31,27]])reachable[fw+"x"+fh]=flood(fw,fh,null);
+
+  // R7 exact 31x27 lower-corridor-only path. Full actor rectangle: never use the main y445 shortcut.
+  function lowerCorridorProof(){
+    const sw=W+1,sat=new Uint32Array((W+1)*(H+1));
+    for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=g[y*W+x]!==0;sat[(y+1)*sw+x+1]=sat[y*sw+x+1]+s;}}
+    function legal(x,y){
+      if(x<15||x>=W-15||y<13||y>=H-13)return false;
+      const a=x-15,b=x+15,c=y-13,d=y+13;
+      return sat[(d+1)*sw+b+1]-sat[c*sw+b+1]-sat[(d+1)*sw+a]+sat[c*sw+a]===0;
+    }
+    const names=[["West tunnel entry",614,752],["West ceiling bank",728,776],["West floor bank",854,721],["Iris lower transit",1072,753],["East ceiling bank",1338,772],["East floor bank",1520,742],["East tunnel exit",1614,753]];
+    const pass=new Uint8Array(W*H);
+    for(let y=700;y<=802;y++)for(let x=580;x<=1650;x++)if(legal(x,y))pass[y*W+x]=1;
+    const st=752*W+614;if(!pass[st])throw Error("LOWER_CORRIDOR_SPAWN_NOT_CLEAR");
+    const seen=new Uint8Array(W*H),q=new Int32Array(W*H),dist=new Int32Array(W*H);
+    q[0]=st;seen[st]=1;let read=0,write=1;
+    while(read<write){const v=q[read++],x=v%W,y=(v/W)|0;
+      for(const n of [x>0?v-1:-1,x+1<W?v+1:-1,y>0?v-W:-1,y+1<H?v+W:-1]){
+        if(n>=0&&pass[n]&&!seen[n]){seen[n]=1;dist[n]=dist[v]+1;q[write++]=n;}
+      }
+    }
+    const actual=names.map(([name,x,y])=>({name,x,y,exact_legal:!!pass[y*W+x],reachable:!!seen[y*W+x],steps:dist[y*W+x]}));
+    if(actual.some(v=>!v.reachable))throw Error("LOWER_CORRIDOR_OPTION_NOT_CONNECTED "+JSON.stringify(actual));
+    const windows=[700,728,854,890,1338,1520].map(x=>{const ys=[];for(let y=700;y<=802;y++)if(pass[y*W+x])ys.push(y);return {x,min:ys[0],max:ys[ys.length-1],count:ys.length};});
+    return {corridor_bounds:[580,700,1650,802],clearance:[31,27],fully_in_bounds:true,access_points:actual,connected_centres:write,windows};
+  }
+  const lowerCorridor=lowerCorridorProof();
+
   const bypass=flood(31,27,[900,330,1110,554]);
   const fullHullBlocked=flood(31,27,[885,317,1125,567]);
   if(fullHullBlocked.sites.filter(s=>s[1]).length!==13||!fullHullBlocked.sites.find(s=>s[0]==="Brake finish")[1])throw Error("FULL_HULL_PHYSICAL_IRIS_BYPASS_FAIL");
@@ -598,10 +668,12 @@ function buildWideCanvas() {
     ["02-drift-canyon.png",384,140,512,384],
     ["03-split-current-iris.png",760,164,512,384],
     ["04-glassstorm-viaduct.png",1240,232,512,384],
-    ["05-catch-recovery.png",1536,540,512,384]
+    ["05-catch-recovery.png",1536,540,512,384],
+    ["06-lower-s-turn-west.png",580,640,512,384],
+    ["07-lower-s-turn-east.png",1150,640,512,384]
   ].map(p=>({name:p[0],region:p.slice(1),...encodePNG(...p.slice(1))}));
   const hist={};for(const v of g)hist[v]=(hist[v]||0)+1;
-  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,hist,materials:mat,gallery,mismatches,collisions};
+  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions};
 }
 const r=buildWideCanvas();
 const artifacts=[["setup-thunderclap-switchyard.json",Buffer.from(r.json,"utf8")],...r.gallery.map(g=>[g.name,Buffer.from(g.bytes)])];

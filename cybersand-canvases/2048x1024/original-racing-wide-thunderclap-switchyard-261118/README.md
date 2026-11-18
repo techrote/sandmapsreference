@@ -1,36 +1,44 @@
-# Thunderclap Switchyard — ORIGINAL racing-wide CyberSand canvas (R6)
+# Thunderclap Switchyard — Original CyberSand racing-wide (R7)
 
-**2048×1024 · OPEN DRAFT/HOLD · ORIGINAL FROM SCRATCH · NATIVE-UNTESTED.**
-No reference art was consulted, sampled, converted or traced. Preserve single creator ownership of this original lane. CyberSand code and sibling branches are untouched.
+**OPEN Draft/HOLD · 2048×1024 actual terrain cells · ORIGINAL-NO-REFERENCE · NATIVE-UNTESTED.** Original from-scratch industrial/geological racing world. No source artwork was selected, traced, converted or otherwise used. CyberSand accepted-main authority is read-only at `018bd09503d7f079ddac52e225c2f7daf8d678bf`; this branch changes no engine, archived artwork, other creator lanes or source-led PRs.
 
-## R6 design and independent-review response
+## Design and R7 response
 
-A shattered lightning-conductor railway is a legible five-district high-speed Midge playground: (1) **Launch Cradle** with boundary-rooted dispatch, (2) **Drift Canyon** with asymmetric roof-saw, (3) **Split-Current Iris** with top-anchored crown suspension, (4) **Glassstorm Viaduct** with real support spine, inhabited weigh-station and service railway, and (5) **Braking Claw** with a basin and recovery loop. The world is exact, flat orthographic side elevation.
+Five traversable districts: founded Launch Cradle and dispatch, asymmetric roof-saw Drift Canyon, split-current Iris with high suspended crown and lower switching apparatus, grounded Glassstorm viaduct with operating weigh bay, and eastern dual-jaw Brake/Recovery. True orthographic flat gameplay terrain; no perspective tricks. The broad central y≈445 straight is a safe high-speed default and remains clear for a full 31×27 conservative hull. Upper route uses founded canyon saw shoulder and Iris gallery. Lower technical/recovery route deliberately changes altitude around **four physically rooted roof/floor banks**, with wide lead-ins, no pinhole and a visible west entry and east rejoin. It is not claimed to be faster than the straight.
 
-R5 independent technical review closed the former four >20k disconnected structural assemblies. R6 addresses the Shepherd's separate P1 racing-course/art REWORK: support-rooted fork at the west start, high-canyon hanging saw deflector, an explicit physical high-iris transfer cue, *four alternate roof/floor obstacle banks* in the lower tunnel, a real underdeck weigh station and asymmetric east re-entry/braking teeth. These alter actual material cells. The broad central y445 straight is deliberately preserved as the safer, lower-complexity high-speed racing choice. The high and low options offer different physical clearance/handling patterns; no imaginary timed speed advantage is asserted.
+R6 independent technical review identified four large unsupported additions and a merely decorative low slalom. R7 physically attaches the western fork, east Iris cue and both active slalom floor banks/roof datum to existing boundary-grounded solids, adds a distinct controlled Glassstorm load apron, and proves an **actual lower-corridor-only 31×27 Midge-centre route**. The formerly repaired four very large R4 ungrounded facilities stay connected. Six original plus six new structural probes now pass. R7 leaves **11,399** material cells still disconnected from world boundaries, predominantly nonclaimed small signs/props; this is not an assertion that all minor fragments are architecturally supported.
 
-**Rejected candidate:** the first R6 western iris switch bar broke the full 31×27 iris-blocked alternative. This bar was omitted before publication. Full obstacle-hull blocking now passes, not only centre masking. The wide negative-space main lane is retained intentionally; do not fill it with collision greebles.
+## Explicit operational route graph and positions
 
-## Exact functional sites and route graph
+**Main:** Launch (116,445) → Iris west (841,445) → Iris chamber (1037,448) → East conductor (1323,454) → Glassstorm (1506,453) → Catch (1826,449) → Brake finish (1943,446). This x≈116–1943/y445 direct centreline is fully 31×27 clear, intentionally.
 
-Primary: Launch cradle (116,445) → Iris west (841,445) → Central chamber (1037,448) → East conductor (1323,454) → Glassstorm viaduct (1506,453) → Catch cliff (1826,449) → Brake finish (1943,446).
+**High technical:** Dispatch roof (203,329) → Canyon high (617,356) → Iris west gallery (844,307) → Over-crown (1033,297) → eastern upper rejoin (1194,308) → east conductor. The saw deflector is physical, rooted, and has an outside passing shoulder. Timing advantage **not measured**.
 
-High technical: Dispatch roof bypass (203,329) → Split-canyon high (617,356) → iris west high approach (844,307) → Over-crown gallery (1033,297) → iris upper rejoin (1194,308) → rejoin east conductor. The hanging saw/fork makes this a different technical line while retaining wide conservative Midge clearance.
+**Low technical/recovery:** West dive (443,612) → West undercroft (614,752) → founded ceiling bank (728,776) → floor bank (854,721) → Iris low (1072,753) → east ceiling bank (1338,772) → east floor bank (1520,742) → eastern tunnel (1614,753) → eastern ascent/underpass (1571,756)/(1760,573) → recovery basin (1883,767). Strict lower-route proof restricts all Midge centres to x580–1650/y700–802: **7/7 exact targets reachable**, with complete 31×27 envelope, from unchanged undercroft centre. Exact path-distance upper bounds from entry (614,752) along lower-only open air: West tunnel entry 0; West ceiling bank 138; West floor bank 285; Iris lower transit 489; East ceiling bank 774; East floor bank 958; East tunnel exit 1041. Six measured cross-section windows in receipt; narrowest audited cross section has 21 legal centre rows at x1338, not a pinhole.
 
-Low technical/return: West dive shaft (443,612) → West undercroft (614,752) → Western tunnel slalom (640,751) → Iris lower transfer (1072,753) → Eastern tunnel slalom (1614,753) → Eastern underpass (1571,756) → East lower return entry (1760,573) → Recovery basin (1883,767). Banks alternate ceiling/floor support; any site claimed in the receipt uses the exact airspace coordinates with a full 31×27 clear rectangle. Not a nearest-point substitution.
+**Blocked-main resilience:** place real solid at x900–1110/y330–554, erode the full 31×27 hull; **13/14** original named sites including finish and recovery remain connected. Iris chamber is intentionally blocked. The direct centre Iris downshaft is not traversable because of an actual solid service spine; the low route uses the west/east entries.
 
-Optional Glassstorm underdeck site (1530,517) is a secondary low-flight line and viewing approach to the fixed weigh-station, not a simulated speed booster. The direct **central iris vertical drop is not available** due to the genuine R5 service spine; use west/east entrances to the lower route.
+## Static qualification and genuine image evidence
 
-## Static qualification on current accepted main
+- Actual dimensions **2048×1024 = 2,097,152 cells**; deterministic fixed seed `0x20261118`.
+- **11,063** nonoverlapping five-int ordered edits / 32,768 permitted; **208,909** UTF-8 setup bytes / 1,048,576. Material edit visits **938,935** / 32,000,000. **Zero** material replay mismatches/overlaps, no erasure stamps. R7 changes **22,245** real cells from R6 (11,895 added, 0 erased, 10,350 reclassified).
+- Full source grid SHA-256 `bfac4832a8726aed8aa88cf803a174384ed301d3ba4a882084920321be94cfc3`; setup JSON SHA-256 `19d73909e394a7fa0ef7f83a4a580a876d25e8f6294c95f97a8102186db1c6b6`. Histogram and complete checksums are in `qualification.json`.
+- Only accepted, inert, immovable native Solids: numeric IDs 49,58,62,100,101,113,117,120,122,123,128. No active liquid, growth, powder, reactive kernel or illustrative fake geometry. Current Midge authoring is **4×3**, spawn **(116,445)**, 1.8 boost. Full operational site reachability **14/14 at 19×15, 23×19, 31×27** with exact centres and no tolerance/proxies.
+- Nine actual grid-rendered indexed PNGs: complete `overview.png` 2048×1024 every native cell, retrievable `overview-review-2x.png` 1024×512 sampled composition copy, five original 512×384 true 1:1 districts, plus **two new 512×384 true 1:1 lower S-turn sheets**. All nine images independently parsed inside the builder for signature, chunk CRC, stored-zlib/Adler, IEND and checked against each intended actual material index pixel. The overview-review copy does NOT replace full-cell evidence.
+- Builder: `node build.cjs` regenerates all JSON/PNG artifacts locally; `node build.cjs --verify` checks byte-exact committed regeneration. A standalone installed Node command-line run is **NOT claimed** here; builder was executed in isolated V8.
 
-Read-only CyberSand engine authority `018bd09503d7f079ddac52e225c2f7daf8d678bf`. Setup-v2 exactly 2048×1024 (2,097,152 cells), 10375 nonoverlapping five-integer rectangles (limit 32,768), 195997 JSON bytes (limit 1,048,576), 927040 edit cell-visits (limit 32,000,000), full-cell deterministic replay 0 mismatches/overlaps. Every placed nonempty ID is a native valid inert immovable solid; material histogram in `qualification.json`. Full source-grid SHA-256 `92c068ab81461565a29f3a7f3d854582d4507ed9339554779f50f0e4b20053cd`; exact setup JSON SHA-256 `0cc8522006a8511cd3cd931d8a830ab12b8a911e89f962f82f8d75422a6bc158`.
+## Honest native gate
 
-All **14 original functional sites** remain exact-centre reachable at **19×15, 23×19 and 31×27**. A **genuine physical iris obstruction** x900–1110/y330–554, expanded to 31×27 legal-centre mask x885–1125/y317–567, still preserves **13/14**, including actual brake finish; only blocked iris central chamber is inaccessible. The whole x116→1943/y445 straight preserves a fully legal **31×27 Midge envelope**, intentionally. The nine optional R6 waypoint coordinates are also individually verified at 31×27.
+**NATIVE-UNTESTED:** no installed matching Godot/CyberDemoBridge/Rapier source-matched binary has been used for real Workbench import, Midge steering/collision at speed, tick progression or independent save/reopen. Accepted source bridge advertises 32,768 rectangles; old installed fallback 4,096 would reject this **11063**-rectangle setup. Check installed capacity before native acceptance. Time-trial markers are inert, not timer triggers. Independent current-HEAD Shepherd/Technical/Fidelity review and owner playtest remain required. Keep Draft/HOLD; no Ready, merge or auto-merge.
 
-R5 existing six actual-cell structural-support probes remain embedded in `build.cjs`. The fixed-seed deterministic builder regenerated the actual setup and all seven evidence PNGs with internal PNG signature/IHDR/CRC/zlib/Adler/IEND checks and grid-pixel parity. `node build.cjs --verify` compares all committed JSON/PNGs byte-for-byte when run under Node 22+. The builder itself was executed in an independent V8 environment, **not** in the installed CyberSand native runtime.
+![Actual full material-cell map](overview.png)
 
-**Full evidence:** `overview.png` (actual 2048×1024, every material pixel), `overview-review-2x.png` (actual-grid nearest sample at 1024×512, independently easier to retrieve; *not* a replacement for full resolution), plus five full **512×384 true 1:1 crops**. All PNG/image checksums are in `qualification.json`.
+![Accessible review-scale actual-cell composition](overview-review-2x.png)
 
-## Native/owner gate
+| Launch | Drift | Iris | Glassstorm | Recovery |
+|---|---|---|---|---|
+| ![Launch](01-launch-cradle.png) | ![Drift](02-drift-canyon.png) | ![Iris](03-split-current-iris.png) | ![Glassstorm](04-glassstorm-viaduct.png) | ![Catch](05-catch-recovery.png) |
 
-**NATIVE-UNTESTED**: no source-matched installed Godot/CyberDemoBridge/Rapier binary was present. Source bridge admits 32,768 rectangles; an old 4,096-limit DLL would reject this 10375-box setup. Installed capacity/version, actual Workbench install, Midge piloting at race speed, actor collision/handling, bounded native ticks, save/reopen and time-trial functionality are not proven. Real checkpoint timers are **not implemented**. Keep this PR **Draft/HOLD** awaiting exact-HEAD independent technical/artistic/Shepherd review and owner native acceptance. No merge or Ready promotion.
+| Actual lower western S-turn | Actual lower eastern S-turn |
+|---|---|
+| ![West](06-lower-s-turn-west.png) | ![East](07-lower-s-turn-east.png) |
