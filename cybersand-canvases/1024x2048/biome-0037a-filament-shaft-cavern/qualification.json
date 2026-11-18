@@ -35,8 +35,16 @@
     "101": "Obsidian Solid/None",
     "122": "QuartzCrystal Solid/None"
   },
-  "art": "Source JPEG directly inspected and compared to actual material-grid overview/crops. Complete pale LEFT-wall filament body; distinct fine rooted pores; wall-integrated ladder and shelf, multiple grounded lower geological return routes. Lower half interpretive, not source PNG pixel parity.",
+  "art": "Source-JPEG-led R2C morphology pass: pale lattice forks and sub-pores, reinforced single connected organism, physically anchored ladder transfer and contrasting supported mineral rims in purposeful west/east extrapolated districts. No image-only overlay; original PNG pixel parity UNVERIFIED.",
   "gallery": [
+    [
+      "filament-shaft-cavern-material-1024x2048.png",
+      0,
+      0,
+      1024,
+      2048,
+      1
+    ],
     [
       "filament-shaft-cavern-preview.png",
       0,
@@ -100,26 +108,26 @@
       2048
     ],
     "complete_cells": 2097152,
-    "rectangles": 11111,
+    "rectangles": 16867,
     "max_rectangles": 32768,
-    "json_bytes": 204439,
+    "json_bytes": 305470,
     "max_json_bytes": 1048576,
     "final_cell_mismatches": 0,
-    "changed_cells_from_archived_r1": 779976,
-    "nonempty_cells": 717812,
+    "changed_cells_from_archived_r1": 782309,
+    "nonempty_cells": 703317,
     "water_cells": 35688,
     "water_changed_cells": 0,
     "material_histogram": {
-      "0": 1379340,
+      "0": 1393835,
       "3": 35688,
-      "38": 35146,
+      "38": 44278,
       "42": 28445,
-      "49": 69060,
-      "62": 3111,
-      "99": 162998,
-      "100": 244705,
+      "49": 70475,
+      "62": 3129,
+      "99": 168346,
+      "100": 204274,
       "101": 119792,
-      "122": 18867
+      "122": 28890
     },
     "allowlist": [
       0,
@@ -284,7 +292,7 @@
           15
         ],
         "spawn_exact": true,
-        "component_centres": 1168018,
+        "component_centres": 1175509,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -294,7 +302,7 @@
           19
         ],
         "spawn_exact": true,
-        "component_centres": 1122344,
+        "component_centres": 1121858,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -304,20 +312,25 @@
           27
         ],
         "spawn_exact": true,
-        "component_centres": 1045020,
+        "component_centres": 1032488,
         "r2_exact": 13,
         "legacy_exact": 15
       }
     ],
     "upper_tissue_components": [
-      190350
+      195488
     ],
-    "connected_primary_tissue_cells": 190350,
-    "tissue_cells": 190350,
+    "connected_primary_tissue_cells": 195488,
+    "tissue_cells": 195488,
     "primary_tissue_fraction": 1,
-    "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)"
+    "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)",
+    "changed_cells_from_previous_r2_head": 74482,
+    "rendered_png_count": 8,
+    "png_index_pixels_verified": 4194304,
+    "png_crc_and_deflate_integrity": "PASS",
+    "png_palette_grid_mismatches": 0
   },
-  "native": "NATIVE-UNTESTED: no Godot native engine install, material readback, Midge collision/input, Water progression or save/reopen; legacy bridge capacity 4096 would reject 11111 rectangles; accepted-main source offers 32768.",
+  "native": "NATIVE-UNTESTED: no compatible Workbench/Godot/Rapier/CyberDemoBridge import, Midge movement/collision, simulation or save/reopen. Legacy bridge 4096-edit capacity would reject this 16867-edit grid; accepted source capacity 32768.",
   "disposition": "DRAFT / HOLD — exact-head independent Shepherd source and technical re-review required; no owner acceptance",
   "rework_round_2_finishing": {
     "assignment": "CANVAS-REWORK-A: 12 @ eddddcec7f3f13a4ef71d9d27152d00c6b88ff43",
@@ -341,5 +354,19 @@
     "native_installed_bridge": "NATIVE-UNTESTED",
     "legacy_4096_capacity_compatible": false,
     "accepted_32768_source_limit": true
+  },
+  "rework_round_2_c": {
+    "assignment": "CANVAS-REWORK-C: 12 @ b810b1ff4bfef8b6999f4f9bc3147803634d6ebc",
+    "source_preview_blob": "168294085274702df98f5698721890fd30874c8f",
+    "original_png_blob": "9364b59479bb2eaf4d2a2924abb501ed8d9e26e3",
+    "original_png_pixel_parity": "UNVERIFIED",
+    "source_preview_inspected": true,
+    "changed_cells": 74482,
+    "final_replay_mismatches": 0,
+    "upper_tissue_connected": 195488,
+    "upper_tissue_total": 195488,
+    "zero_offset_reachability": "13/13 R2 + 15/15 historical at 19x15, 23x19 and 31x27",
+    "native": "NATIVE-UNTESTED",
+    "status": "Draft/HOLD; pending Shepherd and owner"
   }
 }

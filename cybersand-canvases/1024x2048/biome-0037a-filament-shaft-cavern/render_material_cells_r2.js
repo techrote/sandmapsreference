@@ -45,6 +45,7 @@ function pngR2(grid, palette, sx,sy,width,height,step) {
   at=0;for(const b of chunks){png.set(b,at);at+=b.length;}return png;
 }
 const CROP_R2=[
+ ["filament-shaft-cavern-material-1024x2048.png",0,0,1024,2048,1],
  ["filament-shaft-cavern-preview.png",0,0,1024,2048,2],
  ["filament-shaft-cavern-detail-upper.png",0,35,512,512,1],
  ["filament-shaft-cavern-detail-lamina.png",0,482,512,512,1],
