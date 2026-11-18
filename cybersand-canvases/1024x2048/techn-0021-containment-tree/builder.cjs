@@ -765,6 +765,20 @@ const r2b7Ops=[["rect",322,815,114,15,62],["line",335,827,397,853,52,12],["line"
 for(const [kind,...args] of r2b7Ops)(kind==="rect"?rect:line)(...args);
 
 
+function applyR2B8(A,W,H){
+ const idx=(x,y)=>y*W+x;
+ const put=(x,y,v,onlySolid=false)=>{x=Math.round(x);y=Math.round(y);if(x<0||x>=W||y<0||y>=H)return;if(!onlySolid||A[idx(x,y)])A[idx(x,y)]=v};
+ function oval(cx,cy,rx,ry,v,onlySolid=false){for(let y=Math.max(0,Math.floor(cy-ry));y<=Math.min(H-1,Math.ceil(cy+ry));y++){let q=(y-cy)/ry,dx=rx*Math.sqrt(Math.max(0,1-q*q));for(let x=Math.max(0,Math.ceil(cx-dx));x<=Math.min(W-1,Math.floor(cx+dx));x++)put(x,y,v,onlySolid)}}
+ function woody(x0,y0,x1,y1,r0,r1,v,onlySolid=false){let n=Math.ceil(Math.hypot(x1-x0,y1-y0)/3);for(let z=0;z<=n;z++){let t=z/n;oval(x0+(x1-x0)*t,y0+(y1-y0)*t,r0+(r1-r0)*t,r0+(r1-r0)*t,v,onlySolid)}}
+ for(let y=215;y<=461;y++){let cy=(y-338)/145;if(Math.abs(cy)>1)continue;let cx=610+17*Math.sin(y*.023)+9*Math.sin(y*.053+1.1),rw=34+60*Math.sqrt(1-cy*cy)+9*Math.sin(y*.065),edge=rw*(.88+.09*Math.sin(y*.048+1.6));for(let x=Math.max(508,Math.ceil(cx-rw));x<=Math.min(716,Math.floor(cx+rw));x++){let norm=Math.abs(x-cx),outer=norm>edge;if(norm>rw)continue;let m=outer?42:(norm>rw*.75?54:((x+2*y)%79<25?127:123));if(!outer&&Math.abs(x-(603+24*Math.sin(y*.031)))<23&&y>280&&y<412)m=127;if(!outer&&x>628&&y>312&&y<388&&((y/20|0)%3!==1))m=122;put(x,y,m)}}
+ for(const [x,y,rx,ry]of [[548,301,12,17],[576,267,13,18],[639,271,12,13],[679,301,14,20],[571,355,13,18],[655,358,16,19],[607,436,15,17],[676,419,11,17],[536,380,10,13],[607,243,8,11],[689,351,9,12],[560,434,8,13],[631,318,8,11]])oval(x,y,rx,ry,0);
+ for(const [x0,y0,x1,y1,r0,r1,m]of [[554,320,612,370,9,12,54],[612,370,680,402,12,10,54],[579,235,610,315,9,14,42],[613,386,603,470,13,18,54],[654,402,620,487,9,15,42],[572,410,545,509,8,14,54],[582,464,564,603,15,13,53],[632,474,662,620,16,14,54],[603,496,612,734,13,16,53]])woody(x0,y0,x1,y1,r0,r1,m,true);
+ for(let y=1100;y<1900;y++)for(let x=174;x<850;x++){let k=idx(x,y),v=A[k];if(!v)continue;if((x<285||x>749)&&((x+4*y)%101<7)&&(v===52||v===53||v===54))A[k]=y<1510?49:100}
+ for(let y=1260;y<1450;y++)for(let x=150;x<350;x++){let k=idx(x,y);if(A[k]===49&&((x/27|0)%4===0))A[k]=58;if(A[k]===53&&(y%41)<11)A[k]=119}
+ for(let y=1610;y<1830;y++)for(let x=765;x<950;x++){let k=idx(x,y);if(A[k]===49&&((y/37|0)%5===0))A[k]=62;if(A[k]===54&&(x%48)<15)A[k]=42}
+}
+applyR2B8(A,W,H);
+
 // Conservative full non-air collision mask, 19x15 actor centre clearance.
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
 const nav=new Uint8Array(A.length);
@@ -870,6 +884,9 @@ evidence.last_rework={worker:"B",assigned_head:"fb6af47d89e7969b7c499f0f7bc5bd55
 evidence.rework_b7={"worker":"B","date":"2026-11-18","assigned_head":"d2d128d792c7c46ff16364ab94699b65b13f04db","scope":"ground the disconnected bioheart/observation deck via western bank, ground east lab to cliff; retain legal 373-step direct gantry","physical_cells_changed":7018,"connected_solid_cells":1228520,"native":"NATIVE-UNTESTED"};
 evidence.structural_support={"solid_component_cells":1228520,"solid_components":55,"probes":[[600,808],[615,385],[600,984],[610,2035],[450,800],[930,500]]};
 evidence.last_rework={worker:"B",assigned_head:"d2d128d792c7c46ff16364ab94699b65b13f04db",scope:"ground the disconnected bioheart/observation deck via western bank, ground east lab to cliff; retain legal 373-step direct gantry",physical_cells_changed:7018,rectangles:edits.length,json_bytes:json.length,nonempty_cells:stamped,source_jpeg:"AUTHENTIC VIEWED",original_png:"UNVERIFIED",native:"NATIVE-UNTESTED"};
+evidence.rework_b8={"worker":"B","date":"2026-11-18","assigned_head":"0452a308683576d03b3b209d605b355a20e9c0d8","scope":"irregular porous living bioheart, retained rooted gallery/gantry and differentiated deep clinical support","actual_changed_cells":45383,"extent":[1024,2048],"rectangles":22807,"json_bytes":418459,"nonempty_cells":1272911,"exact_destinations":"24/24 at 19x15,23x19,31x27","gantry_steps":[373,373,373],"solid_probes":[[600,808],[615,385],[600,984],[610,2035],[450,800],[930,500]],"connected_solid_cells":1225795,"source":"authentic source JPEG viewed; original PNG pixels UNVERIFIED","native":"NATIVE-UNTESTED"};
+evidence.last_rework=evidence.rework_b8;
+evidence.structural_support={...evidence.structural_support,solid_component_cells:1225795,probes:[[600,808],[615,385],[600,984],[610,2035],[450,800],[930,500]]};
 return {json,png,details,evidence};
 }
 module.exports={generate};
