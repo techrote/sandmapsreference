@@ -308,6 +308,168 @@ function runPipeline() {
   prism([[922,1447],[951,1475],[964,1493]],7,98,122);
   for(const [x,y,dx,dy,r] of [[962,1607,-23,-55,9],[993,1677,-18,-48,9],[949,1518,-32,-42,8]])
     shard(x,y,dx,dy,r,122);
+
+  // R5: site-scale, materially connected architecture. This is a NEW physical
+  // grid authoring pass, not reference conversion or image-only decoration.
+  // The central airshaft is deliberately protected by the subsequent
+  // authoritative flight-tunnel and exact-site safety restoration.
+  // WEST ROOT-ORCHARD: a continuous asymmetrical living retaining wall with
+  // inhabited bark cells, three harvest terraces, and a continuous climbing spine.
+  poly([[0,381],[84,393],[102,424],[96,470],[126,498],[112,546],[139,590],[121,639],
+        [145,686],[121,734],[87,759],[47,790],[0,806]],39);
+  poly([[56,745],[94,692],[111,617],[114,544],[142,488],[161,445],[191,424],
+        [212,458],[201,516],[178,573],[173,640],[154,700],[113,780],[72,810]],83);
+  poly([[134,564],[155,521],[212,482],[245,466],[267,477],[246,505],[195,535],[168,588]],83);
+  poly([[143,636],[189,612],[245,595],[289,605],[305,626],[259,641],[189,651],[156,680]],83);
+  poly([[95,693],[133,675],[188,684],[230,713],[220,732],[166,717],[127,744]],83);
+  poly([[109,495],[86,478],[83,449],[104,426],[126,434],[139,471]],97);
+  poly([[170,433],[190,404],[219,410],[233,436],[271,443],[292,464],[267,483],
+        [235,473],[203,491],[186,462]],42);
+  // Branch-level sockets cut from broad bark, with separately accessible
+  // platforms and service alcoves rather than crossed line-segments.
+  poly([[121,516],[143,493],[160,503],[168,530],[151,551],[122,544]],0);
+  poly([[77,686],[103,663],[126,674],[130,699],[104,720],[78,708]],0);
+  poly([[135,751],[157,732],[181,740],[182,758],[164,772]],0);
+  poly([[46,584],[129,571],[187,577],[198,587],[180,601],[56,597]],38);
+  poly([[55,598],[93,601],[101,640],[83,660],[70,634]],39);
+  poly([[139,653],[200,639],[265,639],[278,650],[265,668],[156,673]],38);
+  poly([[168,675],[181,703],[204,713],[213,677]],39);
+  poly([[31,785],[83,766],[143,767],[155,780],[136,802],[36,807]],40);
+  poly([[121,777],[144,741],[155,740],[151,786]],39);
+  // Open herb-garden cells: irregular, opaque, small enough not to affect
+  // corridor admission, physically rooted in three distinct terraces.
+  for(const q of [
+    [[64,575],[72,557],[80,575]],[[92,574],[102,552],[113,577]],
+    [[178,642],[189,613],[199,639]],[[230,640],[245,616],[259,640]],
+    [[69,771],[81,750],[93,766]],[[109,765],[121,744],[136,768]]
+  ]) poly(q,97);
+  // EAST SPORE ORGAN: a thick linked, fractured mineral-tissue labyrinth,
+  // no oval-ring stamps: unequal large, medium and tiny genuinely open pores.
+  poly([[1023,392],[976,410],[949,439],[937,465],[904,480],[893,503],
+        [907,533],[876,550],[863,582],[869,615],[850,646],[871,680],
+        [850,721],[864,762],[917,800],[977,837],[1023,839]],97);
+  poly([[1023,415],[995,445],[974,480],[972,518],[953,543],[967,578],
+        [945,605],[957,651],[936,692],[955,731],[982,768],[1023,802]],42);
+  poly([[1023,481],[986,493],[958,520],[954,550],[974,573],[961,596],
+        [985,621],[966,647],[996,693],[1023,704]],39);
+  // Nested asymmetrical pores carved all the way back to Empty, with
+  // separate small gallery pockets and intentional complex cross sections.
+  for(const p of [
+    [[942,438],[957,429],[982,446],[987,473],[972,492],[949,482],[935,460]],
+    [[900,522],[920,500],[938,507],[948,524],[933,551],[907,551],[894,535]],
+    [[974,553],[990,534],[1012,549],[1016,567],[995,587],[975,578]],
+    [[915,616],[932,591],[945,602],[950,627],[933,646],[908,635]],
+    [[976,660],[989,638],[1011,657],[1016,679],[992,697],[972,683]],
+    [[895,714],[916,691],[932,707],[930,730],[912,744],[888,730]],
+    [[961,766],[982,743],[1005,752],[1013,770],[985,786],[964,780]],
+    [[957,510],[967,502],[977,510],[973,522],[958,522]],
+    [[946,698],[956,688],[966,695],[963,705],[951,711]]
+  ])poly(p,0);
+  // Single unmistakable horizontal inspection gallery, with two different
+  // suspended-return decks and real below-deck triangle braces.
+  poly([[757,565],[812,556],[858,557],[884,567],[875,580],[761,582]],38);
+  poly([[855,582],[885,595],[905,612],[894,620],[854,599]],39);
+  poly([[766,753],[819,747],[877,748],[911,761],[909,774],[768,773]],40);
+  poly([[858,773],[888,801],[920,813],[902,818],[855,788]],39);
+  poly([[1023,817],[967,807],[921,803],[905,810],[920,824],[987,838],[1023,850]],38);
+  // WEST FOSSIL AMPHITHEATRE: visible semicircular thick seating, not
+  // skeletal spikes; deep layered ground load paths, distinct fossil altar.
+  poly([[0,853],[64,867],[80,887],[88,914],[58,950],[43,996],[59,1030],
+        [82,1066],[94,1107],[129,1140],[169,1174],[166,1225],[0,1248]],40);
+  poly([[0,1079],[64,1070],[94,1087],[129,1114],[172,1129],[209,1141],
+        [194,1177],[160,1171],[123,1150],[82,1120],[0,1119]],100);
+  // Raked tier apron, each terrace integrated into the edge of the west
+  // geologic shell and given a deliberate flight-sized platform top.
+  for(const [x,y,w,depth,stone] of [
+    [18,1120,86,36,38],[68,1080,112,39,98],[112,1041,122,35,38],
+    [157,1004,108,34,99],[191,968,83,30,38]
+  ]){
+    poly([[x-11,y],[x+w,y],[x+w+15,y+12],[x+w-2,y+depth],[x-11,y+depth]],stone);
+    poly([[x-14,y-7],[x+w+3,y-7],[x+w+4,y+2],[x-14,y+2]],99);
+  }
+  // Chamber-scale ribbed ammonite fossil anchored into the lower rock, with
+  // a hollow eye and differentiated surrounding stone so it reads as relic.
+  poly([[32,1185],[54,1159],[93,1142],[126,1145],[154,1170],[164,1192],
+        [152,1218],[123,1230],[78,1231],[51,1214]],98);
+  poly([[62,1191],[80,1178],[104,1180],[122,1193],[119,1212],[87,1215],[68,1205]],0);
+  poly([[93,1201],[101,1194],[109,1199],[106,1207],[97,1209]],122);
+  // Opposing observation alcove provides a visible room inside the fossil
+  // hillside, but the named exact target at 292,978 stays on the open floor.
+  poly([[73,879],[112,852],[155,852],[177,879],[158,909],[101,909]],98);
+  poly([[106,885],[125,870],[149,877],[153,891],[131,904],[109,897]],0);
+  // EAST CALCITE OBSERVATORY: intentionally unlike the organic west gallery,
+  // a continuous faceted crystalline shell with a real interior and portico.
+  poly([[1023,833],[971,856],[915,882],[869,921],[842,957],[820,996],
+        [810,1043],[832,1084],[857,1122],[896,1162],[951,1200],[1023,1216]],98);
+  poly([[1023,858],[979,876],[922,915],[882,957],[862,1003],[865,1055],
+        [899,1096],[954,1120],[1023,1139]],40);
+  // One large, accessible, irregular vaulted room rather than outline-only
+  // antennae. Its left-hand entry is cut in the shell at y980..1072.
+  poly([[753,975],[787,950],[842,947],[891,966],[917,1008],
+        [930,1046],[912,1081],[878,1097],[820,1097],[775,1072],[740,1030]],0);
+  poly([[746,986],[798,975],[805,1068],[756,1077],[705,1060],[687,1026]],0);
+  // Roof beams and genuinely horizontal inspection deck supported by the
+  // outer wall, two vertical crystal ribs, and threshold return.
+  poly([[829,949],[859,915],[887,925],[893,956],[871,982]],122);
+  poly([[903,989],[920,963],[946,967],[961,999],[940,1027]],122);
+  poly([[823,1103],[873,1093],[932,1098],[986,1109],[1023,1120],
+        [1023,1136],[986,1125],[938,1116],[883,1115],[829,1119]],39);
+  poly([[894,1113],[916,1145],[936,1164],[953,1132]],40);
+  poly([[995,1129],[1004,1161],[1023,1179],[1023,1140]],40);
+  // Different access-controlled cabinet recesses in thick supported shell.
+  poly([[974,923],[991,909],[1016,918],[1023,942],[1004,950],[983,941]],0);
+  poly([[977,1060],[997,1045],[1023,1056],[1023,1082],[996,1087]],0);
+  // LEFT ANASTOMOSIS: 3-stop inward artery system with visible valve junctions,
+  // terraced basalt landings and connected return galleries, not loose whiskers.
+  poly([[0,1277],[74,1305],[111,1338],[127,1380],[131,1437],[114,1473],
+        [141,1516],[128,1567],[88,1615],[31,1650],[0,1663]],100);
+  poly([[0,1334],[81,1344],[151,1382],[182,1415],[210,1461],
+        [193,1508],[141,1550],[99,1602],[52,1635],[0,1628]],49);
+  // Trunk connected to boundary with three large but unequal chambers
+  // carved through, with solid walkable crowns and sheltered nooks.
+  for(const p of [
+    [[35,1365],[61,1347],[91,1360],[103,1386],[85,1412],[47,1408]],
+    [[42,1466],[73,1445],[98,1459],[107,1493],[80,1513],[47,1503]],
+    [[16,1564],[45,1543],[77,1566],[70,1592],[30,1600]]
+  ])poly(p,0);
+  poly([[44,1399],[99,1393],[168,1406],[203,1418],[192,1431],[114,1416],[47,1416]],40);
+  poly([[99,1411],[113,1442],[136,1459],[147,1420]],100);
+  poly([[30,1511],[87,1513],[156,1527],[190,1543],[178,1555],[111,1540],[31,1531]],40);
+  poly([[105,1537],[122,1562],[143,1585],[155,1549]],49);
+  poly([[10,1636],[61,1620],[140,1621],[195,1645],[173,1663],[93,1641],[10,1656]],40);
+  // EAST MOONWELL: descending mineral terraces, dry bowl and three usable
+  // unequal inspection stations tied to strong right-wall stone shoulders.
+  poly([[1023,1287],[966,1296],[917,1321],[890,1350],[882,1390],[900,1424],
+        [868,1458],[866,1510],[893,1551],[871,1594],[897,1653],
+        [946,1699],[1023,1731]],40);
+  poly([[1023,1362],[979,1354],[951,1381],[947,1419],[977,1448],
+        [1023,1454]],98);
+  poly([[1023,1483],[986,1483],[953,1510],[949,1540],[991,1561],
+        [1023,1567]],106);
+  poly([[1023,1615],[981,1616],[955,1634],[947,1665],[982,1690],
+        [1023,1697]],101);
+  // A mineral cistern without actual liquid: readable empty dry basin and
+  // nested ledges remain true Empty IDs, not a water-sprite substitution.
+  poly([[908,1410],[926,1390],[953,1396],[966,1414],[960,1435],
+        [935,1443],[915,1431]],0);
+  poly([[900,1533],[920,1513],[945,1518],[959,1539],[941,1557],
+        [911,1557]],0);
+  poly([[924,1640],[947,1625],[970,1633],[979,1654],[958,1669],
+        [933,1661]],0);
+  poly([[763,1453],[805,1445],[858,1443],[901,1452],[895,1465],
+        [843,1461],[772,1468]],38);
+  poly([[829,1461],[855,1482],[874,1506],[890,1514],[873,1498]],40);
+  poly([[782,1584],[842,1575],[897,1577],[925,1588],[918,1602],
+        [846,1591],[787,1599]],98);
+  poly([[877,1591],[899,1610],[916,1632],[929,1640],[903,1621]],40);
+  // Different mineral catch-points: no repeated round crystal stamps.
+  for(const p of [
+    [[948,1459],[962,1429],[968,1460]],
+    [[978,1570],[993,1532],[1006,1575]],
+    [[962,1675],[976,1647],[989,1677]],
+    [[912,1687],[922,1661],[934,1695]]
+  ])poly(p,122);
+
   // Site-centre and emergency corridor clearances are restored downstream after detail.
   // District E: the basal bell is now a giant rooted architectural instrument
   // with a visible shell, resonant side chambers and mineral clapper, not a void.
@@ -553,6 +715,25 @@ function runPipeline() {
   for(let y=0;y<th;y++)for(let x=0;x<tw;x++)mini[y*tw+x]=g[(y*4)*W+x*4];
   retainPNG("thumbnail.png",tw,th,mini);
   const generatorSource=runPipeline.toString()+"\nrunPipeline();\n";
+
+  function pairRoute(a,b){
+    const from=sites[a],to=sites[b],allow=new Uint8Array(N),seen=new Uint8Array(N),dist=new Int32Array(N),q=new Int32Array(N);
+    dist.fill(-1);
+    for(let y=0;y<H;y++)for(let x=0;x<W;x++)if(clear(x,y,31,27))allow[y*W+x]=1;
+    const start=from[1][1]*W+from[1][0],goal=to[1][1]*W+to[1][0];
+    if(!allow[start]||!allow[goal])throw Error("Pair endpoint collides");
+    let lo=0,hi=1;q[0]=start;seen[start]=1;dist[start]=0;
+    while(lo<hi&&!seen[goal]){
+      const p=q[lo++],x=p%W;
+      const adj=[x?p-1:-1,x<W-1?p+1:-1,p>=W?p-W:-1,p<N-W?p+W:-1];
+      for(const n of adj)if(n>=0&&allow[n]&&!seen[n]){seen[n]=1;dist[n]=dist[p]+1;q[hi++]=n;}
+    }
+    if(!seen[goal])throw Error("Exact pair disconnected "+from[0]+" / "+to[0]);
+    return {from:from[0],to:to[0],from_centre:from[1],to_centre:to[1],
+      conservative_hull:[31,27],shortest_cardinal_centre_steps:dist[goal]};
+  }
+  const r5PairRoutes=[[1,2],[3,4],[5,6],[6,7],[1,3],[4,6]].map(([a,b])=>pairRoute(a,b));
+
   const receipt={
     format:"cybersand-original-canvas-qualification-v1",concept:"The Karst Lung Organ",lane:"original-organic-vertical",
     original_reference_free:true,extent:[W,H],seed_hex:"0x"+SEED.toString(16),source_authority:{
@@ -570,6 +751,7 @@ function runPipeline() {
     all_nonempty_materials_immovable_inert_solid:false,all_nonempty_materials_immovable_solid:true,combustible_organic_material_ids:[46,81,83,86,88,92,97],combustible_organic_cell_count:[46,81,83,86,88,92,97].reduce((sum,id)=>sum+(hist[id]||0),0),essential_geological_foundations_inert:true,fluid_cells:0,powder_cells:0,
     midge_hull_source:[4,3],minimum_31x27_reachable_48px_exit_octants:minLocalExits,conservative_centre_clearances:clearance,
     bypass_test:{blocked_centre_region:[300,965,708,1148],conservative_31x27:alt,required_destinations:essential},
+    r5_exact_pairwise_routes:r5PairRoutes,
     pngs,static_qualification:"PASS",native_install:"NATIVE-UNTESTED",native_input_collision:"NATIVE-UNTESTED",
     native_save_fresh_process_reopen:"NATIVE-UNTESTED",
     creative_revisions:["R3 Sunken Crown: monumental asymmetrical anchored root vaults and platforms, clear central arrival.","R3 Root Orchard: thick coherent rooted tree, buttress arches, visitable tiered shelves and differentiated crowns.","R3 Spore Organ: large porous, rim-backed clustered sponge masses with open circular cavities and collection ledges.","R3 Fossil Atrium and Calcite Observatory: grounded stepped fossil seating, unique supported observation portico and crystals.","R3 Anastomosis and Moonwell: branching left arterial gallery, nested dry well terraces, clear mineral socket and outcrops.","R3 Deep Bell: monumental anchored resonator shell, mineral clapper, and two grounded lower platforms."],
@@ -580,7 +762,11 @@ function runPipeline() {
   receipt.creative_revisions.push("R4 Spore Sanctuary: continuous branching tissue, five faceted pores, visitable collection ledges and open membrane threshold, replacing concentric rings.");
   receipt.creative_revisions.push("R4 Fossil and calcite: grounded stepped amphitheatre differentiated from load-bearing faceted mineral viewing station.");
   receipt.creative_revisions.push("R4 Artery/moonwell: full supported arterial junction and asymmetrical dry mineral terraces with open service alcoves.");
+  receipt.creative_revisions.push("R5 Orchard and Spore: connected rooted inhabited terraces and large/mid/small natural tissue pores.");
+  receipt.creative_revisions.push("R5 Fossil and Calcite: five grounded fossil seats with alcove versus faceted enclosed observation room and supported deck.");
+  receipt.creative_revisions.push("R5 Lower loop: 3-stop basalt artery, dry moonwell basin, true apertures and mineral catch terraces.");
   readme += "\n## R4 physical district rebuild (18 November 2026)\n\nThe independent Shepherd and fidelity reviewers requested a substantial second site-scale edit rather than thin detail. R4 replaces the prior root-orchard crossed-stick arrangement with a continuous buttressed tree, three rooted benches, branching irregular canopy and cut geology niches; replaces Spore Organ circles with interconnected irregular membranes, five unequal through-pores, actual approach stages and a route to their service ledges; builds a four-tier stratified fossil amphitheatre opposite a faceted braced observatory; and adds a continuous basalt artery and three dry moonwell service levels. All edits precede full-cell coalescing and independent site/hull/route replay. These are static physical initial-material edits, not live native results.\n";
+  readme += "\n## R5 inhabited-district rebuild (18 November 2026)\n\nAfter the independent R4 Fidelity and Shepherd REWORK, the actual physical grid was rebuilt across six previously thin districts, not merely the preview: a wall-rooted orchard retaining trunk with usable harvest terraces and carved root niches; differently scaled enterable cellular spore tissue with inspection decks; a five-tier raked fossil amphitheatre and sheltered fossil altar; a distinct enclosed calcite viewing room with open entry and supported deck; three distinguishable basalt valve junctions; and a dry, nested moonwell basin with two service walks and different mineral catch sockets. The final Midge safety corridors are restored after additions. These are immovable starting material-cell structures, not simulated biological machinery or liquid physics.\n\n**31x27 fully in-bounds exact-centre destination-to-destination static route tests (cardinal steps):**\n\n" + r5PairRoutes.map(r=>"- "+r.from+" -> "+r.to+": **"+r.shortest_cardinal_centre_steps+"** steps").join("\n") + "\n\nThe centre-mask stress test is not a physically added obstruction. Inserting actual solid terrain in x300..708/y965..1148 physically overlaps the fossil destination envelope at 31x27; all-eight-sites survival in that physical obstruction is **not claimed**. No native installation or gameplay test has been run.\n";
   artifacts["setup-karst-lung-organ.json"]=ascii(json);
   artifacts["build-karst-lung-organ.js"]=ascii(generatorSource);
   artifacts["README.md"]=ascii(readme);
