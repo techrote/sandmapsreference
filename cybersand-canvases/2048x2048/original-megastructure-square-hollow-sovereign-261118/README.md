@@ -2,6 +2,15 @@
 
 **DRAFT / HOLD. Original authored material-cell geometry. No reference artwork was selected, imitated or traced. Native execution and owner acceptance remain UNTESTED.**
 
+
+## R4 architectonic and support repair (18 November 2026)
+
+**REWORK SUBMITTED FOR INDEPENDENT REVIEW — remains Draft/HOLD.** Shepherd/auditors identified unsupported massive inhabited blocks, too-empty rooms, a weakly fractured gravity spindle, floating market rods and a flattened ship. The source builder now performs actual material-cell repairs *after* operational flight cuts: roof-braced freight/foundry and surveillance/gallery wings have different deck/portal rhythms; the gravity spindle has unequal sheared halves, the parliament a divided crown, and the drydock vessel a raised bridge, nose and asymmetric engine/inspection works. The eastern broken-halo remnant retains a dock load path; the western remnant is deliberately severed to preserve alternate Midge circulation.
+
+**Verified fresh:** 17,002 rectangles / 32,768; 328,075 bytes / 1,048,576; 4,194,304 exact replayed material cells, no overlaps or mismatches; **18/18 exact sites** at 19×15, 23×19 and 31×27. The blocked Lost Civic Core stress regressed to 14/18 during first repair, then recovered to **17/18** after correcting the western pier. No sites moved and no tolerance/nearest-point waiver was used. Two independent deterministic rebuilds produced identical JSON and all six actual-grid PNGs. Each PNG passed CRC/zlib/Adler/IEND and 100% material-pixel parity.
+
+**Independent structural grid census at this revised HEAD:** 48 cardinal solid components, of which 47 do not contact the bottom-grounded component, totalling **137,639 inert solid cells** (prior technical audit: 241,406). This is a substantial repair, **not a support-closure claim**: severed halo pieces and some smaller mechanical/occupied-looking installations remain ungrounded and must be independently judged. Static immovable solids do not fall. Native bridge version/capacity, Godot installation, Rapier progression, Midge collision/input and save/reopen are **NATIVE-UNTESTED**.
+
 ## Creative thesis
 
 A ruined transit capital has been cut in two by the removal of its enormous central gravity spindle. The surviving west freight/foundry state, eastern mirror-bastion and hanging sky parliament fight over the missing civic core; a gigantic broken halo-station and a drydock vessel connect their infrastructure below. The **empty vertical civic wound is intentional**, offset by layered dense inhabited flanks, construction framing, irregular cliff silhouettes and a separate dock/keel scene. This is **exact orthographic side elevation**: no platform tops, perspective, image overlay or fake physics.
@@ -52,7 +61,7 @@ For route stress, the rectangular central actor-centre region x961..1152, y931..
 
 Read-only accepted `techrote/cybersand` main **018bd09503d7f079ddac52e225c2f7daf8d678bf** (18 Nov 2026 rechecked). Setup-v2: each side 512–2048 divisible by 64; no more than 32,768 edit stamps, 32,768 source rectangles and 1,048,576 JSON bytes. The installed native bridge's `workbench_start_rectangle_capacity` has NOT been queried; its legacy fallback is only 4096 rectangles.
 
-The source material catalogue at `materials/catalogue/generated/catalogue.shadow.hpp` SHA `bdbac2c6861ec593634c897130e320741734c1c2` declares all used nonempty IDs state=1 (solid), movable=false, valid=true, current_rule_available=true and kernel=0: Slate (49), Reinforced Concrete (58), Steel Plate (62), Basalt Columns (100), Obsidian (101), Zinc Sheet (113), Bare Iron (117), Glass Block (120), Quartz Crystal (122), Uranium Glass (123) and Polymer Panel (128). Source is a generated **shadow candidate**, not proof of the particular installed native binary. No granular rock, autonomous growth, explosive chemistry or uncontained liquid exists.
+The accepted production material enum at `native/include/cybersand/material.hpp` SHA `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3` confirms all used nonempty IDs state=1 (solid), movable=false, valid=true, current_rule_available=true and kernel=0: Slate (49), Reinforced Concrete (58), Steel Plate (62), Basalt Columns (100), Obsidian (101), Zinc Sheet (113), Bare Iron (117), Glass Block (120), Quartz Crystal (122), Uranium Glass (123) and Polymer Panel (128). Source is the production enum, but this is NOT proof of a compatible installed native binary. No granular rock, autonomous growth, explosive chemistry or uncontained liquid exists.
 
 Setup-v2 requires an installed bridge recognizing extended material IDs such as Slate (49) and Steel Plate (62); **a legacy bridge may refuse the map**. The construction is intentionally static, but runtime collision shape equivalence, camera installation, Rapier progression, input response and save/reopen are all **NATIVE-UNTESTED**.
 
@@ -61,8 +70,8 @@ Setup-v2 requires an installed bridge recognizing extended material IDs such as 
 | Gate | Verified outcome |
 |---|---|
 | Extent | **2048 × 2048**, exactly 4,194,304 cells |
-| Serialized non-overlapping rectangles | **13715 / 32768** |
-| JSON length | **266180 / 1048576 bytes** |
+| Serialized non-overlapping rectangles | **17002 / 32768** |
+| JSON length | **328075 / 1048576 bytes** |
 | Full-grid replay / overlap | **0 mismatches / 0 overlap cells** |
 | Conservative 19×15 actor centres | **18/18 exact sites reachable** |
 | Larger 23×19 centres | **18/18 exact sites reachable** |

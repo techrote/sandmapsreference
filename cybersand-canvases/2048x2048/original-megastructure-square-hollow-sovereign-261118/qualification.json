@@ -13,8 +13,8 @@
   "source_setup": "godot/scripts/workbench_setup.gd",
   "source_midge": "godot/authoring/flyers/midge.json",
   "midge_definition_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
-  "source_material_catalogue": "materials/catalogue/generated/catalogue.shadow.hpp",
-  "material_catalogue_blob": "bdbac2c6861ec593634c897130e320741734c1c2",
+  "source_material_catalogue": "native/include/cybersand/material.hpp",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
   "materials_law": "All nonzero IDs in this actual-cell grid: source material state 1 (solid), movable false, valid true, current_rule_available true, kernel 0. No water, reactive or granular materials.",
   "material_ids": {
     "49": "slate",
@@ -44,30 +44,30 @@
   },
   "gates": {
     "dimensions_exact": true,
-    "rectangles": 13715,
+    "rectangles": 17002,
     "rectangle_source_limit": 32768,
-    "setup_bytes": 266180,
+    "setup_bytes": 328075,
     "source_json_limit": 1048576,
-    "edits_count": 13715,
+    "edits_count": 17002,
     "source_edits_limit": 32768,
     "replay_mismatches": 0,
     "rectangle_overlap_cells": 0,
     "material_pixel_count": 4194304,
     "actor_full_envelope": {
       "19x15": {
-        "component_centres": 2076917,
+        "component_centres": 1878038,
         "exact_reachable": 18,
         "expected": 18,
         "missing": []
       },
       "23x19": {
-        "component_centres": 1985734,
+        "component_centres": 1724851,
         "exact_reachable": 18,
         "expected": 18,
         "missing": []
       },
       "31x27": {
-        "component_centres": 1807799,
+        "component_centres": 1573707,
         "exact_reachable": 18,
         "expected": 18,
         "missing": []
@@ -104,13 +104,162 @@
         "Lost civic core"
       ]
     },
-    "fixed_seed_rebuild": "PASS exact JSON and all PNG artifact bytes (two independent executions)",
-    "png_validation": "PASS signature, IHDR, 4-bit palette, CRC32 each chunk, stored zlib deflate, Adler32, IEND, 100% material-index pixel parity for every image",
-    "installed_bridge_rectangle_capacity": "NOT TESTED. Source can admit 32768, but older bridge fallback is 4096.",
+    "fixed_seed_rebuild": "PASS: two independent generator executions, exact JSON and 6 PNG byte-array identity",
+    "png_validation": "PASS 6/6: PNG signature, chunk CRC32, stored-deflate zlib, Adler32, IEND, 100% material-cell pixel parity",
+    "installed_bridge_rectangle_capacity": "NATIVE-UNTESTED; accepted source max 32768; old/absent installed bridge fallback only 4096.",
     "native_workbench": "NATIVE-UNTESTED",
     "native_rapier_simulation": "NATIVE-UNTESTED",
     "physical_actor_input_and_collision": "NATIVE-UNTESTED",
-    "native_save_reopen": "NATIVE-UNTESTED"
+    "native_save_reopen": "NATIVE-UNTESTED",
+    "structural_topology": {
+      "total_cardinal_components": 48,
+      "bottom_grounded_components": 1,
+      "detached_components": 47,
+      "detached_cells": 137639,
+      "largest_detached_components": [
+        {
+          "cells": 24249,
+          "touches_bottom": false,
+          "bounds": [
+            812,
+            1047,
+            978,
+            1407
+          ]
+        },
+        {
+          "cells": 23022,
+          "touches_bottom": false,
+          "bounds": [
+            1116,
+            1047,
+            1242,
+            1435
+          ]
+        },
+        {
+          "cells": 17191,
+          "touches_bottom": false,
+          "bounds": [
+            479,
+            1047,
+            767,
+            1209
+          ]
+        },
+        {
+          "cells": 10312,
+          "touches_bottom": false,
+          "bounds": [
+            384,
+            1626,
+            643,
+            1791
+          ]
+        },
+        {
+          "cells": 9992,
+          "touches_bottom": false,
+          "bounds": [
+            1371,
+            1288,
+            1572,
+            1435
+          ]
+        },
+        {
+          "cells": 9956,
+          "touches_bottom": false,
+          "bounds": [
+            498,
+            1313,
+            683,
+            1435
+          ]
+        },
+        {
+          "cells": 4795,
+          "touches_bottom": false,
+          "bounds": [
+            1409,
+            1077,
+            1558,
+            1156
+          ]
+        },
+        {
+          "cells": 3720,
+          "touches_bottom": false,
+          "bounds": [
+            1165,
+            782,
+            1242,
+            892
+          ]
+        },
+        {
+          "cells": 3617,
+          "touches_bottom": false,
+          "bounds": [
+            174,
+            741,
+            348,
+            838
+          ]
+        },
+        {
+          "cells": 3581,
+          "touches_bottom": false,
+          "bounds": [
+            812,
+            786,
+            912,
+            847
+          ]
+        },
+        {
+          "cells": 3150,
+          "touches_bottom": false,
+          "bounds": [
+            1073,
+            1946,
+            1362,
+            1956
+          ]
+        },
+        {
+          "cells": 2222,
+          "touches_bottom": false,
+          "bounds": [
+            809,
+            568,
+            864,
+            651
+          ]
+        },
+        {
+          "cells": 1728,
+          "touches_bottom": false,
+          "bounds": [
+            1371,
+            1047,
+            1383,
+            1180
+          ]
+        },
+        {
+          "cells": 1716,
+          "touches_bottom": false,
+          "bounds": [
+            1311,
+            1425,
+            1391,
+            1552
+          ]
+        }
+      ],
+      "caveat": "Detached immovable inert solids remain. This is neither dynamic collapse nor grounded-support acceptance."
+    }
   },
   "sites": [
     {
@@ -205,18 +354,18 @@
     }
   ],
   "histogram": {
-    "0": 2681380,
-    "49": 178034,
-    "58": 324550,
-    "62": 235128,
-    "100": 369806,
-    "101": 188231,
-    "113": 13697,
-    "117": 117667,
-    "120": 18511,
-    "122": 3633,
-    "123": 9274,
-    "128": 54393
+    "0": 2559838,
+    "49": 163328,
+    "58": 295645,
+    "62": 344295,
+    "100": 368742,
+    "101": 190040,
+    "113": 14594,
+    "117": 168643,
+    "120": 23649,
+    "122": 3583,
+    "123": 9467,
+    "128": 52480
   },
   "gallery": [
     {
@@ -230,7 +379,8 @@
       "size_bytes": 2099485,
       "material_pixels_verified": 4194304,
       "chunkCRC": "PASS",
-      "adler": "PASS"
+      "adler": "PASS",
+      "git_blob_sha": "107b5fc508a88f3b64a279c6c96421a4f987b10b"
     },
     {
       "file": "01-nacre-freight-cliff.png",
@@ -243,7 +393,8 @@
       "size_bytes": 177615,
       "material_pixels_verified": 353800,
       "chunkCRC": "PASS",
-      "adler": "PASS"
+      "adler": "PASS",
+      "git_blob_sha": "458f697f1bc276703e603acbe9dad8c0573a5abc"
     },
     {
       "file": "02-spindle-and-sacristy.png",
@@ -256,7 +407,8 @@
       "size_bytes": 224580,
       "material_pixels_verified": 447432,
       "chunkCRC": "PASS",
-      "adler": "PASS"
+      "adler": "PASS",
+      "git_blob_sha": "1913845a19aab72ca4feac0e4134b1fdb8e69e3b"
     },
     {
       "file": "03-meridian-bastion.png",
@@ -269,7 +421,8 @@
       "size_bytes": 180675,
       "material_pixels_verified": 359900,
       "chunkCRC": "PASS",
-      "adler": "PASS"
+      "adler": "PASS",
+      "git_blob_sha": "474c9b6f13e05a266e3966aa7adde55aebde5d61"
     },
     {
       "file": "04-split-market-artery.png",
@@ -282,7 +435,8 @@
       "size_bytes": 177639,
       "material_pixels_verified": 353976,
       "chunkCRC": "PASS",
-      "adler": "PASS"
+      "adler": "PASS",
+      "git_blob_sha": "bd61f20fc03587fb8411f53d0047f1d8174df9f1"
     },
     {
       "file": "05-abyssal-drydock.png",
@@ -295,7 +449,18 @@
       "size_bytes": 178695,
       "material_pixels_verified": 356160,
       "chunkCRC": "PASS",
-      "adler": "PASS"
+      "adler": "PASS",
+      "git_blob_sha": "d8d556bd5391da1e265d5126eb7cf47753d8bada"
     }
-  ]
+  ],
+  "rework": {
+    "phase": "R4 same-owned-PR actual-cell architectural repair",
+    "starting_head": "fbde8bb3d5f650b3ee1815bafa2f9651a131dddb",
+    "prior_audited_detached_cells": 241406,
+    "now_detached_cells": 137639,
+    "blocked_core_bypass": "restored 17/18 without relocating sites",
+    "independent_approval": "PENDING",
+    "native": "NATIVE-UNTESTED",
+    "remaining": "Detached broken-halo and technical installations need independent visual/support review."
+  }
 }
