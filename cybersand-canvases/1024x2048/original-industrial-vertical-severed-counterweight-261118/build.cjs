@@ -178,6 +178,51 @@ function r3Put(x,y,m){if(x>=0&&x<W&&y>=0&&y<H&&!R3_PROTECT[y*W+x]&&grid[y*W+x]!=
 let r3Changed=0;const r3Prior=grid.slice();for(const op of ART_OPS){if(op[0]==="B"){let [_,x,y,w,h,m]=op;for(let yy=y;yy<y+h;yy++)for(let xx=x;xx<x+w;xx++)r3Put(xx,yy,m);}else{let [_,x,y,u,v,t,m]=op,dx=u-x,dy=v-y,n=Math.max(Math.abs(dx),Math.abs(dy));for(let k=0;k<=n;k++){let xx=Math.round(x+dx*k/Math.max(n,1)),yy=Math.round(y+dy*k/Math.max(n,1));for(let j=yy-Math.floor(t/2);j<yy-Math.floor(t/2)+t;j++)for(let i=xx-Math.floor(t/2);i<xx-Math.floor(t/2)+t;i++)r3Put(i,j,m);}}}
 for(let i=0;i<grid.length;i++)if(grid[i]!==r3Prior[i])r3Changed++;
 if(r3Changed!==93351||grid.reduce((a,v)=>a+(v===3),0)!==6525)throw Error("R3 art fingerprint/water preservation mismatch");
+
+ // R4 structural closure: seven previously detached major machine components
+ // now have real four-connected load paths to world-edge Solid foundations.
+ // Selected gallery crossings are sacrificed rather than drawing fake braces.
+ const R4_BRIDGES=[
+  ["east crane hanger",[[642,313,7,77,68],[634,310,23,10,62],[634,384,23,10,62]]],
+  ["west counterweight catch column",[[327,410,7,80,58],[319,405,23,12,62],[319,484,23,12,62]]],
+  ["east crusher transfer support",[[760,931,79,8,62],[751,924,19,21,58],[831,925,18,21,58]]],
+  ["rail freight abutment",[[758,1269,85,11,62],[750,1262,20,24,58],[834,1262,18,24,58]]],
+  ["lower west cage collar",[[339,1786,8,78,58],[333,1778,20,17,62],[333,1855,20,16,62]]],
+  ["lower east salvage hoist",[[642,1810,8,78,68],[635,1801,22,17,62],[635,1880,22,17,62]]],
+  ["crusher to exchange transverse load bridge",[[466,1115,167,8,62],[463,1108,15,22,58],[624,1108,15,22,58]]]
+ ];
+ const beforeR4=grid.slice();
+ for(const [name,ops] of R4_BRIDGES)for(const rect of ops)box(...rect);
+ // Industrial gravity-feed motifs. The east downfeed has a deliberate free
+ // 57-cell crossover gap at y1161..1217; no continuous false machinery bridge.
+ for(const op of [
+ [454,1083,8,162,69],[448,1082,20,8,62],[445,1239,23,10,119],
+ [739,1127,8,34,68],[739,1218,8,52,68],[737,1128,12,13,62],[662,1269,85,9,65]
+ ])box(...op);
+ let r4Changed=0,r4ProtectedChanged=0;
+ for(let i=0;i<grid.length;i++)if(grid[i]!==beforeR4[i]){r4Changed++;if(R3_PROTECT[i])r4ProtectedChanged++;}
+ function r4Audit(){
+  const label=new Int32Array(W*H),q=new Int32Array(W*H),components=[],unanchored=[];label.fill(-1);
+  for(let i=0;i<grid.length;i++){if(label[i]>=0||grid[i]===0||grid[i]===3)continue;
+   const id=components.length;let head=0,tail=1,edge=false,l=W,t=H,rr=0,b=0;q[0]=i;label[i]=id;
+   while(head<tail){let v=q[head++],x=v%W,y=(v-x)/W;if(x===0||x===W-1||y===0||y===H-1)edge=true;l=Math.min(l,x);rr=Math.max(rr,x);t=Math.min(t,y);b=Math.max(b,y);
+    for(const u of [x>0?v-1:-1,x<W-1?v+1:-1,y>0?v-W:-1,y<H-1?v+W:-1]){
+     if(u<0||label[u]>=0||grid[u]===0||grid[u]===3)continue;label[u]=id;q[tail++]=u;}}
+   const c={id,size:tail,world_edge_anchored:edge,bounds:[l,t,rr,b]};components.push(c);if(!edge&&tail>1000)unanchored.push(c);
+  }
+  const probes=[
+   ["upper east control",[645,379]],["western failed counterweight",[330,479]],
+   ["east crusher housing",[769,935]],["central ore exchange",[330,1146]],
+   ["rail switch/cargo",[769,1275]],["west salvage processor",[342,1795]],
+   ["east salvage plant",[645,1820]]
+  ].map(([name,[x,y]])=>({name,point:[x,y],material:grid[y*W+x],component:label[y*W+x],anchored:label[y*W+x]>=0&&components[label[y*W+x]].world_edge_anchored}));
+  if(probes.some(p=>!p.anchored))throw Error("R4 major support probe failed: "+JSON.stringify(probes.filter(p=>!p.anchored)));
+  if(unanchored.some(c=>c.size>10000))throw Error("R4 retains unanchored >10000-cell assembly");
+  return{total_solid_components:components.length,major_world_edge_anchored:components.filter(c=>c.world_edge_anchored&&c.size>10000),unanchored_over_1000:unanchored,all_seven_major_probes_anchored:true,probes};
+ }
+ const R4_STRUCTURAL=r4Audit();
+ if(grid.reduce((a,m)=>a+(m===3),0)!==6525)throw Error("R4 Water conservation failure");
+
 const HIST={};let occupied=0;for(const m of grid){HIST[m]=(HIST[m]||0)+1;if(m){occupied++;if(!INERT.has(m)&&m!==3)throw Error("Non-inert unexpected material "+m);}}
 if(!(HIST[3]>0))throw Error("Quench Water was expected in the sealed lower sump"); // this is fatal only if coolant is fully erased
 // Exact optimal by vertical coalescing of horizontal material runs.
@@ -244,7 +289,7 @@ let crops=[
  ["05-quench-salvage-terminal.png",105,1615,813,418]];
 let images=[],imageChecks=[];for(let [name,x,y,w,h] of crops){let png=pngFromGrid(x,y,w,h);images.push({name,bytes:png});imageChecks.push({name,sha256:sha256(png),...verifyPng(png,x,y,w,h)});}
 const gridSha=sha256(grid),setupSha=sha256(bytes(setupString));
-const receipt={schema:"cybersand-original-industrial-vertical-qualification-v1",engine_accepted_main:ENGINE,creator:"original-industrial-vertical",originality:"original from authored plan; no source/reference image used",seed_decimal:SEED>>>0,extent:[W,H],cells:grid.length,nonempty:occupied,nonempty_materials:HIST,grid_sha256:gridSha,setup_sha256:setupSha,setup_bytes:bytes(setupString).length,edit_rectangles:edits.length,rectangle_budget_source:32768,default_no_bridge_capacity:4096,installed_bridge_capacity:"UNKNOWN - do not assert native load",edit_budget:32768,full_cell_replay:"PASS",edit_overlap_count:0,rectangle_work_estimate:work,generated_start_work_limit:Math.min(64*W*H,32000000),material_laws:"all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",flight_checks:flight,alternative_main_throat_block:{rect:[420,983,665,1006],terminal_reachable:true,reachable_centers:alt.count},sites:SITES,routes:ROUTES,image_checks:imageChecks,art_rework:{review_authority:"Shepherd and Fidelity REWORK comments on prior exact head",previous_head:"39644a3a6b0a0500b01faca6c075e08d2054d539",original_cell_changes:r3Changed,operation_records:ART_OPS.length,preservation:"all original exact 11 destinations, three flyable spines and Water 6525 cells retained",districts:"asymmetric severed counterweight/catch; twin ore hoppers/transfer; distinct switch yard/cargo cradle; irregular foundry galleries; furnace-to-quench infrastructure",production_scope:"Only fixed inert physical cells; no runtime physics edits"},native_status:"NATIVE-UNTESTED: no CyberDemoBridge binary or Godot runtime supplied; dynamic inspect_interaction IDs, world install, Rapier input/collision, physics, fresh-process save/reopen unproven",approval:"DRAFT/HOLD - independent Shepherd and owner acceptance outstanding"};
+const receipt={r4_support_rework:{ops:R4_BRIDGES.map(b=>b[0]),changed_cells:r4Changed,prior_protected_corridor_cells_changed:r4ProtectedChanged,structural:R4_STRUCTURAL,flight_crossovers:"Some old straight route-guide segments are interrupted by engineered support; exact whole-hull connectivity retested"},schema:"cybersand-original-industrial-vertical-qualification-v1",engine_accepted_main:ENGINE,creator:"original-industrial-vertical",originality:"original from authored plan; no source/reference image used",seed_decimal:SEED>>>0,extent:[W,H],cells:grid.length,nonempty:occupied,nonempty_materials:HIST,grid_sha256:gridSha,setup_sha256:setupSha,setup_bytes:bytes(setupString).length,edit_rectangles:edits.length,rectangle_budget_source:32768,default_no_bridge_capacity:4096,installed_bridge_capacity:"UNKNOWN - do not assert native load",edit_budget:32768,full_cell_replay:"PASS",edit_overlap_count:0,rectangle_work_estimate:work,generated_start_work_limit:Math.min(64*W*H,32000000),material_laws:"all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",flight_checks:flight,alternative_main_throat_block:{rect:[420,983,665,1006],terminal_reachable:true,reachable_centers:alt.count},sites:SITES,routes:ROUTES,image_checks:imageChecks,art_rework:{review_authority:"Shepherd and Fidelity REWORK comments on prior exact head",previous_head:"39644a3a6b0a0500b01faca6c075e08d2054d539",original_cell_changes:r3Changed,operation_records:ART_OPS.length,preservation:"all original exact 11 destinations, three flyable spines and Water 6525 cells retained",districts:"asymmetric severed counterweight/catch; twin ore hoppers/transfer; distinct switch yard/cargo cradle; irregular foundry galleries; furnace-to-quench infrastructure",production_scope:"Only fixed inert physical cells; no runtime physics edits"},native_status:"NATIVE-UNTESTED: no CyberDemoBridge binary or Godot runtime supplied; dynamic inspect_interaction IDs, world install, Rapier input/collision, physics, fresh-process save/reopen unproven",approval:"DRAFT/HOLD - independent Shepherd and owner acceptance outstanding"};
 const rec=JSON.stringify(receipt,null,2)+"\n";
 let readme=[
 "# Severed Counterweight | original industrial vertical canvas",
@@ -316,7 +361,7 @@ let readme=[
 "",
 "**Independent bounded gates:** the 19x15 / 23x19 / 31x27 fully contained envelopes still reach all original 11 exact coordinates; blocked central throat retains a 31x27 bypass. 8176 nonoverlapping rectangles, 149799 JSON bytes, 885624 painted cells; 0 replay mismatches. **NATIVE-UNTESTED** until a source-compatible installed GDExtension confirms constructor capacity, simulation, collision and fresh save/reopen.",
 "",
-"## Qualification and limitations",
+"## R4 physical structural closure", "", "Seven former major (>10000-cell) detached industrial assemblies now have genuine cardinally connected steel paths to world-edge-anchored Solid. The transverse crusher-to-exchange bridge and rising ore-transfer conduit connect previously disconnected process groups. The eastern gravity downfeed is purposefully interrupted by a 57-cell flight-passage gap; there is no false claim of a seamless moving conveyor.", "", "R4 changed "+r4Changed+" actual material identities, including "+r4ProtectedChanged+" in former protected route space. The old ROUTES coordinate arrays are original design wayfinding guides, NOT a claim that every straight crossover remains unobstructed: selected service channels are interrupted by grounded braces. The full 19x15, 23x19 and 31x27 exact-centre traversability graph, 31x27 blocked-main-throat recovery, and all named sites are rebuilt from final cells and retested.", "", "Seven named large assembly witness points and all unanchored components above 1000 cells are listed in qualification.json. Remaining unanchored smaller static cabinets (>1000 cells): "+R4_STRUCTURAL.unanchored_over_1000.length+"; these are not represented as physically anchored and warrant further finish review. The 2D world has no true structural stress model. Native Workbench input, collision, Water settling and fresh-process save/reopen remain NATIVE-UNTESTED.", "", "## Qualification and limitations",
 "",
 "- Offline full grid, nonoverlap, exact replay, PNG structural/inflate/CRC and material-ID parity: PASS; see `qualification.json`.",
 "- The source reader admits each extent component 512..2048 in multiples of 64, 32,768 stamps and 1 MiB JSON. `native_rectangle_budget()` may fall back to **4,096** without a bridge and otherwise asks the loaded compiled library, up to 32,768; our actual rectangle count must be compared to that installed capacity before loading.",

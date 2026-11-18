@@ -43,11 +43,11 @@ Connectivity is proven from the **exact Midge spawn** to **each exact site** at 
 
 `build.cjs` is a fixed-seed, dependency-free Node.js builder. Run `node build.cjs` from any directory: it rebuilds `setup-severed-counterweight.json`, `qualification.json` and all full-resolution material-identity indexed PNGs in its own directory, then reopens/decodes every generated PNG in memory to check chunk CRC, zlib, Adler-32, IEND and per-cell ID parity. The source grid is reconstructed from hand-authored geometric primitives and exact route masks, never derived from a source image or compressed/reprojected reference PNG.
 
-**JSON format:** ordinary Workbench Setup-v2, not a fabricated generated-start receipt. Ordered, nonoverlapping, vertically coalesced rectangular edits exactly reconstruct the 2097152 source cells. JSON bytes 149799 / 1,048,576, 8176 rectangles / 32,768 source max, 885624 painted cell writes in a 32000000 theoretical work envelope.
+**JSON format:** ordinary Workbench Setup-v2, not a fabricated generated-start receipt. Ordered, nonoverlapping, vertically coalesced rectangular edits exactly reconstruct the 2097152 source cells. JSON bytes 150525 / 1,048,576, 8215 rectangles / 32,768 source max, 894374 painted cell writes in a 32000000 theoretical work envelope.
 
-**SHA-256 identity:** material grid `6c39b9075f11c11a85c3cd0631c0e68c953a570639980caa69167cd3e8778da1`; JSON `30628559c5549234a8cc96a2404ff483b48e16f28be67178875ad709c4f66a22`.
+**SHA-256 identity:** material grid `acb9db8841bcfd0d4dfbbd3c4732e008550cf2ed945f5e9b935814a6e372e7ff`; JSON `1b18dadde694431c6d82b2d4f4253219cc97167a65dfc5c64f8a93d269cb1de9`.
 
-**Physically fixed materials:** `38:1242 40:95383 50:41953 58:164193 62:95756 64:2381 65:72897 68:16066 69:8085 72:3162 73:9450 76:15562 77:3803 78:424 79:5460 100:184304 101:91029 119:15406 120:1435 130:46112 131:4996`. All are accepted-main Solid/non-movable/RuleKernel::None; only Water (3) is dynamic, within the walled lower quench basin. Visual metal pipes and LEDs are material cells, not sprite decals.
+**Physically fixed materials:** `38:1242 40:95383 50:41843 58:166648 62:99632 64:2381 65:73321 68:17296 69:9232 72:3162 73:9450 76:15434 77:3719 78:424 79:5304 100:184304 101:91029 119:15502 120:1435 130:46112 131:4996`. All are accepted-main Solid/non-movable/RuleKernel::None; only Water (3) is dynamic, within the walled lower quench basin. Visual metal pipes and LEDs are material cells, not sprite decals.
 
 **Render evidence:** `overview.png` is the complete 1024x2048 material map; the five numbered crops are native 1:1 unresampled windows of that *same cell grid*. These are palette-identity PNGs, **not** Godot screenshots, not AI concept art, and not a claim that the native renderer has been tested.
 
@@ -76,6 +76,15 @@ Viewed the *complete* 1024x2048 identity-plane PNG and the 1:1 crops. Initial co
 **Actual-cell evidence:** the complete material-ID plane and five original 1:1 windows were regenerated from these same cells, and rechecked by PNG chunk CRC, zlib/Adler, IEND and every indexed material pixel. Self-critique: mechanical load paths are clearer but some service shafts retain repeatable functional steel modules; no active elevator motion or native coolant stability is asserted.
 
 **Independent bounded gates:** the 19x15 / 23x19 / 31x27 fully contained envelopes still reach all original 11 exact coordinates; blocked central throat retains a 31x27 bypass. 8176 nonoverlapping rectangles, 149799 JSON bytes, 885624 painted cells; 0 replay mismatches. **NATIVE-UNTESTED** until a source-compatible installed GDExtension confirms constructor capacity, simulation, collision and fresh save/reopen.
+
+## R4 physical structural closure
+
+Seven former major (>10000-cell) detached industrial assemblies now have genuine cardinally connected steel paths to world-edge-anchored Solid. The transverse crusher-to-exchange bridge and rising ore-transfer conduit connect previously disconnected process groups. The eastern gravity downfeed is purposefully interrupted by a 57-cell flight-passage gap; there is no false claim of a seamless moving conveyor.
+
+R4 changed 11419 actual material identities, including 7909 in former protected route space. The old ROUTES coordinate arrays are original design wayfinding guides, NOT a claim that every straight crossover remains unobstructed: selected service channels are interrupted by grounded braces. The full 19x15, 23x19 and 31x27 exact-centre traversability graph, 31x27 blocked-main-throat recovery, and all named sites are rebuilt from final cells and retested.
+
+Seven named large assembly witness points and all unanchored components above 1000 cells are listed in qualification.json. Remaining unanchored smaller static cabinets (>1000 cells): 6; these are not represented as physically anchored and warrant further finish review. The 2D world has no true structural stress model. Native Workbench input, collision, Water settling and fresh-process save/reopen remain NATIVE-UNTESTED.
+
 ## Qualification and limitations
 
 - Offline full grid, nonoverlap, exact replay, PNG structural/inflate/CRC and material-ID parity: PASS; see `qualification.json`.

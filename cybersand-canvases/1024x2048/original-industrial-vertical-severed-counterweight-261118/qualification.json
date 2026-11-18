@@ -1,4 +1,197 @@
 {
+  "r4_support_rework": {
+    "ops": [
+      "east crane hanger",
+      "west counterweight catch column",
+      "east crusher transfer support",
+      "rail freight abutment",
+      "lower west cage collar",
+      "lower east salvage hoist",
+      "crusher to exchange transverse load bridge"
+    ],
+    "changed_cells": 11419,
+    "prior_protected_corridor_cells_changed": 7909,
+    "structural": {
+      "total_solid_components": 105,
+      "major_world_edge_anchored": [
+        {
+          "id": 0,
+          "size": 109339,
+          "world_edge_anchored": true,
+          "bounds": [
+            135,
+            0,
+            874,
+            870
+          ]
+        },
+        {
+          "id": 1,
+          "size": 256562,
+          "world_edge_anchored": true,
+          "bounds": [
+            0,
+            80,
+            327,
+            2047
+          ]
+        },
+        {
+          "id": 2,
+          "size": 484520,
+          "world_edge_anchored": true,
+          "bounds": [
+            235,
+            80,
+            1023,
+            2047
+          ]
+        }
+      ],
+      "unanchored_over_1000": [
+        {
+          "id": 19,
+          "size": 3530,
+          "world_edge_anchored": false,
+          "bounds": [
+            707,
+            385,
+            769,
+            518
+          ]
+        },
+        {
+          "id": 30,
+          "size": 1306,
+          "world_edge_anchored": false,
+          "bounds": [
+            720,
+            619,
+            769,
+            683
+          ]
+        },
+        {
+          "id": 61,
+          "size": 2408,
+          "world_edge_anchored": false,
+          "bounds": [
+            264,
+            1318,
+            306,
+            1373
+          ]
+        },
+        {
+          "id": 93,
+          "size": 1113,
+          "world_edge_anchored": false,
+          "bounds": [
+            235,
+            1700,
+            328,
+            1771
+          ]
+        },
+        {
+          "id": 102,
+          "size": 1782,
+          "world_edge_anchored": false,
+          "bounds": [
+            128,
+            1885,
+            325,
+            1893
+          ]
+        },
+        {
+          "id": 103,
+          "size": 1632,
+          "world_edge_anchored": false,
+          "bounds": [
+            448,
+            1951,
+            551,
+            1974
+          ]
+        }
+      ],
+      "all_seven_major_probes_anchored": true,
+      "probes": [
+        {
+          "name": "upper east control",
+          "point": [
+            645,
+            379
+          ],
+          "material": 68,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "western failed counterweight",
+          "point": [
+            330,
+            479
+          ],
+          "material": 58,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "east crusher housing",
+          "point": [
+            769,
+            935
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "central ore exchange",
+          "point": [
+            330,
+            1146
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "rail switch/cargo",
+          "point": [
+            769,
+            1275
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "west salvage processor",
+          "point": [
+            342,
+            1795
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "east salvage plant",
+          "point": [
+            645,
+            1820
+          ],
+          "material": 68,
+          "component": 2,
+          "anchored": true
+        }
+      ]
+    },
+    "flight_crossovers": "Some old straight route-guide segments are interrupted by engineered support; exact whole-hull connectivity retested"
+  },
   "schema": "cybersand-original-industrial-vertical-qualification-v1",
   "engine_accepted_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
   "creator": "original-industrial-vertical",
@@ -9,43 +202,43 @@
     2048
   ],
   "cells": 2097152,
-  "nonempty": 885624,
+  "nonempty": 894374,
   "nonempty_materials": {
-    "0": 1211528,
+    "0": 1202778,
     "3": 6525,
     "38": 1242,
     "40": 95383,
-    "50": 41953,
-    "58": 164193,
-    "62": 95756,
+    "50": 41843,
+    "58": 166648,
+    "62": 99632,
     "64": 2381,
-    "65": 72897,
-    "68": 16066,
-    "69": 8085,
+    "65": 73321,
+    "68": 17296,
+    "69": 9232,
     "72": 3162,
     "73": 9450,
-    "76": 15562,
-    "77": 3803,
+    "76": 15434,
+    "77": 3719,
     "78": 424,
-    "79": 5460,
+    "79": 5304,
     "100": 184304,
     "101": 91029,
-    "119": 15406,
+    "119": 15502,
     "120": 1435,
     "130": 46112,
     "131": 4996
   },
-  "grid_sha256": "6c39b9075f11c11a85c3cd0631c0e68c953a570639980caa69167cd3e8778da1",
-  "setup_sha256": "30628559c5549234a8cc96a2404ff483b48e16f28be67178875ad709c4f66a22",
-  "setup_bytes": 149799,
-  "edit_rectangles": 8176,
+  "grid_sha256": "acb9db8841bcfd0d4dfbbd3c4732e008550cf2ed945f5e9b935814a6e372e7ff",
+  "setup_sha256": "1b18dadde694431c6d82b2d4f4253219cc97167a65dfc5c64f8a93d269cb1de9",
+  "setup_bytes": 150525,
+  "edit_rectangles": 8215,
   "rectangle_budget_source": 32768,
   "default_no_bridge_capacity": 4096,
   "installed_bridge_capacity": "UNKNOWN - do not assert native load",
   "edit_budget": 32768,
   "full_cell_replay": "PASS",
   "edit_overlap_count": 0,
-  "rectangle_work_estimate": 885624,
+  "rectangle_work_estimate": 894374,
   "generated_start_work_limit": 32000000,
   "material_laws": "all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",
   "flight_checks": [
@@ -56,7 +249,7 @@
       ],
       "reachable_sites": 11,
       "total_sites": 11,
-      "reachable_centers": 564281,
+      "reachable_centers": 546216,
       "sites": [
         {
           "id": "A",
@@ -166,7 +359,7 @@
       ],
       "reachable_sites": 11,
       "total_sites": 11,
-      "reachable_centers": 516212,
+      "reachable_centers": 497447,
       "sites": [
         {
           "id": "A",
@@ -276,7 +469,7 @@
       ],
       "reachable_sites": 11,
       "total_sites": 11,
-      "reachable_centers": 426995,
+      "reachable_centers": 407447,
       "sites": [
         {
           "id": "A",
@@ -388,7 +581,7 @@
       1006
     ],
     "terminal_reachable": true,
-    "reachable_centers": 425623
+    "reachable_centers": 395220
   },
   "sites": [
     {
@@ -666,9 +859,9 @@
   "image_checks": [
     {
       "name": "overview.png",
-      "sha256": "542103e89dcbb319c12d3d87f32cdf9be03872327231022d445c7993f8f27b50",
+      "sha256": "86224155df4d46dc72a8362b796a857637624b08a3c7db8760b436b0412813ff",
       "chunks": 5,
-      "bytes": 53916,
+      "bytes": 54228,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -682,9 +875,9 @@
     },
     {
       "name": "01-crown-intake.png",
-      "sha256": "99bcd0154493978aca55d3506be4aef6ffb88b86ea721d07bd194375c0e342e4",
+      "sha256": "35da0bd2426e88302445d8d64c7c68022839cc596059547993c422558400f024",
       "chunks": 5,
-      "bytes": 7440,
+      "bytes": 7514,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -698,9 +891,9 @@
     },
     {
       "name": "02-counterweight-cathedral.png",
-      "sha256": "968204f013b0f72149604af4661b34fb18c9e90f7a3de87e63c66bda23a3e804",
+      "sha256": "5d2fb2e70775cdb3811c73f200505b9207f73bd91c81415f9d268599b1710983",
       "chunks": 5,
-      "bytes": 12501,
+      "bytes": 12548,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -714,9 +907,9 @@
     },
     {
       "name": "03-ore-crusher-gallery.png",
-      "sha256": "26b372c7cf9ca235cfe45252ad2b79c36e284c0b4747cb30df7cef383654332b",
+      "sha256": "e6fef7a62aa0ce350214a2648bc3f2d1d398ddfd3df40b069502b199571c2580",
       "chunks": 5,
-      "bytes": 12539,
+      "bytes": 12691,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -730,9 +923,9 @@
     },
     {
       "name": "04-rail-funnel-transfer.png",
-      "sha256": "bce214bd286d36dd413c8799172e6f4b0745c0e70d04e7f5e2060813a205396e",
+      "sha256": "86aa16f46d66bd0ee08f5e0320f7ffcdbf9622f9c45383c96d4dc99817a6aab6",
       "chunks": 5,
-      "bytes": 14308,
+      "bytes": 14336,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -746,9 +939,9 @@
     },
     {
       "name": "05-quench-salvage-terminal.png",
-      "sha256": "20c1b853755cfbea3912d6b2e26514c8df0e4108257079924a734bcc9edf43f8",
+      "sha256": "612735fd36300674c908e493b27b56077c7171a68fde46a8b8f7a45be5728f8d",
       "chunks": 5,
-      "bytes": 9458,
+      "bytes": 9525,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
