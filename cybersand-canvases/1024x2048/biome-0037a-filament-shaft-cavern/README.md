@@ -40,3 +40,24 @@ All eight files are regenerated from **this** committed Setup grid, verified for
 Regenerate with Node 18+ and repository history: `node build_rework_r2.js --check`, `node verify_rework_r2.js`, `node render_material_cells_r2.js`. Source builder operates from immutable baseline `8b43319f...`, layers original R2A, C and [this geometry finisher](finish_r2a_geometry.js). Builder semantics were directly executed in isolated V8; the ordinary Node CLI and native runtime were **not** exercised during this pass.
 
 **HOLD / NATIVE-UNTESTED:** No installed CyberDemoBridge capacity handshake, Godot/Rapier actual install, Midge flight/collision, bounded simulation or save/reopen performed. Source reports 32,768 edit capacity; a legacy installed 4,096 edit bridge would reject this canvas. Full-original PNG parity and independent Shepherd/fidelity/owner physical playtest remain open.
+
+
+## Current R2B: rooted tissue, distinct lower geology and reservoir service (18 November 2026)
+
+**This newest section supersedes the previous R2A3 numerical totals above.** After the Shepherd's exact-HEAD handoff, the original committed source JPEG was visually compared directly with the previous actual-cell map. The source-derived upper western tissue now has varied fine/thick rooted web struts, forked laminae and differentiated porous junctions; the **newly extrapolated lower** regions now include a substantial broad geological calcite-fan observatory with vaulted Midge access, a distinct western deep geode-return chamber and an eastern spiral-cliff service gallery. The historical basin is still exactly **35,688 real Water cells**, now approached through a more convincing basalt shoulder and engineered observation apron. These changes are in the actual cell grid via [deterministic R2B finisher](finish_r2b.js) invoked by the committed builder after R2A3. No photo editing or fake solid background.
+
+| Current static gate | Exact R2B result |
+|---|---|
+| Extent | 1024×2048 = 2,097,152 physical cells |
+| Real material cells changed from assigned HEAD | 174,386 |
+| Setup-v2 serialized rectangles | 15,672 / 32,768 |
+| Serialized JSON | 285,727 / 1,048,576 bytes |
+| Full cell replay/equivalence | 0 mismatches |
+| Full grid SHA-256 | `19969ee568a7450a456f06f8dfa6567a8ab2e52fe9050db75f4d53ef684e111a` |
+| Water changes vs archival baseline | 0 of 35,688 |
+| Upper pale tissue primary physical component | 100.00% |
+| Exact Midge destinations | 13/13 + 15/15 at 19×15; 13/13 + 15/15 at 23×19; 13/13 + 15/15 at 31×27 |
+| Connected legal Midge centres | 1,058,792 / 1,017,813 / 944,034 |
+| Full-resolution original art parity / native runtime | **UNVERIFIED / NATIVE-UNTESTED** |
+
+The source JPEG is genuine, same committed blob as the predecessor; the original large PNG's full-resolution pixels remain UNVERIFIED. Eight indexed PNGs have been regenerated from the same final actual material grid; the deterministic Node renderer and independent readback are included for local reproduction, with no claim of physical native Godot admission. Accepted source bridge has 32,768 capacity, while legacy installed fallback may allow only 4,096; installed capability is unmeasured. Owner playtest, live Water containment, Midge flight/control and save/reopen remain open; no merge/Ready.

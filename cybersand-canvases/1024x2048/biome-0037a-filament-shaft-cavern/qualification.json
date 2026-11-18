@@ -35,7 +35,7 @@
     "101": "Obsidian Solid/None",
     "122": "QuartzCrystal Solid/None"
   },
-  "art": "R2A3 source-JPEG-guided asymmetric pale porous cave wall/ladder/shelf (source-derived upper district), and newly extrapolated load-bearing lower western chambers, east return galleries and integrated historic Water-reservoir gantry. Verified true material-cell PNGs; original full PNG pixel parity UNVERIFIED.",
+  "art": "Current R2B: direct genuine source JPEG reviewed; finer upper rooted tissue struts, large west calcite fan/lower way-throughs, distinct east service-return geology, rock-supported Water-reservoir observation apron. Source-faithful upper district with separately authored lower expansion, no stretched source pixels; no fake atmospheric material.",
   "gallery": [
     [
       "filament-shaft-cavern-material-1024x2048.png",
@@ -108,26 +108,26 @@
       2048
     ],
     "complete_cells": 2097152,
-    "rectangles": 16661,
+    "rectangles": 15672,
     "max_rectangles": 32768,
-    "json_bytes": 303923,
+    "json_bytes": 285727,
     "max_json_bytes": 1048576,
     "final_cell_mismatches": 0,
-    "changed_cells_from_archived_r1": 823225,
-    "nonempty_cells": 773950,
+    "changed_cells_from_archived_r1": 894873,
+    "nonempty_cells": 796680,
     "water_cells": 35688,
     "water_changed_cells": 0,
     "material_histogram": {
-      "0": 1323202,
+      "0": 1300472,
       "3": 35688,
-      "38": 39838,
-      "42": 27508,
-      "49": 89972,
-      "62": 4887,
-      "99": 164842,
-      "100": 257632,
-      "101": 119148,
-      "122": 34435
+      "38": 47679,
+      "42": 7217,
+      "49": 80262,
+      "62": 8801,
+      "99": 181378,
+      "100": 260740,
+      "101": 146074,
+      "122": 28841
     },
     "allowlist": [
       0,
@@ -292,7 +292,7 @@
           15
         ],
         "spawn_exact": true,
-        "component_centres": 1085017,
+        "component_centres": 1058792,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -302,7 +302,7 @@
           19
         ],
         "spawn_exact": true,
-        "component_centres": 1038359,
+        "component_centres": 1017813,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -312,23 +312,18 @@
           27
         ],
         "spawn_exact": true,
-        "component_centres": 962834,
+        "component_centres": 944034,
         "r2_exact": 13,
         "legacy_exact": 15
       }
     ],
     "upper_tissue_components": [
-      193031
+      206861
     ],
-    "connected_primary_tissue_cells": 193031,
-    "tissue_cells": 193031,
+    "connected_primary_tissue_cells": 206861,
+    "tissue_cells": 206861,
     "primary_tissue_fraction": 1,
-    "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)",
-    "changed_cells_from_previous_r2_head": 171012,
-    "rendered_png_count": 8,
-    "png_index_pixels_verified": 4194304,
-    "png_crc_and_deflate_integrity": "PASS: indexed PNG CRC32/PLTE/IHDR/IDAT/IEND, stored zlib and Adler32 independently decoded",
-    "png_palette_grid_mismatches": 0
+    "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)"
   },
   "native": "NATIVE-UNTESTED: no compatible installed Godot/Rapier/CyberDemoBridge import, input/collision/simulation or save/reopen. Accepted source capacity 32768; legacy installed 4096 would reject 16661 rectangles.",
   "disposition": "DRAFT / HOLD; independent Shepherd/fidelity/native/owner acceptance pending. No merge or Ready.",
@@ -403,5 +398,31 @@
     "zero_mismatches": true,
     "builder_static_execution": "V8 deterministic JS builder semantics checked; normal Node CLI NOT run",
     "native": "NATIVE-UNTESTED"
+  },
+  "rework_round_2_b": {
+    "assigned_head": "5bd36757278fbefd32a4ef163156d359bbb9c15d",
+    "cells_changed_from_assigned_head": 174386,
+    "full_grid_sha256": "19969ee568a7450a456f06f8dfa6567a8ab2e52fe9050db75f4d53ef684e111a",
+    "exact_extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 15672,
+    "json_bytes": 285727,
+    "physical_material_parity": "builder coalescence/roundtrip 0 mismatches; PNGs are regenerated deterministic material-grid samples; independently decompressed pixel parity not performed in connector",
+    "water_changed_cells": 0,
+    "upper_pale_tissue_fraction": 1,
+    "exact_r2_sites": [
+      13,
+      13,
+      13
+    ],
+    "exact_historical_sites": [
+      15,
+      15,
+      15
+    ],
+    "native": "NATIVE-UNTESTED",
+    "source_original_png_parity": "UNVERIFIED"
   }
 }
