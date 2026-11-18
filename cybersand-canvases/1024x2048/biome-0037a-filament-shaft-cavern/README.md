@@ -1,3 +1,21 @@
+# CURRENT R2C6 — Filament Shaft Cavern physical-cell finish
+
+**OPEN Draft/HOLD · NATIVE-UNTESTED · owner acceptance outstanding.** Existing source-led conversion PR only; original source art, immutable archive and CyberSand main remain untouched.
+
+**Source-derived compact upper core:** slender unequal chalk/limestone fenestrations, real rooted tapered branches, minor nested pores and deliberate full-hull access to the source's recognizable ladder and long shelf. The broad dark flying vault stays genuinely Empty. Visual ladder landings do not prove on-foot climbing.
+
+**Extrapolated playable geology:** west mineral assay benches, sampling recesses, independent lower approaches; east dark basalt return/lookout and actual supported rock connections. All 769352 inert solid cells are one four-neighbour connected grounded structure, including formerly detached service braces.
+
+**Exact static qualification:** 1024×2048, 12849 rectangles, 237187 JSON bytes; 195444 changed real material IDs (101321 added, 53284 removed, 40839 reclassified), zero full-grid replay mismatches. All 35688 original Water cells remain at identical coordinates. All 28 unchanged named site entries pass strict in-bounds 19×15, 23×19 and 31×27 actor-centre BFS; 31×27 central-detour exclusion also 28/28.
+
+**Evidence:** original unchanged 640×360 committed reference JPEG directly viewed against true material-cell output. Full original untouched source PNG pixel parity UNVERIFIED. Regenerated eight actual material-index PNGs undergo binary CRC/Adler and 4194304-pixel final-grid parity tests separately.
+
+**Native:** NATIVE-UNTESTED. Accepted source permits 32768 stamps; installed bridge unknown, legacy 4096 would refuse. No observed Godot/Rapier load, native Midge input/collision, Water progression or fresh save/reopen.
+
+**Reproduce:** node build_rework_r2.js --check; latest finish_r2c6.js executes after finish_r2c5.js against immutable baseline. Qualification receipt records tests, component census and static limitations.
+
+---
+
 # BIOME-0037a — Filament Shaft Cavern (R2A3 material-cell rework)
 
 **DRAFT / HOLD.** Existing PR branch only; historical merged canvas, original art and CyberSand engine unchanged. Source-led actual **1024×2048** Workbench Setup-v2 material grid, not illustration or native runtime acceptance.

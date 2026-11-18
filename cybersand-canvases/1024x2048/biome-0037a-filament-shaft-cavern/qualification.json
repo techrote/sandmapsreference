@@ -35,7 +35,7 @@
     "101": "Obsidian Solid/None",
     "122": "QuartzCrystal Solid/None"
   },
-  "art": "R2C5 source-JPEG-inspected true-cell macro-composition: irregular attached oval trabecular vaults, supported ladder flight terminations, thickened geological shelf abutments, differentiated west calcite assays, east return lookout and reservoir geology. Exact old 31×27 travel hulls preserved; Water unchanged.",
+  "art": "R2C6 source-local slender fenestrated biological lattice; rooted tapered chalk veins; 31x27-clear exact access routes; extrapolated west assay benches and supported east basalt observations; all inert solid cells one connected geological structure.",
   "gallery": [
     [
       "filament-shaft-cavern-material-1024x2048.png",
@@ -108,26 +108,26 @@
       2048
     ],
     "complete_cells": 2097152,
-    "rectangles": 10205,
+    "rectangles": 12849,
     "max_rectangles": 32768,
-    "json_bytes": 189759,
+    "json_bytes": 237187,
     "max_json_bytes": 1048576,
     "final_cell_mismatches": 0,
-    "changed_cells_from_archived_r1": 839141,
-    "nonempty_cells": 757003,
+    "changed_cells_from_archived_r1": 870392,
+    "nonempty_cells": 805040,
     "water_cells": 35688,
     "water_changed_cells": 0,
     "material_histogram": {
-      "0": 1340149,
+      "0": 1292112,
       "3": 35688,
-      "38": 47018,
+      "38": 45626,
       "42": 5189,
-      "49": 87346,
-      "62": 7439,
-      "99": 90827,
-      "100": 345260,
+      "49": 125792,
+      "62": 5730,
+      "99": 92800,
+      "100": 350965,
       "101": 132312,
-      "122": 5924
+      "122": 10938
     },
     "allowlist": [
       0,
@@ -292,7 +292,7 @@
           15
         ],
         "spawn_exact": true,
-        "component_centres": 1143548,
+        "component_centres": 1045403,
         "r2_exact": 13,
         "legacy_exact": 15,
         "proxies": 0
@@ -303,7 +303,7 @@
           19
         ],
         "spawn_exact": true,
-        "component_centres": 1109163,
+        "component_centres": 1008219,
         "r2_exact": 13,
         "legacy_exact": 15,
         "proxies": 0
@@ -314,17 +314,17 @@
           27
         ],
         "spawn_exact": true,
-        "component_centres": 1043223,
+        "component_centres": 940530,
         "r2_exact": 13,
         "legacy_exact": 15,
         "proxies": 0
       }
     ],
     "upper_tissue_components": [
-      117842
+      117982
     ],
-    "connected_primary_tissue_cells": 117842,
-    "tissue_cells": 117842,
+    "connected_primary_tissue_cells": 117982,
+    "tissue_cells": 117982,
     "primary_tissue_fraction": 1,
     "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)"
   },
@@ -690,5 +690,88 @@
       "unique_exact_site_coordinates_reached": "26/26",
       "note": "Block is a synthetic actor-centre exclusion, not solid terrain or actual native pathfinding"
     }
+  },
+  "rework_round_2_c6": {
+    "assigned_start_head": "c30f05b1136d3ff5c9cbbba1f49ebca635d06422",
+    "engine_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+    "source_jpeg_directly_viewed": true,
+    "original_PNG_pixel_parity": "UNVERIFIED",
+    "spatial_edits": "Source-derived upper-left elongated pale cellular web and access mouths; newly extrapolated west assay benches, mineral niches, east basalt observation/return with support",
+    "changed": 195444,
+    "added": 101321,
+    "removed": 53284,
+    "reclassified": 40839,
+    "water_coordinate_changes": 0,
+    "all_cell_replay_mismatches": 0,
+    "rectangles": 12849,
+    "json_bytes": 237187,
+    "histogram": {
+      "0": 1292112,
+      "3": 35688,
+      "38": 45626,
+      "42": 5189,
+      "49": 125792,
+      "62": 5730,
+      "99": 92800,
+      "100": 350965,
+      "101": 132312,
+      "122": 10938
+    },
+    "exact_actor_routes": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "spawn_exact": true,
+        "component_centres": 1045403,
+        "r2_exact": 13,
+        "legacy_exact": 15,
+        "proxies": 0
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "spawn_exact": true,
+        "component_centres": 1008219,
+        "r2_exact": 13,
+        "legacy_exact": 15,
+        "proxies": 0
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "spawn_exact": true,
+        "component_centres": 940530,
+        "r2_exact": 13,
+        "legacy_exact": 15,
+        "proxies": 0
+      }
+    ],
+    "blocked_centre_31x27": {
+      "box": [
+        480,
+        1100,
+        555,
+        1215
+      ],
+      "reachable_centres": 933682,
+      "unchanged_exact_sites": "28/28"
+    },
+    "upper_tissue_components": [
+      117982
+    ],
+    "solid_component_census": {
+      "total": 1,
+      "largest": 769352,
+      "smaller_cells": 0,
+      "status": "All final inert solid cells are four-neighbour connected to boundary-grounded structure. Static only; dynamic native acceptance outstanding."
+    },
+    "indexed_png_validation": "Final eight indexed material PNGs regenerated and independently checked: CRC32, zlib stored block, Adler32, IEND, full material ID parity.",
+    "native": "NATIVE-UNTESTED; installed bridge capacity / Godot/Rapier input/collision/Water evolution/save-reopen unknown"
   }
 }
