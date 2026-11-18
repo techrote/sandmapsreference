@@ -358,7 +358,8 @@ function buildMegaCanvas() {
     [1392,641,1467,817,15,mat.IRON],[1392,641,1460,682,15,mat.IRON],
     [1942,351,1940,1486,19,mat.STEEL],
     [1890,638,1940,638,14,mat.IRON],[1845,1190,1940,1190,15,mat.IRON],
-    // West halo is the deliberately severed cantilever; east segment retains dock pier.[1210,1234,1418,1645,23,mat.STEEL],
+    // West halo is a deliberately severed cantilever; eastern halo retains a dock pier.
+    [1210,1234,1418,1645,23,mat.STEEL],
     [746,1417,683,1530,12,mat.IRON],[1317,1431,1385,1546,12,mat.IRON]
   ])L(x,y,X,Y,t,m);
   // West freight/foundry: asymmetrical supported decks; active portals stay
