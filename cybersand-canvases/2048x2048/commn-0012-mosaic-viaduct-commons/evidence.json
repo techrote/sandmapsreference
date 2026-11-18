@@ -10,42 +10,42 @@
     2048
   ],
   "cells": 4194304,
-  "covered_cells": 1372176,
+  "covered_cells": 1557262,
   "zero_full_grid_mismatches": true,
-  "rectangles": 8148,
+  "rectangles": 8581,
   "rectangle_limit": 32768,
-  "json_bytes": 157753,
+  "json_bytes": 166245,
   "json_limit": 1048576,
   "material_histogram": {
-    "0": 2822128,
-    "38": 313620,
-    "40": 134390,
-    "41": 157459,
-    "42": 51670,
-    "43": 5798,
-    "44": 87618,
-    "48": 23252,
-    "49": 36389,
-    "50": 2144,
-    "52": 11598,
-    "53": 5039,
+    "0": 2637042,
+    "38": 435221,
+    "40": 137878,
+    "41": 188517,
+    "42": 52570,
+    "43": 7758,
+    "44": 69902,
+    "48": 24909,
+    "49": 39671,
+    "50": 2114,
+    "52": 11552,
+    "53": 3849,
     "54": 5426,
     "55": 2072,
     "56": 194166,
     "57": 15453,
-    "58": 35514,
-    "62": 5792,
+    "58": 34997,
+    "62": 5564,
     "66": 998,
-    "70": 26897,
-    "71": 42380,
-    "72": 17102,
-    "77": 8301,
-    "79": 2733,
+    "70": 26503,
+    "71": 59567,
+    "72": 25133,
+    "77": 7907,
+    "79": 2677,
     "80": 1336,
     "97": 58699,
-    "98": 56050,
+    "98": 76387,
     "100": 10368,
-    "119": 59912
+    "119": 56068
   },
   "source_art_changed": false,
   "actor": {
@@ -180,7 +180,7 @@
         19,
         15
       ],
-      "connected_centres": 2212764,
+      "connected_centres": 2109854,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -190,7 +190,7 @@
         23,
         19
       ],
-      "connected_centres": 2143740,
+      "connected_centres": 2037406,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -200,7 +200,7 @@
         31,
         27
       ],
-      "connected_centres": 2010858,
+      "connected_centres": 1897104,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -273,7 +273,7 @@
   },
   "render": "PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",
   "native": "NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen",
-  "material_sha256": "0c306366e3f0c27037263abe87e8cb18a099b516c00dcb692d16ce4e9dd3fbaa",
+  "material_sha256": "ded00c67d55d9406cc9d2f159c2a32f38914a314808f3058def61727266b1beb",
   "rework_r2b": {
     "starting_head": "c74610365b21c6dd7f88c9f339084905fab1a1f7",
     "changed_material_cells": 268733,
@@ -382,5 +382,46 @@
     "png_images_regenerated": 9,
     "png_generated_material_samples": 7077888,
     "limit_note": "small floating equipment and isolated trim remain; source JPEG comparison is not original PNG parity"
+  },
+  "rework_r2a3": {
+    "starting_sha": "51a32d850f41466bdb18522e4ddf766a9cb35291",
+    "actual_changed_cells": 354753,
+    "source_jpeg_seen": true,
+    "source_jpeg_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
+    "full_original_png_parity": "UNVERIFIED",
+    "grounded_solid_cells": 1430519,
+    "route_lengths_31x27": [
+      {
+        "from": "West underpass",
+        "to": "East underpass",
+        "steps": 1427
+      },
+      {
+        "from": "West underpass",
+        "to": "Reflecting basin overlook",
+        "steps": 923
+      },
+      {
+        "from": "South mosaic overlook",
+        "to": "East shelter",
+        "steps": 570
+      },
+      {
+        "from": "Western lower terrace",
+        "to": "Central garden court",
+        "steps": 595
+      },
+      {
+        "from": "West high entry",
+        "to": "East high entry",
+        "steps": 1273
+      }
+    ],
+    "alternate_route_with_block_1100_1420_1250_1520": [
+      1511,
+      923
+    ],
+    "independent_png_material_pixels": 7077888,
+    "actual_native": "NATIVE-UNTESTED"
   }
 }

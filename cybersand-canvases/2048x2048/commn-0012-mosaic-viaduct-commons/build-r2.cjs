@@ -207,6 +207,7 @@ function canvas(){
  for(let [n,x,y] of TARGETS){R(x-19,y-16,39,33,M.AIR)}
  require('./finish-r2a.cjs')(G,W,H,M);
  require('./finish-r2a2.cjs')(G,W,H,M);
+ require('./finish-r2a3.cjs')(G,W,H,M,TARGETS);
  return G;
 }
 function coalesce(g){
@@ -277,3 +278,5 @@ if(typeof require!=="undefined"&&typeof module!=="undefined"&&require.main===mod
  fs.writeFileSync(path.join(dir,"evidence.json"),JSON.stringify(out.evidence,null,2)+"\n");
  console.log(JSON.stringify({head:"local",rectangles:out.rec.length,json_bytes:out.json.length,reachability:out.reach}));
 }
+
+module.exports={canvas,coalesce,replay,clearance,png,b64,build,W,H,M,TARGETS};
