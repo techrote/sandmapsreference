@@ -230,7 +230,7 @@ let crops=[
  ["03-ore-crusher-gallery.png",109,820,810,475],
  ["04-rail-funnel-transfer.png",110,1200,810,420],
  ["05-quench-salvage-terminal.png",105,1615,813,418]];
-let images=[],imageChecks=[];for(let [name,x,y,w,h] of crops){let png=pngFromGrid(x,y,w,h);images.push({name,bytes:png});imageChecks.push({name,...verifyPng(png,x,y,w,h)});}
+let images=[],imageChecks=[];for(let [name,x,y,w,h] of crops){let png=pngFromGrid(x,y,w,h);images.push({name,bytes:png});imageChecks.push({name,sha256:sha256(png),...verifyPng(png,x,y,w,h)});}
 const gridSha=sha256(grid),setupSha=sha256(bytes(setupString));
 const receipt={schema:"cybersand-original-industrial-vertical-qualification-v1",engine_accepted_main:ENGINE,creator:"original-industrial-vertical",originality:"original from authored plan; no source/reference image used",seed_decimal:SEED>>>0,extent:[W,H],cells:grid.length,nonempty:occupied,nonempty_materials:HIST,grid_sha256:gridSha,setup_sha256:setupSha,setup_bytes:bytes(setupString).length,edit_rectangles:edits.length,rectangle_budget_source:32768,default_no_bridge_capacity:4096,installed_bridge_capacity:"UNKNOWN - do not assert native load",edit_budget:32768,full_cell_replay:"PASS",edit_overlap_count:0,rectangle_work_estimate:work,generated_start_work_limit:Math.min(64*W*H,32000000),material_laws:"all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",flight_checks:flight,alternative_main_throat_block:{rect:[420,983,665,1006],terminal_reachable:true,reachable_centers:alt.count},sites:SITES,routes:ROUTES,image_checks:imageChecks,native_status:"NATIVE-UNTESTED: no CyberDemoBridge binary or Godot runtime supplied; dynamic inspect_interaction IDs, world install, Rapier input/collision, physics, fresh-process save/reopen unproven",approval:"DRAFT/HOLD - independent Shepherd and owner acceptance outstanding"};
 const rec=JSON.stringify(receipt,null,2)+"\n";
@@ -277,6 +277,18 @@ let readme=[
 "**Physically fixed materials:** `"+Object.entries(HIST).filter(([id,n])=>+id!==0&&+id!==3).map(([id,n])=>id+":"+n).join(" ")+"`. All are accepted-main Solid/non-movable/RuleKernel::None; only Water (3) is dynamic, within the walled lower quench basin. Visual metal pipes and LEDs are material cells, not sprite decals.",
 "",
 "**Render evidence:** `overview.png` is the complete 1024x2048 material map; the five numbered crops are native 1:1 unresampled windows of that *same cell grid*. These are palette-identity PNGs, **not** Godot screenshots, not AI concept art, and not a claim that the native renderer has been tested.",
+"",
+"## Actual-cell art review and repair log",
+"",
+"Viewed the *complete* 1024x2048 identity-plane PNG and the 1:1 crops. Initial composition was too skeletal through the ore and rail levels, with small isolated fittings. Revised the physical grid rather than painting a cosmetic preview: mounted a 136x132 east-side crusher cassette and a 111x62 service subdeck, inserted a 126x95 pressurized switch rack and a large 120x152 salvage hoist. Each is attached to existing spines, braces or cable tracks.",
+"",
+"1. **Crown 1:1:** the status/workshop shell read as a disconnected box; added wall brackets and two explicit roof hangers. The silhouette now has asymmetric intakes and an inhabited dispatch room.",
+"2. **Counterweight 1:1:** strong hung counterweight and left winch bank, but the control panel lacked attachment; added a steel bracket to its permanent pier. Lateral bridges terminate at deliberate flight apertures, not accidental holes.",
+"3. **Crusher 1:1:** the previous midshaft had too much empty striping and insufficient machinery; mounted a large braced crusher cassette, rail brackets and a subordinate hoist dock. Source grid inspection confirms the offset Midge tube remains open.",
+"4. **Rail 1:1:** repetitive cross-trusses needed one clear focal function; added a lit pressure switch rack tied to the east pipe main, retaining west/east crossovers.",
+"5. **Quench 1:1:** the right flight carving had opened the coolant vessel lid; repaired this *after* all corridor erasures, explicitly checked every perimeter cell, and reran 31x27 center flood-fill and main-throat bypass.",
+"",
+"**Remaining artistic limitation:** machinery is made of true physical material cells, so several gantries have intentional large aircraft-clearance gaps and cannot visually behave like a continuous solid deck. The high-level east/west service supports repeat for structural plausibility. This is a gameplay/engineering compromise, not final owner art acceptance.",
 "",
 "## Qualification and limitations",
 "",
