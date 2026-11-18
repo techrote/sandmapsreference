@@ -1,0 +1,766 @@
+{
+  "schema": "cybersand-original-industrial-vertical-qualification-v1",
+  "engine_accepted_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+  "creator": "original-industrial-vertical",
+  "originality": "original from authored plan; no source/reference image used",
+  "seed_decimal": 638654469,
+  "extent": [
+    1024,
+    2048
+  ],
+  "cells": 2097152,
+  "nonempty": 823876,
+  "nonempty_materials": {
+    "0": 1273276,
+    "3": 6525,
+    "38": 1242,
+    "40": 95383,
+    "50": 40060,
+    "58": 156912,
+    "62": 90257,
+    "64": 2675,
+    "65": 64520,
+    "68": 17644,
+    "69": 8696,
+    "72": 3756,
+    "73": 8931,
+    "76": 9751,
+    "77": 3812,
+    "78": 424,
+    "79": 3504,
+    "100": 184304,
+    "101": 91029,
+    "119": 9577,
+    "120": 1435,
+    "130": 21895,
+    "131": 1544
+  },
+  "grid_sha256": "c72acc9bca8bd0e7a028f941832cccfe05039ba1d88f5ac2d715a00434056a0a",
+  "setup_sha256": "c120a8ea5d077aa0a75ac3306449faea93f8ce35aaac08e1ad4b12ae45620abf",
+  "setup_bytes": 114671,
+  "edit_rectangles": 6312,
+  "rectangle_budget_source": 32768,
+  "default_no_bridge_capacity": 4096,
+  "installed_bridge_capacity": "UNKNOWN - do not assert native load",
+  "edit_budget": 32768,
+  "full_cell_replay": "PASS",
+  "edit_overlap_count": 0,
+  "rectangle_work_estimate": 823876,
+  "generated_start_work_limit": 32000000,
+  "material_laws": "all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",
+  "flight_checks": [
+    {
+      "footprint": [
+        19,
+        15
+      ],
+      "reachable_sites": 11,
+      "total_sites": 11,
+      "reachable_centers": 606160,
+      "sites": [
+        {
+          "id": "A",
+          "at": [
+            520,
+            145
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "B",
+          "at": [
+            520,
+            290
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "C",
+          "at": [
+            205,
+            575
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "D",
+          "at": [
+            800,
+            700
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "E",
+          "at": [
+            205,
+            1030
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "F",
+          "at": [
+            595,
+            1060
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "G",
+          "at": [
+            514,
+            1335
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "H",
+          "at": [
+            800,
+            1400
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "I",
+          "at": [
+            205,
+            1765
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "J",
+          "at": [
+            800,
+            1750
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "K",
+          "at": [
+            494,
+            1910
+          ],
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "footprint": [
+        23,
+        19
+      ],
+      "reachable_sites": 11,
+      "total_sites": 11,
+      "reachable_centers": 555146,
+      "sites": [
+        {
+          "id": "A",
+          "at": [
+            520,
+            145
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "B",
+          "at": [
+            520,
+            290
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "C",
+          "at": [
+            205,
+            575
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "D",
+          "at": [
+            800,
+            700
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "E",
+          "at": [
+            205,
+            1030
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "F",
+          "at": [
+            595,
+            1060
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "G",
+          "at": [
+            514,
+            1335
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "H",
+          "at": [
+            800,
+            1400
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "I",
+          "at": [
+            205,
+            1765
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "J",
+          "at": [
+            800,
+            1750
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "K",
+          "at": [
+            494,
+            1910
+          ],
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "footprint": [
+        31,
+        27
+      ],
+      "reachable_sites": 11,
+      "total_sites": 11,
+      "reachable_centers": 461244,
+      "sites": [
+        {
+          "id": "A",
+          "at": [
+            520,
+            145
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "B",
+          "at": [
+            520,
+            290
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "C",
+          "at": [
+            205,
+            575
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "D",
+          "at": [
+            800,
+            700
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "E",
+          "at": [
+            205,
+            1030
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "F",
+          "at": [
+            595,
+            1060
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "G",
+          "at": [
+            514,
+            1335
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "H",
+          "at": [
+            800,
+            1400
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "I",
+          "at": [
+            205,
+            1765
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "J",
+          "at": [
+            800,
+            1750
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "K",
+          "at": [
+            494,
+            1910
+          ],
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "alternative_main_throat_block": {
+    "rect": [
+      420,
+      983,
+      665,
+      1006
+    ],
+    "terminal_reachable": true,
+    "reachable_centers": 458332
+  },
+  "sites": [
+    {
+      "id": "A",
+      "name": "Crown dispatch",
+      "at": [
+        520,
+        145
+      ],
+      "district": "Sky intake"
+    },
+    {
+      "id": "B",
+      "name": "Signal lantern bridge",
+      "at": [
+        520,
+        290
+      ],
+      "district": "Sky intake"
+    },
+    {
+      "id": "C",
+      "name": "Western winch desk",
+      "at": [
+        205,
+        575
+      ],
+      "district": "Counterweight cathedral"
+    },
+    {
+      "id": "D",
+      "name": "Eastern thrust control",
+      "at": [
+        800,
+        700
+      ],
+      "district": "Counterweight cathedral"
+    },
+    {
+      "id": "E",
+      "name": "Ore assay alcove",
+      "at": [
+        205,
+        1030
+      ],
+      "district": "Sorting and crushers"
+    },
+    {
+      "id": "F",
+      "name": "Main ore exchange",
+      "at": [
+        595,
+        1060
+      ],
+      "district": "Sorting and crushers"
+    },
+    {
+      "id": "G",
+      "name": "Central rail interlock",
+      "at": [
+        514,
+        1335
+      ],
+      "district": "Rail funnel"
+    },
+    {
+      "id": "H",
+      "name": "Pressure switchroom",
+      "at": [
+        800,
+        1400
+      ],
+      "district": "Rail funnel"
+    },
+    {
+      "id": "I",
+      "name": "Salvage retrieval dock",
+      "at": [
+        205,
+        1765
+      ],
+      "district": "Quench and reclamation"
+    },
+    {
+      "id": "J",
+      "name": "Furnace inspection perch",
+      "at": [
+        800,
+        1750
+      ],
+      "district": "Quench and reclamation"
+    },
+    {
+      "id": "K",
+      "name": "Bottom lift terminal",
+      "at": [
+        494,
+        1910
+      ],
+      "district": "Quench and reclamation"
+    }
+  ],
+  "routes": {
+    "central": [
+      [
+        520,
+        145
+      ],
+      [
+        520,
+        342
+      ],
+      [
+        558,
+        342
+      ],
+      [
+        558,
+        620
+      ],
+      [
+        484,
+        620
+      ],
+      [
+        484,
+        930
+      ],
+      [
+        595,
+        930
+      ],
+      [
+        595,
+        1125
+      ],
+      [
+        514,
+        1125
+      ],
+      [
+        514,
+        1420
+      ],
+      [
+        576,
+        1420
+      ],
+      [
+        576,
+        1640
+      ],
+      [
+        494,
+        1640
+      ],
+      [
+        494,
+        1940
+      ]
+    ],
+    "west": [
+      [
+        205,
+        300
+      ],
+      [
+        205,
+        1850
+      ]
+    ],
+    "east": [
+      [
+        800,
+        270
+      ],
+      [
+        800,
+        1880
+      ]
+    ],
+    "crossovers": [
+      [
+        [
+          205,
+          450
+        ],
+        [
+          558,
+          450
+        ]
+      ],
+      [
+        [
+          205,
+          900
+        ],
+        [
+          595,
+          900
+        ]
+      ],
+      [
+        [
+          205,
+          1460
+        ],
+        [
+          576,
+          1460
+        ]
+      ],
+      [
+        [
+          205,
+          1825
+        ],
+        [
+          494,
+          1825
+        ]
+      ],
+      [
+        [
+          558,
+          350
+        ],
+        [
+          800,
+          350
+        ]
+      ],
+      [
+        [
+          484,
+          760
+        ],
+        [
+          800,
+          760
+        ]
+      ],
+      [
+        [
+          514,
+          1190
+        ],
+        [
+          800,
+          1190
+        ]
+      ],
+      [
+        [
+          576,
+          1640
+        ],
+        [
+          800,
+          1640
+        ]
+      ],
+      [
+        [
+          494,
+          1850
+        ],
+        [
+          800,
+          1850
+        ]
+      ]
+    ]
+  },
+  "image_checks": [
+    {
+      "name": "overview.png",
+      "sha256": "060fd76631cad9b1f62b5f9c4a8fe0fc8d049265f6341bce0d2e9b9e927c4f44",
+      "chunks": 5,
+      "bytes": 49768,
+      "signature_crc_zlib_adler_iend": true,
+      "material_id_parity": true,
+      "dimensions": [
+        1024,
+        2048
+      ],
+      "crop_origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "01-crown-intake.png",
+      "sha256": "46baff0d0f8374b5117a854d5263d4e3054cd4485e351b55d3d8fe8d8733b150",
+      "chunks": 5,
+      "bytes": 7431,
+      "signature_crc_zlib_adler_iend": true,
+      "material_id_parity": true,
+      "dimensions": [
+        800,
+        390
+      ],
+      "crop_origin": [
+        110,
+        53
+      ]
+    },
+    {
+      "name": "02-counterweight-cathedral.png",
+      "sha256": "b0d98a136f78b08fed5e575e0410e41e5ca6278769a6337c38da7b424b6d7109",
+      "chunks": 5,
+      "bytes": 11693,
+      "signature_crc_zlib_adler_iend": true,
+      "material_id_parity": true,
+      "dimensions": [
+        812,
+        470
+      ],
+      "crop_origin": [
+        108,
+        390
+      ]
+    },
+    {
+      "name": "03-ore-crusher-gallery.png",
+      "sha256": "3031e4ebd082a666fb01896b334daba5b8c495815ef7e586f6f58e89d74fbcaa",
+      "chunks": 5,
+      "bytes": 10531,
+      "signature_crc_zlib_adler_iend": true,
+      "material_id_parity": true,
+      "dimensions": [
+        810,
+        475
+      ],
+      "crop_origin": [
+        109,
+        820
+      ]
+    },
+    {
+      "name": "04-rail-funnel-transfer.png",
+      "sha256": "4fb94f5a66324d3817c44778dfb001a6b1fb420cb40056c22995f9198398f950",
+      "chunks": 5,
+      "bytes": 13186,
+      "signature_crc_zlib_adler_iend": true,
+      "material_id_parity": true,
+      "dimensions": [
+        810,
+        420
+      ],
+      "crop_origin": [
+        110,
+        1200
+      ]
+    },
+    {
+      "name": "05-quench-salvage-terminal.png",
+      "sha256": "32a947469d6cb48f6ba7f265430535c56ab516a756a1ac1bd038324b1186cb22",
+      "chunks": 5,
+      "bytes": 8921,
+      "signature_crc_zlib_adler_iend": true,
+      "material_id_parity": true,
+      "dimensions": [
+        813,
+        418
+      ],
+      "crop_origin": [
+        105,
+        1615
+      ]
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED: no CyberDemoBridge binary or Godot runtime supplied; dynamic inspect_interaction IDs, world install, Rapier input/collision, physics, fresh-process save/reopen unproven",
+  "approval": "DRAFT/HOLD - independent Shepherd and owner acceptance outstanding"
+}
