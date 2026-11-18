@@ -42,7 +42,7 @@ Exact destination centres (no radius or nearest-point waivers):
 - Moonwell garden: (786, 1500)
 - Deep bell: (514, 1826)
 
-Three conservative axis-aligned Midge envelopes (19 x 15, 23 x 19, 31 x 27) are flood-tested at every exact named site. The lower route is independently tested after blocking x300..708/y965..1148 in actor-centre space. The main shaft and at least one non-central bypass remain part of the same connected component.
+Three conservative axis-aligned Midge envelopes (19 x 15, 23 x 19, 31 x 27) are flood-tested at every exact named site. The 31x27 clearance includes shortest cardinal-centre route lengths and at least three of eight distinct reachable 48-cell local approach samples per exact site; these samples do not prove edge-disjoint paths or piloted dynamics. The lower route is independently tested after blocking x300..708/y965..1148 in actor-centre space. The main shaft and at least one non-central bypass remain part of the same connected component.
 
 ## Format and use
 
@@ -54,7 +54,7 @@ Every nonempty starting cell is an immovable solid, but the actual accepted phys
 
 - Fixed seed: `0x4b415253`.
 - Deterministic builder: `build-karst-lung-organ.js` (Node.js; no dependencies); writes all artifacts to its optional first directory argument or its own directory.
-- Builder SHA-256: `e0359c3dba8a9ab9384d6dbbc793cc680671d24e93921ecb776290d67a7e101f`.
+- Builder SHA-256: `488adb393b2405bcd3383c369b6c3f8b696461ea2fbd43b6b848c2f8249cd986`.
 - Full material plane SHA-256: `a18cd987873590d721d4245b9fba62adf5ea9eccb55c32463ee9b351b384bb18`.
 - Setup JSON SHA-256: `74d5ff7554a4dcdbf8c13d30d4bab0f8b8eb702d95edccffac56ba906661c11d`.
 - Full-grid parity: 0 mismatches, 0 overlapping rectangles.
@@ -63,7 +63,7 @@ Every nonempty starting cell is an immovable solid, but the actual accepted phys
 
 ## Visual and independent acceptance
 
-The full `overview.png` is exactly 1024x2048 physical cells, one actual material ID per PNG pixel. Six `NN-*.png` files are native 1:1 crops of that same grid; `thumbnail.png` is a nearest-neighbor overview only. See `qualification.json` for exact histogram, full-cell source/PNG hashes, connectivity, basins and static/native truth.
+The full `overview.png` is exactly 1024x2048 physical cells, one actual material ID per PNG pixel. Nine `NN-*.png` files are native 1:1 crops of that same grid; `thumbnail.png` is a nearest-neighbor overview only. See `qualification.json` for exact histogram, full-cell source/PNG hashes, connectivity, basins and static/native truth.
 
 **DRAFT / HOLD. NATIVE-UNTESTED.** No Windows/Godot install, actor input/collision, Rapier progression or save/fresh-process reopen is represented as performed; Shepherd and independent auditor assessment remain outstanding.
 

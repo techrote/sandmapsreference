@@ -14,7 +14,7 @@
     "material_header_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
     "midge_definition_blob": "228399e38a0e0ab215b9f48698edce67a7a35799"
   },
-  "source_sha256": "e0359c3dba8a9ab9384d6dbbc793cc680671d24e93921ecb776290d67a7e101f",
+  "source_sha256": "488adb393b2405bcd3383c369b6c3f8b696461ea2fbd43b6b848c2f8249cd986",
   "grid_sha256": "a18cd987873590d721d4245b9fba62adf5ea9eccb55c32463ee9b351b384bb18",
   "json_sha256": "74d5ff7554a4dcdbf8c13d30d4bab0f8b8eb702d95edccffac56ba906661c11d",
   "exact_cell_count": 2097152,
@@ -69,6 +69,7 @@
     4,
     3
   ],
+  "minimum_31x27_reachable_48px_exit_octants": 3,
   "conservative_centre_clearances": [
     {
       "width": 19,
@@ -80,56 +81,133 @@
           "x": 507,
           "y": 213,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 80,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Root orchard",
           "x": 240,
           "y": 535,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 669,
+          "exit_octants_48": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
         },
         {
           "name": "Spore organ",
           "x": 792,
           "y": 623,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 775,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Fossil amphitheatre",
           "x": 292,
           "y": 978,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1060,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Calcite observatory",
           "x": 780,
           "y": 1028,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1168,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Left anastomosis",
           "x": 269,
           "y": 1410,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1515,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ]
         },
         {
           "name": "Moonwell garden",
           "x": 786,
           "y": 1500,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1646,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Deep bell",
           "x": 514,
           "y": 1826,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1700,
+          "exit_octants_48": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ]
         }
       ]
     },
@@ -143,56 +221,130 @@
           "x": 507,
           "y": 213,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 80,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Root orchard",
           "x": 240,
           "y": 535,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 669,
+          "exit_octants_48": [
+            0,
+            3,
+            4,
+            6
+          ]
         },
         {
           "name": "Spore organ",
           "x": 792,
           "y": 623,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 775,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Fossil amphitheatre",
           "x": 292,
           "y": 978,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1060,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Calcite observatory",
           "x": 780,
           "y": 1028,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1168,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Left anastomosis",
           "x": 269,
           "y": 1410,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1515,
+          "exit_octants_48": [
+            0,
+            2,
+            4,
+            6
+          ]
         },
         {
           "name": "Moonwell garden",
           "x": 786,
           "y": 1500,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1646,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Deep bell",
           "x": 514,
           "y": 1826,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1700,
+          "exit_octants_48": [
+            0,
+            3,
+            4,
+            6,
+            7
+          ]
         }
       ]
     },
@@ -206,56 +358,124 @@
           "x": 507,
           "y": 213,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 80,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Root orchard",
           "x": 240,
           "y": 535,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 669,
+          "exit_octants_48": [
+            0,
+            4,
+            6
+          ]
         },
         {
           "name": "Spore organ",
           "x": 792,
           "y": 623,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 775,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Fossil amphitheatre",
           "x": 292,
           "y": 978,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1060,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Calcite observatory",
           "x": 780,
           "y": 1028,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1168,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
         },
         {
           "name": "Left anastomosis",
           "x": 269,
           "y": 1410,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1515,
+          "exit_octants_48": [
+            0,
+            2,
+            4,
+            6
+          ]
         },
         {
           "name": "Moonwell garden",
           "x": 786,
           "y": 1500,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1646,
+          "exit_octants_48": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Deep bell",
           "x": 514,
           "y": 1826,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1700,
+          "exit_octants_48": [
+            3,
+            6,
+            7
+          ]
         }
       ]
     }
@@ -277,56 +497,122 @@
           "x": 507,
           "y": 213,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 80,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Root orchard",
           "x": 240,
           "y": 535,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 669,
+          "exit_octants_48": [
+            0,
+            4,
+            6
+          ]
         },
         {
           "name": "Spore organ",
           "x": 792,
           "y": 623,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 775,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Fossil amphitheatre",
           "x": 292,
           "y": 978,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1060,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Calcite observatory",
           "x": 780,
           "y": 1028,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1168,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
         },
         {
           "name": "Left anastomosis",
           "x": 269,
           "y": 1410,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1919,
+          "exit_octants_48": [
+            0,
+            2,
+            4,
+            6
+          ]
         },
         {
           "name": "Moonwell garden",
           "x": 786,
           "y": 1500,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 1828,
+          "exit_octants_48": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "name": "Deep bell",
           "x": 514,
           "y": 1826,
           "clear": true,
-          "reached": true
+          "reached": true,
+          "shortest_cardinal_steps": 2090,
+          "exit_octants_48": [
+            3,
+            6,
+            7
+          ]
         }
       ]
     },
