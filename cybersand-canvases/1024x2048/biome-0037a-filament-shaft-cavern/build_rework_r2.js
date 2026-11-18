@@ -344,6 +344,7 @@ function finishR2(a,W,H,id,pix,rect,ellipse,capsule) {
   require('./finish_r2c2.js')(a,W,H);
   require('./finish_r2c3.js')(a,W,H);
   require('./finish_r2c4.js')(a,W,H);
+  require('./finish_r2c5.js')(a,W,H);
   // Reserved exact historical flight sites are not renumbered or proximity-waived.
   // Real accessible volume is checked independently by the qualification step.
   const stable=new Set([0,3,38,42,49,62,66,99,100,101,122]);

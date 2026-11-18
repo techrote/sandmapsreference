@@ -35,7 +35,7 @@
     "101": "Obsidian Solid/None",
     "122": "QuartzCrystal Solid/None"
   },
-  "art": "R2C4 source-led reauthoring: connected nested porous pale membranes, root-attached biology, deliberate ladder thresholds, supported stratified shelf, original extrapolated west calcite destination and east basalt return. Water preserved. Source JPEG inspected; original full PNG parity UNVERIFIED.",
+  "art": "R2C5 source-JPEG-inspected true-cell macro-composition: irregular attached oval trabecular vaults, supported ladder flight terminations, thickened geological shelf abutments, differentiated west calcite assays, east return lookout and reservoir geology. Exact old 31×27 travel hulls preserved; Water unchanged.",
   "gallery": [
     [
       "filament-shaft-cavern-material-1024x2048.png",
@@ -108,26 +108,26 @@
       2048
     ],
     "complete_cells": 2097152,
-    "rectangles": 11069,
+    "rectangles": 10205,
     "max_rectangles": 32768,
-    "json_bytes": 204728,
+    "json_bytes": 189759,
     "max_json_bytes": 1048576,
     "final_cell_mismatches": 0,
-    "changed_cells_from_archived_r1": 857004,
-    "nonempty_cells": 760739,
+    "changed_cells_from_archived_r1": 839141,
+    "nonempty_cells": 757003,
     "water_cells": 35688,
     "water_changed_cells": 0,
     "material_histogram": {
-      "0": 1336413,
+      "0": 1340149,
       "3": 35688,
-      "38": 32207,
+      "38": 47018,
       "42": 5189,
-      "49": 74315,
-      "62": 7170,
-      "99": 115341,
-      "100": 335685,
-      "101": 143717,
-      "122": 11427
+      "49": 87346,
+      "62": 7439,
+      "99": 90827,
+      "100": 345260,
+      "101": 132312,
+      "122": 5924
     },
     "allowlist": [
       0,
@@ -292,9 +292,10 @@
           15
         ],
         "spawn_exact": true,
-        "component_centres": 1112372,
+        "component_centres": 1143548,
         "r2_exact": 13,
-        "legacy_exact": 15
+        "legacy_exact": 15,
+        "proxies": 0
       },
       {
         "envelope": [
@@ -302,9 +303,10 @@
           19
         ],
         "spawn_exact": true,
-        "component_centres": 1077831,
+        "component_centres": 1109163,
         "r2_exact": 13,
-        "legacy_exact": 15
+        "legacy_exact": 15,
+        "proxies": 0
       },
       {
         "envelope": [
@@ -312,16 +314,17 @@
           27
         ],
         "spawn_exact": true,
-        "component_centres": 1012551,
+        "component_centres": 1043223,
         "r2_exact": 13,
-        "legacy_exact": 15
+        "legacy_exact": 15,
+        "proxies": 0
       }
     ],
     "upper_tissue_components": [
-      128326
+      117842
     ],
-    "connected_primary_tissue_cells": 128326,
-    "tissue_cells": 128326,
+    "connected_primary_tissue_cells": 117842,
+    "tissue_cells": 117842,
     "primary_tissue_fraction": 1,
     "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)"
   },
@@ -596,6 +599,69 @@
     "physical_validation": "static stable legal IDs 0,3,38,42,49,62,99,100,101,122; no extra liquids/growth/powder",
     "native": "NATIVE-UNTESTED",
     "installed_bridge_capacity": "NOT MEASURED",
+    "owner_acceptance": false
+  },
+  "rework_round_2_c5": {
+    "assignment": "CANVAS-REWORK-C: 12 @ 5575ae3b1951d916d798a003da4c5d5324d3ee0e",
+    "starting_head": "5575ae3b1951d916d798a003da4c5d5324d3ee0e",
+    "source_preview_blob": "168294085274702df98f5698721890fd30874c8f",
+    "original_png_blob": "9364b59479bb2eaf4d2a2924abb501ed8d9e26e3",
+    "source_jpeg_directly_inspected": true,
+    "full_original_png_pixel_parity": "UNVERIFIED",
+    "source_derived": "compact upper biological gallery, interrupted access and shelf",
+    "extrapolated": "west calcite assay, east basalt return, basin service threshold",
+    "changed_material_cells": 137975,
+    "added_nonempty": 25614,
+    "excavated_to_empty": 29350,
+    "reclassified_materials": 83011,
+    "original_water_mask_differences": 0,
+    "dimensions": [
+      1024,
+      2048
+    ],
+    "rectangles": 10205,
+    "json_bytes": 189759,
+    "nonoverlap_and_replay_mismatches": 0,
+    "exact_static_clearance": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "spawn_exact": true,
+        "component_centres": 1143548,
+        "r2_exact": 13,
+        "legacy_exact": 15,
+        "proxies": 0
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "spawn_exact": true,
+        "component_centres": 1109163,
+        "r2_exact": 13,
+        "legacy_exact": 15,
+        "proxies": 0
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "spawn_exact": true,
+        "component_centres": 1043223,
+        "r2_exact": 13,
+        "legacy_exact": 15,
+        "proxies": 0
+      }
+    ],
+    "upper_tissue_connected_cells": 117842,
+    "large_flight_space_safeguard": "all original spawn-reachable 31x27 hulls maintained by union-of-footprints restoration",
+    "png_integrity": "pending asset regeneration",
+    "native": "NATIVE-UNTESTED",
+    "installed_bridge_capacity": "UNMEASURED",
     "owner_acceptance": false
   }
 }
