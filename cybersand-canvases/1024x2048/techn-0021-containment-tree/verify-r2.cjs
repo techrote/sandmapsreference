@@ -77,4 +77,22 @@ for(const result of evidence.clearance_envelopes){
  console.log('PASS exact actor clearance '+w+'x'+h+' '+n+' centres '+result.passed+'/'+result.exact_sites+' exact sites');
 }
 console.log('PASS '+setup.edits.length+' rectangles, '+compared+' pixel-material comparisons, exact W×H grid.');
+
+// R2B7 physical load-path and preserved local flight, independent of metadata.
+const solidSeen=new Uint8Array(N),solidQ=new Int32Array(N);const startSolid=808*W+600;
+assert(A[startSolid]===62,'upper deck material missing');solidSeen[startSolid]=1;solidQ[0]=startSolid;let solidN=1;
+for(let k=0;k<solidN;k++){const p=solidQ[k],x=p%W;for(const d of [-W,-1,1,W]){const z=p+d;if(z<0||z>=N||(d===-1&&x===0)||(d===1&&x===W-1))continue;if(A[z]&&!solidSeen[z]){solidSeen[z]=1;solidQ[solidN++]=z;}}}
+assert.strictEqual(solidN,1228520,'regressed grounded bioheart material component');
+for(const [x,y] of [[600,808],[615,385],[450,800],[930,500],[600,984],[610,2035]])assert(solidSeen[y*W+x],'disconnected structural anchor '+x+','+y);
+assert.strictEqual(evidence.structural_support.solid_component_cells,solidN);
+// Independent obstacle-erosion pairwise shortest path, not a global reachability proxy.
+for(const [ew,eh] of [[19,15],[23,19],[31,27]]){
+ const hx=(ew-1)>>1,hy=(eh-1)>>1,P=W+1,I=new Int32Array((W+1)*(H+1)),free=new Uint8Array(N);
+ for(let y=0;y<H;y++){let sum=0;for(let x=0;x<W;x++){sum+=A[y*W+x]?1:0;I[(y+1)*P+x+1]=I[y*P+x+1]+sum;}}
+ for(let y=hy;y<H-hy;y++)for(let x=hx;x<W-hx;x++){const l=x-hx,r=x+hx+1,t=y-hy,b=y+hy+1;free[y*W+x]=I[b*P+r]-I[t*P+r]-I[b*P+l]+I[t*P+l]===0?1:0;}
+ const q=new Int32Array(N),dist=new Int32Array(N);dist.fill(-1);const start=930*W+370,goal=931*W+742;assert(free[start]&&free[goal]);q[0]=start;dist[start]=0;let len=1;
+ for(let k=0;k<len;k++){let p=q[k],x=p%W;if(p===goal)break;for(const d of [-W,-1,1,W]){let z=p+d;if(z<0||z>=N||(d===-1&&x===0)||(d===1&&x===W-1))continue;if(free[z]&&dist[z]===-1){dist[z]=dist[p]+1;q[len++]=z;}}}
+ assert.strictEqual(dist[goal],373,'local gantry route regression '+ew+'x'+eh);
+}
+console.log('PASS R2B7 all six cardinal physical supports in grounded component and three gantry routes 373 steps');
 console.log('NATIVE-UNTESTED: no physical Workbench admission/movement/collision/save-reopen was performed.');

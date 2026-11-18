@@ -15,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 21611,
+  "rectangles": 21700,
   "rectangle_budget": 32768,
-  "json_bytes": 396914,
+  "json_bytes": 398503,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1272062,
+  "stamped_cells": 1275637,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -47,24 +47,24 @@
     127
   ],
   "material_counts": {
-    "0": 825090,
-    "39": 6151,
-    "40": 130547,
-    "42": 120591,
-    "49": 161005,
-    "50": 39558,
-    "52": 24658,
-    "53": 131221,
-    "54": 113127,
+    "0": 821515,
+    "39": 6052,
+    "40": 129404,
+    "42": 120436,
+    "49": 160899,
+    "50": 39382,
+    "52": 25355,
+    "53": 131014,
+    "54": 112872,
     "58": 40718,
-    "62": 62553,
+    "62": 68667,
     "65": 3289,
-    "77": 2225,
-    "79": 9378,
-    "100": 212495,
-    "101": 145544,
-    "119": 21390,
-    "120": 17488,
+    "77": 2129,
+    "79": 9307,
+    "100": 212217,
+    "101": 145377,
+    "119": 21153,
+    "120": 17242,
     "121": 4688,
     "122": 7382,
     "123": 9450,
@@ -74,7 +74,7 @@
     19,
     15
   ],
-  "connected_clearance_centres": 464820,
+  "connected_clearance_centres": 461699,
   "spawn": [
     369,
     95
@@ -317,7 +317,7 @@
         19,
         15
       ],
-      "legal_connected_centres": 464820,
+      "legal_connected_centres": 461699,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -327,7 +327,7 @@
         23,
         19
       ],
-      "legal_connected_centres": 427131,
+      "legal_connected_centres": 423996,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -337,7 +337,7 @@
         31,
         27
       ],
-      "legal_connected_centres": 353204,
+      "legal_connected_centres": 350123,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -418,12 +418,12 @@
   },
   "last_rework": {
     "worker": "B",
-    "assigned_head": "fb6af47d89e7969b7c499f0f7bc5bd55a98242fb",
-    "scope": "genuinely short framed and supported inhabited west-east lab artery",
-    "physical_cells_changed": 24013,
-    "rectangles": 21611,
-    "json_bytes": 396914,
-    "nonempty_cells": 1272062,
+    "assigned_head": "d2d128d792c7c46ff16364ab94699b65b13f04db",
+    "scope": "ground the disconnected bioheart/observation deck via western bank, ground east lab to cliff; retain legal 373-step direct gantry",
+    "physical_cells_changed": 7018,
+    "rectangles": 21700,
+    "json_bytes": 398503,
+    "nonempty_cells": 1275637,
     "source_jpeg": "AUTHENTIC VIEWED",
     "original_png": "UNVERIFIED",
     "native": "NATIVE-UNTESTED"
@@ -475,5 +475,44 @@
       ],
       "steps": 373
     }
-  ]
+  ],
+  "rework_b7": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "d2d128d792c7c46ff16364ab94699b65b13f04db",
+    "scope": "ground the disconnected bioheart/observation deck via western bank, ground east lab to cliff; retain legal 373-step direct gantry",
+    "physical_cells_changed": 7018,
+    "connected_solid_cells": 1228520,
+    "native": "NATIVE-UNTESTED"
+  },
+  "structural_support": {
+    "solid_component_cells": 1228520,
+    "solid_components": 55,
+    "probes": [
+      [
+        600,
+        808
+      ],
+      [
+        615,
+        385
+      ],
+      [
+        600,
+        984
+      ],
+      [
+        610,
+        2035
+      ],
+      [
+        450,
+        800
+      ],
+      [
+        930,
+        500
+      ]
+    ]
+  }
 }

@@ -760,6 +760,10 @@ line(610,1969,610,2044,M.COPPER,20);
 // All ops intentionally run after the prior R2B5 crown/deck and external-frame passes.
 const r2b6Ops=[["rect",336,888,455,80,0],["rect",425,873,275,8,62],["rect",430,881,264,5,119],["rect",423,975,281,13,62],["rect",429,988,269,8,119],["line",434,999,455,1058,52,7],["line",498,999,533,1058,52,7],["line",595,999,564,1058,52,7],["line",682,999,655,1058,52,7],["rect",446,861,4,12,119],["rect",453,866,24,5,79],["rect",493,861,4,12,119],["rect",500,866,24,5,79],["rect",540,861,4,12,119],["rect",547,866,24,5,79],["rect",587,861,4,12,119],["rect",594,866,24,5,79],["rect",634,861,4,12,119],["rect",641,866,24,5,79],["rect",336,905,455,59,0],["rect",420,889,286,76,0],["rect",423,975,281,12,62],["rect",429,987,269,8,119],["line",420,977,433,1035,53,7],["line",701,977,690,1035,54,7]];
 for(const [kind,...args] of r2b6Ops)(kind==="rect"?rect:line)(...args);
+// R2B7: cardinally grounded western observatory and eastern lab.
+const r2b7Ops=[["rect",322,815,114,15,62],["line",335,827,397,853,52,12],["line",397,853,427,822,62,12],["rect",939,522,22,143,62],["line",948,530,904,497,62,13],["line",947,650,894,680,62,13]];
+for(const [kind,...args] of r2b7Ops)(kind==="rect"?rect:line)(...args);
+
 
 // Conservative full non-air collision mask, 19x15 actor centre clearance.
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
@@ -863,6 +867,9 @@ evidence.rework_b6={worker:"B",date:"2026-11-18",assigned_head:"fb6af47d89e7969b
 evidence.gantry_pairwise_steps=[[19,15],[23,19],[31,27]].map(([w,h])=>({envelope:[w,h],steps:r2b6Pairwise(w,h)}));
 if(evidence.gantry_pairwise_steps.some(a=>a.steps<0||a.steps>750))throw Error("R2B6 pairwise route regression");
 evidence.last_rework={worker:"B",assigned_head:"fb6af47d89e7969b7c499f0f7bc5bd55a98242fb",scope:"genuinely short framed and supported inhabited west-east lab artery",physical_cells_changed:24013,rectangles:edits.length,json_bytes:json.length,nonempty_cells:stamped,source_jpeg:"AUTHENTIC VIEWED",original_png:"UNVERIFIED",native:"NATIVE-UNTESTED"};
+evidence.rework_b7={"worker":"B","date":"2026-11-18","assigned_head":"d2d128d792c7c46ff16364ab94699b65b13f04db","scope":"ground the disconnected bioheart/observation deck via western bank, ground east lab to cliff; retain legal 373-step direct gantry","physical_cells_changed":7018,"connected_solid_cells":1228520,"native":"NATIVE-UNTESTED"};
+evidence.structural_support={"solid_component_cells":1228520,"solid_components":55,"probes":[[600,808],[615,385],[600,984],[610,2035],[450,800],[930,500]]};
+evidence.last_rework={worker:"B",assigned_head:"d2d128d792c7c46ff16364ab94699b65b13f04db",scope:"ground the disconnected bioheart/observation deck via western bank, ground east lab to cliff; retain legal 373-step direct gantry",physical_cells_changed:7018,rectangles:edits.length,json_bytes:json.length,nonempty_cells:stamped,source_jpeg:"AUTHENTIC VIEWED",original_png:"UNVERIFIED",native:"NATIVE-UNTESTED"};
 return {json,png,details,evidence};
 }
 module.exports={generate};
