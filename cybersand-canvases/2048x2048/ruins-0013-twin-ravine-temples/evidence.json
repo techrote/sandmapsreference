@@ -1,7 +1,7 @@
 {
   "state": "DRAFT/HOLD; NOT native/owner accepted",
-  "worker": "Canvas Reworker B — R2B7",
-  "starting_head": "66c7072ebc768826eac0a2b98ed850514f3dd2c8",
+  "worker": "Canvas Reworker B — R2B8",
+  "starting_head": "7b986f991f393f51f449e0b64e78e2c1443bd942",
   "engine_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
   "source": {
     "catalogue_id": "ruins-0013",
@@ -18,14 +18,14 @@
       2048
     ],
     "cells": 4194304,
-    "rectangles": 21177,
+    "rectangles": 20347,
     "rectangle_cap": 32768,
-    "json_bytes": 403712,
+    "json_bytes": 388708,
     "json_cap": 1048576,
     "reconstruction_mismatches": 0,
     "rectangle_overlaps": 0,
-    "covered_material_cells": 1797619,
-    "encoded_edit_visits": 1797619
+    "covered_material_cells": 1788214,
+    "encoded_edit_visits": 1788214
   },
   "actor": {
     "model": "midge",
@@ -212,7 +212,7 @@
             19,
             15
           ],
-          "connected_centres": 2121764,
+          "connected_centres": 2122630,
           "exact_sites_connected": 23,
           "bypass_connected": 6,
           "fully_in_bounds": true,
@@ -223,7 +223,7 @@
             23,
             19
           ],
-          "connected_centres": 2065455,
+          "connected_centres": 2066009,
           "exact_sites_connected": 23,
           "bypass_connected": 6,
           "fully_in_bounds": true,
@@ -234,7 +234,7 @@
             31,
             27
           ],
-          "connected_centres": 1954939,
+          "connected_centres": 1955144,
           "exact_sites_connected": 23,
           "bypass_connected": 6,
           "fully_in_bounds": true,
@@ -319,30 +319,31 @@
           7,
           8
         ],
-        "interpretation": "Historical R1 positions are positional regressions, NOT named acceptance sites; 13/17 / 13/17 / 12/17 for 19x15, 23x19, 31x27. All 23 R2 named destinations and all six east bypass centres are exact-connected.",
+        "interpretation": "17 archival R1 site coordinates are informational, not the 23 active semantic acceptance targets. Independent read of previous R2B7 final grid confirms 11/17 at 31x27 (the previous R2B7 receipt incorrectly said 12/17). Current R2B8 retains 11/17 and all 23 true sites.",
         "connected_at_23x19": 13,
-        "connected_at_31x27": 12,
+        "connected_at_31x27": 11,
         "blocked_old_indices_at_31x27": [
           0,
           1,
           3,
           7,
-          8
+          8,
+          12
         ]
       }
     }
   },
   "materials": {
     "histogram": {
-      "0": 2457673,
-      "38": 28901,
-      "40": 255208,
-      "41": 167875,
-      "42": 217719,
-      "49": 34129,
-      "52": 3884,
-      "100": 268058,
-      "101": 760857
+      "0": 2406090,
+      "38": 19112,
+      "40": 264277,
+      "41": 163882,
+      "42": 243198,
+      "49": 28438,
+      "52": 4467,
+      "100": 323293,
+      "101": 741547
     },
     "allowed_static_solid_ids": [
       38,
@@ -707,8 +708,8 @@
       730
     ],
     "same_eight_neighbour_nonempty_component": true,
-    "bridge_component_cells": 1793768,
-    "disconnected_solid_components": 8,
+    "bridge_component_cells": 1783209,
+    "disconnected_solid_components": 16,
     "largest_other_component_cells": 1838,
     "flyable_east_wall_bypass": {
       "exterior_chimney": {
@@ -752,8 +753,8 @@
     },
     "comment": "Intentional open-air east route solves the 2D solid-span separation; review source-fidelity compromise of cantilevered upper east cap.",
     "same_four_neighbour_nonempty_component": true,
-    "solid_connected_neighbours": "FOUR cardinal directions; all five rooted bridge/bank probes in one 1691644-cell component.",
-    "solid_components_total": 9
+    "solid_connected_neighbours": "FOUR cardinal directions; five bank-rooted bridge probes all in 1783209 component",
+    "solid_components_total": 17
   },
   "rework_p1": {
     "assigned_starting_head": "85c3ef0166004cd9480d3b1b933d51045d2e19f2",
@@ -1103,5 +1104,36 @@
     "node_cli": "NOT EXECUTED (GitHub V8 source-equivalent generator/decoder replay, not Node CLI)",
     "original_full_png": "UNVERIFIED",
     "native": "NATIVE-UNTESTED; installed bridge capability and Godot/Rapier simulation/input/collision/save-reopen unmeasured."
+  },
+  "det": {
+    "repeated_generation": "Final pure actual-cell deterministic builder executed in isolated JS runtime; fresh standalone Node replay against committed artifacts remains separate gate.",
+    "png_integrity": "Rebuilt 15 actual-grid indexed PNGs from same final authored Setup-v2; independent bytewise PNG CRC/index checks recorded in PR report.",
+    "source_overlay_used": false
+  },
+  "rework_b8": {
+    "worker": "B",
+    "assigned_head": "7b986f991f393f51f449e0b64e78e2c1443bd942",
+    "starting_head": "7b986f991f393f51f449e0b64e78e2c1443bd942",
+    "date": "2026-11-18",
+    "scope": "one genuinely organic bark-vein bridge, forked west tree, unequal shrine interiors, coherent guardian face and lower visitable root crypt",
+    "physical_cells_changed": 95516,
+    "added": 1932,
+    "excavated": 11337,
+    "reclassified": 82247,
+    "extent": [
+      2048,
+      2048
+    ],
+    "rectangles": 20347,
+    "json_bytes": 388708,
+    "occupied_cells": 1788214,
+    "exact_midge_sites": "23/23 all three fully bounded hulls",
+    "east_bypass": "6/6 all three hulls",
+    "legacy_31": "11/17 on parent and child; previous receipt mislabeled 12/17",
+    "cardinal_bridge_component_cells": 1783209,
+    "components": 17,
+    "largest_nonbridge_component": 1838,
+    "source": "Authentic immutable 640x360 JPEG directly viewed; full original PNG parity UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge cap UNMEASURED"
   }
 }

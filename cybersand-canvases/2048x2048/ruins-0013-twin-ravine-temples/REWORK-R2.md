@@ -1,3 +1,15 @@
+# CURRENT R2B8 — source-driven living bridge and distinct playable temples (18 Nov 2026)
+
+**OPEN Draft/HOLD · NATIVE-UNTESTED · independent owner/Shepherd review required.** Exclusively assigned to B at `7b986f991f393f51f449e0b64e78e2c1443bd942`, working only on this existing PR branch. Genuinely viewed unchanged 640×360 original source **JPEG** beside the previous true material preview. Original full-resolution PNG pixel parity **UNVERIFIED**. Entire pictured scene represents one compact source-derived district, not an entire stretched world; deeper rooted crypt is a deliberately newly authored extension.
+
+**Actual-cell reconstruction:** 95,516 modified material cells: 1,932 added, 11,337 excavated, 82,247 rematerialised. Irregular anatomical bark on ONE structurally rooted descending root-bridge, nonrepeating hanging tendrils, forked old-growth left tree, unlike carved entrances and sanctuary interior machinery, guardian forehead/ocular recess/nose/jaw as coherent solid/void masses, one separate rooted service crypt in lower extrapolated geography. No overlay or new bridge.
+
+**Final exact source-controlled Setup-v2:** 2048×2048, 20347/32768 bounded nonoverlapping rectangles, 388708/1048576 UTF8 bytes, 1788214 occupied cells, full 4194304 replay with zero mismatches. Fully bounded 4-neighbour Midge exact 23/23 sites, east bypass exact 6/6, for all 19×15,23×19,31×27 hulls (connected centres 2122630 / 2066009 / 1955144). Five actual rooted bridge-bank solid probes in one 1783209-cell component; 17 total components, largest other 1838, subject to physical-load classification. Original R2B7 receipt's stated 12/17 historical 31×27 is independently contradicted by replay of actual R2B7 material cells: **11/17 at both predecessor and this revision**, so no genuine historical regression (legacy positions are not semantic acceptance sites). Authentic overview + full material PNG and 13 native 1:1 crops regenerated deterministically from exactly the same grid; independent pixel confirmation belongs to this new HEAD's evidence report.
+
+**Unclosed:** source full-resolution PNG comparison, installed CyberDemoBridge rectangle limit (source 32768, fallback 4096), actual Godot/Rapier Midge input/collision/simulation and fresh-process save/reopen: **UNVERIFIED / NATIVE-UNTESTED**. Do not mistake static plane checks for native acceptance.
+
+---
+
 # Current R2B7 — single rooted bridge, old-growth temple crown, grounded gateways (18 November 2026)
 
 **OPEN DRAFT / HOLD · NATIVE-UNTESTED · independent Shepherd/technical/art review required.** This revision is the exclusive B assignment at parent `66c7072ebc768826eac0a2b98ed850514f3dd2c8` and supersedes all prior numeric headings below; do not mistake older historical metrics as current. Source-driven, real CyberSand material-cell changes in the existing branch, without editing original art, archived files, engine or any sibling PR.
