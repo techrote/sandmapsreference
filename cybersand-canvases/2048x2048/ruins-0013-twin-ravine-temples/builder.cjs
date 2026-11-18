@@ -367,6 +367,28 @@ for(let [x,y,w,h,m] of [[163,692,220,12,M.GRANITE],[308,915,245,11,M.COBBLE],[17
  [1706,1005,212,13,M.GRANITE],[1730,1293,201,12,M.COBBLE],[1761,1754,187,11,M.GRANITE]])
  stain(x,y,w,h,m);
 
+
+// R2B6 — genuine reference-led physical material-cell finisher. Preserve all reachable air channels.
+function finishR2B6(A,W,H) {
+ const K={L:38,G:40,C:41,M:42,S:49,B:52,V:100,O:101},base=A.slice();
+ function point(x,y,v,filled=false){x=Math.round(x);y=Math.round(y);if(x<0||x>=W||y<0||y>=H)return;let i=y*W+x;if(!filled||base[i])A[i]=v}
+ function ball(x,y,r,v,filled=false){for(let yy=Math.max(0,Math.floor(y-r));yy<=Math.min(H-1,Math.ceil(y+r));yy++){let dx=Math.sqrt(Math.max(0,r*r-(yy-y)**2));for(let xx=Math.max(0,Math.ceil(x-dx));xx<=Math.min(W-1,Math.floor(x+dx));xx++)point(xx,yy,v,filled)}}
+ function limb(x,y,X,Y,r,R,v,filled=false){let n=Math.max(1,Math.ceil(Math.hypot(X-x,Y-y)/4));for(let z=0;z<=n;z++){let t=z/n;ball(x+(X-x)*t,y+(Y-y)*t,r+(R-r)*t,v,filled)}}
+ const clumps=[[118,68,38],[152,37,25],[196,69,42],[238,44,27],[275,86,32],[318,39,34],[362,76,41],[409,24,28],[471,73,44],[522,93,26],[572,120,34],[625,154,23],[342,133,40],[185,151,27],[250,171,29]];
+ clumps.forEach(([x,y,r],i)=>ball(x,y,r,i%4?K.M:K.G));
+ const roots=[[[446,320,36],[402,412,30],[386,501,28],[342,562,24],[276,654,15]],[[466,345,31],[494,433,26],[527,511,23],[553,577,17],[600,637,12]],[[406,367,28],[356,437,22],[302,487,17],[261,529,13]]];
+ roots.forEach(q=>{for(let i=0;i<q.length-1;i++){let a=q[i],b=q[i+1];limb(a[0],a[1],b[0],b[1],a[2],b[2],i%2?K.G:K.V,true);limb(a[0]+8,a[1]+5,b[0]+8,b[1]+5,4,3,K.M,true)}});
+ const arches=[
+  [[209,672,211,550,19,25,K.C],[211,550,260,516,26,18,K.G],[260,516,325,503,18,19,K.L],[325,503,415,515,19,22,K.C],[415,515,452,555,22,23,K.G],[452,555,458,669,23,20,K.V]],
+  [[1695,736,1700,576,23,30,K.V],[1700,576,1745,545,30,24,K.C],[1745,545,1823,530,24,19,K.L],[1823,530,1902,543,19,26,K.C],[1902,543,1950,585,26,30,K.G],[1950,585,1945,741,30,23,K.V]]
+ ];
+ arches.forEach(e=>e.forEach(p=>limb(...p,true)));
+ for(let i=0;i<26;i++){let x=216+i*9,y=520+Math.sin(x/41)*13;ball(x,y,5,i%3?K.M:K.L,true)}
+ for(let i=0;i<25;i++){let x=1716+i*9,y=554+Math.cos(x/41)*7;ball(x,y,5,i%3?K.S:K.M,true)}
+ for(let x=625;x<1825;x++){let top=-1,bot=-1;for(let y=640;y<791;y++){if(base[y*W+x]){if(top<0)top=y;bot=y}}if(top<0)continue;let drift=Math.sin(x/31)*4+Math.sin(x/79)*7;for(let y=top;y<=Math.min(bot,top+50);y++){let k=y*W+x;if(!base[k])continue;let f=y-top;if((x+Math.round(drift)+Math.floor(f*1.4))%71<13)A[k]=K.G;else if((2*x+f+Math.floor(drift))%49<7)A[k]=K.M;else if(f>9&&f<23&&(x+Math.floor(f/3))%37<12)A[k]=K.V;}}
+ for(let y=348;y<593;y++)for(let x=1580;x<1825;x++){let i=y*W+x;if(!base[i])continue;let w=x-Math.round(3*Math.sin(y/18));if((w+2*y)%83<10)A[i]=K.L;else if((w-y)%69<5)A[i]=K.M}
+}
+finishR2B6(A,W,H);
 const spawn=[1024,454],loc=[
 ['Upper Open Ravine',[1024,454]],['West Upper Shrine',[315,590]],['West Upper Threshold',[604,589]],['West Root Landing',[491,850]],['West Deep Root Niche',[347,1137]],['West Middle Exit',[751,1141]],['West Terrace Chapel',[469,1367]],['West Lower Return',[596,1718]],
 ['Living Bridge West Air',[837,619]],['Living Bridge Mid-Air',[1050,617]],['Living Bridge East Air',[1450,613]],

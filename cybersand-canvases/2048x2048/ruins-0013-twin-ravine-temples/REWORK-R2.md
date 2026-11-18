@@ -1,3 +1,17 @@
+# Current R2B6 — source-led tree buttresses, dissimilar gateways, one rooted bridge (18 November 2026)
+
+**OPEN DRAFT/HOLD — no native or owner acceptance.** Current numerical authority: [evidence.json](evidence.json); all earlier sections below are historical and superseded. Exactly **92,572 actual final material-cell identities changed**, including **7,023 newly occupied cells**, relative to exclusive assigned starting HEAD `384053f7e0d2e4e3809a50afbbeac0537b7dfcc1`. Genuine byte-identical committed source-reference JPEG `adfb56729b2c443a513892fbe803718dc8b71e52` directly viewed; original full-resolution PNG pixel comparison **UNVERIFIED**.
+
+**Original scale rather than image stretch:** Source-local ancient western canopy and fused buttresses, distinct rooted west ritual gateway and opposing stone-vault east shrine are better differentiated by actual-material sculpture and stone colours. The existing SINGLE four-neighbour attached root span now carries nonparallel embedded bark, stone and moss textures instead of monotonous horizontal rails. Eroded right cliff guardian material is painted only over its preexisting physically occupied supported stone. The background air and authored operational routes stay unchanged. The broader lower worlds are separate extrapolated cavern designs, not falsely source-exact pixels.
+
+**Exact physical serialization:** 2048×2048 = 4,194,304 replayed cells; **25,401** legal non-overlapping 5-field rectangles / 32,768; **480,108** UTF-8 bytes / 1 MiB; **1,736,631 occupied**; zero reconstruction mismatches, all native-supported immovable stable material IDs 38/40/41/42/49/52/100/101. Original 4×3 Midge spawn **(1024,454)** and **23/23 exact semantic points + 6/6 east bypass probes** pass fully-in-bounds four-neighbour air-centre BFS at 19×15 (**2,158,725 centres**), 23×19 (**2,101,669**) and 31×27 (**1,988,967**). No nearest-point, radius waiver or changed operational target. All five unchanged bridge/stone anchors cardinal-connected in a **1,691,644-cell** main solid component, **13** solid components, largest separate **15,962** cells.
+
+**Cell-authentic evidence:** [true full-map material identities](temples-material-2048.png), [overview](twin-ravine-temples-preview.png), native 1:1 [old-growth tree](temples-detail-west-tree.png), [west entrance](temples-detail-west-shrine.png), [single rooted bridge](temples-detail-living-bridge.png), [east guardian](temples-detail-east-guardian.png), [east bypass](temples-detail-east-bypass.png). **Nine actual altered images regenerated**, six previously committed lower crops preserved byte-for-byte because their underlying sampled cell values are unchanged; **8,650,752 material pixel indices checked against current plane, zero mismatches**. Standalone Node CLI, independent fetched-binary PNG decode and actual runtime **NOT EXECUTED** on this revision. The source image, merged historical art and accepted CyberSand engine are unchanged.
+
+**Remaining HOLD:** source bridge has 32,768-stamp capacity but installed native binary might still enforce legacy 4,096; no physical Godot/CyberDemoBridge/Rapier install, Midge input/collision, simulation or fresh-process save/reopen. Owner judgement and full original PNG review outstanding. Never merge/Ready.
+
+---
+
 # Current R2B5 — exact-cell source-fidelity and receipt repair (18 November 2026)
 
 **OPEN DRAFT / HOLD.** This section and [evidence.json](evidence.json) contain the **current numerical authority**. Historical sections below are explicitly superseded, not current.

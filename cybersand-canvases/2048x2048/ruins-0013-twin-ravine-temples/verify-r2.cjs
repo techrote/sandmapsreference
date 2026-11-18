@@ -30,14 +30,14 @@ const bridgePoints=[[1070,705],[586,745],[1455,655],[1580,680],[1770,730]];
 const bridgeId=solidAt(bridgePoints[0]);assert(bridgeId>0,'bridge material seed missing');
 for(const p of bridgePoints)assert.strictEqual(solidAt(p),bridgeId,'floating bridge or erased bank anchor '+p);
 const orderedComponents=[...componentSizes].sort((a,b)=>b-a);
-assert.strictEqual(orderedComponents[0],1686910,'unexpected cardinal root/bridge main solid size');assert.strictEqual(componentSizes.length,12,'unexpected independent stone component count');assert(orderedComponents.slice(1).every(x=>x<=20000),'unexpected isolated large structure');
+assert.strictEqual(orderedComponents[0],1691644,'unexpected cardinal root/bridge main solid size');assert.strictEqual(componentSizes.length,13,'unexpected independent stone component count');assert(orderedComponents.slice(1).every(x=>x<=20000),'unexpected isolated large structure');
 console.log('PASS both actual saved-grid bridge anchors, upper east cap and entire deck in common 4-neighbour material component: '+componentSizes[bridgeId-1]+' cells; '+componentSizes.length+' solid components');
 
 // Conservative Midge envelope testing with FULLY IN-BOUNDS centres and exact target points.
 const receipt=JSON.parse(fs.readFileSync('evidence.json','utf8'));
 assert.strictEqual(receipt.format.rectangles,setup.edits.length,"stale rectangle receipt");
 assert.strictEqual(receipt.format.json_bytes,Buffer.byteLength(setupText),"stale JSON byte receipt");
-assert.strictEqual(receipt.format.covered_material_cells,1729608,"stale occupied-cell receipt");
+assert.strictEqual(receipt.format.covered_material_cells,1736631,"stale occupied-cell receipt");
 const sites=receipt.actor.exact_named_sites,legacy=receipt.actor.clearance.archival_regressions.previous_exact_sites;assert.strictEqual(sites.length,23,'all 20 original plus three new exact sites must be present');
 const bypass=[[2018,310],[2018,780],[1932,781],[1730,783],[1450,782],[1418,815]];
 const integral=new Int32Array((W+1)*(H+1));
@@ -84,5 +84,5 @@ for(const [name,[w,h,left,top,step]] of Object.entries(names)){
  const emitted2=name==='twin-ravine-temples-preview.png'?other.png:other.details[name];assert(Buffer.from(emitted2).equals(b),'second build mismatch '+name);
  console.log('PASS '+name+' '+w+'x'+h+' 0 pixel mismatches, verified CRC/IEND');
 }
-assert.strictEqual(covered,1729608);
+assert.strictEqual(covered,1736631);
 console.log('PASS full exact setup replay '+setup.edits.length+' rectangles; '+covered+' occupied cells; deterministic rebuild twice');
