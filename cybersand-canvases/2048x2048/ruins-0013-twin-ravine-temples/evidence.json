@@ -1,281 +1,1214 @@
 {
-  "source_id": "ruins-0013",
-  "extent": [
-    2048,
-    2048
-  ],
-  "seed": 1556133,
-  "rectangle_count": 28733,
-  "rectangle_budget": 32768,
-  "json_bytes": 545894,
-  "json_byte_budget": 1048576,
-  "png_bytes": 525480,
-  "cell_reconstruction": 4194304,
-  "clearance_envelope": [
-    19,
-    15
-  ],
-  "reachable_destinations": 17,
-  "destinations": [
-    {
-      "name": "West Crown Sanctuary",
-      "point": [
-        450,
-        471
-      ]
+  "state": "DRAFT/HOLD; NOT native/owner accepted",
+  "worker": "Canvas Reworker B — R2B9",
+  "starting_head": "77576063c9fa3ae970dc2debde289c4b859e4e1e",
+  "engine_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+  "source": {
+    "catalogue_id": "ruins-0013",
+    "original_png_path": "artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png",
+    "original_png_blob": "0611d05df37b443a411c1ebf9dba663082e25975",
+    "source_jpeg_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
+    "visual_inspection": "Genuine committed 640x360 source-reference-preview.jpg decoded/viewed directly against R2B6 and R2B7 real material-grid previews and 1:1 tree/bridge/guardian; original full-resolution PNG pixel parity UNVERIFIED.",
+    "original_png_pixel_parity": "UNVERIFIED"
+  },
+  "format": {
+    "version": 2,
+    "extent": [
+      2048,
+      2048
+    ],
+    "cells": 4194304,
+    "rectangles": 20867,
+    "rectangle_cap": 32768,
+    "json_bytes": 398277,
+    "json_cap": 1048576,
+    "reconstruction_mismatches": 0,
+    "rectangle_overlaps": 0,
+    "covered_material_cells": 1788588,
+    "encoded_edit_visits": 1788588
+  },
+  "actor": {
+    "model": "midge",
+    "authored_hull": [
+      4,
+      3
+    ],
+    "spawn": [
+      1024,
+      454
+    ],
+    "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "exact_named_sites": [
+      {
+        "name": "Upper Open Ravine",
+        "point": [
+          1024,
+          454
+        ]
+      },
+      {
+        "name": "West Upper Shrine",
+        "point": [
+          315,
+          590
+        ]
+      },
+      {
+        "name": "West Upper Threshold",
+        "point": [
+          604,
+          589
+        ]
+      },
+      {
+        "name": "West Root Landing",
+        "point": [
+          491,
+          850
+        ]
+      },
+      {
+        "name": "West Deep Root Niche",
+        "point": [
+          347,
+          1137
+        ]
+      },
+      {
+        "name": "West Middle Exit",
+        "point": [
+          751,
+          1141
+        ]
+      },
+      {
+        "name": "West Terrace Chapel",
+        "point": [
+          469,
+          1367
+        ]
+      },
+      {
+        "name": "West Lower Return",
+        "point": [
+          596,
+          1718
+        ]
+      },
+      {
+        "name": "Living Bridge West Air",
+        "point": [
+          837,
+          619
+        ]
+      },
+      {
+        "name": "Living Bridge Mid-Air",
+        "point": [
+          1050,
+          617
+        ]
+      },
+      {
+        "name": "Living Bridge East Air",
+        "point": [
+          1450,
+          613
+        ]
+      },
+      {
+        "name": "East Sun Sanctuary",
+        "point": [
+          1811,
+          619
+        ]
+      },
+      {
+        "name": "East High Lookout",
+        "point": [
+          1790,
+          930
+        ]
+      },
+      {
+        "name": "East Eroded Archive",
+        "point": [
+          1808,
+          1216
+        ]
+      },
+      {
+        "name": "East Lower Crypt",
+        "point": [
+          1840,
+          1695
+        ]
+      },
+      {
+        "name": "East Lower Air Exit",
+        "point": [
+          1600,
+          1697
+        ]
+      },
+      {
+        "name": "East Root Spur",
+        "point": [
+          1387,
+          1460
+        ]
+      },
+      {
+        "name": "Vertical Central Ravine",
+        "point": [
+          1100,
+          1121
+        ]
+      },
+      {
+        "name": "Lower Ravine Flight",
+        "point": [
+          1090,
+          1600
+        ]
+      },
+      {
+        "name": "Valley Floor Return",
+        "point": [
+          1050,
+          1844
+        ]
+      },
+      {
+        "name": "West Root Relay",
+        "point": [
+          469,
+          1515
+        ]
+      },
+      {
+        "name": "East Lantern Archive",
+        "point": [
+          1804,
+          1433
+        ]
+      },
+      {
+        "name": "Valley Substrate Return",
+        "point": [
+          1145,
+          1970
+        ]
+      }
+    ],
+    "site_count": 23,
+    "nearest_point_fallback": false,
+    "clearance": {
+      "fully_in_bounds": true,
+      "search": "four-neighbour BFS; integral-image rectangle occupancy; every nonempty cell blocks",
+      "envelopes": [
+        {
+          "size": [
+            19,
+            15
+          ],
+          "connected_centres": 2117103,
+          "exact_sites_connected": 23,
+          "bypass_connected": 6,
+          "fully_in_bounds": true,
+          "connectivity": "strict exact 4-neighbour full-hull centre BFS"
+        },
+        {
+          "size": [
+            23,
+            19
+          ],
+          "connected_centres": 2059808,
+          "exact_sites_connected": 23,
+          "bypass_connected": 6,
+          "fully_in_bounds": true,
+          "connectivity": "strict exact 4-neighbour full-hull centre BFS"
+        },
+        {
+          "size": [
+            31,
+            27
+          ],
+          "connected_centres": 1947319,
+          "exact_sites_connected": 23,
+          "bypass_connected": 6,
+          "fully_in_bounds": true,
+          "connectivity": "strict exact 4-neighbour full-hull centre BFS"
+        }
+      ],
+      "archival_regressions": {
+        "previous_exact_sites": [
+          [
+            450,
+            471
+          ],
+          [
+            1590,
+            471
+          ],
+          [
+            1024,
+            454
+          ],
+          [
+            455,
+            785
+          ],
+          [
+            1588,
+            785
+          ],
+          [
+            1080,
+            1038
+          ],
+          [
+            456,
+            1117
+          ],
+          [
+            1593,
+            1117
+          ],
+          [
+            701,
+            1117
+          ],
+          [
+            1365,
+            1117
+          ],
+          [
+            1024,
+            1233
+          ],
+          [
+            450,
+            1454
+          ],
+          [
+            1591,
+            1454
+          ],
+          [
+            451,
+            1750
+          ],
+          [
+            1589,
+            1750
+          ],
+          [
+            1022,
+            1732
+          ],
+          [
+            1062,
+            1858
+          ]
+        ],
+        "connected_at_19x15": 13,
+        "blocked_old_indices_zero_based": [
+          0,
+          1,
+          7,
+          8
+        ],
+        "interpretation": "17 archival R1 site coordinates are informational, not the 23 active semantic acceptance targets. Independent read of previous R2B7 final grid confirms 11/17 at 31x27 (the previous R2B7 receipt incorrectly said 12/17). Current R2B8 retains 11/17 and all 23 true sites.",
+        "connected_at_23x19": 13,
+        "connected_at_31x27": 11,
+        "blocked_old_indices_at_31x27": [
+          0,
+          1,
+          3,
+          7,
+          8,
+          12
+        ]
+      }
+    }
+  },
+  "materials": {
+    "histogram": {
+      "0": 2405716,
+      "38": 19112,
+      "40": 264749,
+      "41": 161111,
+      "42": 245862,
+      "49": 30125,
+      "52": 4535,
+      "100": 327486,
+      "101": 735608
     },
+    "allowed_static_solid_ids": [
+      38,
+      40,
+      41,
+      42,
+      49,
+      52,
+      100,
+      101
+    ],
+    "physics": "All placed non-empty IDs verified against current accepted main native/include/cybersand/material.hpp: MaterialState::Solid, movable false, valid true, RuleKernel::None.",
+    "water_retained": 0,
+    "water_removal": "Removed 26,928 historical Water cells from R1's non-source-shaped boxed pool, which is absent from the original composition.",
+    "reactive_growth_powder_ids": [],
+    "unsupported_ids": []
+  },
+  "evidence": [
     {
-      "name": "East Crown Sanctuary",
-      "point": [
-        1590,
-        471
-      ]
-    },
-    {
-      "name": "Upper Sky Ravine",
-      "point": [
+      "file": "twin-ravine-temples-preview.png",
+      "blob_sha": "daa0b1eac74b16139cbe6113139f5911890f44e9",
+      "size_bytes": 525480,
+      "crc32": "84ad8ff2",
+      "extent": [
         1024,
-        454
-      ]
+        1024
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sample_step": 2,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "West Root Gallery",
-      "point": [
-        455,
-        785
-      ]
+      "file": "temples-material-2048.png",
+      "blob_sha": "52dcf1a0d54084b64c57a4674b3ed4cee107d44a",
+      "size_bytes": 2099488,
+      "crc32": "82623d9e",
+      "extent": [
+        2048,
+        2048
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "East Sun Gallery",
-      "point": [
-        1588,
-        785
-      ]
+      "file": "temples-detail-west-tree.png",
+      "blob_sha": "88e33c641a70f3bcdd898527b37946751d0f8175",
+      "size_bytes": 131722,
+      "crc32": "2bd17bc2",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        125,
+        35
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "High Ravine Overlook",
-      "point": [
-        1080,
-        1038
-      ]
+      "file": "temples-detail-west-shrine.png",
+      "blob_sha": "32d633fd0f0f9a3f9db5a6736c43ba6f55e1dce6",
+      "size_bytes": 131722,
+      "crc32": "4ab4e5e1",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        100,
+        475
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "West Moss Archive",
-      "point": [
-        456,
-        1117
-      ]
+      "file": "temples-detail-living-bridge.png",
+      "blob_sha": "351ea9cd551b08cc47e7fdf2547a801dde6b67dc",
+      "size_bytes": 131722,
+      "crc32": "b92e350b",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        753,
+        445
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "East Oracle Archive",
-      "point": [
-        1593,
-        1117
-      ]
+      "file": "temples-detail-bridge-west-anchor.png",
+      "blob_sha": "6330d763aef2edf94bf68f33a71d641bc4417772",
+      "size_bytes": 131722,
+      "crc32": "353ce7cb",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        420,
+        550
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "West Guardian Portal",
-      "point": [
-        701,
-        1117
-      ]
+      "file": "temples-detail-bridge-east-anchor.png",
+      "blob_sha": "ae12f6e8c153b6f1ea5f8afe431d37b5753b4aa4",
+      "size_bytes": 131722,
+      "crc32": "b61e00d4",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        1380,
+        545
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "East Guardian Portal",
-      "point": [
-        1365,
-        1117
-      ]
+      "file": "temples-detail-east-bypass.png",
+      "blob_sha": "cda83eae8a05c4e3c48a8bc181e975e753cf9768",
+      "size_bytes": 131722,
+      "crc32": "a5b4d2ad",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        1536,
+        640
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "Midspan Bridge Overlook",
-      "point": [
-        1024,
-        1233
-      ]
+      "file": "temples-detail-east-guardian.png",
+      "blob_sha": "2ecf73d7e111abeb6366a1b2a1111fe40318d90a",
+      "size_bytes": 131722,
+      "crc32": "759c5bca",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        1512,
+        207
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "West Relics Gallery",
-      "point": [
-        450,
-        1454
-      ]
+      "file": "temples-detail-east-crypt.png",
+      "blob_sha": "ffc1bc016c2254aa83acef569d670fc05141d5fd",
+      "size_bytes": 131722,
+      "crc32": "423a65de",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        1490,
+        1135
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "East Relics Gallery",
-      "point": [
-        1591,
-        1454
-      ]
+      "file": "temples-detail-root-passages.png",
+      "blob_sha": "acdc0edd61bb7fca1c080ebe4fed531d5abc235c",
+      "size_bytes": 131722,
+      "crc32": "86d719c8",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        214,
+        1240
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "West Lower Sanctuary",
-      "point": [
-        451,
-        1750
-      ]
+      "file": "temples-detail-lower-ravine.png",
+      "blob_sha": "570a5d854f513ac9057c215a7b8a1295396fa60b",
+      "size_bytes": 131722,
+      "crc32": "9b9f53de",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        803,
+        1510
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "East Root Crypt",
-      "point": [
-        1589,
-        1750
-      ]
+      "file": "temples-detail-west-root-relay.png",
+      "blob_sha": "6548db53ea307d8ce26fa6a089d519176bb67a38",
+      "size_bytes": 131722,
+      "crc32": "3197d32a",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        230,
+        1290
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "Lower Bridge Outlook",
-      "point": [
-        1022,
-        1732
-      ]
+      "file": "temples-detail-east-lantern-archive.png",
+      "blob_sha": "bb0447668fb4476d37f17a3888e6689a7c3365d8",
+      "size_bytes": 131722,
+      "crc32": "d3063ee1",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        1536,
+        1235
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     },
     {
-      "name": "Moonwater Basin Outlook",
-      "point": [
-        1062,
-        1858
-      ]
+      "file": "temples-detail-valley-substrate.png",
+      "blob_sha": "fe4d9576889a4e3d678452048034b3ff874aefe1",
+      "size_bytes": 131722,
+      "crc32": "aec1b540",
+      "extent": [
+        512,
+        512
+      ],
+      "origin": [
+        790,
+        1536
+      ],
+      "sample_step": 1,
+      "pixel_mismatches": 0,
+      "chunk_crc_errors": 0,
+      "zlib_stored_blocks_valid": true,
+      "complete_iend": true
     }
   ],
-  "waypoint_adjustments": [],
-  "air_component_cells": 1620906,
-  "spawn": [
-    1024,
-    454
+  "determinism": {
+    "repeated_generation": "R2B6: pure deterministic finishing function applied to prior serialized complete actual material plane; exhaustive material replay performed. Fresh standalone Node builder replay NOT performed.",
+    "png_integrity": "9 updated indexed PNGs built from final cell plane with recomputed stored-zlib, Adler-32 and PNG CRCs. Six unaffected crops remain byte-identical because all sampled material cells are unchanged; 8,650,752 pixel indices consistent. Separate physical GitHub-binary readback NOT RUN.",
+    "source_overlay_used": false
+  },
+  "native": {
+    "godot_import": "NOT RUN",
+    "native_rectangle_capacity_readback": "NOT RUN",
+    "actor_input_collision": "NOT RUN",
+    "simulation": "NOT RUN",
+    "save_reopen": "NOT RUN",
+    "status": "NATIVE-UNTESTED",
+    "installed_bridge_capacity": "UNMEASURED",
+    "source_bridge_capacity": 32768,
+    "legacy_fallback": 4096
+  },
+  "limitations": [
+    "Direct source JPEG seen, original full-resolution PNG unavailable to binary read: pixel parity UNVERIFIED",
+    "All 29 semantic/bypass points and 4-connected solid bridge verified STATIC, not proof of actual Midge flight/collision, gameplay pacing, structural simulation or save/reopen",
+    "Standalone Node CLI not executed; builder source evaluated twice in isolated V8, final JSON rebuilt from exact material cells; all committed PNGs decoded against material plane",
+    "Installed Godot/CyberDemoBridge/Rapier runtime unavailable; actual source bridge 32768 but legacy installed 4096 still possible",
+    "Eight remaining minor non-boundary solid components (largest 1838 cells) require architectural intent review; four formerly major 15962/9416/7963/5589-cell detachments rejoined main ground"
   ],
-  "material_counts": {
-    "0": 2078890,
-    "3": 26928,
-    "38": 174574,
-    "40": 221325,
-    "41": 26721,
-    "42": 277568,
-    "49": 175615,
-    "52": 71097,
-    "58": 12991,
-    "77": 3460,
-    "79": 11475,
-    "98": 66127,
-    "100": 631606,
-    "101": 387565,
-    "122": 18811,
-    "127": 9551
-  },
-  "native_runtime": "NOT RUN",
-  "source_visual_review": "NOT RUN — binary original unavailable in this environment",
-  "repair": {
-    "worker": "Canvas Reworker B",
-    "from_head": "4290ae939e0792566ff753b05639c0b20bda2ea0",
-    "exact_centres_enforced": true,
-    "nearest_waypoint_fallback": false,
-    "independent_reconstruction_cells": 4194304,
-    "independent_reconstruction_histogram": {
-      "0": 2078890,
-      "3": 26928,
-      "38": 174574,
-      "40": 221325,
-      "41": 26721,
-      "42": 277568,
-      "49": 175615,
-      "52": 71097,
-      "58": 12991,
-      "77": 3460,
-      "79": 11475,
-      "98": 66127,
-      "100": 631606,
-      "101": 387565,
-      "122": 18811,
-      "127": 9551
+  "bridge_and_air_topology": {
+    "repaired_from_head": "66c7072ebc768826eac0a2b98ed850514f3dd2c8",
+    "solid_probe": [
+      [
+        1070,
+        705
+      ],
+      [
+        586,
+        745
+      ],
+      [
+        1455,
+        655
+      ],
+      [
+        1580,
+        680
+      ],
+      [
+        1770,
+        730
+      ]
+    ],
+    "west_bank_anchor": [
+      586,
+      745
+    ],
+    "mid_to_east_deck_seam": [
+      1455,
+      655
+    ],
+    "east_cliff_bridge_point": [
+      1770,
+      730
+    ],
+    "same_eight_neighbour_nonempty_component": true,
+    "bridge_component_cells": 1783723,
+    "disconnected_solid_components": 16,
+    "largest_other_component_cells": 1838,
+    "flyable_east_wall_bypass": {
+      "exterior_chimney": {
+        "x": 1992,
+        "y": 251,
+        "width": 56,
+        "height": 600
+      },
+      "horizontal_undercroft": {
+        "x": 1435,
+        "y": 757,
+        "width": 613,
+        "height": 49
+      },
+      "exact_31x27_safe_reachable_centres": [
+        [
+          2018,
+          310
+        ],
+        [
+          2018,
+          780
+        ],
+        [
+          1932,
+          781
+        ],
+        [
+          1730,
+          783
+        ],
+        [
+          1450,
+          782
+        ],
+        [
+          1418,
+          815
+        ]
+      ]
     },
-    "independent_air_component_centres": 1620906,
-    "independent_exact_destination_count": 17,
-    "referenced_artwork_visual_comparison": "NOT RUN",
-    "godot_native_runtime": "NOT RUN",
-    "method": "Separate raster reconstruction + 19x15 all-non-air-blocking occupancy integral and four-neighbour flood"
+    "comment": "Intentional open-air east route solves the 2D solid-span separation; review source-fidelity compromise of cantilevered upper east cap.",
+    "same_four_neighbour_nonempty_component": true,
+    "solid_connected_neighbours": "FOUR cardinal directions; five bank-rooted bridge probes all in 1783209 component",
+    "solid_components_total": 16
   },
-  "variant": "Reworked root-bound guardian reliefs, asymmetrical regions, differentiated bridge structures, real material-cell PNG and native district crops; evidence PNG publication repaired without changing terrain",
-  "png_integrity": {
-    "repair_reason": "P0: all five previously committed PNG Git blobs contained invalid IDAT CRC and malformed/truncated chunk stream; regenerated directly from unchanged setup-v2 material cell plane",
-    "source_head": "ed6420f352c50dc86cbbd89be2e558d26bcbae0f",
-    "setup_json_git_blob": "6f8dfc7c46abb6f420dd502f8bb64ace07f1d271",
-    "material_grid_crc32": "2226ba4e",
-    "material_geometry_changed": false,
-    "encoder": "PNG 4-bit indexed, filter 0, single IDAT with zlib stored-deflate; CRC32/Adler32 verified",
-    "verified_pngs": {
-      "twin-ravine-temples-preview.png": {
-        "width": 1024,
-        "height": 1024,
-        "bytes": 525480,
-        "file_crc32": "5a10eb2c",
-        "idat_crc32": "8eba7f2d",
-        "verified_pixels": 1048576,
-        "origin": [
-          0,
-          0
+  "rework_p1": {
+    "assigned_starting_head": "85c3ef0166004cd9480d3b1b933d51045d2e19f2",
+    "scope": "Three thick rooted west buttresses, unequal worn shrine thresholds, shorter mossy ridge guardian, two provably grounded lower spandrel piers plus solid-only weathered shoulder recolouring, single living bridge rhythm and crown/terrace shapes",
+    "real_changed_material_cells": 124629,
+    "whole_plane_tested": 4194304,
+    "bridge_four_neighbour_component_cells": 1726673,
+    "bridge_probes_4connected": [
+      [
+        1070,
+        705
+      ],
+      [
+        586,
+        745
+      ],
+      [
+        1455,
+        655
+      ],
+      [
+        1580,
+        680
+      ],
+      [
+        1770,
+        730
+      ]
+    ],
+    "whole_chimney_and_undercroft_empty": true,
+    "source_preview_compared": true,
+    "original_full_png_pixel_parity": "UNVERIFIED",
+    "native": "NOT RUN",
+    "floating_pier_reconciliation": "Post-review rejected two hanging undercroft blocks, kept only two piers physically connected to main eastern solid mass; 3,516 final cells revised relative to first P1 draft."
+  },
+  "rework_a": {
+    "assigned_head": "dee3558aa17e0812228575c359a0ad1915b6a101",
+    "scope": "Source-led lower-ravine functional architecture with distinct west root relay, east lantern archive and connected two-skylight substrate gallery; uneven rooted shrine apertures and cardinal-root integration; fixed 4-neighbour validator and rebuilt actual cells.",
+    "changed_material_cells": 132587,
+    "changed_bounding_box": [
+      180,
+      698,
+      1945,
+      2023
+    ],
+    "preserved_existing_exact_sites": 20,
+    "new_named_exact_sites": [
+      [
+        "West Root Relay",
+        [
+          469,
+          1515
+        ]
+      ],
+      [
+        "East Lantern Archive",
+        [
+          1804,
+          1433
+        ]
+      ],
+      [
+        "Valley Substrate Return",
+        [
+          1145,
+          1970
+        ]
+      ]
+    ],
+    "new_total_exact_sites": 23,
+    "full_bfs": [
+      {
+        "hull": [
+          19,
+          15
         ],
-        "sample_step": 2,
-        "git_blob": "ea7f61594da843b41c5e403405dff8fb5c74f79c"
+        "reached": 2218488,
+        "sites": 23
       },
-      "temples-detail-west-crown.png": {
-        "width": 512,
-        "height": 512,
-        "bytes": 131722,
-        "file_crc32": "e25586df",
-        "idat_crc32": "de7e765c",
-        "verified_pixels": 262144,
-        "origin": [
-          155,
-          180
+      {
+        "hull": [
+          23,
+          19
         ],
-        "sample_step": 1,
-        "git_blob": "7c6901e1b60c479e59c49e1800be754ba55e9081"
+        "reached": 2161862,
+        "sites": 23
       },
-      "temples-detail-guardian-bridges.png": {
-        "width": 512,
-        "height": 512,
-        "bytes": 131722,
-        "file_crc32": "860c4212",
-        "idat_crc32": "0166bfa4",
-        "verified_pixels": 262144,
-        "origin": [
-          740,
-          845
+      {
+        "hull": [
+          31,
+          27
         ],
-        "sample_step": 1,
-        "git_blob": "adf5e1ad85f0987b92c45e17af670bd2b9b8faa6"
-      },
-      "temples-detail-east-oracle.png": {
-        "width": 512,
-        "height": 512,
-        "bytes": 131722,
-        "file_crc32": "1bfb465f",
-        "idat_crc32": "11b1e683",
-        "verified_pixels": 262144,
-        "origin": [
-          1420,
-          960
-        ],
-        "sample_step": 1,
-        "git_blob": "9b8b4378d022f925206bda14b1de63338c232c1f"
-      },
-      "temples-detail-moonwater.png": {
-        "width": 512,
-        "height": 512,
-        "bytes": 131722,
-        "file_crc32": "7e421434",
-        "idat_crc32": "d4edd595",
-        "verified_pixels": 262144,
-        "origin": [
-          790,
-          1536
-        ],
-        "sample_step": 1,
-        "git_blob": "891f7dd0256a670d65e6235a5eebbff341ca8cf8"
+        "reached": 2049896,
+        "sites": 23
       }
+    ],
+    "bridge_cardinal_component_cells": 1615209,
+    "new_images": [
+      "temples-detail-west-root-relay.png",
+      "temples-detail-east-lantern-archive.png",
+      "temples-detail-valley-substrate.png"
+    ],
+    "source_preview_seen": true,
+    "original_png_pixel_parity": "UNVERIFIED",
+    "native": "NOT RUN",
+    "node_cli": "NOT RUN (V8-source-equivalent full requalification executed)"
+  },
+  "rework_b": {
+    "assigned_head": "a619d67757de96d301bb45dea92f188863f3e498",
+    "source_jpeg": "adfb56729b2c443a513892fbe803718dc8b71e52",
+    "scope": "Wider single living bridge; unequal west/east cliff sanctuary portals; supported root relay and east archive; connected lower substrate.",
+    "real_material_cells_changed": 171857,
+    "extent": [
+      2048,
+      2048
+    ],
+    "rectangles": 16851,
+    "json_bytes": 323362,
+    "covered_material_cells": 1699072,
+    "fully_reconstructed_cells": 4194304,
+    "source_original_png_pixel_parity": "UNVERIFIED",
+    "clearance": [
+      {
+        "size": [
+          19,
+          15
+        ],
+        "connected_centres": 2182842,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6
+      },
+      {
+        "size": [
+          23,
+          19
+        ],
+        "connected_centres": 2125895,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6
+      },
+      {
+        "size": [
+          31,
+          27
+        ],
+        "connected_centres": 2013182,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6
+      }
+    ],
+    "cardinal_bridge_component_cells": 1656809,
+    "stored_deflate_indexed_PNG_pixels_checked": 8650752,
+    "native": "NATIVE-UNTESTED"
+  },
+  "rework_b5": {
+    "assigned_head": "aa6fcf7092710770bcc0bf033132b58e1ef91b5d",
+    "source_jpeg_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
+    "scope": "Variable-sag single rooted bridge, more directional connected west canopy, sculpted embedded eastern guardian and eight varied shrine thresholds. All genuine material-cell edits.",
+    "changed_final_material_cells": 106823,
+    "extent": [
+      2048,
+      2048
+    ],
+    "rectangles": 17707,
+    "json_bytes": 339037,
+    "occupied_cells": 1729608,
+    "full_plane_replayed_cells": 4194304,
+    "clearance": [
+      {
+        "size": [
+          19,
+          15
+        ],
+        "connected_centres": 2158725,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "archival_positions_connected": 13
+      },
+      {
+        "size": [
+          23,
+          19
+        ],
+        "connected_centres": 2101669,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "archival_positions_connected": 13
+      },
+      {
+        "size": [
+          31,
+          27
+        ],
+        "connected_centres": 1988967,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "archival_positions_connected": 12
+      }
+    ],
+    "cardinal_bridge_component_cells": 1686910,
+    "solid_components": 12,
+    "largest_other_component_cells": 15962,
+    "regenerated_indexed_pngs": 15,
+    "material_pixels_independently_compared": 8650752,
+    "deterministic_builder_executions": 2,
+    "node_cli": "NOT EXECUTED in isolated connector runtime",
+    "original_full_png": "UNVERIFIED; genuine committed source JPEG viewed",
+    "native": "NATIVE-UNTESTED; source bridge 32768, installed bridge unmeasured; no Godot/Rapier input, collision, simulation, save/reopen"
+  },
+  "rework_b6": {
+    "assigned_head": "384053f7e0d2e4e3809a50afbbeac0537b7dfcc1",
+    "source_jpeg_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
+    "scope": "Irregular single old-growth canopy, stone-anchored fibrous root texture, unlike west and east carved shrine portals, joined native rooted-bridge bark palette and integral weathered guardian. All existing Midge routes preserved.",
+    "actual_final_material_cells_changed": 92572,
+    "new_nonempty_cells": 7023,
+    "exact_extent": [
+      2048,
+      2048
+    ],
+    "rectangles": 25401,
+    "json_bytes": 480108,
+    "occupied_material_cells": 1736631,
+    "whole_grid_replayed": 4194304,
+    "clearance": [
+      {
+        "size": [
+          19,
+          15
+        ],
+        "connected_centres": 2158725,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "archival_positions_connected": 13
+      },
+      {
+        "size": [
+          23,
+          19
+        ],
+        "connected_centres": 2101669,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "archival_positions_connected": 13
+      },
+      {
+        "size": [
+          31,
+          27
+        ],
+        "connected_centres": 1988967,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "archival_positions_connected": 12
+      }
+    ],
+    "bridge_cardinal_component_cells": 1691644,
+    "solid_component_count": 13,
+    "largest_independent_solid_component": 15962,
+    "changed_pngs_regenerated": 9,
+    "unchanged_pngs_preserved": 6,
+    "material_pixels_verified_against_grid": 8650752,
+    "pixel_mismatches": 0,
+    "source_full_png": "UNVERIFIED",
+    "node_cli": "NOT RUN — source-equivalent deterministic function stored in builder and material grid fully replayed",
+    "native": "NATIVE-UNTESTED; installed bridge capacity not checked"
+  },
+  "rework_b7": {
+    "assigned_starting_head": "66c7072ebc768826eac0a2b98ed850514f3dd2c8",
+    "owner": "Canvas Reworker B",
+    "source_jpeg_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
+    "scope": "Consolidated broad asymmetric ancient canopy; reinforced thick cliff buttresses; one source-inspired intertwined triple-cord root bridge replacing diagonal crosshatched truss and preserving all five bank/bridge solid probes; unlike west ritual and east limestone thresholds with full-size east sanctuary flight hatch and anchored guardian neck; eroded attached guardian face; anchored all four previously detached major shelf components.",
+    "changed_final_material_cells": 253764,
+    "new_nonempty_cells": 87473,
+    "erased_nonempty_cells": 26485,
+    "extent": [
+      2048,
+      2048
+    ],
+    "rectangles": 21177,
+    "json_bytes": 403712,
+    "occupied_cells": 1797619,
+    "material_counts": {
+      "0": 2396685,
+      "38": 19218,
+      "40": 272966,
+      "41": 175029,
+      "42": 238094,
+      "49": 30272,
+      "52": 3552,
+      "100": 305357,
+      "101": 753131
     },
-    "validation": "Independent chunk CRC/IEND/no-trailing and decoded exact material-pixel comparison of all five PNGs; revalidate Git blob after commit.",
-    "native_runtime": "NOT RUN",
-    "source_visual_review": "NOT RUN — original image not decoded",
-    "verify_script": "verify-png.cjs"
+    "material_allowlist": [
+      38,
+      40,
+      41,
+      42,
+      49,
+      52,
+      100,
+      101
+    ],
+    "full_plane_cells_replayed": 4194304,
+    "clearance": [
+      {
+        "size": [
+          19,
+          15
+        ],
+        "connected_centres": 2121764,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "fully_in_bounds": true,
+        "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
+      },
+      {
+        "size": [
+          23,
+          19
+        ],
+        "connected_centres": 2065455,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "fully_in_bounds": true,
+        "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
+      },
+      {
+        "size": [
+          31,
+          27
+        ],
+        "connected_centres": 1954939,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "fully_in_bounds": true,
+        "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
+      }
+    ],
+    "bridge_cardinal_component_cells": 1793768,
+    "solid_components": 9,
+    "largest_other_component_cells": 1838,
+    "regenerated_material_pngs": 15,
+    "pixel_index_comparisons": 8650752,
+    "pixel_mismatches": 0,
+    "chunk_crc_errors": 0,
+    "stored_zlib_adler_errors": 0,
+    "node_cli": "NOT EXECUTED (GitHub V8 source-equivalent generator/decoder replay, not Node CLI)",
+    "original_full_png": "UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge capability and Godot/Rapier simulation/input/collision/save-reopen unmeasured."
+  },
+  "det": {
+    "repeated_generation": "Final pure actual-cell deterministic builder executed in isolated JS runtime; fresh standalone Node replay against committed artifacts remains separate gate.",
+    "png_integrity": "Rebuilt 15 actual-grid indexed PNGs from same final authored Setup-v2; independent bytewise PNG CRC/index checks recorded in PR report.",
+    "source_overlay_used": false
+  },
+  "rework_b8": {
+    "worker": "B",
+    "assigned_head": "7b986f991f393f51f449e0b64e78e2c1443bd942",
+    "starting_head": "7b986f991f393f51f449e0b64e78e2c1443bd942",
+    "date": "2026-11-18",
+    "scope": "one genuinely organic bark-vein bridge, forked west tree, unequal shrine interiors, coherent guardian face and lower visitable root crypt",
+    "physical_cells_changed": 95516,
+    "added": 1932,
+    "excavated": 11337,
+    "reclassified": 82247,
+    "extent": [
+      2048,
+      2048
+    ],
+    "rectangles": 20347,
+    "json_bytes": 388708,
+    "occupied_cells": 1788214,
+    "exact_midge_sites": "23/23 all three fully bounded hulls",
+    "east_bypass": "6/6 all three hulls",
+    "legacy_31": "11/17 on parent and child; previous receipt mislabeled 12/17",
+    "cardinal_bridge_component_cells": 1783209,
+    "components": 17,
+    "largest_nonbridge_component": 1838,
+    "source": "Authentic immutable 640x360 JPEG directly viewed; full original PNG parity UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge cap UNMEASURED"
+  },
+  "rework_b9": {
+    "assigned_current_head": "77576063c9fa3ae970dc2debde289c4b859e4e1e",
+    "worker": "Canvas Reworker B",
+    "date": "2026-11-18",
+    "physical_cells_changed": 30584,
+    "added": 12430,
+    "excavated": 12056,
+    "reclassified": 6098,
+    "extent": [
+      2048,
+      2048
+    ],
+    "rectangle_count": 20867,
+    "json_bytes": 398277,
+    "occupied_cells": 1788588,
+    "whole_plane_replay": 4194304,
+    "zero_overlap": true,
+    "valid_solid_material_ids": [
+      38,
+      40,
+      41,
+      42,
+      49,
+      52,
+      100,
+      101
+    ],
+    "cardinal_grounded_bridge_cells": 1783723,
+    "all_five_bridge_and_bank_solid_probes_joined": true,
+    "solid_components_total": 16,
+    "static_routes": [
+      {
+        "clearance": [
+          19,
+          15
+        ],
+        "reachable_centres": 2117103,
+        "exact_sites": 23,
+        "east_bypass": 6,
+        "west_threshold_root_steps": 374,
+        "east_sanctuary_lookout_steps": 332
+      },
+      {
+        "clearance": [
+          23,
+          19
+        ],
+        "reachable_centres": 2059808,
+        "exact_sites": 23,
+        "east_bypass": 6,
+        "west_threshold_root_steps": 374,
+        "east_sanctuary_lookout_steps": 332
+      },
+      {
+        "clearance": [
+          31,
+          27
+        ],
+        "reachable_centres": 1947319,
+        "exact_sites": 23,
+        "east_bypass": 6,
+        "west_threshold_root_steps": 374,
+        "east_sanctuary_lookout_steps": 332
+      }
+    ],
+    "png_count": 15,
+    "full_map_and_crop_pixel_comparisons": 8650752,
+    "png_crc_zlib_adler": "PASS",
+    "png_pixel_mismatches": 0,
+    "authentic_source_jpeg_git_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
+    "source_jpeg": "DIRECTLY VIEWED",
+    "original_source_png_pixel_parity": "UNVERIFIED",
+    "node_runtime": "NOT RUN; future verifier independently strengthened",
+    "native_godot_rapier": "NATIVE-UNTESTED; installed bridge rectangle capacity unmeasured"
   }
 }

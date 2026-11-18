@@ -1,0 +1,194 @@
+# CURRENT R2B9 — practical west shrine and east lookout access (18 November 2026)
+
+**OPEN Draft/HOLD · start HEAD `77576063c9fa3ae970dc2debde289c4b859e4e1e` assigned exclusively to B · NATIVE-UNTESTED · NO owner acceptance.** The original source-derived old tree, unlike shrines, singular rooted bridge and ravine remain one compact district inside the 2048×2048 physical-cell world; nothing was uniformly scaled up from the reference image.
+
+**Physical geometry repair:** Carved fully Midge-traversable stone-margined western upper-shrine → rooted landing gallery (original *exact* endpoints 604,589 → 491,850) and independent eastern sun-sanctuary → lookout passage (1811,619 → 1790,930). Grounded geological counterforts preserve every existing one-bridge-and-both-banks cardinal solid connectivity probe, despite opening the two passages; in-place bark, moss and bronze infill finish the service entries without blocking flyable centres.
+
+| Exact R2B9 qualification | Result |
+|---|---:|
+| World, actual cell plane | **2048×2048 / 4,194,304 cells** |
+| Changed material identities | **30,584** (12,430 added, 12,056 removed, 6,098 reclassified) |
+| Setup-v2 rectangles | **20,867 / 32,768**, nonoverlapping |
+| Setup-v2 JSON bytes | **398,277 / 1,048,576** |
+| Occupied cells / full material replay mismatches | **1,788,588 / zero** |
+| Dominant grounded four-connected bridge/temple structure | **1,783,723 cells**, 16 total components |
+| Exact 23 authored Midge sites / 6 east bypass locations | **23/23 and 6/6** at 19×15, 23×19 and 31×27 envelopes |
+| West shrine threshold → root landing, strict 31×27 | **374 steps**, previously 4,102 |
+| East sun sanctuary → lookout, strict 31×27 | **332 steps**, previously 1,110 |
+| Material-cell overview, full indexed map and 1:1 crops | **15 PNGs**, independent CRC/zlib/Adler and **8,650,752 material-pixel comparisons**, zero mismatches |
+| Original reference | Genuine existing repository JPEG visually inspected; full original PNG pixel parity **UNVERIFIED** |
+| Godot/CyberDemoBridge/Rapier/Midge import, collision, simulation, save/reopen | **NATIVE-UNTESTED**, installed bridge capacity unknown |
+| Original builder Node execution | **NOT RUN**; independently reconstructed material cell plane and generated exact PNG assets; updated future standalone verifier |
+
+[Source JPEG](source-reference-preview.jpg) · [Full-resolution indexed actual material grid](temples-material-2048.png) · [Full overview](twin-ravine-temples-preview.png) · [West route 1:1](temples-detail-west-shrine.png) · [West bridge landing 1:1](temples-detail-bridge-west-anchor.png) · [East local passage 1:1](temples-detail-east-bypass.png) · [Guardian 1:1](temples-detail-east-guardian.png) · [Current machine receipt](evidence.json) · [Updated independent verifier](verify-r2.cjs).
+
+**Earlier R2B8 and preceding descriptions below are retained as historical provenance. Their SHA/counts are superseded.** No merge, Ready, auto-merge or owner acceptance.
+
+---
+
+# CURRENT R2B8 — source-driven living bridge and distinct playable temples (18 Nov 2026)
+
+**OPEN Draft/HOLD · NATIVE-UNTESTED · independent owner/Shepherd review required.** Exclusively assigned to B at `7b986f991f393f51f449e0b64e78e2c1443bd942`, working only on this existing PR branch. Genuinely viewed unchanged 640×360 original source **JPEG** beside the previous true material preview. Original full-resolution PNG pixel parity **UNVERIFIED**. Entire pictured scene represents one compact source-derived district, not an entire stretched world; deeper rooted crypt is a deliberately newly authored extension.
+
+**Actual-cell reconstruction:** 95,516 modified material cells: 1,932 added, 11,337 excavated, 82,247 rematerialised. Irregular anatomical bark on ONE structurally rooted descending root-bridge, nonrepeating hanging tendrils, forked old-growth left tree, unlike carved entrances and sanctuary interior machinery, guardian forehead/ocular recess/nose/jaw as coherent solid/void masses, one separate rooted service crypt in lower extrapolated geography. No overlay or new bridge.
+
+**Final exact source-controlled Setup-v2:** 2048×2048, 20347/32768 bounded nonoverlapping rectangles, 388708/1048576 UTF8 bytes, 1788214 occupied cells, full 4194304 replay with zero mismatches. Fully bounded 4-neighbour Midge exact 23/23 sites, east bypass exact 6/6, for all 19×15,23×19,31×27 hulls (connected centres 2122630 / 2066009 / 1955144). Five actual rooted bridge-bank solid probes in one 1783209-cell component; 17 total components, largest other 1838, subject to physical-load classification. Original R2B7 receipt's stated 12/17 historical 31×27 is independently contradicted by replay of actual R2B7 material cells: **11/17 at both predecessor and this revision**, so no genuine historical regression (legacy positions are not semantic acceptance sites). Authentic overview + full material PNG and 13 native 1:1 crops regenerated deterministically from exactly the same grid; independent pixel confirmation belongs to this new HEAD's evidence report.
+
+**Unclosed:** source full-resolution PNG comparison, installed CyberDemoBridge rectangle limit (source 32768, fallback 4096), actual Godot/Rapier Midge input/collision/simulation and fresh-process save/reopen: **UNVERIFIED / NATIVE-UNTESTED**. Do not mistake static plane checks for native acceptance.
+
+---
+
+# Current R2B7 — single rooted bridge, old-growth temple crown, grounded gateways (18 November 2026)
+
+**OPEN DRAFT / HOLD · NATIVE-UNTESTED · independent Shepherd/technical/art review required.** This revision is the exclusive B assignment at parent `66c7072ebc768826eac0a2b98ed850514f3dd2c8` and supersedes all prior numeric headings below; do not mistake older historical metrics as current. Source-driven, real CyberSand material-cell changes in the existing branch, without editing original art, archived files, engine or any sibling PR.
+
+**Direct genuine source JPEG reviewed:** immutable committed [source-reference-preview.jpg](source-reference-preview.jpg), blob `adfb56729b2c443a513892fbe803718dc8b71e52`. Full-resolution original-PNG parity **UNVERIFIED**; this remains a gameplay-scale interpretive reconstruction rather than an exact pixel copy. The source's huge left tree, one grown root span, opposing unequal temples and right rock guardian were compared with R2B6 material grid and R2B7 imagery at real scale.
+
+**Macro repair:** 253,764 *actual final material cells* changed from assigned parent, 87,473 newly occupied and 26,485 cleared. Replaced geometric round canopy pucks with a wide tiered crown and massive grown cliff buttresses; rebuilt the lone central truss as three uneven continuous embedded root cords with broad fused overlaps and only a handful of thick anchoring pendants; reinforced a rooted western threshold and unlike east limestone vault and cut purpose-built flight apertures, maintaining the semantic shrine entrances; simplified guardian's crosshatched brow/eye/nose/jaw into large integral weathered stone; joined all four formerly major freestanding gallery masses into physically 4-connected stone-root supporting masses. Central high ravine stays mostly Empty; no second bridge, fake backdrop, relocated named destination, engine changes or invented materials.
+
+**Exact static proof:** `2048×2048`, `21,177/32,768` valid integral in-bounds non-overlapping rectangles, `403,712/1,048,576` serialized UTF-8 bytes, `1,797,619` occupied physical material cells (all accepted stable solid IDs 38/40/41/42/49/52/100/101); exact reconstruction of all 4,194,304 cells with zero mismatches; physical bridge/bank probes `(1070,705) (586,745) (1455,655) (1580,680) (1770,730)` share a 1,793,768-cell four-neighbour solid component. Previously 13 solid components and largest detached 15,962 cells; now 9 total, largest detached 1,838 cells.
+
+**Exact Midge:** unchanged authored 4×3 Midge spawn `(1024,454)`; 23/23 named centres **plus six/6** east-bypass centres reachable at each fully-bounded conservative hull: 19×15 `2,121,764`; 23×19 `2,065,455`; 31×27 `1,954,939`. Exact-centre cardinal floodfill only, no nearest-point or radius waivers. Bridge solid load paths and 31-wide east-sanctuary access were independently repaired and retested.
+
+**Real final-grid evidence:** [full exact material PNG](temples-material-2048.png), [whole world overview](twin-ravine-temples-preview.png), 1:1 [west tree](temples-detail-west-tree.png), [west shrine](temples-detail-west-shrine.png), [single bridge](temples-detail-living-bridge.png), [west anchor](temples-detail-bridge-west-anchor.png), [east anchor](temples-detail-bridge-east-anchor.png), [east guardian](temples-detail-east-guardian.png), [east bypass](temples-detail-east-bypass.png), [lower ravine](temples-detail-lower-ravine.png), [substrate](temples-detail-valley-substrate.png). Fifteen indexed PNGs were regenerated and **8,650,752** PNG pixel indices checked against the source-controlled final material plane; PNG chunk CRC, stored-deflate length, Adler-32 and IEND independently verified, zero differences. [Current JSON](setup-twin-ravine-temples.json) / [deterministic builder](builder.cjs) / [machine receipt](evidence.json). No direct Node CLI or native source-compatible Workbench execution performed.
+
+**Remaining gates:** independent exact-HEAD Shepherd, technical and source-fidelity review; installed CyberDemoBridge capacity (accepted-source 32,768 vs old 4,096); physical Godot/Rapier Workbench import, actual Midge flight/collision, simulation and fresh-process save/reopen. **NATIVE-UNTESTED**, no owner acceptance or merge.
+
+---
+
+# Current R2B6 — source-led tree buttresses, dissimilar gateways, one rooted bridge (18 November 2026)
+
+**OPEN DRAFT/HOLD — no native or owner acceptance.** Current numerical authority: [evidence.json](evidence.json); all earlier sections below are historical and superseded. Exactly **92,572 actual final material-cell identities changed**, including **7,023 newly occupied cells**, relative to exclusive assigned starting HEAD `384053f7e0d2e4e3809a50afbbeac0537b7dfcc1`. Genuine byte-identical committed source-reference JPEG `adfb56729b2c443a513892fbe803718dc8b71e52` directly viewed; original full-resolution PNG pixel comparison **UNVERIFIED**.
+
+**Original scale rather than image stretch:** Source-local ancient western canopy and fused buttresses, distinct rooted west ritual gateway and opposing stone-vault east shrine are better differentiated by actual-material sculpture and stone colours. The existing SINGLE four-neighbour attached root span now carries nonparallel embedded bark, stone and moss textures instead of monotonous horizontal rails. Eroded right cliff guardian material is painted only over its preexisting physically occupied supported stone. The background air and authored operational routes stay unchanged. The broader lower worlds are separate extrapolated cavern designs, not falsely source-exact pixels.
+
+**Exact physical serialization:** 2048×2048 = 4,194,304 replayed cells; **25,401** legal non-overlapping 5-field rectangles / 32,768; **480,108** UTF-8 bytes / 1 MiB; **1,736,631 occupied**; zero reconstruction mismatches, all native-supported immovable stable material IDs 38/40/41/42/49/52/100/101. Original 4×3 Midge spawn **(1024,454)** and **23/23 exact semantic points + 6/6 east bypass probes** pass fully-in-bounds four-neighbour air-centre BFS at 19×15 (**2,158,725 centres**), 23×19 (**2,101,669**) and 31×27 (**1,988,967**). No nearest-point, radius waiver or changed operational target. All five unchanged bridge/stone anchors cardinal-connected in a **1,691,644-cell** main solid component, **13** solid components, largest separate **15,962** cells.
+
+**Cell-authentic evidence:** [true full-map material identities](temples-material-2048.png), [overview](twin-ravine-temples-preview.png), native 1:1 [old-growth tree](temples-detail-west-tree.png), [west entrance](temples-detail-west-shrine.png), [single rooted bridge](temples-detail-living-bridge.png), [east guardian](temples-detail-east-guardian.png), [east bypass](temples-detail-east-bypass.png). **Nine actual altered images regenerated**, six previously committed lower crops preserved byte-for-byte because their underlying sampled cell values are unchanged; **8,650,752 material pixel indices checked against current plane, zero mismatches**. Standalone Node CLI, independent fetched-binary PNG decode and actual runtime **NOT EXECUTED** on this revision. The source image, merged historical art and accepted CyberSand engine are unchanged.
+
+**Remaining HOLD:** source bridge has 32,768-stamp capacity but installed native binary might still enforce legacy 4,096; no physical Godot/CyberDemoBridge/Rapier install, Midge input/collision, simulation or fresh-process save/reopen. Owner judgement and full original PNG review outstanding. Never merge/Ready.
+
+---
+
+# Current R2B5 — exact-cell source-fidelity and receipt repair (18 November 2026)
+
+**OPEN DRAFT / HOLD.** This section and [evidence.json](evidence.json) contain the **current numerical authority**. Historical sections below are explicitly superseded, not current.
+
+**Source:** genuine original repository `source-reference-preview.jpg` (SHA `adfb56729b2c443a513892fbe803718dc8b71e52`) viewed directly against committed material overviews/crops. Full original-resolution PNG comparison **UNVERIFIED**, no source-image mutation.
+
+**Changed 106,823 actual material-cell identities from assigned exact parent `aa6fcf7092710770bcc0bf033132b58e1ef91b5d`**: the single rooted bridge has more irregular sag, lateral bark structure and asymmetric attached forks; the western tree has a directed canopy and connected root/branch architecture; the right cliff guardian has shaped brow, paired sockets, cheek/nose and weathered chin; west/east temple entrances have unlike carved and supported stone jambs and gallery details. True 2D gameplay geometry. Core source silhouettes remain compact, with related extended playable caverns rather than image-stretching.
+
+**CURRENT exact Setup-v2:** 2048×2048 = 4,194,304 cells; **17,707 / 32,768 legal rectangles**, **339,037 / 1,048,576 UTF-8 JSON bytes**, **1,729,608 occupied**; full-cell deterministic replay zero mismatches or overlapping rects. Accepted solid/immovable inert materials only: 38, 40, 41, 42, 49, 52, 100, 101. The actual cardinal root bridge and both banks remain a single **1,686,910-cell physically attached solid component** (5 probes), with 12 components total and largest secondary component 15,962.
+
+**Midge authored 4×3 hull, unchanged exact spawn (1024,454), NO nearest/radius waivers:** **23/23 named sites** and **6/6 bypass centres** reachable by fully-bounded cardinal BFS at 19×15 (**2,158,725 centres**), 23×19 (**2,101,669**) and 31×27 (**1,988,967**). Historical R1 *positional* probes (not mandatory semantic sites): 13 / 13 / 12 out of 17.
+
+**Genuine authored-cell evidence**: [complete 2048² material plane](temples-material-2048.png), [overview](twin-ravine-temples-preview.png), native 1:1 [bridge](temples-detail-living-bridge.png), [guardian](temples-detail-east-guardian.png), [west tree](temples-detail-west-tree.png), [west sanctuary](temples-detail-west-shrine.png), [east crypt](temples-detail-east-crypt.png), plus ten further real-grid crops. All 15 PNGs regenerated from this exact grid; **8,650,752 / 8,650,752** independently decoded material-pixel comparisons zero mismatches, chunk CRC/zlib stored block/Adler/IEND verified. Two in-process V8 generator runs byte-identical. The committed `verify-r2.cjs` has updated exact expectations; **standalone `node verify-r2.cjs` was NOT executed in this isolated remote runtime**. Run on a normal checkout with Node 18+.
+
+**Remain HOLD**: source bridge advertises 32,768; actual installed bridge capacity unmeasured, legacy 4,096 fallback may reject. Godot/CyberDemoBridge/Rapier input/collision, simulation, native canvas installation and fresh-process save/reopen **NATIVE-UNTESTED**. Full original PNG fidelity separately UNVERIFIED. No engine/art/archive change, no merge or Ready.
+
+---
+
+## Historical provenance (old quantities below superseded)
+
+# Historical R2A source-led lower-ravine finishing — superseded snapshot (18 November 2026)
+
+**DRAFT / HOLD. Not merged, not Ready, not native qualified or owner accepted.**
+This dated snapshot is superseded by the current R2B5 section above.
+
+**Source inspected:** actual committed `source-reference-preview.jpg` (Git blob `adfb56729b2c443a513892fbe803718dc8b71e52`) of the giant left tree, one living horizontal root bridge, unequal inhabited cliff sanctuaries and squat right guardian. Its full-resolution original PNG `artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png` is unchanged and **original-PNG pixel parity remains UNVERIFIED**. The 2048-square cell canvas is a stylised playable interpretation of this source, not an image-tracing claim.
+
+**Actual authored-cell R2A repair (from assigned `dee3558aa17e0812228575c359a0ad1915b6a101`):**
+- West root relay at x≈370–670, y≈1449–1627: carved asymmetric connected limestone/granite alcove, coupled to west terrace chamber and service shaft; root-moss trace over existing stone, with exact new flyable centre **(469,1515)**.
+- East lantern archive at x≈1593–1897, y≈1328–1515: distinct eroded vaulted stone room and safe lateral corridor to established east shaft; exact centre **(1804,1433)**.
+- Valley substrate return at x≈869–1430, y≈1843–2023: *ground-excavated* continuous hollow gallery, two separate skylight entries and stone/organic inlay. It is **not a second bridge** and leaves the original central flight gap open. New exact centre **(1145,1970)**.
+- Selected west and east older shrine corners are recut into asymmetric supported voussoirs; root continuity is retinted on existing solid rather than painting unsupported floating lines. The only overhead root bridge retains both genuine bank joins and 4-neighbour physical structure.
+
+**Exact static qualification after 132,587 changed material cells:** 2048×2048; **15,441 / 32,768** rectangles; **295,832 / 1,048,576** UTF-8 JSON bytes; independent exhaustive **4,194,304-cell** replay without overlap/invalid IDs; **1,663,020 occupied** cells. Only native accepted-main immovable Solid/RuleKernel::None IDs **38,40,41,42,49,52,100,101**. Original twenty and three new **exact** named sites: **23/23 at 19×15, 23×19 and 31×27**, from original Midge spawn (1024,454), in fully-in-bounds 4-neighbour air BFS, no nearest-point fallback. Free-centre components **2,218,488 / 2,161,862 / 2,049,896**. Four-neighbour physically joined bridge/bank component **1,615,209 cells**; established outside-air east bypass **6/6** at each envelope.
+
+**Reproducibility/evidence:** two actual pure deterministic builder executions produced byte-identical Setup JSON and **all fifteen** indexed material-cell PNG files. Independent decode verified PNG chunk CRC, stored deflate block lengths, IEND, and **8,650,752 / 8,650,752** displayed material-palette pixels against final independent grid with **zero mismatches**. The committed `verify-r2.cjs` has corrected fixed output assertions and now requires strict four-neighbour solid joins and three new sites; the *Node CLI command itself has not been executed* in the isolated tool runtime, and should be run on a normal checkout (`node verify-r2.cjs`). Independent source-equivalent deterministic checks were actually performed. Genuine full-material overview, one 2× preview and **thirteen** native 512×512 district crops are committed, including:
+[west root relay](temples-detail-west-root-relay.png), [east lantern archive](temples-detail-east-lantern-archive.png), [substrate return](temples-detail-valley-substrate.png), [complete original-resolution material cells](temples-material-2048.png), [overview](twin-ravine-temples-preview.png).
+Exact machine-readable counts, image blob SHAs, CRCs, current sites and limitations: [evidence.json](evidence.json).
+
+**Still HOLD:** genuine JPEG source visually inspected but full original PNG not decoded; stylised source-composition compromise including the eastern outside-air chimney remains for independent art review; installed native Godot/Workbench/CyberDemoBridge/Rapier capacity, Midge flight/physics, bounded simulation, and save/reopen **NATIVE-UNTESTED**. Historical twenty R2 sites are preserved; 17 R1 positional probes are not proxy acceptance destinations. No engine/art/historical-main mutations.
+
+---
+
+## Historical R2B notes retained below (not current numerical authority)
+
+## R2B-P1 final validated source-art finishing (supersedes earlier counts)
+
+**Start:** `85c3ef0166004cd9480d3b1b933d51045d2e19f2`, **new final revision** (see current PR HEAD). This branch preserves genuine committed source JPEG, historical R1, CyberSand main and draft status. Final full-grid source-inspired work changes **124,629 real material cells** from the Shepherd-assigned seed. The rebuilt west tree has three thick forked, connected buttresses rather than repeated comb roots; the first two shrine openings have unequal broken-stone arch shoulders and weathered thresholds; the ridge-embedded guardian is lower, broader, less regular and mossy; the living bridge hangs irregular forked rooted pendants; crown and east terraces use supported textured masonry.
+
+**Structural correction:** The initial P1 preview revealed two isolated apparent spandrel piers; these were removed before the final owner-facing result, replacing their decorative material with recolouring of pre-existing stone. Only **two ground-connected east-bank spandrel piers** remain, with stone/moss courses to visually break the exposed undercroft. This explicitly avoids new decorative floating solids while preserving unobstructed **x1435..2047/y757..805** undercroft and **x1992..2047/y251..850** exterior air chimney. Source-versus-playability compromise remains visible and requires owner review.
+
+**Requalification:** 2048×2048 / 4,194,304 material cells, **14,356/32,768** nonoverlapping integral rectangles, **275,012/1,048,576** JSON bytes; zero replay mismatches; accepted inert IDs only 38,40,41,42,49,52,100,101, no active/unstable materials. Four-neighbour bridge/bank connection **1,726,673** solid cells including both banks and east seam. Exact 20/20 Midge air destinations at 19×15, 23×19, 31×27, with legal-centre graph sizes **2,152,140 / 2,100,641 / 1,998,608**; no hidden fallback. Source JPEG `adfb56729b2c443a513892fbe803718dc8b71e52` visually inspected against committed grid PNGs, **original full PNG pixel parity UNVERIFIED**. All 12 genuine material-plane PNGs regenerated and integrity-checked, 7,864,320 displayed-pixel comparisons, no mismatch; two deterministic runs identical. **NATIVE-UNTESTED:** no actual Godot/CyberDemoBridge/Rapier input, collision, simulation or save/reopen. **Draft/HOLD** — independent Shepherd/owner judgment still required.
+
+---
+
+ R2B independent Shepherd remediation — 17 November 2026
+
+**Parent reviewed HEAD:** \`abb91db611255eaa914117805bb7126d3e664243\` on existing Draft/HOLD PR #14. **Result is a real 2048×2048 material-cell change**, not a new conversion or source-art overlay.
+
+**P0 reproduced.** The old final JSON bridge material (1070,705) was a detached 26,282-cell island extending x740..1454; it did not contact the physical east/west banks. Anchors drawn earlier had been erased by later shaft AIR cuts. We moved the final bridge seams and bank roots after the last destructive carve. An additional right-deck seam is necessary: without it, an east bridge piece remains disconnected despite a misleading coarse solid-component check.
+
+**P0 repaired and independently proved from ordered, packed final cells.** Bridge (1070,705), west anchor (586,745), right deck seam (1455,655), east root (1580,680), east stone bank (1770,730) are all in the same **1,726,790-cell 8-neighbour solid component**. Only seven remaining non-Empty components exist; the largest other fragment is 15,962 cells (pre-existing eastern spur). Final art is physically painted in admitted stable materials and no fake raster/overlay is used.
+
+**Level topology tradeoff, explicitly reviewable.** A continuous inert-Solid span permanently joining two grounded canyon banks creates a separation of the lower flyable ravine in 2D. Our real-geometry solution retains both physical bridge attachment and all 20 functional air sites by using an eastern 56-cell open-air chimney (x1992..2047, y251..850) linking a 49-cell-high undercroft (x1435..2047, y757..805) beneath a cantilevered upper east temple. All six exact bypass checkpoints remain reachable at 19×15, 23×19 and 31×27. This is a conscious visual departure from the source's fully supported right bank and **must be assessed by independent source-fidelity review**, not silently accepted.
+
+**P1 actual-cell art:** all nine major west/east stone thresholds acquire differing asymmetric spandrels, moss-supported lintels and irregular wear. Guardian stone is muted and eroded with narrower asymmetric eyes and chiselled features. Small rooted vegetation clusters supplement terrace edges rather than spraying obstructive hazards into navigable air. Original asymmetrical west/east silhouettes, single bridge, central open sky and valley return remain. Side-on orthographic gameplay-plane representation unchanged.
+
+**Static exact-gate receipt:** accepted engine main \`018bd09503d7f079ddac52e225c2f7daf8d678bf\`, 2048² / 4,194,304 cells; **15,734/32,768** rectangles; **299,950/1,048,576** JSON bytes; **0 overlap / out-of-bounds / replay mismatch**; stable IDs \`38,40,41,42,49,52,100,101\` as Solid/immovable/RuleKernel::None; Midge hull 4×3 and spawn (1024,454). Exact R2 destinations **20/20** at 19×15, 23×19, 31×27; safe-centre components **2,147,401 / 2,095,406 / 1,992,845**, no nearest-point fallback. Historical R1 coordinates **12/17 nominal** retained, five explicitly superseded; at 31×27 stress **11/17**. **12/12 binary-valid indexed PNGs** and **7,864,320** real cell-pixels checked, 0 mismatches; two deterministic generations matched. Native Godot / CyberDemoBridge / Rapier load, actor input and save/reopen **NOT RUN**.
+
+**Direct source verification:** unaltered genuinely fetched \`source-reference-preview.jpg\` JPEG (blob \`adfb56729b2c443a513892fbe803718dc8b71e52\`) directly compared against true-grid overview, root landings and guardian/cave crops. Source full-resolution original PNG parity **UNVERIFIED**. **Draft/HOLD. Do not merge or mark Ready.**
+
+---
+
+# Historical R2-first-pass receipt (17 Nov 2026; superseded by the R2B figures above)
+
+**Source-led material-cell repair complete for independent audit; Draft/HOLD, NOT native/owner accepted.** PR #14 starting head `1e80acc80fa9efb3437ef82ff936a726eb56591c`. Deterministic builder seed 20261117. Full extent 2048x2048, 13387 coalesced non-overlapping rectangles, 256936 bytes, 20/20 exact named destinations reachable in fully-in-bounds 19x15, 23x19 and 31x27 static clearance. 9 genuine material-grid PNGs, zero CRC/pixel mismatches. Original source JPEG blob `adfb56729b2c443a513892fbe803718dc8b71e52` directly viewed. Original PNG full-resolution parity unverified; source-matched native gameplay/installation/save-reopen NOT RUN.
+
+**Actual geometry delivered:** singular anchored irregular moss/root bridge, much larger rooted west temple and tree canopy, independent small right sanctuary with stone guardian physically integrated on the east ledge, stepped terraces, distinct lower cave route system and offset eastern spur. Removed R1's 3 stiff viaducts, detached faces, repetitive 5-tier rooms and rectangular water tank. Reconstructed all 4,194,304 cells; do not interpret positional losses of five retired R1 destinations as substitutions. See README and evidence.json for source-vs-output and exact static gates.
+
+**Original source and archived history remain unchanged.**
+
+---
+
+# Canvas R2 — RUINS-0013 Twin Ravine Temples
+**Historical seed brief follows; R2 implementation above supersedes its seed-only status.**
+**Worker: B exclusively (after completion of WORKS-0023 PR #13); PR must remain Draft / HOLD.**
+
+## Provenance and authority
+
+- Canonical public reference: `ruins-0013`, `artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png`
+- Catalogue source key: `batch1/image-0212`; full original PNG Git blob: `0611d05df37b443a411c1ebf9dba663082e25975`; published source SHA-256: `47f4039fb0547f6799b0e3b445a12869e1a7dc5904c68e1725d2ba2d52aa5bdb`.
+- **Actual source pixels to compare:** byte-identical `gh-pages:previews/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.jpg` copied by blob SHA `adfb56729b2c443a513892fbe803718dc8b71e52` into this folder as `source-reference-preview.jpg`. This derivative has been decoded and visually inspected. Do not re-encode it.
+- Full-resolution original PNG is **not decoded/verified**. Do not claim full original pixel parity on the strength of the source JPEG preview.
+- Frozen archived R1 map: merged *historical/unvalidated* PR #4; source directory `cybersand-canvases/2048x2048/ruins-0013-twin-ravine-temples/` on `main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`. Do not overwrite history on main.
+- Accepted CyberSand schema/material/actor authority: `techrote/cybersand main@018bd09503d7f079ddac52e225c2f7daf8d678bf`; revalidate if main changes. No engine code edits.
+- Legacy R1: 2048×2048, 28,733 rectangles (near 32,768 cap), 545,894 bytes, spawn [1024,454], 17/17 legacy 19×15 exact static destinations, 26,928 enclosed Water cells. These are *historical claims to recheck*, not admission or native acceptance.
+
+## Source JPEG: actual observed composition (acceptance authority)
+
+The photo is a **side-on verdant cliff sanctuary with two UNEQUAL rooted masonry masses** split by a large, luminous open-air ravine. The left temple is broad, arboreal, deep terraced and asymmetric: one huge mature tree crowns it, its long roots grow around the carved stone stairs and chambers, and a few dark shrine entrances puncture solid rock. The right temple is **smaller**, with a squat guardian-like eroded monolith on its ridge and tiers of stone steps/terraces. A **single narrow irregular moss/root suspension bridge** connects the sanctuaries around the middle-high elevation. Vertical drops, misty distant landscape, hanging creepers, vine-shadowed ledges and sharp contrast between dense rooted stone and clear central sky dominate the reading. A second lower vegetated spur on the right provides variation, not a second symmetric viaduct.
+
+The surviving historical map image instead shows five broadly equal opposing gallery tiers, an almost empty central shaft with **two disconnected floating face icons** midair, three rigid horizontal decks, spiky decorative fragments and a literal blue water box. This is neither the source silhouette nor its playable spatial premise. Correct that actual material-cell composition, not just its palette.
+
+## Required repair — actual navigable geometry, not a poster
+
+1. **Macro-silhouette first:** Make west cliff larger, denser and rooted; east cliff narrower and offset, with distinct asymmetrical stepped rock and upper guardian *integrated into the solid cliff* rather than floating masks. Preserve a deliberately huge central air ravine with dramatic sky negative space. Avoid reducing it to a monotonous vertical empty tunnel.
+2. **One signature suspended living crossing:** A reasonably narrow, irregular, structurally anchored moss/root/stone bridge at the source's high-middle band is the visual traversal hero. Remove/demote extra identical horizontal trusses; if more gameplay crossings are needed, create meaningfully different offset root spur/hidden lower cave routes **inside the cliffs**, not more repeated slabs spanning the entire void.
+3. **Source-specific left/right districts:** Left: old tree canopy silhouette, visible descending root buttresses, small asymmetric temple thresholds, terraced ruins and vegetated vertical access. Right: integral monolith sanctuary, irregular stone stairworks, an unevenly layered lower walkway and one distinct high lookout. Maintain flat orthographic 2D, consistent horizontal/vertical collision geometry, no angled false perspective and no cropped features.
+4. **Playable actor-scale spaces:** Midge must traverse a continuous connected operational-airspace graph through both sanctuaries, across/around the central divide and to meaningful lower regions. Do not represent a room or shrine as reachable if the exact centre cannot fit the actor. Design source-inspired ledges with enough real flight space/portals, non-trap returns and deliberate open voids. A pure 1-cell flood fill is forbidden.
+5. **Safe material physics:** Foundations, roots, bridge supports and cliff volumes must be genuine accepted-main inert **Solid / RuleKernel::None** IDs; not Stone powder ID 13, invented IDs 237/250, reactive growth, loose powders or unsupported floaters. Preserve or responsibly redesign R1's 26,928 Water cells only if a plausible protected basin is spatially justified; fully contain liquids and explicitly evaluate actor access and native progression. Avoid decorative hazards obstructing flight passages.
+6. **Rebuild, do not layer to failure:** R1 is already 28,733/32,768 rectangles. Reconstruct the final material plane and **coalesce/repack** it; no accumulation of overlays beyond the 32,768 limit. Keep the serialized JSON ≤1,048,576 bytes. Validate true current Setup-v2 / generated-start acceptance, actor model hash, default native bridge rectangle capacity vs old 4,096 fallback, and all material IDs against accepted source.
+
+## Required deliverables and tests
+
+- Modify existing `builder.cjs` or add a deterministic R2 builder; produce a **new actual Setup-v2/generated-start JSON** at 2048×2048, one true-grid 2048×2048 PNG (overview optionally downscaled from the exact grid), **at least six labelled 1:1 native-cell crops** covering both rooted temples, anchored bridge, upper canopy/guardian, lower passages and water/landmark. The source JPEG remains untouched.
+- A concise revised README and machine-readable qualification receipt: exact source IDs/blobs, new material histogram, edits/byte budgets, frozen-material law audit, full 4,194,304-cell replay/PNG parity, actor/spawn identity, no invalid edits, exact target coordinates and actual static graph sizes.
+- Define **new meaningful semantic operational targets** in supported in-world airspace (left threshold, west root terrace, living bridge each end, right sanctuary, high lookout, east lower spur, lower return, any basin overlook). For each target, demonstrate exact-centre clearance and four-neighbour reachability from the unchanged Midge spawn using 19×15 minimum conservative footprint plus at least 23×19 handling stress where possible. Use current 4×3 actor hull; nearest-point substitution/large radius waiver invalidates admission. Recheck legacy 17 points as positional regressions but do not falsely claim displaced monuments persist.
+- A real source-vs-output JPEG/full-map/1:1 side-by-side comparison including explicit limitations of JPEG-only source. Declare physical Windows/Godot/CyberDemoBridge/Rapier input, collision, native rectangle-capacity readback, bounded simulation and save/reopen **NATIVE-UNTESTED unless exercised on a matching installed runtime**.
+- Re-run deterministic full build twice, compare hashes, check PNG integrity and pixel parity, exact setup-schema budgets, source integrity, self-contained artifacts, and document known failure modes. If any qualification fails, repair it before DONE.
+- Post `CANVAS-REWORK-B-DONE: <new-head-sha>` on THIS PR when actual cell changes and evidence are committed; leave Draft/HOLD for independent visual/technical review and owner physical acceptance.
+
+**Prohibitions:** No new unrelated map, no changes to the full-resolution artwork, no archive-main changes, no CyberSand engine code, no merge, no Ready, no auto-merge, no AI-lookalike source image. This seed-only PR is **REWORK REQUIRED**, never owner-playtest-ready before cell edits and qualification.
