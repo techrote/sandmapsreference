@@ -28,7 +28,7 @@ function tunnel(points,width){let half=Math.floor(width/2);for(let i=1;i<points.
 const SITES=[
  {id:"A",name:"Crown dispatch",at:[520,145],district:"Sky intake"},
  {id:"B",name:"Signal lantern bridge",at:[520,290],district:"Sky intake"},
- {id:"C",name:"Western winch desk",at:[205,505],district:"Counterweight cathedral"},
+ {id:"C",name:"Western winch desk",at:[205,575],district:"Counterweight cathedral"},
  {id:"D",name:"Eastern thrust control",at:[800,700],district:"Counterweight cathedral"},
  {id:"E",name:"Ore assay alcove",at:[205,1030],district:"Sorting and crushers"},
  {id:"F",name:"Main ore exchange",at:[595,1060],district:"Sorting and crushers"},
@@ -119,6 +119,28 @@ for(let [y,width] of [[344,196],[693,177],[1049,185],[1539,176],[1885,198]]){
 for(let [y,x1,x2,g] of [[450,339,672,520],[760,350,676,558],[900,345,676,595],[1190,348,676,514],[1460,345,675,576],[1640,345,674,576],[1825,346,670,494]])
  gantry(x1,x2,y,g);
 for(let y=210;y<1940;y+=113){box(128,y,14,9,62);box(878,y+36,16,8,62);lite(137,y+12,79);lite(887,y+48,77);}
+// 9b. Three distinctive large-scale machines to break repetition and anchor the skyline.
+// The high crusher cassette is bolted to the east main pier, not floating in flight space.
+frame(532,797,136,132,7,58);box(540,808,120,103,130);
+for(let k=0;k<5;k++){let y=817+k*18;box(552,y,92,5,k%2?65:62);box(559+(k%2)*11,y+6,75,4,119);}
+box(539,792,129,11,76);box(644,800,25,22,62);box(662,817,22,8,58);
+for(let x of [551,637])box(x,710,4,86,68);
+frame(553,951,111,62,6,50);box(560,957,96,46,72);for(let x=565;x<645;x+=15)box(x,982,10,12,79);
+// Pressurized rail-logic rack and mechanical return of the broken counterweight.
+frame(545,1261,126,95,7,62);box(553,1270,109,70,73);
+for(let y=1277;y<1334;y+=12){box(561,y,87,5,65);box(565,y+6,19,4,77);box(614,y+6,27,4,79);}
+pipe([[663,1264],[685,1264],[685,1344],[706,1344]],69,5);
+box(552,1358,112,9,76);gusset(561,1373,91,44,65);
+// The salvage hoist stays on the other side of the actual central return lane.
+frame(548,1651,120,152,7,58);box(557,1662,101,126,130);
+for(let x of [565,640])box(x,1550,5,101,68);
+box(560,1674,96,18,65);for(let y=1703;y<1785;y+=18){box(564,y,88,5,62);box(567,y+6,84,4,119);}
+for(let x=572;x<647;x+=22)box(x,1795,15,8,76);
+box(656,1705,23,8,58);box(658,1765,21,8,58);
+// Literal accessible workshop alcove at the upper western crown.
+frame(135,202,178,112,6,58);box(143,211,162,22,130);
+for(let x=155;x<289;x+=32){box(x,243,23,28,62);box(x+5,248,13,9,77);}
+box(144,284,158,7,65);box(288,206,27,8,69);
 // 10. Mandatory navigable cores and crossovers carved *after* every fixture.
 tunnel(ROUTES.central,54);tunnel(ROUTES.west,60);tunnel(ROUTES.east,60);
 for(let p of ROUTES.crossovers)tunnel(p,58);
