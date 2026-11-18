@@ -35,7 +35,7 @@
     "101": "Obsidian Solid/None",
     "122": "QuartzCrystal Solid/None"
   },
-  "art": "R2C2 physically rebuilt selected upper webbing and root arches with fine fenestration, wall-linked ladder/shelf transitions, contiguous distinct west calcite halls, east basalt observatory and solid geological reservoir abutments. Upper zones are source-JPEG-led; all lower districts are authored extrapolation, not a stretched/rasterized source.",
+  "art": "R2C3 source-derived variable-width nested filament apertures, root-tied branched arches and rock-integrated ladder threshold; distinct extrapolated supported west calcite terraces, east observatory and dry service/water retaining approach. All output is real material cells. Source JPEG physically viewed; unchanged original full PNG parity unverified.",
   "gallery": [
     [
       "filament-shaft-cavern-material-1024x2048.png",
@@ -108,26 +108,26 @@
       2048
     ],
     "complete_cells": 2097152,
-    "rectangles": 15150,
+    "rectangles": 15773,
     "max_rectangles": 32768,
-    "json_bytes": 275635,
+    "json_bytes": 287956,
     "max_json_bytes": 1048576,
     "final_cell_mismatches": 0,
-    "changed_cells_from_archived_r1": 875539,
-    "nonempty_cells": 773421,
+    "changed_cells_from_archived_r1": 910021,
+    "nonempty_cells": 826655,
     "water_cells": 35688,
     "water_changed_cells": 0,
     "material_histogram": {
-      "0": 1323731,
+      "0": 1270497,
       "3": 35688,
-      "38": 35964,
-      "42": 6036,
-      "49": 71088,
-      "62": 6520,
-      "99": 150792,
-      "100": 301736,
-      "101": 144468,
-      "122": 21129
+      "38": 36836,
+      "42": 5189,
+      "49": 92646,
+      "62": 7205,
+      "99": 168757,
+      "100": 318723,
+      "101": 143745,
+      "122": 17866
     },
     "allowlist": [
       0,
@@ -292,7 +292,7 @@
           15
         ],
         "spawn_exact": true,
-        "component_centres": 1050942,
+        "component_centres": 1005156,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -302,7 +302,7 @@
           19
         ],
         "spawn_exact": true,
-        "component_centres": 1015015,
+        "component_centres": 969170,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -312,29 +312,29 @@
           27
         ],
         "spawn_exact": true,
-        "component_centres": 946212,
+        "component_centres": 900459,
         "r2_exact": 13,
         "legacy_exact": 15
       }
     ],
     "upper_tissue_components": [
-      177615,
+      191134,
+      660,
+      393,
       28,
+      23,
       8,
-      4,
       2,
-      1,
-      1,
-      1,
-      1,
-      1
+      2,
+      2,
+      2
     ],
-    "connected_primary_tissue_cells": 177615,
-    "tissue_cells": 177680,
-    "primary_tissue_fraction": 0.999634,
+    "connected_primary_tissue_cells": 191134,
+    "tissue_cells": 192277,
+    "primary_tissue_fraction": 0.994055,
     "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)"
   },
-  "native": "NATIVE-UNTESTED: no installed Godot/Rapier/CyberDemoBridge import, flight/collision, liquid progression, bounded simulation or fresh-process save/reopen. Accepted main source capacity 32768; legacy installed 4096 would reject 15150 rectangles.",
+  "native": "NATIVE-UNTESTED: only deterministic V8/Node-compatible material computation and independent static verification executed; no installed Godot/Rapier/CyberDemoBridge input, actor collision, liquid progression, bounded simulation or fresh save/reopen. 32,768 source limit; old 4,096 installed fallback would reject 15773 rectangles.",
   "disposition": "DRAFT / HOLD; independent Shepherd/fidelity/native/owner acceptance pending. No merge or Ready.",
   "rework_round_2_finishing": {
     "assignment": "CANVAS-REWORK-A: 12 @ eddddcec7f3f13a4ef71d9d27152d00c6b88ff43",
@@ -487,5 +487,66 @@
     ],
     "native": "NATIVE-UNTESTED",
     "disposition": "Draft/HOLD independent audit required"
+  },
+  "rework_round_2_art_C3": {
+    "assignment": "CANVAS-REWORK-C: 12 @ ccc14c167b501b0834a930f664f97fdff98444ea",
+    "starting_head": "ccc14c167b501b0834a930f664f97fdff98444ea",
+    "genuine_source_preview_seen": true,
+    "genuine_source_jpeg_blob": "168294085274702df98f5698721890fd30874c8f",
+    "original_png_blob": "9364b59479bb2eaf4d2a2924abb501ed8d9e26e3",
+    "original_full_png_pixel_parity": "UNVERIFIED",
+    "actual_material_cells_changed": 95257,
+    "new_nonempty_cells": 60062,
+    "excavated_to_empty_cells": 6828,
+    "material_reclassified_cells": 28367,
+    "unchanged_dynamic_water_cells": 35688,
+    "changed_dynamic_water_cells": 0,
+    "exact_extent": [
+      1024,
+      2048
+    ],
+    "nonoverlap_rectangles": 15773,
+    "setup_bytes": 287956,
+    "full_grid_replay_mismatches": 0,
+    "png_count": 8,
+    "independently_decoded_png_material_indices": 4194304,
+    "png_pixel_mismatches": 0,
+    "png_crc_adler_pass": true,
+    "clearance": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "spawn_exact": true,
+        "component_centres": 1005156,
+        "r2_exact": 13,
+        "legacy_exact": 15
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "spawn_exact": true,
+        "component_centres": 969170,
+        "r2_exact": 13,
+        "legacy_exact": 15
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "spawn_exact": true,
+        "component_centres": 900459,
+        "r2_exact": 13,
+        "legacy_exact": 15
+      }
+    ],
+    "upper_tissue_connected_fraction": 0.994055,
+    "native": "NATIVE-UNTESTED",
+    "node_cli": "NOT RUN: deterministic builder and verifier executed in isolated V8 with original source syntax and matching exact baseline",
+    "status": "DRAFT/HOLD. Source-led visual and gameplay review remains independent; no merge/Ready/owner acceptance"
   }
 }
