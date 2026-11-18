@@ -31,16 +31,16 @@
     "replay_all_cells": "PASS",
     "replay_mismatches": 0,
     "rectangle_overlaps": 0,
-    "rectangles": 7243,
+    "rectangles": 9175,
     "source_rectangle_limit": 32768,
     "source_legacy_fallback_capacity": 4096,
     "installed_bridge_capacity": "NOT TESTED",
-    "json_bytes": 137340,
+    "json_bytes": 173536,
     "source_json_limit": 1048576,
     "exact_material_cell_count": 2097152,
     "static_clearance": {
       "19x15": {
-        "connected_actor_centres": 1027331,
+        "connected_actor_centres": 916774,
         "exact_named_sites_reached": 14,
         "named_site_count": 14,
         "sites": [
@@ -103,7 +103,7 @@
         ]
       },
       "23x19": {
-        "connected_actor_centres": 916985,
+        "connected_actor_centres": 823032,
         "exact_named_sites_reached": 14,
         "named_site_count": 14,
         "sites": [
@@ -166,7 +166,7 @@
         ]
       },
       "31x27": {
-        "connected_actor_centres": 846425,
+        "connected_actor_centres": 752665,
         "exact_named_sites_reached": 14,
         "named_site_count": 14,
         "sites": [
@@ -240,7 +240,7 @@
         31,
         27
       ],
-      "connected_actor_centres": 802854,
+      "connected_actor_centres": 709094,
       "reached": [
         "Launch cradle",
         "Dispatch roof bypass",
@@ -259,12 +259,14 @@
       "blocked_internal_site": "Iris central chamber",
       "finish_reached": true
     },
-    "image_checks": "PNG signatures, IHDR 4-bit indexed, chunk CRC32, zlib stored-block integrity, Adler32, IEND, 100% material-index pixel parity PASS for all six",
+    "image_checks": "Six PNGs generated from exact committed material cells, internal full PNG decoding, CRC, zlib/Adler, IEND and pixel-index parity: PASS",
     "native_workbench": "NATIVE-UNTESTED",
     "native_input": "NATIVE-UNTESTED",
     "rapier_progression": "NATIVE-UNTESTED",
     "native_collision": "NATIVE-UNTESTED",
-    "save_reopen": "NATIVE-UNTESTED"
+    "save_reopen": "NATIVE-UNTESTED",
+    "authored_cell_visits": 884881,
+    "source_replay_work_limit": 32000000
   },
   "site_coordinates": [
     {
@@ -339,38 +341,38 @@
     }
   ],
   "material_histogram": {
-    "0": 1274672,
-    "49": 162307,
-    "58": 36723,
-    "62": 54739,
-    "100": 416205,
-    "101": 90673,
-    "113": 18657,
-    "117": 18689,
-    "120": 6520,
-    "122": 6217,
-    "123": 5779,
-    "128": 5971
+    "0": 1212271,
+    "49": 167020,
+    "58": 42653,
+    "62": 83610,
+    "100": 417632,
+    "101": 96336,
+    "113": 22172,
+    "117": 29691,
+    "120": 7449,
+    "122": 6098,
+    "123": 5393,
+    "128": 6827
   },
   "material_laws": {
     "state": "all authored nonempty IDs validated against catalogue, current_rule_available true, movable false, kernel 0; no active water, powders, growth, reactions",
     "used": {
-      "0": 1274672,
-      "49": 162307,
-      "58": 36723,
-      "62": 54739,
-      "100": 416205,
-      "101": 90673,
-      "113": 18657,
-      "117": 18689,
-      "120": 6520,
-      "122": 6217,
-      "123": 5779,
-      "128": 5971
+      "0": 1212271,
+      "49": 167020,
+      "58": 42653,
+      "62": 83610,
+      "100": 417632,
+      "101": 96336,
+      "113": 22172,
+      "117": 29691,
+      "120": 7449,
+      "122": 6098,
+      "123": 5393,
+      "128": 6827
     }
   },
-  "grid_sha256": "5806108c1df385375b00783c938ed526077318bc548c00faff6e85dc3b43920a",
-  "json_sha256": "bd84e3a13313911ebd605be627d12bb962030fcad66df6f2b88d9c40c2b838fc",
+  "grid_sha256": "6032acfdd9d5f0756db6466bd240a0c16fc7652e108d3e0fea56da526eee6975",
+  "json_sha256": "c5913a52a260f21f855023fe07ece081dd4f2778abf54724c3f4c1050c517f71",
   "pngs": [
     {
       "file": "overview.png",
@@ -386,7 +388,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "da726bc24e195861db2f875f49083749972d6bb7fccd7eb457afa6051b60e825"
+      "sha256": "5cfee80e8a8871c738014253139955155702e4002bfc87371fa76cbe6200fb99"
     },
     {
       "file": "01-launch-cradle.png",
@@ -402,7 +404,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "5090457e4b20b04e8866287f0869039b943dd1143de5d03c83115c17399180ce"
+      "sha256": "f4a5989db1690c20a1b4d737c86be26b639e3c731a66a97e351f4c21ab7aede0"
     },
     {
       "file": "02-drift-canyon.png",
@@ -418,7 +420,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "d49b92f0cca561cf1f45bf2771dae8d7e1e4574e66d3c289bb0b77bd67c59ef9"
+      "sha256": "9e9d77789ef0c6421a19ea9809d6f7168f70f751171cf4b1fd90e5d6db0aecce"
     },
     {
       "file": "03-split-current-iris.png",
@@ -434,7 +436,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "4689b2201552b544691a351d2d314d9e4a0998ad904346677e3cdcbaf05e64a5"
+      "sha256": "5d325aa73654d0d8d0a41b9a69341285d5bdd944dbca7eaa1a31242d970d98dd"
     },
     {
       "file": "04-glassstorm-viaduct.png",
@@ -450,7 +452,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "2f8072a4598ade6cbf37e7b7355df9ff4e27db4215bcfb768e4428ce6ca2924b"
+      "sha256": "3b58a039223cb6bbe8b074182f2780b94b2ef70343f9be295cd4da40b1dc91fd"
     },
     {
       "file": "05-catch-recovery.png",
@@ -466,7 +468,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "789d99834abb271e38d225c984fe2ca3c7b852e7ab019ae46d2ebfa9158c036c"
+      "sha256": "73692610924b4badb77e884e174677602a895ae53c48a59e72aa4e3bcfc6d248"
     }
   ],
   "authoring_review": {
@@ -480,12 +482,17 @@
       "reopened 159-cell-wide west shaft",
       "added founded machinery, signal hierarchy, asymmetric sensor structures, laboratory viewing stations and acceleration motifs",
       "reopened catch-recovery lower return at 31x27",
-      "replaced oval pattern with nonrepeating strata"
+      "replaced oval pattern with nonrepeating strata",
+      "R4 review-driven macro refinement: founded dispatch hall, tectonic saw-canyon, supported crown conductor/high route, asymmetrical viaduct service hall and underdeck truss, large rooted braking-claw silhouette",
+      "R4 regression repair: crossing supports blocked 31x27 high bypass; traced original safe high-line and moved new conductor above it. Strict blocked-iris finish restored."
     ],
     "remaining": [
       "Static centreline connectivity is not a dynamic speed/collision playtest",
       "No Godot/CyberDemoBridge installed in run environment",
-      "Visual checkpoints are landmarks, not wired timing triggers"
+      "Visual checkpoints are landmarks, not wired timing triggers",
+      "R4 original-creator self-review only; independent art/Shepherd revisit outstanding"
     ]
-  }
+  },
+  "rework_iteration": "R4",
+  "previous_head": "569d4362f50a5771990eec153070133dd626bb94"
 }

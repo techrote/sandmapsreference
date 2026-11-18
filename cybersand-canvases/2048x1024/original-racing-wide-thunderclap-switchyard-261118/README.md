@@ -47,15 +47,15 @@ Authority: **techrote/cybersand accepted `main` at `018bd09503d7f079ddac52e225c2
 
 Midge authored hull 4×3; 1.8× boost. All used nonempty material IDs are validated **state=Solid, movable=false, kernel=0, rule available**. Palette: Slate 49, Basalt 100, Obsidian 101, Reinforced Concrete 58, Steel Plate 62, Bare Iron 117, Zinc 113, Polymer Panel 128, Glass Block 120, Quartz 122, Uranium Glass 123. Structural crystals/signals are inert decorative cells, not lethal hazards. Water, acid, growing bio-matter, live reactions and unbounded effects are **not included**; exhibits are deliberately inert. Native installed bridge required for extended non-palette material IDs (49/62).
 
-The current source allows **32,768 starting rectangles**, **32,768 edits** and **1 MiB Setup-v2 JSON**, each dimension 512–2048 in multiples of 64. The installed bridge's `workbench_start_rectangle_capacity` was **not** read back. A legacy/no bridge 4096-rectangle fallback would refuse this 7243-rectangle canvas. No assertion of installed capacity or successful native load is made.
+The current source allows **32,768 starting rectangles**, **32,768 edits** and **1 MiB Setup-v2 JSON**, each dimension 512–2048 in multiples of 64. The installed bridge's `workbench_start_rectangle_capacity` was **not** read back. A legacy/no bridge 4096-rectangle fallback would refuse this 9175-rectangle canvas. No assertion of installed capacity or successful native load is made.
 
 ## Qualification and reproduction
 
 | Static gate | Exact final result |
 |---|---|
 | Extent / cell count | **2048×1024 / 2,097,152** |
-| Non-overlapping, vertically merged boxes | **7243 / 32,768** |
-| Setup JSON bytes | **137340 / 1,048,576** |
+| Non-overlapping, vertically merged boxes | **9175 / 32,768** |
+| Setup JSON bytes | **173536 / 1,048,576** |
 | Full-cell serialized replay | **0 mismatches / 0 overlaps** |
 | Exact sites with 19×15 conservative Midge envelope | **14/14** |
 | Exact sites with 23×19 envelope | **14/14** |
@@ -64,8 +64,8 @@ The current source allows **32,768 starting rectangles**, **32,768 edits** and *
 | Six material-index PNGs and decoded pixel parity | **6/6 PASS** |
 | Native Godot/GDExtension/Rapier and save–reopen | **NATIVE-UNTESTED** |
 
-**Raw full-cell grid SHA-256:** `5806108c1df385375b00783c938ed526077318bc548c00faff6e85dc3b43920a`  
-**UTF-8 setup JSON SHA-256:** `bd84e3a13313911ebd605be627d12bb962030fcad66df6f2b88d9c40c2b838fc`  
+**Raw full-cell grid SHA-256:** `6032acfdd9d5f0756db6466bd240a0c16fc7652e108d3e0fea56da526eee6975`  
+**UTF-8 setup JSON SHA-256:** `c5913a52a260f21f855023fe07ece081dd4f2778abf54724c3f4c1050c517f71`  
 **Fixed seed:** `539365656`.
 
 Run `node build.cjs --verify` from this folder to reconstruct the authored grid and check every committed PNG/JSON artifact byte-for-byte, including the built-in exhaustive rectangle replay, three strict actor envelope flood fills, bypass and actual image pixel parity. Run `node build.cjs` to regenerate the output; **no dependencies**.
@@ -83,6 +83,14 @@ The [machine qualification receipt](qualification.json) contains per-PNG SHA-256
 | ![Central interrupted iris at one cell per pixel](03-split-current-iris.png) | ![Viaduct conductor and specimens](04-glassstorm-viaduct.png) |
 | Catch & recovery | |
 | ![Braking claw and lower return](05-catch-recovery.png) | |
+
+## R4 creative and engineering response to independent REWORK
+
+Rebuilt five districts after direct material-cell overview and 1:1 crop review. The launch dispatch hall now has recognisable supported mass and working sightline thresholds; the drift canyon has a roof-rooted inert saw and sheared rock; the iris has a high overhead conductor; Glassstorm has an asymmetrical control hall and a founded underdeck truss; the eastern jaw has a tall connected braking structure. All work consists of actual CyberSand materials, not images.
+
+**Regression found and repaired:** early R4 support arms occluded the 31×27 blocked-iris upper bypass, although all ordinary destinations still passed. Traced the original bypass centreline and relocated the new iris conductor above its high-speed flight path. The final strict blocked-iris test again reaches finish and 13/14 sites. Main lines remain open for speed; clearance alone is not dynamic racing proof.
+
+This is original-creator rework awaiting independent Shepherd/artistic re-review. Native Workbench installation, input/collision and save/reopen remain **NATIVE-UNTESTED**.
 
 ## Honest art & engineering review
 

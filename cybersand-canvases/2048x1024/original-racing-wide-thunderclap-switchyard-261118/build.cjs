@@ -289,6 +289,75 @@ function buildWideCanvas() {
   R(1786,682,156,132,mat.E);
   // Exact recovery-basin site and contiguous wide return throat, with a safe margin.
   R(1826,731,145,89,mat.E);
+
+  // R4 original racing craft: broaden the founded macro structures while keeping a fast free-flight centreline.
+  // New west dispatch hall, mechanically pinned into the fragmented canopy.
+  P([[113,234],[138,178],[201,157],[281,166],[327,144],[363,176],[356,241],[290,253],[229,224],[170,244]],mat.STEEL);
+  P([[152,187],[199,175],[257,185],[250,209],[190,214],[143,208]],mat.CONCRETE);
+  R(163,185,34,18,mat.BLUE);R(169,190,22,8,mat.GLASSBLOCK);
+  R(208,186,35,16,mat.OBSIDIAN);R(213,191,25,6,mat.SIGNAL);
+  L(271,188,309,159,9,mat.ZINC);L(308,159,342,185,9,mat.ZINC);
+  R(281,204,47,21,mat.IRON);R(289,210,29,8,mat.GLASSBLOCK);
+  L(132,223,103,281,11,mat.IRON);L(322,232,355,284,10,mat.IRON);
+  R(355,313,20,8,mat.SIGNAL);R(355,561,26,7,mat.BLUE);
+  // A unique geologic saw-cut: dangling serrated roof and a fixed, roof-supported rail head.
+  P([[427,149],[466,137],[500,182],[536,172],[567,221],[551,261],[510,235],[488,257],[459,208]],mat.OBSIDIAN);
+  P([[590,174],[633,204],[671,196],[723,237],[751,207],[741,268],[700,303],[662,273],[624,299]],mat.SLATE);
+  L(609,188,601,270,12,mat.STEEL);L(601,270,568,300,10,mat.IRON);
+  L(570,300,609,312,8,mat.IRON);
+  P([[554,306],[564,283],[588,291],[601,315],[579,337]],mat.STEEL);
+  P([[569,298],[585,303],[583,318],[566,313]],mat.QUARTZ);
+  // Broad lower cliff tooth remains *above* the lower tunnel, not a racing pinhole.
+  P([[560,638],[604,601],[646,591],[682,616],[718,592],[754,661],[754,681],[670,675],[626,651],[574,678]],mat.BASALT);
+  L(609,611,657,628,9,mat.STEEL);L(657,628,688,597,8,mat.STEEL);
+  R(620,603,28,7,mat.BLUE);
+  // IRIS: preserve the entire upper 31x27 high-speed bypass and relocate backbone to the crown above it.
+  L(789,96,1327,91,12,mat.STEEL);
+  L(770,116,803,97,12,mat.IRON);
+  L(1326,92,1353,133,12,mat.IRON);
+  R(950,91,46,13,mat.BLUE);R(1086,88,55,13,mat.ZINC);
+  
+  
+  
+  P([[1082,232],[1129,199],[1177,218],[1171,258],[1126,272]],mat.IRON);
+  L(1102,264,1151,241,9,mat.ZINC);
+  R(1114,235,32,12,mat.BLUE);
+  // Asymmetric switch-bank housings sit on an existing load deck, away from the 161-wide dive.
+  P([[855,603],[884,581],[918,588],[951,617],[945,639],[877,640]],mat.CONCRETE);
+  R(873,608,47,12,mat.STEEL);R(881,618,31,9,mat.GLASSBLOCK);
+  P([[1178,602],[1204,584],[1238,599],[1252,632],[1215,651]],mat.CONCRETE);
+  R(1192,606,41,9,mat.STEEL);R(1200,616,25,8,mat.BLUE);
+  // GLASSSTORM: preserve the exact upper speed-line approach x1300..1510/y150..340.
+  
+  L(1731,153,1696,268,17,mat.CONCRETE);
+  
+  
+  
+  P([[1605,269],[1644,240],[1703,256],[1742,315],[1732,349],[1647,337],[1613,312]],mat.STEEL);
+  R(1643,279,60,40,mat.CONCRETE);R(1653,288,42,23,mat.GLASSBLOCK);
+  R(1661,292,26,8,mat.BLUE);R(1667,306,12,5,mat.SIGNAL);
+  L(1684,266,1741,205,12,mat.IRON);
+  // Load-bearing web spans only the deck underbelly: no floating props or low-tunnel plugs.
+  L(1306,595,1404,661,11,mat.STEEL);L(1404,661,1481,600,11,mat.STEEL);
+  L(1482,606,1588,672,11,mat.IRON);L(1588,672,1635,635,11,mat.STEEL);
+  // East recovery ascent x1665..1807 is an open 31x27 flyable throat, not a truss bay.
+  L(1332,630,1434,630,7,mat.ZINC);L(1501,637,1621,637,7,mat.ZINC);
+  // Vast EAST brakestand, anchored to existing east-side massif, without occupying finish y446.
+  L(2029,857,2015,597,20,mat.CONCRETE);
+  L(2015,597,1988,563,19,mat.STEEL);
+  L(1988,563,1945,573,14,mat.STEEL);
+  P([[1987,648],[2029,622],[2039,727],[2002,742],[1984,708]],mat.STEEL);
+  R(1991,665,35,48,mat.IRON);
+  R(1998,671,24,32,mat.GLASSBLOCK);
+  R(2001,682,18,8,mat.SIGNAL);
+  P([[1981,836],[2018,802],[2048,809],[2048,885],[1980,888]],mat.SLATE);
+  L(1981,838,2026,807,11,mat.ZINC);
+  // Upper brake jaw intentionally ends left of the finish mast and joins the right tower only above y550.
+  L(2012,565,2005,335,13,mat.IRON);
+  L(2005,335,1830,318,14,mat.STEEL);
+  L(1838,319,1870,337,10,mat.ZINC);
+  R(1881,325,39,11,mat.BLUE);R(1893,330,16,4,mat.SIGNAL);
+
     // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
