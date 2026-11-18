@@ -15,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 21535,
+  "rectangles": 21611,
   "rectangle_budget": 32768,
-  "json_bytes": 395528,
+  "json_bytes": 396914,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1282700,
+  "stamped_cells": 1272062,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -47,34 +47,34 @@
     127
   ],
   "material_counts": {
-    "0": 814452,
+    "0": 825090,
     "39": 6151,
-    "40": 130557,
-    "42": 123719,
+    "40": 130547,
+    "42": 120591,
     "49": 161005,
-    "50": 41107,
-    "52": 23442,
-    "53": 136368,
-    "54": 116522,
-    "58": 41826,
-    "62": 62616,
-    "65": 3637,
-    "77": 2313,
-    "79": 9435,
+    "50": 39558,
+    "52": 24658,
+    "53": 131221,
+    "54": 113127,
+    "58": 40718,
+    "62": 62553,
+    "65": 3289,
+    "77": 2225,
+    "79": 9378,
     "100": 212495,
-    "101": 145616,
-    "119": 18185,
+    "101": 145544,
+    "119": 21390,
     "120": 17488,
     "121": 4688,
-    "122": 7413,
+    "122": 7382,
     "123": 9450,
-    "127": 8667
+    "127": 8604
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 450752,
+  "connected_clearance_centres": 464820,
   "spawn": [
     369,
     95
@@ -317,7 +317,7 @@
         19,
         15
       ],
-      "legal_connected_centres": 450752,
+      "legal_connected_centres": 464820,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -327,7 +327,7 @@
         23,
         19
       ],
-      "legal_connected_centres": 412896,
+      "legal_connected_centres": 427131,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -337,7 +337,7 @@
         31,
         27
       ],
-      "legal_connected_centres": 339781,
+      "legal_connected_centres": 353204,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -418,14 +418,62 @@
   },
   "last_rework": {
     "worker": "B",
-    "assigned_head": "14bd348782645d7188d221f6c408724f3870d8e4",
-    "scope": "source-led one-heart silhouette and rooted upper observation transfer",
-    "physical_cells_changed": 99850,
-    "rectangles": 21535,
-    "json_bytes": 395528,
-    "nonempty_cells": 1282700,
+    "assigned_head": "fb6af47d89e7969b7c499f0f7bc5bd55a98242fb",
+    "scope": "genuinely short framed and supported inhabited west-east lab artery",
+    "physical_cells_changed": 24013,
+    "rectangles": 21611,
+    "json_bytes": 396914,
+    "nonempty_cells": 1272062,
     "source_jpeg": "AUTHENTIC VIEWED",
     "original_png": "UNVERIFIED",
     "native": "NATIVE-UNTESTED"
-  }
+  },
+  "rework_b6": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "fb6af47d89e7969b7c499f0f7bc5bd55a98242fb",
+    "scope": "actual-cell functional west–east biosphere gantry route",
+    "physical_cells_changed": 24013,
+    "extent": [
+      1024,
+      2048
+    ],
+    "gantry_endpoints": [
+      [
+        370,
+        930
+      ],
+      [
+        742,
+        931
+      ]
+    ],
+    "gantry_max_steps": 750,
+    "source_jpeg_seen": true,
+    "source_png": "UNVERIFIED",
+    "native": "NATIVE-UNTESTED"
+  },
+  "gantry_pairwise_steps": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "steps": 373
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "steps": 373
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "steps": 373
+    }
+  ]
 }

@@ -755,6 +755,12 @@ rect(0,0,9,H,M.BASALT);rect(W-9,0,9,H,M.BASALT);rect(0,H-9,W,9,M.BASALT);
 // A 20-cell root footing intentionally interrupts the lowest open emergency line;
 // upper and side bypass corridors retain all exact Midge operational sites.
 line(610,1969,610,2044,M.COPPER,20);
+
+// CANVAS R2B6 - actual-cell source-scale west-to-east observation artery.
+// All ops intentionally run after the prior R2B5 crown/deck and external-frame passes.
+const r2b6Ops=[["rect",336,888,455,80,0],["rect",425,873,275,8,62],["rect",430,881,264,5,119],["rect",423,975,281,13,62],["rect",429,988,269,8,119],["line",434,999,455,1058,52,7],["line",498,999,533,1058,52,7],["line",595,999,564,1058,52,7],["line",682,999,655,1058,52,7],["rect",446,861,4,12,119],["rect",453,866,24,5,79],["rect",493,861,4,12,119],["rect",500,866,24,5,79],["rect",540,861,4,12,119],["rect",547,866,24,5,79],["rect",587,861,4,12,119],["rect",594,866,24,5,79],["rect",634,861,4,12,119],["rect",641,866,24,5,79],["rect",336,905,455,59,0],["rect",420,889,286,76,0],["rect",423,975,281,12,62],["rect",429,987,269,8,119],["line",420,977,433,1035,53,7],["line",701,977,690,1035,54,7]];
+for(const [kind,...args] of r2b6Ops)(kind==="rect"?rect:line)(...args);
+
 // Conservative full non-air collision mask, 19x15 actor centre clearance.
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
 const nav=new Uint8Array(A.length);
@@ -840,6 +846,23 @@ evidence.rework_b5={date:"2026-11-18",worker:"B",assigned_head:"14bd348782645d71
  native:"NATIVE-UNTESTED"};
 evidence.last_rework={worker:"B",assigned_head:"14bd348782645d7188d221f6c408724f3870d8e4",scope:"source-led one-heart silhouette and rooted upper observation transfer",physical_cells_changed:99850,
  rectangles:edits.length,json_bytes:json.length,nonempty_cells:stamped,source_jpeg:"AUTHENTIC VIEWED",original_png:"UNVERIFIED",native:"NATIVE-UNTESTED"};
+
+function r2b6Pairwise(ew,eh){
+ const hx=(ew-1)>>1,hy=(eh-1)>>1,pitch=W+1,I=new Int32Array((W+1)*(H+1));
+ for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;I[(y+1)*pitch+x+1]=I[y*pitch+x+1]+s;}}
+ const free=new Uint8Array(A.length);
+ for(let y=hy;y<H-hy;y++)for(let x=hx;x<W-hx;x++){let l=x-hx,r=x+hx+1,t=y-hy,b=y+hy+1;free[y*W+x]=!(I[b*pitch+r]-I[t*pitch+r]-I[b*pitch+l]+I[t*pitch+l])?1:0;}
+ const start=930*W+370,goal=931*W+742;if(!free[start]||!free[goal])return -1;
+ const seen=new Uint8Array(A.length),q=new Int32Array(A.length),dist=new Int32Array(A.length);q[0]=start;seen[start]=1;let n=1;
+ for(let i=0;i<n;i++){let p=q[i],x=p%W,y=(p/W)|0;if(p===goal)return dist[p];
+   for(const d of [-W,-1,1,W]){if((d===-W&&y===0)||(d===-1&&x===0)||(d===1&&x===W-1)||(d===W&&y===H-1))continue;let z=p+d;if(free[z]&&!seen[z]){seen[z]=1;dist[z]=dist[p]+1;q[n++]=z;}}}
+ return -1;
+}
+
+evidence.rework_b6={worker:"B",date:"2026-11-18",assigned_head:"fb6af47d89e7969b7c499f0f7bc5bd55a98242fb",scope:"actual-cell functional west–east biosphere gantry route",physical_cells_changed:24013,extent:[W,H],gantry_endpoints:[[370,930],[742,931]],gantry_max_steps:750,source_jpeg_seen:true,source_png:"UNVERIFIED",native:"NATIVE-UNTESTED"};
+evidence.gantry_pairwise_steps=[[19,15],[23,19],[31,27]].map(([w,h])=>({envelope:[w,h],steps:r2b6Pairwise(w,h)}));
+if(evidence.gantry_pairwise_steps.some(a=>a.steps<0||a.steps>750))throw Error("R2B6 pairwise route regression");
+evidence.last_rework={worker:"B",assigned_head:"fb6af47d89e7969b7c499f0f7bc5bd55a98242fb",scope:"genuinely short framed and supported inhabited west-east lab artery",physical_cells_changed:24013,rectangles:edits.length,json_bytes:json.length,nonempty_cells:stamped,source_jpeg:"AUTHENTIC VIEWED",original_png:"UNVERIFIED",native:"NATIVE-UNTESTED"};
 return {json,png,details,evidence};
 }
 module.exports={generate};
