@@ -139,6 +139,119 @@ function runPipeline() {
     const x=180+(hash(i,93)%665),y=1710+(hash(i,71)%338);
     disk(x,y,2+(hash(i,101)%6),i%9===0?77:(i%4===0?106:122),true);
   }
+
+  // R3: Original inhabited-organ architecture, physically authored into the SAME material plane.
+  // All inert structural spans are rooted in the surrounding geological shell.
+  function arc(cx,cy,rx,ry,a,b,weight,mat){
+    const pts=[];
+    for(let i=0;i<=Math.ceil(Math.abs(b-a)*Math.max(rx,ry)/6);i++){
+      const n=Math.ceil(Math.abs(b-a)*Math.max(rx,ry)/6),t=a+(b-a)*i/n;
+      pts.push([cx+rx*Math.cos(t),cy+ry*Math.sin(t)]);
+    }
+    curve(pts,weight,mat);
+  }
+  function prism(points,weight,body,glint){
+    curve(points,weight,body);
+    if(glint)curve(points.slice(1,-1).map(([x,y])=>[x-2,y-4]),Math.max(2,Math.floor(weight/4)),glint);
+  }
+  function shard(x,y,dx,dy,r,mat,tip=122){
+    stroke(x,y,x+dx*0.66,y+dy*0.66,r,mat);
+    stroke(x+dx*.66,y+dy*.66,x+dx,y+dy,Math.max(2,r*.35),tip);
+  }
+  // District A: the broken skylight becomes a roof-bearing twin root-vault with a
+  // central free entry, deliberately asymmetrical inclined flights and ledges.
+  prism([[45,325],[116,320],[175,277],[231,229],[301,215],[352,242]],18,39,98);
+  prism([[975,295],[900,290],[835,256],[769,220],[713,252],[674,309]],22,38,99);
+  prism([[77,351],[162,349],[233,331],[280,312]],11,100,119);
+  prism([[963,353],[882,340],[819,325],[770,342]],10,40,99);
+  for(const q of [[[169,280],[184,231],[206,178]],[[234,231],[256,168],[299,141]],[[806,254],[807,194],[782,159]],[[757,247],[719,196],[697,148]]])
+    prism(q,8,83,86);
+  for(const [x,y] of [[209,239],[263,190],[799,226],[738,210]]){
+    disk(x,y,17,42);disk(x-8,y-7,8,97);disk(x+12,y-13,7,97);
+  }
+  // District B-west: one coherent rooted tree with buttress trunks and visitable
+  // floors; NOT radial one-pixel outlines or identically repeated twig teeth.
+  prism([[46,708],[112,706],[160,676],[187,617],[201,555],[236,491]],24,83,86);
+  prism([[68,730],[132,708],[194,696],[251,664]],14,83,86);
+  prism([[130,711],[148,623],[126,565],[101,518]],13,83,46);
+  prism([[180,615],[248,586],[303,550],[328,513]],11,83,86);
+  prism([[202,560],[231,519],[252,451]],10,83,86);
+  prism([[105,547],[139,509],[161,454]],10,83,86);
+  prism([[60,624],[134,614],[183,625],[229,637]],9,39,98);
+  prism([[72,769],[160,756],[218,733]],12,39,99);
+  prism([[204,693],[255,694],[287,675]],9,39,119);
+  for(const [x,y,r] of [[140,526,27],[186,477,25],[247,466,23],[293,536,28],[114,600,18]]){
+    disk(x,y,r,97);disk(x-8,y-9,Math.max(8,r*.5),42);disk(x+10,y-13,Math.max(7,r*.3),86);
+  }
+  // B-east: open honeycomb sponge towers with actual physical voids, a stairlike
+  // collection ledge and large differentiated pores, rather than scattered dots.
+  prism([[984,766],[920,747],[878,695],[876,628],[914,578],[973,553]],22,42,122);
+  prism([[1006,640],[949,630],[911,598],[897,523],[941,470]],18,42,97);
+  for(const [x,y,r] of [[927,706,42],[929,603,49],[886,548,41],[974,687,36],[860,747,35],[886,480,34]])
+    disk(x,y,r,97);
+  for(const [x,y,r] of [[924,695,20],[937,610,25],[881,545,17],[973,691,13],[858,746,15],[896,486,14]]) disk(x,y,r,0);
+  prism([[997,776],[924,789],[872,787],[828,777]],11,39,122);
+  prism([[1003,829],[927,811],[879,835]],8,38,119);
+  for(let i=0;i<12;i++){
+    const x=839+(i*19)%167,y=470+((i*37)%312);
+    if(g[y*W+x]){disk(x,y,5+(i%3)*3,i%2?77:122,true);}
+  }
+  // District C-west: grounded fossil amphitheatre; three independent stepped
+  // seating trajectories, an open central apse and load-bearing limestone ribs.
+  for(const [rx,ry,r,m] of [[132,115,9,98],[103,89,11,99],[77,67,8,38]]){
+    arc(277,1006,rx,ry,0.33,2.88,r,m);
+  }
+  prism([[69,1089],[124,1070],[178,1072],[210,1086]],15,40,99);
+  prism([[54,1149],[126,1119],[195,1118],[252,1141]],17,40,98);
+  prism([[92,901],[147,918],[171,953]],11,99,98);
+  prism([[115,864],[170,885],[203,910]],8,98,119);
+  for(const [x,y] of [[149,1103],[213,1088],[347,1098],[193,1150]]){
+    prism([[x,y],[x-5,y-46],[x+3,y-84]],8,38,99);
+  }
+  // C-east: observation terrace has a supported portico and suspension cradles.
+  prism([[1007,1118],[934,1098],[864,1104],[818,1081]],16,100,122);
+  prism([[978,1182],[914,1161],[844,1165]],12,40,99);
+  prism([[859,1099],[859,995],[887,956],[927,921]],12,98,122);
+  prism([[950,1099],[948,1013],[933,970]],9,98,119);
+  prism([[863,951],[911,937],[950,943]],8,98,99);
+  for(const [x,y,dx,dy] of [[903,937,-24,-52],[940,943,13,-50],[970,1146,-18,-56]])
+    shard(x,y,dx,dy,9,122);
+  // District D-west: distinct arterial anastomosis arch and mineral side bridges.
+  prism([[45,1500],[110,1477],[168,1440],[202,1383],[230,1346]],19,100,122);
+  prism([[30,1595],[115,1540],[168,1538],[233,1510]],12,40,106);
+  prism([[90,1295],[154,1290],[209,1314],[229,1358]],11,100,49);
+  for(const q of [[[108,1469],[106,1417],[138,1368]],[[170,1446],[180,1401],[208,1360]],[[167,1539],[186,1582],[225,1620]]])
+    prism(q,9,122,106);
+  // D-east: a real dry moonwell made of nested, physically supported irregular
+  // crescent terraces, a bounded socket and coarse quartz outcrops.
+  arc(800,1513,158,147,-1.27,1.39,15,40);
+  arc(810,1518,121,113,-1.22,1.49,12,98);
+  arc(820,1527,84,77,-1.17,1.31,9,106);
+  prism([[1008,1394],[943,1404],[899,1427]],12,40,122);
+  prism([[1002,1606],[933,1609],[871,1587]],13,40,99);
+  prism([[970,1672],[904,1635],[843,1642]],10,40,106);
+  for(const [x,y,dx,dy,r] of [[950,1430,-22,-71,13],[923,1566,-22,-55,11],[866,1640,6,-62,12],[985,1600,-16,-47,11],[891,1422,-33,-55,10]])
+    shard(x,y,dx,dy,r,98);
+  // Distinct inset moonwell stone socket and crystal thicket, not a fake Water pool.
+  arc(889,1550,48,33,0.12,2.96,9,101);
+  for(const [x,y] of [[891,1570],[924,1578],[953,1588]]){
+    disk(x,y,7,122);shard(x,y,-8,-19,5,122);
+  }
+  // District E: the basal bell is now a giant rooted architectural instrument
+  // with a visible shell, resonant side chambers and mineral clapper, not a void.
+  prism([[284,2044],[330,1990],[345,1939],[375,1869],[427,1820]],22,100,98);
+  prism([[746,2044],[694,1984],[680,1940],[651,1872],[601,1817]],23,100,122);
+  prism([[375,1976],[387,1939],[422,1900],[473,1885],[539,1888],[595,1905],[628,1948],[638,1978]],18,98,122);
+  prism([[380,1991],[433,1980],[481,1985],[539,1975],[596,1978],[644,1987]],13,101,106);
+  prism([[422,1903],[445,1848],[477,1839]],10,39,98);
+  prism([[602,1908],[581,1849],[559,1839]],10,39,122);
+  prism([[503,1888],[514,1928],[520,1960]],12,40,119);
+  disk(521,1960,19,119);disk(517,1950,9,122);
+  prism([[281,2018],[376,2008],[435,2019]],11,101,106);
+  prism([[740,2011],[659,2004],[590,2026]],13,101,122);
+  for(const [x,y,dx,dy,r] of [[375,1997,-17,-69,13],[411,2011,21,-76,11],[640,1994,22,-60,12],[603,2011,-8,-79,13],[475,2020,-23,-53,8],[548,2019,20,-65,8]])
+    shard(x,y,dx,dy,r,106);
+
   // In situ rim facies: every contour is drawn from the actual underlying Empty/non-Empty boundary.
   const rim=new Uint8Array(N);
   for(let y=4;y<H-4;y++)for(let x=4;x<W-4;x++){
@@ -336,12 +449,15 @@ function runPipeline() {
     return {width,height,pixels:out};
   }
   const artifacts={};const pngs={};const cropData=[
-    ["01-sink-crown.png",320,45,384,320],
-    ["02-root-orchard.png",48,402,384,320],
-    ["03-spore-organ.png",580,476,384,320],
-    ["04-fossil-atrium.png",95,822,384,320],
-    ["05-moonwell-garden.png",584,1300,384,320],
-    ["06-deep-bell.png",320,1685,384,320]
+    ["01-sink-crown.png",70,90,384,320],
+    ["01b-crown-east.png",565,75,384,320],
+    ["02-root-orchard.png",48,430,384,320],
+    ["03-spore-organ.png",606,477,384,320],
+    ["04-fossil-atrium.png",78,820,384,320],
+    ["04b-calcite-observatory.png",630,860,384,320],
+    ["05-moonwell-garden.png",613,1345,384,320],
+    ["05b-anastomosis.png",45,1280,384,320],
+    ["06-deep-bell.png",320,1710,384,320]
   ];
   function extract(x,y,w,h){const a=new Uint8Array(w*h);for(let yy=0;yy<h;yy++)a.set(g.subarray((y+yy)*W+x,(y+yy)*W+x+w),yy*w);return a;}
   function retainPNG(name,w,h,source,crop=null){
@@ -370,15 +486,15 @@ function runPipeline() {
     setup_bytes:json.length,setup_limit_bytes:1048576,full_replay_mismatches:diffs,rectangle_overlaps:overlaps,
     disconnected_solid_cells_pruned:floatingRemoved,
     material_histogram:hist,
-    all_nonempty_materials_immovable_inert_solid:true,fluid_cells:0,powder_cells:0,
+    all_nonempty_materials_immovable_inert_solid:false,all_nonempty_materials_immovable_solid:true,combustible_organic_material_ids:[46,81,83,86,88,92,97],combustible_organic_cell_count:[46,81,83,86,88,92,97].reduce((sum,id)=>sum+(hist[id]||0),0),essential_geological_foundations_inert:true,fluid_cells:0,powder_cells:0,
     midge_hull_source:[4,3],conservative_centre_clearances:clearance,
     bypass_test:{blocked_centre_region:[300,965,708,1148],conservative_31x27:alt,required_destinations:essential},
     pngs,static_qualification:"PASS",native_install:"NATIVE-UNTESTED",native_input_collision:"NATIVE-UNTESTED",
     native_save_fresh_process_reopen:"NATIVE-UNTESTED",
-    creative_revisions:["Crown macro silhouette received asymmetrical real-cell root arteries and lichen rim facies.","Basal deep bell received twelve nonidentical anchored quartz ribs and individually seeded crystalline deposits."],
+    creative_revisions:["R3 Sunken Crown: monumental asymmetrical anchored root vaults and platforms, clear central arrival.","R3 Root Orchard: thick coherent rooted tree, buttress arches, visitable tiered shelves and differentiated crowns.","R3 Spore Organ: large porous, rim-backed clustered sponge masses with open circular cavities and collection ledges.","R3 Fossil Atrium and Calcite Observatory: grounded stepped fossil seating, unique supported observation portico and crystals.","R3 Anastomosis and Moonwell: branching left arterial gallery, nested dry well terraces, clear mineral socket and outcrops.","R3 Deep Bell: monumental anchored resonator shell, mineral clapper, and two grounded lower platforms."],
     limitations:["No matching installed Godot/native runtime was executed.","Only static native material laws are selected, so no living biological motion or functioning liquid pumps are implied.","PNG is an indexed material-ID image, not a screenshot from CyberSand."]
   };
-  const readme=`# The Karst Lung Organ\n\n**Original CyberSand material-cell canvas, 1024 x 2048, orthographic side elevation.**\n\n## Original spatial thesis\n\nA petrified underground respiratory organ formed naturally over geological time: a continuous curved breathing shaft ventilates offset limestone lobes. Old roots entered from the collapsed skylight and were gradually mineralized into living-looking timber arteries. The porous spore organ, fossil atrium, calcite observatory, moonwell and basal resonating bell retain distinct geological identities. This is a navigable 2D level, not an image-to-map tracing.\n\n## Artistic structure\n\n1. **Sunken Crown (y 0-390):** broken skylight and asymmetric suspending oak/bamboo root arteries; inhabited negative space beneath the fracture.\n2. **Root Orchard and Spore Organ (y 390-820):** intertwined soil/lichen west lobe against luminous eastern spore pockets and deliberately different shapes of perforation.\n3. **Fossil Atrium and Calcite Observatory (y 820-1220):** chalk pressure ribs in the west, quieter opposite mineral observatory and a large alternate right-hand bypass.\n4. **Anastomosis and Moonwell (y 1220-1700):** branching basalt vessels against nacre/quartz eastern mineral garden; forms a side loop below the central obstruction region.\n5. **Deep Bell (y 1700-2048):** massive dry calcite resonator and asymmetrical embedded rib crests, with a traversable lower hollow.\n\n## Exact-centre flight map\n\n\`\`\`text\n                         x=0                 x=1024\n y=0          ROCK ROOTS   / SKYLIGHT /    ROCK\n                    +------ MIDGE (507,133) ------+\n                    |        CROWN               |\n y=535       ROOT ORCHARD == MAIN ORGAN == SPORE ORGAN y=623\n                    \\\\       ||         //\n y=978       FOSSIL ATRIUM == SHAFT == CALCITE OBS. y=1028\n                    \\\\    [central test block]  //\n y=1410      ANASTOMOSIS === SHAFT ====== MOONWELL y=1500\n                         \\\\       //\n y=1826           ==== DEEP BELL ====\n y=2048                 ROOTED ROCK\n\`\`\`\n\nExact destination centres (no radius or nearest-point waivers):\n\n${sites.map(s=>`- ${s[0]}: (${s[1][0]}, ${s[1][1]})`).join("\n")}\n\nThree conservative axis-aligned Midge envelopes (19 x 15, 23 x 19, 31 x 27) are flood-tested at every exact named site. The lower route is independently tested after blocking x300..708/y965..1148 in actor-centre space. The main shaft and at least one non-central bypass remain part of the same connected component.\n\n## Format and use\n\n\`setup-karst-lung-organ.json\` is an ordinary strict Setup-v2 authored starting-map document with ordered, losslessly coalesced nonoverlapping [x,y,width,height,material-ID] rectangles. The array reconstructs the **entire** initial material plane; Empty cells are implicit, with no recipe-dependent background. Use **Shared Workbench -> Load start** after installing the JSON as \`user://workbench/setup-karst-lung-organ.json\` under the **matching accepted CyberSand build**. The installed native rectangle capacity may differ from source; check against the actual GDExtension first. A saved starting map does not persist evolved physics.\n\nAll materials are inert immovable solids under the pinned material catalogue. No false falling-stone supports, liquids, burning ecology or self-propagating cells. Organic form is mineral/timber structure; simulated biological dynamics are not claimed.\n\n## Provenance and repeatability\n\n- Fixed seed: \`0x4b415253\`.\n- Deterministic builder: \`build-karst-lung-organ.js\` (Node.js; no dependencies); writes all artifacts to its optional first directory argument or its own directory.\n- Builder SHA-256: \`${receipt.source_sha256}\`.\n- Full material plane SHA-256: \`${receipt.grid_sha256}\`.\n- Setup JSON SHA-256: \`${receipt.json_sha256}\`.\n- Full-grid parity: ${diffs} mismatches, ${overlaps} overlapping rectangles.\n- PNG: uncompressed-deflate, 8-bit indexed palette; palette pixel **index** is real CyberSand material ID, not illustration. All ${Object.keys(pngs).length} images independently decoded and checked for PNG CRC/Adler/index fidelity.\n- Current CyberSand accepted \`main\`: \`${receipt.source_authority.cybersand_main}\`.\n\n## Visual and independent acceptance\n\nThe full \`overview.png\` is exactly 1024x2048 physical cells, one actual material ID per PNG pixel. Six \`NN-*.png\` files are native 1:1 crops of that same grid; \`thumbnail.png\` is a nearest-neighbor overview only. See \`qualification.json\` for exact histogram, full-cell source/PNG hashes, connectivity, basins and static/native truth.\n\n**DRAFT / HOLD. NATIVE-UNTESTED.** No Windows/Godot install, actor input/collision, Rapier progression or save/fresh-process reopen is represented as performed; Shepherd and independent auditor assessment remain outstanding.\n\nTwo completed self-critique repairs are authored into the deterministic generator itself: extra asymmetric roots and living rim facies in the crown, plus a twelve-rib nonrepeating crystal pressure-bell composition in the deep chamber. Neither changes another repo or any reference artwork.\n`;
+  const readme=`# The Karst Lung Organ\n\n**Original CyberSand material-cell canvas, 1024 x 2048, orthographic side elevation.**\n\n## Original spatial thesis\n\nA petrified underground respiratory organ formed naturally over geological time: a continuous curved breathing shaft ventilates offset limestone lobes. Old roots entered from the collapsed skylight and were gradually mineralized into living-looking timber arteries. The porous spore organ, fossil atrium, calcite observatory, moonwell and basal resonating bell retain distinct geological identities. This is a navigable 2D level, not an image-to-map tracing.\n\n## Artistic structure\n\n1. **Sunken Crown (y 0-390):** broken skylight and asymmetric suspending oak/bamboo root arteries; inhabited negative space beneath the fracture.\n2. **Root Orchard and Spore Organ (y 390-820):** intertwined soil/lichen west lobe against luminous eastern spore pockets and deliberately different shapes of perforation.\n3. **Fossil Atrium and Calcite Observatory (y 820-1220):** chalk pressure ribs in the west, quieter opposite mineral observatory and a large alternate right-hand bypass.\n4. **Anastomosis and Moonwell (y 1220-1700):** branching basalt vessels against nacre/quartz eastern mineral garden; forms a side loop below the central obstruction region.\n5. **Deep Bell (y 1700-2048):** massive dry calcite resonator and asymmetrical embedded rib crests, with a traversable lower hollow.\n\n## Exact-centre flight map\n\n\`\`\`text\n                         x=0                 x=1024\n y=0          ROCK ROOTS   / SKYLIGHT /    ROCK\n                    +------ MIDGE (507,133) ------+\n                    |        CROWN               |\n y=535       ROOT ORCHARD == MAIN ORGAN == SPORE ORGAN y=623\n                    \\\\       ||         //\n y=978       FOSSIL ATRIUM == SHAFT == CALCITE OBS. y=1028\n                    \\\\    [central test block]  //\n y=1410      ANASTOMOSIS === SHAFT ====== MOONWELL y=1500\n                         \\\\       //\n y=1826           ==== DEEP BELL ====\n y=2048                 ROOTED ROCK\n\`\`\`\n\nExact destination centres (no radius or nearest-point waivers):\n\n${sites.map(s=>`- ${s[0]}: (${s[1][0]}, ${s[1][1]})`).join("\n")}\n\nThree conservative axis-aligned Midge envelopes (19 x 15, 23 x 19, 31 x 27) are flood-tested at every exact named site. The lower route is independently tested after blocking x300..708/y965..1148 in actor-centre space. The main shaft and at least one non-central bypass remain part of the same connected component.\n\n## Format and use\n\n\`setup-karst-lung-organ.json\` is an ordinary strict Setup-v2 authored starting-map document with ordered, losslessly coalesced nonoverlapping [x,y,width,height,material-ID] rectangles. The array reconstructs the **entire** initial material plane; Empty cells are implicit, with no recipe-dependent background. Use **Shared Workbench -> Load start** after installing the JSON as \`user://workbench/setup-karst-lung-organ.json\` under the **matching accepted CyberSand build**. The installed native rectangle capacity may differ from source; check against the actual GDExtension first. A saved starting map does not persist evolved physics.\n\nEvery nonempty starting cell is an immovable solid, but the actual accepted physics catalogue marks **OakTimber (46), PinePlanks (81), OakLog (83), Bamboo (86), Driftwood (88), Wicker (92), and MossWall (97) as Combustible**, not inert. Mineral structural supports are RuleKernel::None solids. Organic accents are unignited at spawn; subsequent ignition would change them. No combustion or other dynamic behaviour was natively simulated in this qualification. No false falling-stone supports, liquids, burning ecology or self-propagating cells. Organic form is mineral/timber structure; simulated biological dynamics are not claimed.\n\n## Provenance and repeatability\n\n- Fixed seed: \`0x4b415253\`.\n- Deterministic builder: \`build-karst-lung-organ.js\` (Node.js; no dependencies); writes all artifacts to its optional first directory argument or its own directory.\n- Builder SHA-256: \`${receipt.source_sha256}\`.\n- Full material plane SHA-256: \`${receipt.grid_sha256}\`.\n- Setup JSON SHA-256: \`${receipt.json_sha256}\`.\n- Full-grid parity: ${diffs} mismatches, ${overlaps} overlapping rectangles.\n- PNG: uncompressed-deflate, 8-bit indexed palette; palette pixel **index** is real CyberSand material ID, not illustration. All ${Object.keys(pngs).length} images independently decoded and checked for PNG CRC/Adler/index fidelity.\n- Current CyberSand accepted \`main\`: \`${receipt.source_authority.cybersand_main}\`.\n\n## Visual and independent acceptance\n\nThe full \`overview.png\` is exactly 1024x2048 physical cells, one actual material ID per PNG pixel. Six \`NN-*.png\` files are native 1:1 crops of that same grid; \`thumbnail.png\` is a nearest-neighbor overview only. See \`qualification.json\` for exact histogram, full-cell source/PNG hashes, connectivity, basins and static/native truth.\n\n**DRAFT / HOLD. NATIVE-UNTESTED.** No Windows/Godot install, actor input/collision, Rapier progression or save/fresh-process reopen is represented as performed; Shepherd and independent auditor assessment remain outstanding.\n\nR3 independently repaired seven formerly near-empty true-cell districts (crown, root orchard, spore organ, fossil amphitheatre, calcite observatory, dry moonwell, deep bell), plus supported anastomosis; each has large/midscale physical architecture and distinct silhouettes rather than added outline whiskers. Core airway and blocked-centre bypass remain open. No source/reference image or other repository is used.\n`;
   artifacts["setup-karst-lung-organ.json"]=ascii(json);
   artifacts["build-karst-lung-organ.js"]=ascii(generatorSource);
   artifacts["README.md"]=ascii(readme);

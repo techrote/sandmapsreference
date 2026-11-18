@@ -48,17 +48,17 @@ Three conservative axis-aligned Midge envelopes (19 x 15, 23 x 19, 31 x 27) are 
 
 `setup-karst-lung-organ.json` is an ordinary strict Setup-v2 authored starting-map document with ordered, losslessly coalesced nonoverlapping [x,y,width,height,material-ID] rectangles. The array reconstructs the **entire** initial material plane; Empty cells are implicit, with no recipe-dependent background. Use **Shared Workbench -> Load start** after installing the JSON as `user://workbench/setup-karst-lung-organ.json` under the **matching accepted CyberSand build**. The installed native rectangle capacity may differ from source; check against the actual GDExtension first. A saved starting map does not persist evolved physics.
 
-All materials are inert immovable solids under the pinned material catalogue. No false falling-stone supports, liquids, burning ecology or self-propagating cells. Organic form is mineral/timber structure; simulated biological dynamics are not claimed.
+Every nonempty starting cell is an immovable solid, but the actual accepted physics catalogue marks **OakTimber (46), PinePlanks (81), OakLog (83), Bamboo (86), Driftwood (88), Wicker (92), and MossWall (97) as Combustible**, not inert. Mineral structural supports are RuleKernel::None solids. Organic accents are unignited at spawn; subsequent ignition would change them. No combustion or other dynamic behaviour was natively simulated in this qualification. No false falling-stone supports, liquids, burning ecology or self-propagating cells. Organic form is mineral/timber structure; simulated biological dynamics are not claimed.
 
 ## Provenance and repeatability
 
 - Fixed seed: `0x4b415253`.
 - Deterministic builder: `build-karst-lung-organ.js` (Node.js; no dependencies); writes all artifacts to its optional first directory argument or its own directory.
-- Builder SHA-256: `1c23dd56bdc6690d348b7a4c3bac36bf9a49a180a373c50c0a331076c4ed4ae3`.
-- Full material plane SHA-256: `746c01a198825965f9ef74d04b04a68016733b4d2bdc68c21fbbaf5e15a8a90b`.
-- Setup JSON SHA-256: `512e099f8f9b2c46888c0ac0f8a936afc0490fb3fe0d2d8fb97cc83b5830445e`.
+- Builder SHA-256: `e0359c3dba8a9ab9384d6dbbc793cc680671d24e93921ecb776290d67a7e101f`.
+- Full material plane SHA-256: `a18cd987873590d721d4245b9fba62adf5ea9eccb55c32463ee9b351b384bb18`.
+- Setup JSON SHA-256: `74d5ff7554a4dcdbf8c13d30d4bab0f8b8eb702d95edccffac56ba906661c11d`.
 - Full-grid parity: 0 mismatches, 0 overlapping rectangles.
-- PNG: uncompressed-deflate, 8-bit indexed palette; palette pixel **index** is real CyberSand material ID, not illustration. All 8 images independently decoded and checked for PNG CRC/Adler/index fidelity.
+- PNG: uncompressed-deflate, 8-bit indexed palette; palette pixel **index** is real CyberSand material ID, not illustration. All 11 images independently decoded and checked for PNG CRC/Adler/index fidelity.
 - Current CyberSand accepted `main`: `018bd09503d7f079ddac52e225c2f7daf8d678bf`.
 
 ## Visual and independent acceptance
@@ -67,4 +67,4 @@ The full `overview.png` is exactly 1024x2048 physical cells, one actual material
 
 **DRAFT / HOLD. NATIVE-UNTESTED.** No Windows/Godot install, actor input/collision, Rapier progression or save/fresh-process reopen is represented as performed; Shepherd and independent auditor assessment remain outstanding.
 
-Two completed self-critique repairs are authored into the deterministic generator itself: extra asymmetric roots and living rim facies in the crown, plus a twelve-rib nonrepeating crystal pressure-bell composition in the deep chamber. Neither changes another repo or any reference artwork.
+R3 independently repaired seven formerly near-empty true-cell districts (crown, root orchard, spore organ, fossil amphitheatre, calcite observatory, dry moonwell, deep bell), plus supported anastomosis; each has large/midscale physical architecture and distinct silhouettes rather than added outline whiskers. Core airway and blocked-centre bypass remain open. No source/reference image or other repository is used.

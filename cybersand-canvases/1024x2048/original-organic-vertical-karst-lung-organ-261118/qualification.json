@@ -14,41 +14,55 @@
     "material_header_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
     "midge_definition_blob": "228399e38a0e0ab215b9f48698edce67a7a35799"
   },
-  "source_sha256": "1c23dd56bdc6690d348b7a4c3bac36bf9a49a180a373c50c0a331076c4ed4ae3",
-  "grid_sha256": "746c01a198825965f9ef74d04b04a68016733b4d2bdc68c21fbbaf5e15a8a90b",
-  "json_sha256": "512e099f8f9b2c46888c0ac0f8a936afc0490fb3fe0d2d8fb97cc83b5830445e",
+  "source_sha256": "e0359c3dba8a9ab9384d6dbbc793cc680671d24e93921ecb776290d67a7e101f",
+  "grid_sha256": "a18cd987873590d721d4245b9fba62adf5ea9eccb55c32463ee9b351b384bb18",
+  "json_sha256": "74d5ff7554a4dcdbf8c13d30d4bab0f8b8eb702d95edccffac56ba906661c11d",
   "exact_cell_count": 2097152,
-  "painted_cells": 673543,
-  "empty_cells": 1423609,
-  "rectangle_count": 15263,
+  "painted_cells": 862322,
+  "empty_cells": 1234830,
+  "rectangle_count": 25929,
   "rectangle_limit_source": 32768,
   "native_installed_rectangle_capacity": "UNVERIFIED",
-  "setup_bytes": 274828,
+  "setup_bytes": 471464,
   "setup_limit_bytes": 1048576,
   "full_replay_mismatches": 0,
   "rectangle_overlaps": 0,
-  "disconnected_solid_cells_pruned": 17357,
+  "disconnected_solid_cells_pruned": 21649,
   "material_histogram": {
-    "0": 1423609,
-    "38": 73131,
-    "39": 70617,
-    "40": 99551,
-    "41": 15436,
-    "42": 64899,
-    "49": 33974,
-    "56": 10099,
-    "77": 834,
-    "83": 22613,
-    "86": 7113,
-    "97": 5044,
-    "98": 8246,
-    "99": 4172,
-    "100": 113200,
-    "101": 121917,
-    "106": 6794,
-    "122": 15903
+    "0": 1234830,
+    "38": 92133,
+    "39": 77500,
+    "40": 125402,
+    "41": 13249,
+    "42": 64918,
+    "46": 295,
+    "49": 33340,
+    "56": 5166,
+    "77": 1039,
+    "83": 44225,
+    "86": 7523,
+    "97": 29691,
+    "98": 40375,
+    "99": 11928,
+    "100": 138588,
+    "101": 125630,
+    "106": 17247,
+    "119": 1123,
+    "122": 32950
   },
-  "all_nonempty_materials_immovable_inert_solid": true,
+  "all_nonempty_materials_immovable_inert_solid": false,
+  "all_nonempty_materials_immovable_solid": true,
+  "combustible_organic_material_ids": [
+    46,
+    81,
+    83,
+    86,
+    88,
+    92,
+    97
+  ],
+  "combustible_organic_cell_count": 81734,
+  "essential_geological_foundations_inert": true,
   "fluid_cells": 0,
   "powder_cells": 0,
   "midge_hull_source": [
@@ -59,7 +73,7 @@
     {
       "width": 19,
       "height": 15,
-      "reached": 1272576,
+      "reached": 1011558,
       "sites": [
         {
           "name": "Crown skylight",
@@ -122,7 +136,7 @@
     {
       "width": 23,
       "height": 19,
-      "reached": 1245142,
+      "reached": 980174,
       "sites": [
         {
           "name": "Crown skylight",
@@ -185,7 +199,7 @@
     {
       "width": 31,
       "height": 27,
-      "reached": 1194940,
+      "reached": 925716,
       "sites": [
         {
           "name": "Crown skylight",
@@ -256,7 +270,7 @@
     "conservative_31x27": {
       "width": 31,
       "height": 27,
-      "reached": 1120242,
+      "reached": 854520,
       "sites": [
         {
           "name": "Crown skylight",
@@ -326,7 +340,7 @@
     "overview.png": {
       "width": 1024,
       "height": 2048,
-      "sha256": "90bb5e68fbf5a1cbbb1c27e170571a0c20186a718a0f0bc8dcdae3b553b5dd6b",
+      "sha256": "90f9bfddac1a857e44b106dca1aa3362d7a0dd25bb0e40d94b9b089b35a1f9b5",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
@@ -335,13 +349,27 @@
     "01-sink-crown.png": {
       "width": 384,
       "height": 320,
-      "sha256": "3a42c1cf720dea090cc28068ac4b14ff554ae7ec124cb7225cd3fc1e04aec9df",
+      "sha256": "f934abc947a83b13cedf59f0450bcc07cfc99bb448a489fbcf25cb13b9f1fcd9",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
       "crop": [
-        320,
-        45,
+        70,
+        90,
+        384,
+        320
+      ]
+    },
+    "01b-crown-east.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "39544b11e92a91d93ce88ba16a2d9124861a76391b9cd07d6d671edd2662cca8",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        565,
+        75,
         384,
         320
       ]
@@ -349,13 +377,13 @@
     "02-root-orchard.png": {
       "width": 384,
       "height": 320,
-      "sha256": "956d755cdf4f9d26b3a0e3e729b59aebbe17a357a457339390f2ac60c2d41fa9",
+      "sha256": "adbafe9ca257c622016691963933c588cfe3225870a5f1443f65c6f18c11fa35",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
       "crop": [
         48,
-        402,
+        430,
         384,
         320
       ]
@@ -363,13 +391,13 @@
     "03-spore-organ.png": {
       "width": 384,
       "height": 320,
-      "sha256": "23259f42565e74c4e6bd473706f02d99787ac76714ac66e32cc20cd44b9a9a49",
+      "sha256": "565b7b7f9758ac34015830b870136117d141f374b33b6f4b1d174b7822ebfafd",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
       "crop": [
-        580,
-        476,
+        606,
+        477,
         384,
         320
       ]
@@ -377,13 +405,27 @@
     "04-fossil-atrium.png": {
       "width": 384,
       "height": 320,
-      "sha256": "699ab38ac042e555e53174c241839416ec6caff3359d92601882f89e0721ed4e",
+      "sha256": "7a4ac147c07b4650cfca966ee3189fbecb1dd379c7110ef3a4e1b5f8ef34f704",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
       "crop": [
-        95,
-        822,
+        78,
+        820,
+        384,
+        320
+      ]
+    },
+    "04b-calcite-observatory.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "e4b7a22914d6d9e3278abfbacc3388209108f2b3622e3abbc032791c01d9be5e",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        630,
+        860,
         384,
         320
       ]
@@ -391,13 +433,27 @@
     "05-moonwell-garden.png": {
       "width": 384,
       "height": 320,
-      "sha256": "cedb9783086ebb7dc096e145db0c27526e4c177972da8805ad7348801ff2c684",
+      "sha256": "a4d59d2c59f9e83b366a0244846c12ab665aecb791dfb2d767d5b321dc1e09a8",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
       "crop": [
-        584,
-        1300,
+        613,
+        1345,
+        384,
+        320
+      ]
+    },
+    "05b-anastomosis.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "4c68cf53fa73fcddde884fc670837c44a5f09fd6986533fc4b1093786b290db5",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        45,
+        1280,
         384,
         320
       ]
@@ -405,13 +461,13 @@
     "06-deep-bell.png": {
       "width": 384,
       "height": 320,
-      "sha256": "fcc5bd2db3246fdd793ab45e9453d7a9678909ca0ca6850884d669b085003591",
+      "sha256": "38ac4420ad63dde8fec90fd3780350181faea3ccdf2f2d40c7ddce0ab3b84bab",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
       "crop": [
         320,
-        1685,
+        1710,
         384,
         320
       ]
@@ -419,7 +475,7 @@
     "thumbnail.png": {
       "width": 256,
       "height": 512,
-      "sha256": "ab47e59e662fbc43b6d6dfc16cc45103fa84d5a1caedc0be765bc6aac80755e0",
+      "sha256": "be2d1ab774dc1bd3357c77e0f26f16e384e00f2abf29b80ac0683514bf23b801",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
@@ -431,8 +487,12 @@
   "native_input_collision": "NATIVE-UNTESTED",
   "native_save_fresh_process_reopen": "NATIVE-UNTESTED",
   "creative_revisions": [
-    "Crown macro silhouette received asymmetrical real-cell root arteries and lichen rim facies.",
-    "Basal deep bell received twelve nonidentical anchored quartz ribs and individually seeded crystalline deposits."
+    "R3 Sunken Crown: monumental asymmetrical anchored root vaults and platforms, clear central arrival.",
+    "R3 Root Orchard: thick coherent rooted tree, buttress arches, visitable tiered shelves and differentiated crowns.",
+    "R3 Spore Organ: large porous, rim-backed clustered sponge masses with open circular cavities and collection ledges.",
+    "R3 Fossil Atrium and Calcite Observatory: grounded stepped fossil seating, unique supported observation portico and crystals.",
+    "R3 Anastomosis and Moonwell: branching left arterial gallery, nested dry well terraces, clear mineral socket and outcrops.",
+    "R3 Deep Bell: monumental anchored resonator shell, mineral clapper, and two grounded lower platforms."
   ],
   "limitations": [
     "No matching installed Godot/native runtime was executed.",
