@@ -1,0 +1,491 @@
+{
+  "schema": "cybersand-original-canvas-qualification-v1",
+  "identity": {
+    "origin": "independent-original-design",
+    "title": "Thunderclap Switchyard",
+    "lane": "original/racing-wide",
+    "target": [
+      2048,
+      1024
+    ],
+    "seed": 539365656,
+    "cybersand_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+    "material_catalogue_git_blob": "d7a47d60721598a16589daf177a6ff4401b84b43",
+    "reference_artwork": null
+  },
+  "actor": {
+    "model": "midge",
+    "definition_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "authored_hull": [
+      4,
+      3
+    ],
+    "spawn": [
+      116,
+      445
+    ],
+    "boost": 1.8
+  },
+  "gates": {
+    "exact_extent": "PASS",
+    "replay_all_cells": "PASS",
+    "replay_mismatches": 0,
+    "rectangle_overlaps": 0,
+    "rectangles": 7243,
+    "source_rectangle_limit": 32768,
+    "source_legacy_fallback_capacity": 4096,
+    "installed_bridge_capacity": "NOT TESTED",
+    "json_bytes": 137340,
+    "source_json_limit": 1048576,
+    "exact_material_cell_count": 2097152,
+    "static_clearance": {
+      "19x15": {
+        "connected_actor_centres": 1027331,
+        "exact_named_sites_reached": 14,
+        "named_site_count": 14,
+        "sites": [
+          [
+            "Launch cradle",
+            true
+          ],
+          [
+            "Dispatch roof bypass",
+            true
+          ],
+          [
+            "Split-canyon high",
+            true
+          ],
+          [
+            "West dive shaft",
+            true
+          ],
+          [
+            "West undercroft",
+            true
+          ],
+          [
+            "Iris west approach",
+            true
+          ],
+          [
+            "Iris central chamber",
+            true
+          ],
+          [
+            "Iris lower transfer",
+            true
+          ],
+          [
+            "East conductor",
+            true
+          ],
+          [
+            "Glassstorm viaduct",
+            true
+          ],
+          [
+            "Eastern underpass",
+            true
+          ],
+          [
+            "Catch cliff",
+            true
+          ],
+          [
+            "Brake finish",
+            true
+          ],
+          [
+            "Recovery basin",
+            true
+          ]
+        ]
+      },
+      "23x19": {
+        "connected_actor_centres": 916985,
+        "exact_named_sites_reached": 14,
+        "named_site_count": 14,
+        "sites": [
+          [
+            "Launch cradle",
+            true
+          ],
+          [
+            "Dispatch roof bypass",
+            true
+          ],
+          [
+            "Split-canyon high",
+            true
+          ],
+          [
+            "West dive shaft",
+            true
+          ],
+          [
+            "West undercroft",
+            true
+          ],
+          [
+            "Iris west approach",
+            true
+          ],
+          [
+            "Iris central chamber",
+            true
+          ],
+          [
+            "Iris lower transfer",
+            true
+          ],
+          [
+            "East conductor",
+            true
+          ],
+          [
+            "Glassstorm viaduct",
+            true
+          ],
+          [
+            "Eastern underpass",
+            true
+          ],
+          [
+            "Catch cliff",
+            true
+          ],
+          [
+            "Brake finish",
+            true
+          ],
+          [
+            "Recovery basin",
+            true
+          ]
+        ]
+      },
+      "31x27": {
+        "connected_actor_centres": 846425,
+        "exact_named_sites_reached": 14,
+        "named_site_count": 14,
+        "sites": [
+          [
+            "Launch cradle",
+            true
+          ],
+          [
+            "Dispatch roof bypass",
+            true
+          ],
+          [
+            "Split-canyon high",
+            true
+          ],
+          [
+            "West dive shaft",
+            true
+          ],
+          [
+            "West undercroft",
+            true
+          ],
+          [
+            "Iris west approach",
+            true
+          ],
+          [
+            "Iris central chamber",
+            true
+          ],
+          [
+            "Iris lower transfer",
+            true
+          ],
+          [
+            "East conductor",
+            true
+          ],
+          [
+            "Glassstorm viaduct",
+            true
+          ],
+          [
+            "Eastern underpass",
+            true
+          ],
+          [
+            "Catch cliff",
+            true
+          ],
+          [
+            "Brake finish",
+            true
+          ],
+          [
+            "Recovery basin",
+            true
+          ]
+        ]
+      }
+    },
+    "bypass_test": {
+      "blocked_actor_centre_rectangle": [
+        900,
+        330,
+        1110,
+        554
+      ],
+      "envelope": [
+        31,
+        27
+      ],
+      "connected_actor_centres": 802854,
+      "reached": [
+        "Launch cradle",
+        "Dispatch roof bypass",
+        "Split-canyon high",
+        "West dive shaft",
+        "West undercroft",
+        "Iris west approach",
+        "Iris lower transfer",
+        "East conductor",
+        "Glassstorm viaduct",
+        "Eastern underpass",
+        "Catch cliff",
+        "Brake finish",
+        "Recovery basin"
+      ],
+      "blocked_internal_site": "Iris central chamber",
+      "finish_reached": true
+    },
+    "image_checks": "PNG signatures, IHDR 4-bit indexed, chunk CRC32, zlib stored-block integrity, Adler32, IEND, 100% material-index pixel parity PASS for all six",
+    "native_workbench": "NATIVE-UNTESTED",
+    "native_input": "NATIVE-UNTESTED",
+    "rapier_progression": "NATIVE-UNTESTED",
+    "native_collision": "NATIVE-UNTESTED",
+    "save_reopen": "NATIVE-UNTESTED"
+  },
+  "site_coordinates": [
+    {
+      "name": "Launch cradle",
+      "x": 116,
+      "y": 445
+    },
+    {
+      "name": "Dispatch roof bypass",
+      "x": 203,
+      "y": 329
+    },
+    {
+      "name": "Split-canyon high",
+      "x": 617,
+      "y": 356
+    },
+    {
+      "name": "West dive shaft",
+      "x": 443,
+      "y": 612
+    },
+    {
+      "name": "West undercroft",
+      "x": 614,
+      "y": 752
+    },
+    {
+      "name": "Iris west approach",
+      "x": 841,
+      "y": 445
+    },
+    {
+      "name": "Iris central chamber",
+      "x": 1037,
+      "y": 448
+    },
+    {
+      "name": "Iris lower transfer",
+      "x": 1072,
+      "y": 753
+    },
+    {
+      "name": "East conductor",
+      "x": 1323,
+      "y": 454
+    },
+    {
+      "name": "Glassstorm viaduct",
+      "x": 1506,
+      "y": 453
+    },
+    {
+      "name": "Eastern underpass",
+      "x": 1571,
+      "y": 756
+    },
+    {
+      "name": "Catch cliff",
+      "x": 1826,
+      "y": 449
+    },
+    {
+      "name": "Brake finish",
+      "x": 1943,
+      "y": 446
+    },
+    {
+      "name": "Recovery basin",
+      "x": 1883,
+      "y": 767
+    }
+  ],
+  "material_histogram": {
+    "0": 1274672,
+    "49": 162307,
+    "58": 36723,
+    "62": 54739,
+    "100": 416205,
+    "101": 90673,
+    "113": 18657,
+    "117": 18689,
+    "120": 6520,
+    "122": 6217,
+    "123": 5779,
+    "128": 5971
+  },
+  "material_laws": {
+    "state": "all authored nonempty IDs validated against catalogue, current_rule_available true, movable false, kernel 0; no active water, powders, growth, reactions",
+    "used": {
+      "0": 1274672,
+      "49": 162307,
+      "58": 36723,
+      "62": 54739,
+      "100": 416205,
+      "101": 90673,
+      "113": 18657,
+      "117": 18689,
+      "120": 6520,
+      "122": 6217,
+      "123": 5779,
+      "128": 5971
+    }
+  },
+  "grid_sha256": "5806108c1df385375b00783c938ed526077318bc548c00faff6e85dc3b43920a",
+  "json_sha256": "bd84e3a13313911ebd605be627d12bb962030fcad66df6f2b88d9c40c2b838fc",
+  "pngs": [
+    {
+      "file": "overview.png",
+      "region": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 1049805,
+      "pixels": 2097152,
+      "material_pixels_verified": 2097152,
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "iend": "PASS",
+      "sha256": "da726bc24e195861db2f875f49083749972d6bb7fccd7eb457afa6051b60e825"
+    },
+    {
+      "file": "01-launch-cradle.png",
+      "region": [
+        0,
+        160,
+        512,
+        384
+      ],
+      "bytes": 98818,
+      "pixels": 196608,
+      "material_pixels_verified": 196608,
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "iend": "PASS",
+      "sha256": "5090457e4b20b04e8866287f0869039b943dd1143de5d03c83115c17399180ce"
+    },
+    {
+      "file": "02-drift-canyon.png",
+      "region": [
+        384,
+        140,
+        512,
+        384
+      ],
+      "bytes": 98818,
+      "pixels": 196608,
+      "material_pixels_verified": 196608,
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "iend": "PASS",
+      "sha256": "d49b92f0cca561cf1f45bf2771dae8d7e1e4574e66d3c289bb0b77bd67c59ef9"
+    },
+    {
+      "file": "03-split-current-iris.png",
+      "region": [
+        760,
+        164,
+        512,
+        384
+      ],
+      "bytes": 98818,
+      "pixels": 196608,
+      "material_pixels_verified": 196608,
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "iend": "PASS",
+      "sha256": "4689b2201552b544691a351d2d314d9e4a0998ad904346677e3cdcbaf05e64a5"
+    },
+    {
+      "file": "04-glassstorm-viaduct.png",
+      "region": [
+        1240,
+        232,
+        512,
+        384
+      ],
+      "bytes": 98818,
+      "pixels": 196608,
+      "material_pixels_verified": 196608,
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "iend": "PASS",
+      "sha256": "2f8072a4598ade6cbf37e7b7355df9ff4e27db4215bcfb768e4428ce6ca2924b"
+    },
+    {
+      "file": "05-catch-recovery.png",
+      "region": [
+        1536,
+        540,
+        512,
+        384
+      ],
+      "bytes": 98818,
+      "pixels": 196608,
+      "material_pixels_verified": 196608,
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "iend": "PASS",
+      "sha256": "789d99834abb271e38d225c984fe2ca3c7b852e7ab019ae46d2ebfa9158c036c"
+    }
+  ],
+  "authoring_review": {
+    "initial_issues": [
+      "lower west dive/shaft functional site obstructed",
+      "central iris and launch composition too bare",
+      "underpass end recovery disconnected at 31x27",
+      "patterned oval geological bands over-repetitive"
+    ],
+    "repaired": [
+      "reopened 159-cell-wide west shaft",
+      "added founded machinery, signal hierarchy, asymmetric sensor structures, laboratory viewing stations and acceleration motifs",
+      "reopened catch-recovery lower return at 31x27",
+      "replaced oval pattern with nonrepeating strata"
+    ],
+    "remaining": [
+      "Static centreline connectivity is not a dynamic speed/collision playtest",
+      "No Godot/CyberDemoBridge installed in run environment",
+      "Visual checkpoints are landmarks, not wired timing triggers"
+    ]
+  }
+}
