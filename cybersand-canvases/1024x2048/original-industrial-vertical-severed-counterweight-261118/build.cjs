@@ -156,6 +156,16 @@ for(const [x,y] of [[115,520],[231,1030],[763,700],[838,1400],[845,1735],[524,28
  // status beacons intentionally outside 31x27 flight envelope
  lite(x+22,y-28,79);box(x+15,y-26,4,19,69);
 }
+// Field review repair: eliminate seemingly suspended fixtures with literal attachments.
+box(122,220,20,8,62);box(122,290,20,8,62);
+box(466,166,7,22,62);box(558,166,7,22,62);
+box(310,507,30,8,62);box(658,554,27,8,62);box(692,545,36,7,65);
+// A *sealed* static quench cistern, isolated from the right-hand flight exit;
+// replace the roof that the earlier clearance carve intentionally opened.
+box(719,1875,167,9,58);box(726,1884,153,3,65);
+for(let x=731;x<873;x+=29)box(x,1877,10,3,76);
+for(let x=720;x<884;x++){if(grid[1875*W+x]===0||grid[2005*W+x]===0)throw Error("Quench basin upper/lower boundary broken at "+x);}
+for(let y=1875;y<2006;y++){if(grid[y*W+720]===0||grid[y*W+883]===0)throw Error("Quench basin sidewall broken at "+y);}
 const HIST={};let occupied=0;for(const m of grid){HIST[m]=(HIST[m]||0)+1;if(m){occupied++;if(!INERT.has(m)&&m!==3)throw Error("Non-inert unexpected material "+m);}}
 if(!(HIST[3]>0))throw Error("Quench Water was expected in the sealed lower sump"); // this is fatal only if coolant is fully erased
 // Exact optimal by vertical coalescing of horizontal material runs.
