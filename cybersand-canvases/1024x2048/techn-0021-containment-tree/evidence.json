@@ -15,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 22640,
+  "rectangles": 22445,
   "rectangle_budget": 32768,
-  "json_bytes": 415531,
+  "json_bytes": 411671,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1286682,
+  "stamped_cells": 1287766,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -47,34 +47,34 @@
     127
   ],
   "material_counts": {
-    "0": 810470,
-    "39": 6052,
-    "40": 129402,
-    "42": 124062,
-    "49": 160490,
-    "50": 42244,
-    "52": 25921,
-    "53": 123581,
-    "54": 112994,
-    "58": 39016,
-    "62": 79332,
+    "0": 809386,
+    "39": 6046,
+    "40": 126421,
+    "42": 119223,
+    "49": 160294,
+    "50": 42213,
+    "52": 25478,
+    "53": 117740,
+    "54": 111759,
+    "58": 43403,
+    "62": 89885,
     "65": 2637,
-    "77": 2489,
-    "79": 9817,
-    "100": 211487,
-    "101": 144787,
-    "119": 21117,
+    "77": 2451,
+    "79": 10767,
+    "100": 210754,
+    "101": 144734,
+    "119": 22285,
     "120": 17089,
-    "121": 4688,
-    "122": 4476,
-    "123": 15430,
-    "127": 9571
+    "121": 5453,
+    "122": 4446,
+    "123": 4241,
+    "127": 20447
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 458933,
+  "connected_clearance_centres": 463927,
   "spawn": [
     369,
     95
@@ -317,7 +317,7 @@
         19,
         15
       ],
-      "legal_connected_centres": 458933,
+      "legal_connected_centres": 463927,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -327,7 +327,7 @@
         23,
         19
       ],
-      "legal_connected_centres": 421352,
+      "legal_connected_centres": 425760,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -337,7 +337,7 @@
         31,
         27
       ],
-      "legal_connected_centres": 347597,
+      "legal_connected_centres": 351015,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -419,30 +419,28 @@
   "last_rework": {
     "worker": "B",
     "date": "2026-11-18",
-    "assigned_head": "92046cc4099efede56adc95d382353625b3d85ca",
-    "scope": "source-scale inhabited horizontal gallery, wider asymmetric luminous membrane and authored lower service detail",
-    "physical_cells_changed": 69709,
-    "added_cells": 16988,
-    "excavated_cells": 3217,
-    "recoloured_cells": 49504,
+    "assigned_head": "75171aba712960963ae6f886ff7d5f5d4ec4c5e4",
+    "scope": "source-scale horizontal living biosphere, connected two-level lab bays, lower independent service vault",
+    "changed": 72789,
+    "added": 12435,
+    "removed": 11351,
+    "recolored": 49003,
     "extent": [
       1024,
       2048
     ],
-    "rectangles": 22640,
-    "json_bytes": 415531,
-    "solid_components": 50,
-    "structural_probes": "6/6 cardinal rooted",
-    "source_jpeg": "authentic committed 640x360 directly viewed",
-    "original_png": "full-resolution source-PNG parity UNVERIFIED",
-    "exact_midge_sites": "24/24 all 3 conservative envelopes",
+    "rectangles": 22445,
+    "json_bytes": 411671,
+    "occupied_cells": 1287766,
+    "exact_sites": "24/24 at all 3 conservative hulls",
     "gantry_steps": [
       373,
       373,
       373
     ],
-    "original_air_hulls_preserved": "all old reachable 31x27 centres and exact material footprint",
-    "native": "NATIVE-UNTESTED"
+    "previous_31x27_air_hulls": "complete reached flight-volume union retained",
+    "source": "genuine unchanged JPEG directly viewed; original PNG pixel parity UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge capacity UNMEASURED"
   },
   "rework_b6": {
     "worker": "B",
@@ -502,9 +500,9 @@
     "native": "NATIVE-UNTESTED"
   },
   "structural_support": {
-    "solid_component_cells": 1239015,
-    "solid_components": 50,
-    "largest_component_cells": 1239015,
+    "solid_component_cells": 1241643,
+    "solid_components": 48,
+    "largest_component_cells": 1241643,
     "probes": [
       [
         600,
@@ -595,9 +593,9 @@
       1024,
       2048
     ],
-    "rectangles": 22640,
-    "json_bytes": 415531,
-    "solid_components": 50,
+    "rectangles": 22445,
+    "json_bytes": 411671,
+    "solid_components": 48,
     "structural_probes": "6/6 cardinal rooted",
     "source_jpeg": "authentic committed 640x360 directly viewed",
     "original_png": "full-resolution source-PNG parity UNVERIFIED",
@@ -609,5 +607,31 @@
     ],
     "original_air_hulls_preserved": "all old reachable 31x27 centres and exact material footprint",
     "native": "NATIVE-UNTESTED"
+  },
+  "rework_b10": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "75171aba712960963ae6f886ff7d5f5d4ec4c5e4",
+    "scope": "source-scale horizontal living biosphere, connected two-level lab bays, lower independent service vault",
+    "changed": 72789,
+    "added": 12435,
+    "removed": 11351,
+    "recolored": 49003,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22445,
+    "json_bytes": 411671,
+    "occupied_cells": 1287766,
+    "exact_sites": "24/24 at all 3 conservative hulls",
+    "gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "previous_31x27_air_hulls": "complete reached flight-volume union retained",
+    "source": "genuine unchanged JPEG directly viewed; original PNG pixel parity UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge capacity UNMEASURED"
   }
 }

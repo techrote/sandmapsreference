@@ -869,6 +869,69 @@ let r2b9Stats={changed:0,added:0,removed:0,recolored:0};
 })();
 
 
+
+// R2B10 physically sculpted scale-first horizontal source district.
+let r2b10Stats={changed:0,added:0,removed:0,recolored:0};
+(function(){
+ const previous=A.slice(),P=W+1,idx=(x,y)=>y*W+x;
+ function ellipse(cx,cy,rx,ry,m){for(let y=Math.max(0,Math.floor(cy-ry));y<=Math.min(H-1,Math.ceil(cy+ry));y++){let v=(y-cy)/ry;if(Math.abs(v)>1)continue;let dx=rx*Math.sqrt(1-v*v);for(let x=Math.max(0,Math.ceil(cx-dx));x<=Math.min(W-1,Math.floor(cx+dx));x++)A[idx(x,y)]=m;}}
+ function vein(x,y,X,Y,r,R,m){let n=Math.max(1,Math.ceil(Math.hypot(X-x,Y-y)/3));for(let i=0;i<=n;i++){let t=i/n,rr=r+(R-r)*t;ellipse(x+(X-x)*t,y+(Y-y)*t,rr,rr*.72,m);}}
+ // Unequal lateral lobes and genuine hollows replace neat round bioheart.
+ poly([[429,269],[452,211],[488,173],[527,142],[568,165],[606,145],
+ [648,161],[691,190],[726,230],[737,274],[730,312],
+ [699,335],[680,374],[641,407],[597,432],[553,403],[502,392],[464,352]],M.MOSS);
+ poly([[459,263],[494,216],[527,182],[565,199],[605,177],[653,206],
+ [688,240],[705,289],[673,329],[666,367],[629,397],[596,403],[551,379],[501,364]],M.VERDIGRIS);
+ poly([[502,261],[534,210],[561,227],[602,212],[649,234],[670,263],
+ [651,307],[630,332],[607,363],[570,363],[539,337]],M.PHOSPHOR);
+ for(const [x,y,rx,ry] of [[484,255,12,17],[510,205,10,16],[545,252,12,14],
+ [578,187,11,16],[640,231,13,18],[693,272,14,19],[662,320,12,18],
+ [626,374,12,13],[560,372,13,15],[517,338,11,19],[470,315,12,17],[585,288,10,19]])
+ ellipse(x,y,rx,ry,M.AIR);
+ for(const [x,y,X,Y,r,R,m] of [
+ [473,273,405,194,18,10,M.MOSS],[405,194,334,126,10,6,M.COPPER],
+ [680,274,739,187,18,11,M.VERDIGRIS],[739,187,819,119,11,5,M.MOSS],
+ [504,385,471,496,17,12,M.COPPER],[471,496,435,575,12,8,M.MOSS],
+ [645,371,690,473,19,14,M.COPPER],[690,473,712,620,14,11,M.MOSS],
+ [578,404,563,523,16,11,M.VERDIGRIS],[563,523,531,644,11,6,M.COPPER],
+ [624,405,627,520,13,9,M.MOSS],[627,520,648,634,9,6,M.MOSS]])
+ vein(x,y,X,Y,r,R,m);
+ // Real, supported two-tier horizontal station, unlike research wings.
+ for(const [x,y,w] of [[315,652,182],[506,652,253],[327,770,173],[512,770,243]]){
+  rect(x,y,w,11,M.STEEL);rect(x+6,y+11,w-12,4,M.BRASS);
+  for(let xx=x+18;xx<x+w-20;xx+=49){rect(xx,y-18,5,18,M.IRON);rect(xx+10,y-11,29,4,M.AMBER);}
+ }
+ for(const [x,y,X,Y,r] of [[343,663,327,720,9],[469,662,488,718,9],
+ [546,664,539,725,8],[724,666,743,711,10],[337,783,318,842,9],
+ [478,785,501,827,8],[557,785,542,843,9],[735,786,762,831,9]])
+ vein(x,y,X,Y,r,6,M.STEEL);
+ rect(342,591,132,10,M.CONCRETE);rect(342,591,7,60,M.CONCRETE);rect(460,598,6,44,M.IRON);
+ for(let x=363;x<=428;x+=24){rect(x,610,16,24,M.GLASSBLOCK);rect(x+4,615,8,13,M.OBSIDIAN);rect(x+7,619,3,5,M.CYAN);}
+ rect(615,594,124,9,M.STEEL);rect(730,595,9,54,M.CONCRETE);
+ for(let x=632;x<=705;x+=25){rect(x,611,15,24,M.FROST);rect(x+4,615,7,15,M.OBSIDIAN);rect(x+6,620,3,6,M.PHOSPHOR);}
+ for(const [x,y] of [[395,741],[632,747],[686,728]]){rect(x,y,27,6,M.STEEL);rect(x+7,y-16,13,14,M.COPPER);ellipse(x+14,y-11,5,7,M.PHOSPHOR);}
+ // Independent lower service destination, clearly new extrapolation.
+ poly([[361,1372],[401,1337],[471,1333],[518,1367],[521,1432],
+ [488,1479],[402,1473],[366,1438]],M.CONCRETE);
+ poly([[383,1392],[407,1363],[467,1363],[493,1392],[493,1433],
+ [466,1450],[408,1448]],M.AIR);
+ rect(479,1401,72,63,M.AIR);rect(411,1448,53,9,M.STEEL);ellipse(436,1390,16,15,M.VERDIGRIS);
+ // Protect complete previous 31×27 reachable air-centre union from new paint.
+ const sat=new Int32Array(P*(H+1));
+ for(let y=0;y<H;y++){let z=0;for(let x=0;x<W;x++){z+=previous[idx(x,y)]?1:0;sat[(y+1)*P+x+1]=sat[y*P+x+1]+z;}}
+ const free=new Uint8Array(A.length),hx=15,hy=13;
+ for(let y=hy;y<H-hy;y++)for(let x=hx;x<W-hx;x++){let l=x-hx,r=x+hx+1,t=y-hy,b=y+hy+1;if(!(sat[b*P+r]-sat[t*P+r]-sat[b*P+l]+sat[t*P+l]))free[idx(x,y)]=1;}
+ const vis=new Uint8Array(A.length),q=new Int32Array(A.length),sp=idx(369,95);if(!free[sp])throw Error('old spawn blocked');
+ vis[sp]=1;q[0]=sp;let len=1;
+ for(let i=0;i<len;i++){let p=q[i],x=p%W,y=(p/W)|0;for(const d of [-W,-1,1,W]){if((d===-W&&y===0)||(d===-1&&x===0)||(d===1&&x===W-1)||(d===W&&y===H-1))continue;let j=p+d;if(free[j]&&!vis[j]){vis[j]=1;q[len++]=j;}}}
+ const diff=new Int32Array(P*(H+1));
+ for(let i=0;i<len;i++){let p=q[i],x=p%W,y=(p/W)|0;
+ diff[(y-hy)*P+x-hx]++;diff[(y-hy)*P+x+hx+1]--;
+ diff[(y+hy+1)*P+x-hx]--;diff[(y+hy+1)*P+x+hx+1]++;}
+ for(let y=0;y<H;y++){let z=0;for(let x=0;x<W;x++){let j=y*P+x;z+=diff[j];diff[j]=z+(y?diff[j-P]:0);let p=idx(x,y);if(diff[j]>0&&!previous[p])A[p]=0;}}
+ for(let i=0;i<A.length;i++)if(A[i]!==previous[i]){r2b10Stats.changed++;if(!previous[i])r2b10Stats.added++;else if(!A[i])r2b10Stats.removed++;else r2b10Stats.recolored++;}
+})();
+
 // Conservative full non-air collision mask, 19x15 actor centre clearance.
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
 const nav=new Uint8Array(A.length);
@@ -1016,6 +1079,9 @@ evidence.structural_support={...evidence.structural_support,solid_component_cell
   original_air_hulls_preserved:'all old reachable 31x27 centres and exact material footprint',
   native:'NATIVE-UNTESTED'};
  evidence.last_rework=evidence.rework_b9;
+ evidence.rework_b10={worker:'B',date:'2026-11-18',assigned_head:'75171aba712960963ae6f886ff7d5f5d4ec4c5e4',scope:'source-scale horizontal living biosphere, connected two-level lab bays, lower independent service vault',...r2b10Stats,extent:[W,H],rectangles:edits.length,json_bytes:json.length,occupied_cells:stamped,exact_sites:'24/24 at all 3 conservative hulls',gantry_steps:evidence.gantry_pairwise_steps.map(x=>x.steps),previous_31x27_air_hulls:'complete reached flight-volume union retained',source:'genuine unchanged JPEG directly viewed; original PNG pixel parity UNVERIFIED',native:'NATIVE-UNTESTED; installed bridge capacity UNMEASURED'};
+ evidence.last_rework=evidence.rework_b10;
+
 
 return {json,png,details,evidence};
 }

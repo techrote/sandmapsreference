@@ -1,3 +1,13 @@
+## R2B10 · scale-first horizontally inhabited containment biosphere (18 November 2026)
+
+**OPEN Draft/HOLD; owner/Shepherd independent acceptance outstanding; NATIVE-UNTESTED.** B assignment `CANVAS-REWORK-B: 15 @ 75171aba712960963ae6f886ff7d5f5d4ec4c5e4`.
+
+Direct visual examination of the unchanged **640×360 source JPEG** confirms that it shows one compact horizontally layered facility flanking a dangling organic body, rather than an entire gigantic vertical world. R2B10 physically reconstructs the upper district's asymmetric green membrane and open pockets, widely branched root-hanging silhouette, supported two-tier horizontal west/east research gantries, differentiated analysis and vial bays, and a distinct entered lower rooted crypt in the **newly extrapolated** region. The map has not been stretched to fit the source image. All are real, reproducible material-cell edits, not screenshot decoration.
+
+**Exact proof:** 1024×2048, 72789 changed material cells (12435 added, 11351 excavated, 49003 recoloured), 22445/32768 nonoverlapping bounded rectangles, 411671/1048576 UTF-8 bytes, 1287766 occupied cells; exact complete material-grid replay zero mismatch. Fully bounded, exact 4-neighbour Midge **24/24 locations** at 19×15 / 23×19 / 31×27 (463927 / 425760 / 351015 reached centres) plus local gantry **373/373/373** steps. All old 31×27 reached air space preserved. Six supported solid probes in one 1241643-cell component; 48 other independent components to classify. New real-cell overview and five native 1:1 indexed PNGs regenerated; **2572288 independently checked source-cell PNG indices**, CRC32 and uncompressed deflate boundaries PASS. Original full-resolution PNG pixels UNVERIFIED; accepted source bridge 32768 rectangles, **installed** capability UNMEASURED; Godot/CyberDemoBridge/Rapier import, Midge input/collision and fresh-process save/reopen **NATIVE-UNTESTED**.
+
+---
+
 ## CURRENT R2B9 — actual-cell horizontal biosphere reconstruction (18 November 2026)
 
 **OPEN Draft/HOLD · NATIVE-UNTESTED · no merge/Ready/owner acceptance.**
