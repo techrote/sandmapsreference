@@ -465,6 +465,97 @@ function finishR2B7(A,W,H) {
  cord(1615,560,1618,651,22,24,M.V);
 }
 finishR2B7(A,W,H);
+
+// R2B8: hand-directed living bridge, rooted tree, carved guardian and return.
+// All output is actual material-cell geometry, not decorative sprite layers.
+function finishR2B8(A,W,H) {
+ const previous=A.slice(),P=W+1,idx=(x,y)=>y*W+x;
+ const M={AIR:0,LIME:38,GRANITE:40,COBBLE:41,MOSS:42,SLATE:49,BRONZE:52,BASALT:100,OBSIDIAN:101};
+ function box(x,y,w,h,m){let l=Math.max(0,Math.floor(x)),r=Math.min(W,Math.ceil(x+w)),t=Math.max(0,Math.floor(y)),b=Math.min(H,Math.ceil(y+h));for(let yy=t;yy<b;yy++)A.fill(m,yy*W+l,yy*W+r);}
+ function ell(cx,cy,rx,ry,m,solidOnly=false){for(let y=Math.max(0,Math.floor(cy-ry));y<=Math.min(H-1,Math.ceil(cy+ry));y++){let u=(y-cy)/ry;if(Math.abs(u)>1)continue;let dx=rx*Math.sqrt(1-u*u);for(let x=Math.max(0,Math.ceil(cx-dx));x<=Math.min(W-1,Math.floor(cx+dx));x++)if(!solidOnly||A[idx(x,y)])A[idx(x,y)]=m;}}
+ function vine(x,y,X,Y,r,R,m,solidOnly=false){let n=Math.max(1,Math.ceil(Math.hypot(X-x,Y-y)/3));for(let i=0;i<=n;i++){let t=i/n,rr=r+(R-r)*t;ell(x+(X-x)*t,y+(Y-y)*t,rr,rr*.78,m,solidOnly);}}
+ function poly(points,m){let top=Math.max(0,Math.floor(Math.min(...points.map(q=>q[1])))),end=Math.min(H-1,Math.ceil(Math.max(...points.map(q=>q[1]))));for(let y=top;y<=end;y++){let xs=[];for(let i=0;i<points.length;i++){let a=points[i],b=points[(i+1)%points.length];if((a[1]<=y&&b[1]>y)||(b[1]<=y&&a[1]>y))xs.push(a[0]+(y-a[1])*(b[0]-a[0])/(b[1]-a[1]));}xs.sort((a,b)=>a-b);for(let j=0;j+1<xs.length;j+=2)box(Math.ceil(xs[j]),y,Math.max(0,Math.floor(xs[j+1])-Math.ceil(xs[j])+1),1,m);}}
+ // Retain the existing bank-rooted bridge load path. Change its material
+ // anatomy first: no engineered parallel cord palette or regular comb spikes.
+ for(let y=650;y<850;y++)for(let x=780;x<1535;x++){
+  let k=idx(x,y),v=A[k];if(!v)continue;
+  let tissue=Math.sin(x*.017+y*.027)+.7*Math.sin(y*.073-x*.029);
+  if(v===M.GRANITE||v===M.BASALT||v===M.COBBLE||v===M.MOSS){
+   A[k]=tissue>.6?M.MOSS:tissue<-.75?M.BASALT:M.GRANITE;
+  }
+ }
+ // Continuous organic beam with asymmetrically differentiated bark/heartwood;
+ // short weighted aerial roots are not a repeated structural grid.
+ for(let x=755;x<=1555;x+=3){
+  let t=(x-755)/800,cy=656+49*Math.sin(Math.PI*t)-8*t+3*Math.sin(x*.037)+2*Math.sin(x*.091);
+  let radius=11+5*Math.sin(Math.PI*t)+2.4*Math.sin(x*.083);
+  ell(x,cy,radius+6,radius*.72+4,M.BASALT);
+  ell(x,cy-2,radius+1,radius*.48+2,M.GRANITE);
+  ell(x,cy+5,radius*.55,radius*.35,M.MOSS);
+ }
+ for(const c of [[840,681,864,754,12,5],[948,702,922,781,13,5],[1071,707,1090,786,13,4],
+ [1211,706,1187,780,11,4],[1338,693,1379,756,11,5],[1478,676,1497,730,12,4]])
+ vine(c[0],c[1],c[2],c[3],c[4],c[5],M.BASALT);
+ for(const c of [[785,664,875,694,6,3],[902,687,1016,713,5,3],
+ [1090,713,1204,704,6,4],[1274,700,1438,682,6,4]])
+ vine(...c,M.MOSS,true);
+ vine(738,657,819,683,22,19,M.BASALT);vine(1490,680,1600,654,22,29,M.GRANITE);
+ // Richly forked huge western old-growth trunk, rather than crossed spokes.
+ for(const c of [[392,312,307,214,23,9],[440,320,548,223,24,10],
+ [362,397,268,479,23,10],[480,379,596,448,22,10],
+ [409,297,355,142,19,7],[486,307,590,184,20,7],
+ [345,496,259,580,25,11]])vine(...c,M.BASALT);
+ for(const c of [[366,210,298,176,8,4],[530,220,591,168,9,4],
+ [272,489,224,543,10,4],[565,434,629,488,10,4]])vine(...c,M.MOSS);
+ // Unequal ancient shrine interiors carved in, not floating rectangles.
+ poly([[207,693],[232,662],[318,651],[378,680],[399,718],[378,786],[235,786],[206,752]],M.GRANITE);
+ poly([[235,701],[258,685],[318,678],[353,705],[350,749],[335,760],[250,760],[235,738]],M.AIR);
+ box(255,763,93,11,M.COBBLE);
+ for(const x of [268,308,338]){box(x,710,8,23,M.BRONZE);ell(x+4,699,6,5,M.MOSS);}
+ // Unlike vaulted eastern shrine archive, no obstructing full-height panel.
+ poly([[1791,788],[1818,760],[1868,744],[1926,760],[1955,796],[1954,868],[1789,869]],M.COBBLE);
+ poly([[1812,804],[1831,780],[1868,771],[1911,786],[1927,813],[1928,843],[1812,843]],M.AIR);
+ box(1816,847,105,11,M.GRANITE);
+ for(const x of [1833,1867,1904]){box(x,809,7,20,M.BRONZE);ell(x+3,797,7,6,M.MOSS);}
+ // Reconstruct a recognisable left-facing guardian as a true eroded head:
+ // forward brow, recessed ocular notch, projecting nose and defined jaw.
+ poly([[1615,425],[1653,383],[1696,366],[1744,389],[1766,424],
+ [1751,451],[1704,435],[1668,438],[1636,455]],M.GRANITE);
+ poly([[1603,462],[1632,443],[1669,452],[1680,468],[1652,481],
+ [1627,483],[1593,495]],M.COBBLE);
+ poly([[1624,481],[1667,481],[1696,506],[1702,535],[1662,545],
+ [1617,525],[1598,508]],M.BASALT);
+ ell(1642,443,16,9,M.OBSIDIAN,true);
+ ell(1640,442,6,4,M.AIR);
+ poly([[1607,509],[1651,515],[1689,536],[1730,543],[1721,553],
+ [1672,557],[1629,547]],M.COBBLE);
+ vine(1738,538,1781,584,24,18,M.GRANITE);
+ // Extrapolated lower rooted crypt, actual functional substrate and opening.
+ poly([[759,1547],[783,1518],[842,1494],[906,1512],[952,1564],
+ [959,1634],[941,1719],[902,1747],[813,1722],[757,1667]],M.BASALT);
+ poly([[798,1586],[831,1547],[873,1540],[913,1572],[927,1620],
+ [919,1688],[888,1709],[835,1696],[811,1658]],M.AIR);
+ box(783,1592,45,57,M.AIR);
+ box(837,1696,55,10,M.GRANITE);
+ for(const [x,y] of [[844,1601],[873,1572],[902,1606]])ell(x,y,7,9,M.MOSS);
+ vine(772,1590,722,1522,20,27,M.BASALT);
+ vine(778,1694,722,1747,21,27,M.GRANITE);
+ // Preserve all formerly visited, fully bounded Midge 31x27 air volumes.
+ // New solid cannot close a pre-existing route; old solid is never restored.
+ const sat=new Int32Array(P*(H+1));for(let y=0;y<H;y++){let z=0;for(let x=0;x<W;x++){z+=previous[idx(x,y)]?1:0;sat[(y+1)*P+x+1]=sat[y*P+x+1]+z;}}
+ const hx=15,hy=13,legal=new Uint8Array(A.length);
+ for(let y=hy;y<H-hy;y++)for(let x=hx;x<W-hx;x++){let l=x-hx,r=x+hx+1,t=y-hy,b=y+hy+1;if(!(sat[b*P+r]-sat[t*P+r]-sat[b*P+l]+sat[t*P+l]))legal[idx(x,y)]=1;}
+ const visit=new Uint8Array(A.length),Q=new Int32Array(A.length),src=idx(1024,454);
+ if(!legal[src])throw Error('R2B8 predecessor spawn obstructed');visit[src]=1;Q[0]=src;let N=1;
+ for(let i=0;i<N;i++){let j=Q[i],x=j%W,y=(j/W)|0;for(const d of [-W,-1,1,W]){if((d===-W&&y===0)||(d===-1&&x===0)||(d===1&&x===W-1)||(d===W&&y===H-1))continue;let k=j+d;if(legal[k]&&!visit[k]){visit[k]=1;Q[N++]=k;}}}
+ const diff=new Int32Array(P*(H+1));
+ for(let i=0;i<N;i++){let j=Q[i],x=j%W,y=(j/W)|0;
+ diff[(y-hy)*P+x-hx]++;diff[(y-hy)*P+x+hx+1]--;
+ diff[(y+hy+1)*P+x-hx]--;diff[(y+hy+1)*P+x+hx+1]++;}
+ for(let y=0;y<H;y++){let z=0;for(let x=0;x<W;x++){let j=y*P+x;z+=diff[j];diff[j]=z+(y?diff[j-P]:0);let k=idx(x,y);if(diff[j]>0&&!previous[k])A[k]=0;}}
+}
+finishR2B8(A,W,H);
+
 const spawn=[1024,454],loc=[
 ['Upper Open Ravine',[1024,454]],['West Upper Shrine',[315,590]],['West Upper Threshold',[604,589]],['West Root Landing',[491,850]],['West Deep Root Niche',[347,1137]],['West Middle Exit',[751,1141]],['West Terrace Chapel',[469,1367]],['West Lower Return',[596,1718]],
 ['Living Bridge West Air',[837,619]],['Living Bridge Mid-Air',[1050,617]],['Living Bridge East Air',[1450,613]],
