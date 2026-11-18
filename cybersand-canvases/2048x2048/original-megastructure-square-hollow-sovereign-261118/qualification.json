@@ -1,0 +1,301 @@
+{
+  "schema": "original-cybersand-canvas-qualification-v1",
+  "original": true,
+  "creative_source": "entirely authored original geometry; no repository source image",
+  "design": "The Hollow Sovereign — Nacre Freight Cliff / Broken Gravity Loom / Sky Sacristy / Mirror Meridian / Abyssal Shipyard / Waste-Heat Crypt",
+  "lane": "original/megastructure-square",
+  "seed": 638654545,
+  "extent": [
+    2048,
+    2048
+  ],
+  "engine_accepted_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+  "source_setup": "godot/scripts/workbench_setup.gd",
+  "source_midge": "godot/authoring/flyers/midge.json",
+  "midge_definition_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+  "source_material_catalogue": "materials/catalogue/generated/catalogue.shadow.hpp",
+  "material_catalogue_blob": "bdbac2c6861ec593634c897130e320741734c1c2",
+  "materials_law": "All nonzero IDs in this actual-cell grid: source material state 1 (solid), movable false, valid true, current_rule_available true, kernel 0. No water, reactive or granular materials.",
+  "material_ids": {
+    "49": "slate",
+    "58": "reinforced-concrete",
+    "62": "steel-plate",
+    "100": "basalt-columns",
+    "101": "obsidian",
+    "113": "zinc-sheet",
+    "117": "bare-iron",
+    "120": "glass-block",
+    "122": "quartz-crystal",
+    "123": "uranium-glass",
+    "128": "polymer-panel"
+  },
+  "actor": {
+    "id": 1,
+    "model": "midge",
+    "hull": [
+      4,
+      3
+    ],
+    "spawn": [
+      217,
+      987
+    ],
+    "boost": 1.8
+  },
+  "gates": {
+    "dimensions_exact": true,
+    "rectangles": 13715,
+    "rectangle_source_limit": 32768,
+    "setup_bytes": 266180,
+    "source_json_limit": 1048576,
+    "edits_count": 13715,
+    "source_edits_limit": 32768,
+    "replay_mismatches": 0,
+    "rectangle_overlap_cells": 0,
+    "material_pixel_count": 4194304,
+    "actor_full_envelope": {
+      "19x15": {
+        "component_centres": 2076917,
+        "exact_reachable": 18,
+        "expected": 18,
+        "missing": []
+      },
+      "23x19": {
+        "component_centres": 1985734,
+        "exact_reachable": 18,
+        "expected": 18,
+        "missing": []
+      },
+      "31x27": {
+        "component_centres": 1807799,
+        "exact_reachable": 18,
+        "expected": 18,
+        "missing": []
+      }
+    },
+    "alternate_route": {
+      "blocked_actor_center_region": [
+        961,
+        931,
+        1152,
+        1044
+      ],
+      "tested_envelope": "31x27",
+      "reached": [
+        "Magnet customs",
+        "West skyline hatch",
+        "Nacre foundry chamber",
+        "Freight lift junction",
+        "Western high slip",
+        "Loom aerial transfer",
+        "Underloom service",
+        "Bastion signal loft",
+        "Neon Meridian market",
+        "Eastern descending lift",
+        "Dock west portal",
+        "West keel interrogator",
+        "Reactor berth",
+        "East salt gate",
+        "Broken-spindle observation",
+        "Western crucible transfer",
+        "Bastion undercrypt"
+      ],
+      "unreachable": [
+        "Lost civic core"
+      ]
+    },
+    "fixed_seed_rebuild": "PASS exact JSON and all PNG artifact bytes (two independent executions)",
+    "png_validation": "PASS signature, IHDR, 4-bit palette, CRC32 each chunk, stored zlib deflate, Adler32, IEND, 100% material-index pixel parity for every image",
+    "installed_bridge_rectangle_capacity": "NOT TESTED. Source can admit 32768, but older bridge fallback is 4096.",
+    "native_workbench": "NATIVE-UNTESTED",
+    "native_rapier_simulation": "NATIVE-UNTESTED",
+    "physical_actor_input_and_collision": "NATIVE-UNTESTED",
+    "native_save_reopen": "NATIVE-UNTESTED"
+  },
+  "sites": [
+    {
+      "name": "Magnet customs",
+      "x": 217,
+      "y": 987
+    },
+    {
+      "name": "West skyline hatch",
+      "x": 291,
+      "y": 497
+    },
+    {
+      "name": "Nacre foundry chamber",
+      "x": 513,
+      "y": 751
+    },
+    {
+      "name": "Freight lift junction",
+      "x": 415,
+      "y": 1197
+    },
+    {
+      "name": "Western high slip",
+      "x": 745,
+      "y": 496
+    },
+    {
+      "name": "Loom aerial transfer",
+      "x": 1026,
+      "y": 712
+    },
+    {
+      "name": "Lost civic core",
+      "x": 1047,
+      "y": 989
+    },
+    {
+      "name": "Underloom service",
+      "x": 1046,
+      "y": 1486
+    },
+    {
+      "name": "Bastion signal loft",
+      "x": 1523,
+      "y": 497
+    },
+    {
+      "name": "Neon Meridian market",
+      "x": 1680,
+      "y": 986
+    },
+    {
+      "name": "Eastern descending lift",
+      "x": 1687,
+      "y": 1390
+    },
+    {
+      "name": "Dock west portal",
+      "x": 509,
+      "y": 1487
+    },
+    {
+      "name": "West keel interrogator",
+      "x": 837,
+      "y": 1733
+    },
+    {
+      "name": "Reactor berth",
+      "x": 1281,
+      "y": 1733
+    },
+    {
+      "name": "East salt gate",
+      "x": 1868,
+      "y": 986
+    },
+    {
+      "name": "Broken-spindle observation",
+      "x": 1210,
+      "y": 729
+    },
+    {
+      "name": "Western crucible transfer",
+      "x": 742,
+      "y": 1159
+    },
+    {
+      "name": "Bastion undercrypt",
+      "x": 1439,
+      "y": 1261
+    }
+  ],
+  "histogram": {
+    "0": 2681380,
+    "49": 178034,
+    "58": 324550,
+    "62": 235128,
+    "100": 369806,
+    "101": 188231,
+    "113": 13697,
+    "117": 117667,
+    "120": 18511,
+    "122": 3633,
+    "123": 9274,
+    "128": 54393
+  },
+  "gallery": [
+    {
+      "file": "overview.png",
+      "region": [
+        0,
+        0,
+        2048,
+        2048
+      ],
+      "size_bytes": 2099485,
+      "material_pixels_verified": 4194304,
+      "chunkCRC": "PASS",
+      "adler": "PASS"
+    },
+    {
+      "file": "01-nacre-freight-cliff.png",
+      "region": [
+        100,
+        318,
+        610,
+        580
+      ],
+      "size_bytes": 177615,
+      "material_pixels_verified": 353800,
+      "chunkCRC": "PASS",
+      "adler": "PASS"
+    },
+    {
+      "file": "02-spindle-and-sacristy.png",
+      "region": [
+        714,
+        80,
+        618,
+        724
+      ],
+      "size_bytes": 224580,
+      "material_pixels_verified": 447432,
+      "chunkCRC": "PASS",
+      "adler": "PASS"
+    },
+    {
+      "file": "03-meridian-bastion.png",
+      "region": [
+        1340,
+        314,
+        610,
+        590
+      ],
+      "size_bytes": 180675,
+      "material_pixels_verified": 359900,
+      "chunkCRC": "PASS",
+      "adler": "PASS"
+    },
+    {
+      "file": "04-split-market-artery.png",
+      "region": [
+        668,
+        864,
+        686,
+        516
+      ],
+      "size_bytes": 177639,
+      "material_pixels_verified": 353976,
+      "chunkCRC": "PASS",
+      "adler": "PASS"
+    },
+    {
+      "file": "05-abyssal-drydock.png",
+      "region": [
+        497,
+        1545,
+        742,
+        480
+      ],
+      "size_bytes": 178695,
+      "material_pixels_verified": 356160,
+      "chunkCRC": "PASS",
+      "adler": "PASS"
+    }
+  ]
+}
