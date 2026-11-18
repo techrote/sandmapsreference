@@ -2,6 +2,8 @@
 
 **2048 × 2048 real material cells · Draft / HOLD · PR #11.**
 
+**CURRENT HEAD R2A5** — four genuine grounded gallery repairs, 16/16 strict Midge sites at three envelopes; earlier rows are historical.
+
 **CURRENT HEAD R2A4:** 8,434 rectangles, 163,421-byte generated-start manifest, 16/16 strict sites at all three clearances, new grounded inhabited civic subway. Previous numeric tables below document earlier iterations; latest counts are in the R2A4 section. The archived R1 is preserved on main; this R2 rebuild exists on its separate assigned branch, with no source-art or engine edits.
 
 ## Ground truth and fidelity
@@ -118,3 +120,11 @@ The genuine, unchanged committed source JPEG (Git blob `8cf59bbba8c4a4037924490b
 **Authentic material gallery:** Rebuilt full [2048² physical plane](preview.png), [overview](overview.png), seven existing 1:1 crops including [old underpass footprint](crop-buried-corridor.png), and three **new true native 1:1 views**: [west archive](crop-west-archive.png), [central transfer](crop-subway-transfer.png), [east shelter](crop-east-subway.png). All **12 PNGs** were generated from the same exact grid; 7,864,320 sampled physical-cell pixel positions, PNG chunk CRC, indexed material palette were checked. **Independent PNG decompression/readback NOT RUN**, so do not claim binary pixel-parity independently verified. Deterministic JavaScript builder executed in V8; **standalone Node command was not run**.
 
 **NATIVE-UNTESTED:** no installed CyberDemoBridge rectangular capacity readback, Godot/Rapier import, native Midge control/collision, bounded physics progression or save/reopen. The accepted source advertises 32,768 rectangles; an older installed fallback may still limit acceptance to 4,096. OPEN Draft/HOLD for Shepherd and auditors; no merge, Ready or owner acceptance.
+
+## R2A5 — exact-HEAD grounded subway-gallery repair (18 November 2026)
+
+Starting HEAD `14a906daff7654f2104fd594aba2dd2b6f896adb`. Replaced **57,495 actual material cells**: four formerly detached gallery masses (44,558, 28,111, 23,836, 20,270 cells) now connect cardinally to real grounded civic masonry via four 38–42-cell-wide ribs. Four unequal, limestone-supported mezzanine/plinths contain distinct practical archive, inspection, machinery and mosaic exhibits. Upper civic promenade, large root tree, sails and genuine source composition retained. No automatic artistic rescaling.
+
+Final: **2048×2048**, **8,640/32,768** rectangles, **167,505/1,048,576** JSON bytes, **1,559,725** occupied cells, full-grid replay zero mismatches, SHA-256 `c200e9f5b189cc35d546e4f0d1817c3e3bf8e51a561743936518cbbbf1b03fca`, **1,470,876** cardinally ground-connected solid cells. Residual solid-component count **83**, largest detached component **5,976** cells; small historic detached trim remains. Strict unmodified 16/16 actor destinations pass at 19×15, 23×19, 31×27 (2,155,281 / 2,078,395 / 1,933,500 connected legal centres), no named-site relocation. West→East 31×27 underground shortest path **1,087 steps**; deliberate central obstruction detour **1,121**; West→centre **519**.
+
+Source authentic committed JPEG visually inspected: `8cf59bbba8c4a4037924490b7d158872be876abd`; original full-resolution PNG parity UNVERIFIED. All 14 material-index PNGs regenerated from the same final grid, including 2 additional native 1:1 1024×512 gallery-support views. Independent binary PNG inflate/readback not run; preview generation and material-index sampling from grid verified. All new IDs are legal inert immovable solids, existing MossWall combustible but unignited. **NATIVE-UNTESTED**: no installed Godot/Rapier bridge, Midge flight/collision, simulation or save/reopen executed; actual installed bridge rectangle capacity unmeasured. Draft/HOLD; no merge or owner acceptance.

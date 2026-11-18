@@ -10,41 +10,41 @@
     2048
   ],
   "cells": 4194304,
-  "covered_cells": 1521862,
+  "covered_cells": 1559725,
   "zero_full_grid_mismatches": true,
-  "rectangles": 8434,
+  "rectangles": 8640,
   "rectangle_limit": 32768,
-  "json_bytes": 163421,
+  "json_bytes": 167505,
   "json_limit": 1048576,
   "material_histogram": {
-    "0": 2672442,
-    "38": 414112,
-    "40": 157357,
-    "41": 189670,
+    "0": 2634579,
+    "38": 438687,
+    "40": 156213,
+    "41": 196830,
     "42": 52570,
     "43": 7758,
-    "44": 66579,
-    "48": 25585,
-    "49": 33117,
+    "44": 65062,
+    "48": 24889,
+    "49": 33827,
     "50": 2551,
     "52": 11552,
-    "53": 1970,
+    "53": 2234,
     "54": 5426,
     "55": 2072,
     "56": 194166,
-    "57": 15090,
+    "57": 15574,
     "58": 34997,
-    "62": 6993,
-    "70": 27575,
-    "71": 46570,
-    "72": 17121,
-    "77": 7159,
+    "62": 7617,
+    "70": 28583,
+    "71": 47028,
+    "72": 17359,
+    "77": 7198,
     "79": 1965,
     "80": 1276,
     "97": 58699,
-    "98": 80195,
+    "98": 85223,
     "100": 10368,
-    "119": 49369
+    "119": 50001
   },
   "source_art_changed": false,
   "actor": {
@@ -179,7 +179,7 @@
         19,
         15
       ],
-      "connected_centres": 2192965,
+      "connected_centres": 2155281,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -189,7 +189,7 @@
         23,
         19
       ],
-      "connected_centres": 2115437,
+      "connected_centres": 2078395,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -199,7 +199,7 @@
         31,
         27
       ],
-      "connected_centres": 1968058,
+      "connected_centres": 1933500,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -289,11 +289,25 @@
       512,
       512,
       1
+    ],
+    "crop-r2a5-west-supported.png": [
+      185,
+      1435,
+      1024,
+      512,
+      1
+    ],
+    "crop-r2a5-east-supported.png": [
+      1000,
+      1435,
+      1024,
+      512,
+      1
     ]
   },
   "render": "PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",
   "native": "NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen",
-  "material_sha256": "6e10cf26d48a7671987614db4120714fa1ad931c3da4e4a8c5e4104b18cf7727",
+  "material_sha256": "c200e9f5b189cc35d546e4f0d1817c3e3bf8e51a561743936518cbbbf1b03fca",
   "rework_r2b": {
     "starting_head": "c74610365b21c6dd7f88c9f339084905fab1a1f7",
     "changed_material_cells": 268733,
@@ -464,6 +478,25 @@
     "independent_png_decompression": "NOT RUN",
     "source_jpeg_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
     "full_source_png_parity": "UNVERIFIED",
+    "native": "NATIVE-UNTESTED"
+  },
+  "rework_r2a5": {
+    "assigned_head": "14a906daff7654f2104fd594aba2dd2b6f896adb",
+    "actual_changed_cells": 57495,
+    "large_subway_assemblies_integrated": 4,
+    "anchored_masonry_ribs": 4,
+    "grounded_terraced_plinths": 4,
+    "grounded_solid_cells": 1470876,
+    "residual_non_grounded_components": 82,
+    "largest_residual_detached_solid_cells": 5976,
+    "route_31x27": {
+      "west_east_steps": 1087,
+      "with_central_obstruction_steps": 1121,
+      "west_centre_steps": 519
+    },
+    "sampled_png_material_pixels": 8912896,
+    "source_jpeg_seen": true,
+    "full_original_png_parity": "UNVERIFIED",
     "native": "NATIVE-UNTESTED"
   }
 }
