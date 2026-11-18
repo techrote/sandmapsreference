@@ -72,3 +72,8 @@ The final `builder.cjs` uses fixed seed **210058**, real supported Setup-v2, gri
 ## Pending gates
 
 Independent source-art-fidelity and technical re-review on the **exact committed HEAD**; physical Windows 11 Godot/CyberDemoBridge/Rapier installation, true Midge thrust/contact testing and fresh-process save/reopen; full-resolution original-PNG direct comparison where feasible. **No owner acceptance, merge, Ready or native PASS is claimed.**
+
+
+## R2B second owner-assigned macro repair — 18 November 2026
+
+The previous organism had a narrow straight upper bolus and repeated lab/diamond tiers. This subsequent material-cell revision builds a connected 340-cell-span porous bio-crown with irregular tissue/bronze feeder ribs, replaces three repeated room blocks with distinct cultivation, root-vault and eastern manifold districts, removes the repeated cliff diamonds, braces the inspection gantry to its bank and differentiates lower root geology. The source remains the genuine committed catalogue JPEG, full-resolution original PNG parity UNVERIFIED. All image evidence is generated from the exact committed material cells. Static gates: 22676 rectangles, 413699 UTF-8 bytes, zero replay mismatches, 24/24 exact sites at 19x15/23x19/31x27 fully in-bounds envelope clearance. Physical installed CyberDemoBridge/Godot/Rapier and save/reopen remain NATIVE-UNTESTED. Draft/HOLD; no owner acceptance.

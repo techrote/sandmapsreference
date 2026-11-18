@@ -19,7 +19,11 @@ function re(y){return 851+17*Math.sin(y*.013+1.7)+14*Math.sin(y*.048)+6*Math.sin
 for(let y=0;y<H;y++){let t=shades.find(z=>y>=z[0]&&y<z[1]);let l=Math.max(235,Math.min(313,Math.round(le(y)))),r=Math.max(712,Math.min(794,Math.round(re(y))));rect(0,y,l,1,t[2]);rect(r,y,W-r,1,t[2]);if(y%47<6){rect(0,y,30+Math.round(10*Math.sin(y*.04)),1,t[3]);rect(r+35,y,W-r-35,1,t[3]);}if(y%89<3){rect(8,y,83,1,M.IRON);rect(W-94,y,86,1,M.IRON);}}
 for(let j=0;j<1300;j++){let y=12+(rnd()*2020|0),left=j%2===0,x=left?(18+rnd()*205|0):(795+rnd()*207|0),n=12+rnd()*65,m=[M.GRANITE,M.MOSS,M.VERDIGRIS,M.SANDSTONE,M.COPPER,M.IRON,M.QUARTZ,M.BASALT][(j+(y/250|0))%8];if(A[y*W+x]!==M.AIR){line(x,y,x+(left?n:-n),y+(rnd()*8|0)-4,m,1+(j%3));}}
 // Tectonic fins and brown biolith veins, composed into the immobile wall masses.
-for(let k=0;k<14;k++){let y=48+k*147;poly([[65,y],[122,y-15],[177,y+13],[153,y+35],[84,y+40]],k%3?M.GRANITE:M.MOSS);poly([[838,y+14],[909,y-12],[956,y+21],[917,y+48]],k%2?M.VERDIGRIS:M.COPPER);}
+// Bespoke, unequal cliff strata replace repeating diamond-wall wallpaper.
+for(const [x,y,w,h,m] of [[48,105,109,37,M.GRANITE],[102,393,85,65,M.MOSS],[26,825,143,84,M.COPPER],[94,1198,116,76,M.BASALT],[22,1692,121,94,M.MOSS],[842,166,97,53,M.VERDIGRIS],[897,681,88,75,M.GRANITE],[820,1118,151,66,M.COPPER],[892,1532,114,113,M.BASALT],[830,1886,123,49,M.MOSS]]){
+ poly([[x,y+h/3],[x+w*.3,y-9],[x+w,y+h*.15],[x+w*.66,y+h],[x+w*.19,y+h*.83]],m);
+ line(x+w*.22,y+h*.2,x+w*.67,y+h*.64,M.SLATE,3);
+}
 const left=[
 {y:173,h:225,name:"CROWN LAB",mode:0},{y:523,h:212,name:"SPORE BANK",mode:1},{y:858,h:213,name:"MICROSCOPE",mode:2},
 {y:1179,h:220,name:"RESIN WELL",mode:3},{y:1518,h:222,name:"ROOT VAULT",mode:4},{y:1825,h:180,name:"SEED BANK",mode:5}
@@ -101,13 +105,27 @@ rect(75,258,288,13,M.STEEL);rect(78,274,282,6,M.BRASS);
 rect(85,275,7,128,M.IRON);rect(313,275,7,128,M.IRON);
 for(let j=0;j<4;j++){rect(98+j*52,296,40,40,M.GLASSBLOCK);rect(102+j*52,300,32,32,M.OBSIDIAN);rect(108+j*52,314,20,4,M.CYAN);}
 sampleRoom(122,435,230,172,0);
-sampleRoom(132,668,220,158,1);
+// Open western cultivation grotto with asymmetric rooted vessels.
+poly([[126,678],[162,644],[306,665],[362,707],[352,833],[316,850],[145,838]],M.BASALT);
+poly([[142,697],[170,667],[300,683],[338,721],[333,809],[310,826],[161,811]],M.AIR);
+rect(147,812,189,13,M.STEEL);rect(151,824,178,5,M.BRASS);
+for(const [xx,yy] of [[169,746],[227,765],[285,743]]){line(xx,814,xx-11,yy,M.VERDIGRIS,10);line(xx-11,yy,xx-22,yy-24,M.COPPER,7);disk(xx-24,yy-23,13,M.MOSS);disk(xx-28,yy-27,4,M.PHOSPHOR);}
+line(132,718,170,680,M.COPPER,9);line(341,739,302,682,M.MOSS,10);
 sampleRoom(133,1092,231,178,2);
-sampleRoom(148,1463,228,185,3);
+// Western root-vault socket, open fly-through with actual geologic containment.
+poly([[131,1452],[196,1418],[289,1443],[377,1509],[357,1629],[305,1661],[143,1647]],M.GRANITE);
+poly([[155,1480],[203,1455],[288,1473],[347,1519],[329,1617],[288,1630],[165,1616]],M.AIR);
+rect(159,1618,174,15,M.STEEL);rect(171,1633,149,5,M.BRASS);
+for(const [xx,yy,rr] of [[182,1548,14],[255,1564,17],[314,1536,11]]){line(xx,1609,xx,yy,M.COPPER,8);disk(xx,yy,rr,M.VERDIGRIS);disk(xx-3,yy-3,5,M.PHOSPHOR);}
 sampleRoom(113,1813,247,179,1);
 sampleRoom(786,366,231,190,0);
 sampleRoom(787,775,230,177,3);
-sampleRoom(774,1234,243,189,2);
+// East logistics manifold with irregular excavated hull and three distinct pumps.
+poly([[780,1237],[853,1214],[976,1226],[1019,1267],[1008,1401],[959,1434],[796,1423]],M.CONCRETE);
+poly([[794,1261],[858,1239],[962,1251],[992,1283],[986,1383],[940,1405],[805,1395]],M.AIR);
+rect(798,1391,196,16,M.STEEL);rect(802,1406,185,6,M.BRASS);
+for(const [xx,yy,rr] of [[827,1320,20],[889,1309,27],[961,1332,15]]){disk(xx,yy,rr,M.BRONZE);disk(xx,yy,rr-8,M.OBSIDIAN);rect(xx-6,yy-5,12,10,M.CYAN);}
+line(799,1273,858,1242,M.COPPER,7);line(972,1254,1000,1292,M.STEEL,7);
 sampleRoom(771,1746,252,211,0);
 // Exposed, physically rooted west observation/service shaft and right lab link.
 rect(68,273,7,1432,M.IRON);rect(109,273,7,1432,M.IRON);
@@ -133,12 +151,28 @@ const rootedBranches=[
 [[602,1961],[504,1995],[351,2014]]
 ];
 rootedBranches.forEach((p,i)=>branch(p,i%3?M.VERDIGRIS:M.COPPER,20));
-const crown=[[466,332],[483,258],[544,208],[608,193],[704,212],[773,275],[802,334],[770,386],[697,410],[630,416],[559,433],[492,397]];
+const crown=[[443,330],[470,252],[536,176],[602,153],[693,190],[769,244],[824,334],[784,397],[723,426],[640,437],[540,452],[479,405]];
 for(let j=0;j<crown.length;j++){const a=crown[j],b=crown[(j+1)%crown.length];line(a[0],a[1],b[0],b[1],j%3?M.MOSS:M.VERDIGRIS,17);}
 for(let j=0;j<11;j++){let xx=505+(j*41%273),yy=245+(j*37%155);
  line(623,464,xx,yy,j%2?M.COPPER:M.VERDIGRIS,5);
  disk(xx,yy,11+(j*7%19),j%2?M.MOSS:M.VERDIGRIS);
  disk(xx+2,yy-3,3+(j%3),M.PHOSPHOR);
+}
+// R2B follow-on: source's broad porous organism, rooted lobes and tissue chambers.
+for(const [mat,p] of [
+[M.COPPER,[[620,547],[565,491],[504,435],[463,374],[476,302],[527,260],[556,189],[607,170],[654,185],[689,256],[737,294],[780,364],[757,423],[699,482],[668,563]]],
+[M.MOSS,[[586,448],[518,408],[487,355],[507,290],[562,245],[592,212],[647,207],[685,257],[731,318],[750,362],[712,415],[670,455],[631,491]]],
+[M.VERDIGRIS,[[577,399],[523,382],[514,343],[551,296],[584,268],[644,254],[692,294],[718,335],[692,383],[662,425],[605,453]]]
+])poly(p,mat);
+for(const p of [
+ [[618,575],[603,495],[577,421],[533,344],[491,310]],
+ [[634,553],[654,474],[700,410],[738,361],[781,332]],
+ [[641,553],[621,452],[613,349],[591,269],[568,196]],
+ [[665,539],[675,465],[707,404],[748,384]]
+])branch(p,M.COPPER,22);
+for(const [x,y,w,h] of [[554,332,43,34],[633,295,52,43],[673,375,37,37],[580,417,43,28]]){
+ poly([[x,y+8],[x+12,y-3],[x+w-9,y],[x+w,y+h-12],[x+w-12,y+h],[x+6,y+h-4]],M.URANIUM);
+ disk(x+w*.47,y+h*.4,Math.min(w,h)*.19,M.PHOSPHOR);
 }
 // Bioluminescent specimen heart is not a mechanical ring.
 disk(647,538,92,M.VERDIGRIS);disk(650,537,74,M.MOSS);disk(650,534,59,M.URANIUM);
@@ -154,6 +188,13 @@ for(let j=0;j<8;j++){let yy=1113+j*122,xx=627+16*Math.sin(j*.68);
 rect(250,1000,520,12,M.STEEL);rect(253,1012,514,7,M.BRASS);
 for(let j=0;j<13;j++){let xx=256+j*39;line(xx,1010,xx+27,1034,j%2?M.COPPER:M.IRON,3);rect(xx,974,4,25,M.BRASS);rect(xx,975,36,3,M.BRASS);}
 for(let xx of [252,428,739]){rect(xx,1014,10,67,M.CONCRETE);rect(xx+4,1021,3,44,M.IRON);}
+// Mid-gantry transfer approaches now attach to unequal material-bank abutments.
+poly([[253,999],[233,987],[201,1007],[208,1055],[249,1087],[278,1027]],M.GRANITE);
+poly([[764,999],[788,986],[825,1015],[806,1063],[772,1084],[746,1018]],M.BASALT);
+for(const [x,y,xe,ye] of [[267,1020,314,1102],[749,1020,714,1082],[458,1017,481,1100],[635,1020,616,1080]])line(x,y,xe,ye,M.BRONZE,8);
+for(const [xx,yy,ww] of [[297,956,84],[472,948,116],[632,960,85]]){
+ rect(xx,yy,ww,8,M.STEEL);rect(xx+9,yy-13,5,12,M.BRASS);rect(xx+17,yy-12,22,4,M.CYAN);
+}
 // Deeper root-service terraces show a real laboratory legacy, not copied upper tiers.
 rect(159,1249,229,11,M.STEEL);rect(751,1416,232,12,M.STEEL);
 rect(151,1643,246,13,M.CONCRETE);rect(778,1939,214,11,M.STEEL);
@@ -224,7 +265,17 @@ for(let i=0;i<14;i++){
  let xx=424+(i*47%234),y=1895+(i*19%81);
  if(y<2019)line(xx,2019,xx+(i%3-1)*12,y,i%2?M.COPPER:M.VERDIGRIS,7);
 }
-// Lower service corridors and destination variety; supports rooted in the basement.
+// Rhizome geological transition, independent of upper laboratory grammar.
+for(const [mat,p] of [
+[M.BASALT,[[439,1203],[477,1195],[505,1219],[502,1263],[468,1291],[428,1265]]],
+[M.GRANITE,[[667,1356],[710,1326],[744,1361],[726,1420],[683,1435],[656,1402]]],
+[M.OBSIDIAN,[[439,1613],[479,1570],[530,1590],[536,1640],[495,1665],[450,1642]]],
+[M.SLATE,[[685,1769],[720,1731],[767,1774],[741,1825],[688,1838],[667,1800]]]
+])poly(p,mat);
+for(const [x,y,dx,dy] of [[475,1222,-26,-58],[702,1390,26,-54],[493,1608,-36,-71],[723,1786,22,-66]]){
+ line(x,y,x+dx,y+dy,M.COPPER,10);line(x+dx,y+dy,x+dx-17,y+dy-18,M.VERDIGRIS,6);
+}
+// Lower service corridors and destination variety.
 rect(143,1732,189,11,M.STEEL);rect(144,1743,186,6,M.BRASS);
 for(let i=0;i<4;i++){let xx=165+i*39;rect(xx,1666,26,58,M.FROST);rect(xx+4,1670,18,49,M.OBSIDIAN);disk(xx+13,1690,7,M.URANIUM);}
 rect(783,1537,172,12,M.STEEL);
@@ -345,7 +396,7 @@ function envelopeAudit(w,h){
 }
 const audits=[[19,15],[23,19],[31,27]].map(([w,h])=>envelopeAudit(w,h));
 if(audits.some(a=>a.failed.length))throw Error('Exact Midge site clearance failure: '+JSON.stringify(audits));
-evidence.rework_b={date:'2026-11-18',scope:'source-JPEG-led new physical biosphere geometry, one tree, asymmetric scientific wings, continuous gantry and deeper root districts',starting_head:'db95c0c615e799f97ea885a56a5fdb412dc7cadb',source_jpeg_seen:true,original_png_pixels_verified:false,archival_merged_baseline_unvalidated:true,notes:'Historical source is 640x360 landscape; this tall 1024x2048 adaptation preserves the visible source complex at a deliberately scaled upper district and authors coherent older root/service levels below; not stretched screenshot or repeated organism.'};
+evidence.rework_b={date:'2026-11-18',scope:'second substantive source-led organism canopy and differentiated districts / gantry / lower rhizome repair',starting_head:'134b4dadf74a3df45362d92d6c869c21ecf814b2',source_jpeg_seen:true,original_png_pixels_verified:false,archival_merged_baseline_unvalidated:true,notes:'Historical source is 640x360 landscape; this tall 1024x2048 adaptation preserves the visible source complex at a deliberately scaled upper district and authors coherent older root/service levels below; not stretched screenshot or repeated organism.'};
 evidence.clearance_envelopes=audits;
 evidence.waypoints=destinations.map(([name,point])=>({name,point,clear:true,reachable:true}));
 evidence.actual_native_godot_rapier_qualification='NATIVE-UNTESTED: compatible installed binary, Midge input/collision/simulation and save/reopen not exercised.';
