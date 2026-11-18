@@ -35,7 +35,7 @@
     "101": "Obsidian Solid/None",
     "122": "QuartzCrystal Solid/None"
   },
-  "art": "R2C3 source-derived variable-width nested filament apertures, root-tied branched arches and rock-integrated ladder threshold; distinct extrapolated supported west calcite terraces, east observatory and dry service/water retaining approach. All output is real material cells. Source JPEG physically viewed; unchanged original full PNG parity unverified.",
+  "art": "R2C4 source-led reauthoring: connected nested porous pale membranes, root-attached biology, deliberate ladder thresholds, supported stratified shelf, original extrapolated west calcite destination and east basalt return. Water preserved. Source JPEG inspected; original full PNG parity UNVERIFIED.",
   "gallery": [
     [
       "filament-shaft-cavern-material-1024x2048.png",
@@ -108,26 +108,26 @@
       2048
     ],
     "complete_cells": 2097152,
-    "rectangles": 15773,
+    "rectangles": 11069,
     "max_rectangles": 32768,
-    "json_bytes": 287956,
+    "json_bytes": 204728,
     "max_json_bytes": 1048576,
     "final_cell_mismatches": 0,
-    "changed_cells_from_archived_r1": 910021,
-    "nonempty_cells": 826655,
+    "changed_cells_from_archived_r1": 857004,
+    "nonempty_cells": 760739,
     "water_cells": 35688,
     "water_changed_cells": 0,
     "material_histogram": {
-      "0": 1270497,
+      "0": 1336413,
       "3": 35688,
-      "38": 36836,
+      "38": 32207,
       "42": 5189,
-      "49": 92646,
-      "62": 7205,
-      "99": 168757,
-      "100": 318723,
-      "101": 143745,
-      "122": 17866
+      "49": 74315,
+      "62": 7170,
+      "99": 115341,
+      "100": 335685,
+      "101": 143717,
+      "122": 11427
     },
     "allowlist": [
       0,
@@ -292,7 +292,7 @@
           15
         ],
         "spawn_exact": true,
-        "component_centres": 1005156,
+        "component_centres": 1112372,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -302,7 +302,7 @@
           19
         ],
         "spawn_exact": true,
-        "component_centres": 969170,
+        "component_centres": 1077831,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -312,30 +312,21 @@
           27
         ],
         "spawn_exact": true,
-        "component_centres": 900459,
+        "component_centres": 1012551,
         "r2_exact": 13,
         "legacy_exact": 15
       }
     ],
     "upper_tissue_components": [
-      191134,
-      660,
-      393,
-      28,
-      23,
-      8,
-      2,
-      2,
-      2,
-      2
+      128326
     ],
-    "connected_primary_tissue_cells": 191134,
-    "tissue_cells": 192277,
-    "primary_tissue_fraction": 0.994055,
+    "connected_primary_tissue_cells": 128326,
+    "tissue_cells": 128326,
+    "primary_tissue_fraction": 1,
     "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)"
   },
-  "native": "NATIVE-UNTESTED: only deterministic V8/Node-compatible material computation and independent static verification executed; no installed Godot/Rapier/CyberDemoBridge input, actor collision, liquid progression, bounded simulation or fresh save/reopen. 32,768 source limit; old 4,096 installed fallback would reject 15773 rectangles.",
-  "disposition": "DRAFT / HOLD; independent Shepherd/fidelity/native/owner acceptance pending. No merge or Ready.",
+  "native": "NATIVE-UNTESTED: no installed bridge capacity, actual Midge input/collision, Water tick, Godot/Rapier or save/reopen.",
+  "disposition": "OPEN Draft/HOLD — independent fidelity, Shepherd and owner acceptance outstanding. Never merge/Ready.",
   "rework_round_2_finishing": {
     "assignment": "CANVAS-REWORK-A: 12 @ eddddcec7f3f13a4ef71d9d27152d00c6b88ff43",
     "starting_head": "eddddcec7f3f13a4ef71d9d27152d00c6b88ff43",
@@ -548,5 +539,63 @@
     "native": "NATIVE-UNTESTED",
     "node_cli": "NOT RUN: deterministic builder and verifier executed in isolated V8 with original source syntax and matching exact baseline",
     "status": "DRAFT/HOLD. Source-led visual and gameplay review remains independent; no merge/Ready/owner acceptance"
+  },
+  "rework_round_2_c4": {
+    "assignment": "CANVAS-REWORK-C: 12 @ 5d8f88f88666b4f1a1cc543048d1c4e0705af99b",
+    "starting_head": "5d8f88f88666b4f1a1cc543048d1c4e0705af99b",
+    "source_preview_blob": "168294085274702df98f5698721890fd30874c8f",
+    "original_png_blob": "9364b59479bb2eaf4d2a2924abb501ed8d9e26e3",
+    "jpeg_preview_directly_seen": true,
+    "original_full_png_pixel_parity": "UNVERIFIED",
+    "changed_physical_cells": 294506,
+    "water_cells_changed": 0,
+    "dimensions": [
+      1024,
+      2048
+    ],
+    "full_cell_replay_mismatches": 0,
+    "rectangle_count": 11069,
+    "json_bytes": 204728,
+    "png_count": 8,
+    "independent_expected_png_material_pixels": 4194304,
+    "png_pixel_mismatches": 0,
+    "exact_static_clearance": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "spawn_exact": true,
+        "component_centres": 1112372,
+        "r2_exact": 13,
+        "legacy_exact": 15
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "spawn_exact": true,
+        "component_centres": 1077831,
+        "r2_exact": 13,
+        "legacy_exact": 15
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "spawn_exact": true,
+        "component_centres": 1012551,
+        "r2_exact": 13,
+        "legacy_exact": 15
+      }
+    ],
+    "source_derived": "upper left x19..490/y35..960, nested attached pale membranes, interrupted ladder and long geological shelf",
+    "extrapolated": "lower west calcite hall and east basalt two-tier observatory/return; dry retaining transition above sealed original water",
+    "physical_validation": "static stable legal IDs 0,3,38,42,49,62,99,100,101,122; no extra liquids/growth/powder",
+    "native": "NATIVE-UNTESTED",
+    "installed_bridge_capacity": "NOT MEASURED",
+    "owner_acceptance": false
   }
 }
