@@ -10,42 +10,41 @@
     2048
   ],
   "cells": 4194304,
-  "covered_cells": 1557262,
+  "covered_cells": 1521862,
   "zero_full_grid_mismatches": true,
-  "rectangles": 8581,
+  "rectangles": 8434,
   "rectangle_limit": 32768,
-  "json_bytes": 166245,
+  "json_bytes": 163421,
   "json_limit": 1048576,
   "material_histogram": {
-    "0": 2637042,
-    "38": 435221,
-    "40": 137878,
-    "41": 188517,
+    "0": 2672442,
+    "38": 414112,
+    "40": 157357,
+    "41": 189670,
     "42": 52570,
     "43": 7758,
-    "44": 69902,
-    "48": 24909,
-    "49": 39671,
-    "50": 2114,
+    "44": 66579,
+    "48": 25585,
+    "49": 33117,
+    "50": 2551,
     "52": 11552,
-    "53": 3849,
+    "53": 1970,
     "54": 5426,
     "55": 2072,
     "56": 194166,
-    "57": 15453,
+    "57": 15090,
     "58": 34997,
-    "62": 5564,
-    "66": 998,
-    "70": 26503,
-    "71": 59567,
-    "72": 25133,
-    "77": 7907,
-    "79": 2677,
-    "80": 1336,
+    "62": 6993,
+    "70": 27575,
+    "71": 46570,
+    "72": 17121,
+    "77": 7159,
+    "79": 1965,
+    "80": 1276,
     "97": 58699,
-    "98": 76387,
+    "98": 80195,
     "100": 10368,
-    "119": 56068
+    "119": 49369
   },
   "source_art_changed": false,
   "actor": {
@@ -180,7 +179,7 @@
         19,
         15
       ],
-      "connected_centres": 2109854,
+      "connected_centres": 2192965,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -190,7 +189,7 @@
         23,
         19
       ],
-      "connected_centres": 2037406,
+      "connected_centres": 2115437,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -200,7 +199,7 @@
         31,
         27
       ],
-      "connected_centres": 1897104,
+      "connected_centres": 1968058,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -269,11 +268,32 @@
       512,
       512,
       1
+    ],
+    "crop-west-archive.png": [
+      135,
+      1490,
+      512,
+      512,
+      1
+    ],
+    "crop-subway-transfer.png": [
+      735,
+      1490,
+      512,
+      512,
+      1
+    ],
+    "crop-east-subway.png": [
+      1480,
+      1490,
+      512,
+      512,
+      1
     ]
   },
   "render": "PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",
   "native": "NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen",
-  "material_sha256": "ded00c67d55d9406cc9d2f159c2a32f38914a314808f3058def61727266b1beb",
+  "material_sha256": "6e10cf26d48a7671987614db4120714fa1ad931c3da4e4a8c5e4104b18cf7727",
   "rework_r2b": {
     "starting_head": "c74610365b21c6dd7f88c9f339084905fab1a1f7",
     "changed_material_cells": 268733,
@@ -423,5 +443,27 @@
     ],
     "independent_png_material_pixels": 7077888,
     "actual_native": "NATIVE-UNTESTED"
+  },
+  "rework_r2a4": {
+    "assigned_head": "4e084a662ef0943f76dd349c35010e2ebcec7062",
+    "changed_material_cells": 269373,
+    "ground_connected_solid_cells": 1294115,
+    "grounded_checkpoints": 6,
+    "west_east_underpass_31x27": {
+      "normal_steps": 1087,
+      "with_centre_obstruction_steps": 1121,
+      "obstruction": [
+        980,
+        1685,
+        1115,
+        1755
+      ]
+    },
+    "generated_png_sampled_pixels": 7864320,
+    "png_chunk_crc_palette": "PASS",
+    "independent_png_decompression": "NOT RUN",
+    "source_jpeg_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
+    "full_source_png_parity": "UNVERIFIED",
+    "native": "NATIVE-UNTESTED"
   }
 }

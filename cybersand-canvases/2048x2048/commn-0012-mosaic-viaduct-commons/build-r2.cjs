@@ -208,6 +208,7 @@ function canvas(){
  require('./finish-r2a.cjs')(G,W,H,M);
  require('./finish-r2a2.cjs')(G,W,H,M);
  require('./finish-r2a3.cjs')(G,W,H,M,TARGETS);
+ require('./finish-r2a4.cjs')(G,W,H,M,TARGETS);
  return G;
 }
 function coalesce(g){
@@ -263,7 +264,7 @@ function build(template,palette){
  const json=JSON.stringify(o),hist={};for(let v of g)hist[v]=(hist[v]||0)+1;
  if(rec.length>32768||json.length>1048576||reach[0].reachable!==16)throw Error("Static gates "+JSON.stringify({rects:rec.length,bytes:json.length,reach}));
  const colors=Array.from({length:256},(_,i)=>palette.find(p=>p.id===i)?.rgba||[255,0,255]);
- const crops={"preview.png":[0,0,2048,2048,1],"overview.png":[0,0,1024,1024,2],"detail-civic.png":[39,365,512,512,1],"detail-viaduct.png":[715,736,512,512,1],"detail-gardens.png":[1211,549,512,512,1],"detail-west-gardens.png":[45,1050,512,512,1],"detail-east-gardens.png":[1320,1010,512,512,1],"crop-stair-plaza.png":[890,929,512,512,1],"crop-buried-corridor.png":[825,1468,512,512,1]};
+ const crops={"preview.png":[0,0,2048,2048,1],"overview.png":[0,0,1024,1024,2],"detail-civic.png":[39,365,512,512,1],"detail-viaduct.png":[715,736,512,512,1],"detail-gardens.png":[1211,549,512,512,1],"detail-west-gardens.png":[45,1050,512,512,1],"detail-east-gardens.png":[1320,1010,512,512,1],"crop-stair-plaza.png":[890,929,512,512,1],"crop-buried-corridor.png":[825,1468,512,512,1],"crop-west-archive.png":[135,1490,512,512,1],"crop-subway-transfer.png":[735,1490,512,512,1],"crop-east-subway.png":[1480,1490,512,512,1]};
  const pics={};for(let [name,p] of Object.entries(crops))pics[name]=png(g,colors,...p);
  const evidence={source_public_id:"commn-0012",source_path:"artwork/neighbourhoods_commons/batch2/mosaic_viaduct_commons.png",source_original_blob:"fb01ca96733623502e99e9734bf4fb7d5d28035e",source_jpeg_blob:"8cf59bbba8c4a4037924490b7d158872be876abd",source_seeing:"Original genuine committed catalogue JPEG visually inspected; full-resolution original PNG pixel parity NOT VERIFIED",cybersand_accepted_main:"018bd09503d7f079ddac52e225c2f7daf8d678bf",extent:[2048,2048],cells:4194304,covered_cells:covered,zero_full_grid_mismatches:true,rectangles:rec.length,rectangle_limit:32768,json_bytes:json.length,json_limit:1048576,material_histogram:hist,source_art_changed:false,actor:{model:o.starting_setup.actors[0].model,spawn:o.starting_setup.actors[0].spawn,hull:[4,3],hash:o.starting_setup.actors[0].hash},targets:TARGETS.map(s=>({name:s[0],point:s.slice(1)})),reachability:reach,crops,render:"PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",native:"NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen"};
  return {grid:g,rec,json,pics,evidence,reach}
