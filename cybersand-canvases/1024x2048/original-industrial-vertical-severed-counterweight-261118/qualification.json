@@ -9,43 +9,43 @@
     2048
   ],
   "cells": 2097152,
-  "nonempty": 823876,
+  "nonempty": 885624,
   "nonempty_materials": {
-    "0": 1273276,
+    "0": 1211528,
     "3": 6525,
     "38": 1242,
     "40": 95383,
-    "50": 40060,
-    "58": 156912,
-    "62": 90257,
-    "64": 2675,
-    "65": 64520,
-    "68": 17644,
-    "69": 8696,
-    "72": 3756,
-    "73": 8931,
-    "76": 9751,
-    "77": 3812,
+    "50": 41953,
+    "58": 164193,
+    "62": 95756,
+    "64": 2381,
+    "65": 72897,
+    "68": 16066,
+    "69": 8085,
+    "72": 3162,
+    "73": 9450,
+    "76": 15562,
+    "77": 3803,
     "78": 424,
-    "79": 3504,
+    "79": 5460,
     "100": 184304,
     "101": 91029,
-    "119": 9577,
+    "119": 15406,
     "120": 1435,
-    "130": 21895,
-    "131": 1544
+    "130": 46112,
+    "131": 4996
   },
-  "grid_sha256": "c72acc9bca8bd0e7a028f941832cccfe05039ba1d88f5ac2d715a00434056a0a",
-  "setup_sha256": "c120a8ea5d077aa0a75ac3306449faea93f8ce35aaac08e1ad4b12ae45620abf",
-  "setup_bytes": 114671,
-  "edit_rectangles": 6312,
+  "grid_sha256": "6c39b9075f11c11a85c3cd0631c0e68c953a570639980caa69167cd3e8778da1",
+  "setup_sha256": "30628559c5549234a8cc96a2404ff483b48e16f28be67178875ad709c4f66a22",
+  "setup_bytes": 149799,
+  "edit_rectangles": 8176,
   "rectangle_budget_source": 32768,
   "default_no_bridge_capacity": 4096,
   "installed_bridge_capacity": "UNKNOWN - do not assert native load",
   "edit_budget": 32768,
   "full_cell_replay": "PASS",
   "edit_overlap_count": 0,
-  "rectangle_work_estimate": 823876,
+  "rectangle_work_estimate": 885624,
   "generated_start_work_limit": 32000000,
   "material_laws": "all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",
   "flight_checks": [
@@ -56,7 +56,7 @@
       ],
       "reachable_sites": 11,
       "total_sites": 11,
-      "reachable_centers": 606160,
+      "reachable_centers": 564281,
       "sites": [
         {
           "id": "A",
@@ -166,7 +166,7 @@
       ],
       "reachable_sites": 11,
       "total_sites": 11,
-      "reachable_centers": 555146,
+      "reachable_centers": 516212,
       "sites": [
         {
           "id": "A",
@@ -276,7 +276,7 @@
       ],
       "reachable_sites": 11,
       "total_sites": 11,
-      "reachable_centers": 461244,
+      "reachable_centers": 426995,
       "sites": [
         {
           "id": "A",
@@ -388,7 +388,7 @@
       1006
     ],
     "terminal_reachable": true,
-    "reachable_centers": 458332
+    "reachable_centers": 425623
   },
   "sites": [
     {
@@ -666,9 +666,9 @@
   "image_checks": [
     {
       "name": "overview.png",
-      "sha256": "060fd76631cad9b1f62b5f9c4a8fe0fc8d049265f6341bce0d2e9b9e927c4f44",
+      "sha256": "542103e89dcbb319c12d3d87f32cdf9be03872327231022d445c7993f8f27b50",
       "chunks": 5,
-      "bytes": 49768,
+      "bytes": 53916,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -682,9 +682,9 @@
     },
     {
       "name": "01-crown-intake.png",
-      "sha256": "46baff0d0f8374b5117a854d5263d4e3054cd4485e351b55d3d8fe8d8733b150",
+      "sha256": "99bcd0154493978aca55d3506be4aef6ffb88b86ea721d07bd194375c0e342e4",
       "chunks": 5,
-      "bytes": 7431,
+      "bytes": 7440,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -698,9 +698,9 @@
     },
     {
       "name": "02-counterweight-cathedral.png",
-      "sha256": "b0d98a136f78b08fed5e575e0410e41e5ca6278769a6337c38da7b424b6d7109",
+      "sha256": "968204f013b0f72149604af4661b34fb18c9e90f7a3de87e63c66bda23a3e804",
       "chunks": 5,
-      "bytes": 11693,
+      "bytes": 12501,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -714,9 +714,9 @@
     },
     {
       "name": "03-ore-crusher-gallery.png",
-      "sha256": "3031e4ebd082a666fb01896b334daba5b8c495815ef7e586f6f58e89d74fbcaa",
+      "sha256": "26b372c7cf9ca235cfe45252ad2b79c36e284c0b4747cb30df7cef383654332b",
       "chunks": 5,
-      "bytes": 10531,
+      "bytes": 12539,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -730,9 +730,9 @@
     },
     {
       "name": "04-rail-funnel-transfer.png",
-      "sha256": "4fb94f5a66324d3817c44778dfb001a6b1fb420cb40056c22995f9198398f950",
+      "sha256": "bce214bd286d36dd413c8799172e6f4b0745c0e70d04e7f5e2060813a205396e",
       "chunks": 5,
-      "bytes": 13186,
+      "bytes": 14308,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -746,9 +746,9 @@
     },
     {
       "name": "05-quench-salvage-terminal.png",
-      "sha256": "32a947469d6cb48f6ba7f265430535c56ab516a756a1ac1bd038324b1186cb22",
+      "sha256": "20c1b853755cfbea3912d6b2e26514c8df0e4108257079924a734bcc9edf43f8",
       "chunks": 5,
-      "bytes": 8921,
+      "bytes": 9458,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -761,6 +761,15 @@
       ]
     }
   ],
+  "art_rework": {
+    "review_authority": "Shepherd and Fidelity REWORK comments on prior exact head",
+    "previous_head": "39644a3a6b0a0500b01faca6c075e08d2054d539",
+    "original_cell_changes": 93351,
+    "operation_records": 224,
+    "preservation": "all original exact 11 destinations, three flyable spines and Water 6525 cells retained",
+    "districts": "asymmetric severed counterweight/catch; twin ore hoppers/transfer; distinct switch yard/cargo cradle; irregular foundry galleries; furnace-to-quench infrastructure",
+    "production_scope": "Only fixed inert physical cells; no runtime physics edits"
+  },
   "native_status": "NATIVE-UNTESTED: no CyberDemoBridge binary or Godot runtime supplied; dynamic inspect_interaction IDs, world install, Rapier input/collision, physics, fresh-process save/reopen unproven",
   "approval": "DRAFT/HOLD - independent Shepherd and owner acceptance outstanding"
 }

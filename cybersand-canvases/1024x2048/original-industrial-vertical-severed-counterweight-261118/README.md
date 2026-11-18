@@ -43,11 +43,11 @@ Connectivity is proven from the **exact Midge spawn** to **each exact site** at 
 
 `build.cjs` is a fixed-seed, dependency-free Node.js builder. Run `node build.cjs` from any directory: it rebuilds `setup-severed-counterweight.json`, `qualification.json` and all full-resolution material-identity indexed PNGs in its own directory, then reopens/decodes every generated PNG in memory to check chunk CRC, zlib, Adler-32, IEND and per-cell ID parity. The source grid is reconstructed from hand-authored geometric primitives and exact route masks, never derived from a source image or compressed/reprojected reference PNG.
 
-**JSON format:** ordinary Workbench Setup-v2, not a fabricated generated-start receipt. Ordered, nonoverlapping, vertically coalesced rectangular edits exactly reconstruct the 2097152 source cells. JSON bytes 114671 / 1,048,576, 6312 rectangles / 32,768 source max, 823876 painted cell writes in a 32000000 theoretical work envelope.
+**JSON format:** ordinary Workbench Setup-v2, not a fabricated generated-start receipt. Ordered, nonoverlapping, vertically coalesced rectangular edits exactly reconstruct the 2097152 source cells. JSON bytes 149799 / 1,048,576, 8176 rectangles / 32,768 source max, 885624 painted cell writes in a 32000000 theoretical work envelope.
 
-**SHA-256 identity:** material grid `c72acc9bca8bd0e7a028f941832cccfe05039ba1d88f5ac2d715a00434056a0a`; JSON `c120a8ea5d077aa0a75ac3306449faea93f8ce35aaac08e1ad4b12ae45620abf`.
+**SHA-256 identity:** material grid `6c39b9075f11c11a85c3cd0631c0e68c953a570639980caa69167cd3e8778da1`; JSON `30628559c5549234a8cc96a2404ff483b48e16f28be67178875ad709c4f66a22`.
 
-**Physically fixed materials:** `38:1242 40:95383 50:40060 58:156912 62:90257 64:2675 65:64520 68:17644 69:8696 72:3756 73:8931 76:9751 77:3812 78:424 79:3504 100:184304 101:91029 119:9577 120:1435 130:21895 131:1544`. All are accepted-main Solid/non-movable/RuleKernel::None; only Water (3) is dynamic, within the walled lower quench basin. Visual metal pipes and LEDs are material cells, not sprite decals.
+**Physically fixed materials:** `38:1242 40:95383 50:41953 58:164193 62:95756 64:2381 65:72897 68:16066 69:8085 72:3162 73:9450 76:15562 77:3803 78:424 79:5460 100:184304 101:91029 119:15406 120:1435 130:46112 131:4996`. All are accepted-main Solid/non-movable/RuleKernel::None; only Water (3) is dynamic, within the walled lower quench basin. Visual metal pipes and LEDs are material cells, not sprite decals.
 
 **Render evidence:** `overview.png` is the complete 1024x2048 material map; the five numbered crops are native 1:1 unresampled windows of that *same cell grid*. These are palette-identity PNGs, **not** Godot screenshots, not AI concept art, and not a claim that the native renderer has been tested.
 
@@ -63,6 +63,19 @@ Viewed the *complete* 1024x2048 identity-plane PNG and the 1:1 crops. Initial co
 
 **Remaining artistic limitation:** machinery is made of true physical material cells, so several gantries have intentional large aircraft-clearance gaps and cannot visually behave like a continuous solid deck. The high-level east/west service supports repeat for structural plausibility. This is a gameplay/engineering compromise, not final owner art acceptance.
 
+## Shepherd-directed R3 industrial physical-cell rework
+
+18 November 2026: independent original-art audit and Shepherd both requested substantive redesign of the same lane-owned PR, not another original branch. This post-baseline sculptural pass changes **93,351 exact material identities** through 224 deterministic rectangle/line operations, guarded away from every primary 31x27 navigation corridor and exact site.
+
+- **Severed counterweight cathedral:** an offset 167x180 riveted suspended load, broken copper-steel suspension and heavy twin catch trusses now establish a clear damaged-machine focal point, retaining the side bypasses.
+- **Ore chain:** a framed west feed-hopper, nested discharge throat and east-stage reinforced enclosed cascade, visually connecting assay/crushing toward transfer without sealing the Midge through-routes.
+- **Rail switching yard:** an asymmetric truss/switch drum at the central west edge, hanging eastern cargo cradle, loading braces and apron replace the prior nearly vacant repeated truss tier.
+- **Different wall districts:** expanded west foundry nook and lower service gallery contrasted against elevated east utility/electrical rooms; local geometry changes without damaging the main bridge spans.
+- **Salvage/quench:** a ribbed heat-shield furnace and overhead handling beam turn the lower equipment into a more legible destination, preserving all 6,525 physical Water cells and their sealed vessel.
+
+**Actual-cell evidence:** the complete material-ID plane and five original 1:1 windows were regenerated from these same cells, and rechecked by PNG chunk CRC, zlib/Adler, IEND and every indexed material pixel. Self-critique: mechanical load paths are clearer but some service shafts retain repeatable functional steel modules; no active elevator motion or native coolant stability is asserted.
+
+**Independent bounded gates:** the 19x15 / 23x19 / 31x27 fully contained envelopes still reach all original 11 exact coordinates; blocked central throat retains a 31x27 bypass. 8176 nonoverlapping rectangles, 149799 JSON bytes, 885624 painted cells; 0 replay mismatches. **NATIVE-UNTESTED** until a source-compatible installed GDExtension confirms constructor capacity, simulation, collision and fresh save/reopen.
 ## Qualification and limitations
 
 - Offline full grid, nonoverlap, exact replay, PNG structural/inflate/CRC and material-ID parity: PASS; see `qualification.json`.
