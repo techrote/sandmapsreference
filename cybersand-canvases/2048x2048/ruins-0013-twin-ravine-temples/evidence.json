@@ -1,7 +1,7 @@
 {
   "state": "DRAFT/HOLD; NOT native/owner accepted",
-  "worker": "Canvas Reworker B — R2B8",
-  "starting_head": "7b986f991f393f51f449e0b64e78e2c1443bd942",
+  "worker": "Canvas Reworker B — R2B9",
+  "starting_head": "77576063c9fa3ae970dc2debde289c4b859e4e1e",
   "engine_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
   "source": {
     "catalogue_id": "ruins-0013",
@@ -18,14 +18,14 @@
       2048
     ],
     "cells": 4194304,
-    "rectangles": 20347,
+    "rectangles": 20867,
     "rectangle_cap": 32768,
-    "json_bytes": 388708,
+    "json_bytes": 398277,
     "json_cap": 1048576,
     "reconstruction_mismatches": 0,
     "rectangle_overlaps": 0,
-    "covered_material_cells": 1788214,
-    "encoded_edit_visits": 1788214
+    "covered_material_cells": 1788588,
+    "encoded_edit_visits": 1788588
   },
   "actor": {
     "model": "midge",
@@ -212,33 +212,33 @@
             19,
             15
           ],
-          "connected_centres": 2122630,
+          "connected_centres": 2117103,
           "exact_sites_connected": 23,
           "bypass_connected": 6,
           "fully_in_bounds": true,
-          "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
+          "connectivity": "strict exact 4-neighbour full-hull centre BFS"
         },
         {
           "size": [
             23,
             19
           ],
-          "connected_centres": 2066009,
+          "connected_centres": 2059808,
           "exact_sites_connected": 23,
           "bypass_connected": 6,
           "fully_in_bounds": true,
-          "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
+          "connectivity": "strict exact 4-neighbour full-hull centre BFS"
         },
         {
           "size": [
             31,
             27
           ],
-          "connected_centres": 1955144,
+          "connected_centres": 1947319,
           "exact_sites_connected": 23,
           "bypass_connected": 6,
           "fully_in_bounds": true,
-          "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
+          "connectivity": "strict exact 4-neighbour full-hull centre BFS"
         }
       ],
       "archival_regressions": {
@@ -335,15 +335,15 @@
   },
   "materials": {
     "histogram": {
-      "0": 2406090,
+      "0": 2405716,
       "38": 19112,
-      "40": 264277,
-      "41": 163882,
-      "42": 243198,
-      "49": 28438,
-      "52": 4467,
-      "100": 323293,
-      "101": 741547
+      "40": 264749,
+      "41": 161111,
+      "42": 245862,
+      "49": 30125,
+      "52": 4535,
+      "100": 327486,
+      "101": 735608
     },
     "allowed_static_solid_ids": [
       38,
@@ -708,7 +708,7 @@
       730
     ],
     "same_eight_neighbour_nonempty_component": true,
-    "bridge_component_cells": 1783209,
+    "bridge_component_cells": 1783723,
     "disconnected_solid_components": 16,
     "largest_other_component_cells": 1838,
     "flyable_east_wall_bypass": {
@@ -754,7 +754,7 @@
     "comment": "Intentional open-air east route solves the 2D solid-span separation; review source-fidelity compromise of cantilevered upper east cap.",
     "same_four_neighbour_nonempty_component": true,
     "solid_connected_neighbours": "FOUR cardinal directions; five bank-rooted bridge probes all in 1783209 component",
-    "solid_components_total": 17
+    "solid_components_total": 16
   },
   "rework_p1": {
     "assigned_starting_head": "85c3ef0166004cd9480d3b1b933d51045d2e19f2",
@@ -1135,5 +1135,80 @@
     "largest_nonbridge_component": 1838,
     "source": "Authentic immutable 640x360 JPEG directly viewed; full original PNG parity UNVERIFIED",
     "native": "NATIVE-UNTESTED; installed bridge cap UNMEASURED"
+  },
+  "rework_b9": {
+    "assigned_current_head": "77576063c9fa3ae970dc2debde289c4b859e4e1e",
+    "worker": "Canvas Reworker B",
+    "date": "2026-11-18",
+    "physical_cells_changed": 30584,
+    "added": 12430,
+    "excavated": 12056,
+    "reclassified": 6098,
+    "extent": [
+      2048,
+      2048
+    ],
+    "rectangle_count": 20867,
+    "json_bytes": 398277,
+    "occupied_cells": 1788588,
+    "whole_plane_replay": 4194304,
+    "zero_overlap": true,
+    "valid_solid_material_ids": [
+      38,
+      40,
+      41,
+      42,
+      49,
+      52,
+      100,
+      101
+    ],
+    "cardinal_grounded_bridge_cells": 1783723,
+    "all_five_bridge_and_bank_solid_probes_joined": true,
+    "solid_components_total": 16,
+    "static_routes": [
+      {
+        "clearance": [
+          19,
+          15
+        ],
+        "reachable_centres": 2117103,
+        "exact_sites": 23,
+        "east_bypass": 6,
+        "west_threshold_root_steps": 374,
+        "east_sanctuary_lookout_steps": 332
+      },
+      {
+        "clearance": [
+          23,
+          19
+        ],
+        "reachable_centres": 2059808,
+        "exact_sites": 23,
+        "east_bypass": 6,
+        "west_threshold_root_steps": 374,
+        "east_sanctuary_lookout_steps": 332
+      },
+      {
+        "clearance": [
+          31,
+          27
+        ],
+        "reachable_centres": 1947319,
+        "exact_sites": 23,
+        "east_bypass": 6,
+        "west_threshold_root_steps": 374,
+        "east_sanctuary_lookout_steps": 332
+      }
+    ],
+    "png_count": 15,
+    "full_map_and_crop_pixel_comparisons": 8650752,
+    "png_crc_zlib_adler": "PASS",
+    "png_pixel_mismatches": 0,
+    "authentic_source_jpeg_git_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
+    "source_jpeg": "DIRECTLY VIEWED",
+    "original_source_png_pixel_parity": "UNVERIFIED",
+    "node_runtime": "NOT RUN; future verifier independently strengthened",
+    "native_godot_rapier": "NATIVE-UNTESTED; installed bridge rectangle capacity unmeasured"
   }
 }

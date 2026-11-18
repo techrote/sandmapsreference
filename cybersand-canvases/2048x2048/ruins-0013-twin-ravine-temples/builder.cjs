@@ -556,6 +556,44 @@ function finishR2B8(A,W,H) {
 }
 finishR2B8(A,W,H);
 
+function finishR2B9(A,W,H) {
+ // Scale-first preservation of compact source district. Two functional,
+ // fully traversable shrine galleries carved into existing solid terrain.
+ function disc(cx,cy,r,v,only=false) {
+  for(let y=Math.max(0,Math.ceil(cy-r));y<=Math.min(H-1,Math.floor(cy+r));y++) {
+   let dx=Math.sqrt(Math.max(0,r*r-(y-cy)**2));
+   for(let x=Math.max(0,Math.ceil(cx-dx));x<=Math.min(W-1,Math.floor(cx+dx));x++) {
+    let k=y*W+x;if(!only||A[k])A[k]=v;
+   }
+  }
+ }
+ function path(pts,r,v,only=false) {
+  for(let j=1;j<pts.length;j++) {
+   let [x,y]=pts[j-1],[X,Y]=pts[j],n=Math.ceil(Math.hypot(X-x,Y-y)/4);
+   for(let i=0;i<=n;i++){let t=i/n;disc(x+(X-x)*t,y+(Y-y)*t,r,v,only);}
+  }
+ }
+ // Old root-shrine threshold to local landing, preserving west bridge anchor.
+ const west=[[604,589],[603,645],[583,689],[529,727],[502,775],[491,850]];
+ // Unlike east sanctuary's carved descending lookout service.
+ const east=[[1811,619],[1819,670],[1815,715],[1826,770],[1823,833],[1814,883],[1790,930]];
+ path(west,35,41,true);path(west,29,0);
+ path(east,35,41,true);path(east,29,0);
+ // Inhabited architecture remains load-bearing: joined bank counterforts
+ // retain all five cardinal solid bridge/shore probes in one component.
+ const westCounterfort=[[709,702],[717,760],[705,819],[687,875],[687,942]];
+ const eastCounterfort=[[1693,891],[1697,937],[1694,989],[1683,1030]];
+ path(westCounterfort,21,100);path(eastCounterfort,19,40);
+ path(westCounterfort,10,42,true);path(eastCounterfort,7,49,true);
+ // All detail below strictly recolours existing occupied material,
+ // not masking real Midge clearance or inventing pixel sprites.
+ for(const [x,y,r,v] of [[574,723,8,52],[547,785,7,42],[516,822,8,52],
+  [1839,727,8,52],[1833,831,7,42],[1809,896,7,52],
+  [703,778,7,42],[692,888,6,49],[1697,952,8,52]])disc(x,y,r,v,true);
+}
+
+finishR2B9(A,W,H);
+
 const spawn=[1024,454],loc=[
 ['Upper Open Ravine',[1024,454]],['West Upper Shrine',[315,590]],['West Upper Threshold',[604,589]],['West Root Landing',[491,850]],['West Deep Root Niche',[347,1137]],['West Middle Exit',[751,1141]],['West Terrace Chapel',[469,1367]],['West Lower Return',[596,1718]],
 ['Living Bridge West Air',[837,619]],['Living Bridge Mid-Air',[1050,617]],['Living Bridge East Air',[1450,613]],

@@ -1,3 +1,31 @@
+# CURRENT R2B9 — practical west shrine and east lookout access (18 November 2026)
+
+**OPEN Draft/HOLD · start HEAD `77576063c9fa3ae970dc2debde289c4b859e4e1e` assigned exclusively to B · NATIVE-UNTESTED · NO owner acceptance.** The original source-derived old tree, unlike shrines, singular rooted bridge and ravine remain one compact district inside the 2048×2048 physical-cell world; nothing was uniformly scaled up from the reference image.
+
+**Physical geometry repair:** Carved fully Midge-traversable stone-margined western upper-shrine → rooted landing gallery (original *exact* endpoints 604,589 → 491,850) and independent eastern sun-sanctuary → lookout passage (1811,619 → 1790,930). Grounded geological counterforts preserve every existing one-bridge-and-both-banks cardinal solid connectivity probe, despite opening the two passages; in-place bark, moss and bronze infill finish the service entries without blocking flyable centres.
+
+| Exact R2B9 qualification | Result |
+|---|---:|
+| World, actual cell plane | **2048×2048 / 4,194,304 cells** |
+| Changed material identities | **30,584** (12,430 added, 12,056 removed, 6,098 reclassified) |
+| Setup-v2 rectangles | **20,867 / 32,768**, nonoverlapping |
+| Setup-v2 JSON bytes | **398,277 / 1,048,576** |
+| Occupied cells / full material replay mismatches | **1,788,588 / zero** |
+| Dominant grounded four-connected bridge/temple structure | **1,783,723 cells**, 16 total components |
+| Exact 23 authored Midge sites / 6 east bypass locations | **23/23 and 6/6** at 19×15, 23×19 and 31×27 envelopes |
+| West shrine threshold → root landing, strict 31×27 | **374 steps**, previously 4,102 |
+| East sun sanctuary → lookout, strict 31×27 | **332 steps**, previously 1,110 |
+| Material-cell overview, full indexed map and 1:1 crops | **15 PNGs**, independent CRC/zlib/Adler and **8,650,752 material-pixel comparisons**, zero mismatches |
+| Original reference | Genuine existing repository JPEG visually inspected; full original PNG pixel parity **UNVERIFIED** |
+| Godot/CyberDemoBridge/Rapier/Midge import, collision, simulation, save/reopen | **NATIVE-UNTESTED**, installed bridge capacity unknown |
+| Original builder Node execution | **NOT RUN**; independently reconstructed material cell plane and generated exact PNG assets; updated future standalone verifier |
+
+[Source JPEG](source-reference-preview.jpg) · [Full-resolution indexed actual material grid](temples-material-2048.png) · [Full overview](twin-ravine-temples-preview.png) · [West route 1:1](temples-detail-west-shrine.png) · [West bridge landing 1:1](temples-detail-bridge-west-anchor.png) · [East local passage 1:1](temples-detail-east-bypass.png) · [Guardian 1:1](temples-detail-east-guardian.png) · [Current machine receipt](evidence.json) · [Updated independent verifier](verify-r2.cjs).
+
+**Earlier R2B8 and preceding descriptions below are retained as historical provenance. Their SHA/counts are superseded.** No merge, Ready, auto-merge or owner acceptance.
+
+---
+
 # CURRENT R2B8 — source-driven living bridge and distinct playable temples (18 Nov 2026)
 
 **OPEN Draft/HOLD · NATIVE-UNTESTED · independent owner/Shepherd review required.** Exclusively assigned to B at `7b986f991f393f51f449e0b64e78e2c1443bd942`, working only on this existing PR branch. Genuinely viewed unchanged 640×360 original source **JPEG** beside the previous true material preview. Original full-resolution PNG pixel parity **UNVERIFIED**. Entire pictured scene represents one compact source-derived district, not an entire stretched world; deeper rooted crypt is a deliberately newly authored extension.

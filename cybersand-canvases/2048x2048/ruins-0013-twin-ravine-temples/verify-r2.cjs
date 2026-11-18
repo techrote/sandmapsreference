@@ -30,21 +30,32 @@ const bridgePoints=[[1070,705],[586,745],[1455,655],[1580,680],[1770,730]];
 const bridgeId=solidAt(bridgePoints[0]);assert(bridgeId>0,'bridge material seed missing');
 for(const p of bridgePoints)assert.strictEqual(solidAt(p),bridgeId,'floating bridge or erased bank anchor '+p);
 const orderedComponents=[...componentSizes].sort((a,b)=>b-a);
-assert.strictEqual(orderedComponents[0],1783209,'unexpected cardinal root/bridge main solid size');assert.strictEqual(componentSizes.length,17,'unexpected independent stone component count');assert(orderedComponents.slice(1).every(x=>x<=20000),'unexpected isolated large structure');
+assert.strictEqual(orderedComponents[0],1783723,'unexpected cardinal root/bridge main solid size');assert.strictEqual(componentSizes.length,16,'unexpected independent stone component count');assert(orderedComponents.slice(1).every(x=>x<=20000),'unexpected isolated large structure');
 console.log('PASS both actual saved-grid bridge anchors, upper east cap and entire deck in common 4-neighbour material component: '+componentSizes[bridgeId-1]+' cells; '+componentSizes.length+' solid components');
 
 // Conservative Midge envelope testing with FULLY IN-BOUNDS centres and exact target points.
 const receipt=JSON.parse(fs.readFileSync('evidence.json','utf8'));
 assert.strictEqual(receipt.format.rectangles,setup.edits.length,"stale rectangle receipt");
 assert.strictEqual(receipt.format.json_bytes,Buffer.byteLength(setupText),"stale JSON byte receipt");
-assert.strictEqual(receipt.format.covered_material_cells,1788214,"stale occupied-cell receipt");
+assert.strictEqual(receipt.format.covered_material_cells,1788588,"stale occupied-cell receipt");
 const sites=receipt.actor.exact_named_sites,legacy=receipt.actor.clearance.archival_regressions.previous_exact_sites;assert.strictEqual(sites.length,23,'all 20 original plus three new exact sites must be present');
 const bypass=[[2018,310],[2018,780],[1932,781],[1730,783],[1450,782],[1418,815]];
 const integral=new Int32Array((W+1)*(H+1));
 for(let y=0;y<H;y++){let row=0;for(let x=0;x<W;x++){
  row+=grid[y*W+x]!==0?1:0;integral[(y+1)*(W+1)+x+1]=integral[y*(W+1)+x+1]+row;
 }}
-for(const [ww,hh,expectedConnected,oldRetained] of [[19,15,2122630,13],[23,19,2066009,13],[31,27,1955144,11]]){
+
+function localDistance(legal,start,end){
+ const q=new Int32Array(W*H),D=new Int32Array(W*H),src=start[1]*W+start[0],dst=end[1]*W+end[0];
+ assert(legal[src]&&legal[dst],'exact local Midge endpoint blocked');
+ q[0]=src;D[src]=1;let head=0,tail=1;
+ while(head<tail){const p=q[head++],x=p%W,y=(p/W)|0;if(p===dst)return D[p]-1;
+  for(const k of [x?p-1:-1,x<W-1?p+1:-1,y?p-W:-1,y<H-1?p+W:-1])
+   if(k>=0&&legal[k]&&!D[k]){D[k]=D[p]+1;q[tail++]=k}
+ }
+ throw Error('local exact-semantic route disconnected '+start+' -> '+end);
+}
+for(const [ww,hh,expectedConnected,oldRetained] of [[19,15,2117103,13],[23,19,2059808,13],[31,27,1947319,11]]){
  const rx=(ww-1)/2,ry=(hh-1)/2,allowed=new Uint8Array(W*H),reached=new Uint8Array(W*H);
  for(let y=ry;y<H-ry;y++)for(let x=rx;x<W-rx;x++){
   const l=x-rx,r=x+rx+1,t=y-ry,b=y+ry+1;
@@ -60,6 +71,8 @@ for(const [ww,hh,expectedConnected,oldRetained] of [[19,15,2122630,13],[23,19,20
  }
  for(const d of sites){const p=d.point;assert(reached[p[1]*W+p[0]],'exact Midge site blocked '+ww+' '+d.name)}
  for(const p of bypass)assert(reached[p[1]*W+p[0]],'east fly-around bypass not reachable '+ww+' '+p);
+ assert(localDistance(allowed,[604,589],[491,850])<=600,'west shrine approach excessively indirect');
+ assert(localDistance(allowed,[1811,619],[1790,930])<=600,'east lookout approach excessively indirect');
  assert.strictEqual(tail,expectedConnected,'Midge air component changed '+ww);
  const oldPass=legacy.filter(([x,y])=>reached[y*W+x]).length;
  assert.strictEqual(oldPass,oldRetained,'historical positional count differs '+ww);
@@ -84,5 +97,5 @@ for(const [name,[w,h,left,top,step]] of Object.entries(names)){
  const emitted2=name==='twin-ravine-temples-preview.png'?other.png:other.details[name];assert(Buffer.from(emitted2).equals(b),'second build mismatch '+name);
  console.log('PASS '+name+' '+w+'x'+h+' 0 pixel mismatches, verified CRC/IEND');
 }
-assert.strictEqual(covered,1788214);
+assert.strictEqual(covered,1788588);
 console.log('PASS full exact setup replay '+setup.edits.length+' rectangles; '+covered+' occupied cells; deterministic rebuild twice');
