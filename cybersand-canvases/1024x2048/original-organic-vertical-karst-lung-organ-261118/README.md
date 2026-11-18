@@ -54,9 +54,9 @@ Every nonempty starting cell is an immovable solid, but the actual accepted phys
 
 - Fixed seed: `0x4b415253`.
 - Deterministic builder: `build-karst-lung-organ.js` (Node.js; no dependencies); writes all artifacts to its optional first directory argument or its own directory.
-- Builder SHA-256: `488adb393b2405bcd3383c369b6c3f8b696461ea2fbd43b6b848c2f8249cd986`.
-- Full material plane SHA-256: `a18cd987873590d721d4245b9fba62adf5ea9eccb55c32463ee9b351b384bb18`.
-- Setup JSON SHA-256: `74d5ff7554a4dcdbf8c13d30d4bab0f8b8eb702d95edccffac56ba906661c11d`.
+- Builder SHA-256: `6d69de6d7ad82b9bea50a09f157ea1659a796d38d425c20d1d2899c5e8cd5cad`.
+- Full material plane SHA-256: `ec1e408d42fdbcceb26be305929b8f78974a54652634e6630e27f337b20f856d`.
+- Setup JSON SHA-256: `025f0b1cec9ef494ae0ebbaa4252bad33b14a59e6f2c72ce71a9f29138cb52e5`.
 - Full-grid parity: 0 mismatches, 0 overlapping rectangles.
 - PNG: uncompressed-deflate, 8-bit indexed palette; palette pixel **index** is real CyberSand material ID, not illustration. All 11 images independently decoded and checked for PNG CRC/Adler/index fidelity.
 - Current CyberSand accepted `main`: `018bd09503d7f079ddac52e225c2f7daf8d678bf`.
@@ -68,3 +68,7 @@ The full `overview.png` is exactly 1024x2048 physical cells, one actual material
 **DRAFT / HOLD. NATIVE-UNTESTED.** No Windows/Godot install, actor input/collision, Rapier progression or save/fresh-process reopen is represented as performed; Shepherd and independent auditor assessment remain outstanding.
 
 R3 independently repaired seven formerly near-empty true-cell districts (crown, root orchard, spore organ, fossil amphitheatre, calcite observatory, dry moonwell, deep bell), plus supported anastomosis; each has large/midscale physical architecture and distinct silhouettes rather than added outline whiskers. Core airway and blocked-centre bypass remain open. No source/reference image or other repository is used.
+
+## R4 physical district rebuild (18 November 2026)
+
+The independent Shepherd and fidelity reviewers requested a substantial second site-scale edit rather than thin detail. R4 replaces the prior root-orchard crossed-stick arrangement with a continuous buttressed tree, three rooted benches, branching irregular canopy and cut geology niches; replaces Spore Organ circles with interconnected irregular membranes, five unequal through-pores, actual approach stages and a route to their service ledges; builds a four-tier stratified fossil amphitheatre opposite a faceted braced observatory; and adds a continuous basalt artery and three dry moonwell service levels. All edits precede full-cell coalescing and independent site/hull/route replay. These are static physical initial-material edits, not live native results.
