@@ -1,98 +1,150 @@
-# Mosaic Viaduct Commons — Shared City on the Arches
+# Mosaic Viaduct Commons — CyberSand source-led R2
 
-**Actual CyberSand Workbench generated-start canvas** · **2048×2048** · **Draft / HOLD**
+**2048 × 2048 real material cells · Draft / HOLD · PR #11.**
 
-## Reference / exact provenance
+**HISTORICAL R2A5, superseded by R2A7** — four genuine grounded gallery repairs, 16/16 strict Midge sites at three envelopes; earlier rows are historical.
 
-- Original reference: [`artwork/neighbourhoods_commons/batch2/mosaic_viaduct_commons.png`](https://github.com/techrote/sandmapsreference/blob/main/artwork/neighbourhoods_commons/batch2/mosaic_viaduct_commons.png)
-- Public reference ID: `commn-0012`; source key `batch2/images/img-040.png`
-- Original Git blob SHA: `fb01ca96733623502e99e9734bf4fb7d5d28035e`
-- Original source SHA-256: `2fdd573055f04a2252ce7098c7276db1d9d209e9797ae9e282f15d5e0ef6b8e3`
-- CyberSand accepted `main` schema authority: `018bd09503d7f079ddac52e225c2f7daf8d678bf`
-- **Original reference image pixels were not available through the read-only GitHub binary-file interface in this execution; source width/height and direct side-by-side image fidelity remain unverified.** Do not treat this as a visually exact tracing.
+**HISTORICAL R2A4, superseded:** 8,434 rectangles, 163,421-byte generated-start manifest, 16/16 strict sites at all three clearances, new grounded inhabited civic subway. Previous numeric tables below document earlier iterations; latest counts are in the R2A4 section. The archived R1 is preserved on main; this R2 rebuild exists on its separate assigned branch, with no source-art or engine edits.
 
-## Playable translation
+## CURRENT R2A7 — source-calibrated inhabited subway and true bypass (18 Nov 2026)
 
-A dense two-dimensional mosaic viaduct city with six vaulted limestone arches, terracotta/cyan upper transit deck, suspended circular civic mosaic, west/east townhouse and service quarters, two maintenance portals through the upper viaduct, public tiled court, roof gardens, layered lower passageways, lanterns, shade-festival pennants, a contained reflecting pool, and geological valley banks. The default Midge spawns above the upper viaduct; upper, middle, and lower routes connect through explicit traversal portals. All wall, tile, mosaic, light, water, and plant shapes are authored physical CyberSand materials, not a background illustration.
+**Draft/HOLD; no owner acceptance.** Shepherd-authorised starting HEAD `137bda613568ed30c58268a56632bbf2893866ef`, new 318-operation real-cell finishing pass in `finish-r2a7.cjs`. Changed **180,987 actual material cells**, reserialised all 4,194,304 cells to **9,006** valid in-bounds, nonoverlapping rectangles / 32,768 and **174,508** UTF-8 JSON bytes / 1,048,576; independent final whole-grid SHA-256 `030c722525998deac2add1887fc5ed487f28bd552f1e5b32c891a9a52bfea0d5`, full ordered stamp replay **zero mismatches**. Accepted **stable solid material IDs only** (MossWall 97 is Combustible but immovable/unignited); no liquid or powder foundations. Six tested structural load probes still join the **1,579,508-cell grounded masonry component**.
 
-The output uses an entirely orthographic 2D side elevation, with no isometric platform tops, and avoids unconstrained spreading organisms. Water is confined to the lower service pool. The colored mosaics, lights and foliage are made with stable solid material IDs, so the static composition does not spontaneously grow or dissolve.
+The genuine unchanged repository **JPEG was directly viewed**, and R2A6 overview/three new subway crops were compared. Original full-resolution source PNG pixel parity remains **UNVERIFIED**. Four differentiated locally scaled roofed mezzanine suites now form a continuous public route with floor-supported archive shelving, ticket exchange, civic utilities and inert eastern machinery. Three wide masonry-framed descent shafts preserve terrace access; 1:1 detail crops show actual physical material cells, not screenshots. The blue/ivory west library, rising paved promenade, terracotta shade sails, broad tree and externally Empty flyable sky are unchanged.
 
-## Committed artifacts
+All **16 original operational destinations**, exact spawn and three exact new gallery samples remain reachable from unchanged spawn at conservative full 19×15 / 23×19 / 31×27 Midge centre clearances; no radius proxy or endpoint substitution. The critical lower transit section has a genuine excavated lower service bypass beneath the public artery. A solid rectangle inserted **x980–1115/y1685–1755**, eroded against the *entire* 31×27 conservative collision envelope (NOT centre-only masking), retains a strict cardinal west-underpass `(521,1712)` → east-underpass `(1534,1692)` **1,211-step bypass**, versus **1,033 steps unobstructed**, bounded x200–1850/y1450–1850. The older 1,095-step centre-mask scenario is historical and **was not a physically collision-capable obstruction test**.
 
-- `setup-mosaic-viaduct-commons.json`: the actual Workbench generated-start v1 canvas, with `starting_setup.edits` material rectangles. **Use this file to play; the PNG is only a preview.**
-- `preview.png`: full-resolution RGB PNG rendered from the exact authored material IDs and CyberSand's material palette.
-- `overview.png`: 1024×1024 review image from the same material-cell plane.
-- `build.py`: deterministic map authoring, generation, rectangle coalescing, actor-clearance checks, full reconstruction validation, and PNG rendering; seed `40012`.
-- `base-setup.json`, `generated-start-template.json`, `material-palette.json`: frozen schema/palette authoring inputs, pinned to previously accepted evidence.
-- `evidence.json`: machine-readable source identity, static budgets, hashes, destinations, and explicit native/visual limitations.
+**Gallery:** [authored full-grid material PNG](preview.png), [whole-world overview](overview.png), [west reading rooms](crop-r2a7-west-reading-hall.png), [central exchange/bypass](crop-r2a7-transfer-and-bypass.png), [eastern works](crop-r2a7-east-machinery.png), [two-level service connection](crop-r2a7-upper-lower-route.png). All 21 outputs regenerated from one final material-index plane with self-checked indexed palette and PNG signatures. Standalone Node verifier (independent per-pixel PNG decoding and CRC+zlib readback) **has not run here**; `node build-r2.cjs && node verify-r2.cjs` is provided for subsequent fresh-process qualification, but neither script was executed as Node in this run.
 
-For reproducibility on Python 3 with Pillow, NumPy and SciPy: `python build.py`. The frozen inputs are committed; the script will not need to access the network when rerun from this directory. The same script generates the exact setup and material-plane hash.
+**NATIVE-UNTESTED:** installed CyberDemoBridge capacity (32,768 in accepted source; legacy fallback 4,096 may reject), native Godot/Rapier Workbench setup load, true Midge controls/collision, bounded simulation and save/reopen are untested. Original source, other worker branches, engine and historical main archive remain unchanged. Owner/Shepherd/auditors retain HOLD authority.
 
-## Loading in CyberSand Workbench
+---
+## Ground truth and fidelity
 
-1. Place `setup-mosaic-viaduct-commons.json` in the running CyberSand application's `user://workbench` directory (`%APPDATA%\Godot\app_userdata\Cyber Sand Reference Sandbox\workbench\` on the reference Windows configuration).
-2. Reopen the Workbench generated-start file, then install it into the current Workbench. The selected Midge begins above the upper viaduct.
-3. Fly through the arch galleries, central mosaic passage, side civic quarters, the upper maintenance cuts and the lower basin. Keep the water in its sealed pool unless deliberately performing destructive sandbox testing.
+- Original PNG: artwork/neighbourhoods_commons/batch2/mosaic_viaduct_commons.png, catalogue ID commn-0012, source key batch2/images/img-040.png, original Git blob fb01ca96733623502e99e9734bf4fb7d5d28035e.
+- **Actually inspected:** committed genuine repository source-reference-preview.jpg, blob 8cf59bbba8c4a4037924490b7d158872be876abd, plus committed before/after real material-grid previews and seven native-cell 1:1 crops. Original full-resolution PNG **not independently pixel-decoded**; parity UNVERIFIED.
+- Actual authored changes: restored the asymmetrical left pale-tile civic block, open two-level rooms, blue-and-white mural, orange awnings, continuous rising broad public steps, large broad-canopy right-rooted tree, inhabited terrace and continuous illuminated **dry buried corridor**. Removed the unrelated giant roundel, six identical viaduct arches, mirrored housing, sign glyphs and water basin. **2,287,869/4,194,304 cell identities changed** from archived main.
+- Render honesty: the source's blue photographic daylight sky is physically **Empty**, so the native-cell preview displays CyberSand's dark Empty colour. No screenshot-only backdrop, pseudo-materials or solid sky were inserted. This is a stylized orthographic *playable material translation*, not a claim of original-pixel parity.
+- Tree leaves are legal immovable physical materials. Two decorative solids (pine-plank accents and moss-wall canopy) have Combustible laws, but there are no initial Fire/heat sources or unrestricted growing Plant/Cloner agents. No water, powders, gas or reactive liquid appears at start.
 
-## Static qualification
+## Artifacts and offline regeneration
 
-See `evidence.json` for exact generated counts, output hash, and the 16 named route targets. Acceptance requirements:
+The playable artifact is **setup-mosaic-viaduct-commons.json**, a generated-start v1 manifest with unchanged verified empty GEN-007 recipe provenance and a strict starting Setup-v2 containing the current packed nonoverlapping material rectangles (see R2A4 below). The PNG files are only previews.
 
-- Exact extent **2048×2048** (4,194,304 material cells).
-- Workbench `starting_setup` version 2, generated-start wrapper version 1.
-- At most **32,768** coalesced terrain rectangles and **1 MiB** JSON.
-- Exact roundtrip reconstruction from emitted rectangles back to every authored material cell.
-- Every one of 16 named districts/destinations reachable from Midge spawn with **19×15** and **7×7** geometric clearance envelopes. An empty-cell flood fill alone is insufficient.
-- True material palette rendering; no source image embedded in the setup.
+With Node 20+ in this folder run **node build-r2.cjs** followed by **node verify-r2.cjs**. build-r2.cjs is the deterministic source of truth for 4,194,304 material cells and indexed PNGs; verify-r2.cjs is a separate JSON/PNG/material actor-envelope checker using Node's native zlib. Legacy **python build.py** now forwards to the Node R2 generator; the old R1 authoring program remains available in archival main. Neither generator requires network access, image services or third-party packages. Frozen material-palette.json and generated-start template remain in this folder.
 
-**Native qualification is NOT complete**: this run did not execute a physical Windows 11 Godot/Rapier Workbench, the live actor controls, real simulation progression, or save/reopen. **Direct original-reference image comparison also remains outstanding** because the artwork's PNG bytes could not be retrieved. These are explicit independent-review and owner-acceptance gates, not silently claimed passes.
+### Source vs actual material-cell gallery
 
-**Do not merge or promote Ready.** The shepherd should review this exact HEAD and either commission rework or mark it for owner playtesting after the remaining gates.
+- [Genuine source-reference JPEG](source-reference-preview.jpg) vs [2048² physical-cell preview](preview.png), with [1024² sampled overview](overview.png).
+- [Civic facade at 1:1](detail-civic.png) — origin (39,365), 512²; [upper arcade transition](detail-viaduct.png) — (715,736), 512².
+- [Canopy and rooted tree at 1:1](detail-gardens.png) — (1211,549), 512²; [west shops](detail-west-gardens.png) — (45,1050), 512²; [right terrace](detail-east-gardens.png) — (1320,1010), 512².
+- [Stepped plaza at 1:1](crop-stair-plaza.png) — (890,929), 512²; [continuous lit buried corridor at 1:1](crop-buried-corridor.png) — (825,1468), 512².
 
+All gallery PNG pixel indices are sampled from the *same final 2048² grid* and the exact accepted native palette. Detail crops are truly one cell per pixel; overview is nearest-neighbour 2:1 sampling.
 
-## Reworker B — architectural/civic repair (d36ba7ea59e1 baseline)
+## Structural and playability evidence
 
-The original six-arch viaduct, paired wings, centre roundel, basin, selected Midge, and 16 named coordinates are retained. This iteration repairs **real material cells** with a deterministic additive overlay (`rework-append.json`, 1,331 bounded stamps) rather than merely recolouring a screenshot. The edits give the previously repetitive arch courses asymmetrical stone-repair, pilaster, pennant and buttress grammar; articulate the west/east shopfronts with distinct roofs and window bays; tie the large suspended commemorative roundel to civil infrastructure; add a public court pavilion, colonnade and market details; and give the lower gardens and service/water infrastructure more functional spatial hierarchy.
+| Gate | Exact static result |
+|---|---|
+| Dimension / material-plane cells | 2048×2048 / 4,194,304 |
+| Rectangles / Setup native constructor capacity | **7,863 / 32,768** |
+| Manifest / 1 MiB limit | **152,210 / 1,048,576 bytes** |
+| Physical material and Empty cells | 1,289,475 / 2,904,829 |
+| Full independent cell replay | 4,194,304 / 4,194,304; no mismatch |
+| SHA-256 of material plane | fcdab739ad94aae88ceaf1fc565951ba8afa7533c13876f81990b892ca7a1318 |
+| Initially dynamic/movable materials | None (old 43,916 Water cells removed) |
+| Valid native solid material identifiers | 30, all immovable, 2 Combustible without ignition |
+| Exact 19×15 strict hull-centre 4-neighbour BFS | **16/16 named sites**; 2,370,337 connected centres |
+| Exact 23×19 conservative sensitivity | **16/16**; 2,276,913 connected centres |
+| 31×27 extra sensitivity (not admission floor) | **16/16**, all exact named sites connected |
 
-The overlay was conservatively clipped around the original 19×15 shortest-route tree joining the selected spawn and **all 16 exact named anchors**; the resulting full-grid geometry was independently recomputed after editing. No hidden nearest-point substitution. Original contained Water occupancy is unchanged, and only pre-existing supported palette material IDs were authored.
+Actor remains the original Midge definition/hash and exact spawn (404,502), actual hull **4×3**. All original 16 named coordinates remain exact with no nearest-waypoint substitution; their R1 names are *position regression labels*, not a claim the retired ring/arcade exhibits are still present. Primary outdoor route, upper/library egress, public stair maintenance opening, lower lateral corridor and descending access shafts are actual unobstructed cells.
 
-### Exact-HEAD static requalification
-- Source and PR baseline: `d36ba7ea59e1fdc511c1b9d717f549e007fa58cd`, material-plane SHA-256 `1127b5d58ecd6a32d22ad255652b698d5fc7d1a7ec25087a825eb7fc2acbe23d`.
-- Revised extent: **2048×2048**; **19,357 / 32,768** 5-field rectangle stamps; JSON **376,164 / 1,048,576 bytes**; changed material cells **144,204**.
-- Reconstructed cell plane: **4,194,304/4,194,304**; exact SHA-256 `e9d31f0fb6e813e0d22ac3849d1b4cb60fabdd505b64bf508b3ed23e8459fc6a`; zero unsupported/pseudo material IDs.
-- Conservative 19×15 all-non-air-blocking Midge occupancy: **16/16 original final declared anchors** connected from spawn [404,502], **617,620** connected legal centres, no substitute waypoints. 7×7 route check: **16/16**, 980,001 centres.
-- Dynamic Water: **43,916** original cells retained, zero changed Water cells.
-- The full-resolution `preview.png`, 1024² `overview.png`, and native **512×512** `detail-viaduct.png`, `detail-civic.png`, `detail-gardens.png` all directly depict the final material cell plane.
-- Reproduce with `python build.py` (requires NumPy, Pillow and SciPy); the builder asserts both exact baseline/final grid hashes, rectangle count, and 16/16 conservative route reachability.
+Exact engine authority checked: techrote/cybersand main 018bd09503d7f079ddac52e225c2f7daf8d678bf, godot/scripts/workbench_setup.gd, native/include/cybersand/material.hpp and godot/authoring/flyers/midge.json. The 32,768 construction capacity applies to the source-matched native bridge. **Without its capability method, Setup.native_rectangle_budget() falls back to 4,096; this 7,863-rectangle map can be rejected by an older installed runtime.**
 
-**Evidence limits:** Actual original-source PNG visual comparison remains **UNVERIFIED**; no Godot/CyberDemoBridge native admission, installed DLL capacity, Rapier actor flight/collision, live simulation progression, or save/reopen was exercised. Static-cell admission does not imply physical Windows acceptance. Retain **Draft / HOLD** pending Shepherd and owner review.
+**NATIVE-UNTESTED:** no source-matched Godot/GDExtension/Rapier installation was present, so runtime native admission/capability readback, live Midge input, impact/collision, bounded simulation and fresh-process save/reopen remain external acceptance gates. Static BFS does not prove piloting dynamics. Shepherd independently reviews exact final HEAD. **Do not merge, Ready-promote, auto-merge, or edit any historical source or other PR.**
 
+## Shepherd-assigned R2C finishing pass — 17 November 2026
 
-## Reworker C — inhabited civic and asymmetric gallery finishing (17 November 2026)
+Starting source HEAD: `362f86f0ea18b2e49ae8301a14c562310f87df1b`. This bounded follow-on responds to the genuine JPEG-source fidelity and technical reviews of the previous R2 commit. The earlier historical 'initial R2' statistics in REWORK-R2.md remain a record of the *previous* pass, not the final values here.
 
-**Starting exact PR HEAD:** `a757285d7495a3c2bcf6a740a9c2de6da193939b`. This pass changes real authored material cells, not the screenshot alone. It preserves the original six arch spans, central commemorative roundel, city wings, named Midge sites and the lower contained reflecting pool. The original source artwork remains binary-inaccessible, so **source-image resemblance is not verified**; these changes respond to independently observed deficiencies in the committed output.
+- **Stairs:** replaced thin periodically striped floating treads and sparse posts with uneven stone-mass risers, four differentiated public landings and a single stepped retaining spine. Existing air access is retained via a designed shaded civic opening, not by relocating a Midge destination.
+- **Sails:** moved three real terracotta fabric roofs down over usable civic terraces and added hard-surface legible anchors. These are physical cells, not image overlays.
+- **Tiles and rooms:** replaced large random-colour checker tiling with narrow ivory/cobalt floral bands, smaller differentiated glazing and occupied frontage. The exact Midge spawn remains open; an initial glass-window placement that trapped the spawn was rejected during iteration.
+- **Tree:** replaced repeated ellipse/dot crown stamps with irregular overlapping polygon silhouettes attached to the original right-rooted trunk. No active plant growth, powder supports or ignition sources were introduced.
+- **Buried corridor:** strengthened continuously identifiable masonry roof and gallery bays, with intentional large access shafts; a 31×27-compatible east maintenance chimney is true Empty air rather than a substituted waypoint.
 
-- New western roofed assembly loggia and eastern multi-bay library lookout give the suspended roundel two distinct occupied public-space shoulders rather than detached ornament. Their brackets and piers connect into the central court supports.
-- Additional western market terrace, eastern planted cloister, basin-side service shelter and asymmetric viaduct spandrel/masonry repair give the former empty service void coherent destinations and differentiate the two districts. A single material cell is either real stable material, air or the existing water; no new dynamics or unsupported pseudo-materials.
-- A second geometry iteration found that the first pass disconnected six exact operational sites. The correction **reopened 10,025 air cells in 176 coalesced clearance rectangles**, protecting 8,250 original 19×15 path centres without moving destinations. The final output was visually reviewed again at whole-map and three original-resolution districts, and the restored passages are actual empty material cells.
-- Final **2048×2048**; **21,320/32,768** material edits; serialized JSON **414,119/1,048,576 bytes** (SHA-256 `b9aad3fcda6fab7f1c041c83f941cb27352ff115aed6d173d1f2a2821f579f83`). **94,013 final material cells differ** from Reworker B; 43,916 sealed Water cells unchanged. Final material-plane SHA-256: `237ec6fb387c813babc1893d924d9e07f60cb94998fcbc304273bde3e7913661`.
-- Independent 4,194,304/4,194,304 rectangle replay and histogram equivalence; **16/16 exact named destinations** connected using original 19×15 clearance (522,990 connected centres, 122 components overall), plus **16/16 at 7×7** (804,245 centres, 181 total components). No nearest-air waypoint substitution. Static reachability is not actual flight/control qualification.
-- Reproduction: `python build.py` with NumPy/Pillow/SciPy and the checked-in `png_fixed.py`. The additional deterministic `rework-c-append.json` contains the final C stamping and explicit air-clearance restoration; `png_fixed.py` emits the byte-stable 8-bit native material-ID PNGs and embedded palette.
-
-**Committed final PNG SHA-256 evidence:** `preview.png` f62bcb2f6046dac2b029114afa73d82d8016ddbc2f3aa291adc1aeb147d73b6f; `overview.png` 7d74a5b20c349d9655db19533398e88252c0db254fc6b41ed5d96aa97022a252; `detail-viaduct.png` ffb6c03a477b31f3b31e7809ffd308fc09c7a7b9cbc2fc8e656618d08580ea9b; `detail-civic.png` bac16c094194f1c928392bb063bdfca46d07fc30fd396d616281fcbef59ed6de; `detail-gardens.png` cce74fae28b77c592eedd18fc9290a6f005b3587e739af64c670a26162c99e79.
-
-**Qualification limitations:** The source PNG's actual pixels have not been viewed. No Godot, installed CyberDemoBridge, Midge input/Rapier progression, or physical save/reopen was tested; the installed native rectangle limit and runtime actor hash remain unverified. The independent static replay and custom PNG emission were executed with a JavaScript GitHub-connected renderer; the patched Python builder itself was **not executed in this runtime**. Maintain **Draft / HOLD** until these gates and owner review.
+**Final static receipts:** 2048×2048 = 4,194,304 material cells, 7,863 non-overlapping coalesced five-field rectangles (limit 32,768), 152,210 JSON bytes (limit 1,048,576), 1,289,475 occupied and 2,904,829 Empty, 369,139 material IDs changed from assigned HEAD, SHA-256 `fcdab739ad94aae88ceaf1fc565951ba8afa7533c13876f81990b892ca7a1318`. Independently reconstructed every JSON rectangle/cell against the new builder grid, zero mismatches. All 28 used non-Empty materials are valid non-movable accepted native solids; combustible ID(s) 97 remain unignited. Authored actor, exact spawn, 16 positional targets and native generator provenance are unchanged. Exact zero-offset four-neighbour rectangular actor-centre connectivity: 19×15 **16/16** (2,370,337 centres), 23×19 **16/16** (2,276,913), 31×27 **16/16** (2,132,661); no nearest-point waiver. Current loaded bridge capacity not interrogated: older fallback remains 4,096, which would reject 7863 rectangles. The output PNGs are real material-index PNGs rendered from the reconstructed grid, and the committed independent validator `node verify-r2.cjs` is provided for fresh local reproduction; it was not executed inside the GitHub connector environment. **NATIVE-UNTESTED** (Godot/GDExtension/Rapier admission, flight/collision/simulation, fresh-process save/reopen). Genuine committed JPEG is retained untouched; previous independent reviewers directly inspected it, while this execution could not decode the binary through the connector. Full original PNG pixel parity remains **UNVERIFIED**.
 
 
-## Reworker C — final civic / garden structural finishing, 17 November 2026
+## Current R2B follow-on — physically grounded civic terrace (18 November 2026)
 
-**Starting exact HEAD:** `0480c5b798b69b893d4b764a89e9678ff9de378d` · **Draft / HOLD retained**. New `rework-c2-append.json` follows and does not replace B/C's earlier deterministic overlays. This is material-cell geometry, not a preview-only edit.
+**This table supersedes the preceding R2C totals as the final artifact receipt.** Source-JPEG comparison directly performed: the original's rising terrace, continuous support and underground civic use informed new real-material masonry banks, asymmetrical vaulted halls, connected roofed undercroft and broad open Midge egress. No faux sky material, duplicate source art, or screenshot-only geometry. Rebuilt with deterministic `finish-r2b.cjs` integrated *before* the main builder's rectangle coalescence.
 
-- **Roundel:** paired asymmetric load paths and tension ties from the viaduct to the civic shoulders, with the original central inspection airspace preserved; the ornamental thin suspension rod is partly opened.
-- **Public court:** western stepped gathering/gallery terrace and eastern stained-glass reading pavilion now have load-bearing plinths, occupied openings and different profiles rather than two near-identical decorative sail ornaments.
-- **Lower terrain:** western supported garden workshop and eastern roofed orchard terrace, both grounded to the existing valley circulation; the existing water cistern is unmodified. One right-hand arch landing gains a recognizable repaired-stone bracket instead of another copy of the regular spandrel.
-- **Actual-cell gallery:** `overview.png` (1024², 2:1 downsample), `preview.png` (2048²), `detail-viaduct.png`, `detail-civic.png`, `detail-gardens.png`, `detail-west-gardens.png` and `detail-east-gardens.png` (each 512² native one-cell-per-pixel).
-- **Independent artifact replay:** all **4,194,304** cells equal the final ordered JSON stamps; material SHA-256 `59abd884e322edf9258ddb207b4188d8dd0cd6dba9999dbaeb90df2c9a4b7bff`. **100,826** material cells differ from the starting HEAD, with 1665 additional rectangles, **22,985 / 32,768** rectangles total, **446,333 / 1,048,576** JSON bytes, and **2,415,288 / 32,000,000** painting visits. All existing 43,916 Water cells remain in exactly the same locations.
-- **Actor envelope:** exact 19×15 Midge clearance from original spawn [404,502] reaches **16/16 unchanged named sites** (483,078 connected centres), without tolerance offsets; a 23×19 sensitivity test still reaches **6/16**. The larger-envelope bottlenecks persist and require live flight evaluation. The route-preservation pass clears 8,195 newly occupied air cells on 8,249 original connected route centres; no Water or original foundation was removed for widening.
-- **Rebuild:** run `python build.py` with NumPy/Pillow/SciPy to reproduce JSON, indexed PNGs and evidence. The existing fixed-Huffman PNG writer was independently reimplemented and byte-matched against the starting committed overview before encoding the new gallery. The Python builder itself was **not run** in this tool environment.
-- **Limits:** source artwork `artwork/neighbourhoods_commons/batch2/mosaic_viaduct_commons.png` (blob `fb01ca96733623502e99e9734bf4fb7d5d28035e`) remains **SOURCE-UNVERIFIED**; no original pixels were viewed. **NATIVE-UNTESTED**: no Godot/Rapier/installed bridge load, Midge input or collision, water simulation or save/reopen. Owner/Shepherd acceptance remains pending; never infer physical playability from topology alone.
+| Gate | Exact final R2B result |
+|---|---|
+| Cell plane | 2048×2048; 4,194,304 cells |
+| Physical cells changed against assigned HEAD | 268,733 |
+| Rectangles | 7,508 / 32,768 |
+| JSON bytes | 145,339 / 1,048,576 |
+| Solid/Empty cells | 1,191,548 / 3,002,756 |
+| Full grid replay | 4,194,304 reconstructed, 0 mismatch |
+| Grid SHA-256 | `5b94f810cc5a43476f59abf3ffc3b207ff73b3ec4672655a18e585e950ced390` |
+| Exact target clearance, 19×15, 23×19, 31×27 | 19x15:16/16 (2547576 centres); 23x19:16/16 (2474690 centres); 31x27:16/16 (2299280 centres) |
+| Genuine PNGs | Nine previews/crops rendered directly from this final material-cell grid |
+| Native import/bridge capacity, simulation, input/collision, save/reopen | **NATIVE-UNTESTED**; source max 32,768, old installed fallback 4,096 |
+
+Reference image is the unchanged committed genuine JPEG; original large PNG direct parity remains **UNVERIFIED**. The old 7,863-rectangle/152,210-byte receipts above document predecessor HEAD, **not** the current artifact. No owner acceptance or Ready/merge.
+
+
+### 18 November 2026 Reworker A structural geometry
+`build-r2.cjs` deterministically applies `finish-r2a.cjs` after previous R2B layers. Rebuild the committed Setup/PNG/evidence from one authored material plane. See the R2A section of `REWORK-R2.md`; original source preserved, native untested.
+
+## R2A2 — Independent Shepherd P1 grounded-topology repair, 18 November 2026
+
+**Exact exclusive input HEAD** `859bda5e937f343f3722a50e050d7a529f00f7f0`. Genuine committed source JPEG blob `8cf59bbba8c4a4037924490b7d158872be876abd` directly viewed beside the former real cell overview and 1:1 crops; full original-PNG pixel parity **UNVERIFIED**. Deterministically changed **52,068 real material cells** in `finish-r2a2.cjs`, called after pre-existing overlays.
+
+Restored masonry load paths: western library wall **x54–91/y1150–1854**, west subway footing **x116–146/y1780–1854**, east rooted terrace terminal support **x1899–1939/y1740–1855**, five distinct short pier/wing connectors, west subterranean facade tie, and the **168×15-cell continuous rising plaza stringer** at x932–1099/y1190–1204. These connect the former 311,066-cell west civic mass, 264,064-cell eastern garden/tree body, 83,916-cell west lower wing and 61,199-cell stair bank to actual geologically grounded components, without one-cell cables or point-only operational clearances.
+
+**Static evidence at this exact regenerated state:** 2048×2048, 8,148 supported physical rectangles / 32,768, 157,753 UTF-8 JSON bytes / 1,048,576, 1,372,176 occupied cells, full ordered rectangle replay **0 mismatches**, material SHA-256 `0c306366e3f0c27037263abe87e8cb18a099b516c00dcb692d16ce4e9dd3fbaa`. From genuine y=2047 Solid four-neighbour BFS **1,289,425 connected physical support cells**, six specified original structure checkpoints pass, **65 small separate decorative/secondary components remain** for independent scrutiny. Current accepted-main placed material types all immovable Solid, no added liquids or powder-rock materials. Exact named Midge static cardinal-clearance 16/16 at 19×15, 23×19 and 31×27, no nearest-site substitution. All nine real-grid PNG images rebuilt and 1:1 crops retained (7,077,888 deterministic material-index samples). `verify-r2.cjs` now includes 31×27 and grounded-component gate. PNGs generated from same final cell plane; independent readback remains for auditors.
+
+**NATIVE-UNTESTED**: no physical Godot/CyberDemoBridge/Rapier load/install, actor movement/collision, simulation or save/reopen. Installed bridge capacity **UNMEASURED**, legacy 4,096 fallback would reject this rectangle count. OPEN Draft/HOLD; not Ready, merge or owner acceptance.
+
+
+## Reworker A R2A3 — contiguous civic ascent, inhabited arcade and lower artery (18 Nov 2026)
+
+**Assigned START:** `51a32d850f41466bdb18522e4ddf766a9cb35291`. The *genuine committed* 640×360 source JPEG `source-reference-preview.jpg` (blob `8cf59bbba8c4a4037924490b7d158872be876abd`) was actually viewed alongside the former and revised physical-cell overview. Original full-resolution PNG pixel parity **UNVERIFIED**.
+
+The source's one continuous ascending civic public landscape has been reconstructed from **354,753 changed material cells**, not as rendered decoration: materially backed irregular stairs, planted rest landings, visible shop facades, asymmetric masonry arcade arches, supported room/vault bays and a full-length dry roofed subway artery with meaningful entrances and separate service openings. Preserved the distinctive western blue/ivory library, suspended orange sails, eastern rooted tree, open flight sky and 16 unchanged exact named Midge sites. All new geography is authored physical cells.
+
+**Exact static replay:** 2048×2048, **8,581 / 32,768** rectangles, **166,245 / 1,048,576** Setup JSON bytes. All 4,194,304 cells independently replayed with zero difference; SHA-256 `ded00c67d55d9406cc9d2f159c2a32f38914a314808f3058def61727266b1beb`. All materials legal stationary Solid IDs according to accepted CyberSand main `018bd09503d7f079ddac52e225c2f7daf8d678bf`. World-bottom-connected solid component **1,430,519** cells. Fully in-bounds conservative 4-neighbour Midge centre-envelope reachability: **16/16** exact sites at **19×15, 23×19 and 31×27**. Pairwise 31×27 travel steps: West underpass → East underpass 1,427; West underpass → Reflecting basin 923; South mosaic overlook → East shelter 570; Western lower terrace → Central garden court 595; West high entry → East high entry 1,273. Blocking centre rectangle x1100–1250/y1420–1520 preserves lower alternate routes: 1,511 and 923 steps. Deterministic double regeneration plus **7,077,888** decoded indexed PNG pixel samples passed material-ID/palette parity, PNG chunk CRC32, DEFLATE and Adler32.
+
+**Unresolved:** **NATIVE-UNTESTED**; actual Godot/CyberDemoBridge/Rapier loading, installed bridge rectangle capacity, Midge input/collision, simulation and save/reopen were not exercised. The 4,096 legacy native rectangle fallback would reject 8,581 rectangles; source code supports 32,768 but installed capacity remains unmeasured. Static actor-centre paths do not establish actual flight gameplay. Full original-PNG pixel comparison unverified. Remain **OPEN Draft/HOLD**, independent Shepherd/fidelity and owner evaluation required. Engine, history, original art, other PR branches and actor definition unchanged.
+
+
+## Reworker A · R2A4 grounded, inhabited civic subway (18 November 2026)
+
+The genuine, unchanged committed source JPEG (Git blob `8cf59bbba8c4a4037924490b7d158872be876abd`) was **viewed** alongside the real previous/final overview and native 1:1 buried-corridor crop. **Full-resolution original-PNG pixel parity UNVERIFIED.** Original reference work remains untouched. The illustrated civic library, orange shade sails, broad climbing public stair and rooted right-side canopy retain their prior authored source-derived layout; the newly refined lower subway is **extrapolated beyond the source core**.
+
+**269,373 actual cell changes** in the existing lower district: the former detached roof/rack collection has been reconstructed as a load-bearing limestone/terracotta retaining body with seven **unequal carved usable vaults**, a continuous clear main artery, five open utility/daylight entries, a west civic archive, a central transfer bay/light court, an inert eastern pump maintenance chamber and an unequal eastern mural shelter. Structural shoulders, piers and floor masonry connect the underground into existing civic foundations. Equipment/glazing is now seated within physically supported chambers, rather than simply suspended in blank black air. The coherent upper stair and source landmarks were not flattened or re-scaled.
+
+**Rebuilt exact cells:** 2048×2048, 8,434/32,768 nonoverlapping packed rectangles, 163,421/1,048,576 JSON UTF-8 bytes, 1,521,862 occupied material cells, zero full-plane replay mismatch. SHA-256 `6e10cf26d48a7671987614db4120714fa1ad931c3da4e4a8c5e4104b18cf7727`. All 28 used nonzero IDs match valid accepted immovable Solid palette laws. Strict full-in-bounds 4-neighbour Midge clearance from unchanged spawn and **16/16 original exact sites** at 19×15, 23×19 and 31×27 (2,192,965 / 2,115,437 / 1,968,058 connected centres). **1,294,115** foundation-connected solid cells; six named structural checkpoints grounded. At 31×27, West Underpass→East Underpass path length **1,087** centres normally, **1,121** with an independent artificial central-rectangle exclusion x=980–1115, y=1685–1755. This verifies static bypass, not kinetic piloting.
+
+**Authentic material gallery:** Rebuilt full [2048² physical plane](preview.png), [overview](overview.png), seven existing 1:1 crops including [old underpass footprint](crop-buried-corridor.png), and three **new true native 1:1 views**: [west archive](crop-west-archive.png), [central transfer](crop-subway-transfer.png), [east shelter](crop-east-subway.png). All **12 PNGs** were generated from the same exact grid; 7,864,320 sampled physical-cell pixel positions, PNG chunk CRC, indexed material palette were checked. **Independent PNG decompression/readback NOT RUN**, so do not claim binary pixel-parity independently verified. Deterministic JavaScript builder executed in V8; **standalone Node command was not run**.
+
+**NATIVE-UNTESTED:** no installed CyberDemoBridge rectangular capacity readback, Godot/Rapier import, native Midge control/collision, bounded physics progression or save/reopen. The accepted source advertises 32,768 rectangles; an older installed fallback may still limit acceptance to 4,096. OPEN Draft/HOLD for Shepherd and auditors; no merge, Ready or owner acceptance.
+
+## R2A5 — exact-HEAD grounded subway-gallery repair (18 November 2026)
+
+Starting HEAD `14a906daff7654f2104fd594aba2dd2b6f896adb`. Replaced **57,495 actual material cells**: four formerly detached gallery masses (44,558, 28,111, 23,836, 20,270 cells) now connect cardinally to real grounded civic masonry via four 38–42-cell-wide ribs. Four unequal, limestone-supported mezzanine/plinths contain distinct practical archive, inspection, machinery and mosaic exhibits. Upper civic promenade, large root tree, sails and genuine source composition retained. No automatic artistic rescaling.
+
+Final: **2048×2048**, **8,640/32,768** rectangles, **167,505/1,048,576** JSON bytes, **1,559,725** occupied cells, full-grid replay zero mismatches, SHA-256 `c200e9f5b189cc35d546e4f0d1817c3e3bf8e51a561743936518cbbbf1b03fca`, **1,470,876** cardinally ground-connected solid cells. Residual solid-component count **83**, largest detached component **5,976** cells; small historic detached trim remains. Strict unmodified 16/16 actor destinations pass at 19×15, 23×19, 31×27 (2,155,281 / 2,078,395 / 1,933,500 connected legal centres), no named-site relocation. West→East 31×27 underground shortest path **1,087 steps**; deliberate central obstruction detour **1,121**; West→centre **519**.
+
+Source authentic committed JPEG visually inspected: `8cf59bbba8c4a4037924490b7d158872be876abd`; original full-resolution PNG parity UNVERIFIED. All 14 material-index PNGs regenerated from the same final grid, including 2 additional native 1:1 1024×512 gallery-support views. Independent binary PNG inflate/readback not run; preview generation and material-index sampling from grid verified. All new IDs are legal inert immovable solids, existing MossWall combustible but unignited. **NATIVE-UNTESTED**: no installed Godot/Rapier bridge, Midge flight/collision, simulation or save/reopen executed; actual installed bridge rectangle capacity unmeasured. Draft/HOLD; no merge or owner acceptance.
+
+
+## R2A6 — grounded inhabitable civic subway (18 Nov 2026)
+
+Assigned R2A5 HEAD `60f0ca3a859dd39d04f63642e28cd8bcf47b449d`. A new deterministic physical-material finisher `finish-r2a6.cjs` changes **246194 actual cells**, creating three asymmetrical joined underground destinations: western illuminated book/archive exchange, centre ticket/transport exchange and eastern inert machinery/ceramic service hall. Hollow carved masonry vaults, full-height shared threshold openings, a 31×27-clear common corridor and genuinely open plaza descents replace dispersed display rack islands without sacrificing existing grounded ribs, upper staircase, west mosaic library, shade sails, tree, negative-space sky or any of the 16 exact Midge destinations. Crops are indexed material-cell 1:1, not scenic edits.
+
+2048×2048 Setup-v2 nested generated-start; **8732/32,768 rectangles**, **169150/1,048,576 bytes**, deterministic complete-grid replay zero mismatches, material SHA-256 `1d7283382a0a010198ee30c6689fe7c9de421e5ed0c349c09f41d0af3deef7fa`; all 16 named sites at 19×15 / 23×19 / 31×27 conservative clearance. Three additional genuine gallery air sites: (450,1716), (1106,1714), (1734,1712). Confined lower 31×27 transit route **1039 centre steps**, central-obstruction alternate **1095 steps**; physically grounded civic solid component **1,596,430 cells**. Independently decoded PNG pixel-parity readback is separately recorded when exercised. Genuine source catalogue JPEG seen, full original source PNG pixel parity **UNVERIFIED**. **NATIVE-UNTESTED** — installed CyberDemoBridge capacity, Godot import, Rapier, Midge control/collision, bounded simulation and save/reopen. Remain Draft/HOLD, no owner acceptance.
