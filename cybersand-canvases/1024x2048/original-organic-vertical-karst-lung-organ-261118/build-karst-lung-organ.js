@@ -486,6 +486,118 @@ function runPipeline() {
   for(const [x,y,dx,dy,r] of [[375,1997,-17,-69,13],[411,2011,21,-76,11],[640,1994,22,-60,12],[603,2011,-8,-79,13],[475,2020,-23,-53,8],[548,2019,20,-65,8]])
     shard(x,y,dx,dy,r,106);
 
+
+  // R6 ORIGINAL INHABITATION: non-repeating, mineral/organic playable districts.
+  // Every stroke/polygon here edits true physical material IDs. Kept out of the
+  // central respiratory shaft; the final pass reopens canonical flight approaches.
+  // WEST ORCHARD: unequal bark/root masonry cells are carved into a
+  // grounded root buttress, with visibly distinct deck/task/return faces.
+  poly([[0,500],[28,493],[50,511],[69,525],[88,511],[110,514],[128,548],
+        [119,579],[88,602],[70,637],[44,657],[0,660]],83);
+  poly([[30,525],[67,519],[92,531],[92,547],[75,560],[36,556]],0);
+  poly([[12,591],[48,576],[81,584],[89,611],[75,627],[13,626]],0);
+  poly([[23,664],[60,655],[93,663],[99,688],[66,710],[24,700]],0);
+  poly([[34,559],[90,555],[100,566],[90,573],[34,570]],39);
+  poly([[24,626],[88,621],[94,635],[77,642],[27,636]],38);
+  poly([[40,704],[106,697],[112,707],[97,718],[44,716]],38);
+  // The inhabited orchard is a tree-like frame, not a bundle of crossing rods.
+  poly([[97,635],[124,614],[153,602],[183,595],[197,604],[169,622],[139,637]],83);
+  poly([[112,619],[134,579],[153,545],[162,497],[175,490],[182,527],[167,580],[148,620]],83);
+  poly([[148,541],[181,523],[201,511],[217,519],[217,534],[188,547],[165,564]],83);
+  poly([[141,664],[169,646],[191,633],[220,644],[222,658],[196,670],[175,687]],83);
+  poly([[119,577],[171,569],[205,575],[208,584],[185,591],[130,590]],39);
+  poly([[158,669],[203,659],[240,670],[242,680],[208,688],[167,681]],40);
+  poly([[88,746],[136,733],[184,738],[195,751],[166,763],[103,756]],38);
+  poly([[130,577],[141,562],[153,579]],98);
+  poly([[158,572],[169,554],[179,574]],98);
+  poly([[193,575],[201,560],[208,576]],98);
+  poly([[164,665],[180,650],[189,668]],97);
+  poly([[194,663],[210,648],[225,667]],97);
+  poly([[66,574],[72,568],[91,575],[95,588],[88,593],[69,590]],42);
+  poly([[53,643],[62,635],[83,642],[81,651],[57,654]],42);
+  poly([[84,717],[96,708],[115,713],[118,728],[101,730]],97);
+  poly([[80,571],[91,566],[96,579],[89,584]],0);
+  poly([[59,645],[68,641],[73,648],[64,651]],0);
+  for(const q of [
+    [[107,689],[128,673],[139,662]],[[145,727],[164,704],[171,691]],
+    [[132,594],[119,576],[110,551]],[[191,542],[201,524],[224,516]]
+  ])prism(q,4,86,122);
+  // SPORE SANCTUARY: three gill/collection galleries, unequal tissue thickness,
+  // 13 deliberately mismatched pores and visible vent-to-return progression.
+  poly([[1023,440],[973,447],[943,475],[927,506],[925,550],[899,581],
+        [913,619],[893,651],[917,693],[885,735],[906,788],[949,826],[1023,837]],97);
+  poly([[1023,467],[967,485],[948,520],[952,551],[928,578],[944,612],
+        [917,656],[951,710],[924,747],[960,803],[1023,820]],42);
+  poly([[995,473],[972,471],[952,491],[956,507],[976,514],[993,501]],0);
+  poly([[957,530],[938,529],[923,543],[930,558],[949,565],[965,549]],0);
+  poly([[1008,548],[987,539],[974,557],[980,579],[999,585],[1011,566]],0);
+  poly([[929,582],[906,582],[894,599],[905,619],[922,614],[938,593]],0);
+  poly([[972,611],[955,616],[949,635],[965,650],[985,645],[991,625]],0);
+  poly([[1017,659],[991,650],[979,674],[991,690],[1010,685]],0);
+  poly([[938,688],[916,676],[897,696],[911,718],[935,711]],0);
+  poly([[982,714],[963,707],[951,725],[966,746],[990,739]],0);
+  poly([[944,767],[922,761],[910,778],[919,796],[941,792]],0);
+  poly([[1007,793],[987,785],[978,802],[998,814],[1019,809]],0);
+  poly([[836,544],[879,539],[912,552],[930,561],[918,572],[869,560],[832,559]],39);
+  poly([[781,650],[833,641],[872,644],[908,659],[922,669],[884,673],[821,656]],38);
+  poly([[796,750],[835,739],[879,746],[917,771],[905,786],[859,765],[797,764]],39);
+  poly([[877,561],[889,579],[896,607],[913,618],[919,593],[905,560]],42);
+  poly([[869,668],[881,691],[895,716],[917,729],[909,697],[891,664]],42);
+  poly([[855,759],[870,783],[884,806],[913,814],[909,789],[876,751]],42);
+  for(const q of [
+    [[952,486],[935,462],[940,445]],[[995,531],[1015,508],[1023,508]],
+    [[966,576],[948,591],[941,606]],[[1011,601],[991,608],[981,613]],
+    [[945,676],[956,666],[966,653]],[[1005,728],[1023,709]],
+    [[960,777],[974,766],[986,753]]
+  ])prism(q,5,97,71);
+  for(const p of [
+    [[899,548],[903,528],[915,544]],[[875,648],[885,628],[903,651]],
+    [[879,740],[901,728],[900,754]],[[933,809],[956,794],[961,816]]
+  ])poly(p,71);
+  // FOSSIL AMPHITHEATRE: founded survey terraces, balustrades and vertebrae.
+  poly([[0,1062],[43,1060],[79,1044],[98,1046],[98,1061],[58,1084],[0,1081]],40);
+  poly([[0,1112],[65,1096],[104,1093],[137,1076],[156,1078],[154,1096],
+        [121,1112],[71,1117],[0,1133]],100);
+  poly([[0,1173],[54,1165],[87,1133],[121,1127],[159,1127],[189,1108],
+        [203,1113],[197,1132],[158,1154],[107,1163],[0,1192]],40);
+  for(const q of [
+    [[56,1055],[92,1047],[121,1048],[120,1056],[74,1066]],
+    [[85,1101],[132,1090],[180,1093],[179,1103],[130,1110]],
+    [[111,1149],[154,1138],[208,1132],[230,1138],[210,1147],[152,1159]]
+  ])poly(q,98);
+  prism([[77,1015],[112,982],[145,963],[177,954],[205,934]],12,98,122);
+  for(const q of [
+    [[109,978],[103,948],[89,932]],[[145,960],[157,929],[173,916]],
+    [[185,941],[209,918],[228,918]],[[146,966],[133,991],[138,1008]]
+  ])prism(q,5,99,122);
+  poly([[58,1184],[91,1170],[125,1178],[130,1192],[112,1202],[69,1201]],100);
+  poly([[77,1183],[94,1177],[107,1180],[116,1190],[97,1195],[80,1191]],0);
+  // CALCITE OBSERVATORY: counterpoint with backed optical portico,
+  // differently pitched roof, inspection floor, and split mineral apertures.
+  poly([[1023,892],[985,912],[962,931],[950,954],[951,985],
+        [921,1011],[944,1037],[922,1067],[961,1099],[1023,1122]],98);
+  poly([[1023,941],[997,929],[985,951],[998,969],[1023,966]],0);
+  poly([[960,985],[943,994],[950,1012],[975,1019],[984,998]],0);
+  poly([[1008,1033],[981,1022],[966,1043],[978,1063],[1001,1061]],0);
+  poly([[918,1061],[893,1084],[888,1100],[943,1108],[1023,1137],
+        [1023,1151],[951,1125],[899,1117],[875,1102]],40);
+  poly([[853,1091],[896,1080],[938,1081],[959,1091],[948,1101],[901,1097],[849,1108]],38);
+  prism([[891,1090],[912,1032],[929,982],[955,939]],10,99,122);
+  poly([[921,1080],[928,1056],[942,1059],[948,1081]],122);
+  for(const q of [
+    [[959,944],[974,920],[995,910]],[[974,1003],[1001,983],[1023,981]],
+    [[989,1099],[1004,1081],[1023,1070]]
+  ])prism(q,4,106,122);
+  // MOONWELL: three mineral collection trays and unequal dry catch combs.
+  poly([[906,1387],[942,1376],[976,1390],[976,1402],[949,1410],[918,1402]],98);
+  poly([[879,1515],[927,1504],[967,1514],[973,1527],[945,1539],[894,1532]],38);
+  poly([[902,1654],[932,1641],[982,1650],[988,1667],[948,1674],[918,1664]],40);
+  for(const p of [
+    [[932,1390],[936,1371],[944,1394]],[[948,1401],[960,1383],[967,1399]],
+    [[919,1511],[925,1487],[939,1511]],[[952,1522],[963,1498],[970,1520]],
+    [[937,1657],[948,1632],[956,1657]]
+  ])poly(p,122);
+
   // In situ rim facies: every contour is drawn from the actual underlying Empty/non-Empty boundary.
   const rim=new Uint8Array(N);
   for(let y=4;y<H-4;y++)for(let x=4;x<W-4;x++){
@@ -765,8 +877,12 @@ function runPipeline() {
   receipt.creative_revisions.push("R5 Orchard and Spore: connected rooted inhabited terraces and large/mid/small natural tissue pores.");
   receipt.creative_revisions.push("R5 Fossil and Calcite: five grounded fossil seats with alcove versus faceted enclosed observation room and supported deck.");
   receipt.creative_revisions.push("R5 Lower loop: 3-stop basalt artery, dry moonwell basin, true apertures and mineral catch terraces.");
+  receipt.creative_revisions.push("R6 Orchard: separate embedded cultivation pockets, rooted staggered seed stations and direct tree-to-terrace materials.");
+  receipt.creative_revisions.push("R6 Spore: layered anisotropic membrane with individually carved pores, three service gills and retained return flight.");
+  receipt.creative_revisions.push("R6 Fossil/Calcite/Moonwell: contrasted stepped fossil survey, backed optical portico and three dry mineral collection trays.");
   readme += "\n## R4 physical district rebuild (18 November 2026)\n\nThe independent Shepherd and fidelity reviewers requested a substantial second site-scale edit rather than thin detail. R4 replaces the prior root-orchard crossed-stick arrangement with a continuous buttressed tree, three rooted benches, branching irregular canopy and cut geology niches; replaces Spore Organ circles with interconnected irregular membranes, five unequal through-pores, actual approach stages and a route to their service ledges; builds a four-tier stratified fossil amphitheatre opposite a faceted braced observatory; and adds a continuous basalt artery and three dry moonwell service levels. All edits precede full-cell coalescing and independent site/hull/route replay. These are static physical initial-material edits, not live native results.\n";
   readme += "\n## R5 inhabited-district rebuild (18 November 2026)\n\nAfter the independent R4 Fidelity and Shepherd REWORK, the actual physical grid was rebuilt across six previously thin districts, not merely the preview: a wall-rooted orchard retaining trunk with usable harvest terraces and carved root niches; differently scaled enterable cellular spore tissue with inspection decks; a five-tier raked fossil amphitheatre and sheltered fossil altar; a distinct enclosed calcite viewing room with open entry and supported deck; three distinguishable basalt valve junctions; and a dry, nested moonwell basin with two service walks and different mineral catch sockets. The final Midge safety corridors are restored after additions. These are immovable starting material-cell structures, not simulated biological machinery or liquid physics.\n\n**31x27 fully in-bounds exact-centre destination-to-destination static route tests (cardinal steps):**\n\n" + r5PairRoutes.map(r=>"- "+r.from+" -> "+r.to+": **"+r.shortest_cardinal_centre_steps+"** steps").join("\n") + "\n\nThe centre-mask stress test is not a physically added obstruction. Inserting actual solid terrain in x300..708/y965..1148 physically overlaps the fossil destination envelope at 31x27; all-eight-sites survival in that physical obstruction is **not claimed**. No native installation or gameplay test has been run.\n";
+  readme += "\n## R6 spatial craft refinement (18 November 2026)\n\nA further **108,867 distinct real material-cell identities** changed relative to R5 (21,670 added, 16,918 excavated and 70,279 rematerialized). The west orchard now has irregular directly carved grow-cells, three usable differentiated stages and rooted harvest trellis. The eastern spore organ has unequal membrane layers, nonrepeating ventilation pockets, three connected collection gills and a separately readable service chain. The western fossil tier gains rooted stepped survey decks and a vertebral crest, while the opposite calcite vault has a backed optical portico and inspectable mineral openings; three unequal dry catch combs refine the moonwell. This is entirely true-grid physical geometry, not screenshot decoration. The central airway, exact Midge sites and actual clearance replays are retained; no dynamic, native or owner acceptance is implied.\n";
   artifacts["setup-karst-lung-organ.json"]=ascii(json);
   artifacts["build-karst-lung-organ.js"]=ascii(generatorSource);
   artifacts["README.md"]=ascii(readme);

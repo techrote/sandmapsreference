@@ -54,9 +54,9 @@ Every nonempty starting cell is an immovable solid, but the actual accepted phys
 
 - Fixed seed: `0x4b415253`.
 - Deterministic builder: `build-karst-lung-organ.js` (Node.js; no dependencies); writes all artifacts to its optional first directory argument or its own directory.
-- Builder SHA-256: `22991e0831527dbdf1b096062426a4f3e0c9e3fbe74280a5288857ab8e50f217`.
-- Full material plane SHA-256: `d5d8b667c36163fdf6d1a656f20114a920b2c83ebf47cc7a9a28a6272a7eb119`.
-- Setup JSON SHA-256: `3155ca7c1f03ae90c9a02c634c33e1b7b0b54a83da223601f457d010e41b2490`.
+- Builder SHA-256: `e0596ea4495adb1345515383ab4988e934a66a4c4391c1cd70e5c1a8bdea37bf`.
+- Full material plane SHA-256: `6a8e451a92770dd53393e99194cefff4bd0c2dbc17cb3f13194d6e367df374be`.
+- Setup JSON SHA-256: `edd89fc0d41ce5b51de76592bc82b3f907d341434f908cd9fce372f6229290ea`.
 - Full-grid parity: 0 mismatches, 0 overlapping rectangles.
 - PNG: uncompressed-deflate, 8-bit indexed palette; palette pixel **index** is real CyberSand material ID, not illustration. All 11 images independently decoded and checked for PNG CRC/Adler/index fidelity.
 - Current CyberSand accepted `main`: `018bd09503d7f079ddac52e225c2f7daf8d678bf`.
@@ -87,3 +87,7 @@ After the independent R4 Fidelity and Shepherd REWORK, the actual physical grid 
 - Calcite observatory -> Moonwell garden: **802** steps
 
 The centre-mask stress test is not a physically added obstruction. Inserting actual solid terrain in x300..708/y965..1148 physically overlaps the fossil destination envelope at 31x27; all-eight-sites survival in that physical obstruction is **not claimed**. No native installation or gameplay test has been run.
+
+## R6 spatial craft refinement (18 November 2026)
+
+A further **108,867 distinct real material-cell identities** changed relative to R5 (21,670 added, 16,918 excavated and 70,279 rematerialized). The west orchard now has irregular directly carved grow-cells, three usable differentiated stages and rooted harvest trellis. The eastern spore organ has unequal membrane layers, nonrepeating ventilation pockets, three connected collection gills and a separately readable service chain. The western fossil tier gains rooted stepped survey decks and a vertebral crest, while the opposite calcite vault has a backed optical portico and inspectable mineral openings; three unequal dry catch combs refine the moonwell. This is entirely true-grid physical geometry, not screenshot decoration. The central airway, exact Midge sites and actual clearance replays are retained; no dynamic, native or owner acceptance is implied.
