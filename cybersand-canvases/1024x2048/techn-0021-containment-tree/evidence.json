@@ -15,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 22807,
+  "rectangles": 22640,
   "rectangle_budget": 32768,
-  "json_bytes": 418459,
+  "json_bytes": 415531,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1272911,
+  "stamped_cells": 1286682,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -47,34 +47,34 @@
     127
   ],
   "material_counts": {
-    "0": 824241,
+    "0": 810470,
     "39": 6052,
-    "40": 129404,
-    "42": 118239,
-    "49": 160540,
-    "50": 39382,
-    "52": 25029,
-    "53": 122590,
-    "54": 116150,
-    "58": 41813,
-    "62": 68667,
-    "65": 3289,
-    "77": 2109,
-    "79": 9286,
-    "100": 212417,
-    "101": 145377,
-    "119": 21150,
-    "120": 17242,
+    "40": 129402,
+    "42": 124062,
+    "49": 160490,
+    "50": 42244,
+    "52": 25921,
+    "53": 123581,
+    "54": 112994,
+    "58": 39016,
+    "62": 79332,
+    "65": 2637,
+    "77": 2489,
+    "79": 9817,
+    "100": 211487,
+    "101": 144787,
+    "119": 21117,
+    "120": 17089,
     "121": 4688,
-    "122": 6106,
-    "123": 12839,
-    "127": 10542
+    "122": 4476,
+    "123": 15430,
+    "127": 9571
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 459123,
+  "connected_clearance_centres": 458933,
   "spawn": [
     369,
     95
@@ -317,7 +317,7 @@
         19,
         15
       ],
-      "legal_connected_centres": 459123,
+      "legal_connected_centres": 458933,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -327,7 +327,7 @@
         23,
         19
       ],
-      "legal_connected_centres": 421445,
+      "legal_connected_centres": 421352,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -419,50 +419,29 @@
   "last_rework": {
     "worker": "B",
     "date": "2026-11-18",
-    "assigned_head": "0452a308683576d03b3b209d605b355a20e9c0d8",
-    "scope": "irregular porous living bioheart, retained rooted gallery/gantry and differentiated deep clinical support",
-    "actual_changed_cells": 45383,
+    "assigned_head": "92046cc4099efede56adc95d382353625b3d85ca",
+    "scope": "source-scale inhabited horizontal gallery, wider asymmetric luminous membrane and authored lower service detail",
+    "physical_cells_changed": 69709,
+    "added_cells": 16988,
+    "excavated_cells": 3217,
+    "recoloured_cells": 49504,
     "extent": [
       1024,
       2048
     ],
-    "rectangles": 22807,
-    "json_bytes": 418459,
-    "nonempty_cells": 1272911,
-    "exact_destinations": "24/24 at 19x15,23x19,31x27",
+    "rectangles": 22640,
+    "json_bytes": 415531,
+    "solid_components": 50,
+    "structural_probes": "6/6 cardinal rooted",
+    "source_jpeg": "authentic committed 640x360 directly viewed",
+    "original_png": "full-resolution source-PNG parity UNVERIFIED",
+    "exact_midge_sites": "24/24 all 3 conservative envelopes",
     "gantry_steps": [
       373,
       373,
       373
     ],
-    "solid_probes": [
-      [
-        600,
-        808
-      ],
-      [
-        615,
-        385
-      ],
-      [
-        600,
-        984
-      ],
-      [
-        610,
-        2035
-      ],
-      [
-        450,
-        800
-      ],
-      [
-        930,
-        500
-      ]
-    ],
-    "connected_solid_cells": 1225795,
-    "source": "authentic source JPEG viewed; original PNG pixels UNVERIFIED",
+    "original_air_hulls_preserved": "all old reachable 31x27 centres and exact material footprint",
     "native": "NATIVE-UNTESTED"
   },
   "rework_b6": {
@@ -523,8 +502,9 @@
     "native": "NATIVE-UNTESTED"
   },
   "structural_support": {
-    "solid_component_cells": 1225795,
-    "solid_components": 55,
+    "solid_component_cells": 1239015,
+    "solid_components": 50,
+    "largest_component_cells": 1239015,
     "probes": [
       [
         600,
@@ -550,7 +530,8 @@
         930,
         500
       ]
-    ]
+    ],
+    "method": "exact four-neighbour full nonzero material, deep-footing rooted six probes"
   },
   "rework_b8": {
     "worker": "B",
@@ -599,6 +580,34 @@
     ],
     "connected_solid_cells": 1225795,
     "source": "authentic source JPEG viewed; original PNG pixels UNVERIFIED",
+    "native": "NATIVE-UNTESTED"
+  },
+  "rework_b9": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "92046cc4099efede56adc95d382353625b3d85ca",
+    "scope": "source-scale inhabited horizontal gallery, wider asymmetric luminous membrane and authored lower service detail",
+    "physical_cells_changed": 69709,
+    "added_cells": 16988,
+    "excavated_cells": 3217,
+    "recoloured_cells": 49504,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22640,
+    "json_bytes": 415531,
+    "solid_components": 50,
+    "structural_probes": "6/6 cardinal rooted",
+    "source_jpeg": "authentic committed 640x360 directly viewed",
+    "original_png": "full-resolution source-PNG parity UNVERIFIED",
+    "exact_midge_sites": "24/24 all 3 conservative envelopes",
+    "gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "original_air_hulls_preserved": "all old reachable 31x27 centres and exact material footprint",
     "native": "NATIVE-UNTESTED"
   }
 }

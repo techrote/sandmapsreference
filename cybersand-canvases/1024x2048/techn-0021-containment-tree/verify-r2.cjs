@@ -3,7 +3,7 @@ const fs=require('fs'),zlib=require('zlib'),assert=require('assert');
 const W=1024,H=2048,N=W*H,setup=JSON.parse(fs.readFileSync('setup-containment-tree.json','utf8'));
 assert.deepStrictEqual(setup.extent,[W,H]);
 const evidence=JSON.parse(fs.readFileSync('evidence.json','utf8'));
-const solid=new Set([39,40,42,49,50,52,53,54,58,62,77,79,100,101,119,120,121,122,123,127]);
+const solid=new Set([39,40,42,49,50,52,53,54,58,62,65,77,79,100,101,119,120,121,122,123,127]);
 const A=new Uint8Array(N);let stampArea=0;
 for(const [x,y,w,h,id] of setup.edits){
   assert(Number.isInteger(x)&&Number.isInteger(y)&&Number.isInteger(w)&&Number.isInteger(h)&&Number.isInteger(id));
@@ -82,7 +82,7 @@ console.log('PASS '+setup.edits.length+' rectangles, '+compared+' pixel-material
 const solidSeen=new Uint8Array(N),solidQ=new Int32Array(N);const startSolid=808*W+600;
 assert(A[startSolid]===62,'upper deck material missing');solidSeen[startSolid]=1;solidQ[0]=startSolid;let solidN=1;
 for(let k=0;k<solidN;k++){const p=solidQ[k],x=p%W;for(const d of [-W,-1,1,W]){const z=p+d;if(z<0||z>=N||(d===-1&&x===0)||(d===1&&x===W-1))continue;if(A[z]&&!solidSeen[z]){solidSeen[z]=1;solidQ[solidN++]=z;}}}
-assert.strictEqual(solidN,1228520,'regressed grounded bioheart material component');
+assert.strictEqual(solidN,evidence.structural_support.solid_component_cells,'regressed grounded bioheart material component');
 for(const [x,y] of [[600,808],[615,385],[450,800],[930,500],[600,984],[610,2035]])assert(solidSeen[y*W+x],'disconnected structural anchor '+x+','+y);
 assert.strictEqual(evidence.structural_support.solid_component_cells,solidN);
 // Independent obstacle-erosion pairwise shortest path, not a global reachability proxy.

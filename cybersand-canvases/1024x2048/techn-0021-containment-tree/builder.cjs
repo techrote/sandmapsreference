@@ -779,6 +779,96 @@ function applyR2B8(A,W,H){
 }
 applyR2B8(A,W,H);
 
+let r2b9Stats={changed:0,added:0,removed:0,recolored:0};
+// R2B9: source-first local horizontal research district, irregular suspended green biosphere.
+// The original image covers the upper core; the tall lower root districts remain extrapolated.
+(function(){
+ const original=A.slice(); // authored physical cell identities before this source-led pass
+ // Protect every original full-hull (31x27) traversable centre and its footprint.
+ // This preserves the complete old exact Midge 31x27 graph, not merely waypoint boxes.
+ const sx=31,sy=27,px=15,py=13,sw=W+1,sat0=new Int32Array(sw*(H+1));
+ for(let y=0;y<H;y++){let z=0;for(let x=0;x<W;x++){z+=original[y*W+x]!==0?1:0;sat0[(y+1)*sw+x+1]=sat0[y*sw+x+1]+z;}}
+ const legal=new Uint8Array(A.length);
+ for(let y=py;y<H-py;y++)for(let x=px;x<W-px;x++){
+  const x0=x-px,x1=x+px+1,y0=y-py,y1=y+py+1;
+  if(sat0[y1*sw+x1]-sat0[y0*sw+x1]-sat0[y1*sw+x0]+sat0[y0*sw+x0]===0)legal[y*W+x]=1;
+ }
+ const start=95*W+369,q=new Int32Array(A.length),seen=new Uint8Array(A.length);
+ if(!legal[start])throw Error("Original 31x27 spawn blocked");
+ q[0]=start;seen[start]=1;let n=1;
+ for(let i=0;i<n;i++){let p=q[i],x=p%W,y=(p/W)|0;
+  for(const d of [-W,-1,1,W]){if((d===-W&&y===0)||(d===-1&&x===0)||(d===1&&x===W-1)||(d===W&&y===H-1))continue;
+   let k=p+d;if(legal[k]&&!seen[k]){seen[k]=1;q[n++]=k;}
+  }
+ }
+ const diff=new Int32Array(sw*(H+1));
+ for(let i=0;i<n;i++){let p=q[i],x=p%W,y=(p/W)|0;
+  let x0=x-px,y0=y-py,x1=x+px+1,y1=y+py+1;
+  diff[y0*sw+x0]++;diff[y0*sw+x1]--;diff[y1*sw+x0]--;diff[y1*sw+x1]++;
+ }
+ // One giant asymmetric membrane with true void pores, hanging from thick roof roots.
+ poly([[456,263],[477,214],[514,179],[549,178],[582,197],[616,163],
+  [653,191],[685,230],[700,270],[691,308],[705,349],[683,398],
+  [645,436],[610,431],[571,449],[531,417],[489,381],[462,344]],M.MOSS);
+ poly([[475,274],[509,227],[552,212],[580,236],[612,198],
+  [657,229],[680,265],[672,304],[681,344],[657,400],
+  [619,402],[580,417],[539,387],[512,358]],M.VERDIGRIS);
+ poly([[503,285],[535,252],[558,249],[591,265],[610,231],
+  [646,248],[654,280],[657,327],[642,377],[609,368],
+  [580,400],[543,374],[518,330]],M.PHOSPHOR);
+ for(const [x,y,r] of [[497,303,11],[530,283,12],[556,224,10],[605,260,13],
+  [644,266,13],[674,313,11],[651,351,14],[602,362,11],[553,347,9],
+  [525,399,9],[581,410,8]])disk(x,y,r,M.AIR);
+ for(const [m,w,p] of [
+  [M.VERDIGRIS,16,[[505,392],[529,442],[556,470],[575,488]]],
+  [M.COPPER,17,[[660,400],[688,443],[675,477],[658,538]]],
+  [M.MOSS,15,[[550,203],[529,156],[500,96],[482,23]]],
+  [M.COPPER,18,[[642,213],[663,154],[681,96],[678,0]]],
+  [M.VERDIGRIS,14,[[605,192],[609,127],[585,61],[552,0]]]
+ ])for(let i=1;i<p.length;i++)line(...p[i-1],...p[i],m,w);
+ // Nested bioluminescent vascular illumination follows tissue, rather than
+ // flattened discoid concentric bands. All changed points are existing solids.
+ for(let y=213;y<423;y++)for(let x=481;x<699;x++){
+   const p=y*W+x,m=A[p];
+   if(m!==M.PHOSPHOR&&m!==M.VERDIGRIS&&m!==M.MOSS)continue;
+   const u=x-589,v=y-322,rad=Math.sqrt(u*u*.77+v*v*1.12);
+   const filaments=Math.sin(x*.071+y*.047+Math.sin(y*.095)*1.7)
+       +.65*Math.sin(y*.12-x*.034);
+   if(m===M.PHOSPHOR)A[p]=(rad<87&&filaments>-.55)?M.URANIUM:M.PHOSPHOR;
+   else if(m===M.VERDIGRIS&&rad<99&&filaments>1.0)A[p]=M.PHOSPHOR;
+   else if(m===M.MOSS&&rad<122&&filaments>1.05)A[p]=M.VERDIGRIS;
+ }
+ // A broad architecturally coordinated clinical promenade: substantial bands,
+ // unequal research stations and windowed trusses; the player flight lane is Air.
+ for(const [x,w] of [[278,65],[423,279],[780,72]]){
+  rect(x,843,w,17,M.STEEL);rect(x+3,860,w-6,6,M.BRASS);
+  rect(x,981,w,15,M.STEEL);rect(x+4,996,w-8,5,M.BRONZE);
+  for(let k=x+10;k<x+w-11;k+=38){rect(k,866,5,12,M.IRON);rect(k+9,870,19,4,M.AMBER);}
+ }
+ for(const [x,y,X,Y] of [[294,844,254,791],[831,844,872,790],
+    [298,985,266,1036],[835,985,865,1045]])line(x,y,X,Y,M.STEEL,12);
+ for(const [a,b,c] of [[425,822,477],[486,817,539],[553,825,610],[623,818,696]])
+  line(a,b,c,843,M.IRON,9);
+ for(const [x,y,w,m] of [[289,826,40,M.CYAN],[789,826,47,M.PHOSPHOR],
+   [434,1012,72,M.CYAN],[615,1012,80,M.PHOSPHOR]]){
+  rect(x,y,w,5,M.BRASS);rect(x+7,y-5,w-14,4,m);
+ }
+ // Two unequal, functionally legible root-service laboratories in the *new*
+ // continuation, connected through existing transit rather than painted cut-outs.
+ for(const [x,y,w,m] of [[430,1115,76,M.CYAN],[641,1170,54,M.PHOSPHOR]]){
+  rect(x,y,w,9,M.STEEL);rect(x+9,y-10,w-18,6,m);
+  line(x+9,y+6,x+27,y+57,M.BRONZE,9);
+ }
+ // Remove only new solids in the ORIGINAL complete legal-hull 4-neighbour graph.
+ // Four-neighbour prefix reconstruction of the exact 31x27 footprint union.
+ for(let y=0;y<H;y++){let run=0;for(let x=0;x<W;x++){
+  const j=y*sw+x;run+=diff[j];diff[j]=run+(y?diff[j-sw]:0);
+  const p=y*W+x;if(diff[j]>0&&original[p]===0)A[p]=0;
+ }}
+ for(let i=0;i<A.length;i++)if(A[i]!==original[i]){r2b9Stats.changed++;if(original[i]===0)r2b9Stats.added++;else if(A[i]===0)r2b9Stats.removed++;else r2b9Stats.recolored++;}
+})();
+
+
 // Conservative full non-air collision mask, 19x15 actor centre clearance.
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
 const nav=new Uint8Array(A.length);
@@ -887,6 +977,46 @@ evidence.last_rework={worker:"B",assigned_head:"d2d128d792c7c46ff16364ab94699b65
 evidence.rework_b8={"worker":"B","date":"2026-11-18","assigned_head":"0452a308683576d03b3b209d605b355a20e9c0d8","scope":"irregular porous living bioheart, retained rooted gallery/gantry and differentiated deep clinical support","actual_changed_cells":45383,"extent":[1024,2048],"rectangles":22807,"json_bytes":418459,"nonempty_cells":1272911,"exact_destinations":"24/24 at 19x15,23x19,31x27","gantry_steps":[373,373,373],"solid_probes":[[600,808],[615,385],[600,984],[610,2035],[450,800],[930,500]],"connected_solid_cells":1225795,"source":"authentic source JPEG viewed; original PNG pixels UNVERIFIED","native":"NATIVE-UNTESTED"};
 evidence.last_rework=evidence.rework_b8;
 evidence.structural_support={...evidence.structural_support,solid_component_cells:1225795,probes:[[600,808],[615,385],[600,984],[610,2035],[450,800],[930,500]]};
+
+ // Recompute full solid graph from final authored plane — never carry stale
+ // R2B7/R2B8 receipt counts across a genuinely altered material grid.
+ const materialSeen=new Uint8Array(A.length),materialQ=new Int32Array(A.length);
+ let materialComponents=0,boundaryComponent=0,largestComponent=0;
+ const structuralProbes=[[600,808],[615,385],[600,984],[610,2035],[450,800],[930,500]];
+ for(let j=0;j<A.length;j++){if(!A[j]||materialSeen[j])continue;
+  materialComponents++;materialQ[0]=j;materialSeen[j]=1;let m=1;
+  for(let k=0;k<m;k++){const p=materialQ[k],x=p%W,y=(p/W)|0;
+   for(const d of [-W,-1,1,W]){
+    if((d===-W&&y===0)||(d===-1&&x===0)||(d===1&&x===W-1)||(d===W&&y===H-1))continue;
+    const z=p+d;if(A[z]&&!materialSeen[z]){materialSeen[z]=1;materialQ[m++]=z;}
+   }
+  }
+  if(m>largestComponent)largestComponent=m;
+  if(structuralProbes.some(([x,y])=>x+y*W===j)||materialQ.slice(0,m).includes(2035*W+610)){
+   // The physically rooted component is identified by its deep footing seed.
+   if(materialQ.slice(0,m).includes(2035*W+610)){
+    boundaryComponent=m;
+    for(const [x,y] of structuralProbes)if(!materialQ.slice(0,m).includes(y*W+x))
+     throw Error('R2B9 ungrounded structural anchor at '+x+','+y);
+   }
+  }
+ }
+ if(boundaryComponent===0)throw Error('R2B9 structural load-path seed missing');
+ evidence.structural_support={solid_component_cells:boundaryComponent,solid_components:materialComponents,
+  largest_component_cells:largestComponent,probes:structuralProbes,
+  method:'exact four-neighbour full nonzero material, deep-footing rooted six probes'};
+ evidence.rework_b9={worker:'B',date:'2026-11-18',assigned_head:'92046cc4099efede56adc95d382353625b3d85ca',
+  scope:'source-scale inhabited horizontal gallery, wider asymmetric luminous membrane and authored lower service detail',
+  physical_cells_changed:r2b9Stats.changed,added_cells:r2b9Stats.added,
+  excavated_cells:r2b9Stats.removed,recoloured_cells:r2b9Stats.recolored,
+  extent:[W,H],rectangles:edits.length,json_bytes:json.length,solid_components:materialComponents,
+  structural_probes:'6/6 cardinal rooted',source_jpeg:'authentic committed 640x360 directly viewed',
+  original_png:'full-resolution source-PNG parity UNVERIFIED',
+  exact_midge_sites:'24/24 all 3 conservative envelopes',gantry_steps:evidence.gantry_pairwise_steps.map(v=>v.steps),
+  original_air_hulls_preserved:'all old reachable 31x27 centres and exact material footprint',
+  native:'NATIVE-UNTESTED'};
+ evidence.last_rework=evidence.rework_b9;
+
 return {json,png,details,evidence};
 }
 module.exports={generate};
