@@ -434,6 +434,19 @@ function buildMegaCanvas() {
   R(1445,903,23,8,mat.QUARTZ);
   R(1435,1871,21,7,mat.GLASSBLOCK);
 
+  // CREATOR R5: authored 2D material-cell architectural repair programme.
+  // Deliberate side-elevation industrial rooms, split gravity race, asymmetric
+  // market thresholds and accessible dock maintenance; no image-derived geometry.
+  // Operations execute AFTER R4 structural repair and BEFORE serialization,
+  // and are checked by the same exact-cell replay, three actor hulls and PNG parity.
+  const r5ops=require("./r5-ops.json");
+  for(const [kind,...args] of r5ops){
+    if(kind==="R")R(...args);
+    else if(kind==="L")L(...args);
+    else if(kind==="P")P(...args);
+    else throw Error("R5_UNKNOWN_OPERATION "+kind);
+  }
+
   // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();

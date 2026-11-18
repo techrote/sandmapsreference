@@ -44,30 +44,30 @@
   },
   "gates": {
     "dimensions_exact": true,
-    "rectangles": 17262,
+    "rectangles": 18738,
     "rectangle_source_limit": 32768,
-    "setup_bytes": 333266,
+    "setup_bytes": 362370,
     "source_json_limit": 1048576,
-    "edits_count": 17262,
+    "edits_count": 18738,
     "source_edits_limit": 32768,
     "replay_mismatches": 0,
     "rectangle_overlap_cells": 0,
     "material_pixel_count": 4194304,
     "actor_full_envelope": {
       "19x15": {
-        "component_centres": 1868712,
+        "component_centres": 1795324,
         "exact_reachable": 18,
         "expected": 18,
         "missing": []
       },
       "23x19": {
-        "component_centres": 1716050,
+        "component_centres": 1643356,
         "exact_reachable": 18,
         "expected": 18,
         "missing": []
       },
       "31x27": {
-        "component_centres": 1563279,
+        "component_centres": 1485241,
         "exact_reachable": 18,
         "expected": 18,
         "missing": []
@@ -104,54 +104,28 @@
         "Lost civic core"
       ]
     },
-    "fixed_seed_rebuild": "PASS: two final corrected generator executions, identical JSON and 6 PNG arrays",
-    "png_validation": "PASS 6/6 signature/CRC32/stored zlib/Adler32/IEND/exact-cell pixel parity",
+    "fixed_seed_rebuild": "SOURCE DETERMINISTIC; output generated with independent exact-code reconstruction; Node builder byte-for-byte --verify NOT RUN in this environment",
+    "png_validation": "PASS 6/6 generated actual-cell indexed PNG signature/chunk-CRC32/stored-zlib/Adler/IEND/material-index parity; native render UNTESTED",
     "installed_bridge_rectangle_capacity": "NATIVE-UNTESTED; accepted source max 32768; old/absent installed bridge fallback only 4096.",
     "native_workbench": "NATIVE-UNTESTED",
     "native_rapier_simulation": "NATIVE-UNTESTED",
     "physical_actor_input_and_collision": "NATIVE-UNTESTED",
     "native_save_reopen": "NATIVE-UNTESTED",
     "structural_topology": {
-      "total_cardinal_components": 45,
+      "total_cardinal_components": 35,
       "bottom_grounded_components": 1,
-      "detached_components": 44,
-      "detached_cells": 111267,
+      "detached_components": 34,
+      "detached_cells": 96472,
       "largest_detached_components": [
         {
-          "cells": 24249,
-          "bounds": [
-            812,
-            1047,
-            978,
-            1407
-          ]
-        },
-        {
-          "cells": 17191,
+          "cells": 52681,
           "bounds": [
             479,
             1047,
-            767,
-            1209
-          ]
-        },
-        {
-          "cells": 10312,
-          "bounds": [
-            384,
-            1626,
-            643,
-            1791
-          ]
-        },
-        {
-          "cells": 9992,
-          "bounds": [
-            1371,
-            1288,
-            1572,
-            1435
-          ]
+            978,
+            1407
+          ],
+          "classification": "P1 UNRESOLVED: composite western inhabited-looking transfer AND deliberately sheared halo; structural support not proven"
         },
         {
           "cells": 9956,
@@ -160,34 +134,28 @@
             1313,
             683,
             1435
-          ]
+          ],
+          "classification": "unanchored western lower wreck/deck; further support review"
         },
         {
-          "cells": 4795,
+          "cells": 7701,
           "bounds": [
-            1409,
+            1401,
             1077,
             1558,
-            1156
-          ]
+            1233
+          ],
+          "classification": "unanchored east optical/market group"
         },
         {
-          "cells": 3720,
+          "cells": 5139,
           "bounds": [
             1165,
-            782,
-            1242,
+            764,
+            1256,
             892
-          ]
-        },
-        {
-          "cells": 3617,
-          "bounds": [
-            174,
-            741,
-            348,
-            838
-          ]
+          ],
+          "classification": "severed gravity-loom decorative assembly"
         },
         {
           "cells": 3581,
@@ -196,55 +164,21 @@
             786,
             912,
             847
-          ]
+          ],
+          "classification": "severed loom left indicator"
         },
         {
-          "cells": 3150,
+          "cells": 2384,
           "bounds": [
-            1073,
-            1946,
-            1362,
-            1956
-          ]
-        },
-        {
-          "cells": 2222,
-          "bounds": [
-            809,
-            568,
-            864,
-            651
-          ]
-        },
-        {
-          "cells": 1728,
-          "bounds": [
-            1371,
-            1047,
-            1383,
-            1180
-          ]
-        },
-        {
-          "cells": 1666,
-          "bounds": [
-            677,
-            1411,
-            752,
-            1536
-          ]
-        },
-        {
-          "cells": 1539,
-          "bounds": [
-            1273,
-            1068,
-            1351,
-            1130
-          ]
+            1427,
+            1172,
+            1507,
+            1232
+          ],
+          "classification": "unanchored optical detail"
         }
       ],
-      "caveat": "Immovable solids remain detached; this is not structural-owner acceptance or simulated falling."
+      "caveat": "Inert static solids do not fall. Engineering plausibility remains P1: the large western transfer/halo assembly is cardinally detached, not an accepted support path."
     }
   },
   "sites": [
@@ -340,18 +274,18 @@
     }
   ],
   "histogram": {
-    "0": 2551871,
-    "49": 163328,
-    "58": 294840,
-    "62": 353533,
-    "100": 368742,
-    "101": 190040,
-    "113": 14461,
-    "117": 168310,
-    "120": 23649,
-    "122": 3583,
-    "123": 9467,
-    "128": 52480
+    "0": 2488416,
+    "49": 161894,
+    "58": 293351,
+    "62": 391760,
+    "100": 368632,
+    "101": 189998,
+    "113": 15288,
+    "117": 197834,
+    "120": 25303,
+    "122": 2777,
+    "123": 9764,
+    "128": 49287
   },
   "gallery": [
     {
@@ -366,7 +300,7 @@
       "material_pixels_verified": 4194304,
       "chunkCRC": "PASS",
       "adler": "PASS",
-      "git_blob_sha": "2a962fcbbff20994ae748d6dd937b33901e5b1e2"
+      "git_blob_sha": "45f8dfb59dc68282e5bf672b739127e446ed26ae"
     },
     {
       "file": "01-nacre-freight-cliff.png",
@@ -380,7 +314,7 @@
       "material_pixels_verified": 353800,
       "chunkCRC": "PASS",
       "adler": "PASS",
-      "git_blob_sha": "458f697f1bc276703e603acbe9dad8c0573a5abc"
+      "git_blob_sha": "e5726a73244ed90876dc07c9127bbe8a5ebf8705"
     },
     {
       "file": "02-spindle-and-sacristy.png",
@@ -394,7 +328,7 @@
       "material_pixels_verified": 447432,
       "chunkCRC": "PASS",
       "adler": "PASS",
-      "git_blob_sha": "1913845a19aab72ca4feac0e4134b1fdb8e69e3b"
+      "git_blob_sha": "5f50a45594b98f15d7c6359b8c781b731bad91b6"
     },
     {
       "file": "03-meridian-bastion.png",
@@ -408,7 +342,7 @@
       "material_pixels_verified": 359900,
       "chunkCRC": "PASS",
       "adler": "PASS",
-      "git_blob_sha": "474c9b6f13e05a266e3966aa7adde55aebde5d61"
+      "git_blob_sha": "a9d97583c1137ee2394edec336b1eed92c1de25e"
     },
     {
       "file": "04-split-market-artery.png",
@@ -422,7 +356,7 @@
       "material_pixels_verified": 353976,
       "chunkCRC": "PASS",
       "adler": "PASS",
-      "git_blob_sha": "ec22d21fc16dd78b942a750105ea9bfb23f077aa"
+      "git_blob_sha": "922332dc4cbc003edcb07ce7f68d94e223ae085f"
     },
     {
       "file": "05-abyssal-drydock.png",
@@ -436,18 +370,31 @@
       "material_pixels_verified": 356160,
       "chunkCRC": "PASS",
       "adler": "PASS",
-      "git_blob_sha": "d8d556bd5391da1e265d5126eb7cf47753d8bada"
+      "git_blob_sha": "cd1cda17cc8cb7828f897fd8e1af30e3c790da56"
     }
   ],
   "rework": {
-    "phase": "R4 same-owned-PR actual-cell architectural repair",
-    "starting_head": "fbde8bb3d5f650b3ee1815bafa2f9651a131dddb",
-    "prior_audited_detached_cells": 241406,
-    "now_detached_cells": 111267,
-    "blocked_core_bypass": "restored 17/18 without relocating sites",
-    "independent_approval": "PENDING",
-    "native": "NATIVE-UNTESTED",
-    "remaining": "Detached broken-halo and technical installations need independent visual/support review.",
-    "corrective_note": "Restored eastern dock pier after catching and fixing a swallowed-array comment; all final original artifacts regenerated and revalidated."
+    "phase": "R5 authored actual-cell megastructure/circulation repair on same owned Draft/HOLD PR",
+    "starting_head": "b85f84a1abad520202173ec8c54adf135e93ba95",
+    "r5_ops_blob": "794452e476523272eeb2d0214df718360ddae73e",
+    "r5_operations": 80,
+    "material_cells_added": 63455,
+    "material_cells_removed": 0,
+    "material_cells_reclassified": 36232,
+    "material_cells_changed": 99687,
+    "prior_detached_cells": 111267,
+    "now_detached_cells": 96472,
+    "architectural_changes": [
+      "broadened western crane, instrument and foundry platforms",
+      "different eastern optical-market kiosks and glazed terraces",
+      "asymmetric two-part gravity-loom race while preserving main void",
+      "separated cargo/passenger transfer thresholds with explicit 49x51 live air portal",
+      "restored multi-part drydock service vessel and berthing decks",
+      "grounded 10312-cell dock hoist via top bracing"
+    ],
+    "independent_approval": "REWORK STILL REQUIRED: actual-cell art/engineering review pending",
+    "known_P1": "52,681-cell western composite transfer/halo component remains detached; structural support path and visual habitation need further independent repair",
+    "native": "NATIVE-UNTESTED; installed bridge capacity not queried",
+    "rebuild": "no independent Node 22 process; original geometry plus deterministic R5 op patch independently replayed and PNG-parity-validated"
   }
 }
