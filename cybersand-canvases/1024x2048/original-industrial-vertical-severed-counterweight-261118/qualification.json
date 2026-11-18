@@ -131,6 +131,140 @@
     "flight_routes": "all 11 named sites must pass three conservative exact-hull envelope tests; primary-throat obstruction guarantees terminal bypass only",
     "reproducibility": "fixed seed, full cell replay and PNG indexed material parity validated by builder"
   },
+  "r6_finishing": {
+    "review_authority": "Shepherd and Fidelity art REWORK exact R5 HEAD",
+    "changed_cells": 44496,
+    "water_cells_changed": 0,
+    "structural": {
+      "total_solid_components": 106,
+      "major_world_edge_anchored": [
+        {
+          "id": 0,
+          "size": 143250,
+          "world_edge_anchored": true,
+          "bounds": [
+            135,
+            0,
+            874,
+            889
+          ]
+        },
+        {
+          "id": 1,
+          "size": 256562,
+          "world_edge_anchored": true,
+          "bounds": [
+            0,
+            80,
+            327,
+            2047
+          ]
+        },
+        {
+          "id": 2,
+          "size": 516344,
+          "world_edge_anchored": true,
+          "bounds": [
+            128,
+            80,
+            1023,
+            2047
+          ]
+        }
+      ],
+      "unanchored_over_1000": [
+        {
+          "id": 25,
+          "size": 1306,
+          "world_edge_anchored": false,
+          "bounds": [
+            720,
+            619,
+            769,
+            683
+          ]
+        }
+      ],
+      "all_seven_major_probes_anchored": true,
+      "probes": [
+        {
+          "name": "upper east control",
+          "point": [
+            645,
+            379
+          ],
+          "material": 68,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "western failed counterweight",
+          "point": [
+            330,
+            479
+          ],
+          "material": 130,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "east crusher housing",
+          "point": [
+            769,
+            935
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "central ore exchange",
+          "point": [
+            330,
+            1146
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "rail switch/cargo",
+          "point": [
+            769,
+            1275
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "west salvage processor",
+          "point": [
+            342,
+            1795
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "east salvage plant",
+          "point": [
+            645,
+            1820
+          ],
+          "material": 65,
+          "component": 2,
+          "anchored": true
+        }
+      ]
+    },
+    "creative_repairs": "asymmetric sheared weight, broken terminal cables and compressed catch; segmented gravity sorting with receiving bin; single wagon loading station; supported quench-transfer threshold",
+    "protected": "all exact sites and conservative hull sizes; physical water unchanged",
+    "known_static_separation": "1306-cell east control enclosure remains an intentionally non-loadbearing fixed fixture",
+    "render": "six material-ID PNGs and complete replay generated from identical grid",
+    "native": "NATIVE-UNTESTED - installed binary/rectangle cap and dynamic validation unknown"
+  },
   "r4_support_rework": {
     "ops": [
       "east crane hanger",
@@ -334,45 +468,45 @@
     2048
   ],
   "cells": 2097152,
-  "nonempty": 940225,
+  "nonempty": 948067,
   "nonempty_materials": {
-    "0": 1156927,
+    "0": 1149085,
     "3": 6525,
     "38": 1242,
     "40": 95383,
-    "50": 49653,
-    "58": 165641,
-    "62": 108432,
+    "50": 50785,
+    "58": 165055,
+    "62": 113346,
     "64": 2381,
-    "65": 84503,
-    "68": 18972,
-    "69": 10354,
+    "65": 86666,
+    "68": 18737,
+    "69": 11523,
     "72": 3162,
-    "73": 9282,
-    "76": 16506,
-    "77": 3529,
+    "73": 9145,
+    "76": 16937,
+    "77": 3402,
     "78": 424,
-    "79": 5203,
+    "79": 5170,
     "100": 184304,
-    "101": 91029,
-    "119": 20042,
+    "101": 91359,
+    "119": 23166,
     "120": 1435,
-    "130": 57227,
+    "130": 52924,
     "131": 4996
   },
-  "grid_sha256": "a9724b3c612e275350306e6891079bf9cd148841587a72c1d9dd1dd6d8a16ebf",
-  "setup_sha256": "8a72117fab672f8dcc11206db1bc17f10e8361d7ca591fabeb08e17903355f48",
-  "setup_bytes": 174732,
-  "setup_bytes_excluding_lf": 174732,
-  "setup_file_bytes_including_lf": 174733,
-  "edit_rectangles": 9539,
+  "grid_sha256": "fe86695ae3d9529bb3b39566328baffd5a78965ab44c293bd8ba48c66306ccd2",
+  "setup_sha256": "c50f385fa8f967831db89fed0c26820755dcb28c528719d2bd7aef154d9b9f4c",
+  "setup_bytes": 186196,
+  "setup_bytes_excluding_lf": 186196,
+  "setup_file_bytes_including_lf": 186197,
+  "edit_rectangles": 10179,
   "rectangle_budget_source": 32768,
   "default_no_bridge_capacity": 4096,
   "installed_bridge_capacity": "UNKNOWN - do not assert native load",
   "edit_budget": 32768,
   "full_cell_replay": "PASS",
   "edit_overlap_count": 0,
-  "rectangle_work_estimate": 940225,
+  "rectangle_work_estimate": 948067,
   "generated_start_work_limit": 32000000,
   "material_laws": "all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",
   "flight_checks": [
@@ -383,7 +517,7 @@
       ],
       "reachable_sites": 11,
       "total_sites": 11,
-      "reachable_centers": 508503,
+      "reachable_centers": 500953,
       "sites": [
         {
           "id": "A",
@@ -493,7 +627,7 @@
       ],
       "reachable_sites": 11,
       "total_sites": 11,
-      "reachable_centers": 459685,
+      "reachable_centers": 452713,
       "sites": [
         {
           "id": "A",
@@ -603,7 +737,7 @@
       ],
       "reachable_sites": 11,
       "total_sites": 11,
-      "reachable_centers": 370690,
+      "reachable_centers": 365282,
       "sites": [
         {
           "id": "A",
@@ -715,7 +849,7 @@
       1006
     ],
     "terminal_reachable": true,
-    "reachable_centers": 359653
+    "reachable_centers": 356057
   },
   "sites": [
     {
@@ -993,9 +1127,9 @@
   "image_checks": [
     {
       "name": "overview.png",
-      "sha256": "6a28fa85c965a8e4ee122d293fd5ab7d804d8e02c23ebdf8b63d98d22548e884",
+      "sha256": "4aebc9821bab18d3fc93ebeddde43fd0d9742b44be05992b40d68dce03c819a8",
       "chunks": 5,
-      "bytes": 57328,
+      "bytes": 59256,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -1009,9 +1143,9 @@
     },
     {
       "name": "01-crown-intake.png",
-      "sha256": "acc1898f72f3f8bd4b5bfd40bc3f2c65d7ec3d2d95a556869e2ad55b633f8ad9",
+      "sha256": "f2cb4bee274a2a62dcbd45fabfeeb1cd32a3e6f602126172ee3c2909fcf0c15a",
       "chunks": 5,
-      "bytes": 8611,
+      "bytes": 8930,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -1025,9 +1159,9 @@
     },
     {
       "name": "02-counterweight-cathedral.png",
-      "sha256": "470a000eabf92db6ce966e3752be532d2d42262ff56266c9603da867c78add47",
+      "sha256": "c0971f9594363ab38569f5457930f082743fa5acc909484ae0da95811dd043c3",
       "chunks": 5,
-      "bytes": 14255,
+      "bytes": 15206,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -1041,9 +1175,9 @@
     },
     {
       "name": "03-ore-crusher-gallery.png",
-      "sha256": "5deb0e2881dca62171a50c44549c8ed7b5d7f860a20ab70053610960a04d417b",
+      "sha256": "7c8d7e123f1bdc0b6e66225c337e5f5a0c9c9f4497a3a99c344794e3129f27cc",
       "chunks": 5,
-      "bytes": 13246,
+      "bytes": 13669,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -1057,9 +1191,9 @@
     },
     {
       "name": "04-rail-funnel-transfer.png",
-      "sha256": "66be4ac8b378d31e0952c7480761ca633ec2e66e3c15f695691a532f3973e119",
+      "sha256": "d275cc9aa9562a331276417963817192c809cce46946a039d48a2e0b9c4476cf",
       "chunks": 5,
-      "bytes": 14438,
+      "bytes": 14566,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [
@@ -1073,9 +1207,9 @@
     },
     {
       "name": "05-quench-salvage-terminal.png",
-      "sha256": "7ba712f300b48d5e9f7963fdfd7d93a08398486ddee2753dde613817ec0eb1f2",
+      "sha256": "6e57b997f9406a601dc79e6267986c91d893683ca38e95f8dcf58561c9c942da",
       "chunks": 5,
-      "bytes": 9749,
+      "bytes": 9846,
       "signature_crc_zlib_adler_iend": true,
       "material_id_parity": true,
       "dimensions": [

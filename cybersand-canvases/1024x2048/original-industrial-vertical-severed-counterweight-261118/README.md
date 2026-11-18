@@ -43,11 +43,11 @@ Connectivity is proven from the **exact Midge spawn** to **each exact site** at 
 
 `build.cjs` is a fixed-seed, dependency-free Node.js builder. Run `node build.cjs` from any directory: it rebuilds `setup-severed-counterweight.json`, `qualification.json` and all full-resolution material-identity indexed PNGs in its own directory, then reopens/decodes every generated PNG in memory to check chunk CRC, zlib, Adler-32, IEND and per-cell ID parity. The source grid is reconstructed from hand-authored geometric primitives and exact route masks, never derived from a source image or compressed/reprojected reference PNG.
 
-**JSON format:** ordinary Workbench Setup-v2, not a fabricated generated-start receipt. Ordered, nonoverlapping, vertically coalesced rectangular edits exactly reconstruct the 2097152 source cells. JSON bytes 174732 / 1,048,576, 9539 rectangles / 32,768 source max, 940225 painted cell writes in a 32000000 theoretical work envelope.
+**JSON format:** ordinary Workbench Setup-v2, not a fabricated generated-start receipt. Ordered, nonoverlapping, vertically coalesced rectangular edits exactly reconstruct the 2097152 source cells. JSON bytes 186196 / 1,048,576, 10179 rectangles / 32,768 source max, 948067 painted cell writes in a 32000000 theoretical work envelope.
 
-**SHA-256 identity:** material grid `a9724b3c612e275350306e6891079bf9cd148841587a72c1d9dd1dd6d8a16ebf`; JSON `8a72117fab672f8dcc11206db1bc17f10e8361d7ca591fabeb08e17903355f48`.
+**SHA-256 identity:** material grid `fe86695ae3d9529bb3b39566328baffd5a78965ab44c293bd8ba48c66306ccd2`; JSON `c50f385fa8f967831db89fed0c26820755dcb28c528719d2bd7aef154d9b9f4c`.
 
-**Physically fixed materials:** `38:1242 40:95383 50:49653 58:165641 62:108432 64:2381 65:84503 68:18972 69:10354 72:3162 73:9282 76:16506 77:3529 78:424 79:5203 100:184304 101:91029 119:20042 120:1435 130:57227 131:4996`. All are accepted-main Solid/non-movable/RuleKernel::None; only Water (3) is dynamic, within the walled lower quench basin. Visual metal pipes and LEDs are material cells, not sprite decals.
+**Physically fixed materials:** `38:1242 40:95383 50:50785 58:165055 62:113346 64:2381 65:86666 68:18737 69:11523 72:3162 73:9145 76:16937 77:3402 78:424 79:5170 100:184304 101:91359 119:23166 120:1435 130:52924 131:4996`. All are accepted-main Solid/non-movable/RuleKernel::None; only Water (3) is dynamic, within the walled lower quench basin. Visual metal pipes and LEDs are material cells, not sprite decals.
 
 **Render evidence:** `overview.png` is the complete 1024x2048 material map; the five numbered crops are native 1:1 unresampled windows of that *same cell grid*. These are palette-identity PNGs, **not** Godot screenshots, not AI concept art, and not a claim that the native renderer has been tested.
 
@@ -92,6 +92,18 @@ A final original-cell construction pass responds to the independent R4 Fidelity 
 R5 changed 75382 final material identities. Significant detached static assemblies >1,000 cells went from 6 (R4) to 1 (R5). The current structural census, explicit bounds, all seven major anchored witnesses and three exact Midge hull results are recorded in qualification.json. Not every indicated straight guide is traversable after the support work: true exact-air connectivity is tested instead. The obstruction fallback is **bottom-terminal bypass only**; the mid-level ore exchange need not remain reachable when the main throat is artificially sealed.
 
 The Setup-v2 receipt now distinguishes the JSON payload without its terminal LF from the actual committed file including that LF. Native bridge binary, input/collision, fluid ticks and fresh-process save/reopen remain **NATIVE-UNTESTED**.
+
+## R6 original industrial level finish (18 November 2026)
+
+Following the independent exact-R5 Fidelity Auditor and Shepherd REWORK, the huge louvered machine was recut into a fractured, asymmetric, angular counterweight face with broken crown-to-attachment cables and a compressed braced catch. It is static immovable engineering sculpture, not animated or falling machinery. The inherited shell retains some rounded outer casing; this remains a potential artistic weakness for independent review.
+
+The ore operation now shows two segmented supported feed trays with intentional flyable separation, differentiated inlet/discharge ends and a bolted downstream receiving bin. No ore gravity-movement or mechanical transport is represented as running. The freight hall receives an open compact loading hood over the ONE existing loaded cart and two buffered rail termini. An upper transfer shield/handling threshold visibly joins the salvage apron toward the original sealed quench sump; there are no changes to the original Water cells or basin perimeter.
+
+**R6 exact physical change:** 44496 of the 2,097,152 material IDs differ from committed R5; all 6,525 genuine Water ID3 cells are unchanged. All seven world-rooted machinery witnesses remain rooted and the sole 1,306-cell east control is explicitly independent non-loadbearing fixed console. No wall-mounted controls or gantries have active moving mechanisms.
+
+**Playable route caveat:** all 11 author-specified unrelocated sites remain reached with 19x15, 23x19 and 31x27 fully contained Midge envelopes. The deliberate central obstruction keeps the BOTTOM TERMINAL reachable but does not assert redundant access to every intermediate site. The rail/ore transfer discontinuities are the literal collision-open passages, not accidental fake conveyor continuity.
+
+**Material evidence/self-critique:** regenerated full overview and all five full-resolution 1:1 crops from the exact authored grid. The sheared cap is more angular, the crane hood aligns with its wagon, and east receiver is readable, while a large amount of negative airspace and regular side truss rhythm remain. Independent artistic/technical review is still outstanding; built-in PNG parity and offline access tests do not constitute native Workbench acceptance.
 
 ## Qualification and limitations
 
