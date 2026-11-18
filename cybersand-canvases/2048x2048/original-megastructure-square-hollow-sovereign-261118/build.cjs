@@ -447,6 +447,18 @@ function buildMegaCanvas() {
     else throw Error("R5_UNKNOWN_OPERATION "+kind);
   }
 
+  // CREATOR R6: 58 original real-cell support, access and architectural repairs.
+  // One consciously reopened emergency artery x917..994/y1022..1117 preserves the
+  // 31x27 physical-civic-core blocked bypass despite a new fully grounded west transfer.
+  // Operations use the existing R/L/P deterministic primitives; no image inputs.
+  const r6ops=require("./r6-ops.json");
+  for(const [kind,...args] of r6ops){
+    if(kind==="R")R(...args);
+    else if(kind==="L")L(...args);
+    else if(kind==="P")P(...args);
+    else throw Error("R6_UNKNOWN_OPERATION "+kind);
+  }
+
   // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
