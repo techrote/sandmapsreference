@@ -129,3 +129,10 @@ node verify-r2.cjs
 ```
 
 The run is deterministic with seed 20261117. Existing PR #14 branch only; original source JPEG/PNG, CyberSand engine and archived main remain untouched. The JSON is a standalone Workbench Setup-v2 start with the preserved actor model/hash and spawn; install into a source-matched native Workbench to complete physical evaluation. No Godot, Rapier movement, long simulation or save/reopen was exercised.
+
+
+## R2B source-led macro-composition repair — 18 November 2026
+
+Starting assigned HEAD `a619d67757de96d301bb45dea92f188863f3e498`; following exclusive assignment on the existing Draft/HOLD branch. **171,857 actual material cells changed**, not image retouching. A single thick uneven braided root/stone bridge is integrated with both cliffs. West and east chambers gained distinctly unequal arch crowns, geological strata and root transitions; deep west relay, east archive and substrate received grounded lower mass instead of repeated token marks. Authentic repository source JPEG was viewed and compared with actual-grid images; full source-PNG parity remains **UNVERIFIED**. Black open ravine remains Empty air, not painted decoration.
+
+Exact 2048×2048, 16851 nonoverlapping rectangles, 323362 JSON bytes, 1699072 occupied cells, full 4,194,304-cell replay. Five bridge/bank probe cells are cardinal-connected in 1656809-cell solid component; all **23/23 exact Midge destinations** and **6/6 east bypass probes** reachable at 19×15 (2182842 centres), 23×19 (2125895) and 31×27 (2013182). **8,650,752 committed 4-bit PNG pixels independently compared to material cell IDs with zero mismatches**, validated CRC/DEFLATE/Adler/IEND. Deterministic builder regenerated exact cells/images twice, source accepted material laws unchanged (static Solid/None). **NATIVE-UNTESTED**: installed bridge capacity and actual Godot/Rapier play, simulation and save/reopen remain external gates. **Draft/HOLD; no merge/Ready.**

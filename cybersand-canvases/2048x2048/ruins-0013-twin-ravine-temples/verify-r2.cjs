@@ -30,7 +30,7 @@ const bridgePoints=[[1070,705],[586,745],[1455,655],[1580,680],[1770,730]];
 const bridgeId=solidAt(bridgePoints[0]);assert(bridgeId>0,'bridge material seed missing');
 for(const p of bridgePoints)assert.strictEqual(solidAt(p),bridgeId,'floating bridge or erased bank anchor '+p);
 const orderedComponents=[...componentSizes].sort((a,b)=>b-a);
-assert.strictEqual(orderedComponents[0],1615209,'unexpected cardinal root/bridge main solid size');assert.strictEqual(componentSizes.length,15,'unexpected independent stone component count');assert(orderedComponents.slice(1).every(x=>x<=20000),'unexpected isolated large structure');
+assert.strictEqual(orderedComponents[0],1656809,'unexpected cardinal root/bridge main solid size');assert.strictEqual(componentSizes.length,12,'unexpected independent stone component count');assert(orderedComponents.slice(1).every(x=>x<=20000),'unexpected isolated large structure');
 console.log('PASS both actual saved-grid bridge anchors, upper east cap and entire deck in common 4-neighbour material component: '+componentSizes[bridgeId-1]+' cells; '+componentSizes.length+' solid components');
 
 // Conservative Midge envelope testing with FULLY IN-BOUNDS centres and exact target points.
@@ -41,7 +41,7 @@ const integral=new Int32Array((W+1)*(H+1));
 for(let y=0;y<H;y++){let row=0;for(let x=0;x<W;x++){
  row+=grid[y*W+x]!==0?1:0;integral[(y+1)*(W+1)+x+1]=integral[y*(W+1)+x+1]+row;
 }}
-for(const [ww,hh,expectedConnected,oldRetained] of [[19,15,2218488,13],[23,19,2161862,13],[31,27,2049896,12]]){
+for(const [ww,hh,expectedConnected,oldRetained] of [[19,15,2182842,13],[23,19,2125895,13],[31,27,2013182,12]]){
  const rx=(ww-1)/2,ry=(hh-1)/2,allowed=new Uint8Array(W*H),reached=new Uint8Array(W*H);
  for(let y=ry;y<H-ry;y++)for(let x=rx;x<W-rx;x++){
   const l=x-rx,r=x+rx+1,t=y-ry,b=y+ry+1;
@@ -81,5 +81,5 @@ for(const [name,[w,h,left,top,step]] of Object.entries(names)){
  const emitted2=name==='twin-ravine-temples-preview.png'?other.png:other.details[name];assert(Buffer.from(emitted2).equals(b),'second build mismatch '+name);
  console.log('PASS '+name+' '+w+'x'+h+' 0 pixel mismatches, verified CRC/IEND');
 }
-assert.strictEqual(covered,1663020);
+assert.strictEqual(covered,1699072);
 console.log('PASS full exact setup replay '+setup.edits.length+' rectangles; '+covered+' occupied cells; deterministic rebuild twice');
