@@ -35,7 +35,7 @@
     "101": "Obsidian Solid/None",
     "122": "QuartzCrystal Solid/None"
   },
-  "art": "Current R2B: direct genuine source JPEG reviewed; finer upper rooted tissue struts, large west calcite fan/lower way-throughs, distinct east service-return geology, rock-supported Water-reservoir observation apron. Source-faithful upper district with separately authored lower expansion, no stretched source pixels; no fake atmospheric material.",
+  "art": "R2C2 physically rebuilt selected upper webbing and root arches with fine fenestration, wall-linked ladder/shelf transitions, contiguous distinct west calcite halls, east basalt observatory and solid geological reservoir abutments. Upper zones are source-JPEG-led; all lower districts are authored extrapolation, not a stretched/rasterized source.",
   "gallery": [
     [
       "filament-shaft-cavern-material-1024x2048.png",
@@ -108,26 +108,26 @@
       2048
     ],
     "complete_cells": 2097152,
-    "rectangles": 15672,
+    "rectangles": 15150,
     "max_rectangles": 32768,
-    "json_bytes": 285727,
+    "json_bytes": 275635,
     "max_json_bytes": 1048576,
     "final_cell_mismatches": 0,
-    "changed_cells_from_archived_r1": 894873,
-    "nonempty_cells": 796680,
+    "changed_cells_from_archived_r1": 875539,
+    "nonempty_cells": 773421,
     "water_cells": 35688,
     "water_changed_cells": 0,
     "material_histogram": {
-      "0": 1300472,
+      "0": 1323731,
       "3": 35688,
-      "38": 47679,
-      "42": 7217,
-      "49": 80262,
-      "62": 8801,
-      "99": 181378,
-      "100": 260740,
-      "101": 146074,
-      "122": 28841
+      "38": 35964,
+      "42": 6036,
+      "49": 71088,
+      "62": 6520,
+      "99": 150792,
+      "100": 301736,
+      "101": 144468,
+      "122": 21129
     },
     "allowlist": [
       0,
@@ -292,7 +292,7 @@
           15
         ],
         "spawn_exact": true,
-        "component_centres": 1058792,
+        "component_centres": 1050942,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -302,7 +302,7 @@
           19
         ],
         "spawn_exact": true,
-        "component_centres": 1017813,
+        "component_centres": 1015015,
         "r2_exact": 13,
         "legacy_exact": 15
       },
@@ -312,20 +312,29 @@
           27
         ],
         "spawn_exact": true,
-        "component_centres": 944034,
+        "component_centres": 946212,
         "r2_exact": 13,
         "legacy_exact": 15
       }
     ],
     "upper_tissue_components": [
-      206861
+      177615,
+      28,
+      8,
+      4,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
     ],
-    "connected_primary_tissue_cells": 206861,
-    "tissue_cells": 206861,
-    "primary_tissue_fraction": 1,
+    "connected_primary_tissue_cells": 177615,
+    "tissue_cells": 177680,
+    "primary_tissue_fraction": 0.999634,
     "native_runtime": "NATIVE-UNTESTED (no installed CyberDemoBridge/Godot/Rapier load, input, collision, simulation, or save/reopen)"
   },
-  "native": "NATIVE-UNTESTED: no compatible installed Godot/Rapier/CyberDemoBridge import, input/collision/simulation or save/reopen. Accepted source capacity 32768; legacy installed 4096 would reject 16661 rectangles.",
+  "native": "NATIVE-UNTESTED: no installed Godot/Rapier/CyberDemoBridge import, flight/collision, liquid progression, bounded simulation or fresh-process save/reopen. Accepted main source capacity 32768; legacy installed 4096 would reject 15150 rectangles.",
   "disposition": "DRAFT / HOLD; independent Shepherd/fidelity/native/owner acceptance pending. No merge or Ready.",
   "rework_round_2_finishing": {
     "assignment": "CANVAS-REWORK-A: 12 @ eddddcec7f3f13a4ef71d9d27152d00c6b88ff43",
@@ -424,5 +433,59 @@
     ],
     "native": "NATIVE-UNTESTED",
     "source_original_png_parity": "UNVERIFIED"
+  },
+  "rework_round_2_art_C2": {
+    "assignment": "CANVAS-REWORK-C: 12 @ 7e9b42b309012b636e124e91c7ce3c70acd34516",
+    "source_genuine_jpeg_blob": "168294085274702df98f5698721890fd30874c8f",
+    "source_jpeg_directly_viewed": true,
+    "original_full_png_pixel_parity": "UNVERIFIED",
+    "real_cell_edits": true,
+    "changed_cells_from_assigned_head": 150070,
+    "water_cells_changed": 0,
+    "rectangle_count": 15150,
+    "json_bytes": 275635,
+    "full_grid_replay_mismatches": 0,
+    "png_integrity_and_cell_parity": {
+      "files": 8,
+      "checked_pixels": 4194304,
+      "mismatches": 0
+    },
+    "source_derived": "upper x19..450 y35..960 tissue/filament morphology and ladder/shelf x420..900 y550..1162",
+    "original_extrapolation": "west calcite chambers x19..490 y1240..1840, east basalt observations x690..1005 y1373..1835, reservoir support x200..830 y1820..1988",
+    "exact_centres_no_proxy": true,
+    "static_envelopes": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "spawn_exact": true,
+        "component_centres": 1050942,
+        "r2_exact": 13,
+        "legacy_exact": 15
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "spawn_exact": true,
+        "component_centres": 1015015,
+        "r2_exact": 13,
+        "legacy_exact": 15
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "spawn_exact": true,
+        "component_centres": 946212,
+        "r2_exact": 13,
+        "legacy_exact": 15
+      }
+    ],
+    "native": "NATIVE-UNTESTED",
+    "disposition": "Draft/HOLD independent audit required"
   }
 }
