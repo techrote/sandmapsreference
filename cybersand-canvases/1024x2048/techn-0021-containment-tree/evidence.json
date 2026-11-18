@@ -1,11 +1,12 @@
 {
   "rework_b": {
-    "date": "2026-11-17",
-    "scope": "physical terrain geometry and lab architecture",
-    "baseline_head": "1088e49b2537a9c7805b1a5efe263b203141ddc5",
-    "baseline_rectangles": 27428,
-    "baseline_reachable_clearance_centres": 649989,
-    "notes": "Six distinct botanical root/vascular strata, eleven individually dressed functional labs, five root-framed cross-portals; clearances cut and verified after detail geometry"
+    "date": "2026-11-18",
+    "scope": "second substantive source-led organism canopy and differentiated districts / gantry / lower rhizome repair",
+    "starting_head": "134b4dadf74a3df45362d92d6c869c21ecf814b2",
+    "source_jpeg_seen": true,
+    "original_png_pixels_verified": false,
+    "archival_merged_baseline_unvalidated": true,
+    "notes": "Historical source is 640x360 landscape; this tall 1024x2048 adaptation preserves the visible source complex at a deliberately scaled upper district and authors coherent older root/service levels below; not stretched screenshot or repeated organism."
   },
   "source_public_id": "techn-0021",
   "source_key": "batch1/image-0058",
@@ -14,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 31408,
+  "rectangles": 22713,
   "rectangle_budget": 32768,
-  "json_bytes": 574876,
+  "json_bytes": 415848,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1126461,
+  "stamped_cells": 1215321,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -35,9 +36,7 @@
     62,
     65,
     77,
-    78,
     79,
-    80,
     100,
     101,
     119,
@@ -48,36 +47,34 @@
     127
   ],
   "material_counts": {
-    "0": 970691,
-    "39": 5664,
-    "40": 117183,
-    "42": 62581,
-    "49": 124801,
-    "50": 37157,
-    "52": 37299,
-    "53": 111650,
-    "54": 89027,
-    "58": 60800,
-    "62": 61107,
-    "65": 18582,
-    "77": 6071,
-    "78": 2312,
-    "79": 10878,
-    "80": 335,
-    "100": 145411,
-    "101": 161099,
-    "119": 20215,
-    "120": 8664,
-    "121": 5320,
-    "122": 4869,
-    "123": 14887,
-    "127": 20549
+    "0": 881831,
+    "39": 3079,
+    "40": 126203,
+    "42": 85282,
+    "49": 145304,
+    "50": 28900,
+    "52": 28232,
+    "53": 84671,
+    "54": 95443,
+    "58": 103161,
+    "62": 84985,
+    "65": 1067,
+    "77": 4324,
+    "79": 7088,
+    "100": 197217,
+    "101": 128586,
+    "119": 32342,
+    "120": 20564,
+    "121": 5453,
+    "122": 4369,
+    "123": 3214,
+    "127": 25837
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 611228,
+  "connected_clearance_centres": 503531,
   "spawn": [
     369,
     95
@@ -235,9 +232,517 @@
       ],
       "clear": true,
       "reachable": true
+    },
+    {
+      "name": "WEST DOME",
+      "point": [
+        369,
+        208
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "LIFT SERVICE",
+      "point": [
+        368,
+        550
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "LUMINOUS CANOPY VIEW",
+      "point": [
+        513,
+        532
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "EAST VIAL WINDOWS",
+      "point": [
+        743,
+        484
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "GANTRY WEST PORTAL",
+      "point": [
+        370,
+        930
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "GANTRY EAST PORTAL",
+      "point": [
+        742,
+        931
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "DEEP ROOT TRAVERSE",
+      "point": [
+        515,
+        1750
+      ],
+      "clear": true,
+      "reachable": true
     }
   ],
-  "actual_native_godot_rapier_qualification": "NOT EXECUTED",
-  "original_reference_pixel_comparison": "NOT EXECUTED: GitHub binary image connector refuses PNG bytes",
-  "original_dimensions": "UNVERIFIED"
+  "actual_native_godot_rapier_qualification": "NATIVE-UNTESTED: compatible installed binary, Midge input/collision/simulation and save/reopen not exercised.",
+  "original_reference_pixel_comparison": "AUTHENTIC JPEG preview viewed and compared; full-resolution original PNG parity UNVERIFIED",
+  "original_dimensions": "JPEG preview 640x360; original full PNG dimensions UNVERIFIED",
+  "rework_c": {
+    "date": "2026-11-18",
+    "assigned_head": "c40e9b4dff051e833316c38a3c885781a332aece",
+    "source_jpeg_blob": "64d7df6352b12d1aa57ce85f4925a722705bba1d",
+    "source_jpeg_actually_viewed": true,
+    "original_full_png_parity": "UNVERIFIED",
+    "source_derived": "upper local one-specimen biosphere: dome, lift, vial wing and guarded gantry",
+    "newly_extrapolated": "older deep rhizome, assay grotto, rooted geology and return services below",
+    "repairs": "porous integrated crown/bright off-centre bioheart, multiple drifting supported trunks, asymmetrical scientific districts, braced transfers, distinctive service vault, secondary vein polish",
+    "native": "NATIVE-UNTESTED"
+  },
+  "clearance_envelopes": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "legal_connected_centres": 503531,
+      "exact_sites": 24,
+      "passed": 24,
+      "failed": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "legal_connected_centres": 461004,
+      "exact_sites": 24,
+      "passed": 24,
+      "failed": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "legal_connected_centres": 382842,
+      "exact_sites": 24,
+      "passed": 24,
+      "failed": []
+    }
+  ],
+  "material_physics": "All non-Empty IDs are accepted-main immutable Solid / RuleKernel::None; excludes powder Stone, fluids, growth, agents and unsupported pseudo IDs.",
+  "installed_bridge_rectangle_capacity": "UNMEASURED: accepted source 32768; older fallback 4096 would reject this manifest.",
+  "material_cell_png_crops": {
+    "containment-tree-preview.png": {
+      "rect": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "step": 2
+    },
+    "containment-tree-detail-upper.png": {
+      "rect": [
+        192,
+        115,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-middle.png": {
+      "rect": [
+        191,
+        715,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-lower.png": {
+      "rect": [
+        191,
+        1295,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-west.png": {
+      "rect": [
+        35,
+        90,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-east.png": {
+      "rect": [
+        382,
+        260,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-full-1to1.png": {
+      "rect": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-archive-west.png": {
+      "rect": [
+        30,
+        750,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-return-east.png": {
+      "rect": [
+        384,
+        750,
+        640,
+        640
+      ],
+      "step": 1
+    }
+  },
+  "rework_b5": {
+    "date": "2026-11-18",
+    "worker": "B",
+    "assigned_head": "14bd348782645d7188d221f6c408724f3870d8e4",
+    "source_jpeg_blob": "64d7df6352b12d1aa57ce85f4925a722705bba1d",
+    "source_jpeg_actually_viewed": true,
+    "original_source_png_parity": "UNVERIFIED",
+    "physical_cells_changed": 99850,
+    "source_derived": "single broad luminous porous bioheart with rooted buttresses, compact upper containment and asymmetrical assay/vial wings",
+    "newly_extrapolated": "deep root geology/service route beyond the reference",
+    "upper_observation_transfer": "real central supported source-derived observation deck at y804; lower service transfer y980 has Midge through-shafts",
+    "conservative_clearances": "24/24 exact endpoints 19x15,23x19,31x27",
+    "installed_bridge_capacity": "UNMEASURED; source cap 32768, legacy fallback 4096",
+    "native": "NATIVE-UNTESTED"
+  },
+  "last_rework": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "1dd459e5aea4d2e5475992fe077621d04edc4a79",
+    "scope": "joined physical horizontal laboratory decks, asymmetric supported thresholds, branching specimen pores and anchored tissue",
+    "physical_cells_changed": 69938,
+    "added_cells": 3518,
+    "excavated_cells": 4223,
+    "reclassified_cells": 62197,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "occupied_cells": 1215321,
+    "exact_named_sites": "24/24 at 19x15, 23x19 and 31x27",
+    "direct_west_east_gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "structural_anchors": "6/6 in cardinally connected source-material footing",
+    "source_jpeg": "genuine committed preview used by predecessor and independent reviews; this run is source-JPEG visually unverified",
+    "original_png": "full original image pixel comparison UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge capacity and live Midge/Rapier untested"
+  },
+  "rework_b6": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "fb6af47d89e7969b7c499f0f7bc5bd55a98242fb",
+    "scope": "actual-cell functional west–east biosphere gantry route",
+    "physical_cells_changed": 24013,
+    "extent": [
+      1024,
+      2048
+    ],
+    "gantry_endpoints": [
+      [
+        370,
+        930
+      ],
+      [
+        742,
+        931
+      ]
+    ],
+    "gantry_max_steps": 750,
+    "source_jpeg_seen": true,
+    "source_png": "UNVERIFIED",
+    "native": "NATIVE-UNTESTED"
+  },
+  "gantry_pairwise_steps": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "steps": 373
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "steps": 373
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "steps": 373
+    }
+  ],
+  "rework_b7": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "d2d128d792c7c46ff16364ab94699b65b13f04db",
+    "scope": "ground the disconnected bioheart/observation deck via western bank, ground east lab to cliff; retain legal 373-step direct gantry",
+    "physical_cells_changed": 7018,
+    "connected_solid_cells": 1228520,
+    "native": "NATIVE-UNTESTED"
+  },
+  "structural_support": {
+    "solid_component_cells": 1178609,
+    "solid_components": 66,
+    "largest_component_cells": 1178609,
+    "probes": [
+      [
+        600,
+        808
+      ],
+      [
+        615,
+        385
+      ],
+      [
+        600,
+        984
+      ],
+      [
+        610,
+        2035
+      ],
+      [
+        450,
+        800
+      ],
+      [
+        930,
+        500
+      ]
+    ],
+    "method": "exact four-neighbour full nonzero material, deep-footing rooted six probes"
+  },
+  "rework_b8": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "0452a308683576d03b3b209d605b355a20e9c0d8",
+    "scope": "irregular porous living bioheart, retained rooted gallery/gantry and differentiated deep clinical support",
+    "actual_changed_cells": 45383,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22807,
+    "json_bytes": 418459,
+    "nonempty_cells": 1272911,
+    "exact_destinations": "24/24 at 19x15,23x19,31x27",
+    "gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "solid_probes": [
+      [
+        600,
+        808
+      ],
+      [
+        615,
+        385
+      ],
+      [
+        600,
+        984
+      ],
+      [
+        610,
+        2035
+      ],
+      [
+        450,
+        800
+      ],
+      [
+        930,
+        500
+      ]
+    ],
+    "connected_solid_cells": 1225795,
+    "source": "authentic source JPEG viewed; original PNG pixels UNVERIFIED",
+    "native": "NATIVE-UNTESTED"
+  },
+  "rework_b9": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "92046cc4099efede56adc95d382353625b3d85ca",
+    "scope": "source-scale inhabited horizontal gallery, wider asymmetric luminous membrane and authored lower service detail",
+    "physical_cells_changed": 69709,
+    "added_cells": 16988,
+    "excavated_cells": 3217,
+    "recoloured_cells": 49504,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "solid_components": 66,
+    "structural_probes": "6/6 cardinal rooted",
+    "source_jpeg": "authentic committed 640x360 directly viewed",
+    "original_png": "full-resolution source-PNG parity UNVERIFIED",
+    "exact_midge_sites": "24/24 all 3 conservative envelopes",
+    "gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "original_air_hulls_preserved": "all old reachable 31x27 centres and exact material footprint",
+    "native": "NATIVE-UNTESTED"
+  },
+  "rework_b10": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "75171aba712960963ae6f886ff7d5f5d4ec4c5e4",
+    "scope": "source-scale horizontal living biosphere, connected two-level lab bays, lower independent service vault",
+    "changed": 72789,
+    "added": 12435,
+    "removed": 11351,
+    "recolored": 49003,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "occupied_cells": 1215321,
+    "exact_sites": "24/24 at all 3 conservative hulls",
+    "gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "previous_31x27_air_hulls": "complete reached flight-volume union retained",
+    "source": "genuine unchanged JPEG directly viewed; original PNG pixel parity UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge capacity UNMEASURED"
+  },
+  "rework_b11": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "f0a1729a2c7357ba3e553849858392277d7bdb96",
+    "scope": "compact source-derived horizontal biosphere with physically backed connective gallery, unlike west/east laboratories; 3 grounded new deep scientific destinations",
+    "changed": 212472,
+    "added": 48108,
+    "removed": 55748,
+    "recolored": 108616,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "occupied_cells": 1215321,
+    "exact_sites": "24/24 at 19x15,23x19,31x27",
+    "gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "source": "authentic 640x360 committed JPEG visually inspected; original large PNG UNVERIFIED",
+    "original_connected_31x27_hull": "preserved complete union",
+    "native": "NATIVE-UNTESTED; installed bridge unmeasured"
+  },
+  "rework_b12": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "c71cddfa28fef009f2b13a685df477ee79564b15",
+    "scope": "scale-first source-core horizontal research gallery macro reconstruction and new west resin excavation/east return-pump cavern",
+    "physical_cells_changed": 235205,
+    "added_cells": 27661,
+    "excavated_cells": 91761,
+    "reclassified_cells": 115783,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22187,
+    "json_bytes": 405647,
+    "occupied_cells": 1216026,
+    "exact_sites": "24/24 at 19x15, 23x19 and 31x27, unchanged original coordinates",
+    "gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "previous_31x27_air_union": "ALL previous connected legal-centre hull footprints preserved",
+    "structural_probes": "6/6 connected to deep root at (610,2035) by cardinal full-solid BFS",
+    "genuine_source": "unchanged committed source JPEG visually inspected, full-size original PNG pixel parity unverified",
+    "source_derived": "compact upper horizontal dome, organism, research gallery, asymmetric east vial wing",
+    "extrapolated": "western root-resin excavation, eastern counterbalanced service plant, lower geological returns",
+    "installed_bridge": "UNMEASURED: accepted source 32768; legacy fallback 4096",
+    "native": "NATIVE-UNTESTED: no physical Workbench/Godot/Rapier input/collision/simulation/fresh-process save-reopen"
+  },
+  "rework_b13": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "1dd459e5aea4d2e5475992fe077621d04edc4a79",
+    "scope": "joined physical horizontal laboratory decks, asymmetric supported thresholds, branching specimen pores and anchored tissue",
+    "physical_cells_changed": 69938,
+    "added_cells": 3518,
+    "excavated_cells": 4223,
+    "reclassified_cells": 62197,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "occupied_cells": 1215321,
+    "exact_named_sites": "24/24 at 19x15, 23x19 and 31x27",
+    "direct_west_east_gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "structural_anchors": "6/6 in cardinally connected source-material footing",
+    "source_jpeg": "genuine committed preview used by predecessor and independent reviews; this run is source-JPEG visually unverified",
+    "original_png": "full original image pixel comparison UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge capacity and live Midge/Rapier untested"
+  }
 }
