@@ -358,6 +358,36 @@ function buildWideCanvas() {
   L(1838,319,1870,337,10,mat.ZINC);
   R(1881,325,39,11,mat.BLUE);R(1893,330,16,4,mat.SIGNAL);
 
+
+  // R5 independently prompted true-cell load-path remediation. All structural
+  // members below are part of the physical material grid, not a visual overlay.
+  // West dispatch and foot rail are now attached to the west boundary rock.
+  L(5,572,48,572,24,mat.CONCRETE);
+  L(200,165,203,136,16,mat.IRON);
+  L(5,608,64,608,10,mat.STEEL);
+  // An asymmetrically braced continuous service spine joins the drifting
+  // engineering mass to the Glassstorm underside and true east wall.
+  // It sits between the fast main racing air (y~445) and undercroft (y~752).
+  L(730,635,1340,635,16,mat.STEEL);
+  for(const x of [786,925,1088,1228]){
+    L(x,642,x+49,674,7,mat.ZINC);
+    L(x+49,674,x+102,642,7,mat.IRON);
+    R(x+43,664,15,7,mat.BLUE);
+  }
+  L(1709,613,2040,614,17,mat.CONCRETE);
+  // Rebuild the previously unmoored iris arch as a top-anchored suspension.
+  // Its 440x79 pass is a real 31x27-compatible over-crown flight gallery;
+  // this underpass restores blocked-main-iris high route around the hanger.
+  R(805,257,440,79,mat.E);
+  R(785,0,562,17,mat.CONCRETE);
+  L(1007,18,1007,193,16,mat.IRON);
+  L(818,17,948,77,7,mat.ZINC);
+  L(1199,17,1066,77,7,mat.ZINC);
+  R(968,17,83,9,mat.STEEL);
+  // Catch jaw is fixed into the wall, away from the finish centre (1943,446).
+  L(2005,335,2040,334,12,mat.STEEL);
+  L(1810,617,1830,659,10,mat.IRON);
+
     // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -386,6 +416,35 @@ function buildWideCanvas() {
   for(let i=0;i<g.length;i++)if(g[i]!==replay[i])mismatches++;
   if(mismatches||collisions)throw Error("LOSSLESS_REPLAY_FAIL "+mismatches+" "+collisions);
   if(edits.length>32768)throw Error("RECT_BUDGET_FAIL "+edits.length);
+
+
+  // R5: verify true four-connected material grounding from every world edge.
+  // This supplements (not replaces) the airspace actor-envelope tests below.
+  const grounded=new Uint8Array(W*H), groundQueue=new Int32Array(W*H);
+  let gRead=0,gWrite=0;
+  function seedGround(x,y){
+    const i=y*W+x;
+    if(g[i]&&!grounded[i]){grounded[i]=1;groundQueue[gWrite++]=i;}
+  }
+  for(let x=0;x<W;x++){seedGround(x,0);seedGround(x,H-1);}
+  for(let y=1;y<H-1;y++){seedGround(0,y);seedGround(W-1,y);}
+  while(gRead<gWrite){
+    const i=groundQueue[gRead++],x=i%W,y=(i/W)|0;
+    for(const v of [x>0?i-1:-1,x+1<W?i+1:-1,y>0?i-W:-1,y+1<H?i+W:-1]){
+      if(v>=0&&g[v]&&!grounded[v]){grounded[v]=1;groundQueue[gWrite++]=v;}
+    }
+  }
+  const supportSites=[
+    ["Western dispatch core",200,180],
+    ["Western apron",200,604],
+    ["Drift engineering",700,640],
+    ["Iris structural crown",1007,191],
+    ["Glassstorm anchored service span",1500,620],
+    ["East braking jaw",2005,335]
+  ];
+  for(const [name,x,y] of supportSites){
+    if(!grounded[y*W+x])throw Error("STRUCTURAL_SUPPORT_FAIL "+name+" ("+x+","+y+")");
+  }
 
   const liquid_policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
   const setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:[116,445],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits,response:"LA-SELECTIVE",liquid_policy,normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};

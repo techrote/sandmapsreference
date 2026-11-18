@@ -31,16 +31,16 @@
     "replay_all_cells": "PASS",
     "replay_mismatches": 0,
     "rectangle_overlaps": 0,
-    "rectangles": 9175,
+    "rectangles": 9329,
     "source_rectangle_limit": 32768,
     "source_legacy_fallback_capacity": 4096,
     "installed_bridge_capacity": "NOT TESTED",
-    "json_bytes": 173536,
+    "json_bytes": 176448,
     "source_json_limit": 1048576,
     "exact_material_cell_count": 2097152,
     "static_clearance": {
       "19x15": {
-        "connected_actor_centres": 916774,
+        "connected_actor_centres": 922741,
         "exact_named_sites_reached": 14,
         "named_site_count": 14,
         "sites": [
@@ -103,7 +103,7 @@
         ]
       },
       "23x19": {
-        "connected_actor_centres": 823032,
+        "connected_actor_centres": 832188,
         "exact_named_sites_reached": 14,
         "named_site_count": 14,
         "sites": [
@@ -166,7 +166,7 @@
         ]
       },
       "31x27": {
-        "connected_actor_centres": 752665,
+        "connected_actor_centres": 765999,
         "exact_named_sites_reached": 14,
         "named_site_count": 14,
         "sites": [
@@ -240,7 +240,7 @@
         31,
         27
       ],
-      "connected_actor_centres": 709094,
+      "connected_actor_centres": 715801,
       "reached": [
         "Launch cradle",
         "Dispatch roof bypass",
@@ -259,14 +259,50 @@
       "blocked_internal_site": "Iris central chamber",
       "finish_reached": true
     },
-    "image_checks": "Six PNGs generated from exact committed material cells, internal full PNG decoding, CRC, zlib/Adler, IEND and pixel-index parity: PASS",
+    "image_checks": "Six exact physical-cell PNGs generated, parsed, CRC/zlib Adler/IEND checked, and every indexed material pixel matched directly to final 2048x1024 source cell grid: PASS.",
     "native_workbench": "NATIVE-UNTESTED",
     "native_input": "NATIVE-UNTESTED",
     "rapier_progression": "NATIVE-UNTESTED",
     "native_collision": "NATIVE-UNTESTED",
     "save_reopen": "NATIVE-UNTESTED",
-    "authored_cell_visits": 884881,
-    "source_replay_work_limit": 32000000
+    "authored_cell_visits": 901253,
+    "source_replay_work_limit": 32000000,
+    "structural_support": {
+      "status": "PASS for six exact functional solid sample cells; actual cardinal BFS from world-edge solids",
+      "samples": [
+        [
+          "Western dispatch core",
+          200,
+          180
+        ],
+        [
+          "Western apron",
+          200,
+          604
+        ],
+        [
+          "Drift engineering",
+          700,
+          640
+        ],
+        [
+          "Iris structural crown",
+          1007,
+          191
+        ],
+        [
+          "Glassstorm anchored service span",
+          1500,
+          620
+        ],
+        [
+          "East braking jaw",
+          2005,
+          335
+        ]
+      ],
+      "note": "R5 removes all four >20k detached facilities identified by exact-HEAD technical review; cardinal edge-anchoring checked from final actual-cell grid. Remaining small separated material components may be deliberate fixtures/decor."
+    }
   },
   "site_coordinates": [
     {
@@ -341,38 +377,38 @@
     }
   ],
   "material_histogram": {
-    "0": 1212271,
-    "49": 167020,
-    "58": 42653,
-    "62": 83610,
-    "100": 417632,
-    "101": 96336,
-    "113": 22172,
-    "117": 29691,
-    "120": 7449,
-    "122": 6098,
-    "123": 5393,
-    "128": 6827
+    "0": 1195899,
+    "49": 166782,
+    "58": 56654,
+    "62": 90865,
+    "100": 413079,
+    "101": 95901,
+    "113": 22754,
+    "117": 34061,
+    "120": 7097,
+    "122": 2707,
+    "123": 4580,
+    "128": 6773
   },
   "material_laws": {
     "state": "all authored nonempty IDs validated against catalogue, current_rule_available true, movable false, kernel 0; no active water, powders, growth, reactions",
     "used": {
-      "0": 1212271,
-      "49": 167020,
-      "58": 42653,
-      "62": 83610,
-      "100": 417632,
-      "101": 96336,
-      "113": 22172,
-      "117": 29691,
-      "120": 7449,
-      "122": 6098,
-      "123": 5393,
-      "128": 6827
+      "0": 1195899,
+      "49": 166782,
+      "58": 56654,
+      "62": 90865,
+      "100": 413079,
+      "101": 95901,
+      "113": 22754,
+      "117": 34061,
+      "120": 7097,
+      "122": 2707,
+      "123": 4580,
+      "128": 6773
     }
   },
-  "grid_sha256": "6032acfdd9d5f0756db6466bd240a0c16fc7652e108d3e0fea56da526eee6975",
-  "json_sha256": "c5913a52a260f21f855023fe07ece081dd4f2778abf54724c3f4c1050c517f71",
+  "grid_sha256": "9bd6914d06c5a7ddfde1f24677a3b61a7d6cea6f167daeede4c445dfae125a56",
+  "json_sha256": "cc734fdd702a5acd4353b333f1fbbc57d416ce344cdf905668989309d868cb1a",
   "pngs": [
     {
       "file": "overview.png",
@@ -388,7 +424,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "5cfee80e8a8871c738014253139955155702e4002bfc87371fa76cbe6200fb99"
+      "sha256": "d608ad239fecf5a261dec8c1707e37c5def4d6c951ff6467ee57cc53af7c383d"
     },
     {
       "file": "01-launch-cradle.png",
@@ -404,7 +440,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "f4a5989db1690c20a1b4d737c86be26b639e3c731a66a97e351f4c21ab7aede0"
+      "sha256": "6d2243b4847c23a7ffb881aad42b398d174b8ff50e2acacd9834059f0a4fadd6"
     },
     {
       "file": "02-drift-canyon.png",
@@ -420,7 +456,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "9e9d77789ef0c6421a19ea9809d6f7168f70f751171cf4b1fd90e5d6db0aecce"
+      "sha256": "d1c431e328d12e380fe41552929ef97a5e195eddbcb11e7abb875fa04c975935"
     },
     {
       "file": "03-split-current-iris.png",
@@ -436,7 +472,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "5d325aa73654d0d8d0a41b9a69341285d5bdd944dbca7eaa1a31242d970d98dd"
+      "sha256": "ee37c746a41baf7c8f54e640cca5841004cbb009b90dc7e51700db04392b6fd9"
     },
     {
       "file": "04-glassstorm-viaduct.png",
@@ -452,7 +488,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "3b58a039223cb6bbe8b074182f2780b94b2ef70343f9be295cd4da40b1dc91fd"
+      "sha256": "69aaea455e1e9cf70923937755529a84ea8b310b2f3803130ac8e816e6ef9bf4"
     },
     {
       "file": "05-catch-recovery.png",
@@ -468,7 +504,7 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "iend": "PASS",
-      "sha256": "73692610924b4badb77e884e174677602a895ae53c48a59e72aa4e3bcfc6d248"
+      "sha256": "517efb141b32f9aeb4eb88058be35720f9af48dc8f5a62e392fa2734f4a5ab42"
     }
   ],
   "authoring_review": {
@@ -484,15 +520,19 @@
       "reopened catch-recovery lower return at 31x27",
       "replaced oval pattern with nonrepeating strata",
       "R4 review-driven macro refinement: founded dispatch hall, tectonic saw-canyon, supported crown conductor/high route, asymmetrical viaduct service hall and underdeck truss, large rooted braking-claw silhouette",
-      "R4 regression repair: crossing supports blocked 31x27 high bypass; traced original safe high-line and moved new conductor above it. Strict blocked-iris finish restored."
+      "R4 regression repair: crossing supports blocked 31x27 high bypass; traced original safe high-line and moved new conductor above it. Strict blocked-iris finish restored.",
+      "R5 structural review: genuine cardinal world-edge anchor paths into west dispatch and apron, drift engineering, Glassstorm service span, top-hung iris crown, and east brake jaw; service truss made visibly continuous; main and 31x27 blocked-iris bypass independently rechecked."
     ],
     "remaining": [
-      "Static centreline connectivity is not a dynamic speed/collision playtest",
-      "No Godot/CyberDemoBridge installed in run environment",
-      "Visual checkpoints are landmarks, not wired timing triggers",
-      "R4 original-creator self-review only; independent art/Shepherd revisit outstanding"
+      "NATIVE-UNTESTED: installed CyberDemoBridge rectangle capacity, Godot/Rapier load/input/collision/progression/save-reopen have not been exercised",
+      "31x27 static four-neighbour envelope connectivity does not prove high-speed kinetically controlled line handling",
+      "R5 continuous cross-sector service deck at y635 separates direct iris vertical drop; lower transfer remains reachable via western shaft and eastern access; owner should physically evaluate route choice",
+      "Checkpoint symbols are optical markers, not chronometer triggers",
+      "Fresh independent Shepherd/technical and art re-review required for this exact R5 HEAD"
     ]
   },
-  "rework_iteration": "R4",
-  "previous_head": "569d4362f50a5771990eec153070133dd626bb94"
+  "rework_iteration": "R5",
+  "previous_head": "ab5eb442308bf2513bf3b6fb13f74c809eddb174",
+  "r5_changed_material_cells": 48029,
+  "r5_reference_free": true
 }

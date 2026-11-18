@@ -1,99 +1,84 @@
-# Thunderclap Switchyard — ORIGINAL racing-wide CyberSand canvas
+# Thunderclap Switchyard — ORIGINAL high-speed racing-wide CyberSand canvas
 
-> **Draft / HOLD. Original design, not copied from or inspired by repository artwork. NATIVE-UNTESTED; not owner accepted.**
+> **R5 (18 November 2026) — OPEN Draft / HOLD; NATIVE-UNTESTED; not owner-accepted.**
+>
+> Entirely original designed-from-scratch material-cell environment. No reference image or artwork was selected, inspected, traced, transformed, or reused. Owned racing-wide creator branch only.
 
-## Design thesis
+## Design / playable race
 
-A lightning-conductor railway has been broken open by tectonic shear. The abandoned switching instrument survives across the central racing gap while a rock-cut service return runs below it. The Midge can time-trial the broad, fast near-level main traverse, detour through the exposed overhead crown, or dive into a more demanding lower through-tunnel and recover into the eastern braking claw. **The empty flight corridors are intentional acceleration/recovery space**, unlike the densely detailed rooted machinery.
+A lightning-conductor railway torn apart over a tectonic return valley. Five visually different districts form a fast 2D left-to-right Midge flight course: Launch Cradle, Drift Canyon, Split-Current Iris, Glassstorm Viaduct, and the eastern Braking Claw. Its three altitude bands are a broad main acceleration flight (y around 445), an elevated obstructed-main bypass (y around 174–320), and a grounded undercroft return (y around 752).
 
-True 2D orthographic side-elevation, exactly **2048×1024**. All visible materials are physical CyberSand cells, with a crisp material-ID colour palette; this is not a native-rendered screenshot. Designed without viewing or selecting any reference image.
+True 2D orthographic side elevation. No isometric platforms. Checkpoint chevrons and luminous apparatus are actual inert material cells, **not** working timing triggers.
 
-## Five differentiated districts and their functions
+## R5 physical structural repair
 
-1. **Launch Cradle (west, x24–390):** rooted fractured launch roof, console sill, visual start lights, 300+ cells of spacious runway and upper dispatch bypass.
-2. **Drift Canyon (x390–790):** pale sheared roof, lower false-stone shelf, supported rail-saw, high air lane, broad west undercroft dive.
-3. **Split-Current Iris (x785–1265):** asymmetrical interrupted ring / lightning accumulator, two open side apertures, high crown/straight-through main line, central 151-wide dive and switch-table over tunnel.
-4. **Glassstorm Viaduct (x1290–1770):** exposed conductor suspension, grounded truss deck, safeguarded static specimen panes, lower return gallery and wide upper shortcut.
-5. **Braking Claw (x1770–2048):** off-centre finish arch, grounded catch-recovery bowl, optical tower, 31×27 accessible lower re-entry to the main route.
+Independent review of prior R4 material cells revealed four large invented “support” claims that did not connect cardinally to any boundary-anchored material. R5 changes **48,029 actual cells** and replaces these unattached motifs with real material-cell load paths:
 
-## Exact authored sites and route graph
+- **West dispatch + launch apron:** real western boundary attachment and top-overburden stem, without blocking the Midge launch lane.
+- **Drift Canyon engineering:** a continuous steel service spine physically joining it to the eastern Glassstorm span, with offset triangular truss bracing in the no-race y635–680 band.
+- **Split-Current Iris:** a heavy world-top-supported beam and central hanger support the upper crown, with an oversized **440×79-cell** passable over-crown route below, retaining the 31×27 blocked-main bypass. This is not a fake flight portal or screenshot-only opening.
+- **Glassstorm service viaduct:** steel bridge continues to and actually touches the eastern world-boundary rock.
+- **Braking Claw:** upper jaw joined to the east massif and lower structure tied to the service span, without obstructing exact finish centre (1943,446).
 
-| Functional site | Exact Midge centre (x,y) |
+**Planar-route limitation:** the physically continuous service spine at y635 crosses the former open central iris dive. The eastern and western descent/return connections remain, but the centre shaft cannot be claimed as a straight unobstructed vertical portal through that spine. The exact named *Iris lower transfer* point remains reachable, and bypass tests still pass. This trade-off requires owner physical playtesting, not cosmetic relabelling.
+
+## Actual route graph and named functional airspace centres
+
+| Site | Exact material-cell position |
 |---|---|
-| Launch cradle | (116,445) |
-| Dispatch roof bypass | (203,329) |
-| Split-canyon high | (617,356) |
-| West dive shaft | (443,612) |
-| West undercroft | (614,752) |
-| Iris west approach | (841,445) |
-| Iris central chamber | (1037,448) |
-| Iris lower transfer | (1072,753) |
-| East conductor | (1323,454) |
-| Glassstorm viaduct | (1506,453) |
-| Eastern underpass | (1571,756) |
-| Catch cliff | (1826,449) |
-| Brake finish | (1943,446) |
-| Recovery basin | (1883,767) |
+| Launch cradle | (116, 445) |
+| Dispatch roof bypass | (203, 329) |
+| Split-canyon high | (617, 356) |
+| West dive shaft | (443, 612) |
+| West undercroft | (614, 752) |
+| Iris west approach | (841, 445) |
+| Iris central chamber | (1037, 448) |
+| Iris lower transfer | (1072, 753) |
+| East conductor | (1323, 454) |
+| Glassstorm viaduct | (1506, 453) |
+| Eastern underpass | (1571, 756) |
+| Catch cliff | (1826, 449) |
+| Brake finish | (1943, 446) |
+| Recovery basin | (1883, 767) |
 
-**Main straight and chicane markers:** Launch cradle → Dispatch roof bypass or Split-canyon high → Iris west approach → Iris central chamber → East conductor → Glassstorm viaduct → Catch cliff → Brake finish.
+Primary speed line: Launch Cradle → west straight → Iris west approach → Iris central chamber → East conductor → Glassstorm → Catch cliff → Brake finish.
 
-**Lower return:** Launch cradle → West dive shaft → West undercroft → Iris lower transfer → Eastern underpass → Recovery basin → Brake finish. The lower passage stays connected even with the central main flight corridor x900–1110, y330–554 excluded from actor-centre traversal; only the deliberately blocked *Iris central chamber* site fails the alternate-route stress test. This test deliberately obstructs a corridor virtually; it does not modify the committed world.
+Alternate high line: split into the overhead canyon break → pass the supported iris over-crown gallery → rejoin eastern conductor without entering the blocked central iris chamber. A virtual exclusion of actor centres x900–1110/y330–554 leaves **13/14 named points reachable**, including exact finish and recovery; the deliberately excluded Iris central chamber is the sole missing target.
 
-**High choice:** A deliberately open high route above Drift Canyon and over the top of the iris; it can rejoin either of the large main line sightlines without a 1-cell squeeze. The visual start/finish lamps, mile markers and chevrons are **not functioning chronometer/checkpoint triggers**.
+Lower service route: western broad drop shaft → West undercroft → Iris lower transfer → Eastern underpass → Recovery basin. Connected at exact 31×27 stress envelope. The continuous above-tunnel service structure is an actual support, so test vertical entrances and their approaches under native flight dynamics.
 
-## CyberSand exact-source admission
+## Exact-source and static qualification
 
-Authority: **techrote/cybersand accepted `main` at `018bd09503d7f079ddac52e225c2f7daf8d678bf`**, read-only. Read `godot/scripts/workbench_setup.gd` Setup-v2, `godot/scripts/gcr_flyer_authoring.gd` / `godot/authoring/flyers/midge.json`, and current material catalogue Git blob `d7a47d60721598a16589daf177a6ff4401b84b43`.
-
-Midge authored hull 4×3; 1.8× boost. All used nonempty material IDs are validated **state=Solid, movable=false, kernel=0, rule available**. Palette: Slate 49, Basalt 100, Obsidian 101, Reinforced Concrete 58, Steel Plate 62, Bare Iron 117, Zinc 113, Polymer Panel 128, Glass Block 120, Quartz 122, Uranium Glass 123. Structural crystals/signals are inert decorative cells, not lethal hazards. Water, acid, growing bio-matter, live reactions and unbounded effects are **not included**; exhibits are deliberately inert. Native installed bridge required for extended non-palette material IDs (49/62).
-
-The current source allows **32,768 starting rectangles**, **32,768 edits** and **1 MiB Setup-v2 JSON**, each dimension 512–2048 in multiples of 64. The installed bridge's `workbench_start_rectangle_capacity` was **not** read back. A legacy/no bridge 4096-rectangle fallback would refuse this 9175-rectangle canvas. No assertion of installed capacity or successful native load is made.
-
-## Qualification and reproduction
-
-| Static gate | Exact final result |
+| Gate | R5 result |
 |---|---|
-| Extent / cell count | **2048×1024 / 2,097,152** |
-| Non-overlapping, vertically merged boxes | **9175 / 32,768** |
-| Setup JSON bytes | **173536 / 1,048,576** |
-| Full-cell serialized replay | **0 mismatches / 0 overlaps** |
-| Exact sites with 19×15 conservative Midge envelope | **14/14** |
-| Exact sites with 23×19 envelope | **14/14** |
-| Exact sites with 31×27 stress envelope | **14/14** |
-| 31×27 blocked-centre alternate route | **13/14 sites**, deliberate blocked Iris chamber only; **finish reached** |
-| Six material-index PNGs and decoded pixel parity | **6/6 PASS** |
-| Native Godot/GDExtension/Rapier and save–reopen | **NATIVE-UNTESTED** |
+| CyberSand accepted read-only authority | `018bd09503d7f079ddac52e225c2f7daf8d678bf` |
+| Actual Setup-v2 extent | **2048×1024** = 2,097,152 material cells |
+| Deterministically compressed ordered non-overlap rectangles | **9329 / 32,768** |
+| Setup-v2 JSON | **176,448 / 1,048,576 bytes** |
+| All material cells faithfully serialized and replayed | **PASS — 0 overlaps / mismatches** |
+| Material IDs | 49, 58, 62, 100, 101, 113, 117, 120, 122, 123, 128; inert immovable Solid, kernel 0 |
+| Midge | authored 4×3 rectangle, model definition hash `c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96`; spawn (116,445); 1.8× boost |
+| 19×15 exact conservative actor-envelope reach | **14/14** |
+| 23×19 exact conservative actor-envelope reach | **14/14** |
+| 31×27 exact stress actor-envelope reach | **14/14** |
+| 31×27 main-iris-blocked alternate route | **13/14, exact finish PASS** |
+| Six actual material-index PNGs, CRC/Adler/IEND and all indexed pixel parity | **PASS, 3,080,192 pixels verified** |
+| Boundary-connected physical load probes at six stated sites | **PASS** |
+| Installed binary rectangle capacity | **NOT TESTED** — source 32,768; older bridge may expose only 4,096 |
+| Native Workbench/Godot/Rapier install, control, collision, simulation, save/reopen | **NATIVE-UNTESTED** |
 
-**Raw full-cell grid SHA-256:** `6032acfdd9d5f0756db6466bd240a0c16fc7652e108d3e0fea56da526eee6975`  
-**UTF-8 setup JSON SHA-256:** `c5913a52a260f21f855023fe07ece081dd4f2778abf54724c3f4c1050c517f71`  
-**Fixed seed:** `539365656`.
+Material grid SHA-256: `9bd6914d06c5a7ddfde1f24677a3b61a7d6cea6f167daeede4c445dfae125a56`  
+Exact Setup JSON SHA-256: `cc734fdd702a5acd4353b333f1fbbc57d416ce344cdf905668989309d868cb1a`
 
-Run `node build.cjs --verify` from this folder to reconstruct the authored grid and check every committed PNG/JSON artifact byte-for-byte, including the built-in exhaustive rectangle replay, three strict actor envelope flood fills, bypass and actual image pixel parity. Run `node build.cjs` to regenerate the output; **no dependencies**.
+The builder's deterministic `node build.cjs` regenerates the complete Setup-v2 JSON and every genuine material-cell PNG; `node build.cjs --verify` compares them byte-for-byte. Its R5 structural sample check rejects any detached major facility before publishing the generated assets. This run evaluated the same JavaScript builder function in a V8 execution environment and independently re-parsed its PNG chunks; a locally installed native CyberSand binary was not available.
 
-The [machine qualification receipt](qualification.json) contains per-PNG SHA-256 and region, exact site list, material histogram and static evidence.
+## Evidence gallery
 
-## Full-grid material raster and 1:1 district evidence
+- `overview.png` — full genuine 2048×1024 physical-cell map.
+- `01-launch-cradle.png`, `02-drift-canyon.png`, `03-split-current-iris.png`, `04-glassstorm-viaduct.png`, `05-catch-recovery.png` — 512×384 pixel true 1:1 district crops.
+- `qualification.json` — exact histograms, checksums, 14 saved site coordinates, actor envelopes, support probes and limitations.
+- `build.cjs` — fixed-seed, zero-dependency builder + executable verification.
 
-![Thunderclap Switchyard exact 2048x1024 material-cell plane](overview.png)
+## Owner/Shepherd gates before acceptance
 
-| Launch Cradle | Drift Canyon |
-|---|---|
-| ![Launch roof/runway at one cell per pixel](01-launch-cradle.png) | ![Canyon airspace and saw](02-drift-canyon.png) |
-| Split-Current Iris | Glassstorm Viaduct |
-| ![Central interrupted iris at one cell per pixel](03-split-current-iris.png) | ![Viaduct conductor and specimens](04-glassstorm-viaduct.png) |
-| Catch & recovery | |
-| ![Braking claw and lower return](05-catch-recovery.png) | |
-
-## R4 creative and engineering response to independent REWORK
-
-Rebuilt five districts after direct material-cell overview and 1:1 crop review. The launch dispatch hall now has recognisable supported mass and working sightline thresholds; the drift canyon has a roof-rooted inert saw and sheared rock; the iris has a high overhead conductor; Glassstorm has an asymmetrical control hall and a founded underdeck truss; the eastern jaw has a tall connected braking structure. All work consists of actual CyberSand materials, not images.
-
-**Regression found and repaired:** early R4 support arms occluded the 31×27 blocked-iris upper bypass, although all ordinary destinations still passed. Traced the original bypass centreline and relocated the new iris conductor above its high-speed flight path. The final strict blocked-iris test again reaches finish and 13/14 sites. Main lines remain open for speed; clearance alone is not dynamic racing proof.
-
-This is original-creator rework awaiting independent Shepherd/artistic re-review. Native Workbench installation, input/collision and save/reopen remain **NATIVE-UNTESTED**.
-
-## Honest art & engineering review
-
-First pass had an inaccessible western shaft destination, an obstructed recovery approach under 31×27 stress, sparse hero-area identity and simplistic oval striation. Those were specifically reworked; static routes and image parity were rerun from final **material cells**, not outdated drawings. The layout favours high-speed open sightlines instead of filling the race line with decoration. Its lower undercroft uses a broad 90–130 cell traverse rather than pinhole winding shafts. The upper route crosses real dead-space rather than unsupported fake perspective.
-
-**Known limitations:** no installed native Godot/Rapier, no physical speed/brake/collision or save-reopen validation; timings and checkpoints are not implemented; image palette is a direct material-ID diagnostic (no lighting/screen-space effects). The independent Shepherd/technical/art auditors must review the final PR HEAD before owner acceptance. Leave Draft / HOLD; do not merge or mark Ready.
+Reinspect the R5 full composition and five crops, especially the supported canopy, upper iris gallery, long service-deck spans and western/eastern descent approaches. On a source-matched installed Workbench first interrogate `CyberDemoBridge.workbench_start_rectangle_capacity` and verify >= 9329; then load, fly the high/main/lower paths at racing speed, test actual collision and 31×27 recovery routes, bounded physics progression and save/reopen. **No native outcome or owner acceptance is asserted. Do not merge or mark Ready.**
