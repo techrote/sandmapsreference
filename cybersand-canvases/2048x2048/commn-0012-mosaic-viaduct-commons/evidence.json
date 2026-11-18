@@ -10,42 +10,42 @@
     2048
   ],
   "cells": 4194304,
-  "covered_cells": 1332928,
+  "covered_cells": 1372176,
   "zero_full_grid_mismatches": true,
-  "rectangles": 8042,
+  "rectangles": 8148,
   "rectangle_limit": 32768,
-  "json_bytes": 155686,
+  "json_bytes": 157753,
   "json_limit": 1048576,
   "material_histogram": {
-    "0": 2861376,
-    "38": 271396,
-    "40": 128978,
-    "41": 159666,
+    "0": 2822128,
+    "38": 313620,
+    "40": 134390,
+    "41": 157459,
     "42": 51670,
     "43": 5798,
-    "44": 88169,
-    "48": 23598,
-    "49": 36580,
-    "50": 2229,
+    "44": 87618,
+    "48": 23252,
+    "49": 36389,
+    "50": 2144,
     "52": 11598,
-    "53": 5144,
+    "53": 5039,
     "54": 5426,
     "55": 2072,
-    "56": 194412,
+    "56": 194166,
     "57": 15453,
-    "58": 36764,
-    "62": 5800,
+    "58": 35514,
+    "62": 5792,
     "66": 998,
     "70": 26897,
     "71": 42380,
-    "72": 17222,
+    "72": 17102,
     "77": 8301,
-    "79": 2783,
+    "79": 2733,
     "80": 1336,
     "97": 58699,
-    "98": 58116,
+    "98": 56050,
     "100": 10368,
-    "119": 61075
+    "119": 59912
   },
   "source_art_changed": false,
   "actor": {
@@ -180,7 +180,7 @@
         19,
         15
       ],
-      "connected_centres": 2365749,
+      "connected_centres": 2212764,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -190,7 +190,7 @@
         23,
         19
       ],
-      "connected_centres": 2289071,
+      "connected_centres": 2143740,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -200,7 +200,7 @@
         31,
         27
       ],
-      "connected_centres": 2131652,
+      "connected_centres": 2010858,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -272,8 +272,8 @@
     ]
   },
   "render": "PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",
-  "native": "NATIVE-UNTESTED; source allows 32768 rectangles, older installed bridge may cap at 4096",
-  "material_sha256": "e1d39ca9fea8795ff8e7b2a4922823ea5c22f469d56198e14db5f5c846d40f07",
+  "native": "NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen",
+  "material_sha256": "0c306366e3f0c27037263abe87e8cb18a099b516c00dcb692d16ce4e9dd3fbaa",
   "rework_r2b": {
     "starting_head": "c74610365b21c6dd7f88c9f339084905fab1a1f7",
     "changed_material_cells": 268733,
@@ -335,5 +335,52 @@
     },
     "source_character": "source-JPEG-derived civic facade/terrace/tree/sails; original skyline unpainted",
     "native": "NATIVE-UNTESTED; installed capacity unmeasured"
+  },
+  "rework_r2a2": {
+    "starting_head": "859bda5e937f343f3722a50e050d7a529f00f7f0",
+    "changed_material_cells": 52068,
+    "full_cell_replay_mismatches": 0,
+    "solid_grounded_cells": 1289425,
+    "remaining_detached_components": 65,
+    "grounded_checkpoints": [
+      [
+        "west civic",
+        320,
+        1179
+      ],
+      [
+        "east rooted terrace",
+        1907,
+        1790
+      ],
+      [
+        "west undercroft",
+        116,
+        1700
+      ],
+      [
+        "upper civic stair",
+        840,
+        1300
+      ],
+      [
+        "central support",
+        1132,
+        1300
+      ],
+      [
+        "eastern garden support",
+        1636,
+        1300
+      ]
+    ],
+    "source_jpeg_seen": true,
+    "source_jpeg_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
+    "full_original_png_parity": "UNVERIFIED",
+    "native": "NATIVE-UNTESTED",
+    "installed_bridge_capacity": "UNMEASURED",
+    "png_images_regenerated": 9,
+    "png_generated_material_samples": 7077888,
+    "limit_note": "small floating equipment and isolated trim remain; source JPEG comparison is not original PNG parity"
   }
 }

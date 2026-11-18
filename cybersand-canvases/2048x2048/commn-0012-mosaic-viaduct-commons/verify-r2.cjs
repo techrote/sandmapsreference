@@ -24,5 +24,16 @@ let hx=w>>1,hy=h>>1,free=new Uint8Array(g.length);for(let y=hy;y<H-hy;y++){let t
 let seen=new Uint8Array(g.length),queue=new Int32Array(g.length),at=0,n=0,origin=502*W+404;if(free[origin]){seen[origin]=1;queue[n++]=origin}
 while(at<n){let i=queue[at++],x=i%W,y=i/W|0;for(let j of [x?i-1:-1,x<W-1?i+1:-1,y?i-W:-1,y<H-1?i+W:-1])if(j>=0&&free[j]&&!seen[j]){seen[j]=1;queue[n++]=j}}
 return {size:[w,h],centres:n,sites:ev.targets.filter(t=>seen[t.point[1]*W+t.point[0]]).length}}
-let c=[bfs(19,15),bfs(23,19)];if(c.some(x=>x.sites!==16))throw Error("exact operational target unreachable");
-console.log(JSON.stringify({pass:true,rectangles:s.edits.length,plane_sha256:sha,validated_PNG_pixels:pixels,strict_clearance:c},null,2));
+let c=[bfs(19,15),bfs(23,19),bfs(31,27)];if(c.some(x=>x.sites!==16))throw Error("exact operational target unreachable");
+
+// R2A2 independent grounded topology regression (not actor reachability).
+const solidSeen=new Uint8Array(g.length),solidQueue=new Int32Array(g.length);let lo=0,hi=0,seed=2047*W+2044;
+if(!g[seed])throw Error("foundation absent");solidQueue[hi++]=seed;solidSeen[seed]=1;
+while(lo<hi){let v=solidQueue[lo++],x=v%W,y=v/W|0;
+ for(let n of [x?v-1:-1,x<W-1?v+1:-1,y?v-W:-1,y<H-1?v+W:-1])
+ if(n>=0&&g[n]&&!solidSeen[n]){solidSeen[n]=1;solidQueue[hi++]=n}}
+const requiredSolidSites=[["west civic",320,1179],["east rooted terrace",1907,1790],["west undercroft",116,1700],["upper civic stair",840,1300],["central support",1132,1300],["eastern garden support",1636,1300]];
+for(let [name,x,y] of requiredSolidSites)if(!g[y*W+x]||!solidSeen[y*W+x])throw Error("ungrounded "+name);
+if(hi<1000000)throw Error("insufficient grounded masonry "+hi);
+
+console.log(JSON.stringify({pass:true,rectangles:s.edits.length,plane_sha256:sha,validated_PNG_pixels:pixels,strict_clearance:c,grounded_solid_cells:hi,grounded_checkpoints:requiredSolidSites.length},null,2));

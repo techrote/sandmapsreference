@@ -82,3 +82,13 @@ Reference image is the unchanged committed genuine JPEG; original large PNG dire
 
 ### 18 November 2026 Reworker A structural geometry
 `build-r2.cjs` deterministically applies `finish-r2a.cjs` after previous R2B layers. Rebuild the committed Setup/PNG/evidence from one authored material plane. See the R2A section of `REWORK-R2.md`; original source preserved, native untested.
+
+## R2A2 — Independent Shepherd P1 grounded-topology repair, 18 November 2026
+
+**Exact exclusive input HEAD** `859bda5e937f343f3722a50e050d7a529f00f7f0`. Genuine committed source JPEG blob `8cf59bbba8c4a4037924490b7d158872be876abd` directly viewed beside the former real cell overview and 1:1 crops; full original-PNG pixel parity **UNVERIFIED**. Deterministically changed **52,068 real material cells** in `finish-r2a2.cjs`, called after pre-existing overlays.
+
+Restored masonry load paths: western library wall **x54–91/y1150–1854**, west subway footing **x116–146/y1780–1854**, east rooted terrace terminal support **x1899–1939/y1740–1855**, five distinct short pier/wing connectors, west subterranean facade tie, and the **168×15-cell continuous rising plaza stringer** at x932–1099/y1190–1204. These connect the former 311,066-cell west civic mass, 264,064-cell eastern garden/tree body, 83,916-cell west lower wing and 61,199-cell stair bank to actual geologically grounded components, without one-cell cables or point-only operational clearances.
+
+**Static evidence at this exact regenerated state:** 2048×2048, 8,148 supported physical rectangles / 32,768, 157,753 UTF-8 JSON bytes / 1,048,576, 1,372,176 occupied cells, full ordered rectangle replay **0 mismatches**, material SHA-256 `0c306366e3f0c27037263abe87e8cb18a099b516c00dcb692d16ce4e9dd3fbaa`. From genuine y=2047 Solid four-neighbour BFS **1,289,425 connected physical support cells**, six specified original structure checkpoints pass, **65 small separate decorative/secondary components remain** for independent scrutiny. Current accepted-main placed material types all immovable Solid, no added liquids or powder-rock materials. Exact named Midge static cardinal-clearance 16/16 at 19×15, 23×19 and 31×27, no nearest-site substitution. All nine real-grid PNG images rebuilt and 1:1 crops retained (7,077,888 deterministic material-index samples). `verify-r2.cjs` now includes 31×27 and grounded-component gate. PNGs generated from same final cell plane; independent readback remains for auditors.
+
+**NATIVE-UNTESTED**: no physical Godot/CyberDemoBridge/Rapier load/install, actor movement/collision, simulation or save/reopen. Installed bridge capacity **UNMEASURED**, legacy 4,096 fallback would reject this rectangle count. OPEN Draft/HOLD; not Ready, merge or owner acceptance.

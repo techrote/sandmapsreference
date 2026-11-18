@@ -206,6 +206,7 @@ function canvas(){
  // PROTECTED_ANCHORS: source-led genuine air clearances at named operational sites.
  for(let [n,x,y] of TARGETS){R(x-19,y-16,39,33,M.AIR)}
  require('./finish-r2a.cjs')(G,W,H,M);
+ require('./finish-r2a2.cjs')(G,W,H,M);
  return G;
 }
 function coalesce(g){
