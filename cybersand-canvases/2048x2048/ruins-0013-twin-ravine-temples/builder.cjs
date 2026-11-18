@@ -186,11 +186,68 @@ for(let [x,y,X,Y] of [[306,93,327,83],[364,61,380,75],[471,93,493,87],[533,130,5
 for(let [x,y,X,Y] of [[1840,870,1934,859],[1727,1015,1852,1010],[1760,1121,1946,1127],[1687,1406,1833,1397]]){
  strut(x,y,X,Y,M.COBBLE,8);strut(x,y-6,X-13,Y-7,M.MOSS,4);
 }
+
+/* R2A: source-led lower ravine wayfinding. Three unlike connected destinations,
+   all real materials and carved air, not a duplicate overhead root bridge.
+   The unique upper suspension bridge and both of its anchored banks are unchanged. */
+// West root relay: excavate a sinuous inhabited vein between the already carved
+// terrace chapel and the lower east-facing vertical service shaft.
+poly([[370,1479],[403,1454],[466,1449],[530,1465],[566,1496],[572,1555],[555,1590],[491,1609],[420,1597],[367,1560]],M.AIR);
+poly([[535,1542],[579,1520],[627,1531],[658,1550],[670,1586],[630,1607],[570,1590]],M.AIR);
+poly([[367,1492],[387,1466],[406,1462],[393,1503],[384,1536],[367,1551]],M.GRANITE);
+poly([[535,1476],[556,1488],[581,1528],[563,1556],[547,1520]],M.COBBLE);
+poly([[388,1594],[422,1605],[489,1611],[527,1597],[552,1603],[490,1625],[427,1627]],M.COBBLE);
+strut(380,1480,419,1430,M.MOSS,11);
+strut(419,1430,470,1378,M.MOSS,13);
+strut(477,1368,498,1291,M.MOSS,12);
+strut(515,1608,574,1588,M.MOSS,8);
+strut(421,1618,388,1657,M.MOSS,9);
+// Reopen the carefully dimensioned west transfer after root-buttress work.
+rect(579,1552,91,53,M.AIR);
+for(let [x,y,X,Y] of [[378,1523,407,1478],[532,1569,557,1535],[452,1601,472,1592]])
+  strut(x,y,X,Y,M.SLATE,5);
+// Lower east lantern archive: uneven tall arched room in existing eastern stone,
+// linked to the established x1550 service shaft, not stranded in a boxed cave.
+poly([[1663,1383],[1709,1353],[1756,1340],[1827,1350],[1870,1382],[1890,1437],[1872,1481],[1831,1503],[1747,1498],[1684,1470]],M.AIR);
+poly([[1594,1407],[1676,1400],[1731,1425],[1759,1452],[1735,1468],[1665,1460],[1593,1453]],M.AIR);
+poly([[1680,1375],[1708,1348],[1759,1328],[1777,1337],[1734,1370],[1706,1405]],M.GRANITE);
+poly([[1838,1350],[1860,1367],[1897,1407],[1897,1456],[1867,1453],[1857,1396]],M.COBBLE);
+poly([[1735,1480],[1755,1498],[1801,1504],[1836,1490],[1857,1507],[1771,1515]],M.GRANITE);
+for(let [x,y,X,Y] of [[1744,1343,1747,1373],[1859,1367,1845,1392],[1753,1509,1715,1562],[1827,1501,1872,1574]])
+  strut(x,y,X,Y,M.MOSS,10);
+stain(1718,1352,129,7,M.LIME);
+stain(1748,1511,107,6,M.COBBLE);
+// Lower valley substrate passage is a GROUNDED cut through the basin base,
+// with two vertical skylights and multiple change-of-direction destinations.
+// It is not a second span across the air gap.
+poly([[869,1959],[904,1936],[952,1928],[1017,1931],[1068,1942],[1142,1925],[1220,1934],[1308,1928],[1379,1946],[1430,1960],[1400,2009],[1319,2006],[1224,2015],[1086,2001],[967,2004],[891,1991]],M.AIR);
+poly([[978,1849],[1017,1843],[1045,1874],[1043,1939],[983,1957],[963,1916]],M.AIR);
+poly([[1285,1849],[1333,1848],[1351,1885],[1354,1955],[1290,1970],[1274,1915]],M.AIR);
+poly([[881,1967],[913,1945],[945,1940],[925,1969],[900,1985]],M.COBBLE);
+poly([[1385,1949],[1410,1964],[1408,1986],[1387,1996],[1373,1968]],M.GRANITE);
+for(let [x,y,X,Y] of [[969,1931,1000,1945],[1055,1941,1071,1953],[1215,1936,1199,1954],[1328,1939,1305,1958]])
+  strut(x,y,X,Y,M.MOSS,5);
+stain(938,2008,401,8,M.COBBLE);
+stain(1003,2016,260,8,M.MOSS);
+// Readable root/stone trace in pre-existing cliff only, without freely placed
+// hanging hazards or unstable powders.
+for(let [x,y,X,Y,w] of [[474,704,503,929,12],[503,929,551,1135,10],
+ [544,1160,495,1382,12],[1701,1036,1683,1189,10],[1683,1190,1754,1341,9],
+ [1782,1506,1817,1650,11],[1804,1658,1873,1811,10]])
+ strut(x,y,X,Y,M.MOSS,w);
+// Asymmetric supported masonry at the least legible old shrine apertures;
+// retain the exact existing internal portals and conservative air centres.
+poly([[180,1073],[221,1067],[213,1088],[198,1116],[191,1153],[180,1164]],M.COBBLE);
+poly([[482,1076],[505,1070],[505,1169],[495,1154],[490,1107]],M.GRANITE);
+poly([[1711,1171],[1748,1168],[1729,1196],[1721,1232],[1711,1246]],M.GRANITE);
+poly([[1920,1169],[1945,1166],[1945,1246],[1934,1216],[1929,1185]],M.COBBLE);
+
 const spawn=[1024,454],loc=[
 ['Upper Open Ravine',[1024,454]],['West Upper Shrine',[315,590]],['West Upper Threshold',[604,589]],['West Root Landing',[491,850]],['West Deep Root Niche',[347,1137]],['West Middle Exit',[751,1141]],['West Terrace Chapel',[469,1367]],['West Lower Return',[596,1718]],
 ['Living Bridge West Air',[837,619]],['Living Bridge Mid-Air',[1050,617]],['Living Bridge East Air',[1450,613]],
 ['East Sun Sanctuary',[1811,619]],['East High Lookout',[1790,930]],['East Eroded Archive',[1808,1216]],['East Lower Crypt',[1840,1695]],['East Lower Air Exit',[1600,1697]],
-['East Root Spur',[1387,1460]],['Vertical Central Ravine',[1100,1121]],['Lower Ravine Flight',[1090,1600]],['Valley Floor Return',[1050,1844]]
+['East Root Spur',[1387,1460]],['Vertical Central Ravine',[1100,1121]],['Lower Ravine Flight',[1090,1600]],['Valley Floor Return',[1050,1844]],
+['West Root Relay',[469,1515]],['East Lantern Archive',[1804,1433]],['Valley Substrate Return',[1145,1970]]
 ].map(([name,point])=>({name,point}));
 // Full 19x15 actor-envelope erosion, component connectivity.
 const integral=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;integral[(y+1)*(W+1)+x+1]=integral[y*(W+1)+x+1]+s}}
@@ -231,7 +288,10 @@ const details={
 'temples-detail-east-guardian.png':nativeCrop(1512,207),
 'temples-detail-east-crypt.png':nativeCrop(1490,1135),
 'temples-detail-root-passages.png':nativeCrop(214,1240),
-'temples-detail-lower-ravine.png':nativeCrop(803,1510)
+'temples-detail-lower-ravine.png':nativeCrop(803,1510),
+ 'temples-detail-west-root-relay.png':nativeCrop(230,1290),
+ 'temples-detail-east-lantern-archive.png':nativeCrop(1536,1235),
+ 'temples-detail-valley-substrate.png':nativeCrop(790,1536)
 };
 let counts={};for(let v of A)counts[v]=(counts[v]||0)+1;
 return {json,png,details,stats:{source_id:'ruins-0013',extent:[W,H],seed:SEED,rectangle_count:edits.length,rectangle_budget:32768,json_bytes:json.length,json_byte_budget:1048576,png_bytes:png.length,cell_reconstruction:W*H,clearance_envelope:[19,15],reachable_destinations:loc.length,destinations:loc,waypoint_adjustments:adjustments,air_component_cells:t,spawn,material_counts:counts,native_runtime:'NOT RUN',source_visual_review:'Genuine gh-pages JPEG preview visually inspected; full-resolution original PNG parity UNVERIFIED'}};
