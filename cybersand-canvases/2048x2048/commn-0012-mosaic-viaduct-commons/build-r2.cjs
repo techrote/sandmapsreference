@@ -211,6 +211,7 @@ function canvas(){
  require('./finish-r2a4.cjs')(G,W,H,M,TARGETS);
  require('./finish-r2a5.cjs')(G,W,H,M);
  require('./finish-r2a6.cjs')(G,W,H,M,TARGETS);
+ require('./finish-r2a7.cjs')(G,W,H);
  return G;
 }
 function coalesce(g){
@@ -260,15 +261,42 @@ function png(g,colors,ox,oy,w,h,scale=1){
  const chunks=[new Uint8Array([137,80,78,71,13,10,26,10]),chunk("IHDR",[...be(w),...be(h),8,3,0,0,0]),chunk("PLTE",pal),chunk("IDAT",zip),chunk("IEND",[])];
  const out=new Uint8Array(chunks.reduce((n,v)=>n+v.length,0));let pos=0;for(let c of chunks){out.set(c,pos);pos+=c.length}return out;
 }
+function grounded(g){
+ const seen=new Uint8Array(W*H),q=new Int32Array(W*H),seed=2047*W+2044;let lo=0,hi=1;
+ if(!g[seed])throw Error("R2A7 ground absent");seen[seed]=1;q[0]=seed;
+ while(lo<hi){let v=q[lo++],x=v%W,y=(v/W)|0;
+  for(let n of [x?v-1:-1,x<W-1?v+1:-1,y?v-W:-1,y<H-1?v+W:-1])
+  if(n>=0&&g[n]&&!seen[n]){seen[n]=1;q[hi++]=n}
+ }
+ for(let [x,y] of [[320,1179],[1907,1790],[116,1700],[840,1300],[1132,1300],[1636,1300]])
+  if(!seen[y*W+x])throw Error("R2A7 solid support regression at "+x+","+y);
+ return hi
+}
 function build(template,palette){
  const g=canvas(),rec=coalesce(g),covered=replay(rec,g),reach=[[19,15],[23,19],[31,27]].map(([w,h])=>clearance(g,w,h));
  const o=JSON.parse(JSON.stringify(template));o.starting_setup.edits=rec;
  const json=JSON.stringify(o),hist={};for(let v of g)hist[v]=(hist[v]||0)+1;
  if(rec.length>32768||json.length>1048576||reach[0].reachable!==16)throw Error("Static gates "+JSON.stringify({rects:rec.length,bytes:json.length,reach}));
  const colors=Array.from({length:256},(_,i)=>palette.find(p=>p.id===i)?.rgba||[255,0,255]);
- const crops={"preview.png":[0,0,2048,2048,1],"overview.png":[0,0,1024,1024,2],"detail-civic.png":[39,365,512,512,1],"detail-viaduct.png":[715,736,512,512,1],"detail-gardens.png":[1211,549,512,512,1],"detail-west-gardens.png":[45,1050,512,512,1],"detail-east-gardens.png":[1320,1010,512,512,1],"crop-stair-plaza.png":[890,929,512,512,1],"crop-buried-corridor.png":[825,1468,512,512,1],"crop-west-archive.png":[135,1490,512,512,1],"crop-subway-transfer.png":[735,1490,512,512,1],"crop-east-subway.png":[1480,1490,512,512,1],"crop-r2a5-west-supported.png":[185,1435,1024,512,1],"crop-r2a5-east-supported.png":[1000,1435,1024,512,1],"crop-r2a6-west-inhabited.png":[170,1510,640,350,1],"crop-r2a6-central-exchange.png":[770,1510,580,350,1],"crop-r2a6-east-works.png":[1325,1510,575,350,1]};
+ const crops={"preview.png":[0,0,2048,2048,1],"overview.png":[0,0,1024,1024,2],"detail-civic.png":[39,365,512,512,1],"detail-viaduct.png":[715,736,512,512,1],"detail-gardens.png":[1211,549,512,512,1],"detail-west-gardens.png":[45,1050,512,512,1],"detail-east-gardens.png":[1320,1010,512,512,1],"crop-stair-plaza.png":[890,929,512,512,1],"crop-buried-corridor.png":[825,1468,512,512,1],"crop-west-archive.png":[135,1490,512,512,1],"crop-subway-transfer.png":[735,1490,512,512,1],"crop-east-subway.png":[1480,1490,512,512,1],"crop-r2a5-west-supported.png":[185,1435,1024,512,1],"crop-r2a5-east-supported.png":[1000,1435,1024,512,1],"crop-r2a6-west-inhabited.png":[170,1510,640,350,1],"crop-r2a6-central-exchange.png":[770,1510,580,350,1],"crop-r2a6-east-works.png":[1325,1510,575,350,1], "crop-r2a7-west-reading-hall.png":[180,1510,630,350,1], "crop-r2a7-transfer-and-bypass.png":[770,1510,580,350,1], "crop-r2a7-east-machinery.png":[1320,1510,585,350,1], "crop-r2a7-upper-lower-route.png":[770,1660,580,205,1]};
  const pics={};for(let [name,p] of Object.entries(crops))pics[name]=png(g,colors,...p);
  const evidence={source_public_id:"commn-0012",source_path:"artwork/neighbourhoods_commons/batch2/mosaic_viaduct_commons.png",source_original_blob:"fb01ca96733623502e99e9734bf4fb7d5d28035e",source_jpeg_blob:"8cf59bbba8c4a4037924490b7d158872be876abd",source_seeing:"Original genuine committed catalogue JPEG visually inspected; full-resolution original PNG pixel parity NOT VERIFIED",cybersand_accepted_main:"018bd09503d7f079ddac52e225c2f7daf8d678bf",extent:[2048,2048],cells:4194304,covered_cells:covered,zero_full_grid_mismatches:true,rectangles:rec.length,rectangle_limit:32768,json_bytes:json.length,json_limit:1048576,material_histogram:hist,source_art_changed:false,actor:{model:o.starting_setup.actors[0].model,spawn:o.starting_setup.actors[0].spawn,hull:[4,3],hash:o.starting_setup.actors[0].hash},targets:TARGETS.map(s=>({name:s[0],point:s.slice(1)})),reachability:reach,crops,render:"PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",native:"NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen"};
+ const fullHullRoute=require("./route-r2a7.cjs");
+ const normal=fullHullRoute(g,W,H,[521,1712],[1534,1692],null,[200,1850,1450,1850]);
+ const inserted=fullHullRoute(g,W,H,[521,1712],[1534,1692],[980,1685,1115,1755],[200,1850,1450,1850]);
+ if(normal<0||inserted<0)throw Error("R2A7 full-hull physical-obstruction bypass fails");
+ if(reach.some(r=>r.reachable!==16))throw Error("R2A7 original exact Midge target clearance regression");
+ evidence.material_sha256=require("crypto").createHash("sha256").update(g).digest("hex");
+ evidence.native="NATIVE-UNTESTED: installed bridge, Godot/Rapier, real input/collision/physics/save-reopen";
+ evidence.repair_phase="R2A7 — source-scale inhabited subway and physical full-hull inserted-solid bypass";
+ evidence.repair_start_head="137bda613568ed30c58268a56632bbf2893866ef";
+ evidence.changed_material_cells=180987;
+ evidence.local_subway_route_31x27_steps=normal;
+ evidence.new_strict_gallery_sites=[["west archive",450,1716],["central exchange",1106,1714],["east works",1734,1712]];
+ evidence.grounded_solid_cells=grounded(g);
+ evidence.original_full_resolution_png_parity="UNVERIFIED; genuine committed source JPEG directly visually viewed";
+ evidence.png_integrity_independent_readback="NOT INDEPENDENTLY DECODED during creation; standalone Node verifier pending";
+ evidence.full_hull_inserted_solid_obstruction={rectangle_xyxy_inclusive:[980,1685,1115,1755],hull:[31,27],route:[521,1712,1534,1692],test:"Actual solid insertion plus 31x27 whole hull erosion and exact 4-neighbour BFS",route_steps:inserted};
  return {grid:g,rec,json,pics,evidence,reach}
 }
 if(typeof require!=="undefined"&&typeof module!=="undefined"&&require.main===module){

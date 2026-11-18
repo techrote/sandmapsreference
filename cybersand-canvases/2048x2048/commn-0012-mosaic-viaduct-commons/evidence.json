@@ -10,41 +10,41 @@
     2048
   ],
   "cells": 4194304,
-  "covered_cells": 1667534,
+  "covered_cells": 1660584,
   "zero_full_grid_mismatches": true,
-  "rectangles": 8732,
+  "rectangles": 9006,
   "rectangle_limit": 32768,
-  "json_bytes": 169150,
+  "json_bytes": 174508,
   "json_limit": 1048576,
   "material_histogram": {
-    "0": 2526770,
-    "38": 574631,
-    "40": 138714,
-    "41": 193851,
+    "0": 2533720,
+    "38": 530566,
+    "40": 138157,
+    "41": 207812,
     "42": 52570,
-    "43": 7758,
-    "44": 64305,
-    "48": 25430,
-    "49": 29044,
+    "43": 11216,
+    "44": 64287,
+    "48": 29672,
+    "49": 29483,
     "50": 1694,
     "52": 11552,
-    "53": 2798,
+    "53": 317,
     "54": 5426,
     "55": 2072,
     "56": 194166,
-    "57": 13254,
+    "57": 19551,
     "58": 34997,
-    "62": 6757,
-    "70": 28769,
-    "71": 44655,
-    "72": 16667,
-    "77": 7850,
-    "79": 2925,
-    "80": 1570,
+    "62": 7973,
+    "70": 28915,
+    "71": 46440,
+    "72": 16020,
+    "77": 8120,
+    "79": 3094,
+    "80": 1276,
     "97": 58699,
-    "98": 88084,
+    "98": 94914,
     "100": 10368,
-    "119": 48928
+    "119": 51227
   },
   "source_art_changed": false,
   "actor": {
@@ -179,7 +179,7 @@
         19,
         15
       ],
-      "connected_centres": 2074879,
+      "connected_centres": 2064623,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -189,7 +189,7 @@
         23,
         19
       ],
-      "connected_centres": 2003488,
+      "connected_centres": 1990823,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -199,7 +199,7 @@
         31,
         27
       ],
-      "connected_centres": 1866819,
+      "connected_centres": 1835145,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -324,16 +324,43 @@
       575,
       350,
       1
+    ],
+    "crop-r2a7-west-reading-hall.png": [
+      180,
+      1510,
+      630,
+      350,
+      1
+    ],
+    "crop-r2a7-transfer-and-bypass.png": [
+      770,
+      1510,
+      580,
+      350,
+      1
+    ],
+    "crop-r2a7-east-machinery.png": [
+      1320,
+      1510,
+      585,
+      350,
+      1
+    ],
+    "crop-r2a7-upper-lower-route.png": [
+      770,
+      1660,
+      580,
+      205,
+      1
     ]
   },
   "render": "PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",
-  "native": "NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen",
-  "material_sha256": "1d7283382a0a010198ee30c6689fe7c9de421e5ed0c349c09f41d0af3deef7fa",
-  "repair_phase": "R2A6 — three connected inhabitable vaulted subway destinations",
-  "repair_start_head": "60f0ca3a859dd39d04f63642e28cd8bcf47b449d",
-  "changed_material_cells": 246194,
-  "local_subway_route_31x27_steps": 1039,
-  "alternate_central_obstruction_route_31x27_steps": 1095,
+  "native": "NATIVE-UNTESTED: installed bridge, Godot/Rapier, real input/collision/physics/save-reopen",
+  "material_sha256": "030c722525998deac2add1887fc5ed487f28bd552f1e5b32c891a9a52bfea0d5",
+  "repair_phase": "R2A7 — source-scale inhabited subway and physical full-hull inserted-solid bypass",
+  "repair_start_head": "137bda613568ed30c58268a56632bbf2893866ef",
+  "changed_material_cells": 180987,
+  "local_subway_route_31x27_steps": 1033,
   "new_strict_gallery_sites": [
     [
       "west archive",
@@ -351,8 +378,27 @@
       1712
     ]
   ],
-  "grounded_solid_cells": 1596430,
-  "original_full_resolution_png_parity": "UNVERIFIED; authentic source JPEG visually inspected, no source-original pixel identity claim",
-  "png_integrity_independent_readback": "PASS: 17/17 generated PNGs separately decoded from PNG binary chunks; CRC32, zlib fixed-Huffman inflate, Adler32, indexed palette and all 9,541,146 sample pixels checked against fully replayed final material grid",
-  "independent_decoded_material_png_pixels": 9541146
+  "grounded_solid_cells": 1579508,
+  "original_full_resolution_png_parity": "UNVERIFIED; genuine committed source JPEG directly visually viewed",
+  "png_integrity_independent_readback": "NOT INDEPENDENTLY DECODED during creation; standalone Node verifier pending",
+  "full_hull_inserted_solid_obstruction": {
+    "rectangle_xyxy_inclusive": [
+      980,
+      1685,
+      1115,
+      1755
+    ],
+    "hull": [
+      31,
+      27
+    ],
+    "route": [
+      521,
+      1712,
+      1534,
+      1692
+    ],
+    "test": "Actual solid insertion plus 31x27 whole hull erosion and exact 4-neighbour BFS",
+    "route_steps": 1211
+  }
 }

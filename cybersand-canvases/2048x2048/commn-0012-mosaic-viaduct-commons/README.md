@@ -2,10 +2,23 @@
 
 **2048 × 2048 real material cells · Draft / HOLD · PR #11.**
 
-**CURRENT HEAD R2A5** — four genuine grounded gallery repairs, 16/16 strict Midge sites at three envelopes; earlier rows are historical.
+**HISTORICAL R2A5, superseded by R2A7** — four genuine grounded gallery repairs, 16/16 strict Midge sites at three envelopes; earlier rows are historical.
 
-**CURRENT HEAD R2A4:** 8,434 rectangles, 163,421-byte generated-start manifest, 16/16 strict sites at all three clearances, new grounded inhabited civic subway. Previous numeric tables below document earlier iterations; latest counts are in the R2A4 section. The archived R1 is preserved on main; this R2 rebuild exists on its separate assigned branch, with no source-art or engine edits.
+**HISTORICAL R2A4, superseded:** 8,434 rectangles, 163,421-byte generated-start manifest, 16/16 strict sites at all three clearances, new grounded inhabited civic subway. Previous numeric tables below document earlier iterations; latest counts are in the R2A4 section. The archived R1 is preserved on main; this R2 rebuild exists on its separate assigned branch, with no source-art or engine edits.
 
+## CURRENT R2A7 — source-calibrated inhabited subway and true bypass (18 Nov 2026)
+
+**Draft/HOLD; no owner acceptance.** Shepherd-authorised starting HEAD `137bda613568ed30c58268a56632bbf2893866ef`, new 318-operation real-cell finishing pass in `finish-r2a7.cjs`. Changed **180,987 actual material cells**, reserialised all 4,194,304 cells to **9,006** valid in-bounds, nonoverlapping rectangles / 32,768 and **174,508** UTF-8 JSON bytes / 1,048,576; independent final whole-grid SHA-256 `030c722525998deac2add1887fc5ed487f28bd552f1e5b32c891a9a52bfea0d5`, full ordered stamp replay **zero mismatches**. Accepted **stable solid material IDs only** (MossWall 97 is Combustible but immovable/unignited); no liquid or powder foundations. Six tested structural load probes still join the **1,579,508-cell grounded masonry component**.
+
+The genuine unchanged repository **JPEG was directly viewed**, and R2A6 overview/three new subway crops were compared. Original full-resolution source PNG pixel parity remains **UNVERIFIED**. Four differentiated locally scaled roofed mezzanine suites now form a continuous public route with floor-supported archive shelving, ticket exchange, civic utilities and inert eastern machinery. Three wide masonry-framed descent shafts preserve terrace access; 1:1 detail crops show actual physical material cells, not screenshots. The blue/ivory west library, rising paved promenade, terracotta shade sails, broad tree and externally Empty flyable sky are unchanged.
+
+All **16 original operational destinations**, exact spawn and three exact new gallery samples remain reachable from unchanged spawn at conservative full 19×15 / 23×19 / 31×27 Midge centre clearances; no radius proxy or endpoint substitution. The critical lower transit section has a genuine excavated lower service bypass beneath the public artery. A solid rectangle inserted **x980–1115/y1685–1755**, eroded against the *entire* 31×27 conservative collision envelope (NOT centre-only masking), retains a strict cardinal west-underpass `(521,1712)` → east-underpass `(1534,1692)` **1,211-step bypass**, versus **1,033 steps unobstructed**, bounded x200–1850/y1450–1850. The older 1,095-step centre-mask scenario is historical and **was not a physically collision-capable obstruction test**.
+
+**Gallery:** [authored full-grid material PNG](preview.png), [whole-world overview](overview.png), [west reading rooms](crop-r2a7-west-reading-hall.png), [central exchange/bypass](crop-r2a7-transfer-and-bypass.png), [eastern works](crop-r2a7-east-machinery.png), [two-level service connection](crop-r2a7-upper-lower-route.png). All 21 outputs regenerated from one final material-index plane with self-checked indexed palette and PNG signatures. Standalone Node verifier (independent per-pixel PNG decoding and CRC+zlib readback) **has not run here**; `node build-r2.cjs && node verify-r2.cjs` is provided for subsequent fresh-process qualification, but neither script was executed as Node in this run.
+
+**NATIVE-UNTESTED:** installed CyberDemoBridge capacity (32,768 in accepted source; legacy fallback 4,096 may reject), native Godot/Rapier Workbench setup load, true Midge controls/collision, bounded simulation and save/reopen are untested. Original source, other worker branches, engine and historical main archive remain unchanged. Owner/Shepherd/auditors retain HOLD authority.
+
+---
 ## Ground truth and fidelity
 
 - Original PNG: artwork/neighbourhoods_commons/batch2/mosaic_viaduct_commons.png, catalogue ID commn-0012, source key batch2/images/img-040.png, original Git blob fb01ca96733623502e99e9734bf4fb7d5d28035e.

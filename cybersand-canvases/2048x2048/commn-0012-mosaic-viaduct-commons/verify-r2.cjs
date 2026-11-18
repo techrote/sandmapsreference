@@ -12,7 +12,11 @@ let sha=crypto.createHash("sha256").update(g).digest("hex");if(sha!==ev.material
 let pixels=0;
 for(let [name,r] of Object.entries(ev.crops)){let [ox,oy,w,h,scale]=r,buf=fs.readFileSync(path.join(root,name)),pos=8,wh=null,colors=null,z=[];
  if(!buf.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))throw Error("not PNG");
- while(pos<buf.length){let n=buf.readUInt32BE(pos),type=buf.toString("ascii",pos+4,pos+8),body=buf.subarray(pos+8,pos+8+n);pos+=n+12;
+ while(pos<buf.length){let n=buf.readUInt32BE(pos),type=buf.toString("ascii",pos+4,pos+8),body=buf.subarray(pos+8,pos+8+n);
+ let storedCRC=buf.readUInt32BE(pos+8+n),crc=-1;
+ for(let k=pos+4;k<pos+8+n;k++){crc^=buf[k];for(let b=0;b<8;b++)crc=(crc>>>1)^((crc&1)?0xedb88320:0)}
+ if(((~crc)>>>0)!==storedCRC)throw Error("PNG CRC mismatch "+name+" "+type);
+ pos+=n+12;
  if(type==="IHDR")wh=[body.readUInt32BE(0),body.readUInt32BE(4),body[8],body[9]];if(type==="PLTE")colors=body;if(type==="IDAT")z.push(body);if(type==="IEND")break}
  if(!wh||wh[0]!==w||wh[1]!==h||wh[2]!==8||wh[3]!==3||!colors)throw Error("PNG geometry "+name);
  for(let [id,mat] of allowed)for(let k=0;k<3;k++)if(colors[id*3+k]!==mat.rgba[k])throw Error("palette "+name+" "+id);
@@ -40,4 +44,11 @@ if(hi<1000000)throw Error("insufficient grounded masonry "+hi);
 // R2A6 additional exact air sites (not relocated operational targets).
 for(let [name,x,y] of [["west archive",450,1716],["central exchange",1106,1714],["east works",1734,1712]])if(g[y*W+x]!==0)throw Error("R2A6 blocked gallery point "+name);
 if(ev.independent_decoded_material_png_pixels!==undefined&&pixels!==ev.independent_decoded_material_png_pixels)throw Error("R2A6 PNG pixel count");
+// Real collidable inserted rectangle; entire conservative 31x27 actor hull must survive.
+const fullHullRoute=require("./route-r2a7.cjs");
+const realNormal=fullHullRoute(g,W,H,[521,1712],[1534,1692],null,[200,1850,1450,1850]);
+const realBlocked=fullHullRoute(g,W,H,[521,1712],[1534,1692],[980,1685,1115,1755],[200,1850,1450,1850]);
+if(realNormal<0||realBlocked<0||realNormal!==ev.local_subway_route_31x27_steps||realBlocked!==ev.full_hull_inserted_solid_obstruction.route_steps)throw Error("R2A7 physical full-hull bypass mismatch");
+if(hi!==ev.grounded_solid_cells)throw Error("R2A7 changed support topology");
+for(const [name,x,y] of ev.new_strict_gallery_sites||[])if(g[y*W+x])throw Error("R2A7 blocked exact gallery centre "+name);
 console.log(JSON.stringify({pass:true,rectangles:s.edits.length,plane_sha256:sha,validated_PNG_pixels:pixels,strict_clearance:c,grounded_solid_cells:hi,grounded_checkpoints:requiredSolidSites.length},null,2));
