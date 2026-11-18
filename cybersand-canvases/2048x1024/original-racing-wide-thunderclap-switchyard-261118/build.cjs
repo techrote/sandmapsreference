@@ -388,6 +388,51 @@ function buildWideCanvas() {
   L(2005,335,2040,334,12,mat.STEEL);
   L(1810,617,1830,659,10,mat.IRON);
 
+
+  // R6 original course-finishing pass: physical racing decisions, no screenshot-only art.
+  // Preserve the 31x27-capable y445 direct accelerator while creating authored optional lines.
+  L(346,331,405,355,13,mat.STEEL);L(348,359,411,390,11,mat.IRON);
+  P([[402,338],[433,350],[439,378],[418,391],[400,371]],mat.CONCRETE);
+  R(414,350,15,13,mat.BLUE);R(418,354,7,4,mat.SIGNAL);
+  // Crown-rooted elevated chicane: sawhead, asymmetrical deflector, over-iris gallery.
+  L(510,237,539,297,10,mat.STEEL);
+  P([[531,295],[553,304],[566,320],[555,339],[543,331]],mat.IRON);
+  R(542,307,18,9,mat.BLUE);
+  L(690,260,691,313,10,mat.STEEL);
+  P([[690,315],[726,321],[740,344],[714,348]],mat.IRON);
+  R(715,323,18,8,mat.SIGNAL);
+  // Undercliff return: a separate slalom with alternate shallow roof/floor banks.
+  P([[385,680],[406,653],[437,664],[452,692],[432,709],[400,706]],mat.CONCRETE);
+  L(383,704,437,704,8,mat.STEEL);
+  R(650,699,78,11,mat.STEEL);R(668,710,37,12,mat.CONCRETE);
+  R(802,792,82,18,mat.STEEL);P([[802,790],[832,774],[884,789]],mat.CONCRETE);
+  R(1300,703,78,13,mat.STEEL);P([[1312,717],[1342,729],[1378,715]],mat.CONCRETE);
+  R(1466,799,98,14,mat.STEEL);P([[1481,800],[1514,780],[1552,798]],mat.CONCRETE);
+  // Iris: the western 350px-high crossbar was rejected because it killed the 31x27 bypass.
+  // Retain the legal crown crossing; one asymmetric east cue and working service switchbanks.
+  L(1178,330,1224,353,10,mat.IRON);
+  P([[1216,340],[1253,350],[1259,376],[1234,387]],mat.STEEL);
+  R(1228,353,17,8,mat.BLUE);
+  P([[943,610],[973,587],[999,597],[1002,622]],mat.CONCRETE);
+  R(955,600,26,10,mat.STEEL);R(960,601,17,6,mat.SIGNAL);
+  P([[1156,620],[1196,590],[1219,603],[1208,633]],mat.IRON);
+  R(1181,606,25,10,mat.BLUE);
+  // Glassstorm: locally supported inhabited weigh-station and irregular track underbelly.
+  P([[1390,601],[1419,562],[1504,550],[1543,574],[1554,600]],mat.CONCRETE);
+  P([[1418,574],[1482,562],[1508,576],[1486,590],[1415,590]],mat.STEEL);
+  R(1430,573,46,15,mat.GLASSBLOCK);R(1440,578,14,6,mat.SIGNAL);
+  L(1491,589,1491,615,9,mat.IRON);
+  P([[1574,600],[1621,558],[1662,574],[1692,604]],mat.CONCRETE);
+  R(1616,572,32,12,mat.STEEL);R(1622,575,20,6,mat.BLUE);
+  // Recovery: non-forced lower loop mouth, recognizable dual-jaw braking geometry.
+  L(1786,603,1818,565,13,mat.STEEL);
+  P([[1808,563],[1847,545],[1878,553],[1870,578],[1831,591]],mat.CONCRETE);
+  R(1832,560,28,11,mat.BLUE);
+  P([[1968,356],[2008,368],[2027,396],[2001,402],[1979,387]],mat.STEEL);
+  L(1916,578,1966,539,12,mat.IRON);
+  P([[1955,527],[1999,516],[2024,539],[2002,559],[1973,553]],mat.CONCRETE);
+  L(1832,822,1928,819,10,mat.STEEL);R(1881,817,24,10,mat.BLUE);
+
     // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -484,12 +529,14 @@ function buildWideCanvas() {
   }
   const reachable={};for(const [fw,fh] of [[19,15],[23,19],[31,27]])reachable[fw+"x"+fh]=flood(fw,fh,null);
   const bypass=flood(31,27,[900,330,1110,554]);
+  const fullHullBlocked=flood(31,27,[885,317,1125,567]);
+  if(fullHullBlocked.sites.filter(s=>s[1]).length!==13||!fullHullBlocked.sites.find(s=>s[0]==="Brake finish")[1])throw Error("FULL_HULL_PHYSICAL_IRIS_BYPASS_FAIL");
   // Material catalogue exact RGB palette, indexed 4-bit lossless pixel parity.
-  function encodePNG(x0,y0,ww,hh){
+  function encodePNG(x0,y0,ww,hh,step=1){
     const stride=1+ww/2,raw=new Uint8Array(stride*hh);
     const toIndex=new Int16Array(256);toIndex.fill(-1);for(let i=0;i<indexToMaterial.length;i++)toIndex[indexToMaterial[i]]=i;
     for(let y=0;y<hh;y++)for(let x=0;x<ww;x+=2){
-      const a=toIndex[g[(y0+y)*W+x0+x]],b=toIndex[g[(y0+y)*W+x0+x+1]];
+      const a=toIndex[g[(y0+y*step)*W+x0+x*step]],b=toIndex[g[(y0+y*step)*W+x0+(x+1)*step]];
       if(a<0||b<0)throw Error("PALETTE_FAIL "+a+" "+b);
       raw[y*stride+1+(x>>1)]=(a<<4)|b;
     }
@@ -539,13 +586,14 @@ function buildWideCanvas() {
     let pDiff=0;
     for(let y=0;y<hh;y++)for(let x=0;x<ww;x++){
       const packed=decoded[y*stride+1+(x>>1)],ind=(x&1)?packed&15:packed>>4;
-      if(indexToMaterial[ind]!==g[(y+y0)*W+x+x0])pDiff++;
+      if(indexToMaterial[ind]!==g[(y*step+y0)*W+x*step+x0])pDiff++;
     }
     if(pDiff)throw Error("PNG_PIXEL_PARITY "+pDiff);
     return {bytes:png,pixels:ww*hh,chunkCRC:"PASS",adler:"PASS",materialPixelsVerified:ww*hh};
   }
   const gallery=[
     ["overview.png",0,0,2048,1024],
+    ["overview-review-2x.png",0,0,1024,512,2],
     ["01-launch-cradle.png",0,160,512,384],
     ["02-drift-canyon.png",384,140,512,384],
     ["03-split-current-iris.png",760,164,512,384],
@@ -553,7 +601,7 @@ function buildWideCanvas() {
     ["05-catch-recovery.png",1536,540,512,384]
   ].map(p=>({name:p[0],region:p.slice(1),...encodePNG(...p.slice(1))}));
   const hist={};for(const v of g)hist[v]=(hist[v]||0)+1;
-  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,hist,materials:mat,gallery,mismatches,collisions};
+  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,hist,materials:mat,gallery,mismatches,collisions};
 }
 const r=buildWideCanvas();
 const artifacts=[["setup-thunderclap-switchyard.json",Buffer.from(r.json,"utf8")],...r.gallery.map(g=>[g.name,Buffer.from(g.bytes)])];
