@@ -666,6 +666,29 @@
     "png_material_index_pixels_compared": 4194304,
     "png_material_index_mismatches": 0,
     "png_images": 8,
-    "png_commit_readback": "Pending GitHub blob readback after asset commit"
+    "png_commit_readback": "All 8/8 exact Git blob SHA identities matched after publication; seven smaller PNGs returned binary base64, full 1024x2048 PNG returned zero binary bytes through connector although its committed blob SHA matched. All eight were decoded and pixel-parity checked before upload.",
+    "boundary_structural_census": {
+      "static_solid_components": 26,
+      "primary_boundary_connected_solid_cells": 718848,
+      "detached_inert_solid_cells": 2467,
+      "largest_detached_component_cells": 1394,
+      "disposition": "Residual noncritical inert fragments require independent art/technical judgement; no claimed total physical anchorage."
+    },
+    "alternate_route_stress": {
+      "envelope": [
+        31,
+        27
+      ],
+      "blocked_actor_centre_box": [
+        480,
+        1100,
+        555,
+        1215
+      ],
+      "reachable_centres": 1036375,
+      "exact_named_site_entries_reached": "28/28",
+      "unique_exact_site_coordinates_reached": "26/26",
+      "note": "Block is a synthetic actor-centre exclusion, not solid terrain or actual native pathfinding"
+    }
   }
 }
