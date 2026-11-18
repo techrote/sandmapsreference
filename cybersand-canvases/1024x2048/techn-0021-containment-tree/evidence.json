@@ -15,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 21587,
+  "rectangles": 21930,
   "rectangle_budget": 32768,
-  "json_bytes": 396763,
+  "json_bytes": 402846,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1267189,
+  "stamped_cells": 1285230,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -34,6 +34,7 @@
     54,
     58,
     62,
+    65,
     77,
     79,
     100,
@@ -46,33 +47,34 @@
     127
   ],
   "material_counts": {
-    "0": 829963,
-    "39": 6442,
-    "40": 142596,
-    "42": 125261,
-    "49": 156559,
-    "50": 39842,
-    "52": 20136,
-    "53": 130927,
-    "54": 114753,
-    "58": 32814,
-    "62": 50360,
+    "0": 811922,
+    "39": 6151,
+    "40": 130575,
+    "42": 126726,
+    "49": 161005,
+    "50": 41128,
+    "52": 21366,
+    "53": 133194,
+    "54": 118402,
+    "58": 41978,
+    "62": 58654,
+    "65": 3637,
     "77": 2313,
-    "79": 8533,
-    "100": 212045,
-    "101": 152190,
-    "119": 18908,
-    "120": 16943,
+    "79": 9037,
+    "100": 212503,
+    "101": 149783,
+    "119": 15903,
+    "120": 17488,
     "121": 4688,
-    "122": 6552,
-    "123": 14086,
-    "127": 11241
+    "122": 6321,
+    "123": 12401,
+    "127": 11977
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 477258,
+  "connected_clearance_centres": 460145,
   "spawn": [
     369,
     95
@@ -315,7 +317,7 @@
         19,
         15
       ],
-      "legal_connected_centres": 477258,
+      "legal_connected_centres": 460145,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -325,7 +327,7 @@
         23,
         19
       ],
-      "legal_connected_centres": 435374,
+      "legal_connected_centres": 419049,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -335,7 +337,7 @@
         31,
         27
       ],
-      "legal_connected_centres": 362847,
+      "legal_connected_centres": 347818,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -410,5 +412,58 @@
     "newly_extrapolated_deep": "non-repeating rooted assay chamber and protected geological / return-service districts",
     "native": "NATIVE-UNTESTED"
   },
-  "last_rework": "R2B3 exact-HEAD Shepherd-assigned third material-cell finishing"
+  "last_rework": {
+    "worker": "B",
+    "assigned_head": "c6e46c3fddf6d67aed3a3f401ec7c1ebf825a1dc",
+    "scope": "Compact source-derived horizontal lab district; branching canopy; physically supported guarded deck retaining portal shafts; unlike assay/vial annexes; extrapolated deep rhizome",
+    "physical_cells_changed": 96959,
+    "rectangles": 21930,
+    "json_bytes": 402846,
+    "nonempty_cells": 1285230,
+    "source_original_png_parity": "UNVERIFIED",
+    "native": "NATIVE-UNTESTED"
+  },
+  "rework_b4": {
+    "date": "2026-11-18",
+    "assigned_head": "c6e46c3fddf6d67aed3a3f401ec7c1ebf825a1dc",
+    "scope": "Compact source-derived horizontal lab district; branching canopy; physically supported guarded deck retaining portal shafts; unlike assay/vial annexes; extrapolated deep rhizome",
+    "source_jpeg_seen": true,
+    "source_jpeg_sha": "64d7df6352b12d1aa57ce85f4925a722705bba1d",
+    "original_png_parity": "UNVERIFIED",
+    "physical_cells_changed": 96959,
+    "rectangles": 21930,
+    "json_bytes": 402846,
+    "occupied_cells": 1285230,
+    "full_grid_replay": "PASS",
+    "exact_sites": "24/24 at three conservative envelopes",
+    "deck_structural_component": 1215416,
+    "probes": [
+      {
+        "x": 150,
+        "y": 984,
+        "solid": 62,
+        "connected": true
+      },
+      {
+        "x": 600,
+        "y": 984,
+        "solid": 62,
+        "connected": true
+      },
+      {
+        "x": 885,
+        "y": 984,
+        "solid": 62,
+        "connected": true
+      },
+      {
+        "x": 800,
+        "y": 1010,
+        "solid": 65,
+        "connected": true
+      }
+    ],
+    "pngs": "Regenerated from identical final cells",
+    "standalone_Node_and_native": "UNTESTED"
+  }
 }

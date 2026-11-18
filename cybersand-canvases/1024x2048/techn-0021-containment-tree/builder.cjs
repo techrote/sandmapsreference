@@ -574,6 +574,71 @@ line(744,1660,674,1600,M.COPPER,18);
 // The builder's existing late in-bounds actual Midge portal masks are retained
 // verbatim and applied AFTER this authored geometry; no waypoint relocation.
 
+
+/* R2B4 source-led material-cell repair. Compact photographed upper organism,
+   joined inhabited laboratory deck, and original deep rooted service region. */
+for(const [m,w,p] of [
+[M.MOSS,20,[[501,359],[463,333],[454,296],[470,257],[490,241]]],
+[M.VERDIGRIS,19,[[512,361],[479,385],[455,409],[447,455],[469,489]]],
+[M.COPPER,19,[[581,378],[578,330],[594,272],[623,242]]],
+[M.MOSS,18,[[689,389],[716,400],[735,433],[739,481],[721,515]]],
+[M.COPPER,22,[[631,495],[592,535],[562,606],[540,687]]],
+[M.MOSS,16,[[654,490],[692,531],[695,587],[674,653]]],
+[M.VERDIGRIS,16,[[616,514],[626,570],[609,634],[608,699]]],
+[M.COPPER,13,[[547,614],[500,651],[461,692],[441,745]]],
+[M.MOSS,13,[[661,611],[690,657],[680,722],[654,759]]]
+])for(let i=1;i<p.length;i++)line(...p[i-1],...p[i],m,Math.max(7,w-i));
+for(const [m,p] of [
+[M.MOSS,[[463,273],[478,245],[507,235],[502,253],[489,274]]],
+[M.VERDIGRIS,[[579,300],[602,273],[619,255],[627,276],[606,322]]],
+[M.COPPER,[[713,419],[731,420],[744,452],[737,492],[723,478]]],
+[M.VERDIGRIS,[[574,508],[593,486],[611,505],[598,526]]],
+[M.MOSS,[[642,651],[668,621],[681,648],[665,677]]]
+])poly(p,m);
+for(const [x,y,X,Y,m,w] of [
+[504,385,542,407,M.PHOSPHOR,7],[544,405,574,438,M.URANIUM,6],
+[619,391,591,418,M.PHOSPHOR,7],[675,408,652,454,M.URANIUM,6],
+[590,537,570,567,M.URANIUM,7],[669,547,679,572,M.PHOSPHOR,6],
+[470,487,450,518,M.PHOSPHOR,6],[615,644,587,686,M.URANIUM,5]
+])line(x,y,X,Y,m,w);
+// Physically supported horizontal observatory transit across the wings,
+// with CLEAR vertical flyer shafts left untouched by final portal masks.
+rect(131,978,766,17,M.STEEL);rect(141,995,746,10,M.CONCRETE);
+rect(150,1005,728,8,M.RUST);rect(134,952,765,7,M.IRON);
+for(const [x,y,w] of [[153,954,156],[338,954,164],[541,954,131],[694,954,178]])
+ for(let xx=x;xx<x+w;xx+=48){rect(xx,y,5,24,M.BRONZE);rect(xx+8,y+2,18,4,M.AMBER);}
+for(const [x,y,X,Y,m,w] of [
+[144,1012,111,1074,M.COPPER,16],[276,1014,239,1094,M.IRON,15],
+[444,1013,414,1086,M.COPPER,12],[607,1014,629,1098,M.VERDIGRIS,13],
+[757,1015,791,1098,M.BRONZE,15],[862,1015,906,1069,M.STEEL,17]
+])line(x,y,X,Y,m,w);
+// Distinct source-scaled specimen annexes, west assay versus east vial science.
+poly([[123,866],[169,841],[259,847],[294,878],[294,914],[124,914]],M.SLATE);
+poly([[142,875],[174,853],[244,860],[276,885],[276,903],[143,902]],M.AIR);
+rect(139,907,138,10,M.STEEL);
+for(const [x,w] of [[156,35],[209,42]]){rect(x,870,w,23,M.GLASSBLOCK);rect(x+5,874,w-10,16,M.OBSIDIAN);}
+poly([[832,864],[869,836],[959,844],[999,881],[997,918],[821,918]],M.CONCRETE);
+poly([[846,876],[878,855],[950,861],[980,887],[978,906],[839,905]],M.AIR);
+rect(839,909,146,11,M.STEEL);
+for(const [x,w] of [[852,26],[890,31],[937,29]]){rect(x,872,w,26,M.GLASSBLOCK);rect(x+5,878,w-10,13,M.OBSIDIAN);}
+// New outer gameplay world: rooted geology forks, asymmetrical rather than
+// the source specimen merely stretched over full 2048-cell height.
+for(const [m,w,p] of [
+[M.COPPER,25,[[606,1112],[592,1162],[561,1219],[555,1300]]],
+[M.MOSS,21,[[623,1124],[657,1183],[673,1268],[708,1348]]],
+[M.VERDIGRIS,22,[[580,1253],[602,1321],[626,1371],[676,1450]]],
+[M.COPPER,20,[[675,1376],[723,1443],[744,1540],[727,1594]]],
+[M.MOSS,20,[[598,1471],[651,1526],[676,1617],[657,1701]]],
+[M.COPPER,22,[[680,1700],[633,1789],[620,1861],[607,1987]]],
+[M.VERDIGRIS,18,[[618,1844],[688,1888],[739,1931]]],
+[M.MOSS,13,[[710,1538],[749,1492],[791,1474]]]
+])for(let i=1;i<p.length;i++)line(...p[i-1],...p[i],m,Math.max(7,w-(i-1)*2));
+for(const [m,p] of [
+[M.BASALT,[[541,1228],[578,1207],[604,1240],[598,1291],[563,1327],[535,1294]]],
+[M.COPPER,[[653,1475],[690,1442],[734,1472],[726,1529],[689,1554]]],
+[M.VERDIGRIS,[[604,1843],[649,1816],[675,1861],[663,1916],[624,1919]]]
+])poly(p,m);
+
 // Deliberate collision-safe corridors, access portals and trans-bole openings.
 // Last-pass cuts are deliberate no-build clearance masks and never secretly substituted waypoint anchors.
 rect(343,22,74,2000,M.AIR);rect(702,22,74,2000,M.AIR);
