@@ -29,9 +29,9 @@
       2048
     ],
     "cells": 4194304,
-    "rectangles": 16065,
+    "rectangles": 16385,
     "rectangle_limit": 32768,
-    "json_bytes": 308109,
+    "json_bytes": 313817,
     "json_limit": 1048576,
     "exact_reconstruction_cells": 4194304,
     "reconstruction_mismatches": 0,
@@ -39,7 +39,49 @@
       19,
       15
     ],
-    "component_cells": 960846,
+    "component_cells": 932842,
+    "strict_envelopes": [
+      {
+        "size": [
+          19,
+          15
+        ],
+        "connected_centres": 932842,
+        "reachable": 21,
+        "targets": 21,
+        "failed": []
+      },
+      {
+        "size": [
+          23,
+          19
+        ],
+        "connected_centres": 822365,
+        "reachable": 19,
+        "targets": 21,
+        "failed": [
+          "Upper Nose Overlook",
+          "East Lower Lab"
+        ]
+      },
+      {
+        "size": [
+          31,
+          27
+        ],
+        "connected_centres": 561007,
+        "reachable": 15,
+        "targets": 21,
+        "failed": [
+          "Overhead Hoist Station",
+          "Upper Nose Overlook",
+          "East Crane Rail",
+          "Booster East",
+          "Starboard Engine Deck",
+          "East Lower Lab"
+        ]
+      }
+    ],
     "destinations": [
       {
         "name": "Glazed Flight Control Pod",
@@ -233,25 +275,25 @@
     ],
     "reachable": 21,
     "material_cell_counts": {
-      "0": 1795781,
-      "40": 30015,
-      "49": 221764,
-      "50": 377198,
-      "58": 48034,
-      "62": 351886,
-      "63": 122394,
-      "64": 207200,
-      "65": 75617,
-      "70": 24860,
+      "0": 1807538,
+      "40": 29979,
+      "49": 209181,
+      "50": 383342,
+      "58": 44329,
+      "62": 352661,
+      "63": 121224,
+      "64": 210548,
+      "65": 77002,
+      "70": 24774,
       "71": 1268,
-      "72": 45972,
-      "76": 31093,
-      "77": 15361,
-      "79": 39833,
-      "100": 760382,
+      "72": 43667,
+      "76": 29713,
+      "77": 16149,
+      "79": 40853,
+      "100": 755444,
       "101": 579,
-      "119": 43656,
-      "127": 1411
+      "119": 44573,
+      "127": 1480
     },
     "material_physics": {
       "checked_against": "material-palette.json (frozen accepted CyberSand enum)",
@@ -378,7 +420,15 @@
         "scale": "1:1",
         "source": "actual-material-plane"
       }
-    ]
+    ],
+    "repair_changed_cells": 69804,
+    "native_status": "NATIVE-UNTESTED; installed native rectangle capacity unmeasured",
+    "png_to_final_cell_index_parity": {
+      "source": "independent full reconstruction from same generated-start JSON",
+      "full_preview_pixels": 262144,
+      "native_crop_pixels": 2787950,
+      "material_index_mismatches": 0
+    }
   },
   "reproducibility": {
     "builder": "build.js",

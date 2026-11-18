@@ -101,5 +101,47 @@ function r2({rect,poly,ellipse,line,label,M}) {
  rect(846,1918,270,10,M.steel);
  for(const x of [878,1022,1105]){ellipse(x,1924,12,12,M.iron);ellipse(x,1924,5,5,M.brass);}
  label("FREIGHT",883,1864,2,M.phos);
+
+ // R2A: genuine source preview demands glass cabin ending inside canvas.
+ rect(1815,303,233,322,M.air);
+ rect(1799,395,74,103,M.air);rect(1804,502,150,17,M.iron);rect(1812,505,134,6,M.paint);
+ poly([[1815,315],[1845,302],[1957,302],[1981,314],[1986,336],[1816,336]],M.iron);
+ rect(1825,317,150,7,M.paint);rect(1836,339,144,10,M.steel);
+ rect(1856,350,123,56,M.dark);
+ for(let x=1865;x<1973;x+=28){rect(x,349,6,56,M.paint);rect(x+9,361,14,3,M.cyan);}
+ rect(1853,407,126,8,M.corr);
+ rect(1847,499,140,19,M.iron);rect(1855,502,122,5,M.amber);
+ poly([[1978,315],[1996,334],[1996,489],[1978,519],[1969,508],[1981,483],[1981,347],[1969,325]],M.iron);
+ rect(1984,361,6,115,M.cyan);rect(1985,483,6,16,M.paint);
+ rect(1883,471,39,16,M.iron);rect(1888,466,30,5,M.cyan);
+ rect(1934,473,31,18,M.steel);rect(1939,470,23,5,M.phos);
+ line(1844,518,1817,568,11,M.iron);line(1937,518,1903,584,12,M.iron);
+ line(1817,568,1903,584,7,M.corr);rect(1900,580,64,10,M.steel);
+ rect(1998,290,50,245,M.air);
+ // Source-specific uneven mast silhouettes rather than mirror copies.
+ rect(319,40,12,72,M.iron);rect(315,29,20,11,M.corr);
+ line(325,32,292,68,4,M.brass);line(326,34,350,58,3,M.paint);
+ rect(321,25,8,6,M.amber);rect(300,97,52,10,M.iron);
+ rect(1726,15,7,92,M.steel);rect(1719,20,21,12,M.iron);
+ line(1729,31,1766,53,4,M.paint);rect(1726,9,10,8,M.cyan);
+ rect(1713,92,31,14,M.iron);
+ for(const [x,y] of [[414,100],[1663,105],[1758,105]]){rect(x,y,3,17,M.iron);rect(x-3,y-4,9,5,M.amber);}
+ // Unequal excavated rock strata and genuinely differentiated industrial bays.
+ poly([[119,670],[161,686],[183,737],[171,770],[145,720]],M.rust);
+ poly([[117,1180],[178,1168],[189,1203],[172,1261],[134,1234]],M.basalt);
+ rect(142,909,27,92,M.iron);rect(148,913,12,78,M.brass);
+ rect(160,931,24,7,M.corr);rect(161,965,22,7,M.corr);
+ rect(151,1505,25,81,M.corr);
+ for(let j=0;j<4;j++)rect(157,1514+j*18,13,5,j%2?M.paint:M.amber);
+ rect(225,1158,87,8,M.corr);rect(225,1171,8,69,M.steel);
+ line(230,1163,308,1219,6,M.iron);rect(315,1216,31,8,M.amber);
+ rect(228,1462,18,125,M.iron);rect(247,1475,40,9,M.steel);
+ for(let j=0;j<4;j++)rect(253,1494+j*19,32,5,j===2?M.cyan:M.corr);
+ rect(1812,898,28,68,M.iron);rect(1816,910,19,5,M.cyan);
+ line(1816,963,1782,992,5,M.corr);
+ rect(1808,1185,25,64,M.steel);rect(1814,1196,14,8,M.amber);
+ rect(1814,1230,14,7,M.cyan);
+ rect(1542,1490,75,8,M.paint);rect(1549,1499,9,41,M.corr);
+
 }
 module.exports=r2;
