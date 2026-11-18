@@ -7,9 +7,9 @@
 
 **REWORK SUBMITTED FOR INDEPENDENT REVIEW — remains Draft/HOLD.** Shepherd/auditors identified unsupported massive inhabited blocks, too-empty rooms, a weakly fractured gravity spindle, floating market rods and a flattened ship. The source builder now performs actual material-cell repairs *after* operational flight cuts: roof-braced freight/foundry and surveillance/gallery wings have different deck/portal rhythms; the gravity spindle has unequal sheared halves, the parliament a divided crown, and the drydock vessel a raised bridge, nose and asymmetric engine/inspection works. The eastern broken-halo remnant retains a dock load path; the western remnant is deliberately severed to preserve alternate Midge circulation.
 
-**Verified fresh:** 17,002 rectangles / 32,768; 328,075 bytes / 1,048,576; 4,194,304 exact replayed material cells, no overlaps or mismatches; **18/18 exact sites** at 19×15, 23×19 and 31×27. The blocked Lost Civic Core stress regressed to 14/18 during first repair, then recovered to **17/18** after correcting the western pier. No sites moved and no tolerance/nearest-point waiver was used. Two independent deterministic rebuilds produced identical JSON and all six actual-grid PNGs. Each PNG passed CRC/zlib/Adler/IEND and 100% material-pixel parity.
+**Verified fresh:** 17,262 rectangles / 32,768; 333,266 bytes / 1,048,576; 4,194,304 exact replayed material cells, no overlaps or mismatches; **18/18 exact sites** at 19×15, 23×19 and 31×27. The blocked Lost Civic Core stress regressed to 14/18 during first repair, then recovered to **17/18** after correcting the western pier. No sites moved and no tolerance/nearest-point waiver was used. Two independent deterministic rebuilds produced identical JSON and all six actual-grid PNGs. Each PNG passed CRC/zlib/Adler/IEND and 100% material-pixel parity.
 
-**Independent structural grid census at this revised HEAD:** 48 cardinal solid components, of which 47 do not contact the bottom-grounded component, totalling **137,639 inert solid cells** (prior technical audit: 241,406). This is a substantial repair, **not a support-closure claim**: severed halo pieces and some smaller mechanical/occupied-looking installations remain ungrounded and must be independently judged. Static immovable solids do not fall. Native bridge version/capacity, Godot installation, Rapier progression, Midge collision/input and save/reopen are **NATIVE-UNTESTED**.
+**Independent structural grid census at this revised HEAD:** 48 cardinal solid components, of which 47 do not contact the bottom-grounded component, totalling **111,267 inert solid cells** (prior technical audit: 241,406). This is a substantial repair, **not a support-closure claim**: severed halo pieces and some smaller mechanical/occupied-looking installations remain ungrounded and must be independently judged. Static immovable solids do not fall. Native bridge version/capacity, Godot installation, Rapier progression, Midge collision/input and save/reopen are **NATIVE-UNTESTED**.
 
 ## Creative thesis
 
@@ -70,8 +70,8 @@ Setup-v2 requires an installed bridge recognizing extended material IDs such as 
 | Gate | Verified outcome |
 |---|---|
 | Extent | **2048 × 2048**, exactly 4,194,304 cells |
-| Serialized non-overlapping rectangles | **17002 / 32768** |
-| JSON length | **328075 / 1048576 bytes** |
+| Serialized non-overlapping rectangles | **17262 / 32768** |
+| JSON length | **333266 / 1048576 bytes** |
 | Full-grid replay / overlap | **0 mismatches / 0 overlap cells** |
 | Conservative 19×15 actor centres | **18/18 exact sites reachable** |
 | Larger 23×19 centres | **18/18 exact sites reachable** |

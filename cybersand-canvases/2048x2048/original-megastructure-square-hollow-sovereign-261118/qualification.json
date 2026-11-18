@@ -44,30 +44,30 @@
   },
   "gates": {
     "dimensions_exact": true,
-    "rectangles": 17002,
+    "rectangles": 17262,
     "rectangle_source_limit": 32768,
-    "setup_bytes": 328075,
+    "setup_bytes": 333266,
     "source_json_limit": 1048576,
-    "edits_count": 17002,
+    "edits_count": 17262,
     "source_edits_limit": 32768,
     "replay_mismatches": 0,
     "rectangle_overlap_cells": 0,
     "material_pixel_count": 4194304,
     "actor_full_envelope": {
       "19x15": {
-        "component_centres": 1878038,
+        "component_centres": 1868712,
         "exact_reachable": 18,
         "expected": 18,
         "missing": []
       },
       "23x19": {
-        "component_centres": 1724851,
+        "component_centres": 1716050,
         "exact_reachable": 18,
         "expected": 18,
         "missing": []
       },
       "31x27": {
-        "component_centres": 1573707,
+        "component_centres": 1563279,
         "exact_reachable": 18,
         "expected": 18,
         "missing": []
@@ -104,22 +104,21 @@
         "Lost civic core"
       ]
     },
-    "fixed_seed_rebuild": "PASS: two independent generator executions, exact JSON and 6 PNG byte-array identity",
-    "png_validation": "PASS 6/6: PNG signature, chunk CRC32, stored-deflate zlib, Adler32, IEND, 100% material-cell pixel parity",
+    "fixed_seed_rebuild": "PASS: two final corrected generator executions, identical JSON and 6 PNG arrays",
+    "png_validation": "PASS 6/6 signature/CRC32/stored zlib/Adler32/IEND/exact-cell pixel parity",
     "installed_bridge_rectangle_capacity": "NATIVE-UNTESTED; accepted source max 32768; old/absent installed bridge fallback only 4096.",
     "native_workbench": "NATIVE-UNTESTED",
     "native_rapier_simulation": "NATIVE-UNTESTED",
     "physical_actor_input_and_collision": "NATIVE-UNTESTED",
     "native_save_reopen": "NATIVE-UNTESTED",
     "structural_topology": {
-      "total_cardinal_components": 48,
+      "total_cardinal_components": 45,
       "bottom_grounded_components": 1,
-      "detached_components": 47,
-      "detached_cells": 137639,
+      "detached_components": 44,
+      "detached_cells": 111267,
       "largest_detached_components": [
         {
           "cells": 24249,
-          "touches_bottom": false,
           "bounds": [
             812,
             1047,
@@ -128,18 +127,7 @@
           ]
         },
         {
-          "cells": 23022,
-          "touches_bottom": false,
-          "bounds": [
-            1116,
-            1047,
-            1242,
-            1435
-          ]
-        },
-        {
           "cells": 17191,
-          "touches_bottom": false,
           "bounds": [
             479,
             1047,
@@ -149,7 +137,6 @@
         },
         {
           "cells": 10312,
-          "touches_bottom": false,
           "bounds": [
             384,
             1626,
@@ -159,7 +146,6 @@
         },
         {
           "cells": 9992,
-          "touches_bottom": false,
           "bounds": [
             1371,
             1288,
@@ -169,7 +155,6 @@
         },
         {
           "cells": 9956,
-          "touches_bottom": false,
           "bounds": [
             498,
             1313,
@@ -179,7 +164,6 @@
         },
         {
           "cells": 4795,
-          "touches_bottom": false,
           "bounds": [
             1409,
             1077,
@@ -189,7 +173,6 @@
         },
         {
           "cells": 3720,
-          "touches_bottom": false,
           "bounds": [
             1165,
             782,
@@ -199,7 +182,6 @@
         },
         {
           "cells": 3617,
-          "touches_bottom": false,
           "bounds": [
             174,
             741,
@@ -209,7 +191,6 @@
         },
         {
           "cells": 3581,
-          "touches_bottom": false,
           "bounds": [
             812,
             786,
@@ -219,7 +200,6 @@
         },
         {
           "cells": 3150,
-          "touches_bottom": false,
           "bounds": [
             1073,
             1946,
@@ -229,7 +209,6 @@
         },
         {
           "cells": 2222,
-          "touches_bottom": false,
           "bounds": [
             809,
             568,
@@ -239,7 +218,6 @@
         },
         {
           "cells": 1728,
-          "touches_bottom": false,
           "bounds": [
             1371,
             1047,
@@ -248,17 +226,25 @@
           ]
         },
         {
-          "cells": 1716,
-          "touches_bottom": false,
+          "cells": 1666,
           "bounds": [
-            1311,
-            1425,
-            1391,
-            1552
+            677,
+            1411,
+            752,
+            1536
+          ]
+        },
+        {
+          "cells": 1539,
+          "bounds": [
+            1273,
+            1068,
+            1351,
+            1130
           ]
         }
       ],
-      "caveat": "Detached immovable inert solids remain. This is neither dynamic collapse nor grounded-support acceptance."
+      "caveat": "Immovable solids remain detached; this is not structural-owner acceptance or simulated falling."
     }
   },
   "sites": [
@@ -354,14 +340,14 @@
     }
   ],
   "histogram": {
-    "0": 2559838,
+    "0": 2551871,
     "49": 163328,
-    "58": 295645,
-    "62": 344295,
+    "58": 294840,
+    "62": 353533,
     "100": 368742,
     "101": 190040,
-    "113": 14594,
-    "117": 168643,
+    "113": 14461,
+    "117": 168310,
     "120": 23649,
     "122": 3583,
     "123": 9467,
@@ -380,7 +366,7 @@
       "material_pixels_verified": 4194304,
       "chunkCRC": "PASS",
       "adler": "PASS",
-      "git_blob_sha": "107b5fc508a88f3b64a279c6c96421a4f987b10b"
+      "git_blob_sha": "2a962fcbbff20994ae748d6dd937b33901e5b1e2"
     },
     {
       "file": "01-nacre-freight-cliff.png",
@@ -436,7 +422,7 @@
       "material_pixels_verified": 353976,
       "chunkCRC": "PASS",
       "adler": "PASS",
-      "git_blob_sha": "bd61f20fc03587fb8411f53d0047f1d8174df9f1"
+      "git_blob_sha": "ec22d21fc16dd78b942a750105ea9bfb23f077aa"
     },
     {
       "file": "05-abyssal-drydock.png",
@@ -457,10 +443,11 @@
     "phase": "R4 same-owned-PR actual-cell architectural repair",
     "starting_head": "fbde8bb3d5f650b3ee1815bafa2f9651a131dddb",
     "prior_audited_detached_cells": 241406,
-    "now_detached_cells": 137639,
+    "now_detached_cells": 111267,
     "blocked_core_bypass": "restored 17/18 without relocating sites",
     "independent_approval": "PENDING",
     "native": "NATIVE-UNTESTED",
-    "remaining": "Detached broken-halo and technical installations need independent visual/support review."
+    "remaining": "Detached broken-halo and technical installations need independent visual/support review.",
+    "corrective_note": "Restored eastern dock pier after catching and fixing a swallowed-array comment; all final original artifacts regenerated and revalidated."
   }
 }
