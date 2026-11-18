@@ -10,41 +10,41 @@
     2048
   ],
   "cells": 4194304,
-  "covered_cells": 1559725,
+  "covered_cells": 1667534,
   "zero_full_grid_mismatches": true,
-  "rectangles": 8640,
+  "rectangles": 8732,
   "rectangle_limit": 32768,
-  "json_bytes": 167505,
+  "json_bytes": 169150,
   "json_limit": 1048576,
   "material_histogram": {
-    "0": 2634579,
-    "38": 438687,
-    "40": 156213,
-    "41": 196830,
+    "0": 2526770,
+    "38": 574631,
+    "40": 138714,
+    "41": 193851,
     "42": 52570,
     "43": 7758,
-    "44": 65062,
-    "48": 24889,
-    "49": 33827,
-    "50": 2551,
+    "44": 64305,
+    "48": 25430,
+    "49": 29044,
+    "50": 1694,
     "52": 11552,
-    "53": 2234,
+    "53": 2798,
     "54": 5426,
     "55": 2072,
     "56": 194166,
-    "57": 15574,
+    "57": 13254,
     "58": 34997,
-    "62": 7617,
-    "70": 28583,
-    "71": 47028,
-    "72": 17359,
-    "77": 7198,
-    "79": 1965,
-    "80": 1276,
+    "62": 6757,
+    "70": 28769,
+    "71": 44655,
+    "72": 16667,
+    "77": 7850,
+    "79": 2925,
+    "80": 1570,
     "97": 58699,
-    "98": 85223,
+    "98": 88084,
     "100": 10368,
-    "119": 50001
+    "119": 48928
   },
   "source_art_changed": false,
   "actor": {
@@ -179,7 +179,7 @@
         19,
         15
       ],
-      "connected_centres": 2155281,
+      "connected_centres": 2074879,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -189,7 +189,7 @@
         23,
         19
       ],
-      "connected_centres": 2078395,
+      "connected_centres": 2003488,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -199,7 +199,7 @@
         31,
         27
       ],
-      "connected_centres": 1933500,
+      "connected_centres": 1866819,
       "reachable": 16,
       "blocked": [],
       "unreachable": []
@@ -303,200 +303,56 @@
       1024,
       512,
       1
+    ],
+    "crop-r2a6-west-inhabited.png": [
+      170,
+      1510,
+      640,
+      350,
+      1
+    ],
+    "crop-r2a6-central-exchange.png": [
+      770,
+      1510,
+      580,
+      350,
+      1
+    ],
+    "crop-r2a6-east-works.png": [
+      1325,
+      1510,
+      575,
+      350,
+      1
     ]
   },
   "render": "PNG pixels are material-grid ID palette samples (1:1 native-cell crops / nearest-neighbour 2:1 overview); no image overlays",
   "native": "NATIVE-UNTESTED, including bridge capacity, load/flight/collision/simulation and save/reopen",
-  "material_sha256": "c200e9f5b189cc35d546e4f0d1817c3e3bf8e51a561743936518cbbbf1b03fca",
-  "rework_r2b": {
-    "starting_head": "c74610365b21c6dd7f88c9f339084905fab1a1f7",
-    "changed_material_cells": 268733,
-    "real_material_plane": true,
-    "arcade_understructure": "four non-identical stone-mass retaining banks with vaulted halls and legible horizontal stair/terrace structure",
-    "travel": "multiple open full-hull vaulted portals from civic upper levels to continuous dry civic undercroft",
-    "source_preview_sha": "8cf59bbba8c4a4037924490b7d158872be876abd",
-    "source_original_png_parity": "UNVERIFIED",
-    "native": "NATIVE-UNTESTED",
-    "installed_rectangle_capability": "UNMEASURED; older 4,096 fallback insufficient"
-  },
-  "rework_r2a": {
-    "starting_head": "3f8c73756eb92a49d4eb97df3449bdfb8933bcba",
-    "changed_material_cells": 236051,
-    "material_sha256": "e1d39ca9fea8795ff8e7b2a4922823ea5c22f469d56198e14db5f5c846d40f07",
-    "source_jpeg_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
-    "source_full_png_parity": "UNVERIFIED",
-    "clearance": [
-      {
-        "envelope": [
-          19,
-          15
-        ],
-        "connected_centres": 2365749,
-        "reachable": 16,
-        "blocked": [],
-        "unreachable": []
-      },
-      {
-        "envelope": [
-          23,
-          19
-        ],
-        "connected_centres": 2289071,
-        "reachable": 16,
-        "blocked": [],
-        "unreachable": []
-      },
-      {
-        "envelope": [
-          31,
-          27
-        ],
-        "connected_centres": 2131652,
-        "reachable": 16,
-        "blocked": [],
-        "unreachable": []
-      }
+  "material_sha256": "1d7283382a0a010198ee30c6689fe7c9de421e5ed0c349c09f41d0af3deef7fa",
+  "repair_phase": "R2A6 — three connected inhabitable vaulted subway destinations",
+  "repair_start_head": "60f0ca3a859dd39d04f63642e28cd8bcf47b449d",
+  "changed_material_cells": 246194,
+  "local_subway_route_31x27_steps": 1039,
+  "alternate_central_obstruction_route_31x27_steps": 1095,
+  "new_strict_gallery_sites": [
+    [
+      "west archive",
+      450,
+      1716
     ],
-    "alternate_obstacle_test": {
-      "envelope": [
-        31,
-        27
-      ],
-      "connected_centres": 2119356,
-      "reachable": 16,
-      "blocked": [],
-      "unreachable": []
-    },
-    "source_character": "source-JPEG-derived civic facade/terrace/tree/sails; original skyline unpainted",
-    "native": "NATIVE-UNTESTED; installed capacity unmeasured"
-  },
-  "rework_r2a2": {
-    "starting_head": "859bda5e937f343f3722a50e050d7a529f00f7f0",
-    "changed_material_cells": 52068,
-    "full_cell_replay_mismatches": 0,
-    "solid_grounded_cells": 1289425,
-    "remaining_detached_components": 65,
-    "grounded_checkpoints": [
-      [
-        "west civic",
-        320,
-        1179
-      ],
-      [
-        "east rooted terrace",
-        1907,
-        1790
-      ],
-      [
-        "west undercroft",
-        116,
-        1700
-      ],
-      [
-        "upper civic stair",
-        840,
-        1300
-      ],
-      [
-        "central support",
-        1132,
-        1300
-      ],
-      [
-        "eastern garden support",
-        1636,
-        1300
-      ]
+    [
+      "central exchange",
+      1106,
+      1714
     ],
-    "source_jpeg_seen": true,
-    "source_jpeg_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
-    "full_original_png_parity": "UNVERIFIED",
-    "native": "NATIVE-UNTESTED",
-    "installed_bridge_capacity": "UNMEASURED",
-    "png_images_regenerated": 9,
-    "png_generated_material_samples": 7077888,
-    "limit_note": "small floating equipment and isolated trim remain; source JPEG comparison is not original PNG parity"
-  },
-  "rework_r2a3": {
-    "starting_sha": "51a32d850f41466bdb18522e4ddf766a9cb35291",
-    "actual_changed_cells": 354753,
-    "source_jpeg_seen": true,
-    "source_jpeg_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
-    "full_original_png_parity": "UNVERIFIED",
-    "grounded_solid_cells": 1430519,
-    "route_lengths_31x27": [
-      {
-        "from": "West underpass",
-        "to": "East underpass",
-        "steps": 1427
-      },
-      {
-        "from": "West underpass",
-        "to": "Reflecting basin overlook",
-        "steps": 923
-      },
-      {
-        "from": "South mosaic overlook",
-        "to": "East shelter",
-        "steps": 570
-      },
-      {
-        "from": "Western lower terrace",
-        "to": "Central garden court",
-        "steps": 595
-      },
-      {
-        "from": "West high entry",
-        "to": "East high entry",
-        "steps": 1273
-      }
-    ],
-    "alternate_route_with_block_1100_1420_1250_1520": [
-      1511,
-      923
-    ],
-    "independent_png_material_pixels": 7077888,
-    "actual_native": "NATIVE-UNTESTED"
-  },
-  "rework_r2a4": {
-    "assigned_head": "4e084a662ef0943f76dd349c35010e2ebcec7062",
-    "changed_material_cells": 269373,
-    "ground_connected_solid_cells": 1294115,
-    "grounded_checkpoints": 6,
-    "west_east_underpass_31x27": {
-      "normal_steps": 1087,
-      "with_centre_obstruction_steps": 1121,
-      "obstruction": [
-        980,
-        1685,
-        1115,
-        1755
-      ]
-    },
-    "generated_png_sampled_pixels": 7864320,
-    "png_chunk_crc_palette": "PASS",
-    "independent_png_decompression": "NOT RUN",
-    "source_jpeg_blob": "8cf59bbba8c4a4037924490b7d158872be876abd",
-    "full_source_png_parity": "UNVERIFIED",
-    "native": "NATIVE-UNTESTED"
-  },
-  "rework_r2a5": {
-    "assigned_head": "14a906daff7654f2104fd594aba2dd2b6f896adb",
-    "actual_changed_cells": 57495,
-    "large_subway_assemblies_integrated": 4,
-    "anchored_masonry_ribs": 4,
-    "grounded_terraced_plinths": 4,
-    "grounded_solid_cells": 1470876,
-    "residual_non_grounded_components": 82,
-    "largest_residual_detached_solid_cells": 5976,
-    "route_31x27": {
-      "west_east_steps": 1087,
-      "with_central_obstruction_steps": 1121,
-      "west_centre_steps": 519
-    },
-    "sampled_png_material_pixels": 8912896,
-    "source_jpeg_seen": true,
-    "full_original_png_parity": "UNVERIFIED",
-    "native": "NATIVE-UNTESTED"
-  }
+    [
+      "east works",
+      1734,
+      1712
+    ]
+  ],
+  "grounded_solid_cells": 1596430,
+  "original_full_resolution_png_parity": "UNVERIFIED; authentic source JPEG visually inspected, no source-original pixel identity claim",
+  "png_integrity_independent_readback": "PASS: 17/17 generated PNGs separately decoded from PNG binary chunks; CRC32, zlib fixed-Huffman inflate, Adler32, indexed palette and all 9,541,146 sample pixels checked against fully replayed final material grid",
+  "independent_decoded_material_png_pixels": 9541146
 }

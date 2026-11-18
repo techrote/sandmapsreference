@@ -36,4 +36,8 @@ const requiredSolidSites=[["west civic",320,1179],["east rooted terrace",1907,17
 for(let [name,x,y] of requiredSolidSites)if(!g[y*W+x]||!solidSeen[y*W+x])throw Error("ungrounded "+name);
 if(hi<1000000)throw Error("insufficient grounded masonry "+hi);
 
+
+// R2A6 additional exact air sites (not relocated operational targets).
+for(let [name,x,y] of [["west archive",450,1716],["central exchange",1106,1714],["east works",1734,1712]])if(g[y*W+x]!==0)throw Error("R2A6 blocked gallery point "+name);
+if(ev.independent_decoded_material_png_pixels!==undefined&&pixels!==ev.independent_decoded_material_png_pixels)throw Error("R2A6 PNG pixel count");
 console.log(JSON.stringify({pass:true,rectangles:s.edits.length,plane_sha256:sha,validated_PNG_pixels:pixels,strict_clearance:c,grounded_solid_cells:hi,grounded_checkpoints:requiredSolidSites.length},null,2));
