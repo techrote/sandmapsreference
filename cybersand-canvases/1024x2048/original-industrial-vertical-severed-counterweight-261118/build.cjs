@@ -221,6 +221,60 @@ if(r3Changed!==93351||grid.reduce((a,v)=>a+(v===3),0)!==6525)throw Error("R3 art
   return{total_solid_components:components.length,major_world_edge_anchored:components.filter(c=>c.world_edge_anchored&&c.size>10000),unanchored_over_1000:unanchored,all_seven_major_probes_anchored:true,probes};
  }
  const R4_STRUCTURAL=r4Audit();
+
+ // R5: exact-cell industrial calamity, supported process routes and freight hall.
+ // Original art, no sampled image, no actor, physics or source material changes.
+ const R5_prior=grid.slice();
+ function r5Poly(poly,m){let ys=poly.map(v=>v[1]);for(let y=Math.ceil(Math.min(...ys));y<=Math.floor(Math.max(...ys));y++){let xs=[];for(let k=0;k<poly.length;k++){let a=poly[k],b=poly[(k+1)%poly.length];if(a[1]!==b[1]&&y+.5>=Math.min(a[1],b[1])&&y+.5<Math.max(a[1],b[1]))xs.push(a[0]+(y+.5-a[1])*(b[0]-a[0])/(b[1]-a[1]));}xs.sort((a,b)=>a-b);for(let k=0;k+1<xs.length;k+=2){let x=Math.ceil(xs[k]),w=Math.floor(xs[k+1])-x+1;if(w>0)box(x,y,w,1,m);}}}
+ // Catastrophic upper lift: rupture in previously intact roof, two cut tensile
+ // strands and a heavy slumped eccentric weight caught by real west-pier steel.
+ box(337,88,46,23,0);line(320,86,346,102,11,65);line(381,104,405,89,9,62);
+ box(344,114,10,64,68);line(349,182,364,253,5,68);box(359,253,5,107,68);
+ box(383,110,5,185,69);line(387,295,409,327,5,69);box(406,326,5,49,69);
+ for(let i=0;i<5;i++)line(355+i*3,360+i*3,349+i*5,380+i*2,2,i%2?76:68);
+ box(401,383,38,15,62);line(397,396,381,422,9,65);
+ r5Poly([[326,394],[461,400],[509,420],[532,444],[533,510],[513,553],[469,583],[411,598],[343,590],[294,561],[273,509],[277,451]],50);
+ r5Poly([[334,405],[461,412],[497,438],[511,467],[509,520],[484,555],[437,579],[354,572],[311,543],[293,504],[296,452]],65);
+ r5Poly([[353,420],[460,424],[490,451],[491,510],[468,550],[421,560],[363,552],[333,515],[326,471]],130);
+ for(let j=0;j<7;j++)box(362,443+j*17,105,6,j%2?58:62);
+ line(304,448,358,489,10,76);line(491,421,517,464,9,119);
+ line(331,568,384,601,9,76);line(470,565,442,590,7,119);
+ box(327,573,11,120,58);line(335,680,405,609,13,62);line(351,635,429,676,10,65);
+ box(327,682,130,13,58);box(357,694,82,11,76);
+ for(let x=351;x<430;x+=20)box(x,658,12,14,119);
+ // Crusher line with true 2D overhead intake, transfer bridge and split
+ // high/low gravity feed around preserved mid-shaft Midge crossover.
+ box(314,814,26,41,62);line(330,854,357,886,8,65);
+ line(348,921,380,955,7,65);box(351,935,26,10,119);
+ box(378,1102,91,14,65);line(449,1109,476,1121,9,62);
+ box(466,1105,167,14,62);for(let x=475;x<619;x+=22)box(x,1108,13,8,119);
+ line(639,1110,662,1128,7,69);box(663,1129,8,31,68);
+ box(662,1220,9,53,68);line(667,1272,700,1300,8,65);
+ // Rail hall: distinctive long continuous double-ended rail and one loaded
+ // 2D cart staged ABOVE the track; preserve the y1460 flight crossing.
+ box(339,1538,188,12,62);box(608,1538,159,12,62);
+ for(let x=351;x<515;x+=28)box(x,1552,13,6,119);
+ for(let x=620;x<765;x+=28)box(x,1552,13,6,119);
+ box(350,1507,127,12,65);box(359,1494,98,16,130);box(365,1478,85,14,119);
+ box(374,1518,19,15,50);box(437,1518,19,15,50);
+ box(380,1523,9,7,76);box(443,1523,9,7,76);
+ line(351,1443,374,1401,7,62);line(450,1441,469,1410,7,62);
+ box(386,1369,7,68,68);box(450,1381,7,58,68);
+ box(368,1560,147,10,58);line(367,1566,345,1603,8,62);line(509,1566,524,1602,8,62);
+ // Salvage discharge and intentionally separated quench lookout platforms.
+ // No altered Water or basin-wall material and no faked animated equipment.
+ box(614,1818,80,11,65);line(685,1818,714,1847,8,62);
+ box(717,1829,59,8,58);box(729,1838,44,6,119);box(839,1836,39,7,58);
+ // Six identified significant formerly unanchored modules: tie five or more
+ // physically to nearby actual solid load-bearing spines, not to empty air.
+ box(683,393,32,9,62);box(683,647,43,9,62);box(301,1341,39,8,62);
+ box(312,1729,30,8,62);box(310,1885,38,9,62);box(545,1960,130,8,62);
+ let r5Changed=0,r5LiquidTouched=0;
+ for(let i=0;i<grid.length;i++)if(grid[i]!==R5_prior[i]){r5Changed++;if(grid[i]===3||R5_prior[i]===3)r5LiquidTouched++;}
+ if(r5LiquidTouched!==0||grid.reduce((a,m)=>a+(m===3),0)!==6525)throw Error("R5 quench Water identity changed");
+ const R5_STRUCTURAL=r4Audit();
+ if(R5_STRUCTURAL.unanchored_over_1000.length>=R4_STRUCTURAL.unanchored_over_1000.length)throw Error("R5 insufficient support closure");
+
  if(grid.reduce((a,m)=>a+(m===3),0)!==6525)throw Error("R4 Water conservation failure");
 
 const HIST={};let occupied=0;for(const m of grid){HIST[m]=(HIST[m]||0)+1;if(m){occupied++;if(!INERT.has(m)&&m!==3)throw Error("Non-inert unexpected material "+m);}}
@@ -289,7 +343,7 @@ let crops=[
  ["05-quench-salvage-terminal.png",105,1615,813,418]];
 let images=[],imageChecks=[];for(let [name,x,y,w,h] of crops){let png=pngFromGrid(x,y,w,h);images.push({name,bytes:png});imageChecks.push({name,sha256:sha256(png),...verifyPng(png,x,y,w,h)});}
 const gridSha=sha256(grid),setupSha=sha256(bytes(setupString));
-const receipt={r4_support_rework:{ops:R4_BRIDGES.map(b=>b[0]),changed_cells:r4Changed,prior_protected_corridor_cells_changed:r4ProtectedChanged,structural:R4_STRUCTURAL,flight_crossovers:"Some old straight route-guide segments are interrupted by engineered support; exact whole-hull connectivity retested"},schema:"cybersand-original-industrial-vertical-qualification-v1",engine_accepted_main:ENGINE,creator:"original-industrial-vertical",originality:"original from authored plan; no source/reference image used",seed_decimal:SEED>>>0,extent:[W,H],cells:grid.length,nonempty:occupied,nonempty_materials:HIST,grid_sha256:gridSha,setup_sha256:setupSha,setup_bytes:bytes(setupString).length,edit_rectangles:edits.length,rectangle_budget_source:32768,default_no_bridge_capacity:4096,installed_bridge_capacity:"UNKNOWN - do not assert native load",edit_budget:32768,full_cell_replay:"PASS",edit_overlap_count:0,rectangle_work_estimate:work,generated_start_work_limit:Math.min(64*W*H,32000000),material_laws:"all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",flight_checks:flight,alternative_main_throat_block:{rect:[420,983,665,1006],terminal_reachable:true,reachable_centers:alt.count},sites:SITES,routes:ROUTES,image_checks:imageChecks,art_rework:{review_authority:"Shepherd and Fidelity REWORK comments on prior exact head",previous_head:"39644a3a6b0a0500b01faca6c075e08d2054d539",original_cell_changes:r3Changed,operation_records:ART_OPS.length,preservation:"all original exact 11 destinations, three flyable spines and Water 6525 cells retained",districts:"asymmetric severed counterweight/catch; twin ore hoppers/transfer; distinct switch yard/cargo cradle; irregular foundry galleries; furnace-to-quench infrastructure",production_scope:"Only fixed inert physical cells; no runtime physics edits"},native_status:"NATIVE-UNTESTED: no CyberDemoBridge binary or Godot runtime supplied; dynamic inspect_interaction IDs, world install, Rapier input/collision, physics, fresh-process save/reopen unproven",approval:"DRAFT/HOLD - independent Shepherd and owner acceptance outstanding"};
+const receipt={r5_original_finish:{artistic_brief:"broken sheave / heavy skewed counterweight / anchored arrest / readable crusher manifold / staged freight wagon / split quench lookouts",actual_changed_cells:r5Changed,physical_Water_cells_unchanged:6525,old_r4_unanchored_over_1000:R4_STRUCTURAL.unanchored_over_1000.length,structural:R5_STRUCTURAL,flight_routes:"all 11 named sites must pass three conservative exact-hull envelope tests; primary-throat obstruction guarantees terminal bypass only",reproducibility:"fixed seed, full cell replay and PNG indexed material parity validated by builder"},r4_support_rework:{ops:R4_BRIDGES.map(b=>b[0]),changed_cells:r4Changed,prior_protected_corridor_cells_changed:r4ProtectedChanged,structural:R4_STRUCTURAL,flight_crossovers:"Some old straight route-guide segments are interrupted by engineered support; exact whole-hull connectivity retested"},schema:"cybersand-original-industrial-vertical-qualification-v1",engine_accepted_main:ENGINE,creator:"original-industrial-vertical",originality:"original from authored plan; no source/reference image used",seed_decimal:SEED>>>0,extent:[W,H],cells:grid.length,nonempty:occupied,nonempty_materials:HIST,grid_sha256:gridSha,setup_sha256:setupSha,setup_bytes:bytes(setupString).length,setup_bytes_excluding_lf:bytes(setupString).length,setup_file_bytes_including_lf:bytes(setupString+"\n").length,edit_rectangles:edits.length,rectangle_budget_source:32768,default_no_bridge_capacity:4096,installed_bridge_capacity:"UNKNOWN - do not assert native load",edit_budget:32768,full_cell_replay:"PASS",edit_overlap_count:0,rectangle_work_estimate:work,generated_start_work_limit:Math.min(64*W*H,32000000),material_laws:"all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",flight_checks:flight,alternative_main_throat_block:{rect:[420,983,665,1006],terminal_reachable:true,reachable_centers:alt.count},sites:SITES,routes:ROUTES,image_checks:imageChecks,art_rework:{review_authority:"Shepherd and Fidelity REWORK comments on prior exact head",previous_head:"39644a3a6b0a0500b01faca6c075e08d2054d539",original_cell_changes:r3Changed,operation_records:ART_OPS.length,preservation:"all original exact 11 destinations, three flyable spines and Water 6525 cells retained",districts:"asymmetric severed counterweight/catch; twin ore hoppers/transfer; distinct switch yard/cargo cradle; irregular foundry galleries; furnace-to-quench infrastructure",production_scope:"Only fixed inert physical cells; no runtime physics edits"},native_status:"NATIVE-UNTESTED: no CyberDemoBridge binary or Godot runtime supplied; dynamic inspect_interaction IDs, world install, Rapier input/collision, physics, fresh-process save/reopen unproven",approval:"DRAFT/HOLD - independent Shepherd and owner acceptance outstanding"};
 const rec=JSON.stringify(receipt,null,2)+"\n";
 let readme=[
 "# Severed Counterweight | original industrial vertical canvas",
@@ -361,7 +415,7 @@ let readme=[
 "",
 "**Independent bounded gates:** the 19x15 / 23x19 / 31x27 fully contained envelopes still reach all original 11 exact coordinates; blocked central throat retains a 31x27 bypass. 8176 nonoverlapping rectangles, 149799 JSON bytes, 885624 painted cells; 0 replay mismatches. **NATIVE-UNTESTED** until a source-compatible installed GDExtension confirms constructor capacity, simulation, collision and fresh save/reopen.",
 "",
-"## R4 physical structural closure", "", "Seven former major (>10000-cell) detached industrial assemblies now have genuine cardinally connected steel paths to world-edge-anchored Solid. The transverse crusher-to-exchange bridge and rising ore-transfer conduit connect previously disconnected process groups. The eastern gravity downfeed is purposefully interrupted by a 57-cell flight-passage gap; there is no false claim of a seamless moving conveyor.", "", "R4 changed "+r4Changed+" actual material identities, including "+r4ProtectedChanged+" in former protected route space. The old ROUTES coordinate arrays are original design wayfinding guides, NOT a claim that every straight crossover remains unobstructed: selected service channels are interrupted by grounded braces. The full 19x15, 23x19 and 31x27 exact-centre traversability graph, 31x27 blocked-main-throat recovery, and all named sites are rebuilt from final cells and retested.", "", "Seven named large assembly witness points and all unanchored components above 1000 cells are listed in qualification.json. Remaining unanchored smaller static cabinets (>1000 cells): "+R4_STRUCTURAL.unanchored_over_1000.length+"; these are not represented as physically anchored and warrant further finish review. The 2D world has no true structural stress model. Native Workbench input, collision, Water settling and fresh-process save/reopen remain NATIVE-UNTESTED.", "", "## Qualification and limitations",
+"## R4 physical structural closure", "", "Seven former major (>10000-cell) detached industrial assemblies now have genuine cardinally connected steel paths to world-edge-anchored Solid. The transverse crusher-to-exchange bridge and rising ore-transfer conduit connect previously disconnected process groups. The eastern gravity downfeed is purposefully interrupted by a 57-cell flight-passage gap; there is no false claim of a seamless moving conveyor.", "", "R4 changed "+r4Changed+" actual material identities, including "+r4ProtectedChanged+" in former protected route space. The old ROUTES coordinate arrays are original design wayfinding guides, NOT a claim that every straight crossover remains unobstructed: selected service channels are interrupted by grounded braces. The full 19x15, 23x19 and 31x27 exact-centre traversability graph, 31x27 blocked-main-throat recovery, and all named sites are rebuilt from final cells and retested.", "", "Seven named large assembly witness points and all unanchored components above 1000 cells are listed in qualification.json. Remaining unanchored smaller static cabinets (>1000 cells): "+R4_STRUCTURAL.unanchored_over_1000.length+"; these are not represented as physically anchored and warrant further finish review. The 2D world has no true structural stress model. Native Workbench input, collision, Water settling and fresh-process save/reopen remain NATIVE-UNTESTED.", "", "## R5 broken-counterweight / industrial operation rework (18 November 2026)","","A final original-cell construction pass responds to the independent R4 Fidelity Auditor and Shepherd REWORK. A fractured crown traction beam and deliberately broken paired cable paths terminate above a dramatically enlarged skewed counterweight body; the weight has been arrested by a real diagonal steel catch frame tied into the western pier. The visual is a static broken-lift disaster, not simulated motion. Added a supported crusher-discharge bridge and split feed with a deliberate open flyer passage, a rail hall with a single loaded cart and two separated tracks, and safe quench viewing balconies. No Water identities or quench perimeter were edited.","","R5 changed "+r5Changed+" final material identities. Significant detached static assemblies >1,000 cells went from "+R4_STRUCTURAL.unanchored_over_1000.length+" (R4) to "+R5_STRUCTURAL.unanchored_over_1000.length+" (R5). The current structural census, explicit bounds, all seven major anchored witnesses and three exact Midge hull results are recorded in qualification.json. Not every indicated straight guide is traversable after the support work: true exact-air connectivity is tested instead. The obstruction fallback is **bottom-terminal bypass only**; the mid-level ore exchange need not remain reachable when the main throat is artificially sealed.","","The Setup-v2 receipt now distinguishes the JSON payload without its terminal LF from the actual committed file including that LF. Native bridge binary, input/collision, fluid ticks and fresh-process save/reopen remain **NATIVE-UNTESTED**.","", "## Qualification and limitations",
 "",
 "- Offline full grid, nonoverlap, exact replay, PNG structural/inflate/CRC and material-ID parity: PASS; see `qualification.json`.",
 "- The source reader admits each extent component 512..2048 in multiples of 64, 32,768 stamps and 1 MiB JSON. `native_rectangle_budget()` may fall back to **4,096** without a bridge and otherwise asks the loaded compiled library, up to 32,768; our actual rectangle count must be compared to that installed capacity before loading.",
