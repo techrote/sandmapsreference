@@ -1,11 +1,12 @@
 {
   "rework_b": {
-    "date": "2026-11-17",
-    "scope": "physical terrain geometry and lab architecture",
-    "baseline_head": "1088e49b2537a9c7805b1a5efe263b203141ddc5",
-    "baseline_rectangles": 27428,
-    "baseline_reachable_clearance_centres": 649989,
-    "notes": "Six distinct botanical root/vascular strata, eleven individually dressed functional labs, five root-framed cross-portals; clearances cut and verified after detail geometry"
+    "date": "2026-11-18",
+    "scope": "source-JPEG-led new physical biosphere geometry, one tree, asymmetric scientific wings, continuous gantry and deeper root districts",
+    "starting_head": "db95c0c615e799f97ea885a56a5fdb412dc7cadb",
+    "source_jpeg_seen": true,
+    "original_png_pixels_verified": false,
+    "archival_merged_baseline_unvalidated": true,
+    "notes": "Historical source is 640x360 landscape; this tall 1024x2048 adaptation preserves the visible source complex at a deliberately scaled upper district and authors coherent older root/service levels below; not stretched screenshot or repeated organism."
   },
   "source_public_id": "techn-0021",
   "source_key": "batch1/image-0058",
@@ -14,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 31408,
+  "rectangles": 21259,
   "rectangle_budget": 32768,
-  "json_bytes": 574876,
+  "json_bytes": 387804,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1126461,
+  "stamped_cells": 1168857,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -33,11 +34,8 @@
     54,
     58,
     62,
-    65,
     77,
-    78,
     79,
-    80,
     100,
     101,
     119,
@@ -48,36 +46,33 @@
     127
   ],
   "material_counts": {
-    "0": 970691,
-    "39": 5664,
-    "40": 117183,
-    "42": 62581,
-    "49": 124801,
-    "50": 37157,
-    "52": 37299,
-    "53": 111650,
-    "54": 89027,
-    "58": 60800,
-    "62": 61107,
-    "65": 18582,
-    "77": 6071,
-    "78": 2312,
-    "79": 10878,
-    "80": 335,
-    "100": 145411,
-    "101": 161099,
-    "119": 20215,
-    "120": 8664,
-    "121": 5320,
-    "122": 4869,
-    "123": 14887,
-    "127": 20549
+    "0": 928295,
+    "39": 7015,
+    "40": 149267,
+    "42": 88289,
+    "49": 190120,
+    "50": 32546,
+    "52": 10973,
+    "53": 104475,
+    "54": 92003,
+    "58": 27068,
+    "62": 43741,
+    "77": 2218,
+    "79": 8426,
+    "100": 190361,
+    "101": 163353,
+    "119": 14941,
+    "120": 20838,
+    "121": 4688,
+    "122": 5180,
+    "123": 6702,
+    "127": 6653
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 611228,
+  "connected_clearance_centres": 593647,
   "spawn": [
     369,
     95
@@ -235,9 +230,162 @@
       ],
       "clear": true,
       "reachable": true
+    },
+    {
+      "name": "WEST DOME",
+      "point": [
+        369,
+        208
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "LIFT SERVICE",
+      "point": [
+        368,
+        550
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "LUMINOUS CANOPY VIEW",
+      "point": [
+        513,
+        532
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "EAST VIAL WINDOWS",
+      "point": [
+        743,
+        484
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "GANTRY WEST PORTAL",
+      "point": [
+        370,
+        930
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "GANTRY EAST PORTAL",
+      "point": [
+        742,
+        931
+      ],
+      "clear": true,
+      "reachable": true
+    },
+    {
+      "name": "DEEP ROOT TRAVERSE",
+      "point": [
+        515,
+        1750
+      ],
+      "clear": true,
+      "reachable": true
     }
   ],
-  "actual_native_godot_rapier_qualification": "NOT EXECUTED",
-  "original_reference_pixel_comparison": "NOT EXECUTED: GitHub binary image connector refuses PNG bytes",
-  "original_dimensions": "UNVERIFIED"
+  "actual_native_godot_rapier_qualification": "NATIVE-UNTESTED: compatible installed binary, Midge input/collision/simulation and save/reopen not exercised.",
+  "original_reference_pixel_comparison": "AUTHENTIC JPEG preview viewed and compared; full-resolution original PNG parity UNVERIFIED",
+  "original_dimensions": "JPEG preview 640x360; original full PNG dimensions UNVERIFIED",
+  "clearance_envelopes": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "legal_connected_centres": 593647,
+      "exact_sites": 24,
+      "passed": 24,
+      "failed": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "legal_connected_centres": 553138,
+      "exact_sites": 24,
+      "passed": 24,
+      "failed": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "legal_connected_centres": 478890,
+      "exact_sites": 24,
+      "passed": 24,
+      "failed": []
+    }
+  ],
+  "material_physics": "All non-Empty IDs are accepted-main immutable Solid / RuleKernel::None; excludes powder Stone, fluids, growth, agents and unsupported pseudo IDs.",
+  "installed_bridge_rectangle_capacity": "UNMEASURED: accepted source 32768; older fallback 4096 would reject this manifest.",
+  "material_cell_png_crops": {
+    "containment-tree-preview.png": {
+      "rect": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "step": 2
+    },
+    "containment-tree-detail-upper.png": {
+      "rect": [
+        192,
+        115,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-middle.png": {
+      "rect": [
+        191,
+        715,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-lower.png": {
+      "rect": [
+        191,
+        1295,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-west.png": {
+      "rect": [
+        35,
+        90,
+        640,
+        640
+      ],
+      "step": 1
+    },
+    "containment-tree-detail-east.png": {
+      "rect": [
+        382,
+        260,
+        640,
+        640
+      ],
+      "step": 1
+    }
+  }
 }

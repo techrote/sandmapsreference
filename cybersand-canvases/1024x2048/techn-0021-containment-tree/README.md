@@ -1,52 +1,74 @@
-# Containment Tree — Amber Canopy Biosphere
+# Containment Tree Biosphere — source-led R2 actual-cell repair
 
-**DRAFT / HOLD.** Reworker B physical map repair, 17 November 2026. Owner acceptance is not claimed.
+**Open Draft / HOLD — independent Shepherd, native Workbench and owner acceptance still outstanding.** This is a new physical-cell repair on the existing exclusive Reworker B PR branch, not an edit of archived main or a merely repainted image.
 
-## Reference and original source
+## Genuine source and scale-led interpretation
 
-- Public artwork ID **techn-0021**, source key **batch1/image-0058**.
-- Original: [Amber Canopy — Containment Tree](https://github.com/techrote/sandmapsreference/blob/main/artwork/technical_interiors/batch1/amber_canopy_biosphere-containment_tree-biological_dread.png).
-- Git blob `b8075c08c4a3cea84a877b036537dea55c87264f`; source-map SHA256 `e4413f50496dfca2b41d141c272779d6d7fc956588d45e741dc08f0b0263f93f`.
-- Source binary could not be inspected: the GitHub binary reader rejected direct UTF-8 decoding, while its base64 path returned empty content. **Direct artwork comparison and original dimensions remain UNVERIFIED.** These are source-independent design repairs, not a claim of exact reference parity.
+- Catalogue source **techn-0021**, `batch1/image-0058`: `artwork/technical_interiors/batch1/amber_canopy_biosphere-containment_tree-biological_dread.png` (unaltered Git blob `b8075c08c4a3cea84a877b036537dea55c87264f`).
+- The authentic, unmodified 640×360 repository preview `source-reference-preview.jpg` was **actually decoded and visually inspected** (Git blob `64d7df6352b12d1aa57ce85f4925a722705bba1d`). **Full-resolution original PNG pixel parity remains UNVERIFIED.**
+- The source shows a single massive glowing yellow-green biological heart in a dark rooted cave, a segmented western observatory dome and long service elevator, asymmetric eastern green sample-vial wing, occupied lower galleries, and guarded central gantry. These are the specific source features translated into actual material cells.
+- The reference is a compact *landscape* cross-section. The tall **1024×2048** canvas preserves those features at the top/mid districts while extending coherently into older root geology and logistics below. This is **not** stretching the reference to full height or reproducing a sequence of five copies of its organism.
 
-## Actual rework on CyberSand material cells
+## Physical-cell rebuild
 
-Reworker B started at commit `1088e49b2537a9c7805b1a5efe263b203141ddc5` and changed **124,091** final terrain/material cells while retaining the original exact **1024×2048** layout and the selected Midge at `[369,95]`.
+The archived repeated five-stage circular bioreactors and eleven mirrored lab modules were replaced with **one cardinally connected central biological organism**, thick asymmetric branching crown and lower roots, plus differentiated west/east laboratories, a physical western segmented glass dome and service lift, guarded central gantry/inspection terraces, cavern ribs and deeper root-service vaults. Two protected vertical flight chimneys and lateral inspection portals preserve exact Midge circulation. The lowest root footing genuinely joins the specimen to the bottom stone; it intentionally interrupts the former straight bottom emergency slot, while other fully qualified routes remain open.
 
-- Reworked the isolated central-tree fragments into six differentiated root/branch/fan zones: upper canopy, middle vascular lattice, lower fossil/root network, with non-uniform side growth and structural support geometry.
-- Visibly framed the five deliberate central traversal portals with contained upper/lower root sheaths and material-cell instrumentation instead of abruptly severed stump edges. These are still **passable**, not decorative solid walls.
-- Differentiated all **11 research stations** with architecture tied to each room's purpose: canopy quarantine, spore manifolds, microscope sample trays, resin catchment, root vault, seed nursery, observation gantry, biocore pumps, isolation baffles, lumen buses and return sump.
-- Preserved the two parallel vertical flight lanes, exact research entry airspaces, five cross-portals, central specimen hierarchy and stable wall/metal/crystal material semantics.
-- No floating image/texture overlay, source PNG embedded as scenery, live Plant, falling Stone powder, Fire, free Water or unsupported pseudo-material IDs.
+**Artistic honesty:** Static material cells cannot reproduce the source's photographic glow, atmospheric blue-green depth, or transparent volumetric glass. The original's horizontal freight gantry is reinterpreted as a central railed inspection span with accessible lateral transfer/bypass regions, not a claim of exact pixel-parity or identical continuous walking-surface geometry. The lower half is source-consistent extrapolation, not a trace of unseen original pixels.
 
-## Reproduction
+## Actual material-grid images — all from the same committed cell plane
 
-Run `node rebuild.cjs --verify` from this directory to compare all committed artifacts (builder, Setup-v2 JSON, overview, 3 native-cell crops, evidence). Run `node rebuild.cjs` to regenerate outputs deterministically. The standalone Node scripts require no npm packages.
-
-Material-grid previews:
-
-![Full authored material plane — 512×1024 downsample](containment-tree-preview.png)
-
-[Upper crown and labs — native 640×640](containment-tree-detail-upper.png) · [Middle vascular processing — native 640×640](containment-tree-detail-middle.png) · [Lower roots and galleries — native 640×640](containment-tree-detail-lower.png)
-
-## Static engineering qualification
-
-| Check | Reworked result |
+| Authentic source preview | Rebuilt full 1024×2048 cell world |
 |---|---|
-| Extent | **1024×2048** exact |
-| Setup-v2 JSON size | **574,876 / 1,048,576 bytes** |
-| Terrain rectangles | **31,408 / 32,768** |
-| Full material plane reconstruction | **2,097,152 cells; 0 differences** |
-| Conservative 19×15 Midge air-only clearance | **611,228 connected legal centres** |
-| Exact named destinations | **17/17** original, directly legal and connected, zero nearest-point substitutes |
-| Material IDs | **0, 39, 40, 42, 49, 50, 52, 53, 54, 58, 62, 65, 77, 78, 79, 80, 100, 101, 119, 120, 121, 122, 123, 127** |
-| Final cells changed vs base | **124,091** |
-| Native CyberDemoBridge/Workbench/Rapier | **NOT EXECUTED** |
-| Physical Windows actor/collision/save/reopen | **NOT EXECUTED** |
-| Visual source fidelity | **UNVERIFIED** (original bitmap inaccessible) |
+| ![Authentic source JPEG](source-reference-preview.jpg) | ![Actual-cell full map, 2× downsample only for display](containment-tree-preview.png) |
 
-The generator reconstructs the entire material grid from edit rectangles, and independently generated full-map and native 1:1 PNG districts are derived from that same final plane. Geometry was reviewed on the actual material PNG. Conservative clearance treats **all non-air** as blocking; a 19×15 envelope is not proof of dynamic native collision/control. The accepted CyberSand source may admit the nominal 32,768-stamp budget, but installed bridge capacity can be lower and must be confirmed during physical evaluation.
+Real unscaled 640×640 **1:1 material-cell crops**:
+[Upper organism](containment-tree-detail-upper.png) ·
+[Central gantry and roots](containment-tree-detail-middle.png) ·
+[Deep roots](containment-tree-detail-lower.png) ·
+[West dome/lift](containment-tree-detail-west.png) ·
+[East vial research](containment-tree-detail-east.png).
 
-## Owner/Shepherd remaining gates
+## Deterministic reproduction
 
-The Shepherd should compare the actual original PNG with these real-cell previews, review the eleven individual lab designs and source-specific morphology, then exercise the exact committed setup in a current Windows Workbench and native bridge (material IDs, Midge definition hash, native rectangle capacity, control/collision, simulation and save/reopen). Keep PR **Draft/HOLD** and do not promote or merge without explicit owner approval.
+Use Node (no npm dependencies) from this directory:
+
+```bash
+node rebuild.cjs --verify
+node verify-r2.cjs
+```
+
+To regenerate the same ordered material plane and six PNGs:
+
+```bash
+node rebuild.cjs
+node verify-r2.cjs
+```
+
+The final `builder.cjs` uses fixed seed **210058**, real supported Setup-v2, grid-sourced PNGs, self-contained PNG encoding, and exhaustive rectangular reconstruction. `evidence.json` is regenerated, never hand-adjusted. `verify-r2.cjs` independently reconstructs committed JSON, validates PNG integrity/ID pixel equality, and recalculates exact full-hull airspace from the file.
+
+## Static qualification at repaired builder HEAD
+
+| Gate | Verified |
+|---|---|
+| World | **1024×2048**, 2,097,152 actual material cells |
+| Five-field rectangles | **21,259 / 32,768**, in bounds and 0 overlaps |
+| Setup JSON | **387,804 / 1,048,576 bytes** |
+| Exhaustive reconstruction | **0 cell mismatches** |
+| Materials | Accepted-main immutable Solid / RuleKernel::None structural IDs only; Empty air. No Stone powder, live growth, fluids, pseudo IDs or hazards |
+| Actor | One authored Midge at original **(369,95)**, 4×3 model hull, saved hash unchanged |
+| Original exact semantic sites | **17/17 retained** |
+| Additional source-led sites | **7/7** (western dome/lift, canopy viewpoint, east vials, two gantry approaches, root flight) |
+| 19×15 Midge | **24/24 exact**, 593,647 connected legal centres |
+| 23×19 Midge | **24/24 exact**, 553,138 connected legal centres |
+| 31×27 Midge | **24/24 exact**, 478,890 connected legal centres |
+| Organism cardinal solid connection | Heart through trunk to bottom root/rock in one physical component |
+| Six indexed PNGs | Full PNG chunk integrity + **2,572,288 physical cell-pixel comparisons / 0 mismatches** |
+| Source JPEG | **VIEWED**, compositional comparison |
+| Full original PNG parity | **UNVERIFIED** |
+| Actual Godot/CyberDemoBridge/Rapier | **NATIVE-UNTESTED** — no installed bridge load/input/collision/simulation/save/reopen |
+
+**Native admission caveat:** Accepted engine main `018bd09503d7f079ddac52e225c2f7daf8d678bf` supports 32,768 source starting rectangles; an older/missing bridge reports a 4,096 fallback. The installed Workbench's actual capacity was **not measured** and an older bridge would reject this map.
+
+## Pending gates
+
+Independent source-art-fidelity and technical re-review on the **exact committed HEAD**; physical Windows 11 Godot/CyberDemoBridge/Rapier installation, true Midge thrust/contact testing and fresh-process save/reopen; full-resolution original-PNG direct comparison where feasible. **No owner acceptance, merge, Ready or native PASS is claimed.**

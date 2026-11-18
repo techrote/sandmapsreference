@@ -9,6 +9,8 @@ const outputs={
  'containment-tree-detail-upper.png':Buffer.from(r.details.upper),
  'containment-tree-detail-middle.png':Buffer.from(r.details.middle),
  'containment-tree-detail-lower.png':Buffer.from(r.details.lower),
+ 'containment-tree-detail-west.png':Buffer.from(r.details.west),
+ 'containment-tree-detail-east.png':Buffer.from(r.details.east),
  'evidence.json':Buffer.from(JSON.stringify(r.evidence,null,2)+'\n','utf8'),
 };
 let bad=0;
