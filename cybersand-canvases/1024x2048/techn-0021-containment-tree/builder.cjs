@@ -932,6 +932,150 @@ let r2b10Stats={changed:0,added:0,removed:0,recolored:0};
  for(let i=0;i<A.length;i++)if(A[i]!==previous[i]){r2b10Stats.changed++;if(!previous[i])r2b10Stats.added++;else if(!A[i])r2b10Stats.removed++;else r2b10Stats.recolored++;}
 })();
 
+
+// R2B11: source-scale horizontal biosphere and three non-repeating extrapolated districts.
+// All architecture is written into physical material cells (not a rendered overlay).
+let r2b11Stats={changed:0,added:0,removed:0,recolored:0};
+(function(){
+ const prev=A.slice(),P=W+1,ix=(x,y)=>y*W+x;
+ function oval(cx,cy,rx,ry,m){for(let y=Math.max(0,Math.floor(cy-ry));y<=Math.min(H-1,Math.ceil(cy+ry));y++){let f=(y-cy)/ry;if(Math.abs(f)>1)continue;let rr=rx*Math.sqrt(1-f*f);rect(cx-rr,y,2*rr+1,1,m);}}
+ function root(path,m,w){for(let i=1;i<path.length;i++){let a=path[i-1],b=path[i];line(a[0],a[1],b[0],b[1],m,Math.max(4,w-2*i));}}
+ // Source specimen: broad irregular luminous living membrane with tangent vasculature,
+ // not a vertical stack of symmetric polka-dot compartments.
+ for(let y=188;y<432;y++)for(let x=455;x<741;x++){let k=ix(x,y),m=A[k];if(m===M.URANIUM||m===M.PHOSPHOR){
+  let wave=Math.sin(x*.045+y*.072+Math.sin(x*.051)*1.9)+.64*Math.sin(y*.092-x*.024);
+  if(wave>.96)A[k]=M.VERDIGRIS;else if(wave<-.64)A[k]=M.PHOSPHOR;
+ }}
+ for(const [x,y,rx,ry]of [[578,263,30,25],[630,319,36,29],[563,374,23,30]])
+ {oval(x,y,rx,ry,M.PHOSPHOR);oval(x+6,y-5,rx*.65,ry*.60,M.URANIUM);}
+
+ // Distinct fine-grained vascular network breaks the polygonal "eye"/smile
+ // appearance: uneven capillary forks link translucent source-local lumens.
+ poly([[554,274],[575,263],[596,277],[611,311],[597,325],[566,322],[553,306]],M.PHOSPHOR);
+ poly([[590,305],[619,294],[647,303],[654,323],[635,349],[607,342]],M.PHOSPHOR);
+ poly([[535,340],[556,321],[577,327],[586,354],[575,372],[546,360]],M.VERDIGRIS);
+ poly([[558,284],[575,280],[591,293],[582,307],[562,304]],M.URANIUM);
+ poly([[606,307],[624,311],[635,331],[611,337],[602,323]],M.URANIUM);
+ for(const [path,m,w] of [
+  [[[492,256],[521,281],[545,274],[567,301],[592,318],[618,345]],M.MOSS,7],
+  [[[540,214],[561,246],[588,264],[603,292],[626,316],[657,348]],M.VERDIGRIS,7],
+  [[[666,245],[643,272],[620,283],[597,313],[585,355]],M.MOSS,6],
+  [[[509,343],[534,329],[566,334],[599,358],[635,363]],M.VERDIGRIS,6],
+  [[[581,196],[590,228],[575,266],[560,293],[543,340]],M.COPPER,6],
+  [[[674,312],[653,337],[628,352],[615,398]],M.COPPER,6],
+  [[[502,303],[528,309],[557,321],[582,353]],M.VERDIGRIS,5],
+  [[[638,256],[619,273],[604,305],[594,350],[575,388]],M.VERDIGRIS,6]
+ ])for(let i=1;i<path.length;i++)line(...path[i-1],...path[i],m,w);
+ for(const [path,m,w] of [
+  [[[518,399],[501,452],[473,488],[452,533]],M.VERDIGRIS,7],
+  [[[603,400],[581,461],[550,513],[537,573]],M.MOSS,7],
+  [[[664,393],[699,448],[721,506],[716,574]],M.VERDIGRIS,8],
+  [[[556,431],[530,486],[511,541],[488,584]],M.COPPER,6]
+ ])for(let i=1;i<path.length;i++)line(...path[i-1],...path[i],m,w);
+ for(const [pts,m,w]of [
+  [[[462,259],[428,212],[401,159],[367,100]],M.MOSS,15],
+  [[[704,281],[735,230],[770,158],[815,109]],M.VERDIGRIS,15],
+  [[[545,184],[517,115],[476,44]],M.COPPER,12],
+  [[[660,180],[698,117],[727,38]],M.MOSS,13],
+  [[[487,399],[457,457],[428,522]],M.COPPER,17],
+  [[[676,399],[705,470],[726,556]],M.VERDIGRIS,16]
+ ])root(pts,m,w);
+ // West glazed dome with common backed cladding, human-scale examination bays.
+ poly([[81,382],[116,352],[302,350],[355,378],[374,475],[344,523],[96,523],[76,480]],M.CONCRETE);
+ poly([[100,402],[128,382],[299,379],[339,400],[347,482],[325,502],[105,499]],M.AIR);
+ rect(103,501,244,18,M.STEEL);rect(113,519,224,7,M.BRASS);
+ for(const [x,w,h]of [[117,40,56],[178,49,70],[252,42,52]]){rect(x,412,w,h,M.GLASSBLOCK);rect(x+6,418,w-12,h-14,M.OBSIDIAN);rect(x+12,430,w-24,7,M.CYAN);}
+ // East vial wing, recognisably unequal in roof, glass size and programme.
+ poly([[754,359],[788,329],[959,332],[1017,360],[1015,485],[981,515],[758,510]],M.CONCRETE);
+ poly([[779,379],[805,354],[955,354],[993,385],[991,470],[965,490],[779,486]],M.AIR);
+ rect(766,492,235,17,M.STEEL);rect(779,510,217,7,M.BRASS);
+ for(const [x,w,h]of [[802,33,74],[859,40,91],[928,28,66]]){rect(x,387,w,h,M.GLASSBLOCK);rect(x+6,396,w-12,h-17,M.OBSIDIAN);oval(x+w/2,431,6,11,M.PHOSPHOR);}
+ // One recognisable horizontal two-tier connective installation, braced into
+ // old supports with asymmetric access mezzanines; never span the flight lane.
+ poly([[270,775],[314,753],[429,765],[480,775],[582,766],[690,768],
+  [773,751],[808,783],[808,833],[763,851],[300,851],[270,824]],M.CONCRETE);
+ poly([[294,791],[330,774],[429,784],[472,796],[585,784],[686,789],
+  [765,775],[788,797],[782,821],[316,824]],M.AIR);
+ rect(288,839,507,16,M.STEEL);rect(294,855,495,7,M.BRASS);
+ for(const [x,y,w]of [[329,793,64],[430,794,56],[561,793,70],[695,790,55]]){
+  rect(x,y,w,6,M.BRASS);rect(x+7,y-7,w-14,5,M.PHOSPHOR);
+ }
+ for(const [x,y,X,Y]of [[298,841,276,888],[375,839,348,870],
+  [459,843,486,880],[646,841,625,879],[755,843,813,890]])line(x,y,X,Y,M.STEEL,13);
+ // The inhabited subway immediately beneath the local biological installation,
+ // source-derived; unlike isolated thin display shelves, it has vaulted bays,
+ // lintels, dry passage and a continuous long grounded foot.
+ poly([[266,997],[315,973],[430,976],[490,989],[599,978],[735,976],
+  [793,1004],[811,1102],[782,1145],[293,1148],[258,1110]],M.CONCRETE);
+ poly([[281,1016],[327,999],[423,1001],[490,1014],[588,1005],
+  [722,1003],[772,1022],[778,1095],[752,1124],[302,1124],[278,1092]],M.AIR);
+ rect(281,1128,516,18,M.STEEL);rect(290,1146,495,7,M.BRASS);
+ for(const [x,w,h]of [[312,42,66],[392,50,59],[501,60,76],[615,55,60],[716,41,70]]){
+  rect(x,1036,w,h,M.IRON);rect(x+8,1044,w-16,h-19,M.AIR);
+  rect(x+12,1054,w-24,7,x<500?M.CYAN:M.PHOSPHOR);
+ }
+ for(const [x,y,X,Y]of [[297,1141,273,1219],[447,1144,413,1201],
+  [651,1144,687,1208],[775,1143,801,1225]])line(x,y,X,Y,M.CONCRETE,17);
+ // Three purposefully DIFFERENT new extrapolated worlds, not repeated panels:
+ // western resin archive under bedrock, central root-fossil vault and east pump.
+ poly([[112,1160],[156,1126],[328,1126],[386,1165],[382,1286],
+  [343,1333],[141,1335],[104,1293]],M.GRANITE);
+ poly([[137,1180],[175,1155],[320,1154],[360,1183],[355,1272],
+  [324,1308],[153,1308],[130,1271]],M.AIR);
+ rect(136,1307,221,17,M.STEEL);
+ for(const [x,y]of [[175,1200],[232,1189],[288,1202]]){rect(x,y,34,63,M.GLASSBLOCK);rect(x+5,y+7,24,48,M.OBSIDIAN);oval(x+17,y+33,8,12,M.AMBER);}
+ poly([[351,1477],[401,1444],[497,1447],[550,1485],[565,1573],
+  [524,1616],[395,1617],[348,1580]],M.BASALT);
+ poly([[378,1494],[414,1472],[486,1476],[520,1500],[531,1555],
+  [505,1583],[413,1587],[371,1563]],M.AIR);
+ rect(385,1586,148,14,M.STEEL);rect(399,1600,119,8,M.BRASS);
+ for(const [x,y]of [[411,1513],[500,1525]]){oval(x,y,17,23,M.QUARTZ);oval(x,y,8,11,M.PHOSPHOR);}
+ poly([[735,1671],[789,1646],[961,1654],[1014,1692],[1018,1834],
+  [974,1869],[766,1863],[722,1825]],M.CONCRETE);
+ poly([[757,1697],[798,1676],[949,1679],[991,1707],[994,1809],
+  [961,1835],[774,1834],[753,1809]],M.AIR);
+ rect(758,1830,242,18,M.STEEL);rect(774,1848,213,7,M.BRASS);
+ for(const [x,y,rx,ry]of [[807,1753,24,39],[891,1759,30,49],[966,1746,17,34]]){oval(x,y,rx,ry,M.BRONZE);oval(x,y,rx-8,ry-10,M.OBSIDIAN);oval(x,y+4,rx*.37,ry*.28,M.CYAN);}
+ // Room fixtures are not suspended display pixels: support major glazed bays,
+ // resin vessels and independent pumping drums on proper fixed-steel mullions.
+ for(const [cx,top,bottom,w] of [[137,462,514,10],[202,476,510,11],[273,458,513,10],
+  [818,451,505,9],[878,473,504,10],[942,446,503,10],
+  [192,1257,1320,10],[249,1244,1320,10],[305,1255,1320,10],
+  [808,1786,1843,12],[890,1802,1842,12],[963,1769,1840,11]]){
+  rect(cx-w/2,top,w,bottom-top,M.STEEL);
+  rect(cx-w,Math.max(top,bottom-7),2*w,7,M.BRONZE);
+ }
+ // West lower source-led organism gallery: buttress the older hanging roof
+ // with two irregular rock-backed supports from its south edge.
+ line(154,568,151,616,M.CONCRETE,13);
+ line(274,563,299,606,M.STEEL,12);
+ // Do not cut previously load-bearing girder/core supports while relaying
+ // new walls. In particular these are the authenticated 6-bolt tie system.
+ for(let y=752;y<1159;y++)for(let x=380;x<795;x++){
+  const k=ix(x,y);if(prev[k]&&!A[k])A[k]=prev[k];
+ }
+ for(const [x,y]of [[600,808],[615,385],[450,800],[930,500],[600,984],[610,2035]]){
+  for(let j=Math.max(0,y-11);j<=Math.min(H-1,y+11);j++)
+   for(let i=Math.max(0,x-11);i<=Math.min(W-1,x+11);i++){
+    const k=ix(i,j);if(prev[k]&&!A[k])A[k]=prev[k];
+   }
+ }
+ // Exact 31x27 OLD connected, fully in-bounds, four-neighbour centre union:
+ // an addition in any of its footprints is discarded, without proxy sites.
+ const sat=new Int32Array(P*(H+1));for(let y=0;y<H;y++){let sum=0;for(let x=0;x<W;x++){sum+=prev[ix(x,y)]?1:0;sat[(y+1)*P+x+1]=sat[y*P+x+1]+sum;}}
+ const free=new Uint8Array(A.length),hx=15,hy=13;
+ for(let y=hy;y<H-hy;y++)for(let x=hx;x<W-hx;x++){let l=x-hx,r=x+hx+1,t=y-hy,b=y+hy+1;if(!(sat[b*P+r]-sat[t*P+r]-sat[b*P+l]+sat[t*P+l]))free[ix(x,y)]=1;}
+ const seen=new Uint8Array(A.length),q=new Int32Array(A.length),sp=ix(369,95);if(!free[sp])throw Error('Prior legal Midge spawn blocked');
+ seen[sp]=1;q[0]=sp;let n=1;
+ for(let i=0;i<n;i++){let p=q[i],x=p%W,y=(p/W)|0;for(const d of [-W,-1,1,W]){if((d===-W&&y===0)||(d===-1&&x===0)||(d===1&&x===W-1)||(d===W&&y===H-1))continue;let k=p+d;if(free[k]&&!seen[k]){seen[k]=1;q[n++]=k;}}}
+ const diff=new Int32Array(P*(H+1));
+ for(let i=0;i<n;i++){let p=q[i],x=p%W,y=(p/W)|0;
+  diff[(y-hy)*P+x-hx]++;diff[(y-hy)*P+x+hx+1]--;
+  diff[(y+hy+1)*P+x-hx]--;diff[(y+hy+1)*P+x+hx+1]++;
+ }
+ for(let y=0;y<H;y++){let z=0;for(let x=0;x<W;x++){let j=y*P+x;z+=diff[j];diff[j]=z+(y?diff[j-P]:0);let k=ix(x,y);if(diff[j]>0&&!prev[k])A[k]=0;}}
+ for(let i=0;i<A.length;i++)if(A[i]!==prev[i]){r2b11Stats.changed++;if(!prev[i])r2b11Stats.added++;else if(!A[i])r2b11Stats.removed++;else r2b11Stats.recolored++;}
+})();
 // Conservative full non-air collision mask, 19x15 actor centre clearance.
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
 const nav=new Uint8Array(A.length);
@@ -1081,6 +1225,14 @@ evidence.structural_support={...evidence.structural_support,solid_component_cell
  evidence.last_rework=evidence.rework_b9;
  evidence.rework_b10={worker:'B',date:'2026-11-18',assigned_head:'75171aba712960963ae6f886ff7d5f5d4ec4c5e4',scope:'source-scale horizontal living biosphere, connected two-level lab bays, lower independent service vault',...r2b10Stats,extent:[W,H],rectangles:edits.length,json_bytes:json.length,occupied_cells:stamped,exact_sites:'24/24 at all 3 conservative hulls',gantry_steps:evidence.gantry_pairwise_steps.map(x=>x.steps),previous_31x27_air_hulls:'complete reached flight-volume union retained',source:'genuine unchanged JPEG directly viewed; original PNG pixel parity UNVERIFIED',native:'NATIVE-UNTESTED; installed bridge capacity UNMEASURED'};
  evidence.last_rework=evidence.rework_b10;
+ evidence.rework_b11={worker:'B',date:'2026-11-18',assigned_head:'f0a1729a2c7357ba3e553849858392277d7bdb96',
+  scope:'compact source-derived horizontal biosphere with physically backed connective gallery, unlike west/east laboratories; 3 grounded new deep scientific destinations',
+  ...r2b11Stats,extent:[W,H],rectangles:edits.length,json_bytes:json.length,occupied_cells:stamped,
+  exact_sites:'24/24 at 19x15,23x19,31x27',gantry_steps:evidence.gantry_pairwise_steps.map(x=>x.steps),
+  source:'authentic 640x360 committed JPEG visually inspected; original large PNG UNVERIFIED',
+  original_connected_31x27_hull:'preserved complete union',native:'NATIVE-UNTESTED; installed bridge unmeasured'};
+ evidence.last_rework=evidence.rework_b11;
+
 
 
 return {json,png,details,evidence};

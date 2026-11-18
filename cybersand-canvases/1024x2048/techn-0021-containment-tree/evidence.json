@@ -15,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 22445,
+  "rectangles": 22800,
   "rectangle_budget": 32768,
-  "json_bytes": 411671,
+  "json_bytes": 417561,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1287766,
+  "stamped_cells": 1280126,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -47,34 +47,34 @@
     127
   ],
   "material_counts": {
-    "0": 809386,
-    "39": 6046,
-    "40": 126421,
-    "42": 119223,
-    "49": 160294,
-    "50": 42213,
-    "52": 25478,
-    "53": 117740,
-    "54": 111759,
-    "58": 43403,
-    "62": 89885,
-    "65": 2637,
-    "77": 2451,
-    "79": 10767,
-    "100": 210754,
-    "101": 144734,
-    "119": 22285,
-    "120": 17089,
+    "0": 817026,
+    "39": 5100,
+    "40": 133030,
+    "42": 110863,
+    "49": 148879,
+    "50": 39481,
+    "52": 23385,
+    "53": 109804,
+    "54": 110276,
+    "58": 95396,
+    "62": 89415,
+    "65": 2026,
+    "77": 3094,
+    "79": 10433,
+    "100": 197827,
+    "101": 126917,
+    "119": 26437,
+    "120": 17047,
     "121": 5453,
-    "122": 4446,
-    "123": 4241,
-    "127": 20447
+    "122": 5384,
+    "123": 5175,
+    "127": 14704
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 463927,
+  "connected_clearance_centres": 490602,
   "spawn": [
     369,
     95
@@ -317,7 +317,7 @@
         19,
         15
       ],
-      "legal_connected_centres": 463927,
+      "legal_connected_centres": 490602,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -327,7 +327,7 @@
         23,
         19
       ],
-      "legal_connected_centres": 425760,
+      "legal_connected_centres": 448928,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -337,7 +337,7 @@
         31,
         27
       ],
-      "legal_connected_centres": 351015,
+      "legal_connected_centres": 369147,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -419,28 +419,28 @@
   "last_rework": {
     "worker": "B",
     "date": "2026-11-18",
-    "assigned_head": "75171aba712960963ae6f886ff7d5f5d4ec4c5e4",
-    "scope": "source-scale horizontal living biosphere, connected two-level lab bays, lower independent service vault",
-    "changed": 72789,
-    "added": 12435,
-    "removed": 11351,
-    "recolored": 49003,
+    "assigned_head": "f0a1729a2c7357ba3e553849858392277d7bdb96",
+    "scope": "compact source-derived horizontal biosphere with physically backed connective gallery, unlike west/east laboratories; 3 grounded new deep scientific destinations",
+    "changed": 212472,
+    "added": 48108,
+    "removed": 55748,
+    "recolored": 108616,
     "extent": [
       1024,
       2048
     ],
-    "rectangles": 22445,
-    "json_bytes": 411671,
-    "occupied_cells": 1287766,
-    "exact_sites": "24/24 at all 3 conservative hulls",
+    "rectangles": 22800,
+    "json_bytes": 417561,
+    "occupied_cells": 1280126,
+    "exact_sites": "24/24 at 19x15,23x19,31x27",
     "gantry_steps": [
       373,
       373,
       373
     ],
-    "previous_31x27_air_hulls": "complete reached flight-volume union retained",
-    "source": "genuine unchanged JPEG directly viewed; original PNG pixel parity UNVERIFIED",
-    "native": "NATIVE-UNTESTED; installed bridge capacity UNMEASURED"
+    "source": "authentic 640x360 committed JPEG visually inspected; original large PNG UNVERIFIED",
+    "original_connected_31x27_hull": "preserved complete union",
+    "native": "NATIVE-UNTESTED; installed bridge unmeasured"
   },
   "rework_b6": {
     "worker": "B",
@@ -500,9 +500,9 @@
     "native": "NATIVE-UNTESTED"
   },
   "structural_support": {
-    "solid_component_cells": 1241643,
-    "solid_components": 48,
-    "largest_component_cells": 1241643,
+    "solid_component_cells": 1253287,
+    "solid_components": 46,
+    "largest_component_cells": 1253287,
     "probes": [
       [
         600,
@@ -593,9 +593,9 @@
       1024,
       2048
     ],
-    "rectangles": 22445,
-    "json_bytes": 411671,
-    "solid_components": 48,
+    "rectangles": 22800,
+    "json_bytes": 417561,
+    "solid_components": 46,
     "structural_probes": "6/6 cardinal rooted",
     "source_jpeg": "authentic committed 640x360 directly viewed",
     "original_png": "full-resolution source-PNG parity UNVERIFIED",
@@ -621,9 +621,9 @@
       1024,
       2048
     ],
-    "rectangles": 22445,
-    "json_bytes": 411671,
-    "occupied_cells": 1287766,
+    "rectangles": 22800,
+    "json_bytes": 417561,
+    "occupied_cells": 1280126,
     "exact_sites": "24/24 at all 3 conservative hulls",
     "gantry_steps": [
       373,
@@ -633,5 +633,31 @@
     "previous_31x27_air_hulls": "complete reached flight-volume union retained",
     "source": "genuine unchanged JPEG directly viewed; original PNG pixel parity UNVERIFIED",
     "native": "NATIVE-UNTESTED; installed bridge capacity UNMEASURED"
+  },
+  "rework_b11": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "f0a1729a2c7357ba3e553849858392277d7bdb96",
+    "scope": "compact source-derived horizontal biosphere with physically backed connective gallery, unlike west/east laboratories; 3 grounded new deep scientific destinations",
+    "changed": 212472,
+    "added": 48108,
+    "removed": 55748,
+    "recolored": 108616,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22800,
+    "json_bytes": 417561,
+    "occupied_cells": 1280126,
+    "exact_sites": "24/24 at 19x15,23x19,31x27",
+    "gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "source": "authentic 640x360 committed JPEG visually inspected; original large PNG UNVERIFIED",
+    "original_connected_31x27_hull": "preserved complete union",
+    "native": "NATIVE-UNTESTED; installed bridge unmeasured"
   }
 }
