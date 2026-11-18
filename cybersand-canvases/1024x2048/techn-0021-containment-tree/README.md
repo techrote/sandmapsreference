@@ -1,48 +1,52 @@
-# Containment Tree Biosphere — R2C source-led physical-cell finishing
+# Containment Tree Biosphere — source-led actual-cell R2B3 finish
 
-**DRAFT / HOLD — owner/Shepherd/native acceptance outstanding.** Exclusive Reworker C assignment on the existing PR #15 at starting HEAD `c40e9b4dff051e833316c38a3c885781a332aece`. No source image, archived main, engine, competing branch, or PR-state modification.
+**OPEN Draft / HOLD.** This is a real 1024×2048 CyberSand Setup-v2 material grid, not concept art. Most recent work: exclusive Shepherd-assigned Reworker B pass from verified starting HEAD `04a7f0570029eb68151763044f0cf1464e31b672`. The branch is not merged or Ready. No CyberSand engine files, historical accepted map, or original reference artwork were edited.
 
-## Authentic source and designed world scale
+## Authoritative source and physical-scale split
 
-Catalogue **techn-0021**, `batch1/image-0058`. The *actual* committed `source-reference-preview.jpg` (640×360; blob `64d7df6352b12d1aa57ce85f4925a722705bba1d`) was decoded and visually compared with real material-cell overview and 1:1 crops. The original PNG `artwork/technical_interiors/batch1/amber_canopy_biosphere-containment_tree-biological_dread.png` (blob `b8075c08c4a3cea84a877b036537dea55c87264f`) is untouched: **full-resolution PNG parity UNVERIFIED**.
+**Source-led upper local district:** catalogue `techn-0021`, `batch1/image-0058`. The genuinely committed [640×360 source JPEG](source-reference-preview.jpg), blob `64d7df6352b12d1aa57ce85f4925a722705bba1d`, was independently decoded and **visually inspected** for this pass. It shows a grand enclosed canopy, **one dominant glowing root specimen**, west dome/long shaft, east plant-vial laboratories, and **one inhabited guarded lateral gantry** with industrial foundations. The full original PNG, `artwork/technical_interiors/batch1/amber_canopy_biosphere-containment_tree-biological_dread.png`, blob `b8075c08c4a3cea84a877b036537dea55c87264f`, remains untouched. **Full original-PNG pixel comparison is UNVERIFIED.**
 
-Upper part: compact source-led bio-cavern with one luminous biological heart, porous roof and thick branching roots, segmented west glass dome/lift, different east vial laboratories and central guarded gantry. Below y≈1000: original functional extrapolation into rhizome ecology, resin research, rooted geology and return-pump logistics; no uniformly stretched image or replicated facility.
+**Original extrapolated lower world:** Below approximately y=1100, the older cave rhizome, resin-assay grotto, root galleries and protected return-service vaults are newly authored consistent geography, **not** artificially inflated screenshot pixels or repeated source-room copies. Physical facility scale must be judged relative to Midge's real 4×3 hull and operational flight margins.
 
-## Substantive authored-cell revision
+## Latest material-cell changes (R2B3)
 
-- Replaced angular double-lobe heart and generic crown with one much broader, off-centre, rooted porous biological envelope, genuine large voids, vascular ribs and non-repetitive light-sensitive tissue.
-- Differentiated the former uniform central bole into **three large wandering root axes**, unequal lateral buttresses, scattered reachable siphon pockets and solid-root-to-bottom attachment.
-- Reconstructed matching lab levels as an asymmetric western resin-assay grotto, right-side stepped sample-vial manifold and substantially different crescent-shaped lower return/chemical collection vault.
-- Braced floating-looking service/gantry transfer ledges with real solid supports; included second pass of connected pore-veins, discrete physical struts and purposeful lower rock zones.
-- Kept authored Midge spawn and all **24 original semantic locations at identical coordinates**, protected side air chimneys and source-specific landmarks. No source-image painting, pseudo IDs, mobile powder structures, uncontained liquid or live reactor growth.
+The new authored pass changes **203,895 final material identities**, all in the existing deterministic [builder](builder.cjs) and actual setup, not as PNG painting. At the upper level, the narrow single-orb silhouette became **three large intersecting, organically perforated luminous chambers**, continuous multiple rooted nutrient arteries, substantial bright membranes and supporting tissue. The left lab gains one physically framed occupied greenhouse/observatory level with three different specimen bays grounded into the service infrastructure; the unequal right wing gains an extended monitored-vial bank with thicker vaulted support, a different facade and control balcony.
 
-## Exact material-grid gallery
+The previously scattered mid-level floating stripes now have a **single substantial multi-span deck around y≈1000**, a visible continuous truss/guardrail hierarchy, supported west/east abutments, lower inspection stations and intentional gaps at existing vertical flyer-access gates. These are honest gameplay openings, not accidental disconnected platforms. The extrapolated lower world adds a distinct grounded assay cavity and a geological-service/vial-processing pocket tied into older rooted structures. Existing 24 named **exact** semantic destinations and original spawn stay fixed; existing collision-safety cuts are applied after the new geometry.
 
-| Genuine unchanged source JPEG | Final actual-cell overview |
+**Self-critique:** Major upper source silhouette, wing distinction and occupied transit-hierarchy defects were addressed in actual cells. Native preview still uses CyberSand's restricted material palette: fine illustration/characters/ambient luminous fog and the source's detailed painted background cannot be represented identically as collision-bearing terrain. The world retains wide dark Empty flying voids intentionally. Avoid filling them with solid fake sky. Original source PNG and actual native quality gates remain to be evaluated independently.
+
+## Evidence: actual material-grid output
+
+| Original JPEG source | Exact 1024×2048 material-cell overview (shown 2:1) |
 |---|---|
-| ![Authentic JPEG](source-reference-preview.jpg) | ![1024×2048 physical cell grid](containment-tree-preview.png) |
+| ![Authentic unchanged source](source-reference-preview.jpg) | ![Final material plane](containment-tree-preview.png) |
 
-Real 1:1 crops: [upper organism](containment-tree-detail-upper.png), [middle rooted gantry](containment-tree-detail-middle.png), [lower ecology](containment-tree-detail-lower.png), [western observatory](containment-tree-detail-west.png), [eastern vial wing](containment-tree-detail-east.png).
+Unscaled native-cell crops: [upper tri-lobed organism](containment-tree-detail-upper.png), [middle cross-gantry/roots](containment-tree-detail-middle.png), [deep root/return ecology](containment-tree-detail-lower.png), [west dome/service labs](containment-tree-detail-west.png), [east specialized vials](containment-tree-detail-east.png). Every PNG is generated directly from the same final material IDs.
 
-## Deterministic static qualification
+## Exact source-level qualification
 
-| Gate | Result |
+| Check | Independently confirmed result |
 |---|---|
-| Extent | **1024×2048 = 2,097,152 physical cells** |
-| Actual material identity changes versus assigned HEAD | **370,305** |
-| Valid source-enum physical types | **20 immovable Solid/RuleKernel::None IDs**, no powder, liquid or growth |
-| Rectangular Setup-v2 edits | **20,530 / 32,768**, 0 invalid/overlap |
-| Serialized setup | **377,138 / 1,048,576 bytes** |
-| Full 2,097,152-cell reconstruction | **0 mismatches** |
-| Occupied physical solids | 1,260,097 |
-| Exact 19×15 hull BFS from original Midge spawn | **24/24**, 489,881 connected legal centres |
-| Exact 23×19 hull BFS | **24/24**, 449,282 connected legal centres |
-| Exact 31×27 hull BFS | **24/24**, 382,269 connected legal centres |
-| PNG indexed-pixel parity | **2,572,288 comparisons**, 0 mismatches, PNG CRC + zlib Adler PASS |
-| Root physical support | Deep rooted component reaches upper heart and bottom material, 1,208,546 connected solid cells |
-| Source preview | **GENUINE JPEG VIEWED**; original full PNG parity **UNVERIFIED** |
-| Native Godot / CyberDemoBridge / Rapier / movement / collision / simulation / save-reopen | **NATIVE-UNTESTED** |
+| Accepted CyberSand source | `main@018bd09503d7f079ddac52e225c2f7daf8d678bf` |
+| World | **1024×2048 = 2,097,152** actual cells |
+| Setup-v2 non-overlapping rectangles | **21,587 / 32,768**, 0 invalid, 0 overlap, no erase |
+| Serialized UTF-8 setup | **396,763 / 1,048,576 bytes** |
+| Physical terrain | **1,267,189** occupied, **829,963** Empty |
+| Material law | 20 current immovable Solid/None non-empty IDs, no powder, liquid, growth, unknown IDs |
+| Exhaustive ordered final-cell replay | **2,097,152 cells; zero mismatches** |
+| Original Midge | 4×3 authored hull; unchanged spawn **(369,95)** |
+| Fully-in-bounds 19×15 exact-centre BFS | **24/24**, 477,258 connected centres |
+| Fully-in-bounds 23×19 exact-centre BFS | **24/24**, 435,374 connected centres |
+| Fully-in-bounds 31×27 exact-centre BFS | **24/24**, 362,847 connected centres |
+| Physical material rooting | 1,196,045-cell same-solid component includes the upper heart and deep root footing |
+| Six indexed PNGs decoded + compared to independently replayed final cells | **2,572,288 pixels; zero mismatches**, chunk CRC, deflate, Adler-32 and IEND pass |
+| Original JPG inspection | **GENUINE JPEG VIEWED** |
+| Full-resolution original PNG parity | **UNVERIFIED** |
+| Source-matched installed Godot / CyberDemoBridge / Rapier / Midge flight, collision, simulation, save-reopen | **NATIVE-UNTESTED** |
 
-Current CyberSand accepted source supports 32,768 starting rectangles; installed capacity has **not** been measured. Legacy 4,096 fallback would reject this 20,530-rectangle file. Static 4-neighbour Midge clearance does not replace physical native playtesting or prove guided flight quality.
+The **source** `CyberDemoBridge` advertises 32,768 starting rectangles, but an old/absent installed extension can return a **4,096** fallback and would reject 21,587 records. **Installed binary capacity UNMEASURED.** Static geometry, source validation and pixel parity are NOT native gameplay proof or owner acceptance.
 
-Run `node rebuild.cjs --verify` and `node verify-r2.cjs` from this directory to reproduce generator output and independently inspect all cells, PNGs, materials, and full-envelope exact-point BFS. The authentic source image and historical R1 records remain unchanged. Leave Draft/HOLD for Shepherd and independent auditors.
+Reproduction from this folder: `node rebuild.cjs --verify` and `node verify-r2.cjs` (provided scripts; Node CLI was **not executed in this pass**). The builder `generate()` was executed with an isolated V8-compatible module shim, with an independent Setup-v2 replay and independently decoded six PNGs. The native Workbench remains outstanding. The [machine receipt](evidence.json) retains previous R2B/C history and a new `rework_b3` field.
+
+**Leave Draft/HOLD.** Independent Shepherd/fidelity/technical review, source-matched native import, actual input/collision/water/flight progression and fresh-process save/reopen are still required.

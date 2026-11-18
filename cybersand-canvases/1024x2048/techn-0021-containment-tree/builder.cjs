@@ -467,6 +467,110 @@ line(817,1908,808,1825,M.COPPER,8);line(1001,1913,986,1820,M.IRON,9);
 // Wide source-derived overhead canopy rest zone remains free of unsafe loose
 // leaves; deep geology is extrapolated and none of this uses powder or liquid.
 
+
+// CANVAS R2B3 — physical-source silhouette, materially one multi-lobe rooted heart.
+// The 640×360 reference is a compact upper source-derived district. Deep root
+// services below y1100 are related NEW traversable world, not magnified pixels.
+poly([[462,312],[474,271],[498,248],[535,244],[571,256],[595,292],[602,329],[587,360],[555,401],[515,422],[478,392],[451,356]],M.MOSS);
+poly([[476,306],[489,273],[521,265],[557,279],[578,305],[578,348],[544,379],[511,389],[474,358]],M.VERDIGRIS);
+poly([[497,298],[523,273],[546,286],[565,307],[558,339],[534,369],[504,355],[486,322]],M.URANIUM);
+poly([[513,301],[529,285],[550,307],[544,338],[523,354],[499,327]],M.PHOSPHOR);
+poly([[523,293],[536,290],[546,304],[533,316],[519,308]],M.QUARTZ);
+poly([[587,263],[619,223],[664,213],[705,238],[739,277],[741,332],[716,367],[680,399],[642,410],[601,383],[575,321]],M.MOSS);
+poly([[601,275],[628,239],[666,230],[697,256],[721,289],[715,341],[684,376],[646,386],[609,356],[593,315]],M.VERDIGRIS);
+poly([[620,282],[648,246],[684,263],[706,300],[693,350],[667,367],[630,353],[613,322]],M.URANIUM);
+poly([[633,279],[658,259],[682,275],[696,311],[672,351],[644,344],[625,312]],M.PHOSPHOR);
+poly([[649,271],[668,266],[682,286],[676,307],[650,301]],M.QUARTZ);
+poly([[569,388],[609,359],[658,375],[700,410],[724,462],[709,520],[677,552],[620,540],[575,501],[547,449]],M.COPPER);
+poly([[583,419],[614,390],[661,399],[696,439],[697,496],[669,530],[622,517],[586,479]],M.VERDIGRIS);
+poly([[607,433],[631,409],[664,419],[688,457],[681,494],[648,513],[615,491],[594,466]],M.URANIUM);
+poly([[623,432],[645,420],[665,442],[668,475],[642,496],[618,473]],M.PHOSPHOR);
+poly([[636,431],[653,431],[665,449],[654,463],[633,454]],M.QUARTZ);
+for(const [mat,width,points] of [
+ [M.COPPER,19,[[545,382],[581,411],[612,463],[627,562]]],
+ [M.MOSS,24,[[686,354],[702,409],[673,475],[654,609]]],
+ [M.VERDIGRIS,22,[[513,371],[561,412],[574,473],[583,640]]],
+ [M.COPPER,21,[[650,511],[625,583],[650,712],[635,846]]]
+])for(let i=1;i<points.length;i++)line(...points[i-1],...points[i],mat,Math.max(12,width-i*2));
+for(const p of [
+ [[476,370],[491,349],[513,359],[512,383],[490,398]],
+ [[570,275],[589,262],[604,283],[599,308],[580,305]],
+ [[718,356],[731,341],[749,354],[739,378],[720,385]],
+ [[560,445],[577,433],[592,450],[588,475],[565,469]],
+ [[701,506],[714,489],[726,511],[714,534],[692,525]]
+])poly(p,M.AIR);
+for(const [mat,w,points] of [
+ [M.COPPER,7,[[465,332],[478,355],[493,363]]],
+ [M.MOSS,8,[[569,272],[582,286],[587,301]]],
+ [M.COPPER,7,[[721,359],[732,370],[744,350]]],
+ [M.VERDIGRIS,8,[[559,454],[577,439],[588,461]]]
+])for(let i=1;i<points.length;i++)line(...points[i-1],...points[i],mat,w);
+
+// Source-left unequal glass observatory with a continuous occupied floor,
+// three differentiated bays and rooted support into its existing lift core.
+poly([[83,411],[119,395],[332,396],[349,417],[345,610],[319,622],[104,622],[80,596]],M.CONCRETE);
+poly([[100,422],[122,410],[321,409],[334,428],[329,592],[312,604],[107,603],[94,584]],M.AIR);
+rect(95,605,240,14,M.STEEL);rect(101,620,231,8,M.BRASS);
+for(const [x,y,w,h] of [[119,443,48,61],[182,433,53,76],[259,443,55,59]]){
+ rect(x,y,w,h,M.GLASSBLOCK);rect(x+6,y+6,w-12,h-13,M.OBSIDIAN);
+ rect(x+11,y+13,w-22,6,M.CYAN);rect(x+10,y+h-18,w-19,5,M.AMBER);
+}
+rect(130,533,164,12,M.COPPER);
+for(const x of [132,191,253]){rect(x,545,31,45,M.IRON);rect(x+5,550,21,35,M.OBSIDIAN);disk(x+15,569,6,M.PHOSPHOR);}
+line(87,610,66,647,M.IRON,9);line(332,613,349,646,M.STEEL,9);
+
+// Source-right stepped virology wing: unequal tanks, distinct equipment
+// language and one grounded control balcony instead of repeated square rooms.
+poly([[805,308],[832,290],[972,301],[1016,327],[1024,584],[992,618],[803,606]],M.SLATE);
+poly([[815,330],[839,308],[963,319],[1000,345],[1008,565],[981,595],[811,581]],M.AIR);
+rect(801,589,213,16,M.STEEL);rect(817,606,188,6,M.BRASS);
+for(const [x,y,w,h] of [[832,371,36,139],[884,351,54,159],[952,388,39,124]]){
+ rect(x-4,y-8,w+8,h+14,M.STEEL);rect(x,y,w,h,M.GLASSBLOCK);
+ rect(x+5,y+8,w-10,h-18,M.OBSIDIAN);
+ for(let k=0;k<4;k++)disk(x+w/2-3+(k%2)*5,y+43+k*21,Math.max(4,8-k),k%2?M.URANIUM:M.PHOSPHOR);
+ rect(x-5,y+h+6,w+10,7,M.BRONZE);
+}
+rect(823,525,151,8,M.COPPER);
+for(let x=835;x<961;x+=34){rect(x,521,5,17,M.AMBER);rect(x+8,541,18,6,M.CYAN);}
+line(806,603,793,651,M.IRON,9);line(1000,600,1010,650,M.IRON,9);
+
+// Source's continuous guarded mid-level research transit facility: real
+// heavy deck, continuous truss/stringers, left/right abutments, service bays.
+// Final late portal cuts are retained as functional flyer access gates.
+rect(236,991,575,15,M.STEEL);rect(248,1006,549,9,M.BRASS);rect(257,1016,526,7,M.CONCRETE);
+rect(251,955,540,6,M.IRON);
+for(let xx=250;xx<=784;xx+=42){
+ rect(xx,961,5,27,M.BRASS);rect(xx+9,966,21,4,M.AMBER);
+ line(xx+2,1023,xx+29,1047,M.COPPER,6);
+}
+for(const [m,p] of [
+ [M.BASALT,[[244,1010],[226,1047],[218,1116],[284,1127],[311,1022]]],
+ [M.GRANITE,[[766,1010],[810,1040],[837,1102],[783,1140],[735,1019]]]
+])poly(p,m);
+for(const [mat,x,y,xe,ye,w] of [
+ [M.STEEL,275,1021,297,1096,13],[M.BRONZE,333,1021,315,1093,11],
+ [M.COPPER,450,1022,479,1083,10],[M.IRON,598,1024,622,1124,10],
+ [M.STEEL,715,1020,688,1108,11],[M.BRONZE,786,1021,806,1098,13]
+])line(x,y,xe,ye,mat,w);
+for(const [x,y,w,m] of [[269,1061,56,M.IRON],[473,1069,68,M.COPPER],[665,1068,79,M.STEEL]]){
+ rect(x,y,w,9,m);rect(x+6,y-13,w-12,8,M.OBSIDIAN);
+ rect(x+9,y-9,w-19,3,M.CYAN);line(x+5,y+10,x+15,y+39,M.BRONZE,7);
+}
+
+// Explicitly extrapolated DEEP world, not source-exact: two dissimilar
+// structurally supported assay/geological-service districts and rhizome spurs.
+poly([[402,1367],[440,1329],[489,1338],[523,1391],[521,1456],[477,1494],[416,1482]],M.GRANITE);
+poly([[417,1386],[445,1351],[480,1357],[505,1402],[499,1451],[466,1471],[429,1456]],M.AIR);
+rect(423,1463,81,12,M.STEEL);rect(431,1475,64,5,M.BRASS);
+line(432,1461,440,1400,M.COPPER,9);line(494,1460,479,1391,M.IRON,10);
+for(const [x,y] of [[449,1410],[478,1437]]){disk(x,y,12,M.VERDIGRIS);disk(x,y,6,M.PHOSPHOR);}
+line(508,1444,559,1510,M.MOSS,18);
+poly([[721,1587],[760,1551],[821,1573],[853,1617],[824,1696],[757,1709],[703,1660]],M.BASALT);
+poly([[737,1605],[762,1577],[808,1590],[829,1629],[807,1678],[758,1685],[727,1650]],M.AIR);
+rect(737,1682,91,13,M.STEEL);rect(745,1696,77,7,M.BRASS);
+for(const [x,y] of [[756,1634],[794,1644],[812,1619]]){line(x,1677,x,y,M.VERDIGRIS,6);disk(x,y,9,M.URANIUM);}
+line(744,1660,674,1600,M.COPPER,18);
+
 // The builder's existing late in-bounds actual Midge portal masks are retained
 // verbatim and applied AFTER this authored geometry; no waypoint relocation.
 

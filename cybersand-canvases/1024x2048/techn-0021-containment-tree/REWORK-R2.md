@@ -1,3 +1,13 @@
+## 18 November 2026 — Current R2B3 assigned finishing pass (Draft/HOLD)
+
+Assigned starting HEAD `04a7f0570029eb68151763044f0cf1464e31b672`. Physically changed **203,895 material cells**. Current Setup-v2: **1024×2048**, **21,587 / 32,768** rectangles, **396,763** bytes, **24/24 exact unchanged Midge sites** at all fully-in-bounds 19×15/23×19/31×27 envelopes. Independent final ordered-cell reconstruction shows zero malformed, overlapping, erased or mismatched cells. Six indexed material PNGs decode with full CRC/Adler and **2,572,288 pixel/material comparisons, zero mismatch**. A 1,196,045-cell connected structural component joins actual bright crown to bottom root foundation.
+
+Source-directed upper-core changes: enlarged **three chamber perforated living heart** supported by continuous branch arteries, distinct west functional observatory and east unequal monitoring/vial wing, substantially continuous cross-facility guarded transit stringers with deliberate vertical flight portals. Below y≈1100: source-consistent **newly extrapolated** assay/grotto and geological return facilities, not a scaled original screenshot. The authentic unchanged source JPEG was actually viewed; original full-resolution PNG comparison still **UNVERIFIED**. Installed bridge 32,768 capacity **UNMEASURED**; legacy fallback 4,096 would reject the current rectangle count. **NATIVE-UNTESTED**: no source-matched physical Godot/Rapier Midge input, collision, dynamic progression or fresh save/reopen. Leave OPEN Draft/HOLD, no Ready/merge, no engine/source/archived changes.
+
+The sections below are historical preceding R2B/R2C iterations; **current numerical results and current design intent are in [README.md](README.md) and [evidence.json](evidence.json)**.
+
+---
+
 ## Current 18 November 2026 R2C handoff — Draft/HOLD
 
 Exclusive assignment starting at `c40e9b4dff051e833316c38a3c885781a332aece`. The *physical* material grid has 370305 changed identities, 20530 coalesced rectangles, 377138 UTF-8 bytes, 24/24 exact Midge sites at each 19×15, 23×19, 31×27 envelope and complete material/PNG parity. Real source JPEG viewed (blob `64d7df6352b12d1aa57ce85f4925a722705bba1d`), full original PNG parity unverified. Rebuilt porous canopy/large luminous heart, multiple drifting supported roots, different resin research/vial laboratories, and lower return vault; lower geography is new source-consistent ecology rather than uniform stretching. Native Workbench/CyberDemoBridge/Rapier actor simulation and save/reopen NATIVE-UNTESTED. See current README/evidence for reproducible detail.
