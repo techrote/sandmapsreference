@@ -154,6 +154,31 @@ function runPipeline() {
     else if(y<1710)g[p]=(hash(Math.floor(x/46),Math.floor(y/55),4)%4===0)?106:49;
     else g[p]=(hash(Math.floor(x/35),Math.floor(y/44),5)%4===0)?122:98;
   }
+  // Capillary finisher: irregular secondary ribs arise from actual shaft/cave boundaries.
+  // Separate left/right seeding breaks vertical repetition; they extend only 19-52 cells.
+  for(let y0=70;y0<1980;y0+=49){
+    for(const side of [-1,1]){
+      const yy=y0+(hash(y0,side,74)%37)-18;
+      const centre=Math.max(70,Math.min(950,Math.round(502+70*Math.sin((yy+130)/188)+26*Math.sin(yy/74))));
+      let edge=-1;
+      for(let dist=0;dist<500;dist++){
+        const x=centre+side*dist;
+        if(x<6||x>=W-6)break;
+        if(g[yy*W+x]!==0){edge=x;break;}
+      }
+      if(edge<0)continue;
+      const m=yy<600?83:yy<880?97:yy<1210?98:yy<1690?106:122;
+      const rr=22+hash(y0,side,87)%33;
+      const inner=edge-side*rr;
+      const tipy=yy+((hash(y0,side,88)%53)-26);
+      const base=[edge+side*4,yy],joint=[edge-side*16,yy+((hash(y0,side,89)%21)-10)];
+      stroke(base[0],base[1],joint[0],joint[1],3,m);
+      stroke(joint[0],joint[1],inner,tipy,2+(hash(y0,side,90)%2),m);
+      const branch=[joint[0]-side*(16+hash(y0,side,95)%15),tipy+(hash(y0,side,93)%35)-17];
+      stroke(joint[0],joint[1],branch[0],branch[1],2,yy<880?86:122);
+      disk(inner,tipy,2+hash(y0,side,96)%3,yy<880?97:122);
+    }
+  }
   // Paint is not allowed to collapse the canonical safe flight centre lines.
   for(const b of branches)curve(b,37,0);
   const spawn=[507,133];

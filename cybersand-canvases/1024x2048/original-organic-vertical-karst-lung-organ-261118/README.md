@@ -54,9 +54,9 @@ All materials are inert immovable solids under the pinned material catalogue. No
 
 - Fixed seed: `0x4b415253`.
 - Deterministic builder: `build-karst-lung-organ.js` (Node.js; no dependencies); writes all artifacts to its optional first directory argument or its own directory.
-- Builder SHA-256: `e6accdaff1a3d29de278869ac43919fb2b69d9912b58eda9b75e0340eb446d1f`.
-- Full material plane SHA-256: `4f0db935e32c966057b49c63de41bbefc11d282b8cc586b5c4351ba6987260c5`.
-- Setup JSON SHA-256: `d47225a2c7671564447b7fc0d1d50695ec1262b232987acc1a8c73d4f1f7c9d2`.
+- Builder SHA-256: `1c23dd56bdc6690d348b7a4c3bac36bf9a49a180a373c50c0a331076c4ed4ae3`.
+- Full material plane SHA-256: `746c01a198825965f9ef74d04b04a68016733b4d2bdc68c21fbbaf5e15a8a90b`.
+- Setup JSON SHA-256: `512e099f8f9b2c46888c0ac0f8a936afc0490fb3fe0d2d8fb97cc83b5830445e`.
 - Full-grid parity: 0 mismatches, 0 overlapping rectangles.
 - PNG: uncompressed-deflate, 8-bit indexed palette; palette pixel **index** is real CyberSand material ID, not illustration. All 8 images independently decoded and checked for PNG CRC/Adler/index fidelity.
 - Current CyberSand accepted `main`: `018bd09503d7f079ddac52e225c2f7daf8d678bf`.

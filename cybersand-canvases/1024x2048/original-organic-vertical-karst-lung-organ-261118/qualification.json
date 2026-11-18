@@ -14,39 +14,39 @@
     "material_header_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
     "midge_definition_blob": "228399e38a0e0ab215b9f48698edce67a7a35799"
   },
-  "source_sha256": "e6accdaff1a3d29de278869ac43919fb2b69d9912b58eda9b75e0340eb446d1f",
-  "grid_sha256": "4f0db935e32c966057b49c63de41bbefc11d282b8cc586b5c4351ba6987260c5",
-  "json_sha256": "d47225a2c7671564447b7fc0d1d50695ec1262b232987acc1a8c73d4f1f7c9d2",
+  "source_sha256": "1c23dd56bdc6690d348b7a4c3bac36bf9a49a180a373c50c0a331076c4ed4ae3",
+  "grid_sha256": "746c01a198825965f9ef74d04b04a68016733b4d2bdc68c21fbbaf5e15a8a90b",
+  "json_sha256": "512e099f8f9b2c46888c0ac0f8a936afc0490fb3fe0d2d8fb97cc83b5830445e",
   "exact_cell_count": 2097152,
-  "painted_cells": 652642,
-  "empty_cells": 1444510,
-  "rectangle_count": 11958,
+  "painted_cells": 673543,
+  "empty_cells": 1423609,
+  "rectangle_count": 15263,
   "rectangle_limit_source": 32768,
   "native_installed_rectangle_capacity": "UNVERIFIED",
-  "setup_bytes": 214787,
+  "setup_bytes": 274828,
   "setup_limit_bytes": 1048576,
   "full_replay_mismatches": 0,
   "rectangle_overlaps": 0,
-  "disconnected_solid_cells_pruned": 14780,
+  "disconnected_solid_cells_pruned": 17357,
   "material_histogram": {
-    "0": 1444510,
-    "38": 73170,
-    "39": 70783,
-    "40": 100265,
-    "41": 15588,
-    "42": 65371,
-    "49": 34287,
-    "56": 10142,
+    "0": 1423609,
+    "38": 73131,
+    "39": 70617,
+    "40": 99551,
+    "41": 15436,
+    "42": 64899,
+    "49": 33974,
+    "56": 10099,
     "77": 834,
-    "83": 19333,
-    "86": 4143,
-    "97": 2964,
-    "98": 5587,
-    "99": 4220,
-    "100": 113634,
-    "101": 122275,
-    "106": 2764,
-    "122": 7282
+    "83": 22613,
+    "86": 7113,
+    "97": 5044,
+    "98": 8246,
+    "99": 4172,
+    "100": 113200,
+    "101": 121917,
+    "106": 6794,
+    "122": 15903
   },
   "all_nonempty_materials_immovable_inert_solid": true,
   "fluid_cells": 0,
@@ -59,7 +59,7 @@
     {
       "width": 19,
       "height": 15,
-      "reached": 1361452,
+      "reached": 1272576,
       "sites": [
         {
           "name": "Crown skylight",
@@ -122,7 +122,7 @@
     {
       "width": 23,
       "height": 19,
-      "reached": 1341369,
+      "reached": 1245142,
       "sites": [
         {
           "name": "Crown skylight",
@@ -185,7 +185,7 @@
     {
       "width": 31,
       "height": 27,
-      "reached": 1294431,
+      "reached": 1194940,
       "sites": [
         {
           "name": "Crown skylight",
@@ -256,7 +256,7 @@
     "conservative_31x27": {
       "width": 31,
       "height": 27,
-      "reached": 1219733,
+      "reached": 1120242,
       "sites": [
         {
           "name": "Crown skylight",
@@ -326,7 +326,7 @@
     "overview.png": {
       "width": 1024,
       "height": 2048,
-      "sha256": "f6142d9fee7c53f8519a819a5d0e24eff6f9cc8c2ebbd503423e60f145048002",
+      "sha256": "90bb5e68fbf5a1cbbb1c27e170571a0c20186a718a0f0bc8dcdae3b553b5dd6b",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
@@ -335,7 +335,7 @@
     "01-sink-crown.png": {
       "width": 384,
       "height": 320,
-      "sha256": "783a57eaa83c5d6edb56b0cc969e1b5f1700e09d0a108beedee47387d9bc1915",
+      "sha256": "3a42c1cf720dea090cc28068ac4b14ff554ae7ec124cb7225cd3fc1e04aec9df",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
@@ -349,7 +349,7 @@
     "02-root-orchard.png": {
       "width": 384,
       "height": 320,
-      "sha256": "89b9d559218c09b1733b4a0a6e52c8725f496103b0dee5cb2758a4e4c166ad6c",
+      "sha256": "956d755cdf4f9d26b3a0e3e729b59aebbe17a357a457339390f2ac60c2d41fa9",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
@@ -377,7 +377,7 @@
     "04-fossil-atrium.png": {
       "width": 384,
       "height": 320,
-      "sha256": "2cb6bdf2b7a69e90479d79236e90459cf9301b4368f0184e9f722043ab396479",
+      "sha256": "699ab38ac042e555e53174c241839416ec6caff3359d92601882f89e0721ed4e",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
@@ -391,7 +391,7 @@
     "05-moonwell-garden.png": {
       "width": 384,
       "height": 320,
-      "sha256": "81d73742fed8fdd2aa8a4ef97854671aa4932d2ee5b97510e1e2408bb4211c60",
+      "sha256": "cedb9783086ebb7dc096e145db0c27526e4c177972da8805ad7348801ff2c684",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
@@ -419,7 +419,7 @@
     "thumbnail.png": {
       "width": 256,
       "height": 512,
-      "sha256": "7332849981f986b6d4f1923db1dd806ac6f67ade803b0642025ed631ed098b0b",
+      "sha256": "ab47e59e662fbc43b6d6dfc16cc45103fa84d5a1caedc0be765bc6aac80755e0",
       "crc_pass": true,
       "adler_pass": true,
       "decoded_material_mismatches": 0,
