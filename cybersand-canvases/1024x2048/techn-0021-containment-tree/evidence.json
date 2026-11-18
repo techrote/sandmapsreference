@@ -15,11 +15,11 @@
     2048
   ],
   "seed": 210058,
-  "rectangles": 22187,
+  "rectangles": 22713,
   "rectangle_budget": 32768,
-  "json_bytes": 405647,
+  "json_bytes": 415848,
   "json_byte_budget": 1048576,
-  "stamped_cells": 1216026,
+  "stamped_cells": 1215321,
   "material_cells_verified": 2097152,
   "mismatches": 0,
   "used_material_ids": [
@@ -47,34 +47,34 @@
     127
   ],
   "material_counts": {
-    "0": 881126,
-    "39": 3085,
-    "40": 127550,
-    "42": 103106,
-    "49": 145421,
-    "50": 29447,
-    "52": 28432,
-    "53": 89978,
-    "54": 101812,
-    "58": 101642,
-    "62": 87694,
+    "0": 881831,
+    "39": 3079,
+    "40": 126203,
+    "42": 85282,
+    "49": 145304,
+    "50": 28900,
+    "52": 28232,
+    "53": 84671,
+    "54": 95443,
+    "58": 103161,
+    "62": 84985,
     "65": 1067,
-    "77": 4252,
-    "79": 7465,
-    "100": 183612,
-    "101": 125655,
-    "119": 30745,
-    "120": 15950,
+    "77": 4324,
+    "79": 7088,
+    "100": 197217,
+    "101": 128586,
+    "119": 32342,
+    "120": 20564,
     "121": 5453,
-    "122": 4705,
-    "123": 4524,
-    "127": 14431
+    "122": 4369,
+    "123": 3214,
+    "127": 25837
   },
   "clearance_envelope": [
     19,
     15
   ],
-  "connected_clearance_centres": 501421,
+  "connected_clearance_centres": 503531,
   "spawn": [
     369,
     95
@@ -317,7 +317,7 @@
         19,
         15
       ],
-      "legal_connected_centres": 501421,
+      "legal_connected_centres": 503531,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -327,7 +327,7 @@
         23,
         19
       ],
-      "legal_connected_centres": 459057,
+      "legal_connected_centres": 461004,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -337,7 +337,7 @@
         31,
         27
       ],
-      "legal_connected_centres": 381387,
+      "legal_connected_centres": 382842,
       "exact_sites": 24,
       "passed": 24,
       "failed": []
@@ -446,32 +446,29 @@
   "last_rework": {
     "worker": "B",
     "date": "2026-11-18",
-    "assigned_head": "c71cddfa28fef009f2b13a685df477ee79564b15",
-    "scope": "scale-first source-core horizontal research gallery macro reconstruction and new west resin excavation/east return-pump cavern",
-    "physical_cells_changed": 235205,
-    "added_cells": 27661,
-    "excavated_cells": 91761,
-    "reclassified_cells": 115783,
+    "assigned_head": "1dd459e5aea4d2e5475992fe077621d04edc4a79",
+    "scope": "joined physical horizontal laboratory decks, asymmetric supported thresholds, branching specimen pores and anchored tissue",
+    "physical_cells_changed": 69938,
+    "added_cells": 3518,
+    "excavated_cells": 4223,
+    "reclassified_cells": 62197,
     "extent": [
       1024,
       2048
     ],
-    "rectangles": 22187,
-    "json_bytes": 405647,
-    "occupied_cells": 1216026,
-    "exact_sites": "24/24 at 19x15, 23x19 and 31x27, unchanged original coordinates",
-    "gantry_steps": [
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "occupied_cells": 1215321,
+    "exact_named_sites": "24/24 at 19x15, 23x19 and 31x27",
+    "direct_west_east_gantry_steps": [
       373,
       373,
       373
     ],
-    "previous_31x27_air_union": "ALL previous connected legal-centre hull footprints preserved",
-    "structural_probes": "6/6 connected to deep root at (610,2035) by cardinal full-solid BFS",
-    "genuine_source": "unchanged committed source JPEG visually inspected, full-size original PNG pixel parity unverified",
-    "source_derived": "compact upper horizontal dome, organism, research gallery, asymmetric east vial wing",
-    "extrapolated": "western root-resin excavation, eastern counterbalanced service plant, lower geological returns",
-    "installed_bridge": "UNMEASURED: accepted source 32768; legacy fallback 4096",
-    "native": "NATIVE-UNTESTED: no physical Workbench/Godot/Rapier input/collision/simulation/fresh-process save-reopen"
+    "structural_anchors": "6/6 in cardinally connected source-material footing",
+    "source_jpeg": "genuine committed preview used by predecessor and independent reviews; this run is source-JPEG visually unverified",
+    "original_png": "full original image pixel comparison UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge capacity and live Midge/Rapier untested"
   },
   "rework_b6": {
     "worker": "B",
@@ -531,9 +528,9 @@
     "native": "NATIVE-UNTESTED"
   },
   "structural_support": {
-    "solid_component_cells": 1181801,
-    "solid_components": 67,
-    "largest_component_cells": 1181801,
+    "solid_component_cells": 1178609,
+    "solid_components": 66,
+    "largest_component_cells": 1178609,
     "probes": [
       [
         600,
@@ -624,9 +621,9 @@
       1024,
       2048
     ],
-    "rectangles": 22187,
-    "json_bytes": 405647,
-    "solid_components": 67,
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "solid_components": 66,
     "structural_probes": "6/6 cardinal rooted",
     "source_jpeg": "authentic committed 640x360 directly viewed",
     "original_png": "full-resolution source-PNG parity UNVERIFIED",
@@ -652,9 +649,9 @@
       1024,
       2048
     ],
-    "rectangles": 22187,
-    "json_bytes": 405647,
-    "occupied_cells": 1216026,
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "occupied_cells": 1215321,
     "exact_sites": "24/24 at all 3 conservative hulls",
     "gantry_steps": [
       373,
@@ -678,9 +675,9 @@
       1024,
       2048
     ],
-    "rectangles": 22187,
-    "json_bytes": 405647,
-    "occupied_cells": 1216026,
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "occupied_cells": 1215321,
     "exact_sites": "24/24 at 19x15,23x19,31x27",
     "gantry_steps": [
       373,
@@ -720,5 +717,32 @@
     "extrapolated": "western root-resin excavation, eastern counterbalanced service plant, lower geological returns",
     "installed_bridge": "UNMEASURED: accepted source 32768; legacy fallback 4096",
     "native": "NATIVE-UNTESTED: no physical Workbench/Godot/Rapier input/collision/simulation/fresh-process save-reopen"
+  },
+  "rework_b13": {
+    "worker": "B",
+    "date": "2026-11-18",
+    "assigned_head": "1dd459e5aea4d2e5475992fe077621d04edc4a79",
+    "scope": "joined physical horizontal laboratory decks, asymmetric supported thresholds, branching specimen pores and anchored tissue",
+    "physical_cells_changed": 69938,
+    "added_cells": 3518,
+    "excavated_cells": 4223,
+    "reclassified_cells": 62197,
+    "extent": [
+      1024,
+      2048
+    ],
+    "rectangles": 22713,
+    "json_bytes": 415848,
+    "occupied_cells": 1215321,
+    "exact_named_sites": "24/24 at 19x15, 23x19 and 31x27",
+    "direct_west_east_gantry_steps": [
+      373,
+      373,
+      373
+    ],
+    "structural_anchors": "6/6 in cardinally connected source-material footing",
+    "source_jpeg": "genuine committed preview used by predecessor and independent reviews; this run is source-JPEG visually unverified",
+    "original_png": "full original image pixel comparison UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge capacity and live Midge/Rapier untested"
   }
 }

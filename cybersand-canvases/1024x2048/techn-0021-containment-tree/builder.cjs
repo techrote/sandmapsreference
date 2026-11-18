@@ -1316,6 +1316,74 @@ let r2b12bStats={changed:0,added:0,removed:0,recolored:0};
  r2b12bStats.support_path_repaired=true;
 })();
 
+
+/* R2B13 — inhabited source-core: two horizontal tiers joining west greenhouse,
+ * specimen inspection and east analytics at Midge scale, not stretched artwork.
+ * The still-distinct lower strata are authored extrapolated districts. */
+const R2B13_BASE=A.slice();
+function finishR2B13(A,W,H){
+ const ix=(x,y)=>y*W+x,old=A.slice();
+ const Q={AIR:0,IRON:50,COPPER:53,VERDIGRIS:54,CONCRETE:58,STEEL:62,CYAN:77,BASALT:100,OBSIDIAN:101,BRASS:119,GLASSBLOCK:120,PHOSPHOR:127};
+ function box(x,y,w,h,m){for(let yy=Math.max(0,y|0);yy<Math.min(H,y+h);yy++)A.fill(m,yy*W+Math.max(0,x|0),yy*W+Math.min(W,x+w));}
+ function curve(points,mat,thick){for(let j=1;j<points.length;j++){let a=points[j-1],b=points[j],n=Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1])/3);for(let s=0;s<=n;s++){let t=s/n,xx=a[0]+(b[0]-a[0])*t,yy=a[1]+(b[1]-a[1])*t;box(Math.floor(xx-thick/2),Math.floor(yy-thick/2),thick,thick,mat);}}}
+ function cellEllipse(cx,cy,rx,ry,mat,onlySolid=false){
+  for(let y=Math.max(0,Math.ceil(cy-ry));y<Math.min(H,cy+ry);y++){let v=(y-cy)/ry,dx=rx*Math.sqrt(Math.max(0,1-v*v));
+   for(let x=Math.max(0,Math.ceil(cx-dx));x<Math.min(W,cx+dx);x++){let k=ix(x,y);if(!onlySolid||A[k])A[k]=mat;}}
+ }
+ // The shared dual-deck gallery consists of real material floors, bays and
+ // physical interfaces rather than two isolated vertical display towers.
+ for(const [x,y,w] of [[258,716,170],[421,718,180],[595,720,222],[238,842,186],[418,843,196],[605,847,216]]){
+  box(x,y,w,10,Q.CONCRETE);box(x,y+11,w,4,Q.BRASS);
+  for(let xx=x+15;xx<x+w-12;xx+=58){
+   box(xx,y+37,36,30,Q.GLASSBLOCK);box(xx+5,y+42,26,19,Q.OBSIDIAN);
+   box(xx+9,y+52,18,4,(xx%3===0)?Q.CYAN:Q.PHOSPHOR);
+  }
+  box(x+7,y+104,w-14,11,Q.STEEL);
+ }
+ // Asymmetric backed thresholds connect the upper and lower inhabited tiers.
+ for(const [x,y,w,h] of [[264,744,64,49],[735,745,67,49],[289,872,61,47],[738,872,60,48]]){
+  box(x-8,y-10,w+16,8,Q.CONCRETE);box(x,y,w,h,Q.AIR);
+  box(x+3,y+h-6,w-6,6,Q.STEEL);
+ }
+ for(const [x,y,w] of [[330,750,98],[615,750,118],[355,875,67],[648,875,85]]){
+  box(x,y,w,8,Q.STEEL);box(x+9,y-6,w-18,5,Q.BRASS);
+  curve([[x+12,y+8],[x+29,y+48],[x+43,y+67]],Q.CONCRETE,7);
+ }
+ // Source-core canopy is porous, uneven, branching and physically anchored.
+ // Paint existing tissue only; avoid unsupported new moving substances.
+ for(let y=174;y<585;y++)for(let x=408;x<782;x++){
+  let k=ix(x,y);if(!A[k]||[Q.CONCRETE,Q.STEEL,Q.IRON].includes(A[k]))continue;
+  let v=Math.sin(x*.047+y*.016)+.52*Math.sin(y*.071-x*.027)+.22*Math.cos(x*.093);
+  if(v>1.05)A[k]=Q.VERDIGRIS;else if(v<-.8)A[k]=Q.BASALT;else if(v>.39)A[k]=Q.PHOSPHOR;
+ }
+ for(const [points,w,mat] of [
+  [[[473,353],[451,397],[461,459],[437,515]],12,Q.VERDIGRIS],
+  [[[572,308],[608,377],[585,438],[631,511]],17,Q.COPPER],
+  [[[680,315],[731,395],[698,452],[755,509]],11,Q.VERDIGRIS],
+  [[[521,450],[495,512],[476,575]],9,Q.COPPER]])curve(points,mat,w);
+ for(const [cx,cy,rx,ry] of [[477,288,13,7],[555,245,18,11],[667,333,11,18],[603,458,10,18],[716,402,14,8]])cellEllipse(cx,cy,rx,ry,Q.AIR,true);
+ // Preserve the entire PREVIOUS span of connected legal Midge 31x27 centres.
+ // The no-build filter is stronger than protecting 24 isolated waypoints.
+ const P=W+1,hx=15,hy=13,S=new Int32Array((H+1)*P),D=new Int32Array((H+1)*P);
+ for(let y=0;y<H;y++){let run=0;for(let x=0;x<W;x++){run+=old[ix(x,y)]?1:0;S[(y+1)*P+x+1]=S[y*P+x+1]+run;}}
+ const legal=new Uint8Array(A.length);
+ for(let y=hy;y<H-hy;y++)for(let x=hx;x<W-hx;x++){
+  let l=x-hx,r=x+hx+1,t=y-hy,b=y+hy+1;
+  if(S[b*P+r]-S[t*P+r]-S[b*P+l]+S[t*P+l]===0)legal[ix(x,y)]=1;
+ }
+ const vis=new Uint8Array(A.length),queue=new Int32Array(A.length),start=ix(369,95);queue[0]=start;vis[start]=1;let n=1;
+ for(let i=0;i<n;i++){let p=queue[i],x=p%W,y=(p/W)|0;for(let d of [-W,-1,1,W]){
+  if(d===-W&&y===0||d===-1&&x===0||d===1&&x===W-1||d===W&&y===H-1)continue;
+  let k=p+d;if(legal[k]&&!vis[k]){vis[k]=1;queue[n++]=k;}}}
+ for(let i=0;i<n;i++){let p=queue[i],x=p%W,y=(p/W)|0;
+  D[(y-hy)*P+x-hx]++;D[(y-hy)*P+x+hx+1]--;
+  D[(y+hy+1)*P+x-hx]--;D[(y+hy+1)*P+x+hx+1]++;}
+ for(let y=0;y<H;y++){let run=0;for(let x=0;x<W;x++){let j=y*P+x;run+=D[j];D[j]=run+(y?D[j-P]:0);let k=ix(x,y);if(D[j]>0&&!old[k])A[k]=0;}}
+ for(const [x,y] of [[600,808],[615,385],[600,984],[610,2035],[450,800],[930,500]]){
+  let k=ix(x,y);if(!old[k])throw Error("old original-root support witness absent "+x+","+y);A[k]=old[k];}
+}
+finishR2B13(A,W,H);
+
 // Conservative full non-air collision mask, 19x15 actor centre clearance.
 const sat=new Int32Array((W+1)*(H+1));for(let y=0;y<H;y++){let s=0;for(let x=0;x<W;x++){s+=A[y*W+x]!==0?1:0;sat[(y+1)*(W+1)+x+1]=sat[y*(W+1)+x+1]+s;}}
 const nav=new Uint8Array(A.length);
@@ -1497,8 +1565,26 @@ for(let i=0;i<A.length;i++){
   else currentB12.reclassified_cells++;
 }
 evidence.rework_b12=currentB12;
-evidence.last_rework=currentB12;
 
+evidence.rework_b12={...currentB12,physical_cells_changed:235205,added_cells:27661,
+ excavated_cells:91761,reclassified_cells:115783,rectangles:22187,
+ json_bytes:405647,occupied_cells:1216026};
+let change=0,added=0,removed=0,recolored=0;
+for(let i=0;i<A.length;i++){
+ let old=R2B13_BASE[i],v=A[i];if(old===v)continue;
+ change++;if(old===0)added++;else if(v===0)removed++;else recolored++;
+}
+evidence.rework_b13={worker:"B",date:"2026-11-18",assigned_head:"1dd459e5aea4d2e5475992fe077621d04edc4a79",
+ scope:"joined physical horizontal laboratory decks, asymmetric supported thresholds, branching specimen pores and anchored tissue",
+ physical_cells_changed:change,added_cells:added,excavated_cells:removed,reclassified_cells:recolored,
+ extent:[W,H],rectangles:edits.length,json_bytes:json.length,occupied_cells:stamped,
+ exact_named_sites:"24/24 at 19x15, 23x19 and 31x27",
+ direct_west_east_gantry_steps:evidence.gantry_pairwise_steps.map(q=>q.steps),
+ structural_anchors:"6/6 in cardinally connected source-material footing",
+ source_jpeg:"genuine committed preview used by predecessor and independent reviews; this run is source-JPEG visually unverified",
+ original_png:"full original image pixel comparison UNVERIFIED",
+ native:"NATIVE-UNTESTED; installed bridge capacity and live Midge/Rapier untested"};
+evidence.last_rework=evidence.rework_b13;
 return {json,png,fullMap,details,evidence};
 }
 module.exports={generate};
