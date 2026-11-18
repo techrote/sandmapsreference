@@ -1,14 +1,14 @@
 {
   "state": "DRAFT/HOLD; NOT native/owner accepted",
-  "worker": "Canvas Reworker B — R2B6",
-  "starting_head": "dee3558aa17e0812228575c359a0ad1915b6a101",
+  "worker": "Canvas Reworker B — R2B7",
+  "starting_head": "66c7072ebc768826eac0a2b98ed850514f3dd2c8",
   "engine_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
   "source": {
     "catalogue_id": "ruins-0013",
     "original_png_path": "artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png",
     "original_png_blob": "0611d05df37b443a411c1ebf9dba663082e25975",
     "source_jpeg_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
-    "visual_inspection": "Authentic unmodified gh-pages JPEG source blob adfb56729b2c443a513892fbe803718dc8b71e52 viewed directly and compared with material overview and native 1:1 west relay, east archive and substrate galleries. Original full PNG parity UNVERIFIED.",
+    "visual_inspection": "Genuine committed 640x360 source-reference-preview.jpg decoded/viewed directly against R2B6 and R2B7 real material-grid previews and 1:1 tree/bridge/guardian; original full-resolution PNG pixel parity UNVERIFIED.",
     "original_png_pixel_parity": "UNVERIFIED"
   },
   "format": {
@@ -18,13 +18,14 @@
       2048
     ],
     "cells": 4194304,
-    "rectangles": 25401,
+    "rectangles": 21177,
     "rectangle_cap": 32768,
-    "json_bytes": 480108,
+    "json_bytes": 403712,
     "json_cap": 1048576,
     "reconstruction_mismatches": 0,
     "rectangle_overlaps": 0,
-    "covered_material_cells": 1736631
+    "covered_material_cells": 1797619,
+    "encoded_edit_visits": 1797619
   },
   "actor": {
     "model": "midge",
@@ -211,24 +212,33 @@
             19,
             15
           ],
-          "connected_centres": 2158725,
-          "exact_sites_connected": 23
+          "connected_centres": 2121764,
+          "exact_sites_connected": 23,
+          "bypass_connected": 6,
+          "fully_in_bounds": true,
+          "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
         },
         {
           "size": [
             23,
             19
           ],
-          "connected_centres": 2101669,
-          "exact_sites_connected": 23
+          "connected_centres": 2065455,
+          "exact_sites_connected": 23,
+          "bypass_connected": 6,
+          "fully_in_bounds": true,
+          "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
         },
         {
           "size": [
             31,
             27
           ],
-          "connected_centres": 1988967,
-          "exact_sites_connected": 23
+          "connected_centres": 1954939,
+          "exact_sites_connected": 23,
+          "bypass_connected": 6,
+          "fully_in_bounds": true,
+          "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
         }
       ],
       "archival_regressions": {
@@ -353,7 +363,7 @@
   "evidence": [
     {
       "file": "twin-ravine-temples-preview.png",
-      "blob_sha": "72fbfe00014ca2dc24e865336d708e0bf219361f",
+      "blob_sha": "daa0b1eac74b16139cbe6113139f5911890f44e9",
       "size_bytes": 525480,
       "crc32": "84ad8ff2",
       "extent": [
@@ -372,7 +382,7 @@
     },
     {
       "file": "temples-material-2048.png",
-      "blob_sha": "dc198fbbf7764a91dfb43938dd774312e2fb8a3b",
+      "blob_sha": "52dcf1a0d54084b64c57a4674b3ed4cee107d44a",
       "size_bytes": 2099488,
       "crc32": "82623d9e",
       "extent": [
@@ -391,7 +401,7 @@
     },
     {
       "file": "temples-detail-west-tree.png",
-      "blob_sha": "b56acceab9f350ccbbf35814c3283f7a986746e3",
+      "blob_sha": "88e33c641a70f3bcdd898527b37946751d0f8175",
       "size_bytes": 131722,
       "crc32": "2bd17bc2",
       "extent": [
@@ -410,7 +420,7 @@
     },
     {
       "file": "temples-detail-west-shrine.png",
-      "blob_sha": "4d7e5a131bbbdcfe5521468622166cde43482027",
+      "blob_sha": "32d633fd0f0f9a3f9db5a6736c43ba6f55e1dce6",
       "size_bytes": 131722,
       "crc32": "4ab4e5e1",
       "extent": [
@@ -429,7 +439,7 @@
     },
     {
       "file": "temples-detail-living-bridge.png",
-      "blob_sha": "6ff10171f275a0a347d1f82ee66cd92e5732a74f",
+      "blob_sha": "351ea9cd551b08cc47e7fdf2547a801dde6b67dc",
       "size_bytes": 131722,
       "crc32": "b92e350b",
       "extent": [
@@ -448,7 +458,7 @@
     },
     {
       "file": "temples-detail-bridge-west-anchor.png",
-      "blob_sha": "eec9ca68bf10d75145af3a8753a55481478e3a02",
+      "blob_sha": "6330d763aef2edf94bf68f33a71d641bc4417772",
       "size_bytes": 131722,
       "crc32": "353ce7cb",
       "extent": [
@@ -467,7 +477,7 @@
     },
     {
       "file": "temples-detail-bridge-east-anchor.png",
-      "blob_sha": "74587eb010affbf42741d3de59385dc6353f6b9c",
+      "blob_sha": "ae12f6e8c153b6f1ea5f8afe431d37b5753b4aa4",
       "size_bytes": 131722,
       "crc32": "b61e00d4",
       "extent": [
@@ -486,7 +496,7 @@
     },
     {
       "file": "temples-detail-east-bypass.png",
-      "blob_sha": "d73eba4cbf89444558412b0e8d727cfdd44f7a84",
+      "blob_sha": "cda83eae8a05c4e3c48a8bc181e975e753cf9768",
       "size_bytes": 131722,
       "crc32": "a5b4d2ad",
       "extent": [
@@ -505,7 +515,7 @@
     },
     {
       "file": "temples-detail-east-guardian.png",
-      "blob_sha": "54ac59254471f65fdd06e65470cd8fa33b89779f",
+      "blob_sha": "2ecf73d7e111abeb6366a1b2a1111fe40318d90a",
       "size_bytes": 131722,
       "crc32": "759c5bca",
       "extent": [
@@ -524,7 +534,7 @@
     },
     {
       "file": "temples-detail-east-crypt.png",
-      "blob_sha": "cba0b234bbece1fd2b38936dacf5d696b82ab867",
+      "blob_sha": "ffc1bc016c2254aa83acef569d670fc05141d5fd",
       "size_bytes": 131722,
       "crc32": "423a65de",
       "extent": [
@@ -543,7 +553,7 @@
     },
     {
       "file": "temples-detail-root-passages.png",
-      "blob_sha": "4a03013c60738121f7a24c69d2f2e8ec19259ed4",
+      "blob_sha": "acdc0edd61bb7fca1c080ebe4fed531d5abc235c",
       "size_bytes": 131722,
       "crc32": "86d719c8",
       "extent": [
@@ -562,7 +572,7 @@
     },
     {
       "file": "temples-detail-lower-ravine.png",
-      "blob_sha": "522ae139fb09512dfeba8f5144dcf037dccf8c47",
+      "blob_sha": "570a5d854f513ac9057c215a7b8a1295396fa60b",
       "size_bytes": 131722,
       "crc32": "9b9f53de",
       "extent": [
@@ -581,7 +591,7 @@
     },
     {
       "file": "temples-detail-west-root-relay.png",
-      "blob_sha": "cc0fe7a3874d36b0a3459b699b2a30adf85068c2",
+      "blob_sha": "6548db53ea307d8ce26fa6a089d519176bb67a38",
       "size_bytes": 131722,
       "crc32": "3197d32a",
       "extent": [
@@ -600,7 +610,7 @@
     },
     {
       "file": "temples-detail-east-lantern-archive.png",
-      "blob_sha": "2bd0e74df45463c378043eb5dcd3e35d343a7455",
+      "blob_sha": "bb0447668fb4476d37f17a3888e6689a7c3365d8",
       "size_bytes": 131722,
       "crc32": "d3063ee1",
       "extent": [
@@ -619,7 +629,7 @@
     },
     {
       "file": "temples-detail-valley-substrate.png",
-      "blob_sha": "d45626e2a68523d97d661f6b48d34f85ad76a7a4",
+      "blob_sha": "fe4d9576889a4e3d678452048034b3ff874aefe1",
       "size_bytes": 131722,
       "crc32": "aec1b540",
       "extent": [
@@ -647,19 +657,42 @@
     "native_rectangle_capacity_readback": "NOT RUN",
     "actor_input_collision": "NOT RUN",
     "simulation": "NOT RUN",
-    "save_reopen": "NOT RUN"
+    "save_reopen": "NOT RUN",
+    "status": "NATIVE-UNTESTED",
+    "installed_bridge_capacity": "UNMEASURED",
+    "source_bridge_capacity": 32768,
+    "legacy_fallback": 4096
   },
   "limitations": [
-    "Material-cell style does not claim exact original-PNG pixel parity; authentic source JPEG seen; full original-PNG comparison UNVERIFIED",
-    "The east sanctuary still has a deliberate open undercroft and exterior air chimney for 31x27 fly-around; source fidelity requires owner visual adjudication",
-    "Five old R1 regression positions differ from the updated semantic map; 13/17, 13/17, 12/17 reachable at 19x15/23x19/31x27, whereas all 23 current exact named sites PASS",
-    "Native installed Godot/CyberDemoBridge capacity, real Midge input/collision, simulation, save/reopen remain NATIVE-UNTESTED; Node CLI verifier was not executed in this constrained tool runtime"
+    "Direct source JPEG seen, original full-resolution PNG unavailable to binary read: pixel parity UNVERIFIED",
+    "All 29 semantic/bypass points and 4-connected solid bridge verified STATIC, not proof of actual Midge flight/collision, gameplay pacing, structural simulation or save/reopen",
+    "Standalone Node CLI not executed; builder source evaluated twice in isolated V8, final JSON rebuilt from exact material cells; all committed PNGs decoded against material plane",
+    "Installed Godot/CyberDemoBridge/Rapier runtime unavailable; actual source bridge 32768 but legacy installed 4096 still possible",
+    "Eight remaining minor non-boundary solid components (largest 1838 cells) require architectural intent review; four formerly major 15962/9416/7963/5589-cell detachments rejoined main ground"
   ],
   "bridge_and_air_topology": {
-    "repaired_from_head": "85c3ef0166004cd9480d3b1b933d51045d2e19f2",
+    "repaired_from_head": "66c7072ebc768826eac0a2b98ed850514f3dd2c8",
     "solid_probe": [
-      1070,
-      705
+      [
+        1070,
+        705
+      ],
+      [
+        586,
+        745
+      ],
+      [
+        1455,
+        655
+      ],
+      [
+        1580,
+        680
+      ],
+      [
+        1770,
+        730
+      ]
     ],
     "west_bank_anchor": [
       586,
@@ -674,9 +707,9 @@
       730
     ],
     "same_eight_neighbour_nonempty_component": true,
-    "bridge_component_cells": 1691644,
-    "disconnected_solid_components": 12,
-    "largest_other_component_cells": 15962,
+    "bridge_component_cells": 1793768,
+    "disconnected_solid_components": 8,
+    "largest_other_component_cells": 1838,
     "flyable_east_wall_bypass": {
       "exterior_chimney": {
         "x": 1992,
@@ -719,7 +752,8 @@
     },
     "comment": "Intentional open-air east route solves the 2D solid-span separation; review source-fidelity compromise of cantilevered upper east cap.",
     "same_four_neighbour_nonempty_component": true,
-    "solid_connected_neighbours": "FOUR cardinal directions; all five rooted bridge/bank probes in one 1691644-cell component."
+    "solid_connected_neighbours": "FOUR cardinal directions; all five rooted bridge/bank probes in one 1691644-cell component.",
+    "solid_components_total": 9
   },
   "rework_p1": {
     "assigned_starting_head": "85c3ef0166004cd9480d3b1b933d51045d2e19f2",
@@ -985,5 +1019,89 @@
     "source_full_png": "UNVERIFIED",
     "node_cli": "NOT RUN — source-equivalent deterministic function stored in builder and material grid fully replayed",
     "native": "NATIVE-UNTESTED; installed bridge capacity not checked"
+  },
+  "rework_b7": {
+    "assigned_starting_head": "66c7072ebc768826eac0a2b98ed850514f3dd2c8",
+    "owner": "Canvas Reworker B",
+    "source_jpeg_blob": "adfb56729b2c443a513892fbe803718dc8b71e52",
+    "scope": "Consolidated broad asymmetric ancient canopy; reinforced thick cliff buttresses; one source-inspired intertwined triple-cord root bridge replacing diagonal crosshatched truss and preserving all five bank/bridge solid probes; unlike west ritual and east limestone thresholds with full-size east sanctuary flight hatch and anchored guardian neck; eroded attached guardian face; anchored all four previously detached major shelf components.",
+    "changed_final_material_cells": 253764,
+    "new_nonempty_cells": 87473,
+    "erased_nonempty_cells": 26485,
+    "extent": [
+      2048,
+      2048
+    ],
+    "rectangles": 21177,
+    "json_bytes": 403712,
+    "occupied_cells": 1797619,
+    "material_counts": {
+      "0": 2396685,
+      "38": 19218,
+      "40": 272966,
+      "41": 175029,
+      "42": 238094,
+      "49": 30272,
+      "52": 3552,
+      "100": 305357,
+      "101": 753131
+    },
+    "material_allowlist": [
+      38,
+      40,
+      41,
+      42,
+      49,
+      52,
+      100,
+      101
+    ],
+    "full_plane_cells_replayed": 4194304,
+    "clearance": [
+      {
+        "size": [
+          19,
+          15
+        ],
+        "connected_centres": 2121764,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "fully_in_bounds": true,
+        "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
+      },
+      {
+        "size": [
+          23,
+          19
+        ],
+        "connected_centres": 2065455,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "fully_in_bounds": true,
+        "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
+      },
+      {
+        "size": [
+          31,
+          27
+        ],
+        "connected_centres": 1954939,
+        "exact_sites_connected": 23,
+        "bypass_connected": 6,
+        "fully_in_bounds": true,
+        "connectivity": "exact 4-neighbour air-centre BFS, integral-image occupancy, no proxy"
+      }
+    ],
+    "bridge_cardinal_component_cells": 1793768,
+    "solid_components": 9,
+    "largest_other_component_cells": 1838,
+    "regenerated_material_pngs": 15,
+    "pixel_index_comparisons": 8650752,
+    "pixel_mismatches": 0,
+    "chunk_crc_errors": 0,
+    "stored_zlib_adler_errors": 0,
+    "node_cli": "NOT EXECUTED (GitHub V8 source-equivalent generator/decoder replay, not Node CLI)",
+    "original_full_png": "UNVERIFIED",
+    "native": "NATIVE-UNTESTED; installed bridge capability and Godot/Rapier simulation/input/collision/save-reopen unmeasured."
   }
 }

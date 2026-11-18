@@ -389,6 +389,82 @@ function finishR2B6(A,W,H) {
  for(let y=348;y<593;y++)for(let x=1580;x<1825;x++){let i=y*W+x;if(!base[i])continue;let w=x-Math.round(3*Math.sin(y/18));if((w+2*y)%83<10)A[i]=K.L;else if((w-y)%69<5)A[i]=K.M}
 }
 finishR2B6(A,W,H);
+
+/* R2B7: grounded forms from original source JPEG; no branch/source-art changes.
+ * Convert thin bridge truss to one grown tri-cord, enlarge aged crown,
+ * distinguish supported thresholds and reattach major floating gallery masses. */
+function finishR2B7(A,W,H) {
+ const M={L:38,G:40,C:41,F:42,S:49,B:52,V:100,O:101};
+ let P=[[1024,454],[315,590],[604,589],[491,850],[347,1137],[751,1141],[469,1367],[596,1718],[837,619],[1050,617],[1450,613],[1811,619],[1790,930],[1808,1216],[1840,1695],[1600,1697],[1387,1460],[1100,1121],[1090,1600],[1050,1844],[469,1515],[1804,1433],[1145,1970],[2018,310],[2018,780],[1932,781],[1730,783],[1450,782],[1418,815]];
+ const safe=new Uint8Array(W*H);
+ for(let [x,y] of P)for(let yy=Math.max(0,y-15);yy<=Math.min(H-1,y+15);yy++)safe.fill(1,yy*W+Math.max(0,x-18),yy*W+Math.min(W,x+19));
+ function pixel(x,y,v,filled=false){x=Math.round(x);y=Math.round(y);if(x<0||x>=W||y<0||y>=H)return;let k=y*W+x;if((!filled||A[k])&&(!safe[k]||v===0))A[k]=v}
+ function box(x,y,w,h,v,filled=false){for(let Y=Math.max(0,Math.floor(y));Y<Math.min(H,Math.ceil(y+h));Y++)for(let X=Math.max(0,Math.floor(x));X<Math.min(W,Math.ceil(x+w));X++)pixel(X,Y,v,filled)}
+ function disc(x,y,r,v,filled=false){for(let Y=Math.max(0,Math.ceil(y-r));Y<=Math.min(H-1,Math.floor(y+r));Y++){let d=Math.sqrt(Math.max(0,r*r-(Y-y)*(Y-y)));for(let X=Math.max(0,Math.ceil(x-d));X<=Math.min(W-1,Math.floor(x+d));X++)pixel(X,Y,v,filled)}}
+ function cord(x,y,X,Y,r,R,v,filled=false){let n=Math.max(1,Math.ceil(Math.hypot(X-x,Y-y)/5));for(let i=0;i<=n;i++){let t=i/n;disc(x+(X-x)*t,y+(Y-y)*t,r+(R-r)*t,v,filled)}}
+ function poly(p,v,filled=false){let lo=Math.max(0,Math.floor(Math.min(...p.map(q=>q[1])))),hi=Math.min(H-1,Math.ceil(Math.max(...p.map(q=>q[1]))));for(let y=lo;y<=hi;y++){let xs=[];for(let i=0;i<p.length;i++){let a=p[i],b=p[(i+1)%p.length];if((a[1]<=y&&b[1]>y)||(b[1]<=y&&a[1]>y))xs.push(a[0]+(y-a[1])*(b[0]-a[0])/(b[1]-a[1]))}xs.sort((a,b)=>a-b);for(let k=0;k+1<xs.length;k+=2)box(Math.ceil(xs[k]),y,Math.floor(xs[k+1])-Math.ceil(xs[k])+1,1,v,filled)}}
+ // Reinterpret grey circular pucks as connected canopy tissue.
+ for(let y=0;y<245;y++)for(let x=10;x<680;x++){let k=y*W+x;if(A[k]&&(A[k]===M.C||A[k]===M.G))A[k]=M.F}
+ for(const p of [
+ [[0,66],[25,33],[82,24],[119,0],[212,4],[272,25],[320,0],[378,13],[449,0],[502,27],[566,58],[633,111],[678,145],[640,160],[590,154],[550,194],[514,176],[464,222],[413,195],[360,236],[311,188],[251,231],[193,180],[150,201],[87,165],[0,160]],
+ [[48,111],[101,76],[166,101],[197,157],[157,193],[89,167]],
+ [[461,91],[541,93],[609,131],[667,183],[631,223],[583,202],[529,232],[474,183]]
+ ])poly(p,M.F);
+ for(let q of [[429,265,310,172,33,15,M.G],[445,269,568,168,32,16,M.V],[424,317,236,270,27,12,M.V],
+ [448,342,337,445,43,32,M.V],[337,445,249,552,32,23,M.G],[249,552,183,677,26,15,M.V],
+ [477,360,530,459,34,26,M.G],[530,459,560,546,26,19,M.V],[560,546,635,666,19,12,M.G]])cord(...q);
+ for(let q of [[385,312,293,402,5,4,M.F],[442,356,522,449,6,4,M.F],[316,463,243,534,7,4,M.C]])cord(...q,true);
+ // Single bridge: remove former fine crosslacing only in broad suspended span.
+ for(let y=640;y<852;y++)for(let x=767;x<1536;x++)pixel(x,y,0);
+ const l=725,r=1578;
+ for(let x=l;x<=r;x+=3){let t=(x-l)/(r-l),cy=659+46*Math.sin(Math.PI*t)-8*t+Math.sin(x/42)*4+Math.sin(x/73)*3;
+ disc(x,cy-7+Math.sin(x/57)*5,15+3*Math.sin(Math.PI*t),M.G);
+ disc(x,cy+12+Math.sin(x/39)*6,20+3*Math.sin(Math.PI*t),M.V);
+ disc(x,cy+27+Math.sin(x/89)*6,14+4*Math.sin(Math.PI*t),M.C);
+ disc(x,cy+35,6,M.F);
+ }
+ cord(712,650,785,686,28,26,M.V);cord(1520,684,1619,650,25,30,M.G);
+ cord(1455,655,1455,691,13,16,M.V);
+ for(let a of [[859,717,844,771,21,11,M.V],[982,719,954,794,20,9,M.G],
+ [1104,729,1150,807,21,9,M.V],[1281,711,1308,760,20,10,M.G],[1493,689,1523,755,17,9,M.V]])cord(...a);
+ for(let a of [[768,672,894,703,4,3,M.F],[918,701,1054,725,4,4,M.C],
+ [1097,721,1212,706,5,4,M.F],[1250,700,1424,682,4,3,M.G]])cord(...a,true);
+ // West roots make a wide, supported stone-root sanctuary lintel, not sealed shelves.
+ poly([[166,550],[179,516],[219,496],[252,505],[306,493],[375,492],[420,504],[462,519],[468,542],
+ [431,533],[398,520],[349,528],[299,524],[259,534],[198,536]],M.G,true);
+ cord(186,531,193,564,26,22,M.V);cord(441,529,449,568,25,22,M.G);
+ for(let a of [[199,517,221,531,8,6,M.C],[390,515,424,531,8,6,M.C]])cord(...a,true);
+ // East: a different high limestone-arched entrance supported in the ridge,
+ // avoid new full-span floors or door panels that isolate the target.
+ poly([[1680,562],[1698,538],[1737,525],[1760,535],[1804,522],[1842,536],[1900,526],[1943,543],[1961,565],
+ [1920,554],[1872,557],[1825,546],[1780,565],[1741,550],[1699,568]],M.C);
+ cord(1709,548,1715,580,23,24,M.G);cord(1925,542,1926,584,26,27,M.C);
+ for(let p of [[1755,536],[1843,542],[1887,538]])disc(p[0],p[1],6,M.L,true);
+ // Weathered left-facing cliff guardian: replace crosshatched face texture,
+ // keep occupied backed stone and carve a readable brow / eye / nose / jaw.
+ for(let y=354;y<569;y++)for(let x=1589;x<1820;x++){let k=y*W+x;if(A[k]&&A[k]!==M.F)A[k]=((x+2*y)%113<5?M.C:M.G)}
+ poly([[1601,429],[1637,381],[1680,347],[1712,351],[1748,383],[1769,430],[1806,509],[1810,557],
+ [1740,555],[1692,538],[1645,559],[1606,524],[1588,496],[1601,477],[1576,462]],M.G);
+ poly([[1615,424],[1639,391],[1689,378],[1712,387],[1672,415],[1638,434]],M.C);
+ poly([[1610,440],[1653,433],[1672,451],[1648,470],[1606,454]],M.S);
+ poly([[1595,475],[1634,471],[1659,489],[1682,505],[1641,513],[1604,495]],M.V);
+ poly([[1627,520],[1668,515],[1703,535],[1745,533],[1764,549],[1680,559],[1644,545]],M.C);
+ poly([[1656,451],[1671,453],[1682,469],[1668,476]],M.O);
+ cord(1705,489,1762,509,9,11,M.V);
+ // Convert the previously four heavy freestanding components into bank-rooted
+ // supports (at x1530/825, x1518/1540, x550/1545, x1245/1925).
+ cord(1521,823,1645,840,23,29,M.V);cord(1512,1521,1670,1485,27,35,M.V);
+ cord(542,1532,421,1594,25,37,M.V);cord(1240,1926,1246,2037,24,31,M.V);
+ // 31x27 flyable passage from the inhabited western shrine to exterior canyon.
+ box(555,558,139,106,0);
+ // A deliberate 100-cell-wide east sanctuary flight hatch to the proven undercroft;
+ // original full-height 31x27 actor could not pass the newly carved vault otherwise.
+ box(1795,662,85,145,0);
+ // The east guardian ridge now carries its load through a thick root neck into
+ // the original bridge's rock bank, rather than relying on the cleared hatch.
+ cord(1615,560,1618,651,22,24,M.V);
+}
+finishR2B7(A,W,H);
 const spawn=[1024,454],loc=[
 ['Upper Open Ravine',[1024,454]],['West Upper Shrine',[315,590]],['West Upper Threshold',[604,589]],['West Root Landing',[491,850]],['West Deep Root Niche',[347,1137]],['West Middle Exit',[751,1141]],['West Terrace Chapel',[469,1367]],['West Lower Return',[596,1718]],
 ['Living Bridge West Air',[837,619]],['Living Bridge Mid-Air',[1050,617]],['Living Bridge East Air',[1450,613]],
