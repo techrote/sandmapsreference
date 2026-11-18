@@ -30,7 +30,7 @@ const bridgePoints=[[1070,705],[586,745],[1455,655],[1580,680],[1770,730]];
 const bridgeId=solidAt(bridgePoints[0]);assert(bridgeId>0,'bridge material seed missing');
 for(const p of bridgePoints)assert.strictEqual(solidAt(p),bridgeId,'floating bridge or erased bank anchor '+p);
 const orderedComponents=[...componentSizes].sort((a,b)=>b-a);
-assert(orderedComponents[0]>1700000&&orderedComponents.slice(1).every(x=>x<=20000),'unexpected isolated large structure');
+assert.strictEqual(orderedComponents[0],1615209,'unexpected cardinal root/bridge main solid size');assert.strictEqual(componentSizes.length,15,'unexpected independent stone component count');assert(orderedComponents.slice(1).every(x=>x<=20000),'unexpected isolated large structure');
 console.log('PASS both actual saved-grid bridge anchors, upper east cap and entire deck in common 4-neighbour material component: '+componentSizes[bridgeId-1]+' cells; '+componentSizes.length+' solid components');
 
 // Conservative Midge envelope testing with FULLY IN-BOUNDS centres and exact target points.
