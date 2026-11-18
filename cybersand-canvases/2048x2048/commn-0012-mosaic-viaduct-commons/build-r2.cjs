@@ -202,6 +202,7 @@ function canvas(){
  R(1151,1035,9,55,M.PLASTER);// Side clearance of the shaded civic lane remains visibly open to east sky.
  R(1410,981,104,158,M.AIR);
  R(1514,1029,8,63,M.LIME);
+ require('./finish-r2b.cjs')(G,W,H,M,TARGETS,R,L,P,E);
  // PROTECTED_ANCHORS: source-led genuine air clearances at named operational sites.
  for(let [n,x,y] of TARGETS){R(x-19,y-16,39,33,M.AIR)}
  return G;

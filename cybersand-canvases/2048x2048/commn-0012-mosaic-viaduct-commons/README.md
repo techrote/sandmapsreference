@@ -58,3 +58,23 @@ Starting source HEAD: `362f86f0ea18b2e49ae8301a14c562310f87df1b`. This bounded f
 - **Buried corridor:** strengthened continuously identifiable masonry roof and gallery bays, with intentional large access shafts; a 31×27-compatible east maintenance chimney is true Empty air rather than a substituted waypoint.
 
 **Final static receipts:** 2048×2048 = 4,194,304 material cells, 7,863 non-overlapping coalesced five-field rectangles (limit 32,768), 152,210 JSON bytes (limit 1,048,576), 1,289,475 occupied and 2,904,829 Empty, 369,139 material IDs changed from assigned HEAD, SHA-256 `fcdab739ad94aae88ceaf1fc565951ba8afa7533c13876f81990b892ca7a1318`. Independently reconstructed every JSON rectangle/cell against the new builder grid, zero mismatches. All 28 used non-Empty materials are valid non-movable accepted native solids; combustible ID(s) 97 remain unignited. Authored actor, exact spawn, 16 positional targets and native generator provenance are unchanged. Exact zero-offset four-neighbour rectangular actor-centre connectivity: 19×15 **16/16** (2,370,337 centres), 23×19 **16/16** (2,276,913), 31×27 **16/16** (2,132,661); no nearest-point waiver. Current loaded bridge capacity not interrogated: older fallback remains 4,096, which would reject 7863 rectangles. The output PNGs are real material-index PNGs rendered from the reconstructed grid, and the committed independent validator `node verify-r2.cjs` is provided for fresh local reproduction; it was not executed inside the GitHub connector environment. **NATIVE-UNTESTED** (Godot/GDExtension/Rapier admission, flight/collision/simulation, fresh-process save/reopen). Genuine committed JPEG is retained untouched; previous independent reviewers directly inspected it, while this execution could not decode the binary through the connector. Full original PNG pixel parity remains **UNVERIFIED**.
+
+
+## Current R2B follow-on — physically grounded civic terrace (18 November 2026)
+
+**This table supersedes the preceding R2C totals as the final artifact receipt.** Source-JPEG comparison directly performed: the original's rising terrace, continuous support and underground civic use informed new real-material masonry banks, asymmetrical vaulted halls, connected roofed undercroft and broad open Midge egress. No faux sky material, duplicate source art, or screenshot-only geometry. Rebuilt with deterministic `finish-r2b.cjs` integrated *before* the main builder's rectangle coalescence.
+
+| Gate | Exact final R2B result |
+|---|---|
+| Cell plane | 2048×2048; 4,194,304 cells |
+| Physical cells changed against assigned HEAD | 268,733 |
+| Rectangles | 7,508 / 32,768 |
+| JSON bytes | 145,339 / 1,048,576 |
+| Solid/Empty cells | 1,191,548 / 3,002,756 |
+| Full grid replay | 4,194,304 reconstructed, 0 mismatch |
+| Grid SHA-256 | `5b94f810cc5a43476f59abf3ffc3b207ff73b3ec4672655a18e585e950ced390` |
+| Exact target clearance, 19×15, 23×19, 31×27 | 19x15:16/16 (2547576 centres); 23x19:16/16 (2474690 centres); 31x27:16/16 (2299280 centres) |
+| Genuine PNGs | Nine previews/crops rendered directly from this final material-cell grid |
+| Native import/bridge capacity, simulation, input/collision, save/reopen | **NATIVE-UNTESTED**; source max 32,768, old installed fallback 4,096 |
+
+Reference image is the unchanged committed genuine JPEG; original large PNG direct parity remains **UNVERIFIED**. The old 7,863-rectangle/152,210-byte receipts above document predecessor HEAD, **not** the current artifact. No owner acceptance or Ready/merge.
