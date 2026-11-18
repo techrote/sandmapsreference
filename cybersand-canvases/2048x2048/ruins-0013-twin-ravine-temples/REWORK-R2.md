@@ -1,7 +1,27 @@
-# R2A source-led lower-ravine finishing — current working artifact (18 November 2026)
+# Current R2B5 — exact-cell source-fidelity and receipt repair (18 November 2026)
+
+**OPEN DRAFT / HOLD.** This section and [evidence.json](evidence.json) contain the **current numerical authority**. Historical sections below are explicitly superseded, not current.
+
+**Source:** genuine original repository `source-reference-preview.jpg` (SHA `adfb56729b2c443a513892fbe803718dc8b71e52`) viewed directly against committed material overviews/crops. Full original-resolution PNG comparison **UNVERIFIED**, no source-image mutation.
+
+**Changed 106,823 actual material-cell identities from assigned exact parent `aa6fcf7092710770bcc0bf033132b58e1ef91b5d`**: the single rooted bridge has more irregular sag, lateral bark structure and asymmetric attached forks; the western tree has a directed canopy and connected root/branch architecture; the right cliff guardian has shaped brow, paired sockets, cheek/nose and weathered chin; west/east temple entrances have unlike carved and supported stone jambs and gallery details. True 2D gameplay geometry. Core source silhouettes remain compact, with related extended playable caverns rather than image-stretching.
+
+**CURRENT exact Setup-v2:** 2048×2048 = 4,194,304 cells; **17,707 / 32,768 legal rectangles**, **339,037 / 1,048,576 UTF-8 JSON bytes**, **1,729,608 occupied**; full-cell deterministic replay zero mismatches or overlapping rects. Accepted solid/immovable inert materials only: 38, 40, 41, 42, 49, 52, 100, 101. The actual cardinal root bridge and both banks remain a single **1,686,910-cell physically attached solid component** (5 probes), with 12 components total and largest secondary component 15,962.
+
+**Midge authored 4×3 hull, unchanged exact spawn (1024,454), NO nearest/radius waivers:** **23/23 named sites** and **6/6 bypass centres** reachable by fully-bounded cardinal BFS at 19×15 (**2,158,725 centres**), 23×19 (**2,101,669**) and 31×27 (**1,988,967**). Historical R1 *positional* probes (not mandatory semantic sites): 13 / 13 / 12 out of 17.
+
+**Genuine authored-cell evidence**: [complete 2048² material plane](temples-material-2048.png), [overview](twin-ravine-temples-preview.png), native 1:1 [bridge](temples-detail-living-bridge.png), [guardian](temples-detail-east-guardian.png), [west tree](temples-detail-west-tree.png), [west sanctuary](temples-detail-west-shrine.png), [east crypt](temples-detail-east-crypt.png), plus ten further real-grid crops. All 15 PNGs regenerated from this exact grid; **8,650,752 / 8,650,752** independently decoded material-pixel comparisons zero mismatches, chunk CRC/zlib stored block/Adler/IEND verified. Two in-process V8 generator runs byte-identical. The committed `verify-r2.cjs` has updated exact expectations; **standalone `node verify-r2.cjs` was NOT executed in this isolated remote runtime**. Run on a normal checkout with Node 18+.
+
+**Remain HOLD**: source bridge advertises 32,768; actual installed bridge capacity unmeasured, legacy 4,096 fallback may reject. Godot/CyberDemoBridge/Rapier input/collision, simulation, native canvas installation and fresh-process save/reopen **NATIVE-UNTESTED**. Full original PNG fidelity separately UNVERIFIED. No engine/art/archive change, no merge or Ready.
+
+---
+
+## Historical provenance (old quantities below superseded)
+
+# Historical R2A source-led lower-ravine finishing — superseded snapshot (18 November 2026)
 
 **DRAFT / HOLD. Not merged, not Ready, not native qualified or owner accepted.**
-This section supersedes numerical claims in the historical R2B summaries below.
+This dated snapshot is superseded by the current R2B5 section above.
 
 **Source inspected:** actual committed `source-reference-preview.jpg` (Git blob `adfb56729b2c443a513892fbe803718dc8b71e52`) of the giant left tree, one living horizontal root bridge, unequal inhabited cliff sanctuaries and squat right guardian. Its full-resolution original PNG `artwork/ruins_monuments/batch1/rootbound_guardians-twin_ravine_temples-suspended_tension.png` is unchanged and **original-PNG pixel parity remains UNVERIFIED**. The 2048-square cell canvas is a stylised playable interpretation of this source, not an image-tracing claim.
 
