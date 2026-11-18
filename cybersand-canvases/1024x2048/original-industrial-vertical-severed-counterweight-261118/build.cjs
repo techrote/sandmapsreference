@@ -135,7 +135,7 @@ for(const [x,y] of [[180,520],[231,1030],[763,700],[838,1400],[794,1750],[524,28
  lite(x+22,y-28,79);box(x+15,y-26,4,19,69);
 }
 const HIST={};let occupied=0;for(const m of grid){HIST[m]=(HIST[m]||0)+1;if(m){occupied++;if(!INERT.has(m)&&m!==3)throw Error("Non-inert unexpected material "+m);}}
-if(HIST[3]!==0)throw Error("Quench Water was expected to be isolated, but a route has overwritten it"); // this is fatal only if coolant is fully erased
+if(!(HIST[3]>0))throw Error("Quench Water was expected in the sealed lower sump"); // this is fatal only if coolant is fully erased
 // Exact optimal by vertical coalescing of horizontal material runs.
 let edits=[],prev=new Map();
 for(let y=0;y<H;y++){let active=new Map(),off=y*W,x=0;while(x<W){let m=grid[off+x],start=x++;while(x<W&&grid[off+x]===m)x++;if(!m)continue;let width=x-start,key=start+":"+width+":"+m,index=prev.get(key);if(index!==undefined&&edits[index][1]+edits[index][3]===y){edits[index][3]++;active.set(key,index);}else{edits.push([start,y,width,1,m]);active.set(key,edits.length-1);}}prev=active;}
