@@ -1,0 +1,118 @@
+{
+  "independent": true,
+  "source": "Setup-v2 ordered rectangles, not builder memory",
+  "native_status": "NATIVE-UNTESTED",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_plane_sha256": "9dd2cbc298d6e91ef71e5f1617ef41a516535c97112cc3ab4dfd030fc4098e38",
+  "setup_bytes": 258892,
+  "setup_sha256": "1714c8ced71041e5036886bff62abcbfb38c08717fe4d2903ffc4d82b5016402",
+  "rectangles": 13839,
+  "occupied_cells": 750089,
+  "png_proofs": [
+    {
+      "name": "overview.png",
+      "pixels": [
+        2048,
+        1024
+      ],
+      "sha256": "84d3a1d0a5715ee7bf3f5a121184d6562698c01b18e07aff98dae93d7de8e7de",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "review-half.png",
+      "pixels": [
+        1024,
+        512
+      ],
+      "sha256": "f0970cc73507a425e6435af5d6b02868d5eb7ec2bf82094a5a689dded3f08ce9",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "01-receiving-slip.png",
+      "pixels": [
+        512,
+        650
+      ],
+      "sha256": "5cbb1832e0aa4a5f0c04c06b177cabef6120e91669b3351f49fca0fde952b8b6",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "02-crane-and-entry.png",
+      "pixels": [
+        470,
+        610
+      ],
+      "sha256": "fbb11dd2ce3c38897a28396119e575f648caf5e861175a747113b1cc9f7d701e",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "03-memory-engine.png",
+      "pixels": [
+        510,
+        545
+      ],
+      "sha256": "7b5d93e087be477e4d52d378bcc17ebc91f21e92203b41fc74affd4d2f75d322",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "04-refinery-filter.png",
+      "pixels": [
+        430,
+        605
+      ],
+      "sha256": "c8259916bd9ad955a8e4eb6ad7b67579b2bd52d1fcf75a52ff9db858f88d49d1",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "05-aft-dock.png",
+      "pixels": [
+        330,
+        750
+      ],
+      "sha256": "dd433356864e97b43d3b79bfc9c17d34bb3c272e50faac674f1536fd2c177079",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "06-lower-return.png",
+      "pixels": [
+        770,
+        250
+      ],
+      "sha256": "cfe8ee96f9d5556a084429fcd136c6c11c32752743b142133a500f7a5b1f5257",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    }
+  ],
+  "clearance": {
+    "19x15": {
+      "exact_sites": 14,
+      "connected_legal_centres": 918542,
+      "minimum_approaches": 4
+    },
+    "23x19": {
+      "exact_sites": 14,
+      "connected_legal_centres": 878714,
+      "minimum_approaches": 4
+    },
+    "31x27": {
+      "exact_sites": 14,
+      "connected_legal_centres": 801242,
+      "minimum_approaches": 4
+    }
+  },
+  "alternate_route_connected_centres": {
+    "upper_via_roof": 559810,
+    "lower_via_sump": 571821
+  },
+  "structural_topology": {
+    "components": 1,
+    "boundary_grounded_cells": 750089,
+    "detached_cells": 0,
+    "detached_components": 0,
+    "largest_detached_components": []
+  },
+  "structural_support": "PASS: one fully grounded occupied component",
+  "builder_sha256": "626d59e55a82c85d954d117c4357f220f3f89c951c19cb88de613299b571ea1e"
+}

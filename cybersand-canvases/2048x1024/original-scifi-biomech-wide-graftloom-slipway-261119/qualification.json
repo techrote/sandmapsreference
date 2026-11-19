@@ -1,0 +1,322 @@
+{
+  "concept": "Graftloom Slipway",
+  "original": true,
+  "extent": [
+    2048,
+    1024
+  ],
+  "seed": 19112647,
+  "engine_commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "engine_contract": {
+    "setup_sha": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+    "material_catalogue_sha": "d7a47d60721598a16589daf177a6ff4401b84b43",
+    "midge_authoring_sha": "228399e38a0e0ab215b9f48698edce67a7a35799",
+    "midge_hull": [
+      4,
+      3
+    ],
+    "source_rectangle_limit": 32768,
+    "json_byte_limit": 1048576,
+    "source_native_work_limit": 32000000
+  },
+  "shepherd_rework_r2": {
+    "changed_cells_final": 109036,
+    "objective": "Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return"
+  },
+  "shepherd_rework_r3": {
+    "changed_cells_final": 19242,
+    "objective": "Rooted twin-lobe examination gantry with preserved north aperture, improved receiving cradle and lower dry extrusion, west assay console and aft extraction; rejected route-sealing enclosed workrooms"
+  },
+  "shepherd_rework_r4": {
+    "changed_cells_final": 12356,
+    "objective": "Grounded mnemonic hood reader-pods, enterable mid-level precision assay/fractionation, anchored aft handling; mid-void dock rejected after route gating. Conservative geometry audits mandatory"
+  },
+  "shepherd_rework_r5": {
+    "changed_cells_final": 13948,
+    "objective": "Independent self-review: high receiver split keyed rotary and translated upper jaws versus low dry-extrusion inspection cell. Memory Core site-level bay P1 remains unresolved; rejected unsupported/flight-sealing midspan schemes"
+  },
+  "shepherd_rework_r6": {
+    "changed_cells_final": 2699,
+    "new_site": "memory_diagnostic_workface (925,328)",
+    "objective": "A single two-sided grounded mnemonic specimen assay/workface, independently roof-supported left/right modules and an open 56-cell Midge-entry throat; original Core (921,468) preserved below. Independent art P1 verdict outstanding"
+  },
+  "structural_reconstruction": {
+    "replaced_unsupported_legacy_cells": 115002,
+    "small_detached_finish_cells_trimmed": 0,
+    "detached_final_cells": 0
+  },
+  "material_laws": "All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation",
+  "site_coordinates": {
+    "spawn_receiving_dock": [
+      122,
+      483
+    ],
+    "upper_hull_shunt": [
+      384,
+      224
+    ],
+    "west_filter_service": [
+      291,
+      480
+    ],
+    "spinal_gate_west": [
+      570,
+      470
+    ],
+    "memory_engine_north": [
+      925,
+      145
+    ],
+    "memory_engine_core": [
+      921,
+      468
+    ],
+    "memory_engine_south": [
+      914,
+      809
+    ],
+    "spinal_gate_east": [
+      1240,
+      480
+    ],
+    "refinery_high_bay": [
+      1470,
+      404
+    ],
+    "refinery_middle_filter": [
+      1510,
+      544
+    ],
+    "refinery_lower_sump": [
+      1500,
+      704
+    ],
+    "aft_drydock": [
+      1801,
+      480
+    ],
+    "final_recovery_rail": [
+      1940,
+      848
+    ],
+    "memory_diagnostic_workface": [
+      925,
+      328
+    ]
+  },
+  "replay_mismatches": 0,
+  "overlaps": 0,
+  "total_cells": 2097152,
+  "painted_cells": 750089,
+  "rectangles": 13839,
+  "setup_bytes": 258892,
+  "histogram": {
+    "0": 1347063,
+    "49": 95908,
+    "58": 37192,
+    "62": 183258,
+    "100": 183893,
+    "101": 99798,
+    "113": 45667,
+    "117": 86105,
+    "120": 14457,
+    "128": 3811
+  },
+  "grid_sha256": "9dd2cbc298d6e91ef71e5f1617ef41a516535c97112cc3ab4dfd030fc4098e38",
+  "setup_sha256": "1714c8ced71041e5036886bff62abcbfb38c08717fe4d2903ffc4d82b5016402",
+  "clearance": {
+    "19x15": {
+      "reachability": {
+        "spawn_receiving_dock": true,
+        "upper_hull_shunt": true,
+        "west_filter_service": true,
+        "spinal_gate_west": true,
+        "memory_engine_north": true,
+        "memory_engine_core": true,
+        "memory_engine_south": true,
+        "spinal_gate_east": true,
+        "refinery_high_bay": true,
+        "refinery_middle_filter": true,
+        "refinery_lower_sump": true,
+        "aft_drydock": true,
+        "final_recovery_rail": true,
+        "memory_diagnostic_workface": true
+      },
+      "connected_legal_centres": 918542,
+      "minimum_local_approaches": 4,
+      "local_approaches": {
+        "spawn_receiving_dock": 4,
+        "upper_hull_shunt": 4,
+        "west_filter_service": 4,
+        "spinal_gate_west": 4,
+        "memory_engine_north": 4,
+        "memory_engine_core": 4,
+        "memory_engine_south": 4,
+        "spinal_gate_east": 4,
+        "refinery_high_bay": 4,
+        "refinery_middle_filter": 4,
+        "refinery_lower_sump": 4,
+        "aft_drydock": 4,
+        "final_recovery_rail": 4,
+        "memory_diagnostic_workface": 4
+      }
+    },
+    "23x19": {
+      "reachability": {
+        "spawn_receiving_dock": true,
+        "upper_hull_shunt": true,
+        "west_filter_service": true,
+        "spinal_gate_west": true,
+        "memory_engine_north": true,
+        "memory_engine_core": true,
+        "memory_engine_south": true,
+        "spinal_gate_east": true,
+        "refinery_high_bay": true,
+        "refinery_middle_filter": true,
+        "refinery_lower_sump": true,
+        "aft_drydock": true,
+        "final_recovery_rail": true,
+        "memory_diagnostic_workface": true
+      },
+      "connected_legal_centres": 878714,
+      "minimum_local_approaches": 4,
+      "local_approaches": {
+        "spawn_receiving_dock": 4,
+        "upper_hull_shunt": 4,
+        "west_filter_service": 4,
+        "spinal_gate_west": 4,
+        "memory_engine_north": 4,
+        "memory_engine_core": 4,
+        "memory_engine_south": 4,
+        "spinal_gate_east": 4,
+        "refinery_high_bay": 4,
+        "refinery_middle_filter": 4,
+        "refinery_lower_sump": 4,
+        "aft_drydock": 4,
+        "final_recovery_rail": 4,
+        "memory_diagnostic_workface": 4
+      }
+    },
+    "31x27": {
+      "reachability": {
+        "spawn_receiving_dock": true,
+        "upper_hull_shunt": true,
+        "west_filter_service": true,
+        "spinal_gate_west": true,
+        "memory_engine_north": true,
+        "memory_engine_core": true,
+        "memory_engine_south": true,
+        "spinal_gate_east": true,
+        "refinery_high_bay": true,
+        "refinery_middle_filter": true,
+        "refinery_lower_sump": true,
+        "aft_drydock": true,
+        "final_recovery_rail": true,
+        "memory_diagnostic_workface": true
+      },
+      "connected_legal_centres": 801242,
+      "minimum_local_approaches": 4,
+      "local_approaches": {
+        "spawn_receiving_dock": 4,
+        "upper_hull_shunt": 4,
+        "west_filter_service": 4,
+        "spinal_gate_west": 4,
+        "memory_engine_north": 4,
+        "memory_engine_core": 4,
+        "memory_engine_south": 4,
+        "spinal_gate_east": 4,
+        "refinery_high_bay": 4,
+        "refinery_middle_filter": 4,
+        "refinery_lower_sump": 4,
+        "aft_drydock": 4,
+        "final_recovery_rail": 4,
+        "memory_diagnostic_workface": 4
+      }
+    }
+  },
+  "alternate_route_stress": {
+    "upper_via_roof": {
+      "destination_gate_reached": true,
+      "legal_centres": 559810
+    },
+    "lower_via_sump": {
+      "destination_gate_reached": true,
+      "legal_centres": 571821
+    }
+  },
+  "png_integrity_and_pixel_parity": [
+    {
+      "png": "overview.png",
+      "pixels": [
+        2048,
+        1024
+      ],
+      "bytes": 46224,
+      "sha256": "84d3a1d0a5715ee7bf3f5a121184d6562698c01b18e07aff98dae93d7de8e7de"
+    },
+    {
+      "png": "review-half.png",
+      "pixels": [
+        1024,
+        512
+      ],
+      "bytes": 19826,
+      "sha256": "f0970cc73507a425e6435af5d6b02868d5eb7ec2bf82094a5a689dded3f08ce9"
+    },
+    {
+      "png": "01-receiving-slip.png",
+      "pixels": [
+        512,
+        650
+      ],
+      "bytes": 7554,
+      "sha256": "5cbb1832e0aa4a5f0c04c06b177cabef6120e91669b3351f49fca0fde952b8b6"
+    },
+    {
+      "png": "02-crane-and-entry.png",
+      "pixels": [
+        470,
+        610
+      ],
+      "bytes": 6349,
+      "sha256": "fbb11dd2ce3c38897a28396119e575f648caf5e861175a747113b1cc9f7d701e"
+    },
+    {
+      "png": "03-memory-engine.png",
+      "pixels": [
+        510,
+        545
+      ],
+      "bytes": 4358,
+      "sha256": "7b5d93e087be477e4d52d378bcc17ebc91f21e92203b41fc74affd4d2f75d322"
+    },
+    {
+      "png": "04-refinery-filter.png",
+      "pixels": [
+        430,
+        605
+      ],
+      "bytes": 7187,
+      "sha256": "c8259916bd9ad955a8e4eb6ad7b67579b2bd52d1fcf75a52ff9db858f88d49d1"
+    },
+    {
+      "png": "05-aft-dock.png",
+      "pixels": [
+        330,
+        750
+      ],
+      "bytes": 5410,
+      "sha256": "dd433356864e97b43d3b79bfc9c17d34bb3c272e50faac674f1536fd2c177079"
+    },
+    {
+      "png": "06-lower-return.png",
+      "pixels": [
+        770,
+        250
+      ],
+      "bytes": 5512,
+      "sha256": "cfe8ee96f9d5556a084429fcd136c6c11c32752743b142133a500f7a5b1f5257"
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED"
+}
