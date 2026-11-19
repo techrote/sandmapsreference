@@ -306,6 +306,7 @@ def weld_disconnected_structure():
     # become structurally honest; the giant interior assemblies gain load paths.
     seen = bytearray(rooted)
     tendons = []
+    culled_micro_islands = []
     for start in range(size):
         if not A[start] or seen[start]:
             continue
@@ -344,14 +345,22 @@ def weld_disconnected_structure():
                 chosen=(x0,y0,x1,y1)
                 break
         if chosen is None:
-            # An unsafe strut is worse than a truthful failed qualification.
+            # Small isolated steel splinters in a flight gate are safer removed
+            # than connected by a spar directly across the actor approach.
+            if len(comp) <= 128:
+                for v in comp:
+                    A[v] = 0
+                culled_micro_islands.append(len(comp))
+                continue
             raise RuntimeError(('No site-safe structural anchor',len(comp),
                                 min(comp)%W,min(comp)//W))
         tendons.append((len(comp),chosen))
     for mass,(x0,y0,x1,y1) in tendons:
         line(x0,y0,x1,y1,6 if mass>1000 else 4,117)
     return {'initial_detached_components':len(tendons),
-            'initial_detached_cells':sum(n for n,_ in tendons),
+            'initial_detached_cells':sum(n for n,_ in tendons)+sum(culled_micro_islands),
+            'micro_islands_removed':len(culled_micro_islands),
+            'micro_island_cells_removed':sum(culled_micro_islands),
             'steel_load_paths':[[n,*edge] for n,edge in tendons]}
 
 def _root_distance(start, prev):
