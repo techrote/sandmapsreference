@@ -1,0 +1,265 @@
+{
+  "original": true,
+  "concept": "The Meridian Scar — Severed Clockwork Concourse",
+  "seed": 2493209,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "midge_hull": [
+    4,
+    3
+  ],
+  "source_art": "none",
+  "material_histogram": {
+    "0": 1201976,
+    "58": 152551,
+    "62": 136086,
+    "63": 42500,
+    "64": 37224,
+    "65": 13808,
+    "66": 27966,
+    "68": 19622,
+    "69": 60,
+    "72": 27041,
+    "75": 154,
+    "76": 5118,
+    "77": 4653,
+    "78": 1425,
+    "79": 3824,
+    "98": 5152,
+    "100": 362747,
+    "101": 24541,
+    "111": 3089,
+    "114": 1696,
+    "119": 17146,
+    "120": 8773
+  },
+  "material_names": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete",
+    "62": "SteelPlate",
+    "63": "PaintedSteel",
+    "64": "CorrugatedSteel",
+    "65": "RustedSteel",
+    "66": "SteelGrating",
+    "68": "SteelPipe",
+    "69": "CopperPipe",
+    "70": "CeramicTile",
+    "72": "DarkGlass",
+    "74": "CableBundle",
+    "75": "Insulation",
+    "76": "HazardStripe",
+    "77": "NeonCyan",
+    "78": "NeonMagenta",
+    "79": "NeonAmber",
+    "80": "LEDWhite",
+    "98": "Marble",
+    "100": "BasaltColumns",
+    "101": "Obsidian",
+    "111": "Terrazzo",
+    "114": "AluminiumPanel",
+    "119": "BrassPanel",
+    "120": "GlassBlock",
+    "121": "FrostedGlass",
+    "130": "CarbonFibre",
+    "131": "HeatShieldTile"
+  },
+  "edits": 12384,
+  "work": 895176,
+  "setup_bytes": 229368,
+  "material_sha256": "e5efc0f27f5cf36e4e8616e81a0f1eb90ac788ea689de98f7c7aa4eeb70b0fad",
+  "setup_sha256": "1f4b14793426c4210e7bf7f5c75644a5f9b834f02056785fca36e0660d0f7f88",
+  "clearances": [
+    {
+      "clearance": [
+        19,
+        15
+      ],
+      "airCentres": 846909,
+      "reachable": 16,
+      "total": 16,
+      "component": 505599,
+      "missing": []
+    },
+    {
+      "clearance": [
+        23,
+        19
+      ],
+      "airCentres": 782763,
+      "reachable": 16,
+      "total": 16,
+      "component": 470864,
+      "missing": []
+    },
+    {
+      "clearance": [
+        31,
+        27
+      ],
+      "airCentres": 668943,
+      "reachable": 16,
+      "total": 16,
+      "component": 385525,
+      "missing": []
+    }
+  ],
+  "blocked_route": {
+    "obstruction": [
+      975,
+      440,
+      1108,
+      544
+    ],
+    "occupied_site": "Fault-eye crossing",
+    "clearances": [
+      {
+        "clearance": [
+          19,
+          15
+        ],
+        "airCentres": 829091,
+        "reachable": 15,
+        "total": 15,
+        "component": 487781,
+        "missing": []
+      },
+      {
+        "clearance": [
+          23,
+          19
+        ],
+        "airCentres": 763853,
+        "reachable": 15,
+        "total": 15,
+        "component": 451954,
+        "missing": []
+      },
+      {
+        "clearance": [
+          31,
+          27
+        ],
+        "airCentres": 647812,
+        "reachable": 15,
+        "total": 15,
+        "component": 364394,
+        "missing": []
+      }
+    ]
+  },
+  "structural": {
+    "remaining_detached": 0,
+    "pruned": {
+      "removed": 3749,
+      "components": 13
+    }
+  },
+  "sites": {
+    "West ferryman ingress": [
+      114,
+      478
+    ],
+    "Arcade lantern gallery": [
+      278,
+      311
+    ],
+    "West heat-return subway": [
+      284,
+      749
+    ],
+    "Electromagnetic forge": [
+      588,
+      468
+    ],
+    "Loom overhead cabin": [
+      658,
+      307
+    ],
+    "Loom undercroft": [
+      664,
+      747
+    ],
+    "Fault-eye crossing": [
+      1024,
+      475
+    ],
+    "Meridian zero chamber": [
+      1058,
+      289
+    ],
+    "Null bypass": [
+      1036,
+      742
+    ],
+    "Oracle chronometric nave": [
+      1434,
+      313
+    ],
+    "Oracle public tribunal": [
+      1444,
+      480
+    ],
+    "Oracle machine archive": [
+      1464,
+      742
+    ],
+    "East quarantine intake": [
+      1747,
+      481
+    ],
+    "Quarantine shield crown": [
+      1822,
+      313
+    ],
+    "Isolation return": [
+      1806,
+      749
+    ],
+    "Beacon of twelve hours": [
+      1952,
+      480
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "bytes": 132573,
+      "sha256": "f137f63a327ee431ab5a09c1255df1c47b6e2e84eb05074cc13b984709d8c3a2",
+      "cell_parity": true
+    },
+    {
+      "name": "01-arcade-ingress",
+      "bytes": 8654,
+      "sha256": "f54e6c048f02380617fe6e34628ab04abae45c90385079713d2caba938c847a9",
+      "cell_parity": true
+    },
+    {
+      "name": "02-electromagnetic-loom",
+      "bytes": 10288,
+      "sha256": "dea193669768eaaa33e392131ebb31f8e5739325e2c0f9be83f75fb7695f67cf",
+      "cell_parity": true
+    },
+    {
+      "name": "03-meridian-fault-eye",
+      "bytes": 13742,
+      "sha256": "7566a81caa0dcea0587c1e6f31450e5eb3bef350623959a85f3c803e49483727",
+      "cell_parity": true
+    },
+    {
+      "name": "04-oracle-tribunal",
+      "bytes": 8843,
+      "sha256": "2e2572dc70a334012fa405a726d12a58424af9b33f29bfa8017e1ba2116ec655",
+      "cell_parity": true
+    },
+    {
+      "name": "05-quarantine-terminus",
+      "bytes": 11226,
+      "sha256": "0df6fefceeca7c9460f88a993c968a6b6b4d789fece7a7ceb7211bcbb0fa0523",
+      "cell_parity": true
+    }
+  ],
+  "native": "NATIVE-UNTESTED"
+}
