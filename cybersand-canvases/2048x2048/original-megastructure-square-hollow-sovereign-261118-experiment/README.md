@@ -3,6 +3,17 @@
 > Touching pairs from the accepted native rules (`reactive-pairs.json`) are broken by turning skin cells into ReinforcedConcrete; the build fails if any remain.
 > The build now writes `render/` previews; the legacy indexed PNGs are not regenerated. Setup JSON, qualification and r5/r6 receipts were not regenerated and describe the original PR. Dynamic behaviour is untested; NATIVE-UNTESTED.
 
+## Detail pass v2 (experiment)
+
+- **Band re-skin** of rock, steel, signal, polymer, quartz and glass-block families, now with coarser noise so rectangles stay within budget.
+- **Detail layer:** 226 zinc rivets on steel skin, 1,965 grating seams, and 3,244 phosphor seams on polymer skin.
+- **Specimen cores:** 41 sealed glass-family components keep a one-cell glass rim and hold Water (5,865 cells), Oil (3,107) or Sand (1,701). 23 glass components with air contact were left solid.
+- **Reaction guard:** 18 skin cells converted to ReinforcedConcrete; 0 touching pairs remain.
+- **Budget:** 24,966 rectangles (limit 32,768); setup JSON 474,961 bytes (limit 1,048,576).
+- **Renders:** `render/overview.png`, `overview-review.png`, `overview-routes.png` (site markers and Midge spawn), five district crops at 2×, `manifest.json`, and `experiment-stats.json`.
+
+Liquids, powders and rivets are untested in-game; NATIVE-UNTESTED.
+
 # The Hollow Sovereign — R6 original sci-fi megastructure (2048×2048)
 
 **ORIGINAL FROM SCRATCH · real material-cell CyberSand Setup-v2 · Draft/HOLD · NATIVE-UNTESTED · independent review pending.** No source images, converted/borrowed art, AI-generated image-as-map, engine edits or historical reference conversion.

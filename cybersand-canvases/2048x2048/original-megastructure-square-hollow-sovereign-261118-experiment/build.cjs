@@ -479,9 +479,12 @@ function buildMegaCanvas() {
     }
     return boxes;
   }
-  // EXPERIMENT pass (any CyberSand material). Re-skins rock, steel, signal, polymer, quartz and glass-block families by
-  // five horizontal bands with patchy noise, then breaks any touching pair from the accepted native interaction rules
-  // by turning the skin cell into ReinforcedConcrete (58). Occupancy never changes, so the flood gates below still apply.
+  // EXPERIMENT pass v2 (any CyberSand material). Four steps, all reported in EXPERIMENT_STATS:
+  // 1) band re-skin of rock, steel, signal, polymer, quartz and glass-block families (coarse noise keeps rectangles low);
+  // 2) detail layer: rivets on steel skin, grating seams on steel skin, phosphor seams on polymer skin, all noise-gated;
+  // 3) sealed specimen cores: glass-family components with no air contact keep a one-cell glass rim and get Water, Oil or Sand inside;
+  // 4) reaction guard: any touching pair from the accepted native rules is broken by turning a skin cell into ReinforcedConcrete (58).
+  // Steps 1-2 and 4 reassign only solid IDs; step 3 replaces solid cells with liquid or powder inside sealed rims, so the air mask never changes.
   {
     const NAMEOF=Object.fromEntries(MATS.map(r=>[r[0],r[1]]));
     const RPAIRS=new Set(RPAIRS_JSON);
@@ -489,33 +492,64 @@ function buildMegaCanvas() {
       const hh=(ix,iy)=>{let h=(Math.imul(ix,0x27d4eb2d)^Math.imul(iy,0x165667b1)^seed)>>>0;h=Math.imul(h^(h>>>15),0x85ebca6b)>>>0;h=Math.imul(h^(h>>>13),0xc2b2ae35)>>>0;return ((h^(h>>>16))>>>0)/4294967296;};
       const a=hh(xi,yi),b2=hh(xi+1,yi),c=hh(xi,yi+1),dd=hh(xi+1,yi+1),t=a+(b2-a)*u,bt=c+(dd-c)*u;return t+(bt-t)*v;};
     const bandOf=(y)=>Math.min(4,Math.floor(y/(H/5)));
-    const PALX={
-      rock:[[98,38,39,40,41,99,109],[101,100,111,56,59,112],[98,99,40,111,39,56],[38,39,40,112,56],[100,101,111,59]],
-      steel:[[62,63,64,65,66,67,68,69,52,53,50],[113,114,118,119,52,53],[65,66,50,64,63,62],[52,53,69,68,119],[62,64,66,113]],
-      signal:[[76,77,78,79,80,123],[123,79,77,76],[78,80,79],[76,80],[123,77]],
-      polymer:[[128,129,127,130,131],[128,127,129],[131,130,128],[129,131],[127,128]],
-      quartz:[[122,121,124],[122,121,71],[121,124,122],[122,71],[124,121]],
-      glass:[[120,121,71,72],[72,71,120],[121,120],[120,72],[71,121]],
-    };
-    const FAM={rock:[49,58,100,101,38,98],steel:[62,117,113],signal:[123],polymer:[128],quartz:[122],glass:[120]};
-    const SEEDX={rock:0x0a11c0de,steel:0x57ee1a01,signal:0x51a9a1e5,polymer:0x90ca0bad,quartz:0x9ac7e711,glass:0x61a55b10};
-    const famOf=new Map();for(const k of Object.keys(FAM))for(const m of FAM[k])famOf.set(m,k);
-    const skin=new Uint8Array(W*H);let reskinned=0;
+    const PALX=[
+      null,
+      [[98,38,39,40,41,99,109],[101,100,111,56,59,112],[98,99,40,111,39,56],[38,39,40,112,56],[100,101,111,59]],   // 1 rock
+      [[62,63,64,65,66,67,68,69,52,53,50],[113,114,118,119,52,53],[65,66,50,64,63,62],[52,53,69,68,119],[62,64,66,113]], // 2 steel
+      [[76,77,78,79,80,123],[123,79,77,76],[78,80,79],[76,80],[123,77]],                                                 // 3 signal
+      [[128,129,127,130,131],[128,127,129],[131,130,128],[129,131],[127,128]],                                           // 4 polymer
+      [[122,121,124],[122,121,71],[121,124,122],[122,71],[124,121]],                                                     // 5 quartz
+      [[120,121,71,72],[72,71,120],[121,120],[120,72],[71,121]],                                                         // 6 glass
+    ];
+    const FAMCODE={49:1,58:1,100:1,101:1,38:1,98:1,62:2,117:2,113:2,123:3,128:4,122:5,120:6};
+    const SEEDX=[0,0x0a11c0de,0x57ee1a01,0x51a9a1e5,0x90ca0bad,0x9ac7e711,0x61a55b10];
+    const SEEDD={rivet:0x71e7a001,seam:0x5ea4a001,pseam:0x9e4ab001};
+    const fam=new Uint8Array(W*H);
+    const skin=fam; // alias: nonzero fam marks a skin cell
+    const ST={reskinned:0,rivets:0,steelSeams:0,polySeams:0,sealedCores:0,sealedCells:0,liquids:{3:0,16:0,2:0},unsealedGlass:0,pairFixes:0,pairsLeft:0};
     for(let y=0;y<H;y++)for(let x=0;x<W;x++){
-      const i=y*W+x,f=famOf.get(g[i]);if(!f)continue;
-      const pal=PALX[f][bandOf(y)];
-      g[i]=pal[Math.min(pal.length-1,Math.floor(vnz(x,y,240,SEEDX[f])*pal.length))];skin[i]=1;reskinned++;
+      const i=y*W+x,c=FAMCODE[g[i]];if(!c)continue;
+      const pal=PALX[c][bandOf(y)];
+      g[i]=pal[Math.min(pal.length-1,Math.floor(vnz(x,y,240,SEEDX[c])*pal.length))];fam[i]=c;ST.reskinned++;
+    }
+    for(let y=0;y<H;y++)for(let x=0;x<W;x++){
+      const i=y*W+x;
+      if(fam[i]===2){
+        if(x%32===16&&y%32===16&&vnz(x,y,96,SEEDD.rivet)>0.55){g[i]=113;ST.rivets++;}
+        else if(x%96===0&&vnz(x,y,160,SEEDD.seam)>0.6){g[i]=66;ST.steelSeams++;}
+      }else if(fam[i]===4){
+        if((x%16===0||y%16===0)&&vnz(x,y,120,SEEDD.pseam)>0.5){g[i]=127;ST.polySeams++;}
+      }
     }
     const NB=(i)=>{const x=i%W,y=(i-x)/W,o=[];if(x>0)o.push(i-1);if(x<W-1)o.push(i+1);if(y>0)o.push(i-W);if(y<H-1)o.push(i+W);return o;};
-    let pairFixes=0;
-    for(let i=0;i<W*H;i++){
-      if(!g[i]||!skin[i])continue;
-      for(const n of NB(i)){if(g[n]&&RPAIRS.has([NAMEOF[g[i]],NAMEOF[g[n]]].sort().join("|"))){g[i]=58;skin[i]=0;pairFixes++;break;}}
+    // Step 3: sealed glass-family components (fam 6) get liquid or powder in their interior.
+    const comp=new Int32Array(W*H).fill(-1);let nComp=0;const FLUIDS=[3,16,2];
+    for(let s=0;s<W*H;s++){
+      if(fam[s]!==6||comp[s]>=0)continue;
+      const id=nComp++,cells=[s];comp[s]=id;
+      for(let r=0;r<cells.length;r++)for(const n of NB(cells[r]))if(fam[n]===6&&comp[n]<0){comp[n]=id;cells.push(n);}
+      let sealed=true;
+      for(const c of cells){
+        const x=c%W,y=(c-x)/W;
+        if(x===0||y===0||x===W-1||y===H-1){sealed=false;break;}
+        for(const n of NB(c))if(g[n]===0){sealed=false;break;}
+        if(!sealed)break;
+      }
+      if(!sealed){ST.unsealedGlass++;continue;}
+      const inner=cells.filter(c=>{const x=c%W,y=(c-x)/W;return x>0&&y>0&&x<W-1&&y<H-1&&NB(c).every(n=>comp[n]===id);});
+      if(inner.length<12){ST.unsealedGlass++;continue;}
+      const f=FLUIDS[id%FLUIDS.length];
+      for(const c of inner){g[c]=f;fam[c]=0;}
+      ST.sealedCores++;ST.sealedCells+=inner.length;ST.liquids[f]+=inner.length;
     }
-    let pairsLeft=0;
-    for(let i=0;i<W*H;i++){if(!g[i])continue;for(const n of NB(i))if(g[n]&&RPAIRS.has([NAMEOF[g[i]],NAMEOF[g[n]]].sort().join("|")))pairsLeft++;}
-    if(pairsLeft)throw Error("EXPERIMENT_PAIRS_LEFT "+pairsLeft);
-    EXPERIMENT_STATS={reskinned,pairFixes,pairsLeft};
+    // Step 4: reaction guard on skin cells.
+    for(let i=0;i<W*H;i++){
+      if(!g[i]||!fam[i])continue;
+      for(const n of NB(i)){if(g[n]&&RPAIRS.has([NAMEOF[g[i]],NAMEOF[g[n]]].sort().join("|"))){g[i]=58;fam[i]=0;ST.pairFixes++;break;}}
+    }
+    for(let i=0;i<W*H;i++){if(!g[i])continue;for(const n of NB(i))if(g[n]&&RPAIRS.has([NAMEOF[g[i]],NAMEOF[g[n]]].sort().join("|")))ST.pairsLeft++;}
+    if(ST.pairsLeft)throw Error("EXPERIMENT_PAIRS_LEFT "+ST.pairsLeft);
+    EXPERIMENT_STATS=ST;
   }
   const edits=compress();
   // Reconstruct ALL cells, reject every overlapping pair.
@@ -641,8 +675,9 @@ function buildMegaCanvas() {
     ["05-abyssal-drydock.png",497,1545,742,480]
   ].map(p=>({name:p[0],region:p.slice(1),...encodePNG(...p.slice(1))})):[];
   const hist={};for(const v of g)hist[v]=(hist[v]||0)+1;
-  const PRES=require("./presentation.cjs").buildPresentation(g,W,H,[],[217,987]);
-  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,hist,materials:mat,gallery,mismatches,collisions,PRES};
+  const DISTRICTS=[["01-nacre-freight-cliff",100,318,610,580],["02-spindle-and-sacristy",714,80,618,724],["03-meridian-bastion",1340,314,610,590],["04-split-market-artery",668,864,686,516],["05-abyssal-drydock",497,1545,742,480]];
+  const PRES=require("./presentation.cjs").buildPresentation(g,W,H,sites,[217,987],DISTRICTS);
+  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,hist,materials:mat,gallery,mismatches,collisions,PRES,expStats:EXPERIMENT_STATS};
 }
 const r=buildMegaCanvas();
 const artifacts=[["setup-hollow-sovereign.json",Buffer.from(r.json,"utf8")],...r.gallery.map(g=>[g.name,Buffer.from(g.bytes)])];
@@ -660,4 +695,5 @@ if(!process.argv.includes("--verify")){
   for(const f of r.PRES.files) fs.writeFileSync(f.path,f.bytes);
   fs.writeFileSync("render/manifest.json",JSON.stringify(r.PRES.manifest,null,2)+"\n");
   console.log("WRITE: render/ ("+r.PRES.files.length+" images)");
+  fs.writeFileSync("render/experiment-stats.json",JSON.stringify(r.expStats,null,2)+"\n");
 }

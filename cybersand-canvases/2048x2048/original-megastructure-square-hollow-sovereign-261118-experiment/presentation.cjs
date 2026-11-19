@@ -293,7 +293,7 @@ const _UNUSED = [
 
 // Returns { files: [{ path, bytes, width, height, rgbSha256 }], manifest }.
 // Pixel hashes are the verification key; PNG bytes may vary with the zlib build.
-function buildPresentation(grid, width, height, sites, spawn) {
+function buildPresentation(grid, width, height, sites, spawn, districts) {
   W = width; H = height; if (spawn) SPAWN = spawn;
   const gridSha = sha256(Buffer.from(grid.buffer, grid.byteOffset, grid.byteLength));
   const full = renderFull(grid);
@@ -303,7 +303,7 @@ function buildPresentation(grid, width, height, sites, spawn) {
     ["render/overview-review.png", review(full), W / 2, H / 2],
     ["render/overview-routes.png", routed, W, H],
   ];
-  for (const [name, x0, y0, w, h] of DISTRICTS) items.push(["render/" + name + "@2x.png", crop2x(full, x0, y0, w, h), w * 2, h * 2]);
+  for (const [name, x0, y0, w, h] of (districts || [])) items.push(["render/" + name + "@2x.png", crop2x(full, x0, y0, w, h), w * 2, h * 2]);
   const files = items.map(([path, rgb, w, h]) => {
     const buf = Buffer.from(rgb.buffer, rgb.byteOffset, rgb.byteLength);
     return { path, bytes: encodeRGB(rgb, w, h), width: w, height: h, rgbSha256: sha256(buf) };
