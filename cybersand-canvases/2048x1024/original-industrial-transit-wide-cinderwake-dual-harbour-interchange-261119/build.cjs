@@ -511,6 +511,74 @@ R(1943,476,6,8,M.C);R(832,549,9,7,M.C);
 L(1114,801,1162,801,7,M.S);
 R(760,814,6,7,M.C);R(1456,860,8,8,M.C);R(277,884,7,15,M.C);
 
+
+
+// R4 ACTUAL-CELL SHIP/RAIL INTERCHANGE — direct response to independent R3
+// Shepherd review. All shapes are flat side-elevation material, not a mock
+// screenshot. The drydock retains a 55-cell central Midge inspection hatch.
+// A broad and joined lower hull now runs underneath the accessible well;
+// asymmetrical wheelhouse, sheer and tapered repair prow identify one vessel.
+// Ship hull is static inert Solid, not a dynamic moving actor.
+P([[190,744],[208,775],[252,799],[281,805],[366,805],[409,784],
+   [435,746],[442,779],[418,807],[372,826],[253,826],[210,813]],M.V);
+R(255,806,123,17,M.S);
+L(185,713,202,770,11,M.U);L(202,770,249,800,11,M.S);
+L(375,802,416,778,11,M.S);L(416,778,449,709,10,M.U);
+P([[177,681],[185,653],[216,647],[239,659],[238,684],[217,699],
+   [191,701]],M.U); // aft superstructure on the port hull
+R(186,644,54,9,M.S);R(194,658,28,13,M.F);
+R(205,629,11,16,M.C);R(198,622,26,8,M.S);
+L(221,696,230,736,10,M.C);
+L(232,684,278,678,8,M.U);L(350,683,404,669,8,M.U);
+L(400,667,445,674,8,M.S);
+R(246,699,11,35,M.C);R(379,695,10,34,M.C);
+R(237,728,33,8,M.S);R(374,723,40,8,M.S);
+R(244,736,8,38,M.C);R(399,731,8,43,M.C);
+// Keep the native world-cell inspection position open with full hull margin.
+R(289,636,55,127,M.A);
+// Re-establish lower seamless sheer/keel BELOW the inspection window.
+R(280,795,78,23,M.S);
+// New *visible crane load* hangs OUTSIDE the inspection hatch: the earlier
+// x340 suspended part had been erased by the safety portal. The sloping
+// load cable now reaches the starboard repair bay and clamps a hull module.
+L(341,326,442,565,5,M.P);
+R(419,565,48,9,M.S);R(422,574,41,25,M.V);
+R(425,577,5,19,M.G);R(454,577,5,19,M.G);
+L(430,599,429,627,6,M.P);L(454,599,452,627,6,M.P);
+R(422,625,39,13,M.U);L(442,638,445,670,8,M.C);
+
+// R4 through-freight topology: a visible rail-grade crane handoff links
+// west customs bogies with the lift jaw rather than appearing as disconnected
+// freight props. Grade and wheels are rooted to the existing steel gantry.
+L(876,576,966,510,10,M.S);
+L(879,567,970,500,4,M.U);
+R(903,537,45,18,M.V);R(908,529,35,8,M.U);
+for(const x of [910,938]){ring(x,557,8,8,3,M.K);R(x-3,557,6,12,M.C);}
+R(951,513,15,47,M.C);
+R(958,556,10,22,M.S);
+// The paired hoist cages carry freight at different elevations; explicit
+// fork rails, cable sheaves and side guideways clarify vertical transfer
+// while preserving the entire centre x1045..1135 flight throat.
+R(976,397,52,12,M.S);R(979,409,8,40,M.C);
+R(1019,409,9,40,M.C);R(986,416,33,21,M.V);
+R(987,437,31,8,M.G);R(985,408,36,7,M.F);
+R(1155,407,57,12,M.S);R(1158,419,8,40,M.C);
+R(1203,419,8,40,M.C);R(1167,427,35,22,M.U);
+R(1168,449,34,8,M.G);R(1165,416,40,8,M.F);
+L(1002,248,995,394,5,M.P);L(1167,255,1186,404,5,M.P);
+R(988,337,13,12,M.G);R(1181,347,13,12,M.G);
+R(997,327,10,13,M.C);R(1187,337,10,13,M.C);
+R(1253,377,10,143,M.C);R(1254,399,8,66,M.G);
+R(1257,430,19,35,M.U);R(1261,437,10,20,M.F);
+R(1257,465,19,8,M.S);
+// Handoff from right jaw to the switch-grade classification line.
+L(1215,518,1305,562,10,M.S);
+L(1219,512,1308,555,4,M.U);
+R(1273,544,39,16,M.V);
+R(1280,537,26,8,M.G);
+for(const x of [1281,1300])ring(x,565,8,8,3,M.K);
+R(1302,560,10,22,M.C);
+
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
