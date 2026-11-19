@@ -1,0 +1,194 @@
+{
+  "concept": "Morrow Array — The Split Phasewell",
+  "original": true,
+  "seed": 20261119,
+  "extent": [
+    2048,
+    1024
+  ],
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "midge_hull": [
+    4,
+    3
+  ],
+  "solid_material_histogram": {
+    "49": 82961,
+    "58": 66608,
+    "62": 110570,
+    "63": 20087,
+    "66": 6193,
+    "68": 28236,
+    "77": 3171,
+    "79": 901,
+    "80": 520,
+    "100": 452710,
+    "101": 59699,
+    "120": 1778,
+    "121": 4466,
+    "122": 330,
+    "129": 25056,
+    "130": 37093,
+    "131": 2440
+  },
+  "rectangles": 11657,
+  "rectangle_work": 902819,
+  "setup_bytes": 217828,
+  "material_plane_sha256": "937d829cd425f8a8e583b57a51d7658cedbcb0fc48eff315ee4a2fd9d97c61e5",
+  "setup_sha256": "7c4716cea8b7f78ff674c6026fc8c2495e73e88d2acd2bbc72faf76e16d53b2f",
+  "images": [
+    {
+      "name": "overview",
+      "bytes": 85127,
+      "sha256": "a9304ae7e49772d9ec5d9e87015176701f927ee24052337697225c8fce32bca9"
+    },
+    {
+      "name": "01-west-citadel",
+      "bytes": 14054,
+      "sha256": "57ea94272821a91dc6cf4ee9c89c0928e883078de6543b9c6d274083eccc8c4c"
+    },
+    {
+      "name": "02-split-phasewell",
+      "bytes": 13966,
+      "sha256": "d9774505e80821a22de5139dec50e28746dd87c6c20c6e7a530b68ce87aa8661"
+    },
+    {
+      "name": "03-rift-geology",
+      "bytes": 10719,
+      "sha256": "687c80752d1be76d94bc1e7133efb4b6bd4d171d15b7d91edefdbac00549f316"
+    },
+    {
+      "name": "04-east-cargo",
+      "bytes": 19634,
+      "sha256": "97171f2f2950516a5f39d8e66412df55d7e56b575e3a88bebde055fbce37d05e"
+    },
+    {
+      "name": "05-deep-survey",
+      "bytes": 7938,
+      "sha256": "dceea6d1c1748a2eb6e15a9fe2f67b2503f0b704041075a0832864cec8a55c7f"
+    }
+  ],
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 20,
+      "total": 20,
+      "airCentres": 693316,
+      "bad": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 20,
+      "total": 20,
+      "airCentres": 648140,
+      "bad": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 20,
+      "total": 20,
+      "airCentres": 560223,
+      "bad": []
+    }
+  ],
+  "exact_sites": {
+    "Rover gate": [
+      135,
+      495
+    ],
+    "Citadel porch": [
+      289,
+      402
+    ],
+    "Upper xenology": [
+      322,
+      304
+    ],
+    "Western assay": [
+      317,
+      577
+    ],
+    "Archive lower": [
+      265,
+      750
+    ],
+    "West rift dock": [
+      650,
+      496
+    ],
+    "Helio skywalk": [
+      792,
+      264
+    ],
+    "Phasewell top": [
+      1020,
+      284
+    ],
+    "Phasewell central": [
+      1020,
+      494
+    ],
+    "Phasewell undercroft": [
+      1020,
+      751
+    ],
+    "East tram bridge": [
+      1365,
+      495
+    ],
+    "Quarantine lock": [
+      1558,
+      496
+    ],
+    "Cargo bay": [
+      1812,
+      495
+    ],
+    "Eastern observatory": [
+      1694,
+      304
+    ],
+    "Ion exchanger": [
+      1815,
+      748
+    ],
+    "Deep mineral survey": [
+      1305,
+      748
+    ],
+    "West specimen room": [
+      202,
+      424
+    ],
+    "West rover diagnostics": [
+      341,
+      421
+    ],
+    "East quarantine inspection": [
+      1667,
+      424
+    ],
+    "East freight weigh office": [
+      1835,
+      423
+    ]
+  },
+  "source_art": "none; independently invented",
+  "native_status": "NATIVE-UNTESTED",
+  "tests": [
+    "complete plane exact replay",
+    "supported ID statics",
+    "conservative 19x15 23x19 31x27 exact-site four-neighbour BFS",
+    "indexed PNG inflated-pixel parity"
+  ]
+}
