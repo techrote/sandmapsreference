@@ -1,0 +1,386 @@
+{
+  "concept": "Vesper Negative-Pressure Lock",
+  "creator_lane": "original/industrial-hazard-wide",
+  "seed": 19112603,
+  "world": [
+    2048,
+    1024
+  ],
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "grid_sha256": "bd153205b87439a834f135e036edc394b69c8ba606da276bf77c959c1f65018c",
+  "setup_sha256": "8f44fed16c71be9d966ec2ccadd26352b9726a5196ae932c093518c153b1d6a3",
+  "setup_json_bytes": 56861,
+  "rectangles": 2968,
+  "work": 486266,
+  "histogram": {
+    "0": 1610886,
+    "3": 11044,
+    "8": 2902,
+    "58": 221954,
+    "62": 92514,
+    "68": 10701,
+    "70": 665,
+    "76": 1819,
+    "77": 2048,
+    "79": 930,
+    "100": 67115,
+    "101": 10217,
+    "104": 2691,
+    "117": 61186,
+    "120": 480
+  },
+  "solid_connectivity": {
+    "total": 472320,
+    "grounded": 472320,
+    "detached": 0
+  },
+  "clearance": {
+    "19x15": {
+      "visited": 1068705,
+      "reachable": 14,
+      "centres": [
+        [
+          245,
+          451
+        ],
+        [
+          278,
+          453
+        ],
+        [
+          440,
+          466
+        ],
+        [
+          779,
+          468
+        ],
+        [
+          620,
+          725
+        ],
+        [
+          861,
+          460
+        ],
+        [
+          1052,
+          446
+        ],
+        [
+          1032,
+          862
+        ],
+        [
+          1210,
+          414
+        ],
+        [
+          1430,
+          500
+        ],
+        [
+          1500,
+          703
+        ],
+        [
+          1800,
+          462
+        ],
+        [
+          2008,
+          440
+        ],
+        [
+          1806,
+          812
+        ]
+      ]
+    },
+    "23x19": {
+      "visited": 1032128,
+      "reachable": 14,
+      "centres": [
+        [
+          245,
+          451
+        ],
+        [
+          278,
+          453
+        ],
+        [
+          440,
+          466
+        ],
+        [
+          779,
+          468
+        ],
+        [
+          620,
+          725
+        ],
+        [
+          861,
+          460
+        ],
+        [
+          1052,
+          446
+        ],
+        [
+          1032,
+          862
+        ],
+        [
+          1210,
+          414
+        ],
+        [
+          1430,
+          500
+        ],
+        [
+          1500,
+          703
+        ],
+        [
+          1800,
+          462
+        ],
+        [
+          2008,
+          440
+        ],
+        [
+          1806,
+          812
+        ]
+      ]
+    },
+    "31x27": {
+      "visited": 960063,
+      "reachable": 14,
+      "centres": [
+        [
+          245,
+          451
+        ],
+        [
+          278,
+          453
+        ],
+        [
+          440,
+          466
+        ],
+        [
+          779,
+          468
+        ],
+        [
+          620,
+          725
+        ],
+        [
+          861,
+          460
+        ],
+        [
+          1052,
+          446
+        ],
+        [
+          1032,
+          862
+        ],
+        [
+          1210,
+          414
+        ],
+        [
+          1430,
+          500
+        ],
+        [
+          1500,
+          703
+        ],
+        [
+          1800,
+          462
+        ],
+        [
+          2008,
+          440
+        ],
+        [
+          1806,
+          812
+        ]
+      ]
+    }
+  },
+  "alternate_route": {
+    "box": [
+      1027,
+      491,
+      61,
+      48
+    ],
+    "reachable": 14,
+    "visited": 953368
+  },
+  "sites": [
+    [
+      "Arrival isolation",
+      245,
+      451
+    ],
+    [
+      "Slag loft",
+      278,
+      453
+    ],
+    [
+      "West assay deck",
+      440,
+      466
+    ],
+    [
+      "Sluice valve overlook",
+      779,
+      468
+    ],
+    [
+      "Brine pump inspection",
+      620,
+      725
+    ],
+    [
+      "Gorge west lock",
+      861,
+      460
+    ],
+    [
+      "Suspension span",
+      1052,
+      446
+    ],
+    [
+      "Void retrieval",
+      1032,
+      862
+    ],
+    [
+      "Gorge east lock",
+      1210,
+      414
+    ],
+    [
+      "Vacuum retort observation",
+      1430,
+      500
+    ],
+    [
+      "Thermal shield service",
+      1500,
+      703
+    ],
+    [
+      "Fin stack control",
+      1800,
+      462
+    ],
+    [
+      "East export",
+      2008,
+      440
+    ],
+    [
+      "Coolant recovery",
+      1806,
+      812
+    ]
+  ],
+  "images": {
+    "overview.png": {
+      "bytes": 2099184,
+      "sha256": "4ed143062fda9c440226e47f0d745b54f7b9cffd3394d57d8763f228a337660b",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-west-intake.png": {
+      "bytes": 231743,
+      "sha256": "ba50d435fa9384c7d232427841f6e663cc969ca6f1c8e24b3b23573e30f32b4c",
+      "crop": [
+        70,
+        230,
+        480,
+        480
+      ]
+    },
+    "02-sluice-deck.png": {
+      "bytes": 231743,
+      "sha256": "6ece1c4c12288a117f0fcdbe59925dee9dcb873a6ea164ceaa2ddbdb4c01eae3",
+      "crop": [
+        440,
+        335,
+        480,
+        480
+      ]
+    },
+    "03-pressure-gorge.png": {
+      "bytes": 251363,
+      "sha256": "64378c9ff49726154d55558a6fa20ee7604f690338e32524e7dc2eecc4ed2d71",
+      "crop": [
+        800,
+        355,
+        500,
+        500
+      ]
+    },
+    "04-vacuum-retort.png": {
+      "bytes": 241363,
+      "sha256": "0aec2fd1cd7eaaebc29f1c1a6a2d0860eb174e5930569da464738d290564bf94",
+      "crop": [
+        1240,
+        220,
+        480,
+        500
+      ]
+    },
+    "05-east-fins.png": {
+      "bytes": 235383,
+      "sha256": "6ff4d76c11464477b3f1f4008655b61c46a65a4c9280fc1c5af7a50413cc0cdd",
+      "crop": [
+        1580,
+        260,
+        450,
+        520
+      ]
+    },
+    "06-lower-recovery.png": {
+      "bytes": 131113,
+      "sha256": "d596dcdb764e345c8568a54a9bb875d382eddac69d80774136b4ac399abb07b2",
+      "crop": [
+        880,
+        730,
+        500,
+        260
+      ]
+    }
+  },
+  "flags": {
+    "native": "NATIVE-UNTESTED",
+    "fluid": "initial-four-neighbor-sealed-only",
+    "bridge": "source 32768; installed possibly 4096 UNVERIFIED",
+    "material": "only native inert solid IDs plus sealed 3 water and 8 lava"
+  }
+}
