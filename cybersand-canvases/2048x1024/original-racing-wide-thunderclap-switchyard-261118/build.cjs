@@ -806,6 +806,28 @@ function buildWideCanvas() {
   tintStroke(325,602,377,679,48,mat.QUARTZ);
   tintStroke(1781,671,1835,595,49,mat.BLUE);
 
+
+  // R15 Shepherd P1: replace competing portal fin-signals with ONE dominant
+  // built/painted flight decision per portal, rooted in existing SOLID geometry.
+  // No new collision occupancy, no detached ribbons, no altered named site.
+  function r15QuietZone(xa,ya,xb,yb){
+    for(let y=ya;y<=yb;y++)for(let x=xa;x<=xb;x++){
+      const i=y*W+x,m=g[i];
+      if(m===mat.BLUE)g[i]=mat.STEEL;
+      else if(m===mat.QUARTZ)g[i]=mat.ZINC;
+      else if(m===mat.SIGNAL)g[i]=mat.IRON;
+    }
+  }
+  r15QuietZone(296,547,615,706);       // west shaft: retire the opposed fin/underbracket signals
+  r15QuietZone(615,785,711,831);       // mute subordinate west lower-hardware paint
+  r15QuietZone(1592,544,1890,707);     // east return: quiet competing scaffold chevrons
+  // WEST DESCEND: one white downhill contour on the actual founded left face.
+  tintStroke(335,584,366,681,29,mat.QUARTZ);
+  tintFace([[339,642],[379,645],[373,676],[353,694],[335,676]],mat.QUARTZ);
+  // EAST ASCEND: one contrasting blue rising contour on return-ramp masonry.
+  tintStroke(1808,681,1843,580,30,mat.BLUE);
+  tintFace([[1814,608],[1837,573],[1861,568],[1848,590],[1823,630]],mat.BLUE);
+
   // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -1025,7 +1047,7 @@ function buildWideCanvas() {
     ["07-lower-s-turn-east.png",1150,640,512,384],
     // R8 explicit 1:1 evidence for the newly anchored arcs and two distinct gates.
     ["08-iris-service-braces.png",780,440,512,384],
-    ["09-west-dive-portal.png",310,450,512,384],
+    ["09-west-dive-portal.png",245,450,512,384],
     ["10-east-return-portal.png",1490,450,512,384],
     // R9 additional true 1:1 functional-room and finish-jaw evidence.
     ["11-weigh-inspection-bay.png",1280,550,512,384],
@@ -1040,7 +1062,7 @@ const crypto=require("node:crypto");
 const shab=(v)=>crypto.createHash("sha256").update(v).digest("hex");
 const setupName="setup-thunderclap-switchyard.json";
 const prior=JSON.parse(fs.readFileSync("qualification.json","utf8"));
-let delta=prior.r13_to_r14_cell_delta;
+let delta=prior.r14_to_r15_cell_delta;
 if(!delta) {
  const old=JSON.parse(fs.readFileSync(setupName,"utf8")),oldGrid=new Uint8Array(r.W*r.H);
  for(const [x,y,w,h,m] of old.edits)for(let yy=y;yy<y+h;yy++)oldGrid.fill(m,yy*r.W+x,yy*r.W+x+w);
@@ -1060,9 +1082,9 @@ const pngs=r.gallery.map(p=>({
 const writtenVisits=r.edits.reduce((n,e)=>n+e[2]*e[3],0);
 const receipt={
  ...prior,
- kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R14",
+ kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R15",
  created_utc:"2026-11-19",
- previous_branch_head:"223b97f182f3fceec433bd0f69f06a03aa8acb23",
+ previous_branch_head:"60092cd3d90c02c255da08b64e78d1069ab94a0d",
  engine_main_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",
  terrain_rectangles:r.edits.length,
  setup_json_bytes:Buffer.byteLength(r.json,"utf8"),
@@ -1083,7 +1105,8 @@ const receipt={
  lower_corridor_only:r.lowerCorridor,
  grounded_support_probes:r.supportSites.map(([name,x,y])=>({name,x,y,cardinal_grounding:!!r.grounded[y*r.W+x]})),
  detached_solid_cells:writtenVisits-r.grounded.reduce((v,x)=>v+x,0),
- r13_to_r14_cell_delta:delta,
+ r14_to_r15_cell_delta:delta,
+ r15_portal_hierarchy:{west:"one quartz downhill surface contour on founded west-dive lip",east:"one blue uphill surface contour on founded east-return ramp",quiet_service_zones:[[296,547,615,706],[615,785,711,831],[1592,544,1890,707]],new_obstacle_cells:0},
  r14_detached_component_removal:r.r14Prune,
  pngs,
  installed_bridge_rectangle_capacity:"NATIVE-UNTESTED",
@@ -1110,7 +1133,7 @@ for(const [name,bytes] of artifacts){
    }else console.log("PASS:",name,bytes.length);
  } else {fs.writeFileSync(name,bytes);console.log("WRITE:",name,bytes.length);}
 }
-console.log("R14",JSON.stringify({
+console.log("R15",JSON.stringify({
  rectangles:receipt.terrain_rectangles,bytes:receipt.setup_json_bytes,
  grid:receipt.grid_sha256,delta,reach:receipt.exact_reach,
  lower:receipt.lower_corridor_only.access_points.length,detached:receipt.detached_solid_cells
