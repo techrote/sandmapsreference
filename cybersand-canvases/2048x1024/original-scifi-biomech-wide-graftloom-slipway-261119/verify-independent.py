@@ -210,11 +210,14 @@ def main():
                 end=sites['spinal_gate_east']
                 assert visited[end[1]*W+end[0]], ('alternate flight path failed',label)
                 alternate[label]=count
+    support=grounding(a)
+    assert support['detached_cells']==0 and support['boundary_grounded_cells']==work, ('ungrounded structural cells', support)
+    assert support['components']==1, ('fragmented load-bearing geology', support)
     report={'independent':True,'source':'Setup-v2 ordered rectangles, not builder memory',
         'native_status':'NATIVE-UNTESTED','extent':[W,H],'material_plane_sha256':sha(a),
         'setup_bytes':len(b),'setup_sha256':sha(b),'rectangles':len(s['edits']),
         'occupied_cells':work,'png_proofs':imgs,'clearance':flight,'alternate_route_connected_centres':alternate,
-        'structural_topology':grounding(a),
+        'structural_topology':support,'structural_support':'PASS: one fully grounded occupied component',
         'builder_sha256':sha((ROOT/'build.py').read_bytes())}
     (ROOT/'verification-independent.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'result':'PASS static replay, dimensions, PNG CRC/pixel parity, clearance and alternate routes',
