@@ -282,24 +282,6 @@ def anchored_only(a, remove):
                 rooted[j]=1
                 q.append(j)
     detached=sum(bool(a[i]) and not rooted[i] for i in range(W*H))
-    if remove and 'R2_CHANGED_CELLS' in globals() and detached:
-        remaining={i for i in range(W*H) if a[i] and not rooted[i]}
-        summary=[]
-        while remaining:
-            start=remaining.pop()
-            todo=[start]
-            xs,ys=[],[]
-            while todo:
-                ii=todo.pop()
-                x,y=ii%W,ii//W
-                xs.append(x);ys.append(y)
-                for jj in (ii-1 if x else -1,ii+1 if x<W-1 else -1,
-                           ii-W if y else -1,ii+W if y<H-1 else -1):
-                    if jj in remaining:
-                        remaining.remove(jj);todo.append(jj)
-            summary.append((len(xs),min(xs),min(ys),max(xs),max(ys)))
-        print('ORPHAN COMPONENTS:',sorted(summary,reverse=True)[:25],flush=True)
-
     if remove:
         for i in range(W*H):
             if a[i] and not rooted[i]: a[i]=0
@@ -491,7 +473,6 @@ for x0,x1,y0,y1,m in [(758,835,925,964,117),(1005,1081,929,966,113),
 line(1004, 240, 1073, 240, 5, 117)  # rightward: north portal removes x868..982
 line(1020, 278, 1083, 278, 5, 117)
 
-R2_BEFORE_REFINERY = A[:]
 # D: three genuinely different biorefinery operations.
 # HIGH — roof-supported paired receiver-bells, intentionally NOT three decks.
 line(1419, 260, 1410, 302, 15, 62)
@@ -504,9 +485,10 @@ line(1371, 366, 1371, 384, 10, 117)
 box(1353, 377, 1430, 389, 62)
 box(1565, 376, 1641, 389, 62)
 # High-bay x1470,y404 retains a >31x27 open envelope.
-# MID — alternate clear-span membrane inspection apparatus pending qualified site routing.
-# (The roof-fed diaphragm across the original portal is removed; it cut the
-# exact freight and Midge route to all upper/eastern stations.)
+# MID — the original broad transparent refinery inspection bay is intentionally
+# left open between roof-feed receivers and lower grounded fractionation drums.
+# A dense membrane diaphragm was tested and rejected after it isolated exact
+# Midge routes; this is an accessible processing/inspection gallery instead.
 # LOW — coarse dry fractionation drum anchored to the floor/bedrock,
 # separated from high and middle mechanisms by substantial open air.
 box(1360, 849, 1382, 987, 58)
@@ -525,7 +507,6 @@ for x0,x1,yy in [(1330,1450,925),(1547,1655,925)]:
             if A[i]: A[i]=113
 # Keep the exact three refinery destinations unobstructed at every margin.
 
-R2_AFTER_REFINERY = A[:]
 # E: recognizable aft salvage machinery and real return freight transfer.
 # The upper gantry terminates in a keyed, industrial mouth, not sky scenery.
 line(1929, 155, 1885, 223, 19, 62)
@@ -556,8 +537,6 @@ for cx,cy,rx in [(688,939,19),(1180,943,26)]:
     ellipse(cx,cy,rx,15,117)
     ellipse(cx,cy,rx-8,6,120)
 
-R2_CHANGED_CELLS = sum(x != y for x,y in zip(PRE_R2,A))
-assert R2_CHANGED_CELLS > 14000, ('substantive grid change missing', R2_CHANGED_CELLS)
 
 # A 112-cell-wide deliberate breach in the north mnemonic crown preserves
 # direct access to the fixed Memory Engine North coordinate (925,145).
@@ -567,6 +546,9 @@ REBUILD_DETAIL_TRIM=anchored_only(A, True)
 assert REBUILD_DETAIL_TRIM < 1000, ('unexpected orphaned replacement details', REBUILD_DETAIL_TRIM)
 FINAL_DETACHED=anchored_only(A, False)
 assert FINAL_DETACHED==0, ('post-reconstruction unsupported structure', FINAL_DETACHED)
+R2_CHANGED_CELLS = sum(before != after for before, after in zip(PRE_R2, A))
+assert R2_CHANGED_CELLS > 14000, ('substantive grid change missing', R2_CHANGED_CELLS)
+
 
 
 # The former direct welds are superseded by grounded split architecture; retain exact route audits.
@@ -716,10 +698,6 @@ def run(dest):
     (dest / 'setup-graftloom-slipway.json').write_bytes(js)
     clearance = {}
     common = {}
-    for stage, grid in [('before_R2', PRE_R2), ('before_refinery', R2_BEFORE_REFINERY), ('after_refinery', R2_AFTER_REFINERY), ('after_salvage', A)]:
-        lm = legal_centres(grid, 19, 15)
-        vis, tot = flood(lm, SITES['spawn_receiving_dock'])
-        print('DIAGNOSTIC', stage, tot, {n: bool(vis[y*W+x]) for n,(x,y) in SITES.items()}, flush=True)
     for sx, sy in [(19, 15), (23, 19), (31, 27)]:
         legal = legal_centres(A, sx, sy)
         for n, (x, y) in SITES.items():
@@ -743,7 +721,7 @@ def run(dest):
     for f, x, y, w, h, step in specs:
         imgs.append(png_rgb(A, x, y, w, h, dest / f, step))
         assert png_verify(dest / f, A, x, y, w, h, step)
-    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'shepherd_rework_r2': {'changed_cells_before_final_trim': R2_CHANGED_CELLS, 'objective': 'Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return'}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
+    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'shepherd_rework_r2': {'changed_cells_final': R2_CHANGED_CELLS, 'objective': 'Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return'}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
     (dest / 'qualification.json').write_text(json.dumps(info, indent=2) + '\n')
     (dest / 'seed.txt').write_text(str(SEED) + '\n')
     print(json.dumps({'rectangles': len(rect), 'setup_bytes': len(js), 'occupied': work, 'sites': len(SITES), 'alternate': common, 'gridsha': info['grid_sha256'], 'pngs': len(imgs)}, indent=2))
