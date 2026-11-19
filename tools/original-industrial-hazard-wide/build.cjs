@@ -217,7 +217,67 @@ function construct(spec,index){
  // Shaft reaches the continuous dry maintenance artery at an explicitly designed
  // split in the upper deck; 65-cell aperture preserves 31x27 manoeuvring.
  portal(547,816,67,159);
- return {grid:g,op};
+ // Short, engineered tie rods join disconnected solid assemblies to genuine
+ // boundary-grounded beams. Path search traverses only EMPTY cells, avoids
+ // the exact 31x27 navigation checkpoints, and never traverses a fluid tank.
+ function anchorAssemblies(){
+   const size=g.length,done=new Uint8Array(size),queue=new Int32Array(size);
+   let head=0,tail=0;
+   const solid=p=>{const m=g[p];return m!==0&&m!==MAT.water&&m!==MAT.lava;};
+   const add=p=>{if(!done[p]&&solid(p)){done[p]=1;queue[tail++]=p;}};
+   for(let x=0;x<W;x++){add(x);add((H-1)*W+x);}
+   for(let y=0;y<H;y++){add(y*W);add(y*W+W-1);}
+   while(head<tail){
+     const p=queue[head++],x=p%W,y=(p/W)|0;
+     if(x>0)add(p-1);if(x+1<W)add(p+1);
+     if(y>0)add(p-W);if(y+1<H)add(p+W);
+   }
+   const parent=new Int32Array(size);parent.fill(-2);
+   const dist=new Uint16Array(size);
+   head=0;tail=0;
+   for(let p=0;p<size;p++)if(done[p]){parent[p]=-1;queue[tail++]=p;}
+   const protectedSite=(p)=>{
+     const x=p%W,y=(p/W)|0;
+     for(const point of [spec.spawn,...spec.sites.map(s=>s[1])]){
+       if(Math.abs(x-point[0])<=23&&Math.abs(y-point[1])<=21)return true;
+     }
+     return false;
+   };
+   while(head<tail){
+     const p=queue[head++],x=p%W,y=(p/W)|0;
+     for(const n of [x>0?p-1:-1,x<W-1?p+1:-1,y>0?p-W:-1,y<H-1?p+W:-1]){
+       if(n<0||parent[n]!==-2||g[n]!==0||protectedSite(n))continue;
+       parent[n]=p;dist[n]=dist[p]+1;queue[tail++]=n;
+     }
+   }
+   let ncomponents=0,connected=0;
+   for(let start=0;start<size;start++){
+     if(!solid(start)||done[start])continue;
+     const comp=[];done[start]=1;head=0;tail=0;queue[tail++]=start;
+     let end=-1,best=65535;
+     while(head<tail){
+       const p=queue[head++];comp.push(p);const x=p%W,y=(p/W)|0;
+       for(const n of [x>0?p-1:-1,x<W-1?p+1:-1,y>0?p-W:-1,y<H-1?p+W:-1]){
+         if(n<0)continue;
+         if(solid(n)&&!done[n]){done[n]=1;queue[tail++]=n;}
+         else if(g[n]===0&&parent[n]!==-2&&dist[n]<best){best=dist[n];end=n;}
+       }
+     }
+     ncomponents++;
+     if(end<0)throw Error('unrooted island with no dry structural attachment '+comp.length);
+     let n=end,steps=0;
+     while(n>=0){
+       const x=n%W,y=(n/W)|0;
+       box(x-2,y-2,5,5,MAT.iron); // contiguous five-cell structural brace
+       n=parent[n];steps++;
+       if(steps>W+H)throw Error('support unexpectedly long');
+     }
+     connected++;
+   }
+   return {ncomponents,connected};
+ }
+ const supportReceipt=anchorAssemblies();
+ return {grid:g,op,supportReceipt};
 }
 function rects(g){
  const out=[],active=new Map();let runs=0;
@@ -320,6 +380,7 @@ function BufferLikeLength(str){return unescape(encodeURIComponent(str)).length;}
 function build(i){
  const spec=specs[i],r=construct(spec,i),z=rects(r.grid),result=qualify(spec,r.grid,z.edits);
  result.grid=r.grid;result.spec=spec;result.receipt.paint_operations=r.op;
+ result.receipt.structural_supports=r.supportReceipt;
  result.receipt.unmerged_row_runs=z.rowRuns;
  return result;
 }
