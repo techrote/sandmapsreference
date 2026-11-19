@@ -54,6 +54,38 @@ for(const [w,h] of [[19,15],[23,19],[31,27]]){
  insist(target&&target.reached===Object.keys(sites).length&&target.airCentres===tail,"air-centre receipt mismatch");
  flight.push({footprint:[w,h],exact: Object.keys(sites).length,reachable:tail});
 }
+// Independent 31x27 physical-obstruction tests for meaningful bypass, distinct
+// from the unmodified exact-site BFS above. Centre masks are expanded by
+// half the conservative Midge envelope around each inserted obstacle.
+const bypass=[];
+{
+ const w=31,h=27,hw=15,hh=13,pass=new Uint8Array(N);
+ for(let y=hh;y<H-hh;y++)for(let x=hw;x<W-hw;x++)if(passCentre(x,y,w,h))pass[y*W+x]=1;
+ function stress(name,box){
+   const mask=pass.slice(),[l,t,r,b]=box;
+   for(let y=Math.max(0,t-hh);y<Math.min(H,b+hh);y++)
+     mask.fill(0,y*W+Math.max(0,l-hw),y*W+Math.min(W,r+hw));
+   const seen=new Uint8Array(N),q=new Int32Array(N),start=495*W+135;
+   insist(mask[start]===1,"stress spawn blocked "+name);
+   let front=0,end=1;q[0]=start;seen[start]=1;
+   while(front<end){
+     const i=q[front++],x=i%W,y=(i/W)|0;
+     if(x&&mask[i-1]&&!seen[i-1]){seen[i-1]=1;q[end++]=i-1}
+     if(x<W-1&&mask[i+1]&&!seen[i+1]){seen[i+1]=1;q[end++]=i+1}
+     if(y&&mask[i-W]&&!seen[i-W]){seen[i-W]=1;q[end++]=i-W}
+     if(y<H-1&&mask[i+W]&&!seen[i+W]){seen[i+W]=1;q[end++]=i+W}
+   }
+   const critical=["West rift dock","East tram bridge","Quarantine lock",
+     "Cargo bay","Eastern observatory","Ion exchanger","Deep mineral survey"];
+   const missed=critical.filter(k=>!seen[sites[k][1]*W+sites[k][0]]);
+   insist(missed.length===0,"31x27 bypass lost "+name+": "+missed.join(","));
+   bypass.push({name,insertedObstacle:box,reachableCritical:critical.length,
+     visitedCentres:end});
+ }
+ stress("phasewell central route disabled",[920,430,1100,570]);
+ stress("phasewell lower return disabled",[918,679,1110,850]);
+}
+
 // Explicit independent PNG chunk/CRC/inflate/checksum and exact grid pixel parity.
 const crc32=buf=>{let c=0xffffffff;for(const v of buf){c^=v;for(let k=0;k<8;k++)c=(c>>>1)^(0xedb88320&-(c&1));}return(c^0xffffffff)>>>0};
 const crops=[["overview",0,0,W,H],["01-west-citadel",45,245,510,470],["02-split-phasewell",770,46,500,590],["03-rift-geology",480,548,485,390],["04-east-cargo",1505,237,530,490],["05-deep-survey",1190,638,620,340]];

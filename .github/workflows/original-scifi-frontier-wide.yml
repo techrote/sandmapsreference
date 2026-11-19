@@ -8,7 +8,7 @@ on:
       - '.github/workflows/original-scifi-frontier-wide.yml'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
   exact-map:
     runs-on: ubuntu-latest
@@ -16,23 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Deterministically rebuild and commit only this lane's material artifacts
-        shell: bash
-        run: |
-          set -euo pipefail
-          D="cybersand-canvases/2048x1024/original-scifi-frontier-wide-morrow-array-split-phasewell-261119"
-          node "$D/build.cjs" --verify
-          git add -- "$D/setup-morrow-array.json" "$D/receipt.json" "$D/"*.png
-          if ! git diff --cached --quiet; then
-            git config user.name "cybersand-artifact-builder"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "Publish R2 original Morrow Array exact-cell setup and PNG evidence"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
-          fi
       - name: Independent actual-serialized material grid, named flight and PNG pixel audit
         run: |
           set -euo pipefail

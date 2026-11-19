@@ -15,12 +15,12 @@ All walls and bracing are static physically admissible solids from the accepted 
 
 ## Reproducible artifacts
 - `build.cjs` regenerates the original 2048×1024 material plane, runs full-plane exact replay and conservative actor envelopes, emits indexed pixel PNGs and verifies PNG inflation/raw material-pixel parity.
-- `setup-morrow-array.json`: Setup-v2 ready for Workbench, 7950 five-word ordered nonoverlapping rectangle edits (149494 bytes, 829363 filled cells).
+- `setup-morrow-array.json`: Setup-v2 ready for Workbench, 10311 five-word ordered nonoverlapping rectangle edits (193428 bytes, 886312 filled cells).
 - `overview.png`: one image pixel per actual original material cell, 2048×1024; no artistic mockup.
 - Five authentic 1:1 scene crops: `01-west-citadel.png`, `02-split-phasewell.png`, `03-rift-geology.png`, `04-east-cargo.png`, `05-deep-survey.png`.
 - `receipt.json`: exact site list, conservative clearances, edit budget and histogram. The builder regenerates full SHA256 receipts.
 
-**Exact CyberSand accepted main:** `de109d0131641d6adc8d25bb9ced7ca3d4991105`; Setup-v2 loader blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`; material catalogue blob `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`. Authored Midge rectangle 4×3; conservative centre footprints **19×15, 23×19, 31×27** all reach all 16 exact named sites via true four-neighbour BFS; no closest-site waiver. Nonzero cells 829363; construction work below 32M cap; edit count below 32,768; file below 1 MiB. No fluid, explosive, combustible or mobile material.
+**Exact CyberSand accepted main:** `de109d0131641d6adc8d25bb9ced7ca3d4991105`; Setup-v2 loader blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`; material catalogue blob `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`. Authored Midge rectangle 4×3; conservative centre footprints **19×15, 23×19, 31×27** all reach all 16 exact named sites via true four-neighbour BFS; no closest-site waiver. Nonzero cells 886312; construction work below 32M cap; 10,311 edit rectangles below 32,768; file below 1 MiB. No fluid, explosive, combustible or mobile material.
 
 **NATIVE-UNTESTED**: no source-compatible native Godot + Rapier binary or Windows Workbench evaluation was run. Dynamic flight/control and fresh-process save/reopen remain separate owner/technical gates. Require independent exact-HEAD technical, art and Shepherd review before Ready or merge.
 
@@ -71,3 +71,30 @@ R2 images, receipt, JSON and exact new SHA are regenerated and committed by the
 branch-local content-scoped GitHub Actions authoring job before verification; do
 not treat an unverified intermediate source-only commit as a playable candidate.
 **NATIVE-UNTESTED** until independently exercised.
+
+## R2 exact-cell independent outcomes
+
+**Current R2 material plane** (unaltered by this documentation/CI hardening):
+`a3450974fc297020b8aefbd5b6648d4c85b594112304f836cf5f6d516abef4cc`.
+All **16/16 unchanged functional destinations** pass actual full-hull **19×15,
+23×19, 31×27** cardinal centre BFS, zero nearest-point proxies.
+**10,311** rectangles / **886,312** nonzero cells / **193,428** Setup JSON bytes,
+with all six indexed material PNGs exactly rebuilt and checked by independent
+PNG CRC/zlib/material-index decoding.
+
+A separate 31×27 *physical obstruction* probe placed solid temporary blocks
+at **x920–1099/y430–569** (central route closed) and
+**x918–1109/y679–849** (lower return closed), independently. In both cases,
+the west dock, east tram, quarantine lock, cargo bay, eastern observatory,
+ion exchanger and deep mineral survey remained connected to the exact
+Rover-gate spawn. This proves **static route redundancy for those seven
+checkpoints**; it is not a dynamic flying/handling or native physics result.
+
+Structural connected-solid recomputation on the R2 plane finds **67**
+four-neighbour solid components, **65** without a direct solid path to
+a world boundary (**69,193 occupied cells**, down from prior 103,121).
+The remaining *unattached* pieces include intentionally suspended/isolated
+ring remnants, but also a **9,097-cell eastern roof section** and an
+**8,112-cell right middeck/truss component**. Their load-path legibility
+needs independent art/engineering adjudication; inert solid does not imply
+runtime collapse. This candidate remains **DRAFT/HOLD, NATIVE-UNTESTED**.
