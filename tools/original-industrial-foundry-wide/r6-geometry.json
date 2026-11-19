@@ -1,47 +1,12 @@
 {
-  "revision": "R6-provisional",
+  "revision": "R6",
   "original": true,
   "native": "NATIVE-UNTESTED",
-  "notes": "Subsequent creator qualification must reject any group that closes exact 19x15/23x19/31x27 routes; this file alone does not change built material cells until builder imports it.",
+  "notes": "Curated from 94 original R6 test candidates: 13 flight-blocking structural cells rejected with exact 31x27 full-body four-neighbour BFS; retained edits and two independent hoist/mould additions preserve 15 named coordinates and 50x60 physical throat-blockage bypass. Stage remains NATIVE-UNTESTED until installed engine checks.",
   "groups": [
     {
       "name": "dry-tap-to-ladle-pickup",
       "rects": [
-        [
-          876,
-          579,
-          58,
-          7,
-          62
-        ],
-        [
-          885,
-          570,
-          41,
-          9,
-          65
-        ],
-        [
-          896,
-          563,
-          16,
-          7,
-          76
-        ],
-        [
-          900,
-          585,
-          65,
-          6,
-          117
-        ],
-        [
-          930,
-          579,
-          38,
-          6,
-          65
-        ],
         [
           968,
           573,
@@ -125,27 +90,6 @@
       "name": "foundry-singular-caster-mould",
       "rects": [
         [
-          1137,
-          542,
-          119,
-          13,
-          62
-        ],
-        [
-          1148,
-          555,
-          98,
-          13,
-          104
-        ],
-        [
-          1164,
-          568,
-          68,
-          11,
-          57
-        ],
-        [
           1175,
           579,
           48,
@@ -172,20 +116,6 @@
           70,
           8,
           117
-        ],
-        [
-          1193,
-          525,
-          15,
-          24,
-          65
-        ],
-        [
-          1214,
-          526,
-          8,
-          21,
-          65
         ],
         [
           1247,
@@ -302,13 +232,6 @@
           556,
           10,
           12,
-          65
-        ],
-        [
-          1912,
-          551,
-          10,
-          14,
           65
         ]
       ]
@@ -551,13 +474,6 @@
           9,
           15,
           65
-        ],
-        [
-          1323,
-          844,
-          18,
-          8,
-          68
         ]
       ]
     },
@@ -664,13 +580,6 @@
         ],
         [
           1906,
-          523,
-          43,
-          5,
-          62
-        ],
-        [
-          1906,
           557,
           43,
           5,
@@ -691,6 +600,60 @@
           62
         ]
       ]
+    },
+    {
+      "name": "segmented-upper-hoist-and-mould-overbite",
+      "rects": [
+        [
+          891,
+          466,
+          45,
+          6,
+          62
+        ],
+        [
+          1174,
+          587,
+          52,
+          8,
+          57
+        ]
+      ]
     }
-  ]
+  ],
+  "static_preview": {
+    "changed": 20481,
+    "rects": 4074,
+    "remaining": 22,
+    "solid": 713169,
+    "rooted": 711455,
+    "detached": 1714,
+    "normal": {
+      "flood": 497647,
+      "fails": []
+    },
+    "blocked": {
+      "flood": 496767,
+      "fails": []
+    },
+    "accepted": 83,
+    "rejected": 13,
+    "extra": [
+      [
+        891,
+        466,
+        45,
+        6,
+        62
+      ],
+      [
+        1174,
+        587,
+        52,
+        8,
+        57
+      ]
+    ]
+  },
+  "discarded_candidate_count": 13
 }
