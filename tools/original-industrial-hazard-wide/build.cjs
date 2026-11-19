@@ -15,11 +15,11 @@ spawn:[112,373],sites:[
 ['Quench inspection',[670,395]],['West maintenance',[725,833]],['Upper containment',[965,132]],
 ['Reactor gallery',[1000,395]],['Reactor service',[1215,595]],['East chemistry',[1380,370]],
 ['Glass distillation',[1595,455]],['North evacuation',[1870,250]],
-['Quarantine passage',[1780,650]],['East helipad',[1945,390]],['Dry underpass',[1115,958]]],
+['Quarantine passage',[1780,650]],['East helipad',[1945,337]],['Dry underpass',[1115,958]]],
 crops:[['freight',30,225,410,570],['quench',395,290,440,560],['reactor',805,130,555,710],['distillation',1310,210,500,650],['evacuation',1670,220,370,650]]},
 {slug:'ashlight-counterflow-foundry',seed:27111987,name:'Ashlight Counterflow Foundry',
-spawn:[108,350],sites:[
-['Ashward arrival',[108,350]],['Splitter cliff',[340,260]],['Cold siphon',[510,470]],
+spawn:[108,440],sites:[
+['Ashward arrival',[108,440]],['Splitter cliff',[340,260]],['Cold siphon',[510,470]],
 ['Cyclone lip',[740,330]],['Lower filter service',[645,840]],['Spiral gantry',[1090,250]],
 ['Cascade observation',[1145,485]],['Reactor twin west',[1430,325]],['Reactor twin east',[1645,315]],
 ['Lower isolation gallery',[1555,760]],['Vent conservatory',[1840,390]],['Long exhaust exit',[1940,580]],
@@ -187,6 +187,22 @@ function construct(spec,index){
    frame(1790,743,200,144,12,MAT.wall);portal(1772,781,33,70);portal(1974,787,30,63);
    vents(1788,636,4,61);box(1824,493,125,12,MAT.glass);
    pipe(1776,701,1968,701,9);
+ }
+
+ // Functional passages cut through genuine wall and slab material, not viewpoint aliases.
+ if(index===0){
+   portal(415,392,46,122);portal(779,388,53,120);
+   portal(580,572,78,69);portal(547,781,77,69);
+   portal(1334,390,50,135);portal(1659,434,47,118);
+   portal(1705,573,50,125);portal(1985,572,52,124);
+   portal(1798,698,65,62);
+ }else{
+   portal(422,391,54,139);portal(824,449,58,152);
+   portal(620,493,80,92);portal(552,790,72,72);
+   portal(891,416,55,145);portal(1284,432,55,145);
+   portal(1336,374,57,130);portal(1498,409,50,125);
+   portal(1571,368,50,148);portal(1693,440,55,120);
+   portal(1757,490,50,130);portal(1980,518,53,125);
  }
  // Large-scale repeated strata discontinuities follow geology, not arbitrary wallpaper.
  for(let x=120;x<1950;x+=214){
