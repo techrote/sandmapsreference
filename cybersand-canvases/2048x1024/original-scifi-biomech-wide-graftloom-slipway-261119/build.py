@@ -588,6 +588,10 @@ line(826,326,802,345,7,117)
 line(1031,326,1059,345,7,117)
 box(926,332,945,340,128)
 box(935,339,942,349,120)
+# North observation is a REAL through-aperture, not a sealed scenic eye.
+# This extends the x868..982 / y216..308 crown breach below the new
+# workface to keep the exact (925,145) objective freely accessible.
+portal(886,308,80,61)
 
 # 3. Refinery HIGH: retain R2's verified paired high-bell geometry.
 # An extra R3 press at this restrictive x1570..1640 throat violated the
