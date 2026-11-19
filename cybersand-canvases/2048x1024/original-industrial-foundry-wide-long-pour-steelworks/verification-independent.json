@@ -11,6 +11,18 @@
   "work": 741066,
   "fluids": 27755,
   "exposed_to_air": 0,
+  "static_support": {
+    "rooted": 713311,
+    "total": 713311,
+    "detached": 0
+  },
+  "blocked_throat": {
+    "envelope": [
+      31,
+      27
+    ],
+    "reachable": 15
+  },
   "checkpoints": [
     {
       "envelope": [
@@ -107,5 +119,5 @@
     }
   ],
   "native": "NATIVE-UNTESTED",
-  "result": "INDEPENDENT STATIC PASS; structural detached solids and installed native pending"
+  "result": "INDEPENDENT STATIC PASS; all inert solids rooted; installed native pending"
 }
