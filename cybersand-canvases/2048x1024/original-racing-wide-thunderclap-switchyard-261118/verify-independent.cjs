@@ -115,7 +115,7 @@ for(const p of rec.pngs){
   "03-split-current-iris.png":[760,164],"04-glassstorm-viaduct.png":[1240,232],
   "05-catch-recovery.png":[1536,540],"06-lower-s-turn-west.png":[580,640],
   "07-lower-s-turn-east.png":[1150,640],"08-iris-service-braces.png":[780,440],
-  "09-west-dive-portal.png":[310,450],"10-east-return-portal.png":[1490,450],
+  "09-west-dive-portal.png":[245,450],"10-east-return-portal.png":[1490,450],
   "11-weigh-inspection-bay.png":[1280,550],"12-finish-catch-jaws.png":[1536,280]}[p.file];
  if(!origin)throw Error("UNKNOWN_PNG "+p.file);
  let count=0;
