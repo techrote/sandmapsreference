@@ -652,6 +652,84 @@ assert R2_CHANGED_CELLS > 14000, ('substantive grid change missing', R2_CHANGED_
 
 
 
+# R4 SHEPHERD RESPONSE — a physically enterable diagnostic exchange and three
+# intelligibly different dry refinery mechanisms. Never trace reference art.
+# Preserve BOTH 31x27 altitude-stress routes: the long support arms route
+# OUTSIDE the narrow central x650..1200 transit corridor below y390.
+# Inspect these actual built cells in overview + district crops, not concept art.
+PRE_R4 = A[:]
+
+# MEMORIAL ANALYSER — two unequal perimeter-rooted sampling platforms framing
+# the exact Memory Core (921,468), not a hollow "destination" in featureless air.
+# West: a long roof-bearing counterweight folds OUT toward the western socket
+# before returning as a keyed, accessible optical sample shelf.
+line(727,268,619,371,13,117)
+line(619,371,644,476,17,62)
+line(644,476,696,508,16,117)
+box(690,506,817,519,62)
+poly([(709,504),(732,488),(770,489),(783,505)],117)
+box(730,497,775,504,120)
+box(799,490,815,510,113)
+line(807,490,807,459,8,117)
+box(797,451,818,461,120)
+# East: a longer counter-hung surgical dock, lower than west and equipped
+# with sequential lamellar read heads. Its nearest working surface is
+# x970+, leaving the conservative exact-centre Midge core unobstructed.
+line(1094,258,1222,368,14,62)
+line(1222,368,1211,477,18,117)
+line(1211,477,1115,511,13,62)
+box(973,506,1123,521,62)
+poly([(997,506),(1018,487),(1056,477),(1078,483),
+      (1091,506)],117)
+box(1017,492,1059,504,120)
+for xx, top in [(985,480),(1006,466),(1084,472)]:
+    box(xx,top,xx+7,508,113)
+    box(xx+1,top-8,xx+6,top,120)
+# Staggered loading shoes below the two benches, reachable on both sides.
+for xx, y0 in [(718,519),(763,519),(999,521),(1095,521)]:
+    box(xx,y0,xx+13,y0+12,117)
+    box(xx+3,y0+12,xx+10,y0+17,113)
+
+# REFINERY MID — unlike roof-suspended high receiver bells and deep grounded
+# low extrusion drums, the intermediate level is a bolted dry sorting / assay
+# plant, entered above its table through a generous unobstructed air gallery.
+# The actual inspection centre (1510,544) remains well above the hardware.
+box(1393,596,1410,628,62)
+poly([(1400,596),(1418,577),(1458,573),(1472,590),
+      (1462,601),(1425,604)],117)
+box(1415,584,1454,592,120)
+box(1450,605,1578,617,62)
+box(1465,617,1477,630,117)
+box(1556,617,1568,630,117)
+# Distinct three-step precision separator supported directly from middle deck.
+for xx, yy, ww in [(1476,585,43),(1520,578,34),(1558,592,24)]:
+    box(xx,yy,xx+ww,yy+7,113)
+    box(xx+8,yy+7,xx+15,607,62)
+    box(xx+4,yy-4,xx+ww-4,yy,120)
+# Eastern waste-metering jaws are vertically rooted in the same middle deck,
+# not a membrane across the upper/middle free-flying passage.
+box(1615,587,1627,637,62)
+poly([(1620,583),(1597,562),(1571,564),(1583,577),
+      (1606,596),(1620,598)],117)
+box(1590,558,1611,565,113)
+line(1614,609,1582,619,8,117)
+# Short under-bench rail identifies real dry-material transfer; neither this
+# nor the optical cassette is a decorative floating loop.
+box(1410,623,1590,629,113)
+
+# AFT TRANSFER — a compact cantilever receives the assay cassette, firmly
+# fixed to the eastern salvager's roof-rooted mandible, not the open Midge bay.
+line(1841,278,1864,361,11,117)
+line(1864,361,1919,397,14,62)
+box(1905,392,1965,407,62)
+box(1919,381,1949,391,113)
+box(1924,374,1943,382,120)
+
+R4_CHANGED_CELLS = sum(before != after for before, after in zip(PRE_R4, A))
+assert R4_CHANGED_CELLS > 1500, ('missing R4 physical apparatus', R4_CHANGED_CELLS)
+R4_DETACHED=anchored_only(A, False)
+assert R4_DETACHED==0, ('R4 unsupported apparatus', R4_DETACHED)
+
 # The former direct welds are superseded by grounded split architecture; retain exact route audits.
 
 def rectangles(a):
@@ -822,7 +900,7 @@ def run(dest):
     for f, x, y, w, h, step in specs:
         imgs.append(png_rgb(A, x, y, w, h, dest / f, step))
         assert png_verify(dest / f, A, x, y, w, h, step)
-    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'shepherd_rework_r2': {'changed_cells_final': R2_CHANGED_CELLS, 'objective': 'Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return'}, 'shepherd_rework_r3': {'changed_cells_final': R3_CHANGED_CELLS, 'objective': 'Rooted twin-lobe examination gantry with preserved north aperture, improved receiving cradle and lower dry extrusion, west assay console and aft extraction; rejected route-sealing enclosed workrooms'}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
+    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'shepherd_rework_r2': {'changed_cells_final': R2_CHANGED_CELLS, 'objective': 'Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return'}, 'shepherd_rework_r3': {'changed_cells_final': R3_CHANGED_CELLS, 'objective': 'Rooted twin-lobe examination gantry with preserved north aperture, improved receiving cradle and lower dry extrusion, west assay console and aft extraction; rejected route-sealing enclosed workrooms'}, 'shepherd_rework_r4': {'changed_cells_final': R4_CHANGED_CELLS, 'objective': 'Two side-rooted mnemonic sample docks, enterable dry precision assay/fractionation, anchored aft transfer. Conservative Midge and structural audits mandatory'}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
     (dest / 'qualification.json').write_text(json.dumps(info, indent=2) + '\n')
     (dest / 'seed.txt').write_text(str(SEED) + '\n')
     print(json.dumps({'rectangles': len(rect), 'setup_bytes': len(js), 'occupied': work, 'sites': len(SITES), 'alternate': common, 'gridsha': info['grid_sha256'], 'pngs': len(imgs)}, indent=2))
