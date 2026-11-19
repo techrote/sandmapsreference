@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "revision": "R4",
+  "revision": "R5",
   "concept": "the-long-pour-steelworks",
   "seed": 19261119,
   "extent": [
@@ -8,38 +8,38 @@
     1024
   ],
   "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
-  "material_plane_sha256": "406f769620e7b34e8c580e2d038eb58a2104d40a42f952e6501bcb7c23fc2338",
-  "setup_sha256": "ff8a857ebcfcbdd96cbda162b03e283c4d144627f443f264e59e7bfe7db67e39",
-  "json_bytes": 67273,
-  "rectangle_count": 3627,
+  "material_plane_sha256": "ac3c68e5c77e1906edcf9917f2db426a8e2486e9113d7ed2f0776e1fa3574311",
+  "setup_sha256": "2174a1f7fafb7252f3c09fbae531f34272a12b9a417648d26e7e5dbec2d9b065",
+  "json_bytes": 72139,
+  "rectangle_count": 3890,
   "rectangle_budget": 32768,
   "bridge_fallback": 4096,
-  "construction_work": 704016,
+  "construction_work": 726911,
   "construction_work_budget": 32000000,
   "materials": {
-    "0": 1393136,
+    "0": 1370241,
     "3": 8745,
     "8": 19010,
-    "57": 18567,
-    "58": 158215,
-    "62": 196729,
-    "65": 93082,
-    "66": 20064,
-    "68": 8802,
-    "69": 1170,
-    "72": 2340,
-    "76": 4822,
-    "77": 1961,
-    "79": 3206,
-    "100": 131023,
-    "104": 21652,
-    "117": 2970,
-    "131": 11658
+    "57": 20225,
+    "58": 157870,
+    "62": 206956,
+    "65": 98233,
+    "66": 25219,
+    "68": 9185,
+    "69": 1580,
+    "72": 2448,
+    "76": 5320,
+    "77": 2152,
+    "79": 3137,
+    "100": 130487,
+    "104": 22478,
+    "117": 2285,
+    "131": 11581
   },
   "static_support": {
-    "rooted": 674487,
-    "total": 676261,
-    "detached": 1774
+    "rooted": 697841,
+    "total": 699156,
+    "detached": 1315
   },
   "static_exact_flight": [
     {
@@ -49,7 +49,7 @@
       ],
       "reachable": 15,
       "total": 15,
-      "flood": 911447,
+      "flood": 885170,
       "sites": {
         "Receiving spawn": {
           "x": 115,
@@ -150,7 +150,7 @@
       ],
       "reachable": 15,
       "total": 15,
-      "flood": 845058,
+      "flood": 821595,
       "sites": {
         "Receiving spawn": {
           "x": 115,
@@ -251,7 +251,7 @@
       ],
       "reachable": 15,
       "total": 15,
-      "flood": 536660,
+      "flood": 513427,
       "sites": {
         "Receiving spawn": {
           "x": 115,
@@ -358,8 +358,8 @@
   },
   "pngs": {
     "overview.png": {
-      "bytes": 17979,
-      "sha256": "1988b3118dda38de61e85893c0a1eeeec6f16ac2a6907246312f6ba512009abd",
+      "bytes": 18743,
+      "sha256": "8ce1bf30119d58b972e4eee66d064c4683d166c7a68b6a066a50edaba4eb8a69",
       "viewport": [
         0,
         0,
@@ -368,8 +368,8 @@
       ]
     },
     "01-ore-and-skip.png": {
-      "bytes": 3168,
-      "sha256": "bbb96f4953e3b4190ef3bec5924402fa864baaf2550d45b1e6dac30053f71b26",
+      "bytes": 3189,
+      "sha256": "95b43e98ff46fc5206ddc1571a6a223ce1abe22f24d249aaf45a7bee74f7ffea",
       "viewport": [
         32,
         265,
@@ -378,8 +378,8 @@
       ]
     },
     "02-blast-furnaces.png": {
-      "bytes": 2517,
-      "sha256": "6e147853319d6ccb79332f0af470c58c95c46cc0c84a30e8aa4d89531a7cc8d9",
+      "bytes": 2556,
+      "sha256": "cbf01b99efa804891901feecc4847c24655febf95f1f2e64443dfdf63a876011",
       "viewport": [
         395,
         222,
@@ -388,8 +388,8 @@
       ]
     },
     "03-ladle-crane.png": {
-      "bytes": 3296,
-      "sha256": "f173336e66ca523cbae789f08730fd7de64513fe4add1f1fb29795af578b7030",
+      "bytes": 3520,
+      "sha256": "63ebe7655a924f9090e1c4c549d3db80ad6afe309c9f5d8f7f83a6a02403fc68",
       "viewport": [
         897,
         168,
@@ -398,8 +398,8 @@
       ]
     },
     "04-caster-cells.png": {
-      "bytes": 1879,
-      "sha256": "889ee3f1578b3ca9d2e92013f88ee790ebff52a7cfc3e11c95833604935e55d9",
+      "bytes": 1999,
+      "sha256": "dda6abc38c2ebc3be0939826dd3efc6d93038223dbc4bf981bbf7d10599af57c",
       "viewport": [
         1020,
         527,
@@ -408,8 +408,8 @@
       ]
     },
     "05-quench-and-export.png": {
-      "bytes": 2040,
-      "sha256": "b4423104a60aae256eeae894ba513b7493724914cb34c4ae93e0eeee481fe63f",
+      "bytes": 2144,
+      "sha256": "daee7625d1547a3d4e1620ef2114674aa849d776d405e6f5923a8d6b102117be",
       "viewport": [
         1585,
         320,
@@ -418,8 +418,8 @@
       ]
     },
     "06-subgrade-rail.png": {
-      "bytes": 2481,
-      "sha256": "eed96fd144bc6936a419dd3ddd241451cb1a8c301b0df10cf3149b01f736f41f",
+      "bytes": 2770,
+      "sha256": "6b5065e9e7507d32c979fc2fc60a89bb0be3092bbc430b57c19b452afaa97d54",
       "viewport": [
         300,
         755,
