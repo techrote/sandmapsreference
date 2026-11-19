@@ -22,7 +22,7 @@ spawn:[108,440],sites:[
 ['Ashward arrival',[108,440]],['Splitter cliff',[340,260]],['Cold siphon',[510,470]],
 ['Cyclone lip',[740,330]],['Lower filter service',[645,840]],['Spiral gantry',[1080,326]],
 ['Cascade observation',[1145,485]],['Reactor twin west',[1420,466]],['Reactor twin east',[1645,526]],
-['Lower isolation gallery',[1550,660]],['Vent conservatory',[1950,388]],['Long exhaust exit',[1940,580]],
+['Lower isolation gallery',[1550,545]],['Vent conservatory',[1950,388]],['Long exhaust exit',[1940,580]],
 ['Deep retrieval',[1040,965]]],
 crops:[['ashward',20,160,470,650],['siphons',400,250,510,610],['cascade',880,140,460,670],['twins',1305,160,485,675],['vent',1680,225,340,655]]}
 ];
@@ -214,6 +214,9 @@ function construct(spec,index){
  // Three elevated suspension rods meet the real top boundary, not floating paint.
  box(1425,19,10,74,MAT.iron);
  box(1540,19,10,76,MAT.iron);
+ // Shaft reaches the continuous dry maintenance artery at an explicitly designed
+ // split in the upper deck; 65-cell aperture preserves 31x27 manoeuvring.
+ portal(547,816,67,159);
  return {grid:g,op};
 }
 function rects(g){
