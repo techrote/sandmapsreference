@@ -311,7 +311,9 @@ function construct(spec,index){
  finishReceipt.inhabitation=inhabitedReceipt;
  const supportReceipt=anchorAssemblies();
  finishReceipt.structural_revision=require('./reengineer.cjs')(g,index,spec,{W,H,MAT});
- return {grid:g,op,supportReceipt,finishReceipt};
+ const flow=require('./processflow.cjs')(g,index,spec,{W,H,MAT});
+ finishReceipt.process_flow=flow.receipt;
+ return {grid:g,op,supportReceipt,finishReceipt,flowSites:flow.sites};
 }
 function rects(g){
  const out=[],active=new Map();let runs=0;
@@ -412,8 +414,12 @@ function qualify(spec,g,edits){
 }
 function BufferLikeLength(str){return unescape(encodeURIComponent(str)).length;}
 function build(i){
- const spec=specs[i],r=construct(spec,i),z=rects(r.grid),result=qualify(spec,r.grid,z.edits);
- result.grid=r.grid;result.spec=spec;result.receipt.paint_operations=r.op;
+ const spec=specs[i],r=construct(spec,i),z=rects(r.grid);
+ // New functional destinations are added AFTER the R5 bearing/path optimizer,
+ // preserving its proven corridor protection and avoiding mutable global specs.
+ const qualified={...spec,sites:[...spec.sites,...r.flowSites]};
+ const result=qualify(qualified,r.grid,z.edits);
+ result.grid=r.grid;result.spec=qualified;result.receipt.paint_operations=r.op;
  result.receipt.structural_supports=r.supportReceipt;
  result.receipt.material_finish=r.finishReceipt;
  result.receipt.unmerged_row_runs=z.rowRuns;

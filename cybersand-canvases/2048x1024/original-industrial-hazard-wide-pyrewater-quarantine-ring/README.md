@@ -67,3 +67,14 @@ Static clearance is not flight dynamics. Installed bridge capacity (4096 fallbac
 ## R5 — new entered process chambers (deterministic static qualification PASS; native untested)
 
 Two dry, properly proportioned, **actual material-cell** safety spaces were reauthored. The freight assay booth has a **76×77-cell east double-leaf airlock**, rooted weighing/air-analysis console plinths, and a real retained-floor pressure head (not decorative overlay). The quarantine scrubber room has a **124×107 west rib-spanning hatch** and a separately traversable **94×90 overhead emergency vent** across the suspended roof beam; two low supported rinse pedestals and retained isolation readouts distinguish its function. End-to-end movement is freight intake → triple quench → ring reactor → distillation → segregated scrubber/evacuation. New exact Midge centres: Freight decompression booth (215,812), Quarantine scrubber vestibule (1850,820). The original 14 centres and reactor emergency hatch stay authoritative. Dry airlocks and statically sealed fluids do **not** imply working pumps, live decontamination, safe dynamic fluid mechanics or native actor acceptance. No original reference image exists.
+
+## R6 — pressure/metrology process and servicing link (original material cells)
+
+A dry, structurally joined quench-throttle landing (x598–788/y529–567) now has two different operator positions, a metering head and a physical secondary connection to the reactor bearing. A refractory dry return from the reactor service side meets three distinct-height fractionator columns, and two rooted sampling/clean-air fittings serve the already entered quarantine scrubber. These are actual inert structural material IDs, not an overlay, pumping logic or liquid simulation. The existing mobile Water/Lava enclosures and R5 double-door escape topology remain untouched.
+
+| Additional exact R6 functional destination | Centre | Conservative clearance |
+| --- | --- | --- |
+| Quench metering overlook | (680,482) | 19×15, 23×19, 31×27 |
+| Distillation fractionator overlook | (1570,472) | 19×15, 23×19, 31×27 |
+
+All 18 old-plus-new site centres, both inserted-blockage reroutes, solid rooting, full-plane replay and genuine 1:1 material PNGs must pass independent tests on the regenerated R6 setup. **NATIVE-UNTESTED:** the stage does not implement pressure valves, reactor controls or active distillation; native import/flight, dynamic fluid stability and save/reopen require separate acceptance.

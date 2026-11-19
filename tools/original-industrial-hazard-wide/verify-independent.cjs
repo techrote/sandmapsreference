@@ -82,6 +82,9 @@ for(const slug of maps){
  assert.equal(sha(setupBytes),receipt.setup_sha256);
  assert.equal(sites.length,receipt.clearance['31x27'].sites);
  assert.equal(receipt.engine_main,'de109d0131641d6adc8d25bb9ced7ca3d4991105');
+ assert.equal(receipt.material_finish.process_flow.revision,'R6','R6 actual-cell process stage missing');
+ assert(receipt.material_finish.process_flow.added_cells>=1500,'R6 process stage too small');
+ assert.equal(receipt.material_finish.process_flow.mobile_fluid_changes,0);
  const grid=new Uint8Array(N);let area=0;
  for(const [x,y,w,h,m] of setup.edits){
   assert([x,y,w,h,m].every(isInt),'fractional rectangle');

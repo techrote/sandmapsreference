@@ -60,3 +60,14 @@ Static clearance is not flight dynamics. Installed bridge capacity (4096 fallbac
 ## R5 — entered counterflow and isolation (deterministic static qualification PASS; native untested)
 
 The ash reception/filter chamber now gains an **81×86-cell dry side vestibule** and genuinely floor-rooted weighing and particulate instrument consoles. Between unequal reactor towers, a new dry **west 84×77 / east 91×78 double-entry watchroom** serves a **78×92 below-floor recovery shaft** that physically penetrates the lower girder to reach the existing deep service artery. Here the route is cold siphon → graded cyclone separation → dual thermally isolated plasma watchroom → dry lower retrieval / high exhaust, intentionally distinct from Pyrewater's horizontal quench-to-scrubber chain. New exact conservative-hull checkpoint centres: Ashward filter audit (247,811) and inter-rib Twin-reactor isolation booth (1551,840). Materials are structural and dry at authored source state; there are no working simulations of machinery. Installed native bridge, live Water/Lava and Midge steering remain NATIVE-UNTESTED.
+
+## R6 — graded cyclone recovery and independently serviced hot/cold runs
+
+The diagonal cyclone now feeds a grounded coarse collection step and a differently elevated fine-fraction deck with separate lower retrieval. The hot reactor receives a steel servicing gangway; the cold reactor has its own lower isolated glass reflux landing, with a deliberately different clear volume between landing and pressure vessel. The exhaust gains an unequal lamellar filter with anchored high and low retrieval trays. All are authored material cells, not mock visual effects or functional simulated pumps. Water/Lava cells remain sealed and unchanged.
+
+| Additional exact R6 functional destination | Centre | Conservative clearance |
+| --- | --- | --- |
+| Cyclone graded separation overlook | (1160,550) | 19×15, 23×19, 31×27 |
+| Exhaust filter inspection perch | (1840,588) | 19×15, 23×19, 31×27 |
+
+Independent R6 static tests cover all 17 existing-plus-new exact sites, both artificial route blockages, load-bearing connectivity, 2048×1024 plane replay, material laws and every pixel of the overview/five 1:1 crops. **NATIVE-UNTESTED:** no actual separation machinery, native actor control, dynamic hot/cold fluids or save/reopen is claimed.
