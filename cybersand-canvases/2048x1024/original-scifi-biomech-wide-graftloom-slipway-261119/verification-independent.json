@@ -6,11 +6,11 @@
     2048,
     1024
   ],
-  "material_plane_sha256": "0f76367d83c2570a2ef46a79b470178c17a2ee454ecf09ccbd226771f4e68ddb",
-  "setup_bytes": 218774,
-  "setup_sha256": "52a9b7c625cb501ac6ca2f41d52ac9616be51178420371ee3c9a5e9c8ca32f4b",
+  "material_plane_sha256": "cda7451898ce5fd61cf9e00b27eea79e20f08436b2114d09b89d3fd8f8bc86de",
+  "setup_bytes": 218775,
+  "setup_sha256": "2ec59787b117880837d9eb4cc2b660c92f2a681fc442dc7a3eb179509749a5c8",
   "rectangles": 11717,
-  "occupied_cells": 763178,
+  "occupied_cells": 763248,
   "png_proofs": [
     {
       "name": "overview.png",
@@ -18,7 +18,7 @@
         2048,
         1024
       ],
-      "sha256": "12d052ca632f2ee3ea98029eecd93f1ba83250663ca1e2bf5bccd6978dfbb883",
+      "sha256": "cdc4e731b41d217e89bbf8e8514a193d66139d285f82401ff67f21b4b401c5f5",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -27,7 +27,7 @@
         1024,
         512
       ],
-      "sha256": "740d45f1c5f660d2534792cd2af9246a70776f07f7f39f3f033fa075dd5aa5ca",
+      "sha256": "5f140547c10c2b4cc1a0ca925f2ee1a4fa550499527bea2e3d4dea81a158a0e7",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -72,7 +72,7 @@
         330,
         750
       ],
-      "sha256": "1805307392cd54e5e7f26b032ee575f62ca807bcbddebbb0b95ec07be14f599a",
+      "sha256": "ee06b24e9627dfcd147b5c1e297b9438a3f2029b63104d1dc7c77a0488520ce2",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -88,29 +88,29 @@
   "clearance": {
     "19x15": {
       "exact_sites": 13,
-      "connected_legal_centres": 914558,
+      "connected_legal_centres": 914550,
       "minimum_approaches": 4
     },
     "23x19": {
       "exact_sites": 13,
-      "connected_legal_centres": 861844,
+      "connected_legal_centres": 861836,
       "minimum_approaches": 4
     },
     "31x27": {
       "exact_sites": 13,
-      "connected_legal_centres": 755089,
+      "connected_legal_centres": 755081,
       "minimum_approaches": 4
     }
   },
   "alternate_route_connected_centres": {
-    "upper_via_roof": 626139,
-    "lower_via_sump": 583999
+    "upper_via_roof": 626131,
+    "lower_via_sump": 583991
   },
   "structural_topology": {
-    "components": 34,
-    "boundary_grounded_cells": 646574,
-    "detached_cells": 116604,
-    "detached_components": 33,
+    "components": 33,
+    "boundary_grounded_cells": 648246,
+    "detached_cells": 115002,
+    "detached_components": 32,
     "largest_detached_components": [
       {
         "cells": 39183,
@@ -176,15 +176,6 @@
         ]
       },
       {
-        "cells": 1602,
-        "bbox": [
-          1734,
-          772,
-          1782,
-          875
-        ]
-      },
-      {
         "cells": 951,
         "bbox": [
           630,
@@ -246,8 +237,17 @@
           751,
           921
         ]
+      },
+      {
+        "cells": 488,
+        "bbox": [
+          675,
+          386,
+          703,
+          414
+        ]
       }
     ]
   },
-  "builder_sha256": "7b0a4d731a4302f5ddae810ed0865906f21295a29f7198ac0e99959e7f9699ea"
+  "builder_sha256": "181fd1ed4487741259532f3b095dad89ea646c5dc99fddac67c6cfcb7eddd8f5"
 }

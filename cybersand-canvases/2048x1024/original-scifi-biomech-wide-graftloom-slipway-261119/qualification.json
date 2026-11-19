@@ -77,15 +77,15 @@
   "replay_mismatches": 0,
   "overlaps": 0,
   "total_cells": 2097152,
-  "painted_cells": 763178,
+  "painted_cells": 763248,
   "rectangles": 11717,
-  "setup_bytes": 218774,
+  "setup_bytes": 218775,
   "histogram": {
-    "0": 1333974,
+    "0": 1333904,
     "49": 146529,
-    "58": 34155,
-    "62": 144445,
-    "100": 195858,
+    "58": 34153,
+    "62": 144520,
+    "100": 195855,
     "101": 132487,
     "113": 39476,
     "117": 44062,
@@ -93,8 +93,8 @@
     "123": 4594,
     "128": 9234
   },
-  "grid_sha256": "0f76367d83c2570a2ef46a79b470178c17a2ee454ecf09ccbd226771f4e68ddb",
-  "setup_sha256": "52a9b7c625cb501ac6ca2f41d52ac9616be51178420371ee3c9a5e9c8ca32f4b",
+  "grid_sha256": "cda7451898ce5fd61cf9e00b27eea79e20f08436b2114d09b89d3fd8f8bc86de",
+  "setup_sha256": "2ec59787b117880837d9eb4cc2b660c92f2a681fc442dc7a3eb179509749a5c8",
   "clearance": {
     "19x15": {
       "reachability": {
@@ -112,7 +112,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 914558,
+      "connected_legal_centres": 914550,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -146,7 +146,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 861844,
+      "connected_legal_centres": 861836,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -180,7 +180,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 755089,
+      "connected_legal_centres": 755081,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -202,11 +202,11 @@
   "alternate_route_stress": {
     "upper_via_roof": {
       "destination_gate_reached": true,
-      "legal_centres": 626139
+      "legal_centres": 626131
     },
     "lower_via_sump": {
       "destination_gate_reached": true,
-      "legal_centres": 583999
+      "legal_centres": 583991
     }
   },
   "png_integrity_and_pixel_parity": [
@@ -216,8 +216,8 @@
         2048,
         1024
       ],
-      "bytes": 40083,
-      "sha256": "12d052ca632f2ee3ea98029eecd93f1ba83250663ca1e2bf5bccd6978dfbb883"
+      "bytes": 40123,
+      "sha256": "cdc4e731b41d217e89bbf8e8514a193d66139d285f82401ff67f21b4b401c5f5"
     },
     {
       "png": "review-half.png",
@@ -225,8 +225,8 @@
         1024,
         512
       ],
-      "bytes": 16493,
-      "sha256": "740d45f1c5f660d2534792cd2af9246a70776f07f7f39f3f033fa075dd5aa5ca"
+      "bytes": 16508,
+      "sha256": "5f140547c10c2b4cc1a0ca925f2ee1a4fa550499527bea2e3d4dea81a158a0e7"
     },
     {
       "png": "01-receiving-slip.png",
@@ -270,8 +270,8 @@
         330,
         750
       ],
-      "bytes": 4085,
-      "sha256": "1805307392cd54e5e7f26b032ee575f62ca807bcbddebbb0b95ec07be14f599a"
+      "bytes": 4111,
+      "sha256": "ee06b24e9627dfcd147b5c1e297b9438a3f2029b63104d1dc7c77a0488520ce2"
     },
     {
       "png": "06-lower-return.png",
