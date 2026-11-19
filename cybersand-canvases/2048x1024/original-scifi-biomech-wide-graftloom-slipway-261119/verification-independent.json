@@ -6,11 +6,11 @@
     2048,
     1024
   ],
-  "material_plane_sha256": "57d3b8aadcd26fe773c22d2b40d35d006b0384e037289c1a896b5269f122b0d1",
-  "setup_bytes": 253359,
-  "setup_sha256": "86a8794c30fa0f20694800271450319bd64d1898d73afabe054df846b9cdbb70",
-  "rectangles": 13548,
-  "occupied_cells": 742353,
+  "material_plane_sha256": "39fb83fb434438608e1aa776e06367b0d78e8796ccd8b5411f47c791500a77c5",
+  "setup_bytes": 259333,
+  "setup_sha256": "58f79ab8e11f78cdaf41af21d9bc831c8ce0986fbf39bf2cf92b6eb50804877f",
+  "rectangles": 13862,
+  "occupied_cells": 749216,
   "png_proofs": [
     {
       "name": "overview.png",
@@ -18,7 +18,7 @@
         2048,
         1024
       ],
-      "sha256": "a93308a1b6776d755e539bd4dffaf0aefdfc0c30ac584e6450f7a00db898ee08",
+      "sha256": "fe02a3c05414f1a403843189706f138584ed2deba8ff1bb5cd8aa2b2ac850636",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -27,7 +27,7 @@
         1024,
         512
       ],
-      "sha256": "2191a956e5454003e7cdc96bef0c597969dcbd0edf2b90bc037175ab908bf267",
+      "sha256": "068cb69eff5a8a9e2eb2b54f49a710bbb9b839a64fd10b9f2d00e4c34ca811ed",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -54,7 +54,7 @@
         510,
         545
       ],
-      "sha256": "0015c418d8f0353966ddebbccf354b4a11d8881c14b2e3847e702e76b4c042a7",
+      "sha256": "219af67d372f6aed292d7d1ca065a1d6ff04a2f4ee1776dab8436567784ea746",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -63,7 +63,7 @@
         430,
         605
       ],
-      "sha256": "ac60521ac20259628686608d98a1ce7235ab02b8cbb8b9bbe659675672ee8b28",
+      "sha256": "c8259916bd9ad955a8e4eb6ad7b67579b2bd52d1fcf75a52ff9db858f88d49d1",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -88,31 +88,31 @@
   "clearance": {
     "19x15": {
       "exact_sites": 13,
-      "connected_legal_centres": 921101,
+      "connected_legal_centres": 919657,
       "minimum_approaches": 4
     },
     "23x19": {
       "exact_sites": 13,
-      "connected_legal_centres": 881060,
+      "connected_legal_centres": 879925,
       "minimum_approaches": 4
     },
     "31x27": {
       "exact_sites": 13,
-      "connected_legal_centres": 803299,
+      "connected_legal_centres": 802645,
       "minimum_approaches": 4
     }
   },
   "alternate_route_connected_centres": {
-    "upper_via_roof": 561867,
-    "lower_via_sump": 572316
+    "upper_via_roof": 561213,
+    "lower_via_sump": 571821
   },
   "structural_topology": {
     "components": 1,
-    "boundary_grounded_cells": 742353,
+    "boundary_grounded_cells": 749216,
     "detached_cells": 0,
     "detached_components": 0,
     "largest_detached_components": []
   },
   "structural_support": "PASS: one fully grounded occupied component",
-  "builder_sha256": "e237aeb6e920b6567d35abb8f8c86d42c9dea36198199201cba71299a4c7c2d4"
+  "builder_sha256": "f521edf2bb5c14e75488750ba0001847ee10e4268c7debc34367d05260440b4b"
 }

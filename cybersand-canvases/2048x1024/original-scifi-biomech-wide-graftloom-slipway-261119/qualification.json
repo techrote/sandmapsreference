@@ -31,6 +31,10 @@
     "changed_cells_final": 12356,
     "objective": "Grounded mnemonic hood reader-pods, enterable mid-level precision assay/fractionation, anchored aft handling; mid-void dock rejected after route gating. Conservative geometry audits mandatory"
   },
+  "shepherd_rework_r5": {
+    "changed_cells_final": 13948,
+    "objective": "Independent self-review: high receiver split keyed rotary and translated upper jaws versus low dry-extrusion inspection cell. Memory Core site-level bay P1 remains unresolved; rejected unsupported/flight-sealing midspan schemes"
+  },
   "structural_reconstruction": {
     "replaced_unsupported_legacy_cells": 115002,
     "small_detached_finish_cells_trimmed": 0,
@@ -94,23 +98,23 @@
   "replay_mismatches": 0,
   "overlaps": 0,
   "total_cells": 2097152,
-  "painted_cells": 742353,
-  "rectangles": 13548,
-  "setup_bytes": 253359,
+  "painted_cells": 749216,
+  "rectangles": 13862,
+  "setup_bytes": 259333,
   "histogram": {
-    "0": 1354799,
+    "0": 1347936,
     "49": 95908,
-    "58": 37318,
-    "62": 178345,
+    "58": 37192,
+    "62": 181985,
     "100": 183893,
-    "101": 102363,
-    "113": 45190,
-    "117": 81956,
-    "120": 13569,
+    "101": 99798,
+    "113": 46298,
+    "117": 85777,
+    "120": 14554,
     "128": 3811
   },
-  "grid_sha256": "57d3b8aadcd26fe773c22d2b40d35d006b0384e037289c1a896b5269f122b0d1",
-  "setup_sha256": "86a8794c30fa0f20694800271450319bd64d1898d73afabe054df846b9cdbb70",
+  "grid_sha256": "39fb83fb434438608e1aa776e06367b0d78e8796ccd8b5411f47c791500a77c5",
+  "setup_sha256": "58f79ab8e11f78cdaf41af21d9bc831c8ce0986fbf39bf2cf92b6eb50804877f",
   "clearance": {
     "19x15": {
       "reachability": {
@@ -128,7 +132,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 921101,
+      "connected_legal_centres": 919657,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -162,7 +166,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 881060,
+      "connected_legal_centres": 879925,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -196,7 +200,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 803299,
+      "connected_legal_centres": 802645,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -218,11 +222,11 @@
   "alternate_route_stress": {
     "upper_via_roof": {
       "destination_gate_reached": true,
-      "legal_centres": 561867
+      "legal_centres": 561213
     },
     "lower_via_sump": {
       "destination_gate_reached": true,
-      "legal_centres": 572316
+      "legal_centres": 571821
     }
   },
   "png_integrity_and_pixel_parity": [
@@ -232,8 +236,8 @@
         2048,
         1024
       ],
-      "bytes": 45455,
-      "sha256": "a93308a1b6776d755e539bd4dffaf0aefdfc0c30ac584e6450f7a00db898ee08"
+      "bytes": 46259,
+      "sha256": "fe02a3c05414f1a403843189706f138584ed2deba8ff1bb5cd8aa2b2ac850636"
     },
     {
       "png": "review-half.png",
@@ -241,8 +245,8 @@
         1024,
         512
       ],
-      "bytes": 19413,
-      "sha256": "2191a956e5454003e7cdc96bef0c597969dcbd0edf2b90bc037175ab908bf267"
+      "bytes": 19807,
+      "sha256": "068cb69eff5a8a9e2eb2b54f49a710bbb9b839a64fd10b9f2d00e4c34ca811ed"
     },
     {
       "png": "01-receiving-slip.png",
@@ -268,8 +272,8 @@
         510,
         545
       ],
-      "bytes": 4343,
-      "sha256": "0015c418d8f0353966ddebbccf354b4a11d8881c14b2e3847e702e76b4c042a7"
+      "bytes": 4358,
+      "sha256": "219af67d372f6aed292d7d1ca065a1d6ff04a2f4ee1776dab8436567784ea746"
     },
     {
       "png": "04-refinery-filter.png",
@@ -277,8 +281,8 @@
         430,
         605
       ],
-      "bytes": 6495,
-      "sha256": "ac60521ac20259628686608d98a1ce7235ab02b8cbb8b9bbe659675672ee8b28"
+      "bytes": 7187,
+      "sha256": "c8259916bd9ad955a8e4eb6ad7b67579b2bd52d1fcf75a52ff9db858f88d49d1"
     },
     {
       "png": "05-aft-dock.png",
