@@ -535,17 +535,17 @@ line(1811, 293, 1792, 340, 9, 117)
 line(1854, 303, 1875, 341, 9, 117)
 box(1784, 337, 1820, 348, 113)
 box(1855, 339, 1884, 347, 113)
-# Lower palletiser: fixed to existing eastern stern shell and low rooted keel.
-line(2033, 688, 1986, 738, 20, 62)
-line(1986, 738, 1945, 772, 17, 117)
-lumen(1940, 779, 48, 24, 8, 62)
-line(1899, 783, 1846, 841, 12, 117)
-line(1847, 842, 1851, 914, 14, 58)
-# Final rail (1940,848) remains visibly open with full-hull clearance.
-box(1810, 902, 1882, 915, 62)
-box(1874, 921, 2002, 936, 62)
-for xx in (1825, 1859, 1904, 1950):
-    box(xx, 929, xx+9, 956, 117)
+# Aft palette clamp is split: the roof-rooted recovery pawl never closes
+# the lower arrival passage to the exact (1940,848) extraction coordinate.
+line(2033, 688, 2009, 729, 13, 62)
+line(2009, 729, 1991, 745, 10, 117)
+lumen(1992, 750, 27, 19, 7, 62)
+# Basal handling cradles are rooted independently, with broad air between.
+line(1847, 932, 1838, 880, 12, 58)
+box(1810, 902, 1862, 915, 62)
+box(1991, 925, 2025, 940, 62)
+# Recovery rail x1940,y848 is open above and to both sides at full hull.
+
 # A single legible return pipe follows the underkeel, with diverse junctions,
 # all welded into existing floor geology rather than hovering in the airway.
 for xa,xb,yy in [(608,728,944),(746,875,955),(965,1112,950),
