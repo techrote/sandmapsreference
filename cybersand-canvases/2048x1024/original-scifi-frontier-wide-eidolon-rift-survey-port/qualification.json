@@ -1,0 +1,702 @@
+{
+  "schema": 1,
+  "title": "Eidolon Rift Survey Port",
+  "mode": "ORIGINAL / NO REFERENCE",
+  "seed": 2611190120,
+  "extent": [
+    2048,
+    1024
+  ],
+  "accepted_engine": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "midge_blob": "228399e38a0e0ab215b9f48698edce67a7a35799",
+  "grid_fnv32": "844c45bf",
+  "grid_sha256": "b51d2e1d3d204fc634a31cda3dd4f0b940febca63face3ebc8c474c733e4bba5",
+  "setup_sha256": "775a555533cf6068eb45586a69707527bbf702cd2a15df96344a91b75dddde33",
+  "repair": {
+    "ports": [
+      [
+        248,
+        543,
+        65,
+        70
+      ],
+      [
+        289,
+        559,
+        210,
+        66
+      ],
+      [
+        777,
+        563,
+        95,
+        70
+      ],
+      [
+        1294,
+        479,
+        70,
+        79
+      ],
+      [
+        1396,
+        563,
+        80,
+        120
+      ],
+      [
+        1532,
+        579,
+        120,
+        90
+      ],
+      [
+        858,
+        608,
+        70,
+        49
+      ],
+      [
+        1170,
+        607,
+        80,
+        48
+      ],
+      [
+        977,
+        903,
+        81,
+        47
+      ],
+      [
+        1073,
+        909,
+        69,
+        56
+      ],
+      [
+        998,
+        924,
+        162,
+        44
+      ],
+      [
+        803,
+        476,
+        70,
+        113
+      ]
+    ],
+    "beams": [
+      [
+        752,
+        562,
+        9,
+        355,
+        62
+      ],
+      [
+        1251,
+        503,
+        9,
+        150,
+        62
+      ],
+      [
+        1255,
+        885,
+        10,
+        139,
+        58
+      ],
+      [
+        1534,
+        475,
+        9,
+        420,
+        62
+      ],
+      [
+        1448,
+        350,
+        7,
+        39,
+        62
+      ],
+      [
+        1153,
+        641,
+        8,
+        383,
+        62
+      ],
+      [
+        1370,
+        551,
+        8,
+        290,
+        62
+      ],
+      [
+        1759,
+        685,
+        8,
+        180,
+        62
+      ],
+      [
+        1878,
+        682,
+        8,
+        187,
+        62
+      ],
+      [
+        121,
+        473,
+        8,
+        380,
+        62
+      ]
+    ],
+    "paths": [
+      {
+        "name": "Landing Exchange",
+        "method": "existing 31x27 flight graph"
+      },
+      {
+        "name": "Solar Mast Control",
+        "method": "existing 31x27 flight graph"
+      },
+      {
+        "name": "Geology Receiving Hall",
+        "method": "existing 31x27 flight graph"
+      },
+      {
+        "name": "Xenolith Analysis Chamber",
+        "method": "existing 31x27 flight graph"
+      },
+      {
+        "name": "Rift Sky Tram",
+        "method": "minimal occupancy weighted service passage",
+        "nodes": 38,
+        "explored": 1918
+      },
+      {
+        "name": "Fault Descent",
+        "method": "existing 31x27 flight graph"
+      },
+      {
+        "name": "Glass Meridian Observatory",
+        "method": "existing 31x27 flight graph"
+      },
+      {
+        "name": "Spectral Sample Gallery",
+        "method": "minimal occupancy weighted service passage",
+        "nodes": 19,
+        "explored": 393
+      },
+      {
+        "name": "Eastern Cargo Customs",
+        "method": "existing 31x27 flight graph"
+      },
+      {
+        "name": "Foundry Sorting Hall",
+        "method": "existing 31x27 flight graph"
+      },
+      {
+        "name": "Deep Silicate Archive",
+        "method": "existing 31x27 flight graph"
+      }
+    ],
+    "solid_groups_before": 50,
+    "unsupported_components_culled": 49,
+    "unsupported_cells_culled": 17025
+  },
+  "alternate_route_obstructions": [
+    {
+      "name": "high transit midspan",
+      "box": [
+        980,
+        443,
+        51,
+        45
+      ],
+      "conservative_midge": [
+        31,
+        27
+      ],
+      "reachable_air_centres": 1013258,
+      "critical_sites": 8,
+      "failed": []
+    },
+    {
+      "name": "central freight return",
+      "box": [
+        1038,
+        541,
+        45,
+        45
+      ],
+      "conservative_midge": [
+        31,
+        27
+      ],
+      "reachable_air_centres": 1011725,
+      "critical_sites": 8,
+      "failed": []
+    },
+    {
+      "name": "lower rift return",
+      "box": [
+        1030,
+        781,
+        47,
+        43
+      ],
+      "conservative_midge": [
+        31,
+        27
+      ],
+      "reachable_air_centres": 1008654,
+      "critical_sites": 8,
+      "failed": []
+    },
+    {
+      "name": "eastern approach",
+      "box": [
+        1270,
+        597,
+        49,
+        51
+      ],
+      "conservative_midge": [
+        31,
+        27
+      ],
+      "reachable_air_centres": 1010987,
+      "critical_sites": 8,
+      "failed": []
+    }
+  ],
+  "material_physics": "All used nonempty material IDs are current native Solid, movable=false, RuleKernel::None; zero liquids/powders/reactive agents",
+  "histogram": {
+    "0": 1591303,
+    "49": 18204,
+    "58": 36937,
+    "62": 103249,
+    "100": 312066,
+    "102": 2690,
+    "114": 21197,
+    "118": 4782,
+    "121": 2636,
+    "129": 4088
+  },
+  "edits": 3019,
+  "max_edits": 32768,
+  "json_bytes": 58187,
+  "max_json_bytes": 1048576,
+  "construction_cell_work": 505849,
+  "max_work_cells": 32000000,
+  "overlaps": 0,
+  "replay_diffs": 0,
+  "invalid_rectangles": [],
+  "conservative_midge_clearance": {
+    "19x15": {
+      "centres": 1136030,
+      "sites": [
+        {
+          "name": "Landing Exchange",
+          "xy": [
+            272,
+            571
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Solar Mast Control",
+          "xy": [
+            242,
+            332
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Geology Receiving Hall",
+          "xy": [
+            514,
+            590
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Xenolith Analysis Chamber",
+          "xy": [
+            700,
+            594
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Rift Sky Tram",
+          "xy": [
+            995,
+            570
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Fault Descent",
+          "xy": [
+            1002,
+            824
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Glass Meridian Observatory",
+          "xy": [
+            1390,
+            510
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Spectral Sample Gallery",
+          "xy": [
+            1434,
+            665
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Eastern Cargo Customs",
+          "xy": [
+            1696,
+            620
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Foundry Sorting Hall",
+          "xy": [
+            1843,
+            652
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Deep Silicate Archive",
+          "xy": [
+            1107,
+            942
+          ],
+          "free": true,
+          "reachable": true
+        }
+      ]
+    },
+    "23x19": {
+      "centres": 1087608,
+      "sites": [
+        {
+          "name": "Landing Exchange",
+          "xy": [
+            272,
+            571
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Solar Mast Control",
+          "xy": [
+            242,
+            332
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Geology Receiving Hall",
+          "xy": [
+            514,
+            590
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Xenolith Analysis Chamber",
+          "xy": [
+            700,
+            594
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Rift Sky Tram",
+          "xy": [
+            995,
+            570
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Fault Descent",
+          "xy": [
+            1002,
+            824
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Glass Meridian Observatory",
+          "xy": [
+            1390,
+            510
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Spectral Sample Gallery",
+          "xy": [
+            1434,
+            665
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Eastern Cargo Customs",
+          "xy": [
+            1696,
+            620
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Foundry Sorting Hall",
+          "xy": [
+            1843,
+            652
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Deep Silicate Archive",
+          "xy": [
+            1107,
+            942
+          ],
+          "free": true,
+          "reachable": true
+        }
+      ]
+    },
+    "31x27": {
+      "centres": 1013967,
+      "sites": [
+        {
+          "name": "Landing Exchange",
+          "xy": [
+            272,
+            571
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Solar Mast Control",
+          "xy": [
+            242,
+            332
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Geology Receiving Hall",
+          "xy": [
+            514,
+            590
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Xenolith Analysis Chamber",
+          "xy": [
+            700,
+            594
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Rift Sky Tram",
+          "xy": [
+            995,
+            570
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Fault Descent",
+          "xy": [
+            1002,
+            824
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Glass Meridian Observatory",
+          "xy": [
+            1390,
+            510
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Spectral Sample Gallery",
+          "xy": [
+            1434,
+            665
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Eastern Cargo Customs",
+          "xy": [
+            1696,
+            620
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Foundry Sorting Hall",
+          "xy": [
+            1843,
+            652
+          ],
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Deep Silicate Archive",
+          "xy": [
+            1107,
+            942
+          ],
+          "free": true,
+          "reachable": true
+        }
+      ]
+    }
+  },
+  "sites": [
+    [
+      "Landing Exchange",
+      [
+        272,
+        571
+      ]
+    ],
+    [
+      "Solar Mast Control",
+      [
+        242,
+        332
+      ]
+    ],
+    [
+      "Geology Receiving Hall",
+      [
+        514,
+        590
+      ]
+    ],
+    [
+      "Xenolith Analysis Chamber",
+      [
+        700,
+        594
+      ]
+    ],
+    [
+      "Rift Sky Tram",
+      [
+        995,
+        570
+      ]
+    ],
+    [
+      "Fault Descent",
+      [
+        1002,
+        824
+      ]
+    ],
+    [
+      "Glass Meridian Observatory",
+      [
+        1390,
+        510
+      ]
+    ],
+    [
+      "Spectral Sample Gallery",
+      [
+        1434,
+        665
+      ]
+    ],
+    [
+      "Eastern Cargo Customs",
+      [
+        1696,
+        620
+      ]
+    ],
+    [
+      "Foundry Sorting Hall",
+      [
+        1843,
+        652
+      ]
+    ],
+    [
+      "Deep Silicate Archive",
+      [
+        1107,
+        942
+      ]
+    ]
+  ],
+  "native": "NATIVE-UNTESTED",
+  "native_bridge_source_rectangles": 32768,
+  "old_unavailable_bridge_fallback_rectangles": 4096
+}
