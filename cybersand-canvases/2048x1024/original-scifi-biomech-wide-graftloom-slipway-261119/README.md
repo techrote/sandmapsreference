@@ -1,8 +1,36 @@
-# The Graftloom Slipway — R3 Grounded Examination Gantry & Rooted Keel
+# The Graftloom Slipway — R4 Grounded Assay and Mnemonic Optical Rework
 
 **Original CyberSand science-fiction bio-industrial landscape · exact 2048 × 1024 real material cells · deterministic seed 19112647**
 
 > **DRAFT / HOLD — STATIC-CONTRACT / GEOMETRY / SUPPORT PASS — NATIVE-UNTESTED — INDEPENDENT ART / TECHNICAL / SHEPHERD REVIEW PENDING.** Original material-cell authoring, not a conversion, traced artwork, prior archive migration, AI concept PNG or mock gameplay screenshot. Do not merge, promote Ready, auto-merge or imply owner acceptance.
+
+## R4 current qualification — functioning dry assay plant and readable attached optics (19 November 2026)
+
+**Current physical evidence:** [full 2048×1024 material-cell overview](./overview.png), [true 1:1 memory examination crop](./03-memory-engine.png), [true 1:1 refinery crop](./04-refinery-filter.png), [true 1:1 aft salvage crop](./05-aft-dock.png), and three further 1:1 crops. All are regenerated from the same fixed-seed final material plane, not external reference art, and independently CRC/inflate/pixel-parity verified.
+
+The independent **R3 Shepherd REWORK** finding remained active when R4 began: Memory Core was virtually empty, and all three refinery tiers read as repeated tray/ring silhouettes. R4 physically changes **12,356 final material IDs** through a newly supported middle assay/fractionation workface (asymmetric dry sample recipient, stepped measurement heads, separator table and distinct eastern metering jaws), a compact aft salvage transfer cantilever and asymmetrically differentiated, roof-rooted mnemonic reader pods. The high receiver bells and low grounded extrusion already have distinct mechanical purposes, so the new **middle sorting/assay station** now creates a visibly different process height rather than more free-floating rings.
+
+**Bounded self-review:** the middle tier now shows an identifiable enterable dry processing workface in the actual 1:1 crop, but its surrounding shelves still look repetitive. The aft transfer has a locally credible load path yet remains small relative to the hull. The memory reader-pods are genuinely roof-rooted but **do not solve the important artistic P1**: Memory Core (921,468) remains a huge open inspection volume, not an enterable physical diagnostic bay. This must be judged independently, not marked owner-accepted by this creator.
+
+**Rejected and repaired trials:** Initial R4 cassette included **901 unsupported pixels**, detected and repaired by grounding its optical membrane. A hanging mnemonic pier then severed the strict 31×27 upper alternate; a refinery-anchored long diagonal blocked Middle Filter / Final Recovery; a long west freight rail blocked the strict lower alternate. All those trial structures were **removed or redesigned**. No rejected midair service deck, floating cells, route waiver or bogus site relocation survives in the published R4 grid.
+
+| Current R4 exact static test | Result |
+|---|---:|
+| Full real material plane | **2048 × 1024 = 2,097,152** |
+| Actual occupied supported cells | **742,353 / 742,353** |
+| Detached components / solid cells / edit overlaps | **0 / 0 / 0** |
+| Lossless construction rectangles | **13,548 / 32,768** |
+| Exact UTF-8 Setup-v2 payload | **253,359 / 1,048,576 bytes** |
+| Exact Midge destinations, 19×15, 23×19, 31×27 | **13 / 13 each** |
+| Strict upper and lower West Gate → East Gate detours | **both PASS at 31×27** |
+| Full-map PNG, half-review PNG and six 1:1 district crops | **8 / 8 CRC, zlib and source-pixel parity PASS** |
+| Native installed bridge / Rapier flight / fresh-process reopen | **NATIVE-UNTESTED** |
+
+**R4 material plane SHA-256:** `57d3b8aadcd26fe773c22d2b40d35d006b0384e037289c1a896b5269f122b0d1`  
+**R4 Setup JSON SHA-256:** `86a8794c30fa0f20694800271450319bd64d1898d73afabe054df846b9cdbb70`  
+**Accepted CyberSand main read-only contract:** `de109d0131641d6adc8d25bb9ced7ca3d4991105`, valid 2048×1024 extent and stable immobile solid materials. The native **source** bridge advertises 32,768 rectangles, but an older **installed** bridge may only accept 4,096; R4 is *not* an installed-bridge pass.
+
+**Current authoritative R4 receipts:** [qualification.json](./qualification.json), [independent material replay and PNG verifier](./verification-independent.json), [reproducible Python builder](./build.py), [exact Setup-v2 input](./setup-graftloom-slipway.json) and [fixed seed](./seed.txt). Subsequent R2/R3 numbers are preserved below only as dated historical provenance.
 
 ## Original spatial thesis and engineering repair
 
@@ -28,17 +56,17 @@ No initial simulated biology, free water, acid, powders or fire is used. The bio
 
 ## R3 — functional craft with conservative route preservation (19 November 2026)
 
-**Current independently rebuilt material plane:** 2048×1024 = 2,097,152 cells; **732,826 occupied**; **13,250** nonoverlapping rectangles; **247,582** Setup-v2 UTF-8 bytes; one boundary-grounded solid component (**zero detached**) and zero overlapping writes. Compared with the final R2 plane, **19,242 actual cell values changed**. All **13 exact named sites** remain reachable with **four of four local approaches** at each **19×15, 23×19 and 31×27** conservative Midge envelope. Both independently constrained **31×27 upper-roof and lower-sump alternate routes** from West Gate (570,470) to East Gate (1240,480) pass. The original 2048×1024 grid PNG, reviewer thumbnail and **six 1:1 district crops** pass independent PNG signature, CRC, zlib, IEND and exact material-pixel parity (**8/8**).
+**Historical R3 independently rebuilt material plane:** 2048×1024 = 2,097,152 cells; **732,826 occupied**; **13,250** nonoverlapping rectangles; **247,582** Setup-v2 UTF-8 bytes; one boundary-grounded solid component (**zero detached**) and zero overlapping writes. Compared with the final R2 plane, **19,242 actual cell values changed**. All **13 exact named sites** remain reachable with **four of four local approaches** at each **19×15, 23×19 and 31×27** conservative Midge envelope. Both independently constrained **31×27 upper-roof and lower-sump alternate routes** from West Gate (570,470) to East Gate (1240,480) pass. The original 2048×1024 grid PNG, reviewer thumbnail and **six 1:1 district crops** pass independent PNG signature, CRC, zlib, IEND and exact material-pixel parity (**8/8**).
 
 **Actual new process architecture:** A shaped, dry receiving graft cradle now enters from the western structural cheek. The mnemonic crown carries *paired, asymmetric, fully roof-rooted examination stations* with lamellar memory cassettes, optical contacts and distinct scanning teeth; an exact through-aperture keeps Memory North (925,145) connected. The refinery gains a supported west assay console, a grounded lower dry extrusion auger with asymmetric tooth casing, and actual localized supports. Aft extraction receives a grounded terminal bracket, without cutting Final Recovery Rail (1940,848).
 
 **Explicit rejected experiments:** A much larger suspended inspection platform, an enclosed filtration laboratory, an underkeel sample room and a bridge portal over East Gate were physically constructed and tested in intermediate heads, then **rejected**. They either became thousands of detached cells or sealed strict Midge flight routes. R3 deliberately prioritizes actual level access over visual fill. The central Memory Core (921,468) therefore remains an open inspection void beneath the new supported upper operating hood, not an enterable midair room. Whether that adequately answers the independent artistic REWORK is **for the separate Shepherd/Fidelity reviewers**, not creator self-acceptance.
 
-**Current R3 material-plane SHA-256:** `1667138a09d9d3abcc579b42a7fa67af9701b53c27167dbd57060d1d2ee396f9`  
-**Current R3 Setup-v2 SHA-256:** `da06bb98ac185bcdc77bb031c4a1ca120aa54a8252f1d951d608c3be4e08a03d`  
+**Historical R3 material-plane SHA-256:** `1667138a09d9d3abcc579b42a7fa67af9701b53c27167dbd57060d1d2ee396f9`  
+**Historical R3 Setup-v2 SHA-256:** `da06bb98ac185bcdc77bb031c4a1ca120aa54a8252f1d951d608c3be4e08a03d`  
 **Native Workbench/Godot/Rapier/install/save-reopen:** **NATIVE-UNTESTED**.
 
-The earlier R2 section and its phase-specific numbers remain as **historical provenance**. For acceptance inspect the current R3 section, present qualification and independent-verification receipts, and exact changed HEAD.
+The earlier R2 section and its phase-specific numbers remain as **historical provenance**. For acceptance inspect the **R4 current section**, present qualification and independent-verification receipts, and exact changed HEAD; R3 is historical.
 
 ## Six playable districts at ordinary Midge scale
 
