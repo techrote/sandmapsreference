@@ -504,17 +504,9 @@ line(1371, 366, 1371, 384, 10, 117)
 box(1353, 377, 1430, 389, 62)
 box(1565, 376, 1641, 389, 62)
 # High-bay x1470,y404 retains a >31x27 open envelope.
-# MID — membrane chromatography on two supported towers rather than shelves.
-# The left tower joins rooted roof x1321, right joins x1598.
-line(1405, 349, 1384, 515, 7, 117)  # continuous rooted left feeder
-lumen(1384, 557, 37, 46, 10, 62)
-line(1563, 348, 1592, 518, 7, 117)  # continuous rooted right feeder
-lumen(1592, 566, 35, 57, 11, 62)
-# A pair of selective shunt filters with exposed external service keys.
-for cx,cy in [(1384,557),(1592,566)]:
-    box(cx-8,cy-7,cx+8,cy+7,120)
-    line(cx-4,cy,cx-39,cy,5,117)
-    box(cx-12,cy+47,cx+10,cy+53,113)
+# MID — alternate clear-span membrane inspection apparatus pending qualified site routing.
+# (The roof-fed diaphragm across the original portal is removed; it cut the
+# exact freight and Midge route to all upper/eastern stations.)
 # LOW — coarse dry fractionation drum anchored to the floor/bedrock,
 # separated from high and middle mechanisms by substantial open air.
 box(1360, 849, 1382, 987, 58)
