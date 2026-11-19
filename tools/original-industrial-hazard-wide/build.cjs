@@ -2,9 +2,9 @@
 // ORIGINAL INDUSTRIAL HAZARD WIDE -- wholly authored cell geometry, no source art.
 // Node 24: node build.cjs    (builds two independent self-contained Setup-v2 worlds)
 // Node 24: node build.cjs --verify  (regenerates and checks all emitted files)
-// Accepted read-only CyberSand main 018bd09503d7f079ddac52e225c2f7daf8d678bf
+// Accepted read-only CyberSand main de109d0131641d6adc8d25bb9ced7ca3d4991105
 const W=2048,H=1024,ROOT='cybersand-canvases/2048x1024/';
-const ENGINE='018bd09503d7f079ddac52e225c2f7daf8d678bf';
+const ENGINE='de109d0131641d6adc8d25bb9ced7ca3d4991105';
 const MAT={empty:0,wall:58,basalt:100,obsidian:101,iron:117,glass:120,quartz:122,glow:123,water:3,lava:8};
 const MIDGE_HASH='c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96';
 const POLICY=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
@@ -217,68 +217,91 @@ function construct(spec,index){
  // Shaft reaches the continuous dry maintenance artery at an explicitly designed
  // split in the upper deck; 65-cell aperture preserves 31x27 manoeuvring.
  portal(547,816,67,159);
+ if(index===0){portal(408,781,112,162);portal(514,782,130,192);} // full 31x27 approach to lower dry bypass
  // Short, engineered tie rods join disconnected solid assemblies to genuine
  // boundary-grounded beams. Path search traverses only EMPTY cells, avoids
  // the exact 31x27 navigation checkpoints, and never traverses a fluid tank.
+
  function anchorAssemblies(){
-   const size=g.length,done=new Uint8Array(size),queue=new Int32Array(size);
-   let head=0,tail=0;
-   const solid=p=>{const m=g[p];return m!==0&&m!==MAT.water&&m!==MAT.lava;};
-   const add=p=>{if(!done[p]&&solid(p)){done[p]=1;queue[tail++]=p;}};
-   for(let x=0;x<W;x++){add(x);add((H-1)*W+x);}
-   for(let y=0;y<H;y++){add(y*W);add(y*W+W-1);}
+   // Preserve complete 31 x 27 conservative flight paths before painting load-bearing ties.
+   const lc=legalCentres(g,31,27),parentRoute=new Int32Array(g.length);
+   parentRoute.fill(-2);
+   const q=new Int32Array(g.length);let head=0,tail=0;
+   const origin=spec.spawn[1]*W+spec.spawn[0];
+   if(!lc.clear[origin])throw Error('blocked initial Midge spawn');
+   q[tail++]=origin;parentRoute[origin]=-1;
    while(head<tail){
-     const p=queue[head++],x=p%W,y=(p/W)|0;
-     if(x>0)add(p-1);if(x+1<W)add(p+1);
-     if(y>0)add(p-W);if(y+1<H)add(p+W);
-   }
-   const parent=new Int32Array(size);parent.fill(-2);
-   const dist=new Uint16Array(size);
-   head=0;tail=0;
-   for(let p=0;p<size;p++)if(done[p]){parent[p]=-1;queue[tail++]=p;}
-   const protectedSite=(p)=>{
-     const x=p%W,y=(p/W)|0;
-     for(const point of [spec.spawn,...spec.sites.map(s=>s[1])]){
-       if(Math.abs(x-point[0])<=23&&Math.abs(y-point[1])<=21)return true;
-     }
-     return false;
-   };
-   while(head<tail){
-     const p=queue[head++],x=p%W,y=(p/W)|0;
+     const p=q[head++],x=p%W,y=(p/W)|0;
      for(const n of [x>0?p-1:-1,x<W-1?p+1:-1,y>0?p-W:-1,y<H-1?p+W:-1]){
-       if(n<0||parent[n]!==-2||g[n]!==0||protectedSite(n))continue;
-       parent[n]=p;dist[n]=dist[p]+1;queue[tail++]=n;
+       if(n<0||parentRoute[n]!==-2||!lc.clear[n])continue;
+       parentRoute[n]=p;q[tail++]=n;
      }
    }
-   let ncomponents=0,connected=0;
-   const planned=[]; // snapshot pre-brace components; never rescan new support paint
-   for(let start=0;start<size;start++){
-     if(!solid(start)||done[start])continue;
-     const comp=[];done[start]=1;head=0;tail=0;queue[tail++]=start;
-     let end=-1,best=65535;
+   const protectedMask=new Uint8Array(g.length);
+   for(const [name,pt] of spec.sites){
+     let p=pt[1]*W+pt[0];
+     if(parentRoute[p]===-2)throw Error('pre-support route unavailable '+name);
+     while(p>=0){
+       const x=p%W,y=(p/W)|0;
+       for(let yy=Math.max(0,y-18);yy<=Math.min(H-1,y+18);yy++)
+         protectedMask.fill(1,yy*W+Math.max(0,x-20),yy*W+Math.min(W,x+21));
+       p=parentRoute[p];
+     }
+   }
+   const rooted=new Uint8Array(g.length);head=0;tail=0;
+   const solid=p=>{const m=g[p];return m!==0&&m!==3&&m!==8;};
+   const addRoot=p=>{if(!rooted[p]&&solid(p)){rooted[p]=1;q[tail++]=p;}};
+   for(let x=0;x<W;x++){addRoot(x);addRoot((H-1)*W+x);}
+   for(let y=0;y<H;y++){addRoot(y*W);addRoot(y*W+W-1);}
+   while(head<tail){
+     const p=q[head++],x=p%W,y=(p/W)|0;
+     if(x>0)addRoot(p-1);if(x<W-1)addRoot(p+1);
+     if(y>0)addRoot(p-W);if(y<H-1)addRoot(p+W);
+   }
+   // Multi-source search through EMPTY cells only, never through real liquids.
+   const linkParent=new Int32Array(g.length);linkParent.fill(-2);
+   head=0;tail=0;for(let p=0;p<g.length;p++)if(rooted[p]){linkParent[p]=-1;q[tail++]=p;}
+   while(head<tail){
+     const p=q[head++],x=p%W,y=(p/W)|0;
+     for(const n of [x>0?p-1:-1,x<W-1?p+1:-1,y>0?p-W:-1,y<H-1?p+W:-1]){
+       if(n<0||linkParent[n]!==-2||g[n]!==0||protectedMask[n])continue;
+       linkParent[n]=p;q[tail++]=n;
+     }
+   }
+   const visited=new Uint8Array(g.length),links=[];let ncomponents=0,unlinked=0;
+   for(let start=0;start<g.length;start++){
+     if(!solid(start)||rooted[start]||visited[start])continue;
+     head=0;tail=0;visited[start]=1;q[tail++]=start;let best=-1,bestDist=1e9;
      while(head<tail){
-       const p=queue[head++];comp.push(p);const x=p%W,y=(p/W)|0;
-       for(const n of [x>0?p-1:-1,x<W-1?p+1:-1,y>0?p-W:-1,y<H-1?p+W:-1]){
+       const p=q[head++],x=p%W,y=(p/W)|0;
+       for(const n of [x>0?p-1:-1,x<W-1?p+1:-1,y>0?p-W:-1,y>0?p-W:-1,y<H-1?p+W:-1]){
          if(n<0)continue;
-         if(solid(n)&&!done[n]){done[n]=1;queue[tail++]=n;}
-         else if(g[n]===0&&parent[n]!==-2&&dist[n]<best){best=dist[n];end=n;}
+         if(solid(n)&&!rooted[n]&&!visited[n]){visited[n]=1;q[tail++]=n;}
+         else if(g[n]===0&&linkParent[n]!==-2){
+           let k=n,d=0;while(linkParent[k]>=0&&d<bestDist){k=linkParent[k];d++;}
+           if(d<bestDist){bestDist=d;best=n;}
+         }
        }
      }
-     ncomponents++;
-     if(end<0)throw Error('unrooted island with no dry structural attachment '+comp.length);
-     planned.push(end);
+     ncomponents++;if(best<0){unlinked++;continue;}links.push(best);
    }
-   for(const end of planned){
-     let n=end,steps=0;
-     while(n>=0){
-       const x=n%W,y=(n/W)|0;
-       box(x-2,y-2,5,5,MAT.iron); // contiguous five-cell structural brace
-       n=parent[n];steps++;
-       if(steps>W+H)throw Error('support unexpectedly long');
+   let applied=0;
+   for(const start of links){
+     let p=start,steps=0;
+     while(p>=0){
+       const x=p%W,y=(p/W)|0;
+       for(let dy=-2;dy<=2;dy++)for(let dx=-2;dx<=2;dx++){
+         const xx=x+dx,yy=y+dy;
+         if(xx>=0&&xx<W&&yy>=0&&yy<H){
+           const n=yy*W+xx;
+           if(g[n]===0&&!protectedMask[n])g[n]=MAT.iron;
+         }
+       }
+       p=linkParent[p];steps++;if(steps>W+H)throw Error('runaway tie');
      }
-     connected++;
+     applied++;
    }
-   return {ncomponents,connected};
+   return {ncomponents,applied,unlinked,protected_paths:spec.sites.length};
  }
  const supportReceipt=anchorAssemblies();
  return {grid:g,op,supportReceipt};
