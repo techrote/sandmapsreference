@@ -360,6 +360,10 @@ for xa,xb,ya,yb,dx,dy,mat in [
                     i=y*W+x
                     if A[i]: A[i]=mat
 
+# A 112-cell-wide deliberate breach in the north mnemonic crown preserves
+# direct access to the fixed Memory Engine North coordinate (925,145).
+# Left and right crown halves retain independent boundary-rooted hangers.
+portal(868, 216, 114, 92)
 REBUILD_DETAIL_TRIM=anchored_only(A, True)
 assert REBUILD_DETAIL_TRIM < 1000, ('unexpected orphaned replacement details', REBUILD_DETAIL_TRIM)
 FINAL_DETACHED=anchored_only(A, False)
