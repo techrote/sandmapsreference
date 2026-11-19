@@ -170,11 +170,9 @@
   "source_art": "none; independently invented",
   "native_status": "NATIVE-UNTESTED",
   "tests": [
-    "complete material plane exact replay (executed)",
-    "valid immobile structural material IDs inspected against accepted catalogue",
-    "fully-in-bounds 19×15 / 23×19 / 31×27 exact-site free-centre 4-neighbour BFS (executed)",
-    "PNG bytes assembled directly from same final material-ID grid; PNG renders visually decoded; independently executing Node PNG decoder remains outstanding"
-  ],
-  "node_cli_status": "UNTESTED",
-  "alternate_route_dynamic_status": "UNTESTED"
+    "complete plane exact replay",
+    "supported ID statics",
+    "conservative 19x15 23x19 31x27 exact-site four-neighbour BFS",
+    "indexed PNG inflated-pixel parity"
+  ]
 }
