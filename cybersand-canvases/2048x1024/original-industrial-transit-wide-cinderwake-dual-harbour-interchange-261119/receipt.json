@@ -1,0 +1,181 @@
+{
+  "concept": "Cinderwake Dual Harbour — The Inland Freight Lift",
+  "original": true,
+  "seed": 20261119,
+  "extent": [
+    2048,
+    1024
+  ],
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "midge_hull": [
+    4,
+    3
+  ],
+  "solid_material_histogram": {
+    "49": 9584,
+    "58": 129226,
+    "62": 148019,
+    "63": 74396,
+    "64": 22490,
+    "66": 29434,
+    "68": 14989,
+    "79": 2487,
+    "100": 176496,
+    "101": 187232,
+    "120": 6290,
+    "130": 7049
+  },
+  "rectangles": 12166,
+  "rectangle_work": 807692,
+  "setup_bytes": 223139,
+  "material_plane_sha256": "bf35b9603cea9a8febb1abba77212b2c9804fd1359dcb8f8c29bd2dc2067e6bd",
+  "setup_sha256": "55b54e190f67f36ea7b63583d2d9375f57f79a6ea183a0ce7dd6e82915c55e19",
+  "images": [
+    {
+      "name": "overview",
+      "bytes": 33640,
+      "sha256": "2610a3d64f385f9f65906ab50db10da16142b1bd3212b42057e65f5954c52283"
+    },
+    {
+      "name": "01-west-drydock",
+      "bytes": 7790,
+      "sha256": "f7bd2cc638808ddfc8482e1e432c50fcc59aa6d05a1eadecdf66c9d0e0f38c9d"
+    },
+    {
+      "name": "02-blue-gantry",
+      "bytes": 4575,
+      "sha256": "fe14688a7a465fea08989101a1206a3ed64636e14a1215b4911237b699f8cb3a"
+    },
+    {
+      "name": "03-counterweight-lift",
+      "bytes": 6568,
+      "sha256": "b086cf2ed54972aeda587bc69106affe76fe1179262de33fca19488c7820fbb3"
+    },
+    {
+      "name": "04-hump-classification",
+      "bytes": 5597,
+      "sha256": "22d4c2e1bba4d6054d99fc165b1fd8f152a1f6641ef1a7dc731f0d21ff0eb0da"
+    },
+    {
+      "name": "05-east-terminal",
+      "bytes": 4616,
+      "sha256": "eed02a873c933334a1c0a8c8ab8d4904b70749692d2436a4cc9e254e68bff144"
+    }
+  ],
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 18,
+      "total": 18,
+      "airCentres": 972549,
+      "bad": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 18,
+      "total": 18,
+      "airCentres": 923984,
+      "bad": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 18,
+      "total": 18,
+      "airCentres": 837498,
+      "bad": []
+    }
+  ],
+  "exact_sites": {
+    "West arrival lock": [
+      140,
+      473
+    ],
+    "Drydock keel": [
+      313,
+      743
+    ],
+    "West crane bridge": [
+      320,
+      352
+    ],
+    "Rail departure": [
+      626,
+      474
+    ],
+    "Customs gallery": [
+      822,
+      357
+    ],
+    "West transfer throat": [
+      925,
+      472
+    ],
+    "Lift crown": [
+      1080,
+      282
+    ],
+    "Lift middle": [
+      1083,
+      475
+    ],
+    "Lift undercroft": [
+      1083,
+      745
+    ],
+    "East classifier": [
+      1348,
+      471
+    ],
+    "Signal hall": [
+      1542,
+      357
+    ],
+    "East rail siding": [
+      1614,
+      471
+    ],
+    "Terminal arrival": [
+      1838,
+      469
+    ],
+    "Terminal upper assay": [
+      1850,
+      347
+    ],
+    "West subway": [
+      642,
+      747
+    ],
+    "East subway": [
+      1514,
+      747
+    ],
+    "East exit tunnel": [
+      1877,
+      746
+    ],
+    "West quay": [
+      174,
+      472
+    ]
+  },
+  "source_art": "none; independently invented",
+  "native_status": "NATIVE-UNTESTED",
+  "tests": [
+    "complete plane exact replay",
+    "supported ID statics",
+    "conservative 19x15 23x19 31x27 exact-site four-neighbour BFS",
+    "indexed PNG inflated-pixel parity"
+  ]
+}
