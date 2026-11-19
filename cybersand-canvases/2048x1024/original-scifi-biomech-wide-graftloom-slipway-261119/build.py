@@ -627,18 +627,11 @@ line(1646,762,1647,822,10,117)
 poly([(1395,797),(1421,784),(1480,797),(1472,811),
       (1436,825),(1410,819)],117)
 
-# 4. Underkeel: enterable differential sampling room and asymmetric transfer
-# manifold; supported from lower solid geology, with top-open approach.
-box(870,941,954,956,62)
-box(875,895,888,955,117)
-box(938,914,951,956,117)
-box(876,892,901,905,113)
-box(886,935,941,944,120)
-line(946,925,991,907,10,62)
-poly([(961,913),(989,901),(1012,906),
-      (1007,915),(982,925)],113)
-# These cells are safely below South Memory (914,809); no in-game
-# decorative objects are exempted from actual Midge collision.
+# 4. Underkeel: preserve the accepted R2 narrow lower flyway.
+# A raised sampling enclosure at x870..954/y890..956 obscured part of its
+# already-constrained service throat. The R3 room trial is rejected rather
+# than weakening the exact 31x27 lower-route acceptance gate.
+# Retain existing grounded freight piping, varied underfloor pumps and bays.
 
 # 5. Aft recovery inspection: right-anchored jaw and extraction interface.
 # The earlier deep left prong occluded the Final Recovery approach. Its tip
