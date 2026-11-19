@@ -55,11 +55,12 @@ Read-only engine: [`techrote/cybersand main@de109d0131641d6adc8d25bb9ced7ca3d499
 | Painted work visits | **956,090 / 32,000,000** |
 | Full-grid edit overlap/replay disagreement | **0 / 0** |
 | Exact named sites reachable at 19×15, 23×19, 31×27 | **15/15, 15/15, 15/15** |
+| Full straight high-speed lane at y445, 31×27 envelope | **1,828/1,828 legal consecutive centres** |
 | Connected 31×27 actor centres | **649,398** |
 | Physically blocked central Iris, including finish | **14/15** (central chamber itself intentionally obstructed) |
 | Independently confined lower-only 31×27 course | **7/7**, 69,649 legal connected centres |
 | Critical lower bank aperture at x1338 | **21 legal centre rows** |
-| Grounding of declared critical structural probes | **22/22** |
+| Grounding of declared critical structural probes | **24/24** |
 | Residual physically detached occupied cells | **6,002**, not all claimed load-bearing |
 | Committed indexed PNGs, including 1:1 world + 12 district crops | **14/14** decoded and independent pixel parity PASS |
 | Godot/installed CyberDemoBridge/Rapier input, ticks, collision and save/reopen | **NATIVE-UNTESTED** |
@@ -73,7 +74,7 @@ The entire grid uses only numeric IDs **49, 58, 62, 100, 101, 113, 117, 120, 122
 
 From this folder with **Node 22**: `node build.cjs --verify` compares a deterministic full-grid rebuild of the Setup-v2 JSON, the qualification receipt and every indexed PNG to the committed bytes. `node verify-independent.cjs` does **not import the builder**. It separately replays all rectangles, validates material enum, full-grid/hash/histogram, compares exact fully-contained 4-neighbour Midge clearance and lower-corridor/blocked-Iris routes, checks grounded support probes, and validates every PNG signature, chunk CRC, IEND, zlib decompression and **each material-index pixel** against the reconstructed grid.
 
-Both commands **passed in the exact-source [Node 22 GitHub Actions qualification](https://github.com/techrote/sandmapsreference/actions/runs/44450343702)** on 19 November 2026. This run also regenerated and committed the exact output assets.
+Both commands **passed in the exact-source [Node 22 GitHub Actions qualification](https://github.com/techrote/sandmapsreference/actions/runs/44450837136)** on 19 November 2026. This run also regenerated and committed the exact output assets.
 
 ![Whole-world genuine material-cell PNG, 1:1](overview.png)
 
