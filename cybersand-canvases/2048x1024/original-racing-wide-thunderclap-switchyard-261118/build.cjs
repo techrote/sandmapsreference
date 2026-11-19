@@ -702,7 +702,7 @@ for(const f of pres.files){
 }
 const manifestText=JSON.stringify(pres.manifest,null,2)+"\n";
 if(verifying){
-  if(!fs.existsSync("render/manifest.json")||fs.readFileSync("render/manifest.json","utf8")!==manifestText){ console.error("FAIL: render/manifest.json"); ok=false; }
+  if(!fs.existsSync("render/manifest.json")||fs.readFileSync("render/manifest.json","utf8").replace(/\r\n/g,"\n")!==manifestText){ console.error("FAIL: render/manifest.json"); ok=false; }
   else console.log("PASS: render/manifest.json");
 } else {fs.writeFileSync("render/manifest.json",manifestText); console.log("WRITE: render/manifest.json");}
 if(!ok)process.exitCode=1;
