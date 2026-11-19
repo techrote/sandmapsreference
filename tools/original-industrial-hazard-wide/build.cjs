@@ -306,10 +306,11 @@ function construct(spec,index){
    }
    return {ncomponents,applied,unlinked,protected_paths:spec.sites.length};
  }
+ const inhabitedReceipt=require('./inhabit.cjs')(g,index,spec,{W,H,MAT});
  const finishReceipt=finishCells(g,index,spec,{W,H,MAT,legalCentres});
+ finishReceipt.inhabitation=inhabitedReceipt;
  const supportReceipt=anchorAssemblies();
  finishReceipt.structural_revision=require('./reengineer.cjs')(g,index,spec,{W,H,MAT});
- finishReceipt.inhabitation=require('./inhabit.cjs')(g,index,spec,{W,H,MAT});
  return {grid:g,op,supportReceipt,finishReceipt};
 }
 function rects(g){
