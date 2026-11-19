@@ -538,14 +538,13 @@ R(244,736,8,38,M.C);R(399,731,8,43,M.C);
 R(289,636,55,127,M.A);
 // Re-establish lower seamless sheer/keel BELOW the inspection window.
 R(280,795,78,23,M.S);
-// New *visible crane load* hangs OUTSIDE the inspection hatch: the earlier
-// x340 suspended part had been erased by the safety portal. The sloping
-// load cable now reaches the starboard repair bay and clamps a hull module.
-L(341,326,442,565,5,M.P);
-R(419,565,48,9,M.S);R(422,574,41,25,M.V);
-R(425,577,5,19,M.G);R(454,577,5,19,M.G);
-L(430,599,429,627,6,M.P);L(454,599,452,627,6,M.P);
-R(422,625,39,13,M.U);L(442,638,445,670,8,M.C);
+// Crane's carried hull module stays above the deliberately open x283..415
+// quay-flight portal. The original suspended cable reaches the load, while
+// retaining an actual 31x27 Midge route around the boom and into the keel.
+R(317,536,49,9,M.S);R(320,545,43,18,M.V);
+R(324,549,4,10,M.G);R(354,549,4,10,M.G);
+L(339,527,339,539,5,M.P);
+R(332,550,20,7,M.F);
 
 // R4 through-freight topology: a visible rail-grade crane handoff links
 // west customs bogies with the lift jaw rather than appearing as disconnected
