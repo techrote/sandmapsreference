@@ -7,6 +7,7 @@ on:
       - '.github/workflows/original-scifi-biomech-wide-build.yml'
       - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/verify-independent.py'
       - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/build.py'
+      - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/support-probe.py'
   workflow_dispatch:
 permissions:
   contents: write
@@ -30,6 +31,7 @@ jobs:
           python3 -m py_compile build.py
           python3 build.py
           python3 verify-independent.py
+          python3 support-probe.py
           echo "Map artifact inventory:"
           find . -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
           test -n "$(find . -maxdepth 1 -name '*.png' -print -quit)"
