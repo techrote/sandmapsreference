@@ -1,5 +1,5 @@
 "use strict";
-// Original fully deterministic 2048x1024 CyberSand sci-fi frontier world.
+// Original fully deterministic 2048x1024 CyberSand industrial transit world.
 // Node 22+: node build.cjs --verify. No images or reference art used.
 const fs=require("fs"),crypto=require("crypto"),zlib=require("zlib"),path=require("path");
 function generate(){
@@ -120,6 +120,37 @@ R(86,443,1901,82,M.A);R(104,719,1846,73,M.A);
 // Genuine service door apertures; the crown and signal room are connected to the sky route.
 R(1056,268,58,184,M.A);R(1514,354,64,113,M.A);
 for(let [name,[x,y]] of Object.entries(sites))if(y<700)R(x-20,y-22,41,45,M.A);
+
+// FINAL ENGINEERED LOAD PATHS — welded after final tunnel excavation.
+// Anchored drydock crane cabling, independently braced gantry, freight-lift
+// outriggers, and dry underground structural columns. These intentionally
+// avoid exact named actor sites and retain free-centre detours.
+L(251,429,121,609,12,M.S);R(117,604,14,75,M.C);
+R(954,429,15,165,M.C);R(1211,432,15,175,M.C);
+R(1479,429,13,157,M.S);
+R(539,696,15,170,M.C);R(1001,695,14,169,M.C);
+R(1655,695,14,173,M.C);R(970,660,14,217,M.C);
+L(615,433,544,562,10,M.S); // sky freight crane to grounded west portal
+R(1790,548,5,45,M.S);R(1586,404,4,42,M.S);
+R(1037,578,9,64,M.G);
+// Pendant instrument lights are physically fastened to their room crowns.
+for(let [x,w] of [[215,156],[599,165],[980,176],[1429,156],[1750,155]])
+ for(let xx=x+22;xx<x+w-16;xx+=40)R(xx+7,821,3,17,M.P);
+// Multiple steel branches visibly distribute east gantry thrust into the
+// classifier support piers, not decorative unsupported air-frame strokes.
+L(1484,573,1656,678,12,M.S);
+L(1484,576,1655,680,10,M.S);
+L(1484,567,1630,614,12,M.S);
+// Drydock stirrup/ladder footings and freight-platform lateral welds.
+L(251,563,122,615,9,M.S);
+L(415,670,450,676,9,M.S);
+L(451,659,480,621,10,M.S);
+L(918,580,950,590,8,M.S);
+L(340,559,252,559,8,M.S);
+L(180,692,138,692,8,M.S);
+R(1590,382,4,57,M.S);R(1790,590,6,26,M.S);
+R(1579,409,10,6,M.S);
+L(1789,553,1763,608,8,M.S);
 
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
