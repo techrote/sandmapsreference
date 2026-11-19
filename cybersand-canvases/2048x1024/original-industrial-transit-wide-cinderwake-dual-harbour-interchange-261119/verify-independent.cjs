@@ -77,18 +77,19 @@ function png(name,x0,y0,w,h){
 const definitions=[["overview",0,0,W,H],["01-west-drydock",40,195,527,654],["02-blue-gantry",487,189,478,625],["03-counterweight-lift",909,143,374,711],["04-hump-classification",1253,233,478,630],["05-east-terminal",1672,220,376,674]];
 const images=definitions.map(d=>png(...d));
 // Every separate solid component is inventoried. No assumption that inert means supported.
-const seen=new Uint8Array(N),q=new Int32Array(N);let anchored=0,detached=0,anchored_count=0,detached_count=0,largest_detached=0;
+const seen=new Uint8Array(N),q=new Int32Array(N);let anchored=0,detached=0,anchored_count=0,detached_count=0,largest_detached=0;const detached_details=[];
 for(let k=0;k<N;k++){
  if(!grid[k]||seen[k])continue;
- let tail=1,head=0,boundary=false;q[0]=k;seen[k]=1;
+ let tail=1,head=0,boundary=false;let minx=W,maxx=0,miny=H,maxy=0;q[0]=k;seen[k]=1;
  while(head<tail){
-  const a=q[head++],x=a%W,y=(a/W)|0;if(!x||x===W-1||!y||y===H-1)boundary=true;
+  const a=q[head++],x=a%W,y=(a/W)|0;minx=Math.min(minx,x);maxx=Math.max(maxx,x);miny=Math.min(miny,y);maxy=Math.max(maxy,y);if(!x||x===W-1||!y||y===H-1)boundary=true;
   for(const b of [x?a-1:-1,x<W-1?a+1:-1,y?a-W:-1,y<H-1?a+W:-1])
    if(b>=0&&grid[b]&&!seen[b]){seen[b]=1;q[tail++]=b;}
  }
- if(boundary){anchored+=tail;anchored_count++;}else{detached+=tail;detached_count++;largest_detached=Math.max(largest_detached,tail);}
+ if(boundary){anchored+=tail;anchored_count++;}else{detached+=tail;detached_count++;largest_detached=Math.max(largest_detached,tail);detached_details.push({cells:tail,box:[minx,miny,maxx,maxy]});}
 }
-check(detached===0&&detached_count===0,"unattached structural material components "+detached_count+" / "+detached+" cells");
+check(detached===0&&detached_count===0,"unattached structural material components "+detached_count+" / "+detached+" cells "+JSON.stringify(detached_details.sort((a,b)=>b.cells-a.cells)));
+
 // Real inserted-solid obstruction stress, not centre exclusion or viewpoint substitution.
 // Probe the inhabited West-to-East crossing: entire full-size actor footprint
 // is recomputed against the obstacle, and any remaining flight route is 4-neighbour.
