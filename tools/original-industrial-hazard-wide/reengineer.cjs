@@ -111,5 +111,5 @@ module.exports=function reengineer(g,index,spec,{W,H,MAT}) {
   if(water||lava)throw Error('sealed fluid material changed');
   return {revision:'R4',added_cells:added,removed_cells:removed,inlaid_cells:recoloured,
     static_braces:braces,process_markings:instrument,
-    note:'R4 anchors remaining gyre fragments to true containment steel and removes a 190-cell orphan hatch chip; R3 emergency return preserved; native processes untested'};
+    note:index===0 ? 'R4 anchors remaining gyre fragments to true containment steel and removes a 190-cell orphan hatch chip; R3 emergency return preserved; native processes untested' : 'R4 requalification of unchanged Ashlight R3/R2 physical grid, with grounded twin-tower bearings and static-only Midge/liquid evidence; native processes untested'};
 };
