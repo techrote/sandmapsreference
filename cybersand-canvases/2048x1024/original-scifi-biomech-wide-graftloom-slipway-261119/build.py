@@ -681,11 +681,14 @@ box(797,451,818,461,120)
 # East: a longer counter-hung surgical dock, lower than west and equipped
 # with sequential lamellar read heads. Its nearest working surface is
 # x970+, leaving the conservative exact-centre Midge core unobstructed.
-# East diagnostic pier is driven from the ALREADY ROOTED mid-refinery
-# deck y623, outside the central altitude-stress gate. An oblique dry
-# assay return joins it to the mnemonic reading bench at x1115.
-line(1440,624,1408,548,12,62)
-line(1408,548,1115,513,12,117)
+# The long east-to-refinery transfer beam was REJECTED after exact 31x27
+# testing: it sealed the actual Middle Filter entry and aft recovery path.
+# Instead a narrow supported sampler conveyor links directly into the
+# west-grounded examination platform BELOW Memory Core (y518 versus y468).
+# The central aisle above and the lower/upper altitude routes remain open.
+line(801,514,980,518,10,62)
+for xx in (843,891,946):
+    box(xx,510,xx+10,515,113)
 box(973,506,1123,521,62)
 poly([(997,506),(1018,487),(1056,477),(1078,483),
       (1091,506)],117)
