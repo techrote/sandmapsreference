@@ -561,8 +561,10 @@ box(45,410,75,419,113)
 # 2. Mnemonic examination *dock*: asymmetric cantilevers from two independent
 # roof-rooted masts, enclosing real work bays on either side of a wide open
 # central inspection aperture. Not a ring in the transit void.
-line(609,174,609,416,12,62)
-line(609,416,817,417,13,62)
+# Tapered mnemonic dock stalk attaches to the existing left crown mast.
+# Unlike the trial roof-to-workbench partition at x609, the diagonal leaves
+# a 31x27 upper transverse flight channel beneath its suspended lobe.
+line(748,203,811,418,11,62)
 box(807,413,823,535,62)
 box(817,510,899,524,62)
 box(827,499,889,510,113)
