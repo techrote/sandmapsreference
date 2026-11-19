@@ -304,6 +304,191 @@ L(246,774,260,789,11,M.S); // existing keel foot → same anchored rib
 for(const y of [501,537])R(949,y+7,44,9,M.S); // guides → west jaw wall
 R(1798,509,7,12,M.S); // terminus split load-bearing receiving column
 
+
+// R3 OPERATING PORT — REVIEW-DRIVEN PHYSICAL-CELL RECONSTRUCTION.
+// Four functional systems, each a shaped machine connected to an existing
+// supported floor or tower rather than a row of unrelated painted symbols.
+// Scale is measured against the actual small Midge actor; preserve all
+// exactly named sky and subterranean operational centres.
+//
+// 1. West drydock: two unequal, interrupted sheer rails and a real exposed
+// vessel cross-section. The deliberately absent middle keel is the repair
+// hatch; three genuinely different ribs and roller-locks rest on solid dock.
+L(166,700,181,741,10,M.U);
+L(181,741,208,786,12,M.S);
+L(208,786,268,812,11,M.S);
+L(357,812,410,792,12,M.S);
+L(410,792,448,710,12,M.U);
+L(163,706,178,677,8,M.S);
+L(178,677,235,673,9,M.U);
+L(406,678,446,696,8,M.S);
+L(446,696,448,710,10,M.U);
+// Stern stem and sloping bow: recognisable ship ends, not symmetrical tongs.
+L(173,704,157,657,7,M.U);
+L(157,657,203,649,6,M.S);
+L(438,707,454,669,8,M.S);
+L(454,669,405,660,6,M.U);
+for(const [x,top,dx] of [[194,693,-8],[233,681,15],[371,680,-9],[412,691,12]]) {
+ L(x,794,x+dx,top,10,M.C);
+ L(x+dx,top,x+dx+29,top-13,7,M.U);
+ R(x-7,796,15,29,M.C);
+ R(x-14,813,30,9,M.S);
+}
+// A differentiated dock-lock and roller bed: four small round physical
+// rollers on grounded pedestals, with service hatch kept clear.
+for(const [x,y,r] of [[193,807,11],[252,811,9],[370,810,12],[418,800,8]]) {
+ ring(x,y,r,r,4,M.G);R(x-4,y+3,8,828-(y+3),M.C);
+}
+R(155,787,38,9,M.S);R(162,796,9,32,M.C);
+R(428,784,32,9,M.S);R(448,790,9,37,M.C);
+R(172,686,31,7,M.G);R(397,685,35,7,M.G);
+// Fitted service platform, actual berth wall, and hook-borne hull crate.
+R(124,640,69,10,M.S);R(129,650,11,18,M.C);
+R(391,640,61,10,M.S);R(437,650,10,17,M.C);
+R(323,600,64,9,M.S);R(329,608,50,26,M.V);
+R(332,612,4,17,M.G);R(374,612,4,17,M.G);
+// Keep the keel's TRUE 31x27 operational free-centre approach and the
+// clear wide quay-side entry, even after erecting the ship cradle.
+R(289,636,55,127,M.A);
+R(283,564,132,72,M.A);
+
+// 2. Blue railway → paired elevator shoulders. A clearly loaded western
+// bogie and spaced wagon bed sit on supported gantry truss (not sky glyphs).
+R(789,615,79,11,M.S);R(794,600,69,16,M.U);
+R(802,592,52,10,M.V);R(809,584,9,11,M.K);
+R(844,584,9,11,M.K);
+for(const x of [804,845]){ring(x,628,10,10,4,M.G);R(x-4,630,8,20,M.C);}
+R(812,588,31,7,M.F);
+L(850,308,850,543,5,M.P);R(835,541,30,10,M.S);
+R(828,552,44,15,M.U);
+R(836,566,29,5,M.G);
+// The transfer is an interrupted paired railway with a *mechanically
+// necessary* flying opening around exact centre (1083,475).
+R(963,487,66,12,M.S);R(969,499,55,8,M.G);
+R(972,472,51,16,M.V);R(978,461,38,10,M.U);
+R(982,507,10,29,M.C);R(1006,507,10,28,M.C);
+for(const x of [977,1012])ring(x,506,9,9,4,M.K);
+R(1146,487,73,12,M.S);R(1152,499,62,8,M.G);
+R(1158,473,54,14,M.U);R(1163,460,43,12,M.V);
+R(1164,507,10,29,M.C);R(1199,507,10,30,M.C);
+for(const x of [1164,1201])ring(x,506,9,9,4,M.K);
+// The paired loaded carriages have separate vertical chain paths and
+// counterweight boxes; both remain laterally founded into the jaw piers.
+L(994,269,994,462,5,M.P);L(1189,265,1189,461,5,M.P);
+R(977,451,45,9,M.S);R(1162,451,47,9,M.S);
+R(966,410,12,49,M.G);R(1206,416,16,47,M.G);
+R(967,458,10,30,M.C);R(1208,460,10,28,M.C);
+R(1230,466,26,59,M.U);R(1235,473,16,42,M.F);
+R(1230,525,26,9,M.S);L(1241,332,1241,467,5,M.P);
+R(1234,522,8,82,M.C);
+// Clearly separate operating inspection stations adjacent to the transfer.
+R(943,561,74,12,M.S);R(949,545,15,17,M.C);
+R(998,548,14,15,M.U);R(1000,540,9,8,M.J);
+R(1151,563,71,11,M.S);R(1201,546,12,19,M.C);
+R(1162,550,28,12,M.U);R(1170,543,12,7,M.F);
+
+// 3. Classification two visible branch grades, stop gates, three unequal
+// wagon shapes. The real hollow x1418 transfer is deliberately crossed only
+// by open air, not by a hidden bridge or opaque decorative rail.
+L(1278,613,1364,584,7,M.S);
+L(1283,620,1366,592,5,M.G);
+L(1459,537,1540,517,7,M.S);
+L(1463,545,1551,527,5,M.G);
+L(1551,527,1692,597,7,M.S);
+L(1554,535,1684,604,5,M.G);
+R(1304,584,45,18,M.U);R(1309,575,35,9,M.V);
+for(const x of [1312,1337])ring(x,604,9,9,4,M.K);
+R(1470,515,66,22,M.V);R(1476,507,50,9,M.U);
+for(const x of [1481,1523])ring(x,539,9,9,4,M.K);
+R(1589,548,95,24,M.U);R(1601,538,64,11,M.V);
+for(const x of [1603,1661])ring(x,579,11,11,4,M.K);
+R(1300,604,7,14,M.C);R(1489,535,8,22,M.C);
+R(1624,572,8,19,M.C);
+R(1365,541,13,38,M.C);R(1367,529,9,14,M.J);
+R(1550,490,13,42,M.C);R(1552,477,10,15,M.J);
+L(1371,530,1380,510,5,M.P);
+L(1556,480,1575,459,5,M.P);
+// Receiving and assay is a separate workshop under sawtooth roof,
+// sized as human-scale work bays, not a single empty warehouse glyph.
+R(1910,390,95,12,M.S);R(1918,402,10,33,M.C);
+R(1995,402,10,35,M.C);R(1927,397,57,9,M.F);
+R(1930,414,43,15,M.U);R(1937,405,14,9,M.V);
+R(1980,407,10,21,M.J);
+R(1924,480,83,12,M.S);R(1930,492,9,36,M.C);
+R(1992,492,10,36,M.C);R(1945,461,42,18,M.V);
+R(1952,454,26,9,M.F);
+R(1761,542,95,12,M.S);R(1770,553,11,55,M.C);
+R(1841,552,10,55,M.C);R(1793,525,57,17,M.U);
+for(const x of [1800,1836])ring(x,554,10,10,4,M.K);
+R(1874,568,77,13,M.U);R(1881,558,62,10,M.F);
+for(const x of [1885,1935])ring(x,584,8,8,4,M.K);
+R(1973,553,31,9,M.S);R(1978,538,10,17,M.C);
+R(1991,538,10,16,M.C);
+R(1974,526,34,12,M.V);R(1980,520,16,7,M.J);
+
+// 4. Underground places have different footprints and industrial purposes.
+// These are side chambers below the continuous y719..791 return spine; the
+// deeper y850..923 workrooms do not block any exact submarine centre.
+// The foundry machinery is supported by bedrock, not loose powder voxels.
+// Dock pump cavern: a single large offset impeller with flooded-system
+// *pipes* (not uncontained water), sloping intake and foundation.
+R(204,817,175,96,M.A);R(205,908,174,13,M.C);
+R(211,832,9,76,M.C);R(366,834,10,74,M.C);
+ring(286,869,38,35,8,M.S);ring(286,869,19,19,5,M.G);
+L(247,873,221,874,10,M.U);L(325,869,353,848,11,M.U);
+R(277,894,17,17,M.C);R(242,910,95,11,M.S);
+R(234,848,10,29,M.G);R(229,838,20,12,M.F);
+// Manifest and customs below: three unequal shelf decks on left and a tall
+// freight elevator well on right, rather than a repeated rectangular niche.
+R(600,817,206,98,M.A);R(600,906,208,14,M.C);
+R(602,827,9,81,M.C);R(797,826,10,81,M.C);
+for(const [x,y,w] of [[618,846,84],[624,866,92],[611,886,99]]){
+ R(x,y,w,8,M.S);R(x+8,y-13,13,13,M.U);
+ R(x+w-15,y-16,11,16,M.V);
+}
+R(747,837,40,13,M.S);R(753,850,9,47,M.C);
+R(776,851,9,47,M.C);R(758,865,18,19,M.G);
+L(763,820,763,853,5,M.P);
+// Under-lift engine room: a deep stepped maintenance cave with two different
+// gear drums, a guided cable and substantial grounded loading foundations.
+R(973,813,220,114,M.A);R(976,920,217,16,M.C);
+R(979,831,10,92,M.C);R(1181,830,12,94,M.C);
+ring(1035,868,37,36,8,M.S);ring(1120,885,24,23,7,M.G);
+L(1035,868,1119,884,8,M.U);
+R(1028,898,16,23,M.C);R(1113,907,14,17,M.C);
+R(1000,917,142,9,M.S);
+L(1163,804,1163,855,6,M.P);
+R(1154,856,18,35,M.U);R(1157,891,12,30,M.C);
+// East dispatch: two side-on staggered platforms, a switch-mechanism
+// cradle, visible interlock lever, supported structural columns.
+R(1415,817,228,119,M.A);R(1415,927,228,16,M.C);
+R(1421,835,12,92,M.C);R(1630,831,12,97,M.C);
+R(1450,865,96,12,M.S);R(1461,877,10,51,M.C);
+R(1529,877,10,52,M.C);R(1547,893,75,10,M.G);
+R(1551,903,8,25,M.C);R(1615,902,8,26,M.C);
+R(1458,847,52,16,M.U);R(1465,840,32,8,M.F);
+L(1539,846,1577,818,6,M.P);R(1568,808,19,12,M.J);
+// East recovery cavern: inbound wagon, service gantry and an unequal-width
+// operator tower; room is visibly distinct from pumping and dispatch.
+R(1728,815,184,105,M.A);R(1728,913,184,14,M.C);
+R(1735,827,11,86,M.C);R(1899,827,12,86,M.C);
+R(1762,856,104,12,M.S);R(1771,868,10,45,M.C);
+R(1854,868,10,45,M.C);
+R(1776,844,79,12,M.V);R(1784,836,57,8,M.U);
+for(const x of [1788,1844])ring(x,865,11,11,4,M.K);
+R(1868,830,22,73,M.U);R(1873,836,11,46,M.F);
+R(1874,824,9,11,M.J);R(1874,903,10,12,M.C);
+// Restore five deliberately wide entrances from the cross-map tunnel into
+// the side chambers, while keeping 31x27 vertical-centre transit clear.
+for(const [x,w] of [[241,53],[674,52],[1057,52],[1485,50],[1785,51]]){
+ R(x,786,w,40,M.A);
+}
+// All working-room floor slabs and major machines are actually founded.
+// This also protects the roof-to-foot structural component invariant.
+R(203,908,179,11,M.C);R(599,907,210,12,M.C);
+R(973,921,220,13,M.C);R(1415,929,228,13,M.C);
+R(1728,915,184,12,M.C);
+
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
