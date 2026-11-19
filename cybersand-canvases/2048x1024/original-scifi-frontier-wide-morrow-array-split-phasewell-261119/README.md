@@ -253,3 +253,24 @@ This remains an original source-free 2048×1024 side-elevation material-cell
 landscape on the same creator-owned Draft/HOLD branch. Do not interpret static
 reachability, visual design improvements or autonomous construction as owner
 acceptance; request an independent new-head Shepherd/art/technical audit.
+
+
+### R7 exact published material evidence (immutable publication 40f2a8865faca7a3450cd15bf033072252c96161)
+
+Node 22 regenerated the complete original material-ID plane from the fixed source,
+including every area *outside* the revised inhabited districts. Publication job
+[44480301094](https://github.com/techrote/sandmapsreference/actions/runs/44480301094)
+completed successfully. Full plane **902,819 occupied material cells**,
+**11,657 nonoverlapping ordered material rectangles**, **217,828 Setup-v2 JSON
+bytes**, pixel-plane SHA-256
+`937d829cd425f8a8e583b57a51d7658cedbcb0fc48eff315ee4a2fd9d97c61e5`.
+All **20/20 named exact sites** pass 19×15, 23×19, 31×27 conservative
+four-neighbour route clearing, with route connected centres
+**693,316 / 648,140 / 560,223** respectively. The full map and five native
+1:1 indexed cell crops were regenerated from that identical actual final plane.
+The creator directly inspected the committed full overview and five 1:1 crops.
+Independent final-HEAD CI is the source of truth for JSON, replay, PNG-parity
+and structural regression qualification. Source-connected component preflight:
+**0 detached occupied cells**. The temporary writer must be deleted for
+ordinary read-only qualification; its publication run is not a native runtime
+or independent art-acceptance verdict.
