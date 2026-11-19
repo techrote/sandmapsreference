@@ -88,5 +88,38 @@ for(let k=0;k<N;k++){
  }
  if(boundary){anchored+=tail;anchored_count++;}else{detached+=tail;detached_count++;largest_detached=Math.max(largest_detached,tail);}
 }
-const output={status:"INDEPENDENT-STATIC-PASS",native:"NATIVE-UNTESTED",engine_sha:rec.engine_sha,extent:[W,H],rectangles:setup.edits.length,work,bytes:raw.length,material_sha256:sha(grid),clearances,images,structural:{boundary_anchored_cells:anchored,anchored_components:anchored_count,detached_cells:detached,detached_components:detached_count,largest_detached}};
+check(detached===0&&detached_count===0,"unattached structural material components "+detached_count+" / "+detached+" cells");
+// Real inserted-solid obstruction stress, not centre exclusion or viewpoint substitution.
+// Probe the inhabited West-to-East crossing: entire full-size actor footprint
+// is recomputed against the obstacle, and any remaining flight route is 4-neighbour.
+function crossing(block){
+ const v=grid.slice();
+ if(block){const [x,y,w,h]=block;for(let yy=y;yy<y+h;yy++)v.fill(62,yy*W+x,yy*W+x+w);}
+ const it=new Int32Array((W+1)*(H+1)),stride=W+1;
+ for(let y=1;y<=H;y++){let a=0;for(let x=1;x<=W;x++){a+=v[(y-1)*W+x-1]?1:0;it[y*stride+x]=it[(y-1)*stride+x]+a;}}
+ const pass=new Uint8Array(N),distance=new Int32Array(N),queue=new Int32Array(N);
+ const w=31,h=27;for(let y=13;y<H-13;y++)for(let x=15;x<W-15;x++){
+  const l=x-15,t=y-13,r=l+w,b=t+h;
+  if(it[b*stride+r]-it[b*stride+l]-it[t*stride+r]+it[t*stride+l]===0)pass[y*W+x]=1;
+ }
+ const [sx,sy]=rec.exact_sites["West arrival lock"];
+ const [tx,ty]=rec.exact_sites["Terminal arrival"];
+ const source=sy*W+sx,target=ty*W+tx;
+ check(pass[source]&&pass[target],"alternate test endpoints blocked");
+ let head=0,tail=1;queue[0]=source;distance[source]=1;
+ while(head<tail&&!distance[target]){
+  const a=queue[head++],x=a%W,y=(a/W)|0;
+  for(const b of [x?a-1:-1,x<W-1?a+1:-1,y?a-W:-1,y<H-1?a+W:-1])
+   if(b>=0&&pass[b]&&!distance[b]){distance[b]=distance[a]+1;queue[tail++]=b;}
+ }
+ return distance[target]?distance[target]-1:null;
+}
+const physical_block=[740,65,110,160]; // inserted steel on canonical upper cross-harbour route
+const baseline_steps=crossing(null),detour_steps=crossing(physical_block);
+check(baseline_steps!==null&&detour_steps!==null&&detour_steps>baseline_steps,
+ "real 31x27 physical-obstruction detour missing");
+const alternate_route={start:"West arrival lock",end:"Terminal arrival",envelope:[31,27],
+ obstruction_xywh:physical_block,baseline_steps,obstructed_steps:detour_steps};
+
+const output={status:"INDEPENDENT-STATIC-PASS",native:"NATIVE-UNTESTED",engine_sha:rec.engine_sha,extent:[W,H],rectangles:setup.edits.length,work,bytes:raw.length,material_sha256:sha(grid),clearances,images,alternate_route,structural:{boundary_anchored_cells:anchored,anchored_components:anchored_count,detached_cells:detached,detached_components:detached_count,largest_detached}};
 console.log(JSON.stringify(output,null,2));
