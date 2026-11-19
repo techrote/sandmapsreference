@@ -1,0 +1,426 @@
+{
+  "original": true,
+  "design": "The Ion Parapet — Stormbreaker Freight Terraces",
+  "seed": 1684064,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "size": [
+    2048,
+    1024
+  ],
+  "midge_hull": [
+    4,
+    3
+  ],
+  "materials": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete",
+    "62": "SteelPlate",
+    "63": "PaintedSteel",
+    "64": "CorrugatedSteel",
+    "65": "RustedSteel",
+    "66": "SteelGrating",
+    "68": "SteelPipe",
+    "69": "CopperPipe",
+    "70": "CeramicTile",
+    "72": "DarkGlass",
+    "74": "CableBundle",
+    "75": "Insulation",
+    "76": "HazardStripe",
+    "77": "NeonCyan",
+    "78": "NeonMagenta",
+    "79": "NeonAmber",
+    "80": "LEDWhite",
+    "100": "BasaltColumns",
+    "101": "Obsidian",
+    "111": "Terrazzo",
+    "114": "AluminiumPanel",
+    "119": "BrassPanel",
+    "120": "GlassBlock",
+    "130": "CarbonFibre",
+    "131": "HeatShieldTile"
+  },
+  "histogram": {
+    "0": 1157071,
+    "58": 146525,
+    "62": 186902,
+    "63": 17627,
+    "64": 32922,
+    "65": 12640,
+    "66": 8733,
+    "69": 581,
+    "70": 12618,
+    "72": 25847,
+    "74": 12060,
+    "76": 9415,
+    "77": 21315,
+    "78": 168,
+    "79": 18301,
+    "80": 1437,
+    "100": 311757,
+    "101": 82646,
+    "114": 19920,
+    "119": 3285,
+    "120": 3050,
+    "131": 12332
+  },
+  "edits": 10150,
+  "work": 940081,
+  "bytes": 186925,
+  "grid_sha256": "212e3bea14188eb2035e56979823c959dc3b0364200a0bb4f34cf575988b0c70",
+  "setup_sha256": "aadb04d38c6fb0bc93e7ea04016466d88999691b969477cb71df331749335dbb",
+  "pruned": {
+    "components": 34,
+    "cells": 64196,
+    "largest": [
+      {
+        "cells": 30096,
+        "box": [
+          1095,
+          522,
+          1336,
+          701
+        ]
+      },
+      {
+        "cells": 10972,
+        "box": [
+          836,
+          522,
+          898,
+          701
+        ]
+      },
+      {
+        "cells": 8069,
+        "box": [
+          955,
+          522,
+          1032,
+          701
+        ]
+      },
+      {
+        "cells": 1698,
+        "box": [
+          125,
+          565,
+          195,
+          592
+        ]
+      },
+      {
+        "cells": 1610,
+        "box": [
+          1095,
+          588,
+          1164,
+          610
+        ]
+      },
+      {
+        "cells": 1495,
+        "box": [
+          1455,
+          334,
+          1519,
+          356
+        ]
+      },
+      {
+        "cells": 1426,
+        "box": [
+          1494,
+          557,
+          1555,
+          579
+        ]
+      },
+      {
+        "cells": 1357,
+        "box": [
+          499,
+          369,
+          557,
+          391
+        ]
+      },
+      {
+        "cells": 1293,
+        "box": [
+          321,
+          554,
+          370,
+          587
+        ]
+      },
+      {
+        "cells": 993,
+        "box": [
+          1095,
+          339,
+          1140,
+          375
+        ]
+      },
+      {
+        "cells": 754,
+        "box": [
+          1095,
+          412,
+          1140,
+          428
+        ]
+      },
+      {
+        "cells": 628,
+        "box": [
+          694,
+          230,
+          728,
+          264
+        ]
+      },
+      {
+        "cells": 483,
+        "box": [
+          1569,
+          354,
+          1589,
+          376
+        ]
+      },
+      {
+        "cells": 460,
+        "box": [
+          265,
+          546,
+          284,
+          568
+        ]
+      },
+      {
+        "cells": 299,
+        "box": [
+          203,
+          327,
+          215,
+          349
+        ]
+      }
+    ]
+  },
+  "clearances": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "legalCentres": 912398,
+      "component": 543450,
+      "reached": 16,
+      "total": 16,
+      "missing": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "legalCentres": 862664,
+      "component": 510349,
+      "reached": 16,
+      "total": 16,
+      "missing": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "legalCentres": 770027,
+      "component": 447324,
+      "reached": 16,
+      "total": 16,
+      "missing": []
+    }
+  ],
+  "blocked_route": {
+    "rect": [
+      976,
+      443,
+      1134,
+      526
+    ],
+    "excludes": "Plasma trench neutral line",
+    "checks": [
+      {
+        "size": [
+          19,
+          15
+        ],
+        "legalCentres": 895659,
+        "component": 526700,
+        "reached": 15,
+        "total": 15,
+        "missing": []
+      },
+      {
+        "size": [
+          23,
+          19
+        ],
+        "legalCentres": 845186,
+        "component": 492871,
+        "reached": 15,
+        "total": 15,
+        "missing": []
+      },
+      {
+        "size": [
+          31,
+          27
+        ],
+        "legalCentres": 751092,
+        "component": 428389,
+        "reached": 15,
+        "total": 15,
+        "missing": []
+      }
+    ]
+  },
+  "sites": {
+    "Signal Bazaar landing": [
+      135,
+      487
+    ],
+    "Signal Bazaar observation": [
+      276,
+      301
+    ],
+    "Signal Bazaar subpassage": [
+      245,
+      736
+    ],
+    "Inductor cargo manifold": [
+      578,
+      475
+    ],
+    "Inductor vane watch": [
+      685,
+      288
+    ],
+    "Inductor coolant return": [
+      748,
+      743
+    ],
+    "Parapet top transfer": [
+      1045,
+      284
+    ],
+    "Plasma trench neutral line": [
+      1050,
+      476
+    ],
+    "Trench emergency underpass": [
+      1104,
+      737
+    ],
+    "Civic registry upper gallery": [
+      1471,
+      286
+    ],
+    "Civic registry main kiosk": [
+      1474,
+      477
+    ],
+    "Civic archive circulation": [
+      1552,
+      734
+    ],
+    "Sable Lock shield control": [
+      1793,
+      306
+    ],
+    "Lock security inspection": [
+      1816,
+      472
+    ],
+    "Lock return airlock": [
+      1871,
+      741
+    ],
+    "East beacon destination": [
+      1930,
+      479
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 41918,
+      "sha256": "467d06ed72034908a63400824e2aecb63a49d69fb6e2749659a1f9421c5294d4"
+    },
+    {
+      "name": "01-signal-bazaar",
+      "rect": [
+        38,
+        175,
+        400,
+        410
+      ],
+      "bytes": 4439,
+      "sha256": "7203c3d7c670bbcfeaa9bd3e53a005b846206445fa7c293be6c84405cd92525f"
+    },
+    {
+      "name": "02-inductor-mill",
+      "rect": [
+        432,
+        170,
+        443,
+        450
+      ],
+      "bytes": 5930,
+      "sha256": "b3ed2cc5b6b023435e04b93bdd4a70185488cf14f18e676f81bff04d3f0f14ab"
+    },
+    {
+      "name": "03-plasma-trench",
+      "rect": [
+        858,
+        140,
+        450,
+        540
+      ],
+      "bytes": 5451,
+      "sha256": "cfb9e1cfb37dedd494945d53d153cecc064f440d62bc56dd6f43765398926a99"
+    },
+    {
+      "name": "04-civic-registry",
+      "rect": [
+        1278,
+        174,
+        423,
+        453
+      ],
+      "bytes": 5022,
+      "sha256": "88cd2862d48f4ce2a5ac489d0c75b8bd81ae7a23fa7995b61271d20c76f5bd8e"
+    },
+    {
+      "name": "05-sable-lock",
+      "rect": [
+        1664,
+        171,
+        370,
+        450
+      ],
+      "bytes": 4810,
+      "sha256": "614c55be9755a5c4edaecc34a637a84f0a106ab28beba27995de37cb3866c0c8"
+    }
+  ],
+  "native": "NATIVE-UNTESTED"
+}
