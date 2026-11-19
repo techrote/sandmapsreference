@@ -168,8 +168,8 @@ for(const x of [197,242,379,422]){
 }
 // Two opposite quay-side support galleries, interrupted for the open dock void.
 R(136,660,65,8,M.S);R(144,667,40,5,M.G);
-R(403,657,70,8,M.S);R(415,664,43,6,M.G);
-L(138,658,125,604,7,M.C);L(457,656,453,602,7,M.C);
+R(374,657,43,8,M.S);R(381,664,34,6,M.G);
+L(138,658,125,604,7,M.C);L(410,656,413,602,7,M.C);
 // The crane hook now bears a visible two-point lifting frame and hull section.
 L(340,564,339,592,5,M.P);R(318,589,46,7,M.S);
 L(323,594,311,612,5,M.P);L(359,594,371,612,5,M.P);
@@ -184,9 +184,9 @@ R(710,305,86,9,M.S);R(724,313,22,8,M.G);R(772,313,18,11,M.U);
 L(753,321,753,368,5,M.P);
 R(740,369,27,12,M.U);R(747,382,13,6,M.J);
 // Suspended spreader clamps the already-placed blue freight module.
-R(817,571,67,8,M.S);L(850,557,850,571,5,M.P);
-L(822,578,822,590,5,M.P);L(879,578,879,590,5,M.P);
-R(816,583,12,7,M.G);R(874,583,12,7,M.G);
+R(716,572,64,8,M.S);L(753,382,753,572,5,M.P);
+L(720,579,720,590,5,M.P);L(774,579,774,590,5,M.P);
+R(716,583,11,7,M.G);R(768,583,11,7,M.G);
 // Deliberate rail equipment along the freight deck, supported by existing slabs.
 for(let x of [598,687,783,868]){
   R(x,638,34,8,M.U);R(x+3,646,8,5,M.K);R(x+23,646,8,5,M.K);
@@ -207,9 +207,9 @@ R(1207,523,23,8,M.S);L(1216,433,1216,483,5,M.P);
 R(964,581,58,10,M.S);R(1155,582,65,11,M.S);
 // EAST CLASSIFICATION: two physically branching graded rail alignments.
 // Different inclines/carts signal sorting, without spanning the flying artery.
-L(1329,602,1458,544,5,M.G);L(1422,590,1560,552,5,M.S);
-L(1458,544,1594,556,6,M.G);
-R(1383,567,48,10,M.U);R(1388,577,10,6,M.K);R(1417,577,10,6,M.K);
+L(1291,603,1360,579,6,M.G);L(1467,598,1550,563,5,M.S);
+L(1550,563,1594,578,6,M.G);
+R(1324,576,43,10,M.U);R(1328,586,10,6,M.K);R(1354,586,10,6,M.K);
 R(1517,566,56,12,M.V);R(1524,578,10,7,M.K);R(1556,578,10,7,M.K);
 R(1462,528,16,13,M.C);R(1468,520,6,8,M.J);
 // Compartmentalized, supported signal-work room beneath the control building.
