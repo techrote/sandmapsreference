@@ -588,6 +588,87 @@ R(453,671,50,140,M.A);
 // previously narrower 19x15/23x19 passage is NOT accepted as a waiver.
 R(867,520,44,70,M.A);
 
+
+// R5 OPERATING VESSEL / THROUGH-FREIGHT — creator-owned original physical cells.
+// One inhabited irregular ship, fixed cargo transfer, divergent short siding,
+// and side-enterable assay; no source image, pseudo ID, animation, or site waiver.
+
+// Unequal welded fore cabin on the joined starboard hull; open Midge-scale
+// bay, transparent inspection windows, loaded work deck and supported prow.
+P([[363,685],[369,651],[386,633],[418,634],[436,649],[430,686]],M.U);
+R(375,646,48,20,M.A); // transparent cockpit cavity
+R(385,650,17,8,M.F);R(406,647,12,14,M.G);
+R(369,682,68,10,M.S);
+R(423,683,12,97,M.C);
+R(379,692,47,36,M.A); // work bay side entrance
+R(377,729,60,8,M.S);
+R(404,737,12,32,M.C);R(408,757,14,8,M.K);
+R(396,713,19,9,M.U);R(398,707,13,6,M.F);
+L(432,701,445,734,11,M.U);L(445,734,411,794,12,M.S);
+L(402,794,375,814,9,M.U);
+L(388,689,399,721,6,M.G);
+// Port cutting workshop: asymmetric open roof, 38-cell top-entry portal,
+// founded walls and real inspection bench. No seal across x289..344 hatch.
+R(199,711,14,59,M.C);R(268,712,11,62,M.C);
+R(196,706,23,10,M.S);R(259,706,24,10,M.S);
+R(211,765,62,9,M.S);
+R(214,722,53,40,M.A);
+R(217,752,31,9,M.U);R(222,745,15,7,M.K);
+R(255,752,8,11,M.G);
+// Physical port and starboard berth service lips, not extra crane icons.
+L(154,674,199,709,8,M.S);R(150,672,15,12,M.C);
+L(425,746,446,757,8,M.S);
+
+// From western grade into real rolling-stock wheelstop, docking tongue,
+// twin-jaw locks and eastern unload lip. Fixed vs cargo materials separate.
+R(949,500,46,9,M.S);R(953,509,10,25,M.C);
+R(984,509,10,29,M.C);R(960,512,26,12,M.V);
+R(966,523,13,7,M.F);
+L(991,496,1016,485,7,M.S);
+R(991,481,30,7,M.G);R(1008,472,9,9,M.U);
+R(973,477,13,8,M.K);
+R(990,460,20,10,M.U);R(1001,445,7,15,M.P);
+R(1007,342,13,8,M.G);R(1010,350,5,37,M.P);
+R(1182,465,17,10,M.U);R(1189,455,7,13,M.P);
+L(1190,475,1214,510,7,M.P);
+R(1207,510,47,11,M.S);R(1214,502,33,8,M.V);
+R(1227,519,16,8,M.K);
+R(1242,522,50,11,M.S);R(1250,514,25,8,M.G);
+R(1255,533,8,23,M.C);R(1278,528,10,24,M.C);
+R(1273,519,20,7,M.U);
+
+// Distinctive low catch siding splits from the descending main rail;
+// physical diverging steel and mechanical end-of-line interlock.
+L(1488,543,1553,580,8,M.G);L(1553,580,1654,615,9,M.S);
+L(1494,549,1549,570,4,M.U);L(1549,570,1652,603,4,M.G);
+R(1573,584,60,20,M.V);
+R(1580,604,8,11,M.K);R(1618,604,8,11,M.K);
+R(1649,588,12,40,M.C);R(1642,587,27,8,M.U);
+R(1652,578,7,10,M.J);
+
+// East-side staffed assay: west-facing open portal, occupied work bay,
+// bench and separate unload threshold. Exact x1838/469 remains free.
+R(1881,394,108,10,M.U);R(1978,404,12,89,M.C);
+R(1881,404,10,27,M.C);R(1885,487,105,10,M.S);
+R(1893,441,82,42,M.A);
+R(1903,481,73,8,M.G);
+R(1920,465,42,11,M.U);R(1928,456,21,9,M.F);
+R(1952,446,15,13,M.V);R(1957,440,5,6,M.J);
+R(1980,472,12,16,M.S);
+
+// Two material changes in underground room plans with purpose-specific
+// discharge / dispatch equipment, outside the flown y747 return artery.
+R(341,855,53,11,M.S);L(389,860,407,902,10,M.C);
+R(381,867,19,44,M.C);R(365,884,24,9,M.G);
+R(1164,856,54,12,M.S);R(1172,868,12,31,M.C);
+R(1193,868,12,33,M.C);R(1177,882,25,11,M.U);
+
+// Weld floating instrumentation to existing load-bearing solids,
+// not unsupported hover-decorations or merely visual proximity.
+R(386,655,5,13,M.G);R(414,655,5,14,M.G);
+R(227,754,8,15,M.C);R(258,755,5,18,M.C);
+R(1937,472,8,17,M.C);
+
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
