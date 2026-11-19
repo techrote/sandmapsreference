@@ -8,53 +8,53 @@
     1024
   ],
   "cells": 2097152,
-  "rectangles": 3947,
-  "setup_utf8_bytes": 75961,
-  "construction_work": 582693,
+  "rectangles": 3952,
+  "setup_utf8_bytes": 76080,
+  "construction_work": 572336,
   "material_histogram": {
-    "0": 1514459,
+    "0": 1524816,
     "3": 18136,
     "8": 2552,
-    "58": 209360,
+    "58": 197884,
     "62": 7855,
-    "63": 387,
+    "63": 340,
     "68": 1389,
-    "70": 26,
+    "70": 6,
     "76": 114,
     "77": 479,
     "79": 3,
-    "100": 82390,
-    "101": 41261,
-    "104": 645,
-    "117": 192856,
-    "120": 7759,
-    "122": 10347,
+    "100": 82021,
+    "101": 42081,
+    "104": 628,
+    "117": 189871,
+    "120": 10019,
+    "122": 11824,
     "123": 3871,
     "131": 3263
   },
   "replay_mismatch": 0,
   "solid_connectivity": {
-    "total": 562005,
-    "anchored": 562005,
+    "total": 551648,
+    "anchored": 551648,
     "detached": 0
   },
   "clearance": {
     "19x15": {
-      "legal": 1093862,
-      "reachable": 890096,
-      "sites": 13,
+      "legal": 1106959,
+      "reachable": 921486,
+      "sites": 15,
       "failed": []
     },
     "23x19": {
-      "legal": 1002215,
-      "reachable": 818156,
-      "sites": 13,
+      "legal": 1015479,
+      "reachable": 840267,
+      "sites": 15,
       "failed": []
     },
     "31x27": {
-      "legal": 832138,
-      "reachable": 698109,
-      "sites": 13,
+      "legal": 844887,
+      "reachable": 717334,
+      "sites": 15,
       "failed": []
     }
   },
@@ -63,22 +63,216 @@
   "source_art": "NONE: original design",
   "paint_operations": 3749,
   "structural_supports": {
-    "ncomponents": 38,
-    "applied": 36,
+    "ncomponents": 39,
+    "applied": 37,
     "unlinked": 2,
-    "protected_paths": 13
+    "protected_paths": 15
   },
   "material_finish": {
     "placed": 12523,
     "clipped": 18878,
-    "inlaid": 2227,
-    "protected_centres": 801059,
-    "sites": 13,
+    "inlaid": 1964,
+    "protected_centres": 833356,
+    "sites": 15,
+    "inhabitation": {
+      "revision": "R5",
+      "purpose": "two entered, monitored dry industrial districts per world; distinct process and escape topology",
+      "opened": [
+        {
+          "label": "ashward particulate receiving airlock",
+          "box": [
+            326,
+            773,
+            81,
+            86
+          ],
+          "removed": 1970
+        },
+        {
+          "label": "twin hot-hall west isolation gate",
+          "box": [
+            1347,
+            812,
+            84,
+            77
+          ],
+          "removed": 2756
+        },
+        {
+          "label": "twin cold-hall east isolation gate",
+          "box": [
+            1653,
+            813,
+            91,
+            78
+          ],
+          "removed": 2373
+        },
+        {
+          "label": "twin-reactor independent underfloor recovery shaft",
+          "box": [
+            1495,
+            873,
+            78,
+            92
+          ],
+          "removed": 4032
+        }
+      ],
+      "physical_inlays": [
+        {
+          "label": "ashward filter service trench cover",
+          "box": [
+            120,
+            859,
+            200,
+            7
+          ],
+          "changed": 1400
+        },
+        {
+          "label": "isolation watchroom certified top beam",
+          "box": [
+            1400,
+            786,
+            230,
+            7
+          ],
+          "changed": 1610
+        },
+        {
+          "label": "hot-side grounded service plinth",
+          "box": [
+            1382,
+            889,
+            112,
+            7
+          ],
+          "changed": 784
+        },
+        {
+          "label": "cold-side grounded service plinth",
+          "box": [
+            1573,
+            889,
+            101,
+            7
+          ],
+          "changed": 665
+        },
+        {
+          "label": "cold siphon transfer trunk",
+          "box": [
+            472,
+            502,
+            110,
+            6
+          ],
+          "changed": 444
+        },
+        {
+          "label": "graded particle separation trunk",
+          "box": [
+            644,
+            502,
+            110,
+            6
+          ],
+          "changed": 216
+        },
+        {
+          "label": "cyclone debris weighbridge",
+          "box": [
+            930,
+            789,
+            145,
+            6
+          ],
+          "changed": 725
+        },
+        {
+          "label": "cyclone refined material return",
+          "box": [
+            1130,
+            789,
+            142,
+            6
+          ],
+          "changed": 710
+        },
+        {
+          "label": "hot plasma isolation indicator",
+          "box": [
+            1355,
+            742,
+            123,
+            6
+          ],
+          "changed": 524
+        },
+        {
+          "label": "cold plasma isolation indicator",
+          "box": [
+            1590,
+            742,
+            126,
+            6
+          ],
+          "changed": 564
+        }
+      ],
+      "rooted_fixtures": [
+        {
+          "label": "ash intake sieve desk",
+          "box": [
+            151,
+            829,
+            40,
+            27
+          ],
+          "new_cells": 0
+        },
+        {
+          "label": "ash intake pressure diagnostic",
+          "box": [
+            276,
+            833,
+            29,
+            22
+          ],
+          "new_cells": 0
+        },
+        {
+          "label": "hot zone visual assay pedestal",
+          "box": [
+            1442,
+            858,
+            28,
+            27
+          ],
+          "new_cells": 322
+        },
+        {
+          "label": "cold zone visual assay pedestal",
+          "box": [
+            1604,
+            855,
+            28,
+            29
+          ],
+          "new_cells": 0
+        }
+      ],
+      "added_cells": 322,
+      "removed_cells": 11131,
+      "recoloured_cells": 7642,
+      "changed_mobile_fluid_cells": 0
+    },
     "structural_revision": {
       "revision": "R4",
       "added_cells": 344,
       "removed_cells": 0,
-      "inlaid_cells": 4704,
+      "inlaid_cells": 4386,
       "static_braces": [
         {
           "label": "western reactor gantry into cyclone mast",
@@ -123,7 +317,7 @@
       "note": "R4 requalification of unchanged Ashlight R3/R2 physical grid, with grounded twin-tower bearings and static-only Midge/liquid evidence; native processes untested"
     }
   },
-  "unmerged_row_runs": 17572,
+  "unmerged_row_runs": 17387,
   "source_authority": {
     "repo": "techrote/cybersand",
     "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
@@ -131,8 +325,8 @@
     "materials": "native/include/cybersand/material.hpp",
     "midge": "godot/authoring/flyers/midge.json"
   },
-  "material_plane_sha256": "a67f60f8e8c97da1601e7a0ace75c0861e8cb5ba0f25bc53bb5ffe6cc41100ac",
-  "setup_sha256": "975c7f516925634d11b836ee1bed0518530402e1f6dfefcea670ed00ba78397c",
+  "material_plane_sha256": "743ee8d5733f197d9fe2099cbc757469c8004ce08921567d070b5e6891b2c0d1",
+  "setup_sha256": "4a031b315883b9e0caf7215d674d5bd1db9eab647890c405f83441e84defd7a8",
   "material_laws": {
     "static_ids": [
       58,
@@ -167,8 +361,8 @@
       "y": 0,
       "width": 2048,
       "height": 1024,
-      "bytes": 91690,
-      "sha256": "5dba04bb254d3a555543ff2719ac02950540a0d363e8249eba46f9f34854f01f",
+      "bytes": 90424,
+      "sha256": "cf0fe9aa238e6dae75d5e2ba56d34defe93dcf60f66fe34e4e39e41695ef808d",
       "material_pixel_parity": 2097152
     },
     {
@@ -177,8 +371,8 @@
       "y": 160,
       "width": 470,
       "height": 650,
-      "bytes": 15816,
-      "sha256": "b2bd4db79f0bbf195440939b42bb8a0d5e74fcc391de46ba0f4aa718bf809b02",
+      "bytes": 15713,
+      "sha256": "ce1da39f2f291405dad0f0456128f31c89ea1967ef4b42c8058c89209e78299d",
       "material_pixel_parity": 305500
     },
     {
@@ -187,8 +381,8 @@
       "y": 250,
       "width": 510,
       "height": 610,
-      "bytes": 16314,
-      "sha256": "d453050def93eac9ec013f0a02a1993f93328d1c2c2896c3fa69316b9c7d30b0",
+      "bytes": 16109,
+      "sha256": "657689b6f58119c738e66d006f39b9166485f3e01634ed7d2ec3ad38ce8e2595",
       "material_pixel_parity": 311100
     },
     {
@@ -197,8 +391,8 @@
       "y": 140,
       "width": 460,
       "height": 670,
-      "bytes": 14800,
-      "sha256": "16e236bb41d7b90f854e8581321c9b71a586af2c5236fa546a1f4e5a68a083ff",
+      "bytes": 14820,
+      "sha256": "829ce4729b349478009e885f6a0ab7f3c874362851eefbf44ff2a61114f32308",
       "material_pixel_parity": 308200
     },
     {
@@ -207,8 +401,8 @@
       "y": 160,
       "width": 485,
       "height": 675,
-      "bytes": 24323,
-      "sha256": "b0f8684cf4d7f4ba88356b5186697e8a1e1511b8ab049b9bccceb0c237f1549b",
+      "bytes": 24002,
+      "sha256": "cbe310790d22c24a163abd2135aed50ea46440ece20a719199ddcbbe542f2590",
       "material_pixel_parity": 327375
     },
     {
@@ -217,8 +411,8 @@
       "y": 225,
       "width": 340,
       "height": 655,
-      "bytes": 11898,
-      "sha256": "ab1f5ca038dba5f1e422cab6f23deb8cf58667e56158d8fb5cf3f21483b2b67d",
+      "bytes": 11468,
+      "sha256": "d4d64c201c15259cb99aa0a01173ce6258fcd088c3749ba64f34b3f5fea99694",
       "material_pixel_parity": 222700
     }
   ],

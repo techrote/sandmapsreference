@@ -8,52 +8,52 @@
     1024
   ],
   "cells": 2097152,
-  "rectangles": 2743,
-  "setup_utf8_bytes": 52873,
-  "construction_work": 561203,
+  "rectangles": 2782,
+  "setup_utf8_bytes": 53625,
+  "construction_work": 558609,
   "material_histogram": {
-    "0": 1535949,
+    "0": 1538543,
     "3": 21821,
     "8": 3572,
-    "58": 178411,
+    "58": 171612,
     "62": 11470,
-    "63": 4359,
+    "63": 4161,
     "68": 4044,
     "76": 234,
     "77": 56,
     "79": 112,
     "100": 85824,
-    "101": 22597,
+    "101": 23221,
     "104": 709,
-    "117": 207194,
-    "120": 6672,
-    "122": 10528,
+    "117": 208709,
+    "120": 5874,
+    "122": 13590,
     "123": 2669,
     "131": 931
   },
   "replay_mismatch": 0,
   "solid_connectivity": {
-    "total": 535810,
-    "anchored": 535810,
+    "total": 533216,
+    "anchored": 533216,
     "detached": 0
   },
   "clearance": {
     "19x15": {
-      "legal": 1130860,
-      "reachable": 874766,
-      "sites": 14,
+      "legal": 1133596,
+      "reachable": 900364,
+      "sites": 16,
       "failed": []
     },
     "23x19": {
-      "legal": 1044227,
-      "reachable": 813642,
-      "sites": 14,
+      "legal": 1046659,
+      "reachable": 831708,
+      "sites": 16,
       "failed": []
     },
     "31x27": {
-      "legal": 883713,
-      "reachable": 698070,
-      "sites": 14,
+      "legal": 885787,
+      "reachable": 714465,
+      "sites": 16,
       "failed": []
     }
   },
@@ -62,22 +62,196 @@
   "source_art": "NONE: original design",
   "paint_operations": 3074,
   "structural_supports": {
-    "ncomponents": 35,
-    "applied": 24,
+    "ncomponents": 39,
+    "applied": 28,
     "unlinked": 11,
-    "protected_paths": 14
+    "protected_paths": 16
   },
   "material_finish": {
     "placed": 19599,
     "clipped": 12599,
-    "inlaid": 3058,
-    "protected_centres": 826396,
-    "sites": 14,
+    "inlaid": 2838,
+    "protected_centres": 855619,
+    "sites": 16,
+    "inhabitation": {
+      "revision": "R5",
+      "purpose": "two entered, monitored dry industrial districts per world; distinct process and escape topology",
+      "opened": [
+        {
+          "label": "freight assay east double-leaf airlock",
+          "box": [
+            258,
+            775,
+            76,
+            77
+          ],
+          "removed": 1628
+        },
+        {
+          "label": "quarantine west rib-spanning decontamination hatch",
+          "box": [
+            1686,
+            756,
+            124,
+            107
+          ],
+          "removed": 3187
+        },
+        {
+          "label": "quarantine overhead dry emergency vent",
+          "box": [
+            1814,
+            692,
+            94,
+            90
+          ],
+          "removed": 2193
+        }
+      ],
+      "physical_inlays": [
+        {
+          "label": "arrival booth pressure head",
+          "box": [
+            100,
+            748,
+            170,
+            6
+          ],
+          "changed": 1020
+        },
+        {
+          "label": "freight assay supported underdeck",
+          "box": [
+            114,
+            850,
+            156,
+            7
+          ],
+          "changed": 624
+        },
+        {
+          "label": "scrubber floor reclaim grating",
+          "box": [
+            1762,
+            872,
+            177,
+            8
+          ],
+          "changed": 1416
+        },
+        {
+          "label": "sealed upper aerosol conduit",
+          "box": [
+            1760,
+            754,
+            160,
+            8
+          ],
+          "changed": 6
+        },
+        {
+          "label": "quench primary transfer jacket",
+          "box": [
+            452,
+            582,
+            120,
+            5
+          ],
+          "changed": 218
+        },
+        {
+          "label": "cold secondary transfer jacket",
+          "box": [
+            592,
+            584,
+            106,
+            5
+          ],
+          "changed": 160
+        },
+        {
+          "label": "quench tertiary return jacket",
+          "box": [
+            721,
+            583,
+            70,
+            5
+          ],
+          "changed": 216
+        },
+        {
+          "label": "separation assay receiving channel",
+          "box": [
+            1351,
+            603,
+            127,
+            7
+          ],
+          "changed": 352
+        },
+        {
+          "label": "distillation feed-and-return channel",
+          "box": [
+            1515,
+            603,
+            157,
+            7
+          ],
+          "changed": 331
+        }
+      ],
+      "rooted_fixtures": [
+        {
+          "label": "freight sample scale and weighing bed",
+          "box": [
+            132,
+            826,
+            35,
+            28
+          ],
+          "new_cells": 945
+        },
+        {
+          "label": "air-quality analyzer lower plinth",
+          "box": [
+            182,
+            830,
+            28,
+            24
+          ],
+          "new_cells": 644
+        },
+        {
+          "label": "scrubber west inspection pedestal",
+          "box": [
+            1800,
+            846,
+            28,
+            27
+          ],
+          "new_cells": 672
+        },
+        {
+          "label": "scrubber east rinse pedestal",
+          "box": [
+            1893,
+            844,
+            26,
+            29
+          ],
+          "new_cells": 676
+        }
+      ],
+      "added_cells": 2937,
+      "removed_cells": 7008,
+      "recoloured_cells": 4343,
+      "changed_mobile_fluid_cells": 0
+    },
     "structural_revision": {
       "revision": "R4",
       "added_cells": 2658,
       "removed_cells": 1463,
-      "inlaid_cells": 2317,
+      "inlaid_cells": 2186,
       "static_braces": [
         {
           "label": "western reactor shear-buttress",
@@ -228,7 +402,7 @@
       "note": "R4 anchors remaining gyre fragments to true containment steel and removes a 190-cell orphan hatch chip; R3 emergency return preserved; native processes untested"
     }
   },
-  "unmerged_row_runs": 16891,
+  "unmerged_row_runs": 16864,
   "source_authority": {
     "repo": "techrote/cybersand",
     "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
@@ -236,8 +410,8 @@
     "materials": "native/include/cybersand/material.hpp",
     "midge": "godot/authoring/flyers/midge.json"
   },
-  "material_plane_sha256": "bd3485225e7ca606e9f7399327decfd0150ae976e475955500e142fbc93ad21b",
-  "setup_sha256": "1e6551b17447c849bc285499d80554d9b88827a3acc306cbc6e429ae0e2c7e5a",
+  "material_plane_sha256": "ff564f95b85e2db934ceb6fb50a2d3cc0a5044937b8d06aa1cadbc1a39c3cddf",
+  "setup_sha256": "ed61d935b2edabe4a0f163d0daa01feccefcdc9b2d003f2518d7fc06f2983c85",
   "material_laws": {
     "static_ids": [
       58,
@@ -272,8 +446,8 @@
       "y": 0,
       "width": 2048,
       "height": 1024,
-      "bytes": 87648,
-      "sha256": "0f263e63ab4da7edf85cbdb9e811cd051aea6c68722b40a4075655c307a53128",
+      "bytes": 87407,
+      "sha256": "e1151fa924a796f59d1a7849179f16ba2a366d46c49730b6fbe90a2277149957",
       "material_pixel_parity": 2097152
     },
     {
@@ -282,8 +456,8 @@
       "y": 225,
       "width": 410,
       "height": 570,
-      "bytes": 12307,
-      "sha256": "d51f7789d1f5e877edf2cee47fa75f9aa5612248648c973811d3f1b7e29d96c5",
+      "bytes": 12192,
+      "sha256": "24a9bc6cf83ea6c77d99e9cac72297924c61477be3b172e46cb1d85059dcb085",
       "material_pixel_parity": 233700
     },
     {
@@ -292,8 +466,8 @@
       "y": 290,
       "width": 440,
       "height": 560,
-      "bytes": 14691,
-      "sha256": "6d3f3fec2642e5c1c71c94e4e69f2ec86a56fb7f1cef44e11605bf1abab3b01a",
+      "bytes": 14710,
+      "sha256": "b9da794861222cdc933b8db731c57633b8f5033a1a759c5dc3f40c1d628300d6",
       "material_pixel_parity": 246400
     },
     {
@@ -302,8 +476,8 @@
       "y": 130,
       "width": 555,
       "height": 710,
-      "bytes": 21989,
-      "sha256": "5156dba5c8d812a2303641e4d57547fe4a47e6d9a3bfd9cd9eddaa56bc5cc5e0",
+      "bytes": 22006,
+      "sha256": "4a8c8cd86f5c98f617c6815058ddd0c8f739b280cb6ebcb77125c4e79e3c95cf",
       "material_pixel_parity": 394050
     },
     {
@@ -312,8 +486,8 @@
       "y": 210,
       "width": 500,
       "height": 650,
-      "bytes": 19007,
-      "sha256": "76de390e1076c673db6e872a4404b85c06fe7ebaded03a0ffd2d3194211a9b43",
+      "bytes": 18593,
+      "sha256": "9a9e777eedf2506f74e90561e5c41d059e640c4410e3becaa7e828db3141d3f7",
       "material_pixel_parity": 325000
     },
     {
@@ -322,8 +496,8 @@
       "y": 220,
       "width": 370,
       "height": 650,
-      "bytes": 16831,
-      "sha256": "872a39ab16b78c3ce19e39e2b6f198b6e44b5b51344e068b04d02620c304c079",
+      "bytes": 16680,
+      "sha256": "72c952f121300e6d8b5c68d5542b66464a85a8f496fed34e0c9fc9c8128fca44",
       "material_pixel_parity": 240500
     }
   ],
