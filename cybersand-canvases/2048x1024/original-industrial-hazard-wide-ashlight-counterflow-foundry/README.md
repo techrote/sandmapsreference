@@ -23,6 +23,8 @@ A frost-and-ash refinery on sheared cliffs, featuring **five distinctive distric
 | Vent conservatory | (1950,388) | 19×15, 23×19, 31×27 |
 | Long exhaust exit | (1940,580) | 19×15, 23×19, 31×27 |
 | Deep retrieval | (1040,965) | 19×15, 23×19, 31×27 |
+| Ashward filter audit | (247,811) | 19×15, 23×19, 31×27 |
+| Twin-reactor isolation booth | (1551,840) | 19×15, 23×19, 31×27 |
 
 ## Physical material design
 
@@ -49,3 +51,7 @@ The R4 builder reproduces byte-identical Ashlight Setup/PNG source-grid evidence
 Static clearance is not flight dynamics. Installed bridge capacity (4096 fallback, 32768 source workbench maximum), actual CyberDemoBridge import, Rapier/Midge input and collision, bounded live Water/Lava stability, native performance and fresh-process save/reopen are **NATIVE-UNTESTED**. Do not merge, mark Ready or claim owner acceptance without independent current-head Shepherd, art and technical review.
 
 **Qualification:** [independent exact-source Actions workflow](https://github.com/techrote/sandmapsreference/actions/workflows/original-industrial-hazard-wide.yml) · [Draft/HOLD PR #23](https://github.com/techrote/sandmapsreference/pull/23). Static anchored connectivity is zero-detachment; native loading and independent art review remain outstanding.
+
+## R5 — entered counterflow and isolation (pending final exact-head static qualification)
+
+The ash reception/filter chamber now gains an **81×86-cell dry side vestibule** and genuinely floor-rooted weighing and particulate instrument consoles. Between unequal reactor towers, a new dry **west 84×77 / east 91×78 double-entry watchroom** serves a **78×92 below-floor recovery shaft** that physically penetrates the lower girder to reach the existing deep service artery. Here the route is cold siphon → graded cyclone separation → dual thermally isolated plasma watchroom → dry lower retrieval / high exhaust, intentionally distinct from Pyrewater's horizontal quench-to-scrubber chain. New exact conservative-hull checkpoint centres: Ashward filter audit (247,811) and inter-rib Twin-reactor isolation booth (1551,840). Materials are structural and dry at authored source state; there are no working simulations of machinery. Installed native bridge, live Water/Lava and Midge steering remain NATIVE-UNTESTED.
