@@ -592,7 +592,34 @@ if(rect.length>32768||area>32000000)throw Error("budget "+rect.length+" "+area);
 let ii=new Int32Array((W+1)*(H+1)),S=W+1;for(let y=1;y<=H;y++){let sum=0,o=(y-1)*W;for(let x=1;x<=W;x++){sum+=g[o+x-1]?1:0;ii[y*S+x]=ii[(y-1)*S+x]+sum;}}
 function clear(x,y,w,h){let a=x-(w>>1),b=y-(h>>1),c=a+w,d=b+h;return a>=0&&b>=0&&c<=W&&d<=H&&ii[d*S+c]-ii[d*S+a]-ii[b*S+c]+ii[b*S+a]===0;}
 function bfs(w,h){let pass=new Uint8Array(g.length),seen=new Uint8Array(g.length),q=new Int32Array(g.length),head=0,tail=0;for(let y=(h>>1);y<H-(h>>1);y++)for(let x=(w>>1);x<W-(w>>1);x++)if(clear(x,y,w,h))pass[y*W+x]=1;let si=start[1]*W+start[0];if(!pass[si])return{size:[w,h],spawnBlocked:true};q[tail++]=si;seen[si]=1;while(head<tail){let a=q[head++],x=a%W,y=(a/W)|0;for(let j of [a-W,a+W,a-1,a+1])if(j>=0&&j<g.length&&!(Math.abs(a-j)===1&&((j/W)|0)!==y)&&pass[j]&&!seen[j]){seen[j]=1;q[tail++]=j;}}let bad=Object.entries(sites).filter(([n,[x,y]])=>!seen[y*W+x]).map(([n,p])=>({name:n,xy:p,clear:clear(...p,w,h)}));return{size:[w,h],reached:Object.keys(sites).length-bad.length,total:Object.keys(sites).length,airCentres:tail,bad};}
-let routes=[[19,15],[23,19],[31,27]].map(x=>bfs(...x));if(routes.some(x=>x.spawnBlocked||x.bad?.length))throw Error("clearance "+JSON.stringify(routes));
+let routes=[[19,15],[23,19],[31,27]].map(x=>bfs(...x));
+if(routes.some(z=>z.spawnBlocked||z.bad?.length)){
+  // TEMPORARY STRICT ROUTE DIAG: find the shortest blocked-centre break between
+  // the spawn component and the genuine west-subway component (31x27 erosion).
+  const pass=new Uint8Array(g.length),N=g.length;
+  for(let y=13;y<H-13;y++)for(let x=15;x<W-15;x++)
+    if(clear(x,y,31,27))pass[y*W+x]=1;
+  const flood=(xy)=>{
+    const seen=new Uint8Array(N),queue=new Int32Array(N),si=xy[1]*W+xy[0];
+    let h=0,t=1;queue[0]=si;seen[si]=1;
+    while(h<t){const a=queue[h++],x=a%W,y=(a/W)|0;
+      for(const b of [x?a-1:-1,x<W-1?a+1:-1,y?a-W:-1,y<H-1?a+W:-1])
+        if(b>=0&&pass[b]&&!seen[b]){seen[b]=1;queue[t++]=b;}
+    }return {seen,size:t};
+  };
+  const a=flood(start),b=flood(sites["West subway"]);
+  const prev=new Int32Array(N);prev.fill(-2);
+  const queue=new Int32Array(N);let head=0,tail=0,dest=-1;
+  for(let i=0;i<N;i++)if(b.seen[i]){prev[i]=-1;queue[tail++]=i;}
+  while(head<tail){const k=queue[head++];if(a.seen[k]){dest=k;break;}
+    const x=k%W,y=(k/W)|0;
+    for(const j of [x?k-1:-1,x<W-1?k+1:-1,y?k-W:-1,y<H-1?k+W:-1])
+      if(j>=0&&prev[j]===-2){prev[j]=k;queue[tail++]=j;}
+  }
+  let trace=[],k=dest;while(k>=0&&trace.length<500){trace.push({x:k%W,y:(k/W)|0,legal:!!pass[k]});k=prev[k];}
+  console.error("FULL-HULL-31-DIAGNOSTIC "+JSON.stringify({spawn_component:a.size,subway_component:b.size,path:trace.reverse().filter((v,i,ar)=>!v.legal||i===0||i===ar.length-1)}));
+  throw Error("clearance "+JSON.stringify(routes));
+}
 const setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:start,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits:rect,response:"LA-SELECTIVE",liquid_policy:[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
 let json=JSON.stringify(setup);if(json.length>1048576)throw Error("JSON "+json.length);
 const rgb={0:[8,11,18],49:[70,83,99],100:[54,56,61],101:[24,19,32],58:[119,123,128],62:[126,141,153],63:[49,100,119],64:[109,125,134],66:[74,85,93],68:[102,119,129],77:[55,243,228],79:[255,181,46],80:[236,248,255],98:[226,223,216],120:[156,210,220],121:[190,216,225],122:[226,236,244],128:[62,122,180],129:[33,70,110],130:[52,56,63],131:[168,171,177]};
