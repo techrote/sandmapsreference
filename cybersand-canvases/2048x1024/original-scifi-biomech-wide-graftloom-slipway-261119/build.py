@@ -805,29 +805,6 @@ def run(dest):
             assert legal[y * W + x], ('site not clear', sx, sy, n, (x, y))
         visited, total = flood(legal, SITES['spawn_receiving_dock'])
         reachable = {n: bool(visited[y * W + x]) for n, (x, y) in SITES.items()}
-        if not all(reachable.values()):
-            original_legal=legal_centres(PRE_R3,sx,sy)
-            for target,good in reachable.items():
-                if good: continue
-                stx,sty=SITES['spawn_receiving_dock']; gx,gy=SITES[target]
-                st=sty*W+stx; end=gy*W+gx
-                prev=collections.deque([st]); seen=bytearray(W*H); parent={}
-                seen[st]=1
-                while prev:
-                    k=prev.popleft()
-                    if k==end: break
-                    cx=k%W; cy=k//W
-                    for nxt in (k-1 if cx else -1,k+1 if cx<W-1 else -1,k-W if cy else -1,k+W if cy<H-1 else -1):
-                        if nxt>=0 and original_legal[nxt] and not seen[nxt]:
-                            seen[nxt]=1;parent[nxt]=k;prev.append(nxt)
-                old_path=[]
-                if seen[end]:
-                    q=end
-                    while q!=st:
-                        old_path.append(q);q=parent[q]
-                    old_path.append(st);old_path.reverse()
-                affected=[(i%W,i//W) for i in old_path if not legal[i]]
-                print('R3_SITE_DIFF',json.dumps({'hull':[sx,sy],'site':target,'pre_path_length':len(old_path),'newly_blocked':len(affected),'first':affected[:32],'last':affected[-32:],'pre_sample':[(k%W,k//W) for k in old_path[::125]]}),flush=True)
         assert all(reachable.values()), ('unreachable sites', sx, sy, reachable)
         local = {n: sum((legal[(y + dy) * W + x + dx] and visited[(y + dy) * W + x + dx] for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)])) for n, (x, y) in SITES.items()}
         assert min(local.values()) >= 3
@@ -838,34 +815,6 @@ def run(dest):
                 end = (1240, 480)
                 s, t = flood(legal, start, ban)
                 common[name] = {'destination_gate_reached': bool(s[end[1] * W + end[0]]), 'legal_centres': t}
-                if not common[name]['destination_gate_reached']:
-                    # TEMP R3 differential diagnosis: compare failing hull to
-                    # the exact accepted pre-R3 centre path, no coordinate waiver.
-                    pre_legal=legal_centres(PRE_R3,31,27)
-                    from array import array
-                    prev=array('i',[-1])*(W*H)
-                    st=start[1]*W+start[0]
-                    goal=end[1]*W+end[0]
-                    qq=collections.deque([st])
-                    prev[st]=st
-                    while qq:
-                        k=qq.popleft()
-                        if k==goal: break
-                        xx=k%W; yy=k//W
-                        for nxt in (k-1 if xx else -1,k+1 if xx<W-1 else -1,k-W if yy else -1,k+W if yy<H-1 else -1):
-                            if nxt>=0 and pre_legal[nxt] and prev[nxt]<0 and not ban(nxt%W,nxt//W):
-                                prev[nxt]=k
-                                qq.append(nxt)
-                    points=[]
-                    if prev[goal]>=0:
-                        p=goal
-                        while p!=st:
-                            points.append((p%W,p//W))
-                            p=prev[p]
-                        points.append(start)
-                        points.reverse()
-                    coll=[(xx,yy) for xx,yy in points if not legal[yy*W+xx]]
-                    print("R3_DIFF_DEBUG",json.dumps({"route":name,"pre_route_len":len(points),"newly_blocked_centre_count":len(coll),"first_blocked":coll[:25],"last_blocked":coll[-25:],"baseline_path_every_100":points[::100]}),flush=True)
                 assert common[name]['destination_gate_reached'], ('alternate route failed', name)
     hist = {str(i): A.count(i) for i in sorted(M) if A.count(i)}
     imgs = []
@@ -873,7 +822,7 @@ def run(dest):
     for f, x, y, w, h, step in specs:
         imgs.append(png_rgb(A, x, y, w, h, dest / f, step))
         assert png_verify(dest / f, A, x, y, w, h, step)
-    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'shepherd_rework_r2': {'changed_cells_final': R2_CHANGED_CELLS, 'objective': 'Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return'}, 'shepherd_rework_r3': {'changed_cells_final': R3_CHANGED_CELLS, 'objective': 'Rooted mnemonic examination dock, enterable filtration lab, grafting die, dry extruder, receiving cradle, lower sampling room and aft extraction'}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
+    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'shepherd_rework_r2': {'changed_cells_final': R2_CHANGED_CELLS, 'objective': 'Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return'}, 'shepherd_rework_r3': {'changed_cells_final': R3_CHANGED_CELLS, 'objective': 'Rooted twin-lobe examination gantry with preserved north aperture, improved receiving cradle and lower dry extrusion, west assay console and aft extraction; rejected route-sealing enclosed workrooms'}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
     (dest / 'qualification.json').write_text(json.dumps(info, indent=2) + '\n')
     (dest / 'seed.txt').write_text(str(SEED) + '\n')
     print(json.dumps({'rectangles': len(rect), 'setup_bytes': len(js), 'occupied': work, 'sites': len(SITES), 'alternate': common, 'gridsha': info['grid_sha256'], 'pngs': len(imgs)}, indent=2))
