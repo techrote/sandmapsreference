@@ -22,7 +22,7 @@ Reproduce and verify: `node build.cjs` (writes) and `node build.cjs --verify` (c
 
 R9 is the only physical change since R7. It keeps every R7 gate and adds variety. Current figures live in `qualification.json` under `r9_tidy_and_variety`; the R7 figures in the sections below are historical.
 
-- **Tidy:** erased 34 ungrounded solid fragments under 120 cells (490 cells, air only). 29 larger ungrounded pieces (10,909 cells) were kept as deliberate hanging props and suspended structures; they are the owner's call.
+- **Tidy (R9 + R10):** erased 34 ungrounded fragments under 120 cells (490 cells). Each of the remaining 29 ungrounded pieces (10,909 cells) was then re-anchored with a 3-cell-wide IRON strut of at most 60 air steps to the nearest grounded solid (28 pieces, 883 strut cells), or removed (1 piece, 334 cells). **Result: 0 ungrounded solid cells remain**, checked by the builder's `--summary`.
 - **Variety:** region-scale noise reassigns solid IDs among the 11 validated inert Solids only. 89,696 basalt cells become slate and 29,333 become obsidian in rock patches; 12,636 concrete cells become steel in pier blocks. Occupancy is unchanged except the erased fragments.
 - **Gates re-run by the builder, all passing:** 14/14 sites at 19×15, 23×19 and 31×27; lower-only 31×27 corridor 69,955 connected centres; full-hull physical Iris bypass 13/14; 12/12 support probes grounded; zero replay mismatches or overlaps.
 - **Budget:** 12,219 rectangles (limit 32,768); setup JSON 230,005 bytes (limit 1,048,576).

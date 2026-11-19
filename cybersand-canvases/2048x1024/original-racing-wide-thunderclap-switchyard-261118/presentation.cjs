@@ -11,7 +11,7 @@ const crypto = require("crypto");
 const RENDER_VERSION = "r8-presentation-1";
 const W = 2048, H = 1024;
 const SEED = 0x20261119;
-const EXPECTED_GRID_SHA256 = "7815bc8e96540e257280ccd30344c18e827fe910cab0acf2c12c2419a991ec26"; // R9 grid
+const EXPECTED_GRID_SHA256 = "232e767ae94956fd4fc608ef6ff7c05e7b86f82fc76ca80ff03c6c2467f6862c"; // R10 grid
 
 // sRGB base colours: engine BASE_RGBA8 rows for the material IDs this canvas uses.
 const BASE = {

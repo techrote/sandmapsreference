@@ -555,40 +555,46 @@
     "Independent exact-HEAD Shepherd, technical and art reviewers must re-audit R7."
   ],
   "r9_tidy_and_variety": {
-    "status": "OPEN DRAFT/HOLD (R9 supersedes the R7 numbers above for the physical grid)",
+    "status": "OPEN DRAFT/HOLD (R10 supersedes the R7 numbers above for the physical grid)",
     "renderer": "r8-presentation-1",
-    "grid_sha256": "7815bc8e96540e257280ccd30344c18e827fe910cab0acf2c12c2419a991ec26",
-    "setup_json_sha256": "6ff4b6818ba957a87e9e4e37ce52ab11a339d6d9cd08b7892b5c4c257eb67063",
-    "setup_json_bytes": 230005,
-    "terrain_rectangles": 12219,
+    "grid_sha256": "232e767ae94956fd4fc608ef6ff7c05e7b86f82fc76ca80ff03c6c2467f6862c",
+    "setup_json_sha256": "beb561aadd9a1882628de8987649edc81453c30ab77c54cd4c165775a078144a",
+    "setup_json_bytes": 230749,
+    "terrain_rectangles": 12259,
     "rectangle_limit": 32768,
     "replay_mismatches": 0,
     "overlapping_edits": 0,
-    "solid_cells": 938445,
+    "solid_cells": 938994,
     "changes": {
       "ungrounded_fragments_under_120_cells_erased": {
         "components": 34,
         "cells": 490
       },
-      "ungrounded_fragments_kept_by_design": {
-        "components": 29,
-        "cells": 10909
-      },
       "basalt_to_slate_region_noise": 89696,
       "basalt_to_obsidian_region_noise": 29333,
       "concrete_to_steel_region_noise": 12636,
-      "occupancy_changed": "only the 34 erased fragments (air added; no solid added)"
+      "occupancy_changed": "air removed for 34+1 fragments; solid added only as 883 strut cells through air",
+      "ungrounded_fragments_reanchored_by_iron_struts": {
+        "components": 28,
+        "strut_cells": 883,
+        "max_air_steps": 60
+      },
+      "ungrounded_fragments_removed": {
+        "components": 1,
+        "cells": 334
+      }
     },
     "gates": {
       "site_reachability_19x15_23x19_31x27": "14/14 each",
-      "lower_only_31x27_connected_centres": 69955,
+      "lower_only_31x27_connected_centres": 69924,
       "full_hull_physical_iris_bypass": "13/14 (blocked chamber excluded, as before)",
-      "grounded_support_probes": "12/12",
+      "grounded_support_probes": "12/12; zero ungrounded fragments remain",
       "material_ids_used": "unchanged set of 11 validated inert Solids"
     },
     "history": {
       "r7_grid_sha256": "bfac4832a8726aed8aa88cf803a174384ed301d3ba4a882084920321be94cfc3",
-      "r7_setup_json_sha256": "19d73909e394a7fa0ef7f83a4a580a876d25e8f6294c95f97a8102186db1c6b6"
+      "r7_setup_json_sha256": "19d73909e394a7fa0ef7f83a4a580a876d25e8f6294c95f97a8102186db1c6b6",
+      "r9_grid_sha256": "7815bc8e96540e257280ccd30344c18e827fe910cab0acf2c12c2419a991ec26"
     }
   }
 }

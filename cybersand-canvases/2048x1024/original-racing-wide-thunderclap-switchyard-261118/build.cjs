@@ -507,6 +507,68 @@ function buildWideCanvas() {
       else{R9.ungroundedKept++;R9.ungroundedKeptCells+=wr;}
     }
   }
+  // R10 structural tidy: every remaining ungrounded fragment (>=120 cells) is either re-anchored by a 3-cell-wide
+  // IRON strut through air to the nearest grounded solid (max 60 air steps), or removed. Struts only add solids
+  // on air cells; every route, envelope and support gate below is re-proven after this pass.
+  const R10={reanchored:0,strutCells:0,removed:0,removedCells:0};
+  function groundedMap(){
+    const gr=new Uint8Array(W*H),q=new Int32Array(W*H);let r=0,w=0;
+    const push=(i)=>{if(g[i]&&!gr[i]){gr[i]=1;q[w++]=i;}};
+    for(let x=0;x<W;x++){push(x);push((H-1)*W+x);}
+    for(let y=0;y<H;y++){push(y*W);push(y*W+W-1);}
+    while(r<w){const v=q[r++],x=v%W,y=(v-x)/W;
+      if(x>0)push(v-1);if(x<W-1)push(v+1);if(y>0)push(v-W);if(y<H-1)push(v+W);}
+    return gr;
+  }
+  function ungroundedComponents(gr){
+    const seen=new Uint8Array(W*H),q=new Int32Array(W*H),out=[];
+    for(let s=0;s<W*H;s++){
+      if(!g[s]||gr[s]||seen[s])continue;
+      let r=0,w=0;q[w++]=s;seen[s]=1;
+      while(r<w){const v=q[r++],x=v%W,y=(v-x)/W;
+        for(const n of [x>0?v-1:-1,x<W-1?v+1:-1,y>0?v-W:-1,y<H-1?v+W:-1]){
+          if(n>=0&&g[n]&&!gr[n]&&!seen[n]){seen[n]=1;q[w++]=n;}
+        }}
+      out.push(Array.from(q.subarray(0,w)));
+    }
+    return out;
+  }
+  {
+    let gr=groundedMap();
+    const comps=ungroundedComponents(gr).sort((a,b)=>b.length-a.length);
+    const prev=new Int32Array(W*H),dist=new Int32Array(W*H).fill(-1),q=new Int32Array(W*H);
+    for(const cells of comps){
+      if(gr[cells[0]])continue;
+      // BFS through air from the component to any air cell touching a grounded solid.
+      dist.fill(-1);let r=0,w=0,target=-1;
+      for(const c of cells){dist[c]=0;prev[c]=-1;q[w++]=c;}
+      while(r<w&&target<0){const v=q[r++],x=v%W,y=(v-x)/W;
+        for(const n of [x>0?v-1:-1,x<W-1?v+1:-1,y>0?v-W:-1,y<H-1?v+W:-1]){
+          if(n<0||dist[n]>=0)continue;
+          if(g[n]===0){
+            dist[n]=dist[v]+1;prev[n]=v;
+            const nx=n%W,ny=(n-nx)/W;
+            const touch=[nx>0?n-1:-1,nx<W-1?n+1:-1,ny>0?n-W:-1,ny<H-1?n+W:-1].some(k=>k>=0&&gr[k]);
+            if(touch&&dist[n]<=60){target=n;break;}
+            if(dist[n]<=60)q[w++]=n;
+          }
+        }}
+      if(target>=0){
+        for(let v=target;v>=0&&prev[v]!==-1&&!(g[v]&&dist[v]===0);v=prev[v]){
+          const x=v%W,y=(v-x)/W;
+          for(let yy=y-1;yy<=y+1;yy++)for(let xx=x-1;xx<=x+1;xx++){
+            if(xx<0||yy<0||xx>=W||yy>=H)continue;
+            const k=yy*W+xx;if(g[k]===0){g[k]=mat.IRON;R10.strutCells++;}
+          }
+        }
+        R10.reanchored++;
+      }else{
+        for(const c of cells)g[c]=0;
+        R10.removed++;R10.removedCells+=cells.length;
+      }
+      gr=groundedMap();
+    }
+  }
   // R9 variety: reassign solid IDs only among the 11 validated inert Solids. Occupancy is untouched.
   // Region-scale value noise keeps rectangle count low (run-length budget is checked below).
   const vn=(x,y,s,seed)=>{const xi=Math.floor(x/s),yi=Math.floor(y/s),fx=x/s-xi,fy=y/s-yi,u=fx*fx*(3-2*fx),v=fy*fy*(3-2*fy);
@@ -707,14 +769,15 @@ function buildWideCanvas() {
     ["07-lower-s-turn-east.png",1150,640,512,384]
   ].map(p=>({name:p[0],region:p.slice(1),...encodePNG(...p.slice(1))}));
   const hist={};for(const v of g)hist[v]=(hist[v]||0)+1;
-  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions,R9,R9ids};
+  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions,R9,R9ids,R10};
 }
 const r=buildWideCanvas();
 if(process.argv.includes("--summary")){
   const crypto=require("crypto");
   const sha=(b)=>crypto.createHash("sha256").update(b).digest("hex");
   const solid=r.grid.reduce((n,v)=>n+(v!==0?1:0),0);
-  const summary={grid_sha256:sha(Buffer.from(r.grid.buffer,r.grid.byteOffset,r.grid.byteLength)),json_sha256:sha(Buffer.from(r.json,"utf8")),json_bytes:Buffer.byteLength(r.json),edits:r.edits.length,solid_cells:solid,histogram:r.hist,R9:r.R9,R9ids:r.R9ids,reachable:Object.fromEntries(Object.entries(r.reachable).map(([k,v])=>[k,v.sites.filter(s=>s[1]).length+"/14"])),bypass_sites:r.bypass.sites.filter(s=>s[1]).length,full_hull_blocked_sites:r.fullHullBlocked.sites.filter(s=>s[1]).length,lower_connected_centres:r.lowerCorridor.connected_centres,grounded_support:r.supportSites.length,mismatches:r.mismatches,collisions:r.collisions};
+  const summary={grid_sha256:sha(Buffer.from(r.grid.buffer,r.grid.byteOffset,r.grid.byteLength)),json_sha256:sha(Buffer.from(r.json,"utf8")),json_bytes:Buffer.byteLength(r.json),edits:r.edits.length,solid_cells:solid,histogram:r.hist,R9:r.R9,R9ids:r.R9ids,R10:r.R10,reachable:Object.fromEntries(Object.entries(r.reachable).map(([k,v])=>[k,v.sites.filter(s=>s[1]).length+"/14"])),bypass_sites:r.bypass.sites.filter(s=>s[1]).length,full_hull_blocked_sites:r.fullHullBlocked.sites.filter(s=>s[1]).length,lower_connected_centres:r.lowerCorridor.connected_centres,grounded_support:r.supportSites.length,mismatches:r.mismatches,collisions:r.collisions};
+  {const W=2048,H=1024,G=r.grid,gr=new Uint8Array(W*H),q=new Int32Array(W*H);let rd=0,wr=0;const pu=(i)=>{if(G[i]&&!gr[i]){gr[i]=1;q[wr++]=i;}};for(let x=0;x<W;x++){pu(x);pu((H-1)*W+x);}for(let y=0;y<H;y++){pu(y*W);pu(y*W+W-1);}while(rd<wr){const v=q[rd++],x=v%W,y=(v-x)/W;if(x>0)pu(v-1);if(x<W-1)pu(v+1);if(y>0)pu(v-W);if(y<H-1)pu(v+W);}let ung=0,ungCells=0;for(let s=0;s<W*H;s++)if(G[s]&&!gr[s])ungCells++;summary.ungrounded_solid_cells=ungCells;}
   console.log(JSON.stringify(summary,null,1));
   process.exit(0);
 }
