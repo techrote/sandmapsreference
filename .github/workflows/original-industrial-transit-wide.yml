@@ -1,0 +1,52 @@
+name: Original industrial transit wide — build and qualify
+on:
+  push:
+    branches:
+      - original/industrial-transit-wide/cinderwake-dual-harbour-interchange-261119
+    paths:
+      - 'cybersand-canvases/2048x1024/original-industrial-transit-wide-cinderwake-dual-harbour-interchange-261119/**'
+      - '.github/workflows/original-industrial-transit-wide.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  original-industrial-transit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate actual full material grid, replay, exact Midge routes, and PNG parity
+        run: |
+          set -euo pipefail
+          D="cybersand-canvases/2048x1024/original-industrial-transit-wide-cinderwake-dual-harbour-interchange-261119"
+          node "$D/build.cjs" --verify | tee /tmp/industrial-transit-builder.json
+      - name: Independently audit serialized grid and PNG pixels
+        run: |
+          set -euo pipefail
+          D="cybersand-canvases/2048x1024/original-industrial-transit-wide-cinderwake-dual-harbour-interchange-261119"
+          node "$D/verify-independent.cjs" | tee /tmp/industrial-transit-independent.json
+      - name: Commit generated actual-cell artifacts onto this exclusive lane branch
+        run: |
+          set -euo pipefail
+          D="cybersand-canvases/2048x1024/original-industrial-transit-wide-cinderwake-dual-harbour-interchange-261119"
+          git add -- "$D"
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Publish Cinderwake exact-grid Setup-v2, receipt and six genuine PNGs"
+            git push origin "HEAD:refs/heads/original/industrial-transit-wide/cinderwake-dual-harbour-interchange-261119"
+          fi
+      - name: Retain reproducibility receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cinderwake-industrial-transit-static
+          path: |
+            /tmp/industrial-transit-builder.json
+            /tmp/industrial-transit-independent.json
+          if-no-files-found: ignore
