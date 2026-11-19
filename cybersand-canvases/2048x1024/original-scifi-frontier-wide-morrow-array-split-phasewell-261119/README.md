@@ -216,3 +216,40 @@ GitHub Actions qualification, source-aligned Setup-v2 budget, material-plane SHA
 pixel-perfect genuine PNG crops and functional loads. Installed native bridge,
 Godot/Rapier/Midge in-session control and save/reopen remain **NATIVE-UNTESTED**.
 Keep Draft/HOLD pending separate new-HEAD art/technical/Shepherd review.
+
+
+## R7 — functional inhabited workroom construction (19 Nov 2026)
+
+The Shepherd's R6 P1 was **inhabited engineering**, not material support: zero
+disconnected solids was already proven, while the upper west and east operations
+still read as floating consoles in oversized roofs. The new
+`repair-workrooms-r7.cjs` is a separately bounded, deterministic actual-cell
+finishing stage layered after all R6 repairs. It adds coherent, materially
+load-bearing **west specimen decontamination and rover-diagnostic bays**,
+a distinct **east quarantine intake**, an **overhead freight scale/transfer bay**
+and an **east refuel/repair cradle**. Operations are differentiated by their
+working geometry and material path, not only palette or glow.
+
+Side entry is real: door jambs have 37–40+ cell-high interruptions at meaningful
+approaches; the central west transfer throat remains open. Crucially, the
+**existing freight scale/lift aperture x1825–1882, y443–466** is protected:
+rebuilding a continuous floor over that cut isolates the freight weigh office
+under 31×27 Midge clearance and is therefore expressly forbidden. This was
+reproduced in construction preflight and corrected in R7's shortened deck
+support at x1754–1822. No stage is allowed to inflate a small interior into a
+world-sized room or destroy the wide rift's two independent flight returns.
+
+**Prepublication in-memory whole-grid check:** 902,819 occupied stable cells;
+**zero detached material cells and zero detached solid components**; exact
+20/20 destination reachability at **19×15, 23×19 and 31×27**. Both independent
+31×27 inserted-obstacle detours retained all seven named cross-district critical
+sites (central gap x920–1099/y430–569 and low return x918–1109/y679–849).
+These construction-side measurements are superseded by the committed
+regenerated Setup/receipt/full-material PNGs plus independent read-only CI
+once those artifacts are published. Native physics/collision/import and
+fresh-process save/reopen remain **NATIVE-UNTESTED**.
+
+This remains an original source-free 2048×1024 side-elevation material-cell
+landscape on the same creator-owned Draft/HOLD branch. Do not interpret static
+reachability, visual design improvements or autonomous construction as owner
+acceptance; request an independent new-head Shepherd/art/technical audit.
