@@ -295,6 +295,15 @@ for(const [x,y,w,h] of [
  [1872,855,9,15]
 ])R(x,y,w,h,M.C);
 
+
+// R2 structural five-component closure — actual discovered disconnected solids:
+// ship hull rib and its foundation, two left lift-guide tiers, and the narrow
+// east receiving pier. Widen welds to existing contiguous masonry only.
+L(245,774,164,839,12,M.C); // port hull rib → solid left drydock flank
+L(246,774,260,789,11,M.S); // existing keel foot → same anchored rib
+for(const y of [501,537])R(949,y+7,44,9,M.S); // guides → west jaw wall
+R(1798,509,7,12,M.S); // terminus split load-bearing receiving column
+
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
