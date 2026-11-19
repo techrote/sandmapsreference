@@ -93,28 +93,32 @@
     "final_recovery_rail": [
       1940,
       848
+    ],
+    "memory_diagnostic_workface": [
+      925,
+      328
     ]
   },
   "replay_mismatches": 0,
   "overlaps": 0,
   "total_cells": 2097152,
-  "painted_cells": 749216,
-  "rectangles": 13862,
-  "setup_bytes": 259333,
+  "painted_cells": 750089,
+  "rectangles": 13839,
+  "setup_bytes": 258892,
   "histogram": {
-    "0": 1347936,
+    "0": 1347063,
     "49": 95908,
     "58": 37192,
-    "62": 181985,
+    "62": 183258,
     "100": 183893,
     "101": 99798,
-    "113": 46298,
-    "117": 85777,
-    "120": 14554,
+    "113": 45667,
+    "117": 86105,
+    "120": 14457,
     "128": 3811
   },
-  "grid_sha256": "39fb83fb434438608e1aa776e06367b0d78e8796ccd8b5411f47c791500a77c5",
-  "setup_sha256": "58f79ab8e11f78cdaf41af21d9bc831c8ce0986fbf39bf2cf92b6eb50804877f",
+  "grid_sha256": "9dd2cbc298d6e91ef71e5f1617ef41a516535c97112cc3ab4dfd030fc4098e38",
+  "setup_sha256": "1714c8ced71041e5036886bff62abcbfb38c08717fe4d2903ffc4d82b5016402",
   "clearance": {
     "19x15": {
       "reachability": {
@@ -130,9 +134,10 @@
         "refinery_middle_filter": true,
         "refinery_lower_sump": true,
         "aft_drydock": true,
-        "final_recovery_rail": true
+        "final_recovery_rail": true,
+        "memory_diagnostic_workface": true
       },
-      "connected_legal_centres": 919657,
+      "connected_legal_centres": 918542,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -147,7 +152,8 @@
         "refinery_middle_filter": 4,
         "refinery_lower_sump": 4,
         "aft_drydock": 4,
-        "final_recovery_rail": 4
+        "final_recovery_rail": 4,
+        "memory_diagnostic_workface": 4
       }
     },
     "23x19": {
@@ -164,9 +170,10 @@
         "refinery_middle_filter": true,
         "refinery_lower_sump": true,
         "aft_drydock": true,
-        "final_recovery_rail": true
+        "final_recovery_rail": true,
+        "memory_diagnostic_workface": true
       },
-      "connected_legal_centres": 879925,
+      "connected_legal_centres": 878714,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -181,7 +188,8 @@
         "refinery_middle_filter": 4,
         "refinery_lower_sump": 4,
         "aft_drydock": 4,
-        "final_recovery_rail": 4
+        "final_recovery_rail": 4,
+        "memory_diagnostic_workface": 4
       }
     },
     "31x27": {
@@ -198,9 +206,10 @@
         "refinery_middle_filter": true,
         "refinery_lower_sump": true,
         "aft_drydock": true,
-        "final_recovery_rail": true
+        "final_recovery_rail": true,
+        "memory_diagnostic_workface": true
       },
-      "connected_legal_centres": 802645,
+      "connected_legal_centres": 801242,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -215,14 +224,15 @@
         "refinery_middle_filter": 4,
         "refinery_lower_sump": 4,
         "aft_drydock": 4,
-        "final_recovery_rail": 4
+        "final_recovery_rail": 4,
+        "memory_diagnostic_workface": 4
       }
     }
   },
   "alternate_route_stress": {
     "upper_via_roof": {
       "destination_gate_reached": true,
-      "legal_centres": 561213
+      "legal_centres": 559810
     },
     "lower_via_sump": {
       "destination_gate_reached": true,
@@ -236,8 +246,8 @@
         2048,
         1024
       ],
-      "bytes": 46259,
-      "sha256": "fe02a3c05414f1a403843189706f138584ed2deba8ff1bb5cd8aa2b2ac850636"
+      "bytes": 46224,
+      "sha256": "84d3a1d0a5715ee7bf3f5a121184d6562698c01b18e07aff98dae93d7de8e7de"
     },
     {
       "png": "review-half.png",
@@ -245,8 +255,8 @@
         1024,
         512
       ],
-      "bytes": 19807,
-      "sha256": "068cb69eff5a8a9e2eb2b54f49a710bbb9b839a64fd10b9f2d00e4c34ca811ed"
+      "bytes": 19826,
+      "sha256": "f0970cc73507a425e6435af5d6b02868d5eb7ec2bf82094a5a689dded3f08ce9"
     },
     {
       "png": "01-receiving-slip.png",
@@ -273,7 +283,7 @@
         545
       ],
       "bytes": 4358,
-      "sha256": "219af67d372f6aed292d7d1ca065a1d6ff04a2f4ee1776dab8436567784ea746"
+      "sha256": "7b5d93e087be477e4d52d378bcc17ebc91f21e92203b41fc74affd4d2f75d322"
     },
     {
       "png": "04-refinery-filter.png",
