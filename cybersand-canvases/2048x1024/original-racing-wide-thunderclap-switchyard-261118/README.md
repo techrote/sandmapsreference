@@ -1,6 +1,22 @@
-# Thunderclap Switchyard — Original CyberSand racing-wide (R7)
+# Thunderclap Switchyard — Original CyberSand racing-wide (R7 + R8 presentation)
 
 **OPEN Draft/HOLD · 2048×1024 actual terrain cells · ORIGINAL-NO-REFERENCE · NATIVE-UNTESTED.** Original from-scratch industrial/geological racing world. No source artwork was selected, traced, converted or otherwise used. CyberSand accepted-main authority is read-only at `018bd09503d7f079ddac52e225c2f7daf8d678bf`; this branch changes no engine, archived artwork, other creator lanes or source-led PRs.
+
+## R8 visual presentation pass (presentation-only, no physical change)
+
+R8 re-renders the map as a readable illustrated preview. **The material grid did not change.** The grid SHA-256, setup JSON, 11,063 edits and every gate above are byte-identical to R7; the builder aborts if the grid differs from the R7 hash.
+
+- `render/overview.png` — full 2048×1024 preview, one pixel per actual cell.
+- `render/overview-review.png` — 1024×512 for quick review.
+- `render/overview-routes.png` — same render with the design routes: **white dashed** main straight, **cyan** high technical, **amber** low technical/recovery, white squares for the 14 functional sites, green ring for the Midge spawn at (116,445).
+- `render/01…07-*@2x.png` — the five original districts and two lower S-turns at 2× nearest-cell scale.
+- `render/manifest.json` — renderer version, grid SHA-256 and per-image decoded-pixel SHA-256.
+
+![R8 presentation render with design routes](render/overview-routes.png)
+
+Method: base colours and per-cell value variation mirror CyberSand's presentation-only appearance atlas (`godot/scripts/material_appearance_lut.gd` at the accepted main SHA above). Surface finishes (slate strata, concrete mottling, steel panel seams, glass sheen, basalt facets, uranium-glass glow) approximate that atlas's flair classes. Depth from air, top-left key light and contact shadow are computed from the grid. These are **preview renders, not in-game screenshots**; the in-game look is still unverified (NATIVE-UNTESTED).
+
+Reproduce and verify: `node build.cjs` (writes) and `node build.cjs --verify` (checks every artifact; render PNGs are checked by decoded-pixel hash so zlib build differences cannot cause false failures). Implementation: `presentation.cjs`.
 
 ## Design and R7 response
 

@@ -684,4 +684,25 @@ for(const [name,bytes] of artifacts){
    else console.log("PASS:",name,bytes.length);
  } else {fs.writeFileSync(name,bytes); console.log("WRITE:",name,bytes.length);}
 }
+// R8 presentation previews (render/): derived from the same grid; pixel-hash verified, so PNG bytes may vary by zlib build.
+const verifying=process.argv.includes("--verify");
+const pres=require("./presentation.cjs").buildPresentation(r.grid,r.sites);
+const { decodeRGB } = require("./presentation.cjs");
+if(!verifying)fs.mkdirSync("render",{recursive:true});
+for(const f of pres.files){
+  if(verifying){
+    let good=false;
+    try{
+      const d=decodeRGB(fs.readFileSync(f.path));
+      good=d.w===f.width&&d.h===f.height&&require("crypto").createHash("sha256").update(d.pixels).digest("hex")===f.rgbSha256;
+    }catch(e){ good=false; }
+    if(good)console.log("PASS:",f.path,f.width+"x"+f.height);
+    else { console.error("FAIL:",f.path); ok=false; }
+  } else {fs.writeFileSync(f.path,f.bytes); console.log("WRITE:",f.path,f.bytes.length);}
+}
+const manifestText=JSON.stringify(pres.manifest,null,2)+"\n";
+if(verifying){
+  if(!fs.existsSync("render/manifest.json")||fs.readFileSync("render/manifest.json","utf8")!==manifestText){ console.error("FAIL: render/manifest.json"); ok=false; }
+  else console.log("PASS: render/manifest.json");
+} else {fs.writeFileSync("render/manifest.json",manifestText); console.log("WRITE: render/manifest.json");}
 if(!ok)process.exitCode=1;
