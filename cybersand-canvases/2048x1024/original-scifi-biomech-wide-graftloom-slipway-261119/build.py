@@ -669,6 +669,9 @@ line(644,476,696,508,16,117)
 box(690,506,817,519,62)
 poly([(709,504),(732,488),(770,489),(783,505)],117)
 box(730,497,775,504,120)
+# Weld the tapered membrane underside across the one-row roof-to-deck seam;
+# otherwise its optical mass becomes a detached ~900-cell floating island.
+box(749,502,761,510,62)
 box(799,490,815,510,113)
 line(807,490,807,459,8,117)
 box(797,451,818,461,120)
