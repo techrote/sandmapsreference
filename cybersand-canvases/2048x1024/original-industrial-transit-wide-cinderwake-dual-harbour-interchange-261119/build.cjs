@@ -489,6 +489,28 @@ R(203,908,179,11,M.C);R(599,907,210,12,M.C);
 R(973,921,220,13,M.C);R(1415,929,228,13,M.C);
 R(1728,915,184,12,M.C);
 
+
+// R3 final structural reconciliation: a true flyable aperture around each
+// four-neighbour centre crossing, with actual steel load paths bypassing it.
+R(817,426,69,31,M.A);   // customs / gantry flight portal
+R(1447,442,78,30,M.A);  // signal hall / classifier throat
+R(866,610,36,69,M.A);   // west underground railway transfer
+R(1623,703,78,32,M.A);  // eastern underground return
+// Marine keel completes the *bottom* contour across the two asymmetrical
+// rib sets, safely below the x313,y743 31x27 keel inspection envelope.
+P([[161,708],[180,724],[206,779],[270,804],[271,817],[208,802],[171,766]],M.V);
+P([[358,812],[404,790],[435,730],[449,709],[452,741],[412,806]],M.V);
+L(262,808,374,808,10,M.S);
+L(215,800,266,812,7,M.U);L(369,811,418,799,8,M.U);
+// The upper classifier crane connects downward to its real graded deck at
+// x1590; a direct x1236–1311 skyline beam was rejected because it severed
+// seven exact Midge destinations despite passing raw rectangle validation.
+L(1590,430,1590,530,7,M.S);
+L(1854,551,1881,551,9,M.S);
+R(1943,476,6,8,M.C);R(832,549,9,7,M.C);
+L(1114,801,1162,801,7,M.S);
+R(760,814,6,7,M.C);R(1456,860,8,8,M.C);R(277,884,7,15,M.C);
+
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
@@ -507,13 +529,7 @@ function crc(b){let c=0xffffffff;for(let v of b){c^=v;for(let i=0;i<8;i++)c=c>>>
 function chunk(t,d){let b=new Uint8Array(d.length+12);b.set(be(d.length),0);b.set(t.split("").map(x=>x.charCodeAt(0)),4);b.set(d,8);b.set(be(crc(b.subarray(4,8+d.length))),8+d.length);return b;}
 // DEFLATE fixed canonical Huffman with distance-one RLE, lossless zlib stream.
 function rev(v,n){let o=0;while(n--){o=(o<<1)|(v&1);v>>>=1;}return o;}
-function zlib(raw){const out=[120,1];let bits=0,used=0;
-function wr(v,n){bits|=v<<used;used+=n;while(used>=8){out.push(bits&255);bits>>>=8;used-=8;}}
-function sym(s){let code,n;if(s<=143){code=48+s;n=8;}else if(s<=255){code=400+s-144;n=9;}else if(s<=279){code=s-256;n=7;}else{code=192+s-280;n=8;}wr(rev(code,n),n);}
-const lb=[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258],le=[0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0];
-function run(n){let i=0;while(i<28&&lb[i+1]<=n)i++;sym(i+257);if(le[i])wr(n-lb[i],le[i]);wr(0,5);}
-wr(1,1);wr(1,2);for(let i=0;i<raw.length;){let n=1;while(i+n<raw.length&&n<258&&raw[i+n]===raw[i])n++;if(n>=4&&i>0&&raw[i-1]===raw[i]){run(n);i+=n;}else{sym(raw[i]);i++;}}sym(256);if(used)out.push(bits&255);
-let s1=1,s2=0;for(let v of raw){s1=(s1+v)%65521;s2=(s2+s1)%65521;}out.push(...be(((s2<<16)|s1)>>>0));return new Uint8Array(out);}
+function zlib(raw){return require("zlib").deflateSync(raw,{level:9});}
 function png(x0,y0,w,h){let raw=new Uint8Array((w+1)*h);for(let y=0;y<h;y++)raw.set(g.subarray((y+y0)*W+x0,(y+y0)*W+x0+w),y*(w+1)+1);let pal=new Uint8Array(132*3);for(let id=0;id<132;id++)pal.set(rgb[id]||[128,128,128],id*3);let parts=[new Uint8Array([137,80,78,71,13,10,26,10]),chunk("IHDR",new Uint8Array([...be(w),...be(h),8,3,0,0,0])),chunk("PLTE",pal),chunk("IDAT",zlib(raw)),chunk("IEND",new Uint8Array())],out=new Uint8Array(parts.reduce((a,b)=>a+b.length,0)),p=0;for(let a of parts){out.set(a,p);p+=a.length;}return out;}
 const crops=[["01-west-drydock",40,195,527,654],["02-blue-gantry",487,189,478,625],["03-counterweight-lift",909,143,374,711],["04-hump-classification",1253,233,478,630],["05-east-terminal",1672,220,376,674]];
 const imgs=[["overview",png(0,0,W,H)],...crops.map(([n,x,y,w,h])=>[n,png(x,y,w,h)])];
