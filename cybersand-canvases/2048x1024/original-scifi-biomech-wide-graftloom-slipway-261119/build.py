@@ -330,148 +330,141 @@ def flood(legal, src, banned=None):
     return (seen, tot)
 
 
-# Protect actual legal Midge flight corridors before adding physically rooted
-# load-bearing steel cables. Each protected path reserves the FULL 31x27 envelope.
-def protected_flight_envelopes():
-    import array
-    size=W*H
-    legal=legal_centres(A,31,27)
-    protected=bytearray(size)
-    def path_tree(start, banned=None):
-        root=start[1]*W+start[0]
-        assert legal[root]
-        parent=array.array('i',[-2])*size
-        parent[root]=-1
-        todo=collections.deque([root])
-        while todo:
-            v=todo.popleft()
-            x=v%W
-            for u in (v-1 if x else -1,
-                      v+1 if x<W-1 else -1,
-                      v-W if v>=W else -1,
-                      v+W if v<size-W else -1):
-                if u>=0 and parent[u]==-2 and legal[u]:
-                    if banned is not None and banned(u%W,u//W):
-                        continue
-                    parent[u]=v
-                    todo.append(u)
-        return parent
-    def reserve(parent,dest):
-        pos=dest[1]*W+dest[0]
-        assert parent[pos]!=-2,('protected route absent',dest)
-        nodes=0
-        while pos!=-1:
-            x,y=pos%W,pos//W
-            # Struts must never occupy a single cell in any of these envelopes.
-            for yy in range(y-13,y+14):
-                o=yy*W+x-15
-                protected[o:o+31]=b'\x01'*31
-            nodes+=1
-            pos=parent[pos]
-        return nodes
-    total=0
-    main=path_tree(SITES['spawn_receiving_dock'])
-    for pos in SITES.values():
-        total+=reserve(main,pos)
-    for ban in (lambda x,y:650<=x<=1200 and y>=390,
-                lambda x,y:650<=x<=1200 and y<=650):
-        tree=path_tree(SITES['spinal_gate_west'],ban)
-        total+=reserve(tree,SITES['spinal_gate_east'])
-    return protected,total
 
+# Physically tether structural islands, without sacrificing even one 31x27
+# route. Each candidate is trial-painted to the actual material-ID array,
+# tested against full-envelope actor-centre connectivity, then retained or
+# reverted. This avoids routing a visually attractive cable across a gate.
 def weld_disconnected_structure():
     import array
-    size=W*H
-    forbidden,route_nodes=protected_flight_envelopes()
-    rooted=bytearray(size)
+    n=W*H
+    rooted=bytearray(n)
     q=collections.deque()
     for x in range(W):
         for y in (0,H-1):
-            v=y*W+x
-            if A[v] and not rooted[v]:rooted[v]=1;q.append(v)
+            k=y*W+x
+            if A[k] and not rooted[k]:rooted[k]=1;q.append(k)
     for y in range(H):
         for x in (0,W-1):
-            v=y*W+x
-            if A[v] and not rooted[v]:rooted[v]=1;q.append(v)
+            k=y*W+x
+            if A[k] and not rooted[k]:rooted[k]=1;q.append(k)
     while q:
         v=q.popleft()
         x=v%W
         for u in (v-1 if x else -1,v+1 if x<W-1 else -1,
-                  v-W if v>=W else -1,v+W if v<size-W else -1):
+                  v-W if v>=W else -1,v+W if v<n-W else -1):
             if u>=0 and A[u] and not rooted[u]:
                 rooted[u]=1;q.append(u)
-    # Routing field seeded at grounded solids. The path cannot cut a protected
-    # 31x27 actor envelope; route work is deterministic on this exact cell plane.
-    prev=array.array('i',[-2])*size
-    distance=array.array('I',[0])*size
+    prev=array.array('i',[-2])*n
+    distance=array.array('I',[0])*n
     q=collections.deque()
-    for v,is_root in enumerate(rooted):
-        if is_root:
-            prev[v]=-1
-            q.append(v)
+    for v,yes in enumerate(rooted):
+        if yes:prev[v]=-1;q.append(v)
     while q:
         v=q.popleft()
         x=v%W
         for u in (v-1 if x else -1,v+1 if x<W-1 else -1,
-                  v-W if v>=W else -1,v+W if v<size-W else -1):
-            if u>=0 and prev[u]==-2 and not forbidden[u]:
-                prev[u]=v
-                distance[u]=distance[v]+1
-                q.append(u)
+                  v-W if v>=W else -1,v+W if v<n-W else -1):
+            if u>=0 and prev[u]==-2:
+                prev[u]=v;distance[u]=distance[v]+1;q.append(u)
     seen=bytearray(rooted)
-    tendons=[]
-    culled=[]
-    for start in range(size):
-        if not A[start] or seen[start]:
-            continue
-        todo=collections.deque([start])
+    comps=[]
+    for start in range(n):
+        if not A[start] or seen[start]:continue
+        q=collections.deque([start])
         seen[start]=1
         comp=[]
-        while todo:
-            v=todo.popleft()
-            comp.append(v)
-            x=v%W
+        while q:
+            v=q.popleft();comp.append(v);x=v%W
             for u in (v-1 if x else -1,v+1 if x<W-1 else -1,
-                      v-W if v>=W else -1,v+W if v<size-W else -1):
+                      v-W if v>=W else -1,v+W if v<n-W else -1):
                 if u>=0 and A[u] and not seen[u]:
-                    seen[u]=1;todo.append(u)
-        accessible=(v for v in comp if prev[v]!=-2)
-        best=min(accessible,key=lambda v:distance[v],default=None)
-        if best is None:
+                    seen[u]=1;q.append(u)
+        comps.append(comp)
+    # A 31x27 valid route is also a valid 23x19 and 19x15 route.
+    def flight_ok():
+        legal=legal_centres(A,31,27)
+        if any(not legal[y*W+x] for x,y in SITES.values()):
+            return False
+        vis,_=flood(legal,SITES['spawn_receiving_dock'])
+        if any(not vis[y*W+x] for x,y in SITES.values()):
+            return False
+        end=SITES['spinal_gate_east']
+        for ban in (lambda x,y:650<=x<=1200 and y>=390,
+                    lambda x,y:650<=x<=1200 and y<=650):
+            v,_=flood(legal,SITES['spinal_gate_west'],ban)
+            if not v[end[1]*W+end[0]]:
+                return False
+        return True
+    def trial_cable(start,end,half):
+        x0,y0=start;x1,y1=end
+        count=max(abs(x1-x0),abs(y1-y0),1)*2
+        changed=[]
+        # Rounded 3- or 5-cell continuous orthographic steel cable.
+        for z in range(count+1):
+            x=round(x0+(x1-x0)*z/count)
+            y=round(y0+(y1-y0)*z/count)
+            for dy in range(-half,half+1):
+                for dx in range(-half,half+1):
+                    if dx*dx+dy*dy>half*half+1:continue
+                    xx=x+dx;yy=y+dy
+                    if 0<=xx<W and 0<=yy<H:
+                        i=yy*W+xx
+                        if not A[i]:
+                            A[i]=117
+                            changed.append(i)
+        if flight_ok():
+            return len(changed)
+        for i in changed:A[i]=0
+        return None
+    tendons=[]
+    culled=[]
+    trials=0
+    for comp in sorted(comps,key=lambda c:-len(c)):
+        by_bucket={}
+        for v in comp:
+            key=((v%W)//28,(v//W)//28)
+            if key not in by_bucket or distance[v]<distance[by_bucket[key]]:
+                by_bucket[key]=v
+        candidates=sorted(by_bucket.values(),key=lambda v:distance[v])
+        chosen=None
+        for v in candidates[:32]:
+            root=v
+            while prev[root]!=-1:
+                root=prev[root]
+            start=(v%W,v//W);end=(root%W,root//W)
+            if start==end:continue
+            # Once the counterpart is already a grounded physical component,
+            # only very small spans are needed; never cross the whole canvas.
+            if distance[v]>450:continue
+            trials+=1
+            added=trial_cable(start,end,1)
+            if added is not None:
+                chosen={'original_cells':len(comp),'source':list(start),
+                        'anchor':list(end),'span':distance[v],
+                        'steel_cells_added':added}
+                break
+        if chosen is None:
+            # Short isolated specks around actor gates cannot justify closure.
             if len(comp)<=128:
                 for v in comp:A[v]=0
                 culled.append(len(comp))
                 continue
-            raise RuntimeError(('No route-preserving anchor exists',len(comp),
-                                min(comp)%W,min(comp)//W))
-        chain=[]
-        v=best
-        while v!=-1:
-            chain.append(v)
-            v=prev[v]
-        tendons.append((len(comp),chain))
-    # Three-cell steel braids: construction stays OUTSIDE every reserved route.
-    for mass,chain in tendons:
-        for v in chain:
-            if not A[v]:A[v]=117
-            x,y=v%W,v//W
-            for dx,dy in ((-1,0),(1,0),(0,-1),(0,1)):
-                xx,yy=x+dx,y+dy
-                if 0<=xx<W and 0<=yy<H:
-                    u=yy*W+xx
-                    if not forbidden[u] and not A[u]: A[u]=117
-    return {'initial_detached_components':len(tendons)+len(culled),
-            'initial_detached_cells':sum(n for n,_ in tendons)+sum(culled),
+            raise RuntimeError(('Cannot tether without breaking 31x27 route',
+                                len(comp),min(comp)%W,min(comp)//W,
+                                'candidates',min(32,len(candidates))))
+        tendons.append(chosen)
+    assert flight_ok(), 'final anchored flight graph regression'
+    return {'initial_detached_components':len(comps),
+            'initial_detached_cells':sum(map(len,comps)),
             'welded_components':len(tendons),
             'micro_islands_removed':len(culled),
             'micro_island_cells_removed':sum(culled),
-            'reserved_flight_route_nodes':route_nodes,
-            'tendons':[{'original_cells':n,
-                        'start':[chain[0]%W,chain[0]//W],
-                        'root':[chain[-1]%W,chain[-1]//W],
-                        'path_cells':len(chain)} for n,chain in tendons]}
+            'candidate_flight_trials':trials,
+            'steel_load_paths':tendons}
 
 STRUCTURAL_SUPPORTS = weld_disconnected_structure()
+
 
 def chunk(t, body):
     return struct.pack('>I', len(body)) + t + body + struct.pack('>I', zlib.crc32(t + body) & 4294967295)
