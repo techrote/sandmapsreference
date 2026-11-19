@@ -44,3 +44,30 @@ All walls and bracing are static physically admissible solids from the accepted 
 
 ## Rebuild
 Run `node build.cjs --verify` (no npm dependency); reruns cell, receipt, compression and site checks. PNGs contain exact palette-index values equal to material IDs; they are static physical-plane evidence, not a native screenshot.
+
+## R2 original-world structural and architectural finishing (19 November 2026)
+
+The independent art, technical and Shepherd audits of R1 correctly distinguished static
+schema/flight PASS from weak structural believability and over-scale inhabited rooms.
+R2 applies **new actual-cell geometry** in `repair-structures.cjs`, loaded after the
+baseline world and before the exact ordered-rectangle encoder. This is the same original
+world and the same unchanged 16 named destinations, 2048×1024 extent, Midge and seed.
+
+- **West civic:** differentiated xenology cells, habitation mezzanine, rover servicing,
+  instrument consoles, distinct 40–70-cell room tiers, and anchored load paths.
+- **Eastern quarantine:** sample isolation, customs controls and a physically different
+  refuelling/repair berth, separate landings and grounded freight service.
+- **Phasewell:** offset damaged emitter, human-readable inspection shelves and rock-bonded
+  lower foundation. Broken-ring gaps and open high/low flight routes remain intentional.
+- **Transit & solar:** long, legible sky-truss and midlevel anchors back into the natural
+  cliff faces. Twin sail conductors express intentional suspended technology.
+- **Deep survey:** separate assay chamber, rock-connected registration points and a
+  secondary access bay instead of broad featureless lower geology.
+
+The acceptance criteria are unchanged: full-plane replay/PNG pixel parity, exact
+19×15 / 23×19 / 31×27 named-site flight BFS, static engineering and art audits,
+plus separately real native runtime/flight/save/reopen testing.
+R2 images, receipt, JSON and exact new SHA are regenerated and committed by the
+branch-local content-scoped GitHub Actions authoring job before verification; do
+not treat an unverified intermediate source-only commit as a playable candidate.
+**NATIVE-UNTESTED** until independently exercised.

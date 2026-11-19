@@ -86,6 +86,7 @@ for(let x of [1614,1850,1958])R(x,561,15,28,M.P);
 R(856,582,115,12,M.K);R(1070,583,125,12,M.K);
 for(let x=600;x<1410;x+=84){R(x,870,32,7,M.O);R(x+6,877,8,8,M.T);}
 R(286,565,64,71,M.A);
+require("./repair-structures.cjs")({M,R,P,L,ring,sites});
 const start=sites["Rover gate"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
