@@ -669,6 +669,10 @@ R(386,655,5,13,M.G);R(414,655,5,14,M.G);
 R(227,754,8,15,M.C);R(258,755,5,18,M.C);
 R(1937,472,8,17,M.C);
 
+// Apply bounded R6 authored material cells BEFORE deterministic rectangle encoding.
+// Keep the R5 base intact for spatial provenance and reproducibility.
+require("./r6-geometry.cjs")({R,P,L,ring,M});
+
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
