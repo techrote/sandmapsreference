@@ -599,22 +599,13 @@ poly([(1576,391),(1628,387),(1651,398),(1638,411),
 for xx in (1600,1621,1641):
     line(xx,407,xx-6,431,5,120)
 
-# Refinery MIDDLE: distinct enterable lamellar filtration lab. Its open right
-# side leads into the main corridor and exact (1510,544) destination.
-# The side wall is a continuous member of the pre-existing roof-supplied rack.
-box(1372,465,1388,581,62)
-# The filter is a cantilever from the existing y465 grounded deck, not a wall.
-box(1380,498,1439,508,62)
-box(1380,557,1410,569,62)
-poly([(1380,518),(1440,530),(1449,545),
-      (1419,542),(1380,536)],113)
-poly([(1380,552),(1440,560),(1453,582),
-      (1414,578),(1380,568)],117)
-box(1398,572,1415,586,120)
-box(1380,578,1428,590,113)
-box(1380,579,1390,594,120)
-# Roof slot and lower outlet remain separated, with a real, wide open
-# approach from x>1440; no endless wall/rake across the refinery.
+# Refinery MIDDLE (reopened): R3 separator trial blocked actual site approach.
+# Retain the previously verified y465/y623 rack and full open flights here;
+# a shallow, anchored assay console is now mounted on the west fixed deck.
+box(1344,462,1353,499,62)
+box(1351,491,1388,500,113)
+line(1351,494,1390,508,5,120)
+# No closed diaphragm, vertical barrier or long cross-corridor wall.
 
 # Refinery LOWER: floor-attached tapered waste auger / dry extrusion face.
 # It faces left toward exact (1500,704) while the service exit faces right.
@@ -645,18 +636,14 @@ poly([(961,913),(989,901),(1012,906),
 # These cells are safely below South Memory (914,809); no in-game
 # decorative objects are exempted from actual Midge collision.
 
-# 5. Aft grounded extraction: distinct twin lower jaws and pallet handoff
-# surrounding, not overlapping, the recovery point (1940,848).
-line(1901,930,1898,882,14,58)
-line(1898,881,1917,875,12,62)
-poly([(1859,902),(1897,876),(1916,883),
-      (1909,902),(1878,920)],117)
-line(2010,928,2009,880,14,62)
-line(2009,880,1981,881,11,117)
-poly([(1977,877),(1990,860),(2018,870),
-      (2014,894),(1980,897)],62)
-box(1981,909,2025,919,113)
-# No across-void decoration, active fluids or putative fake organ materials.
+# 5. Aft recovery inspection: right-anchored jaw and extraction interface.
+# The earlier deep left prong occluded the Final Recovery approach. Its tip
+# is deliberately absent pending native gameplay; this local right bracket
+# is a solid grounded terminus, not a floating stage prop.
+box(2001,893,2014,937,62)
+line(2008,897,1987,904,8,117)
+box(1983,906,2013,916,113)
+# Keep exact Final Recovery Rail (1940,848) plus 31x27 approaches clear.
 
 R3_CHANGED_CELLS = sum(u != v for u,v in zip(PRE_R3,A))
 assert R3_CHANGED_CELLS >= 3000, ('R3 physical rework missing',R3_CHANGED_CELLS)
