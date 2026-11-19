@@ -735,7 +735,9 @@ function buildWideCanvas() {
     ["West stator collector",830,605],
     ["East stator collector",1253,603],
     ["Upper brake catch",2000,398],
-    ["Lower brake catch",2000,512]
+    ["Lower brake catch",2000,512],
+    ["R10 upper continuous catch rail",1900,397],
+    ["R10 lower continuous catch rail",1900,501]
   ];
   for(const [name,x,y] of supportSites){
     if(!grounded[y*W+x])throw Error("STRUCTURAL_SUPPORT_FAIL "+name+" ("+x+","+y+")");

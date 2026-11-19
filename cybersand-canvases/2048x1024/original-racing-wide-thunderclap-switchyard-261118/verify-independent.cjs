@@ -71,6 +71,10 @@ for(const [fw,fh] of [[19,15],[23,19],[31,27]]){
  eq(b.n,rec.exact_reach[k].connected_centres,k+" connected centres");
  for(const p of rec.named_sites)if(!b.visited[p.y*W+p.x])throw Error(k+" UNREACHABLE "+p.name);
 }
+// A deliberately straight full-envelope line proves that the new brake lips
+// do not turn a 2048-wide high-speed approach into a collision maze.
+for(let x=116;x<=1943;x++)if(!free(x,445,31,27))throw Error("MAIN_FAST_LANE_PINCH x="+x);
+console.log("DIRECT_MAIN_31x27_CLEAR: 1828/1828 exact centres at y445");
 const block=[885,317,1125,567],blocked=bfs(31,27,[116,445],null,block);
 eq(blocked.n,rec.physical_iris_obstruction.connected_centres,"blocked bypass");
 for(const p of rec.named_sites){
