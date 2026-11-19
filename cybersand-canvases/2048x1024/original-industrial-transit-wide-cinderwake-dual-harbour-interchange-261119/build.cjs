@@ -144,7 +144,7 @@ L(1484,567,1630,614,12,M.S);
 // Drydock stirrup/ladder footings and freight-platform lateral welds.
 L(251,563,122,615,9,M.S);
 L(415,670,450,676,9,M.S);
-L(451,659,480,621,10,M.S);
+R(413,709,15,150,M.C); // Starboard dock stirrup grounded in main keel slab
 L(918,580,950,590,8,M.S);
 L(340,559,252,559,8,M.S);
 L(180,692,138,692,8,M.S);
