@@ -120,3 +120,66 @@ The committed independent verifier also rejects detached occupancy above
 30,000 cells. Exact regenerated receipt, PNG hashes and full pixel parity
 remain the authoritative reproducible gates. No native Workbench install,
 flight steering, simulation or save/reopen has been performed: **NATIVE-UNTESTED**.
+
+
+## R4 — grounded frontier instruments and district-scale service repair (19 November 2026)
+
+The exact original 2048×1024 **Morrow Array / Split Phasewell** was improved at the
+actual material-ID-cell level, not from a source photograph or an AI picture.
+The fixed seed and the unchanged existing 16 site coordinates remain authoritative.
+Original generator `build.cjs` and its final `repair-structures.cjs` overlay
+regenerate the complete Setup-v2 and all actual indexed-cell PNGs byte-for-byte.
+
+- **West civic/xenology:** the previously detached upper rover deck has a short
+  forked structural bracket into the existing shell rather than a world-blocking
+  column. The upper lab now has a pierced specimen carousel, extraction duct and
+  dedicated rover-wheel diagnostic station; lower assay machinery has a vertical
+  probe and non-mirrored readout plinth.
+- **Lower geology:** a former detached geolab slab gains a rock-backed diagonal
+  to the already rooted lower survey installation, with borehole head servicing.
+- **Broken phasewell:** an asymmetrical inspection operator shelf, control mast,
+  subordinate luminous diagnostics and physical service rail were added without
+  filling the three named phasewell flight centres or completing the broken ring.
+- **Eastern harbour:** true-cell quarantine specimen handling, unload weighing
+  station and an overhead freight hook are differentiated from the enclosed
+  rover-refuel/repair cradle; under-bay cranes visibly return to their decks.
+  The added material is selectively structured, not repeated box-wallpaper.
+- **Deep survey:** a compact service receiving port and actual structural
+  underbracing connect to the lower geology; the critical low flight return
+  remains open.
+
+### R4 independently reproduced results
+
+| Gate | R4 final |
+|---|---:|
+| Material extent | **2048×1024 = 2,097,152 cells** |
+| Occupied physical cells | **904,447** |
+| Supported/anchored occupied cells | **892,551** |
+| Residual detached occupied cells | **11,896 / 35 components**, down from R3 19,047 / 51 |
+| Lossless ordered rectangles | **11,224 / 32,768** |
+| Setup-v2 bytes | **210,149 / 1,048,576** |
+| Whole-plane indexed material SHA-256 | `33fd3e8040bd2c46e38826709ceffd5ae435c60bef26290b36d487c9930106c9` |
+| Complete cell replay, legality, no overlaps | **PASS** |
+| Exact named centres at 19×15 / 23×19 / 31×27 | **16/16 each** |
+| Two separately inserted central/lower route obstructions | **PASS; 7/7 critical cross-district centres retained** |
+| Original indexed PNGs, actual pixel parity | **6/6 PASS**, one full-plane and five original unscaled 1:1 crops |
+| Installed native bridge, Godot/Rapier/Midge gameplay, save/reopen | **NATIVE-UNTESTED** |
+
+All still-existing detached assemblies are inert, immobile solids per the
+read-only accepted CyberSand material catalogue; they do not imply falling
+physics. However their intended supporting technology and gameplay purpose
+remain open questions for the *next independent exact-HEAD artistic/technical*
+review. The geometry proves conservative static clearance, not actual
+closed-loop steering, powered machinery, collision runtime performance or
+cross-process persistence. Older installed native bridges can report only
+4,096 starting rectangles despite accepted source supporting 32,768, so
+**no native import or owner-playtest acceptance is claimed**.
+
+The branch-local workflow was temporarily given content write only to commit
+fully regenerated material-cell JSON and PNG artifacts; that one-shot step
+was then removed and **`contents: read` reinstated**. The independent
+verifier now asserts R4 structural non-regression (≤15,000 detached cells
+and ≤40 detached components) in addition to full-grid parity and flight tests.
+
+**Status remains OPEN Draft / HOLD.** No source image, historical canvas,
+sibling creator branch or accepted CyberSand engine code was modified.
