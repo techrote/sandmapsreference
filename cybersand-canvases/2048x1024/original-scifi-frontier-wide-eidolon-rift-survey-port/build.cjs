@@ -4,8 +4,9 @@
  * Rebuild: node build.cjs; compare complete files: node build.cjs --verify
  * Indexed PNG pixel index is the actual CyberSand material ID. */
 const W=2048,H=1024,SEED=2611190120;
-const M={SLATE:49,CONCRETE:58,STEEL:62,BASALT:100,ADOBE:101,ALUMINIUM:113,GOLD:117,FROST:120,URANIUM:122,AMBER:123,SOLAR:128};
-const palette={0:[9,14,25],49:[66,80,99],58:[112,121,133],62:[144,161,176],100:[30,36,50],101:[178,115,81],113:[207,218,228],117:[239,186,83],120:[108,193,203],122:[159,221,92],123:[235,201,132],128:[45,75,131]};
+let repairReceipt=null;
+const M={SLATE:49,CONCRETE:58,STEEL:62,BASALT:100,ADOBE:102,ALUMINIUM:114,GOLD:118,FROST:121,SOLAR:129};
+const palette={0:[9,14,25],49:[66,80,99],58:[112,121,133],62:[144,161,176],100:[30,36,50],102:[178,115,81],114:[207,218,228],118:[239,186,83],121:[108,193,203],129:[45,75,131]};
 const sites=[
 ['Landing Exchange',[272,571]],['Solar Mast Control',[242,332]],
 ['Geology Receiving Hall',[514,590]],['Xenolith Analysis Chamber',[700,594]],
@@ -106,6 +107,7 @@ function plane(){const a=new Uint8Array(W*H);
  R(964,899,59,39,0);R(1225,901,61,39,0);
  R(790,799,92,7,M.STEEL);R(1271,792,74,8,M.STEEL);
  for(let x of [105,350,730,1370,1585,1995]){const y=surface(x);R(x,y-19,13,19,M.STEEL);R(x-7,y-24,26,6,M.GOLD)}
+ repairReceipt=require("./repair-admission.cjs")(a,W,H,M,sites);
  return a}
 function pack(a){const edits=[];let open=new Map(),painted=0;for(let y=0;y<H;y++){const next=new Map();for(let x=0;x<W;){const x0=x,id=a[y*W+x];while(x<W&&a[y*W+x]===id)x++;if(!id)continue;const len=x-x0,key=x0+':'+len+':'+id,p=open.get(key);if(p&&p[1]+p[3]===y){p[3]++;next.set(key,p)}else{const r=[x0,y,len,1,id];edits.push(r);next.set(key,r)}painted+=len}open=next}return {edits,painted}}
 function legal(a,hx,hy){const S=W+1,p=new Uint32Array(S*(H+1));for(let y=0;y<H;y++){let row=0;for(let x=0;x<W;x++){row+=a[y*W+x]?1:0;p[(y+1)*S+x+1]=p[y*S+x+1]+row}}
@@ -136,12 +138,36 @@ function png(a,x,y,w,h){const raw=new Uint8Array((w+1)*h);for(let j=0;j<h;j++)ra
  const pal=new Uint8Array(768);for(let i=0;i<256;i++)pal.set(palette[i]||[30,34,43],i*3);
  const parts=[Uint8Array.from([137,80,78,71,13,10,26,10]),chunk('IHDR',Uint8Array.from([...U(w),...U(h),8,3,0,0,0])),chunk('PLTE',pal),chunk('IDAT',zlib(raw)),chunk('IEND',new Uint8Array())];
  const o=new Uint8Array(parts.reduce((n,v)=>n+v.length,0));let p=0;for(const v of parts){o.set(v,p);p+=v.length}return o}
+function sha256(a){
+ const K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+ 0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+ 0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+ 0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+ 0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+ 0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+ 0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+ 0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+ const h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+ const n=a.length,padded=new Uint8Array(Math.ceil((n+9)/64)*64);padded.set(a);padded[n]=128;
+ const bits=n*8;for(let i=0;i<8;i++)padded[padded.length-1-i]=Math.floor(bits/2**(8*i))&255;
+ const rot=(v,k)=>(v>>>k)|(v<<(32-k)),w=new Uint32Array(64);
+ for(let off=0;off<padded.length;off+=64){
+ for(let j=0;j<16;j++){let q=off+j*4;w[j]=(padded[q]<<24)|(padded[q+1]<<16)|(padded[q+2]<<8)|padded[q+3]}
+ for(let j=16;j<64;j++){let a=w[j-15],b=w[j-2],s0=rot(a,7)^rot(a,18)^(a>>>3),s1=rot(b,17)^rot(b,19)^(b>>>10);w[j]=(w[j-16]+s0+w[j-7]+s1)>>>0}
+ let [a,b,c,d,e,f,g,v]=h;
+ for(let j=0;j<64;j++){let S1=rot(e,6)^rot(e,11)^rot(e,25),ch=(e&f)^((~e)&g),t1=(v+S1+ch+K[j]+w[j])>>>0;
+ let S0=rot(a,2)^rot(a,13)^rot(a,22),maj=(a&b)^(a&c)^(b&c),t2=(S0+maj)>>>0;
+ v=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0}
+ for(let j=0;j<8;j++)h[j]=(h[j]+[a,b,c,d,e,f,g,v][j])>>>0;
+ }return h.map(v=>v.toString(16).padStart(8,'0')).join('')
+}
+
 function fnv(a){let h=2166136261;for(const v of a){h^=v;h=Math.imul(h,16777619)}return(h>>>0).toString(16).padStart(8,'0')}
 const crops=[['01-west-landing.png',58,188,370,595],['02-regolith-labs.png',402,371,411,450],['03-rift-transit.png',810,365,474,504],['04-meridian-observatory.png',1287,298,310,535],['05-eastern-freight.png',1601,245,370,580],['06-deep-archive.png',892,808,453,204]];
 function build(){const a=plane(),{edits,painted}=pack(a),q=assess(a,edits,painted);
  const setup={version:2,extent:[W,H],actors:[{id:1,model:'midge',hash:'c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96',spawn:sites[0][1],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits,response:'LA-SELECTIVE',liquid_policy:policy,normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
  const json=JSON.stringify(setup)+'\n';
- const receipt={schema:1,title:'Eidolon Rift Survey Port',mode:'ORIGINAL / NO REFERENCE',seed:SEED,extent:[W,H],accepted_engine:'018bd09503d7f079ddac52e225c2f7daf8d678bf',setup_loader_blob:'70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9',material_catalogue_blob:'dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3',midge_blob:'228399e38a0e0ab215b9f48698edce67a7a35799',grid_fnv32:fnv(a),histogram:q.hist,edits:q.edit_count,max_edits:32768,json_bytes:json.length,max_json_bytes:1048576,construction_cell_work:q.painted,max_work_cells:32000000,overlaps:q.overlaps,replay_diffs:q.diffs,invalid_rectangles:q.bad,conservative_midge_clearance:q.checks,sites,native:'NATIVE-UNTESTED',native_bridge_source_rectangles:32768,old_unavailable_bridge_fallback_rectangles:4096};
+ const receipt={schema:1,title:'Eidolon Rift Survey Port',mode:'ORIGINAL / NO REFERENCE',seed:SEED,extent:[W,H],accepted_engine:'de109d0131641d6adc8d25bb9ced7ca3d4991105',setup_loader_blob:'70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9',material_catalogue_blob:'dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3',midge_blob:'228399e38a0e0ab215b9f48698edce67a7a35799',grid_fnv32:fnv(a),grid_sha256:sha256(a),setup_sha256:sha256(Uint8Array.from([...json].map(c=>c.charCodeAt(0)))),repair:repairReceipt,histogram:q.hist,edits:q.edit_count,max_edits:32768,json_bytes:json.length,max_json_bytes:1048576,construction_cell_work:q.painted,max_work_cells:32000000,overlaps:q.overlaps,replay_diffs:q.diffs,invalid_rectangles:q.bad,conservative_midge_clearance:q.checks,sites,native:'NATIVE-UNTESTED',native_bridge_source_rectangles:32768,old_unavailable_bridge_fallback_rectangles:4096};
  const files=[['setup-eidolon-rift.json',json],['qualification.json',JSON.stringify(receipt,null,2)+'\n'],['overview.png',png(a,0,0,W,H)]];for(const [name,x,y,w,h] of crops)files.push([name,png(a,x,y,w,h)]);
  return {a,receipt,files,setup}}
 const api={build,plane,pack,legal,flood,assess,crops,png,sites,fnv,W,H,SEED};
