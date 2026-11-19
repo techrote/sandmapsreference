@@ -428,21 +428,44 @@ def weld_disconnected_structure():
                 by_bucket[key]=v
         candidates=sorted(by_bucket.values(),key=lambda v:distance[v])
         chosen=None
-        for v in candidates[:32]:
+        # The closest contact often sits across a narrow flight gate. A large
+        # suspended deck is better tied to the overhead rooted bulkhead with
+        # a true architectural suspension cable, not the nearest side wall.
+        options=[]
+        if len(comp)>1000:
+            xbins={}
+            for v in comp:
+                x=v%W; key=x//45
+                if key not in xbins or v//W<xbins[key]//W:
+                    xbins[key]=v
+            for v in sorted(xbins.values(),key=lambda v:v%W):
+                x,y=v%W,v//W
+                if y>30 and y<450 and A[25*W+x]:
+                    options.append(((x,y),(x,25),'overhead'))
+            if len(comp)>9000:
+                xbins={}
+                for v in comp:
+                    x=v%W;key=x//45
+                    if key not in xbins or v//W>xbins[key]//W:
+                        xbins[key]=v
+                for v in sorted(xbins.values(),key=lambda v:v%W):
+                    x,y=v%W,v//W
+                    if y>550 and y<985 and A[992*W+x]:
+                        options.append(((x,y),(x,992),'underkeel'))
+        for v in candidates[:48]:
             root=v
             while prev[root]!=-1:
                 root=prev[root]
             start=(v%W,v//W);end=(root%W,root//W)
-            if start==end:continue
-            # Once the counterpart is already a grounded physical component,
-            # only very small spans are needed; never cross the whole canvas.
-            if distance[v]>450:continue
+            if start!=end and distance[v]<=450:
+                options.append((start,end,'near-root'))
+        for start,end,kind in options:
             trials+=1
             added=trial_cable(start,end,1)
             if added is not None:
                 chosen={'original_cells':len(comp),'source':list(start),
-                        'anchor':list(end),'span':distance[v],
-                        'steel_cells_added':added}
+                        'anchor':list(end),'span':abs(start[0]-end[0])+abs(start[1]-end[1]),
+                        'connection':kind,'steel_cells_added':added}
                 break
         if chosen is None:
             # Short isolated specks around actor gates cannot justify closure.
