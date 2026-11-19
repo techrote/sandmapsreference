@@ -1,12 +1,45 @@
-# The Graftloom Slipway — R5 Differentiated Refinery Receiver and Extraction
+# The Graftloom Slipway — R6 Split-Throat Mnemonic Examination
 
 **Original CyberSand science-fiction bio-industrial landscape · exact 2048 × 1024 real material cells · deterministic seed 19112647**
 
 > **DRAFT / HOLD — STATIC-CONTRACT / GEOMETRY / SUPPORT PASS — NATIVE-UNTESTED — INDEPENDENT ART / TECHNICAL / SHEPHERD REVIEW PENDING.** Original material-cell authoring, not a conversion, traced artwork, prior archive migration, AI concept PNG or mock gameplay screenshot. Do not merge, promote Ready, auto-merge or imply owner acceptance.
 
-## CURRENT R5 — differentiated high intake, low dry extraction (19 November 2026)
 
-**REVIEW THIS R5 SOURCE-GRID AND EXACT HEAD, NOT THE HISTORICAL R4 COUNTS BELOW.** Fresh from-scratch original 2048×1024 side-elevation world, in the same creator-owned Draft/HOLD branch. No source/reference-image conversions, owner acceptance, merge or Ready promotion.
+## CURRENT R6 — a grounded, enterable Memory examination installation (19 November 2026)
+
+**Exact original physical map:** 2048×1024, 2,097,152 one-byte material IDs, deterministic fixed seed 19112647. This revision directly addresses the [independent exact-R5 art P1](https://github.com/techrote/sandmapsreference/pull/22#issuecomment-7004930418), rather than making another unrelated scenery pass. Original west intake, refinery machinery, underkeel, all thirteen previous exact sites and both strictly constrained flight bypasses are preserved.
+
+**A single split-throat mnemonic assay station** is now mechanically readable in the 1:1 Memory crop. Its grounded asymmetric *left specimen/keying inlet* occupies x≈851–907, y≈309–357, opposite a different *right multiview diagnostic/workface* at x≈963–1024, y≈305–356. Both halves bond directly to the independently supported roof lobes. Their 56-cell-wide central throat x907–963 remains physical empty space, sufficiently wide for Midge's conservative 31×27 full envelope. The **new, exact, reachable inspection workface** is at **(925,328)**, with four unobstructed cardinal approach centres at 19×15, 23×19 and 31×27. From this console Midge can descend through the real open central flight volume to the **unchanged Memory Core (921,468)**, 140 cells below. This is deliberately a **remote upper-boundary examination interface**, not a fictitious suspended station in the empty centre, not a moved Core waypoint and not a claimed native cockpit.
+
+The previous experimental path-separation measurement showed why centre-span structural tethers fail: two conservative flight bypasses occupy separate roof and sump corridors around the central empty chamber. R6 adds no unsupported trans-cavity steel and does **not** weaken either of the existing upper/lower forced-route restrictions. Independent Art/Shepherd judgment on whether this *proximal, entered workface* resolves P1 is still required.
+
+**Independent full-grid delta against committed R5:** **2,699 changed material IDs** inside x851–1023/y305–356, made up of **873 newly occupied stable solid cells, 1,826 rematerialised solid cells, zero excavated cells**. This is actual material-cell geometry; the old R5 refinery/receiving districts are not cosmetically reprocessed.
+
+| Current exact R6 source-static qualification | Result |
+|---|---:|
+| Real material-cell extent | **2048 × 1024 = 2,097,152** |
+| Occupied immovable Solid / None-kernel cells | **750,089** |
+| Boundary-grounded / detached occupied cells | **750,089 / 0** |
+| Non-overlapping rectangle edits (source budget 32,768) | **13,839** |
+| Setup-v2 JSON UTF-8 (1,048,576-byte limit) | **258,892 bytes** |
+| Full ordered rectangle replay / overlaps | **0 mismatches / 0 overlaps** |
+| Exact named Midge sites, three full hull envelopes | **14/14 each**, four immediate approaches |
+| Independent forced upper & lower 31×27 routes | **both PASS** |
+| Real material-PNG CRC/zlib/IEND/full-grid pixel parity | **8/8 PASS** |
+| Native Godot / installed bridge / Rapier / persistence | **NATIVE-UNTESTED** |
+
+**Grid SHA-256:** `9dd2cbc298d6e91ef71e5f1617ef41a516535c97112cc3ab4dfd030fc4098e38`  
+**Exact Setup-v2 JSON SHA-256:** `1714c8ced71041e5036886bff62abcbfb38c08717fe4d2903ffc4d82b5016402`  
+**Builder SHA-256:** `626d59e55a82c85d954d117c4357f220f3f89c951c19cb88de613299b571ea1e`  
+**Read-only accepted CyberSand engine:** `de109d0131641d6adc8d25bb9ced7ca3d4991105`. Full material-law, envelope, budget, PNG and construction receipts are regenerated as [qualification.json](./qualification.json) and independent [verification-independent.json](./verification-independent.json).
+
+**Authentic current material-cell evidence:** [entire 2048×1024 indexed material world](./overview.png) · [true 1:1 mnemonic workface and Core crop](./03-memory-engine.png) · [receiving](./01-receiving-slip.png) · [shunt](./02-crane-and-entry.png) · [refinery](./04-refinery-filter.png) · [aft](./05-aft-dock.png) · [underkeel](./06-lower-return.png) · [half-size overview](./review-half.png). These are generated from the actual final material grid, **not AI art or mock native screenshots**. The [exact-source GitHub Actions builder/independent verifier](https://github.com/techrote/sandmapsreference/actions/runs/44557765891) succeeded and published the complete R6 map/receipt set.
+
+**HOLD:** Existing installed CyberDemoBridge capacity remains unknown: current source advertises 32,768 rectangles, while legacy binaries may limit admission to 4,096. R6's 13,839 rectangles exceed that legacy threshold. Actual Godot import, Midge/Rapier flight and collision, simulation ticks, and fresh-process save/reopen have **not** run. Independent exact-R6 Art/Technical/Shepherd review and owner acceptance remain pending. No Ready/merge/auto-merge.
+
+## HISTORICAL R5 — differentiated high intake, low dry extraction (19 November 2026)
+
+**Historical R5 geometry baseline; the current R6 contract and images are described above.** Fresh from-scratch original 2048×1024 side-elevation world, in the same creator-owned Draft/HOLD branch. No source/reference-image conversions, owner acceptance, merge or Ready promotion.
 
 The Shepherd's exact-R4 review found the **Memory Engine Core (921,468) still lacked an accessible, functionally legible examination bay**, while the upper and lower refinery silhouettes were underdeveloped. This R5 is a **partial**, substantive response: high intake now presents **asymmetric rotary receiving and translated jaw mechanisms** with distinct inert transparent sampling windows; lower refinery has an **asymmetric, bedrock-rooted dry extrusion/inspection enclosure and metering teeth**, not a third ring-on-shelf. Rooted crown reader fins have also been strengthened. **13,948 final material cells have changed from R4**. Several larger *actually constructed* examination dock candidates were rejected in structural/navigation exploration because their supports obstructed the strictly required 31×27 upper or lower alternate routes. No failed experimental dock is published; **Memory Core artistic P1 remains OPEN**.
 
