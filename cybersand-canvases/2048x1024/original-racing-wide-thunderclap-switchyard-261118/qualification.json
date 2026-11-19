@@ -1,10 +1,10 @@
 {
-  "kind": "CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R10",
+  "kind": "CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R11",
   "status": "OPEN DRAFT/HOLD",
   "source_type": "ORIGINAL-NO-REFERENCE",
   "created_utc": "2026-11-19",
   "owner_lane": "original/racing-wide/thunderclap-switchyard-261118",
-  "previous_branch_head": "a559d1c888fbb63afa6d383170f417b9a694d8f1",
+  "previous_branch_head": "bdda61a729a33a2494d036f79dc7702482f7195f",
   "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "extent": [
     2048,
@@ -20,26 +20,26 @@
     "max_json_bytes": 1048576,
     "max_replay_visits": 32000000
   },
-  "terrain_rectangles": 13573,
-  "setup_json_bytes": 256611,
-  "cell_visits": 956090,
+  "terrain_rectangles": 13568,
+  "setup_json_bytes": 256360,
+  "cell_visits": 953423,
   "overlapping_edits": 0,
   "replay_mismatches": 0,
-  "grid_sha256": "8b41a991adadfd5a33cc5269b8fc81cf7efadddd84b6a977a4760b88c304e80f",
-  "json_sha256": "98c71171d40b9c5089ae2db24552c49427f5a782ade42117908e1f3fc6ca48bc",
+  "grid_sha256": "854d879b52caf3a036f7f97fab420cf52f269f9213627e1eab48ea69f69489cf",
+  "json_sha256": "7fd28d700116132db404c20bd2748548efd89a8cc8f14fb415b9a55456f47fce",
   "material_histogram": {
-    "0": 1141062,
-    "49": 157012,
-    "58": 62936,
-    "62": 97660,
-    "100": 404466,
-    "101": 95514,
-    "113": 24523,
-    "117": 55556,
-    "120": 5483,
-    "122": 18554,
-    "123": 9992,
-    "128": 24394
+    "0": 1143729,
+    "49": 156344,
+    "58": 64035,
+    "62": 98049,
+    "100": 403277,
+    "101": 94944,
+    "113": 24416,
+    "117": 59099,
+    "120": 5312,
+    "122": 16636,
+    "123": 8190,
+    "128": 23121
   },
   "material_laws": "Every occupied ID (49,58,62,100,101,113,117,120,122,123,128) accepted inert immovable Solid / RuleKernel::None at engine SHA; no powder or reactive/liquid cells",
   "midge": {
@@ -150,17 +150,17 @@
     "19x15": {
       "reached": 15,
       "total": 15,
-      "connected_centres": 783528
+      "connected_centres": 789311
     },
     "23x19": {
       "reached": 15,
       "total": 15,
-      "connected_centres": 719686
+      "connected_centres": 726073
     },
     "31x27": {
       "reached": 15,
       "total": 15,
-      "connected_centres": 649398
+      "connected_centres": 656996
     }
   },
   "physical_iris_obstruction": {
@@ -189,7 +189,7 @@
     "unreachable": [
       "Iris central chamber"
     ],
-    "connected_centres": 591992
+    "connected_centres": 599590
   },
   "lower_corridor_only": {
     "corridor_bounds": [
@@ -261,7 +261,7 @@
         "steps": 1041
       }
     ],
-    "connected_centres": 69649,
+    "connected_centres": 69648,
     "windows": [
       {
         "x": 700,
@@ -445,9 +445,21 @@
       "x": 1900,
       "y": 501,
       "cardinal_grounding": true
+    },
+    {
+      "name": "R11 west low-floor bank mooring",
+      "x": 668,
+      "y": 820,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "R11 east low-floor bank mooring",
+      "x": 1358,
+      "y": 820,
+      "cardinal_grounding": true
     }
   ],
-  "detached_solid_cells": 6002,
+  "detached_solid_cells": 4213,
   "pngs": [
     {
       "file": "overview.png",
@@ -457,7 +469,7 @@
       ],
       "sample_step": 1,
       "bytes": 1049805,
-      "sha256": "38c1314631ec70851c1942cc1bd1bf2fb408dd5b447149e1ed27a9adf292429e",
+      "sha256": "d01a72ed3aa3010d93ea09328e9e89593a64cedfb2d0ea752a93f69a2f000ffa",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 2097152
@@ -470,7 +482,7 @@
       ],
       "sample_step": 2,
       "bytes": 262801,
-      "sha256": "e9e0abb8ab93aa7020e43ad7958d9902a16c3deaf44658e6c1c90514bb58f25a",
+      "sha256": "2babe1ac54cb8d88efdf636574e7febb4c87b8e2fb8a47a42c7647940660df64",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 524288
@@ -522,7 +534,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "36f0b290f73f4167c2746c9742531574d50fc54fbcd5a2c72bfc9243d2861ad9",
+      "sha256": "6b23ec003c65b6c545c90c34f94e9273a6f6620181ce5c95e4d329941b7a812d",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -535,7 +547,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "9635ffaf4287df59acbb44d45af19080a0b4a09126b39468188cb5fd5822a1cf",
+      "sha256": "7b0568a5cedbf5f1b0de747988dca5de661b5b0eb0489a708e0c6498ea3bd5fd",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -548,7 +560,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "3bf7db44a5a5f3a57db6e914c0cf74f6c65eba89460941c1f3e6bd31e6b8de91",
+      "sha256": "785fe92d28911170a56ed06d43901e3e8ae8c969149095737a3787ea61e67a1b",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -561,7 +573,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "d91225fdd298ebb743d11ac65fc25828929e4469a6797d104bcc1aaa01eb8bbc",
+      "sha256": "282c40c675a86f42ae37cbbba15e063c2e3f267ce23bdd2dc61e2ece944eaf9f",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -587,7 +599,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "5e70985441b53c1cabcbda78cf0a3e01ad162b6b1b734a63de335f198e429ca3",
+      "sha256": "3a826e0f3b4f57b4c110558200501e74f941d6c9ff26ad80cbf88bb6b10dde15",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -600,7 +612,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "7db5f5f3455eaf52a0a31b7f411710111e3482fd6272bd624e74f6694f5c573d",
+      "sha256": "16b06539807b3b00681e5bd1a8cbffb079e04334fbc1f90ec8a434a0b74e31e7",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -613,7 +625,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "2c75b2e49f05925ba166fd58f39c40d90035d79ce8e6d175e2acbd5bce858e6c",
+      "sha256": "972767fe877717f24fccc2f393cfae1df074f13a6398010aae8c716abd3f3c39",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -626,7 +638,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "20fc2dfa38ede0496ccdbd01c3dcaf973421403361c9771361db24c2fbc185b7",
+      "sha256": "3c1e00bc6a1777e2f02c68d29490f4304ab80d60c0d7b876371bfd894dc244ad",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -635,10 +647,10 @@
   "installed_bridge_rectangle_capacity": "NATIVE-UNTESTED",
   "native_workbench_install_input_collision_simulation_save_reopen": "NATIVE-UNTESTED",
   "code_execution": "Node 22 GitHub Actions; independent exact-setup replay and committed PNG verification in verify-independent.cjs",
-  "r9_to_r10_cell_delta": {
-    "added": 2131,
-    "removed": 0,
-    "rematerialized": 20874,
-    "changed_total": 23005
+  "r10_to_r11_cell_delta": {
+    "added": 61,
+    "removed": 2728,
+    "rematerialized": 9952,
+    "changed_total": 12741
   }
 }
