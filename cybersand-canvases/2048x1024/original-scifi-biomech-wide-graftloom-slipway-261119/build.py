@@ -573,15 +573,13 @@ box(45,410,75,419,113)
 box(1034,517,1047,580,62)
 # Exact lower route rises at x1240 from y651 to y480. A 70-cell
 # deliberate material-free slot preserves a 31x27 flight envelope.
-# A load-bearing portal around the exact x1240 lower-route ascent:
-# 49-cell clear door at y567; continuous *overhead* bridge at y410
-# carries the two cantilever segments around the airspace rather than
-# passing through the physical Midge collision envelope.
-box(1040,567,1221,581,62)
-box(1270,567,1349,581,62)
-box(1210,410,1221,579,62)
-box(1270,410,1282,579,62)
-box(1210,410,1282,423,62)
+# Preserve the exact east-gate centre and the two-level return opening.
+# A roof-framed load-bearing portal cut off the refinery and final recovery
+# despite preserving the east-gate site itself; reject that enclosed portal.
+# Keep the original two independent partial conduit decks, joined to
+# existing rooted left/right supports, with open transverse flight access.
+box(1040,567,1204,581,62)
+box(1276,567,1349,581,62)
 box(1338,569,1351,631,62)
 box(807,413,823,535,62)
 box(817,510,899,524,62)
