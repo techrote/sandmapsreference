@@ -192,4 +192,102 @@ module.exports=function repairMorrow({M,R,P,L,sites}){
   // Underpin instead of leaving lower archival and field-survey slabs afloat.
   L(203,826,203,837,14,M.C);
   L(834,873,834,913,12,M.C);
+
+  // R4 | owner-directed inhabited engineering finish. Repairs are true
+  // material-ID cells. Leave the 2048x1024 coordinates and all 16 sites
+  // untouched; full-hull flight and physical-obstruction probes must pass.
+  //
+  // 1. WEST: fasten the upper rover mezzanine to a real habitable shell,
+  // then give xenology, rover diagnostics and assay distinct operations.
+  // A short forked rock bracket avoids an impenetrable central pillar.
+  L(393,453,419,438,13,M.C);
+  L(419,438,431,425,13,M.C);
+  R(385,444,24,9,M.S);
+  // West wet-lab / glass specimen carousel, instrument and extraction duct.
+  P([[156,414],[168,408],[194,411],[206,423],[197,439],[163,438]],M.Q);
+  P([[169,419],[191,420],[188,432],[174,432]],M.A);
+  R(154,440,52,6,M.U); R(184,435,9,8,M.G);
+  L(211,440,214,391,5,M.P); R(207,391,15,8,M.I);
+  // Distinct rover-wheel borescope and roof-fastened charging mast.
+  R(319,435,65,9,M.K);
+  for(const x of [328,368]){R(x,428,15,8,M.N);R(x+5,422,6,8,M.P);}
+  L(355,422,356,388,5,M.P);
+  R(346,394,24,7,M.G);
+  // Lower assay/analyser: a tall vertical probe and offset working plinth.
+  L(366,614,366,587,7,M.P);
+  R(359,602,20,8,M.I);
+  P([[384,616],[402,604],[412,618],[407,631],[389,631]],M.G);
+  R(385,633,25,6,M.U);
+
+  // 2. WESTERN UNDERGEOLOGY: attach formerly aerial assay shelf to a
+  // worked bedrock shoulder and existing lower survey rock-backed tie.
+  // This lies below all 16 named site approach envelopes.
+  L(790,816,834,858,12,M.C);
+  L(834,858,834,878,12,M.C);
+  R(795,816,18,8,M.S);
+  // A borehole feed with safety head at the mouth of the dry geolab.
+  R(850,850,10,24,M.P);
+  R(841,844,28,7,M.U);
+  R(854,834,7,12,M.I);
+
+  // 3. PHASEWELL: an asymmetrical operator station, separated from the
+  // luminous broken-ring silhouette, communicates with grounded diagnostics.
+  // Its inspection line follows the right lower crescent, not the central void.
+  L(1120,631,1178,605,10,M.S);
+  R(1114,620,47,9,M.K);
+  R(1120,608,7,12,M.P);
+  R(1130,609,22,9,M.Q);
+  R(1136,602,13,5,M.I);
+  L(1178,605,1191,584,8,M.P);
+  R(1183,580,34,7,M.U);
+  R(1198,573,11,7,M.I);
+  // Secondary small red-tag safety mast, deliberately offset from emitter.
+  L(849,448,839,431,8,M.P);
+  R(833,424,13,8,M.I);
+
+  // 4. EAST: quarantine inspection is separated from refuel/repair by
+  // selective open thresholds; a cargo hook and rover cradle are actual
+  // supported geometry, not repeated little rectangles on an empty shelf.
+  // Sealed twin quarantine payloads and overhead specimen handling frame.
+  L(1636,379,1636,418,6,M.P);
+  L(1636,418,1603,431,6,M.K);
+  R(1600,430,37,7,M.G);
+  R(1606,417,21,9,M.Q);
+  R(1620,409,10,7,M.I);
+  // West side quarantine decontamination nozzle and wash-test receiver.
+  L(1563,392,1592,399,6,M.P);
+  R(1590,395,28,6,M.U);
+  R(1596,403,9,12,M.I);
+  // Freight weighing station: articulated overhead hook and rail cradle.
+  L(1829,380,1829,406,8,M.P);
+  L(1829,406,1803,417,8,M.P);
+  R(1797,414,16,10,M.K);
+  R(1783,436,44,8,M.U);
+  R(1800,425,13,11,M.N);
+  // A physically different repair/refuel lane, twin grounded rocker arms
+  // beneath a high functional service gantry, not a duplicate cargo pod.
+  L(1916,403,1906,428,9,M.K);
+  L(1965,405,1975,430,9,M.K);
+  R(1903,434,81,8,M.S);
+  R(1924,423,32,11,M.N);
+  R(1931,416,18,6,M.I);
+  R(1914,407,7,16,M.P);
+  R(1967,410,7,18,M.P);
+  // Under-bay service crane heads anchored in the cargo-floor structure.
+  L(1667,578,1667,612,7,M.K);
+  L(1667,582,1702,584,7,M.K);
+  R(1694,583,15,13,M.N);
+  R(1659,612,28,8,M.U);
+  L(1909,579,1909,616,8,M.P);
+  L(1909,584,1950,594,7,M.K);
+  R(1944,588,15,16,M.N);
+  R(1903,613,26,8,M.U);
+
+  // 5. Small supported survey receiving port. Keep >31x27 margin from
+  // the deep-survey site at 1305,748, and avoid forming a new world wall.
+  L(1253,852,1253,889,10,M.C);
+  R(1244,845,20,8,M.U);
+  R(1248,837,12,8,M.I);
+  R(1364,850,22,8,M.G);
+  L(1372,857,1401,888,7,M.P);
 };
