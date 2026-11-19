@@ -26,7 +26,7 @@ spawn:[108,440],sites:[
 ['Cascade observation',[1145,485]],['Reactor twin west',[1420,466]],['Reactor twin east',[1645,526]],
 ['Lower isolation gallery',[1550,545]],['Vent conservatory',[1950,388]],['Long exhaust exit',[1940,580]],
 ['Deep retrieval',[1040,965]],['Ashward filter audit',[247,811]],
-['Twin-reactor isolation booth',[1536,840]]],
+['Twin-reactor isolation booth',[1551,840]]],
 crops:[['ashward',20,160,470,650],['siphons',400,250,510,610],['cascade',880,140,460,670],['twins',1305,160,485,675],['vent',1680,225,340,655]]}
 ];
 function makePlane(){return new Uint8Array(W*H);}
