@@ -1,0 +1,36 @@
+name: TEMP Foundry R6 independent verifier output publisher
+on:
+  push:
+    branches:
+      - original/industrial-foundry-wide/long-pour-steelworks-261119
+permissions:
+  contents: write
+jobs:
+  publish-owned-branch-only:
+    if: github.repository == 'techrote/sandmapsreference' && github.ref == 'refs/heads/original/industrial-foundry-wide/long-pour-steelworks-261119' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild genuine committed-source material plane
+        run: node tools/original-industrial-foundry-wide/build.cjs --verify
+      - name: Independently rerun the stricter R6 qualification
+        run: node tools/original-industrial-foundry-wide/verify-independent.cjs
+      - name: Verify independent receipt regeneration
+        run: |
+          node tools/original-industrial-foundry-wide/verify-independent.cjs --verify
+          git diff --check
+      - name: Commit only independent lane receipt
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- cybersand-canvases/2048x1024/original-industrial-foundry-wide-long-pour-steelworks/verification-independent.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'foundry R6: publish independent grounded-support and blocked-throat proof'
+            git push origin HEAD:refs/heads/original/industrial-foundry-wide/long-pour-steelworks-261119
+          fi
