@@ -1,0 +1,247 @@
+{
+  "title": "Keelgrave Cryodock — Salvage of the Broken Ark",
+  "original": true,
+  "seed": 202611192143,
+  "extent": [
+    2048,
+    1024
+  ],
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "material_definitions_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "midge_hull": [
+    4,
+    3
+  ],
+  "material_histogram": {
+    "49": 102186,
+    "58": 48298,
+    "62": 87612,
+    "63": 12277,
+    "66": 12993,
+    "68": 34550,
+    "77": 596,
+    "79": 824,
+    "100": 355304,
+    "101": 31952,
+    "120": 1180,
+    "121": 1107,
+    "122": 717,
+    "128": 606,
+    "129": 13277,
+    "130": 26208,
+    "131": 6092
+  },
+  "solid_physics": "Accepted inert Solid/None IDs only; no mobile, powder, fluids, combustion or reactive materials.",
+  "rectangle_count": 9750,
+  "construction_work": 735779,
+  "setup_bytes": 182500,
+  "material_plane_sha256": "afa998ba1d2e98990d16d9f8baf8beb0d11252ed4a4215c2eaea7f5f0c8f65f7",
+  "setup_sha256": "54cd07adda406a2312601b2797359f22e8b793ab0400c262afee1748424e7c01",
+  "site_coordinates": {
+    "West rover arrival": [
+      159,
+      447
+    ],
+    "High xenology alcove": [
+      221,
+      341
+    ],
+    "Settler assay lab": [
+      220,
+      576
+    ],
+    "Rift transit throat": [
+      479,
+      503
+    ],
+    "Suspended sensor station": [
+      794,
+      234
+    ],
+    "Elevator machinery": [
+      788,
+      517
+    ],
+    "Uplink outboard": [
+      979,
+      346
+    ],
+    "Crashed ark prow": [
+      1190,
+      362
+    ],
+    "Ark navigation": [
+      1392,
+      368
+    ],
+    "Ark medical archive": [
+      1560,
+      389
+    ],
+    "Ark salvage hangar": [
+      1780,
+      427
+    ],
+    "East emergency lock": [
+      1945,
+      614
+    ],
+    "Lower cable basin": [
+      1471,
+      693
+    ],
+    "Fissure weather lab": [
+      1084,
+      691
+    ],
+    "Mine west airlock": [
+      696,
+      926
+    ],
+    "Deep mineral vault": [
+      1067,
+      914
+    ],
+    "Mine east survey": [
+      1439,
+      925
+    ],
+    "East upper beacon": [
+      1872,
+      271
+    ]
+  },
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 18,
+      "total": 18,
+      "bad": [],
+      "airCentres": 1085162,
+      "connectedCentres": 1007005
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 18,
+      "total": 18,
+      "bad": [],
+      "airCentres": 1023168,
+      "connectedCentres": 955246
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 18,
+      "total": 18,
+      "bad": [],
+      "airCentres": 906411,
+      "connectedCentres": 853210
+    }
+  ],
+  "obstruction_tests": [
+    {
+      "obstruction": [
+        1020,
+        466,
+        1130,
+        575
+      ],
+      "size": [
+        31,
+        27
+      ],
+      "reached": 18,
+      "total": 18,
+      "bad": [],
+      "airCentres": 887724,
+      "connectedCentres": 834479
+    },
+    {
+      "obstruction": [
+        1020,
+        730,
+        1140,
+        860
+      ],
+      "size": [
+        31,
+        27
+      ],
+      "reached": 18,
+      "total": 18,
+      "bad": [],
+      "airCentres": 890531,
+      "connectedCentres": 837330
+    }
+  ],
+  "grounded_solids": {
+    "occupied": 735779,
+    "grounded": 735779,
+    "detached": 0
+  },
+  "images": [
+    {
+      "name": "overview",
+      "x": 0,
+      "y": 0,
+      "width": 2048,
+      "height": 1024,
+      "bytes": 88379,
+      "sha256": "df1e79cfb9c4fcfd1a928593aca58fee00836c3505fa7fa225f786f796a7c835"
+    },
+    {
+      "name": "01-west-settlement",
+      "x": 0,
+      "y": 270,
+      "width": 540,
+      "height": 440,
+      "bytes": 14586,
+      "sha256": "edf3a5ef2e663bdaf086db515a5065db9c472a5d234c82e31fe4cfa9b337d110"
+    },
+    {
+      "name": "02-signal-lift",
+      "x": 470,
+      "y": 130,
+      "width": 620,
+      "height": 600,
+      "bytes": 18101,
+      "sha256": "701977824e9e8d4124e9de4fd2284f7c4e490e2cbc4479462c0496f4dc53e7b8"
+    },
+    {
+      "name": "03-ark-prow",
+      "x": 1010,
+      "y": 220,
+      "width": 530,
+      "height": 470,
+      "bytes": 13675,
+      "sha256": "ddb64ad2155683d8cd7947baf7726185acd9b487ff9a9c8838d9296f872f82e3"
+    },
+    {
+      "name": "04-ark-drydock",
+      "x": 1490,
+      "y": 260,
+      "width": 558,
+      "height": 480,
+      "bytes": 12402,
+      "sha256": "9324317aafe2908b9ba6296d8066b9d6bfc61c8ec75f8548dc31acc0541f6b46"
+    },
+    {
+      "name": "05-deep-mines",
+      "x": 505,
+      "y": 715,
+      "width": 1090,
+      "height": 309,
+      "bytes": 15614,
+      "sha256": "17c454deebc423d8d73c999375076fd032802df4aaab3d9002d9149c3d0f2672"
+    }
+  ]
+}
