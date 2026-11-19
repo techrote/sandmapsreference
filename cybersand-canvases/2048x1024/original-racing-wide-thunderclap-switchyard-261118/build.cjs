@@ -742,7 +742,38 @@ function buildWideCanvas() {
   tintFace([[334,612],[369,597],[372,667],[341,679]],mat.QUARTZ);
   tintFace([[1812,598],[1842,622],[1842,677],[1813,666]],mat.BLUE);
 
-    // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
+
+  // R13, 19 Nov: independent R12 Shepherd's high-speed visual-hierarchy repair.
+  // A racing pilot must read a broad DESCEND mouth, the four lower banks,
+  // one Iris hero and distinct east ASCEND/finish, not signal confetti.
+  // Recolour only already occupied stable inert solids in service bands.
+  // No changes to y445 fast corridor or y700..802 slalom flight footprints.
+  function quietFlightBand(x0,y0,x1,y1) {
+    for(let y=y0;y<=y1;y++)for(let x=x0;x<=x1;x++){
+      const i=y*W+x,m=g[i];
+      if(m===mat.SIGNAL)g[i]=mat.IRON;
+      else if(m===mat.BLUE)g[i]=mat.STEEL;
+      else if(m===mat.QUARTZ)g[i]=mat.ZINC;
+    }
+  }
+  quietFlightBand(435,288,766,626);      // Drift canyon saws and silos
+  quietFlightBand(777,337,1313,653);     // Iris crown keeps hero motif above y337
+  quietFlightBand(1315,313,1837,595);    // Glassstorm working stage stays distinct
+  // One large paired leading-edge cue per entrance, cut from existing masonry.
+  // tintStroke never paints a collision obstacle into empty flight space.
+  tintStroke(351,578,352,675,39,mat.QUARTZ);
+  tintStroke(545,584,545,672,37,mat.BLUE);
+  tintStroke(1653,595,1652,668,38,mat.BLUE);
+  tintStroke(1812,594,1812,673,37,mat.QUARTZ);
+  tintStroke(341,628,371,664,25,mat.ZINC);
+  tintStroke(1784,663,1823,626,25,mat.BLUE);
+  // Prune only small disconnected airborne ornaments, not any boundary-
+  // grounded load structures, operational support probes or flight banks.
+  clearDetachedWhere((x0,x1,y0,y1,n)=>
+    n<=270&&x0>=370&&x1<=1890&&y0>=176&&y1<=692
+  );
+
+  // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
     let last=prev;
@@ -976,7 +1007,7 @@ const crypto=require("node:crypto");
 const shab=(v)=>crypto.createHash("sha256").update(v).digest("hex");
 const setupName="setup-thunderclap-switchyard.json";
 const prior=JSON.parse(fs.readFileSync("qualification.json","utf8"));
-let delta=prior.r11_to_r12_cell_delta;
+let delta=prior.r12_to_r13_cell_delta;
 if(!delta) {
  const old=JSON.parse(fs.readFileSync(setupName,"utf8")),oldGrid=new Uint8Array(r.W*r.H);
  for(const [x,y,w,h,m] of old.edits)for(let yy=y;yy<y+h;yy++)oldGrid.fill(m,yy*r.W+x,yy*r.W+x+w);
@@ -996,9 +1027,9 @@ const pngs=r.gallery.map(p=>({
 const writtenVisits=r.edits.reduce((n,e)=>n+e[2]*e[3],0);
 const receipt={
  ...prior,
- kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R12",
+ kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R13",
  created_utc:"2026-11-19",
- previous_branch_head:"7369907d72767d03618f36d9ed994a1e70a66575",
+ previous_branch_head:"81179a6114729af0145b12a85032a4863b6486e8",
  engine_main_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",
  terrain_rectangles:r.edits.length,
  setup_json_bytes:Buffer.byteLength(r.json,"utf8"),
@@ -1019,13 +1050,14 @@ const receipt={
  lower_corridor_only:r.lowerCorridor,
  grounded_support_probes:r.supportSites.map(([name,x,y])=>({name,x,y,cardinal_grounding:!!r.grounded[y*r.W+x]})),
  detached_solid_cells:writtenVisits-r.grounded.reduce((v,x)=>v+x,0),
- r11_to_r12_cell_delta:delta,
+ r12_to_r13_cell_delta:delta,
  pngs,
  installed_bridge_rectangle_capacity:"NATIVE-UNTESTED",
  native_workbench_install_input_collision_simulation_save_reopen:"NATIVE-UNTESTED",
  code_execution:"Node 22 GitHub Actions; independent exact-setup replay and committed PNG verification in verify-independent.cjs"
 };
-delete receipt.r8_to_r9_cell_delta;
+delete receipt.r11_to_r12_cell_delta;
+ delete receipt.r8_to_r9_cell_delta;
  delete receipt.r10_to_r11_cell_delta;
  delete receipt.r9_to_r10_cell_delta;
 if(receipt.terrain_rectangles>32768||receipt.setup_json_bytes>1048576||receipt.cell_visits>32000000)throw Error("CAPACITY");
@@ -1043,7 +1075,7 @@ for(const [name,bytes] of artifacts){
    }else console.log("PASS:",name,bytes.length);
  } else {fs.writeFileSync(name,bytes);console.log("WRITE:",name,bytes.length);}
 }
-console.log("R12",JSON.stringify({
+console.log("R13",JSON.stringify({
  rectangles:receipt.terrain_rectangles,bytes:receipt.setup_json_bytes,
  grid:receipt.grid_sha256,delta,reach:receipt.exact_reach,
  lower:receipt.lower_corridor_only.access_points.length,detached:receipt.detached_solid_cells
