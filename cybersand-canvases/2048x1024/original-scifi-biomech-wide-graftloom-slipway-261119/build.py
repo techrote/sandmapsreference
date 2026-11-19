@@ -257,10 +257,6 @@ line(1660, 622, 1690, 910, 12, 117)
 # The upper/lower route closures and exact 31x27 site clearance are rechecked.
 line(1327, 214, 1300, 29, 14, 62)      # refinery fore gantry hangs from roof truss
 line(1487, 224, 1580, 29, 10, 117)     # independent aft gantry tie
-line(1090, 724, 1168, 923, 14, 58)    # southern memory engine foundation
-line(736, 749, 693, 928, 14, 62)      # western keel truss to basalt
-line(833, 617, 833, 521, 10, 117)     # inspection deck riser
-line(740, 620, 836, 620, 9, 62)       # transverse under-engine service girder
 line(1814, 363, 1910, 31, 11, 62)    # hanging aft dock crane
 line(1751, 809, 1789, 972, 12, 117)   # deep aft brace to bedrock
 line(1572, 554, 1647, 554, 7, 117)   # refinery middle right sample support
