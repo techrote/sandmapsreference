@@ -1,0 +1,692 @@
+{
+  "kind": "CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R15",
+  "status": "OPEN DRAFT/HOLD",
+  "source_type": "ORIGINAL-NO-REFERENCE",
+  "created_utc": "2026-11-19",
+  "owner_lane": "original/racing-wide/thunderclap-switchyard-261118",
+  "previous_branch_head": "60092cd3d90c02c255da08b64e78d1069ab94a0d",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "total_material_cells": 2097152,
+  "seed": "0x20261118",
+  "source_setup_v2_limit": {
+    "min_axis": 512,
+    "max_axis": 2048,
+    "axis_multiple": 64,
+    "max_rectangles": 32768,
+    "max_json_bytes": 1048576,
+    "max_replay_visits": 32000000
+  },
+  "terrain_rectangles": 12609,
+  "setup_json_bytes": 237839,
+  "cell_visits": 936586,
+  "overlapping_edits": 0,
+  "replay_mismatches": 0,
+  "grid_sha256": "4d64e4237a1012bc06a6ccf1978326ab5c1c522871d3133fccfbe9ed79a8d444",
+  "json_sha256": "e5912cbf4afe0cccd40bcdd41e76953236e28e22fdfb00b856310519818d250b",
+  "material_histogram": {
+    "0": 1160566,
+    "49": 156071,
+    "58": 63265,
+    "62": 106879,
+    "100": 394907,
+    "101": 94944,
+    "113": 25549,
+    "117": 59785,
+    "120": 5245,
+    "122": 12412,
+    "123": 3732,
+    "128": 13797
+  },
+  "material_laws": "Every occupied ID (49,58,62,100,101,113,117,120,122,123,128) accepted inert immovable Solid / RuleKernel::None at engine SHA; no powder or reactive/liquid cells",
+  "midge": {
+    "model": "midge",
+    "authored_hull": [
+      4,
+      3
+    ],
+    "definition_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      116,
+      445
+    ],
+    "boost_multiplier": 1.8,
+    "stress_envelopes": [
+      [
+        19,
+        15
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        31,
+        27
+      ]
+    ]
+  },
+  "named_sites": [
+    {
+      "name": "Launch cradle",
+      "x": 116,
+      "y": 445
+    },
+    {
+      "name": "Dispatch roof bypass",
+      "x": 203,
+      "y": 329
+    },
+    {
+      "name": "Split-canyon high",
+      "x": 617,
+      "y": 356
+    },
+    {
+      "name": "West dive shaft",
+      "x": 443,
+      "y": 612
+    },
+    {
+      "name": "West undercroft",
+      "x": 614,
+      "y": 752
+    },
+    {
+      "name": "Iris west approach",
+      "x": 841,
+      "y": 445
+    },
+    {
+      "name": "Iris central chamber",
+      "x": 1037,
+      "y": 448
+    },
+    {
+      "name": "Iris lower transfer",
+      "x": 1072,
+      "y": 753
+    },
+    {
+      "name": "East conductor",
+      "x": 1323,
+      "y": 454
+    },
+    {
+      "name": "Glassstorm viaduct",
+      "x": 1506,
+      "y": 453
+    },
+    {
+      "name": "Weigh inspection bay",
+      "x": 1500,
+      "y": 670
+    },
+    {
+      "name": "Eastern underpass",
+      "x": 1571,
+      "y": 756
+    },
+    {
+      "name": "Catch cliff",
+      "x": 1826,
+      "y": 449
+    },
+    {
+      "name": "Brake finish",
+      "x": 1943,
+      "y": 446
+    },
+    {
+      "name": "Recovery basin",
+      "x": 1883,
+      "y": 767
+    }
+  ],
+  "exact_reach": {
+    "19x15": {
+      "reached": 15,
+      "total": 15,
+      "connected_centres": 815735
+    },
+    "23x19": {
+      "reached": 15,
+      "total": 15,
+      "connected_centres": 776764
+    },
+    "31x27": {
+      "reached": 15,
+      "total": 15,
+      "connected_centres": 703990
+    }
+  },
+  "physical_iris_obstruction": {
+    "physical_box": [
+      900,
+      330,
+      1110,
+      554
+    ],
+    "reached": [
+      "Launch cradle",
+      "Dispatch roof bypass",
+      "Split-canyon high",
+      "West dive shaft",
+      "West undercroft",
+      "Iris west approach",
+      "Iris lower transfer",
+      "East conductor",
+      "Glassstorm viaduct",
+      "Weigh inspection bay",
+      "Eastern underpass",
+      "Catch cliff",
+      "Brake finish",
+      "Recovery basin"
+    ],
+    "unreachable": [
+      "Iris central chamber"
+    ],
+    "connected_centres": 643839
+  },
+  "lower_corridor_only": {
+    "corridor_bounds": [
+      580,
+      700,
+      1650,
+      802
+    ],
+    "clearance": [
+      31,
+      27
+    ],
+    "fully_in_bounds": true,
+    "access_points": [
+      {
+        "name": "West tunnel entry",
+        "x": 614,
+        "y": 752,
+        "exact_legal": true,
+        "reachable": true,
+        "steps": 0
+      },
+      {
+        "name": "West ceiling bank",
+        "x": 728,
+        "y": 776,
+        "exact_legal": true,
+        "reachable": true,
+        "steps": 138
+      },
+      {
+        "name": "West floor bank",
+        "x": 854,
+        "y": 721,
+        "exact_legal": true,
+        "reachable": true,
+        "steps": 285
+      },
+      {
+        "name": "Iris lower transit",
+        "x": 1072,
+        "y": 753,
+        "exact_legal": true,
+        "reachable": true,
+        "steps": 489
+      },
+      {
+        "name": "East ceiling bank",
+        "x": 1338,
+        "y": 772,
+        "exact_legal": true,
+        "reachable": true,
+        "steps": 774
+      },
+      {
+        "name": "East floor bank",
+        "x": 1520,
+        "y": 742,
+        "exact_legal": true,
+        "reachable": true,
+        "steps": 958
+      },
+      {
+        "name": "East tunnel exit",
+        "x": 1614,
+        "y": 753,
+        "exact_legal": true,
+        "reachable": true,
+        "steps": 1041
+      }
+    ],
+    "connected_centres": 75388,
+    "windows": [
+      {
+        "x": 700,
+        "min": 759,
+        "max": 788,
+        "count": 30
+      },
+      {
+        "x": 728,
+        "min": 759,
+        "max": 794,
+        "count": 36
+      },
+      {
+        "x": 854,
+        "min": 702,
+        "max": 744,
+        "count": 43
+      },
+      {
+        "x": 890,
+        "min": 702,
+        "max": 752,
+        "count": 51
+      },
+      {
+        "x": 1338,
+        "min": 758,
+        "max": 778,
+        "count": 21
+      },
+      {
+        "x": 1520,
+        "min": 718,
+        "max": 757,
+        "count": 40
+      }
+    ]
+  },
+  "grounded_support_probes": [
+    {
+      "name": "Western dispatch core",
+      "x": 200,
+      "y": 180,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Western apron",
+      "x": 200,
+      "y": 604,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Drift engineering",
+      "x": 700,
+      "y": 640,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Iris structural crown",
+      "x": 1007,
+      "y": 191,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Glassstorm anchored service span",
+      "x": 1500,
+      "y": 620,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "East braking jaw",
+      "x": 2005,
+      "y": 335,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "West entry rail",
+      "x": 410,
+      "y": 681,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "West slalom floor rooted",
+      "x": 859,
+      "y": 795,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Iris east tension anchorage",
+      "x": 1240,
+      "y": 360,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "East slalom roof rooted",
+      "x": 1314,
+      "y": 713,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "East slalom floor rooted",
+      "x": 1520,
+      "y": 803,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Canyon overhead root",
+      "x": 660,
+      "y": 191,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Lower launch guide connected",
+      "x": 172,
+      "y": 627,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Upper launch guide connected",
+      "x": 214,
+      "y": 535,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Left Iris arc connected",
+      "x": 992,
+      "y": 584,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Right Iris arc A connected",
+      "x": 1144,
+      "y": 566,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Right Iris arc B connected",
+      "x": 1159,
+      "y": 573,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Weigh-bay entry frame",
+      "x": 1490,
+      "y": 641,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "West stator collector",
+      "x": 830,
+      "y": 605,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "East stator collector",
+      "x": 1253,
+      "y": 603,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Upper brake catch",
+      "x": 2000,
+      "y": 398,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Lower brake catch",
+      "x": 2000,
+      "y": 512,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "R10 upper continuous catch rail",
+      "x": 1900,
+      "y": 397,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "R10 lower continuous catch rail",
+      "x": 1900,
+      "y": 501,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "R11 west low-floor bank mooring",
+      "x": 668,
+      "y": 820,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "R11 east low-floor bank mooring",
+      "x": 1358,
+      "y": 820,
+      "cardinal_grounding": true
+    }
+  ],
+  "detached_solid_cells": 0,
+  "pngs": [
+    {
+      "file": "overview.png",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "sample_step": 1,
+      "bytes": 1049805,
+      "sha256": "cfc341e0db4aed77e9a6e1d9beae2a51aafc43107004a48724529e3d75d6819d",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 2097152
+    },
+    {
+      "file": "overview-review-2x.png",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "sample_step": 2,
+      "bytes": 262801,
+      "sha256": "fe5cfddbead8a5fd7f67be55b163cf4169d3fbec1accad22603a595c2e6c462f",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 524288
+    },
+    {
+      "file": "01-launch-cradle.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "0bcccc909a1974c640f73c648a1142e7d2eb1f81c868446a95b1aa2c8f9b3a11",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "02-drift-canyon.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "7d5fc49cb2d76812362acace50103a90b08baacb4ba3fc0f3c815725834a807c",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "03-split-current-iris.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "9718bb7939d164117857c62f86c900fd769032177d89a37ba324a671f3dc63de",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "04-glassstorm-viaduct.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "928873e28261aad88fdc0365bd5a0e9b1739cc87f2e9288e40850fe27b5c676f",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "05-catch-recovery.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "b03593b944b519e6166bfb347246d8bcc1d97d0e6d779bb6046387f67511ddbc",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "06-lower-s-turn-west.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "2d0d5bd0aedbedb168305232819c387f05488a861526f49955b45095e7f1d041",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "07-lower-s-turn-east.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "49b840410af1c8c408fd4f83a61cb256692c4ce74c03422562fa819d892f4121",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "08-iris-service-braces.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "ef0fe978793a665640d66373e0d58d48dc5eeb1eec35e37e1e8c242735a4be9a",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "09-west-dive-portal.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "7c0e49bfc4af38741b3aecbfb7285db6b79474995709be928478a9a4b6d7fc7e",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "10-east-return-portal.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "74f988050b7f25e7db1f09ec71155842a7dc7adea5fd5cf8d7bc0546e7c86460",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "11-weigh-inspection-bay.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "769ff21ca99b0e9f08cd6dd7759b410f268ad3c04c0aa20cbc1a5486f89bf88a",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "12-finish-catch-jaws.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "646234686df74b0bf7aeccccd44bd51897924f7b0e7779fb7940686f326e104a",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    }
+  ],
+  "installed_bridge_rectangle_capacity": "NATIVE-UNTESTED",
+  "native_workbench_install_input_collision_simulation_save_reopen": "NATIVE-UNTESTED",
+  "code_execution": "Node 22 GitHub Actions; independent exact-setup replay and committed PNG verification in verify-independent.cjs",
+  "r13_to_r14_cell_delta": {
+    "added": 0,
+    "removed": 2957,
+    "rematerialized": 10683,
+    "changed_total": 13640
+  },
+  "r14_detached_component_removal": {
+    "assemblies_removed": 19,
+    "cells_removed": 2957,
+    "post_prune_detached_cells": 0
+  },
+  "r14_to_r15_cell_delta": {
+    "added": 0,
+    "removed": 0,
+    "rematerialized": 5935,
+    "changed_total": 5935
+  },
+  "r15_portal_hierarchy": {
+    "west": "one quartz downhill surface contour on founded west-dive lip",
+    "east": "one blue uphill surface contour on founded east-return ramp",
+    "quiet_service_zones": [
+      [
+        296,
+        547,
+        615,
+        706
+      ],
+      [
+        615,
+        785,
+        711,
+        831
+      ],
+      [
+        1592,
+        544,
+        1890,
+        707
+      ]
+    ],
+    "new_obstacle_cells": 0
+  }
+}
