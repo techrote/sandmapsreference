@@ -1,0 +1,46 @@
+name: Original Scifi Biomech Wide - material-cell build
+on:
+  push:
+    branches:
+      - 'original/scifi-biomech-wide/**'
+    paths:
+      - '.github/workflows/original-scifi-biomech-wide-build.yml'
+      - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/.builder-part-*.b64'
+      - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/finish-stage.cjs'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rebuild-material-cells:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reconstruct and execute deterministic original builder
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd cybersand-canvases/2048x1024/original-scifi-biomech-wide-graftloom-slipway-261119
+          node finish-stage.cjs
+          node --check build.cjs
+          node build.cjs
+          echo "Map artifact inventory:"
+          find . -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
+          test -n "$(find . -maxdepth 1 -name '*.png' -print -quit)"
+          test -n "$(find . -maxdepth 1 -name '*.json' -print -quit)"
+      - name: Commit only owned original landscape directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "cybersand-original-map-build"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- cybersand-canvases/2048x1024/original-scifi-biomech-wide-graftloom-slipway-261119/
+          if git diff --cached --quiet; then echo "No map changes"; exit 0; fi
+          git commit -m "Build Graftloom Slipway full material-cell canvas and receipts"
+          git push origin "HEAD:refs/heads/original/scifi-biomech-wide/graftloom-slipway-261119"
