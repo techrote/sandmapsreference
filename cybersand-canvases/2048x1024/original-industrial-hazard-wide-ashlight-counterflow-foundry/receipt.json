@@ -8,11 +8,11 @@
     1024
   ],
   "cells": 2097152,
-  "rectangles": 3952,
-  "setup_utf8_bytes": 76080,
-  "construction_work": 572336,
+  "rectangles": 3959,
+  "setup_utf8_bytes": 76215,
+  "construction_work": 576134,
   "material_histogram": {
-    "0": 1524816,
+    "0": 1521018,
     "3": 18136,
     "8": 2552,
     "58": 197884,
@@ -26,7 +26,7 @@
     "100": 82021,
     "101": 42081,
     "104": 628,
-    "117": 189871,
+    "117": 193669,
     "120": 10019,
     "122": 11824,
     "123": 3871,
@@ -34,26 +34,26 @@
   },
   "replay_mismatch": 0,
   "solid_connectivity": {
-    "total": 551648,
-    "anchored": 551648,
+    "total": 555446,
+    "anchored": 555446,
     "detached": 0
   },
   "clearance": {
     "19x15": {
-      "legal": 1106959,
-      "reachable": 921486,
+      "legal": 1101146,
+      "reachable": 917347,
       "sites": 15,
       "failed": []
     },
     "23x19": {
-      "legal": 1015479,
-      "reachable": 840267,
+      "legal": 1009212,
+      "reachable": 836060,
       "sites": 15,
       "failed": []
     },
     "31x27": {
-      "legal": 844887,
-      "reachable": 717334,
+      "legal": 838043,
+      "reachable": 712991,
       "sites": 15,
       "failed": []
     }
@@ -72,7 +72,7 @@
     "placed": 12523,
     "clipped": 18878,
     "inlaid": 1964,
-    "protected_centres": 833356,
+    "protected_centres": 827150,
     "sites": 15,
     "inhabitation": {
       "revision": "R5",
@@ -226,21 +226,21 @@
           "label": "ash intake sieve desk",
           "box": [
             151,
-            829,
+            817,
             40,
-            27
+            44
           ],
-          "new_cells": 0
+          "new_cells": 1640
         },
         {
           "label": "ash intake pressure diagnostic",
           "box": [
             276,
-            833,
+            816,
             29,
-            22
+            45
           ],
-          "new_cells": 0
+          "new_cells": 1218
         },
         {
           "label": "hot zone visual assay pedestal",
@@ -256,14 +256,14 @@
           "label": "cold zone visual assay pedestal",
           "box": [
             1604,
-            855,
+            847,
             28,
-            29
+            46
           ],
-          "new_cells": 0
+          "new_cells": 858
         }
       ],
-      "added_cells": 322,
+      "added_cells": 4038,
       "removed_cells": 11131,
       "recoloured_cells": 7642,
       "changed_mobile_fluid_cells": 0
@@ -317,7 +317,7 @@
       "note": "R4 requalification of unchanged Ashlight R3/R2 physical grid, with grounded twin-tower bearings and static-only Midge/liquid evidence; native processes untested"
     }
   },
-  "unmerged_row_runs": 17387,
+  "unmerged_row_runs": 17499,
   "source_authority": {
     "repo": "techrote/cybersand",
     "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
@@ -325,8 +325,8 @@
     "materials": "native/include/cybersand/material.hpp",
     "midge": "godot/authoring/flyers/midge.json"
   },
-  "material_plane_sha256": "743ee8d5733f197d9fe2099cbc757469c8004ce08921567d070b5e6891b2c0d1",
-  "setup_sha256": "4a031b315883b9e0caf7215d674d5bd1db9eab647890c405f83441e84defd7a8",
+  "material_plane_sha256": "c5ecaf01f2b26cd336998c58f50b6da79beb5fdf25f77c3edbaa3173ddc95c27",
+  "setup_sha256": "6495dae356e10b0df9e85303180ba90209f52932abd020942f2d9b9829297962",
   "material_laws": {
     "static_ids": [
       58,
@@ -361,8 +361,8 @@
       "y": 0,
       "width": 2048,
       "height": 1024,
-      "bytes": 90424,
-      "sha256": "cf0fe9aa238e6dae75d5e2ba56d34defe93dcf60f66fe34e4e39e41695ef808d",
+      "bytes": 90942,
+      "sha256": "549b354ea244a09d35aa20ac3312e6e91ec1329cda4ea489b41d075d18a25a1d",
       "material_pixel_parity": 2097152
     },
     {
