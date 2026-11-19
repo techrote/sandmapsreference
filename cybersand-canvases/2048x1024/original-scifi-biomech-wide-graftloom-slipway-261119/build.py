@@ -249,6 +249,9 @@ line(1594, 762, 1594, 770, 8, 117)
 line(1899, 494, 1899, 462, 7, 117)
 line(1753, 613, 1784, 579, 7, 117)
 line(1660, 622, 1690, 910, 12, 117)
+# Narrow aft-dock stirrup: tested against exact 31x27 sites AND both constrained
+# upper/lower cross-map routes. This binds the lower salvage bracket to keel stone.
+box(1779, 875, 1784, 890, 62)
 
 
 # Keep production flight geometry intact pending cable/structure auditing.
