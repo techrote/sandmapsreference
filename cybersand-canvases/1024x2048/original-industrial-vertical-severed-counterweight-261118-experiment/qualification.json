@@ -1,0 +1,1550 @@
+{
+  "r5_original_finish": {
+    "artistic_brief": "broken sheave / heavy skewed counterweight / anchored arrest / readable crusher manifold / staged freight wagon / split quench lookouts",
+    "actual_changed_cells": 75382,
+    "physical_Water_cells_unchanged": 6525,
+    "old_r4_unanchored_over_1000": 6,
+    "structural": {
+      "total_solid_components": 104,
+      "major_world_edge_anchored": [
+        {
+          "id": 0,
+          "size": 145080,
+          "world_edge_anchored": true,
+          "bounds": [
+            135,
+            0,
+            874,
+            889
+          ]
+        },
+        {
+          "id": 1,
+          "size": 256562,
+          "world_edge_anchored": true,
+          "bounds": [
+            0,
+            80,
+            327,
+            2047
+          ]
+        },
+        {
+          "id": 2,
+          "size": 506604,
+          "world_edge_anchored": true,
+          "bounds": [
+            128,
+            80,
+            1023,
+            2047
+          ]
+        }
+      ],
+      "unanchored_over_1000": [
+        {
+          "id": 26,
+          "size": 1306,
+          "world_edge_anchored": false,
+          "bounds": [
+            720,
+            619,
+            769,
+            683
+          ]
+        }
+      ],
+      "all_seven_major_probes_anchored": true,
+      "probes": [
+        {
+          "name": "upper east control",
+          "point": [
+            645,
+            379
+          ],
+          "material": 68,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "western failed counterweight",
+          "point": [
+            330,
+            479
+          ],
+          "material": 130,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "east crusher housing",
+          "point": [
+            769,
+            935
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "central ore exchange",
+          "point": [
+            330,
+            1146
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "rail switch/cargo",
+          "point": [
+            769,
+            1275
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "west salvage processor",
+          "point": [
+            342,
+            1795
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "east salvage plant",
+          "point": [
+            645,
+            1820
+          ],
+          "material": 65,
+          "component": 2,
+          "anchored": true
+        }
+      ]
+    },
+    "flight_routes": "all 11 named sites must pass three conservative exact-hull envelope tests; primary-throat obstruction guarantees terminal bypass only",
+    "reproducibility": "fixed seed, full cell replay and PNG indexed material parity validated by builder"
+  },
+  "r6_finishing": {
+    "review_authority": "Shepherd and Fidelity art REWORK exact R5 HEAD",
+    "changed_cells": 44496,
+    "water_cells_changed": 0,
+    "structural": {
+      "total_solid_components": 106,
+      "major_world_edge_anchored": [
+        {
+          "id": 0,
+          "size": 143250,
+          "world_edge_anchored": true,
+          "bounds": [
+            135,
+            0,
+            874,
+            889
+          ]
+        },
+        {
+          "id": 1,
+          "size": 256562,
+          "world_edge_anchored": true,
+          "bounds": [
+            0,
+            80,
+            327,
+            2047
+          ]
+        },
+        {
+          "id": 2,
+          "size": 516344,
+          "world_edge_anchored": true,
+          "bounds": [
+            128,
+            80,
+            1023,
+            2047
+          ]
+        }
+      ],
+      "unanchored_over_1000": [
+        {
+          "id": 25,
+          "size": 1306,
+          "world_edge_anchored": false,
+          "bounds": [
+            720,
+            619,
+            769,
+            683
+          ]
+        }
+      ],
+      "all_seven_major_probes_anchored": true,
+      "probes": [
+        {
+          "name": "upper east control",
+          "point": [
+            645,
+            379
+          ],
+          "material": 68,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "western failed counterweight",
+          "point": [
+            330,
+            479
+          ],
+          "material": 130,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "east crusher housing",
+          "point": [
+            769,
+            935
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "central ore exchange",
+          "point": [
+            330,
+            1146
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "rail switch/cargo",
+          "point": [
+            769,
+            1275
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "west salvage processor",
+          "point": [
+            342,
+            1795
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "east salvage plant",
+          "point": [
+            645,
+            1820
+          ],
+          "material": 65,
+          "component": 2,
+          "anchored": true
+        }
+      ]
+    },
+    "creative_repairs": "asymmetric sheared weight, broken terminal cables and compressed catch; segmented gravity sorting with receiving bin; single wagon loading station; supported quench-transfer threshold",
+    "protected": "all exact sites and conservative hull sizes; physical water unchanged",
+    "known_static_separation": "1306-cell east control enclosure remains an intentionally non-loadbearing fixed fixture",
+    "render": "six material-ID PNGs and complete replay generated from identical grid",
+    "native": "NATIVE-UNTESTED - installed binary/rectangle cap and dynamic validation unknown"
+  },
+  "r4_support_rework": {
+    "ops": [
+      "east crane hanger",
+      "west counterweight catch column",
+      "east crusher transfer support",
+      "rail freight abutment",
+      "lower west cage collar",
+      "lower east salvage hoist",
+      "crusher to exchange transverse load bridge"
+    ],
+    "changed_cells": 11419,
+    "prior_protected_corridor_cells_changed": 7909,
+    "structural": {
+      "total_solid_components": 105,
+      "major_world_edge_anchored": [
+        {
+          "id": 0,
+          "size": 109339,
+          "world_edge_anchored": true,
+          "bounds": [
+            135,
+            0,
+            874,
+            870
+          ]
+        },
+        {
+          "id": 1,
+          "size": 256562,
+          "world_edge_anchored": true,
+          "bounds": [
+            0,
+            80,
+            327,
+            2047
+          ]
+        },
+        {
+          "id": 2,
+          "size": 484520,
+          "world_edge_anchored": true,
+          "bounds": [
+            235,
+            80,
+            1023,
+            2047
+          ]
+        }
+      ],
+      "unanchored_over_1000": [
+        {
+          "id": 19,
+          "size": 3530,
+          "world_edge_anchored": false,
+          "bounds": [
+            707,
+            385,
+            769,
+            518
+          ]
+        },
+        {
+          "id": 30,
+          "size": 1306,
+          "world_edge_anchored": false,
+          "bounds": [
+            720,
+            619,
+            769,
+            683
+          ]
+        },
+        {
+          "id": 61,
+          "size": 2408,
+          "world_edge_anchored": false,
+          "bounds": [
+            264,
+            1318,
+            306,
+            1373
+          ]
+        },
+        {
+          "id": 93,
+          "size": 1113,
+          "world_edge_anchored": false,
+          "bounds": [
+            235,
+            1700,
+            328,
+            1771
+          ]
+        },
+        {
+          "id": 102,
+          "size": 1782,
+          "world_edge_anchored": false,
+          "bounds": [
+            128,
+            1885,
+            325,
+            1893
+          ]
+        },
+        {
+          "id": 103,
+          "size": 1632,
+          "world_edge_anchored": false,
+          "bounds": [
+            448,
+            1951,
+            551,
+            1974
+          ]
+        }
+      ],
+      "all_seven_major_probes_anchored": true,
+      "probes": [
+        {
+          "name": "upper east control",
+          "point": [
+            645,
+            379
+          ],
+          "material": 68,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "western failed counterweight",
+          "point": [
+            330,
+            479
+          ],
+          "material": 58,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "east crusher housing",
+          "point": [
+            769,
+            935
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "central ore exchange",
+          "point": [
+            330,
+            1146
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "rail switch/cargo",
+          "point": [
+            769,
+            1275
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "west salvage processor",
+          "point": [
+            342,
+            1795
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "east salvage plant",
+          "point": [
+            645,
+            1820
+          ],
+          "material": 68,
+          "component": 2,
+          "anchored": true
+        }
+      ]
+    },
+    "flight_crossovers": "Some old straight route-guide segments are interrupted by engineered support; exact whole-hull connectivity retested"
+  },
+  "schema": "cybersand-original-industrial-vertical-qualification-v1",
+  "engine_accepted_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+  "creator": "original-industrial-vertical",
+  "originality": "original from authored plan; no source/reference image used",
+  "seed_decimal": 638654469,
+  "extent": [
+    1024,
+    2048
+  ],
+  "cells": 2097152,
+  "nonempty": 937763,
+  "nonempty_materials": {
+    "0": 1159389,
+    "3": 6525,
+    "38": 21876,
+    "39": 47153,
+    "40": 81652,
+    "41": 16922,
+    "50": 14792,
+    "52": 18612,
+    "53": 23736,
+    "56": 40040,
+    "58": 6,
+    "59": 26557,
+    "62": 7047,
+    "63": 10603,
+    "64": 34166,
+    "65": 7611,
+    "66": 30821,
+    "67": 6177,
+    "68": 25984,
+    "69": 30964,
+    "72": 3162,
+    "73": 9145,
+    "76": 7194,
+    "77": 3326,
+    "78": 2237,
+    "79": 5020,
+    "80": 4860,
+    "98": 27160,
+    "99": 45986,
+    "100": 55789,
+    "101": 57997,
+    "109": 5116,
+    "111": 82571,
+    "112": 35044,
+    "113": 14638,
+    "114": 8903,
+    "118": 14620,
+    "119": 49267,
+    "120": 1435,
+    "123": 2920,
+    "127": 9753,
+    "128": 11851,
+    "129": 11199,
+    "130": 7553,
+    "131": 9773
+  },
+  "grid_sha256": "27085a45c7321832e902b3700925fecac21e0f50dae2ec0872d4e5f3a4e12b3f",
+  "setup_sha256": "68565a98a229a8471e60cbff144c63f1f50bdcf53edcf41e3f717e062a2451f8",
+  "setup_bytes": 412117,
+  "setup_bytes_excluding_lf": 412117,
+  "setup_file_bytes_including_lf": 412118,
+  "edit_rectangles": 22492,
+  "rectangle_budget_source": 32768,
+  "default_no_bridge_capacity": 4096,
+  "installed_bridge_capacity": "UNKNOWN - do not assert native load",
+  "edit_budget": 32768,
+  "full_cell_replay": "PASS",
+  "edit_overlap_count": 0,
+  "rectangle_work_estimate": 937763,
+  "generated_start_work_limit": 32000000,
+  "material_laws": "all structural materials Solid, non-movable, RuleKernel::None under recorded accepted main; water 3 contained in dedicated lower sump",
+  "flight_checks": [
+    {
+      "footprint": [
+        19,
+        15
+      ],
+      "reachable_sites": 11,
+      "total_sites": 11,
+      "reachable_centers": 512422,
+      "sites": [
+        {
+          "id": "A",
+          "at": [
+            520,
+            145
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "B",
+          "at": [
+            520,
+            290
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "C",
+          "at": [
+            205,
+            575
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "D",
+          "at": [
+            800,
+            700
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "E",
+          "at": [
+            205,
+            1030
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "F",
+          "at": [
+            595,
+            1060
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "G",
+          "at": [
+            514,
+            1335
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "H",
+          "at": [
+            800,
+            1400
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "I",
+          "at": [
+            205,
+            1765
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "J",
+          "at": [
+            800,
+            1750
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "K",
+          "at": [
+            494,
+            1910
+          ],
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "footprint": [
+        23,
+        19
+      ],
+      "reachable_sites": 11,
+      "total_sites": 11,
+      "reachable_centers": 461677,
+      "sites": [
+        {
+          "id": "A",
+          "at": [
+            520,
+            145
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "B",
+          "at": [
+            520,
+            290
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "C",
+          "at": [
+            205,
+            575
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "D",
+          "at": [
+            800,
+            700
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "E",
+          "at": [
+            205,
+            1030
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "F",
+          "at": [
+            595,
+            1060
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "G",
+          "at": [
+            514,
+            1335
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "H",
+          "at": [
+            800,
+            1400
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "I",
+          "at": [
+            205,
+            1765
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "J",
+          "at": [
+            800,
+            1750
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "K",
+          "at": [
+            494,
+            1910
+          ],
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "footprint": [
+        31,
+        27
+      ],
+      "reachable_sites": 11,
+      "total_sites": 11,
+      "reachable_centers": 373940,
+      "sites": [
+        {
+          "id": "A",
+          "at": [
+            520,
+            145
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "B",
+          "at": [
+            520,
+            290
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "C",
+          "at": [
+            205,
+            575
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "D",
+          "at": [
+            800,
+            700
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "E",
+          "at": [
+            205,
+            1030
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "F",
+          "at": [
+            595,
+            1060
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "G",
+          "at": [
+            514,
+            1335
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "H",
+          "at": [
+            800,
+            1400
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "I",
+          "at": [
+            205,
+            1765
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "J",
+          "at": [
+            800,
+            1750
+          ],
+          "clear": true,
+          "reached": true
+        },
+        {
+          "id": "K",
+          "at": [
+            494,
+            1910
+          ],
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "alternative_main_throat_block": {
+    "rect": [
+      420,
+      983,
+      665,
+      1006
+    ],
+    "terminal_reachable": true,
+    "reachable_centers": 364715,
+    "physical_solid_full_hull": {
+      "rectangle": [
+        420,
+        983,
+        665,
+        1006
+      ],
+      "footprint": [
+        31,
+        27
+      ],
+      "reachable_centers": 364403,
+      "reachable_sites": 10,
+      "total_sites": 11,
+      "sites": [
+        {
+          "id": "A",
+          "reached": true
+        },
+        {
+          "id": "B",
+          "reached": true
+        },
+        {
+          "id": "C",
+          "reached": true
+        },
+        {
+          "id": "D",
+          "reached": true
+        },
+        {
+          "id": "E",
+          "reached": true
+        },
+        {
+          "id": "F",
+          "reached": false
+        },
+        {
+          "id": "G",
+          "reached": true
+        },
+        {
+          "id": "H",
+          "reached": true
+        },
+        {
+          "id": "I",
+          "reached": true
+        },
+        {
+          "id": "J",
+          "reached": true
+        },
+        {
+          "id": "K",
+          "reached": true
+        }
+      ],
+      "terminal_reachable": true,
+      "obstruction": "physical Solid fill + complete 31x27 re-erosion + 4-neighbour BFS"
+    }
+  },
+  "sites": [
+    {
+      "id": "A",
+      "name": "Crown dispatch",
+      "at": [
+        520,
+        145
+      ],
+      "district": "Sky intake"
+    },
+    {
+      "id": "B",
+      "name": "Signal lantern bridge",
+      "at": [
+        520,
+        290
+      ],
+      "district": "Sky intake"
+    },
+    {
+      "id": "C",
+      "name": "Western winch desk",
+      "at": [
+        205,
+        575
+      ],
+      "district": "Counterweight cathedral"
+    },
+    {
+      "id": "D",
+      "name": "Eastern thrust control",
+      "at": [
+        800,
+        700
+      ],
+      "district": "Counterweight cathedral"
+    },
+    {
+      "id": "E",
+      "name": "Ore assay alcove",
+      "at": [
+        205,
+        1030
+      ],
+      "district": "Sorting and crushers"
+    },
+    {
+      "id": "F",
+      "name": "Main ore exchange",
+      "at": [
+        595,
+        1060
+      ],
+      "district": "Sorting and crushers"
+    },
+    {
+      "id": "G",
+      "name": "Central rail interlock",
+      "at": [
+        514,
+        1335
+      ],
+      "district": "Rail funnel"
+    },
+    {
+      "id": "H",
+      "name": "Pressure switchroom",
+      "at": [
+        800,
+        1400
+      ],
+      "district": "Rail funnel"
+    },
+    {
+      "id": "I",
+      "name": "Salvage retrieval dock",
+      "at": [
+        205,
+        1765
+      ],
+      "district": "Quench and reclamation"
+    },
+    {
+      "id": "J",
+      "name": "Furnace inspection perch",
+      "at": [
+        800,
+        1750
+      ],
+      "district": "Quench and reclamation"
+    },
+    {
+      "id": "K",
+      "name": "Bottom lift terminal",
+      "at": [
+        494,
+        1910
+      ],
+      "district": "Quench and reclamation"
+    }
+  ],
+  "routes": {
+    "central": [
+      [
+        520,
+        145
+      ],
+      [
+        520,
+        342
+      ],
+      [
+        558,
+        342
+      ],
+      [
+        558,
+        620
+      ],
+      [
+        484,
+        620
+      ],
+      [
+        484,
+        930
+      ],
+      [
+        595,
+        930
+      ],
+      [
+        595,
+        1125
+      ],
+      [
+        514,
+        1125
+      ],
+      [
+        514,
+        1420
+      ],
+      [
+        576,
+        1420
+      ],
+      [
+        576,
+        1640
+      ],
+      [
+        494,
+        1640
+      ],
+      [
+        494,
+        1940
+      ]
+    ],
+    "west": [
+      [
+        205,
+        300
+      ],
+      [
+        205,
+        1850
+      ]
+    ],
+    "east": [
+      [
+        800,
+        270
+      ],
+      [
+        800,
+        1880
+      ]
+    ],
+    "crossovers": [
+      [
+        [
+          205,
+          450
+        ],
+        [
+          558,
+          450
+        ]
+      ],
+      [
+        [
+          205,
+          900
+        ],
+        [
+          595,
+          900
+        ]
+      ],
+      [
+        [
+          205,
+          1460
+        ],
+        [
+          576,
+          1460
+        ]
+      ],
+      [
+        [
+          205,
+          1825
+        ],
+        [
+          494,
+          1825
+        ]
+      ],
+      [
+        [
+          558,
+          350
+        ],
+        [
+          800,
+          350
+        ]
+      ],
+      [
+        [
+          484,
+          760
+        ],
+        [
+          800,
+          760
+        ]
+      ],
+      [
+        [
+          514,
+          1190
+        ],
+        [
+          800,
+          1190
+        ]
+      ],
+      [
+        [
+          576,
+          1640
+        ],
+        [
+          800,
+          1640
+        ]
+      ],
+      [
+        [
+          494,
+          1850
+        ],
+        [
+          800,
+          1850
+        ]
+      ]
+    ]
+  },
+  "image_checks": [],
+  "art_rework": {
+    "review_authority": "Shepherd and Fidelity REWORK comments on prior exact head",
+    "previous_head": "39644a3a6b0a0500b01faca6c075e08d2054d539",
+    "original_cell_changes": 93351,
+    "operation_records": 224,
+    "preservation": "all original exact 11 destinations, three flyable spines and Water 6525 cells retained",
+    "districts": "asymmetric severed counterweight/catch; twin ore hoppers/transfer; distinct switch yard/cargo cradle; irregular foundry galleries; furnace-to-quench infrastructure",
+    "production_scope": "Only fixed inert physical cells; no runtime physics edits"
+  },
+  "native_status": "NATIVE-UNTESTED: no CyberDemoBridge binary or Godot runtime supplied; dynamic inspect_interaction IDs, world install, Rapier input/collision, physics, fresh-process save/reopen unproven",
+  "approval": "DRAFT/HOLD - independent Shepherd and owner acceptance outstanding",
+  "r7_industrial_finish": {
+    "review_authority": "independent exact-R6 Fidelity REWORK and Shepherd conditional static HOLD",
+    "changed_material_cells": 39404,
+    "water_cells_changed": 0,
+    "structural": {
+      "total_solid_components": 105,
+      "major_world_edge_anchored": [
+        {
+          "id": 0,
+          "size": 140618,
+          "world_edge_anchored": true,
+          "bounds": [
+            135,
+            0,
+            874,
+            889
+          ]
+        },
+        {
+          "id": 1,
+          "size": 256562,
+          "world_edge_anchored": true,
+          "bounds": [
+            0,
+            80,
+            327,
+            2047
+          ]
+        },
+        {
+          "id": 2,
+          "size": 521992,
+          "world_edge_anchored": true,
+          "bounds": [
+            128,
+            80,
+            1023,
+            2047
+          ]
+        }
+      ],
+      "unanchored_over_1000": [
+        {
+          "id": 28,
+          "size": 1306,
+          "world_edge_anchored": false,
+          "bounds": [
+            720,
+            619,
+            769,
+            683
+          ]
+        }
+      ],
+      "all_seven_major_probes_anchored": true,
+      "probes": [
+        {
+          "name": "upper east control",
+          "point": [
+            645,
+            379
+          ],
+          "material": 68,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "western failed counterweight",
+          "point": [
+            330,
+            479
+          ],
+          "material": 130,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "east crusher housing",
+          "point": [
+            769,
+            935
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "central ore exchange",
+          "point": [
+            330,
+            1146
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "rail switch/cargo",
+          "point": [
+            769,
+            1275
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "west salvage processor",
+          "point": [
+            342,
+            1795
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "east salvage plant",
+          "point": [
+            645,
+            1820
+          ],
+          "material": 65,
+          "component": 2,
+          "anchored": true
+        }
+      ]
+    },
+    "changes": "large diagonal failure shear and offset captured scrap; crusher-to-twin-terminated-feed and bins; single wagon with loading bay and rail buffers; dry salvage-to-quench service gantry",
+    "geometry": "strict orthographic 1024x2048 material-ID cells; exact all-11 19x15,23x19,31x27 navigation tests",
+    "native": "NATIVE-UNTESTED"
+  },
+  "r8_original_industrial_rework": {
+    "review_authority": "independent R7 Shepherd and Fidelity REWORK",
+    "changed_material_cells": 46891,
+    "water_cell_changes": 0,
+    "structural": {
+      "total_solid_components": 106,
+      "major_world_edge_anchored": [
+        {
+          "id": 0,
+          "size": 126197,
+          "world_edge_anchored": true,
+          "bounds": [
+            135,
+            0,
+            874,
+            889
+          ]
+        },
+        {
+          "id": 1,
+          "size": 256562,
+          "world_edge_anchored": true,
+          "bounds": [
+            0,
+            80,
+            327,
+            2047
+          ]
+        },
+        {
+          "id": 2,
+          "size": 523672,
+          "world_edge_anchored": true,
+          "bounds": [
+            128,
+            80,
+            1023,
+            2047
+          ]
+        }
+      ],
+      "unanchored_over_1000": [
+        {
+          "id": 32,
+          "size": 1306,
+          "world_edge_anchored": false,
+          "bounds": [
+            720,
+            619,
+            769,
+            683
+          ]
+        }
+      ],
+      "all_seven_major_probes_anchored": true,
+      "probes": [
+        {
+          "name": "upper east control",
+          "point": [
+            645,
+            379
+          ],
+          "material": 68,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "western failed counterweight",
+          "point": [
+            330,
+            479
+          ],
+          "material": 130,
+          "component": 0,
+          "anchored": true
+        },
+        {
+          "name": "east crusher housing",
+          "point": [
+            769,
+            935
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "central ore exchange",
+          "point": [
+            330,
+            1146
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "rail switch/cargo",
+          "point": [
+            769,
+            1275
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "west salvage processor",
+          "point": [
+            342,
+            1795
+          ],
+          "material": 58,
+          "component": 2,
+          "anchored": true
+        },
+        {
+          "name": "east salvage plant",
+          "point": [
+            645,
+            1820
+          ],
+          "material": 65,
+          "component": 2,
+          "anchored": true
+        }
+      ]
+    },
+    "physical_throat_block": {
+      "rectangle": [
+        420,
+        983,
+        665,
+        1006
+      ],
+      "footprint": [
+        31,
+        27
+      ],
+      "reachable_centers": 364403,
+      "reachable_sites": 10,
+      "total_sites": 11,
+      "sites": [
+        {
+          "id": "A",
+          "reached": true
+        },
+        {
+          "id": "B",
+          "reached": true
+        },
+        {
+          "id": "C",
+          "reached": true
+        },
+        {
+          "id": "D",
+          "reached": true
+        },
+        {
+          "id": "E",
+          "reached": true
+        },
+        {
+          "id": "F",
+          "reached": false
+        },
+        {
+          "id": "G",
+          "reached": true
+        },
+        {
+          "id": "H",
+          "reached": true
+        },
+        {
+          "id": "I",
+          "reached": true
+        },
+        {
+          "id": "J",
+          "reached": true
+        },
+        {
+          "id": "K",
+          "reached": true
+        }
+      ],
+      "terminal_reachable": true,
+      "obstruction": "physical Solid fill + complete 31x27 re-erosion + 4-neighbour BFS"
+    },
+    "creative_repair": "off-centre planar-sheared counterweight with captured slab and differentiated failed tension lines; staged feed->crusher->terminated split gate->receiver; one vertically loaded wagon; dry salvage and quench inspection gantry",
+    "native_status": "NATIVE-UNTESTED"
+  }
+}
