@@ -607,6 +607,66 @@ function buildWideCanvas() {
 
   // Root-preserving inspection-bay descent at x1400, no slash through support piers.
   R(1400,678,58,82,mat.E);
+
+  // R10 Shepherd rework: make this a three-stage industrial race facility,
+  // not a field of tiny repeated signs. All colour changes below are made
+  // strictly inside ALREADY OCCUPIED material cells, preserving collision.
+  function r10Tint(x0,y0,x1,y1,from,to) {
+    let n=0;
+    for(let y=Math.max(0,y0);y<=Math.min(H-1,y1);y++)
+      for(let x=Math.max(0,x0);x<=Math.min(W-1,x1);x++){
+        const i=y*W+x;
+        if(g[i]===from){g[i]=to;n++;}
+      }
+    return n;
+  }
+  // Clear conflicting micro-signals around the weigh line and catch throat.
+  r10Tint(1320,558,1680,633,mat.SIGNAL,mat.STEEL);
+  r10Tint(1380,613,1654,712,mat.SIGNAL,mat.IRON);
+  r10Tint(1824,291,2036,556,mat.SIGNAL,mat.STEEL);
+  // A racing line clearly traverses INFEED -> FULL-SIZE SCALE -> RELEASE:
+  // three radically different signal bands on the existing rail/support faces.
+  // The actual weighing bay at (1500,670) stays an unobstructed void.
+  tintFace([[1367,588],[1439,574],[1452,606],[1382,615]],mat.BLUE);
+  tintStroke(1382,601,1442,591,22,mat.QUARTZ);
+  tintFace([[1449,620],[1497,613],[1518,631],[1484,645],[1451,640]],mat.ZINC);
+  tintStroke(1440,639,1565,640,22,mat.QUARTZ);
+  tintStroke(1452,699,1567,700,21,mat.BLUE);
+  tintFace([[1544,610],[1596,604],[1634,627],[1597,641],[1557,630]],mat.IRON);
+  tintStroke(1575,637,1653,620,18,mat.SIGNAL);
+  tintStroke(1571,697,1636,691,17,mat.QUARTZ);
+  // Calibrated rail-scale tick blocks are integrated INTO the existing
+  // solid floor rather than small floating tokens in the flight envelope.
+  for(const x of [1469,1490,1511,1532,1553]){
+    tintStroke(x,694,x+9,705,10,mat.QUARTZ);
+  }
+  // Directional, oversized cues placed on real west/east portal masonry.
+  // One west fork promises DESCENT; opposite east portal promises ASCENT.
+  tintStroke(330,614,365,661,35,mat.QUARTZ);
+  tintStroke(561,630,585,681,32,mat.BLUE);
+  tintStroke(1649,662,1624,616,34,mat.BLUE);
+  tintStroke(1805,662,1835,618,34,mat.QUARTZ);
+  tintFace([[360,632],[386,635],[404,666],[377,663]],mat.SIGNAL);
+  tintFace([[1789,624],[1817,625],[1805,655],[1776,661]],mat.BLUE);
+  // Large silhouette/contrast lead-in to the actual slalom turns:
+  // only rock already occupied receives this colour; zero new obstacles.
+  tintStroke(625,708,680,730,24,mat.BLUE);
+  tintStroke(775,804,829,790,25,mat.QUARTZ);
+  tintStroke(1231,713,1307,734,24,mat.SIGNAL);
+  tintStroke(1415,809,1490,790,27,mat.QUARTZ);
+  // The deceleration catcher is an obvious twin-rail throat at the
+  // actual y446 finish, attached to the established right-hand jaws.
+  // Its solid upper/lower lips remain safely away from 31x27 y446.
+  L(1874,396,2008,400,11,mat.STEEL);
+  L(1878,501,2008,502,12,mat.IRON);
+  L(1997,400,2005,351,12,mat.ZINC);
+  L(1998,503,2006,516,12,mat.ZINC);
+  tintStroke(1880,399,1970,402,15,mat.QUARTZ);
+  tintStroke(1882,500,1970,502,16,mat.BLUE);
+  // A single broad mechanical speed-trap fascia instead of small trim.
+  tintFace([[1980,380],[2003,375],[2039,385],[2039,406],[1996,399]],mat.BLUE);
+  tintFace([[1981,521],[2009,512],[2039,508],[2039,531],[1996,532]],mat.IRON);
+
     // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -831,13 +891,80 @@ function buildWideCanvas() {
   const hist={};for(const v of g)hist[v]=(hist[v]||0)+1;
   return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions};
 }
+
 const r=buildWideCanvas();
-const artifacts=[["setup-thunderclap-switchyard.json",Buffer.from(r.json,"utf8")],...r.gallery.map(g=>[g.name,Buffer.from(g.bytes)])];
+const crypto=require("node:crypto");
+const shab=(v)=>crypto.createHash("sha256").update(v).digest("hex");
+const setupName="setup-thunderclap-switchyard.json";
+const prior=JSON.parse(fs.readFileSync("qualification.json","utf8"));
+let delta=prior.r9_to_r10_cell_delta;
+if(!delta) {
+ const old=JSON.parse(fs.readFileSync(setupName,"utf8")),oldGrid=new Uint8Array(r.W*r.H);
+ for(const [x,y,w,h,m] of old.edits)for(let yy=y;yy<y+h;yy++)oldGrid.fill(m,yy*r.W+x,yy*r.W+x+w);
+ let added=0,removed=0,rematerialized=0;
+ for(let i=0;i<oldGrid.length;i++) {
+  const a=oldGrid[i],b=r.grid[i];
+  if(a===b)continue;
+  if(!a)added++;else if(!b)removed++;else rematerialized++;
+ }
+ delta={added,removed,rematerialized,changed_total:added+removed+rematerialized};
+}
+const pngs=r.gallery.map(p=>({
+ file:p.name,dimensions:[p.region[2],p.region[3]],sample_step:p.region[4]||1,
+ bytes:p.bytes.length,sha256:shab(Buffer.from(p.bytes)),
+ crc32:p.chunkCRC,adler32:p.adler,material_pixel_parity:p.materialPixelsVerified
+}));
+const writtenVisits=r.edits.reduce((n,e)=>n+e[2]*e[3],0);
+const receipt={
+ ...prior,
+ kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R10",
+ created_utc:"2026-11-19",
+ previous_branch_head:"a559d1c888fbb63afa6d383170f417b9a694d8f1",
+ engine_main_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",
+ terrain_rectangles:r.edits.length,
+ setup_json_bytes:Buffer.byteLength(r.json,"utf8"),
+ cell_visits:writtenVisits,
+ overlapping_edits:r.collisions,
+ replay_mismatches:r.mismatches,
+ grid_sha256:shab(Buffer.from(r.grid)),
+ json_sha256:shab(Buffer.from(r.json,"utf8")),
+ material_histogram:r.hist,
+ named_sites:r.sites.map(v=>({name:v[0],x:v[1],y:v[2]})),
+ exact_reach:Object.fromEntries(Object.entries(r.reachable).map(([k,v])=>[k,{reached:v.sites.filter(z=>z[1]).length,total:v.sites.length,connected_centres:v.size}])),
+ physical_iris_obstruction:{
+   physical_box:[900,330,1110,554],
+   reached:r.fullHullBlocked.sites.filter(z=>z[1]).map(z=>z[0]),
+   unreachable:r.fullHullBlocked.sites.filter(z=>!z[1]).map(z=>z[0]),
+   connected_centres:r.fullHullBlocked.size
+ },
+ lower_corridor_only:r.lowerCorridor,
+ grounded_support_probes:r.supportSites.map(([name,x,y])=>({name,x,y,cardinal_grounding:!!r.grounded[y*r.W+x]})),
+ detached_solid_cells:writtenVisits-r.grounded.reduce((v,x)=>v+x,0),
+ r9_to_r10_cell_delta:delta,
+ pngs,
+ installed_bridge_rectangle_capacity:"NATIVE-UNTESTED",
+ native_workbench_install_input_collision_simulation_save_reopen:"NATIVE-UNTESTED",
+ code_execution:"Node 22 GitHub Actions; independent exact-setup replay and committed PNG verification in verify-independent.cjs"
+};
+delete receipt.r8_to_r9_cell_delta;
+if(receipt.terrain_rectangles>32768||receipt.setup_json_bytes>1048576||receipt.cell_visits>32000000)throw Error("CAPACITY");
+if(receipt.exact_reach["31x27"].reached!==15||receipt.physical_iris_obstruction.reached.length!==14)throw Error("CLEARANCE");
+const artifacts=[
+ [setupName,Buffer.from(r.json,"utf8")],
+ ...r.gallery.map(p=>[p.name,Buffer.from(p.bytes)]),
+ ["qualification.json",Buffer.from(JSON.stringify(receipt,null,2)+"\n","utf8")]
+];
 let ok=true;
 for(const [name,bytes] of artifacts){
  if(process.argv.includes("--verify")){
-   if(!fs.existsSync(name)||!fs.readFileSync(name).equals(bytes)){ console.error("FAIL:",name); ok=false; }
-   else console.log("PASS:",name,bytes.length);
- } else {fs.writeFileSync(name,bytes); console.log("WRITE:",name,bytes.length);}
+   if(!fs.existsSync(name)||!fs.readFileSync(name).equals(bytes)){
+     console.error("FAIL:",name);ok=false;
+   }else console.log("PASS:",name,bytes.length);
+ } else {fs.writeFileSync(name,bytes);console.log("WRITE:",name,bytes.length);}
 }
+console.log("R10",JSON.stringify({
+ rectangles:receipt.terrain_rectangles,bytes:receipt.setup_json_bytes,
+ grid:receipt.grid_sha256,delta,reach:receipt.exact_reach,
+ lower:receipt.lower_corridor_only.access_points.length,detached:receipt.detached_solid_cells
+}));
 if(!ok)process.exitCode=1;
