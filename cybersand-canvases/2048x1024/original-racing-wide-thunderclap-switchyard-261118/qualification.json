@@ -564,9 +564,48 @@
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
+    },
+    {
+      "file": "08-iris-service-braces.png",
+      "bytes": 98818,
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "sha256": "c688b38b8845f10da495e4f2ebc07973f42c22ece9933902f579517dd07224a7",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "09-west-dive-portal.png",
+      "bytes": 98818,
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "sha256": "cee4d1ca95a01ffb3c3e2a2b646a92a18eb3d66316d6289c47192d0c243f17f3",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "10-east-return-portal.png",
+      "bytes": 98818,
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "sha256": "cdbdce8f83e38a93e9ee083504d2e9ebc5ab091601204fa41e86db545c96c03b",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
     }
   ],
-  "png_integrity": "All nine PNGs builder-self-parsed CRC/zlib/Adler/IEND and entire indexed material pixel parity against final grid; full overview true native 1:1, half-size review is sampling not replacement",
+  "png_integrity": "Twelve genuine grid-rendered PNGs including 10 native 1:1 overview/district images plus one sampled overview and the whole native 2048x1024 overview; all 12 builder-decoded for PNG signature, CRC, stored zlib, Adler, IEND, complete per-material pixel parity.",
   "native_workbench": "NATIVE-UNTESTED",
   "native_rapier": "NATIVE-UNTESTED",
   "native_collision": "NATIVE-UNTESTED",

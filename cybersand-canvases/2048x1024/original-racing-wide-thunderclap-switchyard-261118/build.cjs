@@ -732,7 +732,11 @@ function buildWideCanvas() {
     ["04-glassstorm-viaduct.png",1240,232,512,384],
     ["05-catch-recovery.png",1536,540,512,384],
     ["06-lower-s-turn-west.png",580,640,512,384],
-    ["07-lower-s-turn-east.png",1150,640,512,384]
+    ["07-lower-s-turn-east.png",1150,640,512,384],
+    // R8 explicit 1:1 evidence for the newly anchored arcs and two distinct gates.
+    ["08-iris-service-braces.png",780,440,512,384],
+    ["09-west-dive-portal.png",310,450,512,384],
+    ["10-east-return-portal.png",1490,450,512,384]
   ].map(p=>({name:p[0],region:p.slice(1),...encodePNG(...p.slice(1))}));
   const hist={};for(const v of g)hist[v]=(hist[v]||0)+1;
   return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions};
