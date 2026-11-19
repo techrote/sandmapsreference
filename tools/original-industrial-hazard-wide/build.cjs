@@ -16,7 +16,8 @@ spawn:[112,373],sites:[
 ['Quench inspection',[670,395]],['West maintenance',[580,841]],['Upper containment',[965,132]],
 ['Reactor gallery',[1000,395]],['Reactor service',[1215,595]],['East chemistry',[1410,426]],
 ['Glass distillation',[1595,455]],['North evacuation',[1750,245]],
-['Quarantine passage',[1780,650]],['East helipad',[1945,337]],['Dry underpass',[1115,965]]],
+['Quarantine passage',[1780,650]],['East helipad',[1945,337]],['Dry underpass',[1115,965]],
+['Freight decompression booth',[215,812]],['Quarantine scrubber vestibule',[1850,820]]],
 crops:[['freight',30,225,410,570],['quench',395,290,440,560],['reactor',805,130,555,710],['distillation',1310,210,500,650],['evacuation',1670,220,370,650]]},
 {slug:'ashlight-counterflow-foundry',seed:27111987,name:'Ashlight Counterflow Foundry',
 spawn:[108,440],sites:[
@@ -24,7 +25,8 @@ spawn:[108,440],sites:[
 ['Cyclone lip',[740,330]],['Lower filter service',[645,840]],['Spiral gantry',[1080,326]],
 ['Cascade observation',[1145,485]],['Reactor twin west',[1420,466]],['Reactor twin east',[1645,526]],
 ['Lower isolation gallery',[1550,545]],['Vent conservatory',[1950,388]],['Long exhaust exit',[1940,580]],
-['Deep retrieval',[1040,965]]],
+['Deep retrieval',[1040,965]],['Ashward filter audit',[247,811]],
+['Twin-reactor isolation booth',[1536,840]]],
 crops:[['ashward',20,160,470,650],['siphons',400,250,510,610],['cascade',880,140,460,670],['twins',1305,160,485,675],['vent',1680,225,340,655]]}
 ];
 function makePlane(){return new Uint8Array(W*H);}
@@ -307,6 +309,7 @@ function construct(spec,index){
  const finishReceipt=finishCells(g,index,spec,{W,H,MAT,legalCentres});
  const supportReceipt=anchorAssemblies();
  finishReceipt.structural_revision=require('./reengineer.cjs')(g,index,spec,{W,H,MAT});
+ finishReceipt.inhabitation=require('./inhabit.cjs')(g,index,spec,{W,H,MAT});
  return {grid:g,op,supportReceipt,finishReceipt};
 }
 function rects(g){
