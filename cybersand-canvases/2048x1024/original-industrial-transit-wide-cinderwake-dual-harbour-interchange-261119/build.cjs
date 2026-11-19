@@ -175,6 +175,9 @@ L(340,564,339,592,5,M.P);R(318,589,46,7,M.S);
 L(347,594,358,608,5,M.P);L(361,594,381,608,5,M.P);
 R(345,608,46,11,M.U);R(351,619,35,14,M.V);
 for(let x of [357,370,381])R(x,620,3,12,M.G);
+// Unobstructed keel inspection shaft between the exposed outer hull ribs:
+// 55-cell breadth gives a continuous flyable 31x27 envelope to exact (313,743).
+R(286,628,55,130,M.A);
 // WEST CUSTOMS: platform-scale inspection room and actual cargo hoist spreader.
 R(781,521,88,8,M.S);R(792,499,7,27,M.C);R(851,497,7,29,M.C);
 R(806,504,29,8,M.U);R(810,497,17,7,M.F);
