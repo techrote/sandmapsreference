@@ -165,9 +165,22 @@ function sha256(a){
 function fnv(a){let h=2166136261;for(const v of a){h^=v;h=Math.imul(h,16777619)}return(h>>>0).toString(16).padStart(8,'0')}
 const crops=[['01-west-landing.png',58,188,370,595],['02-regolith-labs.png',402,371,411,450],['03-rift-transit.png',810,365,474,504],['04-meridian-observatory.png',1287,298,310,535],['05-eastern-freight.png',1601,245,370,580],['06-deep-archive.png',892,808,453,204]];
 function build(){const a=plane(),{edits,painted}=pack(a),q=assess(a,edits,painted);
+ const alternate_route_obstructions=[];
+ const critical=sites.filter(([name])=>/Solar|Xenolith|Rift|Fault|Glass|Eastern|Foundry|Deep/.test(name));
+ for(const [name,x,y,w,h] of [
+  ['high transit midspan',980,443,51,45],
+  ['central freight return',1038,541,45,45],
+  ['lower rift return',1030,781,47,43],
+  ['eastern approach',1270,597,49,51]]){
+  const blocked=a.slice();for(let yy=y;yy<y+h;yy++)blocked.fill(M.STEEL,yy*W+x,yy*W+x+w);
+  const admitted=legal(blocked,15,13),flight=flood(admitted,sites[0][1]);
+  const failed=critical.filter(([,xy])=>!flight.seen[xy[1]*W+xy[0]]).map(([name])=>name);
+  alternate_route_obstructions.push({name,box:[x,y,w,h],conservative_midge:[31,27],
+     reachable_air_centres:flight.count,critical_sites:critical.length,failed});
+ }
  const setup={version:2,extent:[W,H],actors:[{id:1,model:'midge',hash:'c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96',spawn:sites[0][1],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits,response:'LA-SELECTIVE',liquid_policy:policy,normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
  const json=JSON.stringify(setup)+'\n';
- const receipt={schema:1,title:'Eidolon Rift Survey Port',mode:'ORIGINAL / NO REFERENCE',seed:SEED,extent:[W,H],accepted_engine:'de109d0131641d6adc8d25bb9ced7ca3d4991105',setup_loader_blob:'70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9',material_catalogue_blob:'dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3',midge_blob:'228399e38a0e0ab215b9f48698edce67a7a35799',grid_fnv32:fnv(a),grid_sha256:sha256(a),setup_sha256:sha256(Uint8Array.from([...json].map(c=>c.charCodeAt(0)))),repair:repairReceipt,histogram:q.hist,edits:q.edit_count,max_edits:32768,json_bytes:json.length,max_json_bytes:1048576,construction_cell_work:q.painted,max_work_cells:32000000,overlaps:q.overlaps,replay_diffs:q.diffs,invalid_rectangles:q.bad,conservative_midge_clearance:q.checks,sites,native:'NATIVE-UNTESTED',native_bridge_source_rectangles:32768,old_unavailable_bridge_fallback_rectangles:4096};
+ const receipt={schema:1,title:'Eidolon Rift Survey Port',mode:'ORIGINAL / NO REFERENCE',seed:SEED,extent:[W,H],accepted_engine:'de109d0131641d6adc8d25bb9ced7ca3d4991105',setup_loader_blob:'70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9',material_catalogue_blob:'dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3',midge_blob:'228399e38a0e0ab215b9f48698edce67a7a35799',grid_fnv32:fnv(a),grid_sha256:sha256(a),setup_sha256:sha256(Uint8Array.from([...json].map(c=>c.charCodeAt(0)))),repair:repairReceipt,alternate_route_obstructions,material_physics:'All used nonempty material IDs are current native Solid, movable=false, RuleKernel::None; zero liquids/powders/reactive agents',histogram:q.hist,edits:q.edit_count,max_edits:32768,json_bytes:json.length,max_json_bytes:1048576,construction_cell_work:q.painted,max_work_cells:32000000,overlaps:q.overlaps,replay_diffs:q.diffs,invalid_rectangles:q.bad,conservative_midge_clearance:q.checks,sites,native:'NATIVE-UNTESTED',native_bridge_source_rectangles:32768,old_unavailable_bridge_fallback_rectangles:4096};
  const files=[['setup-eidolon-rift.json',json],['qualification.json',JSON.stringify(receipt,null,2)+'\n'],['overview.png',png(a,0,0,W,H)]];for(const [name,x,y,w,h] of crops)files.push([name,png(a,x,y,w,h)]);
  return {a,receipt,files,setup}}
 const api={build,plane,pack,legal,flood,assess,crops,png,sites,fnv,W,H,SEED};
@@ -185,7 +198,7 @@ if(typeof require==='function'&&typeof module!=='undefined'&&require.main===modu
  else fs.writeFileSync(p,raw);
  if(name.endsWith('.png'))pngParity(raw,...(name==='overview.png'?[0,0,W,H]:crops.find(c=>c[0]===name).slice(1)),output.a)}
  const r=output.receipt;
- if(r.edits>32768||r.json_bytes>1048576||r.overlaps||r.replay_diffs||r.invalid_rectangles.length||Object.values(r.conservative_midge_clearance).some(v=>v.sites.some(s=>!s.free||!s.reachable)))throw Error('STATIC-FAIL: see qualification.json');
+ if(r.edits>32768||r.json_bytes>1048576||r.overlaps||r.replay_diffs||r.invalid_rectangles.length||Object.values(r.conservative_midge_clearance).some(v=>v.sites.some(s=>!s.free||!s.reachable))||r.alternate_route_obstructions.some(o=>o.failed.length))throw Error('STATIC-FAIL: see qualification.json');
  console.log(JSON.stringify({status:'STATIC-PASS',verify,edits:r.edits,json_bytes:r.json_bytes,exact_sites:r.conservative_midge_clearance['31x27'].sites.length,pngs:1+crops.length,grid_fnv32:r.grid_fnv32},null,2));
 }
 return api})()
