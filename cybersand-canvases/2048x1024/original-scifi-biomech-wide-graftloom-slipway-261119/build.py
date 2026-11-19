@@ -259,9 +259,6 @@ line(1327, 214, 1300, 29, 14, 62)      # refinery fore gantry hangs from roof tr
 line(1487, 224, 1580, 29, 10, 117)     # independent aft gantry tie
 line(1814, 363, 1910, 31, 11, 62)    # hanging aft dock crane
 line(1751, 809, 1789, 972, 12, 117)   # deep aft brace to bedrock
-line(1572, 554, 1647, 554, 7, 117)   # refinery middle right sample support
-line(1463, 548, 1341, 550, 7, 117)   # refinery middle left sample support
-line(1558, 398, 1640, 392, 8, 117)   # upper bay inspection support
 line(741, 896, 739, 950, 8, 117)     # small underkeel hoist into rock
 
 def rectangles(a):
