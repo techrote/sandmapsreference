@@ -549,8 +549,8 @@ R(332,550,20,7,M.F);
 // R4 through-freight topology: a visible rail-grade crane handoff links
 // west customs bogies with the lift jaw rather than appearing as disconnected
 // freight props. Grade and wheels are rooted to the existing steel gantry.
-L(876,576,966,510,10,M.S);
-L(879,567,970,500,4,M.U);
+L(907,536,966,510,10,M.S);
+L(909,529,970,500,4,M.U);
 R(903,537,45,18,M.V);R(908,529,35,8,M.U);
 for(const x of [910,938]){ring(x,557,8,8,3,M.K);R(x-3,557,6,12,M.C);}
 R(951,513,15,47,M.C);
