@@ -564,7 +564,12 @@ box(45,410,75,419,113)
 # Tapered mnemonic dock stalk attaches to the existing left crown mast.
 # Unlike the trial roof-to-workbench partition at x609, the diagonal leaves
 # a 31x27 upper transverse flight channel beneath its suspended lobe.
-line(748,203,811,418,11,62)
+# Mid-altitude freight/conduit tie-in: the inspection room is physically
+# supported by the existing rooted refinery deck at x1336..1652,y623.
+# The bridge sits entirely BETWEEN the two 31x27 constrained flight lanes:
+# roof alternate y<390 and sump alternate y>650 remain unobstructed.
+box(1034,517,1047,621,62)
+box(1040,613,1348,629,62)
 box(807,413,823,535,62)
 box(817,510,899,524,62)
 box(827,499,889,510,113)
