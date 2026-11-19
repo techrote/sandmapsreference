@@ -7,38 +7,38 @@
     1024
   ],
   "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
-  "material_plane_sha256": "9f9222c4b9e07ff10351535ad335aa12f730d3b32456c9ec9014cf63f16468be",
-  "setup_sha256": "518414bb8d94cb3453890862df69626075140bd5d20fb13de5abb93ffe454841",
-  "json_bytes": 73671,
-  "rectangle_count": 3985,
+  "material_plane_sha256": "8414bf387bd05dac0c4e3b3da6191cf8465f2b3c63161a2717aa4f3b1257b3a0",
+  "setup_sha256": "0c95b5c14fd9031f4e9a5437c72cfe502b7951781ea0c5da16ffc578620fb941",
+  "json_bytes": 74646,
+  "rectangle_count": 4037,
   "rectangle_budget": 32768,
   "bridge_fallback": 4096,
-  "construction_work": 676662,
+  "construction_work": 684631,
   "construction_work_budget": 32000000,
   "materials": {
-    "0": 1420490,
+    "0": 1412521,
     "3": 8745,
     "8": 19010,
-    "57": 18657,
-    "58": 157316,
-    "62": 173377,
-    "65": 89965,
-    "66": 20596,
+    "57": 18567,
+    "58": 156959,
+    "62": 184162,
+    "65": 88991,
+    "66": 20194,
     "68": 8332,
     "69": 1032,
     "72": 1222,
-    "76": 5209,
-    "77": 1740,
-    "79": 3418,
-    "100": 131955,
+    "76": 5034,
+    "77": 1576,
+    "79": 3312,
+    "100": 131785,
     "104": 21652,
-    "117": 2670,
-    "131": 11766
+    "117": 2400,
+    "131": 11658
   },
   "static_support": {
-    "rooted": 621402,
-    "total": 648907,
-    "detached": 27505
+    "rooted": 646031,
+    "total": 656876,
+    "detached": 10845
   },
   "static_exact_flight": [
     {
@@ -48,7 +48,7 @@
       ],
       "reachable": 15,
       "total": 15,
-      "flood": 965417,
+      "flood": 955661,
       "sites": {
         "Receiving spawn": {
           "x": 115,
@@ -149,7 +149,7 @@
       ],
       "reachable": 15,
       "total": 15,
-      "flood": 899243,
+      "flood": 889783,
       "sites": {
         "Receiving spawn": {
           "x": 115,
@@ -250,7 +250,7 @@
       ],
       "reachable": 15,
       "total": 15,
-      "flood": 591464,
+      "flood": 583799,
       "sites": {
         "Receiving spawn": {
           "x": 115,
@@ -357,8 +357,8 @@
   },
   "pngs": {
     "overview.png": {
-      "bytes": 15814,
-      "sha256": "8c4a54238fce8bc5f7eed1e9e36fc72f8bfae34eba1526a182c438fe7ff5bc43",
+      "bytes": 16361,
+      "sha256": "f97dc941b2692d30b24b1348464f34a2537bc0f0342f27e0fd0a0b121994cf4c",
       "viewport": [
         0,
         0,
@@ -367,8 +367,8 @@
       ]
     },
     "01-ore-and-skip.png": {
-      "bytes": 2898,
-      "sha256": "cd3f4524257982a123e0079711ec8dedb002775ab3ca257cdd3e60c8ab795000",
+      "bytes": 3091,
+      "sha256": "90978c5e03c9e8019e7fd5a6e46d74f220bc23ac81f6d50a1ac0d6c712ab054c",
       "viewport": [
         32,
         265,
@@ -377,8 +377,8 @@
       ]
     },
     "02-blast-furnaces.png": {
-      "bytes": 2477,
-      "sha256": "b5a6e9251ce8a7bfea0de9b1e00cf504842e1739ca701e903eb4efdc75967df1",
+      "bytes": 2488,
+      "sha256": "be895567d0719e2c5bed4286bc1dbde50a021851d30d7e417233ac158fd3e2a9",
       "viewport": [
         395,
         222,
@@ -387,8 +387,8 @@
       ]
     },
     "03-ladle-crane.png": {
-      "bytes": 2635,
-      "sha256": "5cc8487d664ec46148ddab070ad538029cf793db7c7c553d2144cb220a6f35e6",
+      "bytes": 2726,
+      "sha256": "e67d1117eeb43586c5b2141c115f7e86408f289c7375251fac5d928376ad65a2",
       "viewport": [
         897,
         168,
@@ -397,8 +397,8 @@
       ]
     },
     "04-caster-cells.png": {
-      "bytes": 1607,
-      "sha256": "aa352afe020bbb5711011f009a6399f553c06dea5bbeb38142b15f4272bbdafd",
+      "bytes": 1729,
+      "sha256": "ba39206e164bfeef06233a1ca54081d162e28cd01344180cb755f084f4cfb146",
       "viewport": [
         1020,
         527,
@@ -407,8 +407,8 @@
       ]
     },
     "05-quench-and-export.png": {
-      "bytes": 1846,
-      "sha256": "99f903810bc625191333ee4b3e6005e12fc1c8b28b6592cd80c38a515edecb0e",
+      "bytes": 1882,
+      "sha256": "1428cbff09e2e124a372739421ee4733cf2e8b5cb24a47780acf140b5f67219b",
       "viewport": [
         1585,
         320,
@@ -417,8 +417,8 @@
       ]
     },
     "06-subgrade-rail.png": {
-      "bytes": 2393,
-      "sha256": "dd3b9de00e6151b67a224a028ce1aeb1d14c1d5d446f1b0c39454ef3e9c9db53",
+      "bytes": 2455,
+      "sha256": "311ea2b158030ca55cbd30328228de7bd1ba50857bd4417c0531f66b2c633ed6",
       "viewport": [
         300,
         755,
