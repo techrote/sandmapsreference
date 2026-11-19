@@ -414,7 +414,39 @@ function build(i){
  result.receipt.unmerged_row_runs=z.rowRuns;
  return result;
 }
-module.exports={build,specs,W,H,MAT,rects,replay,legalCentres,reachable,connectedSolids,ENGINE};
+
+// Produce the *complete* canonical receipt from real cells, not a post-hoc
+// enrichment step. This must match committed bytes in --verify mode.
+function composeArtifacts(r, renderer, sha256) {
+ const imgs=[['overview',0,0,W,H],...r.spec.crops],files={'setup.json':r.json};
+ const imageEvidence=[];
+ for(const [name,x,y,w,h] of imgs){
+  const bytes=renderer.make(r.grid,x,y,w,h),filename=name+'.png';
+  files[filename]=bytes;
+  imageEvidence.push({name:filename,x,y,width:w,height:h,bytes:bytes.length,
+   sha256:sha256(bytes),material_pixel_parity:w*h});
+ }
+ const rec=r.receipt;
+ rec.source_authority={repo:'techrote/cybersand',commit:ENGINE,
+  setup:'godot/scripts/workbench_setup.gd',
+  materials:'native/include/cybersand/material.hpp',
+  midge:'godot/authoring/flyers/midge.json'};
+ rec.material_plane_sha256=sha256(r.grid);
+ rec.setup_sha256=sha256(r.json);
+ rec.material_laws={
+  static_ids:[58,62,63,68,70,76,77,79,100,101,104,117,120,122,123,128,131],
+  mobile_ids:[3,8],
+  basis:'Per-ID MaterialDefinition state, density motion and kernels read from accepted native/include/cybersand/material.hpp. Avoid plant, sand/stone powder and uncontained reactions.'
+ };
+ rec.fluid_containment='Every Water/Lava pocket physically enclosed by static material. 0 fluid cells adjacent to spawn-connected 4-neighbour centre air, verified for initial constructed plane; dynamic native simulation UNTESTED.';
+ rec.images=imageEvidence;
+ rec.native_status='NATIVE-UNTESTED';
+ rec.evidence_scope='Source builder replay & static route checks; PNG source-pixel index parity by renderer; independent on-disk PNG revalidation is not claimed.';
+ files['receipt.json']=JSON.stringify(rec,null,2)+'\n';
+ return files;
+}
+
+module.exports={build,specs,W,H,MAT,rects,replay,legalCentres,reachable,connectedSolids,ENGINE,composeArtifacts};
 if(typeof require!=='undefined' && require.main===module){
  const fs=require('fs'),path=require('path'),zlib=require('zlib'),crypto=require('crypto');
  const VERIFY=process.argv.includes('--verify');
@@ -446,9 +478,7 @@ if(typeof require!=='undefined' && require.main===module){
  }
  for(let i=0;i<specs.length;i++){
    const r=build(i),sp=r.spec,dir=path.join(ROOT,'original-industrial-hazard-wide-'+sp.slug);
-   const files={'setup.json':r.json,'receipt.json':JSON.stringify(r.receipt,null,2)+'\n'};
-   files['overview.png']=png(r.grid,0,0,W,H);
-   for(const [name,x,y,w,h] of sp.crops)files[name+'.png']=png(r.grid,x,y,w,h);
+   const files=composeArtifacts(r,cellRenderer,bytes=>crypto.createHash('sha256').update(bytes).digest('hex'));
    for(const [fn,bytes] of Object.entries(files)){
      if(fn.endsWith('.png')){checkPng(bytes,r.grid,...(fn==='overview.png'?[0,0,W,H]:sp.crops.find(c=>c[0]+'.png'===fn).slice(1))); }
      const target=path.join(dir,fn);
