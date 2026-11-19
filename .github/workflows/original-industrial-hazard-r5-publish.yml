@@ -1,0 +1,34 @@
+name: Industrial hazard R5 temporary exact-source artifact publisher
+on:
+  push:
+    branches:
+      - 'original/industrial-hazard-wide/**'
+permissions:
+  contents: write
+jobs:
+  publish-material-cells:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regenerate two complete real material-cell planes and PNGs
+        run: node tools/original-industrial-hazard-wide/build.cjs
+      - name: Exact on-disk replay
+        run: node tools/original-industrial-hazard-wide/build.cjs --verify
+      - name: Independent actor hull/solid/fluid/PNG parity qualification
+        run: node tools/original-industrial-hazard-wide/verify-independent.cjs
+      - name: Publish only regenerated owner-lane artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add cybersand-canvases/2048x1024/original-industrial-hazard-wide-pyrewater-quarantine-ring cybersand-canvases/2048x1024/original-industrial-hazard-wide-ashlight-counterflow-foundry
+          if ! git diff --cached --quiet; then
+            git commit -m 'industrial hazard R5: regenerate real-cell canvases and pixel evidence'
+            git push origin HEAD:original/industrial-hazard-wide/pyrewater-ashlight-dual-261119
+          fi
+# Temporary scoped emitter; remove after successful publication and final-head CI.
