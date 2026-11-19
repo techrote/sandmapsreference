@@ -54,9 +54,9 @@ Every nonempty starting cell is an immovable solid, but the actual accepted phys
 
 - Fixed seed: `0x4b415253`.
 - Deterministic builder: `build-karst-lung-organ.js` (Node.js; no dependencies); writes all artifacts to its optional first directory argument or its own directory.
-- Builder SHA-256: `e0596ea4495adb1345515383ab4988e934a66a4c4391c1cd70e5c1a8bdea37bf`.
-- Full material plane SHA-256: `6a8e451a92770dd53393e99194cefff4bd0c2dbc17cb3f13194d6e367df374be`.
-- Setup JSON SHA-256: `edd89fc0d41ce5b51de76592bc82b3f907d341434f908cd9fce372f6229290ea`.
+- Builder SHA-256: `c9d9d003477808911ba93c6f659e5fa76056f26b6a11379fcc25b2c1cb55b47b`.
+- Full material plane SHA-256: `3b523b3dfa1b9e381155c8989296d6978a20fd320c9bb9663b2fca0459ef27a2`.
+- Setup JSON SHA-256: `78c36400e663f495bae256754a1d89ed113bf5ea0ebec83eaa2ad23192e5a9f5`.
 - Full-grid parity: 0 mismatches, 0 overlapping rectangles.
 - PNG: uncompressed-deflate, 8-bit indexed palette; palette pixel **index** is real CyberSand material ID, not illustration. All 11 images independently decoded and checked for PNG CRC/Adler/index fidelity.
 - Current CyberSand accepted `main`: `018bd09503d7f079ddac52e225c2f7daf8d678bf`.
@@ -83,7 +83,7 @@ After the independent R4 Fidelity and Shepherd REWORK, the actual physical grid 
 - Fossil amphitheatre -> Calcite observatory: **538** steps
 - Left anastomosis -> Moonwell garden: **607** steps
 - Moonwell garden -> Deep bell: **598** steps
-- Root orchard -> Fossil amphitheatre: **561** steps
+- Root orchard -> Fossil amphitheatre: **517** steps
 - Calcite observatory -> Moonwell garden: **802** steps
 
 The centre-mask stress test is not a physically added obstruction. Inserting actual solid terrain in x300..708/y965..1148 physically overlaps the fossil destination envelope at 31x27; all-eight-sites survival in that physical obstruction is **not claimed**. No native installation or gameplay test has been run.
@@ -91,3 +91,7 @@ The centre-mask stress test is not a physically added obstruction. Inserting act
 ## R6 spatial craft refinement (18 November 2026)
 
 A further **108,867 distinct real material-cell identities** changed relative to R5 (21,670 added, 16,918 excavated and 70,279 rematerialized). The west orchard now has irregular directly carved grow-cells, three usable differentiated stages and rooted harvest trellis. The eastern spore organ has unequal membrane layers, nonrepeating ventilation pockets, three connected collection gills and a separately readable service chain. The western fossil tier gains rooted stepped survey decks and a vertebral crest, while the opposite calcite vault has a backed optical portico and inspectable mineral openings; three unequal dry catch combs refine the moonwell. This is entirely true-grid physical geometry, not screenshot decoration. The central airway, exact Midge sites and actual clearance replays are retained; no dynamic, native or owner acceptance is implied.
+
+## R7 differentiated inhabitation (19 November 2026)
+
+The independently reviewed R6 had too many monumental wedges and insufficient legible rooms. R7 carves three distinct west-rooted Orchard seed/harvest/maintenance spaces, three differentiated east Spore membrane/sampling/return rooms, an identifiable three-tier Fossil survey bowl, a separately backed Calcite optical hall, a real dry arterial return and a dry Moonwell catch basin. Every feature is painted as physical starting material, not a decorative sprite. No dynamic biological or liquid behavior is asserted. The builder must reproduce strict rectangle/byte budgets, all eight exact 19x15/23x19/31x27 reachable locations, boundary grounding, lossless material PNG parity and independent verification before accepting this revision.
