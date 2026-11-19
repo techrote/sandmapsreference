@@ -12,7 +12,17 @@ This is a strict orthographic, one-plane **side elevation**. Geometry is actual 
 
 The early branch's full floating eye and upper refinery shell were **not physically acceptable**: an independent occupied-cell flood found 33 detached components containing 116,604 unsupported cells. Welding those components directly to the roof or floor repeatedly severed conservative actual gameplay routes. An on-branch bounded support probe tested 100+ strut candidates, found a safe 5-cell-wide stern bracket anchor, and showed the big assemblies required geometry-level redesign.
 
-**Current structural rebuild** deliberately removed the remaining **115,002 formerly detached actual cells** and reconstructed the industrial crown, mnemonic stations, refinery frame and salvage appendages as distinct **roof- or floor-rooted open half-assemblies**, instead of concealing unsupported components or waiving Midge collisions. The rebuilt north crown includes a deliberate **114 × 92-cell aperture** so the *unchanged* Memory Engine North coordinate remains reachable. The generated results have **676,133 nonair cells, one single boundary-connected solid component, zero detached cells**. An additional **98 small non-anchored finish cells** were trimmed after the replacement pass, not represented as supported.
+**Current structural rebuild** deliberately removed the remaining **115,002 formerly detached actual cells** and reconstructed the industrial crown, mnemonic stations, refinery frame and salvage appendages as distinct **roof- or floor-rooted open half-assemblies**, instead of concealing unsupported components or waiving Midge collisions.
+
+### Shepherd R2 — substantial material-cell artist rework (19 November 2026)
+
+The independent Shepherd's exact-head verdict on R1 was **REWORK REQUIRED for artistic craft**, not static geometry. This R2 responds by altering **92,546 actual material cells** relative to the previous structurally repaired grid. The new receiving ferrule and angled transfer docks route freight into an asymmetric shunt shoulder, with visibly keyed inspection stations. The formerly sparse split mnemonic crown now carries two differently sized rooted neural/optical lobes, articulated service tines and left/right optical consoles; the lower cradle is a separate anchored material-return installation.
+
+The **high refinery** now has distinct roof-fed dry receiver bells; the **middle refinery** deliberately retains a broad accessible inspection/chromatography gallery; the **lower refinery** contains bedrock-founded separation drums and extraction grilles. An initially more elaborate mid-tier membrane diaphragm was tested and *removed* because it physically cut the exact Midge route to high/middle/eastern objectives. This is a real functional compromise, not a claimed successful feature. The aft salvage receives a split roof-rooted extraction mandible and disconnected-from-the-airway low pallet cradles, with an intentional open approach to the final recovery coordinate. Differentiated underkeel freight pipes, grounded couplings and pump pedestals link processing back to the receiving footprint.
+
+**R2 status:** deterministic renderer and independent verifier now pass the exact final replay for the 2048×1024 grid; **717,416 occupied cells**, **12,715 rectangles**, **237,522 JSON bytes**, one grounded solid component, **0 detached cells**, **13/13 exact sites reachable at 19×15 / 23×19 / 31×27**, two 31×27 constrained alternative routes, **8/8 material PNG CRC/zlib/pixel-parity checks**. The 92,546-cell change excludes intermediate geometry subsequently trimmed and counts only final ID differences. This is the creator's revised candidate, **not** independent artistic sign-off and **not** a native Godot pass. The Shepherd and Art/Technical reviewers must inspect this changed head anew.
+
+ The rebuilt north crown retains a deliberate **114 × 92-cell aperture** so the *unchanged* Memory Engine North coordinate remains reachable. The generated results have **717,416 nonair cells, one single boundary-connected solid component, zero detached cells**. An additional **98 small non-anchored finish cells** were trimmed after the replacement pass, not represented as supported.
 
 No initial simulated biology, free water, acid, powders or fire is used. The bio-industrial forms are inert/immobile architected solids; **no live-organism reaction behaviour is claimed**.
 
@@ -22,8 +32,8 @@ No initial simulated biology, free water, acid, powders or fire is used. The bio
 2. **Shunt crane / receiving scissors** — x 330–715. Rooted west mast, roof-hung mechanical scissors, intervening elevated air pockets, shunt control and independent north passage.
 3. **Split mnemonic crown / memory inspection** — x 650–1240. Open northern machinic crown, large central exploration void with an exact optical inspection coordinate, lower excavation arms and **two independent altitude returns**. The former complete unsupported floating eye is **intentionally gone**.
 4. **Dry bio-refinery containment** — x 1240–1710. Roof-hung forked biosynthesis rake, clear glass inspection nodules, several *enterable dry chambers* and low anchored dike supports. Broad traversable bands prevent this district becoming a solid gameplay divider.
-5. **Aft salvage drydock** — x 1710–2036. Real roof-tethered salvage mandibles, rooted lower stern bracket, working galleries and the eastern salvage shoulder.
-6. **Underkeel return** — x 650–1420, y 770–955. Broad alternative flight lane and floor-engineered supports, rather than an ornamental collapsed bottom or a fluid basin.
+5. **Aft salvage drydock** — x 1710–2036. Roof-rooted salvage mandibles, floor-anchored handling forks, a protected recovery approach and the eastern salvage shoulder.
+6. **Underkeel return** — x 650–1420, y 770–955. Broad alternate flight lane with varied grounded material-return pipes and pump pedestals, rather than an ornamental collapsed bottom or a fluid basin.
 
 **Scale:** accepted source Midge authored hull is only **4 × 3 cells** (a small body-thrust flyer). The canvas represents hundreds of hull widths; doors, work galleries and interdistrict air gaps are sized for actual movement. Static acceptance also tests far more conservative whole-hull 19×15 / 23×19 / 31×27 centre envelopes, plus narrow-region stress bans. This does **not** prove that the native inertia/controls can execute the same path.
 
@@ -72,10 +82,10 @@ The deterministic source and separately executed independent verifier require ex
 | Contract | Verified current build |
 |---|---:|
 | Final material plane | **2048 × 1024 = 2,097,152 cells** |
-| Nonair material cells | **676,133** |
-| Single connected boundary-rooted component | **676,133 / 676,133; zero floating** |
-| Nonoverlapping ordered material rectangles | **10,001 / 32,768** |
-| Serialized UTF-8 Setup-v2 bytes | **186,957 / 1,048,576** |
+| Nonair material cells | **717,416** |
+| Single connected boundary-rooted component | **717,416 / 717,416; zero floating** |
+| Nonoverlapping ordered material rectangles | **12,715 / 32,768** |
+| Serialized UTF-8 Setup-v2 bytes | **237,522 / 1,048,576** |
 | Actual full-plane replay mismatches / overlaps | **0 / 0** |
 | Exact destinations reachable | **13 / 13 at all three conservative footprints** |
 | Minimum visited local approaches | **4 of 4** |
@@ -83,13 +93,13 @@ The deterministic source and separately executed independent verifier require ex
 | PNG full plane + downsample + 1:1 crops | **8 / 8 CRC/zlib/pixel-parity PASS** |
 | Native Godot/Bridge/Rapier/flight/reopen | **NATIVE-UNTESTED** |
 
-**Material-ID plane SHA-256:** `c354b0d97cad32e4a30bc0c7334ca232a855a4469cbc00abca271ff9680abdea`
+**Material-ID plane SHA-256:** `329d59a7e3ab277d533b3b5b20555085179da1778bbc3dbb0877a65e957e6b97`
 
 Read-only engine authority as rechecked on 19 November 2026: [CyberSand accepted main](https://github.com/techrote/cybersand/commit/de109d0131641d6adc8d25bb9ced7ca3d4991105), [Workbench Setup-v2 parser](https://github.com/techrote/cybersand/blob/de109d0131641d6adc8d25bb9ced7ca3d4991105/godot/scripts/workbench_setup.gd), [material physical catalogue](https://github.com/techrote/cybersand/blob/de109d0131641d6adc8d25bb9ced7ca3d4991105/materials/catalogue/catalogue.json), [native material enum / physical-law kernel](https://github.com/techrote/cybersand/blob/de109d0131641d6adc8d25bb9ced7ca3d4991105/native/include/cybersand/material.hpp), [Midge authored control/hull](https://github.com/techrote/cybersand/blob/de109d0131641d6adc8d25bb9ced7ca3d4991105/godot/authoring/flyers/midge.json).
 
-The loader admits **2048 × 1024**, multiples of 64 in permitted 512–2048 limits. Source allows 32,768 rectangles; an old installed native bridge can still expose **only 4,096** and would reject this 10,001-rectangle file. Verify **installed** bridge capability before claiming an accepted Workbench evaluation.
+The loader admits **2048 × 1024**, multiples of 64 in permitted 512–2048 limits. Source allows 32,768 rectangles; an old installed native bridge can still expose **only 4,096** and would reject this 12,715-rectangle file. Verify **installed** bridge capability before claiming an accepted Workbench evaluation.
 
-Valid occupied IDs: **49 Slate, 58 ReinforcedConcrete, 62 SteelPlate, 100 BasaltColumns, 101 Obsidian, 113 ZincSheet, 117 BareIron, 120 GlassBlock, 123 UraniumGlass, 128 PolymerPanel**. All ten are accepted immobile Solid / RuleKernel None at initial state. No placeholder or pseudo materials, powder support or unbounded reactions.
+Actually occupied IDs: **49 Slate, 58 ReinforcedConcrete, 62 SteelPlate, 100 BasaltColumns, 101 Obsidian, 113 ZincSheet, 117 BareIron, 120 GlassBlock, 128 PolymerPanel**. All nine are accepted immobile Solid / RuleKernel None at initial state; 123 is not used in the final plane. No placeholder or pseudo materials, powder support or unbounded reactions.
 
 ## Actual source-grid image evidence
 
