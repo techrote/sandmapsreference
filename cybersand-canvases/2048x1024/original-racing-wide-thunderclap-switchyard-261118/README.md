@@ -1,4 +1,4 @@
-# Thunderclap Switchyard R12 — Original Industrial / Sci-Fi Racing
+# Thunderclap Switchyard R13 — Original Industrial / Sci-Fi Racing
 **OPEN Draft / HOLD · ORIGINAL-NO-REFERENCE · NATIVE-UNTESTED · 19 November 2026.**
 Original source-free 2048×1024 material-cell landscape. Authored directly as a two-dimensional orthographic side-elevation game world; no source picture, backdrop or pseudo-3D platforms.
 
@@ -12,6 +12,17 @@ A giant disused interplanetary magnet-rail switchyard is divided into five worki
 **Lower technical route:** West dive (443,612) → west undercroft (614,752) → ceiling bank (728,776) → floor bank (854,721) → Iris lower transit (1072,753) → east ceiling bank (1338,772) → east floor bank (1520,742) → tunnel exit (1614,753) → recovery. Banks are real, alternating full-hull obstacles. This separate confined 31×27 course crosses all seven exact checkpoints without using the upper straight. The tightest tested x1338 aperture retains 21 legal centre rows.
 
 **Working inspection detour:** Access and return via the west and east mouths into the actual Weigh Inspection Bay at (1500,670); descent connects to the lower track. The infeed, calibration bridge and release platform are three distinct material-cell structures, not functional race timing triggers. No checkpoint clock is implemented.
+
+## R12 → R13: quieter acceleration hierarchy and supported race-portal silhouettes
+
+This real material-cell revision addresses the [19 November independent R12 Shepherd REWORK](https://github.com/techrote/sandmapsreference/pull/17#issuecomment-7001000845). The fast y445 line, high route, working inspection bay, two-sided finish jaws, all named actor sites and all four lower-bank geometries remain. The changes are authored directly from the racing route and installed on original material cells, not traced imagery.
+
+- **Suppress the industrial-signal collage, not the race geometry:** three bounded Drift/Iris/Glassstorm service bands (x435–766/y288–626; x777–1313/y337–653; x1315–1837/y313–595) now convert competing isolated bright signal/blue/white occupied material IDs into quieter iron, steel and zinc IDs. The Iris crown motif above y337, the inhabited Glassstorm weighing stage, lower-bank face markings and the open high-speed runway remain the principal visual hierarchy.
+- **Identify course entrances at speed:** four wide directional, solid-backed leading edges at the west descent (near x351/x545) and east ascent (near x1653/x1812) are recoloured on existing founded masonry. No flight-space pixel becomes occupied; these distinguish DESCEND from ASCEND instead of installing more hanging decorations.
+- **Remove loose visual fragments:** 778 detached inert-solid cells in bounded small airborne components were removed; 11,131 other solid cells were rematerialised. **Total actual R12→R13 material-ID difference: 11,909; zero added obstacles.** Detached solid remainder decreases **3,735→2,957** and is *not* represented as universally grounded.
+- **Qualification:** [Node 22 build and independent verifier PASS, run 44470822961](https://github.com/techrote/sandmapsreference/actions/runs/44470822961). Committed canonical source emits 12,763 nonoverlapping rectangles, 240,875 UTF-8 bytes, 939,543 painted material-cell visits and 14 authentic indexed material PNGs. Exact 15/15 sites at all three full envelopes, 14/15 under real blocked-Iris geometry (finish reached), seven out of seven bounded 31×27 S-turn waypoints and all 26 grounded structural probes remain valid. Exact output hashes and 0 PNG-grid mismatches are in the receipt.
+
+**Status:** source STATIC-QUALIFIED only; latest-HEAD independent Art/Technical/Shepherd decisions and installed Workbench Midge dynamics/collision/physics/save-reopen remain **NATIVE-UNTESTED**. R13 is not a declaration of owner or racing-feel acceptance.
 
 ## R11 → R12: occupied-cell negative-space and racing hierarchy repair
 
@@ -58,24 +69,24 @@ Read-only authority: [CyberSand accepted main @ de109d0131641d6adc8d25bb9ced7ca3
 
 All occupied materials are numeric IDs **49, 58, 62, 100, 101, 113, 117, 120, 122, 123, 128**: accepted immovable inert Solid with RuleKernel::None. There is no unstable powder foundation, mobile fluid or active chemical experiment to contain.
 
-| Static qualification | Current regenerated R12 result |
+| Static qualification | Current regenerated R13 result |
 |---|---:|
 | Exact material grid | 2048×1024 = 2,097,152 cells |
-| Ordered, nonoverlapping rectangles | 13035 / 32,768 |
-| Ordinary Setup-v2 JSON bytes | 245989 / 1,048,576 |
+| Ordered, nonoverlapping rectangles | 12763 / 32,768 |
+| Ordinary Setup-v2 JSON bytes | 240875 / 1,048,576 |
 | Material-cell replay mismatch and overlaps | 0 / 0 |
 | Conservative 19×15, 23×19 and 31×27 named sites | 15/15, 15/15, 15/15 |
 | Physical blocked-Iris alternate | 14/15, finish reached |
 | Bounded lower-only 31×27 route | 7/7 |
 | Named grounded structural probes | 26/26 |
-| Remaining detached inert-solid cells (not all guaranteed decoration) | 3735 |
+| Remaining detached inert-solid cells (not all guaranteed decoration) | 2957 |
 | Material-PNGs generated and internally exact-pixel checked | 14/14 |
 | Installed native Workbench/CyberDemoBridge/Rapier input/collision/ticks/save/reopen | **NATIVE-UNTESTED** |
 
-The machine-readable [qualification receipt](qualification.json) records **full SHA-256** for committed Setup-v2 JSON, entire row-major cell plane, material histogram, full material-PNG set, blocked-Iris reach, exact full-envelope centres, grounded probes, and actual generated-image parity. It is produced by the deterministic builder rather than copied from older revisions. R12 hashes and delta are independently checked by the Node 22 exact-source workflow and committed evidence; authoritative committed setup/grid hashes are in that receipt.
+The machine-readable [qualification receipt](qualification.json) records **full SHA-256** for committed Setup-v2 JSON, entire row-major cell plane, material histogram, full material-PNG set, blocked-Iris reach, exact full-envelope centres, grounded probes, and actual generated-image parity. It is produced by the deterministic builder rather than copied from older revisions. R13 hashes and delta are independently checked by the Node 22 exact-source workflow and committed evidence; authoritative committed setup/grid hashes are in that receipt.
 
 ## Reproduction and real-cell evidence
-Execute **Node 22** from this folder: `node build.cjs --verify` regenerates the committed bytes and checks exact JSON / all 14 image artifacts; `node verify-independent.cjs` separately replays all edits, checks 15 exact named destinations at three footprints, blocked-Iris and lower-only challenges, hashes, PNG signature/chunk CRC/zlib/IEND and every PNG material pixel independently of the builder. The GitHub Actions lane workflow runs the builder and independent verifier and publishes any changed outputs **on this same Draft branch**. A passing workflow for a previous SHA must never be cited as an R12 pass.
+Execute **Node 22** from this folder: `node build.cjs --verify` regenerates the committed bytes and checks exact JSON / all 14 image artifacts; `node verify-independent.cjs` separately replays all edits, checks 15 exact named destinations at three footprints, blocked-Iris and lower-only challenges, hashes, PNG signature/chunk CRC/zlib/IEND and every PNG material pixel independently of the builder. The GitHub Actions lane workflow runs the builder and independent verifier and publishes any changed outputs **on this same Draft branch**. A passing workflow for a previous SHA must never be cited as an R13 pass.
 
 ![2048×1024 real indexed material-cell full world](overview.png)
 ![Nearest-sampled 1:2 visual review of the same material world](overview-review-2x.png)
