@@ -568,8 +568,11 @@ box(45,410,75,419,113)
 # supported by the existing rooted refinery deck at x1336..1652,y623.
 # The bridge sits entirely BETWEEN the two 31x27 constrained flight lanes:
 # roof alternate y<390 and sump alternate y>650 remain unobstructed.
-box(1034,517,1047,621,62)
-box(1040,613,1348,629,62)
+# Lifted conduit creates a clear lower bypass at y>650, with its anchoring
+# riser entirely beyond the constrained central x650..1200 flight window.
+box(1034,517,1047,580,62)
+box(1040,567,1349,581,62)
+box(1338,569,1351,631,62)
 box(807,413,823,535,62)
 box(817,510,899,524,62)
 box(827,499,889,510,113)
