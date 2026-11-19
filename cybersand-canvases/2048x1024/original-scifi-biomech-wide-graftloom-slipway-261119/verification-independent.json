@@ -1,0 +1,253 @@
+{
+  "independent": true,
+  "source": "Setup-v2 ordered rectangles, not builder memory",
+  "native_status": "NATIVE-UNTESTED",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_plane_sha256": "0f76367d83c2570a2ef46a79b470178c17a2ee454ecf09ccbd226771f4e68ddb",
+  "setup_bytes": 218774,
+  "setup_sha256": "52a9b7c625cb501ac6ca2f41d52ac9616be51178420371ee3c9a5e9c8ca32f4b",
+  "rectangles": 11717,
+  "occupied_cells": 763178,
+  "png_proofs": [
+    {
+      "name": "overview.png",
+      "pixels": [
+        2048,
+        1024
+      ],
+      "sha256": "12d052ca632f2ee3ea98029eecd93f1ba83250663ca1e2bf5bccd6978dfbb883",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "review-half.png",
+      "pixels": [
+        1024,
+        512
+      ],
+      "sha256": "740d45f1c5f660d2534792cd2af9246a70776f07f7f39f3f033fa075dd5aa5ca",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "01-receiving-slip.png",
+      "pixels": [
+        512,
+        650
+      ],
+      "sha256": "90b7bf75c55ca1a42c065e5e43cb586e1659ac97d7b35c50deb9f4d7a2d37db4",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "02-crane-and-entry.png",
+      "pixels": [
+        470,
+        610
+      ],
+      "sha256": "fed8ff490753064764bc31a940559a374f5aafd0cbecd76721b95b12f3975d71",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "03-memory-engine.png",
+      "pixels": [
+        510,
+        545
+      ],
+      "sha256": "4c6d0dd5b947292e3c6b549b47b879e1a4bdddcd1f9ffc8555217a307571b877",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "04-refinery-filter.png",
+      "pixels": [
+        430,
+        605
+      ],
+      "sha256": "00140d74d5d5f52f0f653a627606ee27c112597c86a36c8a5f164c9ad206cad6",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "05-aft-dock.png",
+      "pixels": [
+        330,
+        750
+      ],
+      "sha256": "1805307392cd54e5e7f26b032ee575f62ca807bcbddebbb0b95ec07be14f599a",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    },
+    {
+      "name": "06-lower-return.png",
+      "pixels": [
+        770,
+        250
+      ],
+      "sha256": "1b69e154cdb3f3c320a4b331f5bff92adf950ff3b145d82395dee232a43e35ab",
+      "crc_chunks_and_exact_pixel_parity": "PASS"
+    }
+  ],
+  "clearance": {
+    "19x15": {
+      "exact_sites": 13,
+      "connected_legal_centres": 914558,
+      "minimum_approaches": 4
+    },
+    "23x19": {
+      "exact_sites": 13,
+      "connected_legal_centres": 861844,
+      "minimum_approaches": 4
+    },
+    "31x27": {
+      "exact_sites": 13,
+      "connected_legal_centres": 755089,
+      "minimum_approaches": 4
+    }
+  },
+  "alternate_route_connected_centres": {
+    "upper_via_roof": 626139,
+    "lower_via_sump": 583999
+  },
+  "structural_topology": {
+    "components": 34,
+    "boundary_grounded_cells": 646574,
+    "detached_cells": 116604,
+    "detached_components": 33,
+    "largest_detached_components": [
+      {
+        "cells": 39183,
+        "bbox": [
+          1204,
+          185,
+          1704,
+          386
+        ]
+      },
+      {
+        "cells": 29054,
+        "bbox": [
+          753,
+          386,
+          1082,
+          550
+        ]
+      },
+      {
+        "cells": 14656,
+        "bbox": [
+          921,
+          522,
+          1208,
+          769
+        ]
+      },
+      {
+        "cells": 11407,
+        "bbox": [
+          630,
+          527,
+          829,
+          775
+        ]
+      },
+      {
+        "cells": 6121,
+        "bbox": [
+          806,
+          609,
+          1044,
+          637
+        ]
+      },
+      {
+        "cells": 3768,
+        "bbox": [
+          675,
+          527,
+          923,
+          681
+        ]
+      },
+      {
+        "cells": 2032,
+        "bbox": [
+          1706,
+          355,
+          1829,
+          371
+        ]
+      },
+      {
+        "cells": 1602,
+        "bbox": [
+          1734,
+          772,
+          1782,
+          875
+        ]
+      },
+      {
+        "cells": 951,
+        "bbox": [
+          630,
+          386,
+          672,
+          414
+        ]
+      },
+      {
+        "cells": 934,
+        "bbox": [
+          883,
+          443,
+          953,
+          483
+        ]
+      },
+      {
+        "cells": 757,
+        "bbox": [
+          1168,
+          386,
+          1208,
+          408
+        ]
+      },
+      {
+        "cells": 685,
+        "bbox": [
+          1528,
+          529,
+          1577,
+          581
+        ]
+      },
+      {
+        "cells": 646,
+        "bbox": [
+          1449,
+          530,
+          1492,
+          581
+        ]
+      },
+      {
+        "cells": 554,
+        "bbox": [
+          1536,
+          386,
+          1582,
+          440
+        ]
+      },
+      {
+        "cells": 548,
+        "bbox": [
+          731,
+          866,
+          751,
+          921
+        ]
+      }
+    ]
+  },
+  "builder_sha256": "834364904a83c0936bfaf8a3108e77d305bf41fb5cf94681f02fb9f93af1ec75"
+}
