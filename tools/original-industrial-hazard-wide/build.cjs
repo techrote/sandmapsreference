@@ -480,7 +480,7 @@ if(typeof require!=='undefined' && require.main===module){
    const r=build(i),sp=r.spec,dir=path.join(ROOT,'original-industrial-hazard-wide-'+sp.slug);
    const files=composeArtifacts(r,cellRenderer,bytes=>crypto.createHash('sha256').update(bytes).digest('hex'));
    for(const [fn,bytes] of Object.entries(files)){
-     if(fn.endsWith('.png')){checkPng(bytes,r.grid,...(fn==='overview.png'?[0,0,W,H]:sp.crops.find(c=>c[0]+'.png'===fn).slice(1))); }
+     if(fn.endsWith('.png')){checkPng(Buffer.from(bytes),r.grid,...(fn==='overview.png'?[0,0,W,H]:sp.crops.find(c=>c[0]+'.png'===fn).slice(1))); }
      const target=path.join(dir,fn);
      if(VERIFY){if(!fs.existsSync(target)||!fs.readFileSync(target).equals(Buffer.isBuffer(bytes)?bytes:Buffer.from(bytes)))throw Error('stale '+target);}
      else {fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(target,bytes);}
