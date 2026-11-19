@@ -1,31 +1,32 @@
-# Thunderclap Switchyard R10 — original sci-fi industrial Midge racing
+# Thunderclap Switchyard R11 — Original Industrial / Sci-Fi Racing
+**OPEN Draft / HOLD · ORIGINAL-NO-REFERENCE · NATIVE-UNTESTED · 19 November 2026.**
+Original source-free 2048×1024 material-cell landscape. Authored directly as a two-dimensional orthographic side-elevation game world; no source picture, backdrop or pseudo-3D platforms.
 
-**OPEN Draft / HOLD · ORIGINAL-NO-REFERENCE · NATIVE-UNTESTED.** This is the existing racing-wide creator-owned original landscape, not a reworked repository image or imported concept art. Exact playable material plane: **2048×1024**, true flat orthographic 2D side elevation.
+## Architectural thesis, physical scale and flight goals
+A giant disused interplanetary magnet-rail switchyard is divided into five working districts: Launch and Dispatch (grounded west cradle), Drift Canyon (roof saws and upper dive), Split-Current Iris (crown-hung switching apparatus), Glassstorm (inhabited service and weigh facility), and eastern Catch/Brake/Recovery (founded two-sided deceleration jaws). Broad air voids divide clustered industrial machinery. One canvas pixel is exactly one simulator material cell, not a screen-space decorative pixel. Accepted Midge authored hull is 4×3, boost nominally 1.8; clearance is deliberately tested with much larger 19×15, 23×19, and 31×27 fully contained envelopes.
 
-## Design thesis, routes and Midge scale
+**Main launch-to-finish route:** (116,445) → (841,445) → (1037,448) → (1323,454) → (1506,453) → (1826,449) → (1943,446). The full 1,828-centre y445 straight remains wide and unobstructed for a true speed-run option.
 
-An abandoned interplanetary **magnet-rail switchyard** has become a three-altitude Midge time-trial route through five different industrial functions: **Launch/Dispatch**, fractured **Drift Canyon**, opposed-stator **Split-Current Iris**, working-scale **Glassstorm weigh/inspection**, and the eastern **Catch/Brake/Recovery** station. The skyline alternates large air voids with dense, mechanically legible structures. The selected actor is the accepted `midge` flyer, authored 4×3 cell hull, nominal boost multiplier 1.8. The operational stress checks use fully-contained 19×15, 23×19, and 31×27 footprint envelopes, much larger than that hull.
+**High detour:** Dispatch roof bypass (203,329) → Drift high (617,356) → opposed Iris crown gallery → eastern rejoin.
 
-A world cell is one physical material cell; no background painting, perspective decks, fake platforms, copied source image or AI render enters the authored setup. The deliberately wide primary straight is not blocked to force optional routes.
+**Lower technical route:** West dive (443,612) → west undercroft (614,752) → ceiling bank (728,776) → floor bank (854,721) → Iris lower transit (1072,753) → east ceiling bank (1338,772) → east floor bank (1520,742) → tunnel exit (1614,753) → recovery. Banks are real, alternating full-hull obstacles. This separate confined 31×27 course crosses all seven exact checkpoints without using the upper straight. The tightest tested x1338 aperture retains 21 legal centre rows.
 
-- **Main high-speed line:** Launch (116,445) → Iris west (841,445) → Iris chamber (1037,448) → east conductor (1323,454) → Glassstorm (1506,453) → catch cliff (1826,449) → real finish (1943,446).
-- **Upper alternative:** Dispatch bypass (203,329) → Drift high (617,356) → crown crossing and upper collector → eastern main-line rejoin.
-- **Real lower slalom alternative:** West dive (443,612) → west undercroft (614,752) → ceiling/floor banks (728,776) and (854,721) → Iris under-transfer (1072,753) → eastern ceiling/floor banks (1338,772), (1520,742) → east tunnel exit (1614,753) → east lift/recovery. This is genuine full-hull geometry, not a decorative lower strip.
-- **Inspection branch:** linked lower-route Glassstorm inspection bay **(1500,670)**, with an approach → weighing scale → released exit and a connected descent at x1400–1457, plus optional recovery basin (1883,767).
+**Working inspection detour:** Access and return via the west and east mouths into the actual Weigh Inspection Bay at (1500,670); descent connects to the lower track. The infeed, calibration bridge and release platform are three distinct material-cell structures, not functional race timing triggers. No checkpoint clock is implemented.
 
-## R9 → R10 authoring repair · 19 November 2026
+## R10 → R11: independent Shepherd flight-line clarity rework
+Responds to [independent R10 Shepherd REWORK](https://github.com/techrote/sandmapsreference/pull/17#issuecomment-6999059794), preserving the independently static-qualified route graph.
 
-Responding to the independent [R9 Shepherd REWORK](https://github.com/techrote/sandmapsreference/pull/17#issuecomment-6998178287), this revision makes the weigh bay read as a **three-stage operating station** rather than isolated instrumentation. Broad occupied-cell infeed colouring on the left, the central calibration rail/scale bed, and a contrasting right-hand exit are mutually distinguishable at normal cell zoom. Visual clutter from scattered tiny signals around the service zone is consolidated into engineering bands.
+- **Subtractive visual repair:** eliminate selected disconnected small high-flight clutter over the eastern crossover, remove the obsolete ungrounded western dive-shaft fixture, and recolour competing tiny signal-colour blocks *only where actual material is already present*. This improves race approach visibility without installing new collision flags in empty flight air.
+- **Physical supports:** two previously floating 480-cell low-bank equipment assemblies receive continuous, grounded downward steel/iron mounts, starting below the checked racing clearance. Structural probes now include both new moorings.
+- **Operational weigh station:** widen the two service mouths, reinforce a single calibrated horizontal balance bridge and contrast infeed, scale and exit as successive founded stages. The site (1500,670) stays an exact legal 31×27 actor centre.
+- **Deceleration sequence:** the existing grounded twin rails carry a large two-part capture/release contrast; a small below-jaw release recess is excavated while the actual finish corridor and y445 fast straight remain unobstructed.
+- **Collision protection:** all four physical lower S-course bank obstacles are retained. A full real-material 31×27 BFS, independent bounded lower course, actual physical-Iris blockage test and full-grid PNG parity remain mandatory.
 
-West dive and east return receive different, large, solid-backed advance/direction cues. Four lower S-course banks gain larger turn-leading surface contrast without adding collision to the existing racing apertures. The east finish gains a **continuous two-sided brake throat** with grounded steel/iron upper and lower lips around the exact centre y≈446, preserving the 31×27 flight envelope. Small disconnected detail is still honestly classified as decorative unless a physical cardinal support can be demonstrated.
+The independently measured R10→R11 physical-grid delta is **12,741** material IDs: 61 newly occupied, 2,728 excavated and 9,952 reclassified. Existing decorations not selected by the surgical clearing pass remain; R11 does **not** claim every detail is anchored. Actual racing time, velocity and inertia still require human/native piloting.
 
-**Actual R9→R10 material delta:** 23,005 changed cell IDs (2,131 added occupied, 0 erased, 20,874 recoloured stable solids). The only added collision geometry is at the new finishing catch lips and their grounded mechanical attachment; the entry/turn/bay cues are rematerialisation of already occupied cells.
-
-## Exact functional destinations
-
-All following sites are **exact** centre coordinates from the final setup and receipt. No substitute position, nearest-clear lookup, or waived waypoint radius is used.
-
-| Site | (x, y) |
+## Named exact gameplay sites
+No nearest-clear substitution, radius tolerance or moved target coordinates.
+| Destination | Exact centre |
 |---|---|
 | Launch cradle | (116, 445) |
 | Dispatch roof bypass | (203, 329) |
@@ -43,66 +44,48 @@ All following sites are **exact** centre coordinates from the final setup and re
 | Brake finish | (1943, 446) |
 | Recovery basin | (1883, 767) |
 
-## Current accepted-source/schema qualification
+## Accepted engine/source contract
+Read-only authority: [CyberSand accepted main @ de109d0131641d6adc8d25bb9ced7ca3d4991105](https://github.com/techrote/cybersand/commit/de109d0131641d6adc8d25bb9ced7ca3d4991105). Workbench ordinary Setup-v2 JSON; 512–2048 axes aligned to 64; 32,768 maximum source edit rectangles, 1 MiB UTF-8 setup and 32,000,000 maximum cell-visits in this extent. Native *source* bridge supports 32,768 rectangles; installed binaries can expose an older 4,096 limit and must be queried independently. Generated-start manifest rules are separate and are not falsely applied to this ordinary Setup-v2 payload.
 
-Read-only engine: [`techrote/cybersand main@de109d0131641d6adc8d25bb9ced7ca3d4991105`](https://github.com/techrote/cybersand/commit/de109d0131641d6adc8d25bb9ced7ca3d4991105). The accepted Setup-v2 source loader admits axes 512–2048 aligned to 64, up to 32,768 edits/rectangles, maximum 1,048,576 UTF-8 JSON bytes, eight actors, and at most min(64×world cells, 32,000,000) replay work visits. The source `CyberDemoBridge.workbench_start_rectangle_capacity()` advertises 32,768 but an absent or older **installed binary can fall back to only 4,096**. Source admission is NOT proof of the installed bridge's capacity.
+All occupied materials are numeric IDs **49, 58, 62, 100, 101, 113, 117, 120, 122, 123, 128**: accepted immovable inert Solid with RuleKernel::None. There is no unstable powder foundation, mobile fluid or active chemical experiment to contain.
 
-| Static gate | Exact R10 result |
-|---|---|
-| Extent and total grid | **2048×1024**, 2,097,152 material cells |
-| Nonoverlapping ordered 5-field rectangles | **13,573 / 32,768** |
-| Actual setup JSON | **256,611 / 1,048,576 bytes** |
-| Painted work visits | **956,090 / 32,000,000** |
-| Full-grid edit overlap/replay disagreement | **0 / 0** |
-| Exact named sites reachable at 19×15, 23×19, 31×27 | **15/15, 15/15, 15/15** |
-| Full straight high-speed lane at y445, 31×27 envelope | **1,828/1,828 legal consecutive centres** |
-| Connected 31×27 actor centres | **649,398** |
-| Physically blocked central Iris, including finish | **14/15** (central chamber itself intentionally obstructed) |
-| Independently confined lower-only 31×27 course | **7/7**, 69,649 legal connected centres |
-| Critical lower bank aperture at x1338 | **21 legal centre rows** |
-| Grounding of declared critical structural probes | **24/24** |
-| Residual physically detached occupied cells | **6,002**, not all claimed load-bearing |
-| Committed indexed PNGs, including 1:1 world + 12 district crops | **14/14** decoded and independent pixel parity PASS |
-| Godot/installed CyberDemoBridge/Rapier input, ticks, collision and save/reopen | **NATIVE-UNTESTED** |
+| Static qualification | Current regenerated R11 result |
+|---|---:|
+| Exact material grid | 2048×1024 = 2,097,152 cells |
+| Ordered, nonoverlapping rectangles | 13568 / 32,768 |
+| Ordinary Setup-v2 JSON bytes | 256360 / 1,048,576 |
+| Material-cell replay mismatch and overlaps | 0 / 0 |
+| Conservative 19×15, 23×19 and 31×27 named sites | 15/15, 15/15, 15/15 |
+| Physical blocked-Iris alternate | 14/15, finish reached |
+| Bounded lower-only 31×27 route | 7/7 |
+| Named grounded structural probes | 26/26 |
+| Remaining detached inert-solid decorative cells | 4213 |
+| Material-PNGs generated and internally exact-pixel checked | 14/14 |
+| Installed native Workbench/CyberDemoBridge/Rapier input/collision/ticks/save/reopen | **NATIVE-UNTESTED** |
 
-The entire grid uses only numeric IDs **49, 58, 62, 100, 101, 113, 117, 120, 122, 123, 128**, each an accepted inert, immovable Solid with RuleKernel::None at this source. No powder foundations, water, uncontained fluid, reactive growth, or fabricated material IDs. Decorative signal colours are themselves real static materials and can collide: the major raceway/side-entry clearances are therefore checked against the full physical cell grid.
+The machine-readable [qualification receipt](qualification.json) records **full SHA-256** for committed Setup-v2 JSON, entire row-major cell plane, material histogram, full material-PNG set, blocked-Iris reach, exact full-envelope centres, grounded probes, and actual generated-image parity. It is produced by the deterministic builder rather than copied from older revisions.
 
-**Grid SHA-256:** `8b41a991adadfd5a33cc5269b8fc81cf7efadddd84b6a977a4760b88c304e80f`  
-**Setup JSON SHA-256:** `98c71171d40b9c5089ae2db24552c49427f5a782ade42117908e1f3fc6ca48bc`
+## Reproduction and real-cell evidence
+Execute **Node 22** from this folder: `node build.cjs --verify` regenerates the committed bytes and checks exact JSON / all 14 image artifacts; `node verify-independent.cjs` separately replays all edits, checks 15 exact named destinations at three footprints, blocked-Iris and lower-only challenges, hashes, PNG signature/chunk CRC/zlib/IEND and every PNG material pixel independently of the builder. The GitHub Actions lane workflow runs the builder and independent verifier and publishes any changed outputs **on this same Draft branch**. A passing workflow for a previous SHA must never be cited as an R11 pass.
 
-## Reproducible standalone proof and evidence
+![2048×1024 real indexed material-cell full world](overview.png)
+![Nearest-sampled 1:2 visual review of the same material world](overview-review-2x.png)
 
-From this folder with **Node 22**: `node build.cjs --verify` compares a deterministic full-grid rebuild of the Setup-v2 JSON, the qualification receipt and every indexed PNG to the committed bytes. `node verify-independent.cjs` does **not import the builder**. It separately replays all rectangles, validates material enum, full-grid/hash/histogram, compares exact fully-contained 4-neighbour Midge clearance and lower-corridor/blocked-Iris routes, checks grounded support probes, and validates every PNG signature, chunk CRC, IEND, zlib decompression and **each material-index pixel** against the reconstructed grid.
+| Genuine material-cell evidence | Image extent | Grid sampling |
+|---|---:|---|
+| [overview.png](overview.png) | 2048×1024 | 1:1 cell sampling |
+| [overview-review-2x.png](overview-review-2x.png) | 1024×512 | 2:1 cell sampling |
+| [01-launch-cradle.png](01-launch-cradle.png) | 512×384 | 1:1 cell sampling |
+| [02-drift-canyon.png](02-drift-canyon.png) | 512×384 | 1:1 cell sampling |
+| [03-split-current-iris.png](03-split-current-iris.png) | 512×384 | 1:1 cell sampling |
+| [04-glassstorm-viaduct.png](04-glassstorm-viaduct.png) | 512×384 | 1:1 cell sampling |
+| [05-catch-recovery.png](05-catch-recovery.png) | 512×384 | 1:1 cell sampling |
+| [06-lower-s-turn-west.png](06-lower-s-turn-west.png) | 512×384 | 1:1 cell sampling |
+| [07-lower-s-turn-east.png](07-lower-s-turn-east.png) | 512×384 | 1:1 cell sampling |
+| [08-iris-service-braces.png](08-iris-service-braces.png) | 512×384 | 1:1 cell sampling |
+| [09-west-dive-portal.png](09-west-dive-portal.png) | 512×384 | 1:1 cell sampling |
+| [10-east-return-portal.png](10-east-return-portal.png) | 512×384 | 1:1 cell sampling |
+| [11-weigh-inspection-bay.png](11-weigh-inspection-bay.png) | 512×384 | 1:1 cell sampling |
+| [12-finish-catch-jaws.png](12-finish-catch-jaws.png) | 512×384 | 1:1 cell sampling |
 
-Both commands **passed in the exact-source [Node 22 GitHub Actions qualification](https://github.com/techrote/sandmapsreference/actions/runs/44450837136)** on 19 November 2026. This run also regenerated and committed the exact output assets.
-
-![Whole-world genuine material-cell PNG, 1:1](overview.png)
-
-![Whole-world genuine material-cell review overview, labelled 1:2](overview-review-2x.png)
-
-| Actual committed image | Pixel dimensions | Sample ratio | SHA-256 |
-|---|---:|---:|---|
-| [overview.png](overview.png) | 2048×1024 | 1:1 | `38c1314631ec7085…` |
-| [overview-review-2x.png](overview-review-2x.png) | 1024×512 | 1:2 | `e9e0abb8ab93aa70…` |
-| [01-launch-cradle.png](01-launch-cradle.png) | 512×384 | 1:1 | `45b862009d682f35…` |
-| [02-drift-canyon.png](02-drift-canyon.png) | 512×384 | 1:1 | `a84e4a47155793d9…` |
-| [03-split-current-iris.png](03-split-current-iris.png) | 512×384 | 1:1 | `dea9af985175c123…` |
-| [04-glassstorm-viaduct.png](04-glassstorm-viaduct.png) | 512×384 | 1:1 | `36f0b290f73f4167…` |
-| [05-catch-recovery.png](05-catch-recovery.png) | 512×384 | 1:1 | `9635ffaf4287df59…` |
-| [06-lower-s-turn-west.png](06-lower-s-turn-west.png) | 512×384 | 1:1 | `3bf7db44a5a5f3a5…` |
-| [07-lower-s-turn-east.png](07-lower-s-turn-east.png) | 512×384 | 1:1 | `d91225fdd298ebb7…` |
-| [08-iris-service-braces.png](08-iris-service-braces.png) | 512×384 | 1:1 | `d6c74e739e851161…` |
-| [09-west-dive-portal.png](09-west-dive-portal.png) | 512×384 | 1:1 | `5e70985441b53c1c…` |
-| [10-east-return-portal.png](10-east-return-portal.png) | 512×384 | 1:1 | `7db5f5f3455eaf52…` |
-| [11-weigh-inspection-bay.png](11-weigh-inspection-bay.png) | 512×384 | 1:1 | `2c75b2e49f05925b…` |
-| [12-finish-catch-jaws.png](12-finish-catch-jaws.png) | 512×384 | 1:1 | `20fc2dfa38ede049…` |
-
-The 1:2 overview is a nearest sampled presentation of the same physical material plane; it does **not** substitute for the 2048×1024 indexed full overview. Crops are original 1:1 cells, not illustrative paintings or screenshots. All evidence is regenerated from the committed deterministic builder.
-
-## Limitations / owner gate
-
-**NATIVE-UNTESTED**, not native PASS: no source-matched installed Godot/Workbench/CyberDemoBridge/Rapier executable was available in this authoring environment. No actual Workbench import/install, live Midge thrust/boost/braking/collision, sustained solver ticks, true checkpoint timing, camera handling, save, full process restart or reopen was exercised. The static reachability checks prove legal collision envelopes, **not** flyable racing speed or human fun at the requested operating zoom. The installed bridge should be queried for `workbench_start_rectangle_capacity` before import; 13,573 rectangles exceed the older 4,096 fallback.
-
-Self-critical review after R10: the infeed/calibration/exit sequence and twin-jaw finish read more coherently in authentic unscaled crops, but the world remains busy in its densest industrial districts and residual decorative free-standing material remains. An independent exact-HEAD Art/Fidelity and Shepherd decision is still required; do not infer acceptance from source-side static PASS.
-
-**Open Draft / HOLD**. No merge, auto-merge, Ready transition, engine modifications, external reference conversion, or owner approval.
+**Limitations / owner test:** NATIVE-UNTESTED. No source-matched installed executable was available here: not measured installed rectangle capacity, no Workbench import or new-process save/reopen, no actor thrust/boost/collision or real-time physics. Static route legality does not establish a comfortable competitive high-speed lap. At full normal play zoom, independent Art/Fidelity and Shepherd must still evaluate image hierarchy, weigh-scale stages and recovery sequence. Do not merge, mark Ready, enable auto-merge or claim owner acceptance.

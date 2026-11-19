@@ -667,6 +667,59 @@ function buildWideCanvas() {
   tintFace([[1980,380],[2003,375],[2039,385],[2039,406],[1996,399]],mat.BLUE);
   tintFace([[1981,521],[2009,512],[2039,508],[2039,531],[1996,532]],mat.IRON);
 
+
+  // R11: subtractive race-line repair following exact-R10 Shepherd feedback.
+  // Selectively erase only independently ungrounded decoration in the crowded
+  // eastern flyover and the obsolete midshaft dangling unit; preserve supported
+  // steelworks, intentionally engineered 31x27 race obstacles and actor sites.
+  function clearDetachedWhere(want){
+    const visited=new Uint8Array(W*H),queue=new Int32Array(W*H);
+    for(let start=0;start<g.length;start++){
+      if(!g[start]||visited[start])continue;
+      let rd=0,wr=1,x0=W,x1=0,y0=H,y1=0,boundary=false;
+      queue[0]=start;visited[start]=1;
+      while(rd<wr){
+        const i=queue[rd++],x=i%W,y=(i/W)|0;
+        x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);
+        if(x===0||x===W-1||y===0||y===H-1)boundary=true;
+        for(const k of [x>0?i-1:-1,x+1<W?i+1:-1,y>0?i-W:-1,y+1<H?i+W:-1])
+          if(k>=0&&g[k]&&!visited[k]){visited[k]=1;queue[wr++]=k;}
+      }
+      if(!boundary&&want(x0,x1,y0,y1,wr))
+        for(let j=0;j<wr;j++)g[queue[j]]=mat.E;
+    }
+  }
+  clearDetachedWhere((x0,x1,y0,y1,n)=>
+    (x0>=450&&x1<=489&&y0>=630&&y1<=680&&n>=500) ||
+    (x0>=1300&&x1<=1800&&y0>=280&&y1<=390&&n<=250)
+  );
+  // Old lower-bank floating equipment now has true founded load members.
+  // Posts begin below the qualified bank apertures and connect to bedrock.
+  L(668,807,668,884,15,mat.IRON);
+  L(1358,806,1358,883,15,mat.STEEL);
+  // Consolidate signal-colour noise strictly on already occupied solids;
+  // no physically collidable "painted" pixels are added in the flight void.
+  r10Tint(1320,250,1772,387,mat.SIGNAL,mat.IRON);
+  r10Tint(1710,547,1950,691,mat.SIGNAL,mat.STEEL);
+  // Three sequential working-scale stages: wide intake, calibration platform,
+  // broad release throat. Actual inspection centre (1500,670) remains clear.
+  R(1369,647,53,45,mat.E);
+  R(1597,647,50,45,mat.E);
+  L(1460,642,1558,642,11,mat.STEEL);
+  tintStroke(1465,641,1553,641,11,mat.QUARTZ);
+  tintStroke(1374,604,1419,611,21,mat.BLUE);
+  tintStroke(1592,611,1632,622,21,mat.ZINC);
+  tintFace([[1372,593],[1394,582],[1434,594],[1437,616],[1392,612]],mat.CONCRETE);
+  tintFace([[1468,696],[1560,696],[1572,707],[1454,709]],mat.BLUE);
+  tintFace([[1584,597],[1627,596],[1642,626],[1608,632]],mat.IRON);
+  // One high-contrast approach / capture / release progression on the two
+  // supported jaws, instead of detached lights in the Midge race aperture.
+  tintStroke(1863,398,1930,399,17,mat.ZINC);
+  tintStroke(1932,399,2005,402,17,mat.QUARTZ);
+  tintStroke(1865,501,1930,502,17,mat.BLUE);
+  tintStroke(1932,502,2005,502,17,mat.IRON);
+  // Eastern below-jaw release-pocket void, clear of the y445 fast line.
+  R(1964,547,32,26,mat.E);
     // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -737,7 +790,9 @@ function buildWideCanvas() {
     ["Upper brake catch",2000,398],
     ["Lower brake catch",2000,512],
     ["R10 upper continuous catch rail",1900,397],
-    ["R10 lower continuous catch rail",1900,501]
+    ["R10 lower continuous catch rail",1900,501],
+    ["R11 west low-floor bank mooring",668,820],
+    ["R11 east low-floor bank mooring",1358,820]
   ];
   for(const [name,x,y] of supportSites){
     if(!grounded[y*W+x])throw Error("STRUCTURAL_SUPPORT_FAIL "+name+" ("+x+","+y+")");
@@ -899,7 +954,7 @@ const crypto=require("node:crypto");
 const shab=(v)=>crypto.createHash("sha256").update(v).digest("hex");
 const setupName="setup-thunderclap-switchyard.json";
 const prior=JSON.parse(fs.readFileSync("qualification.json","utf8"));
-let delta=prior.r9_to_r10_cell_delta;
+let delta=prior.r10_to_r11_cell_delta;
 if(!delta) {
  const old=JSON.parse(fs.readFileSync(setupName,"utf8")),oldGrid=new Uint8Array(r.W*r.H);
  for(const [x,y,w,h,m] of old.edits)for(let yy=y;yy<y+h;yy++)oldGrid.fill(m,yy*r.W+x,yy*r.W+x+w);
@@ -919,9 +974,9 @@ const pngs=r.gallery.map(p=>({
 const writtenVisits=r.edits.reduce((n,e)=>n+e[2]*e[3],0);
 const receipt={
  ...prior,
- kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R10",
+ kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R11",
  created_utc:"2026-11-19",
- previous_branch_head:"a559d1c888fbb63afa6d383170f417b9a694d8f1",
+ previous_branch_head:"bdda61a729a33a2494d036f79dc7702482f7195f",
  engine_main_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",
  terrain_rectangles:r.edits.length,
  setup_json_bytes:Buffer.byteLength(r.json,"utf8"),
@@ -942,13 +997,14 @@ const receipt={
  lower_corridor_only:r.lowerCorridor,
  grounded_support_probes:r.supportSites.map(([name,x,y])=>({name,x,y,cardinal_grounding:!!r.grounded[y*r.W+x]})),
  detached_solid_cells:writtenVisits-r.grounded.reduce((v,x)=>v+x,0),
- r9_to_r10_cell_delta:delta,
+ r10_to_r11_cell_delta:delta,
  pngs,
  installed_bridge_rectangle_capacity:"NATIVE-UNTESTED",
  native_workbench_install_input_collision_simulation_save_reopen:"NATIVE-UNTESTED",
  code_execution:"Node 22 GitHub Actions; independent exact-setup replay and committed PNG verification in verify-independent.cjs"
 };
 delete receipt.r8_to_r9_cell_delta;
+ delete receipt.r9_to_r10_cell_delta;
 if(receipt.terrain_rectangles>32768||receipt.setup_json_bytes>1048576||receipt.cell_visits>32000000)throw Error("CAPACITY");
 if(receipt.exact_reach["31x27"].reached!==15||receipt.physical_iris_obstruction.reached.length!==14)throw Error("CLEARANCE");
 const artifacts=[
@@ -964,7 +1020,7 @@ for(const [name,bytes] of artifacts){
    }else console.log("PASS:",name,bytes.length);
  } else {fs.writeFileSync(name,bytes);console.log("WRITE:",name,bytes.length);}
 }
-console.log("R10",JSON.stringify({
+console.log("R11",JSON.stringify({
  rectangles:receipt.terrain_rectangles,bytes:receipt.setup_json_bytes,
  grid:receipt.grid_sha256,delta,reach:receipt.exact_reach,
  lower:receipt.lower_corridor_only.access_points.length,detached:receipt.detached_solid_cells
