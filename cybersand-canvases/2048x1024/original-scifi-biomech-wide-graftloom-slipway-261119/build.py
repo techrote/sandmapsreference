@@ -781,6 +781,40 @@ R5_DETACHED = anchored_only(A, False)
 assert R5_DETACHED == 0, ('R5 unsupported material fragments', R5_DETACHED)
 FINAL_DETACHED = R5_DETACHED
 
+# R6 — site-level MNEMONIC EXAMINATION WORKFACE, deliberately split across a
+# fully navigable 56-cell centre throat. The existing roof-grounded *left*
+# specimen inlet and *right* diagnostic rack form ONE dry assay installation.
+# A real 31x27 Midge can fly INTO the opening at (925,328), observe the opposed
+# instruments, then descend to the unchanged Memory Core goal (921,468).
+# Both rooted consoles terminate safely ABOVE the independently constrained
+# roof transit band (y < 390), without crossing the lower sump bypass. This
+# answers the art P1 with a functional proximal station, not a floating ring,
+# a tether across the open central flight void, or a relocated legacy site.
+# Architectural acceptance remains an independent Shepherd/Art judgement.
+PRE_R6 = A[:]
+# Asymmetric left keyed specimen inlet, attached to rooted west mnemonic lobe.
+box(851,325,907,337,62)
+box(855,337,900,345,117)
+box(862,345,872,357,62)
+box(882,338,898,347,120)
+box(872,315,905,326,113)
+box(876,309,886,316,120)
+# Contrasting right multi-window readout with taller hanging analytical jaws.
+box(963,320,1024,336,62)
+box(967,336,1016,344,117)
+box(1003,344,1016,356,62)
+box(976,339,995,349,120)
+box(993,314,1017,323,113)
+box(1003,305,1013,315,120)
+# The intervening x907..963 throat is intentionally OPEN; a continuous
+# 31x27 clearance at x925 connects the bay to the original core destination.
+R6_BAY_CHANGED_CELLS = sum(u != v for u,v in zip(PRE_R6,A))
+assert R6_BAY_CHANGED_CELLS >= 2000, ('no substantial diagnostic installation',R6_BAY_CHANGED_CELLS)
+R6_BAY_DETACHED = anchored_only(A,False)
+assert R6_BAY_DETACHED == 0, ('unsupported diagnostic workface',R6_BAY_DETACHED)
+SITES['memory_diagnostic_workface'] = (925,328)
+FINAL_DETACHED = R6_BAY_DETACHED
+
 # The former direct welds are superseded by grounded split architecture; retain exact route audits.
 
 def rectangles(a):
