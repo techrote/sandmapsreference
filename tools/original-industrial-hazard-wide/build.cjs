@@ -1,4 +1,5 @@
 'use strict';
+const finishCells = require('./finish.cjs');
 // ORIGINAL INDUSTRIAL HAZARD WIDE -- wholly authored cell geometry, no source art.
 // Node 24: node build.cjs    (builds two independent self-contained Setup-v2 worlds)
 // Node 24: node build.cjs --verify  (regenerates and checks all emitted files)
@@ -303,8 +304,9 @@ function construct(spec,index){
    }
    return {ncomponents,applied,unlinked,protected_paths:spec.sites.length};
  }
+ const finishReceipt=finishCells(g,index,spec,{W,H,MAT,legalCentres});
  const supportReceipt=anchorAssemblies();
- return {grid:g,op,supportReceipt};
+ return {grid:g,op,supportReceipt,finishReceipt};
 }
 function rects(g){
  const out=[],active=new Map();let runs=0;
@@ -327,7 +329,7 @@ function rects(g){
 function replay(edits){
  const g=makePlane();let overlap=0;
  for(const [x,y,w,h,m] of edits){
-   if(x<0||y<0||w<1||h<1||x+w>W||y+h>H||![3,8,58,100,101,117,120,122,123].includes(m))throw Error('bad edit '+JSON.stringify([x,y,w,h,m]));
+   if(x<0||y<0||w<1||h<1||x+w>W||y+h>H||![3,8,58,62,63,68,70,76,77,79,100,101,104,117,120,122,123,128,131].includes(m))throw Error('bad edit '+JSON.stringify([x,y,w,h,m]));
    for(let yy=y;yy<y+h;yy++)for(let xx=x;xx<x+w;xx++){
      const p=yy*W+xx;if(g[p])overlap++;g[p]=m;
    }
@@ -408,6 +410,7 @@ function build(i){
  const spec=specs[i],r=construct(spec,i),z=rects(r.grid),result=qualify(spec,r.grid,z.edits);
  result.grid=r.grid;result.spec=spec;result.receipt.paint_operations=r.op;
  result.receipt.structural_supports=r.supportReceipt;
+ result.receipt.material_finish=r.finishReceipt;
  result.receipt.unmerged_row_runs=z.rowRuns;
  return result;
 }
