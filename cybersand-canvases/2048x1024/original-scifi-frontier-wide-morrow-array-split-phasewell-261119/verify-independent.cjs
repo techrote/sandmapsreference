@@ -51,7 +51,7 @@ for(const [w,h] of [[19,15],[23,19],[31,27]]){
  const missed=Object.entries(sites).filter(([_,[x,y]])=>!visited[y*W+x]).map(([n])=>n);
  insist(!missed.length,"unreachable exact sites "+w+"x"+h+": "+missed.join(", "));
  const target=receipt.clearance.find(c=>c.size[0]===w&&c.size[1]===h);
- insist(target&&target.reached===undefined&&target.airCentres===tail,"air-centre receipt mismatch");
+ insist(target&&target.reached===Object.keys(sites).length&&target.airCentres===tail,"air-centre receipt mismatch");
  flight.push({footprint:[w,h],exact: Object.keys(sites).length,reachable:tail});
 }
 // Explicit independent PNG chunk/CRC/inflate/checksum and exact grid pixel parity.
