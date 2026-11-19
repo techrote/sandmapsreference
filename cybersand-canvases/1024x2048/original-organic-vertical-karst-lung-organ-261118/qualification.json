@@ -1,0 +1,889 @@
+{
+  "format": "cybersand-original-canvas-qualification-v1",
+  "concept": "The Karst Lung Organ",
+  "lane": "original-organic-vertical",
+  "original_reference_free": true,
+  "extent": [
+    1024,
+    2048
+  ],
+  "seed_hex": "0x4b415253",
+  "source_authority": {
+    "cybersand_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+    "workbench_setup_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+    "material_header_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+    "midge_definition_blob": "228399e38a0e0ab215b9f48698edce67a7a35799"
+  },
+  "source_sha256": "c9d9d003477808911ba93c6f659e5fa76056f26b6a11379fcc25b2c1cb55b47b",
+  "grid_sha256": "3b523b3dfa1b9e381155c8989296d6978a20fd320c9bb9663b2fca0459ef27a2",
+  "json_sha256": "78c36400e663f495bae256754a1d89ed113bf5ea0ebec83eaa2ad23192e5a9f5",
+  "exact_cell_count": 2097152,
+  "painted_cells": 819302,
+  "empty_cells": 1277850,
+  "rectangle_count": 24230,
+  "rectangle_limit_source": 32768,
+  "native_installed_rectangle_capacity": "UNVERIFIED",
+  "setup_bytes": 439624,
+  "setup_limit_bytes": 1048576,
+  "full_replay_mismatches": 0,
+  "rectangle_overlaps": 0,
+  "disconnected_solid_cells_pruned": 22506,
+  "material_histogram": {
+    "0": 1277850,
+    "38": 100314,
+    "39": 56056,
+    "40": 121258,
+    "41": 4153,
+    "42": 52199,
+    "49": 40881,
+    "56": 588,
+    "71": 992,
+    "77": 208,
+    "83": 56216,
+    "86": 9414,
+    "97": 25445,
+    "98": 73950,
+    "99": 13211,
+    "100": 114458,
+    "101": 115098,
+    "106": 14893,
+    "119": 1264,
+    "122": 18704
+  },
+  "all_nonempty_materials_immovable_inert_solid": false,
+  "all_nonempty_materials_immovable_solid": true,
+  "combustible_organic_material_ids": [
+    46,
+    81,
+    83,
+    86,
+    88,
+    92,
+    97
+  ],
+  "combustible_organic_cell_count": 91075,
+  "essential_geological_foundations_inert": true,
+  "fluid_cells": 0,
+  "powder_cells": 0,
+  "midge_hull_source": [
+    4,
+    3
+  ],
+  "minimum_31x27_reachable_48px_exit_octants": 3,
+  "conservative_centre_clearances": [
+    {
+      "width": 19,
+      "height": 15,
+      "reached": 1056449,
+      "sites": [
+        {
+          "name": "Crown skylight",
+          "x": 507,
+          "y": 213,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 80,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Root orchard",
+          "x": 240,
+          "y": 535,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 669,
+          "exit_octants_48": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        {
+          "name": "Spore organ",
+          "x": 792,
+          "y": 623,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 775,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Fossil amphitheatre",
+          "x": 292,
+          "y": 978,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1060,
+          "exit_octants_48": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Calcite observatory",
+          "x": 780,
+          "y": 1028,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1168,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Left anastomosis",
+          "x": 269,
+          "y": 1410,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1515,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "name": "Moonwell garden",
+          "x": 786,
+          "y": 1500,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1646,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "name": "Deep bell",
+          "x": 514,
+          "y": 1826,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1700,
+          "exit_octants_48": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "width": 23,
+      "height": 19,
+      "reached": 1013086,
+      "sites": [
+        {
+          "name": "Crown skylight",
+          "x": 507,
+          "y": 213,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 80,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Root orchard",
+          "x": 240,
+          "y": 535,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 669,
+          "exit_octants_48": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        {
+          "name": "Spore organ",
+          "x": 792,
+          "y": 623,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 775,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "name": "Fossil amphitheatre",
+          "x": 292,
+          "y": 978,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1060,
+          "exit_octants_48": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Calcite observatory",
+          "x": 780,
+          "y": 1028,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1168,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Left anastomosis",
+          "x": 269,
+          "y": 1410,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1515,
+          "exit_octants_48": [
+            0,
+            1,
+            4,
+            6
+          ]
+        },
+        {
+          "name": "Moonwell garden",
+          "x": 786,
+          "y": 1500,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1646,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "name": "Deep bell",
+          "x": 514,
+          "y": 1826,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1700,
+          "exit_octants_48": [
+            0,
+            3,
+            4,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "width": 31,
+      "height": 27,
+      "reached": 949100,
+      "sites": [
+        {
+          "name": "Crown skylight",
+          "x": 507,
+          "y": 213,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 80,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Root orchard",
+          "x": 240,
+          "y": 535,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 669,
+          "exit_octants_48": [
+            0,
+            4,
+            6
+          ]
+        },
+        {
+          "name": "Spore organ",
+          "x": 792,
+          "y": 623,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 775,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "name": "Fossil amphitheatre",
+          "x": 292,
+          "y": 978,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1060,
+          "exit_octants_48": [
+            0,
+            3,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Calcite observatory",
+          "x": 780,
+          "y": 1028,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1168,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "name": "Left anastomosis",
+          "x": 269,
+          "y": 1410,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1515,
+          "exit_octants_48": [
+            0,
+            1,
+            4,
+            6
+          ]
+        },
+        {
+          "name": "Moonwell garden",
+          "x": 786,
+          "y": 1500,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1646,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            5,
+            7
+          ]
+        },
+        {
+          "name": "Deep bell",
+          "x": 514,
+          "y": 1826,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1700,
+          "exit_octants_48": [
+            3,
+            6,
+            7
+          ]
+        }
+      ]
+    }
+  ],
+  "bypass_test": {
+    "blocked_centre_region": [
+      300,
+      965,
+      708,
+      1148
+    ],
+    "conservative_31x27": {
+      "width": 31,
+      "height": 27,
+      "reached": 872152,
+      "sites": [
+        {
+          "name": "Crown skylight",
+          "x": 507,
+          "y": 213,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 80,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Root orchard",
+          "x": 240,
+          "y": 535,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 669,
+          "exit_octants_48": [
+            0,
+            4,
+            6
+          ]
+        },
+        {
+          "name": "Spore organ",
+          "x": 792,
+          "y": 623,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 775,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "name": "Fossil amphitheatre",
+          "x": 292,
+          "y": 978,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1060,
+          "exit_octants_48": [
+            3,
+            6,
+            7
+          ]
+        },
+        {
+          "name": "Calcite observatory",
+          "x": 780,
+          "y": 1028,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1168,
+          "exit_octants_48": [
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "name": "Left anastomosis",
+          "x": 269,
+          "y": 1410,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1919,
+          "exit_octants_48": [
+            0,
+            1,
+            4,
+            6
+          ]
+        },
+        {
+          "name": "Moonwell garden",
+          "x": 786,
+          "y": 1500,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 1828,
+          "exit_octants_48": [
+            0,
+            1,
+            2,
+            5,
+            7
+          ]
+        },
+        {
+          "name": "Deep bell",
+          "x": 514,
+          "y": 1826,
+          "clear": true,
+          "reached": true,
+          "shortest_cardinal_steps": 2090,
+          "exit_octants_48": [
+            3,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    "required_destinations": [
+      "Moonwell garden",
+      "Deep bell",
+      "Left anastomosis"
+    ]
+  },
+  "r5_exact_pairwise_routes": [
+    {
+      "from": "Root orchard",
+      "to": "Spore organ",
+      "from_centre": [
+        240,
+        535
+      ],
+      "to_centre": [
+        792,
+        623
+      ],
+      "conservative_hull": [
+        31,
+        27
+      ],
+      "shortest_cardinal_centre_steps": 640
+    },
+    {
+      "from": "Fossil amphitheatre",
+      "to": "Calcite observatory",
+      "from_centre": [
+        292,
+        978
+      ],
+      "to_centre": [
+        780,
+        1028
+      ],
+      "conservative_hull": [
+        31,
+        27
+      ],
+      "shortest_cardinal_centre_steps": 538
+    },
+    {
+      "from": "Left anastomosis",
+      "to": "Moonwell garden",
+      "from_centre": [
+        269,
+        1410
+      ],
+      "to_centre": [
+        786,
+        1500
+      ],
+      "conservative_hull": [
+        31,
+        27
+      ],
+      "shortest_cardinal_centre_steps": 607
+    },
+    {
+      "from": "Moonwell garden",
+      "to": "Deep bell",
+      "from_centre": [
+        786,
+        1500
+      ],
+      "to_centre": [
+        514,
+        1826
+      ],
+      "conservative_hull": [
+        31,
+        27
+      ],
+      "shortest_cardinal_centre_steps": 598
+    },
+    {
+      "from": "Root orchard",
+      "to": "Fossil amphitheatre",
+      "from_centre": [
+        240,
+        535
+      ],
+      "to_centre": [
+        292,
+        978
+      ],
+      "conservative_hull": [
+        31,
+        27
+      ],
+      "shortest_cardinal_centre_steps": 517
+    },
+    {
+      "from": "Calcite observatory",
+      "to": "Moonwell garden",
+      "from_centre": [
+        780,
+        1028
+      ],
+      "to_centre": [
+        786,
+        1500
+      ],
+      "conservative_hull": [
+        31,
+        27
+      ],
+      "shortest_cardinal_centre_steps": 802
+    }
+  ],
+  "pngs": {
+    "overview.png": {
+      "width": 1024,
+      "height": 2048,
+      "sha256": "fc523eeeda47f261a211d6a140fa903c0e0d5b1bc157ce5fcf3c2a2d6ed059d7",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": null
+    },
+    "01-sink-crown.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "9d2954101cc8ed51a1c8c6ef51b44405fd6316e611be6aa9452c131ebc49ae25",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        70,
+        90,
+        384,
+        320
+      ]
+    },
+    "01b-crown-east.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "39544b11e92a91d93ce88ba16a2d9124861a76391b9cd07d6d671edd2662cca8",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        565,
+        75,
+        384,
+        320
+      ]
+    },
+    "02-root-orchard.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "7a5fc8f43b98b05aebe8d540d853c70e236341f750f06dfff4a99c492fa7819c",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        48,
+        430,
+        384,
+        320
+      ]
+    },
+    "03-spore-organ.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "952203ddc553bdc10a128b09e62069b121aedf070489db02328c0e78bc4be5e6",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        606,
+        477,
+        384,
+        320
+      ]
+    },
+    "04-fossil-atrium.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "db58fd6fab1732c8cb0aa195cb982ba26b22254d9c13748ded22f8ca370bef56",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        78,
+        820,
+        384,
+        320
+      ]
+    },
+    "04b-calcite-observatory.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "4d42250abf3cc9f88ed8b8198b741a5d14f5b59494bd798f462f15e29141b07a",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        630,
+        860,
+        384,
+        320
+      ]
+    },
+    "05-moonwell-garden.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "665e39fcb3fd9b4ef027df48ef7393ad16efa379dd61df8576531000153787f0",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        613,
+        1345,
+        384,
+        320
+      ]
+    },
+    "05b-anastomosis.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "d1ee58cb5d81be6ff554ed9fe8337e36af5cd0b9ac2b64742cc23045674723e7",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        45,
+        1280,
+        384,
+        320
+      ]
+    },
+    "06-deep-bell.png": {
+      "width": 384,
+      "height": 320,
+      "sha256": "38ac4420ad63dde8fec90fd3780350181faea3ccdf2f2d40c7ddce0ab3b84bab",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": [
+        320,
+        1710,
+        384,
+        320
+      ]
+    },
+    "thumbnail.png": {
+      "width": 256,
+      "height": 512,
+      "sha256": "c7e4e5de6d7ea19f9c0bd6c1b8d075fc9517935642ea90ebdc4a60d88ccc0df5",
+      "crc_pass": true,
+      "adler_pass": true,
+      "decoded_material_mismatches": 0,
+      "crop": null
+    }
+  },
+  "static_qualification": "PASS",
+  "native_install": "NATIVE-UNTESTED",
+  "native_input_collision": "NATIVE-UNTESTED",
+  "native_save_fresh_process_reopen": "NATIVE-UNTESTED",
+  "creative_revisions": [
+    "R3 Sunken Crown: monumental asymmetrical anchored root vaults and platforms, clear central arrival.",
+    "R3 Root Orchard: thick coherent rooted tree, buttress arches, visitable tiered shelves and differentiated crowns.",
+    "R3 Spore Organ: large porous, rim-backed clustered sponge masses with open circular cavities and collection ledges.",
+    "R3 Fossil Atrium and Calcite Observatory: grounded stepped fossil seating, unique supported observation portico and crystals.",
+    "R3 Anastomosis and Moonwell: branching left arterial gallery, nested dry well terraces, clear mineral socket and outcrops.",
+    "R3 Deep Bell: monumental anchored resonator shell, mineral clapper, and two grounded lower platforms.",
+    "R4 Orchard: uneven rooted trunk, irregular canopy, connected cultivation terraces and cut western niches; not a circular-leaf stamp.",
+    "R4 Spore Sanctuary: continuous branching tissue, five faceted pores, visitable collection ledges and open membrane threshold, replacing concentric rings.",
+    "R4 Fossil and calcite: grounded stepped amphitheatre differentiated from load-bearing faceted mineral viewing station.",
+    "R4 Artery/moonwell: full supported arterial junction and asymmetrical dry mineral terraces with open service alcoves.",
+    "R5 Orchard and Spore: connected rooted inhabited terraces and large/mid/small natural tissue pores.",
+    "R5 Fossil and Calcite: five grounded fossil seats with alcove versus faceted enclosed observation room and supported deck.",
+    "R5 Lower loop: 3-stop basalt artery, dry moonwell basin, true apertures and mineral catch terraces.",
+    "R6 Orchard: separate embedded cultivation pockets, rooted staggered seed stations and direct tree-to-terrace materials.",
+    "R6 Spore: layered anisotropic membrane with individually carved pores, three service gills and retained return flight.",
+    "R6 Fossil/Calcite/Moonwell: contrasted stepped fossil survey, backed optical portico and three dry mineral collection trays.",
+    "R7 Orchard: separate west-rooted seed, harvest and mineral maintenance rooms with lateral mouths.",
+    "R7 Spore: three unlike membrane/filter, porous sampler, dry return chambers on a supported eastern shell.",
+    "R7 Fossil/Calcite: raked fossil inspection bowl vs enclosed faceted optical hall.",
+    "R7 lower loop: dry basalt arterial inspection portal and dry rooted mineral catch basin."
+  ],
+  "limitations": [
+    "No matching installed Godot/native runtime was executed.",
+    "Only static native material laws are selected, so no living biological motion or functioning liquid pumps are implied.",
+    "PNG is an indexed material-ID image, not a screenshot from CyberSand."
+  ]
+}

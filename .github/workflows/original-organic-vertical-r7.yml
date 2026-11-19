@@ -1,0 +1,43 @@
+name: R7 original organic vertical exact material qualification
+on:
+  push:
+    branches: ['original/organic-vertical/karst-lung-organ-261118']
+    paths:
+      - 'cybersand-canvases/1024x2048/original-organic-vertical-karst-lung-organ-261118/build-karst-lung-organ.js'
+      - '.github/workflows/original-organic-vertical-r7.yml'
+permissions:
+  contents: write
+jobs:
+  regenerate-qualify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Rebuild from fixed seed and verify independently
+        shell: bash
+        run: |
+          set -euo pipefail
+          D="cybersand-canvases/1024x2048/original-organic-vertical-karst-lung-organ-261118"
+          mkdir -p "$RUNNER_TEMP/organic-r7"
+          node "$D/build-karst-lung-organ.js" "$RUNNER_TEMP/organic-r7" > "$RUNNER_TEMP/r7-builder-report.json"
+          cmp "$D/build-karst-lung-organ.js" "$RUNNER_TEMP/organic-r7/build-karst-lung-organ.js"
+          node "$D/verify-r7.js" "$RUNNER_TEMP/organic-r7" > "$RUNNER_TEMP/r7-independent-report.json"
+          cp "$RUNNER_TEMP/organic-r7/"* "$D/"
+          git add "$D/"
+          git diff --cached --stat
+      - name: Commit and push only verified new JSON and material PNGs
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "R7: verified inhabited organic districts and indexed PNG evidence"
+          git push origin "HEAD:$GITHUB_REF_NAME"
