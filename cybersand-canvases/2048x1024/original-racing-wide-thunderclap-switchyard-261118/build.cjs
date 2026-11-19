@@ -773,6 +773,39 @@ function buildWideCanvas() {
     n<=270&&x0>=370&&x1<=1890&&y0>=176&&y1<=692
   );
 
+  // R14 Shepherd P1: remove EVERY exact disconnected collision-solid assembly.
+  // This retires 19 non-boundary pieces including the isolated finish underfixture,
+  // Iris glyph, Drift fins, tunnel tokens and floating launch-console insets.
+  // All actual founded race banks, structural load paths and enterable bays remain.
+  function r14StripDisconnectedCollisionSolids(){
+    const seen=new Uint8Array(W*H),q=new Int32Array(W*H);
+    let assemblies=0,cells=0;
+    for(let start=0;start<g.length;start++){
+      if(!g[start]||seen[start])continue;
+      let read=0,write=1,edge=false;q[0]=start;seen[start]=1;
+      while(read<write){
+        const i=q[read++],x=i%W,y=(i/W)|0;
+        if(x===0||x===W-1||y===0||y===H-1)edge=true;
+        for(const n of [x>0?i-1:-1,x<W-1?i+1:-1,y>0?i-W:-1,y<H-1?i+W:-1])
+          if(n>=0&&g[n]&&!seen[n]){seen[n]=1;q[write++]=n;}
+      }
+      if(!edge){
+        assemblies++;cells+=write;
+        for(let j=0;j<write;j++)g[q[j]]=mat.E;
+      }
+    }
+    if(assemblies!==19||cells!==2957)throw Error("R14_DETACHED_BASELINE_DRIFT "+assemblies+" "+cells);
+    return {assemblies_removed:assemblies,cells_removed:cells,post_prune_detached_cells:0};
+  }
+  const r14Prune=r14StripDisconnectedCollisionSolids();
+  // Asymmetric, physically supported WEST DESCEND / EAST ASCEND profiles.
+  // Only rematerialise OCCUPIED inert-solid cells; never create a new obstacle.
+  r10Tint(516,552,586,693,mat.BLUE,mat.IRON);
+  r10Tint(1634,569,1692,689,mat.BLUE,mat.STEEL);
+  r10Tint(1690,545,1995,691,mat.SIGNAL,mat.IRON);
+  tintStroke(325,602,377,679,48,mat.QUARTZ);
+  tintStroke(1781,671,1835,595,49,mat.BLUE);
+
   // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -999,7 +1032,7 @@ function buildWideCanvas() {
     ["12-finish-catch-jaws.png",1536,280,512,384]
   ].map(p=>({name:p[0],region:p.slice(1),...encodePNG(...p.slice(1))}));
   const hist={};for(const v of g)hist[v]=(hist[v]||0)+1;
-  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions};
+  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions,r14Prune};
 }
 
 const r=buildWideCanvas();
@@ -1007,7 +1040,7 @@ const crypto=require("node:crypto");
 const shab=(v)=>crypto.createHash("sha256").update(v).digest("hex");
 const setupName="setup-thunderclap-switchyard.json";
 const prior=JSON.parse(fs.readFileSync("qualification.json","utf8"));
-let delta=prior.r12_to_r13_cell_delta;
+let delta=prior.r13_to_r14_cell_delta;
 if(!delta) {
  const old=JSON.parse(fs.readFileSync(setupName,"utf8")),oldGrid=new Uint8Array(r.W*r.H);
  for(const [x,y,w,h,m] of old.edits)for(let yy=y;yy<y+h;yy++)oldGrid.fill(m,yy*r.W+x,yy*r.W+x+w);
@@ -1027,9 +1060,9 @@ const pngs=r.gallery.map(p=>({
 const writtenVisits=r.edits.reduce((n,e)=>n+e[2]*e[3],0);
 const receipt={
  ...prior,
- kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R13",
+ kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R14",
  created_utc:"2026-11-19",
- previous_branch_head:"81179a6114729af0145b12a85032a4863b6486e8",
+ previous_branch_head:"223b97f182f3fceec433bd0f69f06a03aa8acb23",
  engine_main_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",
  terrain_rectangles:r.edits.length,
  setup_json_bytes:Buffer.byteLength(r.json,"utf8"),
@@ -1050,13 +1083,15 @@ const receipt={
  lower_corridor_only:r.lowerCorridor,
  grounded_support_probes:r.supportSites.map(([name,x,y])=>({name,x,y,cardinal_grounding:!!r.grounded[y*r.W+x]})),
  detached_solid_cells:writtenVisits-r.grounded.reduce((v,x)=>v+x,0),
- r12_to_r13_cell_delta:delta,
+ r13_to_r14_cell_delta:delta,
+ r14_detached_component_removal:r.r14Prune,
  pngs,
  installed_bridge_rectangle_capacity:"NATIVE-UNTESTED",
  native_workbench_install_input_collision_simulation_save_reopen:"NATIVE-UNTESTED",
  code_execution:"Node 22 GitHub Actions; independent exact-setup replay and committed PNG verification in verify-independent.cjs"
 };
-delete receipt.r11_to_r12_cell_delta;
+delete receipt.r12_to_r13_cell_delta;
+ delete receipt.r11_to_r12_cell_delta;
  delete receipt.r8_to_r9_cell_delta;
  delete receipt.r10_to_r11_cell_delta;
  delete receipt.r9_to_r10_cell_delta;
@@ -1075,7 +1110,7 @@ for(const [name,bytes] of artifacts){
    }else console.log("PASS:",name,bytes.length);
  } else {fs.writeFileSync(name,bytes);console.log("WRITE:",name,bytes.length);}
 }
-console.log("R13",JSON.stringify({
+console.log("R14",JSON.stringify({
  rectangles:receipt.terrain_rectangles,bytes:receipt.setup_json_bytes,
  grid:receipt.grid_sha256,delta,reach:receipt.exact_reach,
  lower:receipt.lower_corridor_only.access_points.length,detached:receipt.detached_solid_cells
