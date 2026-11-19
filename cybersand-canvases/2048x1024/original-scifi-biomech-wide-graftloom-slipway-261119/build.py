@@ -821,6 +821,29 @@ def run(dest):
             assert legal[y * W + x], ('site not clear', sx, sy, n, (x, y))
         visited, total = flood(legal, SITES['spawn_receiving_dock'])
         reachable = {n: bool(visited[y * W + x]) for n, (x, y) in SITES.items()}
+        if not all(reachable.values()):
+            original_legal=legal_centres(PRE_R3,sx,sy)
+            for target,good in reachable.items():
+                if good: continue
+                stx,sty=SITES['spawn_receiving_dock']; gx,gy=SITES[target]
+                st=sty*W+stx; end=gy*W+gx
+                prev=collections.deque([st]); seen=bytearray(W*H); parent={}
+                seen[st]=1
+                while prev:
+                    k=prev.popleft()
+                    if k==end: break
+                    cx=k%W; cy=k//W
+                    for nxt in (k-1 if cx else -1,k+1 if cx<W-1 else -1,k-W if cy else -1,k+W if cy<H-1 else -1):
+                        if nxt>=0 and original_legal[nxt] and not seen[nxt]:
+                            seen[nxt]=1;parent[nxt]=k;prev.append(nxt)
+                old_path=[]
+                if seen[end]:
+                    q=end
+                    while q!=st:
+                        old_path.append(q);q=parent[q]
+                    old_path.append(st);old_path.reverse()
+                affected=[(i%W,i//W) for i in old_path if not legal[i]]
+                print('R3_SITE_DIFF',json.dumps({'hull':[sx,sy],'site':target,'pre_path_length':len(old_path),'newly_blocked':len(affected),'first':affected[:32],'last':affected[-32:],'pre_sample':[(k%W,k//W) for k in old_path[::125]]}),flush=True)
         assert all(reachable.values()), ('unreachable sites', sx, sy, reachable)
         local = {n: sum((legal[(y + dy) * W + x + dx] and visited[(y + dy) * W + x + dx] for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)])) for n, (x, y) in SITES.items()}
         assert min(local.values()) >= 3
