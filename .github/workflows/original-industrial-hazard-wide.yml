@@ -1,0 +1,29 @@
+name: Original industrial hazard wide — exact material-cell qualification
+on:
+  push:
+    branches:
+      - 'original/industrial-hazard-wide/**'
+  pull_request:
+    paths:
+      - 'tools/original-industrial-hazard-wide/**'
+      - 'cybersand-canvases/2048x1024/original-industrial-hazard-wide-*/**'
+      - '.github/workflows/original-industrial-hazard-wide.yml'
+permissions:
+  contents: read
+jobs:
+  exact-material-cells:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Deterministic builder — replay and byte-identical committed artifacts
+        run: node tools/original-industrial-hazard-wide/build.cjs --verify
+      - name: Independent — source-schema, rectangle, material, flight and PNG verification
+        run: node tools/original-industrial-hazard-wide/verify-independent.cjs
+      - name: Assert no generated-file drift
+        run: git diff --exit-code
+# Static-only: Godot, installed CyberDemoBridge, Rapier and fresh save/reopen
+# remain NATIVE-UNTESTED until an independent native admission campaign.

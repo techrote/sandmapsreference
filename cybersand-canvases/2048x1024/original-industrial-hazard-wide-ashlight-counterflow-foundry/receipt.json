@@ -1,0 +1,630 @@
+{
+  "concept": "Ashlight Counterflow Foundry",
+  "slug": "ashlight-counterflow-foundry",
+  "seed": 27111987,
+  "engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "rectangles": 3994,
+  "setup_utf8_bytes": 76913,
+  "construction_work": 584288,
+  "material_histogram": {
+    "0": 1512864,
+    "3": 18136,
+    "8": 2552,
+    "58": 197884,
+    "62": 7855,
+    "63": 340,
+    "68": 1389,
+    "70": 6,
+    "76": 114,
+    "77": 479,
+    "79": 3,
+    "100": 82021,
+    "101": 42081,
+    "104": 628,
+    "117": 198059,
+    "120": 12441,
+    "122": 13166,
+    "123": 3871,
+    "131": 3263
+  },
+  "replay_mismatch": 0,
+  "solid_connectivity": {
+    "total": 563600,
+    "anchored": 563600,
+    "detached": 0
+  },
+  "clearance": {
+    "19x15": {
+      "legal": 1087355,
+      "reachable": 902913,
+      "sites": 17,
+      "failed": []
+    },
+    "23x19": {
+      "legal": 994830,
+      "reachable": 822451,
+      "sites": 17,
+      "failed": []
+    },
+    "31x27": {
+      "legal": 824628,
+      "reachable": 702252,
+      "sites": 17,
+      "failed": []
+    }
+  },
+  "native": "NATIVE-UNTESTED",
+  "installed_bridge_capacity": "UNKNOWN; source 32768, fallback 4096",
+  "source_art": "NONE: original design",
+  "paint_operations": 3749,
+  "structural_supports": {
+    "ncomponents": 39,
+    "applied": 37,
+    "unlinked": 2,
+    "protected_paths": 15
+  },
+  "material_finish": {
+    "placed": 12523,
+    "clipped": 18878,
+    "inlaid": 1964,
+    "protected_centres": 827150,
+    "sites": 15,
+    "inhabitation": {
+      "revision": "R5",
+      "purpose": "two entered, monitored dry industrial districts per world; distinct process and escape topology",
+      "opened": [
+        {
+          "label": "ashward particulate receiving airlock",
+          "box": [
+            326,
+            773,
+            81,
+            86
+          ],
+          "removed": 1970
+        },
+        {
+          "label": "twin hot-hall west isolation gate",
+          "box": [
+            1347,
+            812,
+            84,
+            77
+          ],
+          "removed": 2756
+        },
+        {
+          "label": "twin cold-hall east isolation gate",
+          "box": [
+            1653,
+            813,
+            91,
+            78
+          ],
+          "removed": 2373
+        },
+        {
+          "label": "twin-reactor independent underfloor recovery shaft",
+          "box": [
+            1495,
+            873,
+            78,
+            92
+          ],
+          "removed": 4032
+        }
+      ],
+      "physical_inlays": [
+        {
+          "label": "ashward filter service trench cover",
+          "box": [
+            120,
+            859,
+            200,
+            7
+          ],
+          "changed": 1400
+        },
+        {
+          "label": "isolation watchroom certified top beam",
+          "box": [
+            1400,
+            786,
+            230,
+            7
+          ],
+          "changed": 1610
+        },
+        {
+          "label": "hot-side grounded service plinth",
+          "box": [
+            1382,
+            889,
+            112,
+            7
+          ],
+          "changed": 784
+        },
+        {
+          "label": "cold-side grounded service plinth",
+          "box": [
+            1573,
+            889,
+            101,
+            7
+          ],
+          "changed": 665
+        },
+        {
+          "label": "cold siphon transfer trunk",
+          "box": [
+            472,
+            502,
+            110,
+            6
+          ],
+          "changed": 444
+        },
+        {
+          "label": "graded particle separation trunk",
+          "box": [
+            644,
+            502,
+            110,
+            6
+          ],
+          "changed": 216
+        },
+        {
+          "label": "cyclone debris weighbridge",
+          "box": [
+            930,
+            789,
+            145,
+            6
+          ],
+          "changed": 725
+        },
+        {
+          "label": "cyclone refined material return",
+          "box": [
+            1130,
+            789,
+            142,
+            6
+          ],
+          "changed": 710
+        },
+        {
+          "label": "hot plasma isolation indicator",
+          "box": [
+            1355,
+            742,
+            123,
+            6
+          ],
+          "changed": 524
+        },
+        {
+          "label": "cold plasma isolation indicator",
+          "box": [
+            1590,
+            742,
+            126,
+            6
+          ],
+          "changed": 564
+        }
+      ],
+      "rooted_fixtures": [
+        {
+          "label": "ash intake sieve desk",
+          "box": [
+            151,
+            817,
+            40,
+            44
+          ],
+          "new_cells": 1640
+        },
+        {
+          "label": "ash intake pressure diagnostic",
+          "box": [
+            276,
+            816,
+            29,
+            45
+          ],
+          "new_cells": 1218
+        },
+        {
+          "label": "hot zone visual assay pedestal",
+          "box": [
+            1442,
+            858,
+            28,
+            27
+          ],
+          "new_cells": 322
+        },
+        {
+          "label": "cold zone visual assay pedestal",
+          "box": [
+            1604,
+            847,
+            28,
+            46
+          ],
+          "new_cells": 858
+        }
+      ],
+      "added_cells": 4038,
+      "removed_cells": 11131,
+      "recoloured_cells": 7642,
+      "changed_mobile_fluid_cells": 0
+    },
+    "structural_revision": {
+      "revision": "R4",
+      "added_cells": 344,
+      "removed_cells": 0,
+      "inlaid_cells": 4386,
+      "static_braces": [
+        {
+          "label": "western reactor gantry into cyclone mast",
+          "from": [
+            1344,
+            293
+          ],
+          "to": [
+            1323,
+            293
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "small plasma collar bearing",
+          "from": [
+            1392,
+            393
+          ],
+          "to": [
+            1378,
+            393
+          ],
+          "thickness": 8
+        }
+      ],
+      "process_markings": [
+        "cyclone intake-facing baffle",
+        "cyclone upper separation lip",
+        "low particulate collection rail",
+        "cold siphon upper manifold",
+        "hot reactor lower isolation monitor",
+        "cold reactor recovery manifold",
+        "differentiated siphon analyser",
+        "differentiated siphon analyser",
+        "differentiated siphon analyser",
+        "irregular sediment brace",
+        "irregular sediment brace",
+        "irregular sediment brace",
+        "irregular sediment brace"
+      ],
+      "note": "R4 requalification of unchanged Ashlight R3/R2 physical grid, with grounded twin-tower bearings and static-only Midge/liquid evidence; native processes untested"
+    },
+    "process_flow": {
+      "revision": "R6",
+      "purpose": "two graded cyclone collection decks, different hot/cold reactor service and lamellar particulate recovery",
+      "physical_features": [
+        {
+          "label": "cyclone coarse collector step tied to main mast",
+          "actual_added_cells": 1134,
+          "source_rect": [
+            919,
+            639,
+            144,
+            9
+          ],
+          "material": 117
+        },
+        {
+          "label": "cyclone coarse collector support to lower rack",
+          "actual_added_cells": 324,
+          "source_rect": [
+            1053,
+            640,
+            9,
+            52
+          ],
+          "material": 117
+        },
+        {
+          "label": "cyclone fine collector upper tray",
+          "actual_added_cells": 692,
+          "source_rect": [
+            1082,
+            608,
+            125,
+            8
+          ],
+          "material": 122
+        },
+        {
+          "label": "cyclone fine collector descending grounded leg",
+          "actual_added_cells": 585,
+          "source_rect": [
+            1198,
+            608,
+            9,
+            77
+          ],
+          "material": 117
+        },
+        {
+          "label": "cyclone lower fine product deck",
+          "actual_added_cells": 763,
+          "source_rect": [
+            1090,
+            672,
+            118,
+            7
+          ],
+          "material": 120
+        },
+        {
+          "label": "cyclone metering mast",
+          "actual_added_cells": 507,
+          "source_rect": [
+            1020,
+            573,
+            9,
+            69
+          ],
+          "material": 117
+        },
+        {
+          "label": "cyclone ancillary sample rail",
+          "actual_added_cells": 359,
+          "source_rect": [
+            970,
+            573,
+            59,
+            8
+          ],
+          "material": 120
+        },
+        {
+          "label": "hot reactor dedicated metal servicing gangway",
+          "actual_added_cells": 769,
+          "source_rect": [
+            1350,
+            580,
+            162,
+            8
+          ],
+          "material": 117
+        },
+        {
+          "label": "hot reactor gangway borne on welded steel",
+          "actual_added_cells": 0,
+          "source_rect": [
+            1362,
+            568,
+            9,
+            13
+          ],
+          "material": 117
+        },
+        {
+          "label": "cold reactor isolated reflux gangway",
+          "actual_added_cells": 192,
+          "source_rect": [
+            1590,
+            576,
+            119,
+            8
+          ],
+          "material": 120
+        },
+        {
+          "label": "cold reactor reflux bearing A",
+          "actual_added_cells": 0,
+          "source_rect": [
+            1590,
+            568,
+            10,
+            9
+          ],
+          "material": 117
+        },
+        {
+          "label": "cold reactor reflux bearing B",
+          "actual_added_cells": 7,
+          "source_rect": [
+            1699,
+            568,
+            10,
+            9
+          ],
+          "material": 117
+        },
+        {
+          "label": "ash exhaust first grounded cassette",
+          "actual_added_cells": 233,
+          "source_rect": [
+            1785,
+            610,
+            10,
+            87
+          ],
+          "material": 117
+        },
+        {
+          "label": "ash exhaust second grounded cassette",
+          "actual_added_cells": 770,
+          "source_rect": [
+            1870,
+            616,
+            10,
+            81
+          ],
+          "material": 117
+        },
+        {
+          "label": "ash exhaust outlet cassette",
+          "actual_added_cells": 61,
+          "source_rect": [
+            1910,
+            632,
+            10,
+            65
+          ],
+          "material": 117
+        },
+        {
+          "label": "high lamellar filter tray",
+          "actual_added_cells": 650,
+          "source_rect": [
+            1795,
+            611,
+            85,
+            8
+          ],
+          "material": 122
+        },
+        {
+          "label": "low lamellar particle retrieval",
+          "actual_added_cells": 464,
+          "source_rect": [
+            1795,
+            654,
+            85,
+            8
+          ],
+          "material": 120
+        },
+        {
+          "label": "separate outlet exhaust baffle",
+          "actual_added_cells": 644,
+          "source_rect": [
+            1910,
+            632,
+            96,
+            8
+          ],
+          "material": 120
+        }
+      ],
+      "added_cells": 8154,
+      "removed_cells": 0,
+      "rematerialised_cells": 0,
+      "mobile_fluid_changes": 0,
+      "native_processes": "NOT simulated: actual inert material geometry only; NATIVE-UNTESTED"
+    }
+  },
+  "unmerged_row_runs": 17834,
+  "source_authority": {
+    "repo": "techrote/cybersand",
+    "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+    "setup": "godot/scripts/workbench_setup.gd",
+    "materials": "native/include/cybersand/material.hpp",
+    "midge": "godot/authoring/flyers/midge.json"
+  },
+  "material_plane_sha256": "fe9615865226f6792ff6f38342cb26013add666ff292277b66b63da31f0b8466",
+  "setup_sha256": "29fe60e5103ac1297a46e0cb5454e586f76180ff760ced51c4d48ec472717eb9",
+  "material_laws": {
+    "static_ids": [
+      58,
+      62,
+      63,
+      68,
+      70,
+      76,
+      77,
+      79,
+      100,
+      101,
+      104,
+      117,
+      120,
+      122,
+      123,
+      128,
+      131
+    ],
+    "mobile_ids": [
+      3,
+      8
+    ],
+    "basis": "Per-ID MaterialDefinition state, density motion and kernels read from accepted native/include/cybersand/material.hpp. Avoid plant, sand/stone powder and uncontained reactions."
+  },
+  "fluid_containment": "Every Water/Lava pocket physically enclosed by static material. 0 fluid cells adjacent to spawn-connected 4-neighbour centre air, verified for initial constructed plane; dynamic native simulation UNTESTED.",
+  "images": [
+    {
+      "name": "overview.png",
+      "x": 0,
+      "y": 0,
+      "width": 2048,
+      "height": 1024,
+      "bytes": 92230,
+      "sha256": "bc5b9753a9063e04495b83a73051a24fa1d077c24a0c1845220707ff837d2ae4",
+      "material_pixel_parity": 2097152
+    },
+    {
+      "name": "ashward.png",
+      "x": 20,
+      "y": 160,
+      "width": 470,
+      "height": 650,
+      "bytes": 15713,
+      "sha256": "ce1da39f2f291405dad0f0456128f31c89ea1967ef4b42c8058c89209e78299d",
+      "material_pixel_parity": 305500
+    },
+    {
+      "name": "siphons.png",
+      "x": 400,
+      "y": 250,
+      "width": 510,
+      "height": 610,
+      "bytes": 16109,
+      "sha256": "657689b6f58119c738e66d006f39b9166485f3e01634ed7d2ec3ad38ce8e2595",
+      "material_pixel_parity": 311100
+    },
+    {
+      "name": "cascade.png",
+      "x": 880,
+      "y": 140,
+      "width": 460,
+      "height": 670,
+      "bytes": 15572,
+      "sha256": "70e62dfc432b2057eea216507ec8a6bb7bf3f38d34113999d478042a6b9b880d",
+      "material_pixel_parity": 308200
+    },
+    {
+      "name": "twins.png",
+      "x": 1305,
+      "y": 160,
+      "width": 485,
+      "height": 675,
+      "bytes": 24039,
+      "sha256": "9a18443360031dd5335fb262f75d322c0eaecff224dad73616bd860387cf1292",
+      "material_pixel_parity": 327375
+    },
+    {
+      "name": "vent.png",
+      "x": 1680,
+      "y": 225,
+      "width": 340,
+      "height": 655,
+      "bytes": 12021,
+      "sha256": "63b3bd653826e855270b562dfa582c3e5f916e86ddb0591b052e217b6df3fd73",
+      "material_pixel_parity": 222700
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "evidence_scope": "Source builder replay & static route checks; PNG source-pixel index parity by renderer; independent on-disk PNG revalidation is not claimed."
+}

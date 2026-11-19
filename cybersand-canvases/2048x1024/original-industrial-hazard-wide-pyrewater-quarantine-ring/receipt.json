@@ -1,0 +1,726 @@
+{
+  "concept": "Pyrewater Quarantine Ring",
+  "slug": "pyrewater-quarantine-ring",
+  "seed": 27111941,
+  "engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "rectangles": 2834,
+  "setup_utf8_bytes": 54632,
+  "construction_work": 567542,
+  "material_histogram": {
+    "0": 1529610,
+    "3": 21821,
+    "8": 3572,
+    "58": 171612,
+    "62": 11470,
+    "63": 4161,
+    "68": 4044,
+    "76": 234,
+    "77": 56,
+    "79": 112,
+    "100": 85824,
+    "101": 23221,
+    "104": 709,
+    "117": 214226,
+    "120": 7196,
+    "122": 15602,
+    "123": 2751,
+    "131": 931
+  },
+  "replay_mismatch": 0,
+  "solid_connectivity": {
+    "total": 542149,
+    "anchored": 542149,
+    "detached": 0
+  },
+  "clearance": {
+    "19x15": {
+      "legal": 1117191,
+      "reachable": 869684,
+      "sites": 18,
+      "failed": []
+    },
+    "23x19": {
+      "legal": 1029525,
+      "reachable": 804290,
+      "sites": 18,
+      "failed": []
+    },
+    "31x27": {
+      "legal": 868308,
+      "reachable": 692047,
+      "sites": 18,
+      "failed": []
+    }
+  },
+  "native": "NATIVE-UNTESTED",
+  "installed_bridge_capacity": "UNKNOWN; source 32768, fallback 4096",
+  "source_art": "NONE: original design",
+  "paint_operations": 3074,
+  "structural_supports": {
+    "ncomponents": 39,
+    "applied": 28,
+    "unlinked": 11,
+    "protected_paths": 16
+  },
+  "material_finish": {
+    "placed": 19599,
+    "clipped": 12599,
+    "inlaid": 2838,
+    "protected_centres": 855619,
+    "sites": 16,
+    "inhabitation": {
+      "revision": "R5",
+      "purpose": "two entered, monitored dry industrial districts per world; distinct process and escape topology",
+      "opened": [
+        {
+          "label": "freight assay east double-leaf airlock",
+          "box": [
+            258,
+            775,
+            76,
+            77
+          ],
+          "removed": 1628
+        },
+        {
+          "label": "quarantine west rib-spanning decontamination hatch",
+          "box": [
+            1686,
+            756,
+            124,
+            107
+          ],
+          "removed": 3187
+        },
+        {
+          "label": "quarantine overhead dry emergency vent",
+          "box": [
+            1814,
+            692,
+            94,
+            90
+          ],
+          "removed": 2193
+        }
+      ],
+      "physical_inlays": [
+        {
+          "label": "arrival booth pressure head",
+          "box": [
+            100,
+            748,
+            170,
+            6
+          ],
+          "changed": 1020
+        },
+        {
+          "label": "freight assay supported underdeck",
+          "box": [
+            114,
+            850,
+            156,
+            7
+          ],
+          "changed": 624
+        },
+        {
+          "label": "scrubber floor reclaim grating",
+          "box": [
+            1762,
+            872,
+            177,
+            8
+          ],
+          "changed": 1416
+        },
+        {
+          "label": "sealed upper aerosol conduit",
+          "box": [
+            1760,
+            754,
+            160,
+            8
+          ],
+          "changed": 6
+        },
+        {
+          "label": "quench primary transfer jacket",
+          "box": [
+            452,
+            582,
+            120,
+            5
+          ],
+          "changed": 218
+        },
+        {
+          "label": "cold secondary transfer jacket",
+          "box": [
+            592,
+            584,
+            106,
+            5
+          ],
+          "changed": 160
+        },
+        {
+          "label": "quench tertiary return jacket",
+          "box": [
+            721,
+            583,
+            70,
+            5
+          ],
+          "changed": 216
+        },
+        {
+          "label": "separation assay receiving channel",
+          "box": [
+            1351,
+            603,
+            127,
+            7
+          ],
+          "changed": 352
+        },
+        {
+          "label": "distillation feed-and-return channel",
+          "box": [
+            1515,
+            603,
+            157,
+            7
+          ],
+          "changed": 331
+        }
+      ],
+      "rooted_fixtures": [
+        {
+          "label": "freight sample scale and weighing bed",
+          "box": [
+            132,
+            826,
+            35,
+            28
+          ],
+          "new_cells": 945
+        },
+        {
+          "label": "air-quality analyzer lower plinth",
+          "box": [
+            182,
+            830,
+            28,
+            24
+          ],
+          "new_cells": 644
+        },
+        {
+          "label": "scrubber west inspection pedestal",
+          "box": [
+            1800,
+            846,
+            28,
+            27
+          ],
+          "new_cells": 672
+        },
+        {
+          "label": "scrubber east rinse pedestal",
+          "box": [
+            1893,
+            844,
+            26,
+            29
+          ],
+          "new_cells": 676
+        }
+      ],
+      "added_cells": 2937,
+      "removed_cells": 7008,
+      "recoloured_cells": 4343,
+      "changed_mobile_fluid_cells": 0
+    },
+    "structural_revision": {
+      "revision": "R4",
+      "added_cells": 2658,
+      "removed_cells": 1463,
+      "inlaid_cells": 2186,
+      "static_braces": [
+        {
+          "label": "western reactor shear-buttress",
+          "from": [
+            849,
+            404
+          ],
+          "to": [
+            883,
+            434
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "east distillation wall tie",
+          "from": [
+            1690,
+            333
+          ],
+          "to": [
+            1735,
+            333
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "gyre ring east-side bearing",
+          "from": [
+            1220,
+            430
+          ],
+          "to": [
+            1280,
+            430
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "quench rail to reactor service mast",
+          "from": [
+            805,
+            330
+          ],
+          "to": [
+            850,
+            330
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "quench overdeck bearing",
+          "from": [
+            464,
+            340
+          ],
+          "to": [
+            464,
+            355
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "hood cantilever reaction joint",
+          "from": [
+            1268,
+            354
+          ],
+          "to": [
+            1288,
+            354
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "west hood reaction joint",
+          "from": [
+            850,
+            335
+          ],
+          "to": [
+            855,
+            335
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "condenser-to-evacuation bearing",
+          "from": [
+            1684,
+            401
+          ],
+          "to": [
+            1715,
+            401
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "upper inner-gyre stator-to-anchored shell",
+          "from": [
+            1041,
+            350
+          ],
+          "to": [
+            1041,
+            367
+          ],
+          "thickness": 4
+        },
+        {
+          "label": "west inner-gyre stator-to-anchored shell",
+          "from": [
+            980,
+            365
+          ],
+          "to": [
+            980,
+            387
+          ],
+          "thickness": 4
+        },
+        {
+          "label": "emitter pedestal-to-lower anchored shell",
+          "from": [
+            1046,
+            450
+          ],
+          "to": [
+            1046,
+            499
+          ],
+          "thickness": 4
+        }
+      ],
+      "process_markings": [
+        "lower reactor emergency service hatch (1273 real solid cells removed)",
+        "quench transfer manifold",
+        "sealed heat-transport casing",
+        "distillate and return service manifold",
+        "assay feed indicator",
+        "distillation inspection feed",
+        "evacuation bulkhead pressure indication",
+        "quench vessel inspection rim",
+        "quench vessel inspection rim",
+        "quench vessel inspection rim",
+        "removed 190-cell unsupported dry hatch roof chip"
+      ],
+      "note": "R4 anchors remaining gyre fragments to true containment steel and removes a 190-cell orphan hatch chip; R3 emergency return preserved; native processes untested"
+    },
+    "process_flow": {
+      "revision": "R6",
+      "purpose": "quench pressure control, actual reactor-to-distillation service transfer, unequal fractionator and separate scrubber inspection machinery",
+      "physical_features": [
+        {
+          "label": "quench isolated inspection landing",
+          "actual_added_cells": 740,
+          "source_rect": [
+            598,
+            560,
+            190,
+            8
+          ],
+          "material": 117
+        },
+        {
+          "label": "quench meter western stanchion",
+          "actual_added_cells": 248,
+          "source_rect": [
+            602,
+            529,
+            8,
+            31
+          ],
+          "material": 117
+        },
+        {
+          "label": "quench meter eastern stanchion",
+          "actual_added_cells": 218,
+          "source_rect": [
+            735,
+            529,
+            8,
+            31
+          ],
+          "material": 117
+        },
+        {
+          "label": "quench pressure header",
+          "actual_added_cells": 875,
+          "source_rect": [
+            602,
+            529,
+            141,
+            7
+          ],
+          "material": 122
+        },
+        {
+          "label": "quench sample plinth",
+          "actual_added_cells": 224,
+          "source_rect": [
+            620,
+            552,
+            28,
+            8
+          ],
+          "material": 120
+        },
+        {
+          "label": "quench gauge foot",
+          "actual_added_cells": 82,
+          "source_rect": [
+            690,
+            553,
+            20,
+            7
+          ],
+          "material": 123
+        },
+        {
+          "label": "service load path from quench to reactor bearing",
+          "actual_added_cells": 290,
+          "source_rect": [
+            786,
+            546,
+            52,
+            10
+          ],
+          "material": 117
+        },
+        {
+          "label": "dry refractory service return across reactor-chemical joint",
+          "actual_added_cells": 531,
+          "source_rect": [
+            1279,
+            682,
+            91,
+            9
+          ],
+          "material": 117
+        },
+        {
+          "label": "service return anchored knee to distillation wall",
+          "actual_added_cells": 0,
+          "source_rect": [
+            1356,
+            653,
+            9,
+            38
+          ],
+          "material": 117
+        },
+        {
+          "label": "fractionator first supported riser",
+          "actual_added_cells": 513,
+          "source_rect": [
+            1452,
+            503,
+            9,
+            106
+          ],
+          "material": 117
+        },
+        {
+          "label": "fractionator upper flash column",
+          "actual_added_cells": 1071,
+          "source_rect": [
+            1529,
+            483,
+            9,
+            126
+          ],
+          "material": 117
+        },
+        {
+          "label": "condenser isolated third column",
+          "actual_added_cells": 910,
+          "source_rect": [
+            1643,
+            517,
+            10,
+            92
+          ],
+          "material": 117
+        },
+        {
+          "label": "warm fractionator overhead feed",
+          "actual_added_cells": 476,
+          "source_rect": [
+            1452,
+            503,
+            86,
+            7
+          ],
+          "material": 122
+        },
+        {
+          "label": "cold offset condensation tray",
+          "actual_added_cells": 651,
+          "source_rect": [
+            1529,
+            533,
+            124,
+            7
+          ],
+          "material": 120
+        },
+        {
+          "label": "reflux recovery tray",
+          "actual_added_cells": 556,
+          "source_rect": [
+            1532,
+            574,
+            121,
+            6
+          ],
+          "material": 122
+        },
+        {
+          "label": "quarantine west sample support",
+          "actual_added_cells": 624,
+          "source_rect": [
+            1730,
+            844,
+            26,
+            29
+          ],
+          "material": 117
+        },
+        {
+          "label": "quarantine west joined sample head",
+          "actual_added_cells": 447,
+          "source_rect": [
+            1744,
+            836,
+            51,
+            9
+          ],
+          "material": 120
+        },
+        {
+          "label": "quarantine clean-side sample support",
+          "actual_added_cells": 372,
+          "source_rect": [
+            1934,
+            842,
+            26,
+            30
+          ],
+          "material": 117
+        },
+        {
+          "label": "quarantine separate clean-side manifold",
+          "actual_added_cells": 105,
+          "source_rect": [
+            1900,
+            845,
+            54,
+            7
+          ],
+          "material": 122
+        }
+      ],
+      "added_cells": 8933,
+      "removed_cells": 0,
+      "rematerialised_cells": 0,
+      "mobile_fluid_changes": 0,
+      "native_processes": "NOT simulated: actual inert material geometry only; NATIVE-UNTESTED"
+    }
+  },
+  "unmerged_row_runs": 17351,
+  "source_authority": {
+    "repo": "techrote/cybersand",
+    "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+    "setup": "godot/scripts/workbench_setup.gd",
+    "materials": "native/include/cybersand/material.hpp",
+    "midge": "godot/authoring/flyers/midge.json"
+  },
+  "material_plane_sha256": "6fe8eed05f57600e02a2b018b55bf496bf7a06dff999cf5e9a8d3df78854418d",
+  "setup_sha256": "e6a0808d319ccd58140234c7aae7be617014ef7c5c13c0e0e260867b9c834ad8",
+  "material_laws": {
+    "static_ids": [
+      58,
+      62,
+      63,
+      68,
+      70,
+      76,
+      77,
+      79,
+      100,
+      101,
+      104,
+      117,
+      120,
+      122,
+      123,
+      128,
+      131
+    ],
+    "mobile_ids": [
+      3,
+      8
+    ],
+    "basis": "Per-ID MaterialDefinition state, density motion and kernels read from accepted native/include/cybersand/material.hpp. Avoid plant, sand/stone powder and uncontained reactions."
+  },
+  "fluid_containment": "Every Water/Lava pocket physically enclosed by static material. 0 fluid cells adjacent to spawn-connected 4-neighbour centre air, verified for initial constructed plane; dynamic native simulation UNTESTED.",
+  "images": [
+    {
+      "name": "overview.png",
+      "x": 0,
+      "y": 0,
+      "width": 2048,
+      "height": 1024,
+      "bytes": 89157,
+      "sha256": "e5afd47cc291ed011c7523505c10c61575d651b7320ad3284042fbc8ddb25dce",
+      "material_pixel_parity": 2097152
+    },
+    {
+      "name": "freight.png",
+      "x": 30,
+      "y": 225,
+      "width": 410,
+      "height": 570,
+      "bytes": 12192,
+      "sha256": "24a9bc6cf83ea6c77d99e9cac72297924c61477be3b172e46cb1d85059dcb085",
+      "material_pixel_parity": 233700
+    },
+    {
+      "name": "quench.png",
+      "x": 395,
+      "y": 290,
+      "width": 440,
+      "height": 560,
+      "bytes": 15092,
+      "sha256": "8726cb208383d4b71505dedc596b89ca13d33e2bf7cc898b95df0027af70b60b",
+      "material_pixel_parity": 246400
+    },
+    {
+      "name": "reactor.png",
+      "x": 805,
+      "y": 130,
+      "width": 555,
+      "height": 710,
+      "bytes": 22016,
+      "sha256": "ee7eff3a068618ba5e7a0710d7b20bfbf594b6e6ae2ed3643f07e39891c2c7ac",
+      "material_pixel_parity": 394050
+    },
+    {
+      "name": "distillation.png",
+      "x": 1310,
+      "y": 210,
+      "width": 500,
+      "height": 650,
+      "bytes": 19789,
+      "sha256": "74c52bd6c3d1a3e2a4f6c5fba651193ef616d692433b974d46f2387b6fec482f",
+      "material_pixel_parity": 325000
+    },
+    {
+      "name": "evacuation.png",
+      "x": 1670,
+      "y": 220,
+      "width": 370,
+      "height": 650,
+      "bytes": 17002,
+      "sha256": "f3c8d33a3390cb85b972857a9460a376756ac9fdecc3f6c56e1aefa37e760875",
+      "material_pixel_parity": 240500
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "evidence_scope": "Source builder replay & static route checks; PNG source-pixel index parity by renderer; independent on-disk PNG revalidation is not claimed."
+}
