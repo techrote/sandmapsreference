@@ -14,6 +14,7 @@ function createCalyxBuilder() {
   const line=(ax,ay,bx,by,r,m)=>{const sx=Math.min(ax,bx)-r-1,ex=Math.max(ax,bx)+r+1,sy=Math.min(ay,by)-r-1,ey=Math.max(ay,by)+r+1,dx=bx-ax,dy=by-ay,len=dx*dx+dy*dy;for(let y=Math.max(0,Math.floor(sy));y<=Math.min(H-1,Math.ceil(ey));y++)for(let x=Math.max(0,Math.floor(sx));x<=Math.min(W-1,Math.ceil(ex));x++){let t=len?Math.max(0,Math.min(1,((x+.5-ax)*dx+(y+.5-ay)*dy)/len)):0;let px=ax+t*dx,py=ay+t*dy;if((x+.5-px)**2+(y+.5-py)**2<=r*r)put(x,y,m);}};
   const poly=(pts,m)=>{const ys=pts.map(p=>p[1]);for(let y=Math.max(0,Math.floor(Math.min(...ys)));y<=Math.min(H-1,Math.ceil(Math.max(...ys)));y++){let xs=[];for(let j=0;j<pts.length;j++){const a=pts[j],b=pts[(j+1)%pts.length],Y=y+.5;if((a[1]<=Y&&Y<b[1])||(b[1]<=Y&&Y<a[1]))xs.push(a[0]+(Y-a[1])*(b[0]-a[0])/(b[1]-a[1]));}xs.sort((a,b)=>a-b);for(let j=0;j+1<xs.length;j+=2)box(Math.ceil(xs[j]-.5),y,Math.ceil(xs[j+1]-.5),y+1,m);}};
   for(const op of spec.geometry){const [t,...v]=op;if(t==="b")box(...v);else if(t==="l")line(...v);else if(t==="e")ell(...v);else if(t==="p")poly(...v);else throw Error("unknown operation "+t);}
+  if(spec.qualification_policy&&spec.qualification_policy.prune_unanchored){const supported=grounded(g);for(let i=0;i<N;i++)if(g[i]&&!supported.mask[i])g[i]=0;}
   return g;
  }
  function histogram(g){let a=new Array(256).fill(0);for(const z of g)a[z]++;return Object.fromEntries(a.map((v,k)=>[k,v]).filter(x=>x[1]));}
@@ -67,7 +68,7 @@ if (typeof module!=="undefined"&&module.exports)module.exports=createCalyxBuilde
 if(typeof require==="function"&&typeof process==="object"&&require.main===module){
  const fs=require("fs"),path=require("path"),input=process.argv[2]||"design.json",out=process.argv[3]||".",x=createCalyxBuilder(),recipe=JSON.parse(fs.readFileSync(input,"utf8")),grid=x.draw(recipe);
  let edits=x.rectangles(grid),rp=x.replay(edits),bad=0;for(let i=0;i<grid.length;i++)if(grid[i]!==rp.grid[i])bad++;
- const stats={extent:[2048,1024],grid_sha256:x.sha256(grid),histogram:x.histogram(grid),rectangles:edits.length,replay_mismatches:bad,overlaps:rp.overlaps,grounded:x.grounded(grid).occupied,detached:x.grounded(grid).detached,routes:x.auditRoutes(grid,recipe)};
+ const gt=x.grounded(grid),routes=x.auditRoutes(grid,recipe),stats={extent:[2048,1024],grid_sha256:x.sha256(grid),histogram:x.histogram(grid),rectangles:edits.length,replay_mismatches:bad,overlaps:rp.overlaps,grounded:gt.occupied,detached:gt.detached,routes,native_status:"NATIVE-UNTESTED",accepted_engine_sha:recipe.engine_main};if(bad||rp.overlaps||gt.detached||!routes.pass)throw Error("Refuse unqualified artifacts");
  fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,"qualification.json"),JSON.stringify(stats,null,2)+"\n");
  const crops=[["01-quarantine.png",50,275,410,465],["02-graft-gantry.png",460,30,360,360],["03-split-keel.png",820,510,490,420],["04-fractionation.png",1415,275,384,520],["05-export.png",1805,394,207,502]];
  const images=[["overview.png",0,0,2048,1024],...crops];for(const [name,a,b,w,h]of images)fs.writeFileSync(path.join(out,name),Buffer.from(x.png(grid,a,b,w,h).data));
