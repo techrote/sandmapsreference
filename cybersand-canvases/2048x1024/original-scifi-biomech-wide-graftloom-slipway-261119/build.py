@@ -491,6 +491,7 @@ for x0,x1,y0,y1,m in [(758,835,925,964,117),(1005,1081,929,966,113),
 line(1004, 240, 1073, 240, 5, 117)  # rightward: north portal removes x868..982
 line(1020, 278, 1083, 278, 5, 117)
 
+R2_BEFORE_REFINERY = A[:]
 # D: three genuinely different biorefinery operations.
 # HIGH — roof-supported paired receiver-bells, intentionally NOT three decks.
 line(1419, 260, 1410, 302, 15, 62)
@@ -532,6 +533,7 @@ for x0,x1,yy in [(1330,1450,925),(1547,1655,925)]:
             if A[i]: A[i]=113
 # Keep the exact three refinery destinations unobstructed at every margin.
 
+R2_AFTER_REFINERY = A[:]
 # E: recognizable aft salvage machinery and real return freight transfer.
 # The upper gantry terminates in a keyed, industrial mouth, not sky scenery.
 line(1929, 155, 1885, 223, 19, 62)
@@ -722,6 +724,10 @@ def run(dest):
     (dest / 'setup-graftloom-slipway.json').write_bytes(js)
     clearance = {}
     common = {}
+    for stage, grid in [('before_R2', PRE_R2), ('before_refinery', R2_BEFORE_REFINERY), ('after_refinery', R2_AFTER_REFINERY), ('after_salvage', A)]:
+        lm = legal_centres(grid, 19, 15)
+        vis, tot = flood(lm, SITES['spawn_receiving_dock'])
+        print('DIAGNOSTIC', stage, tot, {n: bool(vis[y*W+x]) for n,(x,y) in SITES.items()}, flush=True)
     for sx, sy in [(19, 15), (23, 19), (31, 27)]:
         legal = legal_centres(A, sx, sy)
         for n, (x, y) in SITES.items():
