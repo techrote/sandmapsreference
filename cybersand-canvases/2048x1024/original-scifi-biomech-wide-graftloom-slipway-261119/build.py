@@ -561,8 +561,8 @@ box(45,410,75,419,113)
 # 2. Mnemonic examination *dock*: asymmetric cantilevers from two independent
 # roof-rooted masts, enclosing real work bays on either side of a wide open
 # central inspection aperture. Not a ring in the transit void.
-line(748,204,746,382,14,62)
-line(746,382,817,417,15,62)
+line(609,174,609,416,12,62)
+line(609,416,817,417,13,62)
 box(807,413,823,535,62)
 box(817,510,899,524,62)
 box(827,499,889,510,113)
@@ -573,8 +573,8 @@ box(851,451,870,460,113)
 line(854,456,884,489,6,117)
 box(872,483,888,490,120)
 # Mirrored load path is deliberately not a mirrored architectural motif.
-line(1094,205,1101,376,14,62)
-line(1101,376,1046,419,15,62)
+line(1330,187,1329,418,14,62)
+line(1329,418,1046,419,13,62)
 box(1032,416,1048,535,62)
 box(962,509,1042,524,62)
 box(976,499,1038,509,113)
@@ -602,7 +602,7 @@ for xx in (1600,1621,1641):
 # Refinery MIDDLE: distinct enterable lamellar filtration lab. Its open right
 # side leads into the main corridor and exact (1510,544) destination.
 # The side wall is a continuous member of the pre-existing roof-supplied rack.
-line(1328,193,1318,477,14,62)
+line(1370,851,1323,597,14,62)
 box(1310,473,1328,604,62)
 box(1319,490,1439,500,62)
 box(1318,597,1401,609,62)
