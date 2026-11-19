@@ -1,0 +1,421 @@
+{
+  "schema": "original-cybersand-canvas-qualification-v1",
+  "original": true,
+  "creative_source": "entirely authored original geometry; no repository source image",
+  "design": "The Hollow Sovereign — Nacre Freight Cliff / Broken Gravity Loom / Sky Sacristy / Mirror Meridian / Abyssal Shipyard / Waste-Heat Crypt",
+  "lane": "original/megastructure-square",
+  "seed": 638654545,
+  "extent": [
+    2048,
+    2048
+  ],
+  "engine_accepted_main": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+  "source_setup": "godot/scripts/workbench_setup.gd",
+  "source_midge": "godot/authoring/flyers/midge.json",
+  "midge_definition_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+  "source_material_catalogue": "native/include/cybersand/material.hpp",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "materials_law": "All nonzero IDs in this actual-cell grid: source material state 1 (solid), movable false, valid true, current_rule_available true, kernel 0. No water, reactive or granular materials.",
+  "material_ids": {
+    "49": "slate",
+    "58": "reinforced-concrete",
+    "62": "steel-plate",
+    "100": "basalt-columns",
+    "101": "obsidian",
+    "113": "zinc-sheet",
+    "117": "bare-iron",
+    "120": "glass-block",
+    "122": "quartz-crystal",
+    "123": "uranium-glass",
+    "128": "polymer-panel"
+  },
+  "actor": {
+    "id": 1,
+    "model": "midge",
+    "hull": [
+      4,
+      3
+    ],
+    "spawn": [
+      217,
+      987
+    ],
+    "boost": 1.8
+  },
+  "gates": {
+    "dimensions_exact": true,
+    "rectangles": 19024,
+    "rectangle_source_limit": 32768,
+    "setup_bytes": 367776,
+    "source_json_limit": 1048576,
+    "edits_count": 19024,
+    "source_edits_limit": 32768,
+    "replay_mismatches": 0,
+    "rectangle_overlap_cells": 0,
+    "material_pixel_count": 4194304,
+    "actor_full_envelope": {
+      "19x15": {
+        "component_centres": 1760583,
+        "exact_reachable": 18,
+        "expected": 18,
+        "missing": []
+      },
+      "23x19": {
+        "component_centres": 1605572,
+        "exact_reachable": 18,
+        "expected": 18,
+        "missing": []
+      },
+      "31x27": {
+        "component_centres": 1457048,
+        "exact_reachable": 18,
+        "expected": 18,
+        "missing": []
+      }
+    },
+    "alternate_route": {
+      "blocked_actor_center_region": [
+        961,
+        931,
+        1152,
+        1044
+      ],
+      "tested_envelope": "31x27",
+      "actor_centre_mask": {
+        "centres": 1435554,
+        "sites_reached": 17,
+        "unreachable": [
+          "Lost civic core"
+        ]
+      },
+      "physical_material_obstruction": {
+        "material_id": 62,
+        "obstructed_bounds_inclusive": [
+          961,
+          931,
+          1152,
+          1044
+        ],
+        "centres": 1427398,
+        "sites_reached": 17,
+        "unreachable": [
+          "Lost civic core"
+        ],
+        "description": "Actual Solid cell insert, recomputed entire obstacle erosion and four-neighbour connectivity, not centre-only masking."
+      }
+    },
+    "fixed_seed_rebuild": "Source deterministic. Exact existing R5 Setup-v2 material grid plus committed 58-operation R6 program independently replayed to final material cells and lossless ordered rectangles. Node builder --verify NOT RUN on this host.",
+    "png_validation": "PASS 6/6 final actual-cell PNG signature/chunk CRC/stored zlib/Adler/IEND/all indexed material pixel parity against R6 final grid, including 2048x2048 overview; native rendering not tested.",
+    "installed_bridge_rectangle_capacity": "NATIVE-UNTESTED; source max 32768; installed bridge not interrogated, legacy fallback 4096 insufficient.",
+    "native_workbench": "NATIVE-UNTESTED",
+    "native_rapier_simulation": "NATIVE-UNTESTED",
+    "physical_actor_input_and_collision": "NATIVE-UNTESTED",
+    "native_save_reopen": "NATIVE-UNTESTED",
+    "structural_topology": {
+      "total_cardinal_components": 32,
+      "bottom_grounded_components": 1,
+      "detached_components": 31,
+      "detached_cells": 24452,
+      "largest_detached_components": [
+        {
+          "cells": 5139,
+          "bounds": [
+            1165,
+            764,
+            1256,
+            892
+          ],
+          "classification": "deliberately severed right gravity-loom counter-fragment — not an occupied platform"
+        },
+        {
+          "cells": 3581,
+          "bounds": [
+            812,
+            786,
+            912,
+            847
+          ],
+          "classification": "severed left loom indicator remnant — not operational"
+        },
+        {
+          "cells": 2315,
+          "bounds": [
+            1321,
+            1755,
+            1471,
+            1773
+          ],
+          "classification": "detached drydock hoist rail; further mechanical-support art review needed"
+        },
+        {
+          "cells": 2222,
+          "bounds": [
+            809,
+            568,
+            864,
+            651
+          ],
+          "classification": "severed gravity-loom fragment"
+        },
+        {
+          "cells": 1472,
+          "bounds": [
+            699,
+            1317,
+            772,
+            1394
+          ],
+          "classification": "detached secondary transfer detail; further review needed"
+        },
+        {
+          "cells": 1332,
+          "bounds": [
+            548,
+            1313,
+            611,
+            1377
+          ],
+          "classification": "detached west-lower architectural detail; further review needed"
+        },
+        {
+          "cells": 1236,
+          "bounds": [
+            513,
+            1276,
+            615,
+            1287
+          ],
+          "classification": "detached narrow floor fixture; further support review needed"
+        },
+        {
+          "cells": 1112,
+          "bounds": [
+            461,
+            755,
+            496,
+            847
+          ],
+          "classification": "detached west freight instrument/detail; not independent functional room"
+        }
+      ],
+      "caveat": "R6 materially connects former 52,681-cell western transfer, 9,956-cell lower-west and 7,701-cell eastern optical composites to grounded solids; remaining 24,452 static immovable cells include intentional severed machinery and unsupported-looking small details requiring independent art/technical review, not native-collapse claims."
+    }
+  },
+  "sites": [
+    {
+      "name": "Magnet customs",
+      "x": 217,
+      "y": 987
+    },
+    {
+      "name": "West skyline hatch",
+      "x": 291,
+      "y": 497
+    },
+    {
+      "name": "Nacre foundry chamber",
+      "x": 513,
+      "y": 751
+    },
+    {
+      "name": "Freight lift junction",
+      "x": 415,
+      "y": 1197
+    },
+    {
+      "name": "Western high slip",
+      "x": 745,
+      "y": 496
+    },
+    {
+      "name": "Loom aerial transfer",
+      "x": 1026,
+      "y": 712
+    },
+    {
+      "name": "Lost civic core",
+      "x": 1047,
+      "y": 989
+    },
+    {
+      "name": "Underloom service",
+      "x": 1046,
+      "y": 1486
+    },
+    {
+      "name": "Bastion signal loft",
+      "x": 1523,
+      "y": 497
+    },
+    {
+      "name": "Neon Meridian market",
+      "x": 1680,
+      "y": 986
+    },
+    {
+      "name": "Eastern descending lift",
+      "x": 1687,
+      "y": 1390
+    },
+    {
+      "name": "Dock west portal",
+      "x": 509,
+      "y": 1487
+    },
+    {
+      "name": "West keel interrogator",
+      "x": 837,
+      "y": 1733
+    },
+    {
+      "name": "Reactor berth",
+      "x": 1281,
+      "y": 1733
+    },
+    {
+      "name": "East salt gate",
+      "x": 1868,
+      "y": 986
+    },
+    {
+      "name": "Broken-spindle observation",
+      "x": 1210,
+      "y": 729
+    },
+    {
+      "name": "Western crucible transfer",
+      "x": 742,
+      "y": 1159
+    },
+    {
+      "name": "Bastion undercrypt",
+      "x": 1439,
+      "y": 1261
+    }
+  ],
+  "histogram": {
+    "0": 2465173,
+    "49": 156397,
+    "58": 293007,
+    "62": 407051,
+    "100": 368632,
+    "101": 190532,
+    "113": 15380,
+    "117": 206397,
+    "120": 25971,
+    "122": 2777,
+    "123": 9917,
+    "128": 53070
+  },
+  "gallery": [
+    {
+      "file": "overview.png",
+      "region": [
+        0,
+        0,
+        2048,
+        2048
+      ],
+      "size_bytes": 2099485,
+      "material_pixels_verified": 4194304,
+      "chunkCRC": "PASS",
+      "adler": "PASS",
+      "git_blob_sha": "a7c0b048b6382f58a313f529d51eb99542243041"
+    },
+    {
+      "file": "01-nacre-freight-cliff.png",
+      "region": [
+        100,
+        318,
+        610,
+        580
+      ],
+      "size_bytes": 177615,
+      "material_pixels_verified": 353800,
+      "chunkCRC": "PASS",
+      "adler": "PASS",
+      "git_blob_sha": "e221ddc85d42ddfd03ba8c801da81bcdf14d13fc"
+    },
+    {
+      "file": "02-spindle-and-sacristy.png",
+      "region": [
+        714,
+        80,
+        618,
+        724
+      ],
+      "size_bytes": 224580,
+      "material_pixels_verified": 447432,
+      "chunkCRC": "PASS",
+      "adler": "PASS",
+      "git_blob_sha": "aaf4822b3d08297c10fdff7d401a133d9f16aa52"
+    },
+    {
+      "file": "03-meridian-bastion.png",
+      "region": [
+        1340,
+        314,
+        610,
+        590
+      ],
+      "size_bytes": 180675,
+      "material_pixels_verified": 359900,
+      "chunkCRC": "PASS",
+      "adler": "PASS",
+      "git_blob_sha": "86b664e3e2adfb0dde9f2ff763971287515535f0"
+    },
+    {
+      "file": "04-split-market-artery.png",
+      "region": [
+        668,
+        864,
+        686,
+        516
+      ],
+      "size_bytes": 177639,
+      "material_pixels_verified": 353976,
+      "chunkCRC": "PASS",
+      "adler": "PASS",
+      "git_blob_sha": "6621c879d660d25000d2c9e124de0bc138942c39"
+    },
+    {
+      "file": "05-abyssal-drydock.png",
+      "region": [
+        497,
+        1545,
+        742,
+        480
+      ],
+      "size_bytes": 178695,
+      "material_pixels_verified": 356160,
+      "chunkCRC": "PASS",
+      "adler": "PASS",
+      "git_blob_sha": "ea6f9e305b87e1472c8df375718b19034071ee8b"
+    }
+  ],
+  "rework": {
+    "phase": "R6 actual-cell support/load-path and differential interior service, physical civic-core bypass rework on existing original megastructure-square Draft/HOLD PR",
+    "starting_head": "2e35e7c2fc1bffecfa6a6336c43bd06b6a794079",
+    "r6_ops_blob": "f97a87247d8bb918b863fe57fd4b0bd230236eba",
+    "r6_operations": 58,
+    "material_cells_added": 23889,
+    "material_cells_removed": 646,
+    "material_cells_reclassified": 15240,
+    "material_cells_changed": 39775,
+    "prior_detached_cells": 96472,
+    "now_detached_cells": 24452,
+    "architectural_changes": [
+      "Connected giant western transfer/halo composite to actual cliff via a steel support path with clearance-preserving service passage",
+      "Connected large formerly detached eastern optical/market and western lower assemblies through actual solid geometry",
+      "Added credible functional cargo/hoist/foundry rooms and unequal surveillance/market approaches, using continuous beams, columns, equipment bays",
+      "Strengthened sheared gravity spindle and separate working dock servicing elements with materially authored cells",
+      "Cut deliberate emergency port x917..994/y1022..1117 and proved that an actual physical solid civic-core obstruction preserves 17/18 destinations at 31x27"
+    ],
+    "known_P1": "52,681-cell west freight/halo structural detachment fixed; remaining 24,452 smaller detached cells include deliberately severed machinery and unreviewed architectural fixtures. Independent art and technical re-review required, NOT owner acceptance.",
+    "independent_approval": "PENDING INDEPENDENT CURRENT-HEAD SHEPHERD / ART / TECH REVIEW",
+    "native": "NATIVE-UNTESTED; installed bridge capacity, Midge physical movement/collision, simulation, load and save/reopen not run",
+    "rebuild": "No independent Node 22 process; independent actual-cell R5 + 58-op R6 deterministic replay, PNG integrity and exhaustive pixel parity done"
+  },
+  "setup_git_blob_sha": "621da2dca40ce35c6510fb1c31ad700acb8c0e52",
+  "rework_note": "Exact-source static validation is not installed Workbench qualification. Retain Draft / HOLD."
+}
