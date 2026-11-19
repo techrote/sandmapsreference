@@ -1,47 +1,41 @@
 {
-  "kind": "CYBERSAND_ORIGINAL_RACING_WIDE_R7",
+  "kind": "CYBERSAND_ORIGINAL_RACING_WIDE_R8",
   "status": "OPEN DRAFT/HOLD",
   "source_type": "ORIGINAL-NO-REFERENCE",
   "engine_main_sha": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
-  "previous_branch_head": "65e97e0431cf42db8df40eba88dcc046d905ae39",
+  "previous_branch_head": "9ec8a6db4edabbc780ea79f99142daf060022854",
   "extent": [
     2048,
     1024
   ],
   "total_material_cells": 2097152,
-  "terrain_rectangles": 11063,
-  "setup_json_bytes": 208909,
+  "terrain_rectangles": 12298,
+  "setup_json_bytes": 232140,
   "source_rect_limit": 32768,
   "source_byte_limit": 1048576,
   "replay_work_limit": 32000000,
-  "cell_visits": 938935,
+  "cell_visits": 950196,
   "overlapping_edits": 0,
   "replay_mismatches": 0,
-  "grid_sha256": "bfac4832a8726aed8aa88cf803a174384ed301d3ba4a882084920321be94cfc3",
-  "json_sha256": "19d73909e394a7fa0ef7f83a4a580a876d25e8f6294c95f97a8102186db1c6b6",
+  "grid_sha256": "008fb3fd4526294c0c1dff5b0447423173e22589a5b1edb539a44089eac293b7",
+  "json_sha256": "1b799a2631fbdc5bd691fa21a0c38af7fd032d630f0409de12b4fa4a38aa4d77",
   "seed": "0x20261118",
-  "change_from_R6": {
-    "physical_cells_changed": 22245,
-    "added": 11895,
-    "erased": 0,
-    "rematerialized": 10350
-  },
   "native_source_bridge_rectangle_capacity": 32768,
   "installed_bridge_rectangle_capacity": "NOT TESTED",
   "material_laws": "All 11 occupied numeric IDs legal inert nonmovable Solid RuleKernel::None; no powder/liquid/reaction",
   "material_histogram": {
-    "0": 1158217,
-    "49": 159991,
-    "58": 71120,
-    "62": 101386,
-    "100": 419026,
-    "101": 95730,
-    "113": 23328,
-    "117": 43075,
-    "120": 7628,
-    "122": 2707,
-    "123": 5050,
-    "128": 9894
+    "0": 1146956,
+    "49": 158946,
+    "58": 70722,
+    "62": 104175,
+    "100": 417001,
+    "101": 95635,
+    "113": 24122,
+    "117": 51661,
+    "120": 7550,
+    "122": 2939,
+    "123": 5881,
+    "128": 11564
   },
   "actor": {
     "model": "midge",
@@ -145,17 +139,17 @@
     "19x15": {
       "reached": 14,
       "total": 14,
-      "connected_centres": 862652
+      "connected_centres": 789863
     },
     "23x19": {
       "reached": 14,
       "total": 14,
-      "connected_centres": 745371
+      "connected_centres": 726632
     },
     "31x27": {
       "reached": 14,
       "total": 14,
-      "connected_centres": 677702
+      "connected_centres": 657994
     }
   },
   "physical_iris_obstruction": {
@@ -189,7 +183,7 @@
     "unreachable": [
       "Iris central chamber"
     ],
-    "connected_centres": 619032
+    "connected_centres": 599711
   },
   "lower_corridor_only": {
     "corridor_bounds": [
@@ -373,9 +367,39 @@
       "x": 660,
       "y": 191,
       "cardinal_grounding": true
+    },
+    {
+      "name": "Lower launch guide connected",
+      "x": 172,
+      "y": 627,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Upper launch guide connected",
+      "x": 214,
+      "y": 535,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Left Iris arc connected",
+      "x": 992,
+      "y": 584,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Right Iris arc A connected",
+      "x": 1144,
+      "y": 566,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Right Iris arc B connected",
+      "x": 1159,
+      "y": 573,
+      "cardinal_grounding": true
     }
   ],
-  "detached_solid_cells": 11399,
+  "detached_solid_cells": 6905,
   "optional_race_waypoints": [
     {
       "name": "Canyon high technical",
@@ -432,10 +456,10 @@
         1024
       ],
       "sample_step": 1,
-      "sha256": "7ec5e066aa5d274ab5dd2836e331c8475201e943db6cdb0d440352cd30df7e69",
+      "sha256": "677fe4f18805804ef9b706851460139cc2e263700ccbb174cb36731a279d84a1",
       "crc32": "PASS",
       "adler32": "PASS",
-      "pixel_parity": 2097152
+      "material_pixel_parity": 2097152
     },
     {
       "file": "overview-review-2x.png",
@@ -445,10 +469,10 @@
         512
       ],
       "sample_step": 2,
-      "sha256": "284e876c2428c06e1dec4ff20997b15cf7c9d6fc79c30ac527b875d9585954ed",
+      "sha256": "9faf4ea2ef0aaa42a056f7e12f85f7f6960d859266524abb011551919e5879d2",
       "crc32": "PASS",
       "adler32": "PASS",
-      "pixel_parity": 524288
+      "material_pixel_parity": 524288
     },
     {
       "file": "01-launch-cradle.png",
@@ -458,10 +482,10 @@
         384
       ],
       "sample_step": 1,
-      "sha256": "2d000cc03806acb3977f93100188dd0c6ceafd5487db16e47ebe97d6177c186e",
+      "sha256": "cd6e088130cbf96a57015d20e9a957cbfa6db57c58440be8d4e44cd373e0975b",
       "crc32": "PASS",
       "adler32": "PASS",
-      "pixel_parity": 196608
+      "material_pixel_parity": 196608
     },
     {
       "file": "02-drift-canyon.png",
@@ -474,7 +498,7 @@
       "sha256": "a84e4a47155793d9903bfdce22b09e593236248618cd1515457ca036ab56b161",
       "crc32": "PASS",
       "adler32": "PASS",
-      "pixel_parity": 196608
+      "material_pixel_parity": 196608
     },
     {
       "file": "03-split-current-iris.png",
@@ -487,7 +511,7 @@
       "sha256": "dea9af985175c123a38bb2dd0f7658bd629fcfefdd7cef6c06568049943cf5a9",
       "crc32": "PASS",
       "adler32": "PASS",
-      "pixel_parity": 196608
+      "material_pixel_parity": 196608
     },
     {
       "file": "04-glassstorm-viaduct.png",
@@ -497,10 +521,10 @@
         384
       ],
       "sample_step": 1,
-      "sha256": "6289e81f2ca91bc338c7213d0482b678f983dca2cae54879bd60cb3e9306b47c",
+      "sha256": "8dbbed7bf062a7a392ca81323595417d076ca7db558c091809d40a5affce5af0",
       "crc32": "PASS",
       "adler32": "PASS",
-      "pixel_parity": 196608
+      "material_pixel_parity": 196608
     },
     {
       "file": "05-catch-recovery.png",
@@ -510,10 +534,10 @@
         384
       ],
       "sample_step": 1,
-      "sha256": "740262185727e2c6763698bf5f8f520631914210f4b5bbdb99ebf4b536d48381",
+      "sha256": "049548fabc8a56b2b9ce1b132c059b3b39f3f8d06349823dd845d301ad7738e4",
       "crc32": "PASS",
       "adler32": "PASS",
-      "pixel_parity": 196608
+      "material_pixel_parity": 196608
     },
     {
       "file": "06-lower-s-turn-west.png",
@@ -523,10 +547,10 @@
         384
       ],
       "sample_step": 1,
-      "sha256": "0ca8280cce8485866a6e6a9b4e28cff42dcb50169b542c64cfb0ca658ab68e0d",
+      "sha256": "fb6dc513ec38e8e808880dba5ecabd2e199b26ca47b155bc4d1e93a8125d5b9c",
       "crc32": "PASS",
       "adler32": "PASS",
-      "pixel_parity": 196608
+      "material_pixel_parity": 196608
     },
     {
       "file": "07-lower-s-turn-east.png",
@@ -536,10 +560,10 @@
         384
       ],
       "sample_step": 1,
-      "sha256": "ff91e3a3e50c43af451c04c057d6ae4c865c20b2e69de8ae0b5ab937835a7599",
+      "sha256": "326faaf0f7676a966dd49368852089add6d7a15e43932e74db9564ea19ba5480",
       "crc32": "PASS",
       "adler32": "PASS",
-      "pixel_parity": 196608
+      "material_pixel_parity": 196608
     }
   ],
   "png_integrity": "All nine PNGs builder-self-parsed CRC/zlib/Adler/IEND and entire indexed material pixel parity against final grid; full overview true native 1:1, half-size review is sampling not replacement",
@@ -548,10 +572,26 @@
   "native_collision": "NATIVE-UNTESTED",
   "save_reopen": "NATIVE-UNTESTED",
   "limitations": [
-    "No version-matched installed CyberDemoBridge/Godot/Rapier executed. Source 32768 rectangle capacity does not establish installed capacity; legacy fallback 4096 would reject.",
-    "True 31x27 lower-only line proven only in static bounded envelope, not at native Midge speed.",
-    "Central Iris spine is solid: lower route enters via west/east, not a direct central drop.",
-    "Inert time-trial markings are not functional timing mechanics.",
-    "Independent exact-HEAD Shepherd, technical and art reviewers must re-audit R7."
-  ]
+    "No matching installed CyberDemoBridge/Godot/Rapier binary or physical Workbench acceptance run; current source capacity 32768 rectangles does not prove installed binary capacity (legacy 4096 fallback).",
+    "All BFS are static 4-neighbour clearance tests, not dynamic handling/lap-time measurement.",
+    "Iris central service spine still intentionally obstructs direct dive; use west/east lower entrances.",
+    "Inert time-trial marks are not functional timers.",
+    "R8 needs fresh independent Shepherd, Technical and Fidelity exact-HEAD reviews and owner playtest."
+  ],
+  "change_from_R7": {
+    "physical_cells_changed": 19611,
+    "added": 11261,
+    "erased": 0,
+    "rematerialized": 8350
+  },
+  "artistic_rework_R8": {
+    "auditor_verdict_addressed": "exact R7 Fidelity REWORK",
+    "lower_bank_surface_inlays": "four distinct actual solid-cell patterns, no new airspace obstructions",
+    "west_and_east_portal": "two separate asymmetric horned structural gates, shaft kept open",
+    "iris": "three large arc components grounded through distinct cable braces to service spine",
+    "launch": "two detached rails cardinal-attached",
+    "glassstorm": "single weight-transfer calibration beam",
+    "brake": "east boundary-mounted deceleration fins",
+    "requires_independent_exact_head_review": true
+  }
 }

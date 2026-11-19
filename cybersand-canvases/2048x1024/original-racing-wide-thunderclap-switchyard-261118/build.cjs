@@ -469,6 +469,63 @@ function buildWideCanvas() {
   L(1810,610,1864,558,12,mat.STEEL);
   R(1842,563,31,8,mat.BLUE);
 
+
+  // R8 Fidelity finish (2026-11-19): authored actual material cells.
+  // Dispatch: both former floating launcher guides are cardinal-joined to west bedrock.
+  L(8,627,79,627,12,mat.STEEL);
+  L(8,535,151,535,11,mat.IRON);
+  // Split-current Iris: three lower crescents now resolve into deliberately
+  // angled load cables and the existing founded y635 industrial service spine.
+  L(992,584,1000,637,12,mat.IRON);
+  L(1144,566,1189,639,10,mat.IRON);
+  L(1159,573,1221,639,10,mat.STEEL);
+  R(993,625,25,10,mat.BLUE);
+  R(1174,629,32,9,mat.BLUE);
+  // West descent: two separated, oblique structural horns make a recognisable
+  // service/race portal. NO transverse bar, so the full actor shaft remains open.
+  L(372,676,372,584,13,mat.IRON);
+  L(372,584,396,551,12,mat.STEEL);
+  L(542,681,541,581,12,mat.IRON);
+  L(541,581,517,552,12,mat.STEEL);
+  P([[374,555],[391,534],[414,538],[402,559]],mat.CONCRETE);
+  P([[502,540],[530,533],[549,560],[524,566]],mat.CONCRETE);
+  R(390,550,10,7,mat.BLUE);
+  R(519,552,10,7,mat.SIGNAL);
+  // East recovery: a different, splayed upward pair of horns marks the
+  // ascent from technical lower tunnel into the east brake/recovery.
+  L(1650,639,1651,580,13,mat.IRON);
+  L(1651,580,1696,548,12,mat.STEEL);
+  L(1811,687,1811,589,13,mat.IRON);
+  L(1811,589,1773,551,12,mat.STEEL);
+  P([[1694,543],[1726,536],[1739,547],[1725,557],[1703,553]],mat.BLUE);
+  P([[1764,544],[1787,539],[1801,549],[1790,562],[1771,557]],mat.SIGNAL);
+  // Four differentiated slope-identifying "dive / crest" bank inlays.
+  // These REMATERIALIZE EXISTING occupied rock only: no collision addition.
+  function faceInlay(x0,y0,x1,y1,expected,replacement,pred){
+    for(let y=y0;y<=y1;y++)for(let x=x0;x<=x1;x++){
+      const ix=y*W+x;if(g[ix]===expected&&pred(x,y))g[ix]=replacement;
+    }
+  }
+  faceInlay(681,703,759,746,mat.BASALT,mat.ZINC,(x,y)=>((x+2*y)%37)<6);
+  faceInlay(830,778,884,816,mat.BASALT,mat.BLUE,(x,y)=>((2*x-y)%43)<8);
+  faceInlay(1284,702,1378,746,mat.BASALT,mat.ZINC,(x,y)=>((x+y)%41)<7);
+  faceInlay(1467,778,1568,813,mat.BASALT,mat.BLUE,(x,y)=>((2*x+y)%47)<7);
+  // Glassstorm: an asymmetrical single-load weigh beam, calibration marker
+  // and angled supported delivery heel, not an endlessly duplicated box row.
+  L(1411,603,1464,589,10,mat.IRON);
+  L(1464,589,1531,601,10,mat.STEEL);
+  R(1455,582,29,8,mat.QUARTZ);
+  R(1520,588,16,9,mat.SIGNAL);
+  L(1499,604,1535,628,8,mat.ZINC);
+  // Outboard solid brake fins rooted in the far-right world boundary;
+  // placed safely above the horizontal y446 Midge finishing corridor.
+  P([[2039,248],[2007,271],[1988,291],[2006,302],[2040,298]],mat.IRON);
+  P([[2039,315],[2009,330],[1994,352],[2017,362],[2040,357]],mat.STEEL);
+  R(2003,336,15,6,mat.SIGNAL);
+  for(const x of [1856,1902,1950]){
+    R(x,852,18,5,mat.ZINC);R(x+4,846,10,5,mat.BLUE);
+  }
+
     // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -527,7 +584,12 @@ function buildWideCanvas() {
     ["Iris east tension anchorage",1240,360],
     ["East slalom roof rooted",1314,713],
     ["East slalom floor rooted",1520,803],
-    ["Canyon overhead root",660,191]
+    ["Canyon overhead root",660,191],
+    ["Lower launch guide connected",172,627],
+    ["Upper launch guide connected",214,535],
+    ["Left Iris arc connected",992,584],
+    ["Right Iris arc A connected",1144,566],
+    ["Right Iris arc B connected",1159,573]
   ];
   for(const [name,x,y] of supportSites){
     if(!grounded[y*W+x])throw Error("STRUCTURAL_SUPPORT_FAIL "+name+" ("+x+","+y+")");
