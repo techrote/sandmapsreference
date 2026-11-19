@@ -98,3 +98,25 @@ ring remnants, but also a **9,097-cell eastern roof section** and an
 **8,112-cell right middeck/truss component**. Their load-path legibility
 needs independent art/engineering adjudication; inert solid does not imply
 runtime collapse. This candidate remains **DRAFT/HOLD, NATIVE-UNTESTED**.
+
+
+## R3 — exact-cell structural and phasewell repair (HOLD)
+
+R3 materially joins the inhabited eastern upper roof into overhead rock and
+connects its quarantine sample gallery to that roof. It bonds west xenology
+works to the native rock canopy, the eastern lower tram to the rooted phasewell
+support, and both broken ring crescents through asymmetrical upper/lower load
+paths. The left emitter has a substantial ruptured shield, glowing diagnostics
+and a separate inspection ledge. Deep archive and survey slabs receive short
+rock ties. This is authored static CyberSand material-cell construction, not
+image paint or an engine change.
+
+The first candidate full-height support columns were rejected because exact
+Midge-hull floods showed that they severed cross-district routes. The corrected
+R3 geometry was preflighted on the full 2,097,152-cell prior plane, retaining
+all sixteen exact named destinations under 19×15, 23×19 and 31×27 hulls,
+and seven key sites through both central and lower obstruction experiments.
+The committed independent verifier also rejects detached occupancy above
+30,000 cells. Exact regenerated receipt, PNG hashes and full pixel parity
+remain the authoritative reproducible gates. No native Workbench install,
+flight steering, simulation or save/reopen has been performed: **NATIVE-UNTESTED**.

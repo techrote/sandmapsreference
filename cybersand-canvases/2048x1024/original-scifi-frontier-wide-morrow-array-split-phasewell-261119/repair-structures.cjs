@@ -162,4 +162,34 @@ module.exports=function repairMorrow({M,R,P,L,sites}){
     R(x-10,865-h,27,6,M.U);
     R(x-3,865-h-9,12,9,M.I);
   }
+
+  // R3: material-cell load paths, not visual overlay. Every unchanged exact
+  // named site was preflighted using full 19x15,23x19,31x27 envelope floods.
+  // Bracing stays near existing terrain and avoids severing the flight lanes.
+  // Overhead geological attachment for the inhabited east roof and airlock.
+  L(1600,350,1611,160,18,M.S);
+  L(1588,389,1583,314,14,M.S);
+  L(1600,419,1600,455,12,M.S);
+  // West xenology ceiling anchored diagonally to real rock, ABOVE the
+  // access envelope; rejected long vertical piers divided the whole world.
+  L(410,351,275,319,11,M.S);
+  L(405,383,411,350,11,M.S);
+  // Distinct short rooted joints for mid-rift tram and inner right ledge.
+  L(1229,555,1229,595,12,M.S);
+  L(1193,592,1205,592,12,M.S);
+  // The split crescents now have ASYMMETRIC grounded upper/lower load paths.
+  L(900,392,900,586,16,M.S);
+  L(1215,247,1215,236,12,M.S);
+  L(1180,340,1215,243,12,M.S);
+  L(1155,350,1180,340,11,M.S);
+  // Ruptured left emitter shield, indexed core and distinct inspection ledge.
+  P([[837,380],[861,354],[884,363],[896,395],[881,419],[844,410]],M.K);
+  R(853,377,22,8,M.U);
+  L(882,406,899,391,11,M.S);
+  R(858,390,10,13,M.I);
+  R(876,543,45,9,M.U);
+  L(880,545,900,569,8,M.P);
+  // Underpin instead of leaving lower archival and field-survey slabs afloat.
+  L(203,826,203,837,14,M.C);
+  L(834,873,834,913,12,M.C);
 };

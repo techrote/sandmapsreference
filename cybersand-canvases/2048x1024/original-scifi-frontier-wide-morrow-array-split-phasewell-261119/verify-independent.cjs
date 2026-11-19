@@ -125,5 +125,8 @@ for(let i=0;i<N;i++){if(!g[i]||touched[i])continue;let head=0,tail=1,boundary=fa
  }
  if(boundary){anchored+=tail;anchoredComponents++}else{detached+=tail;detachedComponents++}
 }
+// R3 support is a measurable physical-cell property, independently flooded.
+insist(detached<=30000,"R3 detached solid regression: "+detached);
+insist(detachedComponents<=60,"R3 component regression: "+detachedComponents);
 const result={status:"INDEPENDENT-STATIC-PASS",native:"NATIVE-UNTESTED",dimension:[W,H],rectangles:setup.edits.length,area,overlaps,json_bytes:source.length,plane_sha256:sha(g),flight,images,structural_diagnostic:{anchored,anchoredComponents,detached,detachedComponents,review:"Independent art/support evaluation required: static solids are immobile but not necessarily physically attached"}};
 console.log(JSON.stringify(result,null,2));
