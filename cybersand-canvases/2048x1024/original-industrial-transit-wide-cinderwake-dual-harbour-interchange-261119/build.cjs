@@ -152,6 +152,111 @@ R(1590,382,4,57,M.S);R(1790,590,6,26,M.S);
 R(1579,409,10,6,M.S);
 L(1789,553,1763,608,8,M.S);
 
+
+// R2 INDUSTRIAL OPERATIONS REPAIR — original industrial function, not source fidelity.
+// These are physical supported material cells added at readable Midge scale.
+// WEST DRYDOCK: an exposed vessel undergoing rib-and-keel repair. Broken sheer
+// segments preserve a wide open central descender; 1:1 inspection at x313,y743.
+L(181,724,188,680,10,M.S);L(188,680,246,660,7,M.U);
+L(205,752,223,691,7,M.C);L(221,690,247,662,5,M.G);
+L(245,774,260,682,7,M.C);L(260,682,278,669,5,M.U);
+L(382,777,375,685,8,M.C);L(374,685,404,663,6,M.G);
+L(426,722,417,677,10,M.S);L(417,677,401,664,7,M.U);
+L(381,778,434,722,7,M.U);L(178,726,215,781,7,M.U);
+for(const x of [197,242,379,422]){
+  R(x,697,7,27,M.C);R(x-6,700,20,5,M.S);
+}
+// Two opposite quay-side support galleries, interrupted for the open dock void.
+R(136,660,65,8,M.S);R(144,667,40,5,M.G);
+R(403,657,70,8,M.S);R(415,664,43,6,M.G);
+L(138,658,125,604,7,M.C);L(457,656,453,602,7,M.C);
+// The crane hook now bears a visible two-point lifting frame and hull section.
+L(340,564,339,592,5,M.P);R(318,589,46,7,M.S);
+L(323,594,311,612,5,M.P);L(359,594,371,612,5,M.P);
+R(309,608,67,11,M.U);R(314,619,57,14,M.V);
+for(let x of [320,341,361])R(x,620,4,12,M.G);
+// WEST CUSTOMS: platform-scale inspection room and actual cargo hoist spreader.
+R(781,521,88,8,M.S);R(792,499,7,27,M.C);R(851,497,7,29,M.C);
+R(806,504,29,8,M.U);R(810,497,17,7,M.F);
+R(835,513,17,9,M.K);R(846,502,6,8,M.J);
+// Horizontal trolley trolley-beam and offset weight on the high gantry.
+R(710,305,86,9,M.S);R(724,313,22,8,M.G);R(772,313,18,11,M.U);
+L(753,321,753,368,5,M.P);
+R(740,369,27,12,M.U);R(747,382,13,6,M.J);
+// Suspended spreader clamps the already-placed blue freight module.
+R(817,571,67,8,M.S);L(850,557,850,571,5,M.P);
+L(822,578,822,590,5,M.P);L(879,578,879,590,5,M.P);
+R(816,583,12,7,M.G);R(874,583,12,7,M.G);
+// Deliberate rail equipment along the freight deck, supported by existing slabs.
+for(let x of [598,687,783,868]){
+  R(x,638,34,8,M.U);R(x+3,646,8,5,M.K);R(x+23,646,8,5,M.K);
+}
+R(741,644,84,8,M.S);R(747,636,72,9,M.G);
+// TWIN-JAW LIFT: supported paired rail stops, service cages and guided cargo.
+// Preserve both x1080,y282 and x1083,y475 conservative full-hull apertures.
+R(972,444,47,13,M.S);R(982,457,8,19,M.C);
+R(1001,457,7,19,M.C);R(976,432,39,9,M.U);
+R(1157,444,49,13,M.S);R(1165,457,9,25,M.C);
+R(1196,457,8,25,M.C);R(1166,430,33,11,M.U);
+for(let y of [390,424,501,537]){
+  R(988,y,10,23,M.G);R(1180,y,10,23,M.G);
+}
+// Offset counterweight cage, not a sealed wall across the flying throat.
+R(1207,484,23,39,M.U);R(1212,488,13,30,M.F);
+R(1207,523,23,8,M.S);L(1216,433,1216,483,5,M.P);
+R(964,581,58,10,M.S);R(1155,582,65,11,M.S);
+// EAST CLASSIFICATION: two physically branching graded rail alignments.
+// Different inclines/carts signal sorting, without spanning the flying artery.
+L(1329,602,1458,544,5,M.G);L(1422,590,1560,552,5,M.S);
+L(1458,544,1594,556,6,M.G);
+R(1383,567,48,10,M.U);R(1388,577,10,6,M.K);R(1417,577,10,6,M.K);
+R(1517,566,56,12,M.V);R(1524,578,10,7,M.K);R(1556,578,10,7,M.K);
+R(1462,528,16,13,M.C);R(1468,520,6,8,M.J);
+// Compartmentalized, supported signal-work room beneath the control building.
+R(1577,415,9,19,M.C);R(1587,423,26,8,M.S);
+R(1596,410,11,13,M.U);R(1599,404,5,6,M.J);
+// EAST TERMINAL: real receiving bench, upper assay and outward-transfer bay.
+// Keep x1838,y469 clear and x1850,y347 assay arrival open.
+R(1900,432,113,10,M.S);R(1910,442,8,67,M.C);
+R(1996,442,9,70,M.C);R(1921,420,44,12,M.U);
+R(1930,411,28,9,M.F);R(1971,415,20,17,M.V);
+R(1976,406,7,7,M.J);
+R(1768,503,37,8,M.S);R(1772,511,8,41,M.C);
+R(1797,517,8,35,M.C);R(1777,489,19,14,M.U);
+R(1884,551,123,8,M.G);R(1888,543,10,8,M.K);
+R(1913,538,64,11,M.U);R(1983,540,16,9,M.K);
+// SUBTERRANEAN: distinct, entered chambers, no five stamped lamp clones.
+// All room entrances use 42+ cell widths; other arched cells remain grounded.
+// West dock drainage pumps (existing niche x215..371).
+R(241,791,47,54,M.A);R(224,817,137,49,M.A);
+R(224,860,137,12,M.C);R(232,847,28,13,M.U);
+R(238,836,16,12,M.K);R(287,845,34,14,M.S);
+R(301,835,9,11,M.P);R(331,842,17,18,M.G);
+L(241,870,241,885,9,M.C);L(351,865,351,884,9,M.C);
+// Freight manifest and signal repair service in the west-mid return.
+R(672,791,44,52,M.A);R(611,815,151,52,M.A);
+R(610,863,154,13,M.C);R(620,846,49,11,M.U);
+R(629,836,11,10,M.F);R(689,838,20,18,M.S);
+R(694,832,10,6,M.J);R(729,843,24,15,M.G);
+L(612,870,612,886,8,M.C);L(763,869,763,883,8,M.C);
+// Counterweight service chamber, broad open entry offset from x1083,745.
+R(1116,791,44,56,M.A);R(992,816,170,54,M.A);
+R(990,866,175,12,M.C);R(1004,846,51,12,M.U);
+R(1011,835,12,11,M.K);R(1058,844,34,12,M.G);
+R(1124,838,21,23,M.S);R(1128,831,11,7,M.P);
+L(990,868,990,888,8,M.C);L(1164,868,1164,888,8,M.C);
+// East dispatch: switching console and offset retrieval portal.
+R(1470,790,42,53,M.A);R(1441,815,134,53,M.A);
+R(1440,863,137,13,M.C);R(1453,847,35,11,M.U);
+R(1462,836,10,11,M.J);R(1524,841,36,18,M.G);
+L(1440,868,1440,883,8,M.C);L(1576,868,1576,883,8,M.C);
+// Terminal recovery pocket: unload trolley, distinct from other rooms.
+R(1779,791,45,53,M.A);R(1762,816,133,50,M.A);
+R(1761,861,137,14,M.C);
+R(1775,847,73,10,M.S);R(1782,857,9,8,M.K);
+R(1835,857,9,8,M.K);R(1861,840,23,19,M.U);
+L(1762,868,1762,882,9,M.C);L(1898,868,1898,883,9,M.C);
+
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
