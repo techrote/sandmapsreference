@@ -250,6 +250,29 @@ line(1899, 494, 1899, 462, 7, 117)
 line(1753, 613, 1784, 579, 7, 117)
 line(1660, 622, 1690, 910, 12, 117)
 
+
+# R2: authored structural engineering, tied into established inert load paths.
+# Stage-1 review found isolated decorative machine slabs: support the large
+# gantry, memory-lens and lower transit districts with deliberate steel ribs.
+# The upper/lower route closures and exact 31x27 site clearance are rechecked.
+line(1327, 214, 1300, 29, 14, 62)      # refinery fore gantry hangs from roof truss
+line(1487, 224, 1580, 29, 10, 117)     # independent aft gantry tie
+line(777, 443, 693, 354, 13, 62)      # port memory ring radial load path
+line(1064, 442, 1165, 357, 13, 62)    # starboard memory ring radial load path
+line(1090, 724, 1168, 923, 14, 58)    # southern memory engine foundation
+line(736, 749, 693, 928, 14, 62)      # western keel truss to basalt
+line(833, 617, 833, 521, 10, 117)     # inspection deck riser
+line(740, 620, 836, 620, 9, 62)       # transverse under-engine service girder
+line(1814, 363, 1910, 31, 11, 62)    # hanging aft dock crane
+line(1751, 809, 1789, 972, 12, 117)   # deep aft brace to bedrock
+line(645, 400, 758, 294, 7, 113)     # port vestibule support cable
+line(871, 456, 814, 439, 6, 120)     # central lens suspension away from pilot
+line(1186, 397, 1150, 342, 7, 113)   # right portal return into ring
+line(1572, 554, 1647, 554, 7, 117)   # refinery middle right sample support
+line(1463, 548, 1341, 550, 7, 117)   # refinery middle left sample support
+line(1558, 398, 1640, 392, 8, 117)   # upper bay inspection support
+line(741, 896, 739, 950, 8, 117)     # small underkeel hoist into rock
+
 def rectangles(a):
     rect = []
     open_runs = {}
