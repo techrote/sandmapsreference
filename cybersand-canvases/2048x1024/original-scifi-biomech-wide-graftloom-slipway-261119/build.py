@@ -254,6 +254,116 @@ line(1660, 622, 1690, 910, 12, 117)
 box(1779, 875, 1784, 890, 62)
 
 
+
+# Structural R1: preserve the rooted geology/hull, remove unsupported islands
+# that earlier direct-strap investigations proved would close BOTH narrow
+# alternates, and replace them with deliberately *grounded* split infrastructure.
+# The two sky and keel transit bands are kept open between the new structures.
+def anchored_only(a, remove):
+    rooted = bytearray(W*H)
+    q = collections.deque()
+    def seed(i):
+        if a[i] and not rooted[i]:
+            rooted[i] = 1
+            q.append(i)
+    for x in range(W):
+        seed(x)
+        seed((H-1)*W+x)
+    for y in range(H):
+        seed(y*W)
+        seed(y*W+W-1)
+    while q:
+        i=q.popleft()
+        x=i%W
+        y=i//W
+        for j in (i-1 if x else -1, i+1 if x<W-1 else -1,
+                  i-W if y else -1, i+W if y<H-1 else -1):
+            if j>=0 and a[j] and not rooted[j]:
+                rooted[j]=1
+                q.append(j)
+    detached=sum(bool(a[i]) and not rooted[i] for i in range(W*H))
+    if remove:
+        for i in range(W*H):
+            if a[i] and not rooted[i]: a[i]=0
+    return detached
+
+REPLACED_UNSUPPORTED_CELLS=anchored_only(A, True)
+assert REPLACED_UNSUPPORTED_CELLS>=100000, REPLACED_UNSUPPORTED_CELLS
+
+# Graftloom upper receiving scissors: roof-fixed, short hanging gantries.
+# Their lowest tips stay above Midge's upper transit and work platforms.
+box(465,25,479,172,62)
+line(471,169,532,205,13,117)
+line(532,205,612,180,12,62)
+box(602,25,616,184,62)
+for xx,yy in [(509,186),(558,196),(589,187)]:
+    line(xx,yy,xx+8,yy+12,6,113)
+
+# Split mnemonic xenoreactor: overhead synaptic crown / low underkeel cradle.
+# IMPORTANT: two anchored open HALF-assemblies, not a closed obstructive wheel.
+# The north-shunt route can pass under the crown at y ~310-375.
+box(744,25,758,211,62)
+line(750,210,825,242,16,62)
+line(825,242,1018,242,13,117)
+line(1018,242,1095,211,16,62)
+box(1088,25,1103,217,62)
+for cx,cy,rx,ry in [(840,241,27,21),(940,242,40,19),(1008,241,24,17)]:
+    ring(cx,cy,rx,ry,7,120)
+    box(cx-3,cy-3,cx+4,cy+4,113)
+# Bottom open keel arms tie to in-situ bedrock, not to the roof arch.
+box(730,894,752,986,58)
+line(740,900,783,837,18,58)
+line(782,839,824,833,10,62)
+box(1095,891,1118,986,58)
+line(1106,897,1072,844,18,58)
+line(1072,845,1029,835,10,62)
+# A shallow U-shaped process gutter remains below the South objective.
+line(740,944,858,931,14,117)
+line(858,931,958,936,14,117)
+line(958,936,1107,945,14,117)
+
+# Three-tier dry biorefinery reconstructed as a roof-suspended bifurcated
+# xenografting rake. It deliberately DOES NOT form a full-height wall.
+box(1321,25,1337,194,62)
+line(1329,192,1419,262,16,62)
+line(1419,262,1606,216,13,62)
+box(1598,25,1614,222,62)
+for cx,cy,rx,ry in [(1397,247,20,19),(1478,247,40,23),(1563,226,26,24)]:
+    ring(cx,cy,rx,ry,7,120)
+    box(cx+rx-8,cy-3,cx+rx+7,cy+4,113)
+# Sublevel industrial dike: low grounded roots and an open inspection arch.
+box(1280,907,1300,987,58)
+line(1290,910,1333,833,14,58)
+line(1333,833,1380,816,10,117)
+box(1620,904,1640,987,58)
+line(1630,913,1585,836,14,58)
+line(1585,837,1540,822,10,117)
+
+# Stern salvage mandibles, clearly supported from the perimeter.
+box(1921,25,1937,170,62)
+line(1929,169,1845,219,15,62)
+line(1845,219,1814,272,11,117)
+box(1890,914,1912,989,58)
+line(1901,921,1865,862,15,58)
+
+# Recolour *existing solid geology* with manufactured ore-sorting grooves:
+# changes material vocabulary without introducing free-floating detail stamps.
+for xa,xb,ya,yb,dx,dy,mat in [
+    (120,328,873,980,25,14,113),
+    (680,1175,895,980,34,16,117),
+    (1260,1670,900,982,29,13,113),
+    (1800,1990,915,982,23,17,117)]:
+    for xx in range(xa,xb,dx):
+        for yy in range(ya,yb,dy):
+            for x in range(xx,min(xx+11,xb)):
+                for y in range(yy,min(yy+3,yb)):
+                    i=y*W+x
+                    if A[i]: A[i]=mat
+
+FINAL_DETACHED=anchored_only(A, False)
+assert FINAL_DETACHED==0, ('post-reconstruction unsupported structure', FINAL_DETACHED)
+
+
 # Keep production flight geometry intact pending cable/structure auditing.
 
 def rectangles(a):
