@@ -1,10 +1,37 @@
-# The Graftloom Slipway — R4 Grounded Assay and Mnemonic Optical Rework
+# The Graftloom Slipway — R5 Differentiated Refinery Receiver and Extraction
 
 **Original CyberSand science-fiction bio-industrial landscape · exact 2048 × 1024 real material cells · deterministic seed 19112647**
 
 > **DRAFT / HOLD — STATIC-CONTRACT / GEOMETRY / SUPPORT PASS — NATIVE-UNTESTED — INDEPENDENT ART / TECHNICAL / SHEPHERD REVIEW PENDING.** Original material-cell authoring, not a conversion, traced artwork, prior archive migration, AI concept PNG or mock gameplay screenshot. Do not merge, promote Ready, auto-merge or imply owner acceptance.
 
-## R4 current qualification — functioning dry assay plant and readable attached optics (19 November 2026)
+## CURRENT R5 — differentiated high intake, low dry extraction (19 November 2026)
+
+**REVIEW THIS R5 SOURCE-GRID AND EXACT HEAD, NOT THE HISTORICAL R4 COUNTS BELOW.** Fresh from-scratch original 2048×1024 side-elevation world, in the same creator-owned Draft/HOLD branch. No source/reference-image conversions, owner acceptance, merge or Ready promotion.
+
+The Shepherd's exact-R4 review found the **Memory Engine Core (921,468) still lacked an accessible, functionally legible examination bay**, while the upper and lower refinery silhouettes were underdeveloped. This R5 is a **partial**, substantive response: high intake now presents **asymmetric rotary receiving and translated jaw mechanisms** with distinct inert transparent sampling windows; lower refinery has an **asymmetric, bedrock-rooted dry extrusion/inspection enclosure and metering teeth**, not a third ring-on-shelf. Rooted crown reader fins have also been strengthened. **13,948 final material cells have changed from R4**. Several larger *actually constructed* examination dock candidates were rejected in structural/navigation exploration because their supports obstructed the strictly required 31×27 upper or lower alternate routes. No failed experimental dock is published; **Memory Core artistic P1 remains OPEN**.
+
+**Exact-current qualification — deterministic builder plus separate source-JSON/PNG verifier:**
+
+| Contract | Source-verified R5 |
+|---|---:|
+| Full material-ID cell plane | 2048 × 1024 = 2,097,152 cells |
+| Occupied immovable inert solids | **749,216** |
+| Boundary-rooted solids / floating cells | 749,216 / **0** |
+| Lossless, non-overlapping paint rectangles | **13,862 / 32,768** |
+| Setup-v2 UTF-8 JSON | **259,333 / 1,048,576 bytes** |
+| Full-plane material replay / unexpected overlaps | **0 mismatches / 0 overlaps** |
+| Exact Midge sites, 19×15, 23×19, 31×27 | **13/13 at each**; four local approach directions |
+| Strict independent upper and lower 31×27 byway gate routes | **both PASS** |
+| Complete material-cell overview, review thumbnail, six 1:1 district crops | **8/8 builder and independent PNG pixel-parity / CRC PASS** |
+| Native Godot, installed CyberDemoBridge, Rapier Midge input/collision, fresh-process save/reopen | **NATIVE-UNTESTED** |
+
+**Material-plane SHA-256:** `39fb83fb434438608e1aa776e06367b0d78e8796ccd8b5411f47c791500a77c5`. **Setup JSON SHA-256:** `58f79ab8e11f78cdaf41af21d9bc831c8ce0986fbf39bf2cf92b6eb50804877f`. **Independent builder SHA-256:** `f521edf2bb5c14e75488750ba0001847ee10e4268c7debc34367d05260440b4b`. Seed remains **19112647**; read-only accepted engine remains `de109d0131641d6adc8d25bb9ced7ca3d4991105`. Installed bridge rectangle limit could still be the old **4,096**, so source acceptance does NOT imply Workbench installation compatibility.
+
+**Actual final-grid evidence:** [full 2048×1024 overview](./overview.png) · [1:1 high/mid/low refinery crop](./04-refinery-filter.png) · [1:1 mnemonic crown/corresponding core void](./03-memory-engine.png) · [1:1 receiving](./01-receiving-slip.png) · [1:1 shunt](./02-crane-and-entry.png) · [1:1 aft](./05-aft-dock.png) · [1:1 underkeel](./06-lower-return.png). All images derive from the committed grid, NOT generated gameplay screenshots. [Qualification](./qualification.json) · [separate independent grid and PNG verifier](./verification-independent.json) · [fixed-seed builder](./build.py) · [Setup-v2 JSON](./setup-graftloom-slipway.json) · [support probe](./support-probe.json).
+
+**Review gates:** R5 corrects two weak physical process districts, but it does not close the Memory Core P1. Shepherd and independent art/technical auditors must inspect this **new** changed HEAD; previous R4 STATIC-PASS is not current independent artistic acceptance. No runtime flight/physics proof.
+
+## Historical R4 qualification — functioning dry assay plant and readable attached optics (19 November 2026)
 
 **Current physical evidence:** [full 2048×1024 material-cell overview](./overview.png), [true 1:1 memory examination crop](./03-memory-engine.png), [true 1:1 refinery crop](./04-refinery-filter.png), [true 1:1 aft salvage crop](./05-aft-dock.png), and three further 1:1 crops. All are regenerated from the same fixed-seed final material plane, not external reference art, and independently CRC/inflate/pixel-parity verified.
 
@@ -30,7 +57,7 @@ The independent **R3 Shepherd REWORK** finding remained active when R4 began: Me
 **R4 Setup JSON SHA-256:** `86a8794c30fa0f20694800271450319bd64d1898d73afabe054df846b9cdbb70`  
 **Accepted CyberSand main read-only contract:** `de109d0131641d6adc8d25bb9ced7ca3d4991105`, valid 2048×1024 extent and stable immobile solid materials. The native **source** bridge advertises 32,768 rectangles, but an older **installed** bridge may only accept 4,096; R4 is *not* an installed-bridge pass.
 
-**Current authoritative R4 receipts:** [qualification.json](./qualification.json), [independent material replay and PNG verifier](./verification-independent.json), [reproducible Python builder](./build.py), [exact Setup-v2 input](./setup-graftloom-slipway.json) and [fixed seed](./seed.txt). Subsequent R2/R3 numbers are preserved below only as dated historical provenance.
+**Historical R4 receipts:** [qualification.json](./qualification.json), [independent material replay and PNG verifier](./verification-independent.json), [reproducible Python builder](./build.py), [exact Setup-v2 input](./setup-graftloom-slipway.json) and [fixed seed](./seed.txt). Subsequent R2/R3 numbers are preserved below only as dated historical provenance.
 
 ## Original spatial thesis and engineering repair
 
@@ -66,7 +93,7 @@ No initial simulated biology, free water, acid, powders or fire is used. The bio
 **Historical R3 Setup-v2 SHA-256:** `da06bb98ac185bcdc77bb031c4a1ca120aa54a8252f1d951d608c3be4e08a03d`  
 **Native Workbench/Godot/Rapier/install/save-reopen:** **NATIVE-UNTESTED**.
 
-The earlier R2 section and its phase-specific numbers remain as **historical provenance**. For acceptance inspect the **R4 current section**, present qualification and independent-verification receipts, and exact changed HEAD; R3 is historical.
+The earlier R2 section and its phase-specific numbers remain as **historical provenance**. For acceptance inspect the **R5 current section**, current qualification and independent-verification receipts, and exact changed HEAD. R2–R4 are historical.
 
 ## Six playable districts at ordinary Midge scale
 
