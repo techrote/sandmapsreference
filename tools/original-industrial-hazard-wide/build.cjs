@@ -418,6 +418,7 @@ module.exports={build,specs,W,H,MAT,rects,replay,legalCentres,reachable,connecte
 if(typeof require!=='undefined' && require.main===module){
  const fs=require('fs'),path=require('path'),zlib=require('zlib'),crypto=require('crypto');
  const VERIFY=process.argv.includes('--verify');
+ const cellRenderer=require('./render.cjs');
  const palette=new Uint8Array(256*3);for(let i=0;i<256;i++){palette[3*i]=8;palette[3*i+1]=11;palette[3*i+2]=20;}
  const colors={0:[8,13,27],3:[36,137,214],8:[238,99,37],58:[83,96,117],100:[60,74,83],101:[34,38,57],117:[165,166,172],120:[108,209,223],122:[230,217,156],123:[150,224,120]};
  for(const [id,rgb] of Object.entries(colors))palette.set(rgb,3*Number(id));
@@ -426,12 +427,8 @@ if(typeof require!=='undefined' && require.main===module){
    const name=Buffer.from(type,'ascii'),n=Buffer.alloc(4),c=Buffer.alloc(4);n.writeUInt32BE(data.length);
    c.writeUInt32BE(crc(Buffer.concat([name,data])));return Buffer.concat([n,name,data,c]);
  }
- function png(g,x0,y0,w,h){
-   const raw=Buffer.alloc(h*(w+1));
-   for(let y=0;y<h;y++)raw.set(g.subarray((y+y0)*W+x0,(y+y0)*W+x0+w),y*(w+1)+1);
-   const hdr=Buffer.alloc(13);hdr.writeUInt32BE(w);hdr.writeUInt32BE(h,4);hdr[8]=8;hdr[9]=3; // indexed, actual ID indices
-   return Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',hdr),chunk('PLTE',Buffer.from(palette)),chunk('IDAT',zlib.deflateSync(raw,{level:9})),chunk('IEND',Buffer.alloc(0))]);
- }
+ function png(g,x0,y0,w,h){return Buffer.from(cellRenderer.make(g,x0,y0,w,h));}
+
  function checkPng(bytes,g,x0,y0,w,h){
    let p=8,data=[];
    if(!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))throw Error('bad png signature');
