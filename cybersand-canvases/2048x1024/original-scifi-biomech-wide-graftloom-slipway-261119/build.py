@@ -251,7 +251,118 @@ line(1753, 613, 1784, 579, 7, 117)
 line(1660, 622, 1690, 910, 12, 117)
 
 
-# Keep production flight geometry intact pending cable/structure auditing.
+
+# Load-bearing steel tendons: physically weld originally detached machine assemblies
+# to rooted infrastructure. This deterministic topology pass uses genuine 4-neighbour
+# material adjacency, not inferred proximity or decorative overlays.
+def weld_disconnected_structure():
+    import array
+    size = W * H
+    rooted = bytearray(size)
+    q = collections.deque()
+    for x in range(W):
+        for y in (0, H - 1):
+            i = y * W + x
+            if A[i] and not rooted[i]:
+                rooted[i] = 1
+                q.append(i)
+    for y in range(H):
+        for x in (0, W - 1):
+            i = y * W + x
+            if A[i] and not rooted[i]:
+                rooted[i] = 1
+                q.append(i)
+    while q:
+        v = q.popleft()
+        x = v % W
+        for u in (v - 1 if x else -1,
+                  v + 1 if x + 1 < W else -1,
+                  v - W if v >= W else -1,
+                  v + W if v < size - W else -1):
+            if u >= 0 and A[u] and not rooted[u]:
+                rooted[u] = 1
+                q.append(u)
+    # Nearest-rooted distance field, with a concrete parent back to rooted solid.
+    # Every empty cell has unit cost, so the selected strut is as short as
+    # possible in taxicab distance before shaping its direct steel diagonal.
+    prev = array.array('i', [-2]) * size
+    q = collections.deque()
+    for i, r in enumerate(rooted):
+        if r:
+            prev[i] = -1
+            q.append(i)
+    while q:
+        v = q.popleft()
+        x = v % W
+        for u in (v - 1 if x else -1,
+                  v + 1 if x + 1 < W else -1,
+                  v - W if v >= W else -1,
+                  v + W if v < size - W else -1):
+            if u >= 0 and prev[u] == -2:
+                prev[u] = v
+                q.append(u)
+    # Label each previously detached occupied component, then attach exactly
+    # one art-directed spar to rooted machine structure. Small machine ornaments
+    # become structurally honest; the giant interior assemblies gain load paths.
+    seen = bytearray(rooted)
+    tendons = []
+    for start in range(size):
+        if not A[start] or seen[start]:
+            continue
+        todo = collections.deque([start])
+        seen[start] = 1
+        comp = []
+        while todo:
+            v = todo.popleft()
+            comp.append(v)
+            x = v % W
+            for u in (v - 1 if x else -1,
+                      v + 1 if x + 1 < W else -1,
+                      v - W if v >= W else -1,
+                      v + W if v < size - W else -1):
+                if u >= 0 and A[u] and not seen[u]:
+                    seen[u] = 1
+                    todo.append(u)
+        # Multi-source BFS discovery order is closest-root first.
+        candidates = sorted(comp, key=lambda i: _root_distance(i, prev))[:64]
+        chosen = None
+        for v in candidates:
+            k = v
+            while prev[k] != -1:
+                k = prev[k]
+            x0,y0=v%W,v//W
+            x1,y1=k%W,k//W
+            steps=max(abs(x1-x0),abs(y1-y0),1)
+            safe=True
+            for j in range(steps+1):
+                x=x0+(x1-x0)*j//steps
+                y=y0+(y1-y0)*j//steps
+                if any(abs(x-sx)<=24 and abs(y-sy)<=22 for sx,sy in SITES.values()):
+                    safe=False
+                    break
+            if safe:
+                chosen=(x0,y0,x1,y1)
+                break
+        if chosen is None:
+            # An unsafe strut is worse than a truthful failed qualification.
+            raise RuntimeError(('No site-safe structural anchor',len(comp),
+                                min(comp)%W,min(comp)//W))
+        tendons.append((len(comp),chosen))
+    for mass,(x0,y0,x1,y1) in tendons:
+        line(x0,y0,x1,y1,6 if mass>1000 else 4,117)
+    return {'initial_detached_components':len(tendons),
+            'initial_detached_cells':sum(n for n,_ in tendons),
+            'steel_load_paths':[[n,*edge] for n,edge in tendons]}
+
+def _root_distance(start, prev):
+    n=0
+    while prev[start] != -1:
+        start=prev[start]
+        n+=1
+    return n
+
+STRUCTURAL_SUPPORTS = weld_disconnected_structure()
+
 
 def rectangles(a):
     rect = []
@@ -421,7 +532,7 @@ def run(dest):
     for f, x, y, w, h, step in specs:
         imgs.append(png_rgb(A, x, y, w, h, dest / f, step))
         assert png_verify(dest / f, A, x, y, w, h, step)
-    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': '018bd09503d7f079ddac52e225c2f7daf8d678bf', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
+    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'structural_welds': STRUCTURAL_SUPPORTS, 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
     (dest / 'qualification.json').write_text(json.dumps(info, indent=2) + '\n')
     (dest / 'seed.txt').write_text(str(SEED) + '\n')
     print(json.dumps({'rectangles': len(rect), 'setup_bytes': len(js), 'occupied': work, 'sites': len(SITES), 'alternate': common, 'gridsha': info['grid_sha256'], 'pngs': len(imgs)}, indent=2))

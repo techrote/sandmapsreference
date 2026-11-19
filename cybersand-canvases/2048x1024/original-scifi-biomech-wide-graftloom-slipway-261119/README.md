@@ -78,6 +78,12 @@ Evidence: [exact Setup-v2 start](setup-graftloom-slipway.json), [fixed-seed buil
 | :--: | :--: | :--: |
 | ![Refinery material cells](04-refinery-filter.png) | ![Aft dock material cells](05-aft-dock.png) | ![Return material cells](06-lower-return.png) |
 
+## Structural load-path repair — original lane
+
+An independent source replay of the first completed material plane found **33 unsupported assemblies / 116,604 detached cells**, including parts of the upper processing rig and memory-eye structure. They were not eligible for a completed technical handoff. The owned deterministic builder now performs a conservative steel-tendon grounding pass after all portals and Midge sites have been authored. Each initially detached 4-neighbour component receives a short, physically touching tendon to a boundary-grounded structural component; candidate tendons exclude site clearance neighborhoods. The separately implemented independent verifier now **refuses publication** unless all resulting occupied material is boundary-grounded. New tendons are part of the actual final cell plane, not a visual annotation. Their exact endpoints and initial component counts are retained in `qualification.json`.
+
+This is a static support/clearance proof only. Independent visual review must still assess spar placement and mechanical plausibility, and native collision / performance remains untested.
+
 ## Honest acceptance gates
 
 The static material/pixel/clearance audit does not prove that a particular installed Godot build loads the setup, that its native bridge has sufficient rectangle capacity, that Midge can actively execute the route, that collisions/reactive materials behave as anticipated, or that a fresh-process save and reopen reproduces the world. **NATIVE-UNTESTED** until a source-matched Workbench process executes those tests. Independent Shepherd, Art/Fidelity and Technical review of the *changed exact HEAD* is still required; no owner acceptance, Ready promotion or merge is permitted.
