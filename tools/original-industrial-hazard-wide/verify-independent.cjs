@@ -96,7 +96,9 @@ for(const slug of maps){
  assert.equal(sha(grid),receipt.material_plane_sha256);
  const hist={};for(const m of grid)hist[m]=(hist[m]||0)+1;
  assert.deepEqual(hist,receipt.material_histogram);
- assert.deepEqual(anchored(grid),receipt.solid_connectivity);
+ const structural=anchored(grid);
+ assert.deepEqual(structural,receipt.solid_connectivity);
+ assert.equal(structural.detached,0,'R4 material-world must have zero unattached inert solids');
  let pixels=0;
  for(const im of receipt.images){
   const bytes=fs.readFileSync(path.join(root,im.name));

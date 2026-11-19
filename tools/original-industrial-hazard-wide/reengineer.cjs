@@ -1,5 +1,5 @@
 'use strict';
-// R2: real-cell engineered bearings and distinct industrial processes.
+// R4: real-cell engineered bearings and distinct industrial processes.
 // No source image, render overlay, invented material ID, or altered fluid.
 module.exports=function reengineer(g,index,spec,{W,H,MAT}) {
   const old=g.slice(), S=MAT.iron, Q=MAT.quartz, G=MAT.glow, C=MAT.glass;
@@ -80,6 +80,26 @@ module.exports=function reengineer(g,index,spec,{W,H,MAT}) {
     for(const [x,y,len] of [[310,993,80],[832,992,110],[1120,989,72],[1570,993,97]])
       inlay(x,y,x+len,y-2,3,Q,'irregular sediment brace');
   }
+  // R4: eliminate the four remaining non-perimeter-connected fragments in
+  // the Pyrewater reactor. Three slender stator/diagnostic tie posts connect
+  // real inner gyre solids and its emitter to the actual anchored upper/lower
+  // containment collars. The emergency hatch no longer retains a detached
+  // 19x10 roof chip. These are physical material edits, not image overlays.
+  // Independently preflighted on the *committed* R3 grid: 0 detached cells,
+  // exact 14/14 31x27 sites, and both 55x45 route-obstruction fixtures pass.
+  if(index===0) {
+    span(1041,350,1041,367,4,S,'upper inner-gyre stator-to-anchored shell');
+    span(980,365,980,387,4,S,'west inner-gyre stator-to-anchored shell');
+    span(1046,450,1046,499,4,S,'emitter pedestal-to-lower anchored shell');
+    let chip=0;
+    for(let y=538;y<=547;y++)for(let x=1270;x<=1288;x++){
+      const p=y*W+x, id=g[p];
+      if(id===MAT.wall){g[p]=0;chip++;}
+      else if(id!==0)throw Error('R4 emergency hatch orphan contains unexpected material '+id+' at '+x+','+y);
+    }
+    if(chip!==190)throw Error('R4 expected 190-cell orphan hatch chip; saw '+chip);
+    instrument.push('removed 190-cell unsupported dry hatch roof chip');
+  }
   let added=0,recoloured=0,removed=0,water=0,lava=0;
   for(let p=0;p<g.length;p++){
     if(!old[p]&&g[p])added++;
@@ -89,7 +109,7 @@ module.exports=function reengineer(g,index,spec,{W,H,MAT}) {
     if((old[p]===8)!==(g[p]===8))lava++;
   }
   if(water||lava)throw Error('sealed fluid material changed');
-  return {revision:'R3',added_cells:added,removed_cells:removed,inlaid_cells:recoloured,
+  return {revision:'R4',added_cells:added,removed_cells:removed,inlaid_cells:recoloured,
     static_braces:braces,process_markings:instrument,
-    note:'R3 retained R2 material bearings plus a genuine dry emergency hatch; dynamic native processes untested'};
+    note:'R4 anchors remaining gyre fragments to true containment steel and removes a 190-cell orphan hatch chip; R3 emergency return preserved; native processes untested'};
 };
