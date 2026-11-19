@@ -69,9 +69,29 @@ if(typeof require==="function"&&typeof process==="object"&&require.main===module
  const fs=require("fs"),path=require("path"),input=process.argv[2]||"design.json",out=process.argv[3]||".",x=createCalyxBuilder(),recipe=JSON.parse(fs.readFileSync(input,"utf8")),grid=x.draw(recipe);
  let edits=x.rectangles(grid),rp=x.replay(edits),bad=0;for(let i=0;i<grid.length;i++)if(grid[i]!==rp.grid[i])bad++;
  const gt=x.grounded(grid),routes=x.auditRoutes(grid,recipe),stats={extent:[2048,1024],grid_sha256:x.sha256(grid),histogram:x.histogram(grid),rectangles:edits.length,replay_mismatches:bad,overlaps:rp.overlaps,grounded:gt.occupied,detached:gt.detached,routes,native_status:"NATIVE-UNTESTED",accepted_engine_sha:recipe.engine_main};if(bad||rp.overlaps||gt.detached||!routes.pass)throw Error("Refuse unqualified artifacts");
- fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,"qualification.json"),JSON.stringify(stats,null,2)+"\n");
- const crops=[["01-quarantine.png",50,275,410,465],["02-graft-gantry.png",460,30,360,360],["03-split-keel.png",820,510,490,420],["04-fractionation.png",1415,275,384,520],["05-export.png",1805,394,207,502]];
- const images=[["overview.png",0,0,2048,1024],...crops];for(const [name,a,b,w,h]of images)fs.writeFileSync(path.join(out,name),Buffer.from(x.png(grid,a,b,w,h).data));
+ fs.mkdirSync(out,{recursive:true});
+ const crops=[["01-quarantine.png",50,275,410,465],["02-graft-gantry.png",460,30,360,360],["03-split-keel.png",820,510,490,420],["04-fractionation.png",1415,275,384,520],["05-export.png",1805,394,207,502],["06-upper-keel.png",775,95,480,310]];
+ const images=[["overview.png",0,0,2048,1024],...crops],png_receipts=[];
+ for(const [name,a,b,w,h] of images){
+  const png=x.png(grid,a,b,w,h),proof=x.auditPng(png.data,grid,a,b,w,h);
+  if(!proof.pass)throw Error("PNG signature/CRC/zlib/IEND or grid parity failure: "+name);
+  fs.writeFileSync(path.join(out,name),Buffer.from(png.data));
+  png_receipts.push({name,box:[a,b,w,h],png_sha256:png.png_sha256,pixel_sha256:png.source_sha256,bytes:png.data.length,verified:proof.pass});
+ }
  const policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
- fs.writeFileSync(path.join(out,"setup-calyx-severance-yard.json"),JSON.stringify(x.setup(grid,edits,recipe,policy)));console.log(JSON.stringify(stats,null,2));
+ const setup=JSON.stringify(x.setup(grid,edits,recipe,policy));
+ if(setup.length>1048576||edits.length>32768)throw Error("Source Workbench capacity exceeded");
+ const original=JSON.parse(fs.readFileSync(input,"utf8")),draft={...original,qualification_policy:{...original.qualification_policy,prune_unanchored:false}};
+ const nominal=x.draw(draft),rejected=x.grounded(nominal).detached;
+ if(rejected!==recipe.qualification_policy.pre_prune_rejected_cells)throw Error("Support rejection count changed: "+rejected);
+ const report={...stats,setup_bytes:setup.length,setup_sha256:x.sha256(x.utf8(setup)),pruned_unanchored_cells:rejected,png_receipts};
+ const expectedPath=path.join(path.dirname(input),"qualification.json");
+ if(fs.existsSync(expectedPath)){
+  const expected=JSON.parse(fs.readFileSync(expectedPath,"utf8"));
+  if(expected.grid.sha256!==stats.grid_sha256||expected.codec.rectangles!==edits.length||expected.codec.setup_sha256!==report.setup_sha256)throw Error("Canonical committed qualification mismatches rebuild");
+  for(const p of png_receipts){const e=expected.images.find(v=>v.name===p.name);if(!e||e.png_sha256!==p.png_sha256||e.indexed_pixels_sha256!==p.pixel_sha256)throw Error("Committed PNG receipt mismatch: "+p.name);}
+ }
+ fs.writeFileSync(path.join(out,"setup-calyx-severance-yard.json"),setup);
+ fs.writeFileSync(path.join(out,"qualification-rebuilt.json"),JSON.stringify(report,null,2)+"\n");
+ console.log(JSON.stringify(report,null,2));
 }
