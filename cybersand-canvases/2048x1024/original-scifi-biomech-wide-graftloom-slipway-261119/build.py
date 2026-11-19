@@ -663,9 +663,12 @@ PRE_R4 = A[:]
 # the exact Memory Core (921,468), not a hollow "destination" in featureless air.
 # West: a long roof-bearing counterweight folds OUT toward the western socket
 # before returning as a keyed, accessible optical sample shelf.
-line(727,268,619,371,13,117)
-line(619,371,644,476,17,62)
-line(644,476,696,508,16,117)
+# West factory freight conduit is welded directly into perimeter rock at x12.
+# It stays far BELOW the restricted upper flyway (y<390) and just below the
+# 31x27 west-gate/receiving footprints, unlike the rejected hanging strap.
+line(12,557,260,549,13,117)
+line(260,549,465,526,12,62)
+line(465,526,700,514,12,117)
 box(690,506,817,519,62)
 poly([(709,504),(732,488),(770,489),(783,505)],117)
 box(730,497,775,504,120)
@@ -678,9 +681,11 @@ box(797,451,818,461,120)
 # East: a longer counter-hung surgical dock, lower than west and equipped
 # with sequential lamellar read heads. Its nearest working surface is
 # x970+, leaving the conservative exact-centre Midge core unobstructed.
-line(1094,258,1222,368,14,62)
-line(1222,368,1211,477,18,117)
-line(1211,477,1115,511,13,62)
+# East diagnostic pier is driven from the ALREADY ROOTED mid-refinery
+# deck y623, outside the central altitude-stress gate. An oblique dry
+# assay return joins it to the mnemonic reading bench at x1115.
+line(1440,624,1408,548,12,62)
+line(1408,548,1115,513,12,117)
 box(973,506,1123,521,62)
 poly([(997,506),(1018,487),(1056,477),(1078,483),
       (1091,506)],117)
