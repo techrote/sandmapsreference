@@ -488,7 +488,7 @@ for x0,x1,y0,y1,m in [(758,835,925,964,117),(1005,1081,929,966,113),
                 if A[i]: A[i]=m
 
 # Key otherwise-isolated internal optical vanes to the right crown shell.
-line(990, 270, 952, 270, 5, 117)
+line(1004, 240, 1073, 240, 5, 117)  # rightward: north portal removes x868..982
 line(1020, 278, 1083, 278, 5, 117)
 
 # D: three genuinely different biorefinery operations.
@@ -566,6 +566,17 @@ for cx,cy,rx in [(688,939,19),(1180,943,26)]:
 
 R2_CHANGED_CELLS = sum(x != y for x,y in zip(PRE_R2,A))
 assert R2_CHANGED_CELLS > 14000, ('substantive grid change missing', R2_CHANGED_CELLS)
+
+
+# Deliberate material-transfer airlocks: passages are carved *after* building
+# the heavy machinery so each level remains entered through a full-hull-safe
+# working slot. The first penetrates the roof-rooted mid-tower, the next two
+# connect functional decks, and the last connects the refinery to salvage.
+# These are not nearest-site waivers: fixed named sites remain unchanged.
+portal(1288, 393, 157, 54)  # west freight to high-bay inspection
+portal(1456, 445, 98, 85)   # high-to-middle hoist throat
+portal(1456, 604, 98, 85)   # middle-to-low dry return
+portal(1620, 468, 150, 89)  # outboard salvage freight airlock
 
 # A 112-cell-wide deliberate breach in the north mnemonic crown preserves
 # direct access to the fixed Memory Engine North coordinate (925,145).
