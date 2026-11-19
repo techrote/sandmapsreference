@@ -124,8 +124,10 @@ module.exports=function repairMorrow({M,R,P,L,sites}){
   // Ground-connected quarantine logistics: stop the factory rooftop from
   // appearing to be an inert floating abstraction.
   L(1966,355,2020,421,15,M.C);
-  L(1743,660,1716,762,12,M.C);
-  L(1894,663,1891,828,12,M.C);
+  // Perimeter braces into outer geological banks preserve the central
+  // 31x27 ion-exchanger approach; do not cage its previously open bay.
+  L(1609,668,1628,760,10,M.C);
+  L(1982,665,2025,795,12,M.C);
 
   // LOWER TECTONIC SURVEY. One carved operations destination, one optional
   // shallow access loop and separate calibration / return infrastructure.
