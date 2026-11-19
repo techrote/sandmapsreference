@@ -121,19 +121,19 @@
     ]
   },
   "material_histogram": {
-    "58": 126303,
-    "62": 16933,
-    "100": 213801
+    "58": 216257,
+    "62": 118254,
+    "100": 272950
   },
-  "stable_occupied_cells": 357037,
-  "grounded": 357037,
+  "stable_occupied_cells": 607461,
+  "grounded": 607461,
   "detached_cells": 0,
-  "pruned_disconnected_decor_cells": 283624,
-  "rectangles": 1146,
-  "rectangle_work": 357037,
-  "setup_bytes": 22141,
-  "material_plane_sha256": "b0ff598705d56230764b4efe59d32bcc341185ba036a5269f4722e04cc49bdde",
-  "setup_sha256": "21c02777a6bddffc5c7191f4cadaf32dbb3660043cfeccc5b5eb9c5b90a0fd49",
+  "pruned_disconnected_decor_cells": 27100,
+  "rectangles": 4457,
+  "rectangle_work": 607461,
+  "setup_bytes": 83038,
+  "material_plane_sha256": "d07ebbff80d5920e644f3afca65c78a9b19e4fe23ed4cb18ca3f54d24e05629a",
+  "setup_sha256": "a5027b44c89efe6f00ad70c7ef005cce8027f9ae79e93060dccb4265fc1a8a47",
   "clearance": [
     {
       "size": [
@@ -142,7 +142,7 @@
       ],
       "reached": 21,
       "total": 21,
-      "free_centres": 1664303,
+      "free_centres": 1230488,
       "bad": [],
       "error": null
     },
@@ -153,7 +153,7 @@
       ],
       "reached": 21,
       "total": 21,
-      "free_centres": 1647551,
+      "free_centres": 1188352,
       "bad": [],
       "error": null
     },
@@ -164,7 +164,7 @@
       ],
       "reached": 21,
       "total": 21,
-      "free_centres": 1617834,
+      "free_centres": 1087220,
       "bad": [],
       "error": null
     }
@@ -172,11 +172,13 @@
   "obstruction": {
     "material": 58,
     "rect": [
-      876,
-      402,
-      84,
-      118
+      185,
+      416,
+      89,
+      85
     ],
+    "from": "West breakwater ingress",
+    "to": "Quay manifest",
     "size": [
       31,
       27
@@ -184,8 +186,8 @@
     "sites_reached": 21,
     "unreachable": [],
     "distance_before_after": [
-      43,
-      173
+      230,
+      338
     ]
   },
   "images": [
@@ -198,7 +200,7 @@
         1024
       ],
       "bytes": 525537,
-      "sha256": "af36f3cc622b285da480185e72742048991e9dc6ba0a0a1c8e76a9971d532cd6",
+      "sha256": "d5bdf53d005e76a32557921a1a50abd4734893aad1da8b335e16dbd7d1e2abe5",
       "pixel_parity": 2097152
     },
     {
@@ -210,7 +212,7 @@
         625
       ],
       "bytes": 86440,
-      "sha256": "ab6a2d514c8018860b50874036003d860cba01ddf71031a224d325bb3036b170",
+      "sha256": "89cf957e929fcccd419fcb5bf27ca1fc8a54fdfef142d649a8a34c4125e1011a",
       "pixel_parity": 342500
     },
     {
@@ -222,7 +224,7 @@
         548
       ],
       "bytes": 85678,
-      "sha256": "96f17a1a4428616f1e09419075527916b503fc7dc8ac2507c50322c0a192564f",
+      "sha256": "79955cf2d2288cc2bd06c5a6f55a9dcf444fd9c1dc4b1120858a908edb60160a",
       "pixel_parity": 339212
     },
     {
@@ -234,7 +236,7 @@
         571
       ],
       "bytes": 48720,
-      "sha256": "ae38263f8dbd45de182125559334baac27662f0edb0af5bbdca76d02435744ed",
+      "sha256": "432fb70b19a33cb7bfb3ba65326200491e34babd39d6dc4b6e8da5afb6866b1f",
       "pixel_parity": 190714
     },
     {
@@ -246,7 +248,7 @@
         466
       ],
       "bytes": 38863,
-      "sha256": "6cb96d743c804d70c45c32b35124bc4e8bc0402333ccfb55b0ea42d0b027d324",
+      "sha256": "b524dda27115dbc5217be6f78f555cef8802050811f7b593e57927c4b4da01f2",
       "pixel_parity": 151916
     },
     {
@@ -258,7 +260,7 @@
         520
       ],
       "bytes": 33985,
-      "sha256": "6ac092b2523ce58b26ccc8f8533de4b50caf3983b7a262ca8191479692306a93",
+      "sha256": "6d1d6980bd984bb5504f64d0f31de91d2a78da46932d9cdd8dab53461ee6fb4f",
       "pixel_parity": 133120
     },
     {
@@ -270,7 +272,7 @@
         288
       ],
       "bytes": 34745,
-      "sha256": "e14375ba5c31d9815432cc9d19df5030bc6aa87121759a46e894b768386b5631",
+      "sha256": "2d31f7754026f168cf54c4c17bae83911768a17b7b0967e8e55c86f6ab070498",
       "pixel_parity": 137088
     }
   ],

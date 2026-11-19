@@ -146,6 +146,43 @@ for(let x of [1849,1903])ring(x,906,10,10,4,M.STEEL);
 for(let [n,[x,y]] of Object.entries(sites))R(x-23,y-25,47,51,M.AIR);
 // Preserve material perimeter and avoid liquid/mobile IDs entirely.
 R(0,990,2048,34,M.WALL);
+
+// TERNBREAK R1 LOAD-PATH AND ACTOR NETWORK FINISHER
+// Structural abutments rehabilitate the source-only geometry into a real
+// grounded world. The prior 283,624-cell loose-fragment prune erased most
+// machinery: root genuine load paths before pruning, do not fake screenshots.
+L(1792,659,2017,688,19,M.STEEL);
+L(680,654,1040,655,15,M.STEEL);
+L(485,231,532,254,14,M.STEEL);R(527,252,19,456,M.WALL);
+L(531,682,687,657,15,M.STEEL);
+L(150,629,54,631,14,M.STEEL);
+L(399,708,567,698,13,M.STEEL);
+L(1925,581,2015,677,12,M.STEEL);
+R(609,931,17,57,M.WALL);
+L(1165,640,1300,644,14,M.STEEL);
+// Real conservative 31x27 sky access; ten different visible ventilation
+// mouths and inspection slots, never moving checkpoint coordinates.
+for(let [x,y] of [[483,285],[607,454],[720,458],[1024,451],[961,360],
+                   [1051,602],[1311,283],[1383,459],[1440,604],[1934,468]])
+ R(x-20,174,41,y-174+6,M.AIR);
+// Load-bearing outriggers below the collision-safe slots.
+L(442,319,522,322,11,M.STEEL);
+L(771,419,790,643,13,M.WALL);
+L(667,383,665,653,11,M.STEEL);
+L(876,422,897,650,11,M.WALL);
+// An authored single drydock vessel, asymmetric bow/cabin, nested hull
+// material and physically rooted cradle. The 47x51 barge checkpoint is open.
+L(184,755,72,721,14,M.STEEL);
+L(432,752,507,652,15,M.STEEL);
+P([[178,718],[203,744],[239,757],[389,758],[427,734],[448,700],
+   [435,751],[400,773],[227,773],[193,752]],M.STEEL);
+P([[203,748],[243,761],[384,762],[420,748],[392,768],[234,768]],M.WALL);
+R(357,682,61,11,M.STEEL);R(372,664,42,18,M.WALL);
+R(382,671,25,9,M.AIR);R(403,692,11,61,M.WALL);
+// Separate full-hull vertical rescue/return throat, clear under the
+// cargo-span deck, reached from sky and the 75-cell-high lower artery.
+R(712,430,45,399,M.AIR);
+
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
@@ -160,9 +197,9 @@ for(let i=0;i<N;i++)if(g[i]!==replay[i])throw Error("replay mismatch "+i);
 let int=new Int32Array((W+1)*(H+1)),S=W+1;for(let y=1;y<=H;y++){let sum=0,o=(y-1)*W;for(let x=1;x<=W;x++){sum+=g[o+x-1]!==0?1:0;int[y*S+x]=int[(y-1)*S+x]+sum;}}
 function clear(x,y,w,h){let a=x-(w>>1),b=y-(h>>1),c=a+w,d=b+h;return a>=0&&b>=0&&c<=W&&d<=H&&int[d*S+c]-int[d*S+a]-int[b*S+c]+int[b*S+a]===0;}
 function BFS(w,h,ob){let pass=new Uint8Array(N),seen=new Uint8Array(N),queue=new Int32Array(N),first=0,last=0;let ox=ob?.[0]||-1,oy=ob?.[1]||-1,ow=ob?.[2]||0,oh=ob?.[3]||0;for(let y=h>>1;y<H-(h>>1);y++)for(let x=w>>1;x<W-(w>>1);x++){if(!clear(x,y,w,h))continue;let left=x-(w>>1),top=y-(h>>1);if(ob&&left<ox+ow&&left+w>ox&&top<oy+oh&&top+h>oy)continue;pass[y*W+x]=1;}let spawn=sites["West breakwater ingress"],n=spawn[1]*W+spawn[0];if(!pass[n])return {size:[w,h],error:"spawn blocked",pos:spawn};seen[n]=1;queue[last++]=n;while(first<last){let a=queue[first++],x=a%W,y=(a/W)|0;for(let b of [a-W,a+W,a-1,a+1])if(b>=0&&b<N&&!(Math.abs(a-b)===1&&((b/W)|0)!==y)&&pass[b]&&!seen[b]){seen[b]=1;queue[last++]=b;}}let bad=Object.entries(sites).filter(([n,p])=>!seen[p[1]*W+p[0]]).map(([n,p])=>({name:n,xy:p,clear:clear(p[0],p[1],w,h)}));return {size:[w,h],reached:Object.keys(sites).length-bad.length,total:Object.keys(sites).length,component:last,bad,pass,seen};}
-let routes=[[19,15],[23,19],[31,27]].map(([w,h])=>BFS(w,h,null)),barrier=[876,402,84,118],detour=BFS(31,27,barrier);
-function dist(pass,start,end){let a=start[1]*W+start[0],b=end[1]*W+end[0],seen=new Uint8Array(N),Q=new Int32Array(N),first=0,last=0;if(!pass[a]||!pass[b])return -1;Q[last++]=a;seen[a]=1;while(first<last){let n=Q[first++];if(n===b)return (seen[n]-1);let x=n%W,y=(n/W)|0;for(let v of [n-W,n+W,n-1,n+1])if(v>=0&&v<N&&!(Math.abs(n-v)===1&&((v/W)|0)!==y)&&pass[v]&&!seen[v]){seen[v]=seen[n]+1;Q[last++]=v;}}return -1;}
-let start=sites["West breakwater ingress"],finish=sites["Outbound freight gate"];
+let routes=[[19,15],[23,19],[31,27]].map(([w,h])=>BFS(w,h,null)),barrier=[185,416,89,85],detour=BFS(31,27,barrier);
+function dist(pass,start,end){let a=start[1]*W+start[0],b=end[1]*W+end[0],seen=new Int32Array(N),Q=new Int32Array(N),first=0,last=0;if(!pass[a]||!pass[b])return -1;Q[last++]=a;seen[a]=1;while(first<last){let n=Q[first++];if(n===b)return (seen[n]-1);let x=n%W,y=(n/W)|0;for(let v of [n-W,n+W,n-1,n+1])if(v>=0&&v<N&&!(Math.abs(n-v)===1&&((v/W)|0)!==y)&&pass[v]&&!seen[v]){seen[v]=seen[n]+1;Q[last++]=v;}}return -1;}
+let start=sites["West breakwater ingress"],finish=sites["Quay manifest"];
 let routeDistance=[dist(routes[2].pass,start,finish),dist(detour.pass,start,finish)];
 let status=routes.map(r=>({size:r.size,reached:r.reached,total:r.total,free_centres:r.component,bad:r.bad,error:r.error||null}));
 if(rect.length>32768||area>32000000)throw Error("budget "+rect.length+"/"+area);
@@ -171,7 +208,7 @@ let setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a
 if(jbytes.length>1048576)throw Error("JSON over budget");
 let crops=[["01-west-quay",82,191,548,625],["02-ternbreak-cableway",655,184,619,548],["03-balance-tower",1214,197,334,571],["04-gravity-classifier",1512,312,326,466],["05-east-dispatch",1792,285,256,520],["06-service-artery",840,733,476,288]];
 let images=[["overview",[0,0,W,H]],...crops.map(c=>[c[0],c.slice(1)])].map(([name,rect])=>{let data=png(g,rect),pixels=verifyPng(g,rect,data);return{name,rect,bytes:data,sha256:sha256(data),pixels};});
-let receipt={concept:"Ternbreak Longspan â High Freight Cableway over the Dry Salt Gorge",original:true,seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],material_ids:{"0":"Empty","100":"Basalt - Solid/None","58":"Hard wall - Solid/None","62":"structural solid - Solid/None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"};
+let receipt={concept:"Ternbreak Longspan â High Freight Cableway over the Dry Salt Gorge",original:true,seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],material_ids:{"0":"Empty","100":"Basalt - Solid/None","58":"Hard wall - Solid/None","62":"structural solid - Solid/None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"West breakwater ingress",to:"Quay manifest",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"};
 return {g,rect,sites,crops,images,receipt,setup,json,jbytes,status,detour:{reached:detour.reached,bad:detour.bad,component:detour.component},distance:routeDistance,pruned};
 }
 return {generate,sha256,base64,utf8};
