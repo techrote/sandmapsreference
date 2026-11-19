@@ -594,6 +594,13 @@ box(872,483,888,490,120)
 # Right workbay uses a supported cross-console canopy rather than a
 # roof-to-floor barrier in the eastern 31x27 high-bay transit throat.
 line(816,416,1041,416,9,117)
+# Positive physical support, not an orphan trim: a continuous 9-cell
+# process spine runs over the 31x27 middle-altitude flyway at y416
+# and climbs diagonally to the rooted x1321 refinery roof mast.
+# Place the diagonal outside x650..1200 to preserve upper restricted
+# corridor; never close the y480 middle nor y650 underkeel escape.
+line(1041,416,1213,416,9,62)
+line(1213,416,1328,182,11,62)
 box(1032,416,1048,535,62)
 box(962,509,1042,524,62)
 box(976,499,1038,509,113)
