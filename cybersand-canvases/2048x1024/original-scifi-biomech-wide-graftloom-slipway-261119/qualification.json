@@ -6,7 +6,7 @@
     1024
   ],
   "seed": 19112647,
-  "engine_commit": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
+  "engine_commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "engine_contract": {
     "setup_sha": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
     "material_catalogue_sha": "d7a47d60721598a16589daf177a6ff4401b84b43",
@@ -18,6 +18,11 @@
     "source_rectangle_limit": 32768,
     "json_byte_limit": 1048576,
     "source_native_work_limit": 32000000
+  },
+  "structural_reconstruction": {
+    "replaced_unsupported_legacy_cells": 115002,
+    "small_detached_finish_cells_trimmed": 98,
+    "detached_final_cells": 0
   },
   "material_laws": "All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation",
   "site_coordinates": {
@@ -77,24 +82,23 @@
   "replay_mismatches": 0,
   "overlaps": 0,
   "total_cells": 2097152,
-  "painted_cells": 763248,
-  "rectangles": 11717,
-  "setup_bytes": 218775,
+  "painted_cells": 676133,
+  "rectangles": 10001,
+  "setup_bytes": 186957,
   "histogram": {
-    "0": 1333904,
-    "49": 146529,
-    "58": 34153,
-    "62": 144520,
-    "100": 195855,
-    "101": 132487,
-    "113": 39476,
-    "117": 44062,
-    "120": 12338,
-    "123": 4594,
-    "128": 9234
+    "0": 1421019,
+    "49": 104277,
+    "58": 31526,
+    "62": 136317,
+    "100": 187079,
+    "101": 115416,
+    "113": 36406,
+    "117": 50237,
+    "120": 10504,
+    "128": 4371
   },
-  "grid_sha256": "cda7451898ce5fd61cf9e00b27eea79e20f08436b2114d09b89d3fd8f8bc86de",
-  "setup_sha256": "2ec59787b117880837d9eb4cc2b660c92f2a681fc442dc7a3eb179509749a5c8",
+  "grid_sha256": "c354b0d97cad32e4a30bc0c7334ca232a855a4469cbc00abca271ff9680abdea",
+  "setup_sha256": "55f3c6647d95cf9ef7cfed3c2d7c1cdf8e783bdcb8c27540d67d59c4a20c0be4",
   "clearance": {
     "19x15": {
       "reachability": {
@@ -112,7 +116,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 914550,
+      "connected_legal_centres": 1040919,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -146,7 +150,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 861836,
+      "connected_legal_centres": 1004476,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -180,7 +184,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 755081,
+      "connected_legal_centres": 930908,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -202,11 +206,11 @@
   "alternate_route_stress": {
     "upper_via_roof": {
       "destination_gate_reached": true,
-      "legal_centres": 626131
+      "legal_centres": 671048
     },
     "lower_via_sump": {
       "destination_gate_reached": true,
-      "legal_centres": 583991
+      "legal_centres": 667410
     }
   },
   "png_integrity_and_pixel_parity": [
@@ -216,8 +220,8 @@
         2048,
         1024
       ],
-      "bytes": 40123,
-      "sha256": "cdc4e731b41d217e89bbf8e8514a193d66139d285f82401ff67f21b4b401c5f5"
+      "bytes": 35635,
+      "sha256": "4f0499cbe8f473bcfcd387a406e1f3b7e574c967a65d89741fcf0e7f39bba05a"
     },
     {
       "png": "review-half.png",
@@ -225,8 +229,8 @@
         1024,
         512
       ],
-      "bytes": 16508,
-      "sha256": "5f140547c10c2b4cc1a0ca925f2ee1a4fa550499527bea2e3d4dea81a158a0e7"
+      "bytes": 15089,
+      "sha256": "019c314ec9e901ebfb0156327e3e9649d79ca969dc3ae5b2b32d05bd2b5132b9"
     },
     {
       "png": "01-receiving-slip.png",
@@ -234,8 +238,8 @@
         512,
         650
       ],
-      "bytes": 5842,
-      "sha256": "90b7bf75c55ca1a42c065e5e43cb586e1659ac97d7b35c50deb9f4d7a2d37db4"
+      "bytes": 5833,
+      "sha256": "523abb395cea2ff7cbb09641dfe54e2d9fd88c9afb2fcb7c029723ee55596c87"
     },
     {
       "png": "02-crane-and-entry.png",
@@ -243,8 +247,8 @@
         470,
         610
       ],
-      "bytes": 6148,
-      "sha256": "fed8ff490753064764bc31a940559a374f5aafd0cbecd76721b95b12f3975d71"
+      "bytes": 5360,
+      "sha256": "b58b247c4868221e3652a887d43ee2fcde64fea18a0ab0ff0ca088fc717040cd"
     },
     {
       "png": "03-memory-engine.png",
@@ -252,8 +256,8 @@
         510,
         545
       ],
-      "bytes": 7928,
-      "sha256": "4c6d0dd5b947292e3c6b549b47b879e1a4bdddcd1f9ffc8555217a307571b877"
+      "bytes": 2890,
+      "sha256": "d0990b1819b2ada33efdb154ab108a6a8e43abf6e4717f4d62dcd9f2590f5846"
     },
     {
       "png": "04-refinery-filter.png",
@@ -261,8 +265,8 @@
         430,
         605
       ],
-      "bytes": 5409,
-      "sha256": "00140d74d5d5f52f0f653a627606ee27c112597c86a36c8a5f164c9ad206cad6"
+      "bytes": 4106,
+      "sha256": "06a3733aecadc4ca0f387886ea41045ecc27952b41453e5454f433dceb22d180"
     },
     {
       "png": "05-aft-dock.png",
@@ -270,8 +274,8 @@
         330,
         750
       ],
-      "bytes": 4111,
-      "sha256": "ee06b24e9627dfcd147b5c1e297b9438a3f2029b63104d1dc7c77a0488520ce2"
+      "bytes": 4308,
+      "sha256": "c711ad3b907dc57a90d5f94f669214c2e4a6f1740618eb847da8cd2f4208a0c8"
     },
     {
       "png": "06-lower-return.png",
@@ -279,8 +283,8 @@
         770,
         250
       ],
-      "bytes": 3854,
-      "sha256": "1b69e154cdb3f3c320a4b331f5bff92adf950ff3b145d82395dee232a43e35ab"
+      "bytes": 3938,
+      "sha256": "bf54e89ea08435216c5433d07ef7c650503122cb09975a89344504b88a2cdfc4"
     }
   ],
   "native_status": "NATIVE-UNTESTED"

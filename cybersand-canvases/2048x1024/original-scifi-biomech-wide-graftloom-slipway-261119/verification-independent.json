@@ -6,11 +6,11 @@
     2048,
     1024
   ],
-  "material_plane_sha256": "cda7451898ce5fd61cf9e00b27eea79e20f08436b2114d09b89d3fd8f8bc86de",
-  "setup_bytes": 218775,
-  "setup_sha256": "2ec59787b117880837d9eb4cc2b660c92f2a681fc442dc7a3eb179509749a5c8",
-  "rectangles": 11717,
-  "occupied_cells": 763248,
+  "material_plane_sha256": "c354b0d97cad32e4a30bc0c7334ca232a855a4469cbc00abca271ff9680abdea",
+  "setup_bytes": 186957,
+  "setup_sha256": "55f3c6647d95cf9ef7cfed3c2d7c1cdf8e783bdcb8c27540d67d59c4a20c0be4",
+  "rectangles": 10001,
+  "occupied_cells": 676133,
   "png_proofs": [
     {
       "name": "overview.png",
@@ -18,7 +18,7 @@
         2048,
         1024
       ],
-      "sha256": "cdc4e731b41d217e89bbf8e8514a193d66139d285f82401ff67f21b4b401c5f5",
+      "sha256": "4f0499cbe8f473bcfcd387a406e1f3b7e574c967a65d89741fcf0e7f39bba05a",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -27,7 +27,7 @@
         1024,
         512
       ],
-      "sha256": "5f140547c10c2b4cc1a0ca925f2ee1a4fa550499527bea2e3d4dea81a158a0e7",
+      "sha256": "019c314ec9e901ebfb0156327e3e9649d79ca969dc3ae5b2b32d05bd2b5132b9",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -36,7 +36,7 @@
         512,
         650
       ],
-      "sha256": "90b7bf75c55ca1a42c065e5e43cb586e1659ac97d7b35c50deb9f4d7a2d37db4",
+      "sha256": "523abb395cea2ff7cbb09641dfe54e2d9fd88c9afb2fcb7c029723ee55596c87",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -45,7 +45,7 @@
         470,
         610
       ],
-      "sha256": "fed8ff490753064764bc31a940559a374f5aafd0cbecd76721b95b12f3975d71",
+      "sha256": "b58b247c4868221e3652a887d43ee2fcde64fea18a0ab0ff0ca088fc717040cd",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -54,7 +54,7 @@
         510,
         545
       ],
-      "sha256": "4c6d0dd5b947292e3c6b549b47b879e1a4bdddcd1f9ffc8555217a307571b877",
+      "sha256": "d0990b1819b2ada33efdb154ab108a6a8e43abf6e4717f4d62dcd9f2590f5846",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -63,7 +63,7 @@
         430,
         605
       ],
-      "sha256": "00140d74d5d5f52f0f653a627606ee27c112597c86a36c8a5f164c9ad206cad6",
+      "sha256": "06a3733aecadc4ca0f387886ea41045ecc27952b41453e5454f433dceb22d180",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -72,7 +72,7 @@
         330,
         750
       ],
-      "sha256": "ee06b24e9627dfcd147b5c1e297b9438a3f2029b63104d1dc7c77a0488520ce2",
+      "sha256": "c711ad3b907dc57a90d5f94f669214c2e4a6f1740618eb847da8cd2f4208a0c8",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -81,173 +81,37 @@
         770,
         250
       ],
-      "sha256": "1b69e154cdb3f3c320a4b331f5bff92adf950ff3b145d82395dee232a43e35ab",
+      "sha256": "bf54e89ea08435216c5433d07ef7c650503122cb09975a89344504b88a2cdfc4",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     }
   ],
   "clearance": {
     "19x15": {
       "exact_sites": 13,
-      "connected_legal_centres": 914550,
+      "connected_legal_centres": 1040919,
       "minimum_approaches": 4
     },
     "23x19": {
       "exact_sites": 13,
-      "connected_legal_centres": 861836,
+      "connected_legal_centres": 1004476,
       "minimum_approaches": 4
     },
     "31x27": {
       "exact_sites": 13,
-      "connected_legal_centres": 755081,
+      "connected_legal_centres": 930908,
       "minimum_approaches": 4
     }
   },
   "alternate_route_connected_centres": {
-    "upper_via_roof": 626131,
-    "lower_via_sump": 583991
+    "upper_via_roof": 671048,
+    "lower_via_sump": 667410
   },
   "structural_topology": {
-    "components": 33,
-    "boundary_grounded_cells": 648246,
-    "detached_cells": 115002,
-    "detached_components": 32,
-    "largest_detached_components": [
-      {
-        "cells": 39183,
-        "bbox": [
-          1204,
-          185,
-          1704,
-          386
-        ]
-      },
-      {
-        "cells": 29054,
-        "bbox": [
-          753,
-          386,
-          1082,
-          550
-        ]
-      },
-      {
-        "cells": 14656,
-        "bbox": [
-          921,
-          522,
-          1208,
-          769
-        ]
-      },
-      {
-        "cells": 11407,
-        "bbox": [
-          630,
-          527,
-          829,
-          775
-        ]
-      },
-      {
-        "cells": 6121,
-        "bbox": [
-          806,
-          609,
-          1044,
-          637
-        ]
-      },
-      {
-        "cells": 3768,
-        "bbox": [
-          675,
-          527,
-          923,
-          681
-        ]
-      },
-      {
-        "cells": 2032,
-        "bbox": [
-          1706,
-          355,
-          1829,
-          371
-        ]
-      },
-      {
-        "cells": 951,
-        "bbox": [
-          630,
-          386,
-          672,
-          414
-        ]
-      },
-      {
-        "cells": 934,
-        "bbox": [
-          883,
-          443,
-          953,
-          483
-        ]
-      },
-      {
-        "cells": 757,
-        "bbox": [
-          1168,
-          386,
-          1208,
-          408
-        ]
-      },
-      {
-        "cells": 685,
-        "bbox": [
-          1528,
-          529,
-          1577,
-          581
-        ]
-      },
-      {
-        "cells": 646,
-        "bbox": [
-          1449,
-          530,
-          1492,
-          581
-        ]
-      },
-      {
-        "cells": 554,
-        "bbox": [
-          1536,
-          386,
-          1582,
-          440
-        ]
-      },
-      {
-        "cells": 548,
-        "bbox": [
-          731,
-          866,
-          751,
-          921
-        ]
-      },
-      {
-        "cells": 488,
-        "bbox": [
-          675,
-          386,
-          703,
-          414
-        ]
-      }
-    ]
+    "components": 1,
+    "boundary_grounded_cells": 676133,
+    "detached_cells": 0,
+    "detached_components": 0,
+    "largest_detached_components": []
   },
-  "builder_sha256": "181fd1ed4487741259532f3b095dad89ea646c5dc99fddac67c6cfcb7eddd8f5"
+  "builder_sha256": "006dee449f70a860b434eb6a892764c296ffc1c02b541add1b5b08ef22cac494"
 }
