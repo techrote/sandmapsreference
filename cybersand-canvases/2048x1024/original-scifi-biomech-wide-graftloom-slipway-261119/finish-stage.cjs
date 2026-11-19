@@ -1,6 +1,6 @@
 'use strict';
 // Lane-local stage finalizer: assemble this map's own deterministic builder.
-// This file is only a transport convenience; the resulting build.cjs is source.
+// This file is only a transport convenience; the resulting build.py is source.
 const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
