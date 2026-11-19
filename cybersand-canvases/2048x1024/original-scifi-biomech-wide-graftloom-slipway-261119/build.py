@@ -251,13 +251,7 @@ line(1753, 613, 1784, 579, 7, 117)
 line(1660, 622, 1690, 910, 12, 117)
 
 
-# R2: authored structural engineering, tied into established inert load paths.
-# Stage-1 review found isolated decorative machine slabs: support the large
-# gantry, memory-lens and lower transit districts with deliberate steel ribs.
-# The upper/lower route closures and exact 31x27 site clearance are rechecked.
-line(1814, 363, 1910, 31, 11, 62)    # hanging aft dock crane
-line(1751, 809, 1789, 972, 12, 117)   # deep aft brace to bedrock
-line(741, 896, 739, 950, 8, 117)     # small underkeel hoist into rock
+# Keep production flight geometry intact pending cable/structure auditing.
 
 def rectangles(a):
     rect = []
