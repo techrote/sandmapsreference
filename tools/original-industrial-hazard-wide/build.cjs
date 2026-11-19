@@ -306,6 +306,7 @@ function construct(spec,index){
  }
  const finishReceipt=finishCells(g,index,spec,{W,H,MAT,legalCentres});
  const supportReceipt=anchorAssemblies();
+ finishReceipt.structural_revision=require('./reengineer.cjs')(g,index,spec,{W,H,MAT});
  return {grid:g,op,supportReceipt,finishReceipt};
 }
 function rects(g){
