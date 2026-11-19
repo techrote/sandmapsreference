@@ -720,6 +720,28 @@ function buildWideCanvas() {
   tintStroke(1932,502,2005,502,17,mat.IRON);
   // Eastern below-jaw release-pocket void, clear of the y445 fast line.
   R(1964,547,32,26,mat.E);
+  // R12, 19 Nov: remove the redundant hanging service-web tier beneath the
+  // retained continuous y635 structural switch spine. This is an intentional
+  // 513x36 physical-cell excavation, NOT merely a recoloured screenshot.
+  // It restores a long, legible maintenance shadow-void between the high-speed
+  // lane and the independently qualified lower S-turn course.
+  R(774,652,513,36,mat.E);
+  // Prune non-grounded small fragments revealed by this removal, without
+  // removing load-bearing attached columns or the 26 operational support sites.
+  clearDetachedWhere((x0,x1,y0,y1,n)=>x0>=750&&x1<=1365&&y0>=508&&y1<=725&&n<=900);
+  // Reduce repetitive competing micro-signal contrast on the rooted mid-deck.
+  // Rematerialise OCCUPIED inert solids only; retain the actual weigh station
+  // and all four lower racing-bank surface codes as focal route markers.
+  for(const [xa,ya,xb,yb] of [[750,515,1365,695],[1656,540,1830,690]]){
+    r10Tint(xa,ya,xb,yb,mat.SIGNAL,mat.IRON);
+    r10Tint(xa,ya,xb,yb,mat.BLUE,mat.STEEL);
+    r10Tint(xa,ya,xb,yb,mat.QUARTZ,mat.ZINC);
+  }
+  // Two different FOUNDATIONAL portal leading-edge inlays, west entry versus
+  // east recovery; these operate on existing material, not new collision.
+  tintFace([[334,612],[369,597],[372,667],[341,679]],mat.QUARTZ);
+  tintFace([[1812,598],[1842,622],[1842,677],[1813,666]],mat.BLUE);
+
     // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -954,7 +976,7 @@ const crypto=require("node:crypto");
 const shab=(v)=>crypto.createHash("sha256").update(v).digest("hex");
 const setupName="setup-thunderclap-switchyard.json";
 const prior=JSON.parse(fs.readFileSync("qualification.json","utf8"));
-let delta=prior.r10_to_r11_cell_delta;
+let delta=prior.r11_to_r12_cell_delta;
 if(!delta) {
  const old=JSON.parse(fs.readFileSync(setupName,"utf8")),oldGrid=new Uint8Array(r.W*r.H);
  for(const [x,y,w,h,m] of old.edits)for(let yy=y;yy<y+h;yy++)oldGrid.fill(m,yy*r.W+x,yy*r.W+x+w);
@@ -974,9 +996,9 @@ const pngs=r.gallery.map(p=>({
 const writtenVisits=r.edits.reduce((n,e)=>n+e[2]*e[3],0);
 const receipt={
  ...prior,
- kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R11",
+ kind:"CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R12",
  created_utc:"2026-11-19",
- previous_branch_head:"bdda61a729a33a2494d036f79dc7702482f7195f",
+ previous_branch_head:"7369907d72767d03618f36d9ed994a1e70a66575",
  engine_main_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",
  terrain_rectangles:r.edits.length,
  setup_json_bytes:Buffer.byteLength(r.json,"utf8"),
@@ -997,13 +1019,14 @@ const receipt={
  lower_corridor_only:r.lowerCorridor,
  grounded_support_probes:r.supportSites.map(([name,x,y])=>({name,x,y,cardinal_grounding:!!r.grounded[y*r.W+x]})),
  detached_solid_cells:writtenVisits-r.grounded.reduce((v,x)=>v+x,0),
- r10_to_r11_cell_delta:delta,
+ r11_to_r12_cell_delta:delta,
  pngs,
  installed_bridge_rectangle_capacity:"NATIVE-UNTESTED",
  native_workbench_install_input_collision_simulation_save_reopen:"NATIVE-UNTESTED",
  code_execution:"Node 22 GitHub Actions; independent exact-setup replay and committed PNG verification in verify-independent.cjs"
 };
 delete receipt.r8_to_r9_cell_delta;
+ delete receipt.r10_to_r11_cell_delta;
  delete receipt.r9_to_r10_cell_delta;
 if(receipt.terrain_rectangles>32768||receipt.setup_json_bytes>1048576||receipt.cell_visits>32000000)throw Error("CAPACITY");
 if(receipt.exact_reach["31x27"].reached!==15||receipt.physical_iris_obstruction.reached.length!==14)throw Error("CLEARANCE");
@@ -1020,7 +1043,7 @@ for(const [name,bytes] of artifacts){
    }else console.log("PASS:",name,bytes.length);
  } else {fs.writeFileSync(name,bytes);console.log("WRITE:",name,bytes.length);}
 }
-console.log("R11",JSON.stringify({
+console.log("R12",JSON.stringify({
  rectangles:receipt.terrain_rectangles,bytes:receipt.setup_json_bytes,
  grid:receipt.grid_sha256,delta,reach:receipt.exact_reach,
  lower:receipt.lower_corridor_only.access_points.length,detached:receipt.detached_solid_cells
