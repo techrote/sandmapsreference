@@ -1,0 +1,43 @@
+'use strict';
+// Independent checker: does not import builder; reloads only committed artifacts.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),zlib=require('node:zlib');
+const D=path.resolve(__dirname,'../../cybersand-canvases/2048x1024/original-industrial-foundry-wide-long-pour-steelworks');
+const j=JSON.parse(fs.readFileSync(path.join(D,'setup.json'),'utf8'));
+const r=JSON.parse(fs.readFileSync(path.join(D,'receipt.json'),'utf8'));
+const W=2048,H=1024;const sha=v=>crypto.createHash('sha256').update(v).digest('hex');const assert=(ok,msg)=>{if(!ok)throw Error('independent FAIL: '+msg)};
+assert(j.version===2&&j.extent[0]===W&&j.extent[1]===H,'schema extent');
+assert(j.edits.length===r.rectangle_count&&j.edits.length<=32768,'edit budget');
+assert(fs.statSync(path.join(D,'setup.json')).size===r.json_bytes&&r.json_bytes<=1048576,'JSON byte cap');
+assert(sha(fs.readFileSync(path.join(D,'setup.json')))===r.setup_sha256,'setup hash');
+assert(j.actors.length===1&&j.actors[0].model==='midge'&&j.actors[0].hash==='c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96','actual actor identity');
+let grid=new Uint8Array(W*H),used=new Uint8Array(W*H),work=0;for(const ed of j.edits){assert(ed.length===5&&ed.every(Number.isInteger),'integer rectangle');const [x,y,w,h,m]=ed;assert(x>=0&&y>=0&&w>0&&h>0&&x+w<=W&&y+h<=H,'rectangle in bounds');assert([57,58,62,63,65,66,68,69,72,76,77,79,80,100,104,117,131,3,8].includes(m),'accepted solid or controlled fluid ID');work+=w*h;for(let yy=y;yy<y+h;yy++){for(let xx=x;xx<x+w;xx++){let p=yy*W+xx;assert(!used[p],'overlap at '+p);used[p]=1;grid[p]=m}}}
+assert(work===r.construction_work&&work<=32000000,'native work');assert(sha(grid)===r.material_plane_sha256,'2,097,152-cell replay hash');
+const counts={};for(const v of grid)counts[v]=(counts[v]||0)+1;assert(JSON.stringify(counts)===JSON.stringify(r.materials),'material histogram');
+let fluids=0,exposed=0;for(let y=0;y<H;y++)for(let x=0;x<W;x++){let v=grid[y*W+x];if(v!==3&&v!==8)continue;fluids++;for(let [nx,ny] of [[x-1,y],[x+1,y],[x,y-1],[x,y+1]])if(nx>=0&&ny>=0&&nx<W&&ny<H&&grid[ny*W+nx]===0)exposed++}assert(fluids>0&&exposed===0,'enclosed reactive fluids (initial edge exposure '+exposed+')');
+// Independently recompute whole-world load-bearing connectivity; do not trust the
+// builder's static_support receipt for classification of crane/staffed fixtures.
+let supportSeen=new Uint8Array(W*H),supportQueue=new Int32Array(W*H),supportHead=0,supportTail=0,inertTotal=0;
+for(let i=0;i<grid.length;i++)if(grid[i]&&grid[i]!==3&&grid[i]!==8)inertTotal++;
+for(let x=0;x<W;x++){let i=(H-1)*W+x;if(grid[i]&&grid[i]!==3&&grid[i]!==8){supportQueue[supportTail++]=i;supportSeen[i]=1}}
+while(supportHead<supportTail){let a=supportQueue[supportHead++],x=a%W,y=(a/W)|0;for(let b of [x>0?a-1:-1,x<W-1?a+1:-1,y>0?a-W:-1,y<H-1?a+W:-1])if(b>=0&&grid[b]&&grid[b]!==3&&grid[b]!==8&&!supportSeen[b]){supportSeen[b]=1;supportQueue[supportTail++]=b}}
+const structural={rooted:supportTail,total:inertTotal,detached:inertTotal-supportTail};
+assert(JSON.stringify(structural)===JSON.stringify(r.static_support),'independent structural receipt parity');
+assert(structural.detached===0,'R6 disjoint inert assemblies');
+function crc32(a){let c=0xffffffff;for(let v of a){c^=v;for(let i=0;i<8;i++)c=(c&1)?(c>>>1)^0xedb88320:c>>>1}return(c^0xffffffff)>>>0}
+function readpng(name){const file=fs.readFileSync(path.join(D,name));assert(sha(file)===r.pngs[name].sha256,'image bytes hash '+name);assert(file.subarray(0,8).toString('hex')==='89504e470d0a1a0a','PNG signature');let i=8,w,h,seenIEND=false,seenIHDR=false;const image=[];while(i<file.length){assert(i+12<=file.length,'PNG truncated '+name);let n=file.readUInt32BE(i),type=file.toString('ascii',i+4,i+8),data=file.subarray(i+8,i+8+n);assert(i+12+n<=file.length,'PNG chunk length');assert(file.readUInt32BE(i+8+n)===crc32(file.subarray(i+4,i+8+n)),'PNG CRC '+type);i+=12+n;if(type==='IHDR'){assert(!seenIHDR&&n===13,'PNG IHDR');seenIHDR=true;w=data.readUInt32BE(0);h=data.readUInt32BE(4);assert(data[8]===8&&data[9]===3,'indexed 8bit PNG')}else if(type==='IDAT'){image.push(data)}else if(type==='IEND'){seenIEND=true;assert(n===0&&i===file.length,'PNG terminal IEND');break;}}
+assert(seenIHDR&&seenIEND,'PNG chunks complete');let decoded=zlib.inflateSync(Buffer.concat(image));assert(decoded.length===(w+1)*h,'PNG uncompressed length');let [ox,oy,cw,ch]=r.pngs[name].viewport;assert(w===cw&&h===ch,'crop dimensions');for(let y=0;y<h;y++){let off=y*(w+1);assert(decoded[off]===0,'PNG filter!=0');for(let x=0;x<w;x++)assert(decoded[off+1+x]===grid[(y+oy)*W+ox+x],'indexed pixel differs from cell at '+name+':'+x+','+y)}return {name,size:[w,h],crc:true,pixel_parity:true,sha256:sha(file)} }
+let images=Object.keys(r.pngs).map(readpng);assert(images.length>=5,'full view plus 4 crops');
+// Eroded centre-mask BFS with integral occupancy and four-neighbour edges.
+let p=new Int32Array((W+1)*(H+1));for(let y=1;y<=H;y++){let sum=0;for(let x=1;x<=W;x++){sum+=grid[(y-1)*W+x-1]!==0?1:0;p[y*(W+1)+x]=sum+p[(y-1)*(W+1)+x]}}
+function flood(w,h){const ax=Math.floor(w/2),ay=Math.floor(h/2),free=new Uint8Array(W*H),q=new Int32Array(W*H),seen=new Uint8Array(W*H);for(let y=ay;y<H-ay;y++)for(let x=ax;x<W-ax;x++){let x0=x-ax,y0=y-ay,x1=x0+w,y1=y0+h;if(![p[y1*(W+1)+x1]-p[y1*(W+1)+x0]-p[y0*(W+1)+x1]+p[y0*(W+1)+x0]][0])free[y*W+x]=1}
+let [sx,sy]=j.actors[0].spawn;let start=sy*W+sx;assert(free[start],'Midge exact spawn '+w+'x'+h);let head=0,tail=1;q[0]=start;seen[start]=1;while(head<tail){let a=q[head++],x=a%W,y=(a/W)|0;for(let n of [x>0?a-1:-1,x<W-1?a+1:-1,y>0?a-W:-1,y<H-1?a+W:-1])if(n>=0&&free[n]&&!seen[n]){seen[n]=1;q[tail++]=n}}
+let record=r.static_exact_flight.find(x=>x.envelope[0]===w&&x.envelope[1]===h);assert(record,'receipt flight envelope');let count=0;for(let [name,v] of Object.entries(record.sites)){let pos=v.y*W+v.x;assert(!!free[pos]&&!!seen[pos],'site '+name+' at '+w+'x'+h);count++}assert(count===15,'exact sites');return {envelope:[w,h],reachable:count}};
+const checks=[[19,15],[23,19],[31,27]].map(([w,h])=>flood(w,h));
+// Physically replace a 50x60 main-throat rectangle with inert Solid and
+// recompute the complete 31x27 free-centre integral occupancy and BFS.
+p=new Int32Array((W+1)*(H+1));for(let y=1;y<=H;y++){let sum=0;for(let x=1;x<=W;x++){const block=x-1>=1025&&x-1<1075&&y-1>=490&&y-1<550;sum+=grid[(y-1)*W+x-1]!==0||block?1:0;p[y*(W+1)+x]=sum+p[(y-1)*(W+1)+x]}}
+const physicallyBlocked=flood(31,27);
+assert(physicallyBlocked.reachable===15&&r.main_throat_blockage.surviving===15,'50x60 blocked-throat all-sites alternative');
+// Distinct production and verification; no native binary was executed.
+const report={schema:1,verifier:'independent no-import replay/png/crc/hull/fluids',extent:[W,H],plane_sha256:sha(grid),rectangles:j.edits.length,bytes:r.json_bytes,work,fluids,exposed_to_air:exposed,static_support:structural,blocked_throat:physicallyBlocked,checkpoints:checks,pngs:images,native:'NATIVE-UNTESTED',result:'INDEPENDENT STATIC PASS; all inert solids rooted; installed native pending'};
+const body=Buffer.from(JSON.stringify(report,null,2)+'\n');const target=path.join(D,'verification-independent.json');if(process.argv.includes('--verify')){assert(fs.existsSync(target)&&fs.readFileSync(target).equals(body),'verification reproducibility')}else fs.writeFileSync(target,body);console.log(JSON.stringify({result:report.result,checks,rectangles:j.edits.length,png:images.length,fluid_air_edges:exposed},null,2));

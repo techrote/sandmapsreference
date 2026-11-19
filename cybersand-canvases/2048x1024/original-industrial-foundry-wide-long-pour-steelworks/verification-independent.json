@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "verifier": "independent no-import replay/png/crc/hull/fluids",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "11219d6f909079aa35634b8bc6697766da3274396abec570721ab637bbe84e84",
+  "rectangles": 4092,
+  "bytes": 75868,
+  "work": 741066,
+  "fluids": 27755,
+  "exposed_to_air": 0,
+  "static_support": {
+    "rooted": 713311,
+    "total": 713311,
+    "detached": 0
+  },
+  "blocked_throat": {
+    "envelope": [
+      31,
+      27
+    ],
+    "reachable": 15
+  },
+  "checkpoints": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable": 15
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable": 15
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable": 15
+    }
+  ],
+  "pngs": [
+    {
+      "name": "overview.png",
+      "size": [
+        2048,
+        1024
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "5bce9fc36d80eb35908db620be451df9a42c8dd7bf7cce901a5ffdcfd1bd7687"
+    },
+    {
+      "name": "01-ore-and-skip.png",
+      "size": [
+        482,
+        457
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "9813f38740c5109de5392cb2fa96fbdf7d79c1f3bee6ac5e98fb46d9dd0c46d6"
+    },
+    {
+      "name": "02-blast-furnaces.png",
+      "size": [
+        490,
+        505
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "03e80f2023838d43d6e7dc7e0b3229a140ab156142cedab57a608a837f4aa9ea"
+    },
+    {
+      "name": "03-ladle-crane.png",
+      "size": [
+        642,
+        440
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "00ba10e12b0f1e9b8e79d28c13e02b01b9e97466776afccc17eb2db648b38acc"
+    },
+    {
+      "name": "04-caster-cells.png",
+      "size": [
+        573,
+        192
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "4b8f1fc7695ffc98a7f88e0107685d2ae5f669b657eab29df828e58dee566d35"
+    },
+    {
+      "name": "05-quench-and-export.png",
+      "size": [
+        452,
+        408
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "bb2a598d527450553c88f046fbe99b69657f1f2af15ad4f64b2d4c86f25701fb"
+    },
+    {
+      "name": "06-subgrade-rail.png",
+      "size": [
+        1400,
+        241
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "3a3574d3d3250d40278b2d45c28413711061bf9608c577f052f451ab0dc9845e"
+    }
+  ],
+  "native": "NATIVE-UNTESTED",
+  "result": "INDEPENDENT STATIC PASS; all inert solids rooted; installed native pending"
+}

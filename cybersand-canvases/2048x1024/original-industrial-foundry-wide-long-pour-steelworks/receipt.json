@@ -1,0 +1,436 @@
+{
+  "schema": 1,
+  "revision": "R6",
+  "concept": "the-long-pour-steelworks",
+  "seed": 19261119,
+  "extent": [
+    2048,
+    1024
+  ],
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "r6_geometry_sha256": "c80f94c88cc917aac9fd13d4026b0bd640a51c834f49e6f1c3fd8c51a7ca6bb3",
+  "r6_authored_rectangles": 92,
+  "r6_cell_identity_changes": 20996,
+  "material_plane_sha256": "11219d6f909079aa35634b8bc6697766da3274396abec570721ab637bbe84e84",
+  "setup_sha256": "351d18c940dbc6e69588e1ef97384667912172e3a830709b6108c0f191add99b",
+  "json_bytes": 75868,
+  "rectangle_count": 4092,
+  "rectangle_budget": 32768,
+  "bridge_fallback": 4096,
+  "construction_work": 741066,
+  "construction_work_budget": 32000000,
+  "materials": {
+    "0": 1356086,
+    "3": 8745,
+    "8": 19010,
+    "57": 20013,
+    "58": 157492,
+    "62": 213673,
+    "63": 190,
+    "65": 102453,
+    "66": 26230,
+    "68": 9260,
+    "69": 1712,
+    "72": 3296,
+    "76": 5725,
+    "77": 2464,
+    "79": 3229,
+    "100": 129921,
+    "104": 22166,
+    "117": 3207,
+    "131": 12280
+  },
+  "static_support": {
+    "rooted": 713311,
+    "total": 713311,
+    "detached": 0
+  },
+  "static_exact_flight": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable": 15,
+      "total": 15,
+      "flood": 871944,
+      "sites": {
+        "Receiving spawn": {
+          "x": 115,
+          "y": 448,
+          "free": true,
+          "reachable": true
+        },
+        "Ore sorting booth": {
+          "x": 335,
+          "y": 554,
+          "free": true,
+          "reachable": true
+        },
+        "Skip hoist apex": {
+          "x": 203,
+          "y": 365,
+          "free": true,
+          "reachable": true
+        },
+        "West furnace approach": {
+          "x": 453,
+          "y": 399,
+          "free": true,
+          "reachable": true
+        },
+        "Blast furnace survey": {
+          "x": 644,
+          "y": 301,
+          "free": true,
+          "reachable": true
+        },
+        "Blower transfer": {
+          "x": 845,
+          "y": 545,
+          "free": true,
+          "reachable": true
+        },
+        "Crane upper gallery": {
+          "x": 1053,
+          "y": 336,
+          "free": true,
+          "reachable": true
+        },
+        "Ladle inspection": {
+          "x": 1275,
+          "y": 542,
+          "free": true,
+          "reachable": true
+        },
+        "Caster operator": {
+          "x": 1435,
+          "y": 460,
+          "free": true,
+          "reachable": true
+        },
+        "Quench overseer": {
+          "x": 1765,
+          "y": 513,
+          "free": true,
+          "reachable": true
+        },
+        "East rail recovery": {
+          "x": 2003,
+          "y": 567,
+          "free": true,
+          "reachable": true
+        },
+        "Western service return": {
+          "x": 270,
+          "y": 849,
+          "free": true,
+          "reachable": true
+        },
+        "Blower basement": {
+          "x": 700,
+          "y": 843,
+          "free": true,
+          "reachable": true
+        },
+        "Caster sump": {
+          "x": 1195,
+          "y": 841,
+          "free": true,
+          "reachable": true
+        },
+        "East maintenance": {
+          "x": 1780,
+          "y": 842,
+          "free": true,
+          "reachable": true
+        }
+      }
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable": 15,
+      "total": 15,
+      "flood": 808109,
+      "sites": {
+        "Receiving spawn": {
+          "x": 115,
+          "y": 448,
+          "free": true,
+          "reachable": true
+        },
+        "Ore sorting booth": {
+          "x": 335,
+          "y": 554,
+          "free": true,
+          "reachable": true
+        },
+        "Skip hoist apex": {
+          "x": 203,
+          "y": 365,
+          "free": true,
+          "reachable": true
+        },
+        "West furnace approach": {
+          "x": 453,
+          "y": 399,
+          "free": true,
+          "reachable": true
+        },
+        "Blast furnace survey": {
+          "x": 644,
+          "y": 301,
+          "free": true,
+          "reachable": true
+        },
+        "Blower transfer": {
+          "x": 845,
+          "y": 545,
+          "free": true,
+          "reachable": true
+        },
+        "Crane upper gallery": {
+          "x": 1053,
+          "y": 336,
+          "free": true,
+          "reachable": true
+        },
+        "Ladle inspection": {
+          "x": 1275,
+          "y": 542,
+          "free": true,
+          "reachable": true
+        },
+        "Caster operator": {
+          "x": 1435,
+          "y": 460,
+          "free": true,
+          "reachable": true
+        },
+        "Quench overseer": {
+          "x": 1765,
+          "y": 513,
+          "free": true,
+          "reachable": true
+        },
+        "East rail recovery": {
+          "x": 2003,
+          "y": 567,
+          "free": true,
+          "reachable": true
+        },
+        "Western service return": {
+          "x": 270,
+          "y": 849,
+          "free": true,
+          "reachable": true
+        },
+        "Blower basement": {
+          "x": 700,
+          "y": 843,
+          "free": true,
+          "reachable": true
+        },
+        "Caster sump": {
+          "x": 1195,
+          "y": 841,
+          "free": true,
+          "reachable": true
+        },
+        "East maintenance": {
+          "x": 1780,
+          "y": 842,
+          "free": true,
+          "reachable": true
+        }
+      }
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable": 15,
+      "total": 15,
+      "flood": 499426,
+      "sites": {
+        "Receiving spawn": {
+          "x": 115,
+          "y": 448,
+          "free": true,
+          "reachable": true
+        },
+        "Ore sorting booth": {
+          "x": 335,
+          "y": 554,
+          "free": true,
+          "reachable": true
+        },
+        "Skip hoist apex": {
+          "x": 203,
+          "y": 365,
+          "free": true,
+          "reachable": true
+        },
+        "West furnace approach": {
+          "x": 453,
+          "y": 399,
+          "free": true,
+          "reachable": true
+        },
+        "Blast furnace survey": {
+          "x": 644,
+          "y": 301,
+          "free": true,
+          "reachable": true
+        },
+        "Blower transfer": {
+          "x": 845,
+          "y": 545,
+          "free": true,
+          "reachable": true
+        },
+        "Crane upper gallery": {
+          "x": 1053,
+          "y": 336,
+          "free": true,
+          "reachable": true
+        },
+        "Ladle inspection": {
+          "x": 1275,
+          "y": 542,
+          "free": true,
+          "reachable": true
+        },
+        "Caster operator": {
+          "x": 1435,
+          "y": 460,
+          "free": true,
+          "reachable": true
+        },
+        "Quench overseer": {
+          "x": 1765,
+          "y": 513,
+          "free": true,
+          "reachable": true
+        },
+        "East rail recovery": {
+          "x": 2003,
+          "y": 567,
+          "free": true,
+          "reachable": true
+        },
+        "Western service return": {
+          "x": 270,
+          "y": 849,
+          "free": true,
+          "reachable": true
+        },
+        "Blower basement": {
+          "x": 700,
+          "y": 843,
+          "free": true,
+          "reachable": true
+        },
+        "Caster sump": {
+          "x": 1195,
+          "y": 841,
+          "free": true,
+          "reachable": true
+        },
+        "East maintenance": {
+          "x": 1780,
+          "y": 842,
+          "free": true,
+          "reachable": true
+        }
+      }
+    }
+  ],
+  "main_throat_blockage": {
+    "rectangle": [
+      1025,
+      490,
+      50,
+      60
+    ],
+    "surviving": 15,
+    "total": 15
+  },
+  "pngs": {
+    "overview.png": {
+      "bytes": 19308,
+      "sha256": "5bce9fc36d80eb35908db620be451df9a42c8dd7bf7cce901a5ffdcfd1bd7687",
+      "viewport": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-ore-and-skip.png": {
+      "bytes": 3200,
+      "sha256": "9813f38740c5109de5392cb2fa96fbdf7d79c1f3bee6ac5e98fb46d9dd0c46d6",
+      "viewport": [
+        32,
+        265,
+        482,
+        457
+      ]
+    },
+    "02-blast-furnaces.png": {
+      "bytes": 2567,
+      "sha256": "03e80f2023838d43d6e7dc7e0b3229a140ab156142cedab57a608a837f4aa9ea",
+      "viewport": [
+        395,
+        222,
+        490,
+        505
+      ]
+    },
+    "03-ladle-crane.png": {
+      "bytes": 3761,
+      "sha256": "00ba10e12b0f1e9b8e79d28c13e02b01b9e97466776afccc17eb2db648b38acc",
+      "viewport": [
+        897,
+        168,
+        642,
+        440
+      ]
+    },
+    "04-caster-cells.png": {
+      "bytes": 2168,
+      "sha256": "4b8f1fc7695ffc98a7f88e0107685d2ae5f669b657eab29df828e58dee566d35",
+      "viewport": [
+        1020,
+        527,
+        573,
+        192
+      ]
+    },
+    "05-quench-and-export.png": {
+      "bytes": 2243,
+      "sha256": "bb2a598d527450553c88f046fbe99b69657f1f2af15ad4f64b2d4c86f25701fb",
+      "viewport": [
+        1585,
+        320,
+        452,
+        408
+      ]
+    },
+    "06-subgrade-rail.png": {
+      "bytes": 2912,
+      "sha256": "3a3574d3d3250d40278b2d45c28413711061bf9608c577f052f451ab0dc9845e",
+      "viewport": [
+        300,
+        755,
+        1400,
+        241
+      ]
+    }
+  },
+  "native": "NATIVE-UNTESTED"
+}
