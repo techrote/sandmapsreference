@@ -43,27 +43,41 @@ All nonempty selected IDs are **static, hard, non-movable solid** in the accepte
 | Admission or proof | Current result |
 |---|---:|
 | Extent/material plane | **2048×1024 / 2,097,152** exact cells |
-| Setup JSON | **212625 / 1,048,576 bytes** |
-| Nonoverlapping native rectangles / edits | **11460 / 32,768** |
-| Nonempty authored cell-work | **883100** |
+| Setup JSON | **229368 / 1,048,576 bytes** |
+| Nonoverlapping native rectangles / edits | **12384 / 32,768** |
+| Nonempty authored cell-work | **895176** |
 | Full-cell replay/equivalence | **2,097,152 / 2,097,152** |
 | 19×15 exact Midge sites | **16/16** |
 | 23×19 exact Midge sites | **16/16** |
 | 31×27 exact Midge sites | **16/16** |
 | Mid-corridor disabled (other sites) | **15/15** at each envelope |
-| Solid structural continuity | **883100 connected rooted cells; zero ungrounded** after trimming 239 tiny fragments |
+| Solid structural continuity | **895176 connected rooted cells; zero ungrounded** after trimming 239 tiny fragments |
 | PNG signatures/CRC/zlib/Adler/index parity | **6/6 PASS**, independently inflated and checked |
 
-Full material grid SHA-256: `c4d8b0549e7df9054f1f09c715959954c82f00b1b82b267d5a6bab65b9c997cf`. Setup SHA-256: `7f4e4f92bd96db3e0d8284a2ae5eb3cc531c41e43320b922e38eb849fead1ffa`.
+Full material grid SHA-256: `9ce36afaafdd2b5748be65fde58be3314b0090da24884a805ed797d8d31a1c94`. Setup SHA-256: `ec254a4df2bab2896cb3226bc2355099a28f7da6abaa4930977912005bbb2cd7`.
 
 **IMPORTANT — NATIVE-UNTESTED:** source `MAX_RUNS=32768` is not proof of installed `CyberDemoBridge.workbench_start_rectangle_capacity`. If runtime lacks the method or DLL is old the fallback is **4,096** and this map must refuse rather than silently omit geometry. Actual native Workbench install, Rapier actor thrust/collision, bounded progression, renderer fidelity, installed bridge capacity and save/reopen are *not tested*. No owner acceptance claimed.
 
 ## Owner / independent-review acceptance
 
-1. Confirm a Windows/Godot build whose installed `CyberDemoBridge` rectangle capacity is ≥ 11460, and which matches the intended accepted source.
+1. Confirm a Windows/Godot build whose installed `CyberDemoBridge` rectangle capacity is ≥ 12384, and which matches the intended accepted source.
 2. Place the JSON in `user://workbench/setup-meridian-scar.json` and load it from Workbench saved setups using the name `meridian-scar`; alternatively use a compatible supported Setup-v2 import flow. Do **not** import it as a generated-start packet.
 3. Verify exact world size, all material IDs, the physical Midge spawn, and distinct upper, middle and lower route recovery. Examine the eye/clock, Loom factory rooms, Oracle nave and isolation lock at normal zoom.
 4. Exercise thrust/input, real collision, bounded simulation and native save/reopen. Capture exact executable/source hashes and findings.
 5. Independent art/technical/Shepherd reviewers decide rework or qualification. Keep the PR **DRAFT / HOLD**; never merge or mark Ready by automation.
 
 The actual cell overview and crops are the only visual evidence for this PR. No historical artwork or third-party source references were used.
+
+## R3 independent-review P1 functional repair (19 November 2026)
+
+Same original map revised after the independent [Shepherd](https://github.com/techrote/sandmapsreference/pull/24#issuecomment-6999971951) and [art auditor](https://github.com/techrote/sandmapsreference/pull/24#issuecomment-7000458935) identified empty schematic halls. The committed **actual cell grid** differs at **129890 positions** from the original PR head; no new PR and no reference inputs. Repairs are reproducibly encoded in the committed fixed-seed `build.cjs`.
+
+- **Ferryman Arcade:** ticketing booth, unequal freight-exchange weighbridge, maintenance stilt and legible thresholds in separate arrival/service spaces.
+- **Electromagnetic Loom:** supported feed, induction coil, overhead transfer, inspection workbench and lower machine-service modules with differentiated equipment heights.
+- **Meridian Fault-Eye:** two anchored diagnostics/perimeter stations and lower measurement supports; a bounded east-side relief preserves the conservative blocked-core bypass rather than closing the clock void.
+- **Oracle Tribunal:** integrated public dais, archive/service side galleries and lower record stacks, different from the factory modules.
+- **Quarantine Terminus:** staged sample intake, shield baffles, scanner desk, and release-coil equipment rather than repeating market pods.
+
+**Final R3 static proof:** exactly **2048×1024**; **12384** nonoverlapping native rectangles under source 32,768; **229368** Setup-v2 UTF-8 bytes under 1 MiB; **895176** occupied cells. Material-plane SHA-256 `9ce36afaafdd2b5748be65fde58be3314b0090da24884a805ed797d8d31a1c94`, setup SHA-256 `ec254a4df2bab2896cb3226bc2355099a28f7da6abaa4930977912005bbb2cd7`; exhaustive 2,097,152-cell reconstruction identical. All **16/16** fixed sites pass exact 19×15, 23×19, and 31×27 conservative legal-centre BFS. After physically sealing x975..1108/y440..544, **15/15** other sites remain reachable in all three envelopes. Residual detached solid components were removed by the builder. All six indexed PNGs were constructed directly from the checked grid and passed PNG signature/chunk CRC/IEND verification. Bytewise decompression and independent pixel-parity decoding of the regenerated PNGs must still be repeated by auditors; the builder's Node validation checks these, but standalone Node was not run in this environment.
+
+**Native remains NATIVE-UNTESTED.** Installed bridge may still cap at 4096 vs 12384 rectangles, despite accepted source 32768. No Godot/Rapier install, native inputs/collision, sustained ticks or fresh-process save/reopen. Open Draft/HOLD awaiting fresh independent exact-HEAD Art/Technical/Shepherd results; owner acceptance not claimed. Do not merge or mark Ready.

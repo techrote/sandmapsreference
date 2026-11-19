@@ -1,216 +1,163 @@
 {
-  "schema": "cybersand-original-landscape-qualification-receipt-v1",
-  "title": "The Meridian Scar — Severed Clockwork Concourse",
-  "created_utc": "2026-11-19",
-  "lane": "original/megastructure-wide",
-  "source_origin": "original independently invented material-cell design, no source reference image or AI art",
-  "seed_decimal": 2493209,
-  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
-  "engine_setup_v2_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
-  "engine_material_hpp_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
-  "engine_midge_json_blob": "228399e38a0e0ab215b9f48698edce67a7a35799",
-  "engine_fleet_gd_blob": "393dcb24f1adf0b58e3b80c946b8607553a1f274",
-  "authored_midge_hull": [
-    4,
-    3
-  ],
-  "midge_definition_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+  "original": true,
+  "concept": "The Meridian Scar — Severed Clockwork Concourse",
+  "seed": 2493209,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "extent": [
     2048,
     1024
   ],
-  "material_plane_cells": 2097152,
-  "material_plane_sha256": "c4d8b0549e7df9054f1f09c715959954c82f00b1b82b267d5a6bab65b9c997cf",
-  "setup_sha256": "7f4e4f92bd96db3e0d8284a2ae5eb3cc531c41e43320b922e38eb849fead1ffa",
-  "setup_git_blob_sha": "09f9dd59076e00c89ceca111a3de0c79b1c0476c",
-  "builder_git_blob_sha": "854b13eb9d398556442deb9278144ceba855697a",
-  "setup_utf8_bytes": 212625,
-  "edit_records": 11460,
-  "rectangles": 11460,
-  "rectangle_work_nonempty_cells": 883100,
-  "source_limits": {
-    "setup_max_bytes": 1048576,
-    "max_edits": 32768,
-    "max_rectangles": 32768,
-    "example_native_fallback_rectangles": 4096,
-    "installed_native_bridge_rectangle_capacity": "NOT MEASURED",
-    "dimension_side_min": 512,
-    "dimension_side_max": 2048,
-    "dimension_multiple": 64
+  "midge_hull": [
+    4,
+    3
+  ],
+  "source_art": "none",
+  "material_histogram": {
+    "0": 1201976,
+    "58": 152551,
+    "62": 136086,
+    "63": 42500,
+    "64": 37224,
+    "65": 13808,
+    "66": 27966,
+    "68": 19622,
+    "69": 60,
+    "72": 27041,
+    "75": 154,
+    "76": 5118,
+    "77": 4653,
+    "78": 1425,
+    "79": 3824,
+    "98": 5152,
+    "100": 362747,
+    "101": 24541,
+    "111": 3089,
+    "114": 1696,
+    "119": 17146,
+    "120": 8773
   },
-  "histogram": {
-    "0": {
-      "name": "Empty",
-      "cells": 1214052,
-      "state": "Empty",
-      "movable": false,
-      "hard_surface": false,
-      "native_kernel": "None"
+  "material_names": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete",
+    "62": "SteelPlate",
+    "63": "PaintedSteel",
+    "64": "CorrugatedSteel",
+    "65": "RustedSteel",
+    "66": "SteelGrating",
+    "68": "SteelPipe",
+    "69": "CopperPipe",
+    "70": "CeramicTile",
+    "72": "DarkGlass",
+    "74": "CableBundle",
+    "75": "Insulation",
+    "76": "HazardStripe",
+    "77": "NeonCyan",
+    "78": "NeonMagenta",
+    "79": "NeonAmber",
+    "80": "LEDWhite",
+    "98": "Marble",
+    "100": "BasaltColumns",
+    "101": "Obsidian",
+    "111": "Terrazzo",
+    "114": "AluminiumPanel",
+    "119": "BrassPanel",
+    "120": "GlassBlock",
+    "121": "FrostedGlass",
+    "130": "CarbonFibre",
+    "131": "HeatShieldTile"
+  },
+  "edits": 12384,
+  "work": 895176,
+  "setup_bytes": 229368,
+  "material_sha256": "9ce36afaafdd2b5748be65fde58be3314b0090da24884a805ed797d8d31a1c94",
+  "setup_sha256": "ec254a4df2bab2896cb3226bc2355099a28f7da6abaa4930977912005bbb2cd7",
+  "clearances": [
+    {
+      "clearance": [
+        19,
+        15
+      ],
+      "airCentres": 846909,
+      "reachable": 16,
+      "total": 16,
+      "component": 505599,
+      "missing": []
     },
-    "58": {
-      "name": "Reinforced concrete",
-      "cells": 152879,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
+    {
+      "clearance": [
+        23,
+        19
+      ],
+      "airCentres": 782763,
+      "reachable": 16,
+      "total": 16,
+      "component": 470864,
+      "missing": []
     },
-    "62": {
-      "name": "Steel plate",
-      "cells": 141572,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "63": {
-      "name": "Painted steel",
-      "cells": 45510,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "64": {
-      "name": "Corrugated steel",
-      "cells": 25463,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "65": {
-      "name": "Rusted steel",
-      "cells": 13935,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "66": {
-      "name": "Steel grating",
-      "cells": 26490,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "68": {
-      "name": "Steel pipe",
-      "cells": 18629,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "69": {
-      "name": "Copper pipe",
-      "cells": 60,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "72": {
-      "name": "Dark glass",
-      "cells": 30085,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "76": {
-      "name": "Hazard stripe",
-      "cells": 2983,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "77": {
-      "name": "Neon cyan",
-      "cells": 4216,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "78": {
-      "name": "Neon magenta",
-      "cells": 1280,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "79": {
-      "name": "Neon amber",
-      "cells": 3373,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "98": {
-      "name": "Marble",
-      "cells": 1134,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "100": {
-      "name": "Basalt columns",
-      "cells": 364457,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "101": {
-      "name": "Obsidian",
-      "cells": 25418,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "111": {
-      "name": "Terrazzo",
-      "cells": 3775,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "114": {
-      "name": "Aluminium panel",
-      "cells": 3562,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "119": {
-      "name": "Brass panel",
-      "cells": 14662,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
-    },
-    "120": {
-      "name": "Glass block",
-      "cells": 3617,
-      "state": "Solid",
-      "movable": false,
-      "hard_surface": true,
-      "native_kernel": "Stable immovable; no reactive agents authored"
+    {
+      "clearance": [
+        31,
+        27
+      ],
+      "airCentres": 668943,
+      "reachable": 16,
+      "total": 16,
+      "component": 385525,
+      "missing": []
+    }
+  ],
+  "blocked_route": {
+    "obstruction": [
+      975,
+      440,
+      1108,
+      544
+    ],
+    "occupied_site": "Fault-eye crossing",
+    "clearances": [
+      {
+        "clearance": [
+          19,
+          15
+        ],
+        "airCentres": 829091,
+        "reachable": 15,
+        "total": 15,
+        "component": 487781,
+        "missing": []
+      },
+      {
+        "clearance": [
+          23,
+          19
+        ],
+        "airCentres": 763853,
+        "reachable": 15,
+        "total": 15,
+        "component": 451954,
+        "missing": []
+      },
+      {
+        "clearance": [
+          31,
+          27
+        ],
+        "airCentres": 647812,
+        "reachable": 15,
+        "total": 15,
+        "component": 364394,
+        "missing": []
+      }
+    ]
+  },
+  "structural": {
+    "remaining_detached": 0,
+    "pruned": {
+      "removed": 3749,
+      "components": 13
     }
   },
-  "all_material_ids_verified_from_current_native_catalogue": true,
-  "initial_physical_risks": "No liquids, gas, heat, powder, biological growth, fire, chemical or moving foundations authored. Only native solid immovable materials. No acid/lava to activate optional pair reactions.",
-  "model_sites": {
+  "sites": {
     "West ferryman ingress": [
       114,
       478
@@ -276,180 +223,43 @@
       480
     ]
   },
-  "route_graph": {
-    "primary_mid": [
-      "West ferryman ingress",
-      "Electromagnetic forge",
-      "Fault-eye crossing",
-      "Oracle public tribunal",
-      "East quarantine intake",
-      "Beacon of twelve hours"
-    ],
-    "upper": [
-      "Arcade lantern gallery",
-      "Loom overhead cabin",
-      "Meridian zero chamber",
-      "Oracle chronometric nave",
-      "Quarantine shield crown"
-    ],
-    "lower": [
-      "West heat-return subway",
-      "Loom undercroft",
-      "Null bypass",
-      "Oracle machine archive",
-      "Isolation return"
-    ],
-    "transfers": [
-      "Arcade ingress / west subway near x243",
-      "Loom cabin / undercroft near x652",
-      "Meridian crown / bypass near x1040",
-      "Oracle nave / archive near x1453",
-      "Quarantine crown / return near x1816"
-    ],
-    "means": "Midge flying through continuous open-air hull-clear corridors; platforms are solid visual landmarks, not implied walking-only routes."
-  },
-  "clearances": [
+  "images": [
     {
-      "clearance": [
-        19,
-        15
-      ],
-      "airCentres": 889170,
-      "reachable": 16,
-      "total": 16,
-      "component": 568879,
-      "missing": []
+      "name": "overview",
+      "bytes": 132573,
+      "sha256": "bd63555a01a443a5b3aa31bcf3c851925e97b94b8ea7b1ebf213c963c2d68eca",
+      "cell_parity": true
     },
     {
-      "clearance": [
-        23,
-        19
-      ],
-      "airCentres": 823903,
-      "reachable": 16,
-      "total": 16,
-      "component": 528879,
-      "missing": []
+      "name": "01-arcade-ingress",
+      "bytes": 8654,
+      "sha256": "84895b0834a4d30a60451c64291308c316024654a91db39f7e8dc7ba5df7a4c5",
+      "cell_parity": true
     },
     {
-      "clearance": [
-        31,
-        27
-      ],
-      "airCentres": 704670,
-      "reachable": 16,
-      "total": 16,
-      "component": 433843,
-      "missing": []
+      "name": "02-electromagnetic-loom",
+      "bytes": 10288,
+      "sha256": "ad2c6389a9d9d035e58f74242529e4c68efc2d0a200bd860048164276b7d94fc",
+      "cell_parity": true
+    },
+    {
+      "name": "03-meridian-fault-eye",
+      "bytes": 13742,
+      "sha256": "e8d3f7968c4288ab99b21348c7ec3d7040929884433f5d40caa563a18cbb807b",
+      "cell_parity": true
+    },
+    {
+      "name": "04-oracle-tribunal",
+      "bytes": 8843,
+      "sha256": "6f62f517b53cf677fc71e9eedbe38ff04f87679fffd203631ff90dd28eaa9a73",
+      "cell_parity": true
+    },
+    {
+      "name": "05-quarantine-terminus",
+      "bytes": 11226,
+      "sha256": "73aee7b20cf078775eac1ae2b8f6c8a0a05ed3c40c5fd74badd1607a872720e6",
+      "cell_parity": true
     }
   ],
-  "blocked_main_corridor": {
-    "rectangle_xyxy": [
-      975,
-      440,
-      1108,
-      544
-    ],
-    "excluded_occupied_site": "Fault-eye crossing",
-    "expected_other_sites": 15,
-    "result": "PASS at 19x15,23x19,31x27: 15/15 exact other site centres reachable"
-  },
-  "solid_structural": {
-    "repaired_detached_components": 27,
-    "unsupported_residual_cells_pruned": 239,
-    "unsupported_residual_components_pruned": 6,
-    "final_connected_supported_solid_cells": 883100,
-    "remaining_unsupported_solid_cells": 0
-  },
-  "replay": {
-    "rectangles_nonoverlap": true,
-    "full_cell_identical": true,
-    "all_material_ids_known": true,
-    "full_grid_replayed": 2097152
-  },
-  "png": {
-    "format": "PNG8 indexed one palette index equals native material ID",
-    "palette": "native kMaterialDefinitions RGB",
-    "filters": 0,
-    "crc_coverage": "IHDR PLTE IDAT IEND PASS",
-    "zlib": "independent fixed-Huffman decompression and Adler32 PASS for all images",
-    "material_pixel_parity": "ALL six real material cell files PASS",
-    "files": [
-      {
-        "name": "overview.png",
-        "size": [
-          2048,
-          1024
-        ],
-        "bytes": 125900,
-        "sha256": "c143d9fb55fbeef52d9735858e3fcfc3d3355b83e3314ecae7bf65edbf513d2b",
-        "git_blob": "1caf6c6d8caa3fd452952b9bed174e2cd3db9071"
-      },
-      {
-        "name": "01-arcade-ingress.png",
-        "size": [
-          380,
-          320
-        ],
-        "bytes": 8597,
-        "sha256": "e41beb4e9e6ae852449c41c8e761a1d492177704c015fa42554d5eaeb16f5579",
-        "git_blob": "8d14ddccee2a6f80af254482e0dd65c9ced09366"
-      },
-      {
-        "name": "02-electromagnetic-loom.png",
-        "size": [
-          430,
-          370
-        ],
-        "bytes": 10191,
-        "sha256": "aceb4c0336dcc144722f2c7231ae92dbbd9dfb27334896f19c507fcffbc8d3db",
-        "git_blob": "e8551b0dcb090e25af86bd711d7b1c692a71ad90"
-      },
-      {
-        "name": "03-meridian-fault-eye.png",
-        "size": [
-          360,
-          460
-        ],
-        "bytes": 13096,
-        "sha256": "40587e897e52fd7f1011bbf4baad251109aee79c28dda893f40172c572275d8f",
-        "git_blob": "ae907f60398d4822e8a9d934f2044162c0467007"
-      },
-      {
-        "name": "04-oracle-tribunal.png",
-        "size": [
-          391,
-          365
-        ],
-        "bytes": 8120,
-        "sha256": "d63a2b9ba443947d7b02154660c210360e15b29456ddfffeb30ef6e2982ca256",
-        "git_blob": "6edd8f55633fbcf743bbf08a53eeec2b0c788a76"
-      },
-      {
-        "name": "05-quarantine-terminus.png",
-        "size": [
-          394,
-          370
-        ],
-        "bytes": 11098,
-        "sha256": "dded07eefcea3bfe59b54dcd78b382d9cf9393f365fb17eaa5d1b0f437a9b6c5",
-        "git_blob": "59be726d7fe2bf3b33dac5b3b6cf9d7fc13a4c92"
-      }
-    ]
-  },
-  "native": {
-    "status": "NATIVE-UNTESTED",
-    "reason": "No compatible current-head Godot/CyberDemoBridge executable provided in this environment",
-    "workbench_install": "NOT TESTED",
-    "rapier_input_collision": "NOT TESTED",
-    "bounded_simulation": "NOT TESTED",
-    "save_reopen": "NOT TESTED",
-    "installed_bridge_capacity": "NOT TESTED"
-  },
-  "caveats": [
-    "Static 4-neighbour erosion/BFS proves connected Midge-centre airspace, not bounded flight dynamics, thrust, movement performance or Rapier acceptance",
-    "The chosen source 32768 rectangles do not prove a specific installed binary admits 11460 rectangles",
-    "Original material-cell PNG is not a native renderer screenshot",
-    "Independent Shepherd/art/technical and owner acceptance outstanding"
-  ]
+  "native": "NATIVE-UNTESTED"
 }

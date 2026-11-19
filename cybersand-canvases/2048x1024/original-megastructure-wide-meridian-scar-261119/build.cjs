@@ -166,6 +166,134 @@ for(let x of [111,390,544,805,1245,1602,1680,1950]){R(x,813,55,7,M.G);R(x+15,820
 // Stabilising and decorative hull edges are real solid cells, cannot cross flight-corridor clearance.
 for(let x=24;x<2040;x+=128){R(x,904,81,7,M.O);R(x+11,930,49,4,M.C);}
 
+
+// R3 independent P1 repair — functional inhabited architecture, not a repeated hall stamp.
+// All work is indexed material-cell state; preserve the generous through-flight corridors.
+// ARC: ferry ticketing above, asymmetric freight weighbridge beside it, service below.
+R(103,358,108,63,0);R(294,353,108,73,0); // remove clone-facade infill, not route
+L(107,387,210,387,8,M.S);R(110,388,10,44,M.C);R(199,388,10,39,M.C);
+R(122,394,76,7,M.J);R(126,401,31,28,M.D);R(130,407,24,11,M.GL);
+R(161,410,28,17,M.S);R(165,405,18,5,M.N);R(174,415,7,10,M.H);
+R(119,429,92,7,M.V);L(112,432,96,454,8,M.S);
+R(297,365,111,10,M.R);L(300,373,299,424,9,M.S);
+R(305,382,65,8,M.U);R(312,391,52,22,M.C);
+R(318,395,40,10,M.GL);R(331,410,17,10,M.H);
+L(361,386,393,414,10,M.S);R(373,412,34,9,M.G);
+for(let x of [319,338,354]){R(x,421,12,8,M.R);R(x+3,424,6,4,M.A);}
+R(112,548,91,76,0); // separate ferry maintenance stilt from prior red box
+poly([[112,603],[129,573],[163,566],[182,594],[196,625],[112,625]],M.R);
+R(125,592,36,15,M.D);R(133,592,20,11,M.GL);
+L(143,609,143,659,10,M.C);R(112,626,84,9,M.S);
+for(let i=0;i<5;i++){R(174-i*8,567+i*13,23,4,M.G);}
+R(289,535,112,78,0); // freight exchange differs in mass and internal access
+poly([[291,592],[311,553],[360,545],[398,569],[401,626],[285,626]],M.U);
+R(306,577,47,25,M.D);R(310,582,38,9,M.GL);
+R(356,569,30,12,M.C);R(360,580,23,9,M.A);
+L(313,626,313,681,9,M.S);L(379,624,395,686,9,M.S);
+R(291,644,99,9,M.R);R(306,654,69,5,M.G);
+for(let i=0;i<5;i++)R(306+i*14,660,7,11,i%2?M.Y:M.H);
+// LOOM: distinct feed → winding → output with service gantry, inspection bench.
+R(489,368,150,69,0);R(691,364,120,73,0); // unbuild the two identical blind pod interiors
+R(485,375,15,61,M.C);R(493,384,12,44,M.R);
+R(510,394,53,12,M.U);R(515,407,43,9,M.G);R(523,417,27,8,M.A);
+L(491,379,523,356,10,M.S);R(528,360,33,8,M.J);
+R(556,422,177,8,M.S);R(564,430,160,5,M.G);
+for(let x of [573,609,666,707]){R(x,423,14,6,M.V);R(x+4,418,6,5,M.N);}
+ring(610,396,37,31,9,M.P);ring(610,396,25,19,6,M.J);
+L(577,398,646,392,6,M.I);L(611,364,611,371,10,M.S);
+R(637,400,32,10,M.U);R(644,409,18,10,M.N);
+L(669,405,706,386,9,M.P);
+poly([[708,367],[776,369],[794,395],[790,421],[707,422]],M.C);
+R(714,375,68,33,M.D);R(720,380,55,13,M.GL);
+R(722,405,40,8,M.Z);R(772,405,12,9,M.H);
+L(782,370,803,350,7,M.S);R(750,423,44,9,M.G);
+R(497,547,116,71,0);R(697,547,118,70,0);
+L(491,559,610,559,11,M.U);R(501,562,15,47,M.C);
+L(535,566,535,606,9,M.S);R(550,578,56,11,M.R);
+for(let i=0;i<3;i++){R(555+i*14,591,10,16,M.C);R(557+i*14,594,6,9,M.A);}
+R(560,610,54,8,M.S);L(605,607,636,640,8,M.P);
+poly([[704,559],[745,540],[786,548],[807,590],[805,616],[698,618]],M.S);
+R(713,561,76,43,M.D);R(720,569,62,14,M.GL);
+R(718,590,62,6,M.N);R(783,566,9,43,M.H);
+R(711,621,92,9,M.U);L(767,628,765,689,9,M.C);
+ring(564,675,32,28,8,M.R);L(547,675,583,675,6,M.J);
+R(519,696,110,7,M.S);R(543,686,44,10,M.G);
+// FAULT-EYE: two anchored diagnostic stations, not a plug across the central void.
+R(881,414,69,9,M.S);L(884,421,870,572,9,M.C);
+R(889,390,50,23,M.D);R(896,395,35,9,M.GL);
+R(903,405,20,5,M.N);L(933,414,943,437,6,M.P);
+R(1134,401,78,8,M.S);L(1200,410,1212,555,9,M.C);
+R(1144,379,52,20,M.D);R(1150,385,41,9,M.GL);
+R(1168,393,16,5,M.H);L(1150,401,1136,431,7,M.J);
+R(911,670,52,12,M.C);R(917,659,36,11,M.D);
+R(918,664,18,5,M.N);L(931,681,943,823,9,M.S);
+R(1130,671,48,11,M.C);R(1139,660,28,11,M.D);
+R(1143,665,19,5,M.F);L(1151,683,1137,824,9,M.S);
+for(let x of [924,1142]){R(x,688,7,15,M.G);R(x-5,701,17,4,M.H);}
+// TRIBUNAL: one dignified dais, unequal citizen and archive galleries, side service.
+R(1323,365,239,70,0); // replace clone of upper box with genuine nested public interior
+L(1310,373,1561,373,12,M.V);L(1316,377,1320,426,9,M.J);
+R(1330,388,41,33,M.D);R(1333,392,34,11,M.GL);
+R(1336,415,29,6,M.G);R(1376,406,35,8,M.S);
+R(1383,414,29,11,M.V);R(1402,424,106,12,M.Z);
+R(1420,401,73,22,M.J);R(1425,397,60,6,M.A);
+R(1440,386,32,11,M.C);R(1446,389,20,7,M.GL);
+R(1518,380,39,41,M.D);R(1522,384,30,10,M.GL);
+R(1532,401,17,11,M.N);R(1522,415,29,6,M.G);
+L(1555,386,1588,357,7,M.S);R(1326,438,236,6,M.S);
+R(1338,541,72,68,0);R(1510,539,88,75,0);
+poly([[1300,583],[1320,544],[1370,550],[1408,580],[1407,623],[1304,623]],M.T);
+R(1318,571,55,24,M.D);R(1322,577,43,8,M.GL);
+R(1373,576,17,35,M.C);R(1380,585,8,18,M.N);
+R(1312,627,95,8,M.V);L(1331,634,1328,692,9,M.C);
+poly([[1511,589],[1535,539],[1560,544],[1593,576],[1604,619],[1508,621]],M.C);
+R(1532,564,53,35,M.D);R(1538,569,40,12,M.GL);
+R(1548,589,20,8,M.F);R(1519,624,79,8,M.S);
+L(1565,630,1571,693,9,M.C);
+for(let x of [1365,1390,1519,1551]){R(x,671,13,24,M.U);R(x+4,675,6,11,M.N);}
+R(1361,699,212,8,M.S);
+// QUARANTINE: actual process sequence: sample dock / seal passage / release controls.
+R(1682,366,98,66,0);R(1860,363,92,70,0);
+R(1685,373,79,9,M.H);R(1692,383,18,42,M.C);
+R(1715,386,49,34,M.D);R(1720,393,38,15,M.GL);
+R(1734,411,15,7,M.F);R(1697,424,79,9,M.S);
+L(1774,379,1800,354,10,M.S);R(1780,414,21,16,M.U);
+R(1785,419,12,7,M.N);R(1806,378,11,58,M.U);R(1810,388,4,30,M.H);
+R(1841,377,11,60,M.U);R(1845,386,4,33,M.F);
+R(1860,371,82,10,M.S);R(1869,382,67,40,M.D);
+R(1875,390,53,16,M.GL);R(1886,414,31,7,M.A);
+R(1858,428,88,7,M.H);L(1940,384,1959,357,10,M.C);
+R(1708,541,84,72,0);R(1871,539,74,76,0);
+R(1680,553,19,85,M.C);R(1702,551,67,9,M.S);
+R(1710,562,55,40,M.D);R(1714,568,46,10,M.GL);
+R(1744,586,13,7,M.F);R(1710,605,64,11,M.U);
+L(1741,616,1739,679,9,M.S);
+ring(1865,580,54,45,10,M.U);ring(1865,580,37,29,8,M.H);
+L(1828,581,1902,581,8,M.P);L(1864,535,1865,548,10,M.S);
+R(1840,624,58,10,M.S);R(1849,635,44,8,M.G);
+L(1880,641,1892,693,9,M.C);
+for(let x of [1777,1805,1933]){R(x,650,15,45,M.T);R(x+4,653,7,17,M.N);}
+R(1711,694,90,9,M.H);R(1824,694,113,8,M.S);
+// P2: asymmetric district cues along the lower return, keep y715..780 open.
+ring(585,806,25,17,6,M.P);R(532,823,107,10,M.S);
+R(914,797,57,8,M.U);L(935,805,964,840,8,M.S);
+R(1752,798,67,8,M.H);R(1763,807,34,10,M.C);
+
+// R3 service attachment: substantial actual beam paths to surrounding infrastructure,
+// not fake 1-pixel cables spanning the fault void.
+R(494,380,14,49,M.S);R(495,389,75,9,M.U);R(526,390,36,13,M.S);
+R(542,581,69,11,M.C);R(550,588,58,15,M.S);
+R(561,603,53,9,M.U);R(553,606,60,9,M.S);
+R(720,415,73,9,M.S);
+R(1315,392,26,12,M.C);R(1327,389,10,37,M.S);
+// Retain all original guaranteed free routes/shafts and the 16 fixed actual points.
+// This may remove interface features within functional flyer envelopes by design.
+tunnel([[105,319],[313,313],[526,308],[701,311],[885,307],[1085,289],[1283,312],[1442,315],[1613,321],[1820,311],[1970,329]],65);
+tunnel([[104,480],[311,483],[511,477],[702,473],[872,478],[1043,477],[1254,473],[1445,485],[1628,480],[1812,479],[1977,487]],83);
+tunnel([[110,749],[295,751],[508,750],[688,750],[884,742],[1038,741],[1238,742],[1456,743],[1660,751],[1812,748],[1973,749]],83);
+for(let [x,y0,y1,w] of [[243,312,751,74],[652,305,751,74],[1040,288,751,94],[1453,314,743,80],[1816,311,751,72]])tunnel([[x,y0],[x+8,Math.floor((y0+y1)/2)],[x,y1]],w);
+for(const xy of Object.values(SITES))R(xy[0]-18,xy[1]-17,37,35,0);
+
 function anchorStructure(){
 const seen=new Uint8Array(a.length),queue=new Int32Array(a.length),islands=[];
 for(let k=0;k<a.length;k++){if(!a[k]||seen[k])continue;let head=0,tail=1,edge=false,minx=W,maxx=0,miny=H,maxy=0;queue[0]=k;seen[k]=1;let cells=[];while(head<tail){let u=queue[head++],xx=u%W,yy=(u/W)|0;cells.push(u);if(xx===0||xx===W-1||yy===H-1)edge=true;minx=Math.min(minx,xx);maxx=Math.max(maxx,xx);miny=Math.min(miny,yy);maxy=Math.max(maxy,yy);for(let v of [u-1,u+1,u-W,u+W])if(v>=0&&v<a.length&&Math.abs(v%W-xx)+Math.abs(((v/W)|0)-yy)===1&&a[v]&&!seen[v]){seen[v]=1;queue[tail++]=v;}}
@@ -173,10 +301,13 @@ islands.push({cells,edge,box:[minx,miny,maxx,maxy]});}
 const main=new Uint8Array(a.length),dist=new Int32Array(a.length),parent=new Int32Array(a.length),q=new Int32Array(a.length);dist.fill(-1);let h=0,t=0;for(let z of islands)if(z.edge){for(let u of z.cells){main[u]=1;dist[u]=0;q[t++]=u;}}
 while(h<t){let u=q[h++],xx=u%W,yy=(u/W)|0;for(let v of [u-1,u+1,u-W,u+W])if(v>=0&&v<a.length&&Math.abs(v%W-xx)+Math.abs(((v/W)|0)-yy)===1&&dist[v]===-1&&!a[v]){dist[v]=dist[u]+1;parent[v]=u;q[t++]=v;}}
 let ties=[];for(let z of islands){if(z.edge||z.cells.length<100)continue;let best=-1,cost=2147483647;for(let u of z.cells){let x=u%W,y=(u/W)|0;for(let v of [u-1,u+1,u-W,u+W])if(v>=0&&v<a.length&&Math.abs(v%W-x)+Math.abs(((v/W)|0)-y)===1&&dist[v]>=0&&dist[v]<cost){best=v;cost=dist[v];}}
-if(best<0)continue;let path=[],u=best;while(dist[u]>0){path.push(u);u=parent[u];}path.push(u);
+if(best<0||cost>205)continue;let path=[],u=best;while(dist[u]>0){path.push(u);u=parent[u];}path.push(u);
 if(path.length>=2){let step=path.filter((v,i)=>i%5===0||i===path.length-1);for(let v of step){let x=v%W,y=(v/W)|0;R(x-2,y-2,5,5,M.P);}ties.push({cells:z.cells.length,link:cost,box:z.box});}}
 return ties;}
 const structuralTies=anchorStructure();
+// R3 conservative Midge recovery: open a bounded relief through the east Fault-Eye
+// service tie (not the clock), preserving the 31x27 alternative after mid-bridge seal.
+tunnel([[1119,410],[1123,463]],53);
 
 
 // No unsupported decorations: remove any residual solid component not tied to grounded superframe.
@@ -207,4 +338,9 @@ const lb=[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,
 let s1=1,s2=0;for(let i=0;i<n;i++){s1=(s1+raw[i])%65521;s2=(s2+s1)%65521;}result.push(...be((s2<<16)|s1));return new Uint8Array(result);}
 function png(g,x,y,w,h){const raw=new Uint8Array((w+1)*h);for(let yy=0;yy<h;yy++){raw[yy*(w+1)]=0;raw.set(g.subarray((yy+y)*W+x,(yy+y)*W+x+w),yy*(w+1)+1);}const compressed=zFixed(raw),palette=new Uint8Array(768);for(let [id,color] of Object.entries(PAL))palette.set(color,+id*3);const chunks=[];function chunk(name,data){let nameBytes=[...name].map(c=>c.charCodeAt(0)),payload=[...nameBytes,...data];for(let x of [...be(data.length),...payload,...be(crc(payload))])chunks.push(x);}chunk("IHDR",[...be(w),...be(h),8,3,0,0,0]);chunk("PLTE",palette);chunk("IDAT",compressed);chunk("IEND",[]);const out=new Uint8Array(8+chunks.length);out.set([137,80,78,71,13,10,26,10]);out.set(chunks,8);return out;}
 function pngChunksValid(p){let sig=[137,80,78,71,13,10,26,10];if(sig.some((x,i)=>p[i]!==x))return false;let n=8,end=false;while(n+12<=p.length){let len=(((p[n]*16777216)+(p[n+1]<<16)+(p[n+2]<<8)+p[n+3])>>>0),tp=String.fromCharCode(...p.subarray(n+4,n+8)),dat=p.subarray(n+4,n+8+len),given=((p[n+8+len]*16777216)+(p[n+9+len]<<16)+(p[n+10+len]<<8)+p[n+11+len])>>>0;if(crc(dat)!==given)return false;n+=12+len;if(tp==="IEND"){end=true;break;}}return end&&n===p.length;}
-if(typeof module!=="undefined"&&module.exports){module.exports={generate,clearances,png,pngChunksValid,PAL,M,NAMES,SITES,CROPS,SEED,W,H};if(require.main===module){const fs=require("fs"),path=require("path"),zlib=require("zlib"),crypto=require("crypto"),dir=__dirname,world=generate(),checks=clearances(world.g,world.sites);if(checks.some(q=>q.missing.length))throw Error(JSON.stringify(checks));const images=[["overview",0,0,W,H],...world.crops],out=[];for(let [name,x,y,w,h] of images){const bytes=png(world.g,x,y,w,h);if(!pngChunksValid(bytes))throw Error("PNG CRC "+name);let pos=8,packed=[];while(pos<bytes.length){let size=bytes.readUInt32BE?bytes.readUInt32BE(pos):((bytes[pos]<<24)|(bytes[pos+1]<<16)|(bytes[pos+2]<<8)|bytes[pos+3])>>>0,tp=String.fromCharCode(...bytes.slice(pos+4,pos+8));if(tp==="IDAT")packed.push(bytes.slice(pos+8,pos+8+size));pos+=size+12;}const inflated=zlib.inflateSync(Buffer.concat(packed.map(x=>Buffer.from(x))));if(inflated.length!==(w+1)*h)throw Error("inflate length "+name);for(let yy=0;yy<h;yy++){if(inflated[yy*(w+1)]!==0)throw Error("PNG filter");for(let xx=0;xx<w;xx++)if(inflated[yy*(w+1)+1+xx]!==world.g[(yy+y)*W+x+xx])throw Error("PNG pixel parity "+name);}const hash=v=>crypto.createHash("sha256").update(v).digest("hex");fs.writeFileSync(path.join(dir,name+".png"),bytes);out.push({name,bytes:bytes.length,sha256:hash(bytes),cell_parity:true});}fs.writeFileSync(path.join(dir,"setup-meridian-scar.json"),world.json+"\n");const hash=v=>crypto.createHash("sha256").update(v).digest("hex");const receipt={original:true,concept:"The Meridian Scar — Severed Clockwork Concourse",seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",extent:[W,H],midge_hull:[4,3],source_art:"none",material_histogram:world.hist,material_names:NAMES,edits:world.edits.length,work:world.work,setup_bytes:Buffer.byteLength(world.json+"\n"),material_sha256:hash(world.g),setup_sha256:hash(world.json+"\n"),clearances:checks,sites:SITES,images:out,native:"NATIVE-UNTESTED"};fs.writeFileSync(path.join(dir,"receipt.json"),JSON.stringify(receipt,null,2)+"\n");console.log(JSON.stringify({static:"PASS",edits:receipt.edits,bytes:receipt.setup_bytes,clearances:checks,images:out}));}}
+if(typeof module!=="undefined"&&module.exports){module.exports={generate,clearances,png,pngChunksValid,PAL,M,NAMES,SITES,CROPS,SEED,W,H};if(require.main===module){const fs=require("fs"),path=require("path"),zlib=require("zlib"),crypto=require("crypto"),dir=__dirname,world=generate(),checks=clearances(world.g,world.sites);if(checks.some(q=>q.missing.length))throw Error(JSON.stringify(checks));const blockedWorld=new Uint8Array(world.g);
+for(let y=440;y<544;y++)blockedWorld.fill(M.C,y*W+975,y*W+1108);
+const unblockedSites=Object.fromEntries(Object.entries(world.sites).filter(([k])=>k!=="Fault-eye crossing"));
+const blockedChecks=clearances(blockedWorld,unblockedSites);
+if(blockedChecks.some(q=>q.missing.length))throw Error("R3 3-envelope obstruction bypass fails");
+const images=[["overview",0,0,W,H],...world.crops],out=[];for(let [name,x,y,w,h] of images){const bytes=png(world.g,x,y,w,h);if(!pngChunksValid(bytes))throw Error("PNG CRC "+name);let pos=8,packed=[];while(pos<bytes.length){let size=bytes.readUInt32BE?bytes.readUInt32BE(pos):((bytes[pos]<<24)|(bytes[pos+1]<<16)|(bytes[pos+2]<<8)|bytes[pos+3])>>>0,tp=String.fromCharCode(...bytes.slice(pos+4,pos+8));if(tp==="IDAT")packed.push(bytes.slice(pos+8,pos+8+size));pos+=size+12;}const inflated=zlib.inflateSync(Buffer.concat(packed.map(x=>Buffer.from(x))));if(inflated.length!==(w+1)*h)throw Error("inflate length "+name);for(let yy=0;yy<h;yy++){if(inflated[yy*(w+1)]!==0)throw Error("PNG filter");for(let xx=0;xx<w;xx++)if(inflated[yy*(w+1)+1+xx]!==world.g[(yy+y)*W+x+xx])throw Error("PNG pixel parity "+name);}const hash=v=>crypto.createHash("sha256").update(v).digest("hex");fs.writeFileSync(path.join(dir,name+".png"),bytes);out.push({name,bytes:bytes.length,sha256:hash(bytes),cell_parity:true});}fs.writeFileSync(path.join(dir,"setup-meridian-scar.json"),world.json+"\n");const hash=v=>crypto.createHash("sha256").update(v).digest("hex");const receipt={original:true,concept:"The Meridian Scar — Severed Clockwork Concourse",seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",extent:[W,H],midge_hull:[4,3],source_art:"none",material_histogram:world.hist,material_names:NAMES,edits:world.edits.length,work:world.work,setup_bytes:Buffer.byteLength(world.json+"\n"),material_sha256:hash(world.g),setup_sha256:hash(world.json+"\n"),clearances:checks,blocked_route:{obstruction:[975,440,1108,544],occupied_site:"Fault-eye crossing",clearances:blockedChecks},structural:{remaining_detached:0,pruned:world.finalPrune},sites:SITES,images:out,native:"NATIVE-UNTESTED"};fs.writeFileSync(path.join(dir,"receipt.json"),JSON.stringify(receipt,null,2)+"\n");console.log(JSON.stringify({static:"PASS",edits:receipt.edits,bytes:receipt.setup_bytes,clearances:checks,images:out}));}}
