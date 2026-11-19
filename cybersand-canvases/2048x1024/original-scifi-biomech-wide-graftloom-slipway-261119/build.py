@@ -538,6 +538,129 @@ for cx,cy,rx in [(688,939,19),(1180,943,26)]:
     ellipse(cx,cy,rx-8,6,120)
 
 
+
+# SHEPHERD R3 — inhabited, legible workspaces, not more identical glyphs.
+# Shipyard functional process: intake cradle -> mnemonic examination -> lamellar
+# sorting/expulsion -> underkeel service -> aft extraction. All structural
+# additions must weld to an already boundary-rooted roof, cliff or bedrock.
+# Non-overlapping conservative Midge hulls are verified *after* this passage.
+PRE_R3 = A[:]
+
+# 1. Receiving: asymmetrical cradled graft intake, bolted into west shoulder.
+# Its opening is beneath the old sky shunt; the exact receiving spawn remains
+# open at (122,483), with 31x27 collision clearance on all four approaches.
+line(52, 403, 110, 419, 13, 62)
+poly([(105,419),(165,418),(186,402),(209,411),
+      (193,438),(165,450),(121,446)], 117)
+poly([(116,419),(140,396),(188,390),(197,399),
+      (170,407),(158,421)], 62)
+box(135,440,162,448,113)
+line(163,422,198,431,7,120)
+box(45,410,75,419,113)
+
+# 2. Mnemonic examination *dock*: asymmetric cantilevers from two independent
+# roof-rooted masts, enclosing real work bays on either side of a wide open
+# central inspection aperture. Not a ring in the transit void.
+line(748,204,746,382,14,62)
+line(746,382,817,417,15,62)
+box(807,413,823,535,62)
+box(817,510,899,524,62)
+box(827,499,889,510,113)
+line(819,419,896,407,8,117)
+line(819,449,858,444,8,117)
+box(841,445,852,488,120)
+box(851,451,870,460,113)
+line(854,456,884,489,6,117)
+box(872,483,888,490,120)
+# Mirrored load path is deliberately not a mirrored architectural motif.
+line(1094,205,1101,376,14,62)
+line(1101,376,1046,419,15,62)
+box(1032,416,1048,535,62)
+box(962,509,1042,524,62)
+box(976,499,1038,509,113)
+line(1041,421,967,410,8,117)
+line(1036,444,1000,439,8,117)
+line(1012,448,987,490,7,62)
+box(984,484,996,512,120)
+# One group of staggered analogue memory cassettes rather than circular stamps.
+for xx,yy,ll in [(840,465,16),(852,473,23),(864,481,18)]:
+    line(823,yy-7,xx+ll,yy,4,113)
+# Keep Core (921,468) clear in 31x27 rectangle x906..936/y455..481;
+# the break between left and right examination workstations is traversable.
+
+# 3. Refinery HIGH: roof-supplied asymmetric grafting die and suspended
+# excision teeth; physically different from the middle filter and lower press.
+line(1603,212,1608,356,13,62)
+line(1608,354,1638,378,12,117)
+box(1595,373,1660,384,62)
+line(1612,369,1611,400,9,117)
+poly([(1576,391),(1628,387),(1651,398),(1638,411),
+      (1605,408),(1590,423),(1579,417)],113)
+for xx in (1600,1621,1641):
+    line(xx,407,xx-6,431,5,120)
+
+# Refinery MIDDLE: distinct enterable lamellar filtration lab. Its open right
+# side leads into the main corridor and exact (1510,544) destination.
+# The side wall is a continuous member of the pre-existing roof-supplied rack.
+line(1328,193,1318,477,14,62)
+box(1310,473,1328,604,62)
+box(1319,490,1439,500,62)
+box(1318,597,1401,609,62)
+poly([(1326,517),(1408,530),(1416,546),
+      (1388,543),(1325,537)],113)
+poly([(1326,551),(1410,560),(1426,582),
+      (1387,577),(1325,568)],117)
+box(1398,572,1415,586,120)
+box(1347,607,1392,620,113)
+box(1362,594,1374,607,120)
+# Roof slot and lower outlet remain separated, with a real, wide open
+# approach from x>1440; no endless wall/rake across the refinery.
+
+# Refinery LOWER: floor-attached tapered waste auger / dry extrusion face.
+# It faces left toward exact (1500,704) while the service exit faces right.
+line(1628,846,1621,764,16,62)
+box(1608,742,1641,767,62)
+poly([(1609,743),(1560,740),(1545,759),
+      (1559,768),(1609,773)],117)
+box(1574,728,1594,744,113)
+box(1611,703,1621,752,120)
+line(1627,760,1690,741,10,62)
+poly([(1640,748),(1688,735),(1704,741),
+      (1694,757),(1660,773),(1640,769)],101)
+line(1646,762,1647,822,10,117)
+# Give one original rotary lower vessel a non-circular working tooth casing.
+poly([(1395,797),(1421,784),(1480,797),(1472,811),
+      (1436,825),(1410,819)],117)
+
+# 4. Underkeel: enterable differential sampling room and asymmetric transfer
+# manifold; supported from lower solid geology, with top-open approach.
+box(870,941,954,956,62)
+box(875,895,888,955,117)
+box(938,914,951,956,117)
+box(876,892,901,905,113)
+box(886,935,941,944,120)
+line(946,925,991,907,10,62)
+poly([(961,913),(989,901),(1012,906),
+      (1007,915),(982,925)],113)
+# These cells are safely below South Memory (914,809); no in-game
+# decorative objects are exempted from actual Midge collision.
+
+# 5. Aft grounded extraction: distinct twin lower jaws and pallet handoff
+# surrounding, not overlapping, the recovery point (1940,848).
+line(1901,930,1898,882,14,58)
+line(1898,881,1917,875,12,62)
+poly([(1859,902),(1897,876),(1916,883),
+      (1909,902),(1878,920)],117)
+line(2010,928,2009,880,14,62)
+line(2009,880,1981,881,11,117)
+poly([(1977,877),(1990,860),(2018,870),
+      (2014,894),(1980,897)],62)
+box(1981,909,2025,919,113)
+# No across-void decoration, active fluids or putative fake organ materials.
+
+R3_CHANGED_CELLS = sum(u != v for u,v in zip(PRE_R3,A))
+assert R3_CHANGED_CELLS >= 3000, ('R3 physical rework missing',R3_CHANGED_CELLS)
+
 # A 112-cell-wide deliberate breach in the north mnemonic crown preserves
 # direct access to the fixed Memory Engine North coordinate (925,145).
 # Left and right crown halves retain independent boundary-rooted hangers.
@@ -721,7 +844,7 @@ def run(dest):
     for f, x, y, w, h, step in specs:
         imgs.append(png_rgb(A, x, y, w, h, dest / f, step))
         assert png_verify(dest / f, A, x, y, w, h, step)
-    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'shepherd_rework_r2': {'changed_cells_final': R2_CHANGED_CELLS, 'objective': 'Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return'}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
+    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'shepherd_rework_r2': {'changed_cells_final': R2_CHANGED_CELLS, 'objective': 'Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return'}, 'shepherd_rework_r3': {'changed_cells_final': R3_CHANGED_CELLS, 'objective': 'Rooted mnemonic examination dock, enterable filtration lab, grafting die, dry extruder, receiving cradle, lower sampling room and aft extraction'}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
     (dest / 'qualification.json').write_text(json.dumps(info, indent=2) + '\n')
     (dest / 'seed.txt').write_text(str(SEED) + '\n')
     print(json.dumps({'rectangles': len(rect), 'setup_bytes': len(js), 'occupied': work, 'sites': len(SITES), 'alternate': common, 'gridsha': info['grid_sha256'], 'pngs': len(imgs)}, indent=2))
