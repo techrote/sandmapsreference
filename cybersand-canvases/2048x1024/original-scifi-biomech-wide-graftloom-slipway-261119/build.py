@@ -602,17 +602,17 @@ for xx in (1600,1621,1641):
 # Refinery MIDDLE: distinct enterable lamellar filtration lab. Its open right
 # side leads into the main corridor and exact (1510,544) destination.
 # The side wall is a continuous member of the pre-existing roof-supplied rack.
-line(1370,851,1323,597,14,62)
-box(1310,473,1328,604,62)
-box(1319,490,1439,500,62)
-box(1318,597,1401,609,62)
-poly([(1326,517),(1408,530),(1416,546),
-      (1388,543),(1325,537)],113)
-poly([(1326,551),(1410,560),(1426,582),
-      (1387,577),(1325,568)],117)
+box(1372,465,1388,581,62)
+# The filter is a cantilever from the existing y465 grounded deck, not a wall.
+box(1380,498,1439,508,62)
+box(1380,557,1410,569,62)
+poly([(1380,518),(1440,530),(1449,545),
+      (1419,542),(1380,536)],113)
+poly([(1380,552),(1440,560),(1453,582),
+      (1414,578),(1380,568)],117)
 box(1398,572,1415,586,120)
-box(1347,607,1392,620,113)
-box(1362,594,1374,607,120)
+box(1380,578,1428,590,113)
+box(1380,579,1390,594,120)
 # Roof slot and lower outlet remain separated, with a real, wide open
 # approach from x>1440; no endless wall/rake across the refinery.
 
