@@ -2,7 +2,51 @@
 
 **ORIGINAL / INDUSTRIAL TRANSIT / LANDSCAPE 2048×1024**. A physical, wholly invented CyberSand material-cell settlement, not a source-image conversion, scene enlargement, web illustration, or rework. **Draft/HOLD candidate; owner and independent reviews outstanding. NATIVE-UNTESTED.**
 
-## R4 physical vessel and freight-transfer reconstruction — 19 November 2026 (CURRENT)
+## R5 operational reconstruction — 19 November 2026 (CURRENT)
+
+**Independent exact-R4 [Art review](https://github.com/techrote/sandmapsreference/pull/21#issuecomment-7001584379) and [Shepherd review](https://github.com/techrote/sandmapsreference/pull/21#issuecomment-7002034730): REWORK REQUIRED.** R5 is this original creator's response in real physical cells, not owner/independent acceptance. The exact spatial extent, unchanged 18 named operational centres and original skyline remain unchanged. This is not a reference conversion.
+
+- **Drydock:** Unequal fore cabin/cockpit on the continuous lower vessel keel, hollow west workroom with a deliberately open top-entry doorway, angled working prow, welded starboard work bay and berth-to-vessel service lips. The inspection shaft at exactly **(313,743)** remains physically accessible with 31×27 conservative clearance, not replaced or moved. All instrumentation is physically anchored; no floating detached solids.
+- **Cargo sequence:** The pre-existing west customs grade now feeds a particular wheelstop and docking tongue; the left lift loading lock, paired guide-linked sheaves/cages, static right-jaw release and outward unloading lip physically connect the route. Fixed supporting brackets, neon service indicators and corrugated cargo use different solid materials. These are **static structures**, not functioning moving freight actors.
+- **Yard and terminal:** The classifier has a genuine forked low catch-siding grade ending at a stop/interlock. The east terminal gets a west-facing side-entry staffed assay chamber, connected load table and separate outbound threshold rather than floating decorative counters.
+- **Lower return:** Two distinct pump-discharge/dispatch equipment arrangements extend existing rooms without occupying the open 31×27 lower flight artery. Five original vertical transfers, skyline voids and the real x867–910/y520–589 31×27 freight seam repair were preserved.
+- **Visual review:** The creator directly reopened the newly committed **full 2048×1024 indexed material-cell overview plus all five 1:1 district crops** at final R5 cells. Pixel-for-pixel equivalence of all six genuine PNGs with the serialized Setup plane was independently checked by the branch's non-importing verifier. No illustration, resized scene, photograph or source JPEG was used.
+
+**R5 exact-node GitHub Actions qualification:** [run 44476859862](https://github.com/techrote/sandmapsreference/actions/runs/44476859862) passed generation, exhaustive independent material replay, indexed-PNG inflation/pixel parity, exact conservative collision routes, grounded-component count and physically inserted alternate-route obstruction. This run generated and committed the six exact-R5 images and Setup JSON.
+
+| R5 verified property | Value |
+|---|---:|
+| Extent / seed | **2048×1024 / 20261119** |
+| Accepted read-only CyberSand main | **de109d0131641d6adc8d25bb9ced7ca3d4991105** |
+| Nonoverlapping edits | **12,046 / 32,768** |
+| Setup-v2 JSON bytes | **221,264 / 1,048,576** |
+| Stable occupied Solid cells / edit work | **809,468 / 32,000,000** |
+| Structurally grounded / detached cells | **809,468 / 0** |
+| Exact centres reached from (140,473) | **18/18 at each 19×15, 23×19, 31×27** |
+| Connected legal 31×27 centres | **835,551** |
+| Physical upper-route 110×160 steel obstruction | **2,542 → 2,690 full-hull BFS steps** |
+| Full material SHA-256 | `c5b89297c54e7f0e1951016ea7a89785ee585a74b55f17bba407123c7cf023dc` |
+| Setup JSON SHA-256 | `c9366b0a2117a50804e815de2a702c3600221d049d665960328dfc6db5a6937c` |
+| Indexed overview + five unscaled 1:1 PNG crops | **6/6 complete material-pixel parity PASS** |
+| Actual native bridge/Godot/Rapier/Midge/save-reopen | **NATIVE-UNTESTED** |
+
+The generated authoritative values, including the full 12-ID material histogram and per-image SHA-256s, reside in [receipt.json](receipt.json). A possibly installed older CyberDemoBridge may still enforce **4,096** edits despite the accepted source's **32,768** limit; R5 requires **12,046**. Exact-head independent **Art, Technical and Shepherd** review and native Windows Workbench acceptance are outstanding. Keep **OPEN Draft/HOLD**, never merge, auto-merge or promote Ready.
+
+### Genuine R5 physical gallery
+
+![Full actual material plane](overview.png)
+
+| Drydock and vessel | Blue freight gantry | Counterweighted freight lift |
+|---|---|---|
+| ![Drydock real material crop](01-west-drydock.png) | ![Blue gantry real material crop](02-blue-gantry.png) | ![Freight lift real material crop](03-counterweight-lift.png) |
+
+| Hump classification | East assay terminal |
+|---|---|
+| ![Classification material crop](04-hump-classification.png) | ![East terminal material crop](05-east-terminal.png) |
+
+Each crop is strictly **one original world cell = one image pixel**, and every PNG comes from the same replayed grid.
+
+## Historical R4 physical vessel and freight-transfer reconstruction — 19 November 2026 (superseded by R5)
 
 **Independent R3 Shepherd disposition: REWORK REQUIRED; R4 is the creator's new exact-material-cell response, not an acceptance.** The true 2D 2048×1024 world and its authored 4×3 Midge are unchanged in extent/identity. No source image was used.
 
@@ -29,11 +73,11 @@
 | Indexed full PNG + five 1:1 crops | **6/6 CRC, zlib inflate, per-pixel material parity PASS** |
 | Installed CyberDemoBridge / Godot / Rapier / save-reopen | **NATIVE-UNTESTED** |
 
-The independent verifier reconstructs the Setup grid without importing the builder; checks all exact sites, full hull integral erosion and four-neighbour BFS, each indexed PNG scanline against the real material plane, complete histogram/hash, and physical inserted-obstruction detour. R4 remains **OPEN Draft/HOLD** until independent exact-R4 Art/Technical/Shepherd reviews and actual native qualification. Source bridge capacity **32,768** does *not* prove the installed DLL supports this map; legacy installations may cap at **4,096** rectangles. The complete reproducible generated files are `build.cjs`, `setup-cinderwake.json`, `receipt.json`, `verify-independent.cjs` and the six real-cell PNGs in this directory.
+The independent verifier reconstructs the Setup grid without importing the builder; checks all exact sites, full hull integral erosion and four-neighbour BFS, each indexed PNG scanline against the real material plane, complete histogram/hash, and physical inserted-obstruction detour. The R4 work was **OPEN Draft/HOLD** pending independent exact-R4 Art/Technical/Shepherd reviews; those reviews subsequently required R5 repair. Source bridge capacity **32,768** does *not* prove the installed DLL supports this map; legacy installations may cap at **4,096** rectangles. The complete reproducible generated files are `build.cjs`, `setup-cinderwake.json`, `receipt.json`, `verify-independent.cjs` and the six real-cell PNGs in this directory.
 
 ## Historical R3 operations — superseded by R4
 
-The independent Art Auditor and Shepherd reviewed R2 at 95c18a75c0dd4971e91e53dfde3de1f7feb56f3c and required further industrial-functional rework. R3 physically modifies authored material cells on this same exclusively owned Draft/HOLD original lane. That R3 version required new independent review; current R4 likewise requires exact-HEAD review. No owner acceptance or working native freight machinery is asserted.
+The independent Art Auditor and Shepherd reviewed R2 at 95c18a75c0dd4971e91e53dfde3de1f7feb56f3c and required further industrial-functional rework. R3 physically modifies authored material cells on this same exclusively owned Draft/HOLD original lane. That R3 version required new independent review; current R5 likewise requires exact-HEAD review. No owner acceptance or working native freight machinery is asserted.
 
 **The authored industrial narrative is now represented in material cells:** west drydock's interrupted hull sides are joined by a substantial *lower* keel below the open Midge inspection aperture, with unequal ribs, cradle rollers, dock locks, and berth access; blue freight gantry carries a wheeled load and trolley spreader into the customs gallery; the paired-jaw inland lift has separated cargo carriages, guides and an offset cable/counterweight travel path without closing its central flight throat. Sorting hump has distinct divergent wagon grades, three different wagon sizes, stop signals and a classifier crane connected to its graded railbed. The eastern sawtooth terminal has staged unloading, receiving/assay workbenches and recovery fittings. Below the main artery five separate excavated industrial rooms now have, respectively, pumping impeller/pipework, manifest shelves/hoist, paired engine drums, switching console and railway-recovery wagons. Materials and shape, not a source photo, create these places.
 
