@@ -172,9 +172,9 @@ R(374,657,43,8,M.S);R(381,664,34,6,M.G);
 L(138,658,125,604,7,M.C);L(410,656,413,602,7,M.C);
 // The crane hook now bears a visible two-point lifting frame and hull section.
 L(340,564,339,592,5,M.P);R(318,589,46,7,M.S);
-L(323,594,311,612,5,M.P);L(359,594,371,612,5,M.P);
-R(309,608,67,11,M.U);R(314,619,57,14,M.V);
-for(let x of [320,341,361])R(x,620,4,12,M.G);
+L(347,594,358,608,5,M.P);L(361,594,381,608,5,M.P);
+R(345,608,46,11,M.U);R(351,619,35,14,M.V);
+for(let x of [357,370,381])R(x,620,3,12,M.G);
 // WEST CUSTOMS: platform-scale inspection room and actual cargo hoist spreader.
 R(781,521,88,8,M.S);R(792,499,7,27,M.C);R(851,497,7,29,M.C);
 R(806,504,29,8,M.U);R(810,497,17,7,M.F);
@@ -184,7 +184,7 @@ R(710,305,86,9,M.S);R(724,313,22,8,M.G);R(772,313,18,11,M.U);
 L(753,321,753,368,5,M.P);
 R(740,369,27,12,M.U);R(747,382,13,6,M.J);
 // Suspended spreader clamps the already-placed blue freight module.
-R(716,572,64,8,M.S);L(753,382,753,572,5,M.P);
+R(716,572,64,8,M.S);R(748,559,9,14,M.U);
 L(720,579,720,590,5,M.P);L(774,579,774,590,5,M.P);
 R(716,583,11,7,M.G);R(768,583,11,7,M.G);
 // Deliberate rail equipment along the freight deck, supported by existing slabs.
