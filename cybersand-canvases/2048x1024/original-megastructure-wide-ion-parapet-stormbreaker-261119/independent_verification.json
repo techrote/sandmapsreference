@@ -1,0 +1,113 @@
+{
+  "result": "PASS",
+  "cells": 2097152,
+  "edits": 10150,
+  "work": 940081,
+  "bytes": 186925,
+  "histogram": {
+    "0": 1157071,
+    "58": 146525,
+    "62": 186902,
+    "63": 17627,
+    "64": 32922,
+    "65": 12640,
+    "66": 8733,
+    "69": 581,
+    "70": 12618,
+    "72": 25847,
+    "74": 12060,
+    "76": 9415,
+    "77": 21315,
+    "78": 168,
+    "79": 18301,
+    "80": 1437,
+    "100": 311757,
+    "101": 82646,
+    "114": 19920,
+    "119": 3285,
+    "120": 3050,
+    "131": 12332
+  },
+  "material_sha256": "212e3bea14188eb2035e56979823c959dc3b0364200a0bb4f34cf575988b0c70",
+  "setup_sha256": "aadb04d38c6fb0bc93e7ea04016466d88999691b969477cb71df331749335dbb",
+  "grounded_components": 1,
+  "png_parity": [
+    "overview",
+    "01-signal-bazaar",
+    "02-inductor-mill",
+    "03-plasma-trench",
+    "04-civic-registry",
+    "05-sable-lock"
+  ],
+  "clearances": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "legalCentres": 912398,
+      "component": 543450,
+      "reached": 16,
+      "total": 16,
+      "missing": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "legalCentres": 862664,
+      "component": 510349,
+      "reached": 16,
+      "total": 16,
+      "missing": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "legalCentres": 770027,
+      "component": 447324,
+      "reached": 16,
+      "total": 16,
+      "missing": []
+    }
+  ],
+  "blocked_route": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "legalCentres": 895659,
+      "component": 526700,
+      "reached": 15,
+      "total": 15,
+      "missing": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "legalCentres": 845186,
+      "component": 492871,
+      "reached": 15,
+      "total": 15,
+      "missing": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "legalCentres": 751092,
+      "component": 428389,
+      "reached": 15,
+      "total": 15,
+      "missing": []
+    }
+  ],
+  "native": "NATIVE-UNTESTED"
+}
