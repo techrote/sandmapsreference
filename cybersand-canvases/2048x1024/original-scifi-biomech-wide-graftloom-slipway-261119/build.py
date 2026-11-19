@@ -483,9 +483,13 @@ for x0,x1,y0,y1,m in [(758,835,925,964,117),(1005,1081,929,966,113),
                        (846,967,951,969,62)]:
     for yy in range(y0,y1,8):
         for xx in range(x0,x1,21):
-            for y in range(yy,min(y0+5,y1)):
+            for y in range(yy,min(yy+5,y1)):
                 i=y*W+xx
                 if A[i]: A[i]=m
+
+# Key otherwise-isolated internal optical vanes to the right crown shell.
+line(990, 270, 952, 270, 5, 117)
+line(1020, 278, 1083, 278, 5, 117)
 
 # D: three genuinely different biorefinery operations.
 # HIGH — roof-supported paired receiver-bells, intentionally NOT three decks.
@@ -495,6 +499,7 @@ line(1606, 217, 1583, 292, 19, 62)
 lumen(1563, 318, 46, 37, 11, 117)
 line(1383, 344, 1371, 372, 7, 113)
 line(1587, 345, 1603, 372, 7, 113)
+line(1371, 366, 1371, 384, 10, 117)
 box(1353, 377, 1430, 389, 62)
 box(1565, 376, 1641, 389, 62)
 # High-bay x1470,y404 retains a >31x27 open envelope.
@@ -509,6 +514,7 @@ lumen(1592, 566, 35, 57, 11, 62)
 # A pair of selective shunt filters with exposed external service keys.
 for cx,cy in [(1384,557),(1592,566)]:
     box(cx-8,cy-7,cx+8,cy+7,120)
+    line(cx-4,cy,cx-39,cy,5,117)
     box(cx-12,cy+47,cx+10,cy+53,113)
 # LOW — coarse dry fractionation drum anchored to the floor/bedrock,
 # separated from high and middle mechanisms by substantial open air.
