@@ -19,9 +19,13 @@
     "json_byte_limit": 1048576,
     "source_native_work_limit": 32000000
   },
+  "shepherd_rework_r2": {
+    "changed_cells_before_final_trim": 91999,
+    "objective": "Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return"
+  },
   "structural_reconstruction": {
     "replaced_unsupported_legacy_cells": 115002,
-    "small_detached_finish_cells_trimmed": 98,
+    "small_detached_finish_cells_trimmed": 0,
     "detached_final_cells": 0
   },
   "material_laws": "All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation",
@@ -82,23 +86,23 @@
   "replay_mismatches": 0,
   "overlaps": 0,
   "total_cells": 2097152,
-  "painted_cells": 676133,
-  "rectangles": 10001,
-  "setup_bytes": 186957,
+  "painted_cells": 717416,
+  "rectangles": 12715,
+  "setup_bytes": 237522,
   "histogram": {
-    "0": 1421019,
-    "49": 104277,
-    "58": 31526,
-    "62": 136317,
-    "100": 187079,
-    "101": 115416,
-    "113": 36406,
-    "117": 50237,
-    "120": 10504,
-    "128": 4371
+    "0": 1379736,
+    "49": 96338,
+    "58": 37318,
+    "62": 168468,
+    "100": 184146,
+    "101": 102245,
+    "113": 41255,
+    "117": 72470,
+    "120": 11365,
+    "128": 3811
   },
-  "grid_sha256": "c354b0d97cad32e4a30bc0c7334ca232a855a4469cbc00abca271ff9680abdea",
-  "setup_sha256": "55f3c6647d95cf9ef7cfed3c2d7c1cdf8e783bdcb8c27540d67d59c4a20c0be4",
+  "grid_sha256": "329d59a7e3ab277d533b3b5b20555085179da1778bbc3dbb0877a65e957e6b97",
+  "setup_sha256": "97569e58588f7aaa39bdfae1cc57e6715bb9f253313b68f299cb6651e81dff3d",
   "clearance": {
     "19x15": {
       "reachability": {
@@ -116,7 +120,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 1040919,
+      "connected_legal_centres": 961796,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -150,7 +154,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 1004476,
+      "connected_legal_centres": 921691,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -184,7 +188,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 930908,
+      "connected_legal_centres": 843865,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -206,11 +210,11 @@
   "alternate_route_stress": {
     "upper_via_roof": {
       "destination_gate_reached": true,
-      "legal_centres": 671048
+      "legal_centres": 602433
     },
     "lower_via_sump": {
       "destination_gate_reached": true,
-      "legal_centres": 667410
+      "legal_centres": 600060
     }
   },
   "png_integrity_and_pixel_parity": [
@@ -220,8 +224,8 @@
         2048,
         1024
       ],
-      "bytes": 35635,
-      "sha256": "4f0499cbe8f473bcfcd387a406e1f3b7e574c967a65d89741fcf0e7f39bba05a"
+      "bytes": 42902,
+      "sha256": "b9363cf9b7f2b13d18ef5859b6ee917cbb0dd5b8d18e88640501bf5066b2347e"
     },
     {
       "png": "review-half.png",
@@ -229,8 +233,8 @@
         1024,
         512
       ],
-      "bytes": 15089,
-      "sha256": "019c314ec9e901ebfb0156327e3e9649d79ca969dc3ae5b2b32d05bd2b5132b9"
+      "bytes": 18275,
+      "sha256": "34594f1836261eee78fb7f8b31e78807aa1f91e2c302b26fe1fc07f9745a357f"
     },
     {
       "png": "01-receiving-slip.png",
@@ -238,8 +242,8 @@
         512,
         650
       ],
-      "bytes": 5833,
-      "sha256": "523abb395cea2ff7cbb09641dfe54e2d9fd88c9afb2fcb7c029723ee55596c87"
+      "bytes": 7332,
+      "sha256": "502d6e29a8bf2000810fb56351234503705e7976ce3ed551a5473870acb71d7c"
     },
     {
       "png": "02-crane-and-entry.png",
@@ -247,8 +251,8 @@
         470,
         610
       ],
-      "bytes": 5360,
-      "sha256": "b58b247c4868221e3652a887d43ee2fcde64fea18a0ab0ff0ca088fc717040cd"
+      "bytes": 6349,
+      "sha256": "fbb11dd2ce3c38897a28396119e575f648caf5e861175a747113b1cc9f7d701e"
     },
     {
       "png": "03-memory-engine.png",
@@ -256,8 +260,8 @@
         510,
         545
       ],
-      "bytes": 2890,
-      "sha256": "d0990b1819b2ada33efdb154ab108a6a8e43abf6e4717f4d62dcd9f2590f5846"
+      "bytes": 3542,
+      "sha256": "71e28e704f66dd76d045024bc1d7407d1417264d3c63c3f1c526a8afd3af6c60"
     },
     {
       "png": "04-refinery-filter.png",
@@ -265,8 +269,8 @@
         430,
         605
       ],
-      "bytes": 4106,
-      "sha256": "06a3733aecadc4ca0f387886ea41045ecc27952b41453e5454f433dceb22d180"
+      "bytes": 5507,
+      "sha256": "9a3066538aefe067db3165a27a9bac2bc3c79345b6c2c109dd1adbd8d694a048"
     },
     {
       "png": "05-aft-dock.png",
@@ -274,8 +278,8 @@
         330,
         750
       ],
-      "bytes": 4308,
-      "sha256": "c711ad3b907dc57a90d5f94f669214c2e4a6f1740618eb847da8cd2f4208a0c8"
+      "bytes": 5125,
+      "sha256": "96aa66edbcb03e682375c327e7d132377a80e3867c961a0d76c270859cf91a67"
     },
     {
       "png": "06-lower-return.png",
@@ -283,8 +287,8 @@
         770,
         250
       ],
-      "bytes": 3938,
-      "sha256": "bf54e89ea08435216c5433d07ef7c650503122cb09975a89344504b88a2cdfc4"
+      "bytes": 5480,
+      "sha256": "470b078e6d06cc6b5bfc80aa43b010fcd56b3534f22914bc0fbf9714bb3d9498"
     }
   ],
   "native_status": "NATIVE-UNTESTED"

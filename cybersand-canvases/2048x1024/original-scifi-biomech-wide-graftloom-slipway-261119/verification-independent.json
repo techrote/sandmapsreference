@@ -6,11 +6,11 @@
     2048,
     1024
   ],
-  "material_plane_sha256": "c354b0d97cad32e4a30bc0c7334ca232a855a4469cbc00abca271ff9680abdea",
-  "setup_bytes": 186957,
-  "setup_sha256": "55f3c6647d95cf9ef7cfed3c2d7c1cdf8e783bdcb8c27540d67d59c4a20c0be4",
-  "rectangles": 10001,
-  "occupied_cells": 676133,
+  "material_plane_sha256": "329d59a7e3ab277d533b3b5b20555085179da1778bbc3dbb0877a65e957e6b97",
+  "setup_bytes": 237522,
+  "setup_sha256": "97569e58588f7aaa39bdfae1cc57e6715bb9f253313b68f299cb6651e81dff3d",
+  "rectangles": 12715,
+  "occupied_cells": 717416,
   "png_proofs": [
     {
       "name": "overview.png",
@@ -18,7 +18,7 @@
         2048,
         1024
       ],
-      "sha256": "4f0499cbe8f473bcfcd387a406e1f3b7e574c967a65d89741fcf0e7f39bba05a",
+      "sha256": "b9363cf9b7f2b13d18ef5859b6ee917cbb0dd5b8d18e88640501bf5066b2347e",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -27,7 +27,7 @@
         1024,
         512
       ],
-      "sha256": "019c314ec9e901ebfb0156327e3e9649d79ca969dc3ae5b2b32d05bd2b5132b9",
+      "sha256": "34594f1836261eee78fb7f8b31e78807aa1f91e2c302b26fe1fc07f9745a357f",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -36,7 +36,7 @@
         512,
         650
       ],
-      "sha256": "523abb395cea2ff7cbb09641dfe54e2d9fd88c9afb2fcb7c029723ee55596c87",
+      "sha256": "502d6e29a8bf2000810fb56351234503705e7976ce3ed551a5473870acb71d7c",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -45,7 +45,7 @@
         470,
         610
       ],
-      "sha256": "b58b247c4868221e3652a887d43ee2fcde64fea18a0ab0ff0ca088fc717040cd",
+      "sha256": "fbb11dd2ce3c38897a28396119e575f648caf5e861175a747113b1cc9f7d701e",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -54,7 +54,7 @@
         510,
         545
       ],
-      "sha256": "d0990b1819b2ada33efdb154ab108a6a8e43abf6e4717f4d62dcd9f2590f5846",
+      "sha256": "71e28e704f66dd76d045024bc1d7407d1417264d3c63c3f1c526a8afd3af6c60",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -63,7 +63,7 @@
         430,
         605
       ],
-      "sha256": "06a3733aecadc4ca0f387886ea41045ecc27952b41453e5454f433dceb22d180",
+      "sha256": "9a3066538aefe067db3165a27a9bac2bc3c79345b6c2c109dd1adbd8d694a048",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -72,7 +72,7 @@
         330,
         750
       ],
-      "sha256": "c711ad3b907dc57a90d5f94f669214c2e4a6f1740618eb847da8cd2f4208a0c8",
+      "sha256": "96aa66edbcb03e682375c327e7d132377a80e3867c961a0d76c270859cf91a67",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -81,38 +81,38 @@
         770,
         250
       ],
-      "sha256": "bf54e89ea08435216c5433d07ef7c650503122cb09975a89344504b88a2cdfc4",
+      "sha256": "470b078e6d06cc6b5bfc80aa43b010fcd56b3534f22914bc0fbf9714bb3d9498",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     }
   ],
   "clearance": {
     "19x15": {
       "exact_sites": 13,
-      "connected_legal_centres": 1040919,
+      "connected_legal_centres": 961796,
       "minimum_approaches": 4
     },
     "23x19": {
       "exact_sites": 13,
-      "connected_legal_centres": 1004476,
+      "connected_legal_centres": 921691,
       "minimum_approaches": 4
     },
     "31x27": {
       "exact_sites": 13,
-      "connected_legal_centres": 930908,
+      "connected_legal_centres": 843865,
       "minimum_approaches": 4
     }
   },
   "alternate_route_connected_centres": {
-    "upper_via_roof": 671048,
-    "lower_via_sump": 667410
+    "upper_via_roof": 602433,
+    "lower_via_sump": 600060
   },
   "structural_topology": {
     "components": 1,
-    "boundary_grounded_cells": 676133,
+    "boundary_grounded_cells": 717416,
     "detached_cells": 0,
     "detached_components": 0,
     "largest_detached_components": []
   },
   "structural_support": "PASS: one fully grounded occupied component",
-  "builder_sha256": "006dee449f70a860b434eb6a892764c296ffc1c02b541add1b5b08ef22cac494"
+  "builder_sha256": "da9d9434881291726adad1de8c0eaa7561adcacb8dd784e65d59796854411be5"
 }
