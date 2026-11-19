@@ -17,13 +17,10 @@ module.exports=function repairMorrow({M,R,P,L,sites}){
   R(165,418,30,8,M.F); R(180,427,6,9,M.I);
   R(346,402,47,5,M.U); R(358,410,22,22,M.Q);
   R(367,412,5,15,M.I);
-  // Airlock partition leaves a full 43-cell central Midge flyway.
-  R(120,474,80,7,M.F); R(206,474,23,7,M.S);
-  R(272,472,54,7,M.S); R(344,472,56,7,M.S);
-  R(105,484,7,28,M.P); R(399,481,7,30,M.P);
-  // Clearance-critical rover corridor is unobstructed at Midge 31x27.
-  R(168,414,7,13,M.G); R(184,414,7,13,M.G);
-  R(350,487,31,5,M.U); R(358,494,6,13,M.I);
+  // Keep the entire lower west-to-rift hull corridor open; its dynamic
+  // maneuver envelope is more important than decorative mezzanine dividers.
+  // Compact machinery is instead located on the UPPER working-room shelves.
+  R(154,432,56,7,M.F); R(347,434,36,7,M.G);
   // Rover service / lower xenology instrumentation below the central flyway.
   R(147,576,92,9,M.C); R(147,585,10,24,M.C);
   R(213,586,8,16,M.P); R(161,590,31,7,M.G);
@@ -31,9 +28,8 @@ module.exports=function repairMorrow({M,R,P,L,sites}){
   R(344,592,53,7,M.S); R(348,599,8,32,M.P);
   R(378,601,8,25,M.P); R(358,613,22,9,M.Q);
   // In-ground load path from inhabited decks into native west cliff.
-  L(404,449,430,543,11,M.C);
-  L(425,547,426,649,12,M.C);
-  L(426,649,453,681,14,M.C);
+  L(132,394,77,465,11,M.C); // outer buttress into native west cliff
+  L(434,624,452,685,13,M.C); // grounded lower exit without caging Midge
 
   // SKY RIFT INFRASTRUCTURE. These diagonals are visible load paths; avoid
   // arbitrary solid fill within the intentionally open 2-altitude transit.
