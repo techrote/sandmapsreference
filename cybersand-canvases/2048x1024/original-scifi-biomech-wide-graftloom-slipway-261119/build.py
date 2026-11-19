@@ -558,62 +558,36 @@ box(135,440,162,448,113)
 line(163,422,198,431,7,120)
 box(45,410,75,419,113)
 
-# 2. Mnemonic examination *dock*: asymmetric cantilevers from two independent
-# roof-rooted masts, enclosing real work bays on either side of a wide open
-# central inspection aperture. Not a ring in the transit void.
-# Tapered mnemonic dock stalk attaches to the existing left crown mast.
-# Unlike the trial roof-to-workbench partition at x609, the diagonal leaves
-# a 31x27 upper transverse flight channel beneath its suspended lobe.
-# Mid-altitude freight/conduit tie-in: the inspection room is physically
-# supported by the existing rooted refinery deck at x1336..1652,y623.
-# The bridge sits entirely BETWEEN the two 31x27 constrained flight lanes:
-# roof alternate y<390 and sump alternate y>650 remain unobstructed.
-# Lifted conduit creates a clear lower bypass at y>650, with its anchoring
-# riser entirely beyond the constrained central x650..1200 flight window.
-box(1034,517,1047,580,62)
-# Exact lower route rises at x1240 from y651 to y480. A 70-cell
-# deliberate material-free slot preserves a 31x27 flight envelope.
-# Preserve the exact east-gate centre and the two-level return opening.
-# A roof-framed load-bearing portal cut off the refinery and final recovery
-# despite preserving the east-gate site itself; reject that enclosed portal.
-# Keep the original two independent partial conduit decks, joined to
-# existing rooted left/right supports, with open transverse flight access.
-box(1040,567,1204,581,62)
-box(1276,567,1349,581,62)
-box(1338,569,1351,631,62)
-box(807,413,823,535,62)
-box(817,510,899,524,62)
-box(827,499,889,510,113)
-line(819,419,896,407,8,117)
-line(819,449,858,444,8,117)
-box(841,445,852,488,120)
-box(851,451,870,460,113)
-line(854,456,884,489,6,117)
-box(872,483,888,490,120)
-# Mirrored load path is deliberately not a mirrored architectural motif.
-# Right workbay uses a supported cross-console canopy rather than a
-# roof-to-floor barrier in the eastern 31x27 high-bay transit throat.
-line(816,416,1041,416,9,117)
-# The two central memory-inspection workstations require positive rooting.
-# Preserve both altitude-constrained routes by anchoring through the WEST
-# receiving-shunt roof mast x602-616, outside the x650..1200 flight ban.
-# The process conduit remains below upper route centres (y<=389) and above
-# the middle-altitude centre y480. The roof-tether at x610 is west of the
-# restricted region and can be passed beneath from West Gate (570,470).
-line(610,177,610,416,10,62)
-line(610,416,816,416,9,62)
-box(1032,416,1048,535,62)
-box(962,509,1042,524,62)
-box(976,499,1038,509,113)
-line(1041,421,967,410,8,117)
-line(1036,444,1000,439,8,117)
-line(1012,448,987,490,7,62)
-box(984,484,996,512,120)
-# One group of staggered analogue memory cassettes rather than circular stamps.
-for xx,yy,ll in [(840,465,16),(852,473,23),(864,481,18)]:
-    line(823,yy-7,xx+ll,yy,4,113)
-# Keep Core (921,468) clear in 31x27 rectangle x906..936/y455..481;
-# the break between left and right examination workstations is traversable.
+# 2. Mnemonic examination gantry: genuinely roof-grounded structure.
+# A mid-void suspended dock at y416 severed either the upper or lower
+# mandated 31x27 route; its unsupported alternative exceeded 14k cells.
+# Rebuild as ONE asymmetric, rooted dry examination capsule UNDER the paired
+# thalamus lobes. The entire new assembly ends at y355, leaving a
+# >=20-cell clearance above the upper route centre's 31x27 hull at y389.
+# Its central observation tool is accessible from the main open airway.
+line(817,273,826,316,11,62)
+line(1030,272,1042,312,13,117)
+poly([(808,316),(851,306),(903,312),(947,308),
+      (1001,299),(1051,310),(1074,321),(1036,336),
+      (958,333),(902,342),(842,342)],62)
+poly([(837,319),(871,315),(914,323),(969,316),
+      (1024,312),(1041,321),(1001,325),(945,325),
+      (891,332),(844,331)],113)
+# A single lamellar reading cassette, not another circular ring.
+poly([(874,311),(896,296),(940,301),(968,309),
+      (950,322),(908,325),(885,319)],117)
+box(903,309,942,318,120)
+box(854,332,891,342,120)
+box(982,326,1028,336,120)
+for xx,top,bot in [(852,334,349),(866,336,351),
+                    (886,335,348),(999,334,353),(1015,333,346)]:
+    box(xx,top,xx+4,bot,113)
+# A shaped lateral workface and keyed scanning tooth remain part of
+# the rooted gantry, without creating an east-west flight divider.
+line(826,326,802,345,7,117)
+line(1031,326,1059,345,7,117)
+box(926,332,945,340,128)
+box(935,339,942,349,120)
 
 # 3. Refinery HIGH: retain R2's verified paired high-bell geometry.
 # An extra R3 press at this restrictive x1570..1640 throat violated the
