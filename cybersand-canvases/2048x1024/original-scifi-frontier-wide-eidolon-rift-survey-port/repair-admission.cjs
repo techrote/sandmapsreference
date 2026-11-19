@@ -69,6 +69,17 @@ module.exports = function repair(g,W,H,M,sites){
    if(!flight().seen[at])throw Error("Exact 31x27 connector does not reach "+name);
    paths.push({name,method:"minimal occupancy weighted service passage",nodes:nodes.length,explored});
  }
+ // Rigid asymmetrical tether to the sky-tram shoulder preserves the
+ // observatory crescent as real supported cells. Opening its west service gate
+ // last keeps the 31x27 flight entrance fully in-bounds without shifting the
+ // named Glass Meridian target.
+ const L=(x,y,X,Y,t,m)=>{const n=Math.ceil(Math.max(Math.abs(X-x),Math.abs(Y-y))/3);
+   for(let i=0;i<=n;i++){const v=i/n;
+     R(Math.round(x+(X-x)*v)-Math.floor(t/2),Math.round(y+(Y-y)*v)-Math.floor(t/2),t,t,m)}};
+ L(1440,345,1254,454,7,M.STEEL);
+ R(1158,653,8,101,M.STEEL);
+ R(1297,477,119,85,0);
+
  // Unsupported decorative pieces are not simulated as if connected to the
  // planet: enumerate 4-neighbour solid components and erase non-grounded ones.
  let removed=0,isolated=0,groups=0;const seen=new Uint8Array(QSIZE),q=new Uint32Array(QSIZE);
