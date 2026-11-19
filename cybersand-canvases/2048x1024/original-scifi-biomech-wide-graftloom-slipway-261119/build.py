@@ -821,6 +821,34 @@ def run(dest):
                 end = (1240, 480)
                 s, t = flood(legal, start, ban)
                 common[name] = {'destination_gate_reached': bool(s[end[1] * W + end[0]]), 'legal_centres': t}
+                if not common[name]['destination_gate_reached']:
+                    # TEMP R3 differential diagnosis: compare failing hull to
+                    # the exact accepted pre-R3 centre path, no coordinate waiver.
+                    pre_legal=legal_centres(PRE_R3,31,27)
+                    from array import array
+                    prev=array('i',[-1])*(W*H)
+                    st=start[1]*W+start[0]
+                    goal=end[1]*W+end[0]
+                    qq=collections.deque([st])
+                    prev[st]=st
+                    while qq:
+                        k=qq.popleft()
+                        if k==goal: break
+                        xx=k%W; yy=k//W
+                        for nxt in (k-1 if xx else -1,k+1 if xx<W-1 else -1,k-W if yy else -1,k+W if yy<H-1 else -1):
+                            if nxt>=0 and pre_legal[nxt] and prev[nxt]<0 and not ban(nxt%W,nxt//W):
+                                prev[nxt]=k
+                                qq.append(nxt)
+                    points=[]
+                    if prev[goal]>=0:
+                        p=goal
+                        while p!=st:
+                            points.append((p%W,p//W))
+                            p=prev[p]
+                        points.append(start)
+                        points.reverse()
+                    coll=[(xx,yy) for xx,yy in points if not legal[yy*W+xx]]
+                    print("R3_DIFF_DEBUG",json.dumps({"route":name,"pre_route_len":len(points),"newly_blocked_centre_count":len(coll),"first_blocked":coll[:25],"last_blocked":coll[-25:],"baseline_path_every_100":points[::100]}),flush=True)
                 assert common[name]['destination_gate_reached'], ('alternate route failed', name)
     hist = {str(i): A.count(i) for i in sorted(M) if A.count(i)}
     imgs = []
