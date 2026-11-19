@@ -251,6 +251,7 @@ function construct(spec,index){
      }
    }
    let ncomponents=0,connected=0;
+   const planned=[]; // snapshot pre-brace components; never rescan new support paint
    for(let start=0;start<size;start++){
      if(!solid(start)||done[start])continue;
      const comp=[];done[start]=1;head=0;tail=0;queue[tail++]=start;
@@ -265,6 +266,9 @@ function construct(spec,index){
      }
      ncomponents++;
      if(end<0)throw Error('unrooted island with no dry structural attachment '+comp.length);
+     planned.push(end);
+   }
+   for(const end of planned){
      let n=end,steps=0;
      while(n>=0){
        const x=n%W,y=(n/W)|0;
