@@ -7,6 +7,8 @@ on:
       - '.github/workflows/original-scifi-biomech-wide-build.yml'
       - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/.builder-part-*.b64'
       - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/finish-stage.cjs'
+      - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/verify-independent.py'
+      - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/build.py'
   workflow_dispatch:
 permissions:
   contents: write
@@ -30,6 +32,7 @@ jobs:
           node finish-stage.cjs
           python3 -m py_compile build.py
           python3 build.py
+          python3 verify-independent.py
           echo "Map artifact inventory:"
           find . -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
           test -n "$(find . -maxdepth 1 -name '*.png' -print -quit)"
@@ -40,7 +43,9 @@ jobs:
           set -euo pipefail
           git config user.name "cybersand-original-map-build"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf cybersand-canvases/2048x1024/original-scifi-biomech-wide-graftloom-slipway-261119/__pycache__
           git add -- cybersand-canvases/2048x1024/original-scifi-biomech-wide-graftloom-slipway-261119/
+          git rm -r --cached -f --ignore-unmatch -- cybersand-canvases/2048x1024/original-scifi-biomech-wide-graftloom-slipway-261119/__pycache__/
           if git diff --cached --quiet; then echo "No map changes"; exit 0; fi
           git commit -m "Build Graftloom Slipway full material-cell canvas and receipts"
           git push origin "HEAD:refs/heads/original/scifi-biomech-wide/graftloom-slipway-261119"
