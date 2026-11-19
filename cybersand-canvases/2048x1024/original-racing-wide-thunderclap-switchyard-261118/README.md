@@ -18,6 +18,18 @@ Method: base colours and per-cell value variation mirror CyberSand's presentatio
 
 Reproduce and verify: `node build.cjs` (writes) and `node build.cjs --verify` (checks every artifact; render PNGs are checked by decoded-pixel hash so zlib build differences cannot cause false failures). Implementation: `presentation.cjs`.
 
+## R9 composition tidy and material variety (physical grid changed)
+
+R9 is the only physical change since R7. It keeps every R7 gate and adds variety. Current figures live in `qualification.json` under `r9_tidy_and_variety`; the R7 figures in the sections below are historical.
+
+- **Tidy:** erased 34 ungrounded solid fragments under 120 cells (490 cells, air only). 29 larger ungrounded pieces (10,909 cells) were kept as deliberate hanging props and suspended structures; they are the owner's call.
+- **Variety:** region-scale noise reassigns solid IDs among the 11 validated inert Solids only. 89,696 basalt cells become slate and 29,333 become obsidian in rock patches; 12,636 concrete cells become steel in pier blocks. Occupancy is unchanged except the erased fragments.
+- **Gates re-run by the builder, all passing:** 14/14 sites at 19×15, 23×19 and 31×27; lower-only 31×27 corridor 69,955 connected centres; full-hull physical Iris bypass 13/14; 12/12 support probes grounded; zero replay mismatches or overlaps.
+- **Budget:** 12,219 rectangles (limit 32,768); setup JSON 230,005 bytes (limit 1,048,576).
+- **Hashes:** grid `7815bc8e…a991ec26`, setup JSON `6ff4b681…7063`. The R7 grid was `bfac4832…`.
+
+NATIVE-UNTESTED still applies: nothing here has run in Godot.
+
 ## Design and R7 response
 
 Five traversable districts: founded Launch Cradle and dispatch, asymmetric roof-saw Drift Canyon, split-current Iris with high suspended crown and lower switching apparatus, grounded Glassstorm viaduct with operating weigh bay, and eastern dual-jaw Brake/Recovery. True orthographic flat gameplay terrain; no perspective tricks. The broad central y≈445 straight is a safe high-speed default and remains clear for a full 31×27 conservative hull. Upper route uses founded canyon saw shoulder and Iris gallery. Lower technical/recovery route deliberately changes altitude around **four physically rooted roof/floor banks**, with wide lead-ins, no pinhole and a visible west entry and east rejoin. It is not claimed to be faster than the straight.

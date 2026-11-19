@@ -486,6 +486,40 @@ function buildWideCanvas() {
     }
     return boxes;
   }
+  // R9 tidy: erase ungrounded solid fragments under 120 cells (sky dust and stray props). Only adds air, so no route, envelope or support gate can lose clearance.
+  // Grounding here is the same edge-connectivity definition used by the support gate below.
+  const R9={specksRemoved:0,specksCells:0,ungroundedKept:0,ungroundedKeptCells:0};
+  {
+    const seen=new Uint8Array(W*H),q=new Int32Array(W*H);
+    for(let s=0;s<W*H;s++){
+      if(!g[s]||seen[s])continue;
+      let rd=0,wr=0,touches=false;
+      q[wr++]=s;seen[s]=1;
+      while(rd<wr){
+        const v=q[rd++],x=v%W,y=(v-x)/W;
+        if(x===0||y===0||x===W-1||y===H-1)touches=true;
+        for(const n of [x>0?v-1:-1,x<W-1?v+1:-1,y>0?v-W:-1,y<H-1?v+W:-1]){
+          if(n>=0&&g[n]&&!seen[n]){seen[n]=1;q[wr++]=n;}
+        }
+      }
+      if(touches)continue;
+      if(wr<120){for(let k=0;k<wr;k++)g[q[k]]=0;R9.specksRemoved++;R9.specksCells+=wr;}
+      else{R9.ungroundedKept++;R9.ungroundedKeptCells+=wr;}
+    }
+  }
+  // R9 variety: reassign solid IDs only among the 11 validated inert Solids. Occupancy is untouched.
+  // Region-scale value noise keeps rectangle count low (run-length budget is checked below).
+  const vn=(x,y,s,seed)=>{const xi=Math.floor(x/s),yi=Math.floor(y/s),fx=x/s-xi,fy=y/s-yi,u=fx*fx*(3-2*fx),v=fy*fy*(3-2*fy);
+    const hh=(ix,iy)=>{let h=(Math.imul(ix,0x27d4eb2d)^Math.imul(iy,0x165667b1)^seed)>>>0;h=Math.imul(h^(h>>>15),0x85ebca6b)>>>0;h=Math.imul(h^(h>>>13),0xc2b2ae35)>>>0;return ((h^(h>>>16))>>>0)/4294967296;};
+    const a=hh(xi,yi),b=hh(xi+1,yi),c=hh(xi,yi+1),d=hh(xi+1,yi+1),t=a+(b-a)*u,bt=c+(d-c)*u;return t+(bt-t)*v;};
+  const R9ids={basaltToSlate:0,basaltToObsidian:0,concreteToSteel:0};
+  for(let y=0;y<H;y++)for(let x=0;x<W;x++){
+    const i=y*W+x;
+    if(g[i]===mat.BASALT){
+      if(vn(x,y,128,0x5a1a7e01)>0.68){g[i]=mat.SLATE;R9ids.basaltToSlate++;}
+      else if(y<760&&vn(x,y,96,0x0b51d1a2)>0.80){g[i]=mat.OBSIDIAN;R9ids.basaltToObsidian++;}
+    }else if(g[i]===mat.CONCRETE&&vn(x,y,64,0xc0ffee77)>0.74){g[i]=mat.STEEL;R9ids.concreteToSteel++;}
+  }
   const edits=compress();
   // Reconstruct ALL cells, reject every overlapping pair.
   const replay=new Uint8Array(W*H),hits=new Uint8Array(W*H);
@@ -673,9 +707,17 @@ function buildWideCanvas() {
     ["07-lower-s-turn-east.png",1150,640,512,384]
   ].map(p=>({name:p[0],region:p.slice(1),...encodePNG(...p.slice(1))}));
   const hist={};for(const v of g)hist[v]=(hist[v]||0)+1;
-  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions};
+  return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions,R9,R9ids};
 }
 const r=buildWideCanvas();
+if(process.argv.includes("--summary")){
+  const crypto=require("crypto");
+  const sha=(b)=>crypto.createHash("sha256").update(b).digest("hex");
+  const solid=r.grid.reduce((n,v)=>n+(v!==0?1:0),0);
+  const summary={grid_sha256:sha(Buffer.from(r.grid.buffer,r.grid.byteOffset,r.grid.byteLength)),json_sha256:sha(Buffer.from(r.json,"utf8")),json_bytes:Buffer.byteLength(r.json),edits:r.edits.length,solid_cells:solid,histogram:r.hist,R9:r.R9,R9ids:r.R9ids,reachable:Object.fromEntries(Object.entries(r.reachable).map(([k,v])=>[k,v.sites.filter(s=>s[1]).length+"/14"])),bypass_sites:r.bypass.sites.filter(s=>s[1]).length,full_hull_blocked_sites:r.fullHullBlocked.sites.filter(s=>s[1]).length,lower_connected_centres:r.lowerCorridor.connected_centres,grounded_support:r.supportSites.length,mismatches:r.mismatches,collisions:r.collisions};
+  console.log(JSON.stringify(summary,null,1));
+  process.exit(0);
+}
 const artifacts=[["setup-thunderclap-switchyard.json",Buffer.from(r.json,"utf8")],...r.gallery.map(g=>[g.name,Buffer.from(g.bytes)])];
 let ok=true;
 for(const [name,bytes] of artifacts){
