@@ -573,8 +573,9 @@ box(851,451,870,460,113)
 line(854,456,884,489,6,117)
 box(872,483,888,490,120)
 # Mirrored load path is deliberately not a mirrored architectural motif.
-line(1330,187,1329,418,14,62)
-line(1329,418,1046,419,13,62)
+# Right workbay uses a supported cross-console canopy rather than a
+# roof-to-floor barrier in the eastern 31x27 high-bay transit throat.
+line(816,416,1041,416,9,117)
 box(1032,416,1048,535,62)
 box(962,509,1042,524,62)
 box(976,499,1038,509,113)
