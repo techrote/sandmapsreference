@@ -21,7 +21,8 @@ module.exports=function repairMorrow({M,R,P,L,sites}){
   R(120,474,80,7,M.F); R(206,474,23,7,M.S);
   R(272,472,54,7,M.S); R(344,472,56,7,M.S);
   R(105,484,7,28,M.P); R(399,481,7,30,M.P);
-  R(168,486,7,13,M.G); R(184,486,7,13,M.G);
+  // Clearance-critical rover corridor is unobstructed at Midge 31x27.
+  R(168,414,7,13,M.G); R(184,414,7,13,M.G);
   R(350,487,31,5,M.U); R(358,494,6,13,M.I);
   // Rover service / lower xenology instrumentation below the central flyway.
   R(147,576,92,9,M.C); R(147,585,10,24,M.C);
