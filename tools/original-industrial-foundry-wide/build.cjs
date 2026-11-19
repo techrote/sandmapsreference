@@ -216,22 +216,27 @@ R(811,615,8,62,M.steel); // West hot-line tap footing
 R(803,597,27,10,M.steel);R(819,587,63,9,M.rust);
 R(823,598,70,6,M.firebrick);R(836,604,32,5,M.stripe);
 R(872,592,9,83,M.steel);R(948,590,11,85,M.steel);
-R(877,589,78,7,M.steel);R(881,571,68,13,M.industrial);
-R(888,576,54,5,M.firebrick);R(890,565,46,6,M.copper);
-R(880,601,70,6,M.grate);R(883,609,65,5,M.rust);
-R(922,534,82,9,M.steel);R(925,543,8,43,M.rust);R(993,543,8,43,M.steel);
+
+
+
+
 R(938,551,45,17,M.industrial);R(943,557,35,5,M.amber);
 L(928,541,948,519,4,M.steel);R(941,518,19,6,M.stripe);
 R(974,600,129,7,M.steel);R(980,608,22,9,M.grate);
 R(1010,608,10,66,M.steel);R(1082,609,10,66,M.rust);
+// Narrow open flight passage retained after conservative 31x27 route regression.
+// The larger continuous receiver frame and overhead cradle were rejected: they closed
+// a real blower-to-crane transit throat, even though all target centres stayed empty.
+R(948,568,7,22,M.steel); // supported split receiving instrument
 // Anchored tap inspection landing from accessible process deck, not a floating callout.
-R(876,654,88,7,M.grate);R(890,632,9,23,M.steel);
-R(901,633,46,5,M.pipe);R(906,637,8,18,M.rust);
 
-// Suspended ladle's STATIC receiving sill and separate downward mould-charge jaws.
+
+
+// Suspended ladle's STATIC receiving sill and separate mould-charge jaws.
+// Continuous sloping hangers were rejected because they isolated the east destination group.
 // Visible continuity from crane cradle to caster inlet, but deliberately DRY and inert.
-R(1183,505,32,11,M.steel);R(1191,515,22,12,M.rust);
-L(1193,527,1163,574,4,M.steel);L(1211,527,1230,574,4,M.rust);
+R(1183,505,32,11,M.steel);R(1191,515,22,12,M.rust);R(1200,527,8,15,M.rust);
+
 R(1159,575,78,13,M.industrial);R(1170,585,58,8,M.firebrick);
 R(1160,595,78,10,M.steel);R(1175,604,44,8,M.iron);
 R(1154,611,94,7,M.grate);
@@ -249,6 +254,7 @@ R(1844,578,101,10,M.steel);R(1849,588,10,30,M.rust);
 R(1926,588,10,30,M.steel);R(1867,592,34,9,M.grate);
 R(1884,581,5,11,M.cyan);R(1910,596,10,6,M.stripe);
 
+// Caster operator roof platform omitted after exact 31x27 test isolated its room.
 // Physically connect previously auditor-reported disconnected equipment:
 // 434-cell quench-side observation rig, ore booth's instrument rack and crane monitor.
 R(1667,576,10,48,M.steel);R(1674,574,8,8,M.rust);
@@ -257,7 +263,7 @@ R(1087,370,16,8,M.steel);R(1095,363,8,14,M.steel);
 // Distinct enterable operator work surfaces, all outside required 31×27 site envelopes.
 R(1001,561,42,7,M.grate);R(1009,548,8,13,M.steel);
 R(1023,549,10,7,M.cyan);R(1038,554,15,5,M.pipe);
-R(1400,483,83,8,M.steel);R(1408,491,8,25,M.rust);
+
 R(1459,492,18,6,M.glass);R(1464,500,7,12,M.cyan);
 R(1736,575,35,6,M.grate);R(1741,581,8,22,M.steel);
 
