@@ -1,0 +1,179 @@
+{
+  "concept": "Ashlight Counterflow Foundry",
+  "slug": "ashlight-counterflow-foundry",
+  "seed": 27111987,
+  "engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "rectangles": 3482,
+  "setup_utf8_bytes": 67083,
+  "construction_work": 582349,
+  "material_histogram": {
+    "0": 1514803,
+    "3": 18136,
+    "8": 2552,
+    "58": 209566,
+    "62": 7871,
+    "63": 485,
+    "68": 1389,
+    "70": 109,
+    "76": 114,
+    "77": 479,
+    "79": 3,
+    "100": 82607,
+    "101": 42399,
+    "104": 645,
+    "117": 195428,
+    "120": 5970,
+    "122": 8780,
+    "123": 2553,
+    "131": 3263
+  },
+  "replay_mismatch": 0,
+  "solid_connectivity": {
+    "total": 561661,
+    "anchored": 548918,
+    "detached": 12743
+  },
+  "clearance": {
+    "19x15": {
+      "legal": 1093959,
+      "reachable": 890183,
+      "sites": 13,
+      "failed": []
+    },
+    "23x19": {
+      "legal": 1002229,
+      "reachable": 818170,
+      "sites": 13,
+      "failed": []
+    },
+    "31x27": {
+      "legal": 832138,
+      "reachable": 698109,
+      "sites": 13,
+      "failed": []
+    }
+  },
+  "native": "NATIVE-UNTESTED",
+  "installed_bridge_capacity": "UNKNOWN; source 32768, fallback 4096",
+  "source_art": "NONE: original design",
+  "paint_operations": 3749,
+  "structural_supports": {
+    "ncomponents": 38,
+    "applied": 36,
+    "unlinked": 2,
+    "protected_paths": 13
+  },
+  "material_finish": {
+    "placed": 12523,
+    "clipped": 18878,
+    "inlaid": 2227,
+    "protected_centres": 801059,
+    "sites": 13
+  },
+  "unmerged_row_runs": 17165,
+  "source_authority": {
+    "repo": "techrote/cybersand",
+    "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+    "setup": "godot/scripts/workbench_setup.gd",
+    "materials": "native/include/cybersand/material.hpp",
+    "midge": "godot/authoring/flyers/midge.json"
+  },
+  "material_plane_sha256": "4e8fbfc453986bcd5ba3578f09c92b1e76b0fc042fbcfbbca777b11b5995e317",
+  "setup_sha256": "e9790152bd963ca9f1933039dde50d1995aa361db8c261583322acd40cf2ebd2",
+  "material_laws": {
+    "static_ids": [
+      58,
+      62,
+      63,
+      68,
+      70,
+      76,
+      77,
+      79,
+      100,
+      101,
+      104,
+      117,
+      120,
+      122,
+      123,
+      128,
+      131
+    ],
+    "mobile_ids": [
+      3,
+      8
+    ],
+    "basis": "Per-ID MaterialDefinition state, density motion and kernels read from accepted native/include/cybersand/material.hpp. Avoid plant, sand/stone powder and uncontained reactions."
+  },
+  "fluid_containment": "Every Water/Lava pocket physically enclosed by static material. 0 fluid cells adjacent to spawn-connected 4-neighbour centre air, verified for initial constructed plane; dynamic native simulation UNTESTED.",
+  "images": [
+    {
+      "name": "overview.png",
+      "x": 0,
+      "y": 0,
+      "width": 2048,
+      "height": 1024,
+      "bytes": 90720,
+      "sha256": "eda4653c6711d2fa26d78efc46b8bbae1c488aecc8d2f5c100e0879e57110741",
+      "material_pixel_parity": 2097152
+    },
+    {
+      "name": "ashward.png",
+      "x": 20,
+      "y": 160,
+      "width": 470,
+      "height": 650,
+      "bytes": 15829,
+      "sha256": "ac2cea4a0e40cdfca50ecae2fef006ec88f5db9b78c9db3ceeddcbb12c0eebad",
+      "material_pixel_parity": 305500
+    },
+    {
+      "name": "siphons.png",
+      "x": 400,
+      "y": 250,
+      "width": 510,
+      "height": 610,
+      "bytes": 16389,
+      "sha256": "6712c0a52e51e93d617716e0e91ac823fbdafa58bd8815c5ea7ef21a241e77a3",
+      "material_pixel_parity": 311100
+    },
+    {
+      "name": "cascade.png",
+      "x": 880,
+      "y": 140,
+      "width": 460,
+      "height": 670,
+      "bytes": 13871,
+      "sha256": "a4e848bb1a7956f7038bf53e97c21b0bcfa6f19f8c56e0b8d79a14e57d8a810d",
+      "material_pixel_parity": 308200
+    },
+    {
+      "name": "twins.png",
+      "x": 1305,
+      "y": 160,
+      "width": 485,
+      "height": 675,
+      "bytes": 24285,
+      "sha256": "919cb7bcb902c9880f77193cb0b1767c82d0a7c29f8a5c8a30565a3e51561bde",
+      "material_pixel_parity": 327375
+    },
+    {
+      "name": "vent.png",
+      "x": 1680,
+      "y": 225,
+      "width": 340,
+      "height": 655,
+      "bytes": 11890,
+      "sha256": "8be8326bb4be5b745b846a4fb4620d4e7d099eaa9fdded6722270352fc7192e9",
+      "material_pixel_parity": 222700
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "evidence_scope": "Source builder replay & static route checks; PNG source-pixel index parity by renderer; independent on-disk PNG revalidation is not claimed."
+}

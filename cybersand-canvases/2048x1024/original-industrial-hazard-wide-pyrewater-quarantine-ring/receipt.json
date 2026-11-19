@@ -1,0 +1,178 @@
+{
+  "concept": "Pyrewater Quarantine Ring",
+  "slug": "pyrewater-quarantine-ring",
+  "seed": 27111941,
+  "engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "rectangles": 2642,
+  "setup_utf8_bytes": 50948,
+  "construction_work": 560008,
+  "material_histogram": {
+    "0": 1537144,
+    "3": 21821,
+    "8": 3572,
+    "58": 180033,
+    "62": 11470,
+    "63": 4381,
+    "68": 4049,
+    "76": 234,
+    "77": 56,
+    "79": 112,
+    "100": 85824,
+    "101": 22597,
+    "104": 709,
+    "117": 206343,
+    "120": 5296,
+    "122": 10604,
+    "123": 1976,
+    "131": 931
+  },
+  "replay_mismatch": 0,
+  "solid_connectivity": {
+    "total": 534615,
+    "anchored": 478865,
+    "detached": 55750
+  },
+  "clearance": {
+    "19x15": {
+      "legal": 1132288,
+      "reachable": 922188,
+      "sites": 14,
+      "failed": []
+    },
+    "23x19": {
+      "legal": 1045257,
+      "reachable": 857057,
+      "sites": 14,
+      "failed": []
+    },
+    "31x27": {
+      "legal": 883383,
+      "reachable": 733914,
+      "sites": 14,
+      "failed": []
+    }
+  },
+  "native": "NATIVE-UNTESTED",
+  "installed_bridge_capacity": "UNKNOWN; source 32768, fallback 4096",
+  "source_art": "NONE: original design",
+  "paint_operations": 3074,
+  "structural_supports": {
+    "ncomponents": 35,
+    "applied": 24,
+    "unlinked": 11,
+    "protected_paths": 14
+  },
+  "material_finish": {
+    "placed": 19599,
+    "clipped": 12599,
+    "inlaid": 3058,
+    "protected_centres": 826396,
+    "sites": 14
+  },
+  "unmerged_row_runs": 16556,
+  "source_authority": {
+    "repo": "techrote/cybersand",
+    "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+    "setup": "godot/scripts/workbench_setup.gd",
+    "materials": "native/include/cybersand/material.hpp",
+    "midge": "godot/authoring/flyers/midge.json"
+  },
+  "material_plane_sha256": "f5ac56180881916ddff45ff71d975989d5b569f12b609e8233be0815846da96a",
+  "setup_sha256": "b8eb20399c90d7742b1af0edac9cd2cde4b170f4cb079fe1b328b980cdd94285",
+  "material_laws": {
+    "static_ids": [
+      58,
+      62,
+      63,
+      68,
+      70,
+      76,
+      77,
+      79,
+      100,
+      101,
+      104,
+      117,
+      120,
+      122,
+      123,
+      128,
+      131
+    ],
+    "mobile_ids": [
+      3,
+      8
+    ],
+    "basis": "Per-ID MaterialDefinition state, density motion and kernels read from accepted native/include/cybersand/material.hpp. Avoid plant, sand/stone powder and uncontained reactions."
+  },
+  "fluid_containment": "Every Water/Lava pocket physically enclosed by static material. 0 fluid cells adjacent to spawn-connected 4-neighbour centre air, verified for initial constructed plane; dynamic native simulation UNTESTED.",
+  "images": [
+    {
+      "name": "overview.png",
+      "x": 0,
+      "y": 0,
+      "width": 2048,
+      "height": 1024,
+      "bytes": 86656,
+      "sha256": "889756575d983906829ad1c8874215105ed8b90335effd028d11160b1dec443e",
+      "material_pixel_parity": 2097152
+    },
+    {
+      "name": "freight.png",
+      "x": 30,
+      "y": 225,
+      "width": 410,
+      "height": 570,
+      "bytes": 12307,
+      "sha256": "d51f7789d1f5e877edf2cee47fa75f9aa5612248648c973811d3f1b7e29d96c5",
+      "material_pixel_parity": 233700
+    },
+    {
+      "name": "quench.png",
+      "x": 395,
+      "y": 290,
+      "width": 440,
+      "height": 560,
+      "bytes": 14570,
+      "sha256": "49e86d7d8819e3c79fe4b1a92cb6819b69f57acc81679116b4787222cb3ce79b",
+      "material_pixel_parity": 246400
+    },
+    {
+      "name": "reactor.png",
+      "x": 805,
+      "y": 130,
+      "width": 555,
+      "height": 710,
+      "bytes": 21761,
+      "sha256": "c85efe6b56429e888de7b6d662c68cbbb6f3add549a08d999d8a9635e7ae9a49",
+      "material_pixel_parity": 394050
+    },
+    {
+      "name": "distillation.png",
+      "x": 1310,
+      "y": 210,
+      "width": 500,
+      "height": 650,
+      "bytes": 18344,
+      "sha256": "1889b4293247e87af86d8254d0064bead47e2750f93bc5dd3123195e3a9fa06e",
+      "material_pixel_parity": 325000
+    },
+    {
+      "name": "evacuation.png",
+      "x": 1670,
+      "y": 220,
+      "width": 370,
+      "height": 650,
+      "bytes": 16864,
+      "sha256": "8007d8b7ab960fe6888d4a410ee783841c8fea795495248a89c62852a9dcc12a",
+      "material_pixel_parity": 240500
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "evidence_scope": "Source builder replay & static route checks; PNG source-pixel index parity by renderer; independent on-disk PNG revalidation is not claimed."
+}
