@@ -14,59 +14,59 @@
     3
   ],
   "solid_material_histogram": {
-    "49": 83281,
-    "58": 62834,
-    "62": 111726,
-    "63": 20355,
-    "66": 6291,
-    "68": 26980,
-    "77": 3732,
+    "49": 82961,
+    "58": 65428,
+    "62": 110503,
+    "63": 20131,
+    "66": 5679,
+    "68": 26898,
+    "77": 3036,
     "79": 901,
-    "80": 750,
-    "100": 452723,
-    "101": 62287,
-    "120": 2875,
-    "121": 4878,
-    "122": 351,
+    "80": 630,
+    "100": 452710,
+    "101": 59707,
+    "120": 1840,
+    "121": 4193,
+    "122": 330,
     "129": 25060,
-    "130": 37251,
-    "131": 2172
+    "130": 36662,
+    "131": 1980
   },
-  "rectangles": 11224,
-  "rectangle_work": 904447,
-  "setup_bytes": 210149,
-  "material_plane_sha256": "33fd3e8040bd2c46e38826709ceffd5ae435c60bef26290b36d487c9930106c9",
-  "setup_sha256": "8151072cf2ed093fd2c27410b0f8699974e7c24941e95f16fc0f3094bfdcfd84",
+  "rectangles": 11557,
+  "rectangle_work": 898649,
+  "setup_bytes": 216013,
+  "material_plane_sha256": "27b3f9970806af111c3c443a74b96af9f87e7ee5509d808730762522e62a4afb",
+  "setup_sha256": "6ba9d6480fef1ade233522558b6849350f5556a35a33d9058dc55cbc5a9c95e0",
   "images": [
     {
       "name": "overview",
-      "bytes": 84222,
-      "sha256": "79b45b6ff8d965fe3e8698f457245d2236b3df0c39a10851647e955bc78295bb"
+      "bytes": 83513,
+      "sha256": "0b9b54c5743ccda5186a343aec12abc15333c4686b8b3e34719efe64586d197b"
     },
     {
       "name": "01-west-citadel",
-      "bytes": 13933,
-      "sha256": "55a697193585af823d84b4b74fc2c6fbaf05ce135652b9063bbdda91c69702bf"
+      "bytes": 13205,
+      "sha256": "d3a4160ae47577537c23692f15a7c173a049ab89bbceac7b22c0533234827bae"
     },
     {
       "name": "02-split-phasewell",
-      "bytes": 13154,
-      "sha256": "fca5d728e327a2f57fe0c9f7557085614489119d661764579084f59557cf12be"
+      "bytes": 13966,
+      "sha256": "d9774505e80821a22de5139dec50e28746dd87c6c20c6e7a530b68ce87aa8661"
     },
     {
       "name": "03-rift-geology",
-      "bytes": 10784,
-      "sha256": "4dfb3d28bcdf4692452f87bd372d9a7f640ccd6af4c79a5c3a11fea30337a0d5"
+      "bytes": 10701,
+      "sha256": "f6ddcc79ff904f7855fdfb433e7d8253eff4d12f46266823716a812d01829ab0"
     },
     {
       "name": "04-east-cargo",
-      "bytes": 19542,
-      "sha256": "1fa5ec14d08ff81b09f583346dfb33ffb0f1d7fc9b3b04d36911c768d0396307"
+      "bytes": 18916,
+      "sha256": "ba7fd0422cbe26f07cfa9dc6bf138521c872b6dce8788020adc0e43259f008b0"
     },
     {
       "name": "05-deep-survey",
-      "bytes": 7821,
-      "sha256": "f7b44868fe9d39c0356c138da41742f730dd34b32f31109ee1caf72caa99fa32"
+      "bytes": 7938,
+      "sha256": "dceea6d1c1748a2eb6e15a9fe2f67b2503f0b704041075a0832864cec8a55c7f"
     }
   ],
   "clearance": [
@@ -75,9 +75,9 @@
         19,
         15
       ],
-      "reached": 16,
-      "total": 16,
-      "airCentres": 678833,
+      "reached": 20,
+      "total": 20,
+      "airCentres": 695106,
       "bad": []
     },
     {
@@ -85,9 +85,9 @@
         23,
         19
       ],
-      "reached": 16,
-      "total": 16,
-      "airCentres": 632706,
+      "reached": 20,
+      "total": 20,
+      "airCentres": 649684,
       "bad": []
     },
     {
@@ -95,9 +95,9 @@
         31,
         27
       ],
-      "reached": 16,
-      "total": 16,
-      "airCentres": 543849,
+      "reached": 20,
+      "total": 20,
+      "airCentres": 561439,
       "bad": []
     }
   ],
@@ -165,6 +165,22 @@
     "Deep mineral survey": [
       1305,
       748
+    ],
+    "West specimen room": [
+      202,
+      424
+    ],
+    "West rover diagnostics": [
+      341,
+      421
+    ],
+    "East quarantine inspection": [
+      1667,
+      424
+    ],
+    "East freight weigh office": [
+      1835,
+      423
     ]
   },
   "source_art": "none; independently invented",
