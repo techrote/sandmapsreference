@@ -505,11 +505,9 @@ box(1565, 376, 1641, 389, 62)
 # High-bay x1470,y404 retains a >31x27 open envelope.
 # MID — membrane chromatography on two supported towers rather than shelves.
 # The left tower joins rooted roof x1321, right joins x1598.
-box(1325, 182, 1340, 550, 62)
-line(1332, 530, 1368, 550, 12, 117)
+line(1405, 349, 1384, 515, 7, 117)  # continuous rooted left feeder
 lumen(1384, 557, 37, 46, 10, 62)
-line(1606, 210, 1632, 520, 14, 117)
-line(1632, 520, 1601, 542, 12, 62)
+line(1563, 348, 1592, 518, 7, 117)  # continuous rooted right feeder
 lumen(1592, 566, 35, 57, 11, 62)
 # A pair of selective shunt filters with exposed external service keys.
 for cx,cy in [(1384,557),(1592,566)]:
@@ -566,17 +564,6 @@ for cx,cy,rx in [(688,939,19),(1180,943,26)]:
 
 R2_CHANGED_CELLS = sum(x != y for x,y in zip(PRE_R2,A))
 assert R2_CHANGED_CELLS > 14000, ('substantive grid change missing', R2_CHANGED_CELLS)
-
-
-# Deliberate material-transfer airlocks: passages are carved *after* building
-# the heavy machinery so each level remains entered through a full-hull-safe
-# working slot. The first penetrates the roof-rooted mid-tower, the next two
-# connect functional decks, and the last connects the refinery to salvage.
-# These are not nearest-site waivers: fixed named sites remain unchanged.
-portal(1288, 393, 157, 54)  # west freight to high-bay inspection
-portal(1456, 445, 98, 85)   # high-to-middle hoist throat
-portal(1456, 604, 98, 85)   # middle-to-low dry return
-portal(1620, 468, 150, 89)  # outboard salvage freight airlock
 
 # A 112-cell-wide deliberate breach in the north mnemonic crown preserves
 # direct access to the fixed Memory Engine North coordinate (925,145).
