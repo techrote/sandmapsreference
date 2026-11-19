@@ -6,11 +6,11 @@
     2048,
     1024
   ],
-  "material_plane_sha256": "329d59a7e3ab277d533b3b5b20555085179da1778bbc3dbb0877a65e957e6b97",
-  "setup_bytes": 237522,
-  "setup_sha256": "97569e58588f7aaa39bdfae1cc57e6715bb9f253313b68f299cb6651e81dff3d",
-  "rectangles": 12715,
-  "occupied_cells": 717416,
+  "material_plane_sha256": "1667138a09d9d3abcc579b42a7fa67af9701b53c27167dbd57060d1d2ee396f9",
+  "setup_bytes": 247582,
+  "setup_sha256": "da06bb98ac185bcdc77bb031c4a1ca120aa54a8252f1d951d608c3be4e08a03d",
+  "rectangles": 13250,
+  "occupied_cells": 732826,
   "png_proofs": [
     {
       "name": "overview.png",
@@ -18,7 +18,7 @@
         2048,
         1024
       ],
-      "sha256": "b9363cf9b7f2b13d18ef5859b6ee917cbb0dd5b8d18e88640501bf5066b2347e",
+      "sha256": "71cadf3e01c08362a28e5d0fd8d1204451103800aea55f62e128d07e09ae3071",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -27,7 +27,7 @@
         1024,
         512
       ],
-      "sha256": "34594f1836261eee78fb7f8b31e78807aa1f91e2c302b26fe1fc07f9745a357f",
+      "sha256": "2de1c3bbc7c469f9729b42b50ced57e5c1582c0099f9472c1fdfa9f8f1a0bde7",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -36,7 +36,7 @@
         512,
         650
       ],
-      "sha256": "502d6e29a8bf2000810fb56351234503705e7976ce3ed551a5473870acb71d7c",
+      "sha256": "5cbb1832e0aa4a5f0c04c06b177cabef6120e91669b3351f49fca0fde952b8b6",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -54,7 +54,7 @@
         510,
         545
       ],
-      "sha256": "71e28e704f66dd76d045024bc1d7407d1417264d3c63c3f1c526a8afd3af6c60",
+      "sha256": "714e3a16e77837163290499f44b8f2f79f6650fcb63155bda72773481363bc07",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -63,7 +63,7 @@
         430,
         605
       ],
-      "sha256": "9a3066538aefe067db3165a27a9bac2bc3c79345b6c2c109dd1adbd8d694a048",
+      "sha256": "40501b4f2b4074c41330057e2f8c6de38025991eb106dffaee636bc4e2432bbd",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     },
     {
@@ -81,38 +81,38 @@
         770,
         250
       ],
-      "sha256": "470b078e6d06cc6b5bfc80aa43b010fcd56b3534f22914bc0fbf9714bb3d9498",
+      "sha256": "cfe8ee96f9d5556a084429fcd136c6c11c32752743b142133a500f7a5b1f5257",
       "crc_chunks_and_exact_pixel_parity": "PASS"
     }
   ],
   "clearance": {
     "19x15": {
       "exact_sites": 13,
-      "connected_legal_centres": 961796,
+      "connected_legal_centres": 949087,
       "minimum_approaches": 4
     },
     "23x19": {
       "exact_sites": 13,
-      "connected_legal_centres": 921691,
+      "connected_legal_centres": 908557,
       "minimum_approaches": 4
     },
     "31x27": {
       "exact_sites": 13,
-      "connected_legal_centres": 843865,
+      "connected_legal_centres": 829893,
       "minimum_approaches": 4
     }
   },
   "alternate_route_connected_centres": {
-    "upper_via_roof": 602433,
-    "lower_via_sump": 600060
+    "upper_via_roof": 588461,
+    "lower_via_sump": 597616
   },
   "structural_topology": {
     "components": 1,
-    "boundary_grounded_cells": 717416,
+    "boundary_grounded_cells": 732826,
     "detached_cells": 0,
     "detached_components": 0,
     "largest_detached_components": []
   },
   "structural_support": "PASS: one fully grounded occupied component",
-  "builder_sha256": "3db4653e96552613ffdaeaaed63eeb47a79df82648a9fab4bb02b37884feb8ee"
+  "builder_sha256": "6ad757d06b969bc486a4f528c91bc7d1168b98f7cb40fb3d1a1abcecf3b64640"
 }
