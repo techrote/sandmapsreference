@@ -5,8 +5,6 @@ on:
       - 'original/scifi-biomech-wide/**'
     paths:
       - '.github/workflows/original-scifi-biomech-wide-build.yml'
-      - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/.builder-part-*.b64'
-      - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/finish-stage.cjs'
       - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/verify-independent.py'
       - 'cybersand-canvases/2048x1024/original-scifi-biomech-wide-*/build.py'
   workflow_dispatch:
@@ -29,7 +27,6 @@ jobs:
         run: |
           set -euo pipefail
           cd cybersand-canvases/2048x1024/original-scifi-biomech-wide-graftloom-slipway-261119
-          node finish-stage.cjs
           python3 -m py_compile build.py
           python3 build.py
           python3 verify-independent.py
