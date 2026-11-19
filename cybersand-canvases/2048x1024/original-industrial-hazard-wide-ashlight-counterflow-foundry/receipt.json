@@ -8,11 +8,11 @@
     1024
   ],
   "cells": 2097152,
-  "rectangles": 3959,
-  "setup_utf8_bytes": 76215,
-  "construction_work": 576134,
+  "rectangles": 3994,
+  "setup_utf8_bytes": 76913,
+  "construction_work": 584288,
   "material_histogram": {
-    "0": 1521018,
+    "0": 1512864,
     "3": 18136,
     "8": 2552,
     "58": 197884,
@@ -26,35 +26,35 @@
     "100": 82021,
     "101": 42081,
     "104": 628,
-    "117": 193669,
-    "120": 10019,
-    "122": 11824,
+    "117": 198059,
+    "120": 12441,
+    "122": 13166,
     "123": 3871,
     "131": 3263
   },
   "replay_mismatch": 0,
   "solid_connectivity": {
-    "total": 555446,
-    "anchored": 555446,
+    "total": 563600,
+    "anchored": 563600,
     "detached": 0
   },
   "clearance": {
     "19x15": {
-      "legal": 1101146,
-      "reachable": 917347,
-      "sites": 15,
+      "legal": 1087355,
+      "reachable": 902913,
+      "sites": 17,
       "failed": []
     },
     "23x19": {
-      "legal": 1009212,
-      "reachable": 836060,
-      "sites": 15,
+      "legal": 994830,
+      "reachable": 822451,
+      "sites": 17,
       "failed": []
     },
     "31x27": {
-      "legal": 838043,
-      "reachable": 712991,
-      "sites": 15,
+      "legal": 824628,
+      "reachable": 702252,
+      "sites": 17,
       "failed": []
     }
   },
@@ -315,9 +315,218 @@
         "irregular sediment brace"
       ],
       "note": "R4 requalification of unchanged Ashlight R3/R2 physical grid, with grounded twin-tower bearings and static-only Midge/liquid evidence; native processes untested"
+    },
+    "process_flow": {
+      "revision": "R6",
+      "purpose": "two graded cyclone collection decks, different hot/cold reactor service and lamellar particulate recovery",
+      "physical_features": [
+        {
+          "label": "cyclone coarse collector step tied to main mast",
+          "actual_added_cells": 1134,
+          "source_rect": [
+            919,
+            639,
+            144,
+            9
+          ],
+          "material": 117
+        },
+        {
+          "label": "cyclone coarse collector support to lower rack",
+          "actual_added_cells": 324,
+          "source_rect": [
+            1053,
+            640,
+            9,
+            52
+          ],
+          "material": 117
+        },
+        {
+          "label": "cyclone fine collector upper tray",
+          "actual_added_cells": 692,
+          "source_rect": [
+            1082,
+            608,
+            125,
+            8
+          ],
+          "material": 122
+        },
+        {
+          "label": "cyclone fine collector descending grounded leg",
+          "actual_added_cells": 585,
+          "source_rect": [
+            1198,
+            608,
+            9,
+            77
+          ],
+          "material": 117
+        },
+        {
+          "label": "cyclone lower fine product deck",
+          "actual_added_cells": 763,
+          "source_rect": [
+            1090,
+            672,
+            118,
+            7
+          ],
+          "material": 120
+        },
+        {
+          "label": "cyclone metering mast",
+          "actual_added_cells": 507,
+          "source_rect": [
+            1020,
+            573,
+            9,
+            69
+          ],
+          "material": 117
+        },
+        {
+          "label": "cyclone ancillary sample rail",
+          "actual_added_cells": 359,
+          "source_rect": [
+            970,
+            573,
+            59,
+            8
+          ],
+          "material": 120
+        },
+        {
+          "label": "hot reactor dedicated metal servicing gangway",
+          "actual_added_cells": 769,
+          "source_rect": [
+            1350,
+            580,
+            162,
+            8
+          ],
+          "material": 117
+        },
+        {
+          "label": "hot reactor gangway borne on welded steel",
+          "actual_added_cells": 0,
+          "source_rect": [
+            1362,
+            568,
+            9,
+            13
+          ],
+          "material": 117
+        },
+        {
+          "label": "cold reactor isolated reflux gangway",
+          "actual_added_cells": 192,
+          "source_rect": [
+            1590,
+            576,
+            119,
+            8
+          ],
+          "material": 120
+        },
+        {
+          "label": "cold reactor reflux bearing A",
+          "actual_added_cells": 0,
+          "source_rect": [
+            1590,
+            568,
+            10,
+            9
+          ],
+          "material": 117
+        },
+        {
+          "label": "cold reactor reflux bearing B",
+          "actual_added_cells": 7,
+          "source_rect": [
+            1699,
+            568,
+            10,
+            9
+          ],
+          "material": 117
+        },
+        {
+          "label": "ash exhaust first grounded cassette",
+          "actual_added_cells": 233,
+          "source_rect": [
+            1785,
+            610,
+            10,
+            87
+          ],
+          "material": 117
+        },
+        {
+          "label": "ash exhaust second grounded cassette",
+          "actual_added_cells": 770,
+          "source_rect": [
+            1870,
+            616,
+            10,
+            81
+          ],
+          "material": 117
+        },
+        {
+          "label": "ash exhaust outlet cassette",
+          "actual_added_cells": 61,
+          "source_rect": [
+            1910,
+            632,
+            10,
+            65
+          ],
+          "material": 117
+        },
+        {
+          "label": "high lamellar filter tray",
+          "actual_added_cells": 650,
+          "source_rect": [
+            1795,
+            611,
+            85,
+            8
+          ],
+          "material": 122
+        },
+        {
+          "label": "low lamellar particle retrieval",
+          "actual_added_cells": 464,
+          "source_rect": [
+            1795,
+            654,
+            85,
+            8
+          ],
+          "material": 120
+        },
+        {
+          "label": "separate outlet exhaust baffle",
+          "actual_added_cells": 644,
+          "source_rect": [
+            1910,
+            632,
+            96,
+            8
+          ],
+          "material": 120
+        }
+      ],
+      "added_cells": 8154,
+      "removed_cells": 0,
+      "rematerialised_cells": 0,
+      "mobile_fluid_changes": 0,
+      "native_processes": "NOT simulated: actual inert material geometry only; NATIVE-UNTESTED"
     }
   },
-  "unmerged_row_runs": 17499,
+  "unmerged_row_runs": 17834,
   "source_authority": {
     "repo": "techrote/cybersand",
     "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
@@ -325,8 +534,8 @@
     "materials": "native/include/cybersand/material.hpp",
     "midge": "godot/authoring/flyers/midge.json"
   },
-  "material_plane_sha256": "c5ecaf01f2b26cd336998c58f50b6da79beb5fdf25f77c3edbaa3173ddc95c27",
-  "setup_sha256": "6495dae356e10b0df9e85303180ba90209f52932abd020942f2d9b9829297962",
+  "material_plane_sha256": "fe9615865226f6792ff6f38342cb26013add666ff292277b66b63da31f0b8466",
+  "setup_sha256": "29fe60e5103ac1297a46e0cb5454e586f76180ff760ced51c4d48ec472717eb9",
   "material_laws": {
     "static_ids": [
       58,
@@ -361,8 +570,8 @@
       "y": 0,
       "width": 2048,
       "height": 1024,
-      "bytes": 90942,
-      "sha256": "549b354ea244a09d35aa20ac3312e6e91ec1329cda4ea489b41d075d18a25a1d",
+      "bytes": 92230,
+      "sha256": "bc5b9753a9063e04495b83a73051a24fa1d077c24a0c1845220707ff837d2ae4",
       "material_pixel_parity": 2097152
     },
     {
@@ -391,8 +600,8 @@
       "y": 140,
       "width": 460,
       "height": 670,
-      "bytes": 14820,
-      "sha256": "829ce4729b349478009e885f6a0ab7f3c874362851eefbf44ff2a61114f32308",
+      "bytes": 15572,
+      "sha256": "70e62dfc432b2057eea216507ec8a6bb7bf3f38d34113999d478042a6b9b880d",
       "material_pixel_parity": 308200
     },
     {
@@ -401,8 +610,8 @@
       "y": 160,
       "width": 485,
       "height": 675,
-      "bytes": 24002,
-      "sha256": "cbe310790d22c24a163abd2135aed50ea46440ece20a719199ddcbbe542f2590",
+      "bytes": 24039,
+      "sha256": "9a18443360031dd5335fb262f75d322c0eaecff224dad73616bd860387cf1292",
       "material_pixel_parity": 327375
     },
     {
@@ -411,8 +620,8 @@
       "y": 225,
       "width": 340,
       "height": 655,
-      "bytes": 11468,
-      "sha256": "d4d64c201c15259cb99aa0a01173ce6258fcd088c3749ba64f34b3f5fea99694",
+      "bytes": 12021,
+      "sha256": "63b3bd653826e855270b562dfa582c3e5f916e86ddb0591b052e217b6df3fd73",
       "material_pixel_parity": 222700
     }
   ],

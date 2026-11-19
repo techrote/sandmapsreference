@@ -8,11 +8,11 @@
     1024
   ],
   "cells": 2097152,
-  "rectangles": 2782,
-  "setup_utf8_bytes": 53625,
-  "construction_work": 558609,
+  "rectangles": 2834,
+  "setup_utf8_bytes": 54632,
+  "construction_work": 567542,
   "material_histogram": {
-    "0": 1538543,
+    "0": 1529610,
     "3": 21821,
     "8": 3572,
     "58": 171612,
@@ -25,35 +25,35 @@
     "100": 85824,
     "101": 23221,
     "104": 709,
-    "117": 208709,
-    "120": 5874,
-    "122": 13590,
-    "123": 2669,
+    "117": 214226,
+    "120": 7196,
+    "122": 15602,
+    "123": 2751,
     "131": 931
   },
   "replay_mismatch": 0,
   "solid_connectivity": {
-    "total": 533216,
-    "anchored": 533216,
+    "total": 542149,
+    "anchored": 542149,
     "detached": 0
   },
   "clearance": {
     "19x15": {
-      "legal": 1133596,
-      "reachable": 900364,
-      "sites": 16,
+      "legal": 1117191,
+      "reachable": 869684,
+      "sites": 18,
       "failed": []
     },
     "23x19": {
-      "legal": 1046659,
-      "reachable": 831708,
-      "sites": 16,
+      "legal": 1029525,
+      "reachable": 804290,
+      "sites": 18,
       "failed": []
     },
     "31x27": {
-      "legal": 885787,
-      "reachable": 714465,
-      "sites": 16,
+      "legal": 868308,
+      "reachable": 692047,
+      "sites": 18,
       "failed": []
     }
   },
@@ -400,9 +400,229 @@
         "removed 190-cell unsupported dry hatch roof chip"
       ],
       "note": "R4 anchors remaining gyre fragments to true containment steel and removes a 190-cell orphan hatch chip; R3 emergency return preserved; native processes untested"
+    },
+    "process_flow": {
+      "revision": "R6",
+      "purpose": "quench pressure control, actual reactor-to-distillation service transfer, unequal fractionator and separate scrubber inspection machinery",
+      "physical_features": [
+        {
+          "label": "quench isolated inspection landing",
+          "actual_added_cells": 740,
+          "source_rect": [
+            598,
+            560,
+            190,
+            8
+          ],
+          "material": 117
+        },
+        {
+          "label": "quench meter western stanchion",
+          "actual_added_cells": 248,
+          "source_rect": [
+            602,
+            529,
+            8,
+            31
+          ],
+          "material": 117
+        },
+        {
+          "label": "quench meter eastern stanchion",
+          "actual_added_cells": 218,
+          "source_rect": [
+            735,
+            529,
+            8,
+            31
+          ],
+          "material": 117
+        },
+        {
+          "label": "quench pressure header",
+          "actual_added_cells": 875,
+          "source_rect": [
+            602,
+            529,
+            141,
+            7
+          ],
+          "material": 122
+        },
+        {
+          "label": "quench sample plinth",
+          "actual_added_cells": 224,
+          "source_rect": [
+            620,
+            552,
+            28,
+            8
+          ],
+          "material": 120
+        },
+        {
+          "label": "quench gauge foot",
+          "actual_added_cells": 82,
+          "source_rect": [
+            690,
+            553,
+            20,
+            7
+          ],
+          "material": 123
+        },
+        {
+          "label": "service load path from quench to reactor bearing",
+          "actual_added_cells": 290,
+          "source_rect": [
+            786,
+            546,
+            52,
+            10
+          ],
+          "material": 117
+        },
+        {
+          "label": "dry refractory service return across reactor-chemical joint",
+          "actual_added_cells": 531,
+          "source_rect": [
+            1279,
+            682,
+            91,
+            9
+          ],
+          "material": 117
+        },
+        {
+          "label": "service return anchored knee to distillation wall",
+          "actual_added_cells": 0,
+          "source_rect": [
+            1356,
+            653,
+            9,
+            38
+          ],
+          "material": 117
+        },
+        {
+          "label": "fractionator first supported riser",
+          "actual_added_cells": 513,
+          "source_rect": [
+            1452,
+            503,
+            9,
+            106
+          ],
+          "material": 117
+        },
+        {
+          "label": "fractionator upper flash column",
+          "actual_added_cells": 1071,
+          "source_rect": [
+            1529,
+            483,
+            9,
+            126
+          ],
+          "material": 117
+        },
+        {
+          "label": "condenser isolated third column",
+          "actual_added_cells": 910,
+          "source_rect": [
+            1643,
+            517,
+            10,
+            92
+          ],
+          "material": 117
+        },
+        {
+          "label": "warm fractionator overhead feed",
+          "actual_added_cells": 476,
+          "source_rect": [
+            1452,
+            503,
+            86,
+            7
+          ],
+          "material": 122
+        },
+        {
+          "label": "cold offset condensation tray",
+          "actual_added_cells": 651,
+          "source_rect": [
+            1529,
+            533,
+            124,
+            7
+          ],
+          "material": 120
+        },
+        {
+          "label": "reflux recovery tray",
+          "actual_added_cells": 556,
+          "source_rect": [
+            1532,
+            574,
+            121,
+            6
+          ],
+          "material": 122
+        },
+        {
+          "label": "quarantine west sample support",
+          "actual_added_cells": 624,
+          "source_rect": [
+            1730,
+            844,
+            26,
+            29
+          ],
+          "material": 117
+        },
+        {
+          "label": "quarantine west joined sample head",
+          "actual_added_cells": 447,
+          "source_rect": [
+            1744,
+            836,
+            51,
+            9
+          ],
+          "material": 120
+        },
+        {
+          "label": "quarantine clean-side sample support",
+          "actual_added_cells": 372,
+          "source_rect": [
+            1934,
+            842,
+            26,
+            30
+          ],
+          "material": 117
+        },
+        {
+          "label": "quarantine separate clean-side manifold",
+          "actual_added_cells": 105,
+          "source_rect": [
+            1900,
+            845,
+            54,
+            7
+          ],
+          "material": 122
+        }
+      ],
+      "added_cells": 8933,
+      "removed_cells": 0,
+      "rematerialised_cells": 0,
+      "mobile_fluid_changes": 0,
+      "native_processes": "NOT simulated: actual inert material geometry only; NATIVE-UNTESTED"
     }
   },
-  "unmerged_row_runs": 16864,
+  "unmerged_row_runs": 17351,
   "source_authority": {
     "repo": "techrote/cybersand",
     "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
@@ -410,8 +630,8 @@
     "materials": "native/include/cybersand/material.hpp",
     "midge": "godot/authoring/flyers/midge.json"
   },
-  "material_plane_sha256": "ff564f95b85e2db934ceb6fb50a2d3cc0a5044937b8d06aa1cadbc1a39c3cddf",
-  "setup_sha256": "ed61d935b2edabe4a0f163d0daa01feccefcdc9b2d003f2518d7fc06f2983c85",
+  "material_plane_sha256": "6fe8eed05f57600e02a2b018b55bf496bf7a06dff999cf5e9a8d3df78854418d",
+  "setup_sha256": "e6a0808d319ccd58140234c7aae7be617014ef7c5c13c0e0e260867b9c834ad8",
   "material_laws": {
     "static_ids": [
       58,
@@ -446,8 +666,8 @@
       "y": 0,
       "width": 2048,
       "height": 1024,
-      "bytes": 87407,
-      "sha256": "e1151fa924a796f59d1a7849179f16ba2a366d46c49730b6fbe90a2277149957",
+      "bytes": 89157,
+      "sha256": "e5afd47cc291ed011c7523505c10c61575d651b7320ad3284042fbc8ddb25dce",
       "material_pixel_parity": 2097152
     },
     {
@@ -466,8 +686,8 @@
       "y": 290,
       "width": 440,
       "height": 560,
-      "bytes": 14710,
-      "sha256": "b9da794861222cdc933b8db731c57633b8f5033a1a759c5dc3f40c1d628300d6",
+      "bytes": 15092,
+      "sha256": "8726cb208383d4b71505dedc596b89ca13d33e2bf7cc898b95df0027af70b60b",
       "material_pixel_parity": 246400
     },
     {
@@ -476,8 +696,8 @@
       "y": 130,
       "width": 555,
       "height": 710,
-      "bytes": 22006,
-      "sha256": "4a8c8cd86f5c98f617c6815058ddd0c8f739b280cb6ebcb77125c4e79e3c95cf",
+      "bytes": 22016,
+      "sha256": "ee7eff3a068618ba5e7a0710d7b20bfbf594b6e6ae2ed3643f07e39891c2c7ac",
       "material_pixel_parity": 394050
     },
     {
@@ -486,8 +706,8 @@
       "y": 210,
       "width": 500,
       "height": 650,
-      "bytes": 18593,
-      "sha256": "9a9e777eedf2506f74e90561e5c41d059e640c4410e3becaa7e828db3141d3f7",
+      "bytes": 19789,
+      "sha256": "74c52bd6c3d1a3e2a4f6c5fba651193ef616d692433b974d46f2387b6fec482f",
       "material_pixel_parity": 325000
     },
     {
@@ -496,8 +716,8 @@
       "y": 220,
       "width": 370,
       "height": 650,
-      "bytes": 16680,
-      "sha256": "72c952f121300e6d8b5c68d5542b66464a85a8f496fed34e0c9fc9c8128fca44",
+      "bytes": 17002,
+      "sha256": "f3c8d33a3390cb85b972857a9460a376756ac9fdecc3f6c56e1aefa37e760875",
       "material_pixel_parity": 240500
     }
   ],
