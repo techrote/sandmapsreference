@@ -196,3 +196,23 @@ This is new actual-cell construction on the original Morrow Array, responding to
 **R5 reproducible source qualification:** exactly 2048×1024 = 2,097,152 material cells; 898,649 non-air inert structural cells; 11,557 lossless nonoverlapping rectangles; 216,013 Setup-v2 JSON bytes; full material plane SHA-256 \`27b3f9970806af111c3c443a74b96af9f87e7ee5509d808730762522e62a4afb\`; all **20/20 exact sites pass each Midge envelope**, both inserted central/lower obstruction tests preserve the critical long-distance alternatives; genuine six indexed material PNGs must be regenerated and CRC/inflated and compared against every source material cell; zero-difference deterministic replay required. Full connected-solid accounting: **898,037 boundary-grounded**, **612 detached cells / four small components**, down from R4 11,896/35. The intentionally detached remaining small pieces require independent artistic judgment; inert material does not prove structural-load simulation.
 
 **HOLD** pending independent R5 exact-HEAD art, technical and Shepherd review, installed native rectangle capacity (older bridge may be 4096 vs current source 32768), Godot/Rapier/Midge steering/collision, and fresh-process save/reopen. **NATIVE-UNTESTED**, no owner acceptance.
+
+## R6 — structural completion of four isolated operational panels (19 November 2026)
+
+On the fully regenerated R5 material plane, an independent four-neighbour occupied-solid
+flood identified exactly **612 detached cells in four fixtures**, rather than a large
+suspended load: east solar telemetry vane 243, west xenology instrument board 176,
+west tram signal panel 175, west lab dashboard 18. The four existing material features
+are preserved and given minimal **authored solid** cable/flange links into their nearest
+rooted frame (8, 33, 28, 5 centre cells respectively). These are actual inert CyberSand
+material-ID edits in `repair-structures.cjs`, not a drawing or PNG-only change.
+The added ties were independently preflighted against exact 20 named sites at
+all 19×15, 23×19 and 31×27 full hull clearances and both physically blocked
+cross-district bypasses before committing this authoring source.
+
+The **R6 committed receipt and PNG assets** supersede R5/R4 cell counts once
+the one-shot publication finishes. Reconfirm immutable exact-head independent
+GitHub Actions qualification, source-aligned Setup-v2 budget, material-plane SHA,
+pixel-perfect genuine PNG crops and functional loads. Installed native bridge,
+Godot/Rapier/Midge in-session control and save/reopen remain **NATIVE-UNTESTED**.
+Keep Draft/HOLD pending separate new-HEAD art/technical/Shepherd review.

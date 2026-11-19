@@ -361,4 +361,19 @@ module.exports=function repairMorrow({M,R,P,L,sites}){
   R(325,438,7,16,M.C);
   L(387,402,387,385,7,M.P);
   R(380,436,7,16,M.C);
+
+  // R6 | Final four functional support/finish junctions. Reproduced at the
+  // R5 exact material plane (no source-image tracing). All four isolated
+  // fragments are small native-approved inert panels, preserved as
+  // purposeful equipment and bonded to the nearest structural load path:
+  //   east solar telemetry vane       243 cells, 8-cell attachment
+  //   west xenology instrument board  176 cells, 33-cell roof hanger
+  //   west assay dashboard             18 cells, 5-cell wall flange
+  //   west tram signalling panel      175 cells, 28-cell deck bus
+  // Tests before publication: zero detached occupied components, all 20
+  // original R5 exact site envelopes at 19x15, 23x19, 31x27, both bypasses.
+  L(1694,233,1694,225,4,M.P);
+  L(278,372,278,339,4,M.P);
+  L(236,397,231,397,4,M.P);
+  L(497,558,469,558,4,M.P);
 };
