@@ -433,6 +433,24 @@ def weld_disconnected_structure():
         # a true architectural suspension cable, not the nearest side wall.
         options=[]
         if len(comp)>1000:
+            # Horizontal hangers into left/right outer hull are especially
+            # effective for decks otherwise sealed off by vertical air shafts.
+            by_y_right={}
+            by_y_left={}
+            for v in comp:
+                x,y=v%W,v//W
+                b=y//46
+                if b not in by_y_right or x>by_y_right[b]%W:by_y_right[b]=v
+                if b not in by_y_left or x<by_y_left[b]%W:by_y_left[b]=v
+            for v in sorted(by_y_right.values(),key=lambda z:z//W):
+                x,y=v%W,v//W
+                if 2036-x<=560:
+                    options.append(((x,y),(2036,y),'east-hull-lateral'))
+            for v in sorted(by_y_left.values(),key=lambda z:z//W):
+                x,y=v%W,v//W
+                if x-12<=560:
+                    options.append(((x,y),(12,y),'west-hull-lateral'))
+        if len(comp)>1000:
             xbins={}
             for v in comp:
                 x=v%W; key=x//45
