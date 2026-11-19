@@ -1,0 +1,180 @@
+{
+  "concept": "Morrow Array — The Split Phasewell",
+  "original": true,
+  "seed": 20261119,
+  "extent": [
+    2048,
+    1024
+  ],
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "midge_hull": [
+    4,
+    3
+  ],
+  "solid_material_histogram": {
+    "49": 85322,
+    "58": 35956,
+    "62": 84556,
+    "63": 16234,
+    "66": 4728,
+    "68": 14311,
+    "77": 1357,
+    "79": 1129,
+    "80": 360,
+    "100": 457098,
+    "101": 64573,
+    "120": 2439,
+    "121": 2134,
+    "122": 351,
+    "129": 25060,
+    "130": 33586,
+    "131": 169
+  },
+  "rectangles": 7950,
+  "rectangle_work": 829363,
+  "setup_bytes": 149494,
+  "material_plane_sha256": "cd94d2782e48c90b5a5c7ec3cca906f05489404c13ab57a9d7982e1780d9a446",
+  "setup_sha256": "b4d1296e86518c46c1924159ea918536ee8d35acdd73e4241bb55a6c7c8f99e4",
+  "images": [
+    {
+      "name": "overview",
+      "bytes": 58324,
+      "sha256": "afa363a8dfa907eef51e594e54ddba4de6826258e37fd998bd521870737ae3c6"
+    },
+    {
+      "name": "01-west-citadel",
+      "bytes": 9219,
+      "sha256": "1e77ba8fc587bf9ad2f1ca0b22816fb53b20e9d99e7da5dcb142080b8894c1c2"
+    },
+    {
+      "name": "02-split-phasewell",
+      "bytes": 8744,
+      "sha256": "06ceef3b54056c7850e0d15c042f08087ee9f6f60bc6f36ecc24dddd597f6642"
+    },
+    {
+      "name": "03-rift-geology",
+      "bytes": 7575,
+      "sha256": "fd1f2e77176fd2a70e6bcf7a84284d0baecf7add587e5df365c5e3bc8dddba28"
+    },
+    {
+      "name": "04-east-cargo",
+      "bytes": 11189,
+      "sha256": "3dd342d90209c21b533971f3d50a853c5f50acf7d300389d42981711564b5cba"
+    },
+    {
+      "name": "05-deep-survey",
+      "bytes": 5256,
+      "sha256": "43c5fd0d34a2c55ad35cd2de57c8504135fe44f88acdc4a7aea0af13e10a6872"
+    }
+  ],
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 16,
+      "total": 16,
+      "airCentres": 1011758,
+      "bad": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 16,
+      "total": 16,
+      "airCentres": 960333,
+      "bad": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 16,
+      "total": 16,
+      "airCentres": 863334,
+      "bad": []
+    }
+  ],
+  "exact_sites": {
+    "Rover gate": [
+      135,
+      495
+    ],
+    "Citadel porch": [
+      289,
+      402
+    ],
+    "Upper xenology": [
+      322,
+      304
+    ],
+    "Western assay": [
+      317,
+      577
+    ],
+    "Archive lower": [
+      265,
+      750
+    ],
+    "West rift dock": [
+      650,
+      496
+    ],
+    "Helio skywalk": [
+      792,
+      264
+    ],
+    "Phasewell top": [
+      1020,
+      284
+    ],
+    "Phasewell central": [
+      1020,
+      494
+    ],
+    "Phasewell undercroft": [
+      1020,
+      751
+    ],
+    "East tram bridge": [
+      1365,
+      495
+    ],
+    "Quarantine lock": [
+      1558,
+      496
+    ],
+    "Cargo bay": [
+      1812,
+      495
+    ],
+    "Eastern observatory": [
+      1694,
+      304
+    ],
+    "Ion exchanger": [
+      1815,
+      748
+    ],
+    "Deep mineral survey": [
+      1305,
+      748
+    ]
+  },
+  "source_art": "none; independently invented",
+  "native_status": "NATIVE-UNTESTED",
+  "tests": [
+    "complete material plane exact replay (executed)",
+    "valid immobile structural material IDs inspected against accepted catalogue",
+    "fully-in-bounds 19×15 / 23×19 / 31×27 exact-site free-centre 4-neighbour BFS (executed)",
+    "PNG bytes assembled directly from same final material-ID grid; PNG renders visually decoded; independently executing Node PNG decoder remains outstanding"
+  ],
+  "node_cli_status": "UNTESTED",
+  "alternate_route_dynamic_status": "UNTESTED"
+}
