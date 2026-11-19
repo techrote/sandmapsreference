@@ -2,7 +2,51 @@
 
 **ORIGINAL / INDUSTRIAL TRANSIT / LANDSCAPE 2048×1024**. A physical, wholly invented CyberSand material-cell settlement, not a source-image conversion, scene enlargement, web illustration, or rework. **Draft/HOLD candidate; owner and independent reviews outstanding. NATIVE-UNTESTED.**
 
-## R5 operational reconstruction — 19 November 2026 (CURRENT)
+## R6 — visible vessel identity and controlled industrial transit (19 November 2026, CURRENT)
+
+**Latest independent [R5 Art audit](https://github.com/techrote/sandmapsreference/pull/21#issuecomment-7002584903) and [Shepherd](https://github.com/techrote/sandmapsreference/pull/21#issuecomment-7002983931) both required REWORK.** R6 physically repairs the same creator-owned original side-elevation world; this is not a source conversion. Same exact 2048×1024 world, 18 unmodified operational centres, static cargo objects and protected full-body flight routes. No owner/Shepherd acceptance is implied.
+
+The new [r6-geometry.cjs](r6-geometry.cjs) is an independent, deterministic physical-cell authoring layer invoked by [build.cjs](build.cjs) **before** ordered lossless rectangle encoding. The R5 baseline remains intact in the source for provenance. These are genuine changes to the final material-ID plane, not preview edits or a scenic illustration:
+
+- **One working hull, not twin vessel forks:** The former port-side cabin is excavated into a low service/winch berth; the only high bridge/wheelhouse is the asymmetric starboard vessel cabin. A long angled outer hull sheer, kept-open 64-cell keel hatch, framed bridge glazing, lower welded keel, accessible work benches and connected cradle tell a single vessel/drydock story. The named Drydock keel **(313,743)** remains physically clear.
+- **Keyed freight chain:** The same corrugated, colour-keyed cargo silhouette now occupies three distinct stages—blue-gantry inbound rolling cradle, west-jaw captured load and right-jaw release/outfeed rollers. Static grey guides, amber interlocks, and dark counterweights are differentiated from cargo; they are *not* animated movable actors. Full-body air corridor **x867–910/y520–589** is preserved.
+- **Legible hump junction and staffed receiving:** The busy lower sorting region was excavated and redrawn as one visible frog between an upper through-grade and a lower catch siding with an end buffer and operator stand. The eastern sawtooth terminal contains a deeper enterable assay bench, mass scale and founded receiving portal rather than a thin cosmetic bar.
+- **Unequal underground destinations:** A western drain-discharge pipe points towards the repaired hull basin, while the central shaft now has an explicit counterweight-maintenance platform. Original differing lower return rooms, five transfers and full-size lower aerial rail survive.
+
+**R5 → R6 actual grid delta:** **35,081** material cells changed (**9,015 additions, 10,791 excavations, 15,275 rematerialisations**). No source image, AI concept drawing, unsupported mobile/powder foundation, uncontained liquid or perspective top was introduced.
+
+| R6 independently generated and verified property | Value |
+|---|---:|
+| Exact dimension / seed | **2048×1024 / 20261119** |
+| Read-only accepted engine main | `de109d0131641d6adc8d25bb9ced7ca3d4991105` |
+| Supported nonoverlapping rectangles | **12,166 / 32,768** |
+| Actual Setup-v2 bytes | **223,139 / 1,048,576** |
+| Stable Solid occupied work | **807,692 / 32,000,000** |
+| Boundary-connected structural solids | **807,692/807,692; 0 detached** |
+| Exact 18/18 Midge destinations | **PASS at 19×15, 23×19, 31×27** |
+| Strict 31×27 connected free centres | **837,498** |
+| True inserted steel obstruction / alternate 31×27 route | **2,542 → 2,690 steps** |
+| Complete JSON replay, histogram and plane hashes | **PASS** |
+| Indexed overview + 5 true 1:1 district PNGs | **6/6 cell-pixel parity PASS** |
+| Actual Workbench/native import, actor controls, physics, save/reopen | **NATIVE-UNTESTED** |
+
+**R6 material plane SHA-256:** `bf35b9603cea9a8febb1abba77212b2c9804fd1359dcb8f8c29bd2dc2067e6bd`; **Setup SHA-256:** `55b54e190f67f36ea7b63583d2d9375f57f79a6ea183a0ce7dd6e82915c55e19`. The regenerated physical files were committed in [the automated R6 publication commit](https://github.com/techrote/sandmapsreference/commit/c8ef2b68f3351218cee4a911741affd176a0de17) following successful Node 22 generation and non-importing independent verification. Six committed genuine material PNGs were visually reopened: the entire 2048×1024 grid plus the west dock, blue gantry, freight lift, classifier and east terminal at original one-cell-per-pixel scale.
+
+### R6 actual material-cell gallery
+
+![R6 original full material-ID plane](overview.png)
+
+| Ship/drydock | Inbound blue gantry | Counterweight freight lift |
+|---|---|---|
+| ![R6 ship material cells](01-west-drydock.png) | ![R6 gantry material cells](02-blue-gantry.png) | ![R6 lift material cells](03-counterweight-lift.png) |
+
+| Switch-grade classifier | Receiving and assay |
+|---|---|
+| ![R6 classifier material cells](04-hump-classification.png) | ![R6 east terminal material cells](05-east-terminal.png) |
+
+**HOLD:** The accepted *source* bridge has a 32,768-edit budget; a possibly installed older bridge could still stop at **4,096** (R6 has 12,166). No source-matched installed bridge, Godot/Rapier/Midge piloting/collision, real moving freight, sustained physics or fresh-process save/reopen was executed. A **new exact-R6 independent Art, Technical and Shepherd review** and owner acceptance remain required. Keep this PR **OPEN Draft/HOLD**, do not merge, auto-merge or promote Ready.
+
+## Historical R5 operational reconstruction — 19 November 2026 (superseded by R6)
 
 **Independent exact-R4 [Art review](https://github.com/techrote/sandmapsreference/pull/21#issuecomment-7001584379) and [Shepherd review](https://github.com/techrote/sandmapsreference/pull/21#issuecomment-7002034730): REWORK REQUIRED.** R5 is this original creator's response in real physical cells, not owner/independent acceptance. The exact spatial extent, unchanged 18 named operational centres and original skyline remain unchanged. This is not a reference conversion.
 
