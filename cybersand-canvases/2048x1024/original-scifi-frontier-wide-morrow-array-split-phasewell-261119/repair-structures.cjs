@@ -129,6 +129,17 @@ module.exports=function repairMorrow({M,R,P,L,sites}){
   L(1609,668,1628,760,10,M.C);
   L(1982,665,2025,795,12,M.C);
 
+  // R2 second-pass structural audit: close major ungrounded edge-load
+  // paths with explicit solid joints. All terminals enter bedrock or an
+  // anchored truss rather than stopping within a few cells of the support.
+  L(1578,345,1648,137,12,M.C); // west edge of quarantine roof to upper cliff
+  L(425,386,442,133,11,M.C);  // east wing of west citadel to overburden
+  L(619,555,430,684,12,M.S);  // middle west sky deck to rock shoulder
+  L(1450,557,1530,284,10,M.S); // right middeck to high anchored sky truss
+  L(922,681,927,938,16,M.C); // phasewell west foot into deep geology
+  L(1102,679,1107,939,16,M.C); // phasewell east foot into deep geology
+  L(178,383,175,321,8,M.C); // assay booth hanging from load-bearing upper shell
+  L(372,384,371,349,8,M.C); // habitat booth attachment into roof
   // LOWER TECTONIC SURVEY. One carved operations destination, one optional
   // shallow access loop and separate calibration / return infrastructure.
   // The 1305,748 named survey centre remains untouched in 31x27 clearance.
