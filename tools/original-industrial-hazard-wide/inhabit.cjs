@@ -45,8 +45,8 @@ module.exports=function inhabit(g,index,spec,{W,H,MAT}){
     floorMachine(182,830,28,24,'air-quality analyzer lower plinth');
     // East evacuation: safe passage through the scrubber quarantine vestibule,
     // with two genuinely independent wide dry doors on its flanks.
-    carve(1727,765,77,87,'quarantine scrubber west decontamination door');
-    carve(1917,766,83,87,'quarantine scrubber east return door');
+    carve(1686,756,124,107,'quarantine west rib-spanning decontamination hatch');
+    carve(1814,692,94,90,'quarantine overhead dry emergency vent');
     finishExisting(1762,872,177,8,MAT.quartz,'scrubber floor reclaim grating');
     finishExisting(1760,754,160,8,MAT.glass,'sealed upper aerosol conduit');
     floorMachine(1800,846,28,27,'scrubber west inspection pedestal');
