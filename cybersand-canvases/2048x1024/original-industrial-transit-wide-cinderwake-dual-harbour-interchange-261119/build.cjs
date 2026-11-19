@@ -263,6 +263,38 @@ R(1775,847,73,10,M.S);R(1782,857,9,8,M.K);
 R(1835,857,9,8,M.K);R(1861,840,23,19,M.U);
 L(1762,868,1762,882,9,M.C);L(1898,868,1898,883,9,M.C);
 
+
+// R2 load-path closure: each newly inhabited workroom has a real wall/floor
+// pedestal, not unsupported console pixels. Connections are to already
+// grounded hull masonry, existing steel deck or stable continuous bedrock.
+// Dock interior work ribs deliberately avoid the 55-cell flight hatch.
+R(256,772,11,58,M.C); // exposed drydock rib to original dock keel floor
+L(196,714,181,730,9,M.S); // port rib to vessel keel
+// Trolley suspension and office instruments have real fixings.
+R(750,312,8,12,M.C);R(750,377,6,8,M.P);
+R(785,527,9,12,M.S);R(861,527,8,12,M.S);
+R(816,509,7,18,M.C); // two customs workbenches to inhabited floor
+// Roll-formed freight vehicle stands on the stable right gantry shoulder,
+// leaving the wide left side of the x861 Midge shaft clear.
+R(899,642,20,10,M.S);
+// Elevator guides tie into actual jaw walls instead of floating in the shaft.
+for(const y of [390,501,537]){
+ R(973,y+7,19,8,M.S);
+ R(1187,y+7,34,8,M.S);
+}
+// End-terminal receiving mezzanine has a founded left-hand support,
+// wholly outside the terminal's x1836 flying lift throat.
+R(1775,545,12,67,M.C);L(1779,605,1768,625,9,M.S);
+R(1978,410,4,8,M.P);
+// Five unique underground service consoles are founded in their separate
+// excavated chambers on real bench legs, pump pedestals and switch piers.
+for(const [x,y,w,h] of [
+ [303,854,9,15], [632,852,9,19], [700,853,9,17],
+ [741,854,8,16], [1018,853,9,17], [1075,852,9,17],
+ [1131,855,9,16], [1466,853,8,17], [1539,855,9,17],
+ [1872,855,9,15]
+])R(x,y,w,h,M.C);
+
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
