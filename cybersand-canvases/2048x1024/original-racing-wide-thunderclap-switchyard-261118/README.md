@@ -1,6 +1,16 @@
-# Thunderclap Switchyard R14 — Original Industrial / Sci-Fi Racing
+# Thunderclap Switchyard R15 — Original Industrial / Sci-Fi Racing
 **OPEN Draft / HOLD · ORIGINAL-NO-REFERENCE · NATIVE-UNTESTED · 19 November 2026.**
 Original source-free 2048×1024 material-cell landscape. Authored directly as a two-dimensional orthographic side-elevation game world; no source picture, backdrop or pseudo-3D platforms.
+
+## R14 → R15 — singular downhill/uphill flight decisions (19 November 2026)
+
+**Latest creator repair:** [exact-R14 independent Shepherd P1 review](https://github.com/techrote/sandmapsreference/pull/17#issuecomment-7002983351) found the WEST DESCEND entrance visually competing with an underbracket and many fin highlights, while the EAST ASCEND recovery decision was mixed into cross-bracing. R15 makes one dominant **white quartz downhill contour** directly on existing grounded west entry masonry, and one distinct **blue uphill contour** on the grounded eastern return ramp. Three bounded service/underbracket zones lose their subordinate bright marks through inert-metal rematerialisation. The west gameplay inspection crop now includes the whole leading edge (x245 instead of x310). Neither portal becomes a painted mockup: changed colours are genuine material IDs in the final grid.
+
+**Actual R14→R15 physical-cell delta:** **5,935 changed IDs, all rematerialised**, **0 new occupied cells, 0 excavated**, 936,586 stable grounded solid cells retained. This is a directional legibility repair, not new collision geometry or verified race handling. The unchanged course has 15/15 exact centres for each 19×15, 23×19, 31×27 Midge envelope, seven of seven confined lower S-turn sites, blocked-Iris escape 14/15 including finish, all 26 supported structural probes, and **zero detached solids**.
+
+**Exact-source qualification:** [Node 22 GitHub Actions run 44495164463 — SUCCESS](https://github.com/techrote/sandmapsreference/actions/runs/44495164463) regenerated the entire ordinary Setup-v2 JSON, real 2048×1024 indexed-material PNG and 12 true 1:1 district images plus half-scale overview from the committed cells. Deterministic rebuild, strict nonoverlapping replay, independent obstacle-eroded site BFS, exact material-grid hashes and PNG signature/chunk CRC/zlib/IEND/full-pixel parity passed. **12,609 rectangles / 32,768**, **237,839 UTF-8 bytes / 1 MiB**, 936,586 cell writes / 32m; grid SHA-256 `4d64e4237a1012bc06a6ccf1978326ab5c1c522871d3133fccfbe9ed79a8d444`, JSON SHA-256 `e5912cbf4afe0cccd40bcdd41e76953236e28e22fdfb00b856310519818d250b`.
+
+**Owner/independent HOLD:** Exact-R15 Art, Technical and Shepherd verdicts are still pending. Installed bridge rectangle capacity is **unknown** (legacy 4,096 risk versus 12,609 required). Actual Godot/Rapier/Workbench Midge steering, contact, speed, simulation and fresh-process save/reopen remain **NATIVE-UNTESTED**. No Ready, merge or owner acceptance.
 
 ## R13 → R14 — structural decluttering and supported directional race cues (19 November 2026)
 
@@ -81,24 +91,24 @@ Read-only authority: [CyberSand accepted main @ de109d0131641d6adc8d25bb9ced7ca3
 
 All occupied materials are numeric IDs **49, 58, 62, 100, 101, 113, 117, 120, 122, 123, 128**: accepted immovable inert Solid with RuleKernel::None. There is no unstable powder foundation, mobile fluid or active chemical experiment to contain.
 
-| Static qualification | Current regenerated R13 result |
+| Static qualification | Current regenerated R15 result |
 |---|---:|
 | Exact material grid | 2048×1024 = 2,097,152 cells |
-| Ordered, nonoverlapping rectangles | 12763 / 32,768 |
-| Ordinary Setup-v2 JSON bytes | 240875 / 1,048,576 |
+| Ordered, nonoverlapping rectangles | 12,609 / 32,768 |
+| Ordinary Setup-v2 JSON bytes | 237,839 / 1,048,576 |
 | Material-cell replay mismatch and overlaps | 0 / 0 |
 | Conservative 19×15, 23×19 and 31×27 named sites | 15/15, 15/15, 15/15 |
 | Physical blocked-Iris alternate | 14/15, finish reached |
 | Bounded lower-only 31×27 route | 7/7 |
 | Named grounded structural probes | 26/26 |
-| Remaining detached inert-solid cells (not all guaranteed decoration) | 2957 |
+| Remaining detached inert-solid cells | 0 |
 | Material-PNGs generated and internally exact-pixel checked | 14/14 |
 | Installed native Workbench/CyberDemoBridge/Rapier input/collision/ticks/save/reopen | **NATIVE-UNTESTED** |
 
-The machine-readable [qualification receipt](qualification.json) records **full SHA-256** for committed Setup-v2 JSON, entire row-major cell plane, material histogram, full material-PNG set, blocked-Iris reach, exact full-envelope centres, grounded probes, and actual generated-image parity. It is produced by the deterministic builder rather than copied from older revisions. R13 hashes and delta are independently checked by the Node 22 exact-source workflow and committed evidence; authoritative committed setup/grid hashes are in that receipt.
+The machine-readable [qualification receipt](qualification.json) records **full SHA-256** for committed Setup-v2 JSON, entire row-major cell plane, material histogram, full material-PNG set, blocked-Iris reach, exact full-envelope centres, grounded probes, and actual generated-image parity. It is produced by the deterministic builder rather than copied from older revisions. R15 hashes and delta are independently checked by the Node 22 exact-source workflow and committed evidence; authoritative committed setup/grid hashes are in that receipt.
 
 ## Reproduction and real-cell evidence
-Execute **Node 22** from this folder: `node build.cjs --verify` regenerates the committed bytes and checks exact JSON / all 14 image artifacts; `node verify-independent.cjs` separately replays all edits, checks 15 exact named destinations at three footprints, blocked-Iris and lower-only challenges, hashes, PNG signature/chunk CRC/zlib/IEND and every PNG material pixel independently of the builder. The GitHub Actions lane workflow runs the builder and independent verifier and publishes any changed outputs **on this same Draft branch**. A passing workflow for a previous SHA must never be cited as an R13 pass.
+Execute **Node 22** from this folder: `node build.cjs --verify` regenerates the committed bytes and checks exact JSON / all 14 image artifacts; `node verify-independent.cjs` separately replays all edits, checks 15 exact named destinations at three footprints, blocked-Iris and lower-only challenges, hashes, PNG signature/chunk CRC/zlib/IEND and every PNG material pixel independently of the builder. The GitHub Actions lane workflow runs the builder and independent verifier and publishes any changed outputs **on this same Draft branch**. A passing workflow for a previous SHA must never be cited as an R15 pass.
 
 ![2048×1024 real indexed material-cell full world](overview.png)
 ![Nearest-sampled 1:2 visual review of the same material world](overview-review-2x.png)
