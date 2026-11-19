@@ -2,7 +2,7 @@
   "revision": "R6",
   "original": true,
   "native": "NATIVE-UNTESTED",
-  "notes": "Curated from 94 original R6 test candidates: 13 flight-blocking structural cells rejected with exact 31x27 full-body four-neighbour BFS; retained edits and two independent hoist/mould additions preserve 15 named coordinates and 50x60 physical throat-blockage bypass. Stage remains NATIVE-UNTESTED until installed engine checks.",
+  "notes": "Curated from 94 original R6 test candidates: 13 flight-blocking structural cells rejected with exact 31x27 full-body four-neighbour BFS; retained edits and two independent hoist/mould additions preserve 15 named coordinates and 50x60 physical throat-blockage bypass. Stage remains NATIVE-UNTESTED until installed engine checks. A second component audit removed two legacy floating hoist-rail fragments and roots R6 service platforms wherever flight and blocked-throat clearance pass.",
   "groups": [
     {
       "name": "dry-tap-to-ladle-pickup",
@@ -580,13 +580,6 @@
         ],
         [
           1906,
-          557,
-          43,
-          5,
-          62
-        ],
-        [
-          1906,
           596,
           20,
           7,
@@ -619,41 +612,172 @@
           57
         ]
       ]
+    },
+    {
+      "name": "audited-rooted-equipment-and-unserviceable-rail-removal",
+      "rects": [
+        [
+          1922,
+          523,
+          23,
+          5,
+          0
+        ],
+        [
+          1922,
+          557,
+          23,
+          5,
+          0
+        ],
+        [
+          1010,
+          415,
+          8,
+          6,
+          62
+        ],
+        [
+          890,
+          463,
+          8,
+          6,
+          62
+        ],
+        [
+          1845,
+          528,
+          8,
+          24,
+          62
+        ],
+        [
+          775,
+          818,
+          12,
+          5,
+          62
+        ],
+        [
+          1089,
+          377,
+          10,
+          11,
+          62
+        ],
+        [
+          1096,
+          401,
+          5,
+          4,
+          62
+        ],
+        [
+          1845,
+          550,
+          7,
+          5,
+          62
+        ],
+        [
+          1906,
+          561,
+          8,
+          53,
+          62
+        ]
+      ]
     }
   ],
   "static_preview": {
-    "changed": 20481,
-    "rects": 4074,
-    "remaining": 22,
-    "solid": 713169,
-    "rooted": 711455,
-    "detached": 1714,
+    "changed": 20996,
+    "rects": 4092,
+    "remaining": 4,
+    "solid": 713311,
+    "rooted": 713311,
+    "detached": 0,
     "normal": {
-      "flood": 497647,
+      "flood": 499426,
       "fails": []
     },
     "blocked": {
-      "flood": 496767,
+      "flood": 498546,
       "fails": []
     },
-    "accepted": 83,
-    "rejected": 13,
-    "extra": [
+    "accepted": 92,
+    "added": [
       [
-        891,
-        466,
-        45,
+        1922,
+        523,
+        23,
+        5,
+        0
+      ],
+      [
+        1922,
+        557,
+        23,
+        5,
+        0
+      ],
+      [
+        1010,
+        415,
+        8,
         6,
         62
       ],
       [
-        1174,
-        587,
-        52,
+        890,
+        463,
         8,
-        57
+        6,
+        62
+      ],
+      [
+        1845,
+        528,
+        8,
+        24,
+        62
+      ],
+      [
+        775,
+        818,
+        12,
+        5,
+        62
+      ],
+      [
+        1089,
+        377,
+        10,
+        11,
+        62
+      ],
+      [
+        1096,
+        401,
+        5,
+        4,
+        62
+      ],
+      [
+        1845,
+        550,
+        7,
+        5,
+        62
+      ],
+      [
+        1906,
+        561,
+        8,
+        53,
+        62
       ]
-    ]
+    ],
+    "failed": []
   },
   "discarded_candidate_count": 13
 }
