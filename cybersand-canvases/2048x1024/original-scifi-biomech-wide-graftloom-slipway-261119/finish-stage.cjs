@@ -10,6 +10,6 @@ const parts = [1, 2, 3].map(i => fs.readFileSync(path.join(dir, '.builder-part-'
 const zipped = Buffer.from(parts.join(''), 'base64');
 const source = zlib.gunzipSync(zipped).toString('utf8');
 if (source.length < 5000 || !source.includes('2048') || !source.includes('1024')) throw new Error('Unexpected builder content');
-const dst = path.join(dir, 'build.cjs');
+const dst = path.join(dir, 'build.py');
 fs.writeFileSync(dst, source);
 console.log(JSON.stringify({builder: dst, bytes: Buffer.byteLength(source), sha256: crypto.createHash('sha256').update(source).digest('hex')}));
