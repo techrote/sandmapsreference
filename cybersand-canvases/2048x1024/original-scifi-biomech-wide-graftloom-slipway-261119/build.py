@@ -594,13 +594,14 @@ box(872,483,888,490,120)
 # Right workbay uses a supported cross-console canopy rather than a
 # roof-to-floor barrier in the eastern 31x27 high-bay transit throat.
 line(816,416,1041,416,9,117)
-# Positive physical support, not an orphan trim: a continuous 9-cell
-# process spine runs over the 31x27 middle-altitude flyway at y416
-# and climbs diagonally to the rooted x1321 refinery roof mast.
-# Place the diagonal outside x650..1200 to preserve upper restricted
-# corridor; never close the y480 middle nor y650 underkeel escape.
-line(1041,416,1213,416,9,62)
-line(1213,416,1328,182,11,62)
+# The two central memory-inspection workstations require positive rooting.
+# Preserve both altitude-constrained routes by anchoring through the WEST
+# receiving-shunt roof mast x602-616, outside the x650..1200 flight ban.
+# The process conduit remains below upper route centres (y<=389) and above
+# the middle-altitude centre y480. The roof-tether at x610 is west of the
+# restricted region and can be passed beneath from West Gate (570,470).
+line(610,177,610,416,10,62)
+line(610,416,816,416,9,62)
 box(1032,416,1048,535,62)
 box(962,509,1042,524,62)
 box(976,499,1038,509,113)
