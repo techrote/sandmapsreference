@@ -1,10 +1,10 @@
 {
-  "kind": "CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R12",
+  "kind": "CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R13",
   "status": "OPEN DRAFT/HOLD",
   "source_type": "ORIGINAL-NO-REFERENCE",
   "created_utc": "2026-11-19",
   "owner_lane": "original/racing-wide/thunderclap-switchyard-261118",
-  "previous_branch_head": "7369907d72767d03618f36d9ed994a1e70a66575",
+  "previous_branch_head": "81179a6114729af0145b12a85032a4863b6486e8",
   "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "extent": [
     2048,
@@ -20,26 +20,26 @@
     "max_json_bytes": 1048576,
     "max_replay_visits": 32000000
   },
-  "terrain_rectangles": 13035,
-  "setup_json_bytes": 245989,
-  "cell_visits": 940321,
+  "terrain_rectangles": 12763,
+  "setup_json_bytes": 240875,
+  "cell_visits": 939543,
   "overlapping_edits": 0,
   "replay_mismatches": 0,
-  "grid_sha256": "e7dbea76e6cad32a66c5fd05bdd5782e2b3a9e000dbafaa303103f3db2f4e682",
-  "json_sha256": "f2170e49447ebe1a7699b18459e006c925c186b347135db37c468faf268b78b3",
+  "grid_sha256": "d3ed09a809f68eb33ff4e1ef3ab5029028f9273788a49933d84e8d5127e3f182",
+  "json_sha256": "2e2f79f6acf8bdd302b633f3238769911ef603271e274144ee019df0b9ac493f",
   "material_histogram": {
-    "0": 1156831,
-    "49": 156341,
-    "58": 64035,
-    "62": 102666,
-    "100": 395082,
+    "0": 1157609,
+    "49": 156072,
+    "58": 63554,
+    "62": 102485,
+    "100": 394909,
     "101": 94944,
-    "113": 23327,
-    "117": 58394,
-    "120": 5312,
-    "122": 15068,
-    "123": 6505,
-    "128": 18647
+    "113": 24695,
+    "117": 57067,
+    "120": 5245,
+    "122": 15326,
+    "123": 4825,
+    "128": 20421
   },
   "material_laws": "Every occupied ID (49,58,62,100,101,113,117,120,122,123,128) accepted inert immovable Solid / RuleKernel::None at engine SHA; no powder or reactive/liquid cells",
   "midge": {
@@ -150,17 +150,17 @@
     "19x15": {
       "reached": 15,
       "total": 15,
-      "connected_centres": 802881
+      "connected_centres": 807222
     },
     "23x19": {
       "reached": 15,
       "total": 15,
-      "connected_centres": 738989
+      "connected_centres": 766973
     },
     "31x27": {
       "reached": 15,
       "total": 15,
-      "connected_centres": 668464
+      "connected_centres": 693009
     }
   },
   "physical_iris_obstruction": {
@@ -189,7 +189,7 @@
     "unreachable": [
       "Iris central chamber"
     ],
-    "connected_centres": 611058
+    "connected_centres": 635603
   },
   "lower_corridor_only": {
     "corridor_bounds": [
@@ -459,7 +459,7 @@
       "cardinal_grounding": true
     }
   ],
-  "detached_solid_cells": 3735,
+  "detached_solid_cells": 2957,
   "pngs": [
     {
       "file": "overview.png",
@@ -469,7 +469,7 @@
       ],
       "sample_step": 1,
       "bytes": 1049805,
-      "sha256": "1b78fd8eede55697dd10b0b1e3519d932d3a1733e66c934218ca700e89034ff9",
+      "sha256": "b3f64bf2d1b7762b13b59054d2f548d55e63f6228dd5f854efa674505d5f60aa",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 2097152
@@ -482,7 +482,7 @@
       ],
       "sample_step": 2,
       "bytes": 262801,
-      "sha256": "8e35b581e02f0be932bc01ff54f031d4252b967fbd6ab198ea23ab51825bd14f",
+      "sha256": "58b50947680d5d6ac68e8e20a4cc89886f46013445e83e63b0bbe4199ba1095c",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 524288
@@ -495,7 +495,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "45b862009d682f3505c330cc0da9f93e60d256da29a02f23248c00e40a36850b",
+      "sha256": "3b01299962577db9ddfcf8c5e4ac65d7de05380ff4ca9e41b9f72de8c84cfa0c",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -508,7 +508,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "a84e4a47155793d9903bfdce22b09e593236248618cd1515457ca036ab56b161",
+      "sha256": "a932c0ab01b5daf5fc6aabc0e9a19f47c6643ad9fbdfffb01884ca781ab2923a",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -521,7 +521,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "dea9af985175c123a38bb2dd0f7658bd629fcfefdd7cef6c06568049943cf5a9",
+      "sha256": "677c02f70bd7a3b0181bec41c8c8786921f64c20d59f897c1106738838701bee",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -534,7 +534,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "b87350f03320aef83219335af8550116d9adbf5aa0ba62e42d662435fa605fe0",
+      "sha256": "2367344ff328e064f36a932a943f11a8c30623fa936221667a1a04cba216a900",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -547,7 +547,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "c25a00cdf3d836f7db722749177aab8e99bf7f20df901fbb7d3f43db54e3de26",
+      "sha256": "be236dd77ed8faabd920c262c9fdc01467e0acbc82d29ee5c6ea32f4280a334b",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -573,7 +573,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "0477cbc91cf687c1aff5f2c9e4691db06a2e8c364c633947ff94234304473c75",
+      "sha256": "eeb2e6c966ec6005450d61eabb357a60a2ef3c2f17f2ba055534bfbb7c70f1bc",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -599,7 +599,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "2ce33f540936fa904c1abd9e3fb9d2a674b18f79d9a85bec60286e46ee4556a4",
+      "sha256": "53e85d93688b3ae887b4039e2e233b3a30260df07400381b3fa26d1a08642f05",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -612,7 +612,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "0bced01d6e9d9d35793bd25092779153107779739ba4962a5c598d13bc03dae9",
+      "sha256": "a2c98aee748f3435410d9b1fa00b012bf4ae35d94a4be69a76dd5d121c97ffbc",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -625,7 +625,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "a55c7d9f236e61cf1dc7b88484e7bc31013d5e0dd665a6b842c62f3f1c13f369",
+      "sha256": "160f3d4ea54336fad92e367af89c9718901edfb19d88dd06113294735265eb37",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -638,7 +638,7 @@
       ],
       "sample_step": 1,
       "bytes": 98818,
-      "sha256": "17d6c9cddc843b8be6c5cc919e4b6fa88469d8cad59553f51303f51eae0b5ea4",
+      "sha256": "382e73a6c2ad7c97ea6fa4c2e2b47d5c5fb53a5e4dfd96969ce7094b117d5f51",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
@@ -647,10 +647,10 @@
   "installed_bridge_rectangle_capacity": "NATIVE-UNTESTED",
   "native_workbench_install_input_collision_simulation_save_reopen": "NATIVE-UNTESTED",
   "code_execution": "Node 22 GitHub Actions; independent exact-setup replay and committed PNG verification in verify-independent.cjs",
-  "r11_to_r12_cell_delta": {
+  "r12_to_r13_cell_delta": {
     "added": 0,
-    "removed": 13102,
-    "rematerialized": 8204,
-    "changed_total": 21306
+    "removed": 778,
+    "rematerialized": 11131,
+    "changed_total": 11909
   }
 }
