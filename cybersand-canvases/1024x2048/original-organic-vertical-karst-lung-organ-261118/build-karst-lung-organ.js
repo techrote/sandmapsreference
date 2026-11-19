@@ -598,6 +598,119 @@ function runPipeline() {
     [[937,1657],[948,1632],[956,1657]]
   ])poly(p,122);
 
+  // R7: independently articulated, physically authored microdistricts.
+  // Distinct spatial thresholds and rooms replace the R6 intersecting-wedge
+  // silhouettes; 31+ cell lateral entries, no dynamic machinery implied.
+  // WEST ROOT ORCHARD -- seed reliquary / harvest hall / maintenance vault.
+  // These three unlike units are directly rooted to the existing west geology.
+  poly([[0,472],[42,476],[91,487],[135,479],[160,509],[165,568],[131,589],[62,590],[0,605]],83);
+  poly([[24,512],[55,503],[115,504],[142,520],[141,556],[113,570],[39,568],[25,552]],0);
+  poly([[131,518],[190,519],[190,553],[129,553]],0);
+  poly([[38,564],[130,562],[145,566],[134,577],[42,576]],39);
+  for(const [x,y] of [[57,558],[84,558],[111,557]]){
+    poly([[x-8,y+1],[x-5,y-7],[x,y-10],[x+8,y+1]],97);
+  }
+  prism([[43,511],[75,489],[116,488],[147,514]],5,86,119);
+  // Harvest: longer and more open 56-cell gallery with clear east return mouth.
+  poly([[0,586],[39,582],[103,582],[164,588],[223,592],[248,619],[248,674],
+        [200,697],[106,696],[34,712],[0,714]],83);
+  poly([[42,610],[68,600],[183,603],[215,616],[220,652],[196,667],[53,665],[39,646]],0);
+  poly([[207,614],[273,615],[273,652],[207,652]],0);
+  poly([[42,665],[214,665],[228,674],[202,681],[42,680]],38);
+  for(const [x,a] of [[64,18],[105,18],[153,32]])
+    poly([[x,662],[x+a,660],[x+a+4,665],[x+a+1,672],[x-3,671]],42);
+  prism([[50,611],[91,584],[152,582],[217,606]],6,83,86);
+  // Maintenance: squared mineral inspection room and open intermediate portal.
+  poly([[0,701],[56,701],[105,711],[164,699],[218,711],[256,741],
+        [253,783],[191,798],[92,804],[0,824]],40);
+  poly([[25,718],[71,716],[160,720],[218,730],[216,770],[167,779],[49,777],[25,764]],0);
+  poly([[205,725],[283,724],[283,763],[206,764]],0);
+  poly([[30,777],[222,778],[222,789],[40,790]],38);
+  prism([[35,715],[72,709],[171,713],[218,729]],5,98,122);
+  poly([[70,771],[85,763],[107,767],[113,776]],99);
+  poly([[151,771],[162,758],[177,761],[188,773]],99);
+  // Supported continuous tree buttress connects distinct chambers.
+  prism([[5,828],[44,786],[70,697],[97,588],[127,475]],13,83,86);
+
+  // EAST SPORE ORGAN -- membrane filter, sampling bay, dry service return.
+  // Three nonidentical chambers backed by the right world boundary.
+  poly([[1023,491],[974,500],[914,503],[866,522],[846,552],
+        [861,596],[906,611],[971,611],[1023,623]],97);
+  poly([[862,534],[900,526],[974,525],[991,535],[993,576],
+        [966,591],[878,587],[856,573]],0);
+  poly([[817,543],[871,541],[874,579],[817,579]],0);
+  poly([[867,590],[990,590],[996,599],[887,603]],42);
+  prism([[902,519],[940,509],[974,518]],5,86,71);
+  poly([[1023,615],[971,618],[925,623],[866,641],[843,670],
+        [858,710],[911,720],[970,708],[1023,730]],42);
+  poly([[855,650],[885,635],[952,640],[990,651],[990,686],
+        [954,701],[868,696],[851,681]],0);
+  poly([[800,650],[867,647],[872,687],[804,686]],0);
+  poly([[866,698],[988,701],[996,708],[877,712]],38);
+  poly([[960,671],[970,652],[981,667],[980,686],[971,694]],71);
+  prism([[896,631],[918,615],[960,614]],6,97,71);
+  poly([[1023,730],[955,728],[912,742],[879,753],[846,774],
+        [872,816],[929,823],[1023,836]],39);
+  poly([[862,761],[899,750],[967,746],[996,756],[994,796],
+        [963,806],[884,801],[858,785]],0);
+  poly([[815,761],[875,758],[882,796],[813,794]],0);
+  poly([[860,802],[991,807],[1002,815],[884,819]],38);
+  prism([[921,744],[947,728],[983,731]],5,97,122);
+
+  // WEST FOSSIL AMPHITHEATRE -- unified excised survey bowl and three
+  // physically raked audience terraces; separate from eastern optics.
+  poly([[0,859],[66,856],[119,871],[169,884],[230,907],
+        [245,957],[219,1009],[165,1033],[81,1038],[0,1047]],40);
+  poly([[27,903],[70,889],[152,900],[194,920],[210,951],
+        [197,972],[52,977],[29,957]],0);
+  poly([[191,930],[265,933],[266,970],[196,970]],0);
+  poly([[37,976],[204,974],[225,985],[208,999],[47,997]],98);
+  prism([[89,941],[113,926],[141,931],[170,948]],6,99,122);
+  disk(126,936,7,122);
+  for(const [x,y,w] of [[18,1056,142],[32,1102,169],[63,1146,200]]){
+    poly([[0,y+6],[x,y],[x+w-22,y],[x+w,y+9],
+          [x+w-24,y+19],[x+18,y+19],[0,y+28]],40);
+    poly([[x,y-4],[x+w-28,y-4],[x+w-18,y+2],[x+w-30,y+7],[x+8,y+7]],98);
+  }
+  poly([[91,1011],[141,1005],[165,1018],[167,1031],[144,1039],[101,1033]],99);
+  poly([[109,1018],[143,1016],[150,1026],[116,1029]],0);
+
+  // EAST CALCITE OBSERVATORY -- faceted roof, large enclosed optical
+  // workshop, rooftop skylight, 40-cell lateral entrance and workface.
+  poly([[1023,877],[960,893],[906,896],[845,915],[823,946],
+        [822,1058],[849,1093],[912,1132],[1023,1152]],98);
+  poly([[847,949],[889,937],[965,933],[990,946],[991,1029],
+        [974,1043],[865,1040],[847,1024]],0);
+  poly([[792,982],[862,980],[864,1023],[793,1025]],0);
+  poly([[852,1042],[994,1042],[1004,1052],[988,1063],[853,1061]],40);
+  poly([[891,907],[949,901],[965,912],[957,929],[909,929]],0);
+  prism([[831,946],[867,910],[920,896],[968,917]],7,99,122);
+  prism([[856,1063],[838,1089],[832,1116]],9,40,106);
+  prism([[993,1058],[1009,1091],[1023,1108]],8,40,122);
+  poly([[943,1038],[949,1029],[954,1029],[960,1043]],106);
+  shard(951,1027,7,-23,5,122,71);
+  poly([[976,997],[985,987],[991,998],[990,1015],[980,1016]],71);
+
+  // Lower side return: a dry basalt arterial inspection slot.
+  poly([[0,1328],[43,1333],[107,1350],[176,1357],[220,1375],
+        [239,1429],[213,1462],[150,1475],[69,1483],[0,1502]],100);
+  poly([[32,1377],[83,1369],[160,1379],[194,1395],
+        [194,1434],[160,1454],[54,1454],[31,1438]],0);
+  poly([[180,1386],[296,1386],[297,1435],[182,1435]],0);
+  poly([[40,1455],[184,1455],[205,1464],[187,1475],[40,1475]],49);
+
+  // Dry moonwell: supported mineral catch basin and a broad side service mouth.
+  poly([[1023,1411],[972,1415],[921,1435],[881,1479],
+        [876,1542],[891,1595],[942,1643],[1023,1678]],40);
+  poly([[855,1477],[910,1460],[974,1459],[997,1476],[995,1562],
+        [963,1586],[888,1570],[857,1544]],0);
+  poly([[812,1494],[867,1494],[875,1536],[812,1536]],0);
+  poly([[863,1569],[965,1582],[998,1577],[1003,1593],
+        [961,1604],[891,1590]],38);
+  poly([[912,1603],[965,1610],[988,1620],[974,1631],[925,1623]],106);
+  poly([[884,1557],[907,1547],[931,1559],[929,1569],[898,1571]],99);
+  prism([[901,1471],[916,1445],[951,1436]],6,122,106);
+
   // In situ rim facies: every contour is drawn from the actual underlying Empty/non-Empty boundary.
   const rim=new Uint8Array(N);
   for(let y=4;y<H-4;y++)for(let x=4;x<W-4;x++){
@@ -880,9 +993,14 @@ function runPipeline() {
   receipt.creative_revisions.push("R6 Orchard: separate embedded cultivation pockets, rooted staggered seed stations and direct tree-to-terrace materials.");
   receipt.creative_revisions.push("R6 Spore: layered anisotropic membrane with individually carved pores, three service gills and retained return flight.");
   receipt.creative_revisions.push("R6 Fossil/Calcite/Moonwell: contrasted stepped fossil survey, backed optical portico and three dry mineral collection trays.");
+  receipt.creative_revisions.push("R7 Orchard: separate west-rooted seed, harvest and mineral maintenance rooms with lateral mouths.");
+  receipt.creative_revisions.push("R7 Spore: three unlike membrane/filter, porous sampler, dry return chambers on a supported eastern shell.");
+  receipt.creative_revisions.push("R7 Fossil/Calcite: raked fossil inspection bowl vs enclosed faceted optical hall.");
+  receipt.creative_revisions.push("R7 lower loop: dry basalt arterial inspection portal and dry rooted mineral catch basin.");
   readme += "\n## R4 physical district rebuild (18 November 2026)\n\nThe independent Shepherd and fidelity reviewers requested a substantial second site-scale edit rather than thin detail. R4 replaces the prior root-orchard crossed-stick arrangement with a continuous buttressed tree, three rooted benches, branching irregular canopy and cut geology niches; replaces Spore Organ circles with interconnected irregular membranes, five unequal through-pores, actual approach stages and a route to their service ledges; builds a four-tier stratified fossil amphitheatre opposite a faceted braced observatory; and adds a continuous basalt artery and three dry moonwell service levels. All edits precede full-cell coalescing and independent site/hull/route replay. These are static physical initial-material edits, not live native results.\n";
   readme += "\n## R5 inhabited-district rebuild (18 November 2026)\n\nAfter the independent R4 Fidelity and Shepherd REWORK, the actual physical grid was rebuilt across six previously thin districts, not merely the preview: a wall-rooted orchard retaining trunk with usable harvest terraces and carved root niches; differently scaled enterable cellular spore tissue with inspection decks; a five-tier raked fossil amphitheatre and sheltered fossil altar; a distinct enclosed calcite viewing room with open entry and supported deck; three distinguishable basalt valve junctions; and a dry, nested moonwell basin with two service walks and different mineral catch sockets. The final Midge safety corridors are restored after additions. These are immovable starting material-cell structures, not simulated biological machinery or liquid physics.\n\n**31x27 fully in-bounds exact-centre destination-to-destination static route tests (cardinal steps):**\n\n" + r5PairRoutes.map(r=>"- "+r.from+" -> "+r.to+": **"+r.shortest_cardinal_centre_steps+"** steps").join("\n") + "\n\nThe centre-mask stress test is not a physically added obstruction. Inserting actual solid terrain in x300..708/y965..1148 physically overlaps the fossil destination envelope at 31x27; all-eight-sites survival in that physical obstruction is **not claimed**. No native installation or gameplay test has been run.\n";
   readme += "\n## R6 spatial craft refinement (18 November 2026)\n\nA further **108,867 distinct real material-cell identities** changed relative to R5 (21,670 added, 16,918 excavated and 70,279 rematerialized). The west orchard now has irregular directly carved grow-cells, three usable differentiated stages and rooted harvest trellis. The eastern spore organ has unequal membrane layers, nonrepeating ventilation pockets, three connected collection gills and a separately readable service chain. The western fossil tier gains rooted stepped survey decks and a vertebral crest, while the opposite calcite vault has a backed optical portico and inspectable mineral openings; three unequal dry catch combs refine the moonwell. This is entirely true-grid physical geometry, not screenshot decoration. The central airway, exact Midge sites and actual clearance replays are retained; no dynamic, native or owner acceptance is implied.\n";
+  readme += "\n## R7 differentiated inhabitation (19 November 2026)\n\nThe independently reviewed R6 had too many monumental wedges and insufficient legible rooms. R7 carves three distinct west-rooted Orchard seed/harvest/maintenance spaces, three differentiated east Spore membrane/sampling/return rooms, an identifiable three-tier Fossil survey bowl, a separately backed Calcite optical hall, a real dry arterial return and a dry Moonwell catch basin. Every feature is painted as physical starting material, not a decorative sprite. No dynamic biological or liquid behavior is asserted. The builder must reproduce strict rectangle/byte budgets, all eight exact 19x15/23x19/31x27 reachable locations, boundary grounding, lossless material PNG parity and independent verification before accepting this revision.\n";
   artifacts["setup-karst-lung-organ.json"]=ascii(json);
   artifacts["build-karst-lung-organ.js"]=ascii(generatorSource);
   artifacts["README.md"]=ascii(readme);
