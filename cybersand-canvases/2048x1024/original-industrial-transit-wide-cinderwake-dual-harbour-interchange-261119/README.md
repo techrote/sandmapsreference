@@ -2,9 +2,38 @@
 
 **ORIGINAL / INDUSTRIAL TRANSIT / LANDSCAPE 2048×1024**. A physical, wholly invented CyberSand material-cell settlement, not a source-image conversion, scene enlargement, web illustration, or rework. **Draft/HOLD candidate; owner and independent reviews outstanding. NATIVE-UNTESTED.**
 
-## R3 industrial operations and whole-actor qualification — 19 November 2026
+## R4 physical vessel and freight-transfer reconstruction — 19 November 2026 (CURRENT)
 
-The independent Art Auditor and Shepherd reviewed R2 at 95c18a75c0dd4971e91e53dfde3de1f7feb56f3c and required further industrial-functional rework. R3 physically modifies authored material cells on this same exclusively owned Draft/HOLD original lane. A new independent R3 review remains required; nothing here constitutes owner acceptance or working native freight machinery.
+**Independent R3 Shepherd disposition: REWORK REQUIRED; R4 is the creator's new exact-material-cell response, not an acceptance.** The true 2D 2048×1024 world and its authored 4×3 Midge are unchanged in extent/identity. No source image was used.
+
+- **West vessel is now physically joined** through a broad, founded lower hull profile (not merely two disconnected-looking jaws). An asymmetric aft wheelhouse/glazed station, uneven plating, shear ribs, inclined prow, grounded repair cradles and berth interfaces are actual inert material cells. A carried cyan hull module is fastened to the pre-existing quay-crane rope **above** the 55-cell-wide keel inspection hatch, rather than cutting off Midge's descent.
+- **True freight handoff:** blue gantry's outward grade now leads to a wheeled freight interface adjacent to the western lift jaw; left/right lift cages have differentiated glazed freight cabins, vertical guides, pulley-linked cable/counterweight routing, and a graded outfeed toward the classifier. This is designed physical machinery, not claimed live vehicle motion or simulated cable mechanics.
+- **Actual actor collision repair:** R4 initially cut the West crane bridge and keel destinations with a diagonal crane cable. Removing that closure restored both exact sites. A freight handoff also isolated the West subway at strict **31×27** (19×15 and 23×19 were insufficient). A two-component legal-centre diagnostic localized the blocked centre seam at **x886, y538–571**. Relocating the rail grade and excavating the real x867–910, y520–589 collision obstruction restores all conservative hull sizes. The x453–502 side junction was opened as a separate safe service transfer. No destination was snapped or exempted; these are physical grid edits.
+- **Genuine R4 image self-inspection:** viewed the full physical overview plus all five unscaled native material-cell district crops. The left dock now forms a discernible joined vessel/cradle; the central freight lift has readable paired cage bodies and side guides. The classifier, terminal and diverse lower caverns retain their prior nonrepeating identities. The image assets are PNGs of material IDs, *not* perspective artwork, native gameplay screenshots or traced references.
+
+**R4 exact independent GitHub Actions qualification** (full final plane, Node 22 builder and independent non-importing verifier):
+
+| Property | R4 verified |
+|---|---:|
+| Extent | **2048×1024 = 2,097,152 exact cells** |
+| Fixed seed | **20261119** |
+| Accepted read-only CyberSand main | **de109d0131641d6adc8d25bb9ced7ca3d4991105** |
+| Valid nonoverlapping material rectangles | **11,743 / 32,768** |
+| Setup-v2 bytes | **215,693 / 1,048,576** |
+| Inert Solid occupied/rectangle work | **803,348 / 32,000,000** |
+| Full material-plane SHA-256 | `0cf10ec3565e5cc8e360f5db05229a93f74071a737a312a78193b53c4c2a653c` |
+| Exact-site four-neighbour centre BFS | **18/18 for each 19×15, 23×19, 31×27** |
+| Legal 31×27 centres reachable from spawn | **840,139** |
+| Solid structural cells attached to world boundary | **803,348 / 803,348; 0 detached** |
+| Real high-route solid-obstruction detour | **2,542 → 2,690 steps** at 31×27 |
+| Indexed full PNG + five 1:1 crops | **6/6 CRC, zlib inflate, per-pixel material parity PASS** |
+| Installed CyberDemoBridge / Godot / Rapier / save-reopen | **NATIVE-UNTESTED** |
+
+The independent verifier reconstructs the Setup grid without importing the builder; checks all exact sites, full hull integral erosion and four-neighbour BFS, each indexed PNG scanline against the real material plane, complete histogram/hash, and physical inserted-obstruction detour. R4 remains **OPEN Draft/HOLD** until independent exact-R4 Art/Technical/Shepherd reviews and actual native qualification. Source bridge capacity **32,768** does *not* prove the installed DLL supports this map; legacy installations may cap at **4,096** rectangles. The complete reproducible generated files are `build.cjs`, `setup-cinderwake.json`, `receipt.json`, `verify-independent.cjs` and the six real-cell PNGs in this directory.
+
+## Historical R3 operations — superseded by R4
+
+The independent Art Auditor and Shepherd reviewed R2 at 95c18a75c0dd4971e91e53dfde3de1f7feb56f3c and required further industrial-functional rework. R3 physically modifies authored material cells on this same exclusively owned Draft/HOLD original lane. That R3 version required new independent review; current R4 likewise requires exact-HEAD review. No owner acceptance or working native freight machinery is asserted.
 
 **The authored industrial narrative is now represented in material cells:** west drydock's interrupted hull sides are joined by a substantial *lower* keel below the open Midge inspection aperture, with unequal ribs, cradle rollers, dock locks, and berth access; blue freight gantry carries a wheeled load and trolley spreader into the customs gallery; the paired-jaw inland lift has separated cargo carriages, guides and an offset cable/counterweight travel path without closing its central flight throat. Sorting hump has distinct divergent wagon grades, three different wagon sizes, stop signals and a classifier crane connected to its graded railbed. The eastern sawtooth terminal has staged unloading, receiving/assay workbenches and recovery fittings. Below the main artery five separate excavated industrial rooms now have, respectively, pumping impeller/pipework, manifest shelves/hoist, paired engine drums, switching console and railway-recovery wagons. Materials and shape, not a source photo, create these places.
 
@@ -58,7 +87,7 @@ All foreground construction is **orthographic perpendicular side elevation**. No
 
 - Accepted **read-only** engine: [CyberSand `de109d0131641d6adc8d25bb9ced7ca3d4991105`](https://github.com/techrote/cybersand/commit/de109d0131641d6adc8d25bb9ced7ca3d4991105); Setup-v2 loader blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`; material-catalogue authority blob `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`. The engine repo was not modified.
 - Final area **2048 × 1024 = 2,097,152 material cells**, both dimensions supported multiples of 64 in the 512–2048 range; ordered, nonoverlapping, vertically coalesced rectangular Setup-v2 material edits.
-- Verified at the R3 current supported candidate: **11,448 / 32,768 material rectangles**, **791,152 actual edited non-air cells**, **210,214 / 1,048,576 Setup JSON bytes**. Exact current hashes and counts live in `receipt.json`, which must be regenerated whenever `build.cjs` is changed. The current R3 serialized plane was reconstructed independently from `setup-cinderwake.json` with zero cell mismatches.
+- Historical R3 measurements (superseded by the R4 table above): **11,448 / 32,768 material rectangles**, **791,152 actual edited non-air cells**, **210,214 / 1,048,576 Setup JSON bytes**. Exact current hashes and counts live in `receipt.json`, which must be regenerated whenever `build.cjs` is changed. The historical R3 serialized plane was reconstructed independently from `setup-cinderwake.json` with zero cell mismatches.
 - Material IDs actually occupied: 49 (Slate), 58 (ReinforcedConcrete), 62 (SteelPlate), 63 (PaintedSteel), 64 (CorrugatedSteel), 66 (SteelGrating), 68 (SteelPipe), 79 (NeonAmber), 100 (BasaltColumns), 101 (Obsidian), 120 (GlassBlock), 130 (CarbonFibre); zero is empty. All placed materials are valid **immobile Solid** entries in accepted native definitions, with no powder, initially flowing water, flame, reactive fluid or source-image pixels. Some building solids have potential **pair-reactions** when exposed to relevant external lava/fire/acid; *not* claiming universal chemical inertness.
 - Actual independent 4-neighbour centre BFS reached **18/18 exact sites** with all fully in-bounds 19×15, 23×19, 31×27 hulls, against the complete final material plane, not nearest accessible substitutions. Grounded structural diagnosis: 791,152 / 791,152 occupied cells in one boundary-connected component after physical repairs (the exact quantity should always be taken from fresh verification).
 - Independent binary PNG validation decodes all six **actual indexed 8-bit material-ID images**, checks PNG signature, chunk CRC, zlib inflation, dimensions and every displayed pixel against the independently reconstructed grid. This is not a Godot screenshot or visual-native acceptance.
