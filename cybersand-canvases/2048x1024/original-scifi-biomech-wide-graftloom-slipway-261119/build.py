@@ -360,6 +360,189 @@ for xa,xb,ya,yb,dx,dy,mat in [
                     i=y*W+x
                     if A[i]: A[i]=mat
 
+
+# SHEPHERD R2 — asymmetrical, rooted bio-industrial apparatus rather than
+# repeating sky rings / identical refinery shelves. This is *actual cell art*:
+# all constructions below occur on the unique material-ID plane before
+# rectangle compression, exact centre clearance tests and PNG generation.
+# Every macroscopic object must touch the perimeter-rooted roof, rock, bed,
+# existing supported gantry or a continuously joined structural arm.
+PRE_R2 = A[:]
+
+def lumen(cx, cy, rx, ry, t, shell, glass=120):
+    """Open capsule with continuous perimeter and a keyed optical ferrule."""
+    ellipse(cx, cy, rx, ry, shell)
+    ellipse(cx, cy, rx-t, ry-t, 0)
+    box(cx-rx+1, cy-3, cx-rx+t+5, cy+4, glass)
+    box(cx+rx-t-4, cy-3, cx+rx, cy+4, 113)
+
+# A: receiving ferrule works — asymmetric incoming cargo and inspection bays.
+# Cantilevered service spine is tied to the original western mass and y260
+# rooted deck; it no longer reads as an arbitrary empty cliff opening.
+poly([(20, 190), (84, 190), (153, 234), (183, 267),
+      (172, 286), (100, 243), (20, 240)], 117)
+line(157, 215, 206, 288, 13, 62)
+line(203, 288, 301, 319, 11, 62)
+box(255, 258, 269, 335, 62)
+box(206, 316, 322, 326, 62)
+box(220, 325, 310, 331, 113)
+for x in (232, 278):
+    box(x, 330, x+9, 351, 117)
+line(16, 404, 72, 386, 14, 62)
+line(72, 386, 180, 398, 12, 62)
+line(180, 398, 204, 424, 10, 117)
+lumen(87, 391, 29, 18, 7, 62)
+# Receiving-side instrument panels are fixed to the rooted ledge.
+box(40, 432, 116, 443, 62)
+for x in (50, 68, 91):
+    box(x, 425, x+9, 432, 120)
+# A unique, clear-to-read landing-fork silhouette.
+poly([(18, 616), (90, 610), (166, 599), (222, 560),
+      (243, 561), (193, 627), (99, 649), (18, 649)], 62)
+box(20, 644, 105, 654, 113)
+
+# B: receiving-to-shunt freight anatomy: a lifting shoulder, not repeated V's.
+# The shunt equipment is joined to the roof mast at x465-615.
+line(471, 158, 509, 219, 16, 62)
+lumen(529, 215, 41, 25, 9, 117)
+line(559, 209, 608, 189, 15, 62)
+box(582, 172, 613, 185, 113)
+line(603, 177, 702, 205, 9, 62)
+line(692, 201, 745, 210, 9, 62)
+# Side-specific articulated sorting claw at lower altitude.
+line(472, 225, 497, 284, 8, 117)
+line(497, 284, 551, 321, 9, 62)
+line(497, 284, 465, 318, 8, 62)
+box(540, 315, 558, 324, 113)
+
+# C: the split mnemonic thalamus. Left and right independently rooted
+# asymmetric neural vessels; neither is a floating wheel. Leave the North
+# objective's x910..940/y132..158 hull entirely empty, and keep the upper
+# transit under the lobes genuinely navigable.
+line(750, 178, 795, 216, 21, 62)
+line(795, 216, 817, 270, 18, 117)
+lumen(823, 252, 54, 32, 11, 62)
+line(779, 263, 761, 299, 9, 117)
+line(847, 280, 853, 296, 8, 113)
+line(1095, 181, 1064, 218, 24, 62)
+line(1064, 218, 1032, 267, 20, 117)
+lumen(1019, 258, 68, 35, 10, 62)
+line(1071, 268, 1099, 290, 11, 117)
+# Distinct optical ribs inside each lobe, not texture stamps.
+for x0,y0,x1,y1 in [(793,248,823,226),(813,269,841,242),
+                    (990,270,1004,240),(1020,278,1050,250)]:
+    line(x0,y0,x1,y1,4,120)
+# Left service gantry has a sloped arm and grasping tines; right interface
+# uses a split descending scalpel. All connect back into the rooted lobes.
+line(817, 274, 778, 300, 11, 117)
+line(778, 300, 766, 322, 6, 113)
+line(778, 300, 793, 322, 6, 113)
+line(1037, 284, 1090, 303, 11, 117)
+line(1090, 303, 1104, 326, 7, 113)
+line(1090, 303, 1076, 330, 7, 113)
+# Contrasting left/right side-wall examination consoles anchored to
+# rooted underside without forming a mid-air separator.
+line(752, 172, 727, 268, 9, 117)
+box(705, 268, 765, 279, 62)
+box(712, 279, 748, 284, 120)
+line(1094, 172, 1129, 258, 9, 117)
+box(1103, 258, 1167, 273, 62)
+box(1117, 273, 1152, 279, 120)
+
+# Basal mnemonic vessel is the *different* process return, with solid
+# keel-anchored arcs at x730/1095 and no closure through the South site.
+line(740, 933, 779, 817, 25, 58)
+line(779, 817, 829, 785, 16, 62)
+lumen(818, 809, 42, 30, 10, 62)
+line(1107, 936, 1066, 817, 25, 58)
+line(1066, 817, 1017, 790, 17, 62)
+lumen(1029, 816, 49, 29, 10, 117)
+line(768, 893, 830, 878, 12, 117)
+line(1062, 895, 1000, 882, 12, 117)
+# Recolour only grounded pre-existing geology into an optically readable,
+# asymmetrical return-pump footprint (no unsupported sprinkle).
+for x0,x1,y0,y1,m in [(758,835,925,964,117),(1005,1081,929,966,113),
+                       (846,967,951,969,62)]:
+    for yy in range(y0,y1,8):
+        for xx in range(x0,x1,21):
+            for y in range(yy,min(y0+5,y1)):
+                i=y*W+xx
+                if A[i]: A[i]=m
+
+# D: three genuinely different biorefinery operations.
+# HIGH — roof-supported paired receiver-bells, intentionally NOT three decks.
+line(1419, 260, 1410, 302, 15, 62)
+lumen(1405, 319, 49, 33, 10, 62)
+line(1606, 217, 1583, 292, 19, 62)
+lumen(1563, 318, 46, 37, 11, 117)
+line(1383, 344, 1371, 372, 7, 113)
+line(1587, 345, 1603, 372, 7, 113)
+box(1353, 377, 1430, 389, 62)
+box(1565, 376, 1641, 389, 62)
+# High-bay x1470,y404 retains a >31x27 open envelope.
+# MID — membrane chromatography on two supported towers rather than shelves.
+# The left tower joins rooted roof x1321, right joins x1598.
+box(1325, 182, 1340, 550, 62)
+line(1332, 530, 1368, 550, 12, 117)
+lumen(1384, 557, 37, 46, 10, 62)
+line(1606, 210, 1632, 520, 14, 117)
+line(1632, 520, 1601, 542, 12, 62)
+lumen(1592, 566, 35, 57, 11, 62)
+# A pair of selective shunt filters with exposed external service keys.
+for cx,cy in [(1384,557),(1592,566)]:
+    box(cx-8,cy-7,cx+8,cy+7,120)
+    box(cx-12,cy+47,cx+10,cy+53,113)
+# LOW — coarse dry fractionation drum anchored to the floor/bedrock,
+# separated from high and middle mechanisms by substantial open air.
+box(1360, 849, 1382, 987, 58)
+line(1371, 850, 1417, 811, 17, 62)
+lumen(1431, 814, 49, 31, 9, 117)
+box(1618, 848, 1640, 989, 58)
+line(1628, 849, 1593, 801, 17, 62)
+lumen(1575, 805, 38, 25, 8, 62)
+line(1381, 896, 1422, 873, 9, 113)
+line(1627, 895, 1595, 876, 9, 113)
+# Underfloor extraction grilles are recolours of already-solid bedrock.
+for x0,x1,yy in [(1330,1450,925),(1547,1655,925)]:
+    for xx in range(x0,x1,18):
+        for y in range(yy,yy+5):
+            i=y*W+xx
+            if A[i]: A[i]=113
+# Keep the exact three refinery destinations unobstructed at every margin.
+
+# E: recognizable aft salvage machinery and real return freight transfer.
+# The upper gantry terminates in a keyed, industrial mouth, not sky scenery.
+line(1929, 155, 1885, 223, 19, 62)
+line(1885, 223, 1828, 266, 14, 117)
+lumen(1840, 279, 49, 26, 8, 62)
+line(1811, 293, 1792, 340, 9, 117)
+line(1854, 303, 1875, 341, 9, 117)
+box(1784, 337, 1820, 348, 113)
+box(1855, 339, 1884, 347, 113)
+# Lower palletiser: fixed to existing eastern stern shell and low rooted keel.
+line(2033, 688, 1986, 738, 20, 62)
+line(1986, 738, 1945, 772, 17, 117)
+lumen(1940, 779, 48, 24, 8, 62)
+line(1899, 783, 1846, 841, 12, 117)
+line(1847, 842, 1851, 914, 14, 58)
+# Final rail (1940,848) remains visibly open with full-hull clearance.
+box(1810, 902, 1882, 915, 62)
+box(1874, 921, 2002, 936, 62)
+for xx in (1825, 1859, 1904, 1950):
+    box(xx, 929, xx+9, 956, 117)
+# A single legible return pipe follows the underkeel, with diverse junctions,
+# all welded into existing floor geology rather than hovering in the airway.
+for xa,xb,yy in [(608,728,944),(746,875,955),(965,1112,950),
+                  (1120,1251,945),(1259,1380,954)]:
+    box(xa,yy,xb,yy+10,62)
+    box(xa+12,yy+10,xb-12,yy+14,113)
+for cx,cy,rx in [(688,939,19),(1180,943,26)]:
+    ellipse(cx,cy,rx,15,117)
+    ellipse(cx,cy,rx-8,6,120)
+
+R2_CHANGED_CELLS = sum(x != y for x,y in zip(PRE_R2,A))
+assert R2_CHANGED_CELLS > 14000, ('substantive grid change missing', R2_CHANGED_CELLS)
+
 # A 112-cell-wide deliberate breach in the north mnemonic crown preserves
 # direct access to the fixed Memory Engine North coordinate (925,145).
 # Left and right crown halves retain independent boundary-rooted hangers.
@@ -540,7 +723,7 @@ def run(dest):
     for f, x, y, w, h, step in specs:
         imgs.append(png_rgb(A, x, y, w, h, dest / f, step))
         assert png_verify(dest / f, A, x, y, w, h, step)
-    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
+    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'shepherd_rework_r2': {'changed_cells_before_final_trim': R2_CHANGED_CELLS, 'objective': 'Mnemonic thalamus, differentiated refinery mechanisms, receiving freight chain, aft salvage and underkeel return'}, 'structural_reconstruction': {'replaced_unsupported_legacy_cells': REPLACED_UNSUPPORTED_CELLS, 'small_detached_finish_cells_trimmed': REBUILD_DETAIL_TRIM, 'detached_final_cells': FINAL_DETACHED}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
     (dest / 'qualification.json').write_text(json.dumps(info, indent=2) + '\n')
     (dest / 'seed.txt').write_text(str(SEED) + '\n')
     print(json.dumps({'rectangles': len(rect), 'setup_bytes': len(js), 'occupied': work, 'sites': len(SITES), 'alternate': common, 'gridsha': info['grid_sha256'], 'pngs': len(imgs)}, indent=2))
