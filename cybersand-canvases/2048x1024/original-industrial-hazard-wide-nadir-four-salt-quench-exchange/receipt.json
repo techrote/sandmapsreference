@@ -1,0 +1,397 @@
+{
+  "schema": "original-landscape-static-v1",
+  "name": "Nadir-4 Salt-Quench Exchange",
+  "seed": 19042647,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "actual_cells": 2097152,
+  "plane_sha256": "2dbf1ad96683690b0828bd99cd61df17896a235c8d2d15a2305c15b1e4e5e2d1",
+  "setup_sha256": "dbdfb62d06a2daae0357eb5636d04275479cdbb3e235c319556ae1122d940cbb",
+  "setup_bytes": 35962,
+  "rectangle_count": 1893,
+  "construction_writes": 590388,
+  "histogram": {
+    "0": 1506764,
+    "3": 17239,
+    "8": 7885,
+    "58": 196883,
+    "62": 78315,
+    "63": 15461,
+    "68": 10778,
+    "70": 1504,
+    "76": 1001,
+    "77": 4647,
+    "79": 1813,
+    "100": 231845,
+    "104": 6203,
+    "117": 9665,
+    "120": 2858,
+    "123": 4291
+  },
+  "structural_grounded": {
+    "grounded": 565264,
+    "total": 565264,
+    "detached": 0,
+    "bearings": []
+  },
+  "added_steel_bearings": [
+    [
+      736,
+      135,
+      966,
+      1404
+    ],
+    [
+      734,
+      966,
+      966,
+      106444
+    ],
+    [
+      601,
+      196,
+      966,
+      682
+    ],
+    [
+      599,
+      836,
+      966,
+      3200
+    ],
+    [
+      1136,
+      900,
+      966,
+      86400
+    ],
+    [
+      266,
+      563,
+      579,
+      258
+    ],
+    [
+      264,
+      579,
+      579,
+      80
+    ],
+    [
+      172,
+      625,
+      645,
+      150
+    ],
+    [
+      170,
+      645,
+      645,
+      100
+    ],
+    [
+      218,
+      632,
+      736,
+      150
+    ],
+    [
+      216,
+      736,
+      736,
+      1526
+    ],
+    [
+      1537,
+      687,
+      966,
+      2050
+    ],
+    [
+      239,
+      681,
+      736,
+      297
+    ],
+    [
+      237,
+      736,
+      736,
+      275
+    ],
+    [
+      1535,
+      966,
+      966,
+      3251
+    ],
+    [
+      1401,
+      758,
+      966,
+      370
+    ],
+    [
+      1439,
+      758,
+      966,
+      370
+    ],
+    [
+      1477,
+      758,
+      966,
+      370
+    ],
+    [
+      1399,
+      760,
+      966,
+      10
+    ],
+    [
+      1437,
+      760,
+      966,
+      10
+    ],
+    [
+      1475,
+      760,
+      966,
+      10
+    ],
+    [
+      1401,
+      823,
+      966,
+      365
+    ],
+    [
+      1435,
+      825,
+      966,
+      381
+    ],
+    [
+      1479,
+      821,
+      966,
+      351
+    ],
+    [
+      597,
+      966,
+      966,
+      462
+    ],
+    [
+      1134,
+      966,
+      966,
+      330
+    ],
+    [
+      1397,
+      966,
+      966,
+      462
+    ],
+    [
+      1433,
+      966,
+      966,
+      594
+    ],
+    [
+      1473,
+      966,
+      966,
+      594
+    ]
+  ],
+  "initial_liquid_isolation": {
+    "open_faces": 0,
+    "cross_reaction": 0
+  },
+  "sites": [
+    [
+      "Arrival aerostat",
+      80,
+      420
+    ],
+    [
+      "West weighing hall",
+      215,
+      440
+    ],
+    [
+      "Interchange flight lock",
+      478,
+      415
+    ],
+    [
+      "Vacuum skylane",
+      554,
+      375
+    ],
+    [
+      "Condensate landing",
+      956,
+      427
+    ],
+    [
+      "Phase-gate overlook",
+      1055,
+      392
+    ],
+    [
+      "Thermal diagnostic",
+      1473,
+      423
+    ],
+    [
+      "Cold-water exchange",
+      1556,
+      494
+    ],
+    [
+      "Exhaust service apron",
+      1950,
+      424
+    ],
+    [
+      "Safe eastern extraction",
+      1981,
+      625
+    ],
+    [
+      "West subterranean hatch",
+      502,
+      928
+    ],
+    [
+      "Middle pressure undercroft",
+      1035,
+      929
+    ],
+    [
+      "East sump return",
+      1605,
+      929
+    ]
+  ],
+  "clearance": {
+    "19x15": {
+      "passable_centres": 1212308,
+      "reachable_centres": 1058774,
+      "sites": 13,
+      "missing": []
+    },
+    "23x19": {
+      "passable_centres": 1154429,
+      "reachable_centres": 1023575,
+      "sites": 13,
+      "missing": []
+    },
+    "31x27": {
+      "passable_centres": 1048406,
+      "reachable_centres": 954957,
+      "sites": 13,
+      "missing": []
+    }
+  },
+  "physical_obstructions": [
+    {
+      "rectangle": [
+        930,
+        500,
+        52,
+        64,
+        58
+      ],
+      "missing": [],
+      "reachable_centres": 947577
+    },
+    {
+      "rectangle": [
+        1502,
+        560,
+        52,
+        64,
+        58
+      ],
+      "missing": [],
+      "reachable_centres": 947577
+    }
+  ],
+  "images": [
+    {
+      "name": "overview.png",
+      "x": 0,
+      "y": 0,
+      "width": 2048,
+      "height": 1024,
+      "bytes": 2099184,
+      "sha256": "b8159e317be3859dc1572d37f92d2ac6e0823221fa6804db6cbb95ef137a949a",
+      "material_pixels_checked": 2097152
+    },
+    {
+      "name": "barge.png",
+      "x": 10,
+      "y": 225,
+      "width": 485,
+      "height": 600,
+      "bytes": 292468,
+      "sha256": "e62495a863ed2d43f975f8b7f91a71551536e3adf5ed0df314fa198c264ce8d6",
+      "material_pixels_checked": 291000
+    },
+    {
+      "name": "vacuum.png",
+      "x": 490,
+      "y": 135,
+      "width": 460,
+      "height": 695,
+      "bytes": 321263,
+      "sha256": "059a9ac89ffa24c837c61d5f00105bd87cd1afc487ba0f362bad10cc40c3a788",
+      "material_pixels_checked": 319700
+    },
+    {
+      "name": "thermal.png",
+      "x": 975,
+      "y": 170,
+      "width": 485,
+      "height": 680,
+      "bytes": 331353,
+      "sha256": "5db6973337b47daac98b81447d773d62792df4d3d91769d755c784853b2e9487",
+      "material_pixels_checked": 329800
+    },
+    {
+      "name": "cold.png",
+      "x": 1475,
+      "y": 200,
+      "width": 545,
+      "height": 675,
+      "bytes": 369423,
+      "sha256": "6464632b1267867f3c04cd63eea8304f1976f444889fb66554d394d25554f950",
+      "material_pixels_checked": 367875
+    },
+    {
+      "name": "subgrade.png",
+      "x": 860,
+      "y": 790,
+      "width": 580,
+      "height": 205,
+      "bytes": 119958,
+      "sha256": "856201def8a8245c07573d594130c5dc460111e81313c7f511cae0d2de02ac51",
+      "material_pixels_checked": 118900
+    }
+  ],
+  "decoded_material_pixels_compared": 3524427,
+  "native": "NATIVE-UNTESTED",
+  "installed_bridge_capacity": "UNKNOWN; source 32768 / possible old installed 4096"
+}
