@@ -290,4 +290,75 @@ module.exports=function repairMorrow({M,R,P,L,sites}){
   R(1248,837,12,8,M.I);
   R(1364,850,22,8,M.G);
   L(1372,857,1401,888,7,M.P);
+
+  // R5: Subtractive, original sci-fi engineering and authentic traversable
+  // inhabited workspaces; all pre-existing named sites and rift void survive.
+  R(861,254,53,29,M.A);
+  R(1453,674,43,46,M.A);
+  R(569,667,44,44,M.A);
+  R(1839,345,48,15,M.A);
+  // Short anchored bridges, not artificial valley-spanning collision walls.
+  L(210,708,213,686,11,M.C);
+  L(420,708,428,683,11,M.C);
+  L(702,850,748,862,11,M.C);
+  L(1060,857,1101,873,11,M.C);
+  // Open west xenology doorframes and retain roof-supported lintels.
+  R(220,397,12,45,M.A);
+  R(328,398,12,42,M.A);
+  R(215,392,17,6,M.U);
+  R(325,393,17,5,M.U);
+  // East quarantine and freight upper-level thresholds.
+  R(1682,400,14,43,M.A);
+  L(1678,377,1689,395,10,M.C);
+  R(1680,391,14,6,M.U);
+  R(1843,399,12,43,M.A);
+  R(1840,393,18,6,M.U);
+  // Solid ties into lower geological assay structure and instrumentation.
+  L(1230,791,1222,811,11,M.C);
+  L(1390,791,1399,811,11,M.C);
+  R(1263,807,7,45,M.P);
+  R(1363,824,7,28,M.P);
+  R(1380,846,14,6,M.U);
+  // A broken-ring-connected spectroscopy vane, not a new full ring.
+  L(1192,345,1176,380,9,M.S);
+  L(1176,380,1163,428,7,M.P);
+  R(1155,427,29,10,M.K);
+  R(1161,438,8,22,M.I);
+  R(1168,447,35,7,M.U);
+  L(1197,451,1216,471,7,M.P);
+  R(1191,457,16,9,M.Q);
+  L(1118,605,1128,594,7,M.P);
+  R(1122,589,17,8,M.I);
+  L(963,354,920,328,5,M.P);
+  // Close physical 4-neighbour support gaps on critical functional details.
+  R(1163,433,7,12,M.P);
+  L(964,352,888,342,6,M.P);
+  L(1880,434,1908,452,11,M.C);
+  L(1364,814,1364,826,8,M.P);
+  L(867,817,870,830,9,M.C);
+  L(776,838,773,859,8,M.P);
+  R(885,661,7,16,M.P);
+  // Remove floating mini-pavers and duplicated unreachable cargo trays.
+  for(const x of [600,684,936,1020])R(x,869,32,17,M.A);
+  for(const x of [192,294,421])R(x,795,12,17,M.A);
+  R(1644,798,35,15,M.A);
+  R(1746,798,35,15,M.A);
+  // Four *actual* generous 31x27 Midge circulation envelopes inside
+  // distinct machine-facing west/east rooms, never surrogate waypoint names.
+  R(187,399,63,48,M.A);
+  R(336,398,44,48,M.A);
+  R(1628,399,67,46,M.A);
+  R(1816,398,52,47,M.A);
+  // Freight weigh office: an authentic 57-cell underdeck cargo-lift throat.
+  R(1825,443,57,23,M.A);
+  R(1818,450,7,9,M.U);
+  R(1882,449,8,9,M.U);
+  // Genuinely grounded status equipment and benches kept beside corridors.
+  R(859,651,7,18,M.P);
+  L(855,475,846,450,7,M.P);
+  L(1158,675,1149,651,8,M.P);
+  R(162,442,8,12,M.C);
+  R(325,438,7,16,M.C);
+  L(387,402,387,385,7,M.P);
+  R(380,436,7,16,M.C);
 };

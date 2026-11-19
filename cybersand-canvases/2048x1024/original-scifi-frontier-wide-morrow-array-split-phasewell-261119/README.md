@@ -183,3 +183,16 @@ and ≤40 detached components) in addition to full-grid parity and flight tests.
 
 **Status remains OPEN Draft / HOLD.** No source image, historical canvas,
 sibling creator branch or accepted CyberSand engine code was modified.
+
+
+## R5 — Authentic inhabitable circulation and supported phasewell machinery (19 November 2026)
+
+This is new actual-cell construction on the original Morrow Array, responding to [Shepherd R4 REWORK](https://github.com/techrote/sandmapsreference/pull/20#issuecomment-7001001543); not a reworker, source-led conversion, historical-PR change, external illustration or CyberSand engine modification.
+
+**Art/physics changes:** eliminate several unsupported dummy strips and ore fragments rather than crowding the great rift; give the split phasewell an asymmetric crescent-mounted spectrometer, physical support cable and inspection station; ground freight gantries, west and lower geosurvey landing loads; preserve the interrupted crescents, asymmetric upper trusses, cavern bedrock, distinct cargo/xenology districts, wide central negative space, high/low flight paths and all original 16 named sites.
+
+**Four new exact original operational destinations:** West specimen room **(202,424)**, West rover diagnostics **(341,421)**, East quarantine inspection **(1667,424)**, East freight weigh office **(1835,423)**. Rather than merely painting machines behind walls, widen side-entry circulation and open a **57-cell physical freight-lift throat** from the cargo deck to the freight workroom. The retained room hardware receives real deck/roof ties. The four interior centres are validated at all three Midge clearance sizes (19×15, 23×19, 31×27) by independent four-neighbour flood, along with the unmodified original 16. No nearest-site waiver or snapping.
+
+**R5 reproducible source qualification:** exactly 2048×1024 = 2,097,152 material cells; 898,649 non-air inert structural cells; 11,557 lossless nonoverlapping rectangles; 216,013 Setup-v2 JSON bytes; full material plane SHA-256 \`27b3f9970806af111c3c443a74b96af9f87e7ee5509d808730762522e62a4afb\`; all **20/20 exact sites pass each Midge envelope**, both inserted central/lower obstruction tests preserve the critical long-distance alternatives; genuine six indexed material PNGs must be regenerated and CRC/inflated and compared against every source material cell; zero-difference deterministic replay required. Full connected-solid accounting: **898,037 boundary-grounded**, **612 detached cells / four small components**, down from R4 11,896/35. The intentionally detached remaining small pieces require independent artistic judgment; inert material does not prove structural-load simulation.
+
+**HOLD** pending independent R5 exact-HEAD art, technical and Shepherd review, installed native rectangle capacity (older bridge may be 4096 vs current source 32768), Godot/Rapier/Midge steering/collision, and fresh-process save/reopen. **NATIVE-UNTESTED**, no owner acceptance.

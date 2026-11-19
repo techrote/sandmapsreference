@@ -35,6 +35,12 @@ insist(sha(g)===receipt.material_plane_sha256,"material-plane SHA mismatch");
 const T=W+1,ii=new Int32Array((W+1)*(H+1));
 for(let y=1;y<=H;y++){let acc=0;for(let x=1;x<=W;x++){acc+=seen[(y-1)*W+x-1];ii[y*T+x]=ii[(y-1)*T+x]+acc;}}
 const sites=receipt.exact_sites;
+// Four exact source-to-operational-room Midge waypoints added on R5.
+const operationalInteriors={"West specimen room":[202,424],"West rover diagnostics":[341,421],
+ "East quarantine inspection":[1667,424],"East freight weigh office":[1835,423]};
+insist(Object.keys(sites).length===20,"preserve original 16 plus four enterable interiors");
+for(const [name,xy] of Object.entries(operationalInteriors))insist(sites[name]?.join(",")===xy.join(","),"R5 room shifted "+name);
+
 function passCentre(x,y,w,h){const l=x-(w>>1),t=y-(h>>1),r=l+w,b=t+h;return l>=0&&t>=0&&r<=W&&b<=H&&ii[b*T+r]-ii[b*T+l]-ii[t*T+r]+ii[t*T+l]===0}
 const flight=[];
 for(const [w,h] of [[19,15],[23,19],[31,27]]){
@@ -126,7 +132,7 @@ for(let i=0;i<N;i++){if(!g[i]||touched[i])continue;let head=0,tail=1,boundary=fa
  if(boundary){anchored+=tail;anchoredComponents++}else{detached+=tail;detachedComponents++}
 }
 // R4 support improvement is measurable actual-cell connectivity, independently flooded.
-insist(detached<=15000,"R4 detached-solid regression: "+detached);
-insist(detachedComponents<=40,"R4 detached-component regression: "+detachedComponents);
-const result={status:"INDEPENDENT-STATIC-PASS",native:"NATIVE-UNTESTED",dimension:[W,H],rectangles:setup.edits.length,area,overlaps,json_bytes:source.length,plane_sha256:sha(g),flight,images,structural_diagnostic:{anchored,anchoredComponents,detached,detachedComponents,review:"Independent art/support evaluation required: static solids are immobile but not necessarily physically attached"}};
+insist(detached<=800,"R5 detached-solid regression: "+detached);
+insist(detachedComponents<=6,"R5 detached-component regression: "+detachedComponents);
+const result={status:"INDEPENDENT-STATIC-PASS",native:"NATIVE-UNTESTED",dimension:[W,H],rectangles:setup.edits.length,area,overlaps,json_bytes:source.length,plane_sha256:sha(g),flight,operationalInteriorTargets:operationalInteriors,images,structural_diagnostic:{anchored,anchoredComponents,detached,detachedComponents,review:"Independent art/support evaluation required: static solids are immobile but not necessarily physically attached"}};
 console.log(JSON.stringify(result,null,2));

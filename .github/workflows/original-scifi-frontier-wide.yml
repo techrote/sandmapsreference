@@ -8,7 +8,7 @@ on:
       - '.github/workflows/original-scifi-frontier-wide.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   exact-map:
     runs-on: ubuntu-latest
@@ -16,10 +16,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          persist-credentials: true
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: R5 one-shot source-derived material-cell publication
+        run: |
+          set -euo pipefail
+          D="cybersand-canvases/2048x1024/original-scifi-frontier-wide-morrow-array-split-phasewell-261119"
+          node "$D/build.cjs" --verify | tee /tmp/morrow-r5-author.json
+          node -e 'const r=require("./"+process.argv[1]+"/receipt.json");if(r.material_plane_sha256!=="27b3f9970806af111c3c443a74b96af9f87e7ee5509d808730762522e62a4afb"||r.rectangles!==11557||Object.keys(r.exact_sites).length!==20)process.exit(1)' "$D"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- "$D/setup-morrow-array.json" "$D/receipt.json" "$D/"*.png
+          if ! git diff --cached --quiet; then
+            git commit -m "R5: publish deterministic actual cells and indexed PNG evidence"
+            git push origin HEAD:refs/heads/original/scifi-frontier-wide/morrow-array-split-phasewell-261119
+          fi
       - name: Independent actual-serialized material grid, named flight and PNG pixel audit
         run: |
           set -euo pipefail
