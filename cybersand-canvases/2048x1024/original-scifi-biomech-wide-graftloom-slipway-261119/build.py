@@ -571,7 +571,10 @@ box(45,410,75,419,113)
 # Lifted conduit creates a clear lower bypass at y>650, with its anchoring
 # riser entirely beyond the constrained central x650..1200 flight window.
 box(1034,517,1047,580,62)
-box(1040,567,1349,581,62)
+# Exact lower route rises at x1240 from y651 to y480. A 70-cell
+# deliberate material-free slot preserves a 31x27 flight envelope.
+box(1040,567,1204,581,62)
+box(1276,567,1349,581,62)
 box(1338,569,1351,631,62)
 box(807,413,823,535,62)
 box(817,510,899,524,62)
