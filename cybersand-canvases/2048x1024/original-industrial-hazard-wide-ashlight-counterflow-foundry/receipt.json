@@ -8,46 +8,46 @@
     1024
   ],
   "cells": 2097152,
-  "rectangles": 3482,
-  "setup_utf8_bytes": 67083,
-  "construction_work": 582349,
+  "rectangles": 3947,
+  "setup_utf8_bytes": 75961,
+  "construction_work": 582693,
   "material_histogram": {
-    "0": 1514803,
+    "0": 1514459,
     "3": 18136,
     "8": 2552,
-    "58": 209566,
-    "62": 7871,
-    "63": 485,
+    "58": 209360,
+    "62": 7855,
+    "63": 387,
     "68": 1389,
-    "70": 109,
+    "70": 26,
     "76": 114,
     "77": 479,
     "79": 3,
-    "100": 82607,
-    "101": 42399,
+    "100": 82390,
+    "101": 41261,
     "104": 645,
-    "117": 195428,
-    "120": 5970,
-    "122": 8780,
-    "123": 2553,
+    "117": 192856,
+    "120": 7759,
+    "122": 10347,
+    "123": 3871,
     "131": 3263
   },
   "replay_mismatch": 0,
   "solid_connectivity": {
-    "total": 561661,
-    "anchored": 548918,
-    "detached": 12743
+    "total": 562005,
+    "anchored": 562005,
+    "detached": 0
   },
   "clearance": {
     "19x15": {
-      "legal": 1093959,
-      "reachable": 890183,
+      "legal": 1093862,
+      "reachable": 890096,
       "sites": 13,
       "failed": []
     },
     "23x19": {
-      "legal": 1002229,
-      "reachable": 818170,
+      "legal": 1002215,
+      "reachable": 818156,
       "sites": 13,
       "failed": []
     },
@@ -73,9 +73,56 @@
     "clipped": 18878,
     "inlaid": 2227,
     "protected_centres": 801059,
-    "sites": 13
+    "sites": 13,
+    "structural_revision": {
+      "revision": "R2",
+      "added_cells": 344,
+      "inlaid_cells": 4704,
+      "static_braces": [
+        {
+          "label": "western reactor gantry into cyclone mast",
+          "from": [
+            1344,
+            293
+          ],
+          "to": [
+            1323,
+            293
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "small plasma collar bearing",
+          "from": [
+            1392,
+            393
+          ],
+          "to": [
+            1378,
+            393
+          ],
+          "thickness": 8
+        }
+      ],
+      "process_markings": [
+        "cyclone intake-facing baffle",
+        "cyclone upper separation lip",
+        "low particulate collection rail",
+        "cold siphon upper manifold",
+        "hot reactor lower isolation monitor",
+        "cold reactor recovery manifold",
+        "differentiated siphon analyser",
+        "differentiated siphon analyser",
+        "differentiated siphon analyser",
+        "irregular sediment brace",
+        "irregular sediment brace",
+        "irregular sediment brace",
+        "irregular sediment brace"
+      ],
+      "note": "R2 actual material-cell bearings; no claim of running process simulation"
+    }
   },
-  "unmerged_row_runs": 17165,
+  "unmerged_row_runs": 17572,
   "source_authority": {
     "repo": "techrote/cybersand",
     "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
@@ -83,8 +130,8 @@
     "materials": "native/include/cybersand/material.hpp",
     "midge": "godot/authoring/flyers/midge.json"
   },
-  "material_plane_sha256": "4e8fbfc453986bcd5ba3578f09c92b1e76b0fc042fbcfbbca777b11b5995e317",
-  "setup_sha256": "e9790152bd963ca9f1933039dde50d1995aa361db8c261583322acd40cf2ebd2",
+  "material_plane_sha256": "a67f60f8e8c97da1601e7a0ace75c0861e8cb5ba0f25bc53bb5ffe6cc41100ac",
+  "setup_sha256": "975c7f516925634d11b836ee1bed0518530402e1f6dfefcea670ed00ba78397c",
   "material_laws": {
     "static_ids": [
       58,
@@ -119,8 +166,8 @@
       "y": 0,
       "width": 2048,
       "height": 1024,
-      "bytes": 90720,
-      "sha256": "eda4653c6711d2fa26d78efc46b8bbae1c488aecc8d2f5c100e0879e57110741",
+      "bytes": 91690,
+      "sha256": "5dba04bb254d3a555543ff2719ac02950540a0d363e8249eba46f9f34854f01f",
       "material_pixel_parity": 2097152
     },
     {
@@ -129,8 +176,8 @@
       "y": 160,
       "width": 470,
       "height": 650,
-      "bytes": 15829,
-      "sha256": "ac2cea4a0e40cdfca50ecae2fef006ec88f5db9b78c9db3ceeddcbb12c0eebad",
+      "bytes": 15816,
+      "sha256": "b2bd4db79f0bbf195440939b42bb8a0d5e74fcc391de46ba0f4aa718bf809b02",
       "material_pixel_parity": 305500
     },
     {
@@ -139,8 +186,8 @@
       "y": 250,
       "width": 510,
       "height": 610,
-      "bytes": 16389,
-      "sha256": "6712c0a52e51e93d617716e0e91ac823fbdafa58bd8815c5ea7ef21a241e77a3",
+      "bytes": 16314,
+      "sha256": "d453050def93eac9ec013f0a02a1993f93328d1c2c2896c3fa69316b9c7d30b0",
       "material_pixel_parity": 311100
     },
     {
@@ -149,8 +196,8 @@
       "y": 140,
       "width": 460,
       "height": 670,
-      "bytes": 13871,
-      "sha256": "a4e848bb1a7956f7038bf53e97c21b0bcfa6f19f8c56e0b8d79a14e57d8a810d",
+      "bytes": 14800,
+      "sha256": "16e236bb41d7b90f854e8581321c9b71a586af2c5236fa546a1f4e5a68a083ff",
       "material_pixel_parity": 308200
     },
     {
@@ -159,8 +206,8 @@
       "y": 160,
       "width": 485,
       "height": 675,
-      "bytes": 24285,
-      "sha256": "919cb7bcb902c9880f77193cb0b1767c82d0a7c29f8a5c8a30565a3e51561bde",
+      "bytes": 24323,
+      "sha256": "b0f8684cf4d7f4ba88356b5186697e8a1e1511b8ab049b9bccceb0c237f1549b",
       "material_pixel_parity": 327375
     },
     {
@@ -169,8 +216,8 @@
       "y": 225,
       "width": 340,
       "height": 655,
-      "bytes": 11890,
-      "sha256": "8be8326bb4be5b745b846a4fb4620d4e7d099eaa9fdded6722270352fc7192e9",
+      "bytes": 11898,
+      "sha256": "ab1f5ca038dba5f1e422cab6f23deb8cf58667e56158d8fb5cf3f21483b2b67d",
       "material_pixel_parity": 222700
     }
   ],

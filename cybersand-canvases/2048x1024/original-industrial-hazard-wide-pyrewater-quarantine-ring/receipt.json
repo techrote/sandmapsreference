@@ -8,51 +8,51 @@
     1024
   ],
   "cells": 2097152,
-  "rectangles": 2642,
-  "setup_utf8_bytes": 50948,
-  "construction_work": 560008,
+  "rectangles": 2734,
+  "setup_utf8_bytes": 52705,
+  "construction_work": 562221,
   "material_histogram": {
-    "0": 1537144,
+    "0": 1534931,
     "3": 21821,
     "8": 3572,
-    "58": 180033,
+    "58": 179874,
     "62": 11470,
-    "63": 4381,
-    "68": 4049,
+    "63": 4359,
+    "68": 4044,
     "76": 234,
     "77": 56,
     "79": 112,
     "100": 85824,
     "101": 22597,
     "104": 709,
-    "117": 206343,
-    "120": 5296,
-    "122": 10604,
-    "123": 1976,
+    "117": 206749,
+    "120": 6672,
+    "122": 10528,
+    "123": 2669,
     "131": 931
   },
   "replay_mismatch": 0,
   "solid_connectivity": {
-    "total": 534615,
-    "anchored": 478865,
-    "detached": 55750
+    "total": 536828,
+    "anchored": 535872,
+    "detached": 956
   },
   "clearance": {
     "19x15": {
-      "legal": 1132288,
-      "reachable": 922188,
+      "legal": 1128886,
+      "reachable": 872736,
       "sites": 14,
       "failed": []
     },
     "23x19": {
-      "legal": 1045257,
-      "reachable": 857057,
+      "legal": 1041912,
+      "reachable": 811327,
       "sites": 14,
       "failed": []
     },
     "31x27": {
-      "legal": 883383,
-      "reachable": 733914,
+      "legal": 880723,
+      "reachable": 695080,
       "sites": 14,
       "failed": []
     }
@@ -72,9 +72,124 @@
     "clipped": 12599,
     "inlaid": 3058,
     "protected_centres": 826396,
-    "sites": 14
+    "sites": 14,
+    "structural_revision": {
+      "revision": "R2",
+      "added_cells": 2213,
+      "inlaid_cells": 2317,
+      "static_braces": [
+        {
+          "label": "western reactor shear-buttress",
+          "from": [
+            849,
+            404
+          ],
+          "to": [
+            883,
+            434
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "east distillation wall tie",
+          "from": [
+            1690,
+            333
+          ],
+          "to": [
+            1735,
+            333
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "gyre ring east-side bearing",
+          "from": [
+            1220,
+            430
+          ],
+          "to": [
+            1280,
+            430
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "quench rail to reactor service mast",
+          "from": [
+            805,
+            330
+          ],
+          "to": [
+            850,
+            330
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "quench overdeck bearing",
+          "from": [
+            464,
+            340
+          ],
+          "to": [
+            464,
+            355
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "hood cantilever reaction joint",
+          "from": [
+            1268,
+            354
+          ],
+          "to": [
+            1288,
+            354
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "west hood reaction joint",
+          "from": [
+            850,
+            335
+          ],
+          "to": [
+            855,
+            335
+          ],
+          "thickness": 8
+        },
+        {
+          "label": "condenser-to-evacuation bearing",
+          "from": [
+            1684,
+            401
+          ],
+          "to": [
+            1715,
+            401
+          ],
+          "thickness": 8
+        }
+      ],
+      "process_markings": [
+        "quench transfer manifold",
+        "sealed heat-transport casing",
+        "distillate and return service manifold",
+        "assay feed indicator",
+        "distillation inspection feed",
+        "evacuation bulkhead pressure indication",
+        "quench vessel inspection rim",
+        "quench vessel inspection rim",
+        "quench vessel inspection rim"
+      ],
+      "note": "R2 actual material-cell bearings; no claim of running process simulation"
+    }
   },
-  "unmerged_row_runs": 16556,
+  "unmerged_row_runs": 16873,
   "source_authority": {
     "repo": "techrote/cybersand",
     "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
@@ -82,8 +197,8 @@
     "materials": "native/include/cybersand/material.hpp",
     "midge": "godot/authoring/flyers/midge.json"
   },
-  "material_plane_sha256": "f5ac56180881916ddff45ff71d975989d5b569f12b609e8233be0815846da96a",
-  "setup_sha256": "b8eb20399c90d7742b1af0edac9cd2cde4b170f4cb079fe1b328b980cdd94285",
+  "material_plane_sha256": "477b4b7051b038f0a2161701bb0ba79a6aaba864c8d4948fdcd60a63939503c8",
+  "setup_sha256": "d498b91ee09f726e4192d80c0046a70ba8f72b9ddc142a130fcd4cd03bf3c5cc",
   "material_laws": {
     "static_ids": [
       58,
@@ -118,8 +233,8 @@
       "y": 0,
       "width": 2048,
       "height": 1024,
-      "bytes": 86656,
-      "sha256": "889756575d983906829ad1c8874215105ed8b90335effd028d11160b1dec443e",
+      "bytes": 87602,
+      "sha256": "265ad23de8879ba5874d69f66495565495b80376472fd44b373f5e62295ddf0e",
       "material_pixel_parity": 2097152
     },
     {
@@ -138,8 +253,8 @@
       "y": 290,
       "width": 440,
       "height": 560,
-      "bytes": 14570,
-      "sha256": "49e86d7d8819e3c79fe4b1a92cb6819b69f57acc81679116b4787222cb3ce79b",
+      "bytes": 14691,
+      "sha256": "6d3f3fec2642e5c1c71c94e4e69f2ec86a56fb7f1cef44e11605bf1abab3b01a",
       "material_pixel_parity": 246400
     },
     {
@@ -148,8 +263,8 @@
       "y": 130,
       "width": 555,
       "height": 710,
-      "bytes": 21761,
-      "sha256": "c85efe6b56429e888de7b6d662c68cbbb6f3add549a08d999d8a9635e7ae9a49",
+      "bytes": 21942,
+      "sha256": "dd5b44c9ac0c36e868abd9198387c5252099e99159aabefdada94288da41a5b0",
       "material_pixel_parity": 394050
     },
     {
@@ -158,8 +273,8 @@
       "y": 210,
       "width": 500,
       "height": 650,
-      "bytes": 18344,
-      "sha256": "1889b4293247e87af86d8254d0064bead47e2750f93bc5dd3123195e3a9fa06e",
+      "bytes": 19007,
+      "sha256": "76de390e1076c673db6e872a4404b85c06fe7ebaded03a0ffd2d3194211a9b43",
       "material_pixel_parity": 325000
     },
     {
@@ -168,8 +283,8 @@
       "y": 220,
       "width": 370,
       "height": 650,
-      "bytes": 16864,
-      "sha256": "8007d8b7ab960fe6888d4a410ee783841c8fea795495248a89c62852a9dcc12a",
+      "bytes": 16831,
+      "sha256": "872a39ab16b78c3ce19e39e2b6f198b6e44b5b51344e068b04d02620c304c079",
       "material_pixel_parity": 240500
     }
   ],
