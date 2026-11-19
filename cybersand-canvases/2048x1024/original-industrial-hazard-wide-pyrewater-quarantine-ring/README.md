@@ -24,6 +24,8 @@ A decommissioned high-pressure quarantine plant anchored between asymmetrical fr
 | Quarantine passage | (1780,650) | 19×15, 23×19, 31×27 |
 | East helipad | (1945,337) | 19×15, 23×19, 31×27 |
 | Dry underpass | (1115,965) | 19×15, 23×19, 31×27 |
+| Freight decompression booth | (215,812) | 19×15, 23×19, 31×27 |
+| Quarantine scrubber vestibule | (1850,820) | 19×15, 23×19, 31×27 |
 
 ## Physical material design
 
@@ -56,3 +58,7 @@ R3's separate 50×67 dry service hatch and both alternative route fixtures are r
 Static clearance is not flight dynamics. Installed bridge capacity (4096 fallback, 32768 source workbench maximum), actual CyberDemoBridge import, Rapier/Midge input and collision, bounded live Water/Lava stability, native performance and fresh-process save/reopen are **NATIVE-UNTESTED**. Do not merge, mark Ready or claim owner acceptance without independent current-head Shepherd, art and technical review.
 
 **Qualification:** [independent exact-source Actions workflow](https://github.com/techrote/sandmapsreference/actions/workflows/original-industrial-hazard-wide.yml) · [Draft/HOLD PR #23](https://github.com/techrote/sandmapsreference/pull/23). R4 static 4-neighbour anchoring is complete; realistic native load/dynamic flight and art review remain outstanding.
+
+## R5 — new entered process chambers (pending final exact-head static qualification)
+
+Two dry, properly proportioned, **actual material-cell** safety spaces were reauthored. The freight assay booth has a **76×77-cell east double-leaf airlock**, rooted weighing/air-analysis console plinths, and a real retained-floor pressure head (not decorative overlay). The quarantine scrubber room has a **124×107 west rib-spanning hatch** and a separately traversable **94×90 overhead emergency vent** across the suspended roof beam; two low supported rinse pedestals and retained isolation readouts distinguish its function. End-to-end movement is freight intake → triple quench → ring reactor → distillation → segregated scrubber/evacuation. New exact Midge centres: Freight decompression booth (215,812), Quarantine scrubber vestibule (1850,820). The original 14 centres and reactor emergency hatch stay authoritative. Dry airlocks and statically sealed fluids do **not** imply working pumps, live decontamination, safe dynamic fluid mechanics or native actor acceptance. No original reference image exists.
