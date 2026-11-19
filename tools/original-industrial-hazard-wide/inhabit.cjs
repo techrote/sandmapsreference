@@ -33,6 +33,7 @@ module.exports=function inhabit(g,index,spec,{W,H,MAT}){
       const down=yy+1<H?g[at(xx,yy+1)]:0;
       if(down!==0&&down!==3&&down!==8){g[p]=MAT.iron;cells++;}
     }
+    if(!cells)throw Error('R5 physical fixture did not construct real material cells: '+label);
     fixtures.push({label,box:[x,y,w,h],new_cells:cells});
   }
   if(index===0){
@@ -62,8 +63,8 @@ module.exports=function inhabit(g,index,spec,{W,H,MAT}){
     // full conservative Midge envelope through an engineered side vestibule.
     carve(326,773,81,86,'ashward particulate receiving airlock');
     finishExisting(120,859,200,7,MAT.obsidian,'ashward filter service trench cover');
-    floorMachine(151,829,40,27,'ash intake sieve desk');
-    floorMachine(276,833,29,22,'ash intake pressure diagnostic');
+    floorMachine(151,817,40,44,'ash intake sieve desk');
+    floorMachine(276,816,29,45,'ash intake pressure diagnostic');
     // Unlike Pyrewater's end scrubber, Ashlight's usable isolation bay has
     // a vertical underfloor descent joining the existing deep dry service run.
     carve(1347,812,84,77,'twin hot-hall west isolation gate');
@@ -73,7 +74,7 @@ module.exports=function inhabit(g,index,spec,{W,H,MAT}){
     finishExisting(1382,889,112,7,MAT.obsidian,'hot-side grounded service plinth');
     finishExisting(1573,889,101,7,MAT.quartz,'cold-side grounded service plinth');
     floorMachine(1442,858,28,27,'hot zone visual assay pedestal');
-    floorMachine(1604,855,28,29,'cold zone visual assay pedestal');
+    floorMachine(1604,847,28,46,'cold zone visual assay pedestal');
     // Solid-only marks differentiate actual cold/sorted/hot process bearings.
     finishExisting(472,502,110,6,MAT.glass,'cold siphon transfer trunk');
     finishExisting(644,502,110,6,MAT.quartz,'graded particle separation trunk');
