@@ -27,6 +27,10 @@
     "changed_cells_final": 19242,
     "objective": "Rooted twin-lobe examination gantry with preserved north aperture, improved receiving cradle and lower dry extrusion, west assay console and aft extraction; rejected route-sealing enclosed workrooms"
   },
+  "shepherd_rework_r4": {
+    "changed_cells_final": 12356,
+    "objective": "Grounded mnemonic hood reader-pods, enterable mid-level precision assay/fractionation, anchored aft handling; mid-void dock rejected after route gating. Conservative geometry audits mandatory"
+  },
   "structural_reconstruction": {
     "replaced_unsupported_legacy_cells": 115002,
     "small_detached_finish_cells_trimmed": 0,
@@ -90,23 +94,23 @@
   "replay_mismatches": 0,
   "overlaps": 0,
   "total_cells": 2097152,
-  "painted_cells": 732826,
-  "rectangles": 13250,
-  "setup_bytes": 247582,
+  "painted_cells": 742353,
+  "rectangles": 13548,
+  "setup_bytes": 253359,
   "histogram": {
-    "0": 1364326,
+    "0": 1354799,
     "49": 95908,
     "58": 37318,
-    "62": 174232,
+    "62": 178345,
     "100": 183893,
-    "101": 103337,
-    "113": 43460,
-    "117": 78217,
-    "120": 12650,
+    "101": 102363,
+    "113": 45190,
+    "117": 81956,
+    "120": 13569,
     "128": 3811
   },
-  "grid_sha256": "1667138a09d9d3abcc579b42a7fa67af9701b53c27167dbd57060d1d2ee396f9",
-  "setup_sha256": "da06bb98ac185bcdc77bb031c4a1ca120aa54a8252f1d951d608c3be4e08a03d",
+  "grid_sha256": "57d3b8aadcd26fe773c22d2b40d35d006b0384e037289c1a896b5269f122b0d1",
+  "setup_sha256": "86a8794c30fa0f20694800271450319bd64d1898d73afabe054df846b9cdbb70",
   "clearance": {
     "19x15": {
       "reachability": {
@@ -124,7 +128,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 949087,
+      "connected_legal_centres": 921101,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -158,7 +162,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 908557,
+      "connected_legal_centres": 881060,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -192,7 +196,7 @@
         "aft_drydock": true,
         "final_recovery_rail": true
       },
-      "connected_legal_centres": 829893,
+      "connected_legal_centres": 803299,
       "minimum_local_approaches": 4,
       "local_approaches": {
         "spawn_receiving_dock": 4,
@@ -214,11 +218,11 @@
   "alternate_route_stress": {
     "upper_via_roof": {
       "destination_gate_reached": true,
-      "legal_centres": 588461
+      "legal_centres": 561867
     },
     "lower_via_sump": {
       "destination_gate_reached": true,
-      "legal_centres": 597616
+      "legal_centres": 572316
     }
   },
   "png_integrity_and_pixel_parity": [
@@ -228,8 +232,8 @@
         2048,
         1024
       ],
-      "bytes": 44338,
-      "sha256": "71cadf3e01c08362a28e5d0fd8d1204451103800aea55f62e128d07e09ae3071"
+      "bytes": 45455,
+      "sha256": "a93308a1b6776d755e539bd4dffaf0aefdfc0c30ac584e6450f7a00db898ee08"
     },
     {
       "png": "review-half.png",
@@ -237,8 +241,8 @@
         1024,
         512
       ],
-      "bytes": 18925,
-      "sha256": "2de1c3bbc7c469f9729b42b50ced57e5c1582c0099f9472c1fdfa9f8f1a0bde7"
+      "bytes": 19413,
+      "sha256": "2191a956e5454003e7cdc96bef0c597969dcbd0edf2b90bc037175ab908bf267"
     },
     {
       "png": "01-receiving-slip.png",
@@ -264,8 +268,8 @@
         510,
         545
       ],
-      "bytes": 4188,
-      "sha256": "714e3a16e77837163290499f44b8f2f79f6650fcb63155bda72773481363bc07"
+      "bytes": 4343,
+      "sha256": "0015c418d8f0353966ddebbccf354b4a11d8881c14b2e3847e702e76b4c042a7"
     },
     {
       "png": "04-refinery-filter.png",
@@ -273,8 +277,8 @@
         430,
         605
       ],
-      "bytes": 5982,
-      "sha256": "40501b4f2b4074c41330057e2f8c6de38025991eb106dffaee636bc4e2432bbd"
+      "bytes": 6495,
+      "sha256": "ac60521ac20259628686608d98a1ce7235ab02b8cbb8b9bbe659675672ee8b28"
     },
     {
       "png": "05-aft-dock.png",
@@ -282,8 +286,8 @@
         330,
         750
       ],
-      "bytes": 5125,
-      "sha256": "96aa66edbcb03e682375c327e7d132377a80e3867c961a0d76c270859cf91a67"
+      "bytes": 5410,
+      "sha256": "dd433356864e97b43d3b79bfc9c17d34bb3c272e50faac674f1536fd2c177079"
     },
     {
       "png": "06-lower-return.png",
