@@ -78,11 +78,11 @@ Evidence: [exact Setup-v2 start](setup-graftloom-slipway.json), [fixed-seed buil
 | :--: | :--: | :--: |
 | ![Refinery material cells](04-refinery-filter.png) | ![Aft dock material cells](05-aft-dock.png) | ![Return material cells](06-lower-return.png) |
 
-## Structural load-path repair — original lane
+## Structural qualification hold (19 November 2026)
 
-An independent source replay of the first completed material plane found **33 unsupported assemblies / 116,604 detached cells**, including parts of the upper processing rig and memory-eye structure. They were not eligible for a completed technical handoff. The owned deterministic builder now performs a conservative steel-tendon grounding pass after all portals and Midge sites have been authored. Each initially detached 4-neighbour component receives a short, physically touching tendon to a boundary-grounded structural component; candidate tendons exclude site clearance neighborhoods. The separately implemented independent verifier now **refuses publication** unless all resulting occupied material is boundary-grounded. New tendons are part of the actual final cell plane, not a visual annotation. Their exact endpoints and initial component counts are retained in `qualification.json`.
+**Important:** Static replay and flight-centre tests pass, but **this map does not yet meet the owner's structural-support criterion**. A separate actual-grid flood audit finds **33 detached occupied components comprising 116,604 / 763,178 occupied cells**; the largest alone has **39,183 cells** in the upper processing frame, bounding box `[1204,185,1704,386]`. These are material cells, not a PNG discrepancy. Their physical kernel is immobile, but structural believability has not passed, and the map must not be presented as owner-ready.
 
-This is a static support/clearance proof only. Independent visual review must still assess spar placement and mechanical plausibility, and native collision / performance remains untested.
+Several deterministic cable-welding strategies were implemented and actually exercised in Actions. Their honest result was failure: the most straightforward anchors either blocked exact Midge routes or could not legally cross protected navigable envelopes. The original verified builder is retained pending a geometry-level reconstruction with a genuine substitute flight passage, not a false acceptance waiver. See [STRUCTURAL-HOLD.md](STRUCTURAL-HOLD.md) for source-matched failures and a constrained repair direction. **Do not open or promote a production PR until this has been repaired and independently reverified.**
 
 ## Honest acceptance gates
 

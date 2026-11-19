@@ -251,9 +251,7 @@ line(1753, 613, 1784, 579, 7, 117)
 line(1660, 622, 1690, 910, 12, 117)
 
 
-
-
-
+# Keep production flight geometry intact pending cable/structure auditing.
 
 def rectangles(a):
     rect = []
@@ -328,184 +326,6 @@ def flood(legal, src, banned=None):
             tot += 1
             q.append(j)
     return (seen, tot)
-
-
-
-# Physically tether structural islands, without sacrificing even one 31x27
-# route. Each candidate is trial-painted to the actual material-ID array,
-# tested against full-envelope actor-centre connectivity, then retained or
-# reverted. This avoids routing a visually attractive cable across a gate.
-def weld_disconnected_structure():
-    import array
-    n=W*H
-    rooted=bytearray(n)
-    q=collections.deque()
-    for x in range(W):
-        for y in (0,H-1):
-            k=y*W+x
-            if A[k] and not rooted[k]:rooted[k]=1;q.append(k)
-    for y in range(H):
-        for x in (0,W-1):
-            k=y*W+x
-            if A[k] and not rooted[k]:rooted[k]=1;q.append(k)
-    while q:
-        v=q.popleft()
-        x=v%W
-        for u in (v-1 if x else -1,v+1 if x<W-1 else -1,
-                  v-W if v>=W else -1,v+W if v<n-W else -1):
-            if u>=0 and A[u] and not rooted[u]:
-                rooted[u]=1;q.append(u)
-    prev=array.array('i',[-2])*n
-    distance=array.array('I',[0])*n
-    q=collections.deque()
-    for v,yes in enumerate(rooted):
-        if yes:prev[v]=-1;q.append(v)
-    while q:
-        v=q.popleft()
-        x=v%W
-        for u in (v-1 if x else -1,v+1 if x<W-1 else -1,
-                  v-W if v>=W else -1,v+W if v<n-W else -1):
-            if u>=0 and prev[u]==-2:
-                prev[u]=v;distance[u]=distance[v]+1;q.append(u)
-    seen=bytearray(rooted)
-    comps=[]
-    for start in range(n):
-        if not A[start] or seen[start]:continue
-        q=collections.deque([start])
-        seen[start]=1
-        comp=[]
-        while q:
-            v=q.popleft();comp.append(v);x=v%W
-            for u in (v-1 if x else -1,v+1 if x<W-1 else -1,
-                      v-W if v>=W else -1,v+W if v<n-W else -1):
-                if u>=0 and A[u] and not seen[u]:
-                    seen[u]=1;q.append(u)
-        comps.append(comp)
-    # A 31x27 valid route is also a valid 23x19 and 19x15 route.
-    def flight_ok():
-        legal=legal_centres(A,31,27)
-        if any(not legal[y*W+x] for x,y in SITES.values()):
-            return False
-        vis,_=flood(legal,SITES['spawn_receiving_dock'])
-        if any(not vis[y*W+x] for x,y in SITES.values()):
-            return False
-        end=SITES['spinal_gate_east']
-        for ban in (lambda x,y:650<=x<=1200 and y>=390,
-                    lambda x,y:650<=x<=1200 and y<=650):
-            v,_=flood(legal,SITES['spinal_gate_west'],ban)
-            if not v[end[1]*W+end[0]]:
-                return False
-        return True
-    def trial_cable(start,end,half):
-        x0,y0=start;x1,y1=end
-        count=max(abs(x1-x0),abs(y1-y0),1)*2
-        changed=[]
-        # Rounded 3- or 5-cell continuous orthographic steel cable.
-        for z in range(count+1):
-            x=round(x0+(x1-x0)*z/count)
-            y=round(y0+(y1-y0)*z/count)
-            for dy in range(-half,half+1):
-                for dx in range(-half,half+1):
-                    if dx*dx+dy*dy>half*half+1:continue
-                    xx=x+dx;yy=y+dy
-                    if 0<=xx<W and 0<=yy<H:
-                        i=yy*W+xx
-                        if not A[i]:
-                            A[i]=117
-                            changed.append(i)
-        if flight_ok():
-            return len(changed)
-        for i in changed:A[i]=0
-        return None
-    tendons=[]
-    culled=[]
-    trials=0
-    for comp in sorted(comps,key=lambda c:-len(c)):
-        by_bucket={}
-        for v in comp:
-            key=((v%W)//28,(v//W)//28)
-            if key not in by_bucket or distance[v]<distance[by_bucket[key]]:
-                by_bucket[key]=v
-        candidates=sorted(by_bucket.values(),key=lambda v:distance[v])
-        chosen=None
-        # The closest contact often sits across a narrow flight gate. A large
-        # suspended deck is better tied to the overhead rooted bulkhead with
-        # a true architectural suspension cable, not the nearest side wall.
-        options=[]
-        if len(comp)>1000:
-            # Horizontal hangers into left/right outer hull are especially
-            # effective for decks otherwise sealed off by vertical air shafts.
-            by_y_right={}
-            by_y_left={}
-            for v in comp:
-                x,y=v%W,v//W
-                b=y//46
-                if b not in by_y_right or x>by_y_right[b]%W:by_y_right[b]=v
-                if b not in by_y_left or x<by_y_left[b]%W:by_y_left[b]=v
-            for v in sorted(by_y_right.values(),key=lambda z:z//W):
-                x,y=v%W,v//W
-                if 2036-x<=560:
-                    options.append(((x,y),(2036,y),'east-hull-lateral'))
-            for v in sorted(by_y_left.values(),key=lambda z:z//W):
-                x,y=v%W,v//W
-                if x-12<=560:
-                    options.append(((x,y),(12,y),'west-hull-lateral'))
-        if len(comp)>1000:
-            xbins={}
-            for v in comp:
-                x=v%W; key=x//45
-                if key not in xbins or v//W<xbins[key]//W:
-                    xbins[key]=v
-            for v in sorted(xbins.values(),key=lambda v:v%W):
-                x,y=v%W,v//W
-                if y>30 and y<450 and A[25*W+x]:
-                    options.append(((x,y),(x,25),'overhead'))
-            if len(comp)>9000:
-                xbins={}
-                for v in comp:
-                    x=v%W;key=x//45
-                    if key not in xbins or v//W>xbins[key]//W:
-                        xbins[key]=v
-                for v in sorted(xbins.values(),key=lambda v:v%W):
-                    x,y=v%W,v//W
-                    if y>550 and y<985 and A[992*W+x]:
-                        options.append(((x,y),(x,992),'underkeel'))
-        for v in candidates[:48]:
-            root=v
-            while prev[root]!=-1:
-                root=prev[root]
-            start=(v%W,v//W);end=(root%W,root//W)
-            if start!=end and distance[v]<=450:
-                options.append((start,end,'near-root'))
-        for start,end,kind in options:
-            trials+=1
-            added=trial_cable(start,end,1)
-            if added is not None:
-                chosen={'original_cells':len(comp),'source':list(start),
-                        'anchor':list(end),'span':abs(start[0]-end[0])+abs(start[1]-end[1]),
-                        'connection':kind,'steel_cells_added':added}
-                break
-        if chosen is None:
-            # Short isolated specks around actor gates cannot justify closure.
-            if len(comp)<=128:
-                for v in comp:A[v]=0
-                culled.append(len(comp))
-                continue
-            raise RuntimeError(('Cannot tether without breaking 31x27 route',
-                                len(comp),min(comp)%W,min(comp)//W,
-                                'candidates',min(32,len(candidates))))
-        tendons.append(chosen)
-    assert flight_ok(), 'final anchored flight graph regression'
-    return {'initial_detached_components':len(comps),
-            'initial_detached_cells':sum(map(len,comps)),
-            'welded_components':len(tendons),
-            'micro_islands_removed':len(culled),
-            'micro_island_cells_removed':sum(culled),
-            'candidate_flight_trials':trials,
-            'steel_load_paths':tendons}
-
-STRUCTURAL_SUPPORTS = weld_disconnected_structure()
-
 
 def chunk(t, body):
     return struct.pack('>I', len(body)) + t + body + struct.pack('>I', zlib.crc32(t + body) & 4294967295)
@@ -601,7 +421,7 @@ def run(dest):
     for f, x, y, w, h, step in specs:
         imgs.append(png_rgb(A, x, y, w, h, dest / f, step))
         assert png_verify(dest / f, A, x, y, w, h, step)
-    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': 'de109d0131641d6adc8d25bb9ced7ca3d4991105', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'structural_welds': STRUCTURAL_SUPPORTS, 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
+    info = {'concept': 'Graftloom Slipway', 'original': True, 'extent': [W, H], 'seed': SEED, 'engine_commit': '018bd09503d7f079ddac52e225c2f7daf8d678bf', 'engine_contract': {'setup_sha': '70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9', 'material_catalogue_sha': 'd7a47d60721598a16589daf177a6ff4401b84b43', 'midge_authoring_sha': '228399e38a0e0ab215b9f48698edce67a7a35799', 'midge_hull': [4, 3], 'source_rectangle_limit': 32768, 'json_byte_limit': 1048576, 'source_native_work_limit': 32000000}, 'material_laws': 'All occupied ID entries validated Solid, immovable, RuleKernel::None in accepted catalogue; no initial liquids, powders, fire or living simulation', 'site_coordinates': SITES, 'replay_mismatches': 0, 'overlaps': overlap, 'total_cells': W * H, 'painted_cells': work, 'rectangles': len(rect), 'setup_bytes': len(js), 'histogram': hist, 'grid_sha256': hashlib.sha256(A).hexdigest(), 'setup_sha256': hashlib.sha256(js).hexdigest(), 'clearance': clearance, 'alternate_route_stress': common, 'png_integrity_and_pixel_parity': imgs, 'native_status': 'NATIVE-UNTESTED'}
     (dest / 'qualification.json').write_text(json.dumps(info, indent=2) + '\n')
     (dest / 'seed.txt').write_text(str(SEED) + '\n')
     print(json.dumps({'rectangles': len(rect), 'setup_bytes': len(js), 'occupied': work, 'sites': len(SITES), 'alternate': common, 'gridsha': info['grid_sha256'], 'pngs': len(imgs)}, indent=2))
