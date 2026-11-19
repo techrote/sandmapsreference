@@ -42,7 +42,7 @@ The intended main objective is **quarantine entry → midlevel graft assay → s
 - Grid SHA256: `037916fc36b6d5d6821c3f16978228de5aa6c0ce593b7b9666d2758a20d2164a`; Setup JSON SHA256: `b0a513d80991f4879daee6ec7d858a80f7196952e7d7b0a918fc8d8bad777082`.
 - Accepted used material IDs: 58, 62, 63, 72, 77, 79, 100, 101, 113, 117, 120, 128, 130. All were verified from `native/include/cybersand/material.hpp` as `Solid`, `movable=false`, `RuleKernel::None`. No unknown IDs.
 - Exact grid PNG is **indexed colour** with index value equal to actual material ID. Six **actual 1:1 cell-resolution** district crops and the overview all have verified PNG signature, IHDR, indexed PLTE, IDAT zlib stored blocks, per-chunk CRCs, IEND and full source-index parity. The simple display palette is illustrative; this is **not a native gameplay screenshot**.
-- Regenerate with `node build.js design.json ./out`. Compare full `qualification.json` SHA/hash/grid results against the committed files. The build script fails on routes/unsupported geometry/overlaps in Node mode.
+- Regenerate with `node build.js design.json ./out`. The Node builder regenerates the setup and all seven material-cell PNGs, checks their exact pixel parity, independently tests replay, grounding, named sites, restricted routes and the 18,591 intentionally rejected prefinal unsupported cells. It compares source-grid, setup and all seven PNG hashes against the committed canonical `qualification.json`, then writes `./out/qualification-rebuilt.json` without overwriting that authoritative receipt. The build fails rather than presenting a false static pass if a check differs.
 
 ## Native gate and honest status
 
