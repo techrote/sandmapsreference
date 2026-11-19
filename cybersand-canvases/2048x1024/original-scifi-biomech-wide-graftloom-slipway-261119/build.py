@@ -588,14 +588,9 @@ for xx,yy,ll in [(840,465,16),(852,473,23),(864,481,18)]:
 # Keep Core (921,468) clear in 31x27 rectangle x906..936/y455..481;
 # the break between left and right examination workstations is traversable.
 
-# 3. Refinery HIGH: a low-profile, non-partitioning graft die keyed into
-# the existing verified roof-bell service ledge (x1565..1641,y376..389).
-# Earlier extended vertical carriage severed aft-drydock exact access.
-box(1568,380,1627,390,62)
-poly([(1574,391),(1612,389),(1632,398),
-      (1624,409),(1594,407),(1579,419)],113)
-for xx in (1588,1606,1623):
-    line(xx,389,xx-4,410,5,120)
+# 3. Refinery HIGH: retain R2's verified paired high-bell geometry.
+# An extra R3 press at this restrictive x1570..1640 throat violated the
+# conservative 31x27 route to High Bay and Aft Drydock; rejected entirely.
 
 # Refinery MIDDLE (reopened): R3 separator trial blocked actual site approach.
 # Retain the previously verified y465/y623 rack and full open flights here;
