@@ -8,14 +8,14 @@
     1024
   ],
   "cells": 2097152,
-  "rectangles": 2734,
-  "setup_utf8_bytes": 52705,
-  "construction_work": 562221,
+  "rectangles": 2735,
+  "setup_utf8_bytes": 52724,
+  "construction_work": 560948,
   "material_histogram": {
-    "0": 1534931,
+    "0": 1536204,
     "3": 21821,
     "8": 3572,
-    "58": 179874,
+    "58": 178601,
     "62": 11470,
     "63": 4359,
     "68": 4044,
@@ -33,26 +33,26 @@
   },
   "replay_mismatch": 0,
   "solid_connectivity": {
-    "total": 536828,
-    "anchored": 535872,
-    "detached": 956
+    "total": 535555,
+    "anchored": 534409,
+    "detached": 1146
   },
   "clearance": {
     "19x15": {
-      "legal": 1128886,
-      "reachable": 872736,
+      "legal": 1130847,
+      "reachable": 874697,
       "sites": 14,
       "failed": []
     },
     "23x19": {
-      "legal": 1041912,
-      "reachable": 811327,
+      "legal": 1043921,
+      "reachable": 813336,
       "sites": 14,
       "failed": []
     },
     "31x27": {
-      "legal": 880723,
-      "reachable": 695080,
+      "legal": 882732,
+      "reachable": 697089,
       "sites": 14,
       "failed": []
     }
@@ -74,8 +74,9 @@
     "protected_centres": 826396,
     "sites": 14,
     "structural_revision": {
-      "revision": "R2",
+      "revision": "R3",
       "added_cells": 2213,
+      "removed_cells": 1273,
       "inlaid_cells": 2317,
       "static_braces": [
         {
@@ -176,6 +177,7 @@
         }
       ],
       "process_markings": [
+        "lower reactor emergency service hatch (1273 real solid cells removed)",
         "quench transfer manifold",
         "sealed heat-transport casing",
         "distillate and return service manifold",
@@ -186,10 +188,10 @@
         "quench vessel inspection rim",
         "quench vessel inspection rim"
       ],
-      "note": "R2 actual material-cell bearings; no claim of running process simulation"
+      "note": "R3 retained R2 material bearings plus a genuine dry emergency hatch; dynamic native processes untested"
     }
   },
-  "unmerged_row_runs": 16873,
+  "unmerged_row_runs": 16806,
   "source_authority": {
     "repo": "techrote/cybersand",
     "commit": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
@@ -197,8 +199,8 @@
     "materials": "native/include/cybersand/material.hpp",
     "midge": "godot/authoring/flyers/midge.json"
   },
-  "material_plane_sha256": "477b4b7051b038f0a2161701bb0ba79a6aaba864c8d4948fdcd60a63939503c8",
-  "setup_sha256": "d498b91ee09f726e4192d80c0046a70ba8f72b9ddc142a130fcd4cd03bf3c5cc",
+  "material_plane_sha256": "dd0ddaf2f232faae91c12bd492f7cb0abd68154ae643f0d9a1049a55c64788ab",
+  "setup_sha256": "85e8aa1b0f08f4a6bcd87d0d15c3f657d5b31a6e10d370a576f6be45da47e847",
   "material_laws": {
     "static_ids": [
       58,
@@ -233,8 +235,8 @@
       "y": 0,
       "width": 2048,
       "height": 1024,
-      "bytes": 87602,
-      "sha256": "265ad23de8879ba5874d69f66495565495b80376472fd44b373f5e62295ddf0e",
+      "bytes": 87249,
+      "sha256": "252d6575c04e670fa56a6cc4548bfc64045a514baea2dbcbac0fb3dec609e64e",
       "material_pixel_parity": 2097152
     },
     {
@@ -263,8 +265,8 @@
       "y": 130,
       "width": 555,
       "height": 710,
-      "bytes": 21942,
-      "sha256": "dd5b44c9ac0c36e868abd9198387c5252099e99159aabefdada94288da41a5b0",
+      "bytes": 21589,
+      "sha256": "3343887677bf1285f5ba5ef6eed4c3566ef19c2b478f280ed82627a50dd49003",
       "material_pixel_parity": 394050
     },
     {
