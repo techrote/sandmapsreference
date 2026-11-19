@@ -1,4 +1,4 @@
-# The Graftloom Slipway — Split Mnemonic Crown & Rooted Keel
+# The Graftloom Slipway — R3 Grounded Examination Gantry & Rooted Keel
 
 **Original CyberSand science-fiction bio-industrial landscape · exact 2048 × 1024 real material cells · deterministic seed 19112647**
 
@@ -25,6 +25,20 @@ The **high refinery** now has distinct roof-fed dry receiver bells; the **middle
  The rebuilt north crown retains a deliberate **114 × 92-cell aperture** so the *unchanged* Memory Engine North coordinate remains reachable. The generated results have **717,416 nonair cells, one single boundary-connected solid component, zero detached cells**. An additional **98 small non-anchored finish cells** were trimmed after the replacement pass, not represented as supported.
 
 No initial simulated biology, free water, acid, powders or fire is used. The bio-industrial forms are inert/immobile architected solids; **no live-organism reaction behaviour is claimed**.
+
+## R3 — functional craft with conservative route preservation (19 November 2026)
+
+**Current independently rebuilt material plane:** 2048×1024 = 2,097,152 cells; **732,826 occupied**; **13,250** nonoverlapping rectangles; **247,582** Setup-v2 UTF-8 bytes; one boundary-grounded solid component (**zero detached**) and zero overlapping writes. Compared with the final R2 plane, **19,242 actual cell values changed**. All **13 exact named sites** remain reachable with **four of four local approaches** at each **19×15, 23×19 and 31×27** conservative Midge envelope. Both independently constrained **31×27 upper-roof and lower-sump alternate routes** from West Gate (570,470) to East Gate (1240,480) pass. The original 2048×1024 grid PNG, reviewer thumbnail and **six 1:1 district crops** pass independent PNG signature, CRC, zlib, IEND and exact material-pixel parity (**8/8**).
+
+**Actual new process architecture:** A shaped, dry receiving graft cradle now enters from the western structural cheek. The mnemonic crown carries *paired, asymmetric, fully roof-rooted examination stations* with lamellar memory cassettes, optical contacts and distinct scanning teeth; an exact through-aperture keeps Memory North (925,145) connected. The refinery gains a supported west assay console, a grounded lower dry extrusion auger with asymmetric tooth casing, and actual localized supports. Aft extraction receives a grounded terminal bracket, without cutting Final Recovery Rail (1940,848).
+
+**Explicit rejected experiments:** A much larger suspended inspection platform, an enclosed filtration laboratory, an underkeel sample room and a bridge portal over East Gate were physically constructed and tested in intermediate heads, then **rejected**. They either became thousands of detached cells or sealed strict Midge flight routes. R3 deliberately prioritizes actual level access over visual fill. The central Memory Core (921,468) therefore remains an open inspection void beneath the new supported upper operating hood, not an enterable midair room. Whether that adequately answers the independent artistic REWORK is **for the separate Shepherd/Fidelity reviewers**, not creator self-acceptance.
+
+**Current R3 material-plane SHA-256:** `1667138a09d9d3abcc579b42a7fa67af9701b53c27167dbd57060d1d2ee396f9`  
+**Current R3 Setup-v2 SHA-256:** `da06bb98ac185bcdc77bb031c4a1ca120aa54a8252f1d951d608c3be4e08a03d`  
+**Native Workbench/Godot/Rapier/install/save-reopen:** **NATIVE-UNTESTED**.
+
+The earlier R2 section and its phase-specific numbers remain as **historical provenance**. For acceptance inspect the current R3 section, present qualification and independent-verification receipts, and exact changed HEAD.
 
 ## Six playable districts at ordinary Midge scale
 
@@ -82,10 +96,10 @@ The deterministic source and separately executed independent verifier require ex
 | Contract | Verified current build |
 |---|---:|
 | Final material plane | **2048 × 1024 = 2,097,152 cells** |
-| Nonair material cells | **717,416** |
-| Single connected boundary-rooted component | **717,416 / 717,416; zero floating** |
-| Nonoverlapping ordered material rectangles | **12,715 / 32,768** |
-| Serialized UTF-8 Setup-v2 bytes | **237,522 / 1,048,576** |
+| Nonair material cells | **732,826** |
+| Single connected boundary-rooted component | **732,826 / 732,826; zero floating** |
+| Nonoverlapping ordered material rectangles | **13,250 / 32,768** |
+| Serialized UTF-8 Setup-v2 bytes | **247,582 / 1,048,576** |
 | Actual full-plane replay mismatches / overlaps | **0 / 0** |
 | Exact destinations reachable | **13 / 13 at all three conservative footprints** |
 | Minimum visited local approaches | **4 of 4** |
@@ -93,11 +107,11 @@ The deterministic source and separately executed independent verifier require ex
 | PNG full plane + downsample + 1:1 crops | **8 / 8 CRC/zlib/pixel-parity PASS** |
 | Native Godot/Bridge/Rapier/flight/reopen | **NATIVE-UNTESTED** |
 
-**Material-ID plane SHA-256:** `329d59a7e3ab277d533b3b5b20555085179da1778bbc3dbb0877a65e957e6b97`
+**Current R3 material-ID plane SHA-256:** `1667138a09d9d3abcc579b42a7fa67af9701b53c27167dbd57060d1d2ee396f9`
 
 Read-only engine authority as rechecked on 19 November 2026: [CyberSand accepted main](https://github.com/techrote/cybersand/commit/de109d0131641d6adc8d25bb9ced7ca3d4991105), [Workbench Setup-v2 parser](https://github.com/techrote/cybersand/blob/de109d0131641d6adc8d25bb9ced7ca3d4991105/godot/scripts/workbench_setup.gd), [material physical catalogue](https://github.com/techrote/cybersand/blob/de109d0131641d6adc8d25bb9ced7ca3d4991105/materials/catalogue/catalogue.json), [native material enum / physical-law kernel](https://github.com/techrote/cybersand/blob/de109d0131641d6adc8d25bb9ced7ca3d4991105/native/include/cybersand/material.hpp), [Midge authored control/hull](https://github.com/techrote/cybersand/blob/de109d0131641d6adc8d25bb9ced7ca3d4991105/godot/authoring/flyers/midge.json).
 
-The loader admits **2048 × 1024**, multiples of 64 in permitted 512–2048 limits. Source allows 32,768 rectangles; an old installed native bridge can still expose **only 4,096** and would reject this 12,715-rectangle file. Verify **installed** bridge capability before claiming an accepted Workbench evaluation.
+The loader admits **2048 × 1024**, multiples of 64 in permitted 512–2048 limits. Source allows 32,768 rectangles; an old installed native bridge can still expose **only 4,096** and would reject this 13,250-rectangle R3 file. Verify **installed** bridge capability before claiming an accepted Workbench evaluation.
 
 Actually occupied IDs: **49 Slate, 58 ReinforcedConcrete, 62 SteelPlate, 100 BasaltColumns, 101 Obsidian, 113 ZincSheet, 117 BareIron, 120 GlassBlock, 128 PolymerPanel**. All nine are accepted immobile Solid / RuleKernel None at initial state; 123 is not used in the final plane. No placeholder or pseudo materials, powder support or unbounded reactions.
 
