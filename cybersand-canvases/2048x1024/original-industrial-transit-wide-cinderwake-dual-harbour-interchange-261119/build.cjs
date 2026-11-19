@@ -578,6 +578,11 @@ R(1280,537,26,8,M.G);
 for(const x of [1281,1300])ring(x,565,8,8,3,M.K);
 R(1302,560,10,22,M.C);
 
+
+// R4 full-hull restoration: widened drydock-to-west-return junction, east
+// of the vessel prow. Carved actual cells, never a destination workaround.
+R(453,671,50,140,M.A);
+
 const start=sites["West arrival lock"];
 const rect=[],hist={},replay=new Uint8Array(g.length);let active=new Map(),area=0;
 for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){const m=g[o+x],s=x;while(x<W&&g[o+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,idx=active.get(key);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(key,idx);}active=next;}
