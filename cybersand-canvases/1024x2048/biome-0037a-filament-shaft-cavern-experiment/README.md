@@ -1,18 +1,27 @@
-> **EXPERIMENTAL · NOT A CANDIDATE.** Copy of the PR #12 R2C6 filament cavern with intentional material roles. Occupancy is identical to R2C6 (0 cells differ; Water mask identical), so the physical route and site claims carry over unchanged; the material identity does not match the source-led reference JPEG any more.
+> **EXPERIMENTAL · NOT A CANDIDATE.** Copy of the PR #12 R2C6 filament cavern with intentional, structural material roles (v2). Occupancy is identical to R2C6 (0 cells differ; Water mask identical), so the physical route and site claims carry over unchanged; the material identity does not match the source-led reference JPEG any more.
 
-## Intentional material pass (experiment)
+## Intentional material pass v2 (experiment)
 
-`experiment_materials.js` runs after `finish_r2c6.js` and reassigns solid IDs only, by district and role:
+`experiment_materials.js` runs after `finish_r2c6.js`. Every rule is structural (neighbour counts, skeletons or surface runs), so each marked pattern follows from geometry. Occupancy is unchanged: 0 cells differ from PR #12, and the water mask is identical (35,688 cells).
 
-| Original role | Tissue (upper-left lattice) | Lookout (east basalt) | Pool gantry (over water) | Shaft (everything else) |
+**Districts:** tissue (upper-left lattice, x < 430, y < 960); lookout (east basalt, x ≥ 640, y 1150–1719); pool gantry (x 250–799, y ≥ 1780); shaft (everything else).
+
+| Original | Tissue | Lookout | Pool gantry | Shaft |
 |---|---|---|---|---|
-| Chalk lattice (99) | woven wicker (92): 91,547 cells | chalk (unchanged) | chalk | chalk |
-| Steel plate (62) | steel plate | none present | steel grating (66): 4,091 cells | painted steel (63): 1,639 cells |
-| Quartz nodes (122) | quartz (unchanged) | uranium glass | uranium glass | uranium glass: 742 cells |
+| Chalk lattice (99) | woven wicker (92) | chalk | chalk | chalk |
+| Steel plate (62) | steel plate | none present | steel grating (66) | painted steel (63) |
+| Quartz nodes (122) | quartz | uranium glass (123) | uranium glass | uranium glass |
 
-Slate, basalt, obsidian, limestone and mossy cobblestone stay natural. Water and air are untouched. The reaction guard needed no fixes.
+**Structural rules**
+- **Strand hubs glow.** The wicker is thinned to a one-cell skeleton (Zhang–Suen). Skeleton junctions with three or more neighbours, at least eight cells from the wicker surface, become 2×2 uranium-glass nodes: 712 hubs, 1,691 cells. Thin spurs do not glow.
+- **Tissue rind.** Wicker cells touching air take a limestone skin: 8,051 cells.
+- **Lookout walkways.** Horizontal runs of slate or basalt, at least 12 cells long with open air above, get a zinc top row: 104 cells.
+- **Shaft landings.** Painted-steel runs of at least 4 cells with open air above get a hazard-stripe top row: 81 cells.
+- **Pool coping.** Solid cells in the pool district that touch water become painted steel: 1,108 cells. Bare iron was tried first and is avoided because it reacts with water; the guard turned all of those cells to concrete.
 
-Stats: 98,019 solid cells changed; 12,849 rectangles; setup JSON 237,187 bytes. The source-led checks (`verify_rework_r2.js` and `build_rework_r2.js --check`) pin the R2C6 hashes and will report a mismatch by design; occupancy was checked separately against the PR #12 setup.
+**Checks:** reaction guard 0 fixes, 0 touching pairs remain. 16,736 rectangles (limit 32,768); setup JSON 302,322 bytes (limit 1,048,576).
+
+**Not done:** the lookout has no steel, so its planned railings are not placed; railings would need new air cells, which would change occupancy. The source-led checks (`verify_rework_r2.js`, `build_rework_r2.js --check`) are expected to differ by design.
 
 Liquids, powders and rivets are untested in-game; NATIVE-UNTESTED.
 

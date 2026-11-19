@@ -350,7 +350,7 @@ function finishR2(a,W,H,id,pix,rect,ellipse,capsule) {
   EXPERIMENT_STATS=require('./experiment_materials.js')(a,W,H);
   // Reserved exact historical flight sites are not renumbered or proximity-waived.
   // Real accessible volume is checked independently by the qualification step.
-  const stable=new Set([0,3,38,42,49,58,62,63,66,92,99,100,101,117,122,123,125]);
+  const stable=new Set([0,3,38,42,49,58,62,63,66,76,92,99,100,101,113,117,122,123,125]);
   const counts={};for(let k=0;k<N;k++){const m=a[k];counts[m]=(counts[m]||0)+1;if(!stable.has(m))throw Error("Unsupported/unstable authored material "+m);}
   // Lossless final-state coalescence, not historical stamp inflation.
   const edits=[]; let active=new Map();
