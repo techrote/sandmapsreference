@@ -59,14 +59,14 @@ R6 independent technical review identified four large unsupported additions and 
 
 **NATIVE-UNTESTED:** no installed matching Godot/CyberDemoBridge/Rapier source-matched binary has been used for real Workbench import, Midge steering/collision at speed, tick progression or independent save/reopen. Accepted source bridge advertises 32,768 rectangles; old installed fallback 4,096 would reject this **11063**-rectangle setup. Check installed capacity before native acceptance. Time-trial markers are inert, not timer triggers. Independent current-HEAD Shepherd/Technical/Fidelity review and owner playtest remain required. Keep Draft/HOLD; no Ready, merge or auto-merge.
 
-![Actual full material-cell map](overview.png)
+*(legacy R7 indexed image removed; see render/)*
 
-![Accessible review-scale actual-cell composition](overview-review-2x.png)
+*(legacy R7 indexed image removed; see render/)*
 
 | Launch | Drift | Iris | Glassstorm | Recovery |
 |---|---|---|---|---|
-| ![Launch](01-launch-cradle.png) | ![Drift](02-drift-canyon.png) | ![Iris](03-split-current-iris.png) | ![Glassstorm](04-glassstorm-viaduct.png) | ![Catch](05-catch-recovery.png) |
+| *(legacy R7 indexed image removed; see render/)* | *(legacy R7 indexed image removed; see render/)* | *(legacy R7 indexed image removed; see render/)* | *(legacy R7 indexed image removed; see render/)* | *(legacy R7 indexed image removed; see render/)* |
 
 | Actual lower western S-turn | Actual lower eastern S-turn |
 |---|---|
-| ![West](06-lower-s-turn-west.png) | ![East](07-lower-s-turn-east.png) |
+| *(legacy R7 indexed image removed; see render/)* | *(legacy R7 indexed image removed; see render/)* |
