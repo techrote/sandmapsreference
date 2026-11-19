@@ -11,19 +11,19 @@ const POLICY=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,15229790
 const specs=[
 {slug:'pyrewater-quarantine-ring',seed:27111941,name:'Pyrewater Quarantine Ring',
 spawn:[112,373],sites:[
-['Freight arrival',[112,373]],['High crane gallery',[300,230]],['Intake assay',[455,435]],
-['Quench inspection',[670,395]],['West maintenance',[725,833]],['Upper containment',[965,132]],
-['Reactor gallery',[1000,395]],['Reactor service',[1215,595]],['East chemistry',[1380,370]],
-['Glass distillation',[1595,455]],['North evacuation',[1870,250]],
-['Quarantine passage',[1780,650]],['East helipad',[1945,337]],['Dry underpass',[1115,958]]],
+['Freight arrival',[112,373]],['High crane gallery',[360,247]],['Intake assay',[455,435]],
+['Quench inspection',[670,395]],['West maintenance',[580,841]],['Upper containment',[965,132]],
+['Reactor gallery',[1000,395]],['Reactor service',[1215,595]],['East chemistry',[1410,426]],
+['Glass distillation',[1595,455]],['North evacuation',[1750,245]],
+['Quarantine passage',[1780,650]],['East helipad',[1945,337]],['Dry underpass',[1115,965]]],
 crops:[['freight',30,225,410,570],['quench',395,290,440,560],['reactor',805,130,555,710],['distillation',1310,210,500,650],['evacuation',1670,220,370,650]]},
 {slug:'ashlight-counterflow-foundry',seed:27111987,name:'Ashlight Counterflow Foundry',
 spawn:[108,440],sites:[
 ['Ashward arrival',[108,440]],['Splitter cliff',[340,260]],['Cold siphon',[510,470]],
-['Cyclone lip',[740,330]],['Lower filter service',[645,840]],['Spiral gantry',[1090,250]],
-['Cascade observation',[1145,485]],['Reactor twin west',[1430,325]],['Reactor twin east',[1645,315]],
-['Lower isolation gallery',[1555,760]],['Vent conservatory',[1840,390]],['Long exhaust exit',[1940,580]],
-['Deep retrieval',[1040,954]]],
+['Cyclone lip',[740,330]],['Lower filter service',[645,840]],['Spiral gantry',[1080,326]],
+['Cascade observation',[1145,485]],['Reactor twin west',[1420,466]],['Reactor twin east',[1645,526]],
+['Lower isolation gallery',[1550,660]],['Vent conservatory',[1950,388]],['Long exhaust exit',[1940,580]],
+['Deep retrieval',[1040,965]]],
 crops:[['ashward',20,160,470,650],['siphons',400,250,510,610],['cascade',880,140,460,670],['twins',1305,160,485,675],['vent',1680,225,340,655]]}
 ];
 function makePlane(){return new Uint8Array(W*H);}
@@ -208,11 +208,12 @@ function construct(spec,index){
  for(let x=120;x<1950;x+=214){
    box(x,999,92,3,MAT.obsidian);
  }
- // Grounded bounded access alcoves in geology, with sufficiently deep dry floor.
- for(let x=126;x<1840;x+=428){
-   portal(x,916,108,28);
-   box(x-8,941,124,5,MAT.iron);
- }
+ // Actual continuous load-transfer girder sits above the dry maintenance tunnel.
+ // It unifies galleries and geological bearing; service void below remains open.
+ box(18,916,2012,27,MAT.iron);
+ // Three elevated suspension rods meet the real top boundary, not floating paint.
+ box(1425,19,10,74,MAT.iron);
+ box(1540,19,10,76,MAT.iron);
  return {grid:g,op};
 }
 function rects(g){
