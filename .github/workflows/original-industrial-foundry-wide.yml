@@ -1,0 +1,24 @@
+name: Original Industrial Foundry Wide exact-artifact verification
+on:
+  push:
+    branches:
+      - 'original/industrial-foundry-wide/**'
+  pull_request:
+    paths:
+      - 'tools/original-industrial-foundry-wide/**'
+      - 'cybersand-canvases/2048x1024/original-industrial-foundry-wide-*/**'
+      - '.github/workflows/original-industrial-foundry-wide.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build exact source and verify byte reproducibility
+        run: node tools/original-industrial-foundry-wide/build.cjs --verify
+      - name: Independently verify replay, real PNGs, actor clearance and fluid containment
+        run: node tools/original-industrial-foundry-wide/verify-independent.cjs --verify
+      - name: No artifact mutation
+        run: git diff --exit-code

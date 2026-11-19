@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "verifier": "independent no-import replay/png/crc/hull/fluids",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "9f9222c4b9e07ff10351535ad335aa12f730d3b32456c9ec9014cf63f16468be",
+  "rectangles": 3985,
+  "bytes": 73671,
+  "work": 676662,
+  "fluids": 27755,
+  "exposed_to_air": 0,
+  "checkpoints": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable": 15
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable": 15
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable": 15
+    }
+  ],
+  "pngs": [
+    {
+      "name": "overview.png",
+      "size": [
+        2048,
+        1024
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "8c4a54238fce8bc5f7eed1e9e36fc72f8bfae34eba1526a182c438fe7ff5bc43"
+    },
+    {
+      "name": "01-ore-and-skip.png",
+      "size": [
+        482,
+        457
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "cd3f4524257982a123e0079711ec8dedb002775ab3ca257cdd3e60c8ab795000"
+    },
+    {
+      "name": "02-blast-furnaces.png",
+      "size": [
+        490,
+        505
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "b5a6e9251ce8a7bfea0de9b1e00cf504842e1739ca701e903eb4efdc75967df1"
+    },
+    {
+      "name": "03-ladle-crane.png",
+      "size": [
+        642,
+        440
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "5cc8487d664ec46148ddab070ad538029cf793db7c7c553d2144cb220a6f35e6"
+    },
+    {
+      "name": "04-caster-cells.png",
+      "size": [
+        573,
+        192
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "aa352afe020bbb5711011f009a6399f553c06dea5bbeb38142b15f4272bbdafd"
+    },
+    {
+      "name": "05-quench-and-export.png",
+      "size": [
+        452,
+        408
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "99f903810bc625191333ee4b3e6005e12fc1c8b28b6592cd80c38a515edecb0e"
+    },
+    {
+      "name": "06-subgrade-rail.png",
+      "size": [
+        1400,
+        241
+      ],
+      "crc": true,
+      "pixel_parity": true,
+      "sha256": "dd3b9de00e6151b67a224a028ce1aeb1d14c1d5d446f1b0c39454ef3e9c9db53"
+    }
+  ],
+  "native": "NATIVE-UNTESTED",
+  "result": "INDEPENDENT STATIC PASS; structural detached solids and installed native pending"
+}
