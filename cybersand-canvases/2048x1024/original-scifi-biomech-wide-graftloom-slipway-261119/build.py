@@ -282,6 +282,24 @@ def anchored_only(a, remove):
                 rooted[j]=1
                 q.append(j)
     detached=sum(bool(a[i]) and not rooted[i] for i in range(W*H))
+    if remove and 'R2_CHANGED_CELLS' in globals() and detached:
+        remaining={i for i in range(W*H) if a[i] and not rooted[i]}
+        summary=[]
+        while remaining:
+            start=remaining.pop()
+            todo=[start]
+            xs,ys=[],[]
+            while todo:
+                ii=todo.pop()
+                x,y=ii%W,ii//W
+                xs.append(x);ys.append(y)
+                for jj in (ii-1 if x else -1,ii+1 if x<W-1 else -1,
+                           ii-W if y else -1,ii+W if y<H-1 else -1):
+                    if jj in remaining:
+                        remaining.remove(jj);todo.append(jj)
+            summary.append((len(xs),min(xs),min(ys),max(xs),max(ys)))
+        print('ORPHAN COMPONENTS:',sorted(summary,reverse=True)[:25],flush=True)
+
     if remove:
         for i in range(W*H):
             if a[i] and not rooted[i]: a[i]=0
