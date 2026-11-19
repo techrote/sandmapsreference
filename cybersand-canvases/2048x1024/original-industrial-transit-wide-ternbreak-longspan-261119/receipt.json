@@ -1,0 +1,281 @@
+{
+  "concept": "Ternbreak Longspan â High Freight Cableway over the Dry Salt Gorge",
+  "original": true,
+  "seed": 20261119,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_ids": {
+    "0": "Empty",
+    "58": "Hard wall - Solid/None",
+    "62": "structural solid - Solid/None",
+    "100": "Basalt - Solid/None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West breakwater ingress": [
+      110,
+      457
+    ],
+    "Quay manifest": [
+      339,
+      456
+    ],
+    "Serviced barge workbay": [
+      304,
+      713
+    ],
+    "Quayside crane crown": [
+      483,
+      285
+    ],
+    "High cargo inspection": [
+      607,
+      454
+    ],
+    "West transfer ramp": [
+      720,
+      458
+    ],
+    "Windward bridge cable": [
+      835,
+      275
+    ],
+    "Cable-span centre": [
+      1024,
+      451
+    ],
+    "Suspended tally pod": [
+      961,
+      360
+    ],
+    "Bridge underbeam": [
+      1051,
+      602
+    ],
+    "Balance tower crown": [
+      1311,
+      283
+    ],
+    "Freight balance receiver": [
+      1383,
+      459
+    ],
+    "Balance service staging": [
+      1440,
+      604
+    ],
+    "Sorting control": [
+      1601,
+      455
+    ],
+    "Downline catch siding": [
+      1679,
+      594
+    ],
+    "East dispatch loft": [
+      1898,
+      314
+    ],
+    "Outbound freight gate": [
+      1934,
+      468
+    ],
+    "Western service intake": [
+      345,
+      813
+    ],
+    "Gorge inspection artery": [
+      1023,
+      814
+    ],
+    "Classifier return": [
+      1628,
+      815
+    ],
+    "East recovery": [
+      1889,
+      814
+    ]
+  },
+  "material_histogram": {
+    "58": 126303,
+    "62": 16933,
+    "100": 213801
+  },
+  "stable_occupied_cells": 357037,
+  "grounded": 357037,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 283624,
+  "rectangles": 1146,
+  "rectangle_work": 357037,
+  "setup_bytes": 22141,
+  "material_plane_sha256": "b0ff598705d56230764b4efe59d32bcc341185ba036a5269f4722e04cc49bdde",
+  "setup_sha256": "21c02777a6bddffc5c7191f4cadaf32dbb3660043cfeccc5b5eb9c5b90a0fd49",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 21,
+      "total": 21,
+      "free_centres": 1664303,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 21,
+      "total": 21,
+      "free_centres": 1647551,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 21,
+      "total": 21,
+      "free_centres": 1617834,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      876,
+      402,
+      84,
+      118
+    ],
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 21,
+    "unreachable": [],
+    "distance_before_after": [
+      43,
+      173
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "af36f3cc622b285da480185e72742048991e9dc6ba0a0a1c8e76a9971d532cd6",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-quay",
+      "rect": [
+        82,
+        191,
+        548,
+        625
+      ],
+      "bytes": 86440,
+      "sha256": "ab6a2d514c8018860b50874036003d860cba01ddf71031a224d325bb3036b170",
+      "pixel_parity": 342500
+    },
+    {
+      "name": "02-ternbreak-cableway",
+      "rect": [
+        655,
+        184,
+        619,
+        548
+      ],
+      "bytes": 85678,
+      "sha256": "96f17a1a4428616f1e09419075527916b503fc7dc8ac2507c50322c0a192564f",
+      "pixel_parity": 339212
+    },
+    {
+      "name": "03-balance-tower",
+      "rect": [
+        1214,
+        197,
+        334,
+        571
+      ],
+      "bytes": 48720,
+      "sha256": "ae38263f8dbd45de182125559334baac27662f0edb0af5bbdca76d02435744ed",
+      "pixel_parity": 190714
+    },
+    {
+      "name": "04-gravity-classifier",
+      "rect": [
+        1512,
+        312,
+        326,
+        466
+      ],
+      "bytes": 38863,
+      "sha256": "6cb96d743c804d70c45c32b35124bc4e8bc0402333ccfb55b0ea42d0b027d324",
+      "pixel_parity": 151916
+    },
+    {
+      "name": "05-east-dispatch",
+      "rect": [
+        1792,
+        285,
+        256,
+        520
+      ],
+      "bytes": 33985,
+      "sha256": "6ac092b2523ce58b26ccc8f8533de4b50caf3983b7a262ca8191479692306a93",
+      "pixel_parity": 133120
+    },
+    {
+      "name": "06-service-artery",
+      "rect": [
+        840,
+        733,
+        476,
+        288
+      ],
+      "bytes": 34745,
+      "sha256": "e14375ba5c31d9815432cc9d19df5030bc6aa87121759a46e894b768386b5631",
+      "pixel_parity": 137088
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "installed_fallback_risk": 4096,
+  "proof": "Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"
+}
