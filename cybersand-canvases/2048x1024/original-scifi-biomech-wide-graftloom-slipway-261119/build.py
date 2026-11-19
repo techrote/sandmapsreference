@@ -252,125 +252,7 @@ line(1660, 622, 1690, 910, 12, 117)
 
 
 
-# Load-bearing steel tendons: physically weld originally detached machine assemblies
-# to rooted infrastructure. This deterministic topology pass uses genuine 4-neighbour
-# material adjacency, not inferred proximity or decorative overlays.
-def weld_disconnected_structure():
-    import array
-    size = W * H
-    rooted = bytearray(size)
-    q = collections.deque()
-    for x in range(W):
-        for y in (0, H - 1):
-            i = y * W + x
-            if A[i] and not rooted[i]:
-                rooted[i] = 1
-                q.append(i)
-    for y in range(H):
-        for x in (0, W - 1):
-            i = y * W + x
-            if A[i] and not rooted[i]:
-                rooted[i] = 1
-                q.append(i)
-    while q:
-        v = q.popleft()
-        x = v % W
-        for u in (v - 1 if x else -1,
-                  v + 1 if x + 1 < W else -1,
-                  v - W if v >= W else -1,
-                  v + W if v < size - W else -1):
-            if u >= 0 and A[u] and not rooted[u]:
-                rooted[u] = 1
-                q.append(u)
-    # Nearest-rooted distance field, with a concrete parent back to rooted solid.
-    # Every empty cell has unit cost, so the selected strut is as short as
-    # possible in taxicab distance before shaping its direct steel diagonal.
-    prev = array.array('i', [-2]) * size
-    q = collections.deque()
-    for i, r in enumerate(rooted):
-        if r:
-            prev[i] = -1
-            q.append(i)
-    while q:
-        v = q.popleft()
-        x = v % W
-        for u in (v - 1 if x else -1,
-                  v + 1 if x + 1 < W else -1,
-                  v - W if v >= W else -1,
-                  v + W if v < size - W else -1):
-            if u >= 0 and prev[u] == -2:
-                prev[u] = v
-                q.append(u)
-    # Label each previously detached occupied component, then attach exactly
-    # one art-directed spar to rooted machine structure. Small machine ornaments
-    # become structurally honest; the giant interior assemblies gain load paths.
-    seen = bytearray(rooted)
-    tendons = []
-    culled_micro_islands = []
-    for start in range(size):
-        if not A[start] or seen[start]:
-            continue
-        todo = collections.deque([start])
-        seen[start] = 1
-        comp = []
-        while todo:
-            v = todo.popleft()
-            comp.append(v)
-            x = v % W
-            for u in (v - 1 if x else -1,
-                      v + 1 if x + 1 < W else -1,
-                      v - W if v >= W else -1,
-                      v + W if v < size - W else -1):
-                if u >= 0 and A[u] and not seen[u]:
-                    seen[u] = 1
-                    todo.append(u)
-        # Multi-source BFS discovery order is closest-root first.
-        candidates = sorted(comp, key=lambda i: _root_distance(i, prev))[:64]
-        chosen = None
-        for v in candidates:
-            k = v
-            while prev[k] != -1:
-                k = prev[k]
-            x0,y0=v%W,v//W
-            x1,y1=k%W,k//W
-            steps=max(abs(x1-x0),abs(y1-y0),1)
-            safe=True
-            for j in range(steps+1):
-                x=x0+(x1-x0)*j//steps
-                y=y0+(y1-y0)*j//steps
-                if any(abs(x-sx)<=24 and abs(y-sy)<=22 for sx,sy in SITES.values()):
-                    safe=False
-                    break
-            if safe:
-                chosen=(x0,y0,x1,y1)
-                break
-        if chosen is None:
-            # Small isolated steel splinters in a flight gate are safer removed
-            # than connected by a spar directly across the actor approach.
-            if len(comp) <= 128:
-                for v in comp:
-                    A[v] = 0
-                culled_micro_islands.append(len(comp))
-                continue
-            raise RuntimeError(('No site-safe structural anchor',len(comp),
-                                min(comp)%W,min(comp)//W))
-        tendons.append((len(comp),chosen))
-    for mass,(x0,y0,x1,y1) in tendons:
-        line(x0,y0,x1,y1,6 if mass>1000 else 4,117)
-    return {'initial_detached_components':len(tendons),
-            'initial_detached_cells':sum(n for n,_ in tendons)+sum(culled_micro_islands),
-            'micro_islands_removed':len(culled_micro_islands),
-            'micro_island_cells_removed':sum(culled_micro_islands),
-            'steel_load_paths':[[n,*edge] for n,edge in tendons]}
 
-def _root_distance(start, prev):
-    n=0
-    while prev[start] != -1:
-        start=prev[start]
-        n+=1
-    return n
-
-STRUCTURAL_SUPPORTS = weld_disconnected_structure()
 
 
 def rectangles(a):
@@ -446,6 +328,150 @@ def flood(legal, src, banned=None):
             tot += 1
             q.append(j)
     return (seen, tot)
+
+
+# Protect actual legal Midge flight corridors before adding physically rooted
+# load-bearing steel cables. Each protected path reserves the FULL 31x27 envelope.
+def protected_flight_envelopes():
+    import array
+    size=W*H
+    legal=legal_centres(A,31,27)
+    protected=bytearray(size)
+    def path_tree(start, banned=None):
+        root=start[1]*W+start[0]
+        assert legal[root]
+        parent=array.array('i',[-2])*size
+        parent[root]=-1
+        todo=collections.deque([root])
+        while todo:
+            v=todo.popleft()
+            x=v%W
+            for u in (v-1 if x else -1,
+                      v+1 if x<W-1 else -1,
+                      v-W if v>=W else -1,
+                      v+W if v<size-W else -1):
+                if u>=0 and parent[u]==-2 and legal[u]:
+                    if banned is not None and banned(u%W,u//W):
+                        continue
+                    parent[u]=v
+                    todo.append(u)
+        return parent
+    def reserve(parent,dest):
+        pos=dest[1]*W+dest[0]
+        assert parent[pos]!=-2,('protected route absent',dest)
+        nodes=0
+        while pos!=-1:
+            x,y=pos%W,pos//W
+            # Struts must never occupy a single cell in any of these envelopes.
+            for yy in range(y-13,y+14):
+                o=yy*W+x-15
+                protected[o:o+31]=b'\x01'*31
+            nodes+=1
+            pos=parent[pos]
+        return nodes
+    total=0
+    main=path_tree(SITES['spawn_receiving_dock'])
+    for pos in SITES.values():
+        total+=reserve(main,pos)
+    for ban in (lambda x,y:650<=x<=1200 and y>=390,
+                lambda x,y:650<=x<=1200 and y<=650):
+        tree=path_tree(SITES['spinal_gate_west'],ban)
+        total+=reserve(tree,SITES['spinal_gate_east'])
+    return protected,total
+
+def weld_disconnected_structure():
+    import array
+    size=W*H
+    forbidden,route_nodes=protected_flight_envelopes()
+    rooted=bytearray(size)
+    q=collections.deque()
+    for x in range(W):
+        for y in (0,H-1):
+            v=y*W+x
+            if A[v] and not rooted[v]:rooted[v]=1;q.append(v)
+    for y in range(H):
+        for x in (0,W-1):
+            v=y*W+x
+            if A[v] and not rooted[v]:rooted[v]=1;q.append(v)
+    while q:
+        v=q.popleft()
+        x=v%W
+        for u in (v-1 if x else -1,v+1 if x<W-1 else -1,
+                  v-W if v>=W else -1,v+W if v<size-W else -1):
+            if u>=0 and A[u] and not rooted[u]:
+                rooted[u]=1;q.append(u)
+    # Routing field seeded at grounded solids. The path cannot cut a protected
+    # 31x27 actor envelope; route work is deterministic on this exact cell plane.
+    prev=array.array('i',[-2])*size
+    distance=array.array('I',[0])*size
+    q=collections.deque()
+    for v,is_root in enumerate(rooted):
+        if is_root:
+            prev[v]=-1
+            q.append(v)
+    while q:
+        v=q.popleft()
+        x=v%W
+        for u in (v-1 if x else -1,v+1 if x<W-1 else -1,
+                  v-W if v>=W else -1,v+W if v<size-W else -1):
+            if u>=0 and prev[u]==-2 and not forbidden[u]:
+                prev[u]=v
+                distance[u]=distance[v]+1
+                q.append(u)
+    seen=bytearray(rooted)
+    tendons=[]
+    culled=[]
+    for start in range(size):
+        if not A[start] or seen[start]:
+            continue
+        todo=collections.deque([start])
+        seen[start]=1
+        comp=[]
+        while todo:
+            v=todo.popleft()
+            comp.append(v)
+            x=v%W
+            for u in (v-1 if x else -1,v+1 if x<W-1 else -1,
+                      v-W if v>=W else -1,v+W if v<size-W else -1):
+                if u>=0 and A[u] and not seen[u]:
+                    seen[u]=1;todo.append(u)
+        accessible=(v for v in comp if prev[v]!=-2)
+        best=min(accessible,key=lambda v:distance[v],default=None)
+        if best is None:
+            if len(comp)<=128:
+                for v in comp:A[v]=0
+                culled.append(len(comp))
+                continue
+            raise RuntimeError(('No route-preserving anchor exists',len(comp),
+                                min(comp)%W,min(comp)//W))
+        chain=[]
+        v=best
+        while v!=-1:
+            chain.append(v)
+            v=prev[v]
+        tendons.append((len(comp),chain))
+    # Three-cell steel braids: construction stays OUTSIDE every reserved route.
+    for mass,chain in tendons:
+        for v in chain:
+            if not A[v]:A[v]=117
+            x,y=v%W,v//W
+            for dx,dy in ((-1,0),(1,0),(0,-1),(0,1)):
+                xx,yy=x+dx,y+dy
+                if 0<=xx<W and 0<=yy<H:
+                    u=yy*W+xx
+                    if not forbidden[u] and not A[u]: A[u]=117
+    return {'initial_detached_components':len(tendons)+len(culled),
+            'initial_detached_cells':sum(n for n,_ in tendons)+sum(culled),
+            'welded_components':len(tendons),
+            'micro_islands_removed':len(culled),
+            'micro_island_cells_removed':sum(culled),
+            'reserved_flight_route_nodes':route_nodes,
+            'tendons':[{'original_cells':n,
+                        'start':[chain[0]%W,chain[0]//W],
+                        'root':[chain[-1]%W,chain[-1]//W],
+                        'path_cells':len(chain)} for n,chain in tendons]}
+
+STRUCTURAL_SUPPORTS = weld_disconnected_structure()
 
 def chunk(t, body):
     return struct.pack('>I', len(body)) + t + body + struct.pack('>I', zlib.crc32(t + body) & 4294967295)
