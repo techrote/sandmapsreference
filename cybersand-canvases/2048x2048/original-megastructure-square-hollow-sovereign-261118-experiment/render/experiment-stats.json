@@ -1,16 +1,40 @@
 {
-  "reskinned": 1729131,
-  "rivets": 226,
-  "steelSeams": 1965,
-  "polySeams": 3244,
-  "sealedCores": 41,
-  "sealedCells": 10673,
-  "liquids": {
-    "2": 1701,
-    "3": 5865,
-    "16": 3107
+  "cells": 1729131,
+  "mapped": {
+    "120>121": 5470,
+    "128>119": 1550,
+    "123>80": 1948,
+    "62>64": 79801,
+    "128>127": 11766,
+    "128>129": 6595,
+    "123>76": 1009,
+    "123>79": 1375,
+    "58>111": 41056,
+    "62>66": 52435,
+    "120>71": 5032
   },
-  "unsealedGlass": 23,
-  "pairFixes": 18,
-  "pairsLeft": 0
+  "rivets": 54,
+  "seams": 860,
+  "cores": {
+    "water": 3,
+    "oil": 4,
+    "salt": 3
+  },
+  "coresKept": 36,
+  "cellsFluid": {
+    "water": 2633,
+    "oil": 1353,
+    "salt": 1234
+  },
+  "pairFixes": 0,
+  "pairKeys": {},
+  "pairsLeft": 0,
+  "zones": {
+    "core": 990931,
+    "sacristy": 155298,
+    "bastion": 173452,
+    "nacre": 162099,
+    "market": 71369,
+    "drydock": 175982
+  }
 }

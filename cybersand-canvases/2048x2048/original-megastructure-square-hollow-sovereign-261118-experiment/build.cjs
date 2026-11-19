@@ -479,73 +479,62 @@ function buildMegaCanvas() {
     }
     return boxes;
   }
-  // EXPERIMENT pass v2 (any CyberSand material). Four steps, all reported in EXPERIMENT_STATS:
-  // 1) band re-skin of rock, steel, signal, polymer, quartz and glass-block families (coarse noise keeps rectangles low);
-  // 2) detail layer: rivets on steel skin, grating seams on steel skin, phosphor seams on polymer skin, all noise-gated;
-  // 3) sealed specimen cores: glass-family components with no air contact keep a one-cell glass rim and get Water, Oil or Sand inside;
-  // 4) reaction guard: any touching pair from the accepted native rules is broken by turning a skin cell into ReinforcedConcrete (58).
-  // Steps 1-2 and 4 reassign only solid IDs; step 3 replaces solid cells with liquid or powder inside sealed rims, so the air mask never changes.
+  // EXPERIMENT pass v3 (intentional materials, no noise). Every original material keeps its authored role; only the
+  // district decides which industrial material that role takes. Districts are the five named gallery regions; everything else is "core".
+  // 1) Role mapping: TABLE[role][district] (identity where not listed). Rock (49, 100, 101) and foundations (58) stay natural.
+  // 2) Machine detail on a regular grid, not noise: rivet dots on bastion steel plate every 32 cells, painted seams every 128 cells.
+  // 3) Sealed glass cores (original 120 with no air contact) get a purpose only in drydock (Water), bastion (Oil) and market (Salt); others stay solid glass.
+  // 4) Reaction guard: any touching pair from the accepted native rules has its non-fluid cell turned into ReinforcedConcrete (58).
   {
     const NAMEOF=Object.fromEntries(MATS.map(r=>[r[0],r[1]]));
     const RPAIRS=new Set(RPAIRS_JSON);
-    const vnz=(x,y,s,seed)=>{const xi=Math.floor(x/s),yi=Math.floor(y/s),fx=x/s-xi,fy=y/s-yi,u=fx*fx*(3-2*fx),v=fy*fy*(3-2*fy);
-      const hh=(ix,iy)=>{let h=(Math.imul(ix,0x27d4eb2d)^Math.imul(iy,0x165667b1)^seed)>>>0;h=Math.imul(h^(h>>>15),0x85ebca6b)>>>0;h=Math.imul(h^(h>>>13),0xc2b2ae35)>>>0;return ((h^(h>>>16))>>>0)/4294967296;};
-      const a=hh(xi,yi),b2=hh(xi+1,yi),c=hh(xi,yi+1),dd=hh(xi+1,yi+1),t=a+(b2-a)*u,bt=c+(dd-c)*u;return t+(bt-t)*v;};
-    const bandOf=(y)=>Math.min(4,Math.floor(y/(H/5)));
-    const PALX=[
-      null,
-      [[98,38,39,40,41,99,109],[101,100,111,56,59,112],[98,99,40,111,39,56],[38,39,40,112,56],[100,101,111,59]],   // 1 rock
-      [[62,63,64,65,66,67,68,69,52,53,50],[113,114,118,119,52,53],[65,66,50,64,63,62],[52,53,69,68,119],[62,64,66,113]], // 2 steel
-      [[76,77,78,79,80,123],[123,79,77,76],[78,80,79],[76,80],[123,77]],                                                 // 3 signal
-      [[128,129,127,130,131],[128,127,129],[131,130,128],[129,131],[127,128]],                                           // 4 polymer
-      [[122,121,124],[122,121,71],[121,124,122],[122,71],[124,121]],                                                     // 5 quartz
-      [[120,121,71,72],[72,71,120],[121,120],[120,72],[71,121]],                                                         // 6 glass
-    ];
-    const FAMCODE={49:1,58:1,100:1,101:1,38:1,98:1,62:2,117:2,113:2,123:3,128:4,122:5,120:6};
-    const SEEDX=[0,0x0a11c0de,0x57ee1a01,0x51a9a1e5,0x90ca0bad,0x9ac7e711,0x61a55b10];
-    const SEEDD={rivet:0x71e7a001,seam:0x5ea4a001,pseam:0x9e4ab001};
-    const fam=new Uint8Array(W*H);
-    const skin=fam; // alias: nonzero fam marks a skin cell
-    const ST={reskinned:0,rivets:0,steelSeams:0,polySeams:0,sealedCores:0,sealedCells:0,liquids:{3:0,16:0,2:0},unsealedGlass:0,pairFixes:0,pairsLeft:0};
+    const DISTRICTS=[["sacristy",714,80,618,724],["bastion",1340,314,610,590],["market",668,864,686,516],["drydock",497,1545,742,480],["nacre",100,318,610,580]];
+    const zoneOf=(x,y)=>{for(const [n,x0,y0,w,h] of DISTRICTS)if(x>=x0&&x<x0+w&&y>=y0&&y<y0+h)return n;return "core";};
+    const TABLE={
+      62:{sacristy:62,bastion:62,market:64,nacre:64,drydock:66},
+      58:{drydock:111},
+      120:{core:120,sacristy:121,bastion:120,market:120,nacre:121,drydock:71},
+      122:{},
+      123:{core:123,sacristy:80,bastion:76,market:79,nacre:123,drydock:79},
+      128:{core:128,sacristy:119,bastion:127,market:129,nacre:129,drydock:128},
+    };
+    const ST={cells:0,mapped:{},rivets:0,seams:0,cores:{water:0,oil:0,salt:0},coresKept:0,cellsFluid:{water:0,oil:0,salt:0},pairFixes:0,pairKeys:{},pairsLeft:0,zones:{}};
+    const orig=g.slice();
     for(let y=0;y<H;y++)for(let x=0;x<W;x++){
-      const i=y*W+x,c=FAMCODE[g[i]];if(!c)continue;
-      const pal=PALX[c][bandOf(y)];
-      g[i]=pal[Math.min(pal.length-1,Math.floor(vnz(x,y,240,SEEDX[c])*pal.length))];fam[i]=c;ST.reskinned++;
-    }
-    for(let y=0;y<H;y++)for(let x=0;x<W;x++){
-      const i=y*W+x;
-      if(fam[i]===2){
-        if(x%32===16&&y%32===16&&vnz(x,y,96,SEEDD.rivet)>0.55){g[i]=113;ST.rivets++;}
-        else if(x%96===0&&vnz(x,y,160,SEEDD.seam)>0.6){g[i]=66;ST.steelSeams++;}
-      }else if(fam[i]===4){
-        if((x%16===0||y%16===0)&&vnz(x,y,120,SEEDD.pseam)>0.5){g[i]=127;ST.polySeams++;}
+      const i=y*W+x;if(!orig[i])continue;
+      const z=zoneOf(x,y);ST.zones[z]=(ST.zones[z]||0)+1;ST.cells++;
+      const id=(TABLE[orig[i]]&&TABLE[orig[i]][z]!==undefined)?TABLE[orig[i]][z]:orig[i];
+      if(id!==orig[i]){const k=orig[i]+">"+id;ST.mapped[k]=(ST.mapped[k]||0)+1;}
+      g[i]=id;
+      if(z==="bastion"&&id===62){
+        if(x%32===16&&y%32===16){g[i]=117;ST.rivets++;}
+        else if(x%128===0||y%128===0){g[i]=63;ST.seams++;}
       }
     }
     const NB=(i)=>{const x=i%W,y=(i-x)/W,o=[];if(x>0)o.push(i-1);if(x<W-1)o.push(i+1);if(y>0)o.push(i-W);if(y<H-1)o.push(i+W);return o;};
-    // Step 3: sealed glass-family components (fam 6) get liquid or powder in their interior.
-    const comp=new Int32Array(W*H).fill(-1);let nComp=0;const FLUIDS=[3,16,2];
+    const FLUID=new Uint8Array(W*H);
+    // Sealed glass cores: original glass-block components with no air contact.
+    const comp=new Int32Array(W*H).fill(-1);let nComp=0;
+    const FLUIDFOR={drydock:[3,"water"],bastion:[16,"oil"],market:[23,"salt"]};
     for(let s=0;s<W*H;s++){
-      if(fam[s]!==6||comp[s]>=0)continue;
+      if(orig[s]!==120||comp[s]>=0)continue;
       const id=nComp++,cells=[s];comp[s]=id;
-      for(let r=0;r<cells.length;r++)for(const n of NB(cells[r]))if(fam[n]===6&&comp[n]<0){comp[n]=id;cells.push(n);}
+      for(let r=0;r<cells.length;r++)for(const n of NB(cells[r]))if(orig[n]===120&&comp[n]<0){comp[n]=id;cells.push(n);}
       let sealed=true;
-      for(const c of cells){
-        const x=c%W,y=(c-x)/W;
-        if(x===0||y===0||x===W-1||y===H-1){sealed=false;break;}
-        for(const n of NB(c))if(g[n]===0){sealed=false;break;}
-        if(!sealed)break;
-      }
-      if(!sealed){ST.unsealedGlass++;continue;}
+      for(const c of cells){const x=c%W,y=(c-x)/W;if(x===0||y===0||x===W-1||y===H-1){sealed=false;break;}for(const n of NB(c))if(g[n]===0){sealed=false;break;}if(!sealed)break;}
+      if(!sealed){continue;}
+      let sx=0,sy=0;for(const c of cells){sx+=c%W;sy+=(c-c%W)/W;}
+      const z=zoneOf(Math.round(sx/cells.length),Math.round(sy/cells.length));
       const inner=cells.filter(c=>{const x=c%W,y=(c-x)/W;return x>0&&y>0&&x<W-1&&y<H-1&&NB(c).every(n=>comp[n]===id);});
-      if(inner.length<12){ST.unsealedGlass++;continue;}
-      const f=FLUIDS[id%FLUIDS.length];
-      for(const c of inner){g[c]=f;fam[c]=0;}
-      ST.sealedCores++;ST.sealedCells+=inner.length;ST.liquids[f]+=inner.length;
+      if(!FLUIDFOR[z]||inner.length<12){ST.coresKept++;continue;}
+      const [f,name]=FLUIDFOR[z];
+      for(const c of inner){g[c]=f;FLUID[c]=1;}
+      ST.cores[name]++;ST.cellsFluid[name]+=inner.length;
     }
-    // Step 4: reaction guard on skin cells.
+    // Reaction guard: fluid cells are never changed; a conflicting solid cell becomes ReinforcedConcrete.
     for(let i=0;i<W*H;i++){
-      if(!g[i]||!fam[i])continue;
-      for(const n of NB(i)){if(g[n]&&RPAIRS.has([NAMEOF[g[i]],NAMEOF[g[n]]].sort().join("|"))){g[i]=58;fam[i]=0;ST.pairFixes++;break;}}
+      if(!g[i]||FLUID[i])continue;
+      for(const n of NB(i)){if(g[n]&&RPAIRS.has([NAMEOF[g[i]],NAMEOF[g[n]]].sort().join("|"))){const kk=[NAMEOF[g[i]],NAMEOF[g[n]]].sort().join("|");ST.pairKeys[kk]=(ST.pairKeys[kk]||0)+1;g[i]=58;ST.pairFixes++;break;}}
     }
     for(let i=0;i<W*H;i++){if(!g[i])continue;for(const n of NB(i))if(g[n]&&RPAIRS.has([NAMEOF[g[i]],NAMEOF[g[n]]].sort().join("|")))ST.pairsLeft++;}
     if(ST.pairsLeft)throw Error("EXPERIMENT_PAIRS_LEFT "+ST.pairsLeft);
