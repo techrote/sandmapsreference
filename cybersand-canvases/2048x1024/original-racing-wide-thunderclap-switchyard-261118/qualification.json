@@ -1,49 +1,55 @@
 {
-  "kind": "CYBERSAND_ORIGINAL_RACING_WIDE_R8",
+  "kind": "CYBERSAND_ORIGINAL_LANDSCAPE_RACING_WIDE_R9",
   "status": "OPEN DRAFT/HOLD",
   "source_type": "ORIGINAL-NO-REFERENCE",
-  "engine_main_sha": "018bd09503d7f079ddac52e225c2f7daf8d678bf",
-  "previous_branch_head": "9ec8a6db4edabbc780ea79f99142daf060022854",
+  "created_utc": "2026-11-19",
+  "owner_lane": "original/racing-wide/thunderclap-switchyard-261118",
+  "previous_branch_head": "940bcd059a60fba77ed8137b37baa27c5d5b3c6f",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "extent": [
     2048,
     1024
   ],
   "total_material_cells": 2097152,
-  "terrain_rectangles": 12298,
-  "setup_json_bytes": 232140,
-  "source_rect_limit": 32768,
-  "source_byte_limit": 1048576,
-  "replay_work_limit": 32000000,
-  "cell_visits": 950196,
+  "seed": "0x20261118",
+  "source_setup_v2_limit": {
+    "min_axis": 512,
+    "max_axis": 2048,
+    "axis_multiple": 64,
+    "max_rectangles": 32768,
+    "max_json_bytes": 1048576,
+    "max_replay_visits": 32000000
+  },
+  "terrain_rectangles": 13187,
+  "setup_json_bytes": 249170,
+  "cell_visits": 953959,
   "overlapping_edits": 0,
   "replay_mismatches": 0,
-  "grid_sha256": "008fb3fd4526294c0c1dff5b0447423173e22589a5b1edb539a44089eac293b7",
-  "json_sha256": "1b799a2631fbdc5bd691fa21a0c38af7fd032d630f0409de12b4fa4a38aa4d77",
-  "seed": "0x20261118",
-  "native_source_bridge_rectangle_capacity": 32768,
-  "installed_bridge_rectangle_capacity": "NOT TESTED",
-  "material_laws": "All 11 occupied numeric IDs legal inert nonmovable Solid RuleKernel::None; no powder/liquid/reaction",
+  "grid_sha256": "f66cb0388ff4e6d869996de4656043a9ec479db08524c5726891726ad3bc0155",
+  "json_sha256": "31d30314c323d5a41c3b9da661e3554943e511b48cffbfb58459059deb03079f",
   "material_histogram": {
-    "0": 1146956,
-    "49": 158946,
-    "58": 70722,
-    "62": 104175,
-    "100": 417001,
-    "101": 95635,
-    "113": 24122,
-    "117": 51661,
-    "120": 7550,
-    "122": 2939,
-    "123": 5881,
-    "128": 11564
+    "0": 1143193,
+    "49": 158005,
+    "58": 64829,
+    "62": 101188,
+    "100": 406493,
+    "101": 95514,
+    "113": 25130,
+    "117": 58589,
+    "120": 6015,
+    "122": 8059,
+    "123": 10692,
+    "128": 19445
   },
-  "actor": {
+  "material_laws": "Every occupied ID (49,58,62,100,101,113,117,120,122,123,128) accepted inert immovable Solid / RuleKernel::None at engine SHA; no powder or reactive/liquid cells",
+  "midge": {
     "model": "midge",
     "authored_hull": [
       4,
       3
     ],
-    "start": [
+    "definition_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
       116,
       445
     ],
@@ -115,6 +121,11 @@
       "y": 453
     },
     {
+      "name": "Weigh inspection bay",
+      "x": 1500,
+      "y": 670
+    },
+    {
       "name": "Eastern underpass",
       "x": 1571,
       "y": 756
@@ -137,19 +148,19 @@
   ],
   "exact_reach": {
     "19x15": {
-      "reached": 14,
-      "total": 14,
-      "connected_centres": 789863
+      "reached": 15,
+      "total": 15,
+      "connected_centres": 787631
     },
     "23x19": {
-      "reached": 14,
-      "total": 14,
-      "connected_centres": 726632
+      "reached": 15,
+      "total": 15,
+      "connected_centres": 724109
     },
     "31x27": {
-      "reached": 14,
-      "total": 14,
-      "connected_centres": 657994
+      "reached": 15,
+      "total": 15,
+      "connected_centres": 654587
     }
   },
   "physical_iris_obstruction": {
@@ -159,13 +170,7 @@
       1110,
       554
     ],
-    "centre_exclusion_full_hull": [
-      885,
-      317,
-      1125,
-      567
-    ],
-    "reachable": [
+    "reached": [
       "Launch cradle",
       "Dispatch roof bypass",
       "Split-canyon high",
@@ -175,6 +180,7 @@
       "Iris lower transfer",
       "East conductor",
       "Glassstorm viaduct",
+      "Weigh inspection bay",
       "Eastern underpass",
       "Catch cliff",
       "Brake finish",
@@ -183,7 +189,7 @@
     "unreachable": [
       "Iris central chamber"
     ],
-    "connected_centres": 599711
+    "connected_centres": 597181
   },
   "lower_corridor_only": {
     "corridor_bounds": [
@@ -255,7 +261,7 @@
         "steps": 1041
       }
     ],
-    "connected_centres": 69955,
+    "connected_centres": 69649,
     "windows": [
       {
         "x": 700,
@@ -397,104 +403,93 @@
       "x": 1159,
       "y": 573,
       "cardinal_grounding": true
+    },
+    {
+      "name": "Weigh-bay entry frame",
+      "x": 1490,
+      "y": 641,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "West stator collector",
+      "x": 830,
+      "y": 605,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "East stator collector",
+      "x": 1253,
+      "y": 603,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Upper brake catch",
+      "x": 2000,
+      "y": 398,
+      "cardinal_grounding": true
+    },
+    {
+      "name": "Lower brake catch",
+      "x": 2000,
+      "y": 512,
+      "cardinal_grounding": true
     }
   ],
-  "detached_solid_cells": 6905,
-  "optional_race_waypoints": [
-    {
-      "name": "Canyon high technical",
-      "x": 617,
-      "y": 356
-    },
-    {
-      "name": "Iris west high",
-      "x": 844,
-      "y": 307
-    },
-    {
-      "name": "Over crown",
-      "x": 1033,
-      "y": 297
-    },
-    {
-      "name": "Iris high rejoin",
-      "x": 1194,
-      "y": 308
-    },
-    {
-      "name": "Glassstorm lower",
-      "x": 1530,
-      "y": 517
-    },
-    {
-      "name": "East lower re-entry",
-      "x": 1760,
-      "y": 573
-    },
-    {
-      "name": "West lower slalom",
-      "x": 640,
-      "y": 751
-    },
-    {
-      "name": "Iris lower transit",
-      "x": 1072,
-      "y": 753
-    },
-    {
-      "name": "East lower slalom",
-      "x": 1614,
-      "y": 753
-    }
-  ],
+  "detached_solid_cells": 6093,
+  "r8_to_r9_cell_delta": {
+    "added": 13353,
+    "removed": 9590,
+    "rematerialized": 26008,
+    "changed_total": 48951
+  },
   "pngs": [
     {
       "file": "overview.png",
-      "bytes": 1049805,
       "dimensions": [
         2048,
         1024
       ],
       "sample_step": 1,
-      "sha256": "677fe4f18805804ef9b706851460139cc2e263700ccbb174cb36731a279d84a1",
+      "bytes": 1049805,
+      "sha256": "9fd206011f27fbfd788e518723b54268c326626eb1e63dfd792d64094e9825fe",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 2097152
     },
     {
       "file": "overview-review-2x.png",
-      "bytes": 262801,
       "dimensions": [
         1024,
         512
       ],
       "sample_step": 2,
-      "sha256": "9faf4ea2ef0aaa42a056f7e12f85f7f6960d859266524abb011551919e5879d2",
+      "bytes": 262801,
+      "sha256": "585cd9666fddc8e268ae9f6da627491ffa6380770f1887a5586e90fe92b385af",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 524288
     },
     {
       "file": "01-launch-cradle.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
-      "sha256": "cd6e088130cbf96a57015d20e9a957cbfa6db57c58440be8d4e44cd373e0975b",
+      "bytes": 98818,
+      "sha256": "45b862009d682f3505c330cc0da9f93e60d256da29a02f23248c00e40a36850b",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
     },
     {
       "file": "02-drift-canyon.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
+      "bytes": 98818,
       "sha256": "a84e4a47155793d9903bfdce22b09e593236248618cd1515457ca036ab56b161",
       "crc32": "PASS",
       "adler32": "PASS",
@@ -502,12 +497,12 @@
     },
     {
       "file": "03-split-current-iris.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
+      "bytes": 98818,
       "sha256": "dea9af985175c123a38bb2dd0f7658bd629fcfefdd7cef6c06568049943cf5a9",
       "crc32": "PASS",
       "adler32": "PASS",
@@ -515,122 +510,123 @@
     },
     {
       "file": "04-glassstorm-viaduct.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
-      "sha256": "8dbbed7bf062a7a392ca81323595417d076ca7db558c091809d40a5affce5af0",
+      "bytes": 98818,
+      "sha256": "a1148192c76b619bb127b7f6ffecf73b66e4621fa0b9815d556eb101f6d3780b",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
     },
     {
       "file": "05-catch-recovery.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
-      "sha256": "049548fabc8a56b2b9ce1b132c059b3b39f3f8d06349823dd845d301ad7738e4",
+      "bytes": 98818,
+      "sha256": "242e08c7628de659b889a058caca519f4721013769835e87c33936c9e7590714",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
     },
     {
       "file": "06-lower-s-turn-west.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
-      "sha256": "fb6dc513ec38e8e808880dba5ecabd2e199b26ca47b155bc4d1e93a8125d5b9c",
+      "bytes": 98818,
+      "sha256": "47f23ef79a43b425cb9a188b4ab98747b6d9433da356446a1b7ccb7404080edc",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
     },
     {
       "file": "07-lower-s-turn-east.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
-      "sha256": "326faaf0f7676a966dd49368852089add6d7a15e43932e74db9564ea19ba5480",
+      "bytes": 98818,
+      "sha256": "01e5eb3c8ccbf66af6c1e5e0bb2c25ffb7023ff6d59e9b3ff1fef6580c791c95",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
     },
     {
       "file": "08-iris-service-braces.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
-      "sha256": "c688b38b8845f10da495e4f2ebc07973f42c22ece9933902f579517dd07224a7",
+      "bytes": 98818,
+      "sha256": "f04e4aeac7d650be529faa411c27d66483ee8cce5881bcbc780fbd7193148654",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
     },
     {
       "file": "09-west-dive-portal.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
-      "sha256": "cee4d1ca95a01ffb3c3e2a2b646a92a18eb3d66316d6289c47192d0c243f17f3",
+      "bytes": 98818,
+      "sha256": "6e5b0e6430442ffb3798542e2ed88fec8badb915f9a1200d4fcb380a99d216f6",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
     },
     {
       "file": "10-east-return-portal.png",
-      "bytes": 98818,
       "dimensions": [
         512,
         384
       ],
       "sample_step": 1,
-      "sha256": "cdbdce8f83e38a93e9ee083504d2e9ebc5ab091601204fa41e86db545c96c03b",
+      "bytes": 98818,
+      "sha256": "db458aad637043f3e34ca401df2a51adfa6eeedb314aa31e137d748f2f8d21a6",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "11-weigh-inspection-bay.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "31829a5580659a145fafc79ac6e98d4c7d8c3ae38861e72c0631124d99c8742c",
+      "crc32": "PASS",
+      "adler32": "PASS",
+      "material_pixel_parity": 196608
+    },
+    {
+      "file": "12-finish-catch-jaws.png",
+      "dimensions": [
+        512,
+        384
+      ],
+      "sample_step": 1,
+      "bytes": 98818,
+      "sha256": "071438b3ce7a523b43075b0c7c306a696fdc29e5fa6c0e981c48bc06c06bc947",
       "crc32": "PASS",
       "adler32": "PASS",
       "material_pixel_parity": 196608
     }
   ],
-  "png_integrity": "Twelve genuine grid-rendered PNGs including 10 native 1:1 overview/district images plus one sampled overview and the whole native 2048x1024 overview; all 12 builder-decoded for PNG signature, CRC, stored zlib, Adler, IEND, complete per-material pixel parity.",
-  "native_workbench": "NATIVE-UNTESTED",
-  "native_rapier": "NATIVE-UNTESTED",
-  "native_collision": "NATIVE-UNTESTED",
-  "save_reopen": "NATIVE-UNTESTED",
-  "limitations": [
-    "No matching installed CyberDemoBridge/Godot/Rapier binary or physical Workbench acceptance run; current source capacity 32768 rectangles does not prove installed binary capacity (legacy 4096 fallback).",
-    "All BFS are static 4-neighbour clearance tests, not dynamic handling/lap-time measurement.",
-    "Iris central service spine still intentionally obstructs direct dive; use west/east lower entrances.",
-    "Inert time-trial marks are not functional timers.",
-    "R8 needs fresh independent Shepherd, Technical and Fidelity exact-HEAD reviews and owner playtest."
-  ],
-  "change_from_R7": {
-    "physical_cells_changed": 19611,
-    "added": 11261,
-    "erased": 0,
-    "rematerialized": 8350
-  },
-  "artistic_rework_R8": {
-    "auditor_verdict_addressed": "exact R7 Fidelity REWORK",
-    "lower_bank_surface_inlays": "four distinct actual solid-cell patterns, no new airspace obstructions",
-    "west_and_east_portal": "two separate asymmetric horned structural gates, shaft kept open",
-    "iris": "three large arc components grounded through distinct cable braces to service spine",
-    "launch": "two detached rails cardinal-attached",
-    "glassstorm": "single weight-transfer calibration beam",
-    "brake": "east boundary-mounted deceleration fins",
-    "requires_independent_exact_head_review": true
-  }
+  "installed_bridge_rectangle_capacity": "NATIVE-UNTESTED",
+  "native_workbench_install_input_collision_simulation_save_reopen": "NATIVE-UNTESTED",
+  "code_execution": "V8 deterministic builder and static PNG self-verification; standalone Node CLI NOT EXECUTED"
 }

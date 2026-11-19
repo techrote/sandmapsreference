@@ -1,51 +1,87 @@
-# Thunderclap Switchyard R8 — ORIGINAL CyberSand high-speed landscape
+# Thunderclap Switchyard R9 — Original sci-fi industrial Midge racing landscape
 
-**OPEN Draft/HOLD; 2048×1024 actual material cells; ORIGINAL-NO-REFERENCE; NATIVE-UNTESTED.** No repository/source photograph or generative illustration was used. Creator lane `original/racing-wide/thunderclap-switchyard-261118` is the sole writer. Do not merge, auto-merge, mark Ready or claim owner acceptance.
+**OPEN Draft/HOLD. ORIGINAL-NO-REFERENCE. Native Workbench/Rapier NOT TESTED.** Owner lane: `original/racing-wide/thunderclap-switchyard-261118`. This is an independently authored exact **2048×1024** material-cell level, not a converted image, copied source map, AI drawing, or screenshot.
 
-**Engine authority (read-only):** `techrote/cybersand main@018bd09503d7f079ddac52e225c2f7daf8d678bf`. Rechecked 19 November 2026. Setup-v2; 512–2048 axis bounds and 64-cell alignment; 32,768 rectangle edits, 1 MiB serialized JSON; installed native CyberDemoBridge rectangle capability is **not verified**.
+## Course thesis and actual play scale
 
-## Artistic thesis and Midge-scale course
-A fractured magnet-rail/switchyard carrying a future-industrial race through five unequal districts: western **alignment/dispatch launch**, **roof-saw Drift Canyon**, an asymmetric **split-current Iris**, **Glassstorm weighing/transfer works** and a double-jawed eastern **brake/recovery** basin. These are physical solids with 2D side-elevation silhouettes, not background scenery. One cell is one native terrain coordinate, and Midge's authored collision hull is 4×3; all stated conservative route proofs enlarge to 19×15, 23×19 and 31×27. Inert material IDs: 49,58,62,100,101,113,117,120,122,123,128; all accepted immovable Solid/RuleKernel::None in the read-only native material table. There are **no liquids, powder, growing, thermal or reactive hazards** in this candidate.
+A decomposing interplanetary **magnet-rail switchyard** became a three-altitude, five-district Midge time-trial complex. A broad high-speed accelerator crosses an open central flight void; a separate optional over-crown technical line and a physically alternating lower S-course demand different piloting choices. All architecture is orthographic side elevation with actual material-cell collision. One world cell is one native terrain coordinate; the real Midge hull is 4×3 and the static margin tests use 19×15, 23×19, and 31×27.
 
-The direct high-speed accelerator follows `(116,445)→(841,445)→(1037,448)→(1323,454)→(1506,453)→(1826,449)→(1943,446)`. A nonforced upper technical line uses Dispatch roof `(203,329)`, canyon `(617,356)`, Iris over-crown `(1033,297)` and eastern upper rejoin `(1194,308)`. The optional **physically undulating low S-course** goes West dive `(443,612)` → tunnel entry `(614,752)` → roof bank `(728,776)` → floor bank `(854,721)` → Iris lower transfer `(1072,753)` → second roof `(1338,772)` → second floor `(1520,742)` → east tunnel exit `(1614,753)` → eastern rejoin `(1760,573)` → recovery `(1883,767)`. All routes are traversable full-cell airspace; none is asserted faster without native Midge lap timing.
+The five purposefully differentiated districts are western **Launch/Dispatch**, fractured **Drift Canyon**, the suspended opposed-stator **Split-Current Iris**, inhabited **Glassstorm weigh/inspection works**, and the **East brake/catch/recovery** complex. The original visual syntax uses inert basalts, concrete/steel frames, zinc bracing and conspicuous blue, quartz and signal-colour industrial faces. There are no simulated fluids, chemical reactions, timed gates, or claimed functioning speed boosts.
 
-## R8 response to independent exact-R7 Fidelity REWORK
-- Two formerly detached launch guide rails are now cardinal-connected into the western world-rock wall, clarifying their real alignment role.
-- Three large lower Iris arcs now have asymmetric **real-material load cables** into the existing rooted service spine instead of reading as stranded deck remnants. The central spine remains deliberately impassable for a direct dive.
-- West descent has two deliberately **separated** horned portal uprights, not a ceiling across the actual shaft; east ascent has a distinct splayed return portal. Both remain fully actor-accessible.
-- Four alternating roof/floor banks now have unique slanted inlaid material-facing markings. All inlays rematerialize existing rock only, so they add **no new collision cells**.
-- Glassstorm gains a nonrepeating calibration/transfer balance assembly; the far east grounded brake gains razor-like deceleration fins and recovery-floor markings. The main y445 racing corridor remains clear.
-- R7→R8 **19,611 actual cells changed**, 11,261 added, 8,350 rematerialized, 0 removed. Detached material cells reduced from 11,399 to **6,905**; residual inert detail is not falsely described as all small or grounded.
+### Functional race route graph
 
-## Deterministic static qualification and reproduction
-Run `node build.cjs` from this folder (Node 22+, no external packages) to regenerate the complete Setup-v2 JSON and all twelve material-cell PNGs; `node build.cjs --verify` checks byte-exact committed outputs. The builder was independently executed in an isolated JavaScript V8 host for this commit, but **no standalone Node CLI or native runtime was executed here**. The source builder includes exact plane replay, overlap rejection, rectangle/byte constraints, cardinal support probes, full-hull exact-site BFS and full PNG signature/CRC/stored-zlib/Adler/IEND/pixel equivalence checks.
+- Main accelerator: Launch (116,445) → Iris west (841,445) → Iris chamber (1037,448) → East conductor (1323,454) → Glassstorm (1506,453) → Catch cliff (1826,449) → Finish (1943,446). Retains broad unblocked y≈445 centre flight.
+- Upper technical alternative: Dispatch roof (203,329) → Drift high (617,356) → Iris high (844,307) → over-crown (1033,297) → upper rejoin (1194,308) → main.
+- Physically forced lower S-course: West dive (443,612) → lower entrance (614,752) → roof bank (728,776) → floor bank (854,721) → Iris under-transfer (1072,753) → roof bank (1338,772) → floor bank (1520,742) → east exit (1614,753) → east rise (1760,573) → recovery basin (1883,767).
+- New enterable inspection branch: hollow Glassstorm station **(1500,670)** with a full-hull-accessible opening at x≈1400–1457/y678–759 to the low route. The upper deck remains rooted; this is a static inspection destination, not a fabricated working timing checkpoint.
 
-- Exact cells **2,097,152**; **12,298/32,768** nonoverlapping ordered rectangles; **232,140/1,048,576** JSON bytes; zero replay overlap/mismatch; 17/17 grounded support probes.
-- Exact unchanged functional sites **14/14** at each 19×15, 23×19 and 31×27 hull. A real-solid-blocked central Iris retains **13/14** destinations including finish. Independent lower-only corridor `x580..1650,y700..802` reaches **7/7** exact points with full 31×27 hull, never borrowing the high-speed direct lane. Narrowest audited x1338 window remains **21 legal centre rows**.
-- Final material-plane SHA-256 `008fb3fd4526294c0c1dff5b0447423173e22589a5b1edb539a44089eac293b7`, Setup-v2 SHA-256 `1b799a2631fbdc5bd691fa21a0c38af7fd032d630f0409de12b4fa4a38aa4d77`; full histogram, separate per-file PNG SHA-256 hashes, exact route graph and clearance windows in `qualification.json`. Twelve indexed PNGs self-decoded with full material-pixel parity including the exact 2048×1024 overview. Review-scale overview is a separate 1:2 sampled image and is **not** full-grid evidence.
-- Native load/install, installed bridge capability, steering/collision, simulation/Rapier ticks and fresh-process save/reopen: **NATIVE-UNTESTED**. The 4,096-rectangle legacy native fallback would reject this file, notwithstanding source-side admission. Native lap timing, reaction testing and real interactive race-readability remain unverified.
+**Exact named work/play sites (all full-hull reachable from the unchanged spawn):**
 
-## Genuine material-cell gallery
+| Name | Exact centre |
+|---|---|
+| Launch cradle | (116,445) |
+| Dispatch roof bypass | (203,329) |
+| Split-canyon high | (617,356) |
+| West dive shaft | (443,612) |
+| West undercroft | (614,752) |
+| Iris west approach | (841,445) |
+| Iris central chamber | (1037,448) |
+| Iris lower transfer | (1072,753) |
+| East conductor | (1323,454) |
+| Glassstorm viaduct | (1506,453) |
+| Weigh inspection bay | (1500,670) |
+| Eastern underpass | (1571,756) |
+| Catch cliff | (1826,449) |
+| Brake finish | (1943,446) |
+| Recovery basin | (1883,767) |
 
-![True 2048x1024 material plane](overview.png)
+## R8 → R9 substantive review repair (19 Nov 2026)
 
-![1:2 nearest-sampled actual-cell overview](overview-review-2x.png)
+- West descent and east ascent gain opposite, major-contrast **grounded throat/edge wayfinding** rather than tiny signs above the actual air corridor. Those colour masks only rematerialise already occupied cells, preserving clearance.
+- The Iris now carries two large opposed collector/stator housings and a real supported bus/cable connection for the residual lower-right assembly, without a beam across the main racing void.
+- Four lower slalom banks receive distinct large-area silhouettes and advance markings cut **only into the existing stable solids**, not invisible or collision-altering wallpaper. The critical x1338 31×27 window remains **21 legal centre rows**.
+- The Glassstorm service mass now contains a **real navigable inspection bay with an accessible downshaft**; the far-right brake has two boundary-anchored solid jaws aligned around the actual y≈446 finishing corridor rather than remote roof ornaments.
+- Compared to R8, **48951** changed actual material identities (13353 added, 9590 excavated, 26008 rematerialised). No external art source was used. Remaining 6093 detached occupied cells are not all claimed grounded; every new named structural support probe is cardinal-boundary-connected.
 
-| Launch | Canyon | Iris | Glassstorm | Brake/recovery |
-|:--:|:--:|:--:|:--:|:--:|
-| ![Launch](01-launch-cradle.png) | ![Canyon](02-drift-canyon.png) | ![Iris](03-split-current-iris.png) | ![Glassstorm](04-glassstorm-viaduct.png) | ![Brake](05-catch-recovery.png) |
+## Authority, serialization, determinism and confidence
 
-| Lower west S-course true 1:1 | Lower east S-course true 1:1 |
-|:--:|:--:|
-| ![West](06-lower-s-turn-west.png) | ![East](07-lower-s-turn-east.png) |
+CyberSand source authority (read-only) is [`main@de109d0131641d6adc8d25bb9ced7ca3d4991105`](https://github.com/techrote/cybersand/commit/de109d0131641d6adc8d25bb9ced7ca3d4991105). The installed native bridge was **not** queried. This source accepts Setup-v2, axes 512–2048 aligned to 64, a source budget of 32,768 rectangles, 1 MiB JSON and 32 million paint work visits. A legacy installed native bridge with the 4,096-rectangle fallback would reject this payload.
 
+- Actual grid: **2048×1024 = 2,097,152 cells**. Lossless rectangles: **13187/32768**. JSON: **249170/1048576 bytes**. Painted visits: **953959/32000000**. Overlaps / full-grid replay mismatches: **0 / 0**.
+- Grid SHA-256: `f66cb0388ff4e6d869996de4656043a9ec479db08524c5726891726ad3bc0155`. Setup JSON SHA-256: `31d30314c323d5a41c3b9da661e3554943e511b48cffbfb58459059deb03079f`. Histogram and every 1:1 PNG hash are in `qualification.json`.
+- All 11 non-empty numeric material IDs **49,58,62,100,101,113,117,120,122,123,128** are current accepted *immovable Solid / RuleKernel::None*. No granular Stone, spreading material, liquid, or reactive foundation.
+- Actor: one current Midge, definition SHA-256 `c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96`, authored collision rectangle 4×3, spawn **(116,445)**, boost multiplier **1.8**. Flight paths are static free-space proofs, not native race-speed/timing claims.
+- Conservative exact full-hull 4-neighbour BFS: **15/15 functional sites** at all **19×15**, **23×19**, **31×27**, without nearest-cell substitution. Physically solid-blocked central Iris: **14/15** remain accessible, including finish and weigh bay. Bounded lower-only 31×27 course: **7/7 exact points**, with x1338 **21 legal centre rows**. **22/22** structural probes grounded; detached material cells **6093**.
+- The deterministic fixed-seed Node 22+ no-dependency builder is `build.cjs`. Run `node build.cjs` in this directory to regenerate Setup JSON and all real indexed PNGs; use `node build.cjs --verify` for byte-exact JSON/PNG checking. Its V8 evaluation passed material replay, connectivity, support and image chunk/CRC/Adler/full-pixel parity. A separate Node process was **not executed** on this run.
+- **NATIVE-UNTESTED:** no installed Godot/CyberDemoBridge/Rapier binary/version verification; no real Workbench import, actor steering, collision, ticks, timing, or save/fresh-process reopen. Independent Fidelity, Technical and Shepherd exact-HEAD review is required; no owner approval implied.
 
-### R8 inspection close-ups (native material cells, 1:1)
+## Actual material-plane evidence
 
-| Rooted Iris brace/cable assemblies | Open western descent portal | Eastern ascent/return portal |
-|:--:|:--:|:--:|
-| ![Iris rooted cables](08-iris-service-braces.png) | ![West dive portal](09-west-dive-portal.png) | ![East return portal](10-east-return-portal.png) |
+![Actual 1:1 grid overview](overview.png)
 
-Each close-up is generated from the **same committed material grid**, not a separate paint-over or illustrative reference.
+![Nearest-sampled 1:2 review overview; not a substitute for 1:1](overview-review-2x.png)
 
-Independent Shepherd, Technical and Fidelity reviewers must evaluate **this new HEAD**. Keep Draft/HOLD.
+**PNG provenance and checksum summary** (all indexed colour images derived from the same committed plane, builder-validated PNG signature/chunks/CRC/Adler/IEND and material-index pixel parity):
+
+| PNG | Pixels | Scale | SHA-256 prefix |
+|---|---|---|---|
+| `overview.png` | 2048×1024 | 1:1 | `9fd206011f27fbfd…` |
+| `overview-review-2x.png` | 1024×512 | 1:2 | `585cd9666fddc8e2…` |
+| `01-launch-cradle.png` | 512×384 | 1:1 | `45b862009d682f35…` |
+| `02-drift-canyon.png` | 512×384 | 1:1 | `a84e4a47155793d9…` |
+| `03-split-current-iris.png` | 512×384 | 1:1 | `dea9af985175c123…` |
+| `04-glassstorm-viaduct.png` | 512×384 | 1:1 | `a1148192c76b619b…` |
+| `05-catch-recovery.png` | 512×384 | 1:1 | `242e08c7628de659…` |
+| `06-lower-s-turn-west.png` | 512×384 | 1:1 | `47f23ef79a43b425…` |
+| `07-lower-s-turn-east.png` | 512×384 | 1:1 | `01e5eb3c8ccbf66a…` |
+| `08-iris-service-braces.png` | 512×384 | 1:1 | `f04e4aeac7d650be…` |
+| `09-west-dive-portal.png` | 512×384 | 1:1 | `6e5b0e6430442ffb…` |
+| `10-east-return-portal.png` | 512×384 | 1:1 | `db458aad637043f3…` |
+| `11-weigh-inspection-bay.png` | 512×384 | 1:1 | `31829a5580659a14…` |
+| `12-finish-catch-jaws.png` | 512×384 | 1:1 | `071438b3ce7a523b…` |
+
+### New R9 diagnostic views
+![Actual 1:1 weigh inspection bay and downshaft](11-weigh-inspection-bay.png)
+![Actual 1:1 y446 finish catch jaws](12-finish-catch-jaws.png)
+
+The other ten true-cell district/portal/slalom crops remain separately committed; no AI illustration or sourced scenery is used. Maintain this PR as **Draft/HOLD**, never Ready or merge.

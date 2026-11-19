@@ -526,6 +526,87 @@ function buildWideCanvas() {
     R(x,852,18,5,mat.ZINC);R(x+4,846,10,5,mat.BLUE);
   }
 
+
+  // R9 exact-cell art/wayfinding repair, 19 Nov 2026. All texture marks are
+  // conditioned on occupied solids: no collision changes in racing bank faces.
+  function tintStroke(x0,y0,x1,y1,width,m) {
+    const dx=x1-x0,dy=y1-y0,len2=dx*dx+dy*dy,rad=width/2;
+    for(let y=Math.max(0,Math.floor(Math.min(y0,y1)-rad));y<=Math.min(H-1,Math.ceil(Math.max(y0,y1)+rad));y++)
+      for(let x=Math.max(0,Math.floor(Math.min(x0,x1)-rad));x<=Math.min(W-1,Math.ceil(Math.max(x0,x1)+rad));x++){
+        const t=Math.max(0,Math.min(1,((x-x0)*dx+(y-y0)*dy)/(len2||1)));
+        if((x-x0-t*dx)**2+(y-y0-t*dy)**2<=rad*rad && g[y*W+x])g[y*W+x]=m;
+      }
+  }
+  function tintFace(points,m) {
+    const lo=Math.max(0,Math.ceil(Math.min(...points.map(p=>p[1]))));
+    const hi=Math.min(H-1,Math.floor(Math.max(...points.map(p=>p[1]))));
+    for(let y=lo;y<=hi;y++){
+      let cuts=[];
+      for(let j=0;j<points.length;j++){
+        const a=points[j],b=points[(j+1)%points.length];
+        if((a[1]<=y&&b[1]>y)||(b[1]<=y&&a[1]>y))
+          cuts.push(a[0]+(y-a[1])*(b[0]-a[0])/(b[1]-a[1]));
+      }
+      cuts.sort((a,b)=>a-b);
+      for(let j=0;j+1<cuts.length;j+=2)
+        for(let x=Math.max(0,Math.ceil(cuts[j]));x<=Math.min(W-1,Math.floor(cuts[j+1]));x++)
+          if(g[y*W+x])g[y*W+x]=m;
+    }
+  }
+  // Large grounded entrance-edge cues carried to actual traversable throats.
+  for(const [x0,y0,x1,y1,w,m] of [
+    [350,554,355,693,28,mat.QUARTZ],[560,555,565,690,29,mat.BLUE],
+    [302,567,356,605,17,mat.SIGNAL],[580,568,553,610,18,mat.QUARTZ],
+    [1636,570,1642,677,29,mat.BLUE],[1827,582,1824,696,29,mat.QUARTZ],
+    [1602,622,1650,573,19,mat.SIGNAL],[1822,601,1860,639,19,mat.BLUE]
+  ])tintStroke(x0,y0,x1,y1,w,m);
+  tintFace([[319,644],[367,633],[370,650],[327,671]],mat.IRON);
+  tintFace([[552,656],[608,642],[616,658],[561,678]],mat.IRON);
+  tintFace([[1601,652],[1658,649],[1660,669],[1610,680]],mat.ZINC);
+  tintFace([[1809,661],[1865,651],[1870,669],[1813,680]],mat.ZINC);
+
+  // Opposed stator/collector housings: rooted on existing service structure,
+  // readable split into above-crown bypass and lower-transfer approach.
+  P([[800,618],[813,578],[846,552],[881,568],[909,606],[895,632]],mat.IRON);
+  P([[1191,613],[1218,565],[1250,555],[1279,581],[1292,629],[1241,641]],mat.STEEL);
+  P([[810,608],[839,579],[858,588],[850,622],[813,623]],mat.BLUE);
+  P([[1228,598],[1244,574],[1267,582],[1276,614],[1243,629]],mat.BLUE);
+  R(829,591,17,20,mat.GLASSBLOCK);R(1249,591,15,21,mat.QUARTZ);
+  L(827,626,860,636,14,mat.IRON);L(1251,631,1234,638,13,mat.IRON);
+  L(1137,555,1107,637,12,mat.IRON);R(1120,623,28,10,mat.BLUE);
+  tintStroke(832,598,858,613,13,mat.SIGNAL);
+  tintStroke(1259,597,1238,615,13,mat.SIGNAL);
+
+  // Four differently coded full-size bank faces, no extra flight collision.
+  tintFace([[679,705],[708,708],[757,736],[746,745],[696,725]],mat.QUARTZ);
+  tintStroke(684,712,738,740,11,mat.BLUE);
+  tintFace([[832,786],[841,771],[855,765],[867,779],[880,784],[881,800],[858,791]],mat.BLUE);
+  tintStroke(840,789,882,807,10,mat.SIGNAL);
+  tintFace([[1285,706],[1317,711],[1350,731],[1376,739],[1370,744],[1335,728],[1293,720]],mat.QUARTZ);
+  tintStroke(1292,713,1362,737,12,mat.SIGNAL);
+  tintFace([[1470,787],[1490,778],[1524,779],[1557,786],[1560,798],[1521,790],[1481,800]],mat.BLUE);
+  tintStroke(1481,805,1552,799,14,mat.QUARTZ);
+
+  // One enterable inspection bay (not a cloned scenic box): hollow, two
+  // accessible mouths, rooted weigh floor, directed upper infeed.
+  R(1415,648,189,43,mat.E);R(1378,651,44,38,mat.E);R(1602,649,38,42,mat.E);
+  L(1418,694,1607,694,9,mat.CONCRETE);
+  L(1423,643,1595,643,8,mat.STEEL);
+  R(1452,694,122,10,mat.IRON);R(1467,698,97,7,mat.BLUE);
+  P([[1444,641],[1463,625],[1514,624],[1548,640]],mat.STEEL);
+  R(1463,634,52,9,mat.GLASSBLOCK);R(1500,634,15,8,mat.SIGNAL);
+  L(1490,641,1506,617,9,mat.IRON);
+
+  // True brake jaws flank y446 actual finish without sealing the flight line.
+  P([[1959,381],[1992,372],[2040,386],[2040,411],[2001,407],[1979,418]],mat.STEEL);
+  P([[1961,500],[1992,488],[2040,483],[2040,526],[1991,538],[1968,518]],mat.IRON);
+  L(1981,410,2038,411,9,mat.ZINC);L(1978,499,2040,489,10,mat.ZINC);
+  R(2012,400,24,7,mat.BLUE);R(2015,497,21,7,mat.SIGNAL);
+  tintStroke(1925,392,1976,414,16,mat.QUARTZ);
+  tintStroke(1927,508,1971,517,15,mat.BLUE);
+
+  // Root-preserving inspection-bay descent at x1400, no slash through support piers.
+  R(1400,678,58,82,mat.E);
     // Compress exact material plane into non-overlapping vertically coalesced five-field boxes.
   function compress(){
     const boxes=[],prev=new Map();
@@ -589,7 +670,12 @@ function buildWideCanvas() {
     ["Upper launch guide connected",214,535],
     ["Left Iris arc connected",992,584],
     ["Right Iris arc A connected",1144,566],
-    ["Right Iris arc B connected",1159,573]
+    ["Right Iris arc B connected",1159,573],
+    ["Weigh-bay entry frame",1490,641],
+    ["West stator collector",830,605],
+    ["East stator collector",1253,603],
+    ["Upper brake catch",2000,398],
+    ["Lower brake catch",2000,512]
   ];
   for(const [name,x,y] of supportSites){
     if(!grounded[y*W+x])throw Error("STRUCTURAL_SUPPORT_FAIL "+name+" ("+x+","+y+")");
@@ -604,7 +690,7 @@ function buildWideCanvas() {
     ["Launch cradle",116,445],["Dispatch roof bypass",203,329],["Split-canyon high",617,356],
     ["West dive shaft",443,612],["West undercroft",614,752],["Iris west approach",841,445],
     ["Iris central chamber",1037,448],["Iris lower transfer",1072,753],
-    ["East conductor",1323,454],["Glassstorm viaduct",1506,453],
+    ["East conductor",1323,454],["Glassstorm viaduct",1506,453],["Weigh inspection bay",1500,670],
     ["Eastern underpass",1571,756],["Catch cliff",1826,449],
     ["Brake finish",1943,446],["Recovery basin",1883,767]
   ];
@@ -632,6 +718,7 @@ function buildWideCanvas() {
     return {size:w,sites:sites.map(s=>[s[0],!!seen[s[2]*W+s[1]]])};
   }
   const reachable={};for(const [fw,fh] of [[19,15],[23,19],[31,27]])reachable[fw+"x"+fh]=flood(fw,fh,null);
+  if(Object.values(reachable).some(v=>v.sites.filter(s=>s[1]).length!==sites.length))throw Error("EXACT_SITE_CLEARANCE_FAIL");
 
   // R7 exact 31x27 lower-corridor-only path. Full actor rectangle: never use the main y445 shortcut.
   function lowerCorridorProof(){
@@ -662,7 +749,7 @@ function buildWideCanvas() {
 
   const bypass=flood(31,27,[900,330,1110,554]);
   const fullHullBlocked=flood(31,27,[885,317,1125,567]);
-  if(fullHullBlocked.sites.filter(s=>s[1]).length!==13||!fullHullBlocked.sites.find(s=>s[0]==="Brake finish")[1])throw Error("FULL_HULL_PHYSICAL_IRIS_BYPASS_FAIL");
+  if(fullHullBlocked.sites.filter(s=>s[1]).length!==14||!fullHullBlocked.sites.find(s=>s[0]==="Brake finish")[1])throw Error("FULL_HULL_PHYSICAL_IRIS_BYPASS_FAIL");
   // Material catalogue exact RGB palette, indexed 4-bit lossless pixel parity.
   function encodePNG(x0,y0,ww,hh,step=1){
     const stride=1+ww/2,raw=new Uint8Array(stride*hh);
@@ -736,7 +823,10 @@ function buildWideCanvas() {
     // R8 explicit 1:1 evidence for the newly anchored arcs and two distinct gates.
     ["08-iris-service-braces.png",780,440,512,384],
     ["09-west-dive-portal.png",310,450,512,384],
-    ["10-east-return-portal.png",1490,450,512,384]
+    ["10-east-return-portal.png",1490,450,512,384],
+    // R9 additional true 1:1 functional-room and finish-jaw evidence.
+    ["11-weigh-inspection-bay.png",1280,550,512,384],
+    ["12-finish-catch-jaws.png",1536,280,512,384]
   ].map(p=>({name:p[0],region:p.slice(1),...encodePNG(...p.slice(1))}));
   const hist={};for(const v of g)hist[v]=(hist[v]||0)+1;
   return {W,H,seed,grid:g,json,edits,sites,reachable,bypass,fullHullBlocked,lowerCorridor,supportSites,grounded,hist,materials:mat,gallery,mismatches,collisions};
