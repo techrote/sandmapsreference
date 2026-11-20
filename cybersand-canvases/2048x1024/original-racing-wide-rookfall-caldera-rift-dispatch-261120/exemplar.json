@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "purpose": ["human_editable_canvas", "procedural_exemplar", "scripted_setpiece_source"],
+  "family": "original/racing-wide",
+  "map_role": "Dry impact-caldera dispatch and broken freight crossing, with upper bridge-fracture flight and an underground recovery bypass",
+  "anchor_donors": [],
+  "macro_topology": "crater with dense edge-anchored loading settlements, a deliberately discontinuous aerial bridge, an open bowl and nested bedrock service cavities",
+  "density_profile": "Two industrial rim clusters and fragmented span supports bound a broad navigable negative-space caldera, with distinct compact underfloor workrooms",
+  "route_grammar": {
+    "primary": "West rim start → upper west sky → broken-girder fracture aperture → crater drop → east capture → west floor return → finish",
+    "alternative": "West rim start → cableway holdout → sloping west entry → underbridge caldera basin → east catcher",
+    "blockage": "A genuine 70×86-cell wall across the central fracture eliminates its literal checkpoint while retaining the lower bypass and finish"
+  },
+  "strong_motifs": ["broken high suspension bridge", "deep dry excavated caldera", "asymmetric shipping claws", "remote west rim settlement", "long sloping cableway", "nested foundation service vaults"],
+  "interesting_relationships": [
+    "A surviving high tension arch roots the split bridge without rebuilding the absent deck",
+    "Flight clearance and geological bowl profile are distinct from the sparse overhead visual machinery",
+    "An intentional west shaft and below-cable passage keep recovery possible when the bridge fracture closes",
+    "Entered below-floor bays remain physically accessible from the open basin"
+  ],
+  "authoring_affordances": [
+    "Wide crater sky and floor remain available for later human-authored spacecraft or encounter geometry",
+    "Two interrupted bridge ends are prepared as an optional destruction/reconnection worksite",
+    "Underfloor service bays can be extended into additional cave branches without disturbing the race loop",
+    "East freighter workface offers an unused crane/event rigging location"
+  ],
+  "setpiece_candidates": [
+    {"site":"Bridge fracture aperture", "kind":"bridge-failure / reveal", "staging":"The still-open fracture lies below the tension arch; the low bypass remains reachable"},
+    {"site":"Cableway staged holdout", "kind":"ambush / chase detour", "staging":"A descending cableway shoulder provides a midcourse diversion and recovery entrance"},
+    {"site":"East cargo approach", "kind":"machinery activation / arrival", "staging":"Open ground beneath the freight claw allows later moving cargo and actor encounters"},
+    {"site":"Abandoned central cavity", "kind":"editable expansion seam", "staging":"An empty bedrock service cavity has room for a future modular sublevel"}
+  ],
+  "procedural_exemplar_value": "Demonstrates a dry geological basin carrying split suspended bridge hardware across a large negative-space racing well, with independently enterable below-grade service cavities and alternate west-rooted bypasses; useful as an example-derived mixed geological/engineering parts grammar.",
+  "similarity_avoidance": "Unlike the recent compact industrial racers with evenly spaced ceiling/floor capacitors, horizontal double flight tubes, annuli or repeating ratchet gates, this map is a largely open excavated crater with asymmetric rim loading clusters and a genuinely interrupted suspended bridge, not a factory corridor.",
+  "diversity_axes": {
+    "macro_topology": "crater",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "bridge",
+    "support_form": "mixed",
+    "environment_relation": "geological",
+    "incompleteness": "editable_gaps"
+  }
+}

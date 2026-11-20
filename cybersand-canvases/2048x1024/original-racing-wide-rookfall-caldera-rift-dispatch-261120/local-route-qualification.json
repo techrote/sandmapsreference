@@ -1,0 +1,390 @@
+{
+  "schema": "rookfall-bounded-route-qualification-v1",
+  "claim": "source-static literal-centre four-neighbour connectivity, not actual flight handling or speed",
+  "full_hull": [
+    31,
+    27
+  ],
+  "route_graph": {
+    "primary": [
+      "Start / west rim dispatch",
+      "Upper western rim",
+      "Upper west return",
+      "Broken girder west lip",
+      "Bridge fracture aperture",
+      "Crater underbridge alternative",
+      "East basin slope",
+      "East capture",
+      "East cargo approach",
+      "East suspended abutment underpass",
+      "Central basin",
+      "West suspended abutment underpass",
+      "West lower slope",
+      "West launch gate",
+      "Finish / west watch"
+    ],
+    "alternative": [
+      "Start / west rim dispatch",
+      "Upper western rim",
+      "Cableway staged holdout",
+      "West cable descent",
+      "West lower slope",
+      "West suspended abutment underpass",
+      "Crater underbridge alternative",
+      "East basin slope",
+      "East capture"
+    ]
+  },
+  "obstruction_xywh": [
+    997,
+    328,
+    70,
+    86
+  ],
+  "sections": {
+    "primary": {
+      "100": {
+        "pass": 14,
+        "total": 14,
+        "legs": [
+          {
+            "from": "Start / west rim dispatch",
+            "to": "Upper western rim",
+            "pass": true
+          },
+          {
+            "from": "Upper western rim",
+            "to": "Upper west return",
+            "pass": true
+          },
+          {
+            "from": "Upper west return",
+            "to": "Broken girder west lip",
+            "pass": true
+          },
+          {
+            "from": "Broken girder west lip",
+            "to": "Bridge fracture aperture",
+            "pass": true
+          },
+          {
+            "from": "Bridge fracture aperture",
+            "to": "Crater underbridge alternative",
+            "pass": true
+          },
+          {
+            "from": "Crater underbridge alternative",
+            "to": "East basin slope",
+            "pass": true
+          },
+          {
+            "from": "East basin slope",
+            "to": "East capture",
+            "pass": true
+          },
+          {
+            "from": "East capture",
+            "to": "East cargo approach",
+            "pass": true
+          },
+          {
+            "from": "East cargo approach",
+            "to": "East suspended abutment underpass",
+            "pass": true
+          },
+          {
+            "from": "East suspended abutment underpass",
+            "to": "Central basin",
+            "pass": true
+          },
+          {
+            "from": "Central basin",
+            "to": "West suspended abutment underpass",
+            "pass": true
+          },
+          {
+            "from": "West suspended abutment underpass",
+            "to": "West lower slope",
+            "pass": true
+          },
+          {
+            "from": "West lower slope",
+            "to": "West launch gate",
+            "pass": true
+          },
+          {
+            "from": "West launch gate",
+            "to": "Finish / west watch",
+            "pass": true
+          }
+        ]
+      },
+      "200": {
+        "pass": 14,
+        "total": 14,
+        "legs": [
+          {
+            "from": "Start / west rim dispatch",
+            "to": "Upper western rim",
+            "pass": true
+          },
+          {
+            "from": "Upper western rim",
+            "to": "Upper west return",
+            "pass": true
+          },
+          {
+            "from": "Upper west return",
+            "to": "Broken girder west lip",
+            "pass": true
+          },
+          {
+            "from": "Broken girder west lip",
+            "to": "Bridge fracture aperture",
+            "pass": true
+          },
+          {
+            "from": "Bridge fracture aperture",
+            "to": "Crater underbridge alternative",
+            "pass": true
+          },
+          {
+            "from": "Crater underbridge alternative",
+            "to": "East basin slope",
+            "pass": true
+          },
+          {
+            "from": "East basin slope",
+            "to": "East capture",
+            "pass": true
+          },
+          {
+            "from": "East capture",
+            "to": "East cargo approach",
+            "pass": true
+          },
+          {
+            "from": "East cargo approach",
+            "to": "East suspended abutment underpass",
+            "pass": true
+          },
+          {
+            "from": "East suspended abutment underpass",
+            "to": "Central basin",
+            "pass": true
+          },
+          {
+            "from": "Central basin",
+            "to": "West suspended abutment underpass",
+            "pass": true
+          },
+          {
+            "from": "West suspended abutment underpass",
+            "to": "West lower slope",
+            "pass": true
+          },
+          {
+            "from": "West lower slope",
+            "to": "West launch gate",
+            "pass": true
+          },
+          {
+            "from": "West launch gate",
+            "to": "Finish / west watch",
+            "pass": true
+          }
+        ]
+      }
+    },
+    "alternative": {
+      "100": {
+        "pass": 8,
+        "total": 8,
+        "legs": [
+          {
+            "from": "Start / west rim dispatch",
+            "to": "Upper western rim",
+            "pass": true
+          },
+          {
+            "from": "Upper western rim",
+            "to": "Cableway staged holdout",
+            "pass": true
+          },
+          {
+            "from": "Cableway staged holdout",
+            "to": "West cable descent",
+            "pass": true
+          },
+          {
+            "from": "West cable descent",
+            "to": "West lower slope",
+            "pass": true
+          },
+          {
+            "from": "West lower slope",
+            "to": "West suspended abutment underpass",
+            "pass": true
+          },
+          {
+            "from": "West suspended abutment underpass",
+            "to": "Crater underbridge alternative",
+            "pass": true
+          },
+          {
+            "from": "Crater underbridge alternative",
+            "to": "East basin slope",
+            "pass": true
+          },
+          {
+            "from": "East basin slope",
+            "to": "East capture",
+            "pass": true
+          }
+        ]
+      },
+      "200": {
+        "pass": 8,
+        "total": 8,
+        "legs": [
+          {
+            "from": "Start / west rim dispatch",
+            "to": "Upper western rim",
+            "pass": true
+          },
+          {
+            "from": "Upper western rim",
+            "to": "Cableway staged holdout",
+            "pass": true
+          },
+          {
+            "from": "Cableway staged holdout",
+            "to": "West cable descent",
+            "pass": true
+          },
+          {
+            "from": "West cable descent",
+            "to": "West lower slope",
+            "pass": true
+          },
+          {
+            "from": "West lower slope",
+            "to": "West suspended abutment underpass",
+            "pass": true
+          },
+          {
+            "from": "West suspended abutment underpass",
+            "to": "Crater underbridge alternative",
+            "pass": true
+          },
+          {
+            "from": "Crater underbridge alternative",
+            "to": "East basin slope",
+            "pass": true
+          },
+          {
+            "from": "East basin slope",
+            "to": "East capture",
+            "pass": true
+          }
+        ]
+      }
+    },
+    "obstructed_alternative": {
+      "100": {
+        "pass": 8,
+        "total": 8,
+        "legs": [
+          {
+            "from": "Start / west rim dispatch",
+            "to": "Upper western rim",
+            "pass": true
+          },
+          {
+            "from": "Upper western rim",
+            "to": "Cableway staged holdout",
+            "pass": true
+          },
+          {
+            "from": "Cableway staged holdout",
+            "to": "West cable descent",
+            "pass": true
+          },
+          {
+            "from": "West cable descent",
+            "to": "West lower slope",
+            "pass": true
+          },
+          {
+            "from": "West lower slope",
+            "to": "West suspended abutment underpass",
+            "pass": true
+          },
+          {
+            "from": "West suspended abutment underpass",
+            "to": "Crater underbridge alternative",
+            "pass": true
+          },
+          {
+            "from": "Crater underbridge alternative",
+            "to": "East basin slope",
+            "pass": true
+          },
+          {
+            "from": "East basin slope",
+            "to": "East capture",
+            "pass": true
+          }
+        ]
+      },
+      "200": {
+        "pass": 8,
+        "total": 8,
+        "legs": [
+          {
+            "from": "Start / west rim dispatch",
+            "to": "Upper western rim",
+            "pass": true
+          },
+          {
+            "from": "Upper western rim",
+            "to": "Cableway staged holdout",
+            "pass": true
+          },
+          {
+            "from": "Cableway staged holdout",
+            "to": "West cable descent",
+            "pass": true
+          },
+          {
+            "from": "West cable descent",
+            "to": "West lower slope",
+            "pass": true
+          },
+          {
+            "from": "West lower slope",
+            "to": "West suspended abutment underpass",
+            "pass": true
+          },
+          {
+            "from": "West suspended abutment underpass",
+            "to": "Crater underbridge alternative",
+            "pass": true
+          },
+          {
+            "from": "Crater underbridge alternative",
+            "to": "East basin slope",
+            "pass": true
+          },
+          {
+            "from": "East basin slope",
+            "to": "East capture",
+            "pass": true
+          }
+        ]
+      }
+    }
+  },
+  "finish_local_return_under_obstruction": true,
+  "native": "NATIVE-UNTESTED"
+}
