@@ -1,0 +1,331 @@
+{
+  "status": "AUTHOR-STATIC-PASS / INDEPENDENT-PENDING / NATIVE-UNTESTED",
+  "source": "ORIGINAL-NO-REFERENCE",
+  "engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "seed": 2611200739,
+  "grid": {
+    "width": 2048,
+    "height": 1024,
+    "cells": 2097152,
+    "sha256": "09ccfd9b22d532e8ac39014232bae8dd1b8848cbb451b93a730590b4f3b7ee56",
+    "histogram": {
+      "0": 1495392,
+      "58": 36105,
+      "62": 85377,
+      "63": 17236,
+      "72": 7882,
+      "77": 4700,
+      "79": 7444,
+      "100": 168759,
+      "101": 173715,
+      "117": 49779,
+      "128": 26118,
+      "130": 24645
+    },
+    "occupied": 601760,
+    "grounded": 601760,
+    "detached": 0,
+    "unanchored_nominal_pruned": 9124,
+    "unknown_materials": 0,
+    "fluids": 0,
+    "reactive": 0
+  },
+  "codec": {
+    "rectangles": 6944,
+    "source_limit": 32768,
+    "setup_bytes": 131743,
+    "source_byte_limit": 1048576,
+    "construction_work": 601760,
+    "source_work_limit": 32000000,
+    "setup_sha256": "f88da8dc8253a8e36a284d48b8f6871ee2e9527270b1fe275f94108797e0883d",
+    "overlaps": 0,
+    "replay_mismatches": 0
+  },
+  "routes": {
+    "pass": true,
+    "envelopes": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "reachable_centres": 1203787,
+        "sites": {
+          "spawn_isolation_port": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "west_quarantine_hatch": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "extraction_ledger": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "sawtooth_spool": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_shuttle": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "central_lamina_focus": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "entered_assay_cradle": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "lower_return": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "east_polymer_valve": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "drying_controls": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "export_cableway": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "finish_freight_gate": {
+            "reachable": true,
+            "approaches": 4
+          }
+        }
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "reachable_centres": 1168099,
+        "sites": {
+          "spawn_isolation_port": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "west_quarantine_hatch": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "extraction_ledger": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "sawtooth_spool": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_shuttle": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "central_lamina_focus": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "entered_assay_cradle": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "lower_return": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "east_polymer_valve": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "drying_controls": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "export_cableway": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "finish_freight_gate": {
+            "reachable": true,
+            "approaches": 4
+          }
+        }
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "reachable_centres": 1109052,
+        "sites": {
+          "spawn_isolation_port": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "west_quarantine_hatch": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "extraction_ledger": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "sawtooth_spool": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_shuttle": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "central_lamina_focus": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "entered_assay_cradle": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "lower_return": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "east_polymer_valve": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "drying_controls": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "export_cableway": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "finish_freight_gate": {
+            "reachable": true,
+            "approaches": 4
+          }
+        },
+        "restricted": {
+          "high": true,
+          "low": true,
+          "high_with_solid_obstruction": true,
+          "low_with_solid_obstruction": true,
+          "obstruction": [
+            941,
+            452,
+            173,
+            172
+          ]
+        }
+      }
+    ]
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "box": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2099184,
+      "png_sha256": "de6ddd79c57ce3411b3fc6fa538e2cea6786993b44552e11df4d9e9aee2fcad8",
+      "material_pixel_sha256": "40ae91d305b1e0295485915ddfe4176e5db976566e5158ee7e8870624e58dc5e",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "01-quarantine-hatch.png",
+      "box": [
+        0,
+        475,
+        380,
+        482
+      ],
+      "bytes": 184500,
+      "png_sha256": "6e8ba0114bc82475bc3eadbbe74f3bfe8cbd4d2d047d641cfdaebebb0c7cdee6",
+      "material_pixel_sha256": "948d7fa860909518f840ae9f228aeb5bdd8d2c1305327f7422879c90d0e95ec7",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "02-preform-ramps.png",
+      "box": [
+        350,
+        450,
+        410,
+        505
+      ],
+      "bytes": 208418,
+      "png_sha256": "ddc816f8f3006eba3aaa2604a4a93ad9f2da643d9a7772d82a48bf30a8cbd2f4",
+      "material_pixel_sha256": "4fe3e6b0cd14bd6b9163a4adf220503270871ee09b4c9ba15d7c04869b2d08cc",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "03-upper-lamina-shuttle.png",
+      "box": [
+        765,
+        45,
+        530,
+        425
+      ],
+      "bytes": 226538,
+      "png_sha256": "7f24a2cdb7321f325d6385a221e0d2b39cc7f223cab4b26c7120e198e5480c6f",
+      "material_pixel_sha256": "8967ab64bb3caabcdbea28fcf3893a77c79664ed1be7c45bde2122384400d153",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "04-entered-assay-cradle.png",
+      "box": [
+        750,
+        680,
+        548,
+        295
+      ],
+      "bytes": 162813,
+      "png_sha256": "ad92629f523de4178f419cfb9de1808eae9cd75cacc6ea4aa1826350db3689a9",
+      "material_pixel_sha256": "44f2145208e0c769a9f2956636e29cfff1deb30e06d17b3388d092ac10010651",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "05-polymer-curing.png",
+      "box": [
+        1320,
+        495,
+        413,
+        482
+      ],
+      "bytes": 200411,
+      "png_sha256": "b79006f91b4bff5d78f140b604b50271b7b20b0caae1868e4f6e4f2bbeb03497",
+      "material_pixel_sha256": "0ad50cb15af1bcfbc27a7fa880132a118372fe9f0683158ef12122b9e496ea17",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "06-freight-recovery.png",
+      "box": [
+        1686,
+        485,
+        362,
+        492
+      ],
+      "bytes": 179454,
+      "png_sha256": "af66a7df18eede5d16802e7a8038fac66783b99b993d06403c604b858edf139d",
+      "material_pixel_sha256": "d86592b3f2feeec96199c9a6d55fa9373ada7a52a8a6643e7f15c3a9ba560dd3",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    }
+  ],
+  "warnings": [
+    "Author static qualification is not independent Art/Technical/Shepherd acceptance.",
+    "Native installed Workbench/Godot/CyberDemoBridge/Rapier and cold save/reopen NOT TESTED.",
+    "Installed bridge capacity must be checked against source 32768; legacy fallback may be 4096."
+  ]
+}
