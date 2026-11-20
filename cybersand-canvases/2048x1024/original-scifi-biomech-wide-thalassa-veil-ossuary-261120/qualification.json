@@ -1,0 +1,506 @@
+{
+  "title": "Thalassa Veil Ossuary",
+  "seed": 2611201103,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source": "ORIGINAL-NO-REFERENCE",
+  "extent": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "grid_sha256": "313bcf80a27047339d613aaacbc47735046fae50280bba0b0ac66364c95fa8be",
+  "setup_sha256": "645a88655b3ea23226bb660f233207959fe28df7efc2dfc28fcbbe809a3c9068",
+  "setup_bytes": 195670,
+  "material_histogram": {
+    "0": 1538104,
+    "58": 49099,
+    "62": 99944,
+    "63": 29465,
+    "72": 5113,
+    "77": 7748,
+    "79": 10075,
+    "100": 160042,
+    "101": 132677,
+    "117": 49736,
+    "128": 15149
+  },
+  "occupied": 559048,
+  "grounded": 559048,
+  "detached": 0,
+  "pruned_nominal_cells": 43620,
+  "rectangles": 10509,
+  "work": 559048,
+  "replay": {
+    "overlaps": 0,
+    "invalid": 0,
+    "mismatches": 0
+  },
+  "sites": {
+    "spawn_mooring": [
+      116,
+      544
+    ],
+    "isolation_valve": [
+      405,
+      651
+    ],
+    "pulse_ledger": [
+      426,
+      627
+    ],
+    "tendon_lift": [
+      769,
+      610
+    ],
+    "upper_resonator": [
+      1010,
+      476
+    ],
+    "core_sampling_port": [
+      1064,
+      561
+    ],
+    "entered_assay": [
+      1076,
+      756
+    ],
+    "lower_return": [
+      1260,
+      747
+    ],
+    "diagnostic_vault": [
+      821,
+      941
+    ],
+    "fractionator_valve": [
+      1486,
+      519
+    ],
+    "crystal_dryer": [
+      1722,
+      578
+    ],
+    "signal_export": [
+      1845,
+      665
+    ],
+    "finish_recovery": [
+      1955,
+      538
+    ]
+  },
+  "site_validation": {
+    "19x15": {
+      "reachable_centres": 1270369,
+      "sites": {
+        "spawn_mooring": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "isolation_valve": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "pulse_ledger": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "tendon_lift": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "upper_resonator": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "core_sampling_port": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "entered_assay": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "lower_return": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "diagnostic_vault": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "fractionator_valve": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "crystal_dryer": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "signal_export": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "finish_recovery": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        }
+      }
+    },
+    "23x19": {
+      "reachable_centres": 1242888,
+      "sites": {
+        "spawn_mooring": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "isolation_valve": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "pulse_ledger": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "tendon_lift": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "upper_resonator": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "core_sampling_port": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "entered_assay": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "lower_return": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "diagnostic_vault": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "fractionator_valve": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "crystal_dryer": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "signal_export": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "finish_recovery": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        }
+      }
+    },
+    "31x27": {
+      "reachable_centres": 1184749,
+      "sites": {
+        "spawn_mooring": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "isolation_valve": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "pulse_ledger": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "tendon_lift": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "upper_resonator": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "core_sampling_port": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "entered_assay": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "lower_return": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "diagnostic_vault": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "fractionator_valve": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "crystal_dryer": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "signal_export": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        },
+        "finish_recovery": {
+          "valid": true,
+          "reachable": true,
+          "four_approaches": true
+        }
+      }
+    }
+  },
+  "gates": {
+    "west": [
+      740,
+      552
+    ],
+    "east": [
+      1320,
+      552
+    ]
+  },
+  "restricted_bypass": {
+    "baseline_shortest": 580,
+    "obstructed_shortest": 700,
+    "restrictions": {
+      "upper": {
+        "baseline": 700,
+        "obstructed": 700
+      },
+      "lower": {
+        "baseline": 896,
+        "obstructed": 896
+      }
+    }
+  },
+  "obstruction": [
+    953,
+    506,
+    172,
+    158
+  ],
+  "crops": [
+    [
+      "01-quarantine-scrubber.png",
+      0,
+      400,
+      400,
+      545
+    ],
+    [
+      "02-tendon-looms.png",
+      375,
+      405,
+      405,
+      540
+    ],
+    [
+      "03-veil-resonator.png",
+      760,
+      0,
+      550,
+      520
+    ],
+    [
+      "04-entered-sampler.png",
+      770,
+      665,
+      540,
+      305
+    ],
+    [
+      "05-fractionators.png",
+      1320,
+      425,
+      405,
+      545
+    ],
+    [
+      "06-export-quay.png",
+      1680,
+      415,
+      368,
+      555
+    ],
+    [
+      "07-vented-vault.png",
+      775,
+      810,
+      245,
+      175
+    ]
+  ],
+  "images": {
+    "overview.png": {
+      "bytes": 2099184,
+      "format": "indexed-material-ID",
+      "crc": "PASS",
+      "pixel_parity": "PASS",
+      "pixels": 2097152,
+      "source_window": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-quarantine-scrubber.png": {
+      "bytes": 219408,
+      "format": "indexed-material-ID",
+      "crc": "PASS",
+      "pixel_parity": "PASS",
+      "pixels": 218000,
+      "source_window": [
+        0,
+        400,
+        400,
+        545
+      ]
+    },
+    "02-tendon-looms.png": {
+      "bytes": 220103,
+      "format": "indexed-material-ID",
+      "crc": "PASS",
+      "pixel_parity": "PASS",
+      "pixels": 218700,
+      "source_window": [
+        375,
+        405,
+        405,
+        540
+      ]
+    },
+    "03-veil-resonator.png": {
+      "bytes": 287388,
+      "format": "indexed-material-ID",
+      "crc": "PASS",
+      "pixel_parity": "PASS",
+      "pixels": 286000,
+      "source_window": [
+        760,
+        0,
+        550,
+        520
+      ]
+    },
+    "04-entered-sampler.png": {
+      "bytes": 165863,
+      "format": "indexed-material-ID",
+      "crc": "PASS",
+      "pixel_parity": "PASS",
+      "pixels": 164700,
+      "source_window": [
+        770,
+        665,
+        540,
+        305
+      ]
+    },
+    "05-fractionators.png": {
+      "bytes": 222133,
+      "format": "indexed-material-ID",
+      "crc": "PASS",
+      "pixel_parity": "PASS",
+      "pixels": 220725,
+      "source_window": [
+        1320,
+        425,
+        405,
+        545
+      ]
+    },
+    "06-export-quay.png": {
+      "bytes": 205658,
+      "format": "indexed-material-ID",
+      "crc": "PASS",
+      "pixel_parity": "PASS",
+      "pixels": 204240,
+      "source_window": [
+        1680,
+        415,
+        368,
+        555
+      ]
+    },
+    "07-vented-vault.png": {
+      "bytes": 43898,
+      "format": "indexed-material-ID",
+      "crc": "PASS",
+      "pixel_parity": "PASS",
+      "pixels": 42875,
+      "source_window": [
+        775,
+        810,
+        245,
+        175
+      ]
+    }
+  },
+  "materials": [
+    58,
+    62,
+    63,
+    72,
+    77,
+    79,
+    100,
+    101,
+    117,
+    128
+  ],
+  "fluid_cells": 0,
+  "native": "NATIVE-UNTESTED"
+}
