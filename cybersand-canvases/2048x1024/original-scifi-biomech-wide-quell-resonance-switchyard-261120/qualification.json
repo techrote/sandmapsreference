@@ -1,0 +1,457 @@
+{
+  "title": "Quell Resonance Switchyard",
+  "seed": 2611201704,
+  "source": "ORIGINAL-NO-REFERENCE",
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "extent": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "grid_sha256": "9f7e37cedeb817db31827e1883020764dedb0ed0fb5bc6e368120cde0a2c5b36",
+  "setup_sha256": "f5b172d74a35cd5e649d0c2610f73434dc9bdcd70b65d9731714c558b4e5d5b4",
+  "setup_bytes": 32083,
+  "materials": {
+    "0": 1509281,
+    "58": 31520,
+    "62": 40506,
+    "63": 39237,
+    "72": 10821,
+    "77": 4108,
+    "79": 1914,
+    "100": 141551,
+    "101": 287917,
+    "117": 19423,
+    "128": 10874
+  },
+  "occupied": 587871,
+  "grounded": 587871,
+  "detached": 0,
+  "pruned_nominal_cells": 33402,
+  "rectangles": 1701,
+  "work": 587871,
+  "replay": {
+    "overlaps": 0,
+    "invalid": 0,
+    "mismatches": 0
+  },
+  "valid_material_ids": [
+    58,
+    62,
+    63,
+    72,
+    77,
+    79,
+    100,
+    101,
+    117,
+    128
+  ],
+  "physics": "Accepted native immovable Solid / RuleKernel::None; no liquids, powders or reactive cells",
+  "sites": {
+    "19x15": {
+      "visited_centres": 1096340,
+      "named_sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "receiver_control": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "shard_recovery": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "splitter_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "spectral_sampling": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_cage_access": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "phase_monitor": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "resonator_valve": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dock_packing": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "nonfree": [],
+      "lost": [],
+      "approach": []
+    },
+    "23x19": {
+      "visited_centres": 1073908,
+      "named_sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "receiver_control": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "shard_recovery": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "splitter_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "spectral_sampling": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_cage_access": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "phase_monitor": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "resonator_valve": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dock_packing": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "nonfree": [],
+      "lost": [],
+      "approach": []
+    },
+    "31x27": {
+      "visited_centres": 1029753,
+      "named_sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "receiver_control": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "shard_recovery": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "splitter_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "spectral_sampling": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_cage_access": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "phase_monitor": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "resonator_valve": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dock_packing": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "nonfree": [],
+      "lost": [],
+      "approach": []
+    }
+  },
+  "route_distances": {
+    "baseline": 540,
+    "blocked": 690,
+    "upper": 704,
+    "lower": 766
+  },
+  "route_obstruction": [
+    967,
+    487,
+    140,
+    126
+  ],
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "receiver_control": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "shard_recovery": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "splitter_console": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "spectral_sampling": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "upper_cage_access": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "central_index": {
+      "directly_occluded": true,
+      "reachable": false
+    },
+    "entered_inspection": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "upper_escape": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "lower_escape": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "phase_monitor": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "resonator_valve": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "dock_packing": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "export_console": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "finish_beacon": {
+      "directly_occluded": false,
+      "reachable": true
+    }
+  },
+  "images": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 2098803,
+      "sha256": "60eb45c7bcbb91940fe85ea6820af324c5f1d3695204422d849fba92657d6dc3",
+      "verified_pixels": 2097152,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "01-signal-intake.png": {
+      "x": 0,
+      "y": 238,
+      "w": 420,
+      "h": 686,
+      "bytes": 289293,
+      "sha256": "77a0cc12a82c8f4c7c9eaef922111e3dfe9a31d2386ea61e0703e745e92fb3da",
+      "verified_pixels": 288120,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "02-spectral-splitter.png": {
+      "x": 385,
+      "y": 190,
+      "w": 430,
+      "h": 735,
+      "bytes": 317272,
+      "sha256": "27a67bdee61b2354624a132a9183b9a44c049d601f57752774f6ee1ae0bea98f",
+      "verified_pixels": 316050,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "03-stepped-core-cage.png": {
+      "x": 780,
+      "y": 70,
+      "w": 495,
+      "h": 560,
+      "bytes": 278247,
+      "sha256": "5e8995bcfbdfa83a67602608bd59960ce9925a0d54d788b89860bb8bd034f8c4",
+      "verified_pixels": 277200,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "04-entered-register.png": {
+      "x": 825,
+      "y": 650,
+      "w": 445,
+      "h": 272,
+      "bytes": 121784,
+      "sha256": "66a2d1f2b8feb697c58a6b2121e13d362d2506c6d3d64f0f70ff0e018d4892a0",
+      "verified_pixels": 121040,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "05-phase-resonators.png": {
+      "x": 1245,
+      "y": 215,
+      "w": 425,
+      "h": 711,
+      "bytes": 303373,
+      "sha256": "34c7d60b0534fe207b9db3a3dd169951d3ccbb383ef31497e865ee3d73b5ef4d",
+      "verified_pixels": 302175,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "06-cassette-export.png": {
+      "x": 1630,
+      "y": 215,
+      "w": 418,
+      "h": 713,
+      "bytes": 299234,
+      "sha256": "55025ddcf17449de8e30b8d92b45e701b8b9584fae94c291fa900a960fbc7e55",
+      "verified_pixels": 298034,
+      "crc_adler_and_exact_material_parity": true
+    }
+  },
+  "source_limits": {
+    "rectangles": 32768,
+    "json_bytes": 1048576,
+    "cell_writes": 32000000
+  },
+  "installed_bridge": "NOT-VERIFIED; possible historical 4096 edit limit",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "AUTHOR-STATIC-PASS; INDEPENDENT ART/TECH/SHEPHERD PENDING"
+}
