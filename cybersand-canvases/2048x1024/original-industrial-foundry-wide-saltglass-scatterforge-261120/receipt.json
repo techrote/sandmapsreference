@@ -1,0 +1,778 @@
+{
+  "schema": 1,
+  "original_no_source": true,
+  "concept": "Saltglass Scatterforge",
+  "seed": 261120347,
+  "engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "6772bc4c0eeb149f6a9e878f7310c05be1523e4598b15b2235555a8efef7e51a",
+  "setup_sha256": "6184355631b3e40fb0ed3c77875a735afbc58ce6a0eb474e29cd5c09ee991533",
+  "json_bytes": 45236,
+  "rectangle_count": 2380,
+  "source_rectangle_limit": 32768,
+  "construction_work": 568662,
+  "material_histogram": {
+    "0": 1528490,
+    "3": 1972,
+    "8": 320,
+    "58": 164355,
+    "62": 26951,
+    "65": 52713,
+    "66": 7531,
+    "68": 21251,
+    "69": 4124,
+    "72": 3022,
+    "76": 8844,
+    "77": 957,
+    "79": 2256,
+    "100": 226781,
+    "104": 17117,
+    "117": 14338,
+    "131": 16130
+  },
+  "ground": {
+    "total": 566370,
+    "rooted": 566370,
+    "detached": 0,
+    "repair": {
+      "components": 24,
+      "links": 539,
+      "maxSize": 10217,
+      "maxLink": 64
+    }
+  },
+  "fluid": {
+    "water": 1972,
+    "lava": 320,
+    "initial_fluid_air_faces": 0,
+    "initial_water_lava_contacts": 0
+  },
+  "flight": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 1304785,
+      "connected_centres": 979303,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "West lip spawn",
+          "x": 116,
+          "y": 251,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore gantry north",
+          "x": 180,
+          "y": 285,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore roof checkpoint",
+          "x": 315,
+          "y": 265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace overlook",
+          "x": 469,
+          "y": 353,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper transit",
+          "x": 540,
+          "y": 249,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle gantry",
+          "x": 678,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle maintenance",
+          "x": 590,
+          "y": 471,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Delivery fall",
+          "x": 824,
+          "y": 430,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "North high bypass",
+          "x": 911,
+          "y": 194,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster crown",
+          "x": 1070,
+          "y": 278,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster observation",
+          "x": 1135,
+          "y": 275,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central seam north entry",
+          "x": 782,
+          "y": 356,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster hatch approach",
+          "x": 1115,
+          "y": 188,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Decline upper entry",
+          "x": 1290,
+          "y": 340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench overlook",
+          "x": 1470,
+          "y": 489,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench service",
+          "x": 1612,
+          "y": 578,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Valve rescue overlook",
+          "x": 1660,
+          "y": 575,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight entry",
+          "x": 1725,
+          "y": 669,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight mast",
+          "x": 1878,
+          "y": 624,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East slip goal",
+          "x": 1952,
+          "y": 670,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Return overdeck",
+          "x": 1268,
+          "y": 183,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 1258436,
+      "connected_centres": 959068,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "West lip spawn",
+          "x": 116,
+          "y": 251,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore gantry north",
+          "x": 180,
+          "y": 285,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore roof checkpoint",
+          "x": 315,
+          "y": 265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace overlook",
+          "x": 469,
+          "y": 353,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper transit",
+          "x": 540,
+          "y": 249,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle gantry",
+          "x": 678,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle maintenance",
+          "x": 590,
+          "y": 471,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Delivery fall",
+          "x": 824,
+          "y": 430,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "North high bypass",
+          "x": 911,
+          "y": 194,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster crown",
+          "x": 1070,
+          "y": 278,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster observation",
+          "x": 1135,
+          "y": 275,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central seam north entry",
+          "x": 782,
+          "y": 356,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster hatch approach",
+          "x": 1115,
+          "y": 188,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Decline upper entry",
+          "x": 1290,
+          "y": 340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench overlook",
+          "x": 1470,
+          "y": 489,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench service",
+          "x": 1612,
+          "y": 578,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Valve rescue overlook",
+          "x": 1660,
+          "y": 575,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight entry",
+          "x": 1725,
+          "y": 669,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight mast",
+          "x": 1878,
+          "y": 624,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East slip goal",
+          "x": 1952,
+          "y": 670,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Return overdeck",
+          "x": 1268,
+          "y": 183,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 1173249,
+      "connected_centres": 919854,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "West lip spawn",
+          "x": 116,
+          "y": 251,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore gantry north",
+          "x": 180,
+          "y": 285,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore roof checkpoint",
+          "x": 315,
+          "y": 265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace overlook",
+          "x": 469,
+          "y": 353,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper transit",
+          "x": 540,
+          "y": 249,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle gantry",
+          "x": 678,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle maintenance",
+          "x": 590,
+          "y": 471,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Delivery fall",
+          "x": 824,
+          "y": 430,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "North high bypass",
+          "x": 911,
+          "y": 194,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster crown",
+          "x": 1070,
+          "y": 278,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster observation",
+          "x": 1135,
+          "y": 275,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central seam north entry",
+          "x": 782,
+          "y": 356,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster hatch approach",
+          "x": 1115,
+          "y": 188,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Decline upper entry",
+          "x": 1290,
+          "y": 340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench overlook",
+          "x": 1470,
+          "y": 489,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench service",
+          "x": 1612,
+          "y": 578,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Valve rescue overlook",
+          "x": 1660,
+          "y": 575,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight entry",
+          "x": 1725,
+          "y": 669,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight mast",
+          "x": 1878,
+          "y": 624,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East slip goal",
+          "x": 1952,
+          "y": 670,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Return overdeck",
+          "x": 1268,
+          "y": 183,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "obstruction": {
+    "box": [
+      750,
+      185,
+      56,
+      130
+    ],
+    "flight": {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 1160445,
+      "connected_centres": 906938,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "West lip spawn",
+          "x": 116,
+          "y": 251,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore gantry north",
+          "x": 180,
+          "y": 285,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore roof checkpoint",
+          "x": 315,
+          "y": 265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace overlook",
+          "x": 469,
+          "y": 353,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper transit",
+          "x": 540,
+          "y": 249,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle gantry",
+          "x": 678,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle maintenance",
+          "x": 590,
+          "y": 471,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Delivery fall",
+          "x": 824,
+          "y": 430,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "North high bypass",
+          "x": 911,
+          "y": 194,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster crown",
+          "x": 1070,
+          "y": 278,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster observation",
+          "x": 1135,
+          "y": 275,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central seam north entry",
+          "x": 782,
+          "y": 356,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster hatch approach",
+          "x": 1115,
+          "y": 188,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Decline upper entry",
+          "x": 1290,
+          "y": 340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench overlook",
+          "x": 1470,
+          "y": 489,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench service",
+          "x": 1612,
+          "y": 578,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Valve rescue overlook",
+          "x": 1660,
+          "y": 575,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight entry",
+          "x": 1725,
+          "y": 669,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight mast",
+          "x": 1878,
+          "y": 624,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East slip goal",
+          "x": 1952,
+          "y": 670,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Return overdeck",
+          "x": 1268,
+          "y": 183,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    "goal_shortest_direct": {
+      "steps": 2343,
+      "visited": 917769
+    },
+    "goal_shortest_blocked": {
+      "steps": 2415,
+      "visited": 904853
+    },
+    "detour_steps": 72
+  },
+  "pngs": {
+    "overview.png": {
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2098812,
+      "sha256": "cab5b9148231dc1dd9203d1ca50c43b220bb09fe41728968c2f62a5bb3cd4619"
+    },
+    "01-ore-and-furnace.png": {
+      "crop": [
+        160,
+        285,
+        329,
+        215
+      ],
+      "bytes": 71431,
+      "sha256": "62daa5ddaf95371016bc6d1866be61a13c31d804ef5f61a66bffc0346948f826"
+    },
+    "02-ladle-island.png": {
+      "crop": [
+        530,
+        387,
+        315,
+        326
+      ],
+      "bytes": 103497,
+      "sha256": "419963c8033f2258e556530df813a265501cf8f915cefc2c8edf1e66859aec17"
+    },
+    "03-caster-crown.png": {
+      "crop": [
+        923,
+        245,
+        320,
+        214
+      ],
+      "bytes": 69175,
+      "sha256": "6f82d3cc4ea4cde00caa16472c777c926659196c7673fd83dfa4eedfe17cace0"
+    },
+    "04-thermal-decline.png": {
+      "crop": [
+        1240,
+        428,
+        440,
+        270
+      ],
+      "bytes": 119551,
+      "sha256": "31831c1e3ddc47269890f81389a9a8bcd2f393b107cf213386d2fe5daee9cee7"
+    },
+    "05-freight-spur.png": {
+      "crop": [
+        1675,
+        618,
+        300,
+        188
+      ],
+      "bytes": 57064,
+      "sha256": "4a16aea2dc242171086b8582f9a2418dff2d40ac0de0e5c70a855f3ed3baa230"
+    },
+    "06-maintenance-voids.png": {
+      "crop": [
+        904,
+        733,
+        716,
+        171
+      ],
+      "bytes": 123088,
+      "sha256": "43940a9d9bc3b1855a4154aea8695279ad45d91c4217278e7e1aa365a4d844c3"
+    }
+  },
+  "pixel_material_parity_count": 2636693,
+  "native": "NATIVE-UNTESTED"
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-foundry-wide",
+  "map_role": "Original foundry production islands; intentionally unfinished reverse-cascade industrial landscape",
+  "anchor_donors": [],
+  "macro_topology": "Five separate grounded process islets, an overhead northern bypass and isolated lower maintenance cavities, above a shared basalt substratum. Distinct sawtooth altitudes, no common horizontal hall roof.",
+  "density_profile": "Dense machine silhouettes on each island; wide exposed vertical air slots, uncrowded high bypass, selectively unfinished enclosed cavities below",
+  "route_grammar": "West lip Midge spawn -> ore roof/heat vessel -> descending ladle -> rising caster crown -> sloping quench -> freight east slip. Sky-level bypass and routes around the island shoulders rejoin; intentional edits can open lower service routes.",
+  "strong_motifs": [
+    "ore chain hoist and suspended weight-cell",
+    "enclosed ceramic lava retort",
+    "off-axis cantilever ladle and feed duct",
+    "three unequal elevated radial casters",
+    "descending diagonal thermal transfer",
+    "sealed water-quench terrace",
+    "rail freight island",
+    "single overhead maintenance gantry"
+  ],
+  "interesting_relationships": [
+    "Upstream ore island is higher than the ladle island, but caster returns to the upper level",
+    "A deliberately vacant cavity below the caster is separated from functional sky navigation",
+    "Thin trestles and boundary-rooted supports establish structural load paths",
+    "High sky bypass protects recovery when the central traversable opening is obstructed"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "Unbuilt middle expansion seam",
+      "region_xywh": [
+        850,
+        500,
+        80,
+        215
+      ],
+      "state": "reserved geometry; not a qualified checkpoint",
+      "use": "add bridges, machinery or alternate lower route"
+    },
+    {
+      "name": "Caster shelf inspection hatch",
+      "region_xywh": [
+        1117,
+        435,
+        50,
+        55
+      ],
+      "state": "authored opening; adjacent lower pocket not currently a named route",
+      "use": "connect machinery access via later edits"
+    },
+    {
+      "name": "Vacant underplant bay",
+      "region_xywh": [
+        940,
+        758,
+        187,
+        95
+      ],
+      "state": "partly fitted and intentionally disconnected",
+      "use": "human-finished machine room or NPC maintenance"
+    },
+    {
+      "name": "Freight load apron",
+      "region_xywh": [
+        1760,
+        708,
+        182,
+        62
+      ],
+      "state": "authored platform",
+      "use": "scripted arrival/departure"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Rotary caster activation",
+      "anchor": "Caster crown",
+      "kind": "machinery_activation",
+      "staging": "Unequal triple wheel family with clear observation lane"
+    },
+    {
+      "name": "Cross-gorge trestle failure",
+      "anchor": "Central seam north entry",
+      "kind": "bridge_failure",
+      "staging": "Low diagonal transfer and independent upper bypass; no event scripted"
+    },
+    {
+      "name": "Quench release",
+      "anchor": "Quench overlook",
+      "kind": "thermal_release",
+      "staging": "Initially sealed water pocket; no fluid released in authored start"
+    },
+    {
+      "name": "Rail freight departure",
+      "anchor": "Freight entry",
+      "kind": "departure",
+      "staging": "Operated-looking freight staging with large open air escape"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Irregular altitude-biased district placement",
+    "Separation of physically load-bearing supports and flight-path corridor graph",
+    "Five unequal industrial island modules",
+    "Future procedural controlled incomplete expansion seams",
+    "Articulated process adjacency without one uninterrupted production shelf"
+  ],
+  "similarity_avoidance": "Unlike Ferroveil, Crownstep and Anvilwake, rejects unified roof, regular undercrofts and a continuous same-altitude casting line. Emphasises isolated tiers, aerial transitions, selective incompleteness and exposed engineering load paths.",
+  "engine_contract": "CyberSand accepted read-only main de58bf1997ca75825cf3b29e046dc1c1022c45bf; Setup-v2 constructor; source rectangle ceiling 32768",
+  "static_proof": {
+    "cells": 2097152,
+    "plane_sha256": "6772bc4c0eeb149f6a9e878f7310c05be1523e4598b15b2235555a8efef7e51a",
+    "rectangles": 2380,
+    "spawn": [
+      116,
+      251
+    ],
+    "named_sites": 21,
+    "static_route_hulls": [
+      [
+        19,
+        15
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        31,
+        27
+      ]
+    ],
+    "obstruction_xywh": [
+      750,
+      185,
+      56,
+      130
+    ],
+    "shortest_direct": 2343,
+    "shortest_blocked": 2415,
+    "detour_steps": 72
+  },
+  "native_status": "NATIVE-UNTESTED"
+}
