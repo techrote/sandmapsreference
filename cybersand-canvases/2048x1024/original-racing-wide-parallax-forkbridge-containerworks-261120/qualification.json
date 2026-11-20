@@ -1,0 +1,297 @@
+{
+  "name": "Parallax Forkbridge Containerworks",
+  "revision": "R1",
+  "seed": "0x20261120",
+  "engine_main_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "repository_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "actual_material_cells": 2097152,
+  "rectangles": 2459,
+  "setup_bytes": 46647,
+  "work_visits": 461608,
+  "source_limits": {
+    "rectangles": 32768,
+    "json_bytes": 1048576,
+    "work_cells": 32000000
+  },
+  "grid_sha256": "07abfde36cfb07f6655a84a4e2c48bc36ae214c260effea6ff7dcde804cc05fe",
+  "setup_sha256": "489fef680e7a0813b489fa5194be3ba31b6be97bed557b0649e13feece13a1c3",
+  "histogram": {
+    "0": 1635544,
+    "58": 131225,
+    "62": 61681,
+    "100": 214908,
+    "101": 4060,
+    "113": 3322,
+    "117": 46196,
+    "122": 216
+  },
+  "detached_design_cells_discarded": 93308,
+  "remaining_detached": 0,
+  "material_laws": {
+    "49": "accepted inert immovable Solid / RuleKernel None",
+    "58": "accepted inert immovable Solid / RuleKernel None",
+    "62": "accepted inert immovable Solid / RuleKernel None",
+    "100": "accepted inert immovable Solid / RuleKernel None",
+    "101": "accepted inert immovable Solid / RuleKernel None",
+    "113": "accepted inert immovable Solid / RuleKernel None",
+    "117": "accepted inert immovable Solid / RuleKernel None",
+    "122": "accepted inert immovable Solid / RuleKernel None"
+  },
+  "named_sites": [
+    {
+      "name": "Start | West ignition",
+      "x": 142,
+      "y": 565
+    },
+    {
+      "name": "Injector coil exit",
+      "x": 326,
+      "y": 564
+    },
+    {
+      "name": "Shuttle lift approach",
+      "x": 505,
+      "y": 594
+    },
+    {
+      "name": "Elevator clearance",
+      "x": 642,
+      "y": 569
+    },
+    {
+      "name": "Forkbridge western throat",
+      "x": 787,
+      "y": 532
+    },
+    {
+      "name": "Upper fork gate",
+      "x": 978,
+      "y": 472
+    },
+    {
+      "name": "Upper fork clearance",
+      "x": 1118,
+      "y": 468
+    },
+    {
+      "name": "Upper fork exit",
+      "x": 1255,
+      "y": 526
+    },
+    {
+      "name": "Cargo gantry arrival",
+      "x": 1432,
+      "y": 520
+    },
+    {
+      "name": "Container loader bypass",
+      "x": 1573,
+      "y": 539
+    },
+    {
+      "name": "Eastern capture entry",
+      "x": 1833,
+      "y": 542
+    },
+    {
+      "name": "East downward turn",
+      "x": 1896,
+      "y": 680
+    },
+    {
+      "name": "East return approach",
+      "x": 1740,
+      "y": 752
+    },
+    {
+      "name": "Under cargo berth",
+      "x": 1532,
+      "y": 738
+    },
+    {
+      "name": "Central lower return",
+      "x": 1132,
+      "y": 752
+    },
+    {
+      "name": "Switch return",
+      "x": 911,
+      "y": 753
+    },
+    {
+      "name": "Shuttle underpass",
+      "x": 593,
+      "y": 738
+    },
+    {
+      "name": "West recovery",
+      "x": 263,
+      "y": 741
+    },
+    {
+      "name": "Finish | West ignition",
+      "x": 143,
+      "y": 565
+    },
+    {
+      "name": "Alternative central ramp",
+      "x": 937,
+      "y": 657
+    },
+    {
+      "name": "Alternative fork rejoin",
+      "x": 1257,
+      "y": 657
+    },
+    {
+      "name": "West control platform",
+      "x": 147,
+      "y": 258
+    },
+    {
+      "name": "Shuttle cable operator",
+      "x": 782,
+      "y": 274
+    },
+    {
+      "name": "Forkbridge overhead signal",
+      "x": 840,
+      "y": 273
+    },
+    {
+      "name": "Cargo loading attendant",
+      "x": 1550,
+      "y": 574
+    },
+    {
+      "name": "East catcher operator",
+      "x": 1852,
+      "y": 198
+    },
+    {
+      "name": "Pressure service room",
+      "x": 277,
+      "y": 865
+    },
+    {
+      "name": "Shuttle gearbox service",
+      "x": 671,
+      "y": 856
+    },
+    {
+      "name": "Fork hydraulics service",
+      "x": 1100,
+      "y": 851
+    },
+    {
+      "name": "Cargo filter service",
+      "x": 1567,
+      "y": 863
+    },
+    {
+      "name": "Brake handoff service",
+      "x": 1900,
+      "y": 847
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "connected": 1148720,
+      "reached": 31,
+      "missing": []
+    },
+    "23x19": {
+      "connected": 1114138,
+      "reached": 31,
+      "missing": []
+    },
+    "31x27": {
+      "connected": 1041243,
+      "reached": 31,
+      "missing": []
+    }
+  },
+  "obstruction": {
+    "xywh": [
+      933,
+      417,
+      120,
+      124
+    ],
+    "connected": 1018766,
+    "reached": 30,
+    "missing": [
+      "Upper fork gate"
+    ]
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "width": 2048,
+      "height": 1024,
+      "bytes": 16224,
+      "sha256": "c6a0e9e5309d77b9eacb179cda78d08f2f6ea7fdfd4ac4767d57bdc7514270b4",
+      "verified_source_pixels": 2097152
+    },
+    "01-west-injection.png": {
+      "x": 0,
+      "y": 145,
+      "width": 423,
+      "height": 746,
+      "bytes": 2585,
+      "sha256": "22461067408279c297a08959b8a68d47f79d7a32699300b8b0dfa6547033ad06",
+      "verified_source_pixels": 315558
+    },
+    "02-shuttle-lift.png": {
+      "x": 389,
+      "y": 167,
+      "width": 432,
+      "height": 756,
+      "bytes": 3707,
+      "sha256": "7bfe0aeda43a51f73e2553461942710784c0fafdbc24e71810778043b8f11d28",
+      "verified_source_pixels": 326592
+    },
+    "03-forkbridge-signal.png": {
+      "x": 819,
+      "y": 101,
+      "width": 440,
+      "height": 806,
+      "bytes": 3801,
+      "sha256": "0d67c1c3e5c6fd3b9c45b0ba1586222915d2004fea7c44f00824e1738944006e",
+      "verified_source_pixels": 354640
+    },
+    "04-cargo-gantry.png": {
+      "x": 1271,
+      "y": 190,
+      "width": 440,
+      "height": 776,
+      "bytes": 2860,
+      "sha256": "f2069b988eb9df65d4dd601086d05d08bd0de9929b3b58334153d86ff75787fe",
+      "verified_source_pixels": 341440
+    },
+    "05-east-arrestor.png": {
+      "x": 1653,
+      "y": 176,
+      "width": 395,
+      "height": 819,
+      "bytes": 2905,
+      "sha256": "92b1d0b576fca8d64e908590604ab21f086612b86b281c22d6beca7c63f0d9dd",
+      "verified_source_pixels": 323505
+    },
+    "06-foundation-service.png": {
+      "x": 242,
+      "y": 741,
+      "width": 1495,
+      "height": 283,
+      "bytes": 3401,
+      "sha256": "3a7c70196b0396eba884ce9207ebf8d766d15f456cee8a27260cb9629fc9a17c",
+      "verified_source_pixels": 423085
+    }
+  },
+  "native": "NATIVE-UNTESTED. No installed bridge, flight, collision, movement or cold save/reopen."
+}
