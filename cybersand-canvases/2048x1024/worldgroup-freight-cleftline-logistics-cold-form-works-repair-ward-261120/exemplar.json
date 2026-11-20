@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Cleftline Logistics",
+  "lane": "worldgroup/freight",
+  "map_role": "Reclaimed-hull cold-form works / inhabited repair ward",
+  "anchor_donors": [
+    "wide-graven-keel-ship-tipper",
+    "wide-peregrine-cleft-halcyon-drydock"
+  ],
+  "siblings": [
+    {
+      "role": "Outer Mooring Registry / Ballast Exchange",
+      "url": "https://github.com/techrote/sandmapsreference/pull/86"
+    },
+    {
+      "role": "Breakwater Recovery / Hull De-rigging Basin",
+      "url": "https://github.com/techrote/sandmapsreference/pull/90"
+    },
+    {
+      "role": "Inland Escarpment / Switchback Exchange",
+      "url": "https://github.com/techrote/sandmapsreference/pull/96"
+    },
+    {
+      "role": "Cold-Form Works / Inhabited Repair Ward",
+      "status": "this_map"
+    }
+  ],
+  "macro_topology": [
+    "basalt roof and floor enclosing three unequal connected production/inhabitation voids",
+    "nested circular rib-press within larger forming vault",
+    "single eastern open vertical relief and emergency shaft",
+    "perforated heavy transverse buttresses and separately accessible underworks"
+  ],
+  "density_profile": "Massive structural border and transverse basalt bulkheads with highly open central press volume; dense west receiving and east repair/relief workfaces, retained unfurnished annexes",
+  "route_grammar": {
+    "main": [
+      "West receiving portal",
+      "Intake ledger bay",
+      "Unload cradle",
+      "Mid transfer throat",
+      "Cold-rib forming gate",
+      "Press core approach",
+      "Inspection die",
+      "Repair infirmary",
+      "Ward common spine",
+      "Recommission dispatch",
+      "Export lift transfer"
+    ],
+    "upper": [
+      "Crown observation gallery",
+      "North rib service",
+      "Ward upper commons",
+      "Ward outer lodge",
+      "Relief shaft head",
+      "Emergency lip"
+    ],
+    "lower": [
+      "Ward low archive",
+      "Relief shaft foot",
+      "West salvage return",
+      "Press coolant return",
+      "Repair salvage lock"
+    ],
+    "deep": [
+      "Deep salvage ledger",
+      "Deep return switch",
+      "Deep discharge fan"
+    ],
+    "obstruction": "76×113 simulated 58-material obstruction at [512,467,76,113], alternate crown/underworks passage remains viable"
+  },
+  "strong_motifs": [
+    "asymmetrically rooted basalt factory-city",
+    "three concentric cold-rib forming arcs and seated forming plinth",
+    "unequal inhabited repair rooms with open portals",
+    "heavy pierced trans-bulkhead mass",
+    "one-sided emergency relief/export column",
+    "deep salvage return bays"
+  ],
+  "interesting_relationships": [
+    "Salvaged hull stock from the coast is graded inland before reaching cold rib-forming, occupied ward repair and dispatch",
+    "Directly adjacent manufacturing vault and resident repair spaces share a traversable service membrane",
+    "Roof-rooted machine supports, pierced massive buttresses and the geological container express different load paths",
+    "An exterior emergency exhaust shaft provides visual contrast and a high/low escape alternative"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "Undeveloped receiving laydown",
+      "bbox": [
+        358,
+        561,
+        152,
+        132
+      ],
+      "role": "Empty edit bay adjacent to held freight for human parts detailing"
+    },
+    {
+      "name": "Forming bay lower spare plinth",
+      "bbox": [
+        616,
+        646,
+        128,
+        80
+      ],
+      "role": "Optional second forming die or event insertion seam without blocking process gate"
+    },
+    {
+      "name": "Ward west service partition",
+      "bbox": [
+        1110,
+        586,
+        140,
+        100
+      ],
+      "role": "Small room expansion/reconfiguration and future actor residence"
+    },
+    {
+      "name": "Remote relief append zone",
+      "bbox": [
+        1815,
+        711,
+        120,
+        135
+      ],
+      "role": "Unfitted outbound bay and vertical continuation"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Cold press seizure",
+      "point": [
+        865,
+        508
+      ],
+      "event_idea": "Potential future press failure/holdout with crown and lower bypasses",
+      "not_scripted": true
+    },
+    {
+      "name": "Inhabited ward encounter",
+      "point": [
+        1378,
+        501
+      ],
+      "event_idea": "Future repair-resident interaction or inspection lockdown",
+      "not_scripted": true
+    },
+    {
+      "name": "Emergency exhaust escape",
+      "point": [
+        1724,
+        227
+      ],
+      "event_idea": "Vertical escape and overhead reveal stage",
+      "not_scripted": true
+    },
+    {
+      "name": "Deep salvage closure",
+      "point": [
+        964,
+        904
+      ],
+      "event_idea": "Reroutable underground return or service door failure",
+      "not_scripted": true
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Generate roof-rooted large unequal chamber hierarchy rather than repeating long quays or split open basins",
+    "Create inhabited industry and manufacture adjacency under a shared massif",
+    "Build physically founded, perforated transverse bulkheads with multiple navigation height bands",
+    "Model non-linear route diversions around a blocked freight throat",
+    "Preserve 2-4 substantial unfitted edit/set-piece receptors as intentional corpus data"
+  ],
+  "similarity_avoidance": "Contrasts with Sibling 01's low linear customs/ballast waterfront, Sibling 02's exterior off-centre V-shaped salvage basin and twin-pier recovery gantry, and Sibling 03's stepped outdoor switchback terraces. This is an enclosed factory-city with an internal triple press rib, occupied ward and a single east vent; no reused donor pixels, room patterns, named sites or route graph.",
+  "diversity_axes": {
+    "macro_topology": "nested_cavities",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "layered",
+    "landmark_family": "ring",
+    "support_form": "mixed",
+    "environment_relation": "geological",
+    "incompleteness": "editable_gaps"
+  },
+  "material_scope": [
+    "0 Empty",
+    "58 ReinforcedConcrete",
+    "62 SteelPlate",
+    "100 BasaltColumns"
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "validation_status": "CREATOR SOURCE-STATIC PASS; independent Art/Technical/Shepherd reviews pending"
+}
