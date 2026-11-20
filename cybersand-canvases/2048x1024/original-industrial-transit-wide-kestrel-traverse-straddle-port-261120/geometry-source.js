@@ -227,3 +227,13 @@ R(1826,680,105,15,M.WALL);
 L(1829,690,1885,752,9,M.STEEL);
 // Revalidate fixed named workstations without snapping or substituting.
 for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Final physically authored bypasses post-detailing. Keep the laden crane
+// module; use the dedicated outward 53-cell underbridge emergency descent
+// instead of deleting the new manifest freight workface.
+R(867,465,53,424,M.AIR);
+R(553,412,94,115,M.AIR);
+R(776,509,58,190,M.AIR);
+// Preserve exact declared site centres; verify their entire hull envelopes.
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
