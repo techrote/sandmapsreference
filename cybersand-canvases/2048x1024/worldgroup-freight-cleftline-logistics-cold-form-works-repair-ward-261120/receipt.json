@@ -1,0 +1,321 @@
+{
+  "concept": "Cleftline Logistics — Reclaimed-Hull Cold-Form Works / Inhabited Repair Ward",
+  "original": true,
+  "seed": 203356676,
+  "engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West receiving portal",
+      "Intake ledger bay",
+      "Unload cradle",
+      "Mid transfer throat",
+      "Cold-rib forming gate",
+      "Press core approach",
+      "Inspection die",
+      "Repair infirmary",
+      "Ward common spine",
+      "Recommission dispatch",
+      "Export lift transfer"
+    ],
+    "upper": [
+      "Crown observation gallery",
+      "North rib service",
+      "Ward upper commons",
+      "Ward outer lodge",
+      "Relief shaft head",
+      "Emergency lip"
+    ],
+    "lower": [
+      "Ward low archive",
+      "Relief shaft foot",
+      "West salvage return",
+      "Press coolant return",
+      "Repair salvage lock"
+    ],
+    "deep": [
+      "Deep salvage ledger",
+      "Deep return switch",
+      "Deep discharge fan"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West receiving portal": [
+      136,
+      502
+    ],
+    "Intake ledger bay": [
+      288,
+      505
+    ],
+    "Unload cradle": [
+      451,
+      503
+    ],
+    "Mid transfer throat": [
+      614,
+      505
+    ],
+    "Cold-rib forming gate": [
+      744,
+      508
+    ],
+    "Press core approach": [
+      865,
+      508
+    ],
+    "Inspection die": [
+      1032,
+      506
+    ],
+    "Crown observation gallery": [
+      879,
+      291
+    ],
+    "North rib service": [
+      1047,
+      320
+    ],
+    "Repair infirmary": [
+      1205,
+      501
+    ],
+    "Ward common spine": [
+      1378,
+      501
+    ],
+    "Recommission dispatch": [
+      1528,
+      505
+    ],
+    "Ward upper commons": [
+      1320,
+      346
+    ],
+    "Ward outer lodge": [
+      1492,
+      347
+    ],
+    "Ward low archive": [
+      1320,
+      658
+    ],
+    "Relief shaft head": [
+      1724,
+      227
+    ],
+    "Emergency lip": [
+      1820,
+      279
+    ],
+    "Export lift transfer": [
+      1720,
+      508
+    ],
+    "Relief shaft foot": [
+      1725,
+      737
+    ],
+    "West salvage return": [
+      273,
+      793
+    ],
+    "Press coolant return": [
+      936,
+      787
+    ],
+    "Repair salvage lock": [
+      1465,
+      793
+    ],
+    "Deep salvage ledger": [
+      231,
+      902
+    ],
+    "Deep return switch": [
+      964,
+      904
+    ],
+    "Deep discharge fan": [
+      1750,
+      901
+    ]
+  },
+  "material_histogram": {
+    "0": 1431724,
+    "58": 46611,
+    "62": 136122,
+    "100": 482695
+  },
+  "stable_occupied_cells": 665428,
+  "grounded": 665428,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 58951,
+  "invalid_writes": 0,
+  "rectangles": 2071,
+  "rectangle_work": 665428,
+  "setup_bytes": 39806,
+  "material_plane_sha256": "569307d9c7bb692cb065e488fbaf45a1fe732c6f0d203ef1d08e1f2ac70f3771",
+  "setup_sha256": "b5aad852e7098730e39534583b05b3847e7ca18004ee09d76060967e133968fd",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1190236,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1145147,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1052041,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      512,
+      467,
+      76,
+      113
+    ],
+    "from": "Unload cradle",
+    "to": "Cold-rib forming gate",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 25,
+    "unreachable": [],
+    "distance_before_after": [
+      298,
+      398
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "fceb781c6a0b8dd04aadf63782efd3580c83636dd1cdc5ce82c015c1f97fc5cd",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-receiving-cradle",
+      "rect": [
+        90,
+        301,
+        520,
+        413
+      ],
+      "bytes": 54288,
+      "sha256": "fbaa2397396463b29c08e306edde7d856aff3d0d678f420ea0f834f4a8d03da2",
+      "pixel_parity": 214760
+    },
+    {
+      "name": "02-cold-rib-press-vault",
+      "rect": [
+        562,
+        247,
+        630,
+        507
+      ],
+      "bytes": 80803,
+      "sha256": "0f318b8421ae2aaab2649b6a9af2c2da442544261fc7ef382ab79aaa50896cda",
+      "pixel_parity": 319410
+    },
+    {
+      "name": "03-inhabited-repair-ward",
+      "rect": [
+        1110,
+        267,
+        491,
+        488
+      ],
+      "bytes": 60697,
+      "sha256": "4dff44be285ca238e1234ef2493cb11633306bf0410edb5e90fbd212be82774b",
+      "pixel_parity": 239608
+    },
+    {
+      "name": "04-vertical-relief-dispatch",
+      "rect": [
+        1550,
+        146,
+        439,
+        747
+      ],
+      "bytes": 83107,
+      "sha256": "9427be6c67c361e56ecd572ebbe530bcfcb0ca6debc1296e091779d121229adc",
+      "pixel_parity": 327933
+    },
+    {
+      "name": "05-salvage-return-and-ports",
+      "rect": [
+        128,
+        723,
+        1790,
+        274
+      ],
+      "bytes": 123216,
+      "sha256": "fbe6b3a36d8aa4063b123d97628884b13c5fadec0368d824ef544ad269cf5037",
+      "pixel_parity": 490460
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Complete material plane, lossless disjoint Setup-v2 replay, exact conservative 19x15/23x19/31x27 routes, physical obstruction detour and indexed PNG integrity/parity"
+}
