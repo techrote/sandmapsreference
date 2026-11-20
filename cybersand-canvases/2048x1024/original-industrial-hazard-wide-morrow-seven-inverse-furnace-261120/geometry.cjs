@@ -135,6 +135,65 @@ rect(830,854,405,18,0);rect(830,870,405,7,117);
  rect(193,690,10,15,117);rect(233,690,10,18,117);
  rect(319,578,11,25,117);rect(690,768,10,21,117);
  rect(1740,643,10,20,117);
+
+ // R2 ORIGINAL PROCESS-LEGIBILITY REPAIR — physically connected inert workfaces, no liquid edits.
+ // WEST FREIGHT: opposed handling forks, load metrology and dry entered inspector station.
+ rect(119,665,11,52,58);rect(119,666,46,9,62);rect(155,667,10,25,76);
+ rect(289,663,11,57,58);rect(269,666,31,9,62);rect(268,666,11,25,76);
+ rect(206,597,10,33,58);rect(204,630,66,8,70);
+ rect(218,611,51,19,101);frame(224,604,38,29,5,117);
+ rect(227,618,29,6,120);rect(214,598,8,17,77);
+ rect(342,743,12,24,58);rect(321,756,60,10,62);
+ frame(331,724,46,29,5,70);rect(339,746,30,7,120);
+ // COUNTERWASH: distinct hot isolation / cold recovery service chain and two entered operation bays.
+ rect(501,593,9,24,117);rect(499,607,19,8,79);
+ rect(508,721,11,50,58);rect(508,768,49,9,68);
+ rect(535,781,10,27,58);rect(535,800,77,11,62);
+ frame(556,768,50,31,6,70);rect(568,790,27,8,79);
+ rect(607,720,10,39,58);rect(606,745,47,8,68);
+ rect(654,745,9,77,58);rect(654,814,77,10,117);
+ frame(680,774,47,34,6,62);rect(690,800,27,8,120);
+ rect(774,716,10,66,117);rect(740,776,43,9,70);
+ rect(746,785,9,30,58);rect(725,812,64,9,62);
+ // Exchange headers are beside fully sealed cartridges, not cut through their walls.
+ rect(640,734,10,20,68);rect(641,736,32,9,79);
+ rect(661,743,10,40,117);rect(619,733,10,18,76);
+ rect(753,731,10,18,77);rect(753,740,23,8,68);
+ // BROKEN ANNULUS: occupied half-ring diagnostic berth; retain central circular flight void.
+ rect(1058,711,72,10,62);rect(1058,711,9,74,58);
+ rect(1116,711,10,83,58);rect(1067,752,48,8,70);
+ frame(1073,671,51,32,6,68);rect(1085,695,24,7,77);
+ rect(1081,703,8,9,117);rect(1110,703,8,9,117);
+ rect(1132,726,12,68,58);rect(1118,754,30,10,62);
+ frame(1138,715,48,31,6,70);rect(1150,738,26,7,76);
+ rect(1150,746,11,15,117);
+ // LOWER CAPTURE: converging unequal retrieval saddles, transfer sampling and drain-end winch.
+ rect(1001,895,13,42,58);rect(1010,908,78,10,68);
+ line(1015,913,1047,932,10,62);line(1047,932,1082,913,10,62);
+ rect(1044,930,10,15,117);
+ rect(1080,896,10,44,58);rect(1072,894,21,9,70);
+ rect(1125,893,11,44,58);rect(1133,910,84,10,62);
+ line(1138,910,1170,932,10,68);line(1170,932,1214,908,10,68);
+ rect(1166,930,13,17,58);rect(1205,903,12,36,58);
+ frame(1148,874,54,28,6,70);rect(1160,895,27,6,77);
+ rect(1149,902,9,13,117);rect(1197,902,9,13,117);
+ // DELTA RADIATOR: separate process measurement and dry coolant-recovery capture head.
+ rect(1372,733,12,72,58);rect(1373,741,96,10,68);
+ frame(1396,704,57,31,6,70);rect(1410,727,28,7,77);
+ rect(1454,735,10,76,58);rect(1460,760,44,8,117);
+ rect(1479,765,9,42,58);
+ // EAST STACKS: entered filter assay booth and lower collection/weighing with separated functions.
+ rect(1770,704,12,97,58);rect(1770,749,67,10,62);
+ frame(1785,711,50,30,6,70);rect(1796,733,25,7,120);
+ rect(1827,750,10,49,58);rect(1800,773,38,7,79);
+ rect(1886,708,13,90,58);rect(1888,752,77,10,68);
+ frame(1905,715,52,32,6,62);rect(1919,737,24,8,77);
+ rect(1954,760,10,38,58);rect(1946,773,42,9,70);
+ rect(1954,716,11,36,117);rect(1962,716,28,9,76);
+ // Core capture lip attached to stack rail, not floating motifs.
+ rect(1722,696,12,39,58);rect(1717,724,57,9,68);
+ frame(1737,703,34,20,5,70);rect(1745,716,18,6,120);
+
  // FINAL controlled openings between rooms/air, not cosmetic labels.
  rect(359,400,44,87,0);rect(818,420,52,84,0);
  rect(1210,426,55,85,0);rect(1640,410,50,88,0);

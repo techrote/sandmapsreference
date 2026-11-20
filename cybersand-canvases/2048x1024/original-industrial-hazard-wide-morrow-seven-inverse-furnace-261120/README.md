@@ -2,6 +2,14 @@
 
 **OPEN Draft/HOLD · original 2048×1024 perpendicular side elevation · source-static creator qualification only · NATIVE-UNTESTED.**
 
+## R2 independent-Shepherd P1 material repair (20 November 2026)
+
+The P1 issue was industrial-process readability at actual Midge scale, not layout viability. This creator-only R2 adds **36,081 changed final material IDs** versus R1 `cf0562f07fd304d33dd4e5f2b74e7b7f3d3cbb9c` (**28,999 added / 7,082 reassigned / 0 removed; 0 Water/Lava cells altered**) across all five districts and the lower return. New features are opposed freight clamps and berth metrology; hot-isolation and cold-recovery headers with entered dry service bays; a supported inner-ring diagnostic observation station without blocking its flight void; differentiated inverter capture saddles, a drain winch and radiator calibration berth; and separately recognizable stack assay, collection and weighing stations. All are inert physically attached material solids, not operating process simulation.
+
+**Recomputed exact R2 source checks:** 2766 canonical disjoint nonempty rectangles, 561870 construction writes, 52485 JSON bytes; 537924/537924 grounded structural cells and zero detached; **15/15 literal named Midge centres** at 19×15, 23×19, 31×27 from the original fixed spawn. The original **90×350** real obstruction retains **15/15**, with +198 to +214 steps for several east/drain destinations. Original Water 15476 and Lava 8470 unchanged, with zero initially open cardinal fluid interfaces.
+
+**PNG integrity independently checked in generator execution:** 3,406,477 pixels across the complete full-grid overview and six authentic 1:1 crops; PNG signature, chunk CRC, fixed-Huffman DEFLATE stream, Adler-32, unfiltered indexed byte parity with the final 2,097,152 material cells — **0 mismatches**. Native Godot/Workbench/Rapier, dynamic water/lava behaviour and cold save/reopen remain **NATIVE-UNTESTED**. Exact new-HEAD independent art/technical/Shepherd reassessment is required before admission.
+
 ## Authored place and shape
 
 Morrow-7 is an evacuated **thermal-reversal and salvage facility** rebuilt around a broken annular inversion chamber. No external image, photo, old conversion or other creator's geometry was used. Its five districts are unequal and separately identifiable by their material-cell shapes, structural purposes and flight challenges:
@@ -51,9 +59,9 @@ The required 31×27 conservative envelope, as well as 19×15 and 23×19 envelope
 - Source base `techrote/sandmapsreference@99a166e7fcae45eb22be1740e9f33f62faccbcc7`.
 - The accepted Setup-v2 root contract is reproduced with all 14 keys; Midge actor hash `c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96`.
 - Deterministic material-ID builder and fixed seed **19112617** are in `geometry.cjs` and `build.cjs`. Run `node build.cjs --write`, then `node build.cjs --verify` in a compatible Node.js environment.
-- Source grid SHA-256 `b730d0e726fe3ad32f05894ffa2f12a698dd42188ca8e0dcc302d4554da86422`. Setup JSON SHA-256 `8d83f366b7af8a5e0b9c7c79551bfec1ec3688e0692eb9048170e19578eae345`.
-- Exactly **2,097,152** final cells encoded in **2409** nonoverlapping canonical ordered material rectangles, **532871** construction material writes; **45826** ASCII/UTF-8 Setup JSON bytes.
-- Inert solids **508925/508925** anchored to world boundary, detached **0**.
+- Source grid SHA-256 `d6c08ec75397a1fbdcc23508e44325af757494398d10dd88f7b36df34ef55df7`. Setup JSON SHA-256 `17583ff2466bc6902a2c5e2372cef47418523fbde012537d4d2acdfb56fadcc7`.
+- Exactly **2,097,152** final cells encoded in **2766** nonoverlapping canonical ordered material rectangles, **561870** construction material writes; **52485** ASCII/UTF-8 Setup JSON bytes.
+- Inert solids **537924/537924** anchored to world boundary, detached **0**.
 - Water and Lava remain confined at time zero with **zero exposed/overlapping reactive cardinal contacts**; no claim about live fluid motion.
 - Source caps 32,768 edits, 1 MiB JSON and 32M work units. Installed CyberDemoBridge limit is **UNKNOWN**, possibly 4,096; this map is below both known numerical candidates but installation still must be tested.
 - Whole-grid material histogram, exact source SHA-256, full ordered edit replay, literal destination BFS, full hull clearance and forced obstruction are in `receipt.json`.

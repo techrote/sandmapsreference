@@ -8,35 +8,36 @@
   ],
   "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "source_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
-  "grid_sha256": "b730d0e726fe3ad32f05894ffa2f12a698dd42188ca8e0dcc302d4554da86422",
-  "setup_sha256": "8d83f366b7af8a5e0b9c7c79551bfec1ec3688e0692eb9048170e19578eae345",
-  "setup_json_bytes": 45826,
-  "rectangles": 2409,
-  "work": 532871,
+  "grid_sha256": "d6c08ec75397a1fbdcc23508e44325af757494398d10dd88f7b36df34ef55df7",
+  "setup_sha256": "17583ff2466bc6902a2c5e2372cef47418523fbde012537d4d2acdfb56fadcc7",
+  "setup_json_bytes": 52485,
+  "rectangles": 2766,
+  "work": 561870,
   "histogram": {
-    "0": 1564281,
+    "0": 1535282,
     "3": 15476,
     "8": 8470,
-    "58": 254536,
-    "62": 81338,
-    "68": 20463,
-    "70": 8948,
-    "76": 1869,
-    "77": 1251,
-    "79": 936,
+    "58": 263710,
+    "62": 85520,
+    "68": 24453,
+    "70": 14404,
+    "76": 3008,
+    "77": 2205,
+    "79": 1838,
     "100": 88002,
-    "104": 4980,
-    "117": 45248,
-    "120": 1354
+    "101": 545,
+    "104": 4969,
+    "117": 47315,
+    "120": 1955
   },
   "solid_connectivity": {
-    "total": 508925,
-    "grounded": 508925,
+    "total": 537924,
+    "grounded": 537924,
     "detached": 0
   },
   "clearance": {
     "19x15": {
-      "visited": 1135847,
+      "visited": 1127092,
       "reachable": 15,
       "centres": [
         [
@@ -102,7 +103,7 @@
       ]
     },
     "23x19": {
-      "visited": 1090986,
+      "visited": 1082740,
       "reachable": 15,
       "centres": [
         [
@@ -168,7 +169,7 @@
       ]
     },
     "31x27": {
-      "visited": 1016528,
+      "visited": 1008843,
       "reachable": 15,
       "centres": [
         [
@@ -242,7 +243,7 @@
       350
     ],
     "reachable": 15,
-    "visited": 979409,
+    "visited": 971724,
     "detours": [
       {
         "name": "Midge induction",
@@ -415,8 +416,8 @@
   ],
   "images": {
     "overview.png": {
-      "bytes": 29552,
-      "sha256": "660cbcdcf6befdfbf36410c623e059bb0d8499b28b24ebaddfa722b79bfbd74e",
+      "bytes": 31194,
+      "sha256": "4c7955baec11ca39e1fb3ee9a8b6e8b87599b7f366f135d97b36f45f9b59ab37",
       "crop": [
         0,
         0,
@@ -425,8 +426,8 @@
       ]
     },
     "01-freight-assay.png": {
-      "bytes": 6289,
-      "sha256": "dcb0056296ea48b76301a2f73ad1d6b2c78493ec81f08cd0ffec2d95cf500bb2",
+      "bytes": 6404,
+      "sha256": "c825f98b3911e363a6b8f5337fffa4de79eb144c931b55608c9b25534647ce76",
       "crop": [
         55,
         185,
@@ -435,8 +436,8 @@
       ]
     },
     "02-counterwash.png": {
-      "bytes": 6502,
-      "sha256": "3e00c0c141f31980adc80eb598844691cfba267bba6edd2519bb459ac2d4015e",
+      "bytes": 6870,
+      "sha256": "06f0ed53e5ec92a267405899b58a2b174ea1d2befa465d3e6b97e1a0851894ff",
       "crop": [
         405,
         365,
@@ -445,8 +446,8 @@
       ]
     },
     "03-annulus.png": {
-      "bytes": 7386,
-      "sha256": "d24ce19bcd948a757b5b3b398ef82a1b94e7d035a290e3c2c9b6c39a4a0532bb",
+      "bytes": 7466,
+      "sha256": "b63e9391389b822e359907620993ecb0007fe653b841f1bf675a3d2bf3bfde45",
       "crop": [
         830,
         400,
@@ -455,8 +456,8 @@
       ]
     },
     "04-radiator.png": {
-      "bytes": 5729,
-      "sha256": "3d3ab3ed48630a24c5adea71e0d9f60b73322f7bd88186304dd14bf9442a98cf",
+      "bytes": 5797,
+      "sha256": "4a01b6862e2fb0b3db45534ddff07a870eaa844a50f52cd0264e985a64e0e134",
       "crop": [
         1230,
         355,
@@ -465,8 +466,8 @@
       ]
     },
     "05-exhaust.png": {
-      "bytes": 6257,
-      "sha256": "d48fb5378a5d356b024f985e4cae392957d09c0f982de0fe7a2d2e56d7504a63",
+      "bytes": 6554,
+      "sha256": "2e560fc965eef84ead198cf41f213776e71f6b102b879dbf18adf1b148ebf76a",
       "crop": [
         1600,
         240,
@@ -475,8 +476,8 @@
       ]
     },
     "06-recovery.png": {
-      "bytes": 3906,
-      "sha256": "6e95ad03eb0c17875eaf840d801717fa794bce4835e80abd41b1c9a041d162bd",
+      "bytes": 4522,
+      "sha256": "f2379afef47aeaf717b07e3c803b893ab7031af15c23f3f29ab4acefc3bf7fe7",
       "crop": [
         830,
         755,
