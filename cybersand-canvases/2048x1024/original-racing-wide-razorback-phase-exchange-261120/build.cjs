@@ -8,7 +8,7 @@ const M={E:0,S:49,C:58,T:62,B:100,O:101,Z:113,I:117,G:120,Q:122,U:123,P:128};
 const POLICY=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
 const PALETTE={0:[8,11,18,255],49:[70,83,99,255],58:[119,123,128,255],62:[126,141,153,255],100:[54,56,61,255],101:[24,19,32,255],113:[152,162,168,255],117:[90,94,100,255],120:[172,203,214,220],122:[226,236,244,224],123:[152,232,94,210],128:[62,122,180,255]};
 const SITES=[['West Start',139,414],['West Departure',290,413],['Bellows Approach',512,411],['Stator Divide',748,411],['Phase Transfer Upper',1016,408],['Ion Scrubber Upper',1444,406],['East Speed Brake',1760,412],['East Pivot',1912,537],['East Lower',1878,658],['Scrubber Return',1510,656],['Exchange Return',1102,660],['Bellows Return',686,658],['West Return',284,655],['West Ascent',155,535],['Finish',190,414],['Departure Control',307,169],['Bellows Service',567,886],['Exchange Test Cell',1027,896],['Scrubber Service',1507,894],['Midfield Breakout',1082,534]];
-const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), bell=(x,p,r)=>Math.exp(-((x-p)/r)**2);
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), bell=(x,p,r)=>Math.exp(-(((x-p)/r)**2));
 function generate(){
  const g=new Uint8Array(W*H),top=new Int16Array(W),bottom=new Int16Array(W);
  function rect(x,y,w,h,m,ink=false){let l=clamp(Math.round(x),0,W),r=clamp(Math.round(x+w),0,W),t=clamp(Math.round(y),0,H),b=clamp(Math.round(y+h),0,H);for(let j=t;j<b;j++){let a=j*W;for(let i=l;i<r;i++){let k=a+i;if(!ink||g[k])g[k]=m;}}}
