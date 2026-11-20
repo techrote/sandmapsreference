@@ -1,0 +1,241 @@
+{
+  "builder_seed": 202611202249,
+  "extent": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "grid_sha256": "21c33c991967e7a27e235ba0c3296999825a072f2293116288949ffe95d37165",
+  "setup_sha256": "5938892f744c91a32e0152e51a877a96379105c143a1d172768db20bff11670d",
+  "setup_bytes": 60348,
+  "rectangles": 3308,
+  "work_cells": 490121,
+  "histogram": {
+    "0": 1607031,
+    "58": 61948,
+    "62": 116126,
+    "63": 14571,
+    "64": 4464,
+    "68": 1596,
+    "69": 869,
+    "72": 10083,
+    "74": 11044,
+    "76": 2435,
+    "77": 7192,
+    "78": 2860,
+    "79": 4161,
+    "80": 1292,
+    "98": 1979,
+    "100": 244653,
+    "119": 4848
+  },
+  "grounded_solids": 490121,
+  "detached_retained": 0,
+  "removed_unconnected_during_build": 17457,
+  "sites": {
+    "Warden west entry": [
+      113,
+      717
+    ],
+    "Warden exchange": [
+      314,
+      524
+    ],
+    "Warden east hatch": [
+      468,
+      516
+    ],
+    "Ascending transfer": [
+      551,
+      544
+    ],
+    "Traction west access": [
+      585,
+      350
+    ],
+    "Traction core": [
+      737,
+      410
+    ],
+    "Traction east access": [
+      947,
+      543
+    ],
+    "Central suspended passage": [
+      955,
+      710
+    ],
+    "Switch west entry": [
+      1107,
+      527
+    ],
+    "Switch operator": [
+      1202,
+      527
+    ],
+    "Switch east hatch": [
+      1313,
+      551
+    ],
+    "Frost west entry": [
+      1586,
+      355
+    ],
+    "Frost valves": [
+      1650,
+      355
+    ],
+    "Frost east hatch": [
+      1797,
+      384
+    ],
+    "Western salvage return": [
+      230,
+      779
+    ],
+    "Eastern salvage approach": [
+      1417,
+      765
+    ],
+    "Repair settlement interior": [
+      1632,
+      845
+    ],
+    "Southern return": [
+      1098,
+      796
+    ],
+    "Eastern terminal": [
+      1849,
+      762
+    ]
+  },
+  "spawn": [
+    113,
+    717
+  ],
+  "clearances": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 19,
+      "total": 19,
+      "errors": [],
+      "component_centres": 1053870
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 19,
+      "total": 19,
+      "errors": [],
+      "component_centres": 1016108
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 19,
+      "total": 19,
+      "errors": [],
+      "component_centres": 937305
+    }
+  ],
+  "physical_obstruction_xywh": [
+    914,
+    625,
+    156,
+    154
+  ],
+  "obstructed_routes": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 18,
+      "total": 19,
+      "errors": [
+        "Central suspended passage"
+      ],
+      "component_centres": 1028573
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 18,
+      "total": 19,
+      "errors": [
+        "Central suspended passage"
+      ],
+      "component_centres": 989991
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 18,
+      "total": 19,
+      "errors": [
+        "Central suspended passage"
+      ],
+      "component_centres": 909548
+    }
+  ],
+  "gallery_crops_xyxy": {
+    "01-warden-exchange.png": [
+      134,
+      350,
+      530,
+      656
+    ],
+    "02-gallows-traction.png": [
+      530,
+      155,
+      945,
+      504
+    ],
+    "03-crosswind-switch.png": [
+      966,
+      350,
+      1390,
+      696
+    ],
+    "04-frost-annex.png": [
+      1414,
+      204,
+      1852,
+      546
+    ],
+    "05-salvage-repair.png": [
+      1445,
+      748,
+      1830,
+      952
+    ]
+  },
+  "file_sha256": {
+    "setup.json": "5938892f744c91a32e0152e51a877a96379105c143a1d172768db20bff11670d",
+    "overview.png": "44603fc01387e818dd65f9f6f760ac814460b61ff3e084aa00f23225d00efb24",
+    "01-warden-exchange.png": "7f967e00c43142ea5337b8bb0eebbddd8ad7fc8dd4b820da1035988f6e474707",
+    "02-gallows-traction.png": "171a9c6f3b035cd3c7797d75bd0c1ee8d91147455fde60b149053e440be375cb",
+    "03-crosswind-switch.png": "8a86c963c3f06ff2587b406f9d0ab6746a2674ce85575d86da886d30864d6da6",
+    "04-frost-annex.png": "90f044a54f9a39de12a8fccb13231ba808869acf4f1bcbf83efd602b149c6fa9",
+    "05-salvage-repair.png": "6f046d96879afe9e2dbf16fbe5c7a256503f40051e6b6388c780d206fc0e7741"
+  },
+  "source_contract": {
+    "repo": "techrote/cybersand",
+    "main": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+    "setup_source_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+    "material_source_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+    "native_test": "NATIVE-UNTESTED"
+  }
+}
