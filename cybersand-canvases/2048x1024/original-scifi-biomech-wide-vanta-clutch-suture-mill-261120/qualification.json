@@ -1,0 +1,456 @@
+{
+  "title": "Vanta Clutch Suture Mill",
+  "seed": 2611201910,
+  "source": "from-scratch authored 2D side-elevation living-ship mooring coupler rebuild factory",
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "extent": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "grid_sha256": "a5eae00a910db0e10306222d3ae68468523b857d38800bf114a5e7102bda91ef",
+  "setup_sha256": "e2928521adccf8d8eb46262ae4acf686da81bc643f525ceb06b9c1aa976d91fd",
+  "setup_bytes": 51560,
+  "materials": {
+    "0": 1285840,
+    "58": 199000,
+    "62": 69735,
+    "63": 13137,
+    "72": 10462,
+    "77": 3909,
+    "79": 12457,
+    "100": 172939,
+    "101": 278528,
+    "117": 51145
+  },
+  "occupied": 811312,
+  "grounded": 811312,
+  "detached": 0,
+  "pruned_nominal_cells": 55189,
+  "rectangles": 2723,
+  "work": 811312,
+  "replay": {
+    "overlaps": 0,
+    "invalid": 0,
+    "mismatches": 0
+  },
+  "valid_material_ids": [
+    58,
+    62,
+    63,
+    72,
+    77,
+    79,
+    100,
+    101,
+    117,
+    128
+  ],
+  "physics": "Accepted native immovable Solid / RuleKernel::None; no liquids, powders or reactive cells",
+  "sites": {
+    "19x15": {
+      "visited_centres": 1038836,
+      "named_sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_gantry": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_recovery": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "stripper_drive": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "service_chamber": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "sensor_rake": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_clutch_access": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_alignment": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_transfer": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "suture_valve": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "seal_control": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "torque_handoff": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "nonfree": [],
+      "lost": [],
+      "approach": []
+    },
+    "23x19": {
+      "visited_centres": 1007468,
+      "named_sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_gantry": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_recovery": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "stripper_drive": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "service_chamber": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "sensor_rake": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_clutch_access": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_alignment": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_transfer": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "suture_valve": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "seal_control": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "torque_handoff": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "nonfree": [],
+      "lost": [],
+      "approach": []
+    },
+    "31x27": {
+      "visited_centres": 948476,
+      "named_sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_gantry": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_recovery": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "stripper_drive": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "service_chamber": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "sensor_rake": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_clutch_access": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_alignment": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_transfer": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "suture_valve": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "seal_control": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "torque_handoff": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "nonfree": [],
+      "lost": [],
+      "approach": []
+    }
+  },
+  "route_distances": {
+    "baseline": 535,
+    "blocked": 655,
+    "upper": 717,
+    "lower": 781
+  },
+  "route_obstruction": [
+    966,
+    509,
+    145,
+    110
+  ],
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "intake_gantry": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "quarantine_recovery": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "stripper_drive": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "service_chamber": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "sensor_rake": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "upper_clutch_access": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "central_alignment": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "entered_inspection": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "lower_transfer": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "upper_escape": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "suture_valve": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "seal_control": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "torque_handoff": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "finish_beacon": {
+      "directly_occluded": false,
+      "reachable": true
+    }
+  },
+  "images": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 2098803,
+      "sha256": "e4a890513613775a8c2393723064fc732c6c46007b2c8862f46b23f0657f5093",
+      "verified_pixels": 2097152,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "01-lock-and-purge.png": {
+      "x": 0,
+      "y": 225,
+      "w": 410,
+      "h": 700,
+      "bytes": 288187,
+      "sha256": "0c8f796e6137fa94b18b777417dd8a5ba42e30def600df220a1ecc84be97349e",
+      "verified_pixels": 287000,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "02-tensile-service.png": {
+      "x": 387,
+      "y": 195,
+      "w": 410,
+      "h": 730,
+      "bytes": 300517,
+      "sha256": "d633eb054d7846e4782048338737ec08130b1598816d248ea4345b550a006a57",
+      "verified_pixels": 299300,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "03-vanta-upper-press.png": {
+      "x": 783,
+      "y": 105,
+      "w": 487,
+      "h": 560,
+      "bytes": 273767,
+      "sha256": "4370b17a6dc36d8cdb9915f24eacdcdce7d5c01b6751c72f283f7b40dc793452",
+      "verified_pixels": 272720,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "04-entered-clutch-bench.png": {
+      "x": 818,
+      "y": 688,
+      "w": 429,
+      "h": 237,
+      "bytes": 102382,
+      "sha256": "f2c4f94f35df651f4881824aa874a5155b3de5c42e01d07999f3ad1c63df926d",
+      "verified_pixels": 101673,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "05-suture-treatments.png": {
+      "x": 1260,
+      "y": 205,
+      "w": 425,
+      "h": 720,
+      "bytes": 307207,
+      "sha256": "c3aa471917518f3018eb322e12e4ecd5d47d1b9b0039b0c794f8ff3877bd00c5",
+      "verified_pixels": 306000,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "06-coupler-export.png": {
+      "x": 1659,
+      "y": 205,
+      "w": 389,
+      "h": 720,
+      "bytes": 281287,
+      "sha256": "8a7cb23479de519a7daddde30bc535d5186509408207f27e8c8fee0847f5f164",
+      "verified_pixels": 280080,
+      "crc_adler_and_exact_material_parity": true
+    }
+  },
+  "source_limits": {
+    "rectangles": 32768,
+    "json_bytes": 1048576,
+    "cell_writes": 32000000
+  },
+  "installed_bridge": "NOT-VERIFIED; possible historical 4096 edit limit",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "AUTHOR-STATIC-PASS; INDEPENDENT ART/TECH/SHEPHERD PENDING"
+}
