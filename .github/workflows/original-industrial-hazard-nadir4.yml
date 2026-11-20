@@ -1,0 +1,25 @@
+name: Nadir-4 exact-material-grid verification
+
+on:
+  push:
+    branches:
+      - original/industrial-hazard-wide/nadir-four-salt-quench-exchange
+  pull_request:
+    paths:
+      - 'cybersand-canvases/2048x1024/original-industrial-hazard-wide-nadir-four-salt-quench-exchange/**'
+      - '.github/workflows/original-industrial-hazard-nadir4.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-original-materials:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify exact full grid, material law receipts, native-scale clearance, and decoded PNG parity
+        run: node cybersand-canvases/2048x1024/original-industrial-hazard-wide-nadir-four-salt-quench-exchange/build.cjs --verify
