@@ -108,11 +108,11 @@ for(const [x,y,w,h,entry] of bays){
 // do NOT erase embedded machinery elsewhere; just preserve literal free centres.
 const sites=[
 ['West entry',144,458],['West upper run',455,457],
-['West interchange',287,572],['West lower return',478,691],
+['West interchange',287,572],['West lower return',453,691],
 ['West rejoin',751,465],['West subgrade',751,682],
 ['Blocked upper checksum',617,459],
 ['Exterior reveal',1018,455],['Exterior lower recovery',1023,694],
-['Middle low through',1249,690],['Mid-east high through',1359,461],
+['Middle low through',1224,690],['Mid-east high through',1359,461],
 ['Crosslink east',1858,577],['Eastern lower return',1519,697],
 ['Final high return',1901,458],['Finish',1940,461],
 ['West ram bay',291,852],['Tension-comb bay',865,858],
