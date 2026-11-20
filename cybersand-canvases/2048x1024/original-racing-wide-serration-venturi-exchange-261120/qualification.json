@@ -1,0 +1,297 @@
+{
+  "kind": "SERRATION_VENTURI_EXCHANGE_ORIGINAL_RACING_WIDE",
+  "revision": "R1",
+  "seed": "0x261120e9",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "material_cells": 2097152,
+  "extent": [
+    2048,
+    1024
+  ],
+  "rectangles": 2639,
+  "setup_json_bytes": 51321,
+  "work_visits": 738549,
+  "source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1358603,
+    "49": 276398,
+    "58": 118110,
+    "62": 87212,
+    "100": 46842,
+    "101": 52832,
+    "113": 40751,
+    "117": 101381,
+    "122": 15023
+  },
+  "grounded_solids": 738549,
+  "discarded_detached_material_cells": 30480,
+  "remaining_detached": 0,
+  "fluids": 0,
+  "reactive": 0,
+  "material_laws": "IDs 49 Slate, 58 ReinforcedConcrete, 62 SteelPlate, 100 BasaltColumns, 101 Obsidian, 113 ZincSheet, 117 BareIron, 122 QuartzCrystal; accepted read-only native: Solid, not movable, RuleKernel::None.",
+  "midge": {
+    "hull": [
+      4,
+      3
+    ],
+    "model_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      145,
+      444
+    ]
+  },
+  "sites": [
+    {
+      "name": "West ignition start",
+      "x": 145,
+      "y": 444
+    },
+    {
+      "name": "Pressure lock",
+      "x": 337,
+      "y": 444
+    },
+    {
+      "name": "First louver descent",
+      "x": 572,
+      "y": 610
+    },
+    {
+      "name": "Filter downstream",
+      "x": 736,
+      "y": 555
+    },
+    {
+      "name": "First ascent",
+      "x": 890,
+      "y": 415
+    },
+    {
+      "name": "Venturi phase throat",
+      "x": 1080,
+      "y": 440
+    },
+    {
+      "name": "Venturi maintenance bypass",
+      "x": 1040,
+      "y": 645
+    },
+    {
+      "name": "Catalyst outbound",
+      "x": 1410,
+      "y": 568
+    },
+    {
+      "name": "Scrubber alternative",
+      "x": 1435,
+      "y": 404
+    },
+    {
+      "name": "Second ascent",
+      "x": 1532,
+      "y": 410
+    },
+    {
+      "name": "East brake anticipator",
+      "x": 1776,
+      "y": 420
+    },
+    {
+      "name": "Reversal throat",
+      "x": 1900,
+      "y": 510
+    },
+    {
+      "name": "Eastern lower return",
+      "x": 1880,
+      "y": 679
+    },
+    {
+      "name": "Return catalyst",
+      "x": 1420,
+      "y": 670
+    },
+    {
+      "name": "Return venturi",
+      "x": 1080,
+      "y": 666
+    },
+    {
+      "name": "Return filter",
+      "x": 710,
+      "y": 664
+    },
+    {
+      "name": "Western surge recovery",
+      "x": 366,
+      "y": 676
+    },
+    {
+      "name": "Western ascent",
+      "x": 148,
+      "y": 579
+    },
+    {
+      "name": "Finish loop",
+      "x": 155,
+      "y": 444
+    },
+    {
+      "name": "West flight control",
+      "x": 226,
+      "y": 156
+    },
+    {
+      "name": "Filter observation",
+      "x": 769,
+      "y": 156
+    },
+    {
+      "name": "Catalyst laboratory",
+      "x": 1397,
+      "y": 158
+    },
+    {
+      "name": "East operations",
+      "x": 1840,
+      "y": 159
+    },
+    {
+      "name": "Filter pump room",
+      "x": 448,
+      "y": 873
+    },
+    {
+      "name": "Venturi calibration",
+      "x": 1035,
+      "y": 873
+    },
+    {
+      "name": "Dry catalyst workshop",
+      "x": 1333,
+      "y": 870
+    },
+    {
+      "name": "East pressure workshop",
+      "x": 1724,
+      "y": 875
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "connected": 1116353,
+      "missing": [],
+      "reached": 27
+    },
+    "23x19": {
+      "connected": 1079020,
+      "missing": [],
+      "reached": 27
+    },
+    "31x27": {
+      "connected": 1006160,
+      "missing": [],
+      "reached": 27
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1360,
+      529,
+      106,
+      76
+    ],
+    "material": 58,
+    "missing": [
+      "Catalyst outbound"
+    ],
+    "remaining": 26,
+    "finish_reachable": true
+  },
+  "grid_sha256": "15273b89ab61924ab4e23bfeb29daff26a95baa05edf99a3004979985ec37e9a",
+  "setup_sha256": "84183d9f98fd64870ea71e74e51fc865016fd5371dfb7a00ff8746fd15645f98",
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 81275,
+      "pixels": 2097152,
+      "sha256": "a3435d4c9dd23149135d772f3d58eb866a1ecf4174f04758da5f9aeaa26d6e29",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "01-west-compression.png": {
+      "x": 0,
+      "y": 110,
+      "w": 405,
+      "h": 700,
+      "bytes": 9848,
+      "pixels": 283500,
+      "sha256": "c318ddb2b6409d95de1e239ed5eaa4fbd707e42850b18728e2b1f91f1053a5fb",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "02-filter-louver-field.png": {
+      "x": 395,
+      "y": 70,
+      "w": 445,
+      "h": 750,
+      "bytes": 14929,
+      "pixels": 333750,
+      "sha256": "906f6b125bfa8d90c5906d4244ddc866fd0c0434f60a50577f8633f0fe7a6a36",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "03-venturi-switchback.png": {
+      "x": 815,
+      "y": 173,
+      "w": 420,
+      "h": 680,
+      "bytes": 13429,
+      "pixels": 285600,
+      "sha256": "62167e1c2ecfce5cc2fc489277b2a8e7d7ab1535c2f5ae5654444299cbe6192a",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "04-dry-catalyst-bank.png": {
+      "x": 1230,
+      "y": 130,
+      "w": 485,
+      "h": 700,
+      "bytes": 12107,
+      "pixels": 339500,
+      "sha256": "d715f7fa8fe4494400455d16a3a10db7d001f4e660be5510788fe72ed33c45a2",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "05-east-reversal.png": {
+      "x": 1640,
+      "y": 100,
+      "w": 408,
+      "h": 780,
+      "bytes": 14782,
+      "pixels": 318240,
+      "sha256": "ca9cfcdb8146753a901b31edaf8342026f57f6430c1dcfca9402bc0e433ac5f1",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "06-accessible-workshops.png": {
+      "x": 320,
+      "y": 735,
+      "w": 1220,
+      "h": 289,
+      "bytes": 15484,
+      "pixels": 352580,
+      "sha256": "366605f75e7c4fac484f0e40def118cee25c21f793f7daa263a1674cd75ef08a",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    }
+  },
+  "native": "NATIVE-UNTESTED; installed bridge 4096/32768 capacity unknown, no flight/collisions/persistence tests"
+}
