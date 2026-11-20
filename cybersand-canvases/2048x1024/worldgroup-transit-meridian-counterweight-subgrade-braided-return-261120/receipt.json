@@ -1,0 +1,316 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_MERIDIAN_SUBGRADE_BRAIDED_RETURN",
+  "revision": "R1",
+  "seed": "0x261120d3",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "donor": "Tungsten Sawtooth R2 7fc24855cf521c90bf67f4afb08685e490473201; Latchreach c68c3e067972356f842ffd7e52f0fbd27f3d8c19 and Forkfield f80acfab74f6ff21d0c07dd28795f3ed46b0fa44 (comparative grammar only; entirely new geometry)",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 874442,
+  "discarded_unattached_candidate_cells": 9655,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 4308,
+  "setup_json_bytes": 82155,
+  "material_work_visits": 874442,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "f0ffa928fb1727b354e5fd4a7aa67e0f53efe7ba37d010cff95d3da820ecdeb9",
+  "setup_sha256": "920cc181645fe2069fc12dc94bba431afd7b71da6a11a2ccd983b7ecbef5894f",
+  "histogram": {
+    "0": 1222710,
+    "49": 50671,
+    "58": 56126,
+    "62": 23920,
+    "100": 651456,
+    "101": 50304,
+    "113": 21547,
+    "117": 15328,
+    "122": 5090
+  },
+  "sites": [
+    {
+      "name": "West entry",
+      "x": 144,
+      "y": 458
+    },
+    {
+      "name": "West upper run",
+      "x": 455,
+      "y": 457
+    },
+    {
+      "name": "West interchange",
+      "x": 287,
+      "y": 572
+    },
+    {
+      "name": "West lower return",
+      "x": 453,
+      "y": 691
+    },
+    {
+      "name": "West rejoin",
+      "x": 751,
+      "y": 465
+    },
+    {
+      "name": "West subgrade",
+      "x": 751,
+      "y": 682
+    },
+    {
+      "name": "Blocked upper checksum",
+      "x": 617,
+      "y": 459
+    },
+    {
+      "name": "Exterior reveal",
+      "x": 1018,
+      "y": 455
+    },
+    {
+      "name": "Exterior lower recovery",
+      "x": 1023,
+      "y": 694
+    },
+    {
+      "name": "Middle low through",
+      "x": 1224,
+      "y": 690
+    },
+    {
+      "name": "Mid-east high through",
+      "x": 1359,
+      "y": 461
+    },
+    {
+      "name": "Crosslink east",
+      "x": 1858,
+      "y": 577
+    },
+    {
+      "name": "Eastern lower return",
+      "x": 1519,
+      "y": 697
+    },
+    {
+      "name": "Final high return",
+      "x": 1901,
+      "y": 458
+    },
+    {
+      "name": "Finish",
+      "x": 1940,
+      "y": 461
+    },
+    {
+      "name": "West ram bay",
+      "x": 291,
+      "y": 852
+    },
+    {
+      "name": "Tension-comb bay",
+      "x": 865,
+      "y": 858
+    },
+    {
+      "name": "Catch magazine",
+      "x": 1392,
+      "y": 851
+    },
+    {
+      "name": "Rescue cradle",
+      "x": 1800,
+      "y": 850
+    },
+    {
+      "name": "Far east turnaround",
+      "x": 1844,
+      "y": 686
+    },
+    {
+      "name": "West egress",
+      "x": 202,
+      "y": 457
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "size": [
+        19,
+        15
+      ],
+      "reachable": 21,
+      "total": 21,
+      "missing": [],
+      "visited_centres": 1007503,
+      "spawn": [
+        144,
+        458
+      ]
+    },
+    "23x19": {
+      "size": [
+        23,
+        19
+      ],
+      "reachable": 21,
+      "total": 21,
+      "missing": [],
+      "visited_centres": 965433,
+      "spawn": [
+        144,
+        458
+      ]
+    },
+    "31x27": {
+      "size": [
+        31,
+        27
+      ],
+      "reachable": 21,
+      "total": 21,
+      "missing": [],
+      "visited_centres": 893516,
+      "spawn": [
+        144,
+        458
+      ]
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      570,
+      387,
+      103,
+      140
+    ],
+    "material": 58,
+    "after_31x27": {
+      "size": [
+        31,
+        27
+      ],
+      "reachable": 20,
+      "total": 21,
+      "missing": [
+        "Blocked upper checksum"
+      ],
+      "visited_centres": 879632,
+      "spawn": [
+        144,
+        458
+      ]
+    },
+    "covered_site": "Blocked upper checksum",
+    "other_sites_reachable": 20
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 48487,
+      "pixels": 2097152,
+      "sha256": "fad6bea75148ce43cedb8b6388319c25959f2698b7b6aa9cf79f86f929c8b6df",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-west-dual-artery.png": {
+      "x": 70,
+      "y": 228,
+      "w": 560,
+      "h": 746,
+      "bytes": 13293,
+      "pixels": 417760,
+      "sha256": "c0fc88e37d8888b89b879c3fe44de7d9e0127be986c0e2929b26f4c33777a0b8",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-first-countershaft.png": {
+      "x": 516,
+      "y": 315,
+      "w": 400,
+      "h": 638,
+      "bytes": 7995,
+      "pixels": 255200,
+      "sha256": "47f933c7273879f57bcc8f099262bf4fa71a171319dbd49183826e5fa7df169a",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-exterior-traction-aperture.png": {
+      "x": 876,
+      "y": 195,
+      "w": 386,
+      "h": 757,
+      "bytes": 8338,
+      "pixels": 292202,
+      "sha256": "59d5c28e360864de48cecf3b6afb417f56e0504c285e719bd1ba233ca00ed887",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-east-subgrade-rejoin.png": {
+      "x": 1200,
+      "y": 308,
+      "w": 430,
+      "h": 647,
+      "bytes": 10323,
+      "pixels": 278210,
+      "sha256": "44dbf706e9033ec009eacb828fe5200991db525efede13c4b0fa127122dc8223",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-emergency-rescue-works.png": {
+      "x": 1599,
+      "y": 284,
+      "w": 449,
+      "h": 714,
+      "bytes": 9438,
+      "pixels": 320586,
+      "sha256": "86c58d0df895c5eebfc6d2f320d26db921cdbe0397b61794233ba468acd1325e",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-undertrack-machine-workfaces.png": {
+      "x": 159,
+      "y": 768,
+      "w": 1759,
+      "h": 228,
+      "bytes": 13901,
+      "pixels": 401052,
+      "sha256": "f115d584c65b59b807ac5b10c3bc18f2e80851d88a19af6fc16e24d9f256c816",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: installed CyberDemoBridge, Godot/Workbench, Rapier, input/collision/ticks, cold save/reopen not executed",
+  "independent_review": "PENDING: Art, Technical, Shepherd exact-head",
+  "ci": "NOT CLAIMED"
+}
