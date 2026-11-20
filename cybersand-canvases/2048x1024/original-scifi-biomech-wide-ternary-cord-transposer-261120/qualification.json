@@ -1,0 +1,512 @@
+{
+  "source": "ORIGINAL-NO-REFERENCE",
+  "seed": 2611201931,
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "read_only_engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_cell_count": 2097152,
+  "grid_sha256": "06b027fdec56196496133f740309d363c24587536cf82de985f9b791e42e686c",
+  "setup_sha256": "f8578ed4ebd6cd3fae2e529d842d06ff3d78a30fd8e9fba7ac4b520abdbf0469",
+  "setup_bytes": 55359,
+  "setup_root_keys": [
+    "version",
+    "extent",
+    "actors",
+    "next_id",
+    "selected",
+    "edits",
+    "response",
+    "liquid_policy",
+    "normalize",
+    "rule_radius",
+    "source",
+    "material",
+    "brush",
+    "fire"
+  ],
+  "rectangle_count": 2908,
+  "rectangle_limit_source": 32768,
+  "legacy_bridge_cap_risk": "installed binaries may expose 4096, no native install executed",
+  "construction_writes": 666151,
+  "write_limit": 32000000,
+  "material_histogram": {
+    "0": 1431001,
+    "58": 47610,
+    "62": 41183,
+    "63": 12601,
+    "72": 6129,
+    "77": 4557,
+    "79": 6293,
+    "100": 149412,
+    "101": 347161,
+    "117": 51205
+  },
+  "occupied": 666151,
+  "grounded": 666151,
+  "nominal_unsupported_removed": 75432,
+  "detached_final": 0,
+  "fluid_falling_reactive_final": 0,
+  "rectangle_overlap_count": 0,
+  "replay_cell_mismatches": 0,
+  "canonical_rectangle_reencode_identity": true,
+  "sites": {
+    "19x15": {
+      "visited_centres": 1203988,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_lock": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "receiver_technician": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "tension_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "sample_sorting": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_hoist": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "stitch_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_return": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "anneal_monitor": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dry_chiller": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "outbound_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "spool_service": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "left_diagnostic_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "right_diagnostic_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "23x19": {
+      "visited_centres": 1162612,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_lock": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "receiver_technician": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "tension_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "sample_sorting": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_hoist": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "stitch_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_return": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "anneal_monitor": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dry_chiller": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "outbound_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "spool_service": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "left_diagnostic_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "right_diagnostic_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "31x27": {
+      "visited_centres": 1114861,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_lock": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "receiver_technician": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "tension_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "sample_sorting": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_hoist": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "stitch_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_return": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "anneal_monitor": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dry_chiller": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "outbound_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "spool_service": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "left_diagnostic_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "right_diagnostic_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    }
+  },
+  "obstruction": [
+    965,
+    470,
+    151,
+    166
+  ],
+  "route_bans": {
+    "xmin": 865,
+    "xmax": 1192,
+    "upper_max_y": 461,
+    "lower_min_y": 669
+  },
+  "route_distances": {
+    "baseline": 575,
+    "blocked": 725,
+    "upper": 725,
+    "lower": 851
+  },
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "covered": false,
+      "reachable": true
+    },
+    "intake_lock": {
+      "covered": false,
+      "reachable": true
+    },
+    "receiver_technician": {
+      "covered": false,
+      "reachable": true
+    },
+    "tension_console": {
+      "covered": false,
+      "reachable": true
+    },
+    "sample_sorting": {
+      "covered": false,
+      "reachable": true
+    },
+    "upper_hoist": {
+      "covered": false,
+      "reachable": true
+    },
+    "stitch_gate": {
+      "covered": true,
+      "reachable": false
+    },
+    "entered_index": {
+      "covered": false,
+      "reachable": true
+    },
+    "lower_return": {
+      "covered": false,
+      "reachable": true
+    },
+    "anneal_monitor": {
+      "covered": false,
+      "reachable": true
+    },
+    "dry_chiller": {
+      "covered": false,
+      "reachable": true
+    },
+    "outbound_index": {
+      "covered": false,
+      "reachable": true
+    },
+    "spool_service": {
+      "covered": false,
+      "reachable": true
+    },
+    "finish_beacon": {
+      "covered": false,
+      "reachable": true
+    },
+    "left_diagnostic_vault": {
+      "covered": false,
+      "reachable": true
+    },
+    "right_diagnostic_vault": {
+      "covered": false,
+      "reachable": true
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "bytes": 1049793,
+      "sha256": "556bf6fb4277d378df3d15cb5b0f57f1880f28e5c59b1cf8c69184f76590217c",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-quarantine-lock.png": {
+      "bytes": 145263,
+      "sha256": "92fa3e348b8ab981309eaeb55ca56cf31e190ffe8f57f4c659fe3df51af6e27c",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        45,
+        190,
+        490,
+        590
+      ]
+    },
+    "02-tension-mill.png": {
+      "bytes": 133035,
+      "sha256": "d6fdd5223fd1d8f84a4ecf31d2b10eeb06c61f3243857c8da104938a6e3bc176",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        395,
+        210,
+        465,
+        568
+      ]
+    },
+    "03-triple-suture-crown.png": {
+      "bytes": 108408,
+      "sha256": "60847b70f381b340c8bc8729829cfa2d8c1da8c0c48506ebfaeda86d9f1df9a6",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        788,
+        124,
+        474,
+        455
+      ]
+    },
+    "04-entered-index-bench.png": {
+      "bytes": 69322,
+      "sha256": "e5cc0408f47af48769ffa62e5a3105b44295399bf97892ee370e6a2e251738ce",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        839,
+        604,
+        435,
+        316
+      ]
+    },
+    "05-dry-annealing-gills.png": {
+      "bytes": 134107,
+      "sha256": "8e56cca31646b21096b2eaab2270120990ab25f8cac4024c79209e44c4fb00a3",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1268,
+        223,
+        422,
+        632
+      ]
+    },
+    "06-winding-freight-dock.png": {
+      "bytes": 132333,
+      "sha256": "53e0882a22ca26e54b8de4a409c91607e88c0495dbdc57a64fc0d62e95c543e0",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1660,
+        176,
+        388,
+        678
+      ]
+    },
+    "07-underfloor-service.png": {
+      "bytes": 60546,
+      "sha256": "e4bfb8dd17f89985259cfd6bd7325d17c280ebb55afb97d95dbd5d662fa26a57",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        218,
+        801,
+        540,
+        223
+      ]
+    },
+    "08-vault-and-anneal-return.png": {
+      "bytes": 49396,
+      "sha256": "4e1061b72139e9d430a2466be90ff8a6b07a8b41c9fe923394745f9280bf9deb",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1435,
+        801,
+        440,
+        223
+      ]
+    }
+  },
+  "author_static_status": "PASS",
+  "independent_reviews": "PENDING",
+  "native_status": "NATIVE-UNTESTED"
+}
