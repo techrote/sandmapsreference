@@ -1,10 +1,13 @@
 # Nacre Spindle Court — original biomechanical neural-wafer foundry
-20 November 2026 · **2048×1024 exact material cells** · **Draft/HOLD / NATIVE-UNTESTED** · Independent review pending
+20 November 2026 · **2048×1024 exact material cells** · **Draft/HOLD / NATIVE-UNTESTED** · Independent post-R2 review pending
 
 ## Place, construction and gameplay thesis
 An extraterrestrial **dry nacre neural-wafer foundry**, where branching nerve cores are cast against an inverted spindle and diagnosed in a grounded collector chalice. This is a new hand-designed map, NOT a sandmapsreference conversion, Graftloom/Calyx geometry remix, or painted scenic illustration. Entirely **true flat side-elevation**, all visible occupied features are solid material IDs.
 
 The distinctive silhouette is a **roof-anchored inverted V-shaped spindle** over a deeply concave **floor-rooted assay chalice**, not a ring or an empty exhibition hall. A wide empty atmospheric band between them supports three Midge flight altitudes. Supports visibly carry load to top/bottom world boundaries. Left isolation, ciliary splice, central spindle assay, triple ceramic annealing and export cleat all have different equipment, footprint and detailing.
+
+## R2 — physical-cell response to first-HEAD independent P1
+Two separate grounded specimen-transfer/inspection stations now face the hanging splice fingertips without closing their flight gap. A ceiling-supported spindle sampler and an offset floor-connected collector provide upper/lower process handoff without spanning the central aerial void. At the annealers, physically supported exchange-valve and loading bays are paired with distinct outbound parcel/operator workfaces at the export cleat. All prior named destinations and both constrained bypasses were retained, including recovery with the 180×152 central physical obstruction. 50 new authored geometry operations were applied; independent Art, Tech and Shepherd re-review remains mandatory.
 
 ## Five navigable functional districts
 1. **Isolation sills / quarantine samples** (x=0–390): three unequal chambered inoculation tanks above a grounded extraction bench; inlet and service exit with clear approach.
@@ -21,9 +24,9 @@ Main transit flows along the midflight corridor; high bypass crosses beneath the
  
 ## Exact physical-source qualification
 - Read-only authority: `techrote/cybersand@de109d0131641d6adc8d25bb9ced7ca3d4991105` Setup-v2, material table and Midge 4×3 body-thrust authoring; source rectangle 32768, JSON 1048576 bytes, construction work 32 million; dimensions 2048×1024.
-- **2,097,152 complete final material cells**; **608,899 occupied inert stable solids**, 608,899 grounded, zero final detached. 348 disconnected nominal decorative cells dropped by deterministic explicit source policy.
-- Used physical material-ID histogram: {"0":1488253,"58":57239,"62":116017,"63":24191,"66":5642,"72":30937,"77":4179,"79":4844,"100":130495,"101":124129,"117":85375,"128":14382,"130":11469}. Every nonzero ID is accepted Solid, immovable, RuleKernel::None. **Zero simulated fluid, agent, fire, expanding growth or powder foundations.**
-- **8471 ordered lossless, nonoverlapping five-field construction rectangles**, **157874 exact UTF-8 setup bytes**, 608899 cell construction work, replay 0 errors. Source indexed-grid SHA256 `dea20bea4fe6283ab9b00c628c489897d050bd0254fc678f0905d8b856b65b65`; Setup SHA256 `3c2de3b877e5fa9ef4382a7920a3403639b494a2d496e264052374b00f0034d3`.
+- **2,097,152 complete final material cells**; **630,245 occupied inert stable solids**, 630,245 grounded, zero final detached. 498 disconnected nominal decorative cells dropped by deterministic explicit source policy.
+- Used physical material-ID histogram: {"0":1466907,"58":79298,"62":115203,"63":25000,"66":5235,"72":30194,"77":5237,"79":5643,"100":129829,"101":123532,"117":84816,"128":15029,"130":11229}. Every nonzero ID is accepted Solid, immovable, RuleKernel::None. **Zero simulated fluid, agent, fire, expanding growth or powder foundations.**
+- **9084 ordered lossless, nonoverlapping five-field construction rectangles**, **169237 exact UTF-8 setup bytes**, 608899 cell construction work, replay 0 errors. Source indexed-grid SHA256 `601e37bd79bdce0506493b4ef184193fac1d2bcc49c338de63c31030f3fe6763`; Setup SHA256 `85297a6d2575b9a73932efd0e19e081923c7b9a2e0730aaf52378e5a865c5c82`.
 - Named sites: 19×15: 11/11 · 23×19: 11/11 · 31×27: 11/11 exact legal centres with four immediate cardinal centre approaches. Both separately restricted 31×27 routes PASS, including inserted central blockage.
 - Indexed-material overview PNG plus **six actual 1:1 crops**, derived from exact committed material values, integrity checked (PNG magic, per-chunk CRC, zlib stored-block integrity + Adler32, final IEND, exact indexed-material pixel parity). Each pixel index is material ID, not a generated mock screenshot.
 - Rebuild reproducibly using **Node ≥18**: `node build.js design.json ./regenerated`. The standalone builder reconstructs full grid and outputs setup, receipts and images, **failing closed** if static predicates do not pass.
