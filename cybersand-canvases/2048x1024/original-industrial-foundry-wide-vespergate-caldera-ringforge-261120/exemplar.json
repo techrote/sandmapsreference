@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-foundry-wide",
+  "map_role": "Geological caldera reclamation forge with internally flyable caster ring and two-tier recovery",
+  "anchor_donors": [],
+  "macro_topology": "One rooted basin between unequal forge and freight shoulders, breached annular caster and exposed central well",
+  "density_profile": "Dense ore/fire and quench/dispatch shoulders; exposed central annulus and open upper sky; lower incomplete service excavation",
+  "route_grammar": {
+    "main": [
+      "West rim spawn",
+      "Furnace approach",
+      "Suspended ladle",
+      "West annulus gate",
+      "Caster heart",
+      "East annulus gate",
+      "Quench regulator",
+      "East rim goal"
+    ],
+    "alternative": [
+      "Furnace return overhead",
+      "Sky ring bypass",
+      "Caster east",
+      "Freight crane"
+    ],
+    "recovery": [
+      "East maintenance"
+    ]
+  },
+  "strong_motifs": [
+    "Excavated single caldera",
+    "Giant double-rim casting annulus with two traversable portals",
+    "Rooted unequal process shoulder buttresses",
+    "Hanging insulated transfer ladle",
+    "East cliffside freight crane",
+    "Sealed furnace melt and sealed quench cells"
+  ],
+  "interesting_relationships": [
+    "Two navigable layers flank a single interior casting landmark",
+    "Western deep refractory furnace contrasts with open eastern freight rim",
+    "Crater geological shape defines clearance and load paths",
+    "Deliberate excavation voids preserve human intervention sites"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "Unfinished west service cavern",
+      "region_xywh": [
+        568,
+        795,
+        148,
+        56
+      ],
+      "state": "partial excavation",
+      "use": "future maintenance room"
+    },
+    {
+      "name": "Annulus undercroft",
+      "region_xywh": [
+        942,
+        721,
+        138,
+        117
+      ],
+      "state": "editable incomplete",
+      "use": "scripted door or collapse"
+    },
+    {
+      "name": "East quench bay",
+      "region_xywh": [
+        1397,
+        788,
+        178,
+        60
+      ],
+      "state": "partial excavation",
+      "use": "quench equipment extension"
+    },
+    {
+      "name": "Freight dispatch apron",
+      "region_xywh": [
+        1734,
+        508,
+        199,
+        105
+      ],
+      "state": "arrival stage",
+      "use": "NPC or scripted departure"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Caster activation",
+      "anchor": "Caster heart",
+      "kind": "machinery_activation",
+      "staging": "two open annular entrances"
+    },
+    {
+      "name": "Gantry break",
+      "anchor": "Sky ring bypass",
+      "kind": "bridge_failure",
+      "staging": "lower recovery route"
+    },
+    {
+      "name": "Quench discharge",
+      "anchor": "Quench regulator",
+      "kind": "thermal_release",
+      "staging": "still-sealed water cell"
+    },
+    {
+      "name": "Freight extraction",
+      "anchor": "East rim goal",
+      "kind": "departure",
+      "staging": "truck crane and open upper air"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Large ring with open internal route as grammar motif",
+    "One geologically anchored macro basin rather than separated islands",
+    "Three-altitude flight graph with returning lower access",
+    "Deliberately incomplete safe editing bays"
+  ],
+  "similarity_avoidance": "Not another Saltglass chain of floating process islands or Crownstep straight hall. Uses a continuous asymmetric caldera, enormous traversable annulus and stacked lower/upper access tied to geological load paths.",
+  "diversity_axes": {
+    "macro_topology": "basin",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "layered",
+    "landmark_family": "ring",
+    "support_form": "cliff_embedded",
+    "environment_relation": "geological",
+    "incompleteness": "excavation"
+  },
+  "engine_contract": {
+    "accepted_main": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+    "setup_version": 2,
+    "rectangle_limit": 32768
+  },
+  "static_proof": {
+    "cells": 2097152,
+    "plane_sha256": "a2a20ff4401b97904ff8c6ba2c00e59800dee934690cf94a21a09cad3ea4fc61",
+    "rectangles": 2779,
+    "obstructed_sites": 18
+  }
+}

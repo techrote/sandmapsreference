@@ -1,0 +1,682 @@
+{
+  "schema": 1,
+  "original_no_source": true,
+  "concept": "Vespergate Caldera Ringforge",
+  "seed": 261120571,
+  "base_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "a2a20ff4401b97904ff8c6ba2c00e59800dee934690cf94a21a09cad3ea4fc61",
+  "setup_sha256": "6f719b80e2b651a42321155ec74fdad50b0d2ea3c532cb532c022efb0e73bd16",
+  "json_bytes": 53331,
+  "rectangle_count": 2779,
+  "source_rectangle_limit": 32768,
+  "construction_work": 761977,
+  "material_histogram": {
+    "0": 1335175,
+    "3": 5632,
+    "8": 6320,
+    "58": 217602,
+    "62": 46420,
+    "65": 42766,
+    "68": 54897,
+    "69": 5924,
+    "76": 5176,
+    "77": 544,
+    "79": 883,
+    "100": 314986,
+    "104": 19339,
+    "117": 29929,
+    "131": 11559
+  },
+  "ground": {
+    "total": 750025,
+    "rooted": 750025,
+    "detached": 0,
+    "repair": {
+      "components": 23,
+      "links": 359,
+      "maxLink": 102
+    }
+  },
+  "fluid": {
+    "water": 5632,
+    "lava": 6320,
+    "exposed_air_faces": 0,
+    "water_lava_contacts": 0
+  },
+  "flight": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 1137906,
+      "connected_centres": 1013019,
+      "passed": 18,
+      "sites": [
+        {
+          "name": "West rim spawn",
+          "x": 124,
+          "y": 298,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore skip observation",
+          "x": 290,
+          "y": 306,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace approach",
+          "x": 408,
+          "y": 340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace return overhead",
+          "x": 552,
+          "y": 232,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Suspended ladle",
+          "x": 713,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West annulus gate",
+          "x": 823,
+          "y": 506,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster heart",
+          "x": 998,
+          "y": 502,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East annulus gate",
+          "x": 1197,
+          "y": 506,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Sky ring bypass",
+          "x": 1007,
+          "y": 164,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster east",
+          "x": 1279,
+          "y": 412,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench regulator",
+          "x": 1498,
+          "y": 557,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench overhead",
+          "x": 1617,
+          "y": 564,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight crane",
+          "x": 1788,
+          "y": 287,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight interior",
+          "x": 1837,
+          "y": 408,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 1947,
+          "y": 295,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East maintenance",
+          "x": 1313,
+          "y": 731,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rim recovery",
+          "x": 1684,
+          "y": 617,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "High approach return",
+          "x": 738,
+          "y": 224,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 1096442,
+      "connected_centres": 978036,
+      "passed": 18,
+      "sites": [
+        {
+          "name": "West rim spawn",
+          "x": 124,
+          "y": 298,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore skip observation",
+          "x": 290,
+          "y": 306,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace approach",
+          "x": 408,
+          "y": 340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace return overhead",
+          "x": 552,
+          "y": 232,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Suspended ladle",
+          "x": 713,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West annulus gate",
+          "x": 823,
+          "y": 506,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster heart",
+          "x": 998,
+          "y": 502,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East annulus gate",
+          "x": 1197,
+          "y": 506,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Sky ring bypass",
+          "x": 1007,
+          "y": 164,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster east",
+          "x": 1279,
+          "y": 412,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench regulator",
+          "x": 1498,
+          "y": 557,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench overhead",
+          "x": 1617,
+          "y": 564,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight crane",
+          "x": 1788,
+          "y": 287,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight interior",
+          "x": 1837,
+          "y": 408,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 1947,
+          "y": 295,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East maintenance",
+          "x": 1313,
+          "y": 731,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rim recovery",
+          "x": 1684,
+          "y": 617,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "High approach return",
+          "x": 738,
+          "y": 224,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 1018392,
+      "connected_centres": 925460,
+      "passed": 18,
+      "sites": [
+        {
+          "name": "West rim spawn",
+          "x": 124,
+          "y": 298,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore skip observation",
+          "x": 290,
+          "y": 306,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace approach",
+          "x": 408,
+          "y": 340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace return overhead",
+          "x": 552,
+          "y": 232,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Suspended ladle",
+          "x": 713,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West annulus gate",
+          "x": 823,
+          "y": 506,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster heart",
+          "x": 998,
+          "y": 502,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East annulus gate",
+          "x": 1197,
+          "y": 506,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Sky ring bypass",
+          "x": 1007,
+          "y": 164,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster east",
+          "x": 1279,
+          "y": 412,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench regulator",
+          "x": 1498,
+          "y": 557,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench overhead",
+          "x": 1617,
+          "y": 564,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight crane",
+          "x": 1788,
+          "y": 287,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight interior",
+          "x": 1837,
+          "y": 408,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 1947,
+          "y": 295,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East maintenance",
+          "x": 1313,
+          "y": 731,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rim recovery",
+          "x": 1684,
+          "y": 617,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "High approach return",
+          "x": 738,
+          "y": 224,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "obstruction": [
+    894,
+    211,
+    222,
+    134
+  ],
+  "blocked": {
+    "hull": [
+      31,
+      27
+    ],
+    "valid_centres": 992248,
+    "connected_centres": 897026,
+    "passed": 18,
+    "sites": [
+      {
+        "name": "West rim spawn",
+        "x": 124,
+        "y": 298,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ore skip observation",
+        "x": 290,
+        "y": 306,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Furnace approach",
+        "x": 408,
+        "y": 340,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Furnace return overhead",
+        "x": 552,
+        "y": 232,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Suspended ladle",
+        "x": 713,
+        "y": 380,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "West annulus gate",
+        "x": 823,
+        "y": 506,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Caster heart",
+        "x": 998,
+        "y": 502,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "East annulus gate",
+        "x": 1197,
+        "y": 506,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Sky ring bypass",
+        "x": 1007,
+        "y": 164,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Caster east",
+        "x": 1279,
+        "y": 412,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Quench regulator",
+        "x": 1498,
+        "y": 557,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Quench overhead",
+        "x": 1617,
+        "y": 564,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Freight crane",
+        "x": 1788,
+        "y": 287,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Freight interior",
+        "x": 1837,
+        "y": 408,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "East rim goal",
+        "x": 1947,
+        "y": 295,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "East maintenance",
+        "x": 1313,
+        "y": 731,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Rim recovery",
+        "x": 1684,
+        "y": 617,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "High approach return",
+        "x": 738,
+        "y": 224,
+        "clear": true,
+        "reached": true
+      }
+    ]
+  },
+  "shortest_goal": {
+    "direct": {
+      "steps": 1944,
+      "visited": 854128
+    },
+    "blocked": {
+      "steps": 2022,
+      "visited": 841515
+    },
+    "detour": 78
+  },
+  "pngs": {
+    "overview.png": {
+      "xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "sha256": "ae1b70a8b648548a88d05184aea735ca96a8515b1e3cde1ef4d2e6967dfd6aaa",
+      "bytes": 2098812
+    },
+    "01-ore-furnace.png": {
+      "xywh": [
+        188,
+        275,
+        450,
+        425
+      ],
+      "sha256": "ecb466c38e1a4565fd1466ebfb773d6908d4388d59ef71375ec27e3354b71d35",
+      "bytes": 192161
+    },
+    "02-suspended-ladle.png": {
+      "xywh": [
+        545,
+        291,
+        440,
+        422
+      ],
+      "sha256": "27a537856db2ba9e4921fda3729916c8915a99996d91b1b39a02ae85f3ae16b9",
+      "bytes": 186588
+    },
+    "03-annular-caster.png": {
+      "xywh": [
+        861,
+        335,
+        440,
+        425
+      ],
+      "sha256": "35836c55b49f1e90f22ba1ecf141ae8c19618b56b99f9f0e8fada66d3b780f55",
+      "bytes": 187911
+    },
+    "04-thermal-quench.png": {
+      "xywh": [
+        1304,
+        420,
+        420,
+        426
+      ],
+      "sha256": "79505553f342b34703d652d8f7082e3846c0f00c192d597dc82cbbcd37568996",
+      "bytes": 179832
+    },
+    "05-east-freight.png": {
+      "xywh": [
+        1625,
+        241,
+        420,
+        430
+      ],
+      "sha256": "6ac21e4319de96485a24c3c1f581072dec69c1389ab53a2d4743e9755736f4ed",
+      "bytes": 181516
+    }
+  },
+  "material_pixel_parity": 3020602,
+  "native": "NATIVE-UNTESTED"
+}
