@@ -50,6 +50,12 @@ class CorpusIndexTests(unittest.TestCase):
         self.assertEqual(checked["normalized"]["macro_topology"],["braided canyon"])
         self.assertEqual(checked["normalized"]["route_grammar"],["branch and rejoin"])
 
+    def test_named_route_grammar_object_is_preserved(self):
+        value=canonical(); value["route_grammar"]={"main":"mid traverse","upper":"high bypass","lower":"deep return"}
+        checked=ci.validate(value)
+        self.assertEqual(checked["status"],"canonical-valid")
+        self.assertEqual(checked["normalized"]["route_grammar"]["upper"],"high bypass")
+
     def test_legacy_is_partial_without_fabricating_missing_claims(self):
         legacy={
           "schema":"cybersand-exemplar-v1",
