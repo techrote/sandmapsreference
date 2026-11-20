@@ -1,6 +1,6 @@
 # Sable Quoin — Gravitic Core Survey and Fracture Bridge
 
-**ORIGINAL / NO REFERENCE ART · 2048×1024 actual material cells · CREATOR STATIC PASS · OPEN Draft/HOLD · NATIVE-UNTESTED**
+**ORIGINAL / NO REFERENCE ART · 2048×1024 actual material cells · R3 CREATOR STATIC PASS · independent exact-head review pending · OPEN Draft/HOLD · NATIVE-UNTESTED**
 
 ## Site and authorship
 
@@ -46,3 +46,7 @@ All images are palette-indexed PNGs in which the pixel index equals the actual m
 ## Reviewer checkpoints and HOLD
 
 Independently replay committed Setup edits across all cells, check material state/kernels and support, canonical rectangles/histograms, exact centres and obstruction, each PNG's pixel parity, life-scale interior widths and distinct functional machinery, and provenance. Request separate source-pinned Art/Technical/Shepherd decisions. Source-static success is **not** native-engine acceptance. Remain **Draft/HOLD**, no Ready, merge or owner acceptance.
+
+## R3 P0 correction — 20 November 2026
+
+Reproduced the independent Shepherd's accepted-loader failure: R2 `build.cjs` indexed `sites["West arrivals"]`, which is undefined; `JSON.stringify` silently omitted the required actor `spawn` field. Corrected the lookup to the existing exact literal `sites["West rover arrivals"] = [205,451]`. The committed Setup-v2 now includes `spawn:[205,451]` in the Midge actor's **exact five-key schema**; the builder asserts the exact 14-root and five-actor key contracts, verifies the literal spawn/site at 19×15, 23×19, 31×27 and independently replays all material rectangles. Regenerated every PNG from the *actual updated builder* so the new understrata workfaces are committed material pixels rather than builder-only claims. All 28/28 literal sites and 27/27 unaffected obstruction sites pass, 442,895/442,895 occupied cells are grounded. **No actual native runtime or installed bridge test was performed.** Previous Art/Technical/Shepherd assessments are stale for this new HEAD; fresh independent reviews requested. Draft/HOLD remains.

@@ -44,12 +44,12 @@
     "ties": 0,
     "longest": 0
   },
-  "creator_revision": "R1 original from-scratch star-collimator engineering 2026-11-20",
+  "creator_revision": "R3 accepted-loader actor spawn P0 repair and committed R2 material 2026-11-20",
   "nonoverlapping_ordered_rectangles": 5267,
   "rectangle_work": 442895,
-  "setup_bytes": 97979,
+  "setup_bytes": 97997,
   "material_plane_sha256": "9021072dc0a5f2906671d17487150fdd92236d1639c7926364397a3146c9ff68",
-  "setup_sha256": "e9483425d8752532feee25a292630a731fc69ea87121b438ad37d98343a53121",
+  "setup_sha256": "170077c5e2ba92295185ad7a58e75b500001a5964420ae67387a63e8f3bf658a",
   "images": [
     {
       "name": "overview.png",
@@ -259,6 +259,17 @@
       914
     ]
   },
+  "accepted_actor_schema": [
+    "id",
+    "model",
+    "hash",
+    "spawn",
+    "options"
+  ],
+  "literal_midge_spawn": [
+    205,
+    451
+  ],
   "crops": [
     [
       "01-west-isotope-port",
