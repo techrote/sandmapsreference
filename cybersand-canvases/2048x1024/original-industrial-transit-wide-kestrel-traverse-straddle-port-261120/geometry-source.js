@@ -156,3 +156,74 @@ R(1800,431,197,95,M.AIR);
 R(1131,572,69,313,M.AIR);
 // All exact targets remain at original authored coordinates.
 for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// SECOND DESIGN PASS — MATERIAL-CELL OPERATIONS, NOT AN IMAGE OVERLAY.
+// Make the drydocked ship load-bearing, inhabited and unambiguously separate
+// from dock gantry hardware; keep a Midge-width 66-cell top access.
+R(272,677,75,42,M.AIR);
+R(218,751,183,13,M.STEEL);
+for(let [x,w,h] of [[231,34,26],[277,46,31],[343,36,22]]){
+ R(x,751-h,w,h,M.WALL);R(x+4,754-h,w-8,8,M.STEEL);
+ R(x+9,746,11,8,M.STEEL);
+}
+R(352,613,86,11,M.STEEL);
+R(357,626,11,53,M.WALL);R(427,626,11,53,M.WALL);
+R(365,634,62,37,M.AIR);
+R(371,643,20,12,M.WALL);R(397,643,22,12,M.WALL);
+L(365,610,397,588,9,M.STEEL);L(397,588,435,611,10,M.STEEL);
+R(409,563,13,38,M.WALL);R(406,559,21,8,M.STEEL);
+R(436,681,14,21,M.STEEL);
+L(435,702,475,664,9,M.STEEL);
+// Dock cargo crane: asymmetric boom on the portal's grounded west footing,
+// continuous trolley cable and a distinct locked container over manifest grade.
+L(584,285,499,351,13,M.STEEL);L(499,351,419,420,11,M.WALL);
+L(493,346,625,346,9,M.STEEL);ring(536,345,13,13,5,M.WALL);
+L(534,356,534,524,6,M.STEEL);
+R(502,526,65,11,M.STEEL);R(511,537,49,38,M.WALL);
+R(518,542,35,10,M.STEEL);
+L(525,574,525,640,9,M.WALL);
+R(481,640,86,9,M.STEEL);
+// Freight straddle platform receives and exports actual load cells.
+// Join trolley sheaves to suspended cage instead of disconnected strokes.
+L(658,480,658,532,10,M.STEEL);
+L(751,480,751,529,10,M.STEEL);
+R(670,565,92,13,M.STEEL);
+R(682,576,72,33,M.WALL);
+R(686,582,64,12,M.STEEL);
+R(689,610,14,75,M.WALL);R(739,610,13,73,M.WALL);
+R(669,672,99,12,M.STEEL);
+R(606,650,45,17,M.WALL);R(614,643,30,10,M.STEEL);
+L(624,669,624,684,9,M.STEEL);
+// Arch load stations gain true tiedown connection to continuous mid-deck.
+for(let x of [1018,1190,1339]){
+ R(x+41,562,11,28,M.WALL);
+ R(x+15,586,62,14,M.STEEL);
+ R(x+19,600,54,18,M.WALL);
+ R(x+24,607,44,7,M.STEEL);
+ L(x+12,621,x+79,621,7,M.STEEL);
+}
+// Switchback load wagon/contact group, controlled yard switching frog.
+for(let [x,y,w] of [[1534,585,91],[1636,546,103],[1737,607,89]]){
+ R(x+19,y-26,w-38,26,M.WALL);
+ R(x+24,y-22,w-48,9,M.STEEL);
+ R(x+27,y+3,w-54,10,M.STEEL);
+}
+L(1524,705,1580,651,12,M.STEEL);
+L(1580,651,1688,610,11,M.STEEL);
+L(1580,651,1662,707,11,M.WALL);
+R(1571,648,15,42,M.STEEL);
+R(1685,612,16,91,M.WALL);
+R(1689,696,19,25,M.STEEL);
+// East examination conveyor / freight weighing scale has visible structure
+// and attached drive stocks; preserve a wide actual side entry.
+R(1880,566,98,12,M.STEEL);
+R(1889,579,13,37,M.WALL);R(1964,579,13,38,M.WALL);
+R(1909,592,44,12,M.WALL);R(1918,604,25,10,M.STEEL);
+L(1863,633,1910,605,10,M.STEEL);
+R(1850,641,145,12,M.STEEL);
+R(1950,618,13,23,M.WALL);
+R(1826,680,105,15,M.WALL);
+L(1829,690,1885,752,9,M.STEEL);
+// Revalidate fixed named workstations without snapping or substituting.
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
