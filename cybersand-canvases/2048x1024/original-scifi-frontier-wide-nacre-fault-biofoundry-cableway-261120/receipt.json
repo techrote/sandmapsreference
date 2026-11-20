@@ -16,23 +16,23 @@
   "bridge_legacy_capacity_risk": 4096,
   "material_rule_assumption": "Accepted catalog inert static solid IDs only (Basalt/Obsidian and architectural solids), no fluid or reactive foundation",
   "material_histogram": {
-    "49": 9042,
-    "62": 40131,
-    "63": 7937,
-    "66": 17437,
-    "68": 40998,
-    "77": 466,
-    "79": 434,
-    "100": 206347,
+    "49": 8246,
+    "62": 41281,
+    "63": 10070,
+    "66": 18351,
+    "68": 43824,
+    "77": 896,
+    "79": 732,
+    "100": 206151,
     "101": 12054,
-    "120": 9138,
-    "121": 3357,
-    "129": 6908,
-    "130": 4794,
-    "131": 10749
+    "120": 10498,
+    "121": 6521,
+    "129": 10722,
+    "130": 7457,
+    "131": 14901
   },
-  "filled_material_cells": 369792,
-  "grounded_cells": 369792,
+  "filled_material_cells": 391704,
+  "grounded_cells": 391704,
   "ungrounded_cells": 0,
   "grounded_components": 1,
   "all_solid_components": 1,
@@ -44,46 +44,51 @@
     "ties": 1,
     "longest": 47
   },
-  "nonoverlapping_ordered_rectangles": 4370,
-  "rectangle_work": 369792,
-  "setup_bytes": 82003,
-  "material_plane_sha256": "cf2cec0c8d04a00668a4c0659e316d88b855126aba38995fc1f52aa5d8a6beeb",
-  "setup_sha256": "c72b01c0224521088542022ef1672ef4722f95db7bdef98d453c91e3cf87d626",
+  "p1_functional_workcell_anchors": {
+    "ties": 14,
+    "longest": 3
+  },
+  "creator_revision": "R2 distinct material-cell workfaces responding to the 2026-11-20 exact-HEAD Shepherd P1; original travel graph and named centres retained",
+  "nonoverlapping_ordered_rectangles": 4623,
+  "rectangle_work": 391704,
+  "setup_bytes": 86643,
+  "material_plane_sha256": "12b9e615b0f7dd47029ef615b4daf5dd9abc1d92027d5fa4fcbd981d094dc85b",
+  "setup_sha256": "337d696bac9ab7b6b9312b0482bca3f081ade55df50c89a8d5d48e414dc42e3d",
   "images": [
     {
       "name": "overview.png",
-      "bytes": 50958,
-      "sha256": "e839c7ace3d97deae08b6c104af7f598d744b0ea675cb09bfb599ff9cebcf292"
+      "bytes": 54904,
+      "sha256": "85e03e4ec45fa1d7698a02662da1d1439b74efd6370fcd6e0371dba797e2d6cd"
     },
     {
       "name": "01-west-rover.png",
-      "bytes": 9899,
-      "sha256": "12e36d09581107b7d48b81b4d307dae36b28bfcc751d331093abc7836b8bbf71"
+      "bytes": 10511,
+      "sha256": "b324c141b7dacbf466e739316e64f8e4cdb82bb2ac005acd1d83891cd8fa89bc"
     },
     {
       "name": "02-seedfoundry.png",
-      "bytes": 10425,
-      "sha256": "418ed8915214a7d6f1df92f8a10824f1587d1ef3a195407c940f2a98fc3c4488"
+      "bytes": 11223,
+      "sha256": "c434a956255368dfe59d26639f66b603621fd2ab3b9e18aa7c9feac85404a526"
     },
     {
       "name": "03-cable-transfer.png",
-      "bytes": 3687,
-      "sha256": "226c932d5b60bd17a8115676d59ceb8174834e9e9ba586391bc43267b5c376f2"
+      "bytes": 4536,
+      "sha256": "6bb94510d32b59ad0399fce019f21d681e4b0cd3ffed90715f7ca40eba597008"
     },
     {
       "name": "04-xenoculture.png",
-      "bytes": 7415,
-      "sha256": "36103feb07451c330ffd4feea99f5f684b6f0664941c623d6fabe6c94a0581cc"
+      "bytes": 8015,
+      "sha256": "22672c0acde67ccbe108ced66a0a73b291c8f9a40538f46caac391c0870773be"
     },
     {
       "name": "05-east-quarantine.png",
-      "bytes": 9762,
-      "sha256": "7fd179ed2e57be075f46522e8cf7539a67f0d029ef13e08e10c1284cd8f7958f"
+      "bytes": 10084,
+      "sha256": "4a676c186cba03619db10db68b313f60d6f29a402c18283993413bb5b00dd9f0"
     },
     {
       "name": "06-underfault.png",
-      "bytes": 7328,
-      "sha256": "9d56f3f7ade53ff96939d6d78bae30575e2fe14091d5408f36a5093c9c2b5faf"
+      "bytes": 8453,
+      "sha256": "baf21a3cb41f9a8d518a74afaf6859d24907abce1cfc2e0113891c33332a2e3a"
     }
   ],
   "clearance": [
@@ -92,7 +97,7 @@
         19,
         15
       ],
-      "centres": 1504489,
+      "centres": 1479768,
       "passed": 26,
       "total": 26,
       "bad": []
@@ -102,7 +107,7 @@
         23,
         19
       ],
-      "centres": 1459153,
+      "centres": 1435007,
       "passed": 26,
       "total": 26,
       "bad": []
@@ -112,7 +117,7 @@
         31,
         27
       ],
-      "centres": 1373940,
+      "centres": 1349055,
       "passed": 26,
       "total": 26,
       "bad": []
@@ -133,7 +138,7 @@
           31,
           27
         ],
-        "centres": 1366485,
+        "centres": 1341620,
         "passed": 25,
         "total": 26,
         "bad": [

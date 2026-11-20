@@ -202,6 +202,56 @@ function build(){
  const r2_connection_bridges=tieStructures();
  for(let [name,[x,y]] of Object.entries(sites))R(x-21,y-19,43,39,0);
 
+
+ // R2: functional biological handling and Midge-accessible unlike workcells.
+ // West rover: cold intake hood and grounded botanical separator.
+ R(272,597,86,13,M.titanium);R(282,572,21,24,M.chrome);
+ R(317,576,28,20,M.window);R(325,565,11,10,M.amber);
+ L(298,606,298,611,9,M.steel);
+ R(292,698,105,13,M.ceramic);R(308,677,27,20,M.frost);
+ R(350,671,33,26,M.glassDark);R(362,659,11,11,M.signal);
+ L(312,710,312,736,8,M.steel);
+ // Suspended seedbank receiving station and culture cassette banks.
+ R(692,672,80,12,M.titanium);R(706,649,22,21,M.window);
+ L(732,664,759,639,9,M.chrome);R(748,629,14,10,M.amber);
+ R(835,674,74,12,M.ceramic);R(841,645,23,27,M.frost);
+ R(875,656,20,16,M.blue);R(881,644,9,10,M.signal);
+ // Cable hoist transfers real payloads into an opposed receiving cradle.
+ R(1060,564,82,10,M.titanium);R(1090,534,14,28,M.chrome);
+ R(1070,548,17,15,M.window);R(1109,546,19,16,M.glassDark);
+ L(1098,572,1098,615,8,M.steel);R(1074,614,58,10,M.ceramic);
+ // East suspended xenoculture clinic: aseptic pressure chambers + exchanger.
+ R(1150,676,61,9,M.steel);R(1161,648,23,26,M.frost);
+ R(1189,657,19,17,M.chrome);R(1195,645,8,9,M.signal);
+ R(1301,677,86,9,M.titanium);R(1314,645,28,30,M.glassDark);
+ R(1355,655,19,20,M.window);R(1360,641,9,12,M.amber);
+ // Eastern decon scrubber and freight weigh-export rather than repeated shelves.
+ R(1645,635,91,10,M.titanium);R(1659,604,23,29,M.frost);
+ R(1694,595,22,38,M.blue);R(1701,585,9,9,M.signal);
+ R(1834,636,125,10,M.steel);R(1850,608,26,26,M.chrome);
+ R(1890,612,43,22,M.glassDark);L(1903,610,1903,590,7,M.conduit);
+ // Deep free flyway y~914 remains clear. Four separate workcells below it
+ // have unique root-bearing machinery, never four cloned crate trays.
+ // Ore archive: reaching crane-arm and stepped mineral comparator.
+ R(535,978,168,5,M.titanium);R(545,948,25,28,M.chrome);
+ R(585,956,50,20,M.glassDark);R(596,945,21,10,M.window);
+ L(559,948,590,939,6,M.conduit);R(659,951,24,25,M.frost);
+ // Pump: opposed displacement heads, manifold, staffed valve.
+ R(799,978,164,5,M.titanium);R(810,945,30,31,M.steel);
+ R(857,955,28,21,M.window);R(898,943,42,33,M.chrome);
+ L(825,941,919,942,7,M.conduit);R(916,934,9,8,M.amber);
+ // Bio-reclamation: unequal digestion vats, reagent injection and balance.
+ R(1086,978,166,5,M.titanium);R(1098,952,21,24,M.glassDark);
+ R(1135,938,30,38,M.frost);R(1179,950,24,26,M.chrome);
+ R(1215,956,29,20,M.window);L(1150,935,1193,940,6,M.conduit);
+ // Climatology: upright finned exchanger, capacitors and separate monitor.
+ R(1371,978,157,5,M.titanium);R(1383,944,31,32,M.blue);
+ R(1433,950,37,26,M.steel);
+ for(let xf=1436;xf<1470;xf+=8)R(xf,937,3,13,M.chrome);
+ R(1482,958,32,18,M.glassDark);R(1490,948,11,9,M.signal);
+ // Anchor every newly introduced assembly in actual solid material.
+ const r2_workcell_anchors=tieStructures();
+
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
  for(let y=0;y<H;y++){let next=new Map(),base=y*W;for(let x=0;x<W;){let m=g[base+x],s=x;while(x<W&&g[base+x]===m)x++;if(!m)continue;let k=s+":"+(x-s)+":"+m,idx=prev.get(k);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(k,idx);}prev=next;}
@@ -255,7 +305,7 @@ function build(){
   let b=new Uint8Array(a.reduce((s,p)=>s+p.length,0)),i=0;for(let p of a){b.set(p,i);i+=p.length;}return b;}
  const crops=[["01-west-rover",0,310,500,574],["02-seedfoundry",534,268,435,506],["03-cable-transfer",907,275,277,469],["04-xenoculture",1109,285,446,490],["05-east-quarantine",1590,346,458,546],["06-underfault",468,843,1150,181]];
  const images=[["overview.png",png(0,0,W,H)],...crops.map(([name,x,y,w,h])=>[name+".png",png(x,y,w,h)])];
- return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info,r2_extra_ties:r2_connection_bridges,seed:SEED};
+ return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info,r2_extra_ties:r2_connection_bridges,r2_workcell_anchors,seed:SEED};
 }
 
 function sha256(input){let b=typeof input==="string"?Uint8Array.from(input,c=>c.charCodeAt(0)):input;
@@ -263,7 +313,7 @@ const K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923
 const n=(b.length+9+63)&~63,buf=new Uint8Array(n);buf.set(b);buf[b.length]=128;let bits=b.length*8;for(let i=0;i<8;i++){buf[n-1-i]=bits&255;bits=Math.floor(bits/256);}
 let h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19],w=new Uint32Array(64);let rotr=(x,n)=>(x>>>n)|(x<<(32-n));
 for(let off=0;off<n;off+=64){for(let j=0;j<16;j++){let i=off+j*4;w[j]=((buf[i]<<24)|(buf[i+1]<<16)|(buf[i+2]<<8)|buf[i+3])>>>0;}for(let j=16;j<64;j++){let p=w[j-15],q=w[j-2];w[j]=(w[j-16]+(rotr(p,7)^rotr(p,18)^(p>>>3))+w[j-7]+(rotr(q,17)^rotr(q,19)^(q>>>10)))>>>0;}let [a,b0,c,d,e,f,g,z]=h;for(let j=0;j<64;j++){let t1=(z+(rotr(e,6)^rotr(e,11)^rotr(e,25))+((e&f)^(~e&g))+K[j]+w[j])>>>0,t2=((rotr(a,2)^rotr(a,13)^rotr(a,22))+((a&b0)^(a&c)^(b0&c)))>>>0;z=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b0;b0=a;a=(t1+t2)>>>0;}for(let j=0;j<8;j++)h[j]=(h[j]+[a,b0,c,d,e,f,g,z][j])>>>0;}return h.map(n=>n.toString(16).padStart(8,"0")).join("");}
-function makeReceipt(a){return {concept:"Nacre Fault - Biofoundry Cableway",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"de109d0131641d6adc8d25bb9ced7ca3d4991105",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Accepted catalog inert static solid IDs only (Basalt/Obsidian and architectural solids), no fluid or reactive foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,final_anchor_ties:a.r2_extra_ties,nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[964,495,1039,557],material_id:58,purpose:"Blocks only literal central Midline service hatch; all other sites recover over the high guideway and below the fault",result:a.bypass},sites:a.sites,crops:a.crops,source_art:"None; original science fiction level geometry",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Independent exact-head Art / Technical / Shepherd pending; Draft/HOLD"};}
+function makeReceipt(a){return {concept:"Nacre Fault - Biofoundry Cableway",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"de109d0131641d6adc8d25bb9ced7ca3d4991105",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Accepted catalog inert static solid IDs only (Basalt/Obsidian and architectural solids), no fluid or reactive foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,final_anchor_ties:a.r2_extra_ties,p1_functional_workcell_anchors:a.r2_workcell_anchors,creator_revision:'R2 distinct material-cell workfaces responding to the 2026-11-20 exact-HEAD Shepherd P1; original travel graph and named centres retained',nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[964,495,1039,557],material_id:58,purpose:"Blocks only literal central Midline service hatch; all other sites recover over the high guideway and below the fault",result:a.bypass},sites:a.sites,crops:a.crops,source_art:"None; original science fiction level geometry",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Independent exact-head Art / Technical / Shepherd pending; Draft/HOLD"};}
 
 if(typeof require!=="undefined"&&require.main===module){
  const fs=require("fs"),path=require("path"),crypto=require("crypto"),zlib=require("zlib");
