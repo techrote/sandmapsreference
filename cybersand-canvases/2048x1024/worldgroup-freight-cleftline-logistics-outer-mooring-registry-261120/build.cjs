@@ -161,6 +161,37 @@ cut(122,313,1776,59);
 for(const [x,top] of [[339,270],[756,264],[1314,269],[1585,272]])cut(x-32,top,65,168);
 /* Final founded base remains continuous under all maintenance culverts. */
 wall(0,997,W,27);
+
+/* Grounded service port lattice and wide, explicit through-gates. */
+steel(125,385,1778,13);steel(120,704,1815,14);
+for(const x of [444,812,1401,1669,1934]){wall(x,380,17,608);steel(x+5,393,6,588);}
+brace(329,289,351,387,10);brace(747,283,779,385,10);
+brace(1324,273,1293,389,12);brace(1590,292,1561,389,9);
+brace(238,612,253,706,9);brace(534,618,558,704,10);
+brace(739,625,759,704,10);brace(1035,700,1085,704,11);
+brace(1449,688,1449,708,10);brace(1804,682,1816,706,10);
+for(const x of [299,642,1030,1493,1814])cut(x-46,375,93,65);
+for(const x of [298,620,1084,1508,1831])cut(x-46,695,93,56);
+cut(336,485,74,303); /* lower-left dock-to-service rescue shaft */
+/* Four entered, separately engineered port-authority watch stations.
+   Deliberately generous physical side portals are essential for Midge. */
+function pod(x,y,w,h){
+ steel(x,y,w,11);wall(x,y+11,13,h-11);wall(x+w-13,y+11,13,h-11);
+ steel(x,y+h-12,w,12);
+ cut(x-2,y+20,36,67);cut(x+w-34,y+20,36,67);
+}
+pod(275,206,159,105);steel(296,243,24,12);wall(310,256,12,21);
+steel(395,242,27,7);brace(292,308,325,386,10);
+pod(685,190,150,110);steel(701,240,29,9);wall(787,242,27,10);
+brace(784,296,770,385,11);
+pod(1236,174,173,119);dial(1269,230,14);steel(1367,233,28,11);
+wall(1346,258,12,16);brace(1314,290,1279,386,10);
+pod(1512,201,153,110);steel(1535,245,28,10);
+for(let i=0;i<3;i++)wall(1604+i*12,247,7,17);
+brace(1585,307,1558,386,10);
+/* Keep exact destinations genuinely accessible after structural tie-ins. */
+for(const [x,y] of Object.values(sites))cut(x-24,y-22,49,45);
+
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
