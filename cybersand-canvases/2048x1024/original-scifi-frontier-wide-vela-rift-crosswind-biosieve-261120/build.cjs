@@ -23,7 +23,7 @@ const build=function build(){
  R(235,479,12,25,M.iron);R(346,479,12,25,M.iron);
  R(228,609,150,12,M.chrome);R(252,581,69,27,M.black);R(274,571,12,10,M.amber);
  for(let x of [333,354]){R(x,568,13,39,M.blue);R(x+3,580,7,14,M.white);}
- R(235,618,12,25,M.steel);R(350,618,12,25,M.steel);
+ R(335,603,11,10,M.blue);R(355,603,11,10,M.blue);R(235,618,12,25,M.steel);R(350,618,12,25,M.steel);
  R(231,754,146,13,M.titanium);L(264,754,317,709,11,M.chrome);R(303,719,57,14,M.black);
  R(240,766,12,27,M.steel);R(355,765,12,27,M.steel);
  // East sterile isolation, classifier and export crane; unlike west machinery.
