@@ -131,7 +131,24 @@ const build=function build(){
  // Preserve an explicit safe slot between the two jaw crown beams.
  R(1013,378,127,112,0);
 
- // All deposited solids must be boundary-rooted. Prune only disconnected prototypes,
+
+ // R3 exact-head Art P1: sampled xenolith remains visibly attached to a guided
+ // two-part cradle, leaving a 70+ cell natural Midge flight throat between sides.
+ L(969,631,1005,674,11,M.steel);
+ R(1005,673,37,10,M.titanium);R(1018,663,26,11,M.blue);R(1024,649,20,13,M.amber);
+ L(1023,670,1042,645,7,M.chrome);
+ L(1177,638,1131,674,10,M.iron);
+ R(1132,669,42,12,M.ceramic);R(1141,657,25,12,M.glass);
+ // Quarantine containment: physical cage, analysis capillaries, control lights.
+ R(1801,463,117,9,M.steel);R(1808,437,10,28,M.titanium);
+ R(1899,437,10,28,M.titanium);R(1820,441,73,20,M.black);
+ for(let x of [1825,1848,1871]){R(x,445,9,14,M.glass);R(x+3,449,4,6,M.signal);}
+ R(1807,471,9,19,M.iron);R(1900,471,9,19,M.iron);
+ // Adjacent separate physically grounded cargo receiver/fork, not assay cabinets.
+ R(1801,743,94,10,M.titanium);L(1820,742,1850,719,9,M.chrome);
+ R(1847,722,45,8,M.iron);R(1842,734,32,10,M.amber);
+ R(1808,750,10,24,M.steel);R(1880,751,10,23,M.steel);
+  // All deposited solids must be boundary-rooted. Prune only disconnected prototypes,
  // then independently verify final connectedness, exact replay and route graph.
  let seen=new Uint8Array(N),q=new Int32Array(N),removed=0,removedGroups=0;
  for(let k=0;k<N;k++)if(g[k]&&!seen[k]){
@@ -225,7 +242,7 @@ const hash=function hash(b){if(typeof b==="string")b=Uint8Array.from(b,c=>c.char
   for(let j=0;j<8;j++)h[j]=(h[j]+[a,b,c,d,e,f,g,k][j])>>>0;}
  return h.map(v=>v.toString(16).padStart(8,"0")).join("");
 };
-const receipt=function receipt(a,sha){return {concept:"Rime Accord - Xenolith Jaw Excavator",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"7b03aa437561ec63e31fd09531171360ab60eeb4",map_repo_base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",loader_source_max_rectangles:32768,loader_source_max_json_bytes:1048576,source_work_budget:32000000,installed_bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only accepted inert immovable Solid/None kernels; no powders or liquids",material_histogram:a.hist,filled_grounded_cells:a.area,detached_final_cells:0,prototype_disconnected_cells_removed:a.removed,prototype_components_removed:a.removedGroups,rectangle_count:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,grid_sha256:sha(a.g),setup_sha256:sha(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha(b)})),clearance:a.clearances,obstruction:{xyxy_halfopen:a.obstacle,material_id:58,purpose:"Blocks only Central jaw custody",result:a.blocked},named_sites:a.sites,literal_actor_spawn:a.sites["West rover spawn"],crops:a.crops,static_status:"CREATOR-STATIC-PASS-R2",native_status:"NATIVE-UNTESTED",independent_reviews:"R1 functional-art P1 addressed in final physical cells; independent exact-R2 Art/Tech/Shepherd RECHECK REQUIRED",r2_feature_survival:a.r2Features,creator_revision:"R2 supported two-jaw industrial mechanism and physical workstations 2026-11-20"};};
+const receipt=function receipt(a,sha){return {concept:"Rime Accord - Xenolith Jaw Excavator",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"7b03aa437561ec63e31fd09531171360ab60eeb4",map_repo_base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",loader_source_max_rectangles:32768,loader_source_max_json_bytes:1048576,source_work_budget:32000000,installed_bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only accepted inert immovable Solid/None kernels; no powders or liquids",material_histogram:a.hist,filled_grounded_cells:a.area,detached_final_cells:0,prototype_disconnected_cells_removed:a.removed,prototype_components_removed:a.removedGroups,rectangle_count:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,grid_sha256:sha(a.g),setup_sha256:sha(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha(b)})),clearance:a.clearances,obstruction:{xyxy_halfopen:a.obstacle,material_id:58,purpose:"Blocks only Central jaw custody",result:a.blocked},named_sites:a.sites,literal_actor_spawn:a.sites["West rover spawn"],crops:a.crops,static_status:"CREATOR-STATIC-PASS-R3",native_status:"NATIVE-UNTESTED",independent_reviews:"R2 Art residual custody / east export P1 addressed with actual grounded material; independent exact-R3 recheck required",r2_feature_survival:a.r2Features,creator_revision:"R3 specimen cradle, supported quarantine analysis and cargo receiving added 2026-11-20"};};
 const a=build(),r=receipt(a,hash);let ok=true;
 for(const [name,data] of [["setup.json",a.json],["receipt.json",JSON.stringify(r,null,2)+"\n"],...a.images]){let expected=typeof data==="string"?Buffer.from(data,"utf8"):Buffer.from(data),f=path.join(__dirname,name);if(process.argv.includes("--verify")){if(!fs.existsSync(f)||!expected.equals(fs.readFileSync(f))){console.error("MISMATCH "+name);ok=false;}}else fs.writeFileSync(f,expected);}
 console.log(JSON.stringify({cells:a.g.length,rectangles:a.rect.length,solid:a.area,sites:Object.keys(a.sites).length,obstruction:a.blocked.bad,hash:r.grid_sha256,verified:ok}));if(!ok)process.exit(1);
