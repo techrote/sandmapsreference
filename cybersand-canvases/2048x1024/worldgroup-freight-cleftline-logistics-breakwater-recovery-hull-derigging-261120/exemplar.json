@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Cleftline Logistics",
+  "map_role": "Breakwater recovery, rigging removal, reclaimed freight dispatch",
+  "anchor_donors": [
+    "wide-peregrine-cleft-halcyon-drydock",
+    "wide-graven-keel-ship-tipper"
+  ],
+  "macro_topology": [
+    "asymmetric V-shaped basin",
+    "rooted twin-pier recovery crown",
+    "multi-altitude recovery routes"
+  ],
+  "density_profile": "High-density founded salvage and dispatch at basin shoulders; broad deliberately open central transfer air; sparse service return for future human development",
+  "route_grammar": [
+    "upper air-inspection bypass",
+    "main cargo traverse",
+    "lower V-cradle return",
+    "deep service recovery"
+  ],
+  "strong_motifs": [
+    "basalt engineering foundations",
+    "steel crane crown",
+    "offset damaged-hull cradle",
+    "seated gripper receiver",
+    "underworks service bays"
+  ],
+  "interesting_relationships": [
+    "salvage suspended between anchored piers",
+    "recovered freight moves east to sorter and dispatch",
+    "lower maintenance traverses beneath industrial cut"
+  ],
+  "authoring_affordances": [
+    {
+      "kind": "editable_gap",
+      "location": [
+        780,
+        390,
+        470,
+        125
+      ],
+      "intention": "preserve useful central open traversal and optional staging void"
+    },
+    {
+      "kind": "expansion_seam",
+      "location": [
+        1410,
+        750,
+        220,
+        120
+      ],
+      "intention": "human-authorable separator station variations"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Crown hoist activation",
+      "point": [
+        1032,
+        444
+      ],
+      "event_idea": "future hoist raise/lower",
+      "not_scripted": true
+    },
+    {
+      "name": "Salvage cradle failure",
+      "point": [
+        1030,
+        610
+      ],
+      "event_idea": "future temporary support failure",
+      "not_scripted": true
+    },
+    {
+      "name": "Eastern reclaimed dispatch arrival",
+      "point": [
+        1820,
+        491
+      ],
+      "event_idea": "future freight vehicle arrival",
+      "not_scripted": true
+    }
+  ],
+  "procedural_exemplar_value": [
+    "asymmetric terrain-rooted industrial V",
+    "interrupted crown transfer",
+    "distinct load path between hoist and crate cradle"
+  ],
+  "similarity_avoidance": "Unlike sibling 01 linear mooring/ballast quay, this is basin-centred anchored salvage and de-rigging; retain open sky instead of filling all bays.",
+  "native_status": "NATIVE-UNTESTED"
+}

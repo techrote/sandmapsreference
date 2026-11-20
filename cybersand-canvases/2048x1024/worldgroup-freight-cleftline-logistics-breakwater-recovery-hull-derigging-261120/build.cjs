@@ -182,6 +182,16 @@ for(const [x,y,w,h] of [[503,136,53,244],[1089,139,56,242],[1525,139,61,246],
  [131,526,64,243],[692,527,65,246],[1304,528,65,246],[1882,527,62,247],
  [1085,519,59,246],[866,629,238,59]])voidRect(x,y,w,h);
 for(const [x,y] of Object.values(sites))voidRect(x-24,y-22,49,45);
+/* R3 verified bounded functional-art repair. Two descended hoist lines, 
+   split grippers and the seated receiver/clamp under the salvage crown.
+   Leave the Midge-clear lateral passage between hoist and cradle. */
+beam(1004,330,1004,425,8);beam(1056,329,1056,425,8);
+steel(988,420,84,13);wall(1014,433,34,20);
+beam(1019,447,990,473,7);beam(1044,447,1070,473,7);
+steel(977,471,27,10);steel(1057,471,26,10);
+steel(964,560,118,14);wall(958,569,16,57);wall(1071,569,16,57);
+beam(970,576,992,607,9);beam(1074,576,1052,607,9);
+steel(967,620,119,14);steel(1016,602,21,32);
 rock(0,1005,W,19);
 
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
