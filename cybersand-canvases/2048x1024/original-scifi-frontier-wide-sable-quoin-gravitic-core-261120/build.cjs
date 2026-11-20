@@ -176,7 +176,7 @@ function build(){
  // Heavy load paths tie five-arm survey core and low eastern brace into 
  // native basalt outside the understrata air passage. No scenic floating mass.
  L(1079,231,20,336,8,M.conduit);
- L(1195,218,2029,356,8,M.conduit);
+ // Free eastern sky flank, one high-anchored tension wire only.
  L(1291,778,1391,402,9,M.chrome);
  // Two severed decorative fragments from emergency-shaft carving are erased.
  R(1609,791,61,16,0);
