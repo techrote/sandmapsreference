@@ -1,0 +1,631 @@
+{
+  "schema": 1,
+  "original_no_source": true,
+  "concept": "Cinderlock Rotary Tiltworks",
+  "seed": 26112071,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "493d1d88426df5d7eb39636eec2a8e828b2a174acbf056b1cebd2c623d5c06fd",
+  "setup_sha256": "953f4f82c2fe508349bd9a4d531c2798ef2ad90a05db10b5f5aa3f769cd0bd1f",
+  "json_bytes": 64913,
+  "rectangle_count": 3473,
+  "source_rectangle_limit": 32768,
+  "possible_installed_fallback_untested": 4096,
+  "construction_work": 958064,
+  "material_histogram": {
+    "0": 1139088,
+    "3": 8736,
+    "8": 34017,
+    "57": 9113,
+    "58": 233644,
+    "62": 196352,
+    "65": 78643,
+    "66": 28259,
+    "68": 18552,
+    "69": 6463,
+    "72": 4701,
+    "76": 11008,
+    "77": 2633,
+    "79": 3923,
+    "100": 216964,
+    "104": 46002,
+    "117": 17407,
+    "131": 41647
+  },
+  "ground": {
+    "total": 915311,
+    "rooted": 915311,
+    "detached": 0,
+    "repair": {
+      "components": 22,
+      "links": 110,
+      "maxSize": 4099,
+      "maxLink": 50
+    }
+  },
+  "fluid": {
+    "water": 8736,
+    "lava": 34017,
+    "initial_fluid_air_faces": 0,
+    "initial_water_lava_contacts": 0
+  },
+  "flight": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 918884,
+      "connected_centres": 689749,
+      "passed": 16,
+      "sites": [
+        {
+          "name": "West freight spawn",
+          "x": 88,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore hoist control",
+          "x": 280,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Charge gate lookdown",
+          "x": 456,
+          "y": 274,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rotary-kiln crown",
+          "x": 664,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trunnion diagnostic",
+          "x": 899,
+          "y": 265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Receiver control",
+          "x": 1199,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First mould overlook",
+          "x": 1432,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second mould overlook",
+          "x": 1554,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear service",
+          "x": 1711,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1850,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East dispatch",
+          "x": 1973,
+          "y": 271,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Centre access shaft",
+          "x": 1100,
+          "y": 742,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West blower shop",
+          "x": 413,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Kiln thermal service",
+          "x": 744,
+          "y": 816,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Die coolant control",
+          "x": 1478,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East underfloor",
+          "x": 1860,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 875716,
+      "connected_centres": 661753,
+      "passed": 16,
+      "sites": [
+        {
+          "name": "West freight spawn",
+          "x": 88,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore hoist control",
+          "x": 280,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Charge gate lookdown",
+          "x": 456,
+          "y": 274,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rotary-kiln crown",
+          "x": 664,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trunnion diagnostic",
+          "x": 899,
+          "y": 265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Receiver control",
+          "x": 1199,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First mould overlook",
+          "x": 1432,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second mould overlook",
+          "x": 1554,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear service",
+          "x": 1711,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1850,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East dispatch",
+          "x": 1973,
+          "y": 271,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Centre access shaft",
+          "x": 1100,
+          "y": 742,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West blower shop",
+          "x": 413,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Kiln thermal service",
+          "x": 744,
+          "y": 816,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Die coolant control",
+          "x": 1478,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East underfloor",
+          "x": 1860,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 795739,
+      "connected_centres": 606859,
+      "passed": 16,
+      "sites": [
+        {
+          "name": "West freight spawn",
+          "x": 88,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore hoist control",
+          "x": 280,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Charge gate lookdown",
+          "x": 456,
+          "y": 274,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rotary-kiln crown",
+          "x": 664,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trunnion diagnostic",
+          "x": 899,
+          "y": 265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Receiver control",
+          "x": 1199,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First mould overlook",
+          "x": 1432,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second mould overlook",
+          "x": 1554,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear service",
+          "x": 1711,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1850,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East dispatch",
+          "x": 1973,
+          "y": 271,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Centre access shaft",
+          "x": 1100,
+          "y": 742,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West blower shop",
+          "x": 413,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Kiln thermal service",
+          "x": 744,
+          "y": 816,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Die coolant control",
+          "x": 1478,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East underfloor",
+          "x": 1860,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "obstruction": {
+    "box": [
+      986,
+      257,
+      55,
+      65
+    ],
+    "flight": {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 788004,
+      "connected_centres": 599124,
+      "passed": 16,
+      "sites": [
+        {
+          "name": "West freight spawn",
+          "x": 88,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore hoist control",
+          "x": 280,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Charge gate lookdown",
+          "x": 456,
+          "y": 274,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rotary-kiln crown",
+          "x": 664,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trunnion diagnostic",
+          "x": 899,
+          "y": 265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Receiver control",
+          "x": 1199,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First mould overlook",
+          "x": 1432,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second mould overlook",
+          "x": 1554,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear service",
+          "x": 1711,
+          "y": 266,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1850,
+          "y": 269,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East dispatch",
+          "x": 1973,
+          "y": 271,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Centre access shaft",
+          "x": 1100,
+          "y": 742,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West blower shop",
+          "x": 413,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Kiln thermal service",
+          "x": 744,
+          "y": 816,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Die coolant control",
+          "x": 1478,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East underfloor",
+          "x": 1860,
+          "y": 813,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2098812,
+      "sha256": "7a05fdd40658fdeb15c8ea1a8afda9b7640060520f36c6aa9eb544485333cc3e"
+    },
+    "01-ore-reception.png": {
+      "crop": [
+        138,
+        373,
+        390,
+        307
+      ],
+      "bytes": 120518,
+      "sha256": "0ac57c6b1a37921bb819e707993863d0cb8d68604ab6b226cb8c500410d3d0b3"
+    },
+    "02-canted-rotary-kiln.png": {
+      "crop": [
+        482,
+        303,
+        554,
+        376
+      ],
+      "bytes": 209171,
+      "sha256": "8b0e3f3332eb6328778a23a6572e5f0f2b246a4865d1151a2ebbcc948f86cc11"
+    },
+    "03-crucible-transfer.png": {
+      "crop": [
+        1096,
+        359,
+        249,
+        321
+      ],
+      "bytes": 80731,
+      "sha256": "7c152bb4b1459375b0846f663d346952b6ead08e7be962d662faf07db8cca72a"
+    },
+    "04-billet-casting.png": {
+      "crop": [
+        1344,
+        370,
+        410,
+        316
+      ],
+      "bytes": 130357,
+      "sha256": "a35df536b4a797df4b7af4e50f449c1e8fc57f527f8df8654059869b983f4c87"
+    },
+    "05-sealed-quench.png": {
+      "crop": [
+        1740,
+        483,
+        267,
+        221
+      ],
+      "bytes": 59704,
+      "sha256": "536e112ae87e718279860b12b59c5e5cd792db141745c717ae70a0602f8c85c2"
+    },
+    "06-service-undercroft.png": {
+      "crop": [
+        187,
+        772,
+        1751,
+        131
+      ],
+      "bytes": 230003,
+      "sha256": "344a78e9562ba48fa596f73972fb6c06f7ecc749b0a34821642c52ac2164809b"
+    }
+  },
+  "pixel_material_parity_count": 2923063,
+  "native": "NATIVE-UNTESTED"
+}
