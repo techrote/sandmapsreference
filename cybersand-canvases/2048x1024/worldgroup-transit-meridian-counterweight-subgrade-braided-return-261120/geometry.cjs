@@ -110,7 +110,7 @@ const sites=[
 ['Middle low through',1249,690],['Mid-east high through',1359,461],
 ['Crosslink east',1618,577],['Eastern lower return',1519,697],
 ['Final high return',1901,458],['Finish',1940,461],
-['West ram bay',321,852],['Tension-comb bay',865,858],
+['West ram bay',291,852],['Tension-comb bay',865,858],
 ['Catch magazine',1392,851],['Rescue cradle',1800,850],
 ['Far east turnaround',1844,686],['West egress',202,457]];
 const obs=[570,387,103,140];
