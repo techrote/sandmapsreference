@@ -52,8 +52,9 @@ function empty(cx,cy,w,h,obs){
  if(obs&&x<obs[0]+obs[2]&&x+w>obs[0]&&y<obs[1]+obs[3]&&y+h>obs[1])return false;
  return sat[(y+h)*stride+x+w]-sat[(y+h)*stride+x]-sat[y*stride+x+w]+sat[y*stride+x]===0;
 }
+assert(setup.actors[0].model==="midge"&&JSON.stringify(setup.actors[0].spawn)===JSON.stringify(receipt.exact_sites["West receiving portal"]),"authoritative Midge spawn");
 function flood(w,h,obs){
- const seen=new Uint8Array(N),queue=new Int32Array(N),dist=new Int32Array(N),start=receipt.exact_sites["West receiving portal"],s=start[1]*W+start[0];assert(empty(start[0],start[1],w,h,obs),"spawn");
+ const seen=new Uint8Array(N),queue=new Int32Array(N),dist=new Int32Array(N),start=receipt.exact_sites["Unload cradle"],s=start[1]*W+start[0];assert(empty(start[0],start[1],w,h,obs),"spawn");
  let head=0,tail=1;queue[0]=s;seen[s]=1;
  while(head<tail){const p=queue[head++],x=p%W,y=Math.floor(p/W);
  for(const q of [p-W,p+W,p-1,p+1]){if(q<0||q>=N||(Math.abs(p-q)===1&&Math.floor(q/W)!==y)||seen[q])continue;
