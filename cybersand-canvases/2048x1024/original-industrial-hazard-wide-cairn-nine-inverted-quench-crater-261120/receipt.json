@@ -1,0 +1,301 @@
+{
+  "concept": "Cairn-9 Inverted Quench Crater",
+  "seed": 2026112099,
+  "world": [
+    2048,
+    1024
+  ],
+  "engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "grid_sha256": "63336a2ac529bf9572c40fbdd428fa9cdf5fbc3123ad84e00d34f97928c4fc39",
+  "setup_sha256": "60a2973d0b9c118806fbd9704257bcd1e93d42e79dd1780fd51641bc007cb615",
+  "setup_json_bytes": 47726,
+  "rectangles": 2517,
+  "work": 450254,
+  "histogram": {
+    "0": 1646898,
+    "3": 1045,
+    "8": 585,
+    "58": 90062,
+    "62": 89038,
+    "68": 2962,
+    "70": 4924,
+    "77": 728,
+    "100": 157086,
+    "101": 75873,
+    "104": 9162,
+    "117": 18789
+  },
+  "solid_connectivity": {
+    "total": 448624,
+    "grounded": 448624,
+    "detached": 0
+  },
+  "fluid_cells": 1630,
+  "clearance": {
+    "19x15": {
+      "visited": 1285760,
+      "reachable": 15
+    },
+    "23x19": {
+      "visited": 1235286,
+      "reachable": 15
+    },
+    "31x27": {
+      "visited": 1162318,
+      "reachable": 15
+    }
+  },
+  "alternate_route": {
+    "box": [
+      1090,
+      0,
+      72,
+      330
+    ],
+    "visited": 1128658,
+    "reachable": 15,
+    "detours": [
+      {
+        "name": "West survey spawn",
+        "baseline": 0,
+        "blocked": 0,
+        "extra": 0
+      },
+      {
+        "name": "Assay handoff",
+        "baseline": 365,
+        "blocked": 365,
+        "extra": 0
+      },
+      {
+        "name": "West editable berth",
+        "baseline": 665,
+        "blocked": 665,
+        "extra": 0
+      },
+      {
+        "name": "Fault-cutter crown",
+        "baseline": 530,
+        "blocked": 530,
+        "extra": 0
+      },
+      {
+        "name": "Fault shaft inspection",
+        "baseline": 725,
+        "blocked": 725,
+        "extra": 0
+      },
+      {
+        "name": "Deep fault recovery",
+        "baseline": 1025,
+        "blocked": 1025,
+        "extra": 0
+      },
+      {
+        "name": "Annulus approach",
+        "baseline": 1003,
+        "blocked": 1003,
+        "extra": 0
+      },
+      {
+        "name": "Annulus inner chamber",
+        "baseline": 1308,
+        "blocked": 1308,
+        "extra": 0
+      },
+      {
+        "name": "Subcrater return",
+        "baseline": 1583,
+        "blocked": 1583,
+        "extra": 0
+      },
+      {
+        "name": "East fault control",
+        "baseline": 1618,
+        "blocked": 1618,
+        "extra": 0
+      },
+      {
+        "name": "East lower refuge",
+        "baseline": 1923,
+        "blocked": 1923,
+        "extra": 0
+      },
+      {
+        "name": "Broken scrubber crown",
+        "baseline": 1830,
+        "blocked": 1994,
+        "extra": 164
+      },
+      {
+        "name": "Scrubber inspection",
+        "baseline": 2035,
+        "blocked": 2199,
+        "extra": 164
+      },
+      {
+        "name": "Scrubber return",
+        "baseline": 2350,
+        "blocked": 2514,
+        "extra": 164
+      },
+      {
+        "name": "Safety extraction",
+        "baseline": 2075,
+        "blocked": 2239,
+        "extra": 164
+      }
+    ]
+  },
+  "sites": [
+    [
+      "West survey spawn",
+      65,
+      290
+    ],
+    [
+      "Assay handoff",
+      240,
+      480
+    ],
+    [
+      "West editable berth",
+      240,
+      780
+    ],
+    [
+      "Fault-cutter crown",
+      565,
+      260
+    ],
+    [
+      "Fault shaft inspection",
+      600,
+      480
+    ],
+    [
+      "Deep fault recovery",
+      600,
+      780
+    ],
+    [
+      "Annulus approach",
+      1000,
+      300
+    ],
+    [
+      "Annulus inner chamber",
+      1040,
+      565
+    ],
+    [
+      "Subcrater return",
+      1040,
+      840
+    ],
+    [
+      "East fault control",
+      1435,
+      480
+    ],
+    [
+      "East lower refuge",
+      1435,
+      785
+    ],
+    [
+      "Broken scrubber crown",
+      1740,
+      275
+    ],
+    [
+      "Scrubber inspection",
+      1740,
+      480
+    ],
+    [
+      "Scrubber return",
+      1740,
+      795
+    ],
+    [
+      "Safety extraction",
+      1970,
+      290
+    ]
+  ],
+  "images": {
+    "overview.png": {
+      "bytes": 29239,
+      "sha256": "26a17bfcc474816a65c93869269bad6720b1c995d6489797eeb1a14f2d472769",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-freight-assay.png": {
+      "bytes": 6618,
+      "sha256": "c7a5ffffa22fd1eee1cb03f1bcfd9f76b2e33df3f9c5672a673e8b71535f2977",
+      "crop": [
+        10,
+        180,
+        485,
+        705
+      ]
+    },
+    "02-cliff-fault.png": {
+      "bytes": 6009,
+      "sha256": "425b56b2a760142ff7b37c4c8a2765203b974ff515bb89fa321fd63c9d2601c8",
+      "crop": [
+        476,
+        151,
+        312,
+        744
+      ]
+    },
+    "03-quench-annulus.png": {
+      "bytes": 11395,
+      "sha256": "279f19bcf9e252430a9f59cc0dae1b47c9aa4b97895ef14c6aeadbe448183cf5",
+      "crop": [
+        774,
+        299,
+        546,
+        540
+      ]
+    },
+    "04-subcrater-works.png": {
+      "bytes": 4105,
+      "sha256": "6bd9baeca7298a98b92f4934f5e4b494d374cfd9b8c5f83282bf8945de49d64a",
+      "crop": [
+        700,
+        719,
+        745,
+        214
+      ]
+    },
+    "05-broken-scrubber.png": {
+      "bytes": 8473,
+      "sha256": "4f5d8f52b9365de6ade2610fdd29d48a5f052341c71f719ddd775253226bfffe",
+      "crop": [
+        1460,
+        151,
+        581,
+        730
+      ]
+    },
+    "06-opposite-faults.png": {
+      "bytes": 13449,
+      "sha256": "59a90f57dce8ff0d7645621a32e5246aac2984f5c1d891e2a13be3393fe394d4",
+      "crop": [
+        500,
+        410,
+        1042,
+        480
+      ]
+    }
+  },
+  "status": "SOURCE-STATIC-PASS / NATIVE-UNTESTED"
+}
