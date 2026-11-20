@@ -45,7 +45,10 @@ def normalize(raw):
     if not isinstance(raw,dict): return {},["metadata root is not an object"],False
     if raw.get("schema_version")==1:
         n=dict(raw); n["purpose"]=purpose(n.get("purpose"))
-        if isinstance(n.get("similarity_avoidance"),str): n["similarity_avoidance"]=[n["similarity_avoidance"]]
+        for field in ["macro_topology","route_grammar","strong_motifs","interesting_relationships","procedural_exemplar_value","similarity_avoidance"]:
+            if isinstance(n.get(field),str): n[field]=[n[field]]
+        for field in ["authoring_affordances","setpiece_candidates"]:
+            if field in n and not isinstance(n[field],list): n[field]=[n[field]]
         return n,[],False
     legacy=raw.get("schema")=="cybersand-exemplar-v1" or "world_family" in raw
     if not legacy: return dict(raw),["unrecognized exemplar schema"],False
@@ -66,9 +69,11 @@ def validate(raw):
     elif any(x not in PURPOSES for x in p): err.append("unsupported purpose value")
     for k in ["family","map_role","density_profile"]:
         if k in n and (not isinstance(n[k],str) or not n[k].strip()): err.append(k+" must be a non-empty string")
-    for k in ["macro_topology","route_grammar","strong_motifs","interesting_relationships",
-              "authoring_affordances","setpiece_candidates","procedural_exemplar_value"]:
-        if k in n and not isinstance(n[k],list): err.append(k+" must be an array")
+    for k in ["macro_topology","route_grammar","strong_motifs","interesting_relationships","procedural_exemplar_value"]:
+        if k in n and (not isinstance(n[k],list) or any(not isinstance(x,str) or not x.strip() for x in n[k])):
+            err.append(k+" must be a string or array of non-empty strings")
+    for k in ["authoring_affordances","setpiece_candidates"]:
+        if k in n and not isinstance(n[k],list): err.append(k+" must be an item or array")
     if "anchor_donors" in n and not isinstance(n["anchor_donors"],list): err.append("anchor_donors must be an array")
     axes=n.get("diversity_axes"); populated=0
     if axes is not None:
