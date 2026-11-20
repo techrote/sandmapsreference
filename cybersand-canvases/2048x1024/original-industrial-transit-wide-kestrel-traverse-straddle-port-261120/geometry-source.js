@@ -288,8 +288,12 @@ L(849,332,939,370,11,M.WALL);
 for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
 
 
-// Broad underarch central maintenance access genuinely descends from the
-// traversable air corridor through the mid-deck into the lower return rail.
-// The arch's primary curved chords remain well above this full-hull opening.
-R(1096,457,80,437,M.AIR);
+// West drydock transfer recovers through a full 70-cell-wide service well.
+// Cargo cradle is held above the entrance by the portal's anchored beam.
+// This connects free shipping air to all five underground chambers without
+// cutting the grounded double-chord saddle arch or main crane's A-frame.
+L(471,379,591,379,12,M.STEEL);
+R(497,390,67,12,M.STEEL);R(505,402,52,19,M.WALL);
+R(512,407,37,9,M.STEEL);
+R(494,435,70,454,M.AIR);
 for(const [,site] of Object.entries(sites))R(site[0]-23,site[1]-25,47,51,M.AIR);
