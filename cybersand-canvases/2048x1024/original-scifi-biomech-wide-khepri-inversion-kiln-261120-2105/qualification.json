@@ -1,0 +1,513 @@
+{
+  "source": "ORIGINAL-NO-REFERENCE",
+  "seed": 2611202105,
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "read_only_engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_cell_count": 2097152,
+  "grid_sha256": "fca10a1ca00e39ba6b55206fe7254967a47575933d07e15c9b8fddc3ed9b9877",
+  "setup_sha256": "bee87bf3576e400a7f2d3f16b2e9a19a3b6ffb17438ddbf804ecd802e285a154",
+  "setup_bytes": 26559,
+  "setup_root_keys": [
+    "version",
+    "extent",
+    "actors",
+    "next_id",
+    "selected",
+    "edits",
+    "response",
+    "liquid_policy",
+    "normalize",
+    "rule_radius",
+    "source",
+    "material",
+    "brush",
+    "fire"
+  ],
+  "rectangle_count": 1378,
+  "rectangle_limit_source": 32768,
+  "legacy_bridge_cap_risk": "installed binaries may expose 4096, no native install executed",
+  "construction_writes": 724584,
+  "write_limit": 32000000,
+  "material_histogram": {
+    "0": 1372568,
+    "58": 148914,
+    "62": 35499,
+    "63": 9275,
+    "72": 5566,
+    "77": 2835,
+    "79": 3829,
+    "100": 163298,
+    "101": 273416,
+    "117": 80369,
+    "128": 1583
+  },
+  "occupied": 724584,
+  "grounded": 724584,
+  "nominal_unsupported_removed": 32636,
+  "detached_final": 0,
+  "fluid_falling_reactive_final": 0,
+  "rectangle_overlap_count": 0,
+  "replay_cell_mismatches": 0,
+  "canonical_rectangle_reencode_identity": true,
+  "sites": {
+    "19x15": {
+      "visited_centres": 1055513,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "pickup_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "pickup_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "shear_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "shear_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "gate_west": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "kiln_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "kiln_core": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "gate_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lamination_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lamination_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dispatch_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dispatch_quay": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "23x19": {
+      "visited_centres": 1018872,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "pickup_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "pickup_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "shear_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "shear_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "gate_west": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "kiln_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "kiln_core": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "gate_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lamination_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lamination_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dispatch_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dispatch_quay": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "31x27": {
+      "visited_centres": 945815,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "pickup_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "pickup_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "shear_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "shear_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "gate_west": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "kiln_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "kiln_core": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "gate_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lamination_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lamination_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dispatch_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "dispatch_quay": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    }
+  },
+  "obstruction": [
+    965,
+    598,
+    164,
+    108
+  ],
+  "route_bans": {
+    "xmin": 785,
+    "xmax": 1290,
+    "upper_max_y": 588,
+    "lower_min_y": 713
+  },
+  "route_distances": {
+    "baseline": 1778,
+    "blocked": 1894,
+    "upper": 1894,
+    "lower": 1932
+  },
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "covered": false,
+      "reachable": true
+    },
+    "pickup_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "pickup_station": {
+      "covered": false,
+      "reachable": true
+    },
+    "shear_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "shear_station": {
+      "covered": false,
+      "reachable": true
+    },
+    "gate_west": {
+      "covered": false,
+      "reachable": true
+    },
+    "kiln_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "kiln_core": {
+      "covered": false,
+      "reachable": true
+    },
+    "entered_index": {
+      "covered": false,
+      "reachable": true
+    },
+    "gate_east": {
+      "covered": false,
+      "reachable": true
+    },
+    "lamination_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "lamination_station": {
+      "covered": false,
+      "reachable": true
+    },
+    "dispatch_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "dispatch_quay": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_vault": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_vault": {
+      "covered": false,
+      "reachable": true
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "bytes": 1049793,
+      "sha256": "e77bb278d9edcead1253f6c531ff80a8fbb8deb1b36c0715874e32a05b84d24b",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-rib-intake.png": {
+      "bytes": 123868,
+      "sha256": "bdf8a82f8468b47aa94d2b422fdd9f578b5b2ce9037402433c6b8de2eab4e730",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        24,
+        125,
+        393,
+        625
+      ]
+    },
+    "02-dry-shear-mill.png": {
+      "bytes": 128243,
+      "sha256": "47777d9538c5751efb8899d4336d75a385bdcaabda4e8c54b8a504d5d139d482",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        397,
+        135,
+        408,
+        625
+      ]
+    },
+    "03-inversion-kiln.png": {
+      "bytes": 118282,
+      "sha256": "16f3ce00bcbd7f25ef0941782154307eb5863cf1039e0e9eba9501a283d9ab39",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        792,
+        125,
+        514,
+        458
+      ]
+    },
+    "04-service-deck.png": {
+      "bytes": 55382,
+      "sha256": "8b615b1c66ae24ad4f64141a43ad6403f25e5de41c13ea7b310611989087f008",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        852,
+        572,
+        411,
+        267
+      ]
+    },
+    "05-ion-lamination.png": {
+      "bytes": 136998,
+      "sha256": "4cb0af75ba0c801ae4b374245a6906194453fc151f3f94220ce85ef034732527",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1301,
+        125,
+        435,
+        625
+      ]
+    },
+    "06-dispatch-winches.png": {
+      "bytes": 107638,
+      "sha256": "e3914117fc20f892bb6cf3fbc80f729083f6553a13e4fdeb78a76944532cb120",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1715,
+        124,
+        333,
+        640
+      ]
+    },
+    "07-west-service-vault.png": {
+      "bytes": 33344,
+      "sha256": "09a43e5022f632ad88eee05e00ea20c47207eb552425cb61cbaf57f67d19c3cb",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        340,
+        815,
+        315,
+        209
+      ]
+    },
+    "08-east-service-vault.png": {
+      "bytes": 42122,
+      "sha256": "1d3ba2005bef65eb4d787435ec6f117b47c11570ca72dcb4f5d183cf576b9fe1",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1515,
+        815,
+        400,
+        209
+      ]
+    }
+  },
+  "author_static_status": "PASS",
+  "independent_reviews": "PENDING",
+  "native_status": "NATIVE-UNTESTED"
+}
