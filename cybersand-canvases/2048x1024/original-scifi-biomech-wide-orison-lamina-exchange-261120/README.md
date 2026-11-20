@@ -29,3 +29,7 @@ Original committed geometry 328 ops + R2 **117 genuinely new author geometric op
 ### Open gates
 
 Independently reassess this **new HEAD** for visual purpose and distinctiveness, real-cell legal navigation, full committed-grid replay, PNG equality and material semantics. Author validation does not amount to independent qualification. Native installed DLL/bridge report, Workbench actual load, Midge/Rapier movement/collision, simulation and fresh-process save/reopen are **NATIVE-UNTESTED**. Source max 32,768 but a legacy installed bridge may report 4,096: test installed capacity before claiming native admission. Preserve Draft/HOLD, no merge or Ready.
+
+## Supplemental R2 physically interrupted primary-route test
+
+`R2-primary-detour-proof.json` inserts a real **90×110 solid-material** rectangle at **(860,490)** into a private full-grid copy. This location physically obstructs the ordinary 31×27 shortest west→east gate passage, so the actual shortest path length grows **660→790** steps (+130). A local return crossing from **(800,545)** to **(1010,545)** grows **210→346** steps (+136); all **12/12 literal destinations** remain reachable with **four legal cardinal approaches**, and both independently restricted upper/lower detours survive. No grid cells are changed in the committed map by the test; this is source-static evidence, **not native Workbench/Rapier validation**.
