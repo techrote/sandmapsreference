@@ -91,6 +91,14 @@ for(let i=0;i<5;i++){
 }
 // Smaller bilateral relief alcoves for future destructible machinery additions.
 for(const [x,y,w,h] of [[488,756,144,53],[1462,760,115,40]])rect(x,y,w,h,0);
+// The low, shared access throat is carved AFTER machinery is mounted. It is not
+// a teleport / site exemption: actual rock removal creates full-hull tunnels.
+for(const [x,w] of [[236,116],[681,129],[1066,143],[1567,121],[1807,116]])rect(x+20,381,w-40,396,0);
+for(const [x,y,w,h,entry] of bays){
+ rect(entry-43,730,87,y+80-730,0);
+ // The rooms have no solid membrane separating their entrance from the shaft.
+ rect(entry-43,y,87,15,0);
+}
 // Repeat corridor clearing where shaft throat must remain 31x27-compatible:
 // do NOT erase embedded machinery elsewhere; just preserve literal free centres.
 const sites=[
