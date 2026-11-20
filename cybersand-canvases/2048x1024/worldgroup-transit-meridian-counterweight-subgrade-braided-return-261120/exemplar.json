@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Meridian Counterweight Corridor",
+  "map_role": "subgrade traction return with braided emergency sliplane and three broad grade interchanges",
+  "sibling_number": 3,
+  "anchor_donors": [
+    {
+      "name": "wide-tungsten-sawtooth-tramworks",
+      "head_sha": "7fc24855cf521c90bf67f4afb08685e490473201",
+      "relationship": "dry traction vocabulary and clear directional choices, not reused wheel/teeth/route geometry"
+    },
+    {
+      "name": "Meridian Latchreach",
+      "head_sha": "c68c3e067972356f842ffd7e52f0fbd27f3d8c19",
+      "relationship": "family engineering language only"
+    },
+    {
+      "name": "Meridian Forkfield",
+      "head_sha": "f80acfab74f6ff21d0c07dd28795f3ed46b0fa44",
+      "relationship": "contrast case: deliberately avoids ground-level mast row and repeated switch matrices"
+    }
+  ],
+  "macro_topology": [
+    "braided dual excavated arterials",
+    "three off-axis shaft interchanges",
+    "central exposed traction aperture",
+    "four entered subgrade machinery bays"
+  ],
+  "density_profile": "Dense bedrock envelope, two long sparse and legible traffic corridors, punctuated by compact rooted workface bays and one exposed cable-harp aperture.",
+  "route_grammar": {
+    "primary": "west-to-east upper traffic cutting, with local founded abutment interruptions",
+    "recovery": "lower continuous traction return serving as physical bypass around upper obstruction",
+    "interchanges": "three separate vertical throat connections with offset entries",
+    "service": "four independently entered lower excavated workbays",
+    "obstructed_demo": "103x140 material wall at x570 y387 makes the upper checksum unusable while twenty other sites remain reachable by lower return"
+  },
+  "strong_motifs": [
+    "two sharply contrasting horizontal void bands",
+    "roof-rooted median load supports",
+    "open-air paired tension harps",
+    "ivory recovery markings",
+    "distributed ram, cable comb, catcher and rescue machine assemblies"
+  ],
+  "interesting_relationships": [
+    "a low recovery arterial carries rerouted traffic past an interrupted upper tunnel",
+    "few widely separated shafts create route decisions without repeated ladders",
+    "the central roof breach exposes machinery while lower passage remains excavated",
+    "four uneven chambers act as modular parts for later human additions"
+  ],
+  "authoring_affordances": [
+    "undeveloped geologic wall faces and short vacant side seams for manual editing",
+    "four service bays with spare machinery interfaces",
+    "open exterior bridge-failure zone with room for later set dressing",
+    "low return line can receive future dynamic obstructions without eliminating the rescue network"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Subgrade black-out bypass",
+      "location": [
+        617,
+        459
+      ],
+      "role": "power or lighting failure at the blocked upper checksum, alternate low route"
+    },
+    {
+      "name": "Traction aperture reveal",
+      "location": [
+        1020,
+        455
+      ],
+      "role": "unscripted arrival over an open cutting with twin anchored cable harps"
+    },
+    {
+      "name": "Cable-comb rescue",
+      "location": [
+        865,
+        858
+      ],
+      "role": "interior NPC repair or escort encounter with alternate exit through the shaft"
+    },
+    {
+      "name": "East emergency traction bay",
+      "location": [
+        1800,
+        850
+      ],
+      "role": "train rescue or destructible release staging at founded hoists"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "braided routes represented as disjoint supported excavations",
+    "median grounding resolved with roof-rooted abutments",
+    "enterable machine bays connected to functioning highways",
+    "single huge exterior opening changes interior/exterior ratio without adding a central wheel",
+    "intentional unfinished rock surfaces kept for authoring"
+  ],
+  "similarity_avoidance": [
+    "not Tungsten's sawtooth-capacitor rise/fall and central radial brake",
+    "not Latchreach's A-frame and long crosshead",
+    "not Forkfield's open yard with recurring mast-like tall elements",
+    "not a Cleftline cliff switchback or drydock salvage basin"
+  ],
+  "diversity_axes": {
+    "macro_topology": "braided",
+    "altitude_grammar": "dual_level",
+    "density_cadence": "dense_open_dense",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "cableway",
+    "support_form": "roof_rooted",
+    "environment_relation": "geological",
+    "incompleteness": "modular_append_zones"
+  },
+  "source_static_status": "creator reproducible, preliminary; 21 exact sites at three hull envelopes, physical obstruction isolates only covered checkpoint",
+  "native_status": "NATIVE-UNTESTED",
+  "corpus_design_goal": "Preserve useful sparse cuttings and editing seams; do not force-fill voids merely for density."
+}
