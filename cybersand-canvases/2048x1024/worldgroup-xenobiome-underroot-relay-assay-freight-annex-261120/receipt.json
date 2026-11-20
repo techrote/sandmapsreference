@@ -1,0 +1,256 @@
+{
+  "world_group": "Underroot Relay System",
+  "concept": "Underroot Assay Freight Annex",
+  "original_no_source": true,
+  "seed": 2535946,
+  "anchor": "wide-graftloom-slipway",
+  "anchor_head": "b0d1e5216aabb9b5e009e599ffbffcec6fd8a657",
+  "engine_main": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "material_histogram": {
+    "49": 18941,
+    "62": 12163,
+    "66": 10531,
+    "68": 104850,
+    "77": 1869,
+    "100": 199153,
+    "101": 86297,
+    "120": 12741,
+    "122": 5148,
+    "129": 12877,
+    "131": 21456
+  },
+  "filled_material_cells": 486026,
+  "grounded_cells": 486026,
+  "unrooted_cells": 0,
+  "structural_ties": {
+    "ties": 67,
+    "longest": 55
+  },
+  "rectangles": 4128,
+  "rectangle_work": 486026,
+  "setup_bytes": 77345,
+  "source_max_rectangles": 32768,
+  "source_max_bytes": 1048576,
+  "legacy_bridge_fallback": 4096,
+  "plane_sha256": "96e76588a4b48c7259dde44b9b62f0fe657eae014a187002276bcd35056e5b09",
+  "setup_sha256": "3b06c945f5055b1db2778daf7e2dda233288ec782c94ac28f8d5487034e7ab5a",
+  "literal_sites": {
+    "West relay arrivals": [
+      137,
+      456
+    ],
+    "Receiving custody": [
+      286,
+      461
+    ],
+    "West cliff sky exit": [
+      262,
+      308
+    ],
+    "West assay floor": [
+      336,
+      610
+    ],
+    "West bio-alloy service": [
+      359,
+      757
+    ],
+    "West rescue outlet": [
+      505,
+      911
+    ],
+    "Mid assay controller": [
+      720,
+      535
+    ],
+    "West spine inspection": [
+      871,
+      355
+    ],
+    "Vertical cask throat": [
+      1032,
+      538
+    ],
+    "Upper transfer overflight": [
+      1008,
+      240
+    ],
+    "Extrusion overlook": [
+      1380,
+      541
+    ],
+    "East basin recovery": [
+      1443,
+      783
+    ],
+    "East rescue throat": [
+      1643,
+      870
+    ],
+    "East cleanroom": [
+      1733,
+      465
+    ],
+    "East freight dispatch": [
+      1895,
+      627
+    ],
+    "East ridge escape": [
+      1862,
+      304
+    ],
+    "Deep ore sorter": [
+      734,
+      906
+    ],
+    "Deep cask winder": [
+      1011,
+      902
+    ],
+    "Deep decon filters": [
+      1329,
+      903
+    ]
+  },
+  "clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1355875,
+      "passed": 19,
+      "total": 19,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1314698,
+      "passed": 19,
+      "total": 19,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1237218,
+      "passed": 19,
+      "total": 19,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "box": [
+      1008,
+      509,
+      1056,
+      569
+    ],
+    "isolated_site": "Vertical cask throat",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1232851,
+        "passed": 18,
+        "total": 19,
+        "bad": [
+          [
+            "Vertical cask throat",
+            [
+              1032,
+              538
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 55816,
+      "sha256": "6eaf8ffa27c2b69b6471d8c5e6e0f0d0af6c10d63d48a5d13573e2341872063d"
+    },
+    {
+      "name": "01-west-custody-intake.png",
+      "bytes": 9453,
+      "sha256": "9aab96e58490c99906e8c7d8c6b7477ae62c719bd3034bb13fc64dc1da8ddaad"
+    },
+    {
+      "name": "02-three-drum-assay.png",
+      "bytes": 12072,
+      "sha256": "050211b93aa03b2c205a1256847dae94b169e84f0c37053e57e54461dbc5bb03"
+    },
+    {
+      "name": "03-vertical-underroot-spine.png",
+      "bytes": 16560,
+      "sha256": "1c6ac270de97dabffb5fafe0b3e75362eb5f066bad72eee32d4222f012090f6e"
+    },
+    {
+      "name": "04-east-cold-freight.png",
+      "bytes": 10828,
+      "sha256": "08ad0237c8d9c19173f65702f6ce90d0d7b931e4c303ff239b06dfe72a2c61f9"
+    },
+    {
+      "name": "05-deep-assay-carriage.png",
+      "bytes": 4856,
+      "sha256": "eea73e47c1e61b8f5e83615179ec2fb00d8f685494c8156ac15ca111129ebe61"
+    }
+  ],
+  "crops": [
+    [
+      "01-west-custody-intake",
+      50,
+      330,
+      560,
+      480
+    ],
+    [
+      "02-three-drum-assay",
+      185,
+      530,
+      655,
+      355
+    ],
+    [
+      "03-vertical-underroot-spine",
+      755,
+      328,
+      595,
+      560
+    ],
+    [
+      "04-east-cold-freight",
+      1500,
+      349,
+      548,
+      515
+    ],
+    [
+      "05-deep-assay-carriage",
+      370,
+      866,
+      1300,
+      125
+    ]
+  ],
+  "static": "CREATOR-STATIC-PASS",
+  "native": "NATIVE-UNTESTED",
+  "independent": "PENDING",
+  "status": "DRAFT/HOLD"
+}
