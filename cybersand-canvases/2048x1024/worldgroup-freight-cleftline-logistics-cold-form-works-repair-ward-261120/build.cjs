@@ -102,6 +102,32 @@ for(let x of [185,533,819,1115,1487,1780]){wall(x,946,139,39);V(x+11,952,111,24)
 for(let x of [400,710,1198,1550]){beam(x,842,x+40,875,11);steel(x,842,13,35);}
 wall(547,788,96,31);V(560,795,70,20);
 wall(1206,780,108,37);V(1219,788,82,23);
+
+/* Heavy rooted transverse mass ribs, perforated by generous main, high and
+   deep portals: support grammar is an inhabited massif, not thin crane legs.
+   All portals retain >31x27 clearance, without copying earlier lane graphs. */
+B(513,289,69,711);B(1153,284,59,716);B(1590,266,65,734);
+for(const [x,w] of [[510,81],[1147,79],[1584,88]]){
+ V(x,453,w,126);V(x,712,w,134);V(x,865,w,108);
+}
+/* Non-identical north galleries cross around each buttress via a higher
+   aperture, leaving the factory roof and inhabited quarters readable. */
+V(506,310,83,89);V(1147,314,80,88);V(1581,309,83,90);
+/* Press superstructure is attached to upper basalt; not free-floating art. */
+beam(806,186,795,377,24);beam(957,185,972,390,25);
+beam(707,540,707,695,20);beam(1037,544,1037,698,18);
+steel(692,681,26,67);steel(1035,685,24,68);
+steel(603,669,111,18);steel(1032,669,121,18);
+/* Heavy equipment is seated on supported west receiving bed. */
+steel(332,606,19,107);steel(430,601,18,117);
+/* Ward roof-mounted inhabitation modules; distinct lower service plinths. */
+steel(1230,178,17,155);steel(1480,177,17,163);
+steel(1190,686,20,163);steel(1510,697,17,150);
+beam(1210,685,1204,742,13);beam(1471,692,1472,742,12);
+/* Central hoist service bridge is a rooted rib-transfer path. */
+steel(750,675,265,21);steel(756,687,22,64);
+steel(986,687,19,67);
+/* The bottom return uses three intentional alternate exits through ribs. */
 /* Exact sites must be in air, and actual named site connection checked after
    all carving; these pockets alone do not establish reachable passages. */
 for(const [x,y] of Object.values(sites))V(x-28,y-26,57,53);
