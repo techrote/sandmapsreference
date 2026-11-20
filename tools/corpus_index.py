@@ -175,7 +175,7 @@ def build(repo,gh):
             "similarity_method":{"name":"declared-metadata lexical Jaccard","advisory_only":True}}
 
 def report(idx):
-    rs=idx["records"]; st=collections.Counter(x["metadata_status"] for x in rs)
+    rs=idx["records"]; st=collections.Counter(x.get("metadata_status","unknown") for x in rs)
     lines=["# CyberSand exemplar corpus diversity report","",
            "Open PRs inspected: **"+str(idx["open_prs_inspected"])+"**  ","Corpus map records: **"+str(len(rs))+"**","",
            "## Metadata coverage","","| Status | Maps |","|---|---:|"]
