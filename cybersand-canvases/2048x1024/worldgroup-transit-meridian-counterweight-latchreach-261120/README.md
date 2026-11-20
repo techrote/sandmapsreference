@@ -1,10 +1,14 @@
 # Meridian Counterweight Corridor — Latchreach Switch Exchange (2048×1024)
 
-**World-group:** Meridian Counterweight Corridor / **Sibling 01:** Latchreach switch exchange. **DRAFT/HOLD**; entirely new material-cell world, no source-image conversion or donor geometry copied. Creator source-static checks only. Independent Art / Technical / Shepherd reviews PENDING. **NATIVE-UNTESTED.**
+**World-group:** Meridian Counterweight Corridor / **Sibling 01:** Latchreach switch exchange. **R2 mechanical detail pass.** **DRAFT/HOLD**; entirely new material-cell world, no source-image conversion or donor geometry copied. Creator source-static checks only. Independent Art / Technical / Shepherd reviews PENDING. **NATIVE-UNTESTED.**
 
 This is the first location in a planned family of 4–8 related mechanical-transit levels. Its world role is the **regenerative counterweight rail-switch and lift-transfer interchange** between the upstream impulse tram corridor and downstream freight/racing branches. Recurring family vocabulary: bare-iron crossheads, zinc countersigns, heavy grounded basalt footings, concrete counterweight cases, braced tram mast gantries, roof-hung telemetry and floor-entered workshops.
 
 **Primary stylistic anchor:** [Tungsten Sawtooth Tramworks R2](https://github.com/techrote/sandmapsreference/pull/69) (exact consulted HEAD `7fc24855cf521c90bf67f4afb08685e490473201`). Unlike that source, there is **no central six-spoke rotor, repeating alternating roof/floor teeth, salt screen or equivalent route copy**. The new spatial program is west intake switch → differential A-frame gantry → **long horizontal six-channel transfer crosshead** with actual counterweight service line → eastern offset cantilever mast → regenerative catcher/recovery. The engineering looks static; there are no fake moving machine claims.
+
+## R2 mechanical plant revision
+
+The original source-static R1 route map already connected every named Midge site but its large middle band was under-equipped, with too-similar floor workshops. R2 materially reauthors the same owned grid: a new suspended differential gantry, a slotted *horizontal* crosshead, a separate eastern mast head, grounded lower tram chassis, and five non-identical actual-cell workshops (actuator, stators, clutch, tension ram and recovery winch). The new 24-site source-static clearance and blocked-route tests have been rerun at the new grid SHA; **R1 image and geometry qualification must not be inherited**. Native/independent review remains pending.
 
 ## Five independent physical workfaces
 
@@ -35,7 +39,7 @@ A genuine solid **96×56 obstruction at XY (1050,476)** covers the Crosshead mid
 | Literal sites at 19×15, 23×19, 31×27 | 24/24 at each |
 | Real 31×27 blocked alternative | 23/24 (only covered site unavailable; finish reached) |
 | Genuine material-ID PNGs | 1 full 2048×1024 overview + 6 exact 1:1 crops |
-| Source-material grid SHA-256 | `4ee1ca0378853b3c864432bf42bca0b8a851f24ca7fd8c27f48de321767b8ab2` |
+| Source-material grid SHA-256 | `232780d1080ebafe93b7f9dc0fcaa023782388248ad57e4b1d4b15d7b0996963` |
 | Native Workbench / Rapier / installed bridge / cold reopen | **NATIVE-UNTESTED** |
 
 **Reproduce:** `node build.cjs`, then `node verify-independent.cjs`. The standalone verifier reconstructs the *committed Setup JSON*, hashes and floods every material cell, tests fully contained literal Midge envelopes, physically inserts the blockage, and inflates every committed indexed PNG to compare each pixel with the Setup grid. The author generated and internally checked the source representation; do **not** treat this as executed independent GitHub CI or a native physics test.
