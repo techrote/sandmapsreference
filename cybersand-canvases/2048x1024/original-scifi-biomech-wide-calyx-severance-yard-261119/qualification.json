@@ -35,26 +35,26 @@
       1024
     ],
     "cells": 2097152,
-    "sha256": "037916fc36b6d5d6821c3f16978228de5aa6c0ce593b7b9666d2758a20d2164a",
-    "empty_cells": 1508744,
-    "occupied_cells": 588408,
-    "grounded_cells": 588408,
+    "sha256": "18cfbe5fca6eae8bb780722f053be77ab15fcae66b454c2a5b4f64578d99db58",
+    "empty_cells": 1485022,
+    "occupied_cells": 612130,
+    "grounded_cells": 612130,
     "detached_final": 0,
-    "nominal_unanchored_strokes_discarded": 18591,
+    "nominal_unanchored_strokes_discarded": 21931,
     "materials": {
-      "0": 1508744,
-      "58": 133018,
-      "62": 123924,
+      "0": 1485022,
+      "58": 131183,
+      "62": 135434,
       "63": 1975,
-      "72": 13143,
-      "77": 3521,
-      "79": 1824,
+      "72": 12781,
+      "77": 4942,
+      "79": 2470,
       "100": 163633,
-      "101": 64214,
-      "113": 9166,
-      "117": 62215,
-      "120": 2184,
-      "128": 5068,
+      "101": 64102,
+      "113": 13857,
+      "117": 68031,
+      "120": 2269,
+      "128": 6930,
       "130": 4523
     },
     "material_laws": {
@@ -143,14 +143,14 @@
   },
   "codec": {
     "kind": "ordered five-field nonoverlapping rectangle edits",
-    "rectangles": 7541,
+    "rectangles": 8287,
     "replay_mismatches": 0,
     "overlaps": 0,
     "invalid": 0,
-    "setup_bytes": 140335,
-    "setup_sha256": "b0a513d80991f4879daee6ec7d858a80f7196952e7d7b0a918fc8d8bad777082",
-    "written_cells": 588408,
-    "source_rectangle_headroom": 25227
+    "setup_bytes": 154146,
+    "setup_sha256": "98f88be9c13ab60bc06ed1ebb27c3f546ab92555e5e0839fd8fd180003e08951",
+    "written_cells": 612130,
+    "source_rectangle_headroom": 24481
   },
   "route_graph": {
     "sites": {
@@ -197,8 +197,8 @@
     },
     "clearances": {
       "19x15": {
-        "legal_centres": 1231685,
-        "connected_centres": 1146745,
+        "legal_centres": 1191667,
+        "connected_centres": 1089043,
         "sites": {
           "spawn_decontamination_gate": true,
           "west_quarantine_readout": true,
@@ -225,8 +225,8 @@
         }
       },
       "23x19": {
-        "legal_centres": 1178684,
-        "connected_centres": 1106998,
+        "legal_centres": 1136641,
+        "connected_centres": 1050466,
         "sites": {
           "spawn_decontamination_gate": true,
           "west_quarantine_readout": true,
@@ -253,8 +253,8 @@
         }
       },
       "31x27": {
-        "legal_centres": 1087205,
-        "connected_centres": 918100,
+        "legal_centres": 1041822,
+        "connected_centres": 867837,
         "sites": {
           "spawn_decontamination_gate": true,
           "west_quarantine_readout": true,
@@ -283,12 +283,12 @@
       "restricted_detours": {
         "upper": {
           "pass": true,
-          "centres": 664837,
+          "centres": 620044,
           "max_cross_y": 391
         },
         "lower": {
           "pass": true,
-          "centres": 598854,
+          "centres": 548591,
           "min_cross_y": 663
         }
       }
@@ -322,11 +322,11 @@
       "routes": {
         "upper": {
           "pass": true,
-          "reachable_legal_centres": 664837
+          "reachable_legal_centres": 620044
         },
         "lower": {
           "pass": true,
-          "reachable_legal_centres": 598854
+          "reachable_legal_centres": 548591
         }
       }
     }
@@ -340,15 +340,15 @@
         2048,
         1024
       ],
-      "blob_sha": "619b9416bd476dca8ade8c7547e0a7af1a1374c7",
-      "png_sha256": "63120101c822aa06db6cdd55ce22971494f78d6370ae952825d7d7c1ce90ad24",
-      "indexed_pixels_sha256": "d1953a80566e3a82b829a4a39950c341640746f313d824e9136fdf35c9e3710e",
+      "png_sha256": "d2ec1f0dcde53dd3779b21aad9f66e43576ff7769795b671e9fc5924aa8ad734",
+      "indexed_pixels_sha256": "5e45e6dd88ef9572d173d0dce5112d2f558bc5f67940e11538a2f5c7585d515e",
       "bytes": 2099184,
       "source_cell_parity": true,
       "png_signature": true,
       "crc32_chunks": true,
       "zlib_stored_blocks": true,
-      "iend": true
+      "iend": true,
+      "blob_sha": "6c766eeb083c779586540b6bed2682f35c63bb7c"
     },
     {
       "name": "01-quarantine.png",
@@ -358,15 +358,15 @@
         410,
         465
       ],
-      "blob_sha": "1e5068319d7ff979649556129ffbe1a052e93322",
-      "png_sha256": "18d1c214f5883627bae3f949eb213d1340062e8404dc6937d3435d5234687c95",
-      "indexed_pixels_sha256": "081380bb244f34212dc9b33c08707fbee09ba3fe078c2847e6a818db2ed8a47b",
+      "png_sha256": "e69f5b55443cf579b6f55db13f0b8dccada5b0e9193e41a24aa5fc36b72f6350",
+      "indexed_pixels_sha256": "9a5ed29171d49adfe3120ad019cf9ffd23f8d9b04ba140f1f7943682a456b651",
       "bytes": 191973,
       "source_cell_parity": true,
       "png_signature": true,
       "crc32_chunks": true,
       "zlib_stored_blocks": true,
-      "iend": true
+      "iend": true,
+      "blob_sha": "f18c1f28852ee0c3f0f2ef91dcc36818fb805c8b"
     },
     {
       "name": "02-graft-gantry.png",
@@ -376,15 +376,15 @@
         360,
         360
       ],
-      "blob_sha": "24e951e19de261c7fa46d94166a62001035576e4",
-      "png_sha256": "cf2a3cdfbe9650a862b74bccf62a19e83dff0c0dafe70c1d8c036b479b250d5b",
-      "indexed_pixels_sha256": "5751572100dcb183d1e8496053bb18dd7e1d0854479b99097f755e6308e008cb",
+      "png_sha256": "97eaaee200039135215b1958bd866f688d3559a0e4065de3e864afe3051b6e9f",
+      "indexed_pixels_sha256": "a3fcacd9583618e61616dba195804190548a0f01ba29c5c9b5a3b39b72180678",
       "bytes": 130813,
       "source_cell_parity": true,
       "png_signature": true,
       "crc32_chunks": true,
       "zlib_stored_blocks": true,
-      "iend": true
+      "iend": true,
+      "blob_sha": "ef12448f91965b8d4ac36735fdc9cd7022beb5f6"
     },
     {
       "name": "03-split-keel.png",
@@ -394,15 +394,15 @@
         490,
         420
       ],
-      "blob_sha": "25e2aeb4c77fb81573132044056068a47a8bf62a",
-      "png_sha256": "a786a5b665689981640987a01823257d282d754afb90d1005fa3bccd155f1379",
-      "indexed_pixels_sha256": "d32d921f44d567331ca09e035328f41124d53a98658090f85a397017ea37db80",
+      "png_sha256": "27dde6523c999b29bcfdd1dd41b2b9a5a66b499f62f640ac07e9ac4786de100b",
+      "indexed_pixels_sha256": "7bf8bfd8894d7c26e90ab504b048ff2c7af7a62d86dc5b46594c54f15bea02f6",
       "bytes": 207083,
       "source_cell_parity": true,
       "png_signature": true,
       "crc32_chunks": true,
       "zlib_stored_blocks": true,
-      "iend": true
+      "iend": true,
+      "blob_sha": "8c8db08e3d7468b05f01280f4eb3ec0da8fe4fd0"
     },
     {
       "name": "04-fractionation.png",
@@ -412,15 +412,15 @@
         384,
         520
       ],
-      "blob_sha": "05989ef7944b8666e257054e3ddfd884624fc59f",
-      "png_sha256": "42e181df825625bb6f3e77e2b7cdff8367b96ee6cae5fb3b95dc750d44cd2093",
-      "indexed_pixels_sha256": "5f7ab8faa0cdcab5a3b37e8738c8312b4d6ad92f65d7b668ce81ecd4015623cf",
+      "png_sha256": "af7e0f3c770fe1957eb83731a047be4f3ab1f4664393e761570c4d22de66ccbf",
+      "indexed_pixels_sha256": "9cc17ec433cd6700b6a5c05f784d37bd7d5e76658632e6588de16835855d8905",
       "bytes": 201063,
       "source_cell_parity": true,
       "png_signature": true,
       "crc32_chunks": true,
       "zlib_stored_blocks": true,
-      "iend": true
+      "iend": true,
+      "blob_sha": "0846e6063b59577769e2081fe7f1cd3d225dd35f"
     },
     {
       "name": "05-export.png",
@@ -430,15 +430,15 @@
         207,
         502
       ],
-      "blob_sha": "c27ead46157a2eb2b3cc89272838a56a2e8fd652",
-      "png_sha256": "14cf15015cc09cf4a250411c05b03330227994e78fbc31bd73bd39ce9d34b442",
-      "indexed_pixels_sha256": "39ce94a760b2ce44bbffdb404f3c10f6cd9a4a7e1e061b997221a1b6aa019c79",
+      "png_sha256": "c62264ab8d0f016ea83570286ec7adc790a6e57ea8dcb95405f2092cf29f1dbd",
+      "indexed_pixels_sha256": "6cb6cf4cbfd9dac1ecfc3bb9e65b572fddafe2a9b1ebdc6e3ef033396f87cd3f",
       "bytes": 105269,
       "source_cell_parity": true,
       "png_signature": true,
       "crc32_chunks": true,
       "zlib_stored_blocks": true,
-      "iend": true
+      "iend": true,
+      "blob_sha": "54440672ce1f3438832f660683f4e517aaa0c5b1"
     },
     {
       "name": "06-upper-keel.png",
@@ -448,7 +448,6 @@
         480,
         310
       ],
-      "blob_sha": "8be2007c9576e842cf7e57a0233050bea32ebd13",
       "png_sha256": "a58c93d4dd9cbec8e7b3d9a0c8124afba4d3a3993e82fb4523257b512f92e7b9",
       "indexed_pixels_sha256": "7de2ac2a2151a6de27e55c6a757c29162765ae91a7d12b51977de29d415533b2",
       "bytes": 149968,
@@ -456,7 +455,8 @@
       "png_signature": true,
       "crc32_chunks": true,
       "zlib_stored_blocks": true,
-      "iend": true
+      "iend": true,
+      "blob_sha": "8be2007c9576e842cf7e57a0233050bea32ebd13"
     }
   ],
   "reproducibility": {
@@ -472,5 +472,20 @@
     "Native runtime not available here; no installed Windows or Linux Workbench load/collision/tick/save/reopen",
     "All simulation is initially inert stable-solid; no chemical reaction is claimed",
     "bridge 7541-rectangle capacity must be queried from installed binary; older 4096 fallback insufficient"
-  ]
+  ],
+  "revision": {
+    "name": "R2 grounded functional-station repair",
+    "based_on_head": "40a064075555b0ea43e956d02b42235d3a8a19fb",
+    "independent_finding": "https://github.com/techrote/sandmapsreference/pull/28#issuecomment-7025440305",
+    "added_geometry_operations": 96,
+    "changed_cells": 28630,
+    "new_occupied_cells": 23722,
+    "rematerialised_cells": 4908,
+    "excavated_cells": 0,
+    "static_route_envelopes_pass": true,
+    "physical_obstruction_upper_pass": true,
+    "physical_obstruction_lower_pass": true,
+    "review": "INDEPENDENT ART/TECH/SHEPHERD REQUALIFICATION PENDING",
+    "native": "NATIVE-UNTESTED"
+  }
 }
