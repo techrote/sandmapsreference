@@ -15,7 +15,7 @@ function base64(a){const t="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 function generate(){
 
 
-const g=new Uint8Array(N),sites={"West labour arrival":[122,425],"Mooring stock levy":[298,425],"West refugee kitchen":[414,425],"First workers causeway":[577,425],"Cooperative tool loft":[731,425],"Coop trade table":[873,425],"Central rubble sluice":[1013,425],"Reclaim exchange stalls":[1162,425],"Eastern sort shed":[1328,425],"Customs tally lodge":[1531,425],"High outbound socket":[1713,425],"Remote transit mouth":[1910,425],"West canopy commons":[271,235],"Cooperative upper watch":[730,182],"Upper transit crossing":[1085,189],"East suspended shelter":[1609,175],"Derelict spur watch":[1841,182],"West lower refuge":[310,785],"Causeway underpass":[688,784],"Reclaimer undercroft":[1052,783],"East low retrieval":[1550,786],"Deep west medical lock":[241,892],"Deep return coop":[1032,892],"Deep eastern escape":[1820,893]};
+const g=new Uint8Array(N),sites={"West labour arrival":[122,425],"Mooring stock levy":[298,425],"West refugee kitchen":[414,425],"First workers causeway":[577,425],"Cooperative tool loft":[731,425],"Coop trade table":[873,425],"Central rubble sluice":[1013,425],"Reclaim exchange stalls":[1162,425],"Eastern sort shed":[1328,425],"Customs tally lodge":[1531,425],"High outbound socket":[1713,425],"Remote transit mouth":[1910,425],"West canopy commons":[271,235],"Cooperative upper watch":[730,182],"Upper transit crossing":[1085,189],"East suspended shelter":[1609,175],"Derelict spur watch":[1841,182],"West lower refuge":[310,785],"Causeway underpass":[939,784],"Reclaimer undercroft":[1052,783],"East low retrieval":[1550,786],"Deep west medical lock":[241,892],"Deep return coop":[1032,892],"Deep eastern escape":[1950,893]};
 function R(x,y,w,h,m){x=Math.round(x);y=Math.round(y);w=Math.round(w);h=Math.round(h);const a=Math.max(0,x),b=Math.min(W,x+w),c=Math.max(0,y),d=Math.min(H,y+h);if(a>=b||c>=d)return;for(let yy=c;yy<d;yy++)g.fill(m,yy*W+a,yy*W+b);}
 function P(v,m){let lo=Math.max(0,Math.ceil(Math.min(...v.map(a=>a[1])))),hi=Math.min(H-1,Math.ceil(Math.max(...v.map(a=>a[1]))));for(let y=lo;y<=hi;y++){let xx=[];for(let j=0;j<v.length;j++){let a=v[j],b=v[(j+1)%v.length];if((a[1]<=y&&b[1]>y)||(b[1]<=y&&a[1]>y))xx.push(a[0]+(y-a[1])*(b[0]-a[0])/(b[1]-a[1]));}xx.sort((a,b)=>a-b);for(let j=0;j+1<xx.length;j+=2)R(Math.ceil(xx[j]),y,Math.floor(xx[j+1])-Math.ceil(xx[j])+1,1,m);}}
 function L(x,y,X,Y,t,m){let dx=X-x,dy=Y-y,d=dx*dx+dy*dy,rad=t/2;for(let yy=Math.max(0,Math.floor(Math.min(y,Y)-rad));yy<Math.min(H,Math.ceil(Math.max(y,Y)+rad+1));yy++)for(let xx=Math.max(0,Math.floor(Math.min(x,X)-rad));xx<Math.min(W,Math.ceil(Math.max(x,X)+rad+1));xx++){let s=Math.max(0,Math.min(1,((xx-x)*dx+(yy-y)*dy)/(d||1)));if((xx-x-s*dx)**2+(yy-y-s*dy)**2<=rad*rad)g[yy*W+xx]=m;}}
@@ -101,7 +101,15 @@ for(let x of [466,938,1446,1952])V(x-41,444,82,479);
 V(125,755,1801,82);V(126,871,1800,56);
 for(let x of [306,1050,1589])V(x-40,802,82,117);
 
-/* Exact sites must be in air, and actual named site connection checked after
+
+/* Real-founded independent populated shelves; preserve passable air gaps. */
+for(const [x,y] of [[590,620],[847,632],[1073,638],[1320,636],[1581,601],[1910,603]])steel(x,y,15,1024-y);
+/* Damaged east spur: a physically attached, incomplete cantilever and
+   absent return segment, rather than an unfounded cartoon silhouette. */
+steel(1801,286,12,211);beam(1807,290,1931,260,12);
+steel(1927,261,13,37);steel(1942,243,18,7);
+beam(1916,266,1930,243,7);
+ /* Exact sites must be in air, and actual named site connection checked after
    all carving; these pockets alone do not establish reachable passages. */
 for(const [x,y] of Object.values(sites))V(x-28,y-26,57,53);
 B(0,1000,W,24);
