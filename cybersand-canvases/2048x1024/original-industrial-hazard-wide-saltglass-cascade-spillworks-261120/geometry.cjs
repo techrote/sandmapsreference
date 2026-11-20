@@ -8,24 +8,24 @@
 const W=2048,H=1024,SEED=26112073;
 const SITES=[
 ['Arrival radiation check',76,370],
-['Dockside load assay',204,502],
-['Dock upper release',371,365],
-['Membrane west entry',472,485],
-['Membrane wheel inspection',617,473],
+['Dockside load assay',303,503],
+['Dock upper release',400,350],
+['Membrane west entry',429,485],
+['Membrane wheel inspection',548,454],
 ['Membrane vent crown',695,279],
 ['Clarifier inlet overlook',832,392],
-['Settling stage A',938,461],
-['Settling stage B',1080,433],
+['Settling stage A',930,413],
+['Settling stage B',1101,413],
 ['Settling stage C',1199,440],
 ['Underclarifier pump',1096,777],
 ['Weir isolation gate',1253,541],
-['Vitrifier feed control',1354,452],
-['Vitrifier shield overlook',1540,424],
-['Kiln underworks return',1506,773],
-['Cyclone control gallery',1692,443],
-['Ceramic scrubber deck',1854,529],
-['East export',1993,368],
-['West dry bypass',381,779],
+['Vitrifier feed control',1282,444],
+['Vitrifier shield overlook',1614,425],
+['Kiln underworks return',1374,775],
+['Cyclone control gallery',1640,442],
+['Ceramic scrubber deck',1830,463],
+['East export',1983,315],
+['West dry bypass',420,780],
 ['Quarantine lower exit',1888,781]
 ];
 const CROPS=[
@@ -151,6 +151,16 @@ rect(861,581,16,26,58);rect(1013,544,16,31,58);rect(1152,603,16,31,58);
 rect(862,484,12,42,117);rect(1039,427,12,49,117);rect(1186,499,11,52,117);
 rect(1517,812,29,14,62);rect(1458,805,13,18,58);
 line(1268,637,1309,698,13,58);rect(1640,650,29,19,62);
+
+// Closed first-stage load paths and Midge-clear 31x27 emergency entrances.
+rect(112,590,18,20,58);rect(368,587,17,26,58);
+rect(143,455,14,16,62);rect(367,455,14,16,62);
+line(1236,614,1285,691,13,58);rect(1582,654,17,37,58);
+// Dry pilot access doors and local bypass apertures. No liquid walls cut.
+rect(108,468,52,86,0);rect(464,440,55,100,0);
+rect(389,572,65,187,0);rect(1009,676,72,79,0);
+rect(1260,675,77,84,0);rect(1805,635,90,125,0);
+rect(369,550,13,52,58);rect(690,595,12,77,117);
 return g;
 }
 module.exports={W,H,SEED,SITES,CROPS,COLORS,materialWorld};
