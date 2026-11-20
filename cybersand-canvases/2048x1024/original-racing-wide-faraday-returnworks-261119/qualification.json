@@ -1,0 +1,283 @@
+{
+  "kind": "FARADAY_RETURNWORKS_ORIGINAL_RACING_WIDE",
+  "seed": "0xFA202611",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "rectangles": 10438,
+  "setup_json_bytes": 194310,
+  "cell_visits": 758340,
+  "setup_source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1338812,
+    "3": 8976,
+    "49": 205199,
+    "58": 30901,
+    "62": 93618,
+    "100": 259487,
+    "101": 80927,
+    "113": 20941,
+    "117": 33338,
+    "122": 12046,
+    "123": 9081,
+    "128": 3826
+  },
+  "exact_replay_mismatches": 0,
+  "overlap_writes": 0,
+  "isolated_solids_excavated": 953,
+  "remaining_detached": 0,
+  "sealed_water_air_edges": 0,
+  "material_laws": "IDs 49,58,62,100,101,113,117,120,122,123,128 are inert immovable Solid/RuleKernel::None; ID 3 is confined movable water",
+  "midge": {
+    "model": "midge",
+    "hull": [
+      4,
+      3
+    ],
+    "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      120,
+      350
+    ]
+  },
+  "sites": [
+    {
+      "name": "Launch",
+      "x": 120,
+      "y": 350
+    },
+    {
+      "name": "Injector dispatch",
+      "x": 269,
+      "y": 123
+    },
+    {
+      "name": "Magnet lab",
+      "x": 676,
+      "y": 116
+    },
+    {
+      "name": "Upper injector",
+      "x": 510,
+      "y": 350
+    },
+    {
+      "name": "Upper flywheel",
+      "x": 1030,
+      "y": 350
+    },
+    {
+      "name": "Upper quench",
+      "x": 1530,
+      "y": 350
+    },
+    {
+      "name": "East turn",
+      "x": 1875,
+      "y": 510
+    },
+    {
+      "name": "East return",
+      "x": 1710,
+      "y": 706
+    },
+    {
+      "name": "Quench ridge",
+      "x": 1500,
+      "y": 547
+    },
+    {
+      "name": "Bearing ridge",
+      "x": 1030,
+      "y": 503
+    },
+    {
+      "name": "Magnet ridge",
+      "x": 531,
+      "y": 538
+    },
+    {
+      "name": "West return",
+      "x": 275,
+      "y": 704
+    },
+    {
+      "name": "West turn",
+      "x": 125,
+      "y": 540
+    },
+    {
+      "name": "Bearing vault",
+      "x": 1260,
+      "y": 895
+    },
+    {
+      "name": "Finish",
+      "x": 190,
+      "y": 350
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "reached": 15,
+      "missing": [],
+      "free_centres": 1194236
+    },
+    "23x19": {
+      "reached": 15,
+      "missing": [],
+      "free_centres": 1161801
+    },
+    "31x27": {
+      "reached": 15,
+      "missing": [],
+      "free_centres": 1100669
+    }
+  },
+  "full_upper_and_lower_31x27_samples_each": 1691,
+  "temporary_gate": [
+    918,
+    284,
+    221,
+    165,
+    58
+  ],
+  "gate_bypass_31x27": 14,
+  "districts": [
+    "Pulse Injector",
+    "Magnet-Skein Metrology",
+    "Twin Flywheel Press",
+    "Quench-Wave Exchangers",
+    "Reversal Throat"
+  ],
+  "native": "NATIVE-UNTESTED; accepted source supports 32768 rectangles but installed bridge may cap 4096",
+  "repair_revision": "R3 accepted Setup-v2 14-key root loader acceptance fix; no change to R2 material IDs, rectangles, geometry, named sites or six committed indexed PNGs; R2 Shepherd P1 spatial repairs retained",
+  "grid_sha256": "51bb308e4fdc7f1cd5512df026a14058e32297b02bd231ae345a6b576b7b159e",
+  "setup_json_sha256": "bc490f4cd252980a4989d035af7c43b29341a2089c0c92808f0edcda0be40647",
+  "images": [
+    {
+      "name": "overview.png",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "sha256": "4b078193cb6808f039e8a096ee84954edf3d4d45a9c3cf3f631d29aae1008284",
+      "pixels": 2097152,
+      "bytes": 2099184,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "01-pulse-injector.png",
+      "rect": [
+        22,
+        30,
+        520,
+        480
+      ],
+      "sha256": "124801082f3ad6af0a00a40cd08e4cdfd0b1e9e0a3d517c2bcab930369473be9",
+      "pixels": 249600,
+      "bytes": 250943,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "02-magnet-skein.png",
+      "rect": [
+        460,
+        28,
+        500,
+        480
+      ],
+      "sha256": "dfbc213b4e222d929331bdcfe585f71267fca957cecdadde5eb5f98b6d9d4d92",
+      "pixels": 240000,
+      "bytes": 241343,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "03-twin-flywheel.png",
+      "rect": [
+        833,
+        320,
+        520,
+        570
+      ],
+      "sha256": "67f7a5bead5cc102dc19abdeaf736091f7b77619906f84d9ad30abaf6bc9759e",
+      "pixels": 296400,
+      "bytes": 297838,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "04-quench-exchangers.png",
+      "rect": [
+        1290,
+        340,
+        500,
+        590
+      ],
+      "sha256": "5d61a7b13d6b68e14dd388548c66c1ea6328cedc370c41a9033f8ef7fd7bbdbb",
+      "pixels": 295000,
+      "bytes": 296458,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "05-east-turnaround.png",
+      "rect": [
+        1650,
+        268,
+        398,
+        630
+      ],
+      "sha256": "9f53f00b37fd9ea662819393ea24b7d7b1167dacab968a2d2011f1dee29dddca",
+      "pixels": 250740,
+      "bytes": 252233,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    }
+  ],
+  "source_type": "ORIGINAL-NO-REFERENCE",
+  "status": "OPEN DRAFT/HOLD",
+  "generated_source_mode": "One-byte material ID for each cell, deterministic fixed-seed pure JS, lossless ordered rectangles",
+  "png_rule": "8-bit indexed PNG; PNG pixel index IS the material ID; PLTE only changes display colour",
+  "image_verification": "Self-checked signature, IHDR, PLTE, chunk CRC, zlib stored deflate, Adler32, IEND, and exhaustive literal material-ID pixel parity",
+  "stage": "STATIC AUTHOR VALIDATION; independent auditor and native playtest outstanding",
+  "setup_contract": {
+    "root_keys": [
+      "version",
+      "extent",
+      "actors",
+      "next_id",
+      "selected",
+      "edits",
+      "response",
+      "liquid_policy",
+      "normalize",
+      "rule_radius",
+      "source",
+      "material",
+      "brush",
+      "fire"
+    ],
+    "liquid_policy_words": 55,
+    "validated_against": "techrote/cybersand main@de109d0131641d6adc8d25bb9ced7ca3d4991105 godot/scripts/workbench_setup.gd ROOT_KEYS / read_named requirements",
+    "native_executed": false
+  }
+}
