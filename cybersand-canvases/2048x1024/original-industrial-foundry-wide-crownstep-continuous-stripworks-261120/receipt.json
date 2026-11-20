@@ -1,0 +1,826 @@
+{
+  "schema": 1,
+  "original_no_source": true,
+  "concept": "Crownstep Continuous Stripworks",
+  "seed": 261120211,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "aa27f9653406fe4da1c1675a442a2f4072246f1e2f8df8bd16f381e5aea39230",
+  "setup_sha256": "6f3c89405eaa0d559beb214661644862b8c93a1b85c688b143870a5da4300e9d",
+  "json_bytes": 71004,
+  "rectangle_count": 3732,
+  "source_rectangle_limit": 32768,
+  "possible_installed_fallback_untested": 4096,
+  "construction_work": 855407,
+  "material_histogram": {
+    "0": 1241745,
+    "3": 14766,
+    "8": 8441,
+    "58": 232386,
+    "62": 52003,
+    "65": 106109,
+    "66": 5380,
+    "68": 30476,
+    "69": 11677,
+    "72": 32808,
+    "76": 17286,
+    "77": 713,
+    "79": 1128,
+    "100": 247924,
+    "104": 29988,
+    "117": 35761,
+    "131": 28561
+  },
+  "ground": {
+    "total": 832200,
+    "rooted": 832200,
+    "detached": 0,
+    "repair": {
+      "components": 7,
+      "links": 35,
+      "maxSize": 5439,
+      "maxLink": 12
+    }
+  },
+  "fluid": {
+    "water": 14766,
+    "lava": 8441,
+    "initial_fluid_air_faces": 0,
+    "initial_water_lava_contacts": 0
+  },
+  "flight": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 1018006,
+      "connected_centres": 726970,
+      "passed": 23,
+      "sites": [
+        {
+          "name": "Ore rail arrival",
+          "x": 86,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Tip lock operator",
+          "x": 222,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West shaft",
+          "x": 370,
+          "y": 534,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First hearth",
+          "x": 474,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second hearth",
+          "x": 631,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Third hearth",
+          "x": 729,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dry transfer",
+          "x": 808,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Primary ladle",
+          "x": 889,
+          "y": 271,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Counterweight ladle",
+          "x": 1089,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Mill portal",
+          "x": 1119,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First crownwheel",
+          "x": 1227,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Main crownwheel",
+          "x": 1362,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pinch finish",
+          "x": 1506,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear control",
+          "x": 1591,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1714,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East shaft",
+          "x": 1867,
+          "y": 534,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight goal",
+          "x": 1948,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Press service",
+          "x": 213,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Heat exchanger service",
+          "x": 537,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Gear repair",
+          "x": 854,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Coolant manifold",
+          "x": 1223,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bladder isolation",
+          "x": 1537,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Relay room",
+          "x": 1948,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 975134,
+      "connected_centres": 701200,
+      "passed": 23,
+      "sites": [
+        {
+          "name": "Ore rail arrival",
+          "x": 86,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Tip lock operator",
+          "x": 222,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West shaft",
+          "x": 370,
+          "y": 534,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First hearth",
+          "x": 474,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second hearth",
+          "x": 631,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Third hearth",
+          "x": 729,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dry transfer",
+          "x": 808,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Primary ladle",
+          "x": 889,
+          "y": 271,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Counterweight ladle",
+          "x": 1089,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Mill portal",
+          "x": 1119,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First crownwheel",
+          "x": 1227,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Main crownwheel",
+          "x": 1362,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pinch finish",
+          "x": 1506,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear control",
+          "x": 1591,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1714,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East shaft",
+          "x": 1867,
+          "y": 534,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight goal",
+          "x": 1948,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Press service",
+          "x": 213,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Heat exchanger service",
+          "x": 537,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Gear repair",
+          "x": 854,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Coolant manifold",
+          "x": 1223,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bladder isolation",
+          "x": 1537,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Relay room",
+          "x": 1948,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 897506,
+      "connected_centres": 651524,
+      "passed": 23,
+      "sites": [
+        {
+          "name": "Ore rail arrival",
+          "x": 86,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Tip lock operator",
+          "x": 222,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West shaft",
+          "x": 370,
+          "y": 534,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First hearth",
+          "x": 474,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second hearth",
+          "x": 631,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Third hearth",
+          "x": 729,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dry transfer",
+          "x": 808,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Primary ladle",
+          "x": 889,
+          "y": 271,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Counterweight ladle",
+          "x": 1089,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Mill portal",
+          "x": 1119,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First crownwheel",
+          "x": 1227,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Main crownwheel",
+          "x": 1362,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pinch finish",
+          "x": 1506,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear control",
+          "x": 1591,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1714,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East shaft",
+          "x": 1867,
+          "y": 534,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight goal",
+          "x": 1948,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Press service",
+          "x": 213,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Heat exchanger service",
+          "x": 537,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Gear repair",
+          "x": 854,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Coolant manifold",
+          "x": 1223,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bladder isolation",
+          "x": 1537,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Relay room",
+          "x": 1948,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "obstruction": {
+    "box": [
+      996,
+      181,
+      74,
+      505
+    ],
+    "flight": {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 888254,
+      "connected_centres": 642376,
+      "passed": 23,
+      "sites": [
+        {
+          "name": "Ore rail arrival",
+          "x": 86,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Tip lock operator",
+          "x": 222,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West shaft",
+          "x": 370,
+          "y": 534,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First hearth",
+          "x": 474,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second hearth",
+          "x": 631,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Third hearth",
+          "x": 729,
+          "y": 268,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dry transfer",
+          "x": 808,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Primary ladle",
+          "x": 889,
+          "y": 271,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Counterweight ladle",
+          "x": 1089,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Mill portal",
+          "x": 1119,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First crownwheel",
+          "x": 1227,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Main crownwheel",
+          "x": 1362,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pinch finish",
+          "x": 1506,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear control",
+          "x": 1591,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1714,
+          "y": 270,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East shaft",
+          "x": 1867,
+          "y": 534,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight goal",
+          "x": 1948,
+          "y": 272,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Press service",
+          "x": 213,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Heat exchanger service",
+          "x": 537,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Gear repair",
+          "x": 854,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Coolant manifold",
+          "x": 1223,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bladder isolation",
+          "x": 1537,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Relay room",
+          "x": 1948,
+          "y": 780,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2098812,
+      "sha256": "da21d65b6651539470ee1ae45f85e5689e17b10327870e4939bda90fabbc13ce"
+    },
+    "01-side-tip-charge.png": {
+      "crop": [
+        58,
+        417,
+        347,
+        281
+      ],
+      "bytes": 98269,
+      "sha256": "7a8598f5b9ab160fc0fc56d61a30c0d656db0c9a5c35b49a9f5fb830b0db9bdf"
+    },
+    "02-thermal-hearths.png": {
+      "crop": [
+        395,
+        412,
+        412,
+        286
+      ],
+      "bytes": 118599,
+      "sha256": "0355179f9d7be69854cb9b8ba8c9c6b235b4072c47fd05dcf84a3ece0a435d7f"
+    },
+    "03-siphon-ladles.png": {
+      "crop": [
+        809,
+        381,
+        302,
+        317
+      ],
+      "bytes": 96532,
+      "sha256": "d64db987a4dfc5e7c510a02f54b59db04badf57c146e000e41aecdf3e652f26c"
+    },
+    "04-crowned-stripmill.png": {
+      "crop": [
+        1087,
+        415,
+        521,
+        282
+      ],
+      "bytes": 147690,
+      "sha256": "d29d6df7e7febb8d9d9ea4791e8eb38f133912c47d6e4fd36aaeefd9904a042b"
+    },
+    "05-quench-dispatch.png": {
+      "crop": [
+        1594,
+        419,
+        454,
+        282
+      ],
+      "bytes": 128791,
+      "sha256": "61808d81422894aa25cca4b9c6c55b4339a57452cdddb20ca61cca1e3ca40afd"
+    },
+    "06-repair-rooms.png": {
+      "crop": [
+        59,
+        743,
+        1941,
+        157
+      ],
+      "bytes": 305390,
+      "sha256": "4b0f57d48594e067a6f28f45c3b520394b03d590849bf748e402ec97d43f3746"
+    }
+  },
+  "pixel_material_parity_count": 2987912,
+  "native": "NATIVE-UNTESTED"
+}
