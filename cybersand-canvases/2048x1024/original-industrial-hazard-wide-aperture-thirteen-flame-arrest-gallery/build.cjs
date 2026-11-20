@@ -70,6 +70,24 @@ function world(){
  b(750,536,65,284,0);    // quench underdeck recovery
  b(1143,534,72,266,0);   // lower shield return
  b(1660,601,64,226,0);   // cold hatch outside retained water vessels
+
+// R7: grounded functional workfaces, crew-scale inspection, shield sensor booths, and opened access.
+for(const [x,y,w,h,k] of [
+[252,565,83,23,"F"],[261,546,64,19,"G"],[269,537,47,9,"U"],[278,532,29,6,"N"],[318,485,12,54,"S"],
+[217,733,89,9,"P"],[228,721,11,12,"G"],[244,710,30,7,"V"],[248,698,18,12,"N"],[286,706,11,27,"I"],[291,694,16,12,"A"],
+[970,650,26,20,"P"],[979,638,13,12,"N"],[970,633,27,5,"V"],[980,659,18,10,"G"],[983,646,9,13,"I"],
+[1462,628,8,23,"P"],[1461,624,28,7,"G"],[1471,612,11,12,"N"],[1596,628,9,38,"P"],[1587,624,30,8,"G"],[1601,609,12,15,"Z"],
+[1497,639,67,7,"P"],[1498,639,8,20,"P"],[1555,639,8,26,"P"],[1525,630,11,17,"I"],[1520,626,21,6,"U"],[1541,567,14,7,"V"],[1565,553,11,17,"I"],
+[1831,746,80,10,"S"],[1850,726,45,20,"F"],[1855,715,36,11,"U"],[1867,709,12,6,"N"],[1819,731,26,15,"P"],[1827,717,10,14,"Z"],[1906,729,13,17,"I"],[1907,720,22,7,"N"],[1796,773,53,9,"P"],[1802,760,13,13,"G"]])b(x,y,w,h,M[k]);
+for(const [x,y,X,Y,t,k] of [[325,352,324,493,7,"T"],[323,529,310,546,6,"I"],[323,529,337,548,6,"I"],[552,602,552,611,6,"P"],[678,585,678,612,6,"P"],[1048,674,1048,704,7,"P"]])l(x,y,X,Y,t,M[k]);
+for(const [x,y] of [[533,570],[656,536],[723,581]]){b(x,y,26,8,M.Z);b(x+5,y+8,9,20,M.I);b(x+6,y+25,22,6,M.G);}
+fr(957,583,91,96,8,M.S);b(1030,605,30,71,0);
+deck(1262,679,104,9);fr(1275,583,84,96,8,M.F);b(1350,604,10,69,0);
+b(1322,648,24,23,M.P);b(1331,634,11,14,M.Z);b(1290,650,18,21,M.G);l(1280,675,1280,709,7,M.I);
+b(322,583,56,28,0);b(322,640,56,55,0);b(341,692,42,66,0);
+b(100,667,39,88,0);b(141,673,78,83,0);
+b(620,606,66,60,0);b(620,660,85,38,0);
+b(688,693,18,10,M.P);b(698,681,8,12,M.I);b(692,673,13,7,M.N);
  return g;
 }
 function connect(g,fix){const W=2048,H=1024,s=g.length,seen=new Uint8Array(s),q=new Int32Array(s),solid=k=>k!==0&&k!==3&&k!==8;function scan(){seen.fill(0);let i=0,j=0;function add(v){if(solid(g[v])&&!seen[v]){seen[v]=1;q[j++]=v}}for(let x=0;x<W;x++){add(x);add((H-1)*W+x)}for(let y=0;y<H;y++){add(y*W);add(y*W+W-1)}while(i<j){let v=q[i++],x=v%W,y=v/W|0;if(x>0)add(v-1);if(x<W-1)add(v+1);if(y>0)add(v-W);if(y<H-1)add(v+W)}return j}
@@ -99,6 +117,7 @@ function join(parts){let n=parts.reduce((s,p)=>s+p.length,0),r=new Uint8Array(n)
 function png(g,x0,y0,w,h){const raw=new Uint8Array((w+1)*h);for(let y=0;y<h;y++)raw.set(g.subarray((y0+y)*2048+x0,(y0+y)*2048+x0+w),y*(w+1)+1);let a=1,b=0;for(const v of raw){a=(a+v)%65521;b=(b+a)%65521}let z=[[120,1]],p=0;while(p<raw.length){let n=Math.min(65535,raw.length-p),fin=p+n===raw.length;z.push([fin?1:0,n&255,n>>8,(~n)&255,((~n)>>8)&255]);z.push(raw.subarray(p,p+n));p+=n}z.push([b>>>8,b&255,a>>>8,a&255]);const palette=new Uint8Array(768),cl={0:[9,14,25],3:[41,128,184],8:[240,94,37],58:[78,84,99],62:[133,146,160],63:[53,102,131],66:[113,135,153],68:[83,123,141],70:[192,191,172],76:[228,185,63],77:[70,243,227],79:[250,161,74],100:[45,55,66],101:[32,37,50],104:[133,64,55],117:[145,153,169],120:[77,183,205],122:[175,225,225],123:[88,226,160]};for(let i=0;i<256;i++)palette.set(cl[i]||[164,85,141],3*i);const U=(v)=>[(v>>>24)&255,(v>>>16)&255,(v>>>8)&255,v&255];const chunk=(t,d)=>{let c=join([ascii(t),d]);return join([U(d.length),c,U(crc(c))])};return join([[137,80,78,71,13,10,26,10],chunk("IHDR",join([U(w),U(h),[8,3,0,0,0]])),chunk("PLTE",palette),chunk("IDAT",join(z)),chunk("IEND",[])])}
 
 function checkPng(bytes,g,x0,y0,w,h){const u=p=>((bytes[p]*16777216)+(bytes[p+1]<<16)+(bytes[p+2]<<8)+bytes[p+3])>>>0;let at=8,ids=[],iend=false;while(at<bytes.length){let n=u(at),type=String.fromCharCode(...bytes.subarray(at+4,at+8));if(u(at+8+n)!==crc(bytes.subarray(at+4,at+8+n)))throw Error("PNG CRC");if(type==="IHDR"&&(u(at+8)!==w||u(at+12)!==h||bytes[at+17]!==3))throw Error("PNG IHDR");if(type==="IDAT")ids.push(bytes.subarray(at+8,at+8+n));if(type==="IEND")iend=true;at+=12+n}if(!iend)throw Error("missing IEND");const z=join(ids),r=new Uint8Array((w+1)*h);let p=2,j=0;while(true){let f=z[p++],n=z[p]|z[p+1]<<8,N=z[p+2]|z[p+3]<<8;p+=4;if((n^N)!==65535||(f&6))throw Error("Bad DEFLATE");r.set(z.subarray(p,p+n),j);p+=n;j+=n;if(f&1)break}if(j!==r.length)throw Error("PNG scanline");for(let y=0;y<h;y++){let s=y*(w+1);if(r[s])throw Error("PNG filter");for(let x=0;x<w;x++)if(r[s+x+1]!==g[(y+y0)*2048+x+x0])throw Error("PNG index parity mismatch")}return w*h}
+sites.push(["Assay entered inspection",204,699],["Splitters calibration",653,674],["West shield sensor",1014,645],["East shield isolation",1309,620],["Retort operator console",1515,534],["Quarantine extraction",1848,701]);
 const g=world(),support=connect(g,true),edits=rectangles(g),check=qualify(g,edits,sites);
 const setup={version:2,extent:[W,H],actors:[{id:1,model:'midge',hash:HASH,spawn:[80,420],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:2}}],next_id:2,selected:1,edits,response:'LA-SELECTIVE',liquid_policy:policy,normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
 const setupBytes=ascii(JSON.stringify(setup)+'\n');if(edits.length>32768||setupBytes.length>1048576)throw Error('Workbench budget');

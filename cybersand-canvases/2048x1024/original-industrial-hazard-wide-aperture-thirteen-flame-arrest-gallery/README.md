@@ -10,11 +10,11 @@ This is a real traversable 2D cross-section, authored at playable Midge scale wi
 
 | District | Horizontal span | Real machinery and movement role |
 |---|---|---|
-| Blast Assay Yard | x=70-435 | Unequal raking assay crane, thick load-bearing piers, open impact cradle, entered cargo lock and high staging route |
-| Ceramic Splitter Field | x=435-865 | Three deliberately different grounded splitter vanes, dry service watchroom, paired but unequally charged sealed quench cells, upper and lower maneuvering |
-| Pulse Shield Hollow | x=865-1330 | Massive refractory blast arch with a deep flyable central void, breached flash-vent at the crown, independent below-shield bypass, isolated sealed lava capsule |
-| Condenser Drum Works | x=1330-1730 | High/low/medium condenser supports, two isolated water reservoirs, twin-door instrument cabin, dry upper ventilation and lower inspection exit |
-| Exhaust and Extraction | x=1730-2010 | Distinct descending wind vane, sheltered double-ended exit gallery, extended low external extraction position |
+| Blast Assay Yard | x=70-435 | Unequal raking assay crane, thick load-bearing piers, clamped and hoisted assay specimen, side-entered control room and inspected cargo lock and high staging route |
+| Ceramic Splitter Field | x=435-865 | Three deliberately different grounded splitter vanes, accessible calibration aperture and contact relays, dry service watchroom, paired but unequally charged sealed quench cells, upper and lower maneuvering |
+| Pulse Shield Hollow | x=865-1330 | Massive refractory blast arch with a deep flyable central void, breached flash-vent at the crown, two separately entered side sensor/isolation rooms, independent below-shield bypass, isolated sealed lava capsule |
+| Condenser Drum Works | x=1330-1730 | High/low/medium condenser supports, two isolated water reservoirs, twin-door instrument cabin and closed inert transfer/valve manifold, dry upper ventilation and lower inspection exit |
+| Exhaust and Extraction | x=1730-2010 | Distinct descending wind vane, staffed extraction load fixture and sheltered double-ended exit gallery, extended low external extraction position |
 
 **Authoring route graph (all nodes exact):** Aerostat arrival -> Blast assay deck -> Slag arrival lock -> Quench relay -> Ceramic vane overlook -> Shield west gate -> Shield hollow -> Shield east recovery -> Vapor drum service -> Retort return gallery -> Quarantine departure -> Eastern emergency exit.
 
@@ -41,7 +41,7 @@ Damped lower transit           (1172, 754)
 Cold isolation refuge          (1660, 780)
 ```
 
-The authored spawn and each of the 16 exact targets are checked in bounds with **19x15**, **23x19**, and **31x27** full rectangular Midge clearance, followed by 4-neighbour centre flood from the exact spawn. No waypoint displacement, nearby-site fallback or radius concession. Two independently inserted **52x64** solid obstructions test recovery and return, rather than assuming an alternate route exists.
+The authored spawn and each of the 22 exact targets are checked in bounds with **19x15**, **23x19**, and **31x27** full rectangular Midge clearance, followed by 4-neighbour centre flood from the exact spawn. No waypoint displacement, nearby-site fallback or radius concession. Two independently inserted **52x64** solid obstructions test recovery and return, rather than assuming an alternate route exists.
 
 ## Deterministic physical contract
 
@@ -58,7 +58,7 @@ The authored spawn and each of the 16 exact targets are checked in bounds with *
 
 Run `node build.cjs` from this folder to deterministically recreate all six indexed material PNGs, Setup-v2 JSON and independent evidence JSON from the source; run `node build.cjs --verify` to byte-compare the committed versions. The builder itself does exhaustive rectangle replay, legal material and bounds checks, material histograms, 3 conservative full-hull BFS sweeps, both obstruction sweeps, initial fluid isolation, rooted structural connectivity, CRC-verified indexed PNG decoding and complete per-index grid parity.
 
-This run's full grid SHA-256 is `cdf45bae5e9101989dab1a4c73d4610acb38b61b77c21e253808f3fd1bd5e2f9`; Setup-v2 SHA-256 `5b798aa6178b52fad20955ec36d82675d6a9d6022075cab7f2251e6371977df9`. See `receipt.json` for exact byte, rectangle, hash, support, material histogram and checkpoint evidence. Self-qualified on the exact generated source, **not** independently accepted or native-tested.
+This run's full grid SHA-256 is `cdf45bae5e9101989dab1a4c73d4610acb38b61b77c21e253808f3fd1bd5e2f9`; Setup-v2 SHA-256 `f221337ff6e141f40c8f184223efad2c056ad52182672b4253a3594ff56a726c`. See `receipt.json` for exact byte, rectangle, hash, support, material histogram and checkpoint evidence. Self-qualified on the exact generated source, **not** independently accepted or native-tested.
 
 ## Genuine 1:1 indexed material-cell PNG gallery
 
@@ -68,6 +68,26 @@ This run's full grid SHA-256 is `cdf45bae5e9101989dab1a4c73d4610acb38b61b77c21e2
 * [Pulse-shield central hollow and plasma containment](./shield.png) -- 1 material pixel per cell
 * [Unequal condenser retorts and instrument gallery](./retorts.png) -- 1 material pixel per cell
 * [Exhaust and emergency return](./exit.png) -- 1 material pixel per cell
+
+
+## R7 — genuine reviewer P1 material-cell repair (20 November 2026)
+
+The first independent Art and Shepherd assessments of R6 identified skeletal machinery and poorly entered service interfaces. R7 changes the actual final material-ID plane and regenerates **all** committed artifacts, preserving the unequal skyline, central void and original 16 Midge destinations. Newly rooted load/hoist inspection, ceramic contact/calibration, west/east shield sensor/isolation booths, retort transfer-valve manifold and quarantine extraction apparatus replace empty schematic workfaces. Three genuine opened access shafts (assay overhead/west and splitter calibration) and physically cleared shield entrances prevent the new workrooms being purely scenic. Existing safe bypasses, Water and Lava cassettes remain.
+
+**Six additionally verified exact operational Midge destinations:**
+
+| New entered checkpoint | Exact cell centre |
+|---|---|
+| Assay entered inspection | (204, 699) |
+| Splitters calibration | (653, 674) |
+| West shield sensor | (1014, 645) |
+| East shield isolation | (1309, 620) |
+| Retort operator console | (1515, 534) |
+| Quarantine extraction | (1848, 701) |
+
+All **22/22** old/new exact sites are reachable from original spawn at all three full rectangular 19×15, 23×19, 31×27 envelopes, and survive each original real 52×64 obstruction independently. Independently generated material support, fluid-interface, complete ordered edit replay, CRC/index parity and SHA-256 receipts are in `receipt.json`. R7 has **2011** optimized disjoint material rectangles, **38201** Setup-v2 JSON bytes and full plane SHA-256 `b3cd784a0ddcee229ea66f9d67d727536014690f7e1962a03c2367dc1971292b`. **0** detached inert cells; zero time-zero fluid leak or Water–Lava contact. These are creator static tests, not independent new-HEAD or native qualification. The visible valves, gauges and retort connections are inert material-cell architecture, not animated process simulation.
+
+The accepted engine source read remains `de109d0131641d6adc8d25bb9ced7ca3d4991105`; installed CyberDemoBridge capability, live Midge physics/fluid containment and save/reopen remain **NATIVE-UNTESTED**. This new R7 HEAD is OPEN Draft/HOLD awaiting independent Art/Technical/Shepherd requalification.
 
 ## HOLD
 
