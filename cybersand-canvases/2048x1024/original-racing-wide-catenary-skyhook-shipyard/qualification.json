@@ -1,0 +1,282 @@
+{
+  "kind": "CATENARY_SKYHOOK_SHIPYARD_ORIGINAL_RACING_WIDE",
+  "seed": "0xC471E20261120",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "rectangles": 7366,
+  "setup_json_bytes": 141554,
+  "cell_visits": 797290,
+  "setup_source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1299862,
+    "3": 9396,
+    "49": 32040,
+    "58": 67730,
+    "62": 66561,
+    "100": 531936,
+    "101": 18520,
+    "113": 18262,
+    "117": 30742,
+    "120": 2509,
+    "122": 7757,
+    "123": 9558,
+    "128": 2279
+  },
+  "exact_replay_mismatches": 0,
+  "overlap_writes": 0,
+  "isolated_solids_excavated": 923,
+  "remaining_detached": 0,
+  "sealed_water_air_edges": 0,
+  "sealed_water_cells": 9396,
+  "material_laws": "Only 49,58,62,100,101,113,117,120,122,123,128 are inert immovable Solid RuleKernel::None; water 3 confined movable Water kernel",
+  "midge": {
+    "model": "midge",
+    "authored_hull": [
+      4,
+      3
+    ],
+    "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      124,
+      366
+    ]
+  },
+  "sites": [
+    {
+      "name": "West Launch",
+      "x": 124,
+      "y": 366
+    },
+    {
+      "name": "Launch Control",
+      "x": 269,
+      "y": 137
+    },
+    {
+      "name": "Crane One",
+      "x": 578,
+      "y": 365
+    },
+    {
+      "name": "Crane Two",
+      "x": 816,
+      "y": 365
+    },
+    {
+      "name": "Drylift Upper",
+      "x": 1080,
+      "y": 365
+    },
+    {
+      "name": "Ballast Upper",
+      "x": 1510,
+      "y": 365
+    },
+    {
+      "name": "East Capture",
+      "x": 1875,
+      "y": 386
+    },
+    {
+      "name": "Return Descent",
+      "x": 1925,
+      "y": 516
+    },
+    {
+      "name": "East Lower",
+      "x": 1792,
+      "y": 652
+    },
+    {
+      "name": "Ballast Return",
+      "x": 1510,
+      "y": 652
+    },
+    {
+      "name": "Drydock Return",
+      "x": 1138,
+      "y": 651
+    },
+    {
+      "name": "Crane Return",
+      "x": 710,
+      "y": 652
+    },
+    {
+      "name": "West Return",
+      "x": 290,
+      "y": 653
+    },
+    {
+      "name": "West Brake",
+      "x": 120,
+      "y": 538
+    },
+    {
+      "name": "Drylift Interior",
+      "x": 1084,
+      "y": 875
+    },
+    {
+      "name": "Ballast Lab",
+      "x": 1573,
+      "y": 896
+    },
+    {
+      "name": "West Finish",
+      "x": 164,
+      "y": 366
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "reached": 17,
+      "missing": [],
+      "legal_connected": 1159087
+    },
+    "23x19": {
+      "reached": 17,
+      "missing": [],
+      "legal_connected": 1132420
+    },
+    "31x27": {
+      "reached": 17,
+      "missing": [],
+      "legal_connected": 1078651
+    }
+  },
+  "straight_flight_31x27_samples_each": 1813,
+  "temporary_gate": {
+    "xywh": [
+      966,
+      328,
+      222,
+      78
+    ],
+    "material": 58
+  },
+  "gate_alternate": {
+    "reached": 16,
+    "missing": [
+      "Drylift Upper"
+    ],
+    "legal_connected": 1055145
+  },
+  "districts": [
+    "West magnetic launch and recovery",
+    "Asymmetric two-crane high yard",
+    "Central graving bay and suspended skyhook",
+    "Eastern cold-ballast laboratories",
+    "East brake and reversal throat"
+  ],
+  "route_graph": "West Launch -> Crane One -> Crane Two -> Drylift Upper -> Ballast Upper -> East Capture -> Return Descent -> East Lower -> Ballast Return -> Drydock Return -> Crane Return -> West Return -> West Brake -> West Finish; mid-height graving short-cut; independent crane/ballast workshops",
+  "native": "NATIVE-UNTESTED; accepted source 32768 rectangles, installed native bridge may be legacy 4096",
+  "grid_sha256": "4c5a25c358d3a172c71f5079826cd831dc4af7fa4cf31a59e2e03425b06f7e29",
+  "setup_json_sha256": "4236af7e673d9db51b6c98d6e28cecb871a8bd47c246983bc47a07ee09c87562",
+  "images": [
+    {
+      "name": "overview.png",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "sha256": "06928a988c474cc52df71ed3cdde7ebc4f791c5931d56088dcdeb859956e30f0",
+      "pixels": 2097152,
+      "bytes": 2099184,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "01-magnetic-launch.png",
+      "rect": [
+        48,
+        32,
+        470,
+        515
+      ],
+      "sha256": "d64b7d831c2147c84c4d65358cc554078736901c4b72fb7836a7feeaf2c34d15",
+      "pixels": 242050,
+      "bytes": 243428,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "02-skycrane-canyon.png",
+      "rect": [
+        414,
+        128,
+        490,
+        425
+      ],
+      "sha256": "d55b459aa7d3bdf86685651a6bebd228d981b3ad4d2cd47c376e6e261e411219",
+      "pixels": 208250,
+      "bytes": 209538,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "03-skyhook-and-graving-bay.png",
+      "rect": [
+        800,
+        178,
+        515,
+        800
+      ],
+      "sha256": "b9fe9253678634372c5730d648ccf6f6f2a9c9c7e82ec8c8f46084fff999751c",
+      "pixels": 412000,
+      "bytes": 413678,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "04-ballast-workshops.png",
+      "rect": [
+        1360,
+        495,
+        450,
+        495
+      ],
+      "sha256": "f0a48b3c9c0d053e89d8ab0838c523f339e21a20b46ec1f8436334af38e5963a",
+      "pixels": 222750,
+      "bytes": 224108,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    },
+    {
+      "name": "05-east-reversal-throat.png",
+      "rect": [
+        1732,
+        199,
+        316,
+        790
+      ],
+      "sha256": "b3be8c9d9d48c6b9fce5d9863de2586d8755843308d480001b1cca6d9730ed6e",
+      "pixels": 249640,
+      "bytes": 251293,
+      "chunk_crc": true,
+      "zlib": true,
+      "material_parity": true
+    }
+  ],
+  "source_type": "ORIGINAL-NO-REFERENCE",
+  "status": "OPEN DRAFT/HOLD",
+  "generated_source_mode": "One-byte material ID for each cell, deterministic fixed-seed pure JS, lossless ordered rectangles",
+  "png_rule": "8-bit indexed PNG; PNG pixel index IS the material ID; PLTE only changes display colour",
+  "image_verification": "Self-checked signature, IHDR, PLTE, chunk CRC, zlib stored deflate, Adler32, IEND, and exhaustive literal material-ID pixel parity",
+  "stage": "STATIC AUTHOR VALIDATION; independent auditor and native playtest outstanding"
+}
