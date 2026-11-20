@@ -113,6 +113,24 @@ function build(){
  R(1451,926,52,26,M.glassDark);R(1528,917,42,35,M.frost);
  for(let t=0;t<5;t++)R(1532+t*7,904,3,12,M.chrome);
  // Grounded metal pillars are unbroken except for existing tunnel circulation.
+
+ // True enterable repairs: clear gangway thresholds and deliberate vaulted
+ // crossovers, not nearest-site substitutions or artificially relaxed hulls.
+ // Main gallery opens vertically into the suspended inspection cradle.
+ R(1031,374,159,63,0);R(873,371,83,72,0);
+ // Breaks in the compression lintels preserve two distinct vertical return
+ // channels between top, middle and lower workfaces.
+ R(752,459,248,70,0);R(1084,462,191,69,0);
+ R(814,555,83,116,0);R(1184,582,78,99,0);
+ R(965,510,99,78,0);R(960,698,107,94,0);
+ // Two cliff-rooted counterweight braces keep the superstructures
+ // genuinely grounded while vaulted 90px doors cross the excavated bore.
+ L(331,725,710,725,12,M.titanium);
+ L(1293,709,1669,720,12,M.titanium);
+ R(681,841,90,116,0);R(1270,841,90,116,0);
+ // Habitation clearances follow real excavated side-entry corridors.
+ R(1546,381,430,46,0);R(1567,528,389,45,0);
+ R(1543,685,409,49,0);
  // Named Midge approach/recovery sites, deliberate metre-scale clear space.
  const sites={
  "Rover recovery dock":[126,464],
@@ -129,10 +147,10 @@ function build(){
  "East collector service":[1224,487],
  "Fork east locator":[1399,219],
  "East upper weather ledge":[1500,308],
- "Quarantine intake":[1625,455],
- "Eastern isolation lab":[1890,465],
- "Thermal displacement bay":[1867,600],
- "East freight and evacuation":[1798,765],
+ "Quarantine intake":[1625,403],
+ "Eastern isolation lab":[1890,401],
+ "Thermal displacement bay":[1867,543],
+ "East freight and evacuation":[1798,708],
  "Eastern rescue shaft":[1637,766],
  "Deep west entry":[420,881],
  "Lower mineral assay":[614,885],
