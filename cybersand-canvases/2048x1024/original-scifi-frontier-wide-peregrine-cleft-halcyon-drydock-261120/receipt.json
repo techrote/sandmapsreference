@@ -1,0 +1,271 @@
+{
+  "concept": "Peregrine Cleft - Halcyon Ark Drydock",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 2493216,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
+  "material_histogram": {
+    "49": 54795,
+    "62": 102122,
+    "63": 6081,
+    "66": 19914,
+    "68": 67145,
+    "77": 2718,
+    "79": 2849,
+    "80": 365,
+    "100": 476965,
+    "101": 28601,
+    "120": 2762,
+    "121": 5502,
+    "129": 3051,
+    "130": 13891,
+    "131": 5585
+  },
+  "filled_material_cells": 792346,
+  "grounded_cells": 792346,
+  "ungrounded_cells": 0,
+  "grounded_components": 3,
+  "all_solid_components": 3,
+  "physical_fixture_ties": {
+    "ties": 67,
+    "longest": 47
+  },
+  "nonoverlapping_ordered_rectangles": 10038,
+  "rectangle_work": 792346,
+  "setup_bytes": 186903,
+  "material_plane_sha256": "15db2e5cf9b94f844adf7a3472a412c747ab73a284a7e1c762e42ddbdb650a6e",
+  "setup_sha256": "d0a4dc58f8b8865b2c23cf0acfc443a3a6bfa121d6b841488a3503ee5da4a65a",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 77373,
+      "sha256": "9255b0f6518798523d181049fddace450bc4a904c79eaf56824eecfcb175c950"
+    },
+    {
+      "name": "01-west-arrivals.png",
+      "bytes": 9368,
+      "sha256": "5d4bcf39d346339b3898ad70f2e1a3cd66444c8742b431aa3813e23383a687fa"
+    },
+    {
+      "name": "02-arkship-interior.png",
+      "bytes": 10400,
+      "sha256": "5c6d0d8a8502bd2982c990dd7bf66bf6552f0bc16cd5fa6e48ec7ae7d9c9cc82"
+    },
+    {
+      "name": "03-fabrication.png",
+      "bytes": 12183,
+      "sha256": "dc03246f2365e1bf0d137d12a2a28517c1902c4ccb37c70864485786d1769ae5"
+    },
+    {
+      "name": "04-east-salvage.png",
+      "bytes": 10838,
+      "sha256": "4abf954d41e9097eef12d1ae34e973a5f7e6ba86701ae1178a0bc52bdd5435fc"
+    },
+    {
+      "name": "05-lower-mineral.png",
+      "bytes": 15096,
+      "sha256": "6b84d8577c5898e8339e2db8975f17227d2d6cb2cce5c184fb1b30a9703fc38f"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1027103,
+      "passed": 21,
+      "total": 21,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 969393,
+      "passed": 21,
+      "total": 21,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 867725,
+      "passed": 21,
+      "total": 21,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      968,
+      454,
+      1113,
+      607
+    ],
+    "material_id": 58,
+    "purpose": "Blocks exact Drydock centre; all other 20 named destinations recoverable",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 839969,
+        "passed": 20,
+        "total": 21,
+        "bad": [
+          [
+            "Drydock centre",
+            [
+              1000,
+              515
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "West arrivals": [
+      120,
+      524
+    ],
+    "Pilots exchange": [
+      244,
+      418
+    ],
+    "West assay": [
+      235,
+      645
+    ],
+    "West rock archive": [
+      266,
+      787
+    ],
+    "Fabrication platform": [
+      539,
+      507
+    ],
+    "Fabricator lookout": [
+      556,
+      281
+    ],
+    "Ark aft hatch": [
+      718,
+      492
+    ],
+    "Ark specimen bay": [
+      855,
+      329
+    ],
+    "Ark living galley": [
+      964,
+      326
+    ],
+    "Ark navigation core": [
+      1091,
+      328
+    ],
+    "Ark bow hatch": [
+      1366,
+      500
+    ],
+    "Ark roof rendezvous": [
+      1115,
+      210
+    ],
+    "Great crane console": [
+      1394,
+      294
+    ],
+    "East quarantine lock": [
+      1820,
+      402
+    ],
+    "East cargo": [
+      1891,
+      533
+    ],
+    "East thermal salvage": [
+      1810,
+      636
+    ],
+    "East survey": [
+      1875,
+      783
+    ],
+    "Drydock centre": [
+      1000,
+      515
+    ],
+    "Lower mineral assay": [
+      959,
+      744
+    ],
+    "Lower bore drill": [
+      1265,
+      756
+    ],
+    "Western vent recovery": [
+      617,
+      725
+    ]
+  },
+  "crops": [
+    [
+      "01-west-arrivals",
+      35,
+      345,
+      475,
+      515
+    ],
+    [
+      "02-arkship-interior",
+      670,
+      215,
+      705,
+      320
+    ],
+    [
+      "03-fabrication",
+      420,
+      185,
+      315,
+      535
+    ],
+    [
+      "04-east-salvage",
+      1560,
+      355,
+      473,
+      520
+    ],
+    [
+      "05-lower-mineral",
+      560,
+      660,
+      968,
+      285
+    ]
+  ],
+  "source_art": "None; independently invented level design",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"
+}
