@@ -1,8 +1,27 @@
-# Graven Keel — Ship-Tipper Crossdock
+# Graven Keel — Ship-Tipper Crossdock (R2)
 
-**Wholly original 2048×1024 CyberSand material-ID world · horizontal side elevation, no source image · STATIC-CREATOR-PASS / NATIVE-UNTESTED · DRAFT/HOLD.**
+**Wholly original 2048×1024 CyberSand material-ID world · horizontal side elevation, no source image · R2 STATIC-CREATOR-PASS / NATIVE-UNTESTED · DRAFT/HOLD.**
 
 Accepted CyberSand source (READ ONLY): `de109d0131641d6adc8d25bb9ced7ca3d4991105`. sandmapsreference parent: `99a166e7fcae45eb22be1740e9f33f62faccbcc7`. Material descriptor Git blob `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`; Setup-v2 loader blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`. Seed `152731237`. 4×3 authored Midge model hash `c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96`.
+
+## R2 owner-authored physical-cell revision — 20 November 2026
+
+Independent Art/Shepherd P1 reviews of predecessor HEAD `7bed4ba0ac3100d85f51af6fed946452cf2fbaf4` found insufficiently legible vessel/cradle/workface transactions. R2 changes the **actual complete material-ID plane**, not only previews or prose. Compared to the predecessor, **50,188 cells differ**: 33,602 added, 3,509 excavated, 13,077 reassigned. The cargo hold, mooring and manifest structures now share a single lower hull; the inclined tipper has connected bearer/ram/pivot contacts; a highline sheave and crossdock handling interfaces, loaded switch wagons, customs scale and distinct grounded lower service fixtures were introduced. A deterministic pre-R2 empty-corridor mask prevents new workfaces from closing historically qualified Midge access routes without excavating original supports.
+
+The exact 6314 in-bounds nonoverlapping rectangles reconstruct all 2097152 cells, and all 575,919 stable inert cells are boundary-connected. Exact 22/22 / 22/22 / 22/22 destination clearance at 19×15, 23×19 and 31×27; true obstacle alternative 241 → 263 steps; 7/7 authentic PNG integrity and source-pixel parity. Gallery files below were regenerated from these cells, not redrawn.
+
+**Qualification boundaries:** CREATOR-STATIC-PASS only; fresh independent R2 Art/Technical/Shepherd review is required. Installed CyberDemoBridge capacity, native Godot/Rapier flight and collision, sustained progression and cold save/reopen are **NATIVE-UNTESTED**. This is not a claim that every artistic P1 is accepted. The three upper apertures and original site coordinates remain unchanged.
+
+### Changed-source district counts
+
+| Physical crop | Changed cells |
+|---|---:|
+| tidal berth | 6,769 |
+| tipper | 7,388 |
+| crossdock | 2,791 |
+| sorter | 4,777 |
+| customs | 6,250 |
+| underworks | 4,390 |
 
 ## Location and freight logistics
 
@@ -51,17 +70,17 @@ Midge spawn: **West tidal ingress** at `(125,425)`. Every exact site remains fou
 | Source generator seed | 152731237 |
 | Material IDs | 0 Empty; 58 ReinforcedConcrete; 62 SteelPlate; 100 BasaltColumns |
 | Per-ID accepted physics | 58/62/100 immovable Solid, RuleKernel::None |
-| Final material histogram | 0:1551326, 58:225300, 62:170802, 100:149724 |
-| Final occupied stable cells | 545826 |
-| Grounded solids / detached | 545826 / 0 |
-| Unsupported intermediate candidates removed (not in final map) | 36157 |
-| Disjoint canonical rectangles | 6270 / 32,768 source capacity |
-| Setup-v2 JSON UTF-8 bytes | 114002 / 1,048,576 |
-| Rectangle paint work | 545826 / 32,000,000 |
+| Final material histogram | 0:1521233, 58:236752, 62:189942, 100:149225 |
+| Final occupied stable cells | 575919 |
+| Grounded solids / detached | 575919 / 0 |
+| Unsupported intermediate candidates removed (not in final map) | 39267 |
+| Disjoint canonical rectangles | 6314 / 32,768 source capacity |
+| Setup-v2 JSON UTF-8 bytes | 114980 / 1,048,576 |
+| Rectangle paint work | 575919 / 32,000,000 |
 | Exact 19×15 / 23×19 / 31×27 destination reachability | 22/22 / 22/22 / 22/22 |
 | Obstruction route length | 241 → 263 |
-| Full-grid material-ID SHA-256 | `288ce2183de671411599d2ac36bdb7a6e71d2598c625bc38f3afbe3b015caeec` |
-| Serialized Setup-v2 SHA-256 | `5113d095025c6e99a9f653452ecbd4a1696e1c810c15e9fedee4c44cfedd0a0f` |
+| Full-grid material-ID SHA-256 | `7d3de7bb24abcf022723617e4764cf4c54a6ab570cf9d3554a07c155d4df856c` |
+| Serialized Setup-v2 SHA-256 | `4c6491b58b32efe47203cda2a5b89b29576680102beb0d3708a449d157f3d7f1` |
 | PNG CRC/zlib/Adler/full pixel parity | 7/7 PASS |
 
 The serializer row-run/vertical-coalesces the **actual final material-ID plane**, producing disjoint ordered five-field rectangles. It then *exhaustively replays* every edit and compares all 2,097,152 cells. Candidate decoration without a supported load path is removed before final serialization; retained final material is entirely grounded inert solid. This provenance does not turn site clearance into a native Workbench test.
@@ -72,6 +91,6 @@ True full 2048×1024 material PNG: [overview.png](overview.png). Real unscaled 1
 
 Run `node build.cjs` (Node 22) to regenerate `setup-graven-keel.json`, `receipt.json` and all seven authentic PNGs. Run `node build.cjs --verify` for a deterministic in-memory rebuild and byte-equality test against all nine committed outputs. This algorithm shares **only serialization/PNG/static-verification helper techniques** with earlier Industrial Transit lane work; landscape geography, site topology, vessels and machinery were freshly authored.
 
-**Legacy bridge risk:** accepted CyberSand source advertises **32,768** records, but an installed CyberDemoBridge without `workbench_start_rectangle_capacity` may fall back to **4,096**, **2174 fewer** than this map requires. Do not truncate or silently reshape the map. Verify installed binary/engine IDs and capability, then genuinely test Setup-v2 import, Midge movement/collisions, sustained simulation and a cold save/reopen. They have **not** been performed here: **NATIVE-UNTESTED**.
+**Legacy bridge risk:** accepted CyberSand source advertises **32,768** records, but an installed CyberDemoBridge without `workbench_start_rectangle_capacity` may fall back to **4,096**, **2218 fewer** than this map requires. Do not truncate or silently reshape the map. Verify installed binary/engine IDs and capability, then genuinely test Setup-v2 import, Midge movement/collisions, sustained simulation and a cold save/reopen. They have **not** been performed here: **NATIVE-UNTESTED**.
 
 Requires independent Art, Technical and Shepherd exact-HEAD inspection, then owner acceptance. Remains **OPEN DRAFT/HOLD**; never merge, Ready or auto-merge on this receipt.

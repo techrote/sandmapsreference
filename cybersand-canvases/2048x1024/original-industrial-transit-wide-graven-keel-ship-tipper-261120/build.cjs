@@ -201,6 +201,112 @@ R(655,465,78,427,M.AIR);
 R(753,613,77,91,M.AIR);R(810,461,69,226,M.AIR);
 for(const q of Object.values(sites))R(q[0]-21,q[1]-19,43,39,M.AIR);
 
+const r2Base=g.slice();
+
+/* Graven Keel R2 / functional process chain: sheltered berth → engaged angled
+   tipper → suspended crossdock → shunt frog → customs, plus differentiated
+   maintenance below. Real stable material, perpendicular 2D elevation. */
+function r2Room(x,y,w,h){R(x,y,w,8,M.STEEL);R(x,y,8,h,M.WALL);R(x+8,y+h-9,w-8,9,M.STEEL);R(x+w-8,y,8,h,M.WALL);R(x+10,y+12,w-20,h-26,M.AIR);R(x+w-9,y+17,13,h-27,M.AIR);}
+function r2Load(x,y,w=66){R(x,y,w,8,M.STEEL);R(x+7,y-23,w-14,22,M.WALL);for(let z=x+16;z<x+w-10;z+=18)R(z,y-19,4,14,M.STEEL);for(let z of [x+15,x+w-15]){ring(z,y+12,11,11,4,M.STEEL);R(z-3,y+9,6,7,M.WALL);}}
+// One vessel: fore sheer, continuous keel under open 70px hatch, aft
+// wheelhouse on same vessel (not a second dock cabin).
+L(198,747,209,682,13,M.STEEL);L(209,682,243,646,14,M.STEEL);
+R(243,638,174,11,M.STEEL);L(417,646,453,691,13,M.STEEL);
+L(453,690,440,765,13,M.STEEL);L(440,765,416,791,13,M.STEEL);
+R(223,783,210,15,M.STEEL);L(226,786,197,754,13,M.STEEL);
+R(223,746,70,12,M.WALL);R(384,746,59,12,M.WALL);
+R(244,742,10,48,M.STEEL);R(419,742,11,49,M.STEEL);
+r2Room(377,595,51,64);R(400,653,12,94,M.WALL);
+R(385,608,27,13,M.AIR);R(393,601,20,8,M.STEEL);
+r2Load(239,720,55);r2Load(383,717,50);
+R(175,743,24,15,M.WALL);L(193,752,224,777,9,M.STEEL);
+R(178,753,12,61,M.WALL);r2Room(238,552,73,63);
+R(254,610,13,144,M.WALL);R(263,587,42,10,M.STEEL);
+R(485,668,55,13,M.STEEL);L(426,699,493,673,11,M.STEEL);
+R(474,678,11,81,M.WALL);r2Load(490,650,52);
+// Incline: two rails tied to grounded heel, rolling pivot and a ram
+// touching the same tilted load deck; clear keeper gallery stays traversable.
+L(577,715,761,473,17,M.STEEL);L(598,716,782,495,10,M.WALL);
+L(619,744,753,606,12,M.STEEL);L(628,748,776,603,7,M.WALL);
+R(621,742,107,15,M.WALL);ring(629,738,25,25,9,M.STEEL);
+R(619,748,19,44,M.WALL);R(750,480,62,12,M.STEEL);
+R(788,489,10,100,M.WALL);R(752,579,60,10,M.STEEL);
+L(804,610,880,659,13,M.STEEL);
+R(873,650,88,12,M.STEEL);R(882,660,12,96,M.WALL);
+R(895,624,62,23,M.STEEL);R(905,631,44,14,M.WALL);
+r2Room(835,554,51,64);R(854,610,12,47,M.WALL);
+// Crossdock hoist: the load hangs from the grounded bridging trolley and
+// is received at a defined platform beside an entered operator room.
+L(946,354,1260,354,11,M.STEEL);
+R(1136,343,95,14,M.WALL);R(1159,334,61,10,M.STEEL);
+ring(1192,355,18,18,7,M.STEEL);
+R(1187,373,9,183,M.WALL);R(1190,554,8,29,M.STEEL);
+R(1158,578,75,10,M.STEEL);R(1163,587,65,26,M.WALL);
+R(1175,593,42,12,M.STEEL);
+L(1153,614,1117,684,9,M.STEEL);L(1238,613,1268,684,9,M.STEEL);
+R(1103,684,183,11,M.STEEL);r2Room(1020,625,81,68);
+R(1063,683,12,20,M.WALL);R(1245,633,61,12,M.STEEL);
+R(1284,638,10,62,M.WALL);r2Load(1252,710,66);
+// Real diverging shunt, loaded wagons and enclosed switch room.
+r2Load(1407,568,70);r2Load(1577,583,71);
+L(1395,612,1515,632,11,M.STEEL);
+L(1515,632,1664,604,10,M.STEEL);
+R(1620,603,33,11,M.WALL);R(1661,583,10,75,M.STEEL);
+r2Room(1584,690,76,62);R(1608,738,13,21,M.WALL);
+// East: inspect/weigh portal, side room and loaded outbound trolley.
+r2Room(1729,646,91,82);R(1754,695,34,13,M.WALL);
+R(1747,722,12,26,M.WALL);
+R(1862,578,11,166,M.WALL);R(1923,575,11,169,M.WALL);
+R(1861,575,73,12,M.STEEL);R(1883,600,29,9,M.STEEL);
+R(1895,610,8,25,M.WALL);R(1875,634,39,9,M.STEEL);
+r2Load(1870,706,70);R(1941,689,41,12,M.STEEL);
+R(1960,700,13,49,M.WALL);
+// Five different machines anchored to true underground decks.
+R(195,921,12,34,M.WALL);R(205,944,106,12,M.STEEL);
+R(218,906,10,39,M.WALL);R(228,907,49,10,M.STEEL);
+R(310,918,44,34,M.WALL);R(320,927,27,18,M.AIR);
+L(261,925,309,908,7,M.STEEL);
+R(633,943,172,13,M.STEEL);R(645,907,14,43,M.WALL);
+R(663,918,11,34,M.STEEL);R(695,923,13,28,M.WALL);
+R(742,901,12,51,M.WALL);L(648,925,746,911,7,M.STEEL);
+R(1013,941,206,14,M.STEEL);R(1029,913,13,38,M.WALL);
+R(1042,904,95,9,M.STEEL);R(1195,898,13,53,M.WALL);
+L(1143,922,1202,921,8,M.STEEL);
+R(1464,944,165,12,M.STEEL);R(1467,911,12,39,M.WALL);
+R(1478,917,92,9,M.STEEL);
+for(const z of [1484,1500,1516,1532,1548])R(z,928,7,17,M.WALL);
+R(1587,904,11,45,M.WALL);R(1596,912,33,9,M.STEEL);
+R(1779,936,142,14,M.STEEL);R(1788,906,92,29,M.WALL);
+R(1800,913,67,15,M.AIR);R(1885,902,12,47,M.STEEL);
+L(1891,921,1929,890,9,M.STEEL);
+
+// Rooted crossdock chain: overhead car spanning bridge -> sheave at mast ->
+// guided downward pick -> loaded cradle -> wheeled deposit staging.
+R(1152,227,84,13,M.STEEL);
+R(1183,237,13,340,M.STEEL);
+ring(1189,285,18,18,7,M.WALL);
+R(1178,542,26,12,M.STEEL);
+R(1154,556,74,12,M.STEEL);
+R(1160,570,66,28,M.WALL);R(1168,576,49,16,M.STEEL);
+L(1204,591,1264,648,10,M.STEEL);
+R(1251,644,68,13,M.STEEL);R(1301,656,13,97,M.WALL);
+R(1244,689,87,10,M.STEEL);
+
+// Reestablish PRE-R2 legal corridors while *never excavating a preexisting
+// rooted structural pixel*. Additional machine strokes cannot close them.
+function restoreFree(x,y,w,h){
+ for(let yy=Math.max(0,y);yy<Math.min(H,y+h);yy++)
+ for(let xx=Math.max(0,x);xx<Math.min(W,x+w);xx++){let n=yy*W+xx;if(r2Base[n]===0 && !(yy>=379&&yy<451&&xx>=1183&&xx<1196))g[n]=0;}
+}
+restoreFree(103,379,1847,72);restoreFree(104,306,1830,53);
+for(const x of [125,568,960,1478,1783,1953])restoreFree(x-34,329,69,169);
+for(const x of [258,693,1119,1506,1845])restoreFree(x-38,422,77,463);
+for(const x of [338,783,1318,1550,1825])restoreFree(x-34,507,69,228);
+restoreFree(302,482,75,258);restoreFree(231,725,69,162);
+restoreFree(655,465,78,427);restoreFree(753,613,77,91);
+restoreFree(810,461,69,226);
+for(const p of Object.values(sites))restoreFree(p[0]-21,p[1]-19,43,39);
+
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
