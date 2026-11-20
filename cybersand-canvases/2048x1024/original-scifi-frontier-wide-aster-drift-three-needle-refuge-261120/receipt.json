@@ -1,0 +1,290 @@
+{
+  "concept": "Aster Drift - Three Needle Storm Refuge",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 2533153,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
+  "material_histogram": {
+    "49": 7943,
+    "62": 51136,
+    "63": 3774,
+    "66": 15974,
+    "68": 68272,
+    "77": 2794,
+    "79": 1133,
+    "100": 170998,
+    "101": 10989,
+    "120": 4668,
+    "121": 1273,
+    "129": 2016,
+    "130": 8992,
+    "131": 6607
+  },
+  "filled_material_cells": 356569,
+  "grounded_cells": 356569,
+  "ungrounded_cells": 0,
+  "grounded_components": 1,
+  "all_solid_components": 1,
+  "physical_fixture_ties": {
+    "ties": 82,
+    "longest": 131
+  },
+  "nonoverlapping_ordered_rectangles": 4526,
+  "rectangle_work": 356569,
+  "setup_bytes": 84937,
+  "material_plane_sha256": "0da04919a3e01bf97903a4e6aa6c0764521903c6f0e995f54b4b806dd22c3a05",
+  "setup_sha256": "77de496a538bf752ac9de540c147371dcfda44e2a135a59f97357983fa2d87e3",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 54307,
+      "sha256": "b5b1a7675c69cff4da1bf1ee98472a746b4eba2973cb765c9d71d0d295b29a16"
+    },
+    {
+      "name": "01-west-stormport.png",
+      "bytes": 9812,
+      "sha256": "9afd5245d440f1e8999966907cd89e4e68accc5af801bfaa8e6475aa5ff54c69"
+    },
+    {
+      "name": "02-fork-needle.png",
+      "bytes": 9473,
+      "sha256": "576f861fa5ef67f3add7cfb1c69814dd9a13b6778cc9b4ca89cebc3f7999a0dd"
+    },
+    {
+      "name": "03-condenser.png",
+      "bytes": 9236,
+      "sha256": "2588bca015b9a707fc064075a128c1b239e28eb345b3817edf5b542f5dc7f35c"
+    },
+    {
+      "name": "04-shield-needle.png",
+      "bytes": 17879,
+      "sha256": "dc53e9a78057c71dcd1511ffa2075f0dd8738e3389c18fb5ff46545e8b19f07c"
+    },
+    {
+      "name": "05-geothermal-return.png",
+      "bytes": 6352,
+      "sha256": "c628d50aefa860260f3a300fb65c6923e2ca147012b38276dbc42bf58edae59f"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1484714,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1425944,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1318275,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      1034,
+      374,
+      1113,
+      448
+    ],
+    "material_id": 58,
+    "purpose": "Blocks exact Crown transfer node; all other named destinations remain recoverable",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1299463,
+        "passed": 25,
+        "total": 26,
+        "bad": [
+          [
+            "Crown transfer node",
+            [
+              1068,
+              408
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "West stormport": [
+      304,
+      574
+    ],
+    "Shield ferry berth": [
+      167,
+      449
+    ],
+    "Pilots mess": [
+      238,
+      572
+    ],
+    "Storm cassette plant": [
+      231,
+      697
+    ],
+    "West cryo testing": [
+      244,
+      800
+    ],
+    "West descent": [
+      352,
+      919
+    ],
+    "Anemometer crown": [
+      651,
+      174
+    ],
+    "Upper diagnostic dock": [
+      649,
+      307
+    ],
+    "Tower one midshaft": [
+      647,
+      467
+    ],
+    "Wind bridge west": [
+      812,
+      503
+    ],
+    "Grand atrium": [
+      1008,
+      618
+    ],
+    "Crown transfer node": [
+      1068,
+      408
+    ],
+    "Seismic reference pod": [
+      1060,
+      223
+    ],
+    "Jetstream recovery": [
+      1090,
+      53
+    ],
+    "Biofilter terrace": [
+      1360,
+      502
+    ],
+    "Needle three upper": [
+      1467,
+      294
+    ],
+    "East health quarantine": [
+      1793,
+      461
+    ],
+    "Scrub holding bay": [
+      1895,
+      577
+    ],
+    "Evacuation hangar": [
+      1815,
+      707
+    ],
+    "Shield capacitor hall": [
+      1888,
+      802
+    ],
+    "East tunnel mouth": [
+      1744,
+      922
+    ],
+    "Fossil sensor lab": [
+      588,
+      916
+    ],
+    "Return pump manifold": [
+      886,
+      928
+    ],
+    "Thermal archive": [
+      1298,
+      925
+    ],
+    "Storm cellar refuge": [
+      1559,
+      922
+    ],
+    "Basin overflight": [
+      1233,
+      620
+    ]
+  },
+  "crops": [
+    [
+      "01-west-stormport",
+      0,
+      375,
+      520,
+      510
+    ],
+    [
+      "02-fork-needle",
+      445,
+      62,
+      419,
+      718
+    ],
+    [
+      "03-condenser",
+      865,
+      40,
+      460,
+      718
+    ],
+    [
+      "04-shield-needle",
+      1325,
+      170,
+      723,
+      705
+    ],
+    [
+      "05-geothermal-return",
+      416,
+      844,
+      1240,
+      180
+    ]
+  ],
+  "source_art": "None; independently invented level design",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"
+}
