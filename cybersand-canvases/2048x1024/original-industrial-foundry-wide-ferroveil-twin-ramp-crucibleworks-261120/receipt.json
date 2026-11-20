@@ -1,0 +1,826 @@
+{
+  "schema": 1,
+  "original_no_source": true,
+  "concept": "Ferroveil Twin-Ramp Crucibleworks",
+  "seed": 261120191,
+  "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "9f18a5af794bec044da59b00dbc0c9ecb1e688b6ce625063f8c97b22d7a423b5",
+  "setup_sha256": "6e2fe2496e49e2b66b1481ee6d1ec7ae4f464e68f8c42f23797e64bad5d582d3",
+  "json_bytes": 36923,
+  "rectangle_count": 1937,
+  "source_rectangle_limit": 32768,
+  "possible_installed_fallback_untested": 4096,
+  "construction_work": 959835,
+  "material_histogram": {
+    "0": 1137317,
+    "3": 6247,
+    "8": 4578,
+    "58": 320979,
+    "62": 111722,
+    "65": 80365,
+    "66": 17375,
+    "68": 17841,
+    "69": 8029,
+    "72": 19206,
+    "76": 17019,
+    "77": 615,
+    "79": 3526,
+    "100": 215040,
+    "104": 53818,
+    "117": 16936,
+    "131": 66539
+  },
+  "ground": {
+    "total": 949010,
+    "rooted": 949010,
+    "detached": 0,
+    "repair": {
+      "components": 0,
+      "links": 0,
+      "maxSize": 0,
+      "maxLink": 0
+    }
+  },
+  "fluid": {
+    "water": 6247,
+    "lava": 4578,
+    "initial_fluid_air_faces": 0,
+    "initial_water_lava_contacts": 0
+  },
+  "flight": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 909861,
+      "connected_centres": 664987,
+      "passed": 23,
+      "sites": [
+        {
+          "name": "West rail spawn",
+          "x": 91,
+          "y": 263,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roof incline observer",
+          "x": 459,
+          "y": 261,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore weighhouse checkpoint",
+          "x": 382,
+          "y": 261,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First retort overlook",
+          "x": 676,
+          "y": 258,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second retort overlook",
+          "x": 895,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Heat exchanger inspection",
+          "x": 760,
+          "y": 237,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pivot ladle access",
+          "x": 1088,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pour shoe",
+          "x": 1169,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster intake",
+          "x": 1260,
+          "y": 258,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Drawbed control",
+          "x": 1439,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear mast",
+          "x": 1606,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench survey",
+          "x": 1698,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight goal",
+          "x": 1964,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West descent mouth",
+          "x": 288,
+          "y": 424,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East descent mouth",
+          "x": 1797,
+          "y": 424,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West recovery ledge",
+          "x": 288,
+          "y": 815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West winch service",
+          "x": 141,
+          "y": 814,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roll exchange station",
+          "x": 491,
+          "y": 814,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Copper winding station",
+          "x": 830,
+          "y": 815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Valve diagnostic station",
+          "x": 1119,
+          "y": 808,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Filter return workshop",
+          "x": 1488,
+          "y": 808,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East coolant pump station",
+          "x": 1900,
+          "y": 816,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East recovery ledge",
+          "x": 1796,
+          "y": 817,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 863993,
+      "connected_centres": 638272,
+      "passed": 23,
+      "sites": [
+        {
+          "name": "West rail spawn",
+          "x": 91,
+          "y": 263,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roof incline observer",
+          "x": 459,
+          "y": 261,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore weighhouse checkpoint",
+          "x": 382,
+          "y": 261,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First retort overlook",
+          "x": 676,
+          "y": 258,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second retort overlook",
+          "x": 895,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Heat exchanger inspection",
+          "x": 760,
+          "y": 237,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pivot ladle access",
+          "x": 1088,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pour shoe",
+          "x": 1169,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster intake",
+          "x": 1260,
+          "y": 258,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Drawbed control",
+          "x": 1439,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear mast",
+          "x": 1606,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench survey",
+          "x": 1698,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight goal",
+          "x": 1964,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West descent mouth",
+          "x": 288,
+          "y": 424,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East descent mouth",
+          "x": 1797,
+          "y": 424,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West recovery ledge",
+          "x": 288,
+          "y": 815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West winch service",
+          "x": 141,
+          "y": 814,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roll exchange station",
+          "x": 491,
+          "y": 814,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Copper winding station",
+          "x": 830,
+          "y": 815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Valve diagnostic station",
+          "x": 1119,
+          "y": 808,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Filter return workshop",
+          "x": 1488,
+          "y": 808,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East coolant pump station",
+          "x": 1900,
+          "y": 816,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East recovery ledge",
+          "x": 1796,
+          "y": 817,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 779514,
+      "connected_centres": 585664,
+      "passed": 23,
+      "sites": [
+        {
+          "name": "West rail spawn",
+          "x": 91,
+          "y": 263,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roof incline observer",
+          "x": 459,
+          "y": 261,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore weighhouse checkpoint",
+          "x": 382,
+          "y": 261,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First retort overlook",
+          "x": 676,
+          "y": 258,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second retort overlook",
+          "x": 895,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Heat exchanger inspection",
+          "x": 760,
+          "y": 237,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pivot ladle access",
+          "x": 1088,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pour shoe",
+          "x": 1169,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster intake",
+          "x": 1260,
+          "y": 258,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Drawbed control",
+          "x": 1439,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear mast",
+          "x": 1606,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench survey",
+          "x": 1698,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight goal",
+          "x": 1964,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West descent mouth",
+          "x": 288,
+          "y": 424,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East descent mouth",
+          "x": 1797,
+          "y": 424,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West recovery ledge",
+          "x": 288,
+          "y": 815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West winch service",
+          "x": 141,
+          "y": 814,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roll exchange station",
+          "x": 491,
+          "y": 814,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Copper winding station",
+          "x": 830,
+          "y": 815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Valve diagnostic station",
+          "x": 1119,
+          "y": 808,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Filter return workshop",
+          "x": 1488,
+          "y": 808,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East coolant pump station",
+          "x": 1900,
+          "y": 816,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East recovery ledge",
+          "x": 1796,
+          "y": 817,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "obstruction": {
+    "box": [
+      1194,
+      200,
+      47,
+      139
+    ],
+    "flight": {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 769735,
+      "connected_centres": 575885,
+      "passed": 23,
+      "sites": [
+        {
+          "name": "West rail spawn",
+          "x": 91,
+          "y": 263,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roof incline observer",
+          "x": 459,
+          "y": 261,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore weighhouse checkpoint",
+          "x": 382,
+          "y": 261,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "First retort overlook",
+          "x": 676,
+          "y": 258,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Second retort overlook",
+          "x": 895,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Heat exchanger inspection",
+          "x": 760,
+          "y": 237,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pivot ladle access",
+          "x": 1088,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Pour shoe",
+          "x": 1169,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster intake",
+          "x": 1260,
+          "y": 258,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Drawbed control",
+          "x": 1439,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Shear mast",
+          "x": 1606,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench survey",
+          "x": 1698,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight goal",
+          "x": 1964,
+          "y": 259,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West descent mouth",
+          "x": 288,
+          "y": 424,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East descent mouth",
+          "x": 1797,
+          "y": 424,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West recovery ledge",
+          "x": 288,
+          "y": 815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West winch service",
+          "x": 141,
+          "y": 814,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roll exchange station",
+          "x": 491,
+          "y": 814,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Copper winding station",
+          "x": 830,
+          "y": 815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Valve diagnostic station",
+          "x": 1119,
+          "y": 808,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Filter return workshop",
+          "x": 1488,
+          "y": 808,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East coolant pump station",
+          "x": 1900,
+          "y": 816,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East recovery ledge",
+          "x": 1796,
+          "y": 817,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2098812,
+      "sha256": "9f51e20ef9448c9d56e8d907bbd707d60ecffe32d93b5536f8ae2f34b5614903"
+    },
+    "01-ore-tip.png": {
+      "crop": [
+        345,
+        465,
+        245,
+        239
+      ],
+      "bytes": 59270,
+      "sha256": "22fa004b67a4f35bb027a3d86aa34f432df26e8e8fbf3f7a78fbf39d807921ae"
+    },
+    "02-opposed-retorts.png": {
+      "crop": [
+        588,
+        289,
+        406,
+        415
+      ],
+      "bytes": 169391,
+      "sha256": "121fd75c0f71c390b8cf073ff39d7a347b34802bb6f50c1d760cbf97ff5f1149"
+    },
+    "03-pivot-ladle.png": {
+      "crop": [
+        977,
+        345,
+        268,
+        359
+      ],
+      "bytes": 97052,
+      "sha256": "d249f8f2861ff83b7ff2515fbcafc26c6df6239b6b205c683b1863767e3f080a"
+    },
+    "04-caster-fan.png": {
+      "crop": [
+        1220,
+        422,
+        430,
+        282
+      ],
+      "bytes": 122023,
+      "sha256": "9b7ab0f8805cc6cf25d6ca2cf9400529df8130de23c0fd6de81f0f21c92f5dad"
+    },
+    "05-quench-dispatch.png": {
+      "crop": [
+        1570,
+        450,
+        447,
+        254
+      ],
+      "bytes": 114273,
+      "sha256": "c29668aca090ee43a4fa82e9724732e79bcd5c7a6e0eb4a56d2c8c0bee8ff997"
+    },
+    "06-service-undercroft.png": {
+      "crop": [
+        40,
+        791,
+        1969,
+        103
+      ],
+      "bytes": 203401,
+      "sha256": "6d63af629c874cc17fd515608b9087df9379e3e77c358268ff89485140e155e6"
+    }
+  },
+  "pixel_material_parity_count": 2858014,
+  "native": "NATIVE-UNTESTED"
+}
