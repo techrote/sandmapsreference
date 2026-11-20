@@ -1,0 +1,267 @@
+{
+  "kind": "LAGRANGE_SLIPWAY_SIX_ORIGINAL_RACING_WIDE",
+  "revision": "R2",
+  "seed": "0x261120d1",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "material_cells": 2097152,
+  "extent": [
+    2048,
+    1024
+  ],
+  "rectangles": 5777,
+  "setup_json_bytes": 108859,
+  "work_visits": 720712,
+  "source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1376440,
+    "49": 49152,
+    "58": 101863,
+    "62": 88359,
+    "100": 262319,
+    "101": 127932,
+    "113": 23384,
+    "117": 53022,
+    "122": 14681
+  },
+  "grounded_solids": 720712,
+  "discarded_detached_material_cells": 17347,
+  "remaining_detached": 0,
+  "fluids": 0,
+  "reactive": 0,
+  "material_laws": "IDs 49 Slate, 58 ReinforcedConcrete, 62 SteelPlate, 100 BasaltColumns, 101 Obsidian, 113 ZincSheet, 117 BareIron, 122 QuartzCrystal; accepted read-only native: Solid, not movable, RuleKernel::None.",
+  "midge": {
+    "hull": [
+      4,
+      3
+    ],
+    "model_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      142,
+      636
+    ]
+  },
+  "sites": [
+    {
+      "name": "West slipway start",
+      "x": 142,
+      "y": 636
+    },
+    {
+      "name": "Induction accelerators",
+      "x": 346,
+      "y": 634
+    },
+    {
+      "name": "Forged weights outbound",
+      "x": 655,
+      "y": 635
+    },
+    {
+      "name": "Resonance atrium outbound",
+      "x": 1041,
+      "y": 634
+    },
+    {
+      "name": "Separator outbound",
+      "x": 1459,
+      "y": 635
+    },
+    {
+      "name": "East dry-release",
+      "x": 1844,
+      "y": 635
+    },
+    {
+      "name": "East reversal shaft",
+      "x": 1912,
+      "y": 505
+    },
+    {
+      "name": "East upper capture",
+      "x": 1886,
+      "y": 373
+    },
+    {
+      "name": "Separator westbound",
+      "x": 1539,
+      "y": 374
+    },
+    {
+      "name": "Array return",
+      "x": 1160,
+      "y": 373
+    },
+    {
+      "name": "Foundry return",
+      "x": 723,
+      "y": 374
+    },
+    {
+      "name": "Western deceleration",
+      "x": 336,
+      "y": 372
+    },
+    {
+      "name": "West transition",
+      "x": 136,
+      "y": 500
+    },
+    {
+      "name": "Finish west low",
+      "x": 156,
+      "y": 635
+    },
+    {
+      "name": "West flight control",
+      "x": 245,
+      "y": 118
+    },
+    {
+      "name": "Resonance monitor",
+      "x": 1032,
+      "y": 117
+    },
+    {
+      "name": "East trajectory control",
+      "x": 1778,
+      "y": 120
+    },
+    {
+      "name": "Weight-smith service",
+      "x": 583,
+      "y": 927
+    },
+    {
+      "name": "Central drive room",
+      "x": 1020,
+      "y": 923
+    },
+    {
+      "name": "Cold separator service",
+      "x": 1498,
+      "y": 920
+    },
+    {
+      "name": "East recovery workshop",
+      "x": 1840,
+      "y": 930
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "connected": 1165805,
+      "missing": [],
+      "reached": 21
+    },
+    "23x19": {
+      "connected": 1130812,
+      "missing": [],
+      "reached": 21
+    },
+    "31x27": {
+      "connected": 1060220,
+      "missing": [],
+      "reached": 21
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1400,
+      341,
+      130,
+      79
+    ],
+    "material": 58,
+    "missing": [
+      "Separator westbound"
+    ],
+    "remaining": 20,
+    "finish_reachable": true
+  },
+  "grid_sha256": "c27a8c8cf42ccada3ffb0fabac9c07e55e24f387c55cac3f88b84d43654aa5b6",
+  "setup_sha256": "9d1851ae9709fc2b920306e1a4e600b6549d5684de95300fc31c3a937acd597a",
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 69233,
+      "pixels": 2097152,
+      "sha256": "fd5a694a7f58b82e7f8fdfef61ad0236c5dd4c64e638d921f861c44a6c97a69d",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "01-west-slipway.png": {
+      "x": 0,
+      "y": 60,
+      "w": 432,
+      "h": 710,
+      "bytes": 10862,
+      "pixels": 306720,
+      "sha256": "953f61d21730f8d81041351bd212f6d8b41ea847a8d3acfbd66e4ce6f08bafad",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "02-foundry-weights.png": {
+      "x": 396,
+      "y": 173,
+      "w": 446,
+      "h": 711,
+      "bytes": 13881,
+      "pixels": 317106,
+      "sha256": "d3527c6e9c877c4cd859e2d0e78643e9475ca0790378d86ef44dec1fce2c49c0",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "03-resonance-atrium.png": {
+      "x": 818,
+      "y": 124,
+      "w": 495,
+      "h": 806,
+      "bytes": 14377,
+      "pixels": 398970,
+      "sha256": "1d56c98234385700cf506ed17f84f15638263a35741cc543d5e37a9f02158797",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "04-separator-plant.png": {
+      "x": 1283,
+      "y": 154,
+      "w": 438,
+      "h": 742,
+      "bytes": 15226,
+      "pixels": 324996,
+      "sha256": "462a3afaaa5dd04d7d281cc917fbe77d2f1f84ac0bfcbf41758185e6fd0412d3",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "05-east-turntower.png": {
+      "x": 1696,
+      "y": 100,
+      "w": 352,
+      "h": 854,
+      "bytes": 9281,
+      "pixels": 300608,
+      "sha256": "2c1c0692b9478fe1f8826adb59ee2b04bef2a3c07f2e784e3e997537ae16553e",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "06-undercroft-rooms.png": {
+      "x": 761,
+      "y": 701,
+      "w": 620,
+      "h": 323,
+      "bytes": 12420,
+      "pixels": 200260,
+      "sha256": "de1b82b80301cff79d96d9bb4dda68e131dcda17a4e0e94fbe857be56765a137",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    }
+  },
+  "native": "NATIVE-UNTESTED; installed bridge 4096/32768 capacity unknown, no flight/collisions/persistence tests"
+}
