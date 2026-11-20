@@ -1,0 +1,300 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Underroot Relay System",
+  "sibling": 4,
+  "role": "Root-Archive / Sealed Quarantine Vault",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "donor_design_language": [
+    "wide-graftloom-slipway",
+    "wide-sable-quoin-gravitic-core",
+    "wide-threnody-scar-foldwing-seedlift"
+  ],
+  "no_geometry_donated": true,
+  "seed": "deterministic-coordinate-formulas-v1",
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 14055,
+    "62": 4525,
+    "66": 14637,
+    "68": 23665,
+    "77": 961,
+    "100": 666602,
+    "101": 122507,
+    "120": 5235,
+    "129": 7864,
+    "131": 9336
+  },
+  "occupied_cells": 869387,
+  "grounded_cells": 869387,
+  "unrooted_cells": 0,
+  "connected_solid_components": 1,
+  "tie_structures": {
+    "ties": 56,
+    "longest": 66,
+    "raw_components": 57
+  },
+  "lossless_rectangles": 5628,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 869387,
+  "setup_bytes": 107650,
+  "plane_sha256": "2aecfa0dcd0e7e1e30b093001060eb5b51685bd1edc631ffaed2b4ed962ae1aa",
+  "setup_sha256": "6be265bd14c729c1eb3c32c19cce42b4f7fa32d715773acd75d6d294af618db6",
+  "literal_sites": {
+    "Western intake checkpoint": [
+      211,
+      521
+    ],
+    "Western specimen handoff": [
+      362,
+      583
+    ],
+    "Inoculation refuge": [
+      297,
+      425
+    ],
+    "West roof vent": [
+      311,
+      322
+    ],
+    "Archive registration": [
+      576,
+      513
+    ],
+    "Root lattice gallery": [
+      724,
+      516
+    ],
+    "Root archive lower neck": [
+      662,
+      669
+    ],
+    "Archive upper optics": [
+      699,
+      323
+    ],
+    "Core transfer aperture": [
+      1024,
+      520
+    ],
+    "Archive viewing gallery": [
+      1096,
+      389
+    ],
+    "Examination descent": [
+      1030,
+      673
+    ],
+    "Core roof bypass": [
+      1107,
+      327
+    ],
+    "Eastern sterile vestibule": [
+      1356,
+      517
+    ],
+    "Decontamination survey": [
+      1434,
+      543
+    ],
+    "Eastern filter station": [
+      1485,
+      640
+    ],
+    "North quarantine vent": [
+      1507,
+      321
+    ],
+    "Sealed specimen cells": [
+      1734,
+      537
+    ],
+    "Quarantine shelter": [
+      1832,
+      626
+    ],
+    "East archive landing": [
+      1769,
+      429
+    ],
+    "East roof vent": [
+      1809,
+      320
+    ],
+    "West deep return": [
+      350,
+      836
+    ],
+    "Registry press": [
+      744,
+      836
+    ],
+    "Deep transfer sluice": [
+      1041,
+      840
+    ],
+    "Root filtration underworks": [
+      1423,
+      840
+    ],
+    "Eastern deep refuge": [
+      1726,
+      839
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 663639,
+      "passed": 25,
+      "total": 25,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 623451,
+      "passed": 25,
+      "total": 25,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 545353,
+      "passed": 25,
+      "total": 25,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      1001,
+      497,
+      1047,
+      545
+    ],
+    "expected_blocked_site": "Core transfer aperture",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 539729,
+      "passed": 24,
+      "total": 25,
+      "bad": [
+        {
+          "name": "Core transfer aperture",
+          "point": [
+            1024,
+            520
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "extent": [
+        2048,
+        1024
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "bytes": 49531,
+      "sha256": "8af98f43e1ee423dcc5155f3fe72f77417b7bd23f5bd7280e149e74df25cbce9",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "01-west-custody-refuge.png",
+      "extent": [
+        430,
+        445
+      ],
+      "origin": [
+        97,
+        309
+      ],
+      "bytes": 8122,
+      "sha256": "273da62f8ce10129ca2ad4d9c6ed25af60927801bfb4e0d5f9689ac1f079ee5b",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "02-root-lattice-archive.png",
+      "extent": [
+        345,
+        410
+      ],
+      "origin": [
+        473,
+        338
+      ],
+      "bytes": 5703,
+      "sha256": "fa39858067c89d1a51019c8aef36c37cbbc87bb9e4b800a65c2e86da6fa1f4b6",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "03-double-shell-examination.png",
+      "extent": [
+        457,
+        483
+      ],
+      "origin": [
+        805,
+        305
+      ],
+      "bytes": 9248,
+      "sha256": "0268d19dd235c9eb1b4d34d2e8ecbf0a41f5b16b073686498aad1f8d834ccafd",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "04-eastern-quarantine.png",
+      "extent": [
+        647,
+        434
+      ],
+      "origin": [
+        1288,
+        331
+      ],
+      "bytes": 10869,
+      "sha256": "63f5a9daa84ee61735d1e36e0fb9847f7eb6272d463c37f1c71d81a46441c5f4",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "05-deep-service-ring.png",
+      "extent": [
+        1610,
+        167
+      ],
+      "origin": [
+        232,
+        782
+      ],
+      "bytes": 7129,
+      "sha256": "01c8e9a37fa08d69482b44006dacfe9f879cb0366ed37288e83fe3b379abc3c4",
+      "indexed_material_pixel_parity": "PASS"
+    }
+  ],
+  "source_static": "CREATOR-STATIC-PASS",
+  "independent_art_technical_shepherd": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "DRAFT/HOLD"
+}
