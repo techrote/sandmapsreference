@@ -1,0 +1,270 @@
+{
+  "kind": "ROOKFALL_CASCADE_LOCKS_ORIGINAL_RACING_WIDE",
+  "revision": "R1",
+  "seed": "0x261120e9",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "rectangles": 2068,
+  "setup_json_bytes": 39918,
+  "work_visits": 766930,
+  "grounded_solids": 766930,
+  "discarded_detached_material_cells": 31857,
+  "remaining_detached": 0,
+  "fluids": 0,
+  "reactive": 0,
+  "material_laws": "49 Slate,58 ReinforcedConcrete,62 SteelPlate,100 BasaltColumns,101 Obsidian,113 ZincSheet,117 BareIron,122 QuartzCrystal. Accepted main: immovable Solid/RuleKernel::None.",
+  "histogram": {
+    "0": 1330222,
+    "49": 48180,
+    "58": 135125,
+    "62": 143693,
+    "100": 256981,
+    "101": 96642,
+    "113": 25200,
+    "117": 56512,
+    "122": 4597
+  },
+  "midge": {
+    "hull": [
+      4,
+      3
+    ],
+    "model_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      126,
+      358
+    ]
+  },
+  "sites": [
+    {
+      "name": "West ignition spawn",
+      "x": 126,
+      "y": 358
+    },
+    {
+      "name": "Launch gantry",
+      "x": 308,
+      "y": 355
+    },
+    {
+      "name": "First lock descent",
+      "x": 554,
+      "y": 600
+    },
+    {
+      "name": "Pressure bypass",
+      "x": 743,
+      "y": 584
+    },
+    {
+      "name": "Second lock rise",
+      "x": 976,
+      "y": 404
+    },
+    {
+      "name": "Central diaphragm route",
+      "x": 1105,
+      "y": 473
+    },
+    {
+      "name": "Third lock descent",
+      "x": 1454,
+      "y": 656
+    },
+    {
+      "name": "Fourth lock rise",
+      "x": 1760,
+      "y": 479
+    },
+    {
+      "name": "East reversal",
+      "x": 1902,
+      "y": 567
+    },
+    {
+      "name": "East recovery apron",
+      "x": 1860,
+      "y": 800
+    },
+    {
+      "name": "Fourth lock return bypass",
+      "x": 1553,
+      "y": 489
+    },
+    {
+      "name": "Lower cascade",
+      "x": 1460,
+      "y": 741
+    },
+    {
+      "name": "Regulator return",
+      "x": 1070,
+      "y": 720
+    },
+    {
+      "name": "Second lock return bypass",
+      "x": 974,
+      "y": 412
+    },
+    {
+      "name": "Foundry underpass",
+      "x": 690,
+      "y": 753
+    },
+    {
+      "name": "West brake zone",
+      "x": 252,
+      "y": 750
+    },
+    {
+      "name": "Finish west low",
+      "x": 126,
+      "y": 769
+    },
+    {
+      "name": "West ignition room",
+      "x": 242,
+      "y": 226
+    },
+    {
+      "name": "Diaphragm operator",
+      "x": 1090,
+      "y": 260
+    },
+    {
+      "name": "East warning bridge",
+      "x": 1822,
+      "y": 214
+    },
+    {
+      "name": "West service room",
+      "x": 370,
+      "y": 846
+    },
+    {
+      "name": "Rotor maintenance",
+      "x": 766,
+      "y": 836
+    },
+    {
+      "name": "Cold sluice service",
+      "x": 1515,
+      "y": 800
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "connected": 1138627,
+      "missing": [],
+      "reached": 23
+    },
+    "23x19": {
+      "connected": 1107460,
+      "missing": [],
+      "reached": 23
+    },
+    "31x27": {
+      "connected": 1050768,
+      "missing": [],
+      "reached": 23
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1411,
+      640,
+      124,
+      78
+    ],
+    "material": 58,
+    "missing": [
+      "Third lock descent"
+    ],
+    "remaining": 22,
+    "finish_reachable": true
+  },
+  "grid_sha256": "be0dbbcd5a453f0890c5ee8f96b446cbeefbad03ff9aadfe7b91cd9058470776",
+  "setup_sha256": "423847475b4a985681a19d0470238821cd46f3c0b6a7985898552dcd8903b6d0",
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "pixels": 2097152,
+      "bytes": 65994,
+      "sha256": "e7564208387668d3eee5abea000458c0c02ba429f90e2e63d0060882c4e23348",
+      "indexed_material_pixel_map": true
+    },
+    "01-west-railhead.png": {
+      "x": 0,
+      "y": 94,
+      "w": 446,
+      "h": 776,
+      "pixels": 346096,
+      "bytes": 10338,
+      "sha256": "b5d83d341835feb1353341dcf01feb1c6a6f4e1d24fd65bb24b08f9cd13ca519",
+      "indexed_material_pixel_map": true
+    },
+    "02-drop-gate.png": {
+      "x": 390,
+      "y": 105,
+      "w": 462,
+      "h": 801,
+      "pixels": 370062,
+      "bytes": 16505,
+      "sha256": "d276fcd923be95c8d6baf8232e4a0f48dce16edaba1564734389261bba7b5b29",
+      "indexed_material_pixel_map": true
+    },
+    "03-mid-compressor.png": {
+      "x": 810,
+      "y": 105,
+      "w": 465,
+      "h": 827,
+      "pixels": 384555,
+      "bytes": 19528,
+      "sha256": "3bccecc5d5bae994d6c655933cf8e75da85b1316753f7e8192632f9cc5b0dfac",
+      "indexed_material_pixel_map": true
+    },
+    "04-sluice-barrage.png": {
+      "x": 1220,
+      "y": 105,
+      "w": 460,
+      "h": 818,
+      "pixels": 376280,
+      "bytes": 21951,
+      "sha256": "424aeae18799dc877e46864dbbc032f5182b167702b650c715cc5f7992e1e886",
+      "indexed_material_pixel_map": true
+    },
+    "05-east-lockworks.png": {
+      "x": 1655,
+      "y": 112,
+      "w": 393,
+      "h": 799,
+      "pixels": 314007,
+      "bytes": 9535,
+      "sha256": "d7e27d57a3ff71a047317756098ccc827bc1d973bc57041714e5a271d58214f3",
+      "indexed_material_pixel_map": true
+    },
+    "06-foundation-shops.png": {
+      "x": 265,
+      "y": 715,
+      "w": 1320,
+      "h": 309,
+      "pixels": 407880,
+      "bytes": 19634,
+      "sha256": "713fe3d4c6d772e2b128b3e44c2268536f3b7e5ad0859def7402aee58ce2d422",
+      "indexed_material_pixel_map": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: Godot/bridge/Rapier actual flight, collision, persistence and installed bridge capacity unmeasured"
+}
