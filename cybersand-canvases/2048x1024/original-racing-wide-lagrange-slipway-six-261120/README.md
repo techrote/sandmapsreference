@@ -1,4 +1,14 @@
-# Lagrange Slipway Six — ORIGINAL racing-wide material-cell landscape
+# Lagrange Slipway Six R2 — current exact geometry
+
+R2 material-cell revision responds to the independent Shepherd functional-district P1 on R1 at `ab1a70b0f72cd83739ca4302a3f4c0db53a63823`. It adds a west ignition transformer/charge bus and operator gearing, three different counterweight-clamp mechanisms, grounded crescent actuator/feed/return linkages, differentiated thermal separator machinery, genuinely equipped work bays in each of the four foundation rooms, and supported direction/finish cues. These additions occupy **91,328 changed material-ID cells** (**73,280** newly occupied; **18,048** reclassified; **zero** removed). The two long racing corridors and central flight void remain open; do not infer native racing from static geometry.
+
+Current R2: **2,097,152 cells**, **5777 nonoverlapping rectangles**, **108859 Setup bytes**, **720712 boundary-grounded inert solids**, **c27a8c8cf42ccada3ffb0fabac9c07e55e24f387c55cac3f88b84d43654aa5b6** indexed-grid SHA-256. Exactly **21/21 original sites** remain reachable at all three conservative full-Midge envelopes; the original physically obstructed Separator westbound case retains **20/21 reachable including finish**. The full authentic overview and six 1:1 crops are rebuilt; actual Godot/Rapier flight, collisions, persistence and installed bridge rectangle capacity remain **NATIVE-UNTESTED**. Legacy possible 4,096 rectangle bridge ceiling remains a risk. Independent exact-HEAD Art/Technical/Shepherd review is required before static promotion; retain Draft/HOLD.
+
+---
+
+# Historical R1 authoring and qualification notes (superseded by R2 above)
+
+## Lagrange Slipway Six — ORIGINAL racing-wide material-cell landscape
 
 A genuinely new, independently authored **2048x1024** orthographic side-elevation CyberSand world, not a rendering of source artwork. Source intent: a reversible Lagrange-mass flight test loop built into an abandoned dry slipway, with immense opposing resonance crescents and a stepped induction foundry.
 

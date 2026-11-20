@@ -35,6 +35,44 @@ function generate(){
  for(let x=48;x<2017;x+=82){let y=roof[x];box(x,y-10,26,7,x<400?M.Q:x<820?M.Z:x<1290?M.Q:x<1700?M.Z:M.Q,true);}
  for(let x=56;x<2010;x+=78){let y=floor[x];box(x,y+3,27,8,x<410?M.Z:x<827?M.Q:x<1310?M.Z:x<1710?M.Q:M.Z,true);}
  for(let i=0;i<14;i++){let x=160+(rand()*1720|0);box(x,floor[x]+6,13,6,i%2?M.Q:M.Z,true);}
+
+ // R2 independently requested physically rooted and functionally differentiated gear.
+ box(151,62,13,143,M.I);box(166,166,46,25,M.T);box(181,142,19,25,M.Z);
+ box(166,197,35,9,M.Q);box(326,61,14,147,M.I);box(287,170,30,24,M.T);
+ beam(339,184,337,247,7,M.Z);box(310,250,32,12,M.Q);
+ for(let [x,len,side] of [[496,44,-1],[634,58,1],[755,39,-1]]){
+   let y=roof[x];beam(x,y-6,x+side*12,y+len,11,M.I);
+   box(x+side*12-13,y+len-7,26,20,M.T);
+   beam(x+side*12,y+len+14,x+side*28,y+len+31,5,M.Z);
+ }
+ box(490,790,77,14,M.T);beam(510,floor[510]-4,508,794,13,M.C);
+ box(512,784,30,10,M.Q);box(676,781,72,17,M.T);
+ beam(704,floor[704]-3,703,786,14,M.C);
+ beam(858,789,894,839,13,M.T);beam(1218,785,1172,842,13,M.I);
+ box(850,812,45,16,M.Z);box(1169,818,53,14,M.Q);
+ beam(876,822,886,862,9,M.I);beam(1203,823,1199,857,9,M.I);
+ for(let [x,w,h] of [[1341,58,42],[1464,76,64],[1591,49,52]]){
+   let y=roof[x];box(x+4,y-4,w-8,13,M.T);
+   beam(x+13,y,x+13,y+h,9,M.I);beam(x+w-14,y,x+w-14,y+h+12,9,M.I);
+   box(x+13,y+h-8,w-27,17,M.Z);
+ }
+ box(1374,790,59,19,M.I);beam(1399,floor[1399]-5,1396,800,13,M.C);
+ box(1481,768,75,21,M.T);beam(1510,floor[1510]-4,1510,778,12,M.C);
+ box(1601,792,58,16,M.Z);beam(1615,floor[1615]-5,1615,801,12,M.C);
+ box(433,981,56,21,M.C);box(443,954,30,27,M.T);
+ beam(481,994,510,958,9,M.I);box(497,955,34,11,M.Z);
+ box(636,986,64,19,M.C);box(646,966,31,20,M.I);box(657,958,17,8,M.Q);
+ box(922,979,60,23,M.C);box(935,949,31,30,M.T);
+ box(1090,982,54,21,M.C);box(1098,956,33,26,M.I);box(1110,950,14,12,M.Z);
+ box(1363,983,61,22,M.C);
+ for(let j=0;j<3;j++)box(1374+j*14,963+j*3,10,20-j*3,M.T);
+ box(1552,976,45,27,M.C);box(1558,953,33,23,M.I);box(1563,947,14,8,M.Q);
+ box(1743,979,58,23,M.C);beam(1761,987,1788,953,8,M.I);
+ box(1774,949,33,14,M.Z);box(1933,978,34,24,M.C);
+ box(1937,950,25,28,M.I);
+ box(1980,257,19,22,M.Z,true);box(1768,245,24,19,M.Q,true);
+ box(203,804,37,14,M.Q,true);box(338,803,36,15,M.Z,true);
+
  let seen=new Uint8Array(N),q=new Int32Array(N),a=0,b=0;function push(i){if(g[i]&&!seen[i]){seen[i]=1;q[b++]=i;}}for(let x=0;x<W;x++){push(x);push((H-1)*W+x);}for(let y=0;y<H;y++){push(y*W);push(y*W+W-1);}while(a<b){let i=q[a++],x=i%W,y=(i-x)/W;if(x)push(i-1);if(x<W-1)push(i+1);if(y)push(i-W);if(y<H-1)push(i+W);}let discarded=0;for(let i=0;i<N;i++)if(g[i]&&!seen[i]){g[i]=0;discarded++;}return {g,grounded:b,discarded};
 }
 function encodeRects(g){let rects=[],last=new Map();for(let y=0;y<H;y++){let cur=new Map();for(let x=0;x<W;){let v=g[y*W+x],x0=x++;while(x<W&&g[y*W+x]===v)x++;if(!v)continue;let key=x0+":"+(x-x0)+":"+v,r=last.get(key);if(r)r[3]++;else{r=[x0,y,x-x0,1,v];rects.push(r);}cur.set(key,r);}last=cur;}return {edits:rects,visits:rects.reduce((s,r)=>s+r[2]*r[3],0)};}

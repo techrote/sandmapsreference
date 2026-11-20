@@ -1,6 +1,6 @@
 {
   "kind": "LAGRANGE_SLIPWAY_SIX_ORIGINAL_RACING_WIDE",
-  "revision": "R1",
+  "revision": "R2",
   "seed": "0x261120d1",
   "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "material_cells": 2097152,
@@ -8,27 +8,27 @@
     2048,
     1024
   ],
-  "rectangles": 4675,
-  "setup_json_bytes": 87865,
-  "work_visits": 647432,
+  "rectangles": 5777,
+  "setup_json_bytes": 108859,
+  "work_visits": 720712,
   "source_limits": {
     "rectangles": 32768,
     "bytes": 1048576,
     "work": 32000000
   },
   "histogram": {
-    "0": 1449720,
+    "0": 1376440,
     "49": 49152,
-    "58": 82140,
-    "62": 68199,
-    "100": 266136,
-    "101": 129798,
-    "113": 16325,
-    "117": 23190,
-    "122": 12492
+    "58": 101863,
+    "62": 88359,
+    "100": 262319,
+    "101": 127932,
+    "113": 23384,
+    "117": 53022,
+    "122": 14681
   },
-  "grounded_solids": 647432,
-  "discarded_detached_material_cells": 65564,
+  "grounded_solids": 720712,
+  "discarded_detached_material_cells": 17347,
   "remaining_detached": 0,
   "fluids": 0,
   "reactive": 0,
@@ -153,17 +153,17 @@
   ],
   "clearances": {
     "19x15": {
-      "connected": 1274716,
+      "connected": 1165805,
       "missing": [],
       "reached": 21
     },
     "23x19": {
-      "connected": 1240316,
+      "connected": 1130812,
       "missing": [],
       "reached": 21
     },
     "31x27": {
-      "connected": 1171627,
+      "connected": 1060220,
       "missing": [],
       "reached": 21
     }
@@ -182,17 +182,17 @@
     "remaining": 20,
     "finish_reachable": true
   },
-  "grid_sha256": "b5f512a0d8319756d26d4c83c703aeb4de1269fdebf79fb7bebc26306b20a955",
-  "setup_sha256": "84ffd4f004eef594d5b93f3cb1909163e2b45217d6a15317429e8940f8820945",
+  "grid_sha256": "c27a8c8cf42ccada3ffb0fabac9c07e55e24f387c55cac3f88b84d43654aa5b6",
+  "setup_sha256": "9d1851ae9709fc2b920306e1a4e600b6549d5684de95300fc31c3a937acd597a",
   "pngs": {
     "overview.png": {
       "x": 0,
       "y": 0,
       "w": 2048,
       "h": 1024,
-      "bytes": 55400,
+      "bytes": 69233,
       "pixels": 2097152,
-      "sha256": "2d167cbba20c78e2f49dfac231036a8b505087dd4babb747a4ab9e613ba8fea4",
+      "sha256": "fd5a694a7f58b82e7f8fdfef61ad0236c5dd4c64e638d921f861c44a6c97a69d",
       "png_crc_zlib_expected": true,
       "source_cell_pixel_map": true
     },
@@ -201,9 +201,9 @@
       "y": 60,
       "w": 432,
       "h": 710,
-      "bytes": 8227,
+      "bytes": 10862,
       "pixels": 306720,
-      "sha256": "71493c04523d6bdca60b6a5661a32395840967fbff7611130a18504b49c3120d",
+      "sha256": "953f61d21730f8d81041351bd212f6d8b41ea847a8d3acfbd66e4ce6f08bafad",
       "png_crc_zlib_expected": true,
       "source_cell_pixel_map": true
     },
@@ -212,9 +212,9 @@
       "y": 173,
       "w": 446,
       "h": 711,
-      "bytes": 12635,
+      "bytes": 13881,
       "pixels": 317106,
-      "sha256": "87d922d1a3023d786e519461cbac5ab86c28d20a6050cbf6a2370aadabd28e05",
+      "sha256": "d3527c6e9c877c4cd859e2d0e78643e9475ca0790378d86ef44dec1fce2c49c0",
       "png_crc_zlib_expected": true,
       "source_cell_pixel_map": true
     },
@@ -223,9 +223,9 @@
       "y": 124,
       "w": 495,
       "h": 806,
-      "bytes": 12686,
+      "bytes": 14377,
       "pixels": 398970,
-      "sha256": "0a639c2e81dec225d34a56c8341e28830168062eef7f4fefd481d315f84cc8d8",
+      "sha256": "1d56c98234385700cf506ed17f84f15638263a35741cc543d5e37a9f02158797",
       "png_crc_zlib_expected": true,
       "source_cell_pixel_map": true
     },
@@ -234,9 +234,9 @@
       "y": 154,
       "w": 438,
       "h": 742,
-      "bytes": 12644,
+      "bytes": 15226,
       "pixels": 324996,
-      "sha256": "78dc3d7e3040dcd60465a9fcac6191c97cd7599004162d976e9c22f9c8e18328",
+      "sha256": "462a3afaaa5dd04d7d281cc917fbe77d2f1f84ac0bfcbf41758185e6fd0412d3",
       "png_crc_zlib_expected": true,
       "source_cell_pixel_map": true
     },
@@ -245,9 +245,9 @@
       "y": 100,
       "w": 352,
       "h": 854,
-      "bytes": 8838,
+      "bytes": 9281,
       "pixels": 300608,
-      "sha256": "19ece7892c1a0303e6d573671b2d869041acb1ba71a5fea4dac1f4e87a658da5",
+      "sha256": "2c1c0692b9478fe1f8826adb59ee2b04bef2a3c07f2e784e3e997537ae16553e",
       "png_crc_zlib_expected": true,
       "source_cell_pixel_map": true
     },
@@ -256,9 +256,9 @@
       "y": 701,
       "w": 620,
       "h": 323,
-      "bytes": 9018,
+      "bytes": 12420,
       "pixels": 200260,
-      "sha256": "dc9eff00c1e4a43c97529ce10fbb7a209fedb1c80b7ae3013f06cd1aadda5f78",
+      "sha256": "de1b82b80301cff79d96d9bb4dda68e131dcda17a4e0e94fbe857be56765a137",
       "png_crc_zlib_expected": true,
       "source_cell_pixel_map": true
     }
