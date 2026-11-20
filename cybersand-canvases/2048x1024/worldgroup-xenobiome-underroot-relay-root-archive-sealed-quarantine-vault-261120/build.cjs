@@ -98,7 +98,7 @@ const build=function build(){
  "Eastern filter station":[1485,640],"North quarantine vent":[1507,321],
  "Sealed specimen cells":[1734,537],"Quarantine shelter":[1832,626],
  "East archive landing":[1769,429],"East roof vent":[1809,320],
- "West deep return":[350,836],"Registry press":[707,840],
+ "West deep return":[350,836],"Registry press":[744,836],
  "Deep transfer sluice":[1041,840],"Root filtration underworks":[1423,840],
  "Eastern deep refuge":[1726,839]
  };
