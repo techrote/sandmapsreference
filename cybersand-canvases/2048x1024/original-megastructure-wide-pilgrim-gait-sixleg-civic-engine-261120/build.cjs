@@ -146,6 +146,50 @@ function worldBuild(){
    R(l,263,r-l,526,M.E);
  // West gyro egress and Commons public vertical lift: real fully contained 31x27 approaches.
  R(891,271,73,49,M.E);R(1303,265,83,64,M.E);R(1310,265,47,212,M.E);
+
+ // R3 functional-art repair — distinct load-carrying elbows, interactive-scale civic works.
+ // Everything below is inert real material; existing flight bands and through shafts retained.
+ function torqueKnee(ax,kx,bx,kind){
+   const accent=kind%2?M.CYAN:M.COP;
+   R(ax-21,587,42,83,M.E);
+   L(ax,570,kx,614,20,M.CON);L(ax+7,570,kx+4,607,7,accent);
+   L(kx,635,bx,679,22,M.STEEL);L(kx-8,639,bx-9,671,7,accent);
+   R(kx-24,603,48,43,M.BRASS);R(kx-16,611,32,27,M.OBS);
+   R(kx-8,619,16,11,kind%2?M.CYAN:M.AMBER);R(kx-25,646,50,7,M.HEAT);
+   L(ax-13,575,kx-23,625,8,M.STEEL);R(bx-20,669,40,16,M.CON);
+   L(bx,793,bx+(kind%2?-14:17),836,17,M.STEEL);
+   R(bx-21,797,43,11,M.BRASS);R(bx-9,807,18,12,accent);R(bx-34,830,69,10,M.CON);
+ }
+ torqueKnee(564,587,584,0);torqueKnee(725,680,718,1);
+ torqueKnee(1304,1351,1330,2);torqueKnee(1833,1846,1842,3);
+ // Rook dock: physical freight receipt with unequal weighed cargo and actual gantry.
+ R(120,664,67,9,M.STEEL);R(124,650,25,14,M.CARB);R(128,644,18,6,M.HAZ);
+ R(157,644,21,19,M.CORR);R(158,638,19,6,M.AMBER);
+ L(185,610,185,647,5,M.COP);R(176,646,20,6,M.BRASS);
+ R(116,630,9,39,M.STEEL);R(121,627,16,5,M.CYAN);
+ // Cloister: two distinguishable instrumented actuator-service workbenches.
+ R(475,654,75,9,M.STEEL);R(482,629,17,25,M.COP);R(502,632,13,21,M.OBS);
+ R(521,631,21,8,M.AMBER);R(531,641,10,13,M.CYAN);
+ R(664,646,30,8,M.STEEL);R(665,622,11,24,M.COP);
+ R(678,630,10,17,M.HEAT);R(684,618,6,10,M.WHITE);
+ // Commons archive: real material-cell folio shelving, indexing and illuminated terminal.
+ R(1295,640,13,34,M.STEEL);R(1311,641,10,33,M.BRASS);
+ R(1324,646,11,28,M.STEEL);R(1325,649,9,3,M.AMBER);
+ R(1340,644,12,29,M.CARB);R(1341,649,10,3,M.CYAN);
+ R(1358,657,12,17,M.BRASS);R(1358,650,12,7,M.WHITE);
+ // Commons public chamber: speaking rostrum, independent registrar desk.
+ R(1467,658,28,16,M.BRASS);R(1470,647,23,11,M.TILE);
+ R(1474,636,16,11,M.AL);R(1477,628,10,8,M.WHITE);
+ R(1500,656,27,12,M.CARB);R(1506,645,16,11,M.GLASSB);
+ // East terminal: staged quarantine screen, classification wicket and release.
+ R(1812,652,10,25,M.HAZ);R(1825,648,13,29,M.STEEL);
+ R(1839,641,16,31,M.GLASSB);R(1842,649,10,7,M.CYAN);
+ R(1859,661,16,9,M.STEEL);R(1861,652,11,9,M.AMBER);
+ // Freight terminal: pallet exchange, offset gantry and unequal containers.
+ R(1920,660,42,10,M.STEEL);R(1924,636,17,24,M.CORR);
+ R(1944,643,16,17,M.RUST);R(1947,637,11,6,M.HAZ);
+ L(1958,607,1958,638,5,M.COP);R(1949,635,15,6,M.BRASS);
+
  // Explicit corridor-wide local recoverability at central ballast: retain both lower and upper bypasses.
  const seen=new Uint8Array(g.length),q=new Uint32Array(g.length);let detached=0,clusters=0,retained=0;for(let i=0;i<g.length;i++){if(!g[i]||seen[i])continue;let head=0,tail=1,root=false;q[0]=i;seen[i]=1;while(head<tail){const p=q[head++],x=p%W,y=(p/W)|0;if(x===0||x===W-1||y===H-1)root=true;for(const v of [p-1,p+1,p-W,p+W])if(v>=0&&v<g.length&&Math.abs(v%W-x)+Math.abs(((v/W)|0)-y)===1&&!seen[v]&&g[v]){seen[v]=1;q[tail++]=v;}}if(!root){clusters++;detached+=tail;for(let j=0;j<tail;j++)g[q[j]]=0;}else retained+=tail;}
  // Canonical horizontal runs with matching adjacent rows merged vertically; no overlap or cell loss.
