@@ -1,0 +1,198 @@
+{
+  "title": "Thalassa Veil Ossuary",
+  "seed": 2611201103,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source": "ORIGINAL-NO-REFERENCE",
+  "sites": {
+    "spawn_mooring": [
+      116,
+      544
+    ],
+    "isolation_valve": [
+      405,
+      651
+    ],
+    "pulse_ledger": [
+      426,
+      627
+    ],
+    "tendon_lift": [
+      769,
+      610
+    ],
+    "upper_resonator": [
+      1010,
+      476
+    ],
+    "core_sampling_port": [
+      1064,
+      561
+    ],
+    "entered_assay": [
+      1076,
+      756
+    ],
+    "lower_return": [
+      1260,
+      747
+    ],
+    "diagnostic_vault": [
+      821,
+      941
+    ],
+    "fractionator_valve": [
+      1486,
+      519
+    ],
+    "crystal_dryer": [
+      1722,
+      578
+    ],
+    "signal_export": [
+      1845,
+      665
+    ],
+    "finish_recovery": [
+      1955,
+      538
+    ]
+  },
+  "gates": {
+    "west": [
+      740,
+      552
+    ],
+    "east": [
+      1320,
+      552
+    ]
+  },
+  "route_bans": {
+    "xmin": 842,
+    "xmax": 1214,
+    "upper_max_y": 492,
+    "lower_min_y": 710
+  },
+  "obstruction": [
+    953,
+    506,
+    172,
+    158
+  ],
+  "crops": [
+    [
+      "01-quarantine-scrubber.png",
+      0,
+      400,
+      400,
+      545
+    ],
+    [
+      "02-tendon-looms.png",
+      375,
+      405,
+      405,
+      540
+    ],
+    [
+      "03-veil-resonator.png",
+      760,
+      0,
+      550,
+      520
+    ],
+    [
+      "04-entered-sampler.png",
+      770,
+      665,
+      540,
+      305
+    ],
+    [
+      "05-fractionators.png",
+      1320,
+      425,
+      405,
+      545
+    ],
+    [
+      "06-export-quay.png",
+      1680,
+      415,
+      368,
+      555
+    ],
+    [
+      "07-vented-vault.png",
+      775,
+      810,
+      245,
+      175
+    ]
+  ],
+  "districts": [
+    "quarantine scrubber",
+    "tendon pulse loom",
+    "descending neural veil and entered sampler",
+    "membrane fractionation",
+    "dry export quay"
+  ],
+  "palette": {
+    "0": [
+      7,
+      12,
+      23
+    ],
+    "58": [
+      79,
+      88,
+      104
+    ],
+    "62": [
+      111,
+      137,
+      154
+    ],
+    "63": [
+      165,
+      193,
+      195
+    ],
+    "72": [
+      23,
+      65,
+      79
+    ],
+    "77": [
+      46,
+      233,
+      203
+    ],
+    "79": [
+      255,
+      171,
+      74
+    ],
+    "100": [
+      48,
+      56,
+      76
+    ],
+    "101": [
+      27,
+      32,
+      49
+    ],
+    "117": [
+      107,
+      93,
+      93
+    ],
+    "128": [
+      173,
+      125,
+      165
+    ]
+  }
+}
