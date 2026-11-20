@@ -150,20 +150,20 @@
     ]
   },
   "material_histogram": {
-    "0": 1521233,
-    "58": 236752,
-    "62": 189942,
-    "100": 149225
+    "0": 1507160,
+    "58": 242201,
+    "62": 198952,
+    "100": 148839
   },
-  "stable_occupied_cells": 575919,
-  "grounded": 575919,
+  "stable_occupied_cells": 589992,
+  "grounded": 589992,
   "detached_cells": 0,
-  "pruned_disconnected_decor_cells": 39267,
-  "rectangles": 6314,
-  "rectangle_work": 575919,
-  "setup_bytes": 114980,
-  "material_plane_sha256": "7d3de7bb24abcf022723617e4764cf4c54a6ab570cf9d3554a07c155d4df856c",
-  "setup_sha256": "4c6491b58b32efe47203cda2a5b89b29576680102beb0d3708a449d157f3d7f1",
+  "pruned_disconnected_decor_cells": 33684,
+  "rectangles": 6572,
+  "rectangle_work": 589992,
+  "setup_bytes": 119608,
+  "material_plane_sha256": "682a97a20c8a90764ed7db488681c4032271e6a51117f2d8d00b01db327242d2",
+  "setup_sha256": "f8bc708b89aa81c19f20ea1e5ae8b0a91a6857103a499ee95fb57044318546a9",
   "clearance": [
     {
       "size": [
@@ -172,7 +172,7 @@
       ],
       "reached": 22,
       "total": 22,
-      "free_centres": 823967,
+      "free_centres": 789409,
       "bad": [],
       "error": null
     },
@@ -183,7 +183,7 @@
       ],
       "reached": 22,
       "total": 22,
-      "free_centres": 788939,
+      "free_centres": 754635,
       "bad": [],
       "error": null
     },
@@ -194,7 +194,7 @@
       ],
       "reached": 22,
       "total": 22,
-      "free_centres": 725390,
+      "free_centres": 691435,
       "bad": [],
       "error": null
     }
@@ -230,7 +230,7 @@
         1024
       ],
       "bytes": 525537,
-      "sha256": "f3b756bc3f2a26c8c23c82117d319f21b54e54e63ba57dd05fd8c774b87ca0a6",
+      "sha256": "7f678d18e0dfef25f6371ee363765241c7015c4039c94490de1ea05d2c9063de",
       "pixel_parity": 2097152
     },
     {
@@ -242,7 +242,7 @@
         399
       ],
       "bytes": 36095,
-      "sha256": "3ea75134a44d5d9000d87a05c2e330e56ee9c51ade5c53bc67891c5a1a736b16",
+      "sha256": "aa8dee0cb0bbc4294d6385c5fe2d3319a9c420411e592fbac7a87a338ddeb0e3",
       "pixel_parity": 141246
     },
     {
@@ -254,7 +254,7 @@
         677
       ],
       "bytes": 73983,
-      "sha256": "1e0e1fd6366143c23b63ffab47657710cad534d6ba96726822667c1227baefdd",
+      "sha256": "1d8c5124ff7c726b2ca64167d7c82b6a89bb036d7ee17c3994887359a744f8d9",
       "pixel_parity": 291787
     },
     {
@@ -266,7 +266,7 @@
         642
       ],
       "bytes": 74662,
-      "sha256": "588a75d892e19a4aacc6af36a816f5b8d72dc712040ffbe7473e269bb70f64a1",
+      "sha256": "39a9c88af7de39f3c8a204629226130c4bfa021df2b41d824d9da9b10c02efdf",
       "pixel_parity": 294036
     },
     {
@@ -302,12 +302,27 @@
         250
       ],
       "bytes": 34685,
-      "sha256": "9c4a7e617f0b70527557578f54cee372be63f8d38f519a05af95a80863af9fe9",
+      "sha256": "04063211339b73dcae3c186fd055c9dd1762ee9f4cdd07458e96f52684a58630",
       "pixel_parity": 136750
     }
   ],
   "native_status": "NATIVE-UNTESTED",
   "bridge_source_max_rectangles": 32768,
   "installed_fallback_risk": 4096,
-  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity",
+  "revision": "R3",
+  "revision_parent_head": "27a06ab541a9f0d5787a420cd1c98f0f773c3da2",
+  "changed_material_cells": 20696,
+  "changed_add": 14826,
+  "changed_excavate": 753,
+  "changed_reassign": 5117,
+  "crop_changed_cell_counts": {
+    "01-tidal-berth": 991,
+    "02-tipped-hull": 6805,
+    "03-crossdock": 9930,
+    "04-rail-sorter": 0,
+    "05-customs": 0,
+    "06-underworks": 2362
+  },
+  "independent_ordered_replay_cells": 589992
 }

@@ -1,27 +1,25 @@
-# Graven Keel — Ship-Tipper Crossdock (R2)
+# Graven Keel — Ship-Tipper Crossdock (R3)
 
-**Wholly original 2048×1024 CyberSand material-ID world · horizontal side elevation, no source image · R2 STATIC-CREATOR-PASS / NATIVE-UNTESTED · DRAFT/HOLD.**
+**Wholly original 2048×1024 CyberSand material-ID world · horizontal side elevation, no source image · R3 STATIC-CREATOR-PASS / NATIVE-UNTESTED · DRAFT/HOLD.**
 
 Accepted CyberSand source (READ ONLY): `de109d0131641d6adc8d25bb9ced7ca3d4991105`. sandmapsreference parent: `99a166e7fcae45eb22be1740e9f33f62faccbcc7`. Material descriptor Git blob `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`; Setup-v2 loader blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`. Seed `152731237`. 4×3 authored Midge model hash `c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96`.
 
-## R2 owner-authored physical-cell revision — 20 November 2026
+## R3 owner-authored material repair — 20 November 2026
 
-Independent Art/Shepherd P1 reviews of predecessor HEAD `7bed4ba0ac3100d85f51af6fed946452cf2fbaf4` found insufficiently legible vessel/cradle/workface transactions. R2 changes the **actual complete material-ID plane**, not only previews or prose. Compared to the predecessor, **50,188 cells differ**: 33,602 added, 3,509 excavated, 13,077 reassigned. The cargo hold, mooring and manifest structures now share a single lower hull; the inclined tipper has connected bearer/ram/pivot contacts; a highline sheave and crossdock handling interfaces, loaded switch wagons, customs scale and distinct grounded lower service fixtures were introduced. A deterministic pre-R2 empty-corridor mask prevents new workfaces from closing historically qualified Midge access routes without excavating original supports.
+Independent R2 [Art P1](https://github.com/techrote/sandmapsreference/pull/45#issuecomment-7035483181) identified two remaining bounded **real-cell functional transactions**. R3 repairs their physical geometry: (1) the western hold/berth jaws engage a **loaded founded roller-transfer frame** and the inclined tipper heel, and (2) the crossdock now contains a genuinely connected **upper trolley, lower load/receiving deck, side-entry control room and independently founded guide**. The cargo access route was deliberately re-excavated where the stable guide would otherwise isolate the exact Crossdock cargo bay. This is not a new art brief and no existing destination was moved.
 
-The exact 6314 in-bounds nonoverlapping rectangles reconstruct all 2097152 cells, and all 575,919 stable inert cells are boundary-connected. Exact 22/22 / 22/22 / 22/22 destination clearance at 19×15, 23×19 and 31×27; true obstacle alternative 241 → 263 steps; 7/7 authentic PNG integrity and source-pixel parity. Gallery files below were regenerated from these cells, not redrawn.
+**Exact R2→R3 cell comparison:** 20,696 actual material-ID cells changed (14,826 additions, 753 excavations, 5,117 rematerialisations). 6,572 disjoint legal rectangles, 119,608 Setup-v2 JSON bytes, 589,992 grounded stable cells, **zero detached**, **22/22** literal sites at 19×15, 23×19 and 31×27, and the same obstruction detour **241 → 263**. Entire grid re-encoded/replayed; **7/7** genuine indexed-material PNG parity checks PASS. See `r3-change-proof.json`.
 
-**Qualification boundaries:** CREATOR-STATIC-PASS only; fresh independent R2 Art/Technical/Shepherd review is required. Installed CyberDemoBridge capacity, native Godot/Rapier flight and collision, sustained progression and cold save/reopen are **NATIVE-UNTESTED**. This is not a claim that every artistic P1 is accepted. The three upper apertures and original site coordinates remain unchanged.
+**Gates:** Creator source-static pass only. New-head independent Art, Technical and Shepherd receipts required. Legacy installed bridge capacity may be 4096, below this 6572 rectangle map. Godot/Rapier collision, flight, sustained simulation and cold save/reopen remain **NATIVE-UNTESTED**. Draft/HOLD; not owner accepted.
 
-### Changed-source district counts
-
-| Physical crop | Changed cells |
+| Genuine district crop | Changed material cells |
 |---|---:|
-| tidal berth | 6,769 |
-| tipper | 7,388 |
-| crossdock | 2,791 |
-| sorter | 4,777 |
-| customs | 6,250 |
-| underworks | 4,390 |
+| 01-tidal-berth | 991 |
+| 02-tipped-hull | 6,805 |
+| 03-crossdock | 9,930 |
+| 04-rail-sorter | 0 |
+| 05-customs | 0 |
+| 06-underworks | 2,362 |
 
 ## Location and freight logistics
 

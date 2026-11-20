@@ -203,7 +203,7 @@ for(const q of Object.values(sites))R(q[0]-21,q[1]-19,43,39,M.AIR);
 
 const r2Base=g.slice();
 
-/* Graven Keel R2 / functional process chain: sheltered berth → engaged angled
+/* Graven Keel R3 / functional process chain: sheltered berth → engaged angled
    tipper → suspended crossdock → shunt frog → customs, plus differentiated
    maintenance below. Real stable material, perpendicular 2D elevation. */
 function r2Room(x,y,w,h){R(x,y,w,8,M.STEEL);R(x,y,8,h,M.WALL);R(x+8,y+h-9,w-8,9,M.STEEL);R(x+w-8,y,8,h,M.WALL);R(x+10,y+12,w-20,h-26,M.AIR);R(x+w-9,y+17,13,h-27,M.AIR);}
@@ -306,6 +306,51 @@ restoreFree(302,482,75,258);restoreFree(231,725,69,162);
 restoreFree(655,465,78,427);restoreFree(753,613,77,91);
 restoreFree(810,461,69,226);
 for(const p of Object.values(sites))restoreFree(p[0]-21,p[1]-19,43,39);
+
+
+/* R3 exact-source functional-art repair: connected berth-clamp to engaged
+   cradle carriage, and continuous upper trolley / suspended pick / founded
+   pallet with side-entry cab. No source/reference trace and no fluid. */
+function r3Beam(x,y,X,Y,t=9,m=M.STEEL){L(x,y,X,Y,t,m);}
+r3Beam(417,704,474,672,15,M.STEEL);r3Beam(444,738,474,672,12,M.WALL);
+R(449,704,14,46,M.STEEL);R(459,699,15,12,M.WALL);
+R(470,664,144,15,M.STEEL);R(476,679,128,7,M.WALL);
+r3Beam(477,674,510,744,10,M.WALL);r3Beam(596,672,621,742,14,M.STEEL);
+R(486,631,91,32,M.WALL);R(494,639,75,17,M.AIR);
+for(const j of [505,532,559])R(j,636,7,23,M.STEEL);
+R(490,624,81,9,M.STEEL);
+for(const j of [502,556]){ring(j,680,13,13,5,M.STEEL);R(j-4,671,8,7,M.WALL);}
+r3Beam(527,626,568,584,13,M.STEEL);r3Beam(563,587,610,625,12,M.STEEL);
+r3Beam(604,626,644,599,13,M.STEEL);R(565,578,11,36,M.WALL);
+R(599,612,12,35,M.WALL);
+r3Beam(583,712,615,745,17,M.STEEL);r3Beam(614,738,658,683,12,M.STEEL);
+R(616,730,72,14,M.WALL);R(665,692,14,49,M.STEEL);
+R(1098,307,195,13,M.STEEL);
+r3Beam(1102,311,1070,367,10,M.STEEL);r3Beam(1281,312,1313,367,10,M.STEEL);
+R(1153,319,80,19,M.WALL);R(1160,338,66,22,M.STEEL);
+for(const j of [1170,1212])ring(j,355,12,12,5,M.WALL);
+R(1184,357,12,205,M.STEEL);R(1205,459,11,104,M.STEEL);
+r3Beam(1158,476,1188,562,8,M.STEEL);r3Beam(1212,476,1212,562,8,M.STEEL);
+R(1146,560,93,13,M.STEEL);R(1151,573,86,36,M.WALL);
+R(1159,580,70,22,M.AIR);
+for(const j of [1167,1198,1224])R(j,578,8,26,M.STEEL);
+R(1156,612,86,9,M.STEEL);
+r3Beam(1152,611,1140,661,9,M.WALL);r3Beam(1235,610,1245,661,9,M.WALL);
+R(1133,661,126,14,M.STEEL);
+for(const j of [1145,1234]){R(j,673,17,73,M.WALL);r3Beam(j,728,j+28,744,8,M.STEEL);}
+R(1101,688,177,11,M.STEEL);
+R(1008,528,81,13,M.STEEL);R(1008,538,11,78,M.WALL);
+R(1079,538,11,78,M.WALL);R(1022,554,57,46,M.AIR);
+R(1029,580,35,9,M.STEEL);R(1040,568,10,12,M.WALL);R(1009,609,81,10,M.STEEL);
+restoreFree(103,379,1847,72);restoreFree(104,306,1830,53);
+for(const x of [125,568,960,1478,1783,1953])restoreFree(x-34,329,69,169);
+for(const x of [258,693,1119,1506,1845])restoreFree(x-38,422,77,463);
+for(const x of [338,783,1318,1550,1825])restoreFree(x-34,507,69,228);
+for(const q of Object.values(sites))restoreFree(q[0]-21,q[1]-19,43,39);
+R(1203,667,11,327,M.STEEL);R(1194,661,28,12,M.WALL);
+R(1198,972,21,22,M.WALL);
+R(1110,622,222,32,M.AIR);R(1281,580,56,75,M.AIR);
+
 
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
