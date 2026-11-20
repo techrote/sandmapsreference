@@ -18,3 +18,12 @@ From spawn at (116,544), move across a braced quarantine scrubber and specimen b
 - Independent Art/Technical/Shepherd review and owner acceptance remain necessary. Do not mark Ready, merge or auto-merge.
 
 Regenerate with `node build.js`. Builder writes Setup-v2, design receipt and PNG assets from fixed-seed geometry. The committed source is NOT a native gameplay-pass certificate.
+
+
+## R2 bounded functional-art root-cause repair (20 November 2026)
+
+Addresses the independent exact-R1 Shepherd P1 with **physical final-material cells**, not illustration. A grounded conduit now carries the tendon-loom specimen toward a two-sided, Midge-enterable examination/readout bench. Three unequal membrane fractionators gained individual grounded calibration valves, physically followed by a dry, six-cartridge loading conveyor and separate serial scanning terminal. The underground diagnostic vault now includes a repair bench and inspection sensor beyond the unchanged literal arrival point. Its service shaft and the export arrival aperture are real cleared material cells. Roof-rooted waveguides keep upper and lower central flight bypasses open.
+
+R1->R2 full-grid changes: 68635 actual final material cells = 58386 additions, 59 excavations, 10190 material substitutions. Final material-ID grid SHA-256 `1629e6d3909629de9f07a6c06c25df44eff940f35d75f0992030de43cd3d780e`, Setup JSON SHA-256 `9b43a6b6608865ad01b0c8b889a54c2aea2449a6b23cd83619e68995513f74ba`. 11356 canonical nonoverlapping rectangles, 617375 boundary-grounded inert solids, zero detached, 211511 Setup bytes. All 13 exact named destinations at 19x15, 23x19, 31x27 centre envelopes are reachable with four cardinal approaches; the actual central obstruction lengthens 31x27 west-to-east flight from 580 to 700 steps, with upper and lower restrictions each passing. All eight indexed source-material PNGs were regenerated and verified to full pixel parity. Reproduce with `node build.js`.
+
+**OPEN Draft/HOLD; author STATIC-PASS only.** Independent exact-R2 Art, Tech and Shepherd qualification pending. Native Godot/Workbench/Rapier load, Midge collision/advancement, tick and cold save/reopen **NATIVE-UNTESTED**. Source 32,768 rectangles is not an installed bridge guarantee; 11,356 exceeds possible installed 4,096 legacy capacity. No owner acceptance, Ready or merge.
