@@ -330,6 +330,86 @@ R(1903,627,110,12,M.STEEL);
 // Preserve every exact named checkpoint; never adjust the coordinates.
 for(let [,p] of Object.entries(sites))R(p[0]-23,p[1]-25,47,51,M.AIR);
 
+
+// R2 genuine operational geography: readable ship hold-to-rail freight transaction.
+R(222,747,42,16,M.WALL);R(226,738,32,7,M.STEEL);
+R(238,763,9,18,M.STEEL);R(260,762,10,19,M.WALL);
+R(351,748,34,20,M.WALL);R(358,742,22,7,M.STEEL);
+R(356,768,11,17,M.STEEL);R(378,768,9,17,M.STEEL);
+L(393,776,462,705,9,M.STEEL);
+R(427,706,45,11,M.STEEL);
+L(465,704,509,641,9,M.WALL);
+R(498,640,73,12,M.STEEL);
+R(510,611,37,21,M.WALL);R(518,602,21,10,M.STEEL);
+L(511,610,529,587,5,M.STEEL);
+R(548,618,16,14,M.STEEL);
+R(648,604,87,13,M.STEEL);
+R(665,588,49,14,M.WALL);
+R(668,578,43,9,M.STEEL);
+R(681,602,12,12,M.WALL);
+R(714,598,12,14,M.WALL);
+// Elevated sheave held between the existing grounded crane and lift frame.
+L(475,284,545,377,8,M.STEEL);
+L(545,377,658,367,9,M.STEEL);
+L(658,367,716,284,7,M.WALL);
+ring(545,379,12,12,5,M.STEEL);
+R(540,391,9,35,M.WALL);
+// Opposed brake shoes/pawls and real side entrances to the hinge machine rooms.
+R(815,627,24,35,M.AIR);
+R(831,648,13,23,M.STEEL);R(849,651,18,9,M.STEEL);
+ring(855,635,11,11,5,M.WALL);
+L(867,638,879,609,7,M.STEEL);
+R(1339,647,13,25,M.STEEL);R(1356,651,23,9,M.WALL);
+ring(1368,636,10,13,5,M.STEEL);
+L(1375,640,1395,612,8,M.WALL);
+R(1377,627,27,36,M.AIR);
+// Loaded rail cradle beneath the indexing wheel; switch frog, shunt stop.
+R(1547,552,106,12,M.STEEL);
+R(1556,563,60,22,M.WALL);
+R(1565,569,42,9,M.STEEL);
+for(const xx of [1569,1602])ring(xx,590,9,9,4,M.STEEL);
+L(1646,553,1693,609,8,M.STEEL);
+L(1693,609,1735,635,10,M.WALL);
+L(1693,609,1726,679,9,M.STEEL);
+R(1683,613,12,43,M.WALL);
+R(1734,653,11,31,M.STEEL);
+L(1704,677,1762,713,8,M.STEEL);
+// Customs weighing/toll machinery and a separate grounded outbound trolley.
+R(1902,575,73,12,M.STEEL);
+R(1912,587,12,38,M.WALL);
+R(1957,589,12,37,M.STEEL);
+R(1925,595,30,11,M.WALL);
+R(1934,606,15,10,M.STEEL);
+L(1885,637,1915,604,8,M.STEEL);
+R(2002,609,18,17,M.WALL);
+L(1988,636,2014,661,8,M.STEEL);
+R(1853,677,79,12,M.STEEL);
+R(1860,686,11,26,M.STEEL);
+R(1916,686,10,28,M.WALL);
+// Five distinct lower service machines: bilge reciprocator, hoist gearbox,
+// unequally geared invert drums, interlocking switches and carriage jack.
+L(203,952,230,903,10,M.WALL);
+ring(236,923,17,17,6,M.STEEL);
+L(266,947,300,901,9,M.STEEL);
+R(289,924,11,30,M.WALL);
+R(551,935,94,10,M.WALL);
+ring(584,922,16,16,5,M.STEEL);
+ring(635,923,20,13,6,M.WALL);
+L(587,922,643,923,5,M.STEEL);
+R(1034,950,122,9,M.WALL);
+ring(1102,927,15,16,6,M.STEEL);
+L(1071,930,1134,930,6,M.STEEL);
+R(1170,931,12,24,M.WALL);
+R(1472,941,119,11,M.STEEL);
+L(1490,925,1524,905,8,M.WALL);
+L(1524,905,1560,932,8,M.STEEL);
+R(1542,930,11,26,M.STEEL);
+R(1792,932,128,12,M.STEEL);
+R(1805,924,77,8,M.WALL);
+for(const xx of [1825,1873])ring(xx,951,11,11,5,M.WALL);
+// Keep true authored exact-site footprints and check independently below.
+for(const [,site] of Object.entries(sites))R(site[0]-23,site[1]-25,47,51,M.AIR);
+
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
@@ -355,7 +435,7 @@ let setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a
 if(jbytes.length>1048576)throw Error("JSON over budget");
 let crops=[["01-serviced-freighter",119,419,423,413],["02-rail-lift",493,161,317,622],["03-bascule-cut",779,236,630,553],["04-rotary-sorter",1404,265,386,520],["05-dispatch-hall",1774,319,274,486],["06-invert-rescue",890,791,438,233]];
 let images=[["overview",[0,0,W,H]],...crops.map(c=>[c[0],c.slice(1)])].map(([name,rect])=>{let data=png(g,rect),pixels=verifyPng(g,rect,data);return{name,rect,bytes:data,sha256:sha256(data),pixels};});
-let receipt={concept:"Silt Meridian — Twin Raised Bascule Rail-Ferry Exchange",original:true,seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],route_graph:{main:['Western arrival buoy','Berth customs manifest','Rail lift receiver','Western bascule hinge','Channel free throat','Eastern bascule hinge','Rotary outer inspection','Sorting frog operator','Dispatch inlet','Outbound customs gate'],upper:['Quay crane crown','Lift upper service','Upper open west','Upper channel traverse','Upper open east'],lower:['Bilge pump station','Rail lift maintenance','Channel invert','Sorter switch below','Dispatch recovery']},material_ids:{"0":"Empty","100":"Basalt - Solid/None","58":"Hard wall - Solid/None","62":"structural solid - Solid/None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"Western arrival buoy",to:"Berth customs manifest",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"};
+let receipt={concept:"Silt Meridian — Twin Raised Bascule Rail-Ferry Exchange",original:true,seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],route_graph:{main:['Western arrival buoy','Berth customs manifest','Rail lift receiver','Western bascule hinge','Channel free throat','Eastern bascule hinge','Rotary outer inspection','Sorting frog operator','Dispatch inlet','Outbound customs gate'],upper:['Quay crane sky inspection','Lift upper service','Upper open west','Upper channel traverse','Upper open east'],lower:['Bilge pump station','Rail lift maintenance','Channel invert','Sorter switch below','Dispatch recovery']},material_ids:{"0":"Empty","100":"Basalt - Solid/None","58":"Hard wall - Solid/None","62":"structural solid - Solid/None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"Western arrival buoy",to:"Berth customs manifest",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"};
 return {g,rect,sites,crops,images,receipt,setup,json,jbytes,status,detour:{reached:detour.reached,bad:detour.bad,component:detour.component},distance:routeDistance,pruned};
 }
 return {generate,sha256,base64,utf8};

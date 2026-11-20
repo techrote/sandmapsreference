@@ -2,7 +2,7 @@
 
 **ORIGINAL/NO-REFERENCE · 2048×1024 · fixed seed 20261120 · Draft/HOLD · NATIVE-UNTESTED.**
 
-A different place from Cinderwake and Ternbreak: a stranded coastal rail-ferry drydock feeding a colossal pair of **raised bascule rail bridge leaves** across a dry cargo cut. The opposite steel leaves stop short of one another to make a Midge-flight throat. East of the gap a ten-spoke wagon indexing wheel feeds a real split-frog classifier, side-entered customs hall and inland dispatch. Above the engineering is a free-air traverse; below it a separate service artery with five grounded workstations and recovery shafts. This is a **static** material-cell freight arrangement, not moving bridge, wheel or cargo simulation.
+A different place from Cinderwake and Ternbreak: a stranded coastal rail-ferry drydock feeding a colossal pair of **raised bascule rail bridge leaves** across a dry cargo cut. The opposite steel leaves stop short of one another to make a Midge-flight throat. East of the gap a ten-spoke wagon indexing wheel feeds a real split-frog classifier, side-entered customs hall and inland dispatch. Above the engineering is a free-air traverse; below it a separate service artery with five grounded workstations and recovery shafts. R2 adds material-cell ship cargo stocks, a dockside transfer hoist, paired hinge-brake operator stations, indexed sorting wagons/frog, a staffed examination scale, and differentiated lower service machinery, preserving all 24 exact flight destinations. This is a **static** material-cell freight arrangement, not moving bridge, wheel or cargo simulation.
 
 Six functional districts:
 1. **Serviced freighter and dry berth, x100–545** — thick asymmetric joined hull, one pilothouse, exposed Midge-sized central cutaway, supported keel blocks, customs manifest and quay crane.
@@ -57,16 +57,16 @@ Six functional districts:
 | Static metric | Generated result |
 |---|---:|
 | Cells | 2,097,152 |
-| Rectangles / accepted source maximum | 5845 / 32,768 |
-| Setup UTF-8 bytes / accepted source maximum | 107964 / 1,048,576 |
-| Material-work painted cells / max | 591841 / 32,000,000 |
-| Grounded occupied / detached | 591841 / 0 |
-| Pruned unsupported pre-final fragments (excluded from final world) | 13595 |
+| Rectangles / accepted source maximum | 7044 / 32,768 |
+| Setup UTF-8 bytes / accepted source maximum | 129581 / 1,048,576 |
+| Material-work painted cells / max | 615813 / 32,000,000 |
+| Grounded occupied / detached | 615813 / 0 |
+| Pruned unsupported pre-final fragments (excluded from final world) | 11097 |
 | Exact Midge destinations at 19×15, 23×19, 31×27 | 24/24, 24/24, 24/24 |
 | Added 74×90 obstacle / exact 31×27 destination reach | 24/24 |
 | Real indexed PNG integrity / material-pixel parity | 7/7 PASS |
-| Material plane SHA-256 | `85bfb801d8f1ee450d376f55dd80a6932e65ddabdde65cff1c5d37021b19f306` |
-| Setup JSON SHA-256 | `06cb15e0d9d2e90278186f00807555955d49bd7bd9de9ac9b069143c257d264e` |
+| Material plane SHA-256 | `78e963437dafb359406779ee13cfef8bd8c6f5c3a7d20f2d7dca8b918ebd9044` |
+| Setup JSON SHA-256 | `9f1ac2833afaeb7093d1ab6ae4bcb0b390d2beb7be480f575cf6c37c6a178d91` |
 
 **Read-only accepted CyberSand main:** `de109d0131641d6adc8d25bb9ced7ca3d4991105`. Setup-v2 loader SHA `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`; material definitions SHA `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`. **Source repo main base:** `99a166e7fcae45eb22be1740e9f33f62faccbcc7`. The supported physical IDs 58, 62 and 100 are inert immovable Solid / RuleKernel::None (as verified against the accepted material descriptors); no unstable powder, fluids, fire, lava or fake IDs.
 
