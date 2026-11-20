@@ -8,40 +8,40 @@
     2048,
     1024
   ],
-  "plane_sha256": "e87946bdc18382fb71edb3ef04e834a0e16935383011057a0655ef5ee7c6dd77",
-  "setup_sha256": "aa3e93ac06bc1bf63a33d4db1fcee48c29dc9da8d563f6422ea52201cd69edc3",
-  "json_bytes": 46122,
-  "rectangle_count": 2445,
+  "plane_sha256": "a1f289bd76445da6555c9d17d6d9e2c1402c7050dba8eaef56b6d403f3829fdf",
+  "setup_sha256": "f50e75193653c09ee8086a54cb7cee4ef8fe6e8816bb835d5ca4fb082f76475c",
+  "json_bytes": 50495,
+  "rectangle_count": 2680,
   "source_rectangle_limit": 32768,
   "possible_installed_fallback_untested": 4096,
-  "construction_work": 818257,
+  "construction_work": 812053,
   "material_histogram": {
-    "0": 1278895,
+    "0": 1285099,
     "3": 12288,
     "8": 6106,
-    "58": 204619,
-    "62": 89114,
-    "65": 99322,
-    "66": 1779,
-    "68": 22195,
-    "69": 5508,
-    "72": 17652,
-    "76": 24594,
-    "77": 837,
-    "79": 1179,
+    "58": 172796,
+    "62": 91446,
+    "65": 101687,
+    "66": 2811,
+    "68": 26517,
+    "69": 12808,
+    "72": 13954,
+    "76": 28475,
+    "77": 1422,
+    "79": 1549,
     "100": 249728,
-    "104": 25904,
-    "117": 22915,
-    "131": 34517
+    "104": 22465,
+    "117": 30648,
+    "131": 37353
   },
   "ground": {
-    "total": 799863,
-    "rooted": 799863,
+    "total": 793659,
+    "rooted": 793659,
     "detached": 0,
     "repair": {
-      "components": 3,
-      "links": 35,
-      "maxSize": 293805,
+      "components": 11,
+      "links": 54,
+      "maxSize": 306956,
       "maxLink": 27
     }
   },
@@ -57,8 +57,8 @@
         19,
         15
       ],
-      "valid_centres": 1048889,
-      "connected_centres": 693811,
+      "valid_centres": 1047495,
+      "connected_centres": 699838,
       "passed": 21,
       "sites": [
         {
@@ -215,8 +215,8 @@
         23,
         19
       ],
-      "valid_centres": 1001296,
-      "connected_centres": 665122,
+      "valid_centres": 1000826,
+      "connected_centres": 671683,
       "passed": 21,
       "sites": [
         {
@@ -373,8 +373,8 @@
         31,
         27
       ],
-      "valid_centres": 913898,
-      "connected_centres": 606116,
+      "valid_centres": 915910,
+      "connected_centres": 613392,
       "passed": 21,
       "sites": [
         {
@@ -539,8 +539,8 @@
         31,
         27
       ],
-      "valid_centres": 894478,
-      "connected_centres": 592291,
+      "valid_centres": 898344,
+      "connected_centres": 599567,
       "passed": 21,
       "sites": [
         {
@@ -702,7 +702,7 @@
         1024
       ],
       "bytes": 2098812,
-      "sha256": "111b21439224137e3e00e75ddc22220ec90176ddec1d967c65afd650aaa3c3b7"
+      "sha256": "b2ad5093843ec50956ef6618a91e33340b3bb574e6398d94f221db5a8460c695"
     },
     "01-ore-hoist.png": {
       "crop": [
@@ -712,7 +712,7 @@
         305
       ],
       "bytes": 108451,
-      "sha256": "5064eea58adc6a0063b6d20f6a885cf99953b5d580580121de0c86f5e0165406"
+      "sha256": "3ec696e99d148a375284d3182e54c2210e4e0133701699ec0f991b9f48f22fba"
     },
     "02-bloom-furnaces.png": {
       "crop": [
@@ -722,7 +722,7 @@
         352
       ],
       "bytes": 105025,
-      "sha256": "f7f527fa4bd8e83f70ad82b3612d9371c80abca62b66a4fde869c495f7ca479c"
+      "sha256": "742a0ca08d8da97dc2af0e96f3ca1869be13b340aeb71f8565debe0081455a6a"
     },
     "03-hanging-ladles.png": {
       "crop": [
@@ -732,7 +732,7 @@
         308
       ],
       "bytes": 151406,
-      "sha256": "9cd2bde2258555d4ae6c7e227899cd967f9ad328ecbc729097572ae90bc83b1f"
+      "sha256": "dc7863ad1716ce7d77c18822c22f8c97e5c8fa2de0328782717c5982945f6a38"
     },
     "04-gravity-casters.png": {
       "crop": [
@@ -742,7 +742,7 @@
         272
       ],
       "bytes": 110913,
-      "sha256": "524123a1acc45a452a6eb097097f3c2d51e7e931b78eb3ee241187c7ac3bb0d7"
+      "sha256": "3adcf012d44f72ffdf45e86077d63566b9588cc5b456af4ec1a7cd7405ab738f"
     },
     "05-quench-freight.png": {
       "crop": [
@@ -752,7 +752,7 @@
         261
       ],
       "bytes": 109840,
-      "sha256": "89f4c11b582260b516cdbbeef12cab494210b510e11ca0b18a3b67f954cb423d"
+      "sha256": "1bd6052c6d4a7f53ae339e0e481a7df9886dd7f31797408df804d8428f6f6182"
     },
     "06-subgrade-repair.png": {
       "crop": [
@@ -762,7 +762,7 @@
         136
       ],
       "bytes": 263656,
-      "sha256": "d067507b3ec5c59378d823bb7e4915de9873c080a25cf70d0d136c6a9762e23c"
+      "sha256": "5b550b7bfd3f2a7e487138c7d2db63cbde1a9e65f327ab72f46d9292a42b4e15"
     }
   },
   "pixel_material_parity_count": 2941903,

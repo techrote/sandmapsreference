@@ -126,6 +126,90 @@ function world(){
  rect(1778,506,8,178,76);rect(1889,509,8,175,76);
  // A genuine arch-pier breach at x1000 forces alternate from upper to lower gallery.
  // The actual obstruction is inserted in audit, never painted permanently.
+ // R2 P1: Rivetfall-specific SIDE-LOADING hopper, twin-ladle transaction and entered underbridge maintenance.
+ // Replace the old diagonal skip that closely resembled Mantlefall; preserve west rescue shaft x305..405.
+ rect(233,468,154,160,0);
+ rect(204,603,93,18,62);rect(211,621,86,63,58);
+ rect(199,574,104,22,117);rect(208,559,82,15,76);
+ rect(212,544,22,16,65);rect(268,540,24,19,65);
+ rect(91,495,202,13,65);rect(96,508,193,8,76);
+ rect(120,520,81,20,117);rect(133,540,55,23,131);
+ for(let x=133;x<190;x+=17)rect(x,548,9,13,72);
+ rect(208,516,12,49,68);rect(272,516,12,49,68);
+ rect(223,545,49,12,62);rect(235,557,25,9,79);
+ rect(237,459,12,39,65);rect(259,459,12,39,65);
+ rect(245,469,18,19,72);rect(198,477,37,13,68);rect(166,472,32,10,68);
+ rect(86,590,110,13,65);rect(93,582,21,9,76);rect(171,582,20,9,76);
+ rect(168,566,11,16,69);rect(176,561,17,8,77);
+ // Different furnaces: connected charge/taps and dry inspection spigots.
+ rect(516,552,19,54,117);rect(533,566,47,13,69);
+ rect(568,579,64,12,65);rect(579,587,48,10,76);
+ rect(615,576,14,32,68);rect(620,574,10,13,79);
+ rect(665,553,25,17,117);rect(680,562,30,12,69);
+ rect(699,571,53,11,131);rect(711,583,36,10,76);
+ rect(530,533,10,13,77);rect(675,530,12,13,79);
+ // Suspended vessels: large oval bowl A and smaller pivoted side-pour pot B.
+ ellipse(846,607,57,42,117);ellipse(846,604,47,32,104);
+ ellipse(846,607,36,25,131);
+ rect(789,586,15,51,62);rect(892,581,15,52,62);
+ rect(803,573,87,13,65);rect(816,563,55,10,76);
+ rect(813,651,66,11,62);
+ rect(813,665,13,20,58);rect(869,665,13,20,58);
+ rect(824,554,13,19,68);rect(872,554,13,19,68);
+ ellipse(981,613,43,38,65);ellipse(981,607,34,30,131);
+ rect(942,580,78,9,117);rect(948,571,66,9,76);
+ rect(1018,594,31,10,69);rect(1044,599,24,8,69);
+ rect(954,653,17,32,58);rect(1002,653,17,32,58);
+ rect(966,559,14,21,68);rect(993,559,13,21,68);
+ // Continuous rooted material transfer shelf to five unequal mould machines.
+ rect(1028,629,162,14,117);rect(1040,643,132,10,62);
+ rect(1063,653,14,31,58);rect(1147,653,14,31,58);
+ rect(1094,615,36,14,76);rect(1102,601,16,14,69);
+ rect(1177,599,30,12,69);rect(1190,587,11,15,79);
+ rect(1193,483,369,11,65);rect(1208,494,331,8,69);
+ for(const [x,w] of [[1224,14],[1316,12],[1387,18],[1460,12],[1530,11]]){
+   rect(x,502,w,40,117);rect(x+2,506,w-4,21,131);
+ }
+ rect(1206,545,66,11,76);rect(1210,557,12,55,68);
+ rect(1275,568,26,11,117);rect(1282,579,12,39,68);
+ rect(1321,551,39,10,69);rect(1330,560,17,43,117);
+ rect(1378,475,25,18,62);rect(1384,493,13,76,69);
+ rect(1452,550,48,12,117);rect(1470,562,13,40,68);
+ rect(1506,581,42,14,131);rect(1543,589,25,10,69);
+ rect(1567,590,21,13,76);rect(1571,607,23,11,117);
+ // Replace repeated shallow lower icons with six rooted, enterable, mechanically distinct repair fronts.
+ // Protected 77px lower return corridor is y757..834; no edits to sites or service shafts.
+ for(const [x,w] of [[80,203],[440,235],[770,233],[1119,223],[1444,239],[1870,118]])rect(x,824,w,69,0);
+ // 1: crane-serviced turbocompressor and open maintenance surround.
+ rect(84,886,193,7,58);rect(89,849,12,37,65);rect(264,850,11,36,65);
+ rect(101,844,163,7,62);rect(132,851,8,18,68);rect(236,851,8,18,68);
+ ellipse(174,869,41,18,117);ellipse(174,869,27,12,72);
+ rect(155,868,39,5,77);rect(147,882,54,5,62);
+ // 2: four-cylinder dry piston rebuild and suspended chain hoist.
+ rect(445,886,223,7,58);rect(449,849,11,37,65);rect(656,849,11,37,65);
+ rect(463,844,190,6,62);
+ for(let x of [475,516,557,599]){rect(x,858,20,25,117);rect(x+6,849,8,12,69);}
+ rect(485,882,156,5,66);rect(576,833,8,11,76);
+ // 3: low, long axle-turning lathe and three exposed drive rolls.
+ rect(773,886,225,7,58);rect(780,848,12,38,65);rect(988,849,11,37,65);
+ rect(795,845,188,6,62);rect(808,867,160,9,117);
+ for(const x of [834,904,958])ellipse(x,878,14,10,68);
+ rect(814,858,131,7,76);rect(918,834,10,11,77);
+ // 4: dry hydraulic spreader rebuild, accessible from main lower flight.
+ rect(1125,886,211,7,58);rect(1129,851,11,35,65);rect(1323,852,11,34,65);
+ rect(1143,845,177,7,62);rect(1172,852,12,21,69);rect(1286,852,12,22,69);
+ rect(1190,872,83,13,117);rect(1210,856,43,16,131);rect(1230,840,11,16,77);
+ // 5: triple dry cartridge filter and branched extraction manifolds.
+ rect(1449,886,228,7,58);rect(1454,850,11,36,65);rect(1664,850,11,36,65);
+ rect(1467,846,194,6,62);
+ for(const x of [1484,1538,1594]){rect(x,854,35,29,117);rect(x+6,862,23,12,72);rect(x+9,875,17,6,79);}
+ rect(1491,842,158,5,69);rect(1607,833,12,12,68);
+ // 6: actual electrical relay control interface for dispatch.
+ rect(1890,886,95,7,58);rect(1898,849,11,37,65);
+ rect(1910,850,64,28,117);rect(1917,856,51,15,72);
+ for(const x of [1925,1940,1955])rect(x,860,7,7,77);
+ rect(1929,879,36,7,66);
+
  const sites=[
  ["Ore wagon arrival",87,281],["Dry hoist catwalk",249,277],
  ["West recovery riser",355,537],["Twin furnace control",473,280],

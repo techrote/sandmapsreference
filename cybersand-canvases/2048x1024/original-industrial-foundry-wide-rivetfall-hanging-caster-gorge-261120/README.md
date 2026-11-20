@@ -2,7 +2,7 @@
 
 **2048×1024 actual material cells · standalone fixed-seed source · Draft/HOLD · NATIVE-UNTESTED.**
 
-An asymmetrical ore-to-bloom suspended foundry spanning a deep dry industrial gorge. The west ore/operated-hoist district feeds two unequal shielded bloom furnaces. A root-supported suspension truss carries a double suspended ladle over a negative-space arch, handing its dry receiving geometry to five different gravity moulds. A guarded shear connects the moulds to an entirely sealed three-cell quench cassette and the east rail freight dispatch. Below the plant is a continuous 77px dry inspection flying route with ventilation, finned coolant, hydraulic return, gear repair, scrubber and dispatch signal workfaces.
+An asymmetrical ore-to-bloom suspended foundry spanning a deep dry industrial gorge. The revised operated side-jaw hopper and horizontal bridge replace the former diagonal skip, feeding two unequal shielded bloom furnaces. A root-supported suspension truss carries a double suspended ladle over a negative-space arch, handing its dry receiving geometry to five different gravity moulds. A guarded shear connects the moulds to an entirely sealed three-cell quench cassette and the east rail freight dispatch. Below the plant is a continuous 77px dry inspection flying route with six mechanically differentiated entered service bays: crane-serviced turbocompressor, piston overhaul, axle-turning lathe, hydraulic spreader, triple-filter service and electrical relay controls.
 
 ## Route graph (authored before construction)
 
@@ -28,3 +28,9 @@ Fixed seed **261120137**; deterministic builder `build.cjs`, executable via `nod
 - `06-subgrade-repair.png` original wide lower maintenance and Midge return corridor
 
 See `receipt.json` for the exact committed grid hash, construction work/histogram, grounded supports, all named sites, route obstruction and image hashes. Keep OPEN Draft/HOLD for independent reviews and native downstream qualification.
+
+## R2 functional-art rework — 20 November 2026
+
+This bounded geometry revision responds to independent Art and Shepherd P1s at exact R1 HEAD `9a5600b434c5b23d71eb9a859f7e302f7f7f94e5`. The former inclined ore-skip was replaced by an operated side-loading jaw/hopper exchange without intruding into the west Midge rescue shaft. Separate furnace dry taps, a large oval transfer crucible, a smaller pivoted side-pour pot, a rooted shared delivery shelf and unequal mould/tool heads form an intelligible furnace → dual-ladle → caster → shear material transaction. All six lower workfaces are now different grounded, human-scale service machines with overhead service frames, while the 77-cell lower flight lane remains open.
+
+R1-to-R2 source-cell difference: **109255** actual cells (22754 additions, 28958 excavations, 57543 material substitutions), **zero water/lava cell edits**. Regenerated and source-verified Setup, receipt and seven authentic PNG files. See receipt for current source-grid SHA and exact immutable technical results. Independent Art, Technical and Shepherd R2 review remains pending. Native load/flight/fluids/save remain untested. No merge or Ready promotion.
