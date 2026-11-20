@@ -75,6 +75,15 @@ for(let j=0;j<6;j++){rect(1340+j*22,859+(j%2)*13,13,59,j%2?M.silver:M.signal)}
 rect(1693,943,208,13,M.frame);line(1710,930,1760,858,10,M.iron);line(1870,930,1820,853,10,M.iron);
 for(let j=0;j<9;j++){let x=1736+j*15;rect(x,878+(j%3)*9,8,26,j%3?M.signal:M.ivory)}
 line(1760,863,1820,856,7,M.plate);
+// The rescue hoist really touches the concrete foundation. Former isolated
+// chain strokes were culled as ungrounded; root both drums to material footings.
+rect(1696,920,38,35,M.iron);rect(1850,920,38,35,M.iron);
+line(1715,929,1733,882,10,M.silver);
+line(1864,930,1852,883,10,M.silver);
+for(let j=0;j<4;j++){
+  rect(1700+j*11,886+(j%2)*8,8,39,j%2?M.signal:M.ivory);
+  rect(1850+j*10,890+(j%2)*7,7,35,j%2?M.signal:M.ivory);
+}
 // Services are physically entered via their vertical relief shafts. Wall fixtures
 // are attached to rock roofs / full stone floors, avoiding unattached islands.
 for(const [x,y,w,h] of bays){
