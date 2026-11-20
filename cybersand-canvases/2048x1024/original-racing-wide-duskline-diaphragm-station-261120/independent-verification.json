@@ -1,0 +1,28 @@
+{
+  "schema": "duskline-independent-source-static-v1",
+  "exact_grid_sha256": "954b9535e2cd359c5e618718475258aa9379568e82783b2a9fce9e3e79653617",
+  "clearance": {
+    "19x15": {
+      "reachable": 33,
+      "connected_free_centres": 1120057
+    },
+    "23x19": {
+      "reachable": 33,
+      "connected_free_centres": 1087734
+    },
+    "31x27": {
+      "reachable": 33,
+      "connected_free_centres": 1023174
+    }
+  },
+  "blocked_31x27": {
+    "reachable": 32,
+    "unreachable_literal_sites": [
+      "Upper transfer datum"
+    ],
+    "finish_reachable": true,
+    "lower_bypass_reachable": true
+  },
+  "png_pixel_parity": 3574922,
+  "native": "NATIVE-UNTESTED"
+}

@@ -1,0 +1,298 @@
+{
+  "schema": "original-landscape-racing-wide-source-static-v1",
+  "title": "Duskline Diaphragm Station",
+  "seed": 3495694624,
+  "engine_authority_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "map_parent_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "total_cells": 2097152,
+  "grid_sha256": "954b9535e2cd359c5e618718475258aa9379568e82783b2a9fce9e3e79653617",
+  "setup_sha256": "410d18fc0a9f99f9b4498f95e7a1c1b3bb3f1d388c576b473d77583c9cdc2de2",
+  "setup_bytes": 35440,
+  "rectangle_count": 1839,
+  "construction_work_cells": 554369,
+  "overlaps": 0,
+  "replay_mismatches": 0,
+  "histogram": {
+    "0": 1542783,
+    "58": 38692,
+    "62": 112534,
+    "100": 296254,
+    "101": 12180,
+    "113": 5798,
+    "117": 82888,
+    "122": 6023
+  },
+  "detached_design_candidates_pruned": 29337,
+  "detached_final_solids": 0,
+  "inert_materials": [
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "uncontained_liquid_count": 0,
+  "falling_mobile_reactive_count": 0,
+  "sites": {
+    "Start / west ignition": [
+      144,
+      523
+    ],
+    "West braking fin": [
+      308,
+      521
+    ],
+    "Hoist crossing": [
+      487,
+      502
+    ],
+    "Pressure intake": [
+      674,
+      503
+    ],
+    "Upper diaphragm gate": [
+      913,
+      501
+    ],
+    "Upper transfer datum": [
+      1041,
+      500
+    ],
+    "East outlet gate": [
+      1269,
+      503
+    ],
+    "Condenser nose": [
+      1527,
+      520
+    ],
+    "Arrestor approach": [
+      1760,
+      525
+    ],
+    "East capture": [
+      1903,
+      538
+    ],
+    "East descent": [
+      1898,
+      651
+    ],
+    "East return": [
+      1757,
+      704
+    ],
+    "Undercondenser return": [
+      1507,
+      706
+    ],
+    "Return crossflow": [
+      1260,
+      702
+    ],
+    "Countershaft return": [
+      1016,
+      702
+    ],
+    "West service return": [
+      682,
+      705
+    ],
+    "West counterweight return": [
+      403,
+      704
+    ],
+    "West climb": [
+      179,
+      625
+    ],
+    "Finish": [
+      145,
+      522
+    ],
+    "Alternate split": [
+      696,
+      594
+    ],
+    "Lower bypass datum": [
+      1019,
+      619
+    ],
+    "Lower bypass exit": [
+      1307,
+      601
+    ],
+    "West operator room": [
+      233,
+      350
+    ],
+    "Damping control cell": [
+      577,
+      331
+    ],
+    "Diaphragm service interior": [
+      1038,
+      318
+    ],
+    "Cryogenic panel": [
+      1448,
+      330
+    ],
+    "Brake control cupola": [
+      1841,
+      355
+    ],
+    "West underworks vault": [
+      217,
+      864
+    ],
+    "Hoist maintenance shaft": [
+      512,
+      858
+    ],
+    "Central pump vault": [
+      831,
+      864
+    ],
+    "Motor clutch vault": [
+      1134,
+      861
+    ],
+    "Cryo manifold vault": [
+      1488,
+      866
+    ],
+    "East inspection vault": [
+      1790,
+      860
+    ]
+  },
+  "primary_route": [
+    "Start / west ignition",
+    "West braking fin",
+    "Hoist crossing",
+    "Pressure intake",
+    "Upper diaphragm gate",
+    "Upper transfer datum",
+    "East outlet gate",
+    "Condenser nose",
+    "Arrestor approach",
+    "East capture",
+    "East descent",
+    "East return",
+    "Undercondenser return",
+    "Return crossflow",
+    "Countershaft return",
+    "West service return",
+    "West counterweight return",
+    "West climb",
+    "Finish"
+  ],
+  "alternate_route": [
+    "Pressure intake",
+    "Alternate split",
+    "Lower bypass datum",
+    "Lower bypass exit",
+    "Condenser nose"
+  ],
+  "obstruction_xywh": [
+    960,
+    478,
+    126,
+    75
+  ],
+  "pngs": {
+    "overview.png": {
+      "source_box": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "sha256": "b154f5903ef1ac17e90c9b4ecb2db789dfdd44a87b62f99ca60f9dea8afa7485",
+      "width": 2048,
+      "height": 1024,
+      "pixel_count": 2097152
+    },
+    "01-ignition-lock.png": {
+      "source_box": [
+        0,
+        260,
+        470,
+        470
+      ],
+      "sha256": "f1a492b112917b3e9c65921efc91fc307d499547733052284de430ae13af8998",
+      "width": 470,
+      "height": 470,
+      "pixel_count": 220900
+    },
+    "02-counterweight-hoists.png": {
+      "source_box": [
+        360,
+        130,
+        480,
+        470
+      ],
+      "sha256": "6a4ff5f63f10f69f8ce0dc6018452b6620512b4a99f529181b6938430fa293cd",
+      "width": 480,
+      "height": 470,
+      "pixel_count": 225600
+    },
+    "03-double-diaphragm.png": {
+      "source_box": [
+        760,
+        115,
+        520,
+        530
+      ],
+      "sha256": "20f74d0d1a2ea035d03e585da72995d6e20e631635c27388915f6ca31f01f268",
+      "width": 520,
+      "height": 530,
+      "pixel_count": 275600
+    },
+    "04-cryogenic-bellows.png": {
+      "source_box": [
+        1240,
+        130,
+        480,
+        500
+      ],
+      "sha256": "5544e58a785d986b305025006d3bf574f3f65220d8c980b32b41113bc7d8e463",
+      "width": 480,
+      "height": 500,
+      "pixel_count": 240000
+    },
+    "05-eastern-arrestor.png": {
+      "source_box": [
+        1570,
+        300,
+        478,
+        500
+      ],
+      "sha256": "3f68721478b8d2cbfe45a130882d6e374d5c80087dd5c805f7c4cc568ccecfe8",
+      "width": 478,
+      "height": 500,
+      "pixel_count": 239000
+    },
+    "06-inhabited-service-vaults.png": {
+      "source_box": [
+        620,
+        645,
+        730,
+        379
+      ],
+      "sha256": "6b902f75ad26b883cab63a5507175ac9bfa33386139115dc9c9d4d54050317c1",
+      "width": 730,
+      "height": 379,
+      "pixel_count": 276670
+    }
+  },
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "independent Art/Tech/Shepherd pending"
+}
