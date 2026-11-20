@@ -1,0 +1,518 @@
+{
+  "concept": "Oxbow-6 Cyclone Transfer Lock",
+  "creator_lane": "original/industrial-hazard-wide",
+  "seed": 202611206,
+  "world": [
+    2048,
+    1024
+  ],
+  "engine_main_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "source_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "grid_sha256": "a953f1668ddcbd50bfb428934b25901ec34482ec2a20d5882db4a3efff12efd0",
+  "setup_sha256": "102845097404062434e33902203760c14d42b24d0f3062f86e80127420012e27",
+  "setup_json_bytes": 56086,
+  "rectangles": 2990,
+  "work": 510864,
+  "histogram": {
+    "0": 1586288,
+    "3": 7646,
+    "8": 2166,
+    "58": 163783,
+    "62": 80804,
+    "68": 28248,
+    "70": 11181,
+    "76": 1744,
+    "77": 2089,
+    "79": 1167,
+    "100": 85475,
+    "101": 86016,
+    "104": 26985,
+    "117": 13420,
+    "120": 140
+  },
+  "solid_connectivity": {
+    "total": 501052,
+    "grounded": 501052,
+    "detached": 0
+  },
+  "clearance": {
+    "19x15": {
+      "visited": 1116591,
+      "reachable": 16,
+      "centres": [
+        [
+          153,
+          480
+        ],
+        [
+          284,
+          698
+        ],
+        [
+          332,
+          878
+        ],
+        [
+          522,
+          395
+        ],
+        [
+          713,
+          758
+        ],
+        [
+          722,
+          253
+        ],
+        [
+          850,
+          569
+        ],
+        [
+          1047,
+          550
+        ],
+        [
+          1202,
+          711
+        ],
+        [
+          1403,
+          395
+        ],
+        [
+          1495,
+          638
+        ],
+        [
+          1350,
+          858
+        ],
+        [
+          1805,
+          628
+        ],
+        [
+          1894,
+          723
+        ],
+        [
+          1960,
+          485
+        ],
+        [
+          1152,
+          145
+        ]
+      ]
+    },
+    "23x19": {
+      "visited": 1070627,
+      "reachable": 16,
+      "centres": [
+        [
+          153,
+          480
+        ],
+        [
+          284,
+          698
+        ],
+        [
+          332,
+          878
+        ],
+        [
+          522,
+          395
+        ],
+        [
+          713,
+          758
+        ],
+        [
+          722,
+          253
+        ],
+        [
+          850,
+          569
+        ],
+        [
+          1047,
+          550
+        ],
+        [
+          1202,
+          711
+        ],
+        [
+          1403,
+          395
+        ],
+        [
+          1495,
+          638
+        ],
+        [
+          1350,
+          858
+        ],
+        [
+          1805,
+          628
+        ],
+        [
+          1894,
+          723
+        ],
+        [
+          1960,
+          485
+        ],
+        [
+          1152,
+          145
+        ]
+      ]
+    },
+    "31x27": {
+      "visited": 979678,
+      "reachable": 16,
+      "centres": [
+        [
+          153,
+          480
+        ],
+        [
+          284,
+          698
+        ],
+        [
+          332,
+          878
+        ],
+        [
+          522,
+          395
+        ],
+        [
+          713,
+          758
+        ],
+        [
+          722,
+          253
+        ],
+        [
+          850,
+          569
+        ],
+        [
+          1047,
+          550
+        ],
+        [
+          1202,
+          711
+        ],
+        [
+          1403,
+          395
+        ],
+        [
+          1495,
+          638
+        ],
+        [
+          1350,
+          858
+        ],
+        [
+          1805,
+          628
+        ],
+        [
+          1894,
+          723
+        ],
+        [
+          1960,
+          485
+        ],
+        [
+          1152,
+          145
+        ]
+      ]
+    }
+  },
+  "alternate_route": {
+    "box": [
+      970,
+      50,
+      55,
+      275
+    ],
+    "reachable": 16,
+    "visited": 958874,
+    "detours": [
+      {
+        "name": "Freight airlock spawn",
+        "baseline": 0,
+        "blocked": 0,
+        "extra": 0
+      },
+      {
+        "name": "Dockside gauge hall",
+        "baseline": 787,
+        "blocked": 787,
+        "extra": 0
+      },
+      {
+        "name": "West recovery track",
+        "baseline": 1075,
+        "blocked": 1075,
+        "extra": 0
+      },
+      {
+        "name": "Cyclone upper approach",
+        "baseline": 722,
+        "blocked": 722,
+        "extra": 0
+      },
+      {
+        "name": "Cyclone assay station",
+        "baseline": 1276,
+        "blocked": 1276,
+        "extra": 0
+      },
+      {
+        "name": "Cyclone bypass ridge",
+        "baseline": 796,
+        "blocked": 796,
+        "extra": 0
+      },
+      {
+        "name": "Kiln west control",
+        "baseline": 1224,
+        "blocked": 1224,
+        "extra": 0
+      },
+      {
+        "name": "Breached kiln interior",
+        "baseline": 1402,
+        "blocked": 1852,
+        "extra": 450
+      },
+      {
+        "name": "Thermal isolation office",
+        "baseline": 1718,
+        "blocked": 2168,
+        "extra": 450
+      },
+      {
+        "name": "Canyon upper survey",
+        "baseline": 1603,
+        "blocked": 2053,
+        "extra": 450
+      },
+      {
+        "name": "Quench sampling berth",
+        "baseline": 1958,
+        "blocked": 2388,
+        "extra": 430
+      },
+      {
+        "name": "Deep coolant return",
+        "baseline": 2013,
+        "blocked": 2463,
+        "extra": 450
+      },
+      {
+        "name": "Exhaust under-gallery",
+        "baseline": 2258,
+        "blocked": 2688,
+        "extra": 430
+      },
+      {
+        "name": "Chimney operator station",
+        "baseline": 2544,
+        "blocked": 2872,
+        "extra": 328
+      },
+      {
+        "name": "Eastern evacuation hatch",
+        "baseline": 2372,
+        "blocked": 2700,
+        "extra": 328
+      },
+      {
+        "name": "Open-sky return",
+        "baseline": 1334,
+        "blocked": 1552,
+        "extra": 218
+      }
+    ]
+  },
+  "sites": [
+    [
+      "Freight airlock spawn",
+      153,
+      480
+    ],
+    [
+      "Dockside gauge hall",
+      284,
+      698
+    ],
+    [
+      "West recovery track",
+      332,
+      878
+    ],
+    [
+      "Cyclone upper approach",
+      522,
+      395
+    ],
+    [
+      "Cyclone assay station",
+      713,
+      758
+    ],
+    [
+      "Cyclone bypass ridge",
+      722,
+      253
+    ],
+    [
+      "Kiln west control",
+      850,
+      569
+    ],
+    [
+      "Breached kiln interior",
+      1047,
+      550
+    ],
+    [
+      "Thermal isolation office",
+      1202,
+      711
+    ],
+    [
+      "Canyon upper survey",
+      1403,
+      395
+    ],
+    [
+      "Quench sampling berth",
+      1495,
+      638
+    ],
+    [
+      "Deep coolant return",
+      1350,
+      858
+    ],
+    [
+      "Exhaust under-gallery",
+      1805,
+      628
+    ],
+    [
+      "Chimney operator station",
+      1894,
+      723
+    ],
+    [
+      "Eastern evacuation hatch",
+      1960,
+      485
+    ],
+    [
+      "Open-sky return",
+      1152,
+      145
+    ]
+  ],
+  "images": {
+    "overview.png": {
+      "bytes": 31776,
+      "sha256": "7af765563bc1afbde48c720b17f8c7d173dbd55dd25efbd94b865fd9e281bb29",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-freight-airlock.png": {
+      "bytes": 6758,
+      "sha256": "cc19bb33d78dff9807800e54e68af17e92348d9854723f598079a6c6f00882c1",
+      "crop": [
+        25,
+        235,
+        395,
+        650
+      ]
+    },
+    "02-cyclone-separators.png": {
+      "bytes": 7330,
+      "sha256": "cc1e0068f13412b5138721886199994040210b741405eb0302b7d8759925481e",
+      "crop": [
+        413,
+        200,
+        410,
+        675
+      ]
+    },
+    "03-breached-annular-kiln.png": {
+      "bytes": 10660,
+      "sha256": "97056136a8587c4547fe73e90387a0b17fcfca89a69c62e3e9759d99dae53b45",
+      "crop": [
+        822,
+        205,
+        443,
+        680
+      ]
+    },
+    "04-quenched-canyon.png": {
+      "bytes": 7202,
+      "sha256": "57ff9d2dee11e22acfd9eea50fcefb03bd00fbf80381734a2210e7a776b1da0a",
+      "crop": [
+        1263,
+        224,
+        418,
+        660
+      ]
+    },
+    "05-triple-chimney.png": {
+      "bytes": 6937,
+      "sha256": "26763d6ed78d8573e5cdc709de55be0412493a03afcfb9186a10e5415f16ad6a",
+      "crop": [
+        1662,
+        105,
+        380,
+        800
+      ]
+    },
+    "06-deep-utility-return.png": {
+      "bytes": 4254,
+      "sha256": "f32605410dcb16ab927465882f71a3be7367e3bad1e8746f74e390ab3ed186f9",
+      "crop": [
+        734,
+        775,
+        630,
+        230
+      ]
+    }
+  },
+  "flags": {
+    "native": "NATIVE-UNTESTED",
+    "fluid": "initial-four-neighbor-sealed-only",
+    "bridge": "source 32768; installed possibly 4096 UNVERIFIED",
+    "material": "only native inert solid IDs plus sealed 3 water and 8 lava"
+  }
+}
