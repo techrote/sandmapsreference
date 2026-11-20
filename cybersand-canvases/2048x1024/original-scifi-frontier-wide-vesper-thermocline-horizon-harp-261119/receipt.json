@@ -1,0 +1,278 @@
+{
+  "concept": "Vesper Thermocline — Horizon Harp",
+  "original_no_reference": true,
+  "seed": 81102619,
+  "extent": [
+    2048,
+    1024
+  ],
+  "base_repository_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "read_only_engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "midge_definition_blob": "228399e38a0e0ab215b9f48698edce67a7a35799",
+  "midge_hull": [
+    4,
+    3
+  ],
+  "midge_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+  "material_plane_sha256": "4c9a39278d4c730090e92b683d136b7a5a49593d644372ae8e237204aa37627d",
+  "setup_json_sha256": "23c910e9829403250b77f3d772b473d16401f15c09c614c99df6e1f28a9b0ddd",
+  "plane_cells": 2097152,
+  "solid_cells": 540105,
+  "boundary_grounded_solid_cells": 540105,
+  "detached_final_solid_cells": 0,
+  "discarded_during_authoring": 16949,
+  "source_material_histogram": {
+    "49": 12645,
+    "58": 41803,
+    "62": 74408,
+    "63": 1523,
+    "66": 1205,
+    "68": 5967,
+    "77": 861,
+    "79": 262,
+    "80": 1447,
+    "100": 219555,
+    "101": 116358,
+    "120": 6611,
+    "121": 3525,
+    "122": 1223,
+    "129": 10519,
+    "130": 34794,
+    "131": 7399
+  },
+  "rectangle_edits": 5543,
+  "rectangle_work": 540105,
+  "json_bytes": 105492,
+  "source_rectangle_limit": 32768,
+  "source_json_limit": 1048576,
+  "source_replay_work_limit": 32000000,
+  "installed_bridge_capacity": "UNKNOWN — legacy 4096 fallback possible",
+  "midge_spawn": [
+    145,
+    653
+  ],
+  "exact_sites": {
+    "West arrival": [
+      145,
+      653
+    ],
+    "Habitat canteen": [
+      201,
+      555
+    ],
+    "Archive overlook": [
+      395,
+      464
+    ],
+    "Rover repair": [
+      576,
+      665
+    ],
+    "West transmitter": [
+      119,
+      348
+    ],
+    "West drill relay": [
+      620,
+      670
+    ],
+    "Cleft north": [
+      802,
+      345
+    ],
+    "Harp upper": [
+      1020,
+      525
+    ],
+    "Harp western console": [
+      942,
+      577
+    ],
+    "Harp east console": [
+      1123,
+      579
+    ],
+    "Harp base": [
+      1096,
+      827
+    ],
+    "Cleft lower": [
+      1170,
+      745
+    ],
+    "East observation": [
+      1624,
+      352
+    ],
+    "Spectrograph bay": [
+      1698,
+      440
+    ],
+    "East medical": [
+      1663,
+      530
+    ],
+    "East storage": [
+      1814,
+      609
+    ],
+    "East boarding": [
+      1963,
+      602
+    ],
+    "West archive": [
+      350,
+      872
+    ],
+    "Tectonic corridor": [
+      1107,
+      910
+    ],
+    "Cryobank": [
+      1618,
+      877
+    ],
+    "Cryobank maintenance vault": [
+      1778,
+      884
+    ],
+    "East relief shaft": [
+      1718,
+      780
+    ]
+  },
+  "conservative_free_centre_bfs": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "sites_reached": 22,
+      "total": 22,
+      "reachable_centres": 1295589
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "sites_reached": 22,
+      "total": 22,
+      "reachable_centres": 1244408
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "sites_reached": 22,
+      "total": 22,
+      "reachable_centres": 1154150
+    }
+  ],
+  "physical_obstruction_detour": {
+    "obstruction": [
+      865,
+      775,
+      64,
+      48
+    ],
+    "air_converted_to_solid": 2730,
+    "reached": 22,
+    "total": 22,
+    "centres": 1150633,
+    "bad": []
+  },
+  "images": [
+    {
+      "name": "overview",
+      "box": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 82211,
+      "sha256": "9d1ec1502e4a4240ad4ef26f151effe142d35462cae674b604fc46ec2c92cbdf"
+    },
+    {
+      "name": "01-west-habitat",
+      "box": [
+        60,
+        335,
+        505,
+        390
+      ],
+      "bytes": 13599,
+      "sha256": "60f3b618ff74091cbb0b6a31286557c0eb3f8d36cfdff062bf868c60e5872f97"
+    },
+    {
+      "name": "02-horizon-harp",
+      "box": [
+        720,
+        270,
+        590,
+        540
+      ],
+      "bytes": 10985,
+      "sha256": "446cb97f4af583db817446656375aa84cc3b05884e351a895304dcfc4dd5aa7c"
+    },
+    {
+      "name": "03-east-spectrograph",
+      "box": [
+        1480,
+        225,
+        545,
+        520
+      ],
+      "bytes": 16719,
+      "sha256": "8c4e9e08be33a681687306514cb654e22fb27ddf1ae4393258dada7224cf5bd5"
+    },
+    {
+      "name": "04-subplate-vaults",
+      "box": [
+        610,
+        735,
+        805,
+        265
+      ],
+      "bytes": 14603,
+      "sha256": "f4f0b0461b87a8e29a782ea871828279568b56a872ae341c511d242c173916c8"
+    },
+    {
+      "name": "05-field-stations",
+      "box": [
+        104,
+        590,
+        580,
+        330
+      ],
+      "bytes": 11119,
+      "sha256": "127405ee5c4d9fb0ffa21661ae17424acdfc1a9a00ac4d76b27cd61461b5e364"
+    },
+    {
+      "name": "06-cryobank-vault",
+      "box": [
+        1470,
+        795,
+        525,
+        200
+      ],
+      "bytes": 8021,
+      "sha256": "69009e0f0be8a1a06489a37a941c2336c8cc195eaabac4d85232edf60e8557c3"
+    }
+  ],
+  "static_truth": "R2 SOURCE-CELL GRID / EXACT ROUTES / LOSSLESS RECTANGLE REPLAY VERIFIED; NO INSTALLED NATIVE LOAD",
+  "native": "NATIVE-UNTESTED",
+  "independent_art_technical_shepherd_review": "P1 SHEPHERD FOLLOW-UP REWORK SUBMITTED; EXACT R2 HEAD ART/TECH/SHEPHERD AUDITS PENDING",
+  "r2_start_head": "0de5f781b73fd9e19c6ee54b9c6e3da27cec64db",
+  "r2_material_changes": {
+    "added_air_to_solid": 20761,
+    "erased_solid_to_air": 216,
+    "rematerialized_solid": 2535,
+    "total": 23512
+  },
+  "r2_notes": "Functional material-cell workfaces: west sample and rover bay, twin Harp calibration receivers, east spectroscopy/medical/boarding, entered and grounded cryobank maintenance vault. No changes to earlier original or source-led PRs."
+}
