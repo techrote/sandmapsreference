@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-biomech-wide",
+  "map_role": "Fault-basin bridge and excavated memory retrieval campus",
+  "anchor_donors": [],
+  "macro_topology": [
+    "basin",
+    "nested_cavities",
+    "bridge"
+  ],
+  "density_profile": "Dense roof-rooted process clusters over open fault airspace; alternating terraced industrial shelves and excavated voids",
+  "route_grammar": {
+    "primary": "West quarantine → fault rim → basin inspection → east sift → drydock dispatch, connected in main level",
+    "upper": "Constrained underbridge bypass at y≤532 across central x850–1240",
+    "lower": "Constrained basin-floor bypass at y≥723 across central x850–1240",
+    "subfloor": "Separate accessible excavation branches with return shafts"
+  },
+  "strong_motifs": [
+    "Unequal geological terraces",
+    "Two spans of roof-supported cable truss and indexed transfer cassette",
+    "Three cut-through lower diagnostic cavities",
+    "Offset export crane jaws",
+    "Open sky-wells between discontinuous roof islands"
+  ],
+  "interesting_relationships": [
+    "Roof-rooted bridge cradle connects upper cable load paths to cargo transfer without blocking broad lower Midge lanes",
+    "Terraced floor depression preserves separate lower route and indexed inspection station",
+    "Excavated vaults connect to the primary flight field via 80–94-cell-wide shafts",
+    "Asymmetric east fractionation rack leads to an incompletely furnished shipment quay"
+  ],
+  "authoring_affordances": [
+    {
+      "kind": "expansion_seam",
+      "region": [
+        390,
+        100,
+        75,
+        340
+      ],
+      "note": "Wide unroofed opening between quarantine and extraction for future hanging modules"
+    },
+    {
+      "kind": "empty_interior",
+      "region": [
+        960,
+        920,
+        245,
+        69
+      ],
+      "note": "Lower central vault intentionally sparse and Midge-reachable"
+    },
+    {
+      "kind": "service_bay",
+      "region": [
+        1320,
+        150,
+        160,
+        250
+      ],
+      "note": "Unfurnished upper east process bay available for author-built chemistry or NPC work"
+    },
+    {
+      "kind": "bridge_repair",
+      "region": [
+        890,
+        445,
+        250,
+        20
+      ],
+      "note": "Long narrow bridge span suitable for a later reroutable collapse variant"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "type": "bridge_failure",
+      "region": [
+        890,
+        445,
+        250,
+        20
+      ],
+      "alternate_exits": [
+        "upper bypass",
+        "lower basin traverse"
+      ]
+    },
+    {
+      "type": "memory_transfer_activation",
+      "region": [
+        970,
+        325,
+        155,
+        140
+      ],
+      "note": "Contained cassette and reachable workface below"
+    },
+    {
+      "type": "vault_reveal",
+      "region": [
+        1110,
+        790,
+        100,
+        180
+      ],
+      "note": "Vertical descent to the underbridge diagnostic cavity"
+    }
+  ],
+  "procedural_exemplar_value": "Tests independent generation of terraced basin floors, tri-vault excavation and return shafts, ceiling-cable bridges over physical setpiece voids, and unequal district support grammar without a monolithic central vessel.",
+  "similarity_avoidance": "Unlike Khepri's suspended octagonal kiln, Ternary's roof prongs and Orison's primarily serial roof-hung process bays, this level uses a geological basin and a narrow indexed cable bridge over separately connected underfloor vaults.",
+  "diversity_axes": {
+    "macro_topology": "basin",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "layered",
+    "landmark_family": "bridge",
+    "support_form": "mixed",
+    "environment_relation": "geological",
+    "incompleteness": "excavation"
+  },
+  "source_grid_sha256": "b351bd89c2c4dcdebaace0cd6bcd345ab85c155524d3ce98cb119203afdc2e16",
+  "source_parent_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "read_only_engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "native_status": "NATIVE-UNTESTED"
+}

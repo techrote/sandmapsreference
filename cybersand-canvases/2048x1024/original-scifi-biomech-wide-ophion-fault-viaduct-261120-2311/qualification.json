@@ -1,0 +1,500 @@
+{
+  "source": "ORIGINAL-NO-REFERENCE",
+  "seed": 2611202311,
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "read_only_engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_cell_count": 2097152,
+  "grid_sha256": "b351bd89c2c4dcdebaace0cd6bcd345ab85c155524d3ce98cb119203afdc2e16",
+  "setup_sha256": "4aa05d6f39f9a815ad990ee043050fee6d4dc696c0670c3a17149c9150cc707e",
+  "setup_bytes": 38753,
+  "setup_root_keys": [
+    "version",
+    "extent",
+    "actors",
+    "next_id",
+    "selected",
+    "edits",
+    "response",
+    "liquid_policy",
+    "normalize",
+    "rule_radius",
+    "source",
+    "material",
+    "brush",
+    "fire"
+  ],
+  "rectangle_count": 1992,
+  "rectangle_limit_source": 32768,
+  "native_installation_status": "NATIVE-UNTESTED: source supports 32768; compatible Godot/bridge binary not executed",
+  "construction_writes": 655809,
+  "write_limit": 32000000,
+  "material_histogram": {
+    "0": 1441343,
+    "58": 50964,
+    "62": 49362,
+    "63": 12597,
+    "77": 1143,
+    "79": 3488,
+    "100": 102050,
+    "101": 359409,
+    "117": 73848,
+    "128": 2948
+  },
+  "occupied": 655809,
+  "grounded": 655809,
+  "nominal_unsupported_removed": 18008,
+  "detached_final": 0,
+  "fluid_falling_reactive_final": 0,
+  "rectangle_overlap_count": 0,
+  "replay_cell_mismatches": 0,
+  "canonical_rectangle_reencode_identity": true,
+  "sites": {
+    "19x15": {
+      "visited_centres": 1022433,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "fault_west_rim": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "fault_service": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "bridge_west": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "bridge_overlook": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "bridge_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_sift_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_sift_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_quay": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "23x19": {
+      "visited_centres": 990691,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "fault_west_rim": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "fault_service": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "bridge_west": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "bridge_overlook": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "bridge_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_sift_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_sift_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_quay": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "31x27": {
+      "visited_centres": 830007,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "fault_west_rim": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "fault_service": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "bridge_west": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "bridge_overlook": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "bridge_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_sift_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_sift_station": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_quay": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    }
+  },
+  "obstruction": [
+    958,
+    555,
+    170,
+    131
+  ],
+  "route_bans": {
+    "xmin": 850,
+    "xmax": 1240,
+    "upper_max_y": 532,
+    "lower_min_y": 723
+  },
+  "route_distances": {
+    "baseline": 1803,
+    "blocked": 1949,
+    "upper": 1967,
+    "lower": 2021
+  },
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "covered": false,
+      "reachable": true
+    },
+    "quarantine_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "quarantine_station": {
+      "covered": false,
+      "reachable": true
+    },
+    "fault_west_rim": {
+      "covered": false,
+      "reachable": true
+    },
+    "fault_service": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_vault": {
+      "covered": false,
+      "reachable": true
+    },
+    "bridge_west": {
+      "covered": false,
+      "reachable": true
+    },
+    "bridge_overlook": {
+      "covered": false,
+      "reachable": true
+    },
+    "entered_index": {
+      "covered": false,
+      "reachable": true
+    },
+    "central_vault": {
+      "covered": false,
+      "reachable": true
+    },
+    "bridge_east": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_sift_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_sift_station": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_vault": {
+      "covered": false,
+      "reachable": true
+    },
+    "export_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "export_quay": {
+      "covered": false,
+      "reachable": true
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "bytes": 1049793,
+      "sha256": "16eefc2afb1091ea206e4ab65373ee8e1511602a7a820cc9be5adfe245b3097b",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-quarantine-ridge.png": {
+      "bytes": 115670,
+      "sha256": "bae3cf69046944dafec19f746d1685aec4aac4b2d2de99a2c0f328a736594996",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        52,
+        145,
+        365,
+        628
+      ]
+    },
+    "02-fault-jaw-extraction.png": {
+      "bytes": 99438,
+      "sha256": "3de2fe8d08bcd62a95777db8eaae471db7b13dfdd9fdd73ff5f5e070e38931d4",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        428,
+        305,
+        380,
+        520
+      ]
+    },
+    "03-cable-viaduct.png": {
+      "bytes": 112834,
+      "sha256": "82e6e79cedf045f7157714fe7ae68057f63bbd81f3ae7fb02c9e8a04a7be5f67",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        778,
+        130,
+        556,
+        404
+      ]
+    },
+    "04-entered-index.png": {
+      "bytes": 65639,
+      "sha256": "f10d95936eb67ff6f24b0bd8a67c64af5486c1117c72b79cba2a376aa3414411",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        866,
+        548,
+        399,
+        326
+      ]
+    },
+    "05-east-fractionator.png": {
+      "bytes": 73643,
+      "sha256": "c612d6e5774880269a012fcc264703c260edea8e169e888d143074809235c710",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1350,
+        390,
+        344,
+        425
+      ]
+    },
+    "06-export-cranes.png": {
+      "bytes": 110718,
+      "sha256": "cd0663cd4f2085fcb8b11cf505980706dec50f4eba11be77503cead136087b82",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1700,
+        140,
+        348,
+        632
+      ]
+    },
+    "07-underfault-diagnostics.png": {
+      "bytes": 38263,
+      "sha256": "bd2f498804ebf50e5c416983b984b00ae5ece1993bdc4d8434891af3c8074674",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        900,
+        806,
+        348,
+        218
+      ]
+    }
+  },
+  "author_static_status": "PASS",
+  "independent_reviews": "PENDING",
+  "native_status": "NATIVE-UNTESTED"
+}
