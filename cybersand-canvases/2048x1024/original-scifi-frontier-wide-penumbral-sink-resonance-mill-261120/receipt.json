@@ -1,0 +1,336 @@
+{
+  "concept": "Penumbral Sink - Split-Mirror Resonance Mill",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 4092282,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
+  "material_histogram": {
+    "49": 13831,
+    "62": 46362,
+    "63": 12357,
+    "66": 9166,
+    "68": 22913,
+    "77": 1214,
+    "79": 180,
+    "100": 257371,
+    "101": 7676,
+    "120": 8166,
+    "121": 8335,
+    "122": 360,
+    "129": 14841,
+    "130": 23947,
+    "131": 25329
+  },
+  "filled_material_cells": 452048,
+  "grounded_cells": 452048,
+  "ungrounded_cells": 0,
+  "grounded_components": 1,
+  "all_solid_components": 1,
+  "physical_fixture_ties": {
+    "ties": 65,
+    "longest": 124
+  },
+  "resonance_support_anchors": {
+    "ties": 65,
+    "longest": 124,
+    "island_removed": 0
+  },
+  "detail_ties": {
+    "ties": 0,
+    "longest": 0
+  },
+  "creator_revision": "R1 original acoustic quarry 2026-11-20",
+  "nonoverlapping_ordered_rectangles": 2936,
+  "rectangle_work": 452048,
+  "setup_bytes": 55681,
+  "material_plane_sha256": "9ce7895ddbb5b38490c1f1a88c44e29775ce36ab5f8eb38f853c936e3243b604",
+  "setup_sha256": "c8e2b1de819a7772822a6f5d3756ebbe97c541b389d51e32f2525377f733df46",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 41205,
+      "sha256": "ef5ca223aba6ea5751516b12f58178c8ce07b781ccd6d621047f1539e6d2a610"
+    },
+    {
+      "name": "01-west-compressor.png",
+      "bytes": 9602,
+      "sha256": "d9e0e03c26204a80333604d03c9104b6aba5b4cfedc41a9fc4b9384832e60ad0"
+    },
+    {
+      "name": "02-split-mirror.png",
+      "bytes": 13135,
+      "sha256": "6d3580fc8db018477c4f7a644988233de122f7bf22cb86130944b5b1d138cd88"
+    },
+    {
+      "name": "03-mill-chamber.png",
+      "bytes": 6309,
+      "sha256": "34436701c72c7db6a33baca7e70327aa95e6399c261d2d393b765e7d6fa0c2f5"
+    },
+    {
+      "name": "04-east-quarantine.png",
+      "bytes": 9549,
+      "sha256": "4a3296c052000b5b6a73e16f026e3355628bd66ad9b4a3c1449feb37c025bf74"
+    },
+    {
+      "name": "05-deep-machinery.png",
+      "bytes": 7384,
+      "sha256": "1ba1ca34471d4eabccc5bb1da09947d93b4e63cd92e909e4b34f0057fe17585d"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1460764,
+      "passed": 32,
+      "total": 32,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1421263,
+      "passed": 32,
+      "total": 32,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1344126,
+      "passed": 32,
+      "total": 32,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      1006,
+      547,
+      1067,
+      606
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only exact Mill drop transfer; all other named destinations remain recoverable",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1338097,
+        "passed": 31,
+        "total": 32,
+        "bad": [
+          [
+            "Mill drop transfer",
+            [
+              1034,
+              576
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "West rover arrivals": [
+      180,
+      445
+    ],
+    "West compressor": [
+      336,
+      448
+    ],
+    "West laboratory": [
+      203,
+      612
+    ],
+    "West sample custody": [
+      416,
+      618
+    ],
+    "West refuge": [
+      249,
+      781
+    ],
+    "West mechanical workshop": [
+      459,
+      782
+    ],
+    "West service exit": [
+      527,
+      574
+    ],
+    "West rim sensor": [
+      730,
+      238
+    ],
+    "Upper sky bypass": [
+      1032,
+      150
+    ],
+    "East rim sensor": [
+      1321,
+      239
+    ],
+    "West ring portal": [
+      830,
+      486
+    ],
+    "Ring centre": [
+      1032,
+      462
+    ],
+    "East ring portal": [
+      1222,
+      485
+    ],
+    "Mill intake": [
+      923,
+      573
+    ],
+    "Mill drop transfer": [
+      1034,
+      576
+    ],
+    "Mill receiver": [
+      1153,
+      571
+    ],
+    "East service exit": [
+      1550,
+      571
+    ],
+    "West lower basin": [
+      678,
+      759
+    ],
+    "Central basin recovery": [
+      1032,
+      770
+    ],
+    "East lower basin": [
+      1352,
+      761
+    ],
+    "Deep west shaft": [
+      560,
+      885
+    ],
+    "Deep ore assay": [
+      699,
+      881
+    ],
+    "Deep pressure rotor": [
+      915,
+      881
+    ],
+    "Deep archive": [
+      1157,
+      879
+    ],
+    "Deep rover garage": [
+      1408,
+      885
+    ],
+    "Deep east shaft": [
+      1510,
+      885
+    ],
+    "East quarantine": [
+      1698,
+      447
+    ],
+    "East classifier": [
+      1902,
+      443
+    ],
+    "East sterile sluice": [
+      1695,
+      621
+    ],
+    "East radiation archive": [
+      1901,
+      620
+    ],
+    "East geology": [
+      1689,
+      776
+    ],
+    "East rover freight": [
+      1900,
+      779
+    ]
+  },
+  "accepted_actor_schema": [
+    "id",
+    "model",
+    "hash",
+    "spawn",
+    "options"
+  ],
+  "literal_midge_spawn": [
+    180,
+    445
+  ],
+  "crops": [
+    [
+      "01-west-compressor",
+      0,
+      280,
+      568,
+      630
+    ],
+    [
+      "02-split-mirror",
+      560,
+      170,
+      936,
+      610
+    ],
+    [
+      "03-mill-chamber",
+      786,
+      416,
+      515,
+      417
+    ],
+    [
+      "04-east-quarantine",
+      1487,
+      290,
+      561,
+      621
+    ],
+    [
+      "05-deep-machinery",
+      430,
+      818,
+      1210,
+      184
+    ]
+  ],
+  "source_art": "None. Original quarry, broken elliptical mirror and inhabited machinery",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"
+}
