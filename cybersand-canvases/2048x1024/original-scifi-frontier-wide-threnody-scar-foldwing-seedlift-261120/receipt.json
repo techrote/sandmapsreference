@@ -8,7 +8,7 @@
     1024
   ],
   "material_cell_count": 2097152,
-  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "engine_accepted_main": "7b03aa437561ec63e31fd09531171360ab60eeb4",
   "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
   "source_loader_max_rectangles": 32768,
   "source_loader_max_setup_bytes": 1048576,
@@ -16,24 +16,24 @@
   "bridge_legacy_capacity_risk": 4096,
   "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
   "material_histogram": {
-    "49": 18385,
-    "62": 35655,
-    "63": 12684,
-    "66": 8202,
-    "68": 27893,
-    "77": 377,
-    "79": 137,
+    "49": 19145,
+    "62": 38803,
+    "63": 12892,
+    "66": 10849,
+    "68": 31639,
+    "77": 766,
+    "79": 214,
     "100": 222418,
-    "101": 13887,
-    "120": 8001,
-    "121": 9656,
-    "122": 2259,
-    "129": 9920,
-    "130": 19818,
-    "131": 20273
+    "101": 14125,
+    "120": 7111,
+    "121": 10218,
+    "122": 2327,
+    "129": 11460,
+    "130": 21072,
+    "131": 24671
   },
-  "filled_material_cells": 409565,
-  "grounded_cells": 409565,
+  "filled_material_cells": 427710,
+  "grounded_cells": 427710,
   "ungrounded_cells": 0,
   "grounded_components": 1,
   "all_solid_components": 1,
@@ -46,42 +46,46 @@
     "longest": 116,
     "island_removed": 8279
   },
-  "creator_revision": "R1 original foldwing xenoseed lift 2026-11-20",
-  "nonoverlapping_ordered_rectangles": 3252,
-  "rectangle_work": 409565,
-  "setup_bytes": 61640,
-  "material_plane_sha256": "d0f52f9fb46fad8ec71ceaca44f0ca5c8c08c815aa1829a288a69cf758c8f20c",
-  "setup_sha256": "b96aba62297435cc4bfac66442bb3b9805ba1619555fab75a56fc78e5a7904d9",
+  "detail_ties": {
+    "ties": 5,
+    "longest": 5
+  },
+  "creator_revision": "R2 custody lift and mechanized entered workfaces 2026-11-20",
+  "nonoverlapping_ordered_rectangles": 4107,
+  "rectangle_work": 427710,
+  "setup_bytes": 77409,
+  "material_plane_sha256": "7453d63598f4df0a5a443589f35276a5e56b8d088fd5fa4eb94954935ed54e2c",
+  "setup_sha256": "f3b18509d7a21499683d2677b2b2caab2121b30f3db1b4fee0d8b5e2e8df59ff",
   "images": [
     {
       "name": "overview.png",
-      "bytes": 44071,
-      "sha256": "e54ba21afe2ddd6571174001e25b135d005e4623a9177074b45d26ec0e6ef1db"
+      "bytes": 51400,
+      "sha256": "9feed0518156b55a8044cb8f655841dbbcde6837155169119e43d4117b73ba44"
     },
     {
       "name": "01-west-nursery.png",
-      "bytes": 8551,
-      "sha256": "8ea9caead17cef0ee8065b158fe1b49b8e2a75e84dde97a50b1ce86958fb43ad"
+      "bytes": 10375,
+      "sha256": "1ce66c14108550950f5d7906cfcb27e3b655127ac9f0e870a2077365176e288c"
     },
     {
       "name": "02-foldwing-west.png",
-      "bytes": 7998,
-      "sha256": "212a249df8ec57e293985259863f5c65acc2eb33111733a8777e2055e8e70cc3"
+      "bytes": 8619,
+      "sha256": "8c792a15b822bb6e6fbc1abcc2c1da5e79ee95f19d7688030fca49f51ca518e1"
     },
     {
       "name": "03-xenoseed-lift.png",
-      "bytes": 8061,
-      "sha256": "663de765fa9394ef03aaefe0f7d2aca14a00d94a1c484bccdf37fbcce87545ab"
+      "bytes": 9169,
+      "sha256": "a5e6f50508d7b8239b11abbe255c92b871a7d8483d955989c7d720f7dfa0dd0d"
     },
     {
       "name": "04-east-quarantine.png",
-      "bytes": 8649,
-      "sha256": "174ec606a6bf6a93f968f383c241aadcf16663fa89773a4245ffa8d62a311f70"
+      "bytes": 9792,
+      "sha256": "0eae6a7b397e891ee9db343a2415018ea0fb8d3f902ee8ac1f132a35b29e4791"
     },
     {
       "name": "05-dry-understrata.png",
-      "bytes": 6029,
-      "sha256": "1f08f45cfd50deff980b874bbb64b5df7952292e58d0045a312c529d32efd361"
+      "bytes": 9283,
+      "sha256": "53e1f16dcb67c357ee13f9753cf1c8bd35bb034ef797fbac8ee4ebd5ab07ac36"
     }
   ],
   "clearance": [
@@ -90,7 +94,7 @@
         19,
         15
       ],
-      "centres": 1512122,
+      "centres": 1484717,
       "passed": 29,
       "total": 29,
       "bad": []
@@ -100,7 +104,7 @@
         23,
         19
       ],
-      "centres": 1472459,
+      "centres": 1444591,
       "passed": 29,
       "total": 29,
       "bad": []
@@ -110,7 +114,7 @@
         31,
         27
       ],
-      "centres": 1394540,
+      "centres": 1366160,
       "passed": 29,
       "total": 29,
       "bad": []
@@ -131,7 +135,7 @@
           31,
           27
         ],
-        "centres": 1387667,
+        "centres": 1360541,
         "passed": 28,
         "total": 29,
         "bad": [

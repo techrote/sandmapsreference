@@ -1,4 +1,52 @@
 "use strict";
+function upgrade(g){
+ const W=2048,H=1024,M={iron:49,steel:62,blue:63,conduit:66,titanium:68,signal:77,amber:79,window:120,frost:121,quartz:122,glassDark:129,ceramic:130,chrome:131,schist:101};
+ const R=(x,y,w,h,m)=>{let x0=Math.max(0,Math.round(x)),x1=Math.min(W,Math.round(x+w)),y0=Math.max(0,Math.round(y)),y1=Math.min(H,Math.round(y+h));for(let yy=y0;yy<y1;yy++)g.fill(m,yy*W+x0,yy*W+x1);};
+ const L=(x,y,X,Y,t,m)=>{let dx=X-x,dy=Y-y,d=dx*dx+dy*dy,r=t/2;for(let yy=Math.max(0,Math.floor(Math.min(y,Y)-r));yy<Math.min(H,Math.ceil(Math.max(y,Y)+r)+1);yy++)for(let xx=Math.max(0,Math.floor(Math.min(x,X)-r));xx<Math.min(W,Math.ceil(Math.max(x,X)+r)+1);xx++){let f=Math.max(0,Math.min(1,((xx-x)*dx+(yy-y)*dy)/(d||1)));if((xx-x-f*dx)**2+(yy-y-f*dy)**2<=r*r)g[yy*W+xx]=m;}};
+ const O=(cx,cy,rx,ry,m)=>{for(let y=Math.max(0,cy-ry);y<Math.min(H,cy+ry+1);y++)for(let x=Math.max(0,cx-rx);x<Math.min(W,cx+rx+1);x++)if(((x-cx)/rx)**2+((y-cy)/ry)**2<=1)g[y*W+x]=m;};
+ // West custody and assay: triple sealed sample feeder and distinct pipette station.
+ R(208,513,42,8,M.titanium);R(213,474,9,40,M.chrome);R(234,480,7,31,M.chrome);
+ for(let i=0;i<3;i++){R(212+i*12,484,9,18,i===1?M.frost:M.quartz);R(215+i*12,479,4,5,M.signal);}
+ L(240,495,262,510,5,M.conduit);R(266,493,66,7,M.steel);R(270,470,9,28,M.chrome);
+ R(288,479,40,12,M.glassDark);R(289,477,38,3,M.window);R(319,473,5,7,M.amber);
+ R(345,508,73,7,M.chrome);L(357,505,378,482,6,M.titanium);R(373,470,8,16,M.chrome);
+ O(388,479,12,11,M.frost);O(388,479,4,5,M.glassDark);R(404,490,10,15,M.blue);
+ R(210,662,13,21,M.titanium);R(216,642,52,7,M.conduit);R(265,640,10,41,M.chrome);
+ R(228,653,31,20,M.glassDark);for(let i=0;i<4;i++)R(231+i*7,658,5,9,i%2?M.window:M.frost);
+ R(420,663,7,16,M.chrome);L(423,660,442,643,5,M.conduit);R(433,631,10,15,M.signal);
+ // Central xenoseed custody: winch/rail, paired gripping jaws, enclosed payload, lowered platform.
+ // Preserve the precise [1116,594] lower transfer; no continuous right-hand barrier.
+ R(976,504,8,45,M.chrome);L(980,504,996,494,5,M.conduit);
+ R(1045,505,8,44,M.titanium);L(1048,507,1043,495,5,M.conduit);
+ R(982,500,64,5,M.blue);R(988,511,54,4,M.steel);
+ L(982,534,1001,546,6,M.chrome);L(1048,534,1040,546,6,M.chrome);
+ O(1021,539,21,13,M.titanium);O(1021,538,15,8,M.glassDark);O(1021,536,9,5,M.frost);
+ R(1016,529,5,6,M.signal);R(1027,529,6,7,M.amber);R(1003,550,37,6,M.ceramic);
+ // East receiver, anchored to the eastern wing without blocking the flight corridor.
+ R(1225,516,58,6,M.ceramic);R(1239,495,7,24,M.chrome);R(1269,493,9,25,M.chrome);
+ R(1249,500,21,13,M.glassDark);R(1254,498,12,4,M.frost);
+ L(1234,513,1307,476,4,M.conduit);
+ // East quarantine is a double sealed sluice; freight has overhead lifting, not duplicate tables.
+ R(1758,470,8,43,M.chrome);L(1761,472,1805,466,5,M.conduit);R(1799,465,12,51,M.steel);
+ R(1772,486,20,25,M.glassDark);R(1775,484,13,4,M.window);
+ R(1946,513,49,7,M.titanium);R(1971,473,7,43,M.chrome);
+ R(1762,675,10,12,M.chrome);R(1775,649,64,6,M.titanium);L(1787,650,1826,637,5,M.chrome);
+ R(1830,636,8,41,M.conduit);R(1839,661,66,12,M.steel);R(1854,640,24,18,M.frost);
+ // Four distinct rooted understrata mechanisms: corer, membrane rotor, heat manifold, rover repair.
+ R(546,932,8,31,M.steel);R(565,919,6,45,M.chrome);L(565,922,602,920,5,M.titanium);
+ R(594,921,5,41,M.conduit);R(593,938,17,14,M.schist);R(610,933,68,7,M.ceramic);
+ for(let i=0;i<5;i++)R(618+i*10,941,7,19,i%2?M.quartz:M.glassDark);R(677,940,8,22,M.iron);
+ R(820,925,6,38,M.steel);R(835,921,44,6,M.titanium);L(853,928,871,941,7,M.conduit);
+ O(887,942,33,20,M.chrome);O(887,942,25,13,M.glassDark);O(887,942,9,8,M.signal);
+ L(919,941,951,934,7,M.conduit);R(947,925,11,37,M.iron);R(957,932,31,7,M.steel);
+ R(1079,928,8,35,M.chrome);R(1083,918,106,7,M.conduit);
+ for(let i=0;i<8;i++)R(1104+10*i,929+(i%2)*5,5,31,M.titanium);
+ R(1192,926,12,37,M.steel);R(1208,936,35,8,M.blue);L(1237,943,1242,960,7,M.chrome);
+ R(1343,924,10,39,M.steel);L(1348,927,1395,917,7,M.chrome);R(1395,916,14,8,M.titanium);
+ R(1401,924,7,14,M.conduit);R(1380,943,97,12,M.ceramic);R(1393,934,59,11,M.glassDark);
+ for(const x of [1395,1459]){O(x,955,14,10,M.iron);O(x,955,6,5,M.window);}
+ R(1483,936,11,25,M.chrome);R(1497,937,24,7,M.signal);
+}
 function build(){
  const W=2048,H=1024,SEED=0x3E717A, g=new Uint8Array(W*H);
  const M={rock:100,schist:101,iron:49,wall:58,steel:62,blue:63,conduit:66,titanium:68,window:120,frost:121,quartz:122,glassDark:129,ceramic:130,chrome:131,signal:77,amber:79,white:80};
@@ -139,6 +187,8 @@ function build(){
  if(island_removed>16000)throw Error("Too much structural island pruning "+island_removed);
  const r2_workcell_anchors={ties:tie_info.ties,longest:tie_info.longest,island_removed};
 
+ upgrade(g);
+ const detail_ties=tieStructures();
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
  for(let y=0;y<H;y++){let next=new Map(),base=y*W;for(let x=0;x<W;){let m=g[base+x],s=x;while(x<W&&g[base+x]===m)x++;if(!m)continue;let k=s+":"+(x-s)+":"+m,idx=prev.get(k);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(k,idx);}prev=next;}
@@ -196,7 +246,7 @@ function build(){
   let b=new Uint8Array(a.reduce((s,p)=>s+p.length,0)),i=0;for(let p of a){b.set(p,i);i+=p.length;}return b;}
  const crops=[["01-west-nursery",0,334,545,537],["02-foldwing-west",518,208,530,580],["03-xenoseed-lift",793,245,510,513],["04-east-quarantine",1503,327,545,540],["05-dry-understrata",450,853,1130,171]];
  const images=[["overview.png",png(0,0,W,H)],...crops.map(([name,x,y,w,h])=>[name+".png",png(x,y,w,h)])];
- return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info,r2_workcell_anchors,seed:SEED};
+ return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info,r2_workcell_anchors,detail_ties,seed:SEED};
 }
 
 function sha256(input){let b=typeof input==="string"?Uint8Array.from(input,c=>c.charCodeAt(0)):input;
@@ -204,7 +254,7 @@ const K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923
 const n=(b.length+9+63)&~63,buf=new Uint8Array(n);buf.set(b);buf[b.length]=128;let bits=b.length*8;for(let i=0;i<8;i++){buf[n-1-i]=bits&255;bits=Math.floor(bits/256);}
 let h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19],w=new Uint32Array(64);let rotr=(x,n)=>(x>>>n)|(x<<(32-n));
 for(let off=0;off<n;off+=64){for(let j=0;j<16;j++){let i=off+j*4;w[j]=((buf[i]<<24)|(buf[i+1]<<16)|(buf[i+2]<<8)|buf[i+3])>>>0;}for(let j=16;j<64;j++){let p=w[j-15],q=w[j-2];w[j]=(w[j-16]+(rotr(p,7)^rotr(p,18)^(p>>>3))+w[j-7]+(rotr(q,17)^rotr(q,19)^(q>>>10)))>>>0;}let [a,b0,c,d,e,f,g,z]=h;for(let j=0;j<64;j++){let t1=(z+(rotr(e,6)^rotr(e,11)^rotr(e,25))+((e&f)^(~e&g))+K[j]+w[j])>>>0,t2=((rotr(a,2)^rotr(a,13)^rotr(a,22))+((a&b0)^(a&c)^(b0&c)))>>>0;z=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b0;b0=a;a=(t1+t2)>>>0;}for(let j=0;j<8;j++)h[j]=(h[j]+[a,b0,c,d,e,f,g,z][j])>>>0;}return h.map(n=>n.toString(16).padStart(8,"0")).join("");}
-function makeReceipt(a){return {concept:"Threnody Scar - Foldwing Xenoseed Lift",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"de109d0131641d6adc8d25bb9ced7ca3d4991105",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,foldwing_support_anchors:a.r2_workcell_anchors,creator_revision:'R1 original foldwing xenoseed lift 2026-11-20',nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[1002,431,1059,484],material_id:58,purpose:"Blocks only exact Lift junction; all other named destinations remain recoverable",result:a.bypass},sites:a.sites,accepted_actor_schema:["id","model","hash","spawn","options"],literal_midge_spawn:a.sites["West rover intake"],crops:a.crops,source_art:"None; wholly new original invented sci-fi frontier",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
+function makeReceipt(a){return {concept:"Threnody Scar - Foldwing Xenoseed Lift",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"7b03aa437561ec63e31fd09531171360ab60eeb4",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,foldwing_support_anchors:a.r2_workcell_anchors,detail_ties:a.detail_ties,creator_revision:'R2 custody lift and mechanized entered workfaces 2026-11-20',nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[1002,431,1059,484],material_id:58,purpose:"Blocks only exact Lift junction; all other named destinations remain recoverable",result:a.bypass},sites:a.sites,accepted_actor_schema:["id","model","hash","spawn","options"],literal_midge_spawn:a.sites["West rover intake"],crops:a.crops,source_art:"None; wholly new original invented sci-fi frontier",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
 
 if(typeof require!=="undefined"&&require.main===module){
  const fs=require("fs"),path=require("path"),crypto=require("crypto"),zlib=require("zlib");
