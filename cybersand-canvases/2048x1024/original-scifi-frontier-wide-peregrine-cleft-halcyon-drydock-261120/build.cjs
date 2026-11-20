@@ -120,6 +120,63 @@ function build(){
 
  // Eastern side-entry quarantine cycler and salvage furnace assemblies.
 
+
+ // R8 exact-geometry functional occupation; no reference traced and no scenic overlay.
+ // Hull specimen carousel, side-access via retained 45-cell-high shipboard flying aisle.
+ R(916,292,8,13,M.titanium);R(916,380,8,16,M.titanium);
+ R(882,363,26,20,M.ceramic);R(886,359,17,5,M.window);
+ for(let x of [884,892,900]){R(x,366,6,11,M.glassDark);R(x+2,362,3,4,M.signal);}
+ R(885,385,26,6,M.blue);
+ // Galley hotplate, grow towers and crew counter, unlike specimen containment.
+ R(1015,294,8,10,M.titanium);R(1015,385,8,11,M.titanium);
+ R(937,362,13,22,M.steel);R(940,358,7,5,M.frost);
+ R(988,363,12,21,M.ceramic);R(990,359,8,5,M.amber);
+ R(954,375,32,10,M.chrome);R(958,369,23,7,M.ceramic);
+ // Navigation dual chart displays, bridge helm and bulkhead framing.
+ R(1040,294,8,11,M.titanium);R(1040,386,8,10,M.titanium);
+ R(1140,293,8,12,M.titanium);R(1140,383,8,13,M.titanium);
+ R(1049,360,27,25,M.glassDark);R(1053,356,19,5,M.window);
+ R(1107,362,27,23,M.chrome);R(1114,357,13,6,M.signal);
+ R(1065,386,57,6,M.ceramic);R(1077,380,31,6,M.blue);
+ // Fabrication: grounded dual-ram press, part pallet, operator station.
+ R(610,531,86,10,M.steel);R(620,541,66,6,M.blue);
+ R(630,468,10,57,M.titanium);R(683,468,10,57,M.titanium);
+ R(640,468,42,10,M.chrome);R(649,479,24,21,M.steel);
+ R(658,501,12,22,M.amber);R(641,524,43,7,M.glassDark);
+ R(578,475,25,19,M.ceramic);R(581,469,18,8,M.signal);
+ L(601,490,625,513,6,M.conduit);
+ // Distinct service cradle and operator diagnostics below the assembly gantry.
+ R(490,635,161,10,M.steel);R(499,645,145,6,M.blue);
+ R(608,612,8,23,M.titanium);R(640,612,9,23,M.titanium);
+ R(616,616,24,10,M.glassDark);R(621,608,14,9,M.amber);
+ R(497,619,25,16,M.ceramic);R(503,611,12,8,M.signal);
+ // Quarantine: separated jaw bulkheads maintain 60-cell side entry.
+ R(1751,373,9,14,M.steel);R(1751,447,9,16,M.steel);
+ R(1890,373,10,14,M.titanium);R(1890,448,10,15,M.titanium);
+ R(1740,398,12,27,M.ceramic);R(1743,390,7,10,M.frost);
+ R(1903,399,22,24,M.ceramic);R(1907,389,13,12,M.window);
+ R(1743,428,10,7,M.signal);R(1904,425,19,7,M.chrome);
+ // Cargo shuttle fork/hoist and manually accessible transfer palette.
+ R(1717,522,60,12,M.steel);R(1725,513,45,9,M.amber);
+ R(1742,489,9,33,M.titanium);R(1751,488,36,10,M.chrome);
+ R(1767,499,12,18,M.signal);
+ R(1924,494,10,40,M.titanium);R(1934,528,29,8,M.chrome);
+ // Thermal salvage: anchored exchanger, four fins, separate operator station.
+ R(1707,665,71,12,M.titanium);R(1724,649,23,16,M.amber);
+ for(let x of [1867,1881,1895,1909]){R(x,644,8,16,M.frost);R(x,661,7,7,M.conduit);}
+ R(1857,670,72,9,M.ceramic);R(1856,647,9,22,M.signal);
+ // Basal district: X-ray mineral assay differs from the big torque-head shaft drill.
+ R(879,782,63,10,M.steel);R(889,769,42,12,M.glassDark);
+ R(893,754,13,15,M.frost);R(913,756,14,13,M.signal);
+ R(988,785,66,10,M.titanium);R(1002,770,16,16,M.amber);
+ R(1030,767,14,18,M.chrome);R(1033,752,8,14,M.frost);
+ R(1157,782,69,11,M.steel);R(1168,734,10,48,M.titanium);
+ R(1212,736,10,46,M.titanium);R(1178,735,34,8,M.chrome);
+ R(1188,744,16,26,M.ceramic);R(1193,770,6,18,M.amber);
+ R(1300,783,63,10,M.titanium);R(1312,739,10,43,M.chrome);
+ R(1343,741,10,41,M.chrome);R(1322,745,21,10,M.ceramic);
+ R(1328,754,9,26,M.signal);R(1320,781,29,8,M.frost);
+
  // Exact intended navigable functional centres (NOT shifted to convenient pixels).
  const sites={
  "West arrivals":[120,524],"Pilots exchange":[244,418],"West assay":[235,645],"West rock archive":[266,787],
