@@ -1,0 +1,27 @@
+'use strict';
+// Independent committed artifact verifier. Never requires build.cjs or generator grid.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),zlib=require('node:zlib');
+const D=__dirname,W=2048,H=1024,N=W*H,sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const assert=(b,msg)=>{if(!b)throw Error(msg)};
+let text=fs.readFileSync(path.join(D,'setup-umbral-induction-dock.json'));
+let s=JSON.parse(text),r=JSON.parse(fs.readFileSync(path.join(D,'qualification.json')));
+const keys=['version','extent','actors','next_id','selected','edits','response','liquid_policy','normalize','rule_radius','source','material','brush','fire'];
+assert(Object.keys(s).length===14&&keys.every(k=>Object.hasOwn(s,k)),'exact Setup-v2 envelope');
+assert(s.version===2&&JSON.stringify(s.extent)==='[2048,1024]'&&s.actors.length===1&&s.actors[0].model==='midge'&&s.actors[0].id===1&&s.selected===1,'actor/extent');
+assert(s.liquid_policy.length===55,'accepted default liquid policy length');
+assert(s.edits.length===r.rectangles&&s.edits.length<=32768&&text.length<=1048576,'Setup limits');
+assert(sha(text)===r.setup_sha256&&text.length===r.setup_json_bytes,'Setup bytes/hash');
+const g=new Uint8Array(N),hist={};let visits=0;
+for(const e of s.edits){assert(e.length===5,'5-field rectangle');let [x,y,w,h,m]=e;assert([x,y,w,h,m].every(Number.isInteger)&&x>=0&&y>=0&&w>0&&h>0&&x+w<=W&&y+h<=H,'rectangle bounds');assert([49,58,62,100,101,113,117,122].includes(m),'nonreactive immovable valid material');for(let yy=y;yy<y+h;yy++){for(let xx=x;xx<x+w;xx++){let i=yy*W+xx;assert(g[i]===0,'overlapping material rectangles');g[i]=m;visits++;}}}
+assert(visits===r.work_visits&&visits<=32000000,'work receipt');assert(sha(g)===r.grid_sha256,'full material ID plane checksum');for(let v of g)hist[v]=(hist[v]||0)+1;assert(JSON.stringify(hist)===JSON.stringify(r.histogram),'material histogram');
+// Independent four-neighbour grounding BFS.
+const marked=new Uint8Array(N),q=new Int32Array(N);let a=0,b=0;function add(i){if(g[i]&&!marked[i]){marked[i]=1;q[b++]=i}}for(let x=0;x<W;x++){add(x);add(N-W+x)}for(let y=0;y<H;y++){add(y*W);add(y*W+W-1)}while(a<b){let i=q[a++],x=i%W;if(x)add(i-1);if(x<W-1)add(i+1);if(i>=W)add(i-W);if(i<N-W)add(i+W)}assert(b===visits&&r.remaining_detached===0,'all solids boundary-grounded');
+// Independent footprint centre BFS by summed-area occupancy. Exact coords only.
+function reach(data,w,h){let sat=new Uint32Array((H+1)*(W+1));for(let y=1;y<=H;y++){let sum=0,prev=(y-1)*(W+1),dst=y*(W+1);for(let x=1;x<=W;x++){sum+=data[(y-1)*W+x-1]!==0?1:0;sat[dst+x]=sat[prev+x]+sum}}let hw=(w-1)/2,hh=(h-1)/2,ok=new Uint8Array(N);for(let y=hh;y<H-hh;y++){let t=(y-hh)*(W+1),d=(y+hh+1)*(W+1);for(let x=hw;x<W-hw;x++){let l=x-hw,rr=x+hw+1;if(sat[d+rr]-sat[t+rr]-sat[d+l]+sat[t+l]===0)ok[y*W+x]=1}}let sites=r.sites;let start=sites[0].y*W+sites[0].x;assert(ok[start],'literal spawn footprint');let seen=new Uint8Array(N),fifo=new Int32Array(N),lo=0,hi=1;fifo[0]=start;seen[start]=1;function step(j){if(ok[j]&&!seen[j]){seen[j]=1;fifo[hi++]=j}}while(lo<hi){let i=fifo[lo++],x=i%W;if(x)step(i-1);if(x<W-1)step(i+1);if(i>=W)step(i-W);if(i<N-W)step(i+W)}let missing=sites.filter(s=>!seen[s.y*W+s.x]).map(s=>s.name);return {missing,connected:hi,reached:sites.length-missing.length}}
+for(let [w,h]of [[19,15],[23,19],[31,27]]){let z=reach(g,w,h),expected=r.clearances[w+'x'+h];assert(!z.missing.length&&z.connected===expected.connected,'literal-site reachability '+w+'x'+h)}
+let blocked=g.slice(),[bx,by,bw,bh]=r.physical_obstruction.xywh;for(let y=by;y<by+bh;y++)blocked.fill(58,y*W+bx,y*W+bx+bw);let alt=reach(blocked,31,27);assert(JSON.stringify(alt.missing)==='["Upper annulus exit"]'&&r.physical_obstruction.finish_reachable&&alt.reached===r.physical_obstruction.remaining,'physical gate obstruction');
+// Decode *committed* indexed PNGs with native zlib and verify every material-ID pixel.
+function crc(bytes){let v=0xffffffff;for(let t of bytes){v^=t;for(let j=0;j<8;j++)v=(v>>>1)^((v&1)?0xedb88320:0)}return(v^0xffffffff)>>>0}
+let pixels=0;
+for(let [name,m]of Object.entries(r.pngs)){let buf=fs.readFileSync(path.join(D,name));assert(buf.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])),'PNG signature '+name);assert(sha(buf)===m.sha256&&buf.length===m.bytes,'PNG bytes/hash '+name);let at=8,idats=[],ih=false,plte=false,iend=false;while(at<buf.length){let len=buf.readUInt32BE(at),kind=buf.toString('ascii',at+4,at+8),data=buf.subarray(at+8,at+8+len);assert(at+len+12<=buf.length,'PNG boundary');assert(crc(buf.subarray(at+4,at+8+len))===buf.readUInt32BE(at+8+len),'PNG CRC '+name+' '+kind);if(kind==='IHDR'){assert(data.readUInt32BE(0)===m.w&&data.readUInt32BE(4)===m.h&&data[8]===8&&data[9]===3,'PNG indexed size');ih=true}if(kind==='PLTE')plte=true;if(kind==='IDAT')idats.push(data);if(kind==='IEND')iend=true;at+=len+12}assert(ih&&plte&&iend&&at===buf.length,'PNG required chunks');let raw=zlib.inflateSync(Buffer.concat(idats));assert(raw.length===(m.w+1)*m.h,'PNG decompression size');for(let y=0;y<m.h;y++){assert(raw[y*(m.w+1)]===0,'PNG filter zero');for(let x=0;x<m.w;x++)assert(raw[y*(m.w+1)+x+1]===g[(m.y+y)*W+m.x+x],'PNG material index parity '+name+' @ '+x+','+y)}pixels+=m.w*m.h;}
+console.log(JSON.stringify({result:'SOURCE-STATIC-PASS',rectangles:s.edits.length,bytes:text.length,work:visits,sha:r.grid_sha256,grounded:b,sites:r.sites.length,obstruction:alt.missing,verified_pngs:Object.keys(r.pngs).length,verified_material_pixels:pixels,native:'NATIVE-UNTESTED'},null,2));
