@@ -199,6 +199,61 @@ R(839,445,51,179,M.AIR);
 R(1898,203,55,227,M.AIR);
 for(const p of Object.values(sites))R(p[0]-23,p[1]-25,47,51,M.AIR);
 
+
+/* R2 physical-cell P1 repair: five functionally separate entered service
+   machines and cargo transaction faces, no replacement art or native claim. */
+function valve(x,y,r=10){ring(x,y,r,r,5,M.STEEL);R(x-3,y-r-4,6,12,M.WALL);}
+function jack(x,y){R(x,y,22,30,M.WALL);R(x+5,y+4,12,23,M.STEEL);R(x+8,y-11,6,15,M.STEEL);}
+R(184,939,175,10,M.WALL);R(198,910,14,33,M.STEEL);
+R(206,913,51,7,M.STEEL);valve(253,924,12);
+R(265,923,64,8,M.STEEL);jack(329,909);R(336,936,15,12,M.WALL);
+R(543,938,206,11,M.WALL);jack(559,909);jack(608,909);
+R(582,926,29,7,M.STEEL);R(638,910,93,9,M.STEEL);
+for(let x of [651,679,707]){valve(x,928,9);R(x-3,938,7,10,M.WALL);}
+R(978,940,239,11,M.WALL);R(999,914,64,19,M.STEEL);
+ring(1090,925,24,18,9,M.WALL);R(1083,937,14,11,M.STEEL);
+R(1120,928,79,13,M.STEEL);R(1141,906,45,23,M.WALL);
+R(1156,938,18,12,M.STEEL);
+R(1456,938,193,12,M.WALL);L(1468,923,1514,914,6,M.STEEL);
+L(1468,925,1541,936,7,M.STEEL);R(1538,909,61,30,M.WALL);
+R(1547,916,41,17,M.STEEL);R(1564,938,12,12,M.STEEL);
+valve(1616,926,10);R(1611,938,12,11,M.WALL);
+R(1796,939,130,12,M.WALL);
+P([[1812,913],[1871,913],[1863,933],[1820,937]],M.STEEL);
+for(let x of [1821,1835,1849,1861])R(x,916,7,19,M.WALL);
+R(1880,910,25,33,M.STEEL);R(1888,917,11,20,M.WALL);
+// Pallet stop and captured lift freight beside the original dual guide.
+// Transfer is located beneath the open Midge transit band.
+R(796,537,43,11,M.STEEL);R(797,522,35,15,M.WALL);
+R(803,526,23,7,M.STEEL);R(833,535,13,17,M.STEEL);
+// Articulated truss carriage, lowered spreader and loaded receiving pallet.
+R(977,514,63,13,M.WALL);R(982,519,52,8,M.STEEL);
+R(986,530,8,25,M.STEEL);R(1023,530,8,25,M.STEEL);
+R(993,536,31,11,M.WALL);R(990,552,47,9,M.STEEL);
+R(989,562,50,9,M.WALL);R(997,486,20,28,M.STEEL);
+// Hopper throat meets a fixed-steel sorter deposit belt, not a powder spill.
+R(1671,648,12,44,M.STEEL);L(1677,688,1704,712,8,M.WALL);
+R(1694,704,49,11,M.STEEL);R(1702,694,35,10,M.WALL);
+R(1710,715,18,12,M.STEEL);
+
+/* R2 inspected customs transaction: an outbound scale/scan pad in front
+   of the east tallies, between the final rail wagon and the manifest hall. */
+R(1745,740,72,12,M.STEEL);
+R(1751,711,61,25,M.WALL);R(1757,717,49,8,M.STEEL);
+R(1760,736,47,7,M.STEEL);
+R(1746,676,10,63,M.WALL);R(1811,676,10,63,M.STEEL);
+R(1746,667,75,12,M.STEEL);
+R(1764,678,39,8,M.WALL);R(1769,686,28,7,M.STEEL);
+R(1753,651,20,15,M.WALL);R(1760,646,8,10,M.STEEL);
+R(1812,740,17,12,M.WALL);R(1831,740,30,11,M.STEEL);
+
+// Customs actual rear inspection: anchored manifest scanner and weigh bed
+// at far-east side, preserving independent x1821..1899 vertical rescue shaft.
+R(1903,690,31,9,M.WALL);R(1918,653,9,38,M.STEEL);
+R(1904,652,32,8,M.STEEL);R(1909,664,20,9,M.WALL);
+R(1901,724,42,10,M.STEEL);R(1914,713,16,11,M.WALL);
+R(1905,741,38,9,M.WALL);
+
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
@@ -244,9 +299,9 @@ if(rect.length>32768||area>32000000)throw Error("budget "+rect.length+"/"+area);
 const policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
 let setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:start,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits:rect,response:"LA-SELECTIVE",liquid_policy:policy,normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false},json=JSON.stringify(setup),jbytes=utf8(json);
 if(jbytes.length>1048576)throw Error("JSON over budget");
-let crops=[["01-graving-vessel",112,450,417,365],["02-caisson-stacklift",525,221,456,581],["03-truss-handoff",959,410,549,389],["04-hopper-classifier",1492,474,283,337],["05-east-customs",1770,469,278,338],["06-underworks",519,831,413,190]];
+let crops=[["01-graving-vessel",112,450,417,365],["02-caisson-stacklift",525,221,456,581],["03-truss-handoff",959,410,549,389],["04-hopper-classifier",1492,474,283,337],["05-east-customs",1770,469,278,338],["06-underworks",519,831,413,190],["07-underworks-all-five",103,831,1844,190]];
 let images=[["overview",[0,0,W,H]],...crops.map(c=>[c[0],c.slice(1)])].map(([name,rect])=>{let data=png(g,rect),pixels=verifyPng(g,rect,data);return{name,rect,bytes:data,sha256:sha256(data),pixels};});
-let receipt={concept:"Nacre Caisson — Drylock Ship Stacklift and Freight Truss",original:true,seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],route_graph:{main:["Mooring Arrival","Dispatch Ledger","Caisson Gate","Truss West Receiver","Overcut Transit","Truss East Receiver","Classifier Control","Dispatch Transfer","Outbound Manifest"],upper:["North Crane Catwalk","Lift Inspection Loft","Upper Freight Traverse","East Horizon Beacon"],lower:["Underkeel Pump","Hydraulic Service","Gantry Bearing Service","Rail Switch Workshop","Reclamation Return"]},material_ids:{"0":"Empty","100":"BasaltColumns Solid immovable None","58":"ReinforcedConcrete Solid immovable None","62":"SteelPlate Solid immovable None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,grounding_steel_ties:ties.length,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"West launch",to:"Harbour clearance",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"};
+let receipt={concept:"Nacre Caisson — Drylock Ship Stacklift and Freight Truss",original:true,seed:SEED,engine_sha:"7b03aa437561ec63e31fd09531171360ab60eeb4",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],route_graph:{main:["Mooring Arrival","Dispatch Ledger","Caisson Gate","Truss West Receiver","Overcut Transit","Truss East Receiver","Classifier Control","Dispatch Transfer","Outbound Manifest"],upper:["North Crane Catwalk","Lift Inspection Loft","Upper Freight Traverse","East Horizon Beacon"],lower:["Underkeel Pump","Hydraulic Service","Gantry Bearing Service","Rail Switch Workshop","Reclamation Return"]},material_ids:{"0":"Empty","100":"BasaltColumns Solid immovable None","58":"ReinforcedConcrete Solid immovable None","62":"SteelPlate Solid immovable None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,grounding_steel_ties:ties.length,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"Mooring Arrival",to:"Dispatch Ledger",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"};
 return {g,rect,sites,crops,images,receipt,setup,json,jbytes,status,detour:{reached:detour.reached,bad:detour.bad,component:detour.component},distance:routeDistance,pruned};
 }
 return {generate,sha256,base64,utf8};

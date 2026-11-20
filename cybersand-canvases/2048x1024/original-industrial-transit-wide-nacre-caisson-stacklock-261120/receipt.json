@@ -2,7 +2,7 @@
   "concept": "Nacre Caisson — Drylock Ship Stacklift and Freight Truss",
   "original": true,
   "seed": 2026112013,
-  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
   "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
   "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
   "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
@@ -151,21 +151,21 @@
     ]
   },
   "material_histogram": {
-    "0": 1496159,
-    "58": 261895,
-    "62": 193013,
-    "100": 146085
+    "0": 1477459,
+    "58": 274119,
+    "62": 199480,
+    "100": 146094
   },
-  "stable_occupied_cells": 600993,
-  "grounded": 600993,
+  "stable_occupied_cells": 619693,
+  "grounded": 619693,
   "detached_cells": 0,
   "pruned_disconnected_decor_cells": 0,
-  "grounding_steel_ties": 51,
-  "rectangles": 3431,
-  "rectangle_work": 600993,
-  "setup_bytes": 64125,
-  "material_plane_sha256": "be28be1e1bb36923fbe87cdd548ff999b559267de4067f521658bf15d5960fa9",
-  "setup_sha256": "cdf74df1751d118bcaaa02bb6298b456ef7d6f56b275207974c0c50d546b4ac4",
+  "grounding_steel_ties": 48,
+  "rectangles": 3644,
+  "rectangle_work": 619693,
+  "setup_bytes": 68009,
+  "material_plane_sha256": "328b5b25e56f2f89a068a326746e555489d3ce8780458ca6d33e03fb5be2fe81",
+  "setup_sha256": "0f9ad7ac39e37a5a9b52c0f1edeb8bc51f63b28f5e1c9bc894d85070ec823718",
   "clearance": [
     {
       "size": [
@@ -174,7 +174,7 @@
       ],
       "reached": 22,
       "total": 22,
-      "free_centres": 724257,
+      "free_centres": 713904,
       "bad": [],
       "error": null
     },
@@ -185,7 +185,7 @@
       ],
       "reached": 22,
       "total": 22,
-      "free_centres": 686450,
+      "free_centres": 676000,
       "bad": [],
       "error": null
     },
@@ -196,7 +196,7 @@
       ],
       "reached": 22,
       "total": 22,
-      "free_centres": 616474,
+      "free_centres": 605811,
       "bad": [],
       "error": null
     }
@@ -209,8 +209,8 @@
       80,
       91
     ],
-    "from": "West launch",
-    "to": "Harbour clearance",
+    "from": "Mooring Arrival",
+    "to": "Dispatch Ledger",
     "size": [
       31,
       27
@@ -232,7 +232,7 @@
         1024
       ],
       "bytes": 525537,
-      "sha256": "e196d647debcab9b17e4573a5aa4337912bb0a4c9a431f3a95d4ba9000722317",
+      "sha256": "3566e048c1d6aea77b3409d6fc4c6903ad79c1f467965faf7bfc742677ee0845",
       "pixel_parity": 2097152
     },
     {
@@ -256,7 +256,7 @@
         581
       ],
       "bytes": 67005,
-      "sha256": "912b4471c70d1a87751f6280c9fb3d9b2d49b24f0488a470f77e2455e0dee996",
+      "sha256": "6b09b08903e3155369ef2019528497b5c681b79ba04624ff48a151197059008d",
       "pixel_parity": 264936
     },
     {
@@ -268,7 +268,7 @@
         389
       ],
       "bytes": 54256,
-      "sha256": "278c9cb47e8e9a3386c12edd478e9b4794ec1a312da64c3c756a0d8d602a9f85",
+      "sha256": "586f0b587185d496aa5b5e349b2e4a9c3aafd2b4462688bd26210b9fe683173f",
       "pixel_parity": 213561
     },
     {
@@ -280,7 +280,7 @@
         337
       ],
       "bytes": 24449,
-      "sha256": "e5b498b640a20d45b562e5addcd38354df7e29ff68818150f5b2fd67daf5ce87",
+      "sha256": "90f1e7e39804e4678a893ccff1dd6605b544a4acd59b59821323c0d50e8d1a09",
       "pixel_parity": 95371
     },
     {
@@ -292,7 +292,7 @@
         338
       ],
       "bytes": 24183,
-      "sha256": "2fb4f8d8afadbdbf5be6bb28981e3a19920c04819d9cc7d4d7007385ad4c555d",
+      "sha256": "6f226dbdc9e7204b0d62decc9de56ea2ba08efbb204f8b344b6d8b290054e321",
       "pixel_parity": 93964
     },
     {
@@ -304,8 +304,20 @@
         190
       ],
       "bytes": 20135,
-      "sha256": "f349edef906bccad961c035e814f0b865ba7b32e21b5330c7fc648fe140ac4d1",
+      "sha256": "a87eadd0601147b13efb7896fc81405b7ee606ec752cc73577ed33fa682b3789",
       "pixel_parity": 78470
+    },
+    {
+      "name": "07-underworks-all-five",
+      "rect": [
+        103,
+        831,
+        1844,
+        190
+      ],
+      "bytes": 87970,
+      "sha256": "b8ed6f7e03319cdab6ade76c9e7ef3de52e88252b19b9e7f2426629778415f38",
+      "pixel_parity": 350360
     }
   ],
   "native_status": "NATIVE-UNTESTED",
