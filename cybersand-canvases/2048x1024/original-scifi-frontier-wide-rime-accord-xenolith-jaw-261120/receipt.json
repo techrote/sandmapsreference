@@ -1,0 +1,443 @@
+{
+  "concept": "Rime Accord - Xenolith Jaw Excavator",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 12690030,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "map_repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "loader_source_max_rectangles": 32768,
+  "loader_source_max_json_bytes": 1048576,
+  "source_work_budget": 32000000,
+  "installed_bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only accepted inert immovable Solid/None kernels; no powders or liquids",
+  "material_histogram": {
+    "49": 30952,
+    "62": 42564,
+    "63": 4380,
+    "66": 1428,
+    "68": 36904,
+    "77": 504,
+    "79": 1675,
+    "100": 342927,
+    "101": 85632,
+    "120": 606,
+    "121": 934,
+    "129": 3769,
+    "130": 4884,
+    "131": 12388
+  },
+  "filled_grounded_cells": 569547,
+  "detached_final_cells": 0,
+  "prototype_disconnected_cells_removed": 11385,
+  "prototype_components_removed": 31,
+  "rectangle_count": 3401,
+  "rectangle_work": 569547,
+  "setup_bytes": 64193,
+  "grid_sha256": "de43614395c07ac2207c89fb5e12d88aaba7d199815e4123c255d71fbce1520c",
+  "setup_sha256": "f9ca1bb4b8368d6108971a492e3a13ddca1758e45c99dcabc5df5adb4fce73da",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 38882,
+      "sha256": "548930d3a3b36d427ec50e330888b17e4b0531f9c0d18c86eb51456f1cd8123d"
+    },
+    {
+      "name": "01-west-inhabited-rover.png",
+      "bytes": 5917,
+      "sha256": "aa08e58b9ec761183436d47b491527082b294f73ab64f187cea2829cf483fda3"
+    },
+    {
+      "name": "02-jaw-extraction-frame.png",
+      "bytes": 13894,
+      "sha256": "ab509a7e28b1ae7d94e27f99a1ad50a30336db70c28c4ae65d99835f1b7b30cf"
+    },
+    {
+      "name": "03-custody-and-receiver.png",
+      "bytes": 10423,
+      "sha256": "7368bb55defaa30e532eaa174bde5b30bf9f68cfc9db5bb51709ee167c0e28a1"
+    },
+    {
+      "name": "04-east-quarantine-freight.png",
+      "bytes": 6980,
+      "sha256": "2022ea6d9e9e824148affd5923f1c3918407f8d453679343f4eee575e54b4d6c"
+    },
+    {
+      "name": "05-deep-ore-service.png",
+      "bytes": 7023,
+      "sha256": "d255228897a186107b57e7f9df989005fda7aac3690f0db1036174aca3cbce7c"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1367017,
+      "passed": 32,
+      "total": 32,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1329747,
+      "passed": 32,
+      "total": 32,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1257227,
+      "passed": 32,
+      "total": 32,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "xyxy_halfopen": [
+      1021,
+      539,
+      1079,
+      589
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only Central jaw custody",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1250592,
+      "passed": 31,
+      "total": 32,
+      "bad": [
+        {
+          "name": "Central jaw custody",
+          "xy": [
+            1050,
+            564
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "named_sites": {
+    "West rover spawn": [
+      164,
+      414
+    ],
+    "West charging": [
+      332,
+      416
+    ],
+    "West ore intake": [
+      164,
+      565
+    ],
+    "West isotope assay": [
+      334,
+      566
+    ],
+    "West repair": [
+      160,
+      712
+    ],
+    "West shelter": [
+      332,
+      712
+    ],
+    "West access throat": [
+      512,
+      690
+    ],
+    "West rim": [
+      608,
+      246
+    ],
+    "West arm monitor": [
+      830,
+      388
+    ],
+    "West jaw approach": [
+      791,
+      675
+    ],
+    "Upper open flight": [
+      1039,
+      193
+    ],
+    "East jaw approach": [
+      1360,
+      674
+    ],
+    "East arm monitor": [
+      1275,
+      389
+    ],
+    "East rim": [
+      1445,
+      245
+    ],
+    "Central jaw custody": [
+      1050,
+      564
+    ],
+    "Intake shuttle": [
+      912,
+      697
+    ],
+    "Outfeed receiver": [
+      1248,
+      710
+    ],
+    "East access throat": [
+      1543,
+      690
+    ],
+    "Lower west refuge": [
+      570,
+      783
+    ],
+    "Lower east refuge": [
+      1472,
+      784
+    ],
+    "Deep west entry": [
+      575,
+      850
+    ],
+    "Deep probe": [
+      697,
+      845
+    ],
+    "Deep gear reducer": [
+      886,
+      848
+    ],
+    "Deep spectrometer": [
+      1110,
+      844
+    ],
+    "Deep hoist": [
+      1352,
+      846
+    ],
+    "Deep east entry": [
+      1455,
+      853
+    ],
+    "East quarantine": [
+      1758,
+      420
+    ],
+    "East seal": [
+      1911,
+      417
+    ],
+    "East spectroscope": [
+      1758,
+      568
+    ],
+    "East isotope rack": [
+      1905,
+      567
+    ],
+    "East rover freight": [
+      1754,
+      711
+    ],
+    "East loading": [
+      1911,
+      709
+    ]
+  },
+  "literal_actor_spawn": [
+    164,
+    414
+  ],
+  "crops": [
+    [
+      "01-west-inhabited-rover",
+      0,
+      306,
+      557,
+      477
+    ],
+    [
+      "02-jaw-extraction-frame",
+      530,
+      344,
+      990,
+      419
+    ],
+    [
+      "03-custody-and-receiver",
+      759,
+      440,
+      618,
+      341
+    ],
+    [
+      "04-east-quarantine-freight",
+      1490,
+      306,
+      558,
+      475
+    ],
+    [
+      "05-deep-ore-service",
+      484,
+      814,
+      1090,
+      198
+    ]
+  ],
+  "static_status": "CREATOR-STATIC-PASS-R3",
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "R2 Art residual custody / east export P1 addressed with actual grounded material; independent exact-R3 recheck required",
+  "r2_feature_survival": {
+    "west-interior": {
+      "nongeological_cells": 13792,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "49": 9073,
+        "62": 1118,
+        "77": 384,
+        "79": 468,
+        "121": 287,
+        "130": 1472,
+        "131": 990
+      }
+    },
+    "east-interior": {
+      "nongeological_cells": 18855,
+      "distinct_nonrock_materials": 11,
+      "histogram": {
+        "49": 702,
+        "62": 9409,
+        "63": 1569,
+        "68": 2133,
+        "77": 72,
+        "79": 592,
+        "120": 306,
+        "121": 113,
+        "129": 2260,
+        "130": 631,
+        "131": 1068
+      }
+    },
+    "west-anchored-jaw": {
+      "nongeological_cells": 20397,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "49": 970,
+        "62": 4882,
+        "66": 970,
+        "68": 10202,
+        "79": 36,
+        "129": 72,
+        "131": 3265
+      }
+    },
+    "east-anchored-jaw": {
+      "nongeological_cells": 20989,
+      "distinct_nonrock_materials": 9,
+      "histogram": {
+        "49": 6307,
+        "62": 3583,
+        "66": 123,
+        "68": 7517,
+        "77": 48,
+        "120": 300,
+        "129": 760,
+        "130": 42,
+        "131": 2309
+      }
+    },
+    "custody-pickup": {
+      "nongeological_cells": 3469,
+      "distinct_nonrock_materials": 9,
+      "histogram": {
+        "49": 469,
+        "62": 646,
+        "63": 103,
+        "66": 2,
+        "68": 601,
+        "79": 225,
+        "129": 153,
+        "130": 594,
+        "131": 676
+      }
+    },
+    "outfeed-receiver": {
+      "nongeological_cells": 4792,
+      "distinct_nonrock_materials": 9,
+      "histogram": {
+        "49": 882,
+        "62": 434,
+        "66": 214,
+        "68": 1023,
+        "77": 48,
+        "120": 300,
+        "129": 996,
+        "130": 408,
+        "131": 487
+      }
+    },
+    "core-probe": {
+      "nongeological_cells": 3156,
+      "distinct_nonrock_materials": 4,
+      "histogram": {
+        "49": 591,
+        "62": 1197,
+        "68": 137,
+        "131": 1231
+      }
+    },
+    "gear-reducer": {
+      "nongeological_cells": 4519,
+      "distinct_nonrock_materials": 5,
+      "histogram": {
+        "49": 705,
+        "62": 1188,
+        "68": 1255,
+        "79": 329,
+        "131": 1042
+      }
+    },
+    "spectral-array": {
+      "nongeological_cells": 5938,
+      "distinct_nonrock_materials": 4,
+      "histogram": {
+        "62": 1557,
+        "63": 2164,
+        "121": 534,
+        "130": 1683
+      }
+    },
+    "return-hoist": {
+      "nongeological_cells": 5023,
+      "distinct_nonrock_materials": 5,
+      "histogram": {
+        "49": 1753,
+        "62": 1566,
+        "63": 445,
+        "68": 696,
+        "131": 563
+      }
+    }
+  },
+  "creator_revision": "R3 specimen cradle, supported quarantine analysis and cargo receiving added 2026-11-20"
+}
