@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Cleftline Logistics",
+  "lane": "worldgroup/freight",
+  "map_role": "Dispersed Reclamation Enclave / Workers' Causeways",
+  "anchor_donors": [
+    "wide-graven-keel-ship-tipper",
+    "wide-peregrine-cleft-halcyon-drydock"
+  ],
+  "sibling_sequence": [
+    {
+      "role": "Outer mooring and ballast registry",
+      "pr": 86
+    },
+    {
+      "role": "Hull de-rigging salvage basin",
+      "pr": 90
+    },
+    {
+      "role": "Inland classification switchback",
+      "pr": 96
+    },
+    {
+      "role": "Cold-form repair ward",
+      "pr": 103
+    },
+    {
+      "role": "Workers' causeways",
+      "status": "this_map"
+    }
+  ],
+  "macro_topology": [
+    "Four unequal inhabited basalt shelves with exposed discontinuous terrain between them",
+    "Three diagonal working causeways and linked aerial cable handoffs",
+    "One central low return with attached excavation bays and several vertical rescue connections",
+    "Damaged incomplete cantilever above far eastern settlement"
+  ],
+  "density_profile": "Alternating distinct medium-density inhabited shelf clusters with open flying sky and deep unused retrieval voids; no dominant central machine",
+  "route_grammar": {
+    "main": "West labour arrival to mooring levy/refuge to cooperative loft and worktable to reclaimer exchange to customs and remote transit exit",
+    "upper": "West canopy to tool-watch and suspended freight cable to east shelter and derelict-spur watch",
+    "lower": "West low refuge through causeway underpass and reclaimer undercroft to east retrieval",
+    "deep": "Bottom medical lock to deep cooperative return and eastern escape shaft, reconnecting via vertical exposed gaps",
+    "obstruction": "A temporary 80×88 source-solid obstruction at [471,392] across the west-to-cooperative flight corridor leaves the 31×27 alternate route available"
+  },
+  "strong_motifs": [
+    "Four spatially discontinuous populated salvage terraces",
+    "Unequally sloping two-chord steel worker causeways with founded legs",
+    "Roofline-to-cable transfers with three small local grabbers",
+    "Disparate lived-in open-front labour and customs houses",
+    "Abandoned ruptured eastern high spur",
+    "Separable low recovery and excavation networks"
+  ],
+  "interesting_relationships": [
+    "Industrial freight is handled by multiple small settlements rather than one commanding machine",
+    "Inter-village transport crosses open air while salvage escape uses excavated service corridors",
+    "Founded heavy basalt shelves carry compact independent mechanical cooperatives",
+    "Abandoned east cantilever exposes future broken-route repair without preventing ordinary passage"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "Western labour annex gap",
+      "bbox": [
+        260,
+        655,
+        180,
+        110
+      ],
+      "role": "Human-authored housing or customs expansion between intake and lower refuge"
+    },
+    {
+      "name": "Cooperative secondary bench",
+      "bbox": [
+        706,
+        670,
+        188,
+        83
+      ],
+      "role": "Space for human parts, SWARM connectors, or minor fabrication"
+    },
+    {
+      "name": "Reclaimer undercroft port",
+      "bbox": [
+        1090,
+        734,
+        242,
+        93
+      ],
+      "role": "Empty salvage/recovery chamber with viable flight access"
+    },
+    {
+      "name": "Derelict eastern bridge seam",
+      "bbox": [
+        1860,
+        216,
+        125,
+        123
+      ],
+      "role": "Damaged dangling causeway suitable for extension or destruction setpiece"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "West labour assembly",
+      "point": [
+        298,
+        425
+      ],
+      "event_idea": "NPC encounter or customs holdout in inhabited levy district",
+      "not_scripted": true
+    },
+    {
+      "name": "Intermediate causeway drop",
+      "point": [
+        938,
+        784
+      ],
+      "event_idea": "Future bridge failure and alternate underbridge flight route",
+      "not_scripted": true
+    },
+    {
+      "name": "East salvage ambush",
+      "point": [
+        1531,
+        425
+      ],
+      "event_idea": "Customs containment with high/low egress and open-air approach",
+      "not_scripted": true
+    },
+    {
+      "name": "Damaged spur departure",
+      "point": [
+        1841,
+        182
+      ],
+      "event_idea": "Reveal or emergency aerial evacuation from broken high terminal",
+      "not_scripted": true
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Procedurally derive multiple independent villages on unequal supported shelves instead of a central landmark factory",
+    "Learn variable-height diagonal causeways and cable exchange with founded bracing",
+    "Preserve an alternating dense/open spatial cadence with genuine empty expansion receptors",
+    "Combine route branch/rejoin high sky and excavated underworks for physical obstruction recovery",
+    "Express incomplete industrial infrastructure while maintaining all conservative actor routes"
+  ],
+  "similarity_avoidance": "Rejects Sibling 01's uniform waterfront registry lattice, Sibling 02's monumental V salvage cradle, Sibling 03's continuous terrace switchback, and Sibling 04's roofed concentric press. Four separated tool-and-labour communities, visibly independent local transactions, inclined causeways, sparse low excavations and damaged remote spur. No donor source pixels, route graphs or anchor coordinates copied.",
+  "diversity_axes": {
+    "macro_topology": [
+      "multi_settlement",
+      "islands"
+    ],
+    "altitude_grammar": [
+      "high_low_bypass",
+      "multi_strata"
+    ],
+    "density_cadence": [
+      "alternating",
+      "clustered"
+    ],
+    "route_structure": [
+      "branch_rejoin",
+      "layered"
+    ],
+    "landmark_family": [
+      "bridge",
+      "cableway"
+    ],
+    "support_form": [
+      "multi_leg",
+      "floor_rooted"
+    ],
+    "environment_relation": [
+      "dry",
+      "damaged"
+    ],
+    "incompleteness": [
+      "modular_append_zones",
+      "damaged"
+    ]
+  },
+  "material_scope": [
+    "0 Empty",
+    "58 ReinforcedConcrete",
+    "62 SteelPlate",
+    "100 BasaltColumns"
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "validation_status": "CREATOR SOURCE-STATIC PASS; independent Art/Technical/Shepherd and installed bridge/native pending"
+}

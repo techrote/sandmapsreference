@@ -1,0 +1,316 @@
+{
+  "concept": "Cleftline Logistics — Dispersed Reclamation Enclave / Workers' Causeways",
+  "original": true,
+  "seed": 203356677,
+  "engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West labour arrival",
+      "Mooring stock levy",
+      "West refugee kitchen",
+      "First workers causeway",
+      "Cooperative tool loft",
+      "Coop trade table",
+      "Central rubble sluice",
+      "Reclaim exchange stalls",
+      "Eastern sort shed",
+      "Customs tally lodge",
+      "High outbound socket",
+      "Remote transit mouth"
+    ],
+    "upper": [
+      "West canopy commons",
+      "Cooperative upper watch",
+      "Upper transit crossing",
+      "East suspended shelter",
+      "Derelict spur watch"
+    ],
+    "lower": [
+      "West lower refuge",
+      "Causeway underpass",
+      "Reclaimer undercroft",
+      "East low retrieval"
+    ],
+    "deep": [
+      "Deep west medical lock",
+      "Deep return coop",
+      "Deep eastern escape"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West labour arrival": [
+      122,
+      425
+    ],
+    "Mooring stock levy": [
+      298,
+      425
+    ],
+    "West refugee kitchen": [
+      414,
+      425
+    ],
+    "First workers causeway": [
+      577,
+      425
+    ],
+    "Cooperative tool loft": [
+      731,
+      425
+    ],
+    "Coop trade table": [
+      873,
+      425
+    ],
+    "Central rubble sluice": [
+      1013,
+      425
+    ],
+    "Reclaim exchange stalls": [
+      1162,
+      425
+    ],
+    "Eastern sort shed": [
+      1328,
+      425
+    ],
+    "Customs tally lodge": [
+      1531,
+      425
+    ],
+    "High outbound socket": [
+      1713,
+      425
+    ],
+    "Remote transit mouth": [
+      1910,
+      425
+    ],
+    "West canopy commons": [
+      271,
+      235
+    ],
+    "Cooperative upper watch": [
+      730,
+      182
+    ],
+    "Upper transit crossing": [
+      1085,
+      189
+    ],
+    "East suspended shelter": [
+      1609,
+      175
+    ],
+    "Derelict spur watch": [
+      1841,
+      182
+    ],
+    "West lower refuge": [
+      310,
+      785
+    ],
+    "Causeway underpass": [
+      939,
+      784
+    ],
+    "Reclaimer undercroft": [
+      1052,
+      783
+    ],
+    "East low retrieval": [
+      1550,
+      786
+    ],
+    "Deep west medical lock": [
+      241,
+      892
+    ],
+    "Deep return coop": [
+      1032,
+      892
+    ],
+    "Deep eastern escape": [
+      1950,
+      893
+    ]
+  },
+  "material_histogram": {
+    "0": 1554211,
+    "58": 38135,
+    "62": 165318,
+    "100": 339488
+  },
+  "stable_occupied_cells": 542941,
+  "grounded": 542941,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 12529,
+  "invalid_writes": 0,
+  "rectangles": 1701,
+  "rectangle_work": 542941,
+  "setup_bytes": 32727,
+  "material_plane_sha256": "8b8817e8f3e194bc9eb22ddb95a1c6b9018c8c587a8963a7511081e29aa2d276",
+  "setup_sha256": "99cb403911e7e1ea4f9f05377d604d73d7c4f0b331797e1fd7f5d14b729f151d",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1159848,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1120849,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1044383,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      471,
+      392,
+      80,
+      88
+    ],
+    "from": "West refugee kitchen",
+    "to": "Coop trade table",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 24,
+    "unreachable": [],
+    "distance_before_after": [
+      459,
+      595
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "93dfb852b30eff90c18e7c9b8f06573a86067fa706f18bf0f2b8ca4fa664b1a8",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-labour-quarter",
+      "rect": [
+        60,
+        295,
+        435,
+        450
+      ],
+      "bytes": 49685,
+      "sha256": "aafa77408caa6189cb63664d9b9972c486ed25871116297d965c947eec0617e8",
+      "pixel_parity": 195750
+    },
+    {
+      "name": "02-upper-tool-cooperative",
+      "rect": [
+        535,
+        206,
+        410,
+        535
+      ],
+      "bytes": 55825,
+      "sha256": "78c8f45c573549051beb381211cd7bb570c9e70559897f0bdb4817089f8b9fda",
+      "pixel_parity": 219350
+    },
+    {
+      "name": "03-reclaimer-exchange",
+      "rect": [
+        981,
+        323,
+        447,
+        516
+      ],
+      "bytes": 58493,
+      "sha256": "5e729bcd3d329f4f78486791feaf685475d5421b18358a83fc7cd29468d7fda9",
+      "pixel_parity": 230652
+    },
+    {
+      "name": "04-customs-abandoned-spur",
+      "rect": [
+        1497,
+        204,
+        533,
+        590
+      ],
+      "bytes": 79840,
+      "sha256": "2ee52bf72fabf6020e69ca17565c74960e6726c3cb350f3adfdd8a256be72d75",
+      "pixel_parity": 314470
+    },
+    {
+      "name": "05-causeway-underworks",
+      "rect": [
+        95,
+        697,
+        1850,
+        278
+      ],
+      "bytes": 129182,
+      "sha256": "87083ffeda4b668c2e39f8720a2fbb80ad2c591765a6f371d806bac05a7c6d43",
+      "pixel_parity": 514300
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Complete material plane, lossless disjoint Setup-v2 replay, exact conservative 19x15/23x19/31x27 routes, physical obstruction detour and indexed PNG integrity/parity"
+}
