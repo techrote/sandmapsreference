@@ -123,7 +123,7 @@ function level(){
   for(let e of active.values())edits.push(e);active.clear();for(let [k,v] of next)active.set(k,v);
  }
  for(let e of active.values())edits.push(e);edits.sort((a,b)=>a[1]-b[1]||a[0]-b[0]||a[4]-b[4]);
- const setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:[120,350],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits};
+ const setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:[120,350],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits,response:"LA-SELECTIVE",liquid_policy:[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],normalize:false,rule_radius:2,source:[],material:2,brush:8,fire:false};
  const json=JSON.stringify(setup);if(edits.length>32768||json.length>1048576)throw Error("source budget "+edits.length+" "+json.length);
  const replay=new Uint8Array(g.length),mask=new Uint8Array(g.length);let visits=0;
  for(let [x,y,w,h,m] of edits){if(x<0||y<0||w<1||h<1||x+w>W||y+h>H)throw Error("invalid rectangle");
@@ -159,7 +159,7 @@ function level(){
   sites,clearances:hull,full_upper_and_lower_31x27_samples_each:lineSamples,temporary_gate:[918,284,221,165,58],gate_bypass_31x27:closure.reached,
   districts:["Pulse Injector","Magnet-Skein Metrology","Twin Flywheel Press","Quench-Wave Exchangers","Reversal Throat"],
   native:"NATIVE-UNTESTED; accepted source supports 32768 rectangles but installed bridge may cap 4096"};
- report.repair_revision="R2 SHEPHERD P1: rooted pulse and metrology machinery, flywheel drive and bearing workface, quench heat-exchanger channels, navigation indicators; original 15 sites preserved";
+ report.repair_revision="R3 Setup-v2 14-field loader contract repair; R2 rooted pulse/metrology/flywheel/quench geometry unchanged";
  return {grid:g,json,report};
 }
 

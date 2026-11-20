@@ -8,7 +8,7 @@
   ],
   "material_cells": 2097152,
   "rectangles": 10438,
-  "setup_json_bytes": 193915,
+  "setup_json_bytes": 194310,
   "cell_visits": 758340,
   "setup_source_limits": {
     "rectangles": 32768,
@@ -158,9 +158,9 @@
     "Reversal Throat"
   ],
   "native": "NATIVE-UNTESTED; accepted source supports 32768 rectangles but installed bridge may cap 4096",
-  "repair_revision": "R2 SHEPHERD P1: rooted pulse and metrology machinery, flywheel drive and bearing workface, quench heat-exchanger channels, navigation indicators; original 15 sites preserved",
+  "repair_revision": "R3 accepted Setup-v2 14-key root loader acceptance fix; no change to R2 material IDs, rectangles, geometry, named sites or six committed indexed PNGs; R2 Shepherd P1 spatial repairs retained",
   "grid_sha256": "51bb308e4fdc7f1cd5512df026a14058e32297b02bd231ae345a6b576b7b159e",
-  "setup_json_sha256": "99ce89658ba40a31e0284d2df2632a0f34d88223fe2fa3a96d101122e598e7bc",
+  "setup_json_sha256": "bc490f4cd252980a4989d035af7c43b29341a2089c0c92808f0edcda0be40647",
   "images": [
     {
       "name": "overview.png",
@@ -258,5 +258,26 @@
   "generated_source_mode": "One-byte material ID for each cell, deterministic fixed-seed pure JS, lossless ordered rectangles",
   "png_rule": "8-bit indexed PNG; PNG pixel index IS the material ID; PLTE only changes display colour",
   "image_verification": "Self-checked signature, IHDR, PLTE, chunk CRC, zlib stored deflate, Adler32, IEND, and exhaustive literal material-ID pixel parity",
-  "stage": "STATIC AUTHOR VALIDATION; independent auditor and native playtest outstanding"
+  "stage": "STATIC AUTHOR VALIDATION; independent auditor and native playtest outstanding",
+  "setup_contract": {
+    "root_keys": [
+      "version",
+      "extent",
+      "actors",
+      "next_id",
+      "selected",
+      "edits",
+      "response",
+      "liquid_policy",
+      "normalize",
+      "rule_radius",
+      "source",
+      "material",
+      "brush",
+      "fire"
+    ],
+    "liquid_policy_words": 55,
+    "validated_against": "techrote/cybersand main@de109d0131641d6adc8d25bb9ced7ca3d4991105 godot/scripts/workbench_setup.gd ROOT_KEYS / read_named requirements",
+    "native_executed": false
+  }
 }
