@@ -252,6 +252,32 @@ function build(){
  L(546,599,546,617,11,M.titanium);
  L(352,765,416,799,12,M.steel);
 
+
+ // KESTREL R3 — Art-audited WEST cryogenic cartridge-to-driver transaction.
+ // Inhabited deck-mounted cradle, visible capsule, powered ram and a deliberate
+ // sloping loader connected to the real lower rail near the impact launch point.
+ R(267,665,78,9,M.titanium);
+ ellipse(299,653,27,13,M.iron);ellipse(299,653,19,8,M.frost);
+ R(279,661,43,4,M.chrome);R(335,659,13,24,M.steel);
+ L(338,678,419,railY(419)+43,9,M.chrome);
+ L(351,680,365,703,7,M.conduit);
+ R(416,railY(416)+37,26,10,M.ceramic);
+ // EAST receiving and capture: real rail-nose capture spar, catch bed,
+ // secured cartridge, lift annunciator and a low-level guide to freight.
+ L(1549,railY(1549)+42,1649,416,9,M.chrome);
+ R(1644,395,94,12,M.titanium);R(1665,380,52,15,M.glassDark);
+ R(1679,371,28,10,M.frost);R(1688,364,10,7,M.signal);
+ L(1718,401,1769,422,6,M.chrome);
+ L(1769,422,1827,454,6,M.conduit);
+ // EAST enclosed specimen-processing workface on already supported cargo deck.
+ // The interrupted left wall leaves a genuine portal; all existing Midge
+ // checkpoints and high/low recovery apertures remain untouched.
+ R(1884,515,103,11,M.ceramic);
+ R(1905,485,18,31,M.frost);R(1932,480,21,36,M.window);
+ R(1960,491,12,25,M.glassDark);R(1977,466,8,50,M.steel);
+ R(1893,464,90,9,M.titanium);
+ R(1893,473,8,10,M.steel);R(1893,510,8,8,M.steel);
+
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
  for(let y=0;y<H;y++){let next=new Map(),base=y*W;for(let x=0;x<W;){let m=g[base+x],s=x;while(x<W&&g[base+x]===m)x++;if(!m)continue;let k=s+":"+(x-s)+":"+m,idx=prev.get(k);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(k,idx);}prev=next;}
