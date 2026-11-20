@@ -237,3 +237,11 @@ R(553,412,94,115,M.AIR);
 R(776,509,58,190,M.AIR);
 // Preserve exact declared site centres; verify their entire hull envelopes.
 for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Straddle inside is an actual fly-through cargo portal, not a sealed display
+// cage. Open a 102-cell longitudinal door through crossing cable planes;
+// lower cage and adjacent right-hand recovery slot remain rooted.
+R(626,404,204,103,M.AIR);
+R(763,486,68,220,M.AIR);
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
