@@ -52,6 +52,6 @@ Run `node build.cjs` to regenerate the exact `setup.json`, `receipt.json` and se
 
 **Unscaled 1:1 indexed-material details:** [West twin-artery](01-west-dual-artery.png) · [First countershaft](02-first-countershaft.png) · [Central traction aperture](03-exterior-traction-aperture.png) · [East subgrade rejoin](04-east-subgrade-rejoin.png) · [Rescue works](05-emergency-rescue-works.png) · [Undertrack workfaces](06-undertrack-machine-workfaces.png).
 
-These are direct pixel crops of one final indexed material plane, not generated concept art. Full 256-entry PNG PLTE uses the eight chosen material IDs plus empty ID 0; transparent black void is represented as empty material index 0. The intended empty chambers, undertrack seams and bare industrial walls are future editing affordances, not accidental omission.
+These are direct pixel crops of one final indexed material plane, not generated concept art. Full 256-entry PNG PLTE uses the eight chosen material IDs plus empty ID 0; dark unoccupied void is represented by empty material index 0 (opaque background palette entry). The intended empty chambers, undertrack seams and bare industrial walls are future editing affordances, not accidental omission.
 
 **Source authority:** `sandmapsreference main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`; current CyberSand accepted read-only source `main@de58bf1997ca75825cf3b29e046dc1c1022c45bf`. No engine edits, donor branch edits, other creator work, native claims, Ready promotion or merge.
