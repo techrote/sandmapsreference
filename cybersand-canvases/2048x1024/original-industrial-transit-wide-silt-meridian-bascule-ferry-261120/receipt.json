@@ -1,0 +1,323 @@
+{
+  "concept": "Silt Meridian — Twin Raised Bascule Rail-Ferry Exchange",
+  "original": true,
+  "seed": 20261120,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Western arrival buoy",
+      "Berth customs manifest",
+      "Rail lift receiver",
+      "Western bascule hinge",
+      "Channel free throat",
+      "Eastern bascule hinge",
+      "Rotary outer inspection",
+      "Sorting frog operator",
+      "Dispatch inlet",
+      "Outbound customs gate"
+    ],
+    "upper": [
+      "Quay crane crown",
+      "Lift upper service",
+      "Upper open west",
+      "Upper channel traverse",
+      "Upper open east"
+    ],
+    "lower": [
+      "Bilge pump station",
+      "Rail lift maintenance",
+      "Channel invert",
+      "Sorter switch below",
+      "Dispatch recovery"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "Hard wall - Solid/None",
+    "62": "structural solid - Solid/None",
+    "100": "Basalt - Solid/None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Western arrival buoy": [
+      112,
+      447
+    ],
+    "Berth customs manifest": [
+      333,
+      465
+    ],
+    "Ship cutaway workface": [
+      310,
+      713
+    ],
+    "Quay crane sky inspection": [
+      470,
+      205
+    ],
+    "Rail lift receiver": [
+      652,
+      460
+    ],
+    "Lift upper service": [
+      706,
+      220
+    ],
+    "Western bascule hinge": [
+      849,
+      463
+    ],
+    "Western raised leaf": [
+      983,
+      342
+    ],
+    "Channel free throat": [
+      1095,
+      474
+    ],
+    "Eastern raised leaf": [
+      1214,
+      337
+    ],
+    "Eastern bascule hinge": [
+      1369,
+      462
+    ],
+    "Rotary outer inspection": [
+      1450,
+      475
+    ],
+    "Rotary internal bay": [
+      1600,
+      489
+    ],
+    "Sorting frog operator": [
+      1724,
+      487
+    ],
+    "Dispatch inlet": [
+      1843,
+      473
+    ],
+    "Outbound customs gate": [
+      1930,
+      470
+    ],
+    "Upper open west": [
+      523,
+      201
+    ],
+    "Upper channel traverse": [
+      1111,
+      203
+    ],
+    "Upper open east": [
+      1762,
+      206
+    ],
+    "Bilge pump station": [
+      268,
+      838
+    ],
+    "Rail lift maintenance": [
+      616,
+      838
+    ],
+    "Channel invert": [
+      1121,
+      838
+    ],
+    "Sorter switch below": [
+      1533,
+      838
+    ],
+    "Dispatch recovery": [
+      1850,
+      838
+    ]
+  },
+  "material_histogram": {
+    "58": 176683,
+    "62": 170321,
+    "100": 244837
+  },
+  "stable_occupied_cells": 591841,
+  "grounded": 591841,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 13595,
+  "rectangles": 5845,
+  "rectangle_work": 591841,
+  "setup_bytes": 107964,
+  "material_plane_sha256": "85bfb801d8f1ee450d376f55dd80a6932e65ddabdde65cff1c5d37021b19f306",
+  "setup_sha256": "06cb15e0d9d2e90278186f00807555955d49bd7bd9de9ac9b069143c257d264e",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1181436,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1137364,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1057163,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      166,
+      403,
+      74,
+      90
+    ],
+    "from": "Western arrival buoy",
+    "to": "Berth customs manifest",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 24,
+    "unreachable": [],
+    "distance_before_after": [
+      239,
+      321
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "4d1914764332dd4c7fafa77aea9e2c18d44ed6ae757154c2931801f86961a3e2",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-serviced-freighter",
+      "rect": [
+        119,
+        419,
+        423,
+        413
+      ],
+      "bytes": 44376,
+      "sha256": "6c9bd9d6c4b05b7cc47879c45ea269df0af595c8d70274133e9fb0d80e67ec40",
+      "pixel_parity": 174699
+    },
+    {
+      "name": "02-rail-lift",
+      "rect": [
+        493,
+        161,
+        317,
+        622
+      ],
+      "bytes": 50567,
+      "sha256": "620a5e3bfb3b0d0bcfa5dc5b8a48d5500e8dba74ac1e2fb5193d4ca4066bf237",
+      "pixel_parity": 197174
+    },
+    {
+      "name": "03-bascule-cut",
+      "rect": [
+        779,
+        236,
+        630,
+        553
+      ],
+      "bytes": 88117,
+      "sha256": "7cacf8ad7d1e85c052f58264153b1fe8a7b4e9f366b32da9d1ce3dadc78dbf5f",
+      "pixel_parity": 348390
+    },
+    {
+      "name": "04-rotary-sorter",
+      "rect": [
+        1404,
+        265,
+        386,
+        520
+      ],
+      "bytes": 51145,
+      "sha256": "756fdf64c0e023a38fc4360a56ce9fc3e534078a0e2b4b5be3457367ba8b2b6f",
+      "pixel_parity": 200720
+    },
+    {
+      "name": "05-dispatch-hall",
+      "rect": [
+        1774,
+        319,
+        274,
+        486
+      ],
+      "bytes": 34205,
+      "sha256": "25fa05cb3f469b596de74b607cd51429164f2c2af9f657563ccdcccb63896c91",
+      "pixel_parity": 133164
+    },
+    {
+      "name": "06-invert-rescue",
+      "rect": [
+        890,
+        791,
+        438,
+        233
+      ],
+      "bytes": 26048,
+      "sha256": "90e6504056b6cc4fe4b255020250504aca6e207ef6d60413311b9d8f871e0051",
+      "pixel_parity": 102054
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "installed_fallback_risk": 4096,
+  "proof": "Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"
+}
