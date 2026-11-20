@@ -1,5 +1,5 @@
 {
-  "status": "AUTHOR-STATIC-PASS / INDEPENDENT-PENDING / NATIVE-UNTESTED",
+  "status": "AUTHOR-STATIC-PASS / INDEPENDENT-R2-PENDING / NATIVE-UNTESTED",
   "source": "ORIGINAL-NO-REFERENCE",
   "engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
@@ -8,37 +8,37 @@
     "width": 2048,
     "height": 1024,
     "cells": 2097152,
-    "sha256": "09ccfd9b22d532e8ac39014232bae8dd1b8848cbb451b93a730590b4f3b7ee56",
+    "sha256": "cfa710d23cc2d4a3c2871dda5d132c8653a5c1eede41e1b1991f410d1675170e",
     "histogram": {
-      "0": 1495392,
-      "58": 36105,
-      "62": 85377,
-      "63": 17236,
-      "72": 7882,
-      "77": 4700,
-      "79": 7444,
-      "100": 168759,
+      "0": 1434747,
+      "58": 52510,
+      "62": 97325,
+      "63": 24536,
+      "72": 11444,
+      "77": 6512,
+      "79": 12411,
+      "100": 166051,
       "101": 173715,
-      "117": 49779,
-      "128": 26118,
-      "130": 24645
+      "117": 57021,
+      "128": 34562,
+      "130": 26318
     },
-    "occupied": 601760,
-    "grounded": 601760,
+    "occupied": 662405,
+    "grounded": 662405,
     "detached": 0,
-    "unanchored_nominal_pruned": 9124,
+    "unanchored_nominal_pruned": 8179,
     "unknown_materials": 0,
     "fluids": 0,
     "reactive": 0
   },
   "codec": {
-    "rectangles": 6944,
+    "rectangles": 7253,
     "source_limit": 32768,
-    "setup_bytes": 131743,
+    "setup_bytes": 137344,
     "source_byte_limit": 1048576,
-    "construction_work": 601760,
+    "construction_work": 662405,
     "source_work_limit": 32000000,
-    "setup_sha256": "f88da8dc8253a8e36a284d48b8f6871ee2e9527270b1fe275f94108797e0883d",
+    "setup_sha256": "3c105a3e6ac919f7cbe019f36c82e31e1820ce380f1869d458b5c2334fdc01d9",
     "overlaps": 0,
     "replay_mismatches": 0
   },
@@ -50,7 +50,7 @@
           19,
           15
         ],
-        "reachable_centres": 1203787,
+        "reachable_centres": 1187038,
         "sites": {
           "spawn_isolation_port": {
             "reachable": true,
@@ -107,7 +107,7 @@
           23,
           19
         ],
-        "reachable_centres": 1168099,
+        "reachable_centres": 1152246,
         "sites": {
           "spawn_isolation_port": {
             "reachable": true,
@@ -164,7 +164,7 @@
           31,
           27
         ],
-        "reachable_centres": 1109052,
+        "reachable_centres": 1097680,
         "sites": {
           "spawn_isolation_port": {
             "reachable": true,
@@ -240,8 +240,8 @@
         1024
       ],
       "bytes": 2099184,
-      "png_sha256": "de6ddd79c57ce3411b3fc6fa538e2cea6786993b44552e11df4d9e9aee2fcad8",
-      "material_pixel_sha256": "40ae91d305b1e0295485915ddfe4176e5db976566e5158ee7e8870624e58dc5e",
+      "png_sha256": "7dfc7b5319dd95eb3545bb80772971e51c38e06b46a22b2a041e54160fef98d8",
+      "material_pixel_sha256": "8c76597169249eff2fb6eca0f81c791c85c1a735fda51f90dd43cc063e09900c",
       "signature_crc_zlib_iend_pixel_parity": "PASS"
     },
     {
@@ -253,8 +253,8 @@
         482
       ],
       "bytes": 184500,
-      "png_sha256": "6e8ba0114bc82475bc3eadbbe74f3bfe8cbd4d2d047d641cfdaebebb0c7cdee6",
-      "material_pixel_sha256": "948d7fa860909518f840ae9f228aeb5bdd8d2c1305327f7422879c90d0e95ec7",
+      "png_sha256": "a2eb8e3b0124f2ed129377e91c78af40e416ed0c063beec44927b237de33fd92",
+      "material_pixel_sha256": "899af8bbb72374ff02ff61f593eb4395c84c7f486222ac7406b43e712d94c893",
       "signature_crc_zlib_iend_pixel_parity": "PASS"
     },
     {
@@ -266,8 +266,8 @@
         505
       ],
       "bytes": 208418,
-      "png_sha256": "ddc816f8f3006eba3aaa2604a4a93ad9f2da643d9a7772d82a48bf30a8cbd2f4",
-      "material_pixel_sha256": "4fe3e6b0cd14bd6b9163a4adf220503270871ee09b4c9ba15d7c04869b2d08cc",
+      "png_sha256": "f296444a8ff9ebc44d622a938bd6c7c6622f3870e23abb8694b5f7dffda1b35a",
+      "material_pixel_sha256": "f87f474ce0ef722307dcff15b26a7cc1e172bb248c1a9931f54634ca3de4c6b0",
       "signature_crc_zlib_iend_pixel_parity": "PASS"
     },
     {
@@ -279,8 +279,8 @@
         425
       ],
       "bytes": 226538,
-      "png_sha256": "7f24a2cdb7321f325d6385a221e0d2b39cc7f223cab4b26c7120e198e5480c6f",
-      "material_pixel_sha256": "8967ab64bb3caabcdbea28fcf3893a77c79664ed1be7c45bde2122384400d153",
+      "png_sha256": "5640e366b6157aca0c4773b2445e03b1edd3510291dfa8a88b7755965081a1b7",
+      "material_pixel_sha256": "e6e7fd33e522dd9b1c6b957af5de58627052514ec8fb8e896df424d860a76afe",
       "signature_crc_zlib_iend_pixel_parity": "PASS"
     },
     {
@@ -292,8 +292,8 @@
         295
       ],
       "bytes": 162813,
-      "png_sha256": "ad92629f523de4178f419cfb9de1808eae9cd75cacc6ea4aa1826350db3689a9",
-      "material_pixel_sha256": "44f2145208e0c769a9f2956636e29cfff1deb30e06d17b3388d092ac10010651",
+      "png_sha256": "1c1f04e120995be2837f829df47ab05ff9b1cdbc09c680c1b87cd86a8c9e41db",
+      "material_pixel_sha256": "0a2cc7ddbfc7307003603463c82ff91b2220bfbc0ae1410a252a3ab4cac44500",
       "signature_crc_zlib_iend_pixel_parity": "PASS"
     },
     {
@@ -305,8 +305,8 @@
         482
       ],
       "bytes": 200411,
-      "png_sha256": "b79006f91b4bff5d78f140b604b50271b7b20b0caae1868e4f6e4f2bbeb03497",
-      "material_pixel_sha256": "0ad50cb15af1bcfbc27a7fa880132a118372fe9f0683158ef12122b9e496ea17",
+      "png_sha256": "a5fcd7f4d69b416c9214f870826f9cecfac43432494913e44884cbb0ae37b428",
+      "material_pixel_sha256": "902ace1691eadc29f95eda76d55724df6d503a2f80f0409e382e2755941214e9",
       "signature_crc_zlib_iend_pixel_parity": "PASS"
     },
     {
@@ -318,11 +318,28 @@
         492
       ],
       "bytes": 179454,
-      "png_sha256": "af66a7df18eede5d16802e7a8038fac66783b99b993d06403c604b858edf139d",
-      "material_pixel_sha256": "d86592b3f2feeec96199c9a6d55fa9373ada7a52a8a6643e7f15c3a9ba560dd3",
+      "png_sha256": "55f3f254370e351ab707a95733982f5e5ed608c6960dec2ffd8dd23d2ab80e02",
+      "material_pixel_sha256": "9d1f1bf44282ccdb523730e88819000fc594fcec3a764af3c0cdc6169c79cd02",
       "signature_crc_zlib_iend_pixel_parity": "PASS"
     }
   ],
+  "revision": {
+    "from": "b6ca981ade1bbc198230acba47dfe9c757920861",
+    "operations_added": 117,
+    "real_changed_cells": 100663,
+    "new_solids": 60645,
+    "rematerialized_cells": 40018,
+    "removed_cells": 0,
+    "technical_repair": "Raised central inspection specimen bar that blocked the fourth 31x27 approach was removed before publication; retested all literal destinations.",
+    "districts": [
+      "asymmetric quarantine pressure-lock scrubber",
+      "linear preform tension/pressure die",
+      "roof-rooted lamina sheet-cutting shuttle",
+      "entered lower sheet assay table",
+      "multi-stage curing tunnel/dryer",
+      "roller freight outfeed"
+    ]
+  },
   "warnings": [
     "Author static qualification is not independent Art/Technical/Shepherd acceptance.",
     "Native installed Workbench/Godot/CyberDemoBridge/Rapier and cold save/reopen NOT TESTED.",
