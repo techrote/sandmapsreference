@@ -17,7 +17,7 @@ function build(){
  R(0,985,W,39,C.rock);
  P([[0,1024],[0,346],[84,358],[159,408],[233,486],[313,560],[402,645],[509,759],[605,894],[646,1024]],C.rock);
  P([[2048,1024],[2048,331],[1969,351],[1891,414],[1820,495],[1748,592],[1636,715],[1521,852],[1473,1024]],C.rock);
- for(let x=0;x<W;x+=4){let y=985+Math.round(4*Math.sin(x*.026)+3*Math.cos(x*.075));R(x,y,4,H-y,C.schist);}
+ for(let x=0;x<W;x+=8){let y=985+Math.round(4*Math.sin(x*.026)+3*Math.cos(x*.075));R(x,y,8,H-y,C.schist);}
  for(let x=0;x<590;x+=37)R(x,822+Math.floor(x*.12),8,70,C.schist);
  for(let x=1520;x<W;x+=43)R(x,841-Math.floor((x-1520)*.13),7,83,C.schist);
  // Unequal terraced physical side-entry district chambers and true dry underworks.
