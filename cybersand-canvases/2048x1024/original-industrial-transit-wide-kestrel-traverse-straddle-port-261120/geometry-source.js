@@ -143,3 +143,16 @@ R(0,991,W,33,M.WALL);
 R(90,799,1860,81,M.AIR);
 for(let [x,y] of [[305,745],[691,745],[1161,749],[1577,743],[1861,739]])R(x-38,y,77,141,M.AIR);
 for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Authorial full-hull doors, never nearest-centre substitutions:
+// A 74-cell dockside descending service shaft, a shipyard-portal transverse
+// service gate, the straddle-side cage recovery well, and east customs entry.
+R(506,503,67,383,M.AIR);
+R(548,412,98,108,M.AIR);
+R(782,510,50,184,M.AIR);
+R(1800,431,197,95,M.AIR);
+// Redundant secondary underarch shaft into the real lower service rail.
+R(1131,572,69,313,M.AIR);
+// All exact targets remain at original authored coordinates.
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
