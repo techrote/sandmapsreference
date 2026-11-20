@@ -21,7 +21,7 @@ function deflate(raw){
 function png(g,x0,y0,w,h){const raw=new Uint8Array((w+1)*h);for(let y=0;y<h;y++)raw.set(g.subarray((y+y0)*W+x0,(y+y0)*W+x0+w),y*(w+1)+1);
  const parts=[new Uint8Array([137,80,78,71,13,10,26,10]),chunk("IHDR",new Uint8Array([...be(w),...be(h),8,3,0,0,0])),chunk("PLTE",PALETTE_BYTES),chunk("IDAT",deflate(raw)),chunk("IEND",new Uint8Array())];
  const out=new Uint8Array(parts.reduce((a,b)=>a+b.length,0));let p=0;for(let a of parts){out.set(a,p);p+=a.length}return out}
-const CROPS=[["01-west-habitat",60,335,505,390],["02-horizon-harp",720,270,590,540],["03-east-spectrograph",1480,225,545,520],["04-subplate-vaults",610,735,805,265],["05-field-stations",104,590,580,330]];
+const CROPS=[["01-west-habitat",60,335,505,390],["02-horizon-harp",720,270,590,540],["03-east-spectrograph",1480,225,545,520],["04-subplate-vaults",610,735,805,265],["05-field-stations",104,590,580,330],["06-cryobank-vault",1470,795,525,200]];
 const LIQUID_POLICY=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
 function make(){
  const {grid,rooted,removed}=B.buildPlane();

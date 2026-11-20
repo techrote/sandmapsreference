@@ -1,61 +1,63 @@
-# Vesper Thermocline — Horizon Harp
+# Vesper Thermocline — Horizon Harp (R2 functional engineering)
 
-> ORIGINAL / NO REFERENCE · Sci-Fi Frontier Wide · 2048×1024 exact CyberSand material cells · DRAFT/HOLD · SOURCE-STATIC TESTED · NATIVE-UNTESTED
+> **ORIGINAL / NO REFERENCE · Sci-Fi Frontier Wide · 2048×1024 · actual CyberSand material cells · OPEN Draft/HOLD · R2 AUTHOR SOURCE-STATIC PASS · NATIVE-UNTESTED · INDEPENDENT R2 AUDIT REQUIRED**
 
-A completely newly invented off-world observatory community built across a sheared volcanic thermocline. Its landmark is the **Horizon Harp**, a two-armed solar/geophysical interferometer pinned to deep foundation rock, spanning a natural cleft between a compact western greenhouse/rover settlement and an eastern stepped xenogeological spectrograph hospital. Beneath the open flight rift is a genuinely interconnected tectonic service/cryobank passage. Rendered strictly in perpendicular 2D side elevation; no reference art, painted overlays, isometric surfaces or visible platform tops.
+An original off-world volcanic thermocline settlement spanning an enormous open aerial cleft. A split V-shaped Horizon Harp interferometer stands on rock-bedded foundations between the west inhabited service habitat and the east spectrograph, medical and boarding campus; a lower tectonic service/cryobank return provides a separate exploration loop. True orthographic side elevation only: no perspective, imported concept imagery or visual-only obstacles.
 
-## Source identity and technical authority
+## R2 response to exact-HEAD Shepherd functional-workface P1
 
-- Repository: `techrote/sandmapsreference`, new independent `original/scifi-frontier-wide/vesper-thermocline-horizon-harp-261119` branch rooted at accepted default `main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`.
-- **READ-ONLY CyberSand engine authority** `techrote/cybersand main@de109d0131641d6adc8d25bb9ced7ca3d4991105`, Workbench Setup-v2 loader blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`, material enum blob `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`, Midge 4×3 authored definition blob `228399e38a0e0ab215b9f48698edce67a7a35799`.
-- Fixed original seed **81102619**. `build.cjs` creates all 2,097,152 physical cells, rooted supports and exact named target positions; `serialize.cjs` performs lossless ordered nonoverlapping rectangular encoding and generates truly indexed material-cell PNGs; `generate.cjs` verifies exhaustive replay, 31×27 flight and independently inflated PNG pixel parity.
-- Run `node generate.cjs --verify` on Node 22+ from this directory; `node generate.cjs --write` re-creates exact Setup-v2 JSON and all images deterministically. No package installation or network required.
-- **No engine code, imported artwork, historical conversion or other creator's PR was changed.**
+Compared with the initial Vesper submission at `0de5f781b73fd9e19c6ee54b9c6e3da27cec64db`, this revision changes **23512 genuine material IDs** (**20761 added**, **216 excavated**, **2535 reassigned**) instead of adding illustrative overlays. The West settlement now has two connected sample-handling bench stations, a recognisable rover chassis/diagnostics landing, and an independent crane at the relay. The Horizon Harp has separate tuning and receiving workfaces hanging from the west and east landed gantries. The east campus now contains physically different spectrometer collimation, medical scanning and boarding support mechanisms. The deep return contains a grounded, side-enterable cold-service vault, with an independently checked access centre `[1778,884]`. The central open canyon silhouette and original 21 waypoints are unchanged.
 
-## Physical gameplay scale and district graph
+A first R2 workface blocked the 23×19/31×27 approach to the named spectrograph station; this was **rejected** and relocated to the far eastern telescope bay before publication. An initial service-bay chassis also disconnected the west landing; it was rejected and replaced with the low-profile, grounded chassis beneath the flyable circulation band. These are recorded design regressions repaired before the new candidate, not waived checks.
 
-The actual Midge hull is **4×3** cells. We conservatively test **19×15, 23×19 and 31×27** completely unobstructed Midge-centre envelopes. The west habitable place has several people-scale storeys separated by enterable portals; elevated transmitter and east radio horns are attached to actual load-bearing columns. Four primary functional districts plus supporting facilities:
+## Immutable source identity and material authority
 
-1. **West settlement:** arrival dock (145,653), canteen (201,555), archive overlook (395,464), rover repair (576,665), tall aerial transmitter (119,348), relay (620,670), sub-basement archive (350,872).
-2. **Volcanic cleft:** sky-side cleft overlook (802,345), western rock descent, low tectonic corridor (1107,910), eastern relief shaft (1718,780).
-3. **Horizon Harp:** split upper interferometer (1020,525), left console (942,577), right console (1123,579), embedded foundation service (1096,827), lower cleft (1170,745).
-4. **East xenogeology campus:** sealed observatory (1624,352), spectral analyser (1698,440), medical triage (1663,530), canister storage (1814,609), rover boarding (1963,602).
-5. **Subplate and cryobank:** cryobank (1618,877) connected to west archive, tectonic corridor, geological probe spine and eastern relief shaft.
+- Writable repository/branch: `techrote/sandmapsreference`, `original/scifi-frontier-wide/vesper-thermocline-horizon-harp-261119`, starting default `main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`.
+- Accepted **READ-ONLY** engine `techrote/cybersand main@de109d0131641d6adc8d25bb9ced7ca3d4991105`: Workbench Setup-v2 loader blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`, material definitions blob `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`, Midge JSON blob `228399e38a0e0ab215b9f48698edce67a7a35799`, true authored Midge hull **4×3**, model hash `c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96`.
+- Deterministic `build.cjs`, fixed `SEED=81102619`, `serialize.cjs` lossless nonoverlapping ordered rectangles, real indexed-PNG material values, `generate.cjs` verifier. Node 22+ from the map directory: `node generate.cjs --verify` (fully regenerate into memory, match committed bytes and PNG material indices), or `node generate.cjs --write` to reproduce committed Setup/images. No network or npm dependencies required.
+- Allowed construction solids: accepted immutable **Solid / RuleKernel::None** IDs as enumerated by `source_material_histogram` in `receipt.json`. No falling sand, unconfined fluids, molten liquids, reactive decoration or invented material IDs. **540105 / 540105** occupied final cells have a four-neighbour boundary-grounded structural connection. `16949` provisional ungrounded builder-stage cells were discarded **before** final serialization; no detached final material is accepted.
 
-**Route topology**: arrival → west settlement → open cleft sky → Harp → eastern observatory → medical/storage/boarding. Lower recovery loop: west archive → tectonic underplate → Harp footing → cryobank → eastern relief, connecting again to the mid-altitude campus. Test obstruction (865,775) size 64×48 fills **2,730 air cells**, yet **21/21** exact sites remain connected at 31×27 without coordinate shifting or target substitutions; a real alternative route exists in the static centre graph. This is not a guarantee of comfortable native manoeuvring under physics.
+## Gameplay/route graph (strict actual named 31×27 envelopes)
 
-## Source-static qualification (full final grid)
+**Spawn:** West arrival `[145,653]`. Primary loop: West arrival → Habitat canteen `[201,555]` → Archive overlook `[395,464]` → West transmitter `[119,348]` / Rover repair `[576,665]` → Cleft north `[802,345]` → Horizon Harp upper `[1020,525]` → west/east workfaces `[942,577]` and `[1123,579]` → east observation `[1624,352]` → spectrograph `[1698,440]` → medical `[1663,530]` → boarding `[1963,602]` / storage `[1814,609]`.
 
-| Test | Result |
+**Lower independent recovery:** West archive `[350,872]` → West drill relay `[620,670]` → Harp base `[1096,827]` → Tectonic corridor `[1107,910]` → Cleft lower `[1170,745]` → Cryobank `[1618,877]` → **new cold-vault maintenance `[1778,884]`** → East relief shaft `[1718,780]` → East campus. Every exact site is listed in the machine receipt, including those not expanded in this prose.
+
+Two interconnected flight flanks surround the central V-shaped Harp. An actual `64×48` blocked-solid under-rift insertion at `[865,775]` converts **2730** real air cells to material yet retains **22/22** exact 31×27 destination reachability; the obstruction is not a simulated UI highlight. Static free-centre BFS establishes traversable spaces, **not** dynamic Midge steering success.
+
+## Exact R2 final-plane and source-static receipt
+
+| Check | Exact committed data |
 |---|---:|
-| Exact material plane | **2048×1024 = 2,097,152 IDs** |
-| Boundary-rooted occupied inert solids | **519,560 / 519,560**, 0 detached |
-| Preliminary unattached construction fragments discarded **before serialization** | 15,233 |
-| Legal nonoverlapping rectangles | **5,285 / 32,768** |
-| Setup-v2 JSON | **100,692 / 1,048,576 bytes** |
-| Rectangle work | **519,560 / 32,000,000** |
-| 19×15 exact-site reachable centres | 21/21; 1,322,929 |
-| 23×19 exact-site reachable centres | 21/21; 1,271,561 |
-| 31×27 exact-site reachable centres | 21/21; 1,180,519 |
-| 31×27 physically blocked lower rift stress test | 21/21; 1,177,002 centres |
-| Exhaustive rectangle replay and indexed image material-pixel construction | Exact same final grid |
-| Material-plane SHA-256 | `33a261e8f90ce3de6ae2b376f54bc341caccbac10f9c893ea5d1533babfc6759` |
-| Setup JSON SHA-256 | `c783b4adca00e7a82337de7535ad897d7dabb716cd9b59c601aeef015baed588` |
+| Cell plane | **2048×1024 = 2,097,152** material IDs |
+| Stable occupied / boundary-grounded cells | **540,105 / 540,105**; zero detached final |
+| Canonical nonoverlapping rectangle edits | **5,543 / 32,768** |
+| Setup-v2 JSON bytes | **105,492 / 1,048,576** |
+| Construction work | **540,105 / 32,000,000** |
+| Exact 19×15 Midge clearance | **22/22**, 1,295,589 reachable centres |
+| Exact 23×19 Midge clearance | **22/22**, 1,244,408 reachable centres |
+| Exact 31×27 Midge clearance | **22/22**, 1,154,150 reachable centres |
+| Physical obstruction / return | **22/22**, 1,150,633 remaining centres |
+| Ordered-rectangle exact whole-grid replay | **2,097,152 / 2,097,152** cell identities match |
+| Real indexed material-PNG outputs | **7**: one full extent, six 1:1 district crops |
+| Whole-plane SHA-256 | `4c9a39278d4c730090e92b683d136b7a5a49593d644372ae8e237204aa37627d` |
+| Setup JSON SHA-256 | `23c910e9829403250b77f3d772b473d16401f15c09c614c99df6e1f28a9b0ddd` |
 
-All occupied IDs in `receipt.json` are from the accepted inert, immobile Solid/None class. No falling powders, fluid volumes, growing vegetation, explosive or invalid IDs were staged. The algorithm removes would-be disconnected solids rather than treating them as grounded. Index-valued palette PNGs represent **actual material cells**; the color palette is only a viewer mapping and does not affect material identity.
+## Genuine material-cell gallery (indexed palette values = native material IDs)
 
-**Risk — installed bridge capacity:** Accepted *source* advertises 32,768 Workbench rectangles but older *installed* CyberDemoBridge may fall back to **4,096**. This map requires **5,285**, so **native admission is unverified** until the actual loaded GDExtension/binary reports sufficient capacity. It must not be labeled native-compatible based only on this static count. Runtime flight, Rapier collision/advancement, long-running simulation, and fresh-process save/reopen are **NATIVE-UNTESTED**. Independent exact-HEAD art/technical/Shepherd review is requested. No merge, Ready promotion, auto-merge or owner acceptance.
+![Vesper whole original source-cell world](overview.png)
 
-## Real material-cell evidence
-
-![Whole actual material-cell world, 2048×1024](overview.png)
-
-| Western habitation — 1:1 (505×390) | Horizon Harp — 1:1 (590×540) |
+| West inhabited service and rover (1:1) | Twin Harp tuning decks (1:1) |
 |---|---|
-| ![West habitat](01-west-habitat.png) | ![Harp](02-horizon-harp.png) |
-| Eastern spectrograph — 1:1 (545×520) | Deep subplate vaults — 1:1 (805×265) |
-| ![East campus](03-east-spectrograph.png) | ![Tectonic levels](04-subplate-vaults.png) |
+| ![west actual grid](01-west-habitat.png) | ![Harp actual grid](02-horizon-harp.png) |
+| East spectrometer, medical and boarding (1:1) | Deep tectonic return (1:1) |
+| ![east actual grid](03-east-spectrograph.png) | ![lower actual grid](04-subplate-vaults.png) |
 
-![Field stations, exact 1:1 material crop 580×330](05-field-stations.png)
+![Rover and drill field stations, 1:1 cells](05-field-stations.png)
+![NEW: real entered cold-store maintenance vault, 1:1 cells](06-cryobank-vault.png)
 
-All crops select subarrays from the **same final material-ID grid**, no enlargement, AI visual substitutions, or source-photo artifacts. Each image's byte count, bounding extent and SHA-256 are retained in `receipt.json`.
+Binary SHA-256, raw dimensions and exact subarray coordinates of each PNG are in `receipt.json`. Images contain material IDs, *not* screenshot painting. The last crop is newly included because the earlier subplate crop did not contain the actual cryobank chamber.
+
+## Native / independent gates
+
+**DRAFT / HOLD — NATIVE-UNTESTED.** These are actual static material cells; no installed Godot, Workbench, CyberDemoBridge or Rapier binary was executed. Accepted source advertises **32,768** start rectangles but older **installed bridge** may report only **4,096**. The **5543** records still exceed that fallback: confirm the loaded bridge method, then import the unaltered Setup, exercise Midge steering/contacts and fresh-process save/reopen before promotion. Independent exact-R2-HEAD **Art, Technical and Shepherd** audit is required. Never mark Ready, merge, auto-merge or treat source-static tests as owner acceptance.

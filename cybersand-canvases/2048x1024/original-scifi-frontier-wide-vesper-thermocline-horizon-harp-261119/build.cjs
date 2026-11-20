@@ -118,7 +118,62 @@ function buildPlane(){
  for(let x of [1550,1817])rect(x+7,667,5,11,M.STEEL);
  for(let x of [268,402,432,1634,1780])rect(x+5,908,4,20,M.STEEL);
  for(let x of [626,758,905,1075,1227])rect(x+5,927,5,9,M.STEEL);
- // Enforce stable grounded final material; discard unattached construction trials.
+
+ // R2 FRONTIER FUNCTIONAL WORKFACES: physically grounded, open-sided, Midge-scale collision cells.
+ // West: inhabited wet-sample transfer, rover diagnostics and genuinely enterable servicing.
+ rect(380,700,121,11,M.STEEL);rect(386,684,107,16,M.WALL);
+ rect(401,672,65,12,M.CARBON);rect(412,661,43,11,M.GLASS);
+ rect(421,659,15,8,M.CYAN);rect(390,675,14,8,M.GRATE);
+ rect(471,675,15,8,M.GRATE);rect(392,665,6,19,M.PIPE);
+ rect(482,667,7,17,M.CARBON);rect(402,654,8,13,M.AMBER);
+ rect(478,660,8,7,M.LED);rect(452,681,17,5,M.SHIELD);
+ rect(191,602,60,7,M.STEEL);rect(195,583,6,19,M.CARBON);
+ rect(241,584,6,19,M.CARBON);rect(205,586,27,15,M.GLASS);
+ rect(212,580,12,7,M.CYAN);rect(216,574,4,7,M.PIPE);
+ rect(351,602,66,7,M.STEEL);rect(355,583,9,19,M.CARBON);
+ rect(401,581,8,21,M.CARBON);rect(366,592,32,10,M.GRATE);
+ rect(374,584,15,8,M.FROST);rect(388,575,4,10,M.LED);
+ rect(594,600,65,9,M.CARBON);rect(645,563,9,39,M.STEEL);
+ line(647,566,582,566,7,M.CARBON);rect(581,565,10,18,M.PIPE);
+ rect(583,582,17,6,M.AMBER);rect(614,591,29,9,M.STEEL);
+ rect(618,581,24,10,M.GLASS);rect(608,575,6,25,M.CYAN);
+ // Horizon Harp: asymmetrically separate tuning and receiving consoles under its two flanks.
+ rect(917,632,10,53,M.CARBON);rect(971,633,9,45,M.CARBON);
+ rect(925,678,56,7,M.STEEL);rect(934,658,30,19,M.GLASS);
+ rect(942,648,13,10,M.CYAN);rect(954,646,4,13,M.PIPE);
+ rect(990,647,13,6,M.GRATE);line(986,685,1018,742,6,M.PIPE);
+ rect(1081,633,9,45,M.CARBON);rect(1131,633,10,54,M.STEEL);
+ rect(1086,679,55,8,M.STEEL);rect(1097,659,30,20,M.FROST);
+ rect(1102,649,9,10,M.AMBER);rect(1115,640,4,19,M.PIPE);
+ line(1074,687,1035,743,6,M.PIPE);
+ // East: independent actual-cell scientific spectrometer, triage and boarding crane.
+ rect(1780,464,68,10,M.STEEL);rect(1780,425,9,39,M.CARBON);
+ rect(1839,425,8,39,M.CARBON);rect(1790,440,42,18,M.GLASS);
+ rect(1797,431,29,9,M.FROST);rect(1805,424,7,9,M.CYAN);
+ line(1831,450,1854,436,5,M.PIPE);
+ rect(1741,551,75,9,M.STEEL);rect(1744,511,9,41,M.CARBON);
+ rect(1805,520,9,31,M.CARBON);rect(1754,539,43,12,M.GLASS);
+ rect(1762,527,23,11,M.FROST);rect(1766,518,6,10,M.CYAN);
+ rect(1787,509,6,30,M.PIPE);rect(1797,525,7,8,M.LED);
+ rect(1842,650,65,11,M.WALL);rect(1851,631,7,19,M.CARBON);
+ rect(1893,617,8,33,M.CARBON);rect(1859,630,29,15,M.GLASS);
+ rect(1864,619,19,12,M.SHIELD);rect(1852,610,10,10,M.AMBER);
+ rect(1905,615,21,6,M.GRATE);line(1910,618,1933,646,5,M.PIPE);
+ // Cryobank: service vault bored into the underplate tunnel with an actual 43-cell side entry.
+ rect(1730,856,130,10,M.CARBON);rect(1839,856,13,66,M.CARBON);
+ rect(1731,864,11,53,M.STEEL);rect(1735,910,116,9,M.STEEL);
+ rect(1744,917,13,18,M.STEEL);rect(1835,918,13,17,M.STEEL);
+ rect(1728,868,43,43,M.AIR);rect(1771,873,66,33,M.AIR);
+ rect(1809,890,23,16,M.GLASS);rect(1814,878,14,12,M.FROST);
+ rect(1819,874,4,6,M.CYAN);rect(1797,895,8,14,M.PIPE);
+ rect(1781,902,18,7,M.GRATE);rect(1832,888,5,18,M.LED);
+
+ // Load-bearing ties to the existing West settlement decks and off-world rover landing.
+ rect(386,708,9,8,M.STEEL);rect(484,708,9,8,M.STEEL);
+ rect(192,605,8,12,M.CARBON);rect(354,605,9,12,M.CARBON);
+ rect(614,605,9,14,M.STEEL);
+ rect(1852,658,9,20,M.STEEL);rect(1891,658,9,20,M.STEEL);
+  // Enforce stable grounded final material; discard unattached construction trials.
  const mask=new Uint8Array(g.length);const q=new Int32Array(g.length);let head=0,tail=0;
  for(let x=0;x<WIDTH;x++){let i=(HEIGHT-1)*WIDTH+x;if(g[i]!==0&&!mask[i]){mask[i]=1;q[tail++]=i}}
  while(head<tail){let p=q[head++], x=p%WIDTH,y=(p-x)/WIDTH;let ns=[x>0?p-1:-1,x+1<WIDTH?p+1:-1,y>0?p-WIDTH:-1,y+1<HEIGHT?p+WIDTH:-1];for(let n of ns)if(n>=0&&g[n]!==0&&!mask[n]){mask[n]=1;q[tail++]=n}}
@@ -132,7 +187,7 @@ const SITES={
  'Harp east console':[1123,579], 'Harp base':[1096,827], 'Cleft lower': [1170,745],
  'East observation': [1624,352], 'Spectrograph bay': [1698,440], 'East medical': [1663,530],
  'East storage': [1814,609], 'East boarding': [1963,602], 'West archive': [350,872],
- 'Tectonic corridor': [1107,910], 'Cryobank': [1618,877], 'East relief shaft': [1718,780]
+ 'Tectonic corridor': [1107,910], 'Cryobank': [1618,877], 'Cryobank maintenance vault': [1778,884], 'East relief shaft': [1718,780]
 };
 function rectangles(g){const edits=[];let active=new Map();for(let y=0;y<HEIGHT;y++){
  let next=new Map();let x=0;while(x<WIDTH){let m=g[y*WIDTH+x];if(m===0){x++;continue;}let sx=x;while(x<WIDTH&&g[y*WIDTH+x]===m)x++;let key=sx+','+(x-sx)+','+m, old=active.get(key);if(old){old[3]++;next.set(key,old)}else{let rr=[sx,y,x-sx,1,m];edits.push(rr);next.set(key,rr)}}active=next}return edits}
