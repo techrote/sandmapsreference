@@ -180,3 +180,64 @@ const png=function png(g,x0,y0,w,h){
 };
 
 function makeFiles(){const a=build(),s=JSON.stringify(a.json),im=[["overview.png",png(a.g,0,0,2048,1024)],...a.crops.map(([n,x,y,w,h])=>[n+".png",png(a.g,x,y,w,h)])];return a;}
+
+
+// Deterministic write or byte-exact readback; no host-engine/native claims.
+if (typeof require !== "undefined" && require.main === module) {
+ const fs=require("fs"), crypto=require("crypto"), zlib=require("zlib");
+ const a=build(), hash=b=>crypto.createHash("sha256").update(b).digest("hex");
+ const images=[["overview.png",0,0,2048,1024],...a.crops.map(q=>[q[0]+".png",q[1],q[2],q[3],q[4]])];
+ const records=[],files=[["setup.json",Buffer.from(a.json)]];
+ function validateImage(bytes,x0,y0,w,h){
+   const blocks=[],sig=Buffer.from([137,80,78,71,13,10,26,10]);
+   if(!bytes.subarray(0,8).equals(sig))throw Error("bad PNG magic");
+   let p=8,iw=0,ih=0;
+   while(p<bytes.length){
+     let size=bytes.readUInt32BE(p),name=bytes.toString("ascii",p+4,p+8),body=bytes.subarray(p+8,p+8+size);
+     if(name==="IHDR"){iw=body.readUInt32BE(0);ih=body.readUInt32BE(4);if(body[8]!==8||body[9]!==3)throw Error("not indexed PNG");}
+     if(name==="IDAT")blocks.push(body);
+     p+=size+12;
+     if(name==="IEND")break;
+   }
+   if(iw!==w||ih!==h)throw Error("PNG dimensions mismatch");
+   const raw=zlib.inflateSync(Buffer.concat(blocks));
+   if(raw.length!==(w+1)*h)throw Error("bad PNG decompressed length");
+   for(let y=0;y<h;y++){
+     if(raw[y*(w+1)]!==0)throw Error("unexpected indexed filter");
+     const src=Buffer.from(a.g.subarray((y+y0)*2048+x0,(y+y0)*2048+x0+w));
+     if(!raw.subarray(y*(w+1)+1,(y+1)*(w+1)).equals(src))throw Error("PNG/source-cell pixel mismatch");
+   }
+ }
+ for(let [name,x,y,w,h] of images){
+   let bytes=Buffer.from(png(a.g,x,y,w,h));validateImage(bytes,x,y,w,h);
+   records.push({name,extent:[w,h],origin:[x,y],bytes:bytes.length,sha256:hash(bytes),indexed_material_pixel_parity:"PASS"});
+   files.push([name,bytes]);
+ }
+ const receipt={
+   project:"CYBERSAND WORLD-GROUP XENOBIOME",family:"Underroot Relay System",sibling:4,
+   role:"Root-Archive / Sealed Quarantine Vault",map_base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+   engine_readonly_main:"de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+   donor_design_language:["wide-graftloom-slipway","wide-sable-quoin-gravitic-core","wide-threnody-scar-foldwing-seedlift"],
+   no_geometry_donated:true,seed:"deterministic-coordinate-formulas-v1",
+   extent:[2048,1024],cell_count:2097152,material_histogram:a.hist,
+   occupied_cells:a.area,grounded_cells:a.rooted,unrooted_cells:a.unrooted,
+   connected_solid_components:a.comps,tie_structures:a.ties,
+   lossless_rectangles:a.rect.length,source_rectangle_limit:32768,source_max_json_bytes:1048576,
+   rectangle_work_cells:a.area,setup_bytes:Buffer.byteLength(a.json),
+   plane_sha256:hash(Buffer.from(a.g)),setup_sha256:hash(Buffer.from(a.json)),
+   literal_sites:a.sites,midge_full_hull_clearances:a.clearances,
+   obstruction:{box:a.obstruction,expected_blocked_site:"Core transfer aperture",result:a.bypass},
+   indexed_images:records,source_static:"CREATOR-STATIC-PASS",
+   independent_art_technical_shepherd:"PENDING",native:"NATIVE-UNTESTED",pr_gate:"DRAFT/HOLD"
+ };
+ files.push(["receipt.json",Buffer.from(JSON.stringify(receipt,null,2)+"\n")]);
+ for(let [name,bytes] of files){
+   const path=__dirname+"/"+name;
+   if(process.argv.includes("--verify")){
+     if(!fs.existsSync(path)||!fs.readFileSync(path).equals(bytes))throw Error("not byte-identical "+name);
+   }else fs.writeFileSync(path,bytes);
+ }
+ console.log(JSON.stringify({status:"CREATOR-STATIC-PASS",rectangles:a.rect.length,
+    sites:a.clearances.map(x=>x.passed),obstruction_remains:a.bypass.passed,images:records.length,
+    action:process.argv.includes("--verify")?"verified":"written",native:"NATIVE-UNTESTED"}));
+}
