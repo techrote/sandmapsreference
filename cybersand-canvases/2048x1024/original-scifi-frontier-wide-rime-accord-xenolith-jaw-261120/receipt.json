@@ -1,0 +1,301 @@
+{
+  "concept": "Rime Accord - Xenolith Jaw Excavator",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 12690030,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "map_repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "loader_source_max_rectangles": 32768,
+  "loader_source_max_json_bytes": 1048576,
+  "source_work_budget": 32000000,
+  "installed_bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only accepted inert immovable Solid/None kernels; no powders or liquids",
+  "material_histogram": {
+    "49": 12632,
+    "62": 14664,
+    "68": 1764,
+    "100": 346667,
+    "101": 85632
+  },
+  "filled_grounded_cells": 461359,
+  "detached_final_cells": 0,
+  "prototype_disconnected_cells_removed": 67809,
+  "prototype_components_removed": 43,
+  "rectangle_count": 243,
+  "rectangle_work": 461359,
+  "setup_bytes": 5475,
+  "grid_sha256": "2259a955bcd963de89b78ea808162962cd7d2d718336ea71bbccf9bb90d2960a",
+  "setup_sha256": "f6ad00a476d8941b2b4597abf36f871f7a692675c2bba6aad2ed3abe23bfbf18",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 19537,
+      "sha256": "e8cb2b5e21066919e2c7d87eebba9875e09a62c1411ad7bc7310cad3a30536f3"
+    },
+    {
+      "name": "01-west-inhabited-rover.png",
+      "bytes": 4158,
+      "sha256": "3668653f3632eeb291fcd6c64faf3b27260f6cc0a7ec8edc0047c06b4d3ee38a"
+    },
+    {
+      "name": "02-jaw-extraction-frame.png",
+      "bytes": 3090,
+      "sha256": "147c210eab446e6dec1d23e9297600c6bbfdd5990cefa8d1166ba5a8db004b88"
+    },
+    {
+      "name": "03-custody-and-receiver.png",
+      "bytes": 1805,
+      "sha256": "a797c217fe3b41cc6527f182f563ac2516ab63d4389f7221613dce4d17ca8a39"
+    },
+    {
+      "name": "04-east-quarantine-freight.png",
+      "bytes": 4150,
+      "sha256": "b3f33e9311ab728812b4f21b2b4adc3a7c2bfa311361f431c1c8ec8308c0e69b"
+    },
+    {
+      "name": "05-deep-ore-service.png",
+      "bytes": 2556,
+      "sha256": "5108f028296235dba259cc1b00b4606f013417728360e83f7cb7603c1dc5ba0b"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1555683,
+      "passed": 32,
+      "total": 32,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1534071,
+      "passed": 32,
+      "total": 32,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1490982,
+      "passed": 32,
+      "total": 32,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "xyxy_halfopen": [
+      1021,
+      539,
+      1079,
+      589
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only Central jaw custody",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1484294,
+      "passed": 31,
+      "total": 32,
+      "bad": [
+        {
+          "name": "Central jaw custody",
+          "xy": [
+            1050,
+            564
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "named_sites": {
+    "West rover spawn": [
+      164,
+      414
+    ],
+    "West charging": [
+      332,
+      416
+    ],
+    "West ore intake": [
+      164,
+      565
+    ],
+    "West isotope assay": [
+      334,
+      566
+    ],
+    "West repair": [
+      160,
+      712
+    ],
+    "West shelter": [
+      332,
+      712
+    ],
+    "West access throat": [
+      512,
+      690
+    ],
+    "West rim": [
+      608,
+      246
+    ],
+    "West arm monitor": [
+      830,
+      388
+    ],
+    "West jaw approach": [
+      791,
+      675
+    ],
+    "Upper open flight": [
+      1039,
+      193
+    ],
+    "East jaw approach": [
+      1360,
+      674
+    ],
+    "East arm monitor": [
+      1275,
+      389
+    ],
+    "East rim": [
+      1445,
+      245
+    ],
+    "Central jaw custody": [
+      1050,
+      564
+    ],
+    "Intake shuttle": [
+      912,
+      697
+    ],
+    "Outfeed receiver": [
+      1248,
+      710
+    ],
+    "East access throat": [
+      1543,
+      690
+    ],
+    "Lower west refuge": [
+      570,
+      783
+    ],
+    "Lower east refuge": [
+      1472,
+      784
+    ],
+    "Deep west entry": [
+      575,
+      850
+    ],
+    "Deep probe": [
+      697,
+      845
+    ],
+    "Deep gear reducer": [
+      886,
+      848
+    ],
+    "Deep spectrometer": [
+      1110,
+      844
+    ],
+    "Deep hoist": [
+      1352,
+      846
+    ],
+    "Deep east entry": [
+      1455,
+      853
+    ],
+    "East quarantine": [
+      1758,
+      420
+    ],
+    "East seal": [
+      1911,
+      417
+    ],
+    "East spectroscope": [
+      1758,
+      568
+    ],
+    "East isotope rack": [
+      1905,
+      567
+    ],
+    "East rover freight": [
+      1754,
+      711
+    ],
+    "East loading": [
+      1911,
+      709
+    ]
+  },
+  "literal_actor_spawn": [
+    164,
+    414
+  ],
+  "crops": [
+    [
+      "01-west-inhabited-rover",
+      0,
+      306,
+      557,
+      477
+    ],
+    [
+      "02-jaw-extraction-frame",
+      530,
+      344,
+      990,
+      419
+    ],
+    [
+      "03-custody-and-receiver",
+      759,
+      440,
+      618,
+      341
+    ],
+    [
+      "04-east-quarantine-freight",
+      1490,
+      306,
+      558,
+      475
+    ],
+    [
+      "05-deep-ore-service",
+      484,
+      814,
+      1090,
+      198
+    ]
+  ],
+  "static_status": "CREATOR-STATIC-PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "PENDING"
+}
