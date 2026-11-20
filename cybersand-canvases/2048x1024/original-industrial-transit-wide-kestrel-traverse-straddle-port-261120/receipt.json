@@ -1,0 +1,322 @@
+{
+  "concept": "Kestrel Traverse — Saddle-Arch Intermodal Straddle Port",
+  "original": true,
+  "seed": 2026112004,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Breakwater arrival",
+      "Quay waybill office",
+      "Straddle load receiver",
+      "Arch west approach",
+      "Void shipping lane",
+      "Arch east approach",
+      "Switchback signalman",
+      "East freight manifest",
+      "Outbound customs"
+    ],
+    "upper": [
+      "West sky lookout",
+      "Crane A-frame inspection",
+      "Upper arch flyway",
+      "East roof lookout"
+    ],
+    "lower": [
+      "Drydock keel service",
+      "Pump repair station",
+      "Portal motor chamber",
+      "Arch undercroft repair",
+      "Switchgear repair",
+      "Outbound recovery bay"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "Hard wall - Solid/None",
+    "62": "structural solid - Solid/None",
+    "100": "Basalt - Solid/None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Breakwater arrival": [
+      120,
+      440
+    ],
+    "Ship service gangway": [
+      310,
+      570
+    ],
+    "Quay waybill office": [
+      452,
+      465
+    ],
+    "Drydock keel service": [
+      320,
+      835
+    ],
+    "West sky lookout": [
+      262,
+      165
+    ],
+    "Crane A-frame inspection": [
+      689,
+      171
+    ],
+    "Straddle load receiver": [
+      738,
+      451
+    ],
+    "Straddle underframe": [
+      789,
+      624
+    ],
+    "Arch west approach": [
+      968,
+      455
+    ],
+    "Underarch cargo sling": [
+      1081,
+      462
+    ],
+    "Void shipping lane": [
+      1220,
+      441
+    ],
+    "Arch east approach": [
+      1457,
+      455
+    ],
+    "Switchback signalman": [
+      1544,
+      468
+    ],
+    "Upper branch siding": [
+      1640,
+      389
+    ],
+    "Sorter transfer stage": [
+      1723,
+      522
+    ],
+    "East freight manifest": [
+      1848,
+      472
+    ],
+    "Outbound customs": [
+      1940,
+      464
+    ],
+    "Upper arch flyway": [
+      1143,
+      165
+    ],
+    "East roof lookout": [
+      1785,
+      166
+    ],
+    "Pump repair station": [
+      272,
+      850
+    ],
+    "Portal motor chamber": [
+      700,
+      851
+    ],
+    "Arch undercroft repair": [
+      1180,
+      852
+    ],
+    "Switchgear repair": [
+      1590,
+      852
+    ],
+    "Outbound recovery bay": [
+      1880,
+      850
+    ]
+  },
+  "material_histogram": {
+    "58": 172761,
+    "62": 153886,
+    "100": 199798
+  },
+  "stable_occupied_cells": 526445,
+  "grounded": 526445,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 26227,
+  "rectangles": 4612,
+  "rectangle_work": 526445,
+  "setup_bytes": 85360,
+  "material_plane_sha256": "06b3b07ff0e1829ba66f86937cf4319be51c966528b0f4c1802d54706b198a21",
+  "setup_sha256": "06c27d98c591a45ad1d94e96acbe75b6286307281064e24a3b7e3ea40024d867",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1288092,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1247226,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1167297,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      207,
+      390,
+      83,
+      103
+    ],
+    "from": "Breakwater arrival",
+    "to": "Quay waybill office",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 24,
+    "unreachable": [],
+    "distance_before_after": [
+      357,
+      439
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "7f88e5270cb323c648c07d6352a93b9973d3624217fa35ab3f3c38712ff999ef",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-drydock",
+      "rect": [
+        108,
+        390,
+        423,
+        440
+      ],
+      "bytes": 47265,
+      "sha256": "aac13ca2a4ec9583d34118cff5a749915d87d2742bf7063704b2afad38767e9c",
+      "pixel_parity": 186120
+    },
+    {
+      "name": "02-straddle-gantry",
+      "rect": [
+        506,
+        165,
+        359,
+        630
+      ],
+      "bytes": 57515,
+      "sha256": "3f3394019ad78285cdfce13a52a7b9fb9353ebf44a0cf61ee41be1fe80f3fc48",
+      "pixel_parity": 226170
+    },
+    {
+      "name": "03-saddle-arch",
+      "rect": [
+        865,
+        170,
+        635,
+        624
+      ],
+      "bytes": 100030,
+      "sha256": "ea50383dd3614cc1f1fd36a1b58e6cf3575705edcab4ba0ed46727f29b9d5675",
+      "pixel_parity": 396240
+    },
+    {
+      "name": "04-switchback",
+      "rect": [
+        1470,
+        260,
+        365,
+        510
+      ],
+      "bytes": 47615,
+      "sha256": "fd95e5c828604f3c649b6ba83c53c336c326a9ed0b6b14a80573e430bd32d831",
+      "pixel_parity": 186150
+    },
+    {
+      "name": "05-east-dispatch",
+      "rect": [
+        1790,
+        285,
+        258,
+        514
+      ],
+      "bytes": 34109,
+      "sha256": "72d2fb1bac719c477ecfcbaf5af19d187a879c9b6a512ac88524ec61dc69d3d3",
+      "pixel_parity": 132612
+    },
+    {
+      "name": "06-service-gallery",
+      "rect": [
+        938,
+        785,
+        476,
+        239
+      ],
+      "bytes": 28865,
+      "sha256": "536e41a534f445cd1f66e772d4555c5eec74f6cf4b73c08ae4297504fd6d26d6",
+      "pixel_parity": 113764
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "installed_fallback_risk": 4096,
+  "proof": "Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"
+}
