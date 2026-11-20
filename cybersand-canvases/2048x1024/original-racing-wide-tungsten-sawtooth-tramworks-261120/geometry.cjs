@@ -112,6 +112,74 @@ function generate(){
  // Explicit real 90px-wide emergency egress from below the rotor saddle into the flight loop.
  // The western pier remains firmly attached to bedrock; the ring is not a floating ornament.
  box(1150,669,100,108,0);
+ // R2 SHEPHERD P1: FUNCTIONAL plant equipment after final access cuts.
+ // All controls terminate on actual roof/floor sidewalls; no floating foreground signage.
+ // Four deliberately DIFFERENT roof control stations: injector, shear, radial brake, dispatch.
+ // West injector telemetry: top-wall longitudinal pressure recorder, sidewall tube array and dump valve.
+ box(115,72,34,102,M.I);box(125,79,26,82,M.C);box(132,89,12,65,M.O);
+ for(let y of [91,116,141]){box(137,y,24,7,M.Z);box(156,y-6,13,21,M.I);}
+ beam(350,86,307,113,8,M.T);box(293,101,45,15,M.Z);box(298,133,41,32,M.I);
+ box(321,147,16,20,M.Q);beam(336,166,349,174,6,M.C);
+ // Shear switchboard: cantilevered distribution comb, stacked contactors and rooted cooling exchanger.
+ box(625,77,29,115,M.C);for(let j=0;j<4;j++)box(647,88+j*22,23,12,j%2?M.Z:M.I);
+ beam(833,83,777,101,10,M.T);box(763,107,67,15,M.Z);
+ box(790,127,33,60,M.I);box(798,135,17,37,M.O);box(787,175,44,8,M.Q);
+ // Brake-watch operation: two opposed interlocks and a stepped mechanical status rack.
+ box(1150,83,34,111,M.I);beam(1176,91,1197,151,10,M.C);
+ box(1155,98,41,14,M.Z);box(1167,130,32,9,M.Q);
+ box(1360,79,9,107,M.T);for(let j=0;j<3;j++){box(1301+j*18,91+j*17,54-j*13,12,M.I);}
+ box(1310,164,48,20,M.Z);box(1321,170,27,8,M.Q);
+ // East dispatcher: shuttered capture schedule drums, pneumatic readout and lower power tap.
+ box(1720,76,36,118,M.C);for(let j=0;j<3;j++){box(1744,82+j*31,22,16,M.I);box(1748,86+j*31,12,6,M.Z);}
+ beam(1944,79,1905,110,8,M.T);box(1858,108,70,19,M.I);box(1867,115,53,8,M.Q);
+ box(1899,137,31,48,M.C);box(1904,146,17,33,M.Z);
+ // Five genuinely furnished founded underworks, kept outside the open 80px entry shafts.
+ // Injector overhaul: pressure piston and bolted radial compressor, two different service faces.
+ box(128,943,69,51,M.I);oval(164,922,27,26,M.C);oval(164,922,12,12,M.O);
+ box(188,899,21,95,M.T);box(192,903,13,76,M.Z);beam(298,986,330,903,13,M.I);
+ box(318,918,63,76,M.C);box(331,921,39,23,M.Z);box(342,949,23,35,M.I);
+ // Sawtooth substation: paired electrical stators and visible feed bus.
+ box(627,949,73,45,M.I);for(let j=0;j<4;j++)box(634+j*14,911+j%2*10,9,45,M.Z);
+ box(675,898,15,67,M.T);box(625,896,64,9,M.C);
+ box(787,936,78,58,M.I);box(795,901,25,66,M.T);box(831,915,23,53,M.C);
+ beam(809,904,845,893,7,M.Q);box(794,939,50,11,M.Z);
+ // Brake-bearing workshop: anchored gear-ring diagnostic drum, double-cradle access and a toothed dog-clutch.
+ box(969,955,69,39,M.C);oval(1003,924,36,37,M.T);oval(1003,924,22,23,M.O);
+ for(let a of [0,1,2,3]){let yy=901+a*15;box(966,yy,10,8,M.Z);}
+ box(1132,938,63,56,M.I);box(1137,906,15,62,M.C);box(1167,921,16,45,M.T);
+ for(let j=0;j<4;j++)box(1152+j*10,953-j%2*7,7,25,M.Z);
+ // Salt service: pressure-separated cyclone vessels, rinsing channels and a dry sample rack.
+ box(1340,946,70,48,M.T);oval(1372,932,29,34,M.C);oval(1372,932,17,20,M.O);
+ box(1399,936,15,58,M.I);box(1513,922,62,72,M.C);
+ for(let j=0;j<3;j++)box(1519+j*17,910-j%2*11,12,52+j%2*11,M.T);
+ box(1519,965,53,9,M.Z);box(1531,900,26,9,M.Q);
+ // East recovery: geared haul winch, articulated jack, redirection drum and tool crib.
+ box(1760,948,60,46,M.I);oval(1792,923,26,28,M.C);oval(1792,923,13,14,M.O);
+ beam(1768,914,1799,894,9,M.T);box(1902,946,68,48,M.C);
+ beam(1912,945,1945,903,12,M.I);box(1949,911,16,55,M.T);box(1916,963,44,10,M.Z);
+ // Six-spoke RADIAL BRAKE now has an operable axial transfer assembly:
+ // founded west drive chain, two asymmetrical interlocking shoes, ring-top encoder,
+ // and an *open* physical maintenance bypass beneath the right-hand shoe.
+ beam(930,floor[930]+3,944,666,18,M.C);
+ box(921,663,55,31,M.I);for(let j=0;j<5;j++)box(930+j*9,658,5,21,M.Z);
+ beam(951,672,977,627,12,M.T);box(944,676,27,15,M.Q);
+ // Motor drive is grounded through its west foot; ring rests on the two original founded bearings.
+ beam(1036,639,1061,661,10,M.I);box(1042,658,41,13,M.C);
+ // Brake gates are segmented supported shoes, NOT solid doors across the course.
+ beam(991,629,1008,602,10,M.Z);beam(1152,624,1139,605,10,M.Q);
+ for(let j=0;j<4;j++)box(1031+j*18,381-j%2*3,12,10,M.Z,true);
+ beam(1172,675,1186,651,9,M.I);box(1184,665,24,16,M.C);
+ // Speed-readable but structural wayfinding: sawtooth UP markers on roof-backed machinery;
+ // rotor upper bypass and lower emergency egress are two differentiated *physical* landmarks.
+ beam(745,roof[745],777,266,7,M.Z);beam(777,266,796,278,7,M.Q);
+ beam(820,roof[820],788,279,7,M.I);
+ beam(971,roof[971],983,276,10,M.T);beam(983,276,1007,290,8,M.Q);
+ beam(1140,roof[1140],1126,284,9,M.T);beam(1126,284,1107,297,7,M.Z);
+ // Lower return uses a triple supported rail-end distinction (horizontal, not another roof tooth).
+ for(let j=0;j<3;j++){let xx=1191+j*25;box(xx,floor[xx]-61+j*8,12,65-j*8,M.C);box(xx-6,floor[xx]-67+j*8,24,9,M.Z);}
+ // West recovery portal: double-height cowl physically joined to bedplate, leaving centre lane clear.
+ beam(166,floor[166],179,790,13,M.T);beam(204,floor[204],213,794,12,M.C);
+ box(170,793,42,10,M.Q);box(182,806,17,11,M.Z);
  // Avoid accidental hard material over literal named race sites, not clear-radius exemptions.
  // Each named centre must be passed by full 31x27 clearance checker.
  // Discard unattached candidate steel details; final real-world material plane is grounded.

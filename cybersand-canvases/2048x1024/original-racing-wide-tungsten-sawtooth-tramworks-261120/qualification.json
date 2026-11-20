@@ -1,6 +1,6 @@
 {
   "kind": "TUNGSTEN_SAWTOOTH_TRAMWORKS_ORIGINAL_RACING_WIDE",
-  "revision": "R1",
+  "revision": "R2",
   "seed": "0x261120f7",
   "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "material_cells": 2097152,
@@ -8,27 +8,27 @@
     2048,
     1024
   ],
-  "rectangles": 4334,
-  "setup_json_bytes": 82335,
-  "work_visits": 713378,
+  "rectangles": 6434,
+  "setup_json_bytes": 121452,
+  "work_visits": 834976,
   "source_limits": {
     "rectangles": 32768,
     "bytes": 1048576,
     "work": 32000000
   },
   "histogram": {
-    "0": 1383774,
-    "49": 46483,
-    "58": 107310,
-    "62": 125937,
-    "100": 334726,
-    "101": 46621,
-    "113": 14801,
-    "117": 31669,
-    "122": 5831
+    "0": 1262176,
+    "49": 46405,
+    "58": 132365,
+    "62": 157283,
+    "100": 334260,
+    "101": 51577,
+    "113": 29985,
+    "117": 68248,
+    "122": 14853
   },
-  "grounded_solids": 713378,
-  "discarded_detached_material_cells": 55585,
+  "grounded_solids": 834976,
+  "discarded_detached_material_cells": 11790,
   "remaining_detached": 0,
   "fluids": 0,
   "reactive": 0,
@@ -183,17 +183,17 @@
   ],
   "clearances": {
     "19x15": {
-      "connected": 1166823,
+      "connected": 1018643,
       "missing": [],
       "reached": 27
     },
     "23x19": {
-      "connected": 1129640,
+      "connected": 977889,
       "missing": [],
       "reached": 27
     },
     "31x27": {
-      "connected": 1056328,
+      "connected": 897253,
       "missing": [],
       "reached": 27
     }
@@ -212,17 +212,17 @@
     "remaining": 26,
     "finish_reachable": true
   },
-  "grid_sha256": "7e7c752c04793be96162586d9a808f8b3d79a0b18a557f258286d78f890269fb",
-  "setup_sha256": "3c35aca46c0621bee4d8b626c1f407d738deeadbc4a789118f72a59997e50209",
+  "grid_sha256": "3187b0ab61570b94dbde94887d0705397623803d786e6c3382ec2c03381b6597",
+  "setup_sha256": "7c8817c41386161a3821f8e4bbe9b402f0f5e4b8ff32f79b8c3f5da202fdf52c",
   "pngs": {
     "overview.png": {
       "x": 0,
       "y": 0,
       "w": 2048,
       "h": 1024,
-      "bytes": 19354,
+      "bytes": 23950,
       "pixels": 2097152,
-      "sha256": "38daac53d0094fc96c3de0bed5b88af67a0c2c47c7f86ab73f1b9c7d305a46b7",
+      "sha256": "c89bdca9c522339951950093556d4bcc4c3c65a751bd31e84c4eeb556312290f",
       "crc": true,
       "zlib": true,
       "parity": true
@@ -232,9 +232,9 @@
       "y": 12,
       "w": 440,
       "h": 703,
-      "bytes": 2351,
+      "bytes": 2618,
       "pixels": 309320,
-      "sha256": "19fb32657db1337b26661b07239cb6e1bb57b61520d87a9c2811a5a3450c3b3d",
+      "sha256": "88e836a4f549b30afe02242d01b028d1a784079abbecbbec455f7a39253d1f38",
       "crc": true,
       "zlib": true,
       "parity": true
@@ -244,9 +244,9 @@
       "y": 207,
       "w": 470,
       "h": 735,
-      "bytes": 3236,
+      "bytes": 4175,
       "pixels": 345450,
-      "sha256": "b3f7a55567d3f612fc937f56269c353be0a434e03618484949091b25e21fe023",
+      "sha256": "a1588454c10bef10540f4b4dc0f6e1a28ae4acf38dbbd1fd73f01f33e2910e3f",
       "crc": true,
       "zlib": true,
       "parity": true
@@ -256,9 +256,9 @@
       "y": 151,
       "w": 511,
       "h": 799,
-      "bytes": 5128,
+      "bytes": 6744,
       "pixels": 408289,
-      "sha256": "9ec339ea79c5d6a51fb38a63f590b9474ec40924b384a7d257081536e6b39d6a",
+      "sha256": "e5a5413043e2e497ece19687d0a41c59dc0b9fd871f06064a581dc906bc86bf6",
       "crc": true,
       "zlib": true,
       "parity": true
@@ -268,9 +268,9 @@
       "y": 185,
       "w": 436,
       "h": 764,
-      "bytes": 3861,
+      "bytes": 4081,
       "pixels": 333104,
-      "sha256": "819f79dae97224ea3c8097d040a1cdc9add6e8bf4bbb583bc4e8c8a593b1bac2",
+      "sha256": "8e7c2d1613c50c74214ebad699a38a96352fe04c259336eca7597ba4554b99d3",
       "crc": true,
       "zlib": true,
       "parity": true
@@ -280,9 +280,9 @@
       "y": 169,
       "w": 428,
       "h": 788,
-      "bytes": 3291,
+      "bytes": 3630,
       "pixels": 337264,
-      "sha256": "c3e55104e6508713c4888b57606f589d74f531e77f5f5941180cad7ad6546815",
+      "sha256": "911141e430b920875b6f80420355fa0a242aafd02b108686701bedc624ce8f14",
       "crc": true,
       "zlib": true,
       "parity": true
@@ -292,9 +292,9 @@
       "y": 675,
       "w": 932,
       "h": 349,
-      "bytes": 3615,
+      "bytes": 4432,
       "pixels": 325268,
-      "sha256": "10f83a4e90fc89c17bff274bf3f5a94e0f26fbc6eceff97bc32cb1ebbee3d113",
+      "sha256": "be2753b7a0bba76dd9696af4b68d30234e67ec429baf6a9da44f342583ffc0ca",
       "crc": true,
       "zlib": true,
       "parity": true
