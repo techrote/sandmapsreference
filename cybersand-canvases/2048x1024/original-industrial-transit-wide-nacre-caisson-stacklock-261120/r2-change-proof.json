@@ -1,0 +1,248 @@
+{
+  "title": "Nacre Caisson R2 exact material-cell difference proof",
+  "parent_head": "c3478a95a3b75ea5bf0978db30d2bc4b64438da4",
+  "parent_plane_sha256": "be28be1e1bb36923fbe87cdd548ff999b559267de4067f521658bf15d5960fa9",
+  "current_plane_sha256": "328b5b25e56f2f89a068a326746e555489d3ce8780458ca6d33e03fb5be2fe81",
+  "current_engine_authority_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "fixed_seed": 2026112013,
+  "extent": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "diff": {
+    "changed": 36495,
+    "added": 21668,
+    "excavated": 2968,
+    "rematerialized": 11859
+  },
+  "regions": [
+    {
+      "name": "west-graving",
+      "count": 3115,
+      "x": [
+        0,
+        520
+      ],
+      "y": [
+        0,
+        1024
+      ]
+    },
+    {
+      "name": "caisson",
+      "count": 8596,
+      "x": [
+        520,
+        959
+      ],
+      "y": [
+        0,
+        1024
+      ]
+    },
+    {
+      "name": "transfer-truss",
+      "count": 9532,
+      "x": [
+        959,
+        1492
+      ],
+      "y": [
+        0,
+        1024
+      ]
+    },
+    {
+      "name": "classifier",
+      "count": 7430,
+      "x": [
+        1492,
+        1771
+      ],
+      "y": [
+        0,
+        1024
+      ]
+    },
+    {
+      "name": "east-customs",
+      "count": 7822,
+      "x": [
+        1771,
+        2048
+      ],
+      "y": [
+        0,
+        1024
+      ]
+    },
+    {
+      "name": "underworks",
+      "count": 20380,
+      "x": [
+        0,
+        2048
+      ],
+      "y": [
+        899,
+        1024
+      ]
+    }
+  ],
+  "original_rectangles": 3431,
+  "r2_rectangles": 3644,
+  "r2_setup_bytes": 68009,
+  "roots_original": 600993,
+  "roots_r2": 619693,
+  "all_sites_r2": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reached": 22,
+      "total": 22,
+      "connected_centres": 713904
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reached": 22,
+      "total": 22,
+      "connected_centres": 676000
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reached": 22,
+      "total": 22,
+      "connected_centres": 605811
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      213,
+      360,
+      80,
+      91
+    ],
+    "from": "Mooring Arrival",
+    "to": "Dispatch Ledger",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 22,
+    "unreachable": [],
+    "distance_before_after": [
+      227,
+      337
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "3566e048c1d6aea77b3409d6fc4c6903ad79c1f467965faf7bfc742677ee0845",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-graving-vessel",
+      "rect": [
+        112,
+        450,
+        417,
+        365
+      ],
+      "bytes": 38875,
+      "sha256": "d018f7c20591129b92dfbd22732b26a57b4a4e40969734bd9dbccc2fc60a10c4",
+      "pixel_parity": 152205
+    },
+    {
+      "name": "02-caisson-stacklift",
+      "rect": [
+        525,
+        221,
+        456,
+        581
+      ],
+      "bytes": 67005,
+      "sha256": "6b09b08903e3155369ef2019528497b5c681b79ba04624ff48a151197059008d",
+      "pixel_parity": 264936
+    },
+    {
+      "name": "03-truss-handoff",
+      "rect": [
+        959,
+        410,
+        549,
+        389
+      ],
+      "bytes": 54256,
+      "sha256": "586f0b587185d496aa5b5e349b2e4a9c3aafd2b4462688bd26210b9fe683173f",
+      "pixel_parity": 213561
+    },
+    {
+      "name": "04-hopper-classifier",
+      "rect": [
+        1492,
+        474,
+        283,
+        337
+      ],
+      "bytes": 24449,
+      "sha256": "90f1e7e39804e4678a893ccff1dd6605b544a4acd59b59821323c0d50e8d1a09",
+      "pixel_parity": 95371
+    },
+    {
+      "name": "05-east-customs",
+      "rect": [
+        1770,
+        469,
+        278,
+        338
+      ],
+      "bytes": 24183,
+      "sha256": "6f226dbdc9e7204b0d62decc9de56ea2ba08efbb204f8b344b6d8b290054e321",
+      "pixel_parity": 93964
+    },
+    {
+      "name": "06-underworks",
+      "rect": [
+        519,
+        831,
+        413,
+        190
+      ],
+      "bytes": 20135,
+      "sha256": "a87eadd0601147b13efb7896fc81405b7ee606ec752cc73577ed33fa682b3789",
+      "pixel_parity": 78470
+    },
+    {
+      "name": "07-underworks-all-five",
+      "rect": [
+        103,
+        831,
+        1844,
+        190
+      ],
+      "bytes": 87970,
+      "sha256": "b8ed6f7e03319cdab6ade76c9e7ef3de52e88252b19b9e7f2426629778415f38",
+      "pixel_parity": 350360
+    }
+  ],
+  "native": "NATIVE-UNTESTED",
+  "method": "Exhaustive byte-for-byte comparison of two deterministic full 2,097,152-cell planes; generated native-indexed authentic PNGs decoded and checked for every pixel against R2 grid"
+}

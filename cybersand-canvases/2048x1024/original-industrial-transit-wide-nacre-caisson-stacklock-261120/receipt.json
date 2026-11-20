@@ -1,0 +1,327 @@
+{
+  "concept": "Nacre Caisson — Drylock Ship Stacklift and Freight Truss",
+  "original": true,
+  "seed": 2026112013,
+  "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Mooring Arrival",
+      "Dispatch Ledger",
+      "Caisson Gate",
+      "Truss West Receiver",
+      "Overcut Transit",
+      "Truss East Receiver",
+      "Classifier Control",
+      "Dispatch Transfer",
+      "Outbound Manifest"
+    ],
+    "upper": [
+      "North Crane Catwalk",
+      "Lift Inspection Loft",
+      "Upper Freight Traverse",
+      "East Horizon Beacon"
+    ],
+    "lower": [
+      "Underkeel Pump",
+      "Hydraulic Service",
+      "Gantry Bearing Service",
+      "Rail Switch Workshop",
+      "Reclamation Return"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Mooring Arrival": [
+      151,
+      409
+    ],
+    "Dispatch Ledger": [
+      378,
+      409
+    ],
+    "Vessel Gangway": [
+      332,
+      568
+    ],
+    "West Graving Hold": [
+      335,
+      740
+    ],
+    "Caisson Gate": [
+      626,
+      408
+    ],
+    "Lift Counterweight": [
+      863,
+      591
+    ],
+    "Lift Inspection Loft": [
+      735,
+      217
+    ],
+    "North Crane Catwalk": [
+      348,
+      216
+    ],
+    "Truss West Receiver": [
+      1014,
+      407
+    ],
+    "Overcut Transit": [
+      1181,
+      407
+    ],
+    "Truss East Receiver": [
+      1470,
+      407
+    ],
+    "Classifier Control": [
+      1580,
+      408
+    ],
+    "Hopper Access": [
+      1615,
+      590
+    ],
+    "Dispatch Transfer": [
+      1810,
+      407
+    ],
+    "Outbound Manifest": [
+      1891,
+      407
+    ],
+    "East Horizon Beacon": [
+      1925,
+      228
+    ],
+    "Upper Freight Traverse": [
+      1228,
+      228
+    ],
+    "Underkeel Pump": [
+      275,
+      871
+    ],
+    "Hydraulic Service": [
+      658,
+      871
+    ],
+    "Gantry Bearing Service": [
+      1090,
+      871
+    ],
+    "Rail Switch Workshop": [
+      1518,
+      871
+    ],
+    "Reclamation Return": [
+      1870,
+      871
+    ]
+  },
+  "material_histogram": {
+    "0": 1477459,
+    "58": 274119,
+    "62": 199480,
+    "100": 146094
+  },
+  "stable_occupied_cells": 619693,
+  "grounded": 619693,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 0,
+  "grounding_steel_ties": 48,
+  "rectangles": 3644,
+  "rectangle_work": 619693,
+  "setup_bytes": 68009,
+  "material_plane_sha256": "328b5b25e56f2f89a068a326746e555489d3ce8780458ca6d33e03fb5be2fe81",
+  "setup_sha256": "0f9ad7ac39e37a5a9b52c0f1edeb8bc51f63b28f5e1c9bc894d85070ec823718",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 713904,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 676000,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 605811,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      213,
+      360,
+      80,
+      91
+    ],
+    "from": "Mooring Arrival",
+    "to": "Dispatch Ledger",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 22,
+    "unreachable": [],
+    "distance_before_after": [
+      227,
+      337
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "3566e048c1d6aea77b3409d6fc4c6903ad79c1f467965faf7bfc742677ee0845",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-graving-vessel",
+      "rect": [
+        112,
+        450,
+        417,
+        365
+      ],
+      "bytes": 38875,
+      "sha256": "d018f7c20591129b92dfbd22732b26a57b4a4e40969734bd9dbccc2fc60a10c4",
+      "pixel_parity": 152205
+    },
+    {
+      "name": "02-caisson-stacklift",
+      "rect": [
+        525,
+        221,
+        456,
+        581
+      ],
+      "bytes": 67005,
+      "sha256": "6b09b08903e3155369ef2019528497b5c681b79ba04624ff48a151197059008d",
+      "pixel_parity": 264936
+    },
+    {
+      "name": "03-truss-handoff",
+      "rect": [
+        959,
+        410,
+        549,
+        389
+      ],
+      "bytes": 54256,
+      "sha256": "586f0b587185d496aa5b5e349b2e4a9c3aafd2b4462688bd26210b9fe683173f",
+      "pixel_parity": 213561
+    },
+    {
+      "name": "04-hopper-classifier",
+      "rect": [
+        1492,
+        474,
+        283,
+        337
+      ],
+      "bytes": 24449,
+      "sha256": "90f1e7e39804e4678a893ccff1dd6605b544a4acd59b59821323c0d50e8d1a09",
+      "pixel_parity": 95371
+    },
+    {
+      "name": "05-east-customs",
+      "rect": [
+        1770,
+        469,
+        278,
+        338
+      ],
+      "bytes": 24183,
+      "sha256": "6f226dbdc9e7204b0d62decc9de56ea2ba08efbb204f8b344b6d8b290054e321",
+      "pixel_parity": 93964
+    },
+    {
+      "name": "06-underworks",
+      "rect": [
+        519,
+        831,
+        413,
+        190
+      ],
+      "bytes": 20135,
+      "sha256": "a87eadd0601147b13efb7896fc81405b7ee606ec752cc73577ed33fa682b3789",
+      "pixel_parity": 78470
+    },
+    {
+      "name": "07-underworks-all-five",
+      "rect": [
+        103,
+        831,
+        1844,
+        190
+      ],
+      "bytes": 87970,
+      "sha256": "b8ed6f7e03319cdab6ade76c9e7ef3de52e88252b19b9e7f2426629778415f38",
+      "pixel_parity": 350360
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "installed_fallback_risk": 4096,
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+}
