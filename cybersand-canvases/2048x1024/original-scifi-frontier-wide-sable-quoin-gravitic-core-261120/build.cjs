@@ -172,6 +172,17 @@ function build(){
  R(327,902,1391,75,0);R(378,816,132,160,0);R(1530,804,145,173,0);
  for(const [name,[x,y]] of Object.entries(sites))R(x-20,y-18,41,37,0);
  const r2_workcell_anchors={ties:0,longest:0};
+
+ // Heavy load paths tie five-arm survey core and low eastern brace into 
+ // native basalt outside the understrata air passage. No scenic floating mass.
+ L(663,442,349,683,13,M.titanium);
+ L(1392,401,1714,650,14,M.titanium);
+ L(1291,778,1391,402,9,M.chrome);
+ // Two severed decorative fragments from emergency-shaft carving are erased.
+ R(1609,791,61,16,0);
+ R(1055,894,40,9,0);
+ // Reconfirm all literal site envelopes, avoiding structure across a spawn.
+ for(const [name,[x,y]] of Object.entries(sites))R(x-20,y-18,41,37,0);
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
  for(let y=0;y<H;y++){let next=new Map(),base=y*W;for(let x=0;x<W;){let m=g[base+x],s=x;while(x<W&&g[base+x]===m)x++;if(!m)continue;let k=s+":"+(x-s)+":"+m,idx=prev.get(k);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(k,idx);}prev=next;}
