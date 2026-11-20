@@ -1,0 +1,283 @@
+{
+  "concept": "Ternbreak Longspan — High Freight Cableway over the Dry Salt Gorge",
+  "original": true,
+  "seed": 20261119,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_ids": {
+    "0": "Empty",
+    "58": "Hard wall - Solid/None",
+    "62": "structural solid - Solid/None",
+    "100": "Basalt - Solid/None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West breakwater ingress": [
+      110,
+      457
+    ],
+    "Quay manifest": [
+      339,
+      456
+    ],
+    "Serviced barge workbay": [
+      304,
+      713
+    ],
+    "Quayside crane crown": [
+      483,
+      285
+    ],
+    "High cargo inspection": [
+      607,
+      454
+    ],
+    "West transfer ramp": [
+      720,
+      458
+    ],
+    "Windward bridge cable": [
+      835,
+      275
+    ],
+    "Cable-span centre": [
+      1024,
+      451
+    ],
+    "Suspended tally pod": [
+      961,
+      360
+    ],
+    "Bridge underbeam": [
+      1051,
+      602
+    ],
+    "Balance tower crown": [
+      1311,
+      283
+    ],
+    "Freight balance receiver": [
+      1383,
+      459
+    ],
+    "Balance service staging": [
+      1440,
+      604
+    ],
+    "Sorting control": [
+      1601,
+      455
+    ],
+    "Downline catch siding": [
+      1679,
+      594
+    ],
+    "East dispatch loft": [
+      1898,
+      314
+    ],
+    "Outbound freight gate": [
+      1934,
+      468
+    ],
+    "Western service intake": [
+      345,
+      813
+    ],
+    "Gorge inspection artery": [
+      1023,
+      814
+    ],
+    "Classifier return": [
+      1628,
+      815
+    ],
+    "East recovery": [
+      1889,
+      814
+    ]
+  },
+  "material_histogram": {
+    "58": 230384,
+    "62": 148432,
+    "100": 271967
+  },
+  "stable_occupied_cells": 650783,
+  "grounded": 650783,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 26582,
+  "rectangles": 5703,
+  "rectangle_work": 650783,
+  "setup_bytes": 105659,
+  "material_plane_sha256": "44099e4d72f79978d30d1e4ff00ad3cb455b2f9d66dcd639a4ecd1a709a77ef0",
+  "setup_sha256": "5b247d3034eadc9b657d73739b3cd0347347c2e6851ed4b4794d47214714c12d",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 21,
+      "total": 21,
+      "free_centres": 1140073,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 21,
+      "total": 21,
+      "free_centres": 1099642,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 21,
+      "total": 21,
+      "free_centres": 1022958,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      185,
+      416,
+      89,
+      85
+    ],
+    "from": "West breakwater ingress",
+    "to": "Quay manifest",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 21,
+    "unreachable": [],
+    "distance_before_after": [
+      230,
+      338
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "69a1bbaa6a613686fe541feb9b5b58ed058ed4436756d9d4365906ea669f40d3",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-quay",
+      "rect": [
+        82,
+        191,
+        548,
+        625
+      ],
+      "bytes": 86440,
+      "sha256": "6db6ca62fcdd23411ac6bbc656e9a7739f85f211313de7ec2fef1fa8953de736",
+      "pixel_parity": 342500
+    },
+    {
+      "name": "02-ternbreak-cableway",
+      "rect": [
+        655,
+        184,
+        619,
+        548
+      ],
+      "bytes": 85678,
+      "sha256": "879e6f6b3ceddeb974b43c635776322960379f7c5fb52f373691a64479eeb67b",
+      "pixel_parity": 339212
+    },
+    {
+      "name": "03-balance-tower",
+      "rect": [
+        1214,
+        197,
+        334,
+        571
+      ],
+      "bytes": 48720,
+      "sha256": "d3ec7ab910352967908b64b852518830a4cc4ce92aadc82a8c6a5009a4fa7a2b",
+      "pixel_parity": 190714
+    },
+    {
+      "name": "04-gravity-classifier",
+      "rect": [
+        1512,
+        312,
+        326,
+        466
+      ],
+      "bytes": 38863,
+      "sha256": "00f75b2392fd39c9f9c9f5c84fc77a6ce3e88506237404e8da6d516728419112",
+      "pixel_parity": 151916
+    },
+    {
+      "name": "05-east-dispatch",
+      "rect": [
+        1792,
+        285,
+        256,
+        520
+      ],
+      "bytes": 33985,
+      "sha256": "f213d82119dd6de2097e2cf28c635f832aeab7655e796c61dca82e58e158f677",
+      "pixel_parity": 133120
+    },
+    {
+      "name": "06-service-artery",
+      "rect": [
+        840,
+        733,
+        476,
+        288
+      ],
+      "bytes": 34745,
+      "sha256": "c0c134fdda71667cfec2e8b189b2bd76e7d03ae321212ff7b6fa299769c92a3f",
+      "pixel_parity": 137088
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "installed_fallback_risk": 4096,
+  "proof": "Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"
+}

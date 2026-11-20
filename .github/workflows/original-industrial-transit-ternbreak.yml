@@ -1,0 +1,56 @@
+name: Original industrial transit wide — Ternbreak exact material-grid qualification
+on:
+  push:
+    branches:
+      - original/industrial-transit-wide/ternbreak-longspan-261119
+    paths:
+      - 'cybersand-canvases/2048x1024/original-industrial-transit-wide-ternbreak-longspan-261119/**'
+      - '.github/workflows/original-industrial-transit-ternbreak.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-static-and-image-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild complete 2,097,152-cell world and run strict 3-hull navigation, grounding, replay and PNG CRC/pixel checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          D="cybersand-canvases/2048x1024/original-industrial-transit-wide-ternbreak-longspan-261119"
+          node "$D/build.cjs" > /tmp/ternbreak-replay.json
+          cat /tmp/ternbreak-replay.json
+      - name: Ensure the committed JSON, receipt and all seven genuine PNG images are byte-for-byte reproducible
+        shell: bash
+        run: |
+          set -euo pipefail
+          D="cybersand-canvases/2048x1024/original-industrial-transit-wide-ternbreak-longspan-261119"
+          git diff --exit-code -- "$D"
+          git status --short
+          node - "$D" <<'NODE'
+          const fs=require('node:fs'), crypto=require('node:crypto'), path=require('node:path');
+          const d=process.argv[2], r=JSON.parse(fs.readFileSync(path.join(d,'receipt.json'),'utf8'));
+          const sum=b=>crypto.createHash('sha256').update(b).digest('hex');
+          const json=fs.readFileSync(path.join(d,'setup-ternbreak.json'));
+          if(sum(json)!==r.setup_sha256)throw Error('Setup sha mismatch');
+          if(r.extent[0]!==2048||r.extent[1]!==1024||r.rectangles>32768||r.setup_bytes>1048576)throw Error('Setup contract');
+          if(r.detached_cells!==0||r.grounded!==r.stable_occupied_cells)throw Error('physical grounding');
+          if(r.clearance.some(x=>x.reached!==21||x.total!==21||x.bad.length))throw Error('Midge full-hull exact-centre reach');
+          const [before,after]=r.obstruction.distance_before_after;
+          if(!(after>before&&r.obstruction.sites_reached===21))throw Error('obstructed alternative route');
+          if(r.images.length!==7)throw Error('image count');
+          for(const img of r.images){const b=fs.readFileSync(path.join(d,img.name+'.png'));if(b.length!==img.bytes||sum(b)!==img.sha256||img.pixel_parity!==img.rect[2]*img.rect[3])throw Error('material-cell PNG mismatch '+img.name);}
+          console.log(JSON.stringify({grid:r.material_plane_sha256,rectangles:r.rectangles,sites:r.clearance.map(x=>x.reached),images:r.images.length,alternate:r.obstruction.distance_before_after}));
+          NODE
+      - name: Preserve exact-HEAD static evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ternbreak-original-material-cell-evidence
+          path: /tmp/ternbreak-replay.json
+          if-no-files-found: ignore
