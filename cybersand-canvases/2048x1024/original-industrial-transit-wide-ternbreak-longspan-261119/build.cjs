@@ -183,6 +183,130 @@ R(382,671,25,9,M.AIR);R(403,692,11,61,M.WALL);
 // cargo-span deck, reached from sky and the 75-cell-high lower artery.
 R(712,430,45,399,M.AIR);
 
+
+// TERNBREAK R2 AUTHOR-OWNED REAL-CELL P1 REPAIR
+// West recognisable serviced vessel: continuous unequal hull, port workbay,
+// stern bridge, freight pickup and a workshop linked to the cableway.
+P([[177,720],[201,740],[250,754],[368,754],[416,736],[460,693],
+   [445,745],[411,774],[389,786],[240,786],[198,766]],M.STEEL);
+P([[198,753],[251,772],[388,772],[428,749],[396,781],[240,781]],M.WALL);
+R(207,715,200,11,M.STEEL);
+R(237,725,12,43,M.WALL);R(384,725,12,43,M.WALL);
+R(258,753,110,20,M.AIR);R(268,772,91,9,M.STEEL);
+P([[348,708],[348,667],[366,644],[406,637],[427,659],[427,711]],M.STEEL);
+P([[360,698],[360,668],[375,652],[400,651],[415,666],[415,699]],M.AIR);
+R(363,666,49,8,M.WALL);R(372,665,12,13,M.AIR);R(394,665,13,13,M.AIR);
+R(344,705,91,10,M.WALL);L(426,702,463,662,9,M.STEEL);
+R(224,688,113,9,M.STEEL);R(241,697,10,55,M.WALL);
+R(315,698,10,55,M.WALL);R(259,743,55,23,M.AIR);
+R(267,766,35,18,M.AIR);R(281,696,12,9,M.WALL);
+R(179,787,267,10,M.STEEL);
+L(163,679,203,746,10,M.STEEL);L(455,667,414,772,10,M.WALL);
+R(529,560,144,10,M.STEEL);R(535,570,12,60,M.WALL);
+R(541,619,125,13,M.STEEL);R(651,570,13,57,M.WALL);
+R(549,577,105,39,M.AIR);R(649,579,23,36,M.AIR);
+R(553,596,34,9,M.WALL);R(559,605,7,15,M.STEEL);
+R(601,600,34,8,M.WALL);R(610,608,7,13,M.STEEL);
+R(571,581,31,7,M.STEEL);R(617,581,24,7,M.STEEL);
+L(567,559,539,525,8,M.STEEL);
+L(628,292,628,457,5,M.STEEL);ring(628,463,13,13,6,M.WALL);
+L(620,472,602,480,6,M.STEEL);L(636,472,650,480,6,M.STEEL);
+R(581,479,84,29,M.WALL);R(590,485,67,16,M.STEEL);
+for(let x of [599,622,645])R(x,482,5,21,M.WALL);
+L(585,509,559,558,9,M.STEEL);L(656,509,671,566,8,M.STEEL);
+R(674,508,55,11,M.STEEL);R(682,520,9,35,M.WALL);
+R(705,516,9,38,M.WALL);R(679,543,50,10,M.STEEL);
+// Sky-borne line and genuine hanging carriages with cables joined to sag,
+// wheel/sheave clusters, guiderails and a visibly carried heavy container.
+function hangerY(x){return 228+Math.round(91*(1-Math.pow((x-987)/275,2)));}
+for(let x of [845,995,1168]){
+  const y=hangerY(x);L(x,y-4,x,376,6,M.STEEL);
+  ring(x,y+9,17,15,6,M.WALL);R(x-6,y+3,12,14,M.STEEL);
+  L(x-19,y+15,x-30,y+31,6,M.WALL);
+  L(x+19,y+15,x+31,y+31,6,M.WALL);
+}
+R(807,373,98,9,M.WALL);R(819,385,74,30,M.STEEL);
+R(828,393,56,17,M.AIR);
+for(let x of [830,857,881]){R(x,385,6,24,M.WALL);R(x,413,9,12,M.STEEL);}
+L(845,367,816,384,7,M.STEEL);L(845,367,898,384,7,M.STEEL);
+R(1134,373,76,10,M.WALL);R(1143,385,60,31,M.STEEL);
+R(1150,392,45,15,M.AIR);R(1148,411,54,8,M.WALL);
+L(1168,368,1140,379,8,M.STEEL);L(1168,368,1206,379,8,M.STEEL);
+// Functional inspection shelves only in safe ends, supported from pylons.
+R(1221,503,49,9,M.STEEL);R(1232,457,38,9,M.WALL);
+R(1241,417,30,9,M.STEEL);L(1251,507,1251,637,7,M.WALL);
+// Counterweight tower: keyed drum, two guides, heavy grounded receiver and
+// operational-height control room, while preserving the overflight void.
+ring(1377,309,40,37,9,M.STEEL);R(1364,301,27,20,M.AIR);
+R(1372,306,10,10,M.WALL);
+L(1377,269,1377,351,7,M.WALL);
+L(1377,352,1425,389,8,M.STEEL);L(1377,352,1331,391,8,M.STEEL);
+R(1344,422,94,10,M.STEEL);R(1350,432,80,37,M.WALL);
+R(1357,439,66,22,M.AIR);R(1356,468,71,10,M.STEEL);
+L(1407,477,1407,532,7,M.STEEL);
+L(1437,286,1437,541,5,M.STEEL);
+R(1421,542,36,43,M.STEEL);R(1425,551,27,26,M.WALL);
+R(1409,539,8,63,M.STEEL);R(1460,539,8,63,M.STEEL);
+R(1411,593,56,11,M.WALL);
+R(1318,579,89,9,M.STEEL);R(1324,587,11,48,M.WALL);
+R(1327,628,93,11,M.WALL);R(1337,588,78,38,M.AIR);
+R(1403,592,28,37,M.AIR);R(1347,607,25,7,M.STEEL);
+// Classifier has a true short catch siding, interlock, hopper scale and
+// human-sized lateral work/control room (still midge access proven below).
+R(1492,552,85,12,M.STEEL);R(1505,565,13,54,M.WALL);
+P([[1583,572],[1604,547],[1655,547],[1670,576],[1658,615],[1594,614]],M.STEEL);
+R(1598,573,56,27,M.AIR);R(1603,601,49,9,M.WALL);
+R(1623,560,24,8,M.WALL);
+L(1590,649,1637,678,10,M.STEEL);
+L(1637,678,1740,726,11,M.STEEL);
+L(1637,678,1712,638,9,M.WALL);
+R(1694,623,73,11,M.STEEL);R(1701,634,59,18,M.WALL);
+ring(1712,659,14,13,5,M.WALL);R(1720,651,10,21,M.STEEL);
+R(1753,722,27,12,M.WALL);
+R(1672,690,65,8,M.STEEL);R(1676,699,13,31,M.WALL);
+// Dispatch now has the real side-enterable unloading assay department and
+// two distinct working grades under the asymmetric receiving roof.
+R(1838,510,176,13,M.STEEL);R(1847,523,12,102,M.WALL);
+R(1999,527,13,99,M.WALL);R(1857,606,145,16,M.WALL);
+R(1865,531,130,70,M.AIR);
+R(1923,538,10,42,M.STEEL);R(1942,570,48,11,M.WALL);
+R(1947,581,8,22,M.STEEL);R(1878,568,39,10,M.STEEL);
+R(1884,578,8,25,M.WALL);R(1955,541,25,9,M.WALL);
+R(1980,550,29,49,M.AIR);R(1837,558,31,41,M.AIR);
+R(1903,468,94,10,M.STEEL);R(1913,478,77,30,M.WALL);
+R(1919,486,63,14,M.AIR);R(1921,503,58,7,M.STEEL);
+// Unequal lower artery: genuine billet pump / archive / cable drum /
+// switch levers / rescue cart, all anchored to separate rock-cut chambers.
+R(208,922,151,10,M.STEEL);ring(275,886,42,39,8,M.STEEL);
+R(268,891,14,38,M.WALL);L(318,885,348,885,10,M.STEEL);
+L(348,885,348,923,8,M.WALL);R(224,888,19,35,M.WALL);
+R(553,922,117,9,M.STEEL);R(563,879,81,10,M.STEEL);
+R(576,889,12,33,M.WALL);R(638,889,12,33,M.WALL);
+for(let x of [581,601,621])R(x,902,12,8,M.STEEL);
+R(991,934,146,12,M.STEEL);ring(1035,903,33,29,8,M.STEEL);
+ring(1093,914,19,19,6,M.WALL);L(1064,902,1080,909,9,M.STEEL);
+R(1029,917,12,18,M.WALL);L(1119,900,1134,870,7,M.STEEL);
+R(1525,934,147,12,M.STEEL);R(1539,896,92,10,M.WALL);
+for(let x of [1549,1571,1593,1615])R(x,906,9,29,M.STEEL);
+L(1642,902,1667,869,8,M.WALL);
+R(1813,929,122,11,M.STEEL);R(1830,890,88,17,M.WALL);
+R(1844,908,64,11,M.STEEL);
+for(let x of [1853,1900])ring(x,923,11,10,5,M.WALL);
+R(1927,861,9,67,M.WALL);
+// Preserve exactly sized authored sites, and explicit 31-hull fly-through
+// in the tower transfer corridor and grade/sorting approach.
+R(1264,480,248,46,M.AIR);R(1502,478,230,46,M.AIR);
+R(1358,462,48,118,M.AIR);R(1417,492,47,132,M.AIR);
+R(1579,455,48,96,M.AIR);R(1657,508,48,108,M.AIR);
+
+// Supported overpass links high crown to founded abutment and terminal;
+// never build an impassable column across the Midge return airway.
+L(1256,443,1292,443,11,M.STEEL);
+L(1256,538,1292,538,11,M.WALL);
+L(1772,410,1819,411,13,M.STEEL);
+
+for(let [,xy] of Object.entries(sites))R(xy[0]-23,xy[1]-25,47,51,M.AIR);
+
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
@@ -208,7 +332,7 @@ let setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a
 if(jbytes.length>1048576)throw Error("JSON over budget");
 let crops=[["01-west-quay",82,191,548,625],["02-ternbreak-cableway",655,184,619,548],["03-balance-tower",1214,197,334,571],["04-gravity-classifier",1512,312,326,466],["05-east-dispatch",1792,285,256,520],["06-service-artery",840,733,476,288]];
 let images=[["overview",[0,0,W,H]],...crops.map(c=>[c[0],c.slice(1)])].map(([name,rect])=>{let data=png(g,rect),pixels=verifyPng(g,rect,data);return{name,rect,bytes:data,sha256:sha256(data),pixels};});
-let receipt={concept:"Ternbreak Longspan â High Freight Cableway over the Dry Salt Gorge",original:true,seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],material_ids:{"0":"Empty","100":"Basalt - Solid/None","58":"Hard wall - Solid/None","62":"structural solid - Solid/None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"West breakwater ingress",to:"Quay manifest",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"};
+let receipt={concept:"Ternbreak Longspan — High Freight Cableway over the Dry Salt Gorge",original:true,seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],material_ids:{"0":"Empty","100":"Basalt - Solid/None","58":"Hard wall - Solid/None","62":"structural solid - Solid/None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"West breakwater ingress",to:"Quay manifest",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Full grid, zero-overlap rectangle replay, cardinal ground flood, fully in-bounds 4-connected centre BFS, deterministic indexed PNG CRC/Adler/full-pixel parity"};
 return {g,rect,sites,crops,images,receipt,setup,json,jbytes,status,detour:{reached:detour.reached,bad:detour.bad,component:detour.component},distance:routeDistance,pruned};
 }
 return {generate,sha256,base64,utf8};
