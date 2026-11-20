@@ -100,6 +100,49 @@ function world(){
  rect(51,742,1947,77,0);
  rect(313,509,8,178,76);rect(425,509,8,178,76);
  rect(1818,509,8,178,76);rect(1904,509,8,178,76);
+
+ // Crownstep process-legibility P1: physically mounted (not floating) detail.
+ // Three different staffed hearth charge/inspection structures.
+ rect(420,465,27,18,65);rect(426,459,16,6,76);
+ rect(432,481,18,31,69);rect(436,487,11,13,72);
+ rect(497,507,34,16,117);rect(504,509,19,10,72);
+ rect(550,488,35,27,58);rect(558,480,19,8,66);
+ rect(571,494,18,24,69);rect(577,499,10,13,131);
+ for(const x of [608,625,644])rect(x,512,7,33,117);
+ rect(679,474,34,30,65);rect(685,468,20,6,76);
+ rect(704,492,27,25,69);rect(712,497,14,9,72);
+ rect(755,516,32,18,117);rect(764,523,13,8,79);
+ // Solid-to-solid short interstage transfer rather than detached pipes.
+ rect(529,599,35,15,69);rect(549,603,28,9,104);
+ rect(650,610,39,13,68);rect(668,605,24,14,104);
+ rect(775,617,42,13,104);rect(792,612,24,18,117);
+ // The suspended cups now have visibly tilted pour lips, connected to each cup.
+ rect(919,614,44,11,117);rect(929,607,16,12,69);
+ rect(957,617,44,11,104);rect(973,622,28,9,62);
+ rect(1046,613,51,15,117);rect(1079,620,27,11,69);
+ rect(1091,622,41,12,104);rect(1112,631,14,20,58);
+ // Distinct entry, compression, cutoff and inspected mill outfeed.
+ rect(1110,613,40,13,66);rect(1116,607,16,9,76);
+ rect(1239,608,38,13,117);rect(1246,605,17,9,69);
+ rect(1389,613,34,15,62);rect(1396,609,19,7,77);
+ rect(1496,620,42,14,117);rect(1506,613,24,9,76);
+ rect(1568,599,23,24,117);rect(1576,603,10,10,72);
+ // Quench dry-feed and inspection face tied to the existing sealed tank.
+ rect(1612,514,35,16,58);rect(1622,518,15,9,72);
+ rect(1765,511,40,17,65);rect(1775,516,19,10,79);
+ rect(1802,609,30,12,62);rect(1819,618,31,12,66);
+ // Five genuinely distinct floor-founded underplant workstations.
+ // All remain BELOW the 77px clear flyway and outside both rescue shafts.
+ rect(125,843,36,13,117);rect(132,838,21,9,68);
+ rect(181,838,57,13,62);rect(197,833,31,8,72);
+ rect(462,844,48,14,131);rect(477,836,20,10,69);
+ rect(566,837,29,12,68);rect(573,832,15,9,77);
+ rect(780,843,27,14,65);rect(787,837,14,9,69);
+ rect(866,838,71,14,117);rect(878,834,24,8,72);
+ rect(1133,839,28,14,62);rect(1140,834,14,9,77);
+ rect(1194,838,48,13,68);rect(1206,834,26,9,72);
+ rect(1473,844,38,12,117);rect(1483,838,19,9,69);
+ rect(1575,838,45,13,62);rect(1587,833,18,9,77);
  const sites=[
  ["Ore rail arrival",86,272],["Tip lock operator",222,272],["West shaft",370,534],
  ["First hearth",474,268],["Second hearth",631,268],["Third hearth",729,268],

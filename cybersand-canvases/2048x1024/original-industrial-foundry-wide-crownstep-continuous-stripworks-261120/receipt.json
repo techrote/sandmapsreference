@@ -8,46 +8,46 @@
     2048,
     1024
   ],
-  "plane_sha256": "aa27f9653406fe4da1c1675a442a2f4072246f1e2f8df8bd16f381e5aea39230",
-  "setup_sha256": "6f3c89405eaa0d559beb214661644862b8c93a1b85c688b143870a5da4300e9d",
-  "json_bytes": 71004,
-  "rectangle_count": 3732,
+  "plane_sha256": "e75eec966ec6f9e085ba8ef862faa12cdf17c3566497d86acef80e81c6aa9d28",
+  "setup_sha256": "06b4c2881e4a2a5c090ac3f1544614a9b149c633854b5f45cf5bbd9ad9e7fa38",
+  "json_bytes": 72920,
+  "rectangle_count": 3835,
   "source_rectangle_limit": 32768,
   "possible_installed_fallback_untested": 4096,
-  "construction_work": 855407,
+  "construction_work": 861174,
   "material_histogram": {
-    "0": 1241745,
+    "0": 1235978,
     "3": 14766,
-    "8": 8441,
-    "58": 232386,
-    "62": 52003,
-    "65": 106109,
-    "66": 5380,
-    "68": 30476,
-    "69": 11677,
-    "72": 32808,
-    "76": 17286,
-    "77": 713,
-    "79": 1128,
+    "8": 8382,
+    "58": 232384,
+    "62": 53013,
+    "65": 104207,
+    "66": 6166,
+    "68": 31674,
+    "69": 14029,
+    "72": 33932,
+    "76": 17002,
+    "77": 1257,
+    "79": 1422,
     "100": 247924,
-    "104": 29988,
-    "117": 35761,
-    "131": 28561
+    "104": 28281,
+    "117": 40460,
+    "131": 26275
   },
   "ground": {
-    "total": 832200,
-    "rooted": 832200,
+    "total": 838026,
+    "rooted": 838026,
     "detached": 0,
     "repair": {
-      "components": 7,
-      "links": 35,
-      "maxSize": 5439,
+      "components": 3,
+      "links": 22,
+      "maxSize": 3213,
       "maxLink": 12
     }
   },
   "fluid": {
     "water": 14766,
-    "lava": 8441,
+    "lava": 8382,
     "initial_fluid_air_faces": 0,
     "initial_water_lava_contacts": 0
   },
@@ -57,8 +57,8 @@
         19,
         15
       ],
-      "valid_centres": 1018006,
-      "connected_centres": 726970,
+      "valid_centres": 1014376,
+      "connected_centres": 725090,
       "passed": 23,
       "sites": [
         {
@@ -229,8 +229,8 @@
         23,
         19
       ],
-      "valid_centres": 975134,
-      "connected_centres": 701200,
+      "valid_centres": 972028,
+      "connected_centres": 699540,
       "passed": 23,
       "sites": [
         {
@@ -401,8 +401,8 @@
         31,
         27
       ],
-      "valid_centres": 897506,
-      "connected_centres": 651524,
+      "valid_centres": 894884,
+      "connected_centres": 649720,
       "passed": 23,
       "sites": [
         {
@@ -581,8 +581,8 @@
         31,
         27
       ],
-      "valid_centres": 888254,
-      "connected_centres": 642376,
+      "valid_centres": 885632,
+      "connected_centres": 640572,
       "passed": 23,
       "sites": [
         {
@@ -758,7 +758,7 @@
         1024
       ],
       "bytes": 2098812,
-      "sha256": "da21d65b6651539470ee1ae45f85e5689e17b10327870e4939bda90fabbc13ce"
+      "sha256": "24f1a1eb7bd6b7ed18eddf9b033491b48ebc57138fe7899a0dc6d2c71ff9da69"
     },
     "01-side-tip-charge.png": {
       "crop": [
@@ -778,7 +778,7 @@
         286
       ],
       "bytes": 118599,
-      "sha256": "0355179f9d7be69854cb9b8ba8c9c6b235b4072c47fd05dcf84a3ece0a435d7f"
+      "sha256": "cc2c94b40d2097f22a340741b0a49ea422f8af56e30d6c6b42db852ccfd3481f"
     },
     "03-siphon-ladles.png": {
       "crop": [
@@ -788,7 +788,7 @@
         317
       ],
       "bytes": 96532,
-      "sha256": "d64db987a4dfc5e7c510a02f54b59db04badf57c146e000e41aecdf3e652f26c"
+      "sha256": "79d68920228c68a2281f3ed5b6fafc31138e54d8e85e04c080357eb8d87df890"
     },
     "04-crowned-stripmill.png": {
       "crop": [
@@ -798,7 +798,7 @@
         282
       ],
       "bytes": 147690,
-      "sha256": "d29d6df7e7febb8d9d9ea4791e8eb38f133912c47d6e4fd36aaeefd9904a042b"
+      "sha256": "62203f155c72fa9a34df5cc3ef6267ad1f893b423cd7767add4b27fb07abba05"
     },
     "05-quench-dispatch.png": {
       "crop": [
@@ -808,7 +808,7 @@
         282
       ],
       "bytes": 128791,
-      "sha256": "61808d81422894aa25cca4b9c6c55b4339a57452cdddb20ca61cca1e3ca40afd"
+      "sha256": "a01b51734936f479e4b0a250b76e1b9c985822dd01f2448476571d94c5b86bc1"
     },
     "06-repair-rooms.png": {
       "crop": [
@@ -818,7 +818,7 @@
         157
       ],
       "bytes": 305390,
-      "sha256": "4b0f57d48594e067a6f28f45c3b520394b03d590849bf748e402ec97d43f3746"
+      "sha256": "80f0c50cc37f3a327060faa5150920359eea403d968084bd35f9230358e8ddbf"
     }
   },
   "pixel_material_parity_count": 2987912,
