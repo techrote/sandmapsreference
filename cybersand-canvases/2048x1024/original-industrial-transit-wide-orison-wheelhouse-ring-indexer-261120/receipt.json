@@ -1,0 +1,327 @@
+{
+  "concept": "Orison Wheelhouse — Ring Indexer RoRo Port",
+  "original": true,
+  "seed": 2026112026,
+  "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Berth Approach",
+      "Quay Manifest",
+      "Twin-Drum Gate",
+      "Indexing Ring Entry",
+      "Ring Outer Transfer",
+      "Classification Control",
+      "Freight Scan Gate",
+      "Outbound Relay"
+    ],
+    "upper": [
+      "West Crane Loft",
+      "Elevator Head",
+      "Upper Truss Way",
+      "East Semaphore"
+    ],
+    "lower": [
+      "Berth Bilge Return",
+      "Hoist Pump Gallery",
+      "Ring Axle Service",
+      "Turnout Service",
+      "Customs Recovery"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Berth Approach": [
+      158,
+      413
+    ],
+    "Quay Manifest": [
+      411,
+      413
+    ],
+    "Pilot Wheelhouse": [
+      254,
+      578
+    ],
+    "RoRo Vehicle Hold": [
+      331,
+      735
+    ],
+    "Twin-Drum Gate": [
+      650,
+      413
+    ],
+    "Elevator Control": [
+      704,
+      570
+    ],
+    "West Crane Loft": [
+      374,
+      247
+    ],
+    "Elevator Head": [
+      704,
+      247
+    ],
+    "Indexing Ring Entry": [
+      1051,
+      414
+    ],
+    "Ring Viewing Pocket": [
+      1143,
+      544
+    ],
+    "Ring Cargo East": [
+      1248,
+      649
+    ],
+    "Ring Outer Transfer": [
+      1368,
+      414
+    ],
+    "Classification Control": [
+      1575,
+      413
+    ],
+    "Rail Switch Gallery": [
+      1580,
+      686
+    ],
+    "Freight Scan Gate": [
+      1800,
+      414
+    ],
+    "Outbound Relay": [
+      1902,
+      414
+    ],
+    "Upper Truss Way": [
+      1178,
+      247
+    ],
+    "East Semaphore": [
+      1870,
+      247
+    ],
+    "Berth Bilge Return": [
+      270,
+      872
+    ],
+    "Hoist Pump Gallery": [
+      642,
+      872
+    ],
+    "Ring Axle Service": [
+      1088,
+      872
+    ],
+    "Turnout Service": [
+      1540,
+      872
+    ],
+    "Customs Recovery": [
+      1840,
+      872
+    ]
+  },
+  "material_histogram": {
+    "0": 1518743,
+    "58": 281591,
+    "62": 196315,
+    "100": 100503
+  },
+  "stable_occupied_cells": 578409,
+  "grounded": 578409,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 0,
+  "grounding_steel_ties": 38,
+  "rectangles": 4288,
+  "rectangle_work": 578409,
+  "setup_bytes": 79791,
+  "material_plane_sha256": "0ffe9a9ddaa968969f11607d40fa1569168afe8e967cfe63ef2c216e0c7581b0",
+  "setup_sha256": "60dadfd3cd72a1fe2e90daf3fc36f084ab2edd811ce9e77a64a3ce0c9ffde42f",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 23,
+      "total": 23,
+      "free_centres": 1135734,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 23,
+      "total": 23,
+      "free_centres": 1082465,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 23,
+      "total": 23,
+      "free_centres": 978153,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      231,
+      363,
+      92,
+      96
+    ],
+    "from": "Berth Approach",
+    "to": "Quay Manifest",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 23,
+    "unreachable": [],
+    "distance_before_after": [
+      253,
+      371
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "f30c01f813372dbdeca37d1d6c65a1d2b6cfb7b90f6c245224270cc142525f32",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-ro-ro-vessel",
+      "rect": [
+        125,
+        513,
+        375,
+        309
+      ],
+      "bytes": 29540,
+      "sha256": "831fd2673b4a0916fa48ad365e70ad1b8fa4910799c95d1851cff288266c1871",
+      "pixel_parity": 115875
+    },
+    {
+      "name": "02-double-drum-elevator",
+      "rect": [
+        520,
+        197,
+        359,
+        617
+      ],
+      "bytes": 56332,
+      "sha256": "43dd8e067fcb5465e5aef42639303140f01c4c4aa3b20835e6fa6d224d4b407a",
+      "pixel_parity": 221503
+    },
+    {
+      "name": "03-indexing-ring",
+      "rect": [
+        924,
+        461,
+        460,
+        371
+      ],
+      "bytes": 43221,
+      "sha256": "ed76c6525cf815bba5321bab4f16d6f33ece18d7454e7b5c21541ddc2fbb952d",
+      "pixel_parity": 170660
+    },
+    {
+      "name": "04-classification-fan",
+      "rect": [
+        1373,
+        552,
+        401,
+        267
+      ],
+      "bytes": 27419,
+      "sha256": "87cf10adb15f28f0235a8fb166434db81acc753e7746d25c247b6270d1b61bfa",
+      "pixel_parity": 107067
+    },
+    {
+      "name": "05-customs-terminal",
+      "rect": [
+        1752,
+        470,
+        290,
+        350
+      ],
+      "bytes": 26085,
+      "sha256": "474b6a23f4affc4917f610d69ecce7f478a87cc4d1a4a9d914f3ee7fbdd4d20b",
+      "pixel_parity": 101500
+    },
+    {
+      "name": "06-machine-underworks",
+      "rect": [
+        145,
+        835,
+        1789,
+        182
+      ],
+      "bytes": 81908,
+      "sha256": "6fce274c132e5a8c1868471b7c99d903a9a36d9b965e109b080d98cf7125b094",
+      "pixel_parity": 325598
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "installed_fallback_risk": 4096,
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity",
+  "revision": "R2",
+  "parent_head": "c10b16fb98dcd0da19783f25af358d9c6a50e8ef",
+  "exact_grid_difference_from_r1": {
+    "added": 10714,
+    "excavated": 14023,
+    "rematerialized": 8911,
+    "changed": 33648
+  },
+  "audit_response": "Bounded functional-art P1: identical custody loads at vessel, hoist, ring in/out, underworks gear room and recovery hoist, corrected route labels. Reviewer acceptance pending."
+}
