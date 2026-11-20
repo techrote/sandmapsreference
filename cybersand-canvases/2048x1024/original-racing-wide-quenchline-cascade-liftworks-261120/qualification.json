@@ -1,0 +1,299 @@
+{
+  "kind": "QUENCHLINE_CASCADE_LIFTWORKS_ORIGINAL_RACING_WIDE",
+  "revision": "R1",
+  "seed": "0x261120ce",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "material_cells": 2097152,
+  "extent": [
+    2048,
+    1024
+  ],
+  "rectangles": 4431,
+  "setup_json_bytes": 83485,
+  "work_visits": 738049,
+  "source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1359103,
+    "49": 56160,
+    "58": 108106,
+    "62": 174200,
+    "100": 291868,
+    "101": 55925,
+    "113": 13289,
+    "117": 31872,
+    "122": 6629
+  },
+  "grounded_solids": 738049,
+  "discarded_detached_material_cells": 14749,
+  "remaining_detached": 0,
+  "fluids": 0,
+  "reactive": 0,
+  "material_laws": "49 Slate, 58 ReinforcedConcrete, 62 SteelPlate, 100 BasaltColumns, 101 Obsidian, 113 ZincSheet, 117 BareIron, 122 QuartzCrystal: static inert solid, movable=false, RuleKernel=None.",
+  "midge": {
+    "hull": [
+      4,
+      3
+    ],
+    "model_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      130,
+      339
+    ]
+  },
+  "sites": [
+    {
+      "name": "West ignition start",
+      "x": 130,
+      "y": 339
+    },
+    {
+      "name": "Upper dispatch cut",
+      "x": 330,
+      "y": 352
+    },
+    {
+      "name": "Cascade intake",
+      "x": 474,
+      "y": 407
+    },
+    {
+      "name": "Baffled upper outlet",
+      "x": 705,
+      "y": 443
+    },
+    {
+      "name": "Quench transfer west",
+      "x": 886,
+      "y": 476
+    },
+    {
+      "name": "Switch drum outbound",
+      "x": 1125,
+      "y": 523
+    },
+    {
+      "name": "Thermal filtration approach",
+      "x": 1318,
+      "y": 552
+    },
+    {
+      "name": "Thermal fin outbound",
+      "x": 1615,
+      "y": 570
+    },
+    {
+      "name": "East capture lip",
+      "x": 1866,
+      "y": 573
+    },
+    {
+      "name": "East descent",
+      "x": 1905,
+      "y": 660
+    },
+    {
+      "name": "East release",
+      "x": 1870,
+      "y": 747
+    },
+    {
+      "name": "Thermal return",
+      "x": 1537,
+      "y": 754
+    },
+    {
+      "name": "Central lower return",
+      "x": 1150,
+      "y": 764
+    },
+    {
+      "name": "West lower return",
+      "x": 770,
+      "y": 759
+    },
+    {
+      "name": "Brake service return",
+      "x": 403,
+      "y": 761
+    },
+    {
+      "name": "West recovery climb",
+      "x": 126,
+      "y": 545
+    },
+    {
+      "name": "Finish / ignition arch",
+      "x": 134,
+      "y": 336
+    },
+    {
+      "name": "Dispatch operator room",
+      "x": 249,
+      "y": 129
+    },
+    {
+      "name": "Control gantry studio",
+      "x": 861,
+      "y": 135
+    },
+    {
+      "name": "East observation deck",
+      "x": 1570,
+      "y": 134
+    },
+    {
+      "name": "West foundation repair",
+      "x": 267,
+      "y": 930
+    },
+    {
+      "name": "Turbine service room",
+      "x": 920,
+      "y": 935
+    },
+    {
+      "name": "Cooling inspection bay",
+      "x": 1402,
+      "y": 938
+    },
+    {
+      "name": "East brake maintenance",
+      "x": 1841,
+      "y": 937
+    },
+    {
+      "name": "Vertical switch inspection",
+      "x": 1119,
+      "y": 638
+    },
+    {
+      "name": "Return cable way",
+      "x": 568,
+      "y": 615
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "connected": 1177303,
+      "missing": [],
+      "reached": 26
+    },
+    "23x19": {
+      "connected": 1143193,
+      "missing": [],
+      "reached": 26
+    },
+    "31x27": {
+      "connected": 1077520,
+      "missing": [],
+      "reached": 26
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1040,
+      465,
+      150,
+      100
+    ],
+    "material": 58,
+    "missing": [
+      "Switch drum outbound"
+    ],
+    "remaining": 25,
+    "finish_reachable": true
+  },
+  "grid_sha256": "ec292c072dbba2871bb2ef1e50dbd20b227b281772b1854d4eef44c050114429",
+  "setup_sha256": "c1d9f603285126ad134a2f774c539832aca365021c05c6716a508c9d47e25498",
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 17834,
+      "pixels": 2097152,
+      "sha256": "adec314290b8d5038faefc860fcd6c154b6dd2419d065cc173393d889712de6a",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "01-ignition-dispatch.png": {
+      "x": 0,
+      "y": 33,
+      "w": 428,
+      "h": 684,
+      "bytes": 2643,
+      "pixels": 292752,
+      "sha256": "afa5cde8a8d436720e5855d8186d48d71b3795ab9dd4f0aa3a256f8e777c704a",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "02-cascade-louvers.png": {
+      "x": 385,
+      "y": 178,
+      "w": 485,
+      "h": 695,
+      "bytes": 3700,
+      "pixels": 337075,
+      "sha256": "1b5fbff5f6ff4aa674d23f8bbf64cc067f4c915066a2e939dc18a1a682bcb32b",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "03-switch-drum.png": {
+      "x": 785,
+      "y": 198,
+      "w": 527,
+      "h": 780,
+      "bytes": 3895,
+      "pixels": 411060,
+      "sha256": "8e68994018f038bd0ba89de093b969e557b983a3f46b70ebd407b3f6aef78929",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "04-quench-banks.png": {
+      "x": 1240,
+      "y": 193,
+      "w": 461,
+      "h": 770,
+      "bytes": 2960,
+      "pixels": 354970,
+      "sha256": "a2419bbf52355c361d821e86aa72298856d24497d7e87ab2eba51da5dc634727",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "05-capture-reversal.png": {
+      "x": 1650,
+      "y": 180,
+      "w": 398,
+      "h": 791,
+      "bytes": 3310,
+      "pixels": 314818,
+      "sha256": "f04e16fd0d62928e3255b0cd130119998ebfdddaab63dba1d75fb0a4b51c610f",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "06-underfloor-shops.png": {
+      "x": 503,
+      "y": 653,
+      "w": 613,
+      "h": 371,
+      "bytes": 3177,
+      "pixels": 227423,
+      "sha256": "1e410c5b3ea219ce67ae54f843afc5d7c3e9c4f9b5369a3705a99e6449f3b39d",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    }
+  },
+  "native": "NATIVE-UNTESTED; installed CyberDemoBridge capacity 4096-vs-32768 not measured; flight, collision, persistence untested"
+}
