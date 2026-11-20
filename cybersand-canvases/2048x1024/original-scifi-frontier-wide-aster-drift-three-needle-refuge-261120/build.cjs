@@ -173,6 +173,87 @@ function build(){
  L(1512,746,1890,881,18,M.titanium);
  L(1424,735,1838,880,15,M.steel);
 
+
+ // R2 independent Shepherd P1: working instrument chains, staffed workfaces
+ // and differentiated geothermal process units, all formed from material IDs.
+ const frame=(x,y,w,h,m)=>{R(x,y,w,5,m);R(x,y+h-5,w,5,m);R(x,y,5,h,m);R(x+w-5,y,5,h,m);};
+ const fins=(x,y,n)=>{for(let i=0;i<n;i++){let xx=x+i*12;R(xx,y,7,27,i%2?M.frost:M.chrome);R(xx-1,y+12,9,4,M.blue);}};
+ const gauges=(x,y,n)=>{for(let i=0;i<n;i++){R(x+i*21,y,15,19,i%2?M.glassDark:M.window);R(x+5+i*21,y+20,7,7,M.signal);}};
+ // Fork needle A: real wind-speed rotor -> gear train -> sample chamber.
+ L(584,220,601,255,6,M.conduit);
+ ellipse(612,268,19,19,M.chrome);ellipse(612,268,12,12,0);
+ for(let [dx,dy] of [[-18,0],[18,0],[0,-18],[0,18]])L(612,268,612+dx,268+dy,3,M.titanium);
+ L(592,284,591,382,5,M.conduit);
+ frame(582,302,34,66,M.steel);fins(588,316,2);
+ R(590,349,16,10,M.signal);
+ L(701,381,701,317,6,M.conduit);
+ frame(681,315,27,58,M.titanium);
+ R(688,325,12,20,M.window);R(688,349,12,13,M.amber);
+ L(684,368,697,382,4,M.conduit);
+ // No new solid inside Tower one midshaft y400..550: all hull entrances remain clear.
+ // Condenser needle B: crystal exchanger -> coolant pipes -> sealed cistern.
+ L(991,268,1015,289,6,M.conduit);
+ frame(996,289,34,87,M.steel);fins(1003,302,2);
+ L(1012,376,1012,425,6,M.conduit);
+ frame(1116,299,35,80,M.titanium);
+ for(let i=0;i<4;i++){R(1123,305+16*i,21,7,M.frost);R(1126,313+16*i,15,4,M.blue);}
+ L(1138,379,1138,425,6,M.conduit);
+ R(1038,290,65,6,M.conduit);
+ for(let i=0;i<3;i++)R(1046+i*20,299,13,26,i%2?M.glassDark:M.frost);
+ L(1099,293,1116,304,5,M.conduit);
+ // Mid-lower sealed pump near the right pillar; preserve west-facing 82px flight.
+ L(1142,443,1142,646,6,M.conduit);
+ ellipse(1119,515,25,38,M.titanium);ellipse(1119,515,16,29,0);
+ for(let i=0;i<4;i++)R(1103,490+i*14,32,4,M.frost);
+ L(1120,553,1119,648,5,M.conduit);
+ frame(1120,591,35,47,M.steel);
+ gauges(1126,599,1);
+ // Shield needle C: storm shutter -> four membrane filters -> piston actuator.
+ L(1528,387,1528,414,6,M.conduit);
+ frame(1501,404,35,74,M.steel);
+ for(let i=0;i<4;i++){R(1508,412+i*15,20,7,i%2?M.frost:M.blue);R(1504,414+i*15,4,4,M.signal);}
+ L(1534,470,1534,548,5,M.conduit);
+ frame(1419,411,30,70,M.titanium);
+ R(1425,421,19,21,M.window);R(1425,447,19,9,M.signal);
+ L(1433,480,1433,549,5,M.conduit);
+ frame(1501,573,34,67,M.steel);
+ R(1508,581,20,16,M.amber);R(1507,615,22,14,M.glassDark);
+ L(1532,638,1538,735,5,M.conduit);
+ // West stormport: instrumented ferry intake and cryogenic cassette transfer.
+ R(144,620,55,6,M.titanium);R(151,602,12,17,M.chrome);
+ R(172,598,19,22,M.glassDark);R(181,588,7,10,M.signal);
+ R(295,647,85,6,M.conduit);
+ for(let i=0;i<3;i++)R(304+i*23,653,17,19,i%2?M.window:M.frost);
+ L(354,668,358,650,5,M.chrome);
+ // East: physically discrete scrub membrane, freight hoist and shield control.
+ frame(1733,566,40,65,M.steel);
+ for(let i=0;i<3;i++)R(1740,573+i*16,24,9,i%2?M.frost:M.blue);
+ L(1771,607,1818,605,5,M.conduit);
+ frame(1818,563,35,67,M.titanium);
+ gauges(1825,572,1);R(1825,607,20,10,M.amber);
+ R(1694,687,91,6,M.chrome);
+ for(let i=0;i<4;i++)R(1701+i*20,671,12,15,M.iron);
+ L(1706,693,1742,717,5,M.conduit);
+ R(1726,714,51,8,M.titanium);R(1758,705,12,9,M.signal);
+ // Lower galleries: visible independent process at each bay. Stay below y960
+ // so the entire y907..959 return and all literal station hulls stay open.
+ L(537,998,537,969,6,M.titanium);L(655,999,655,972,6,M.titanium);
+ R(540,965,112,6,M.conduit);fins(550,973,3);
+ R(602,977,38,13,M.iron);R(615,966,11,10,M.signal);
+ L(828,999,828,969,6,M.chrome);L(960,1000,960,969,6,M.chrome);
+ for(let x of [848,906]){ellipse(x,980,16,15,M.steel);ellipse(x,980,9,8,0);}
+ L(848,980,906,980,5,M.conduit);
+ R(936,970,20,21,M.glassDark);R(941,965,10,8,M.signal);
+ L(1210,1000,1210,967,6,M.steel);L(1380,1001,1380,968,6,M.titanium);
+ R(1217,963,156,7,M.conduit);fins(1231,972,7);
+ R(1340,980,25,14,M.amber);
+ L(1512,999,1512,969,6,M.chrome);L(1633,1000,1633,970,6,M.titanium);
+ R(1518,965,109,7,M.chrome);gauges(1525,974,4);
+ R(1620,973,10,22,M.frost);
+ // Only existing rooted supports and local attached machine cells; require
+ // the independent final connectedness and exact-route tests below to pass.
+
+ const r2_connection_bridges=tieStructures();
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
  for(let y=0;y<H;y++){let next=new Map(),base=y*W;for(let x=0;x<W;){let m=g[base+x],s=x;while(x<W&&g[base+x]===m)x++;if(!m)continue;let k=s+":"+(x-s)+":"+m,idx=prev.get(k);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(k,idx);}prev=next;}
@@ -199,6 +280,7 @@ function build(){
   queue[tl++]=si;vis[si]=1;while(hd<tl){let a=queue[hd++],x=a%W;let j=a-W;if(j>=0&&pass[j]&&!vis[j]){vis[j]=1;queue[tl++]=j;}j=a+W;if(j<g.length&&pass[j]&&!vis[j]){vis[j]=1;queue[tl++]=j;}j=a-1;if(x>0&&pass[j]&&!vis[j]){vis[j]=1;queue[tl++]=j;}j=a+1;if(x<W-1&&pass[j]&&!vis[j]){vis[j]=1;queue[tl++]=j;}}
   let bad=Object.entries(sites).filter(([n,p])=>!vis[p[1]*W+p[0]]).map(([n,p])=>[n,p,clearAt(p[0],p[1])]);
   return {envelope:[w,h],centres:tl,passed:Object.keys(sites).length-bad.length,total:Object.keys(sites).length,bad};}
+ if(unrooted!==0)throw Error("R2 detached material cells: "+unrooted);
  let clearances=[[19,15],[23,19],[31,27]].map(v=>flood(...v));if(clearances.some(v=>v.bad.length))throw Error("Failed exact-site clearance "+JSON.stringify(clearances));
  
  let obstructions=[[1034,374,1113,448]];
@@ -225,7 +307,7 @@ function build(){
   let b=new Uint8Array(a.reduce((s,p)=>s+p.length,0)),i=0;for(let p of a){b.set(p,i);i+=p.length;}return b;}
  const crops=[["01-west-stormport",0,375,520,510],["02-fork-needle",445,62,419,718],["03-condenser",865,40,460,718],["04-shield-needle",1325,170,723,705],["05-geothermal-return",416,844,1240,180]];
  const images=[["overview.png",png(0,0,W,H)],...crops.map(([name,x,y,w,h])=>[name+".png",png(x,y,w,h)])];
- return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info,seed:SEED};
+ return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info,r2_extra_ties:r2_connection_bridges,seed:SEED};
 }
 
 function sha256(input){let b=typeof input==="string"?Uint8Array.from(input,c=>c.charCodeAt(0)):input;
@@ -233,7 +315,7 @@ const K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923
 const n=(b.length+9+63)&~63,buf=new Uint8Array(n);buf.set(b);buf[b.length]=128;let bits=b.length*8;for(let i=0;i<8;i++){buf[n-1-i]=bits&255;bits=Math.floor(bits/256);}
 let h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19],w=new Uint32Array(64);let rotr=(x,n)=>(x>>>n)|(x<<(32-n));
 for(let off=0;off<n;off+=64){for(let j=0;j<16;j++){let i=off+j*4;w[j]=((buf[i]<<24)|(buf[i+1]<<16)|(buf[i+2]<<8)|buf[i+3])>>>0;}for(let j=16;j<64;j++){let p=w[j-15],q=w[j-2];w[j]=(w[j-16]+(rotr(p,7)^rotr(p,18)^(p>>>3))+w[j-7]+(rotr(q,17)^rotr(q,19)^(q>>>10)))>>>0;}let [a,b0,c,d,e,f,g,z]=h;for(let j=0;j<64;j++){let t1=(z+(rotr(e,6)^rotr(e,11)^rotr(e,25))+((e&f)^(~e&g))+K[j]+w[j])>>>0,t2=((rotr(a,2)^rotr(a,13)^rotr(a,22))+((a&b0)^(a&c)^(b0&c)))>>>0;z=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b0;b0=a;a=(t1+t2)>>>0;}for(let j=0;j<8;j++)h[j]=(h[j]+[a,b0,c,d,e,f,g,z][j])>>>0;}return h.map(n=>n.toString(16).padStart(8,"0")).join("");}
-function makeReceipt(a){return {concept:"Aster Drift - Three Needle Storm Refuge",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"de109d0131641d6adc8d25bb9ced7ca3d4991105",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[1034,374,1113,448],material_id:58,purpose:"Blocks exact Crown transfer node; all other named destinations remain recoverable",result:a.bypass},sites:a.sites,crops:a.crops,source_art:"None; independently invented level design",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
+function makeReceipt(a){return {concept:"Aster Drift - Three Needle Storm Refuge R2 / operational equipment",lane:"original/scifi-frontier-wide",original_no_source:true,repair_revision:"R2 / 20 November 2026",independent_shepherd_p1_repair:{changed_material_cells:37901,added:29641,erased:243,retyped:8017,scope:"Three needle operational chains, west/east processing equipment and rooted geothermal bays; preserve all 26 exact sites and blocked-node recovery"},seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"de109d0131641d6adc8d25bb9ced7ca3d4991105",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,r2_extra_fixture_ties:a.r2_extra_ties,nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[1034,374,1113,448],material_id:58,purpose:"Blocks exact Crown transfer node; all other named destinations remain recoverable",result:a.bypass},sites:a.sites,crops:a.crops,source_art:"None; independently invented level design",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
 
 if(typeof require!=="undefined"&&require.main===module){
  const fs=require("fs"),path=require("path"),crypto=require("crypto"),zlib=require("zlib");

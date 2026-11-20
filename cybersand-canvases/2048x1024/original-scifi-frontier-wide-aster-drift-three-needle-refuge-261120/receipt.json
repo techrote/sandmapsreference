@@ -1,7 +1,15 @@
 {
-  "concept": "Aster Drift - Three Needle Storm Refuge",
+  "concept": "Aster Drift - Three Needle Storm Refuge R2 / operational equipment",
   "lane": "original/scifi-frontier-wide",
   "original_no_source": true,
+  "repair_revision": "R2 / 20 November 2026",
+  "independent_shepherd_p1_repair": {
+    "changed_material_cells": 37901,
+    "added": 29641,
+    "erased": 243,
+    "retyped": 8017,
+    "scope": "Three needle operational chains, west/east processing equipment and rooted geothermal bays; preserve all 26 exact sites and blocked-node recovery"
+  },
   "seed": 2533153,
   "extent": [
     2048,
@@ -16,23 +24,23 @@
   "bridge_legacy_capacity_risk": 4096,
   "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
   "material_histogram": {
-    "49": 7943,
-    "62": 51136,
-    "63": 3774,
-    "66": 15974,
-    "68": 68272,
-    "77": 2794,
-    "79": 1133,
+    "49": 9139,
+    "62": 56395,
+    "63": 5139,
+    "66": 23965,
+    "68": 71480,
+    "77": 3372,
+    "79": 2133,
     "100": 170998,
     "101": 10989,
-    "120": 4668,
-    "121": 1273,
-    "129": 2016,
-    "130": 8992,
-    "131": 6607
+    "120": 6174,
+    "121": 4974,
+    "129": 3662,
+    "130": 6845,
+    "131": 10702
   },
-  "filled_material_cells": 356569,
-  "grounded_cells": 356569,
+  "filled_material_cells": 385967,
+  "grounded_cells": 385967,
   "ungrounded_cells": 0,
   "grounded_components": 1,
   "all_solid_components": 1,
@@ -40,41 +48,45 @@
     "ties": 82,
     "longest": 131
   },
-  "nonoverlapping_ordered_rectangles": 4526,
-  "rectangle_work": 356569,
-  "setup_bytes": 84937,
-  "material_plane_sha256": "0da04919a3e01bf97903a4e6aa6c0764521903c6f0e995f54b4b806dd22c3a05",
-  "setup_sha256": "77de496a538bf752ac9de540c147371dcfda44e2a135a59f97357983fa2d87e3",
+  "r2_extra_fixture_ties": {
+    "ties": 17,
+    "longest": 7
+  },
+  "nonoverlapping_ordered_rectangles": 5454,
+  "rectangle_work": 385967,
+  "setup_bytes": 101945,
+  "material_plane_sha256": "c4900fc764a469ba48babc3cb2a2a76d377ec9c0305ca9837b482cf253b5711c",
+  "setup_sha256": "41858caca8254bbcbf27d583ed0444805e6e0f403b9bde9105d594f760e22908",
   "images": [
     {
       "name": "overview.png",
-      "bytes": 54307,
-      "sha256": "b5b1a7675c69cff4da1bf1ee98472a746b4eba2973cb765c9d71d0d295b29a16"
+      "bytes": 70538,
+      "sha256": "06ce10f666d048f94a719a2afa4cc3ed73e3e78e4e40253fc6c143d256b05d9e"
     },
     {
       "name": "01-west-stormport.png",
-      "bytes": 9812,
-      "sha256": "9afd5245d440f1e8999966907cd89e4e68accc5af801bfaa8e6475aa5ff54c69"
+      "bytes": 10567,
+      "sha256": "70ba2641000151c9974e76a3a530074888e291a34831875a22e21447fa2a1d4c"
     },
     {
       "name": "02-fork-needle.png",
-      "bytes": 9473,
-      "sha256": "576f861fa5ef67f3add7cfb1c69814dd9a13b6778cc9b4ca89cebc3f7999a0dd"
+      "bytes": 11956,
+      "sha256": "7402168e89c09a7ccedf7e7f9940df9cad607721734785a251a8c41036a2cdbe"
     },
     {
       "name": "03-condenser.png",
-      "bytes": 9236,
-      "sha256": "2588bca015b9a707fc064075a128c1b239e28eb345b3817edf5b542f5dc7f35c"
+      "bytes": 13743,
+      "sha256": "9b5c9b4107e25c5fad735ceaeb0d1e42448bdd3e88ae1f896fca779c40ffdeba"
     },
     {
       "name": "04-shield-needle.png",
-      "bytes": 17879,
-      "sha256": "dc53e9a78057c71dcd1511ffa2075f0dd8738e3389c18fb5ff46545e8b19f07c"
+      "bytes": 23308,
+      "sha256": "ab7defe2bd2b875cdce4f751317b36adc68dda7972c608d9ffc45827146aa3e6"
     },
     {
       "name": "05-geothermal-return.png",
-      "bytes": 6352,
-      "sha256": "c628d50aefa860260f3a300fb65c6923e2ca147012b38276dbc42bf58edae59f"
+      "bytes": 9418,
+      "sha256": "3e8e07a078fb8e345ff138362e73729560afd4f256889b032b116b332c6f8b70"
     }
   ],
   "clearance": [
@@ -83,7 +95,7 @@
         19,
         15
       ],
-      "centres": 1484714,
+      "centres": 1422260,
       "passed": 26,
       "total": 26,
       "bad": []
@@ -93,7 +105,7 @@
         23,
         19
       ],
-      "centres": 1425944,
+      "centres": 1364695,
       "passed": 26,
       "total": 26,
       "bad": []
@@ -103,7 +115,7 @@
         31,
         27
       ],
-      "centres": 1318275,
+      "centres": 1258546,
       "passed": 26,
       "total": 26,
       "bad": []
@@ -124,7 +136,7 @@
           31,
           27
         ],
-        "centres": 1299463,
+        "centres": 1249937,
         "passed": 25,
         "total": 26,
         "bad": [

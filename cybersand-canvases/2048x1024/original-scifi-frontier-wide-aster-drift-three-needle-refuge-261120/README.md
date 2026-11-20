@@ -1,6 +1,18 @@
-# Aster Drift — Three Needle Storm Refuge
+# Aster Drift — Three Needle Storm Refuge (R2)
 
 **ORIGINAL / NO REFERENCE.** Fixed-seed, exact **2048×1024** CyberSand Setup-v2, physically authored in perpendicular orthographic 2D side elevation. **Draft/HOLD; NATIVE-UNTESTED; independent Art/Technical/Shepherd qualification requested.** Not an illustration or source-art conversion.
+
+## R2 substantive functional-geometry repair — 20 November 2026
+
+Independent Shepherd [P1 at original 15bc7b93](https://github.com/techrote/sandmapsreference/pull/59#issuecomment-7038725543) found thin mast bars, insufficient industrial function and underdeveloped underground stations. This R2 revision changes **37,901 actual final material-cell IDs** (**29,641 additions, 243 excavations, 8,017 rematerializations**), preserving the three-needle silhouette, basin voids and original 26 literal Midge sites. Workfaces are physical solids, not overlays or generated concept art.
+
+- **Needle A:** wind-speed rotor with drive linkage, framed ice sampler and independently legible encoder housing, attached to the fork spar.
+- **Needle B:** dual intake filter/ice-exchanger banks, cross-needle coolant header, reservoir drum and grounded lower control cabinet.
+- **Needle C:** four-stage weather-shield membrane stack, upper sampling enclosure, actuator and servo feed to grounded shield strut.
+- **Inhabited west/east:** ferry diagnostic desk, cryogenic cassette conveyor, two-stage quarantine wash, instrumented scrub processor and freight transfer line.
+- **Geothermal return:** four differentiated, entered stations for fossil assay, duplex return pump, finned heat-exchange archive and refuge pressure/medical terminals. Continuous lower flyable corridor retained.
+
+All previously declared points are still reached from the unchanged spawn by literal-centre 4-neighbour flood at **19×15, 23×19 and 31×27** hull envelopes; a physically added obstruction at **[1034,374,1113,448]** continues to disable only the intentional Crown transfer node, leaving **25/25** other stations reachable. All **385,967** material solids are edge-rooted; 0 detached. Independent **R2 exact-HEAD Art/Tech/Shepherd qualification required**; preceding static findings must not be carried forward as R2 acceptance.
 
 ## World and engineering
 
@@ -32,12 +44,12 @@ Run `node build.cjs` from this folder to regenerate all canonical outputs, or `n
 - Source: `techrote/cybersand` accepted main **de109d0131641d6adc8d25bb9ced7ca3d4991105** (read-only)
 - Base repository: `techrote/sandmapsreference` main **99a166e7fcae45eb22be1740e9f33f62faccbcc7**
 - Output extent: 2048×1024; total material cells **2,097,152**
-- Grounded inert static material cells **356569 / 356569**, with **0** detached
-- Ordered nonoverlapping rectangles **4526 / 32,768**
-- Setup-v2 UTF-8 JSON **84937 / 1,048,576 bytes**
-- Construction cell budget **356569 / 32,000,000**
-- Material grid SHA-256: **0da04919a3e01bf97903a4e6aa6c0764521903c6f0e995f54b4b806dd22c3a05**
-- Setup JSON SHA-256: **77de496a538bf752ac9de540c147371dcfda44e2a135a59f97357983fa2d87e3**
+- Grounded inert static material cells **385967 / 385967**, with **0** detached
+- Ordered nonoverlapping rectangles **5454 / 32,768**
+- Setup-v2 UTF-8 JSON **101945 / 1,048,576 bytes**
+- Construction cell budget **385967 / 32,000,000**
+- Material grid SHA-256: **c4900fc764a469ba48babc3cb2a2a76d377ec9c0305ca9837b482cf253b5711c**
+- Setup JSON SHA-256: **41858caca8254bbcbf27d583ed0444805e6e0f403b9bde9105d594f760e22908**
 - Physical-material palette: `49, 62, 63, 66, 68, 77, 79, 100, 101, 120, 121, 129, 130, 131`, validated against the accepted stable inert Solid/None catalog; no falling powders, mobile fluids, reactive or combustible foundations
 - Named sites: **26/26** at each conservative clearance; physical-obstruction recovery **25/25 other sites**
 - Printed image proof: one full **2048×1024**, plus **five authentic unscaled 1:1 district crops**, IDs encoded as actual indexed PNG palette indices; no fake game screenshot or AI scene illustration
@@ -55,4 +67,4 @@ Run `node build.cjs` from this folder to regenerate all canonical outputs, or `n
 
 ## Installed-bridge admission
 
-Accepted source `godot/scripts/workbench_setup.gd` advertises 32,768 rectangles and 1 MiB JSON, but falls back to **4,096** if the installed bridge lacks a compatible `workbench_start_rectangle_capacity` method. **This map exceeds that legacy fallback by 430 rectangles.** Establish the actual installed binary capability before asserting admission. Native runtime test still requires exact binary hashes, Workbench import, piloted Midge traversal/collisions, tick progression and cold save/reopen. Keep **Draft/HOLD** and request independent exact-HEAD Art/Technical/Shepherd review.
+Accepted source `godot/scripts/workbench_setup.gd` advertises 32,768 rectangles and 1 MiB JSON, but falls back to **4,096** if the installed bridge lacks a compatible `workbench_start_rectangle_capacity` method. **This map exceeds that legacy fallback by 1,358 rectangles.** Establish the actual installed binary capability before asserting admission. Native runtime test still requires exact binary hashes, Workbench import, piloted Midge traversal/collisions, tick progression and cold save/reopen. Keep **Draft/HOLD** and request independent exact-HEAD Art/Technical/Shepherd review.
