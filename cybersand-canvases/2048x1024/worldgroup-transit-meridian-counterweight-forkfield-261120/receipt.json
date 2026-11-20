@@ -1,0 +1,294 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_MERIDIAN_COUNTERWEIGHT_FORKFIELD",
+  "revision": "R1",
+  "seed": "0x261120d2",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "donor": "Tungsten Sawtooth R2 7fc24855cf521c90bf67f4afb08685e490473201, Latchreach R2 c68c3e067972356f842ffd7e52f0fbd27f3d8c19 (stylistic vocabulary only)",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 435199,
+  "discarded_unattached_candidate_cells": 128405,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 4438,
+  "setup_json_bytes": 84512,
+  "material_work_visits": 435199,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "ea24fd95442b0064ea52e37f7493bf27dd393d660b7a6a17f54cb5877309d279",
+  "setup_sha256": "eb58256df5d8a21bde7cca25337f5336be2a38915617dd89ee4a0c7c2c9e4268",
+  "histogram": {
+    "0": 1661953,
+    "58": 140029,
+    "62": 26911,
+    "100": 169159,
+    "101": 6155,
+    "113": 18130,
+    "117": 71415,
+    "122": 3400
+  },
+  "sites": [
+    {
+      "name": "West embark",
+      "x": 134,
+      "y": 524
+    },
+    {
+      "name": "Inbound rake",
+      "x": 335,
+      "y": 518
+    },
+    {
+      "name": "High west decision",
+      "x": 548,
+      "y": 395
+    },
+    {
+      "name": "West relief approach",
+      "x": 530,
+      "y": 681
+    },
+    {
+      "name": "Signal loft west",
+      "x": 719,
+      "y": 285
+    },
+    {
+      "name": "West matrix",
+      "x": 796,
+      "y": 525
+    },
+    {
+      "name": "Upper tally traverse",
+      "x": 905,
+      "y": 396
+    },
+    {
+      "name": "Fault recovery lane",
+      "x": 940,
+      "y": 714
+    },
+    {
+      "name": "Comparator gallery",
+      "x": 1063,
+      "y": 288
+    },
+    {
+      "name": "Identity checkpoint",
+      "x": 1005,
+      "y": 521
+    },
+    {
+      "name": "Divergent central turnout",
+      "x": 1253,
+      "y": 524
+    },
+    {
+      "name": "Deep sliplane",
+      "x": 1281,
+      "y": 687
+    },
+    {
+      "name": "Signal loft east",
+      "x": 1510,
+      "y": 286
+    },
+    {
+      "name": "Upper east classification",
+      "x": 1603,
+      "y": 392
+    },
+    {
+      "name": "Low dispatch approach",
+      "x": 1628,
+      "y": 711
+    },
+    {
+      "name": "East recovery signal",
+      "x": 1821,
+      "y": 291
+    },
+    {
+      "name": "Recovery cradle",
+      "x": 1814,
+      "y": 711
+    },
+    {
+      "name": "East turnback",
+      "x": 1922,
+      "y": 527
+    },
+    {
+      "name": "Return to marshalling",
+      "x": 337,
+      "y": 707
+    },
+    {
+      "name": "Finish west",
+      "x": 172,
+      "y": 520
+    },
+    {
+      "name": "Turnout actuator workface",
+      "x": 317,
+      "y": 929
+    },
+    {
+      "name": "Bifurcation comparator",
+      "x": 816,
+      "y": 927
+    },
+    {
+      "name": "Shear coupling pit",
+      "x": 1306,
+      "y": 932
+    },
+    {
+      "name": "Emergency traction bay",
+      "x": 1775,
+      "y": 931
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "connected": 1475609,
+      "missing": [],
+      "free_sites": 24
+    },
+    "23x19": {
+      "connected": 1438203,
+      "missing": [],
+      "free_sites": 24
+    },
+    "31x27": {
+      "connected": 1365790,
+      "missing": [],
+      "free_sites": 24
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      954,
+      475,
+      104,
+      66
+    ],
+    "material": 58,
+    "after_31x27": {
+      "connected": 1358456,
+      "missing": [
+        "Identity checkpoint"
+      ],
+      "free_sites": 23
+    },
+    "covered_site": "Identity checkpoint",
+    "other_sites_reachable": 23
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 54872,
+      "pixels": 2097152,
+      "sha256": "02dc2842fe14e4fbec862893de80ee6775101765968242f31c34607332eb403d",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-west-fork-and-rake.png": {
+      "x": 28,
+      "y": 275,
+      "w": 535,
+      "h": 695,
+      "bytes": 5218,
+      "pixels": 371825,
+      "sha256": "0fbcd2b37d9e7cab3697477e9a6e99a18a195b6542b181968e630990c622e679",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-west-relay-field.png": {
+      "x": 520,
+      "y": 202,
+      "w": 490,
+      "h": 785,
+      "bytes": 19009,
+      "pixels": 384650,
+      "sha256": "b145866b75f6bc040cfe4813633d38771bce9ccbabb23597d38e74d383a2c89a",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-comparator-interlocking.png": {
+      "x": 940,
+      "y": 210,
+      "w": 495,
+      "h": 775,
+      "bytes": 13799,
+      "pixels": 383625,
+      "sha256": "13d1223ee2e008c735c1dfa8c6f78305c40cfe42df2aaa22ab1c7bf7694027af",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-dispatch-divergence.png": {
+      "x": 1403,
+      "y": 199,
+      "w": 500,
+      "h": 783,
+      "bytes": 12019,
+      "pixels": 391500,
+      "sha256": "529a68358c86ea7c37576cf06263b812c4a1d7f380a1debd5d335f1a9cff0728",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-east-recovery-turn.png": {
+      "x": 1708,
+      "y": 230,
+      "w": 340,
+      "h": 774,
+      "bytes": 4897,
+      "pixels": 263160,
+      "sha256": "a08ceff5491355a706f7d9a754a4fcd4f054e9e688ec78e9d88bd0200db16766",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-four-entered-service-chambers.png": {
+      "x": 155,
+      "y": 802,
+      "w": 1762,
+      "h": 210,
+      "bytes": 14647,
+      "pixels": 370020,
+      "sha256": "0e02e0531e97f7d8012a299c763647de35aecfc6cad44ccda0eae7154e1bb2dc",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: installed CyberDemoBridge, Godot/Workbench, Rapier, input/collision/ticks, cold save/reopen not executed",
+  "independent_review": "PENDING: Art, Technical, Shepherd exact-head",
+  "ci": "NOT CLAIMED"
+}
