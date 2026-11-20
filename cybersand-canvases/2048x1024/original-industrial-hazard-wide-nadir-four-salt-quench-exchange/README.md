@@ -1,36 +1,48 @@
-# Nadir-4 Salt-Quench Exchange — Original Industrial Hazard Landscape
+# Nadir-4 Salt-Quench Exchange — R2 original industrial landscape
 
-**Original 2048x1024 actual material-cell landscape · perpendicular 2D side elevation · OPEN Draft/HOLD · NATIVE-UNTESTED.** All structures are actual stable construction material cells; water and lava are mobile/reactive and fully contained at initial placement. No external source art, JPEG tracing, AI illustration, fake native rendering or modified CyberSand engine.
+**2048x1024 actual material-ID world | fully orthographic side elevation | OPEN DRAFT/HOLD | NATIVE-UNTESTED.** Entirely new original authored environment, unrelated to source-image rework. The apparatus is built from actual accepted material cells, not animated industrial machinery. Water (#3) and Lava (#8) are mobile/reactive, not stable foundation. Every described valve/manifold below is **static geometry**.
 
-## Physical architecture and navigable districts
-The Nadir-4 geothermal brine-lift lies against a stepped underground salt fault. **Barge Intake** (west): an asymmetric crane with an open-topped aerial inspection void, dry weigh hall, two low staging levels and cargo rail approaches. **Vacuum Needles** (west-central): unequal-height siphon spires with slanted pressure lines, two different sealed condensate basins, inhabited instrument bay and a prominent open skyline. **Phase-Gate** (east-central): isolated squared thermal chamber with two unequal refractory baffles, sealed lava thermal capsule, dry two-entrance diagnostic room and an unroofed observation route. **Cold Recovery** (east): staggered cooling fins, twin individually enclosed water retorts, dual-purpose service floors and exit isolation bay. Four different silhouettes in one actual terrain plane, no isometric surfaces.
+## Process districts
 
-## Routes and exact functional destinations
-Primary aerial route: Arrival -> Weigh Hall -> Interchange -> Vacuum Skylane -> Condensate Landing -> Phase Lookout -> Thermal Diagnostic -> Cold Exchange -> Exhaust -> Eastern Extraction. Three substantial open excavation shafts give an alternate lower 66-cell-high, end-to-end **dry undercroft**, with named east/west/central return checkpoints. All centres are the authored, immutable site coordinates below; no near-site substitution. Midge's accepted authored hull is 4x3; all sites and four-neighbour spawn-to-centre flood checked at full 19x15, 23x19 and 31x27 conservative envelopes and under two inserted 52x64 blockages. Static navigation is not a substitute for live Rapier steering.
+1. **Barge Intake** (x50-490): uneven brine-handling gantry, actual cargo clamping jaws, fixed specimen lift, and crew-scale inspection console inside the entered weighing hall.
+2. **Vacuum Needles** (x490-970): unequal spires, separately sealed water-condensate vessels, an external differential inlet/outlet contact chain, and a dry instrument-room examination surface.
+3. **Phase Gate** (x970-1500): twin thermal baffles, a sealed lava vessel, joined external thermal transfer header and distinctive hot-chain operator controls.
+4. **Cold Recovery** (x1500-2020): independent stepped fins, two contained water retorts, a four-section exchanger header and an entered cold finishing bench.
+5. **Return Undercroft** (x130-1920,y900-970): continuous flyable dry lower alternative with a two-sided entered drain-test alcove, a separate valve-shuttle alcove and eastern sump instrument island. The R2 subgrade crop is widened to show both stations.
 
-| Checkpoint | Exact centre (x,y) |
+Original macro silhouette and flight voids remain, including three large vertical return shafts. Primary airborne route is arrival -> weighing -> vacuum -> phase-gate -> cold recovery -> eastern extraction. Lower return connects at west/central/east shaft accesses; no site has been moved or waived.
+
+## Exact functional Midge destinations (unchanged from original)
+
+| Name | Cell centre |
 |---|---|
-| Arrival aerostat | (80, 420) |
-| West weighing hall | (215, 440) |
-| Interchange flight lock | (478, 415) |
-| Vacuum skylane | (554, 375) |
-| Condensate landing | (956, 427) |
-| Phase-gate overlook | (1055, 392) |
-| Thermal diagnostic | (1473, 423) |
-| Cold-water exchange | (1556, 494) |
-| Exhaust service apron | (1950, 424) |
-| Safe eastern extraction | (1981, 625) |
-| West subterranean hatch | (502, 928) |
-| Middle pressure undercroft | (1035, 929) |
-| East sump return | (1605, 929) |
+| Arrival aerostat | (80,420) |
+| West weighing hall | (215,440) |
+| Interchange flight lock | (478,415) |
+| Vacuum skylane | (554,375) |
+| Condensate landing | (956,427) |
+| Phase-gate overlook | (1055,392) |
+| Thermal diagnostic | (1473,423) |
+| Cold-water exchange | (1556,494) |
+| Exhaust service apron | (1950,424) |
+| Safe eastern extraction | (1981,625) |
+| West subterranean hatch | (502,928) |
+| Middle pressure undercroft | (1035,929) |
+| East sump return | (1605,929) |
 
-## Deterministic source and technical receipt
-Run `node build.cjs` in this folder to deterministically regenerate Setup-v2 and **all six actual indexed material PNGs** from fixed seed `19042647`; `node build.cjs --verify` compares each generated artifact byte-for-byte. Source occupies exactly 2,097,152 material-ID cells, optimized into 1893 ordered nonoverlapping rectangles (35962 Setup-v2 UTF-8 bytes; source ceilings 32768 rects / 1 MiB). Raw-grid SHA256 `2dbf1ad96683690b0828bd99cd61df17896a235c8d2d15a2305c15b1e4e5e2d1` and literal Setup-v2 SHA256 `dbdfb62d06a2daae0357eb5636d04275479cdbb3e235c319556ae1122d940cbb`. Accepted read-only CyberSand main `de109d0131641d6adc8d25bb9ced7ca3d4991105`; sandmapsreference main base `99a166e7fcae45eb22be1740e9f33f62faccbcc7`. See `receipt.json` for complete material histogram, full-cell replay, exact route centres, obstructed-path checks, anchored solids, initial mobile fluid contacts, image dimensions and pixel parity.
+All **13 exact named destinations** are checked from spawn (80,420) for fully in-bounds 19x15, 23x19 and 31x27 Midge clearance with 4-connected centre flood; no nearest substitutions. Two physical 52x64 obstruction fixtures independently retain all exact sites. This proves only *static* connectivity, not live handling.
 
-Valid stable/inert structural material IDs are 58,62,63,66,68,70,76,77,79,100,104,117,120,123; mobile Water ID3 and mobile/reactive Lava ID8 are separately enclosed and not load-bearing. No floating structural pieces remain: rooted-steel supports are real built cells. There are no fluid-to-empty cardinal contact faces at time zero, nor water-to-lava adjacent faces; this **does not** prove future containment during simulation.
+## Deterministic physical-cell proof
 
-## Authentic raster evidence
-[Full 2048x1024 world](./overview.png) plus true 1:1 material crops [barge](./barge.png), [vacuum](./vacuum.png), [thermal](./thermal.png), [cold](./cold.png) and [subgrade](./subgrade.png). Each PNG is indexed with real material IDs as its pixel values; checked 3524427 decoded material indices against the complete grid with zero differences, verified chunks and CRC. No source JPEG or visual concept image was used.
+- Fixed seed: **19042647**; source generator **build.cjs** is the complete geometry and renderer. Run `node build.cjs` here to regenerate all Setup/receipt/PNG evidence, or `node build.cjs --verify` to re-compute every artifact and fail on byte drift.
+- Accepted READ-ONLY CyberSand: `de109d0131641d6adc8d25bb9ced7ca3d4991105`; original sandmapsreference branch base main: `99a166e7fcae45eb22be1740e9f33f62faccbcc7`.
+- Exact full material plane **2048x1024 = 2,097,152 cells**, SHA-256 `ef640b99c34c9a2d5bbc1d3a0346ce5ae47a3fe3617c607bc4514b469eb91cdc`.
+- **2191** lossless ordered, nonoverlapping Setup-v2 rectangles; **41426** serialized ASCII/UTF-8 bytes; SHA-256 `ab4ad1ecf30f50e8138f5628c4607a7eff6a45f72e1a1e72976132e0af908b60`; **607515** construction visits. Budgets: 32768 source rectangles, 1 MiB JSON, 32M visits.
+- Stable boundary-rooted inert Solid/None: **582391/582391**, **0 detached**; actual support bearings are emitted by the deterministic builder.
+- Water/Lava initial fluid-exposed faces: **0**; direct Water-to-Lava adjacent faces **0**; original Water/Lava cell values unchanged by R2. Not a dynamic-fluid test.
+- Material changes from independent exact-R1 replay: **24692** cells (18157 added, 1030 removed, 5505 rematerialized), spanning (202,484) to (1858,965).
+- Genuine 8-bit indexed PNG pixel = exact material cell: full **overview.png** plus five **1:1** district crops barge/vacuum/thermal/cold and widened **subgrade.png**; 3582852 decoded material indices CRC-checked and compared against final grid, zero mismatches. See receipt.json for all hashes/dimensions/histogram and BFS counts.
 
-## Draft / HOLD gates
-**NATIVE-UNTESTED:** installed CyberDemoBridge rectangle admission/version (source advertises 32768, legacy binary may enforce 4096), native Workbench import, Midge thrust and collision, active Water/Lava settling and containment, Rapier and save/reopen. No independent Art/Technical/Shepherd assessment of this HEAD yet; do not merge or promote Ready. Material geometry represents apparatus without simulated industrial process control.
+## Admission / review status
+
+**CREATOR STATIC-PASS, NEW-HEAD ART/TECH/SHEPHERD REVIEW REQUESTED, NATIVE-UNTESTED.** This revision responds to the reviewers' functional industrial art P1; it is not self-declared independent acceptance. Godot, Workbench/CyberDemoBridge installed rectangle capability, Rapier/Midge live collision/flight, fluid settling and fresh-process save/reopen were **not executed**. Native bridge source cap 32768 does not establish installed capacity (legacy ~4096 fallback). Do not merge, mark Ready, auto-merge or claim owner acceptance.

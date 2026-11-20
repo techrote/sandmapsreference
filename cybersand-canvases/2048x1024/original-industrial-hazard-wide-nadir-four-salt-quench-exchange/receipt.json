@@ -9,32 +9,34 @@
     1024
   ],
   "actual_cells": 2097152,
-  "plane_sha256": "2dbf1ad96683690b0828bd99cd61df17896a235c8d2d15a2305c15b1e4e5e2d1",
-  "setup_sha256": "dbdfb62d06a2daae0357eb5636d04275479cdbb3e235c319556ae1122d940cbb",
-  "setup_bytes": 35962,
-  "rectangle_count": 1893,
-  "construction_writes": 590388,
+  "plane_sha256": "ef640b99c34c9a2d5bbc1d3a0346ce5ae47a3fe3617c607bc4514b469eb91cdc",
+  "setup_sha256": "ab4ad1ecf30f50e8138f5628c4607a7eff6a45f72e1a1e72976132e0af908b60",
+  "setup_bytes": 41426,
+  "rectangle_count": 2191,
+  "construction_writes": 607515,
   "histogram": {
-    "0": 1506764,
+    "0": 1489637,
     "3": 17239,
     "8": 7885,
-    "58": 196883,
-    "62": 78315,
-    "63": 15461,
-    "68": 10778,
+    "58": 195087,
+    "62": 81931,
+    "63": 19278,
+    "66": 1804,
+    "68": 14558,
     "70": 1504,
-    "76": 1001,
-    "77": 4647,
-    "79": 1813,
-    "100": 231845,
-    "104": 6203,
-    "117": 9665,
-    "120": 2858,
+    "76": 1628,
+    "77": 5155,
+    "79": 2660,
+    "100": 231493,
+    "104": 7515,
+    "117": 10339,
+    "120": 4560,
+    "122": 588,
     "123": 4291
   },
   "structural_grounded": {
-    "grounded": 565264,
-    "total": 565264,
+    "grounded": 582391,
+    "total": 582391,
     "detached": 0,
     "bearings": []
   },
@@ -49,7 +51,7 @@
       734,
       966,
       966,
-      106444
+      109900
     ],
     [
       601,
@@ -67,19 +69,31 @@
       1136,
       900,
       966,
-      86400
+      87669
     ],
     [
-      266,
-      563,
+      241,
+      570,
       579,
-      258
+      4368
     ],
     [
-      264,
+      239,
       579,
       579,
-      80
+      45
+    ],
+    [
+      1821,
+      619,
+      649,
+      78
+    ],
+    [
+      1819,
+      649,
+      649,
+      150
     ],
     [
       172,
@@ -103,7 +117,7 @@
       216,
       736,
       736,
-      1526
+      2048
     ],
     [
       1537,
@@ -119,9 +133,9 @@
     ],
     [
       237,
+      708,
       736,
-      736,
-      275
+      375
     ],
     [
       1535,
@@ -130,31 +144,37 @@
       3251
     ],
     [
+      1396,
+      716,
+      966,
+      396
+    ],
+    [
+      235,
+      736,
+      736,
+      140
+    ],
+    [
+      1394,
+      760,
+      966,
+      220
+    ],
+    [
+      1477,
+      758,
+      966,
+      1855
+    ],
+    [
       1401,
       758,
       966,
       370
     ],
     [
-      1439,
-      758,
-      966,
-      370
-    ],
-    [
-      1477,
-      758,
-      966,
-      370
-    ],
-    [
       1399,
-      760,
-      966,
-      10
-    ],
-    [
-      1437,
       760,
       966,
       10
@@ -169,13 +189,7 @@
       1401,
       823,
       966,
-      365
-    ],
-    [
-      1435,
-      825,
-      966,
-      381
+      614
     ],
     [
       1479,
@@ -187,7 +201,7 @@
       597,
       966,
       966,
-      462
+      372
     ],
     [
       1134,
@@ -196,22 +210,76 @@
       330
     ],
     [
-      1397,
+      1392,
       966,
       966,
-      462
-    ],
-    [
-      1433,
-      966,
-      966,
-      594
+      792
     ],
     [
       1473,
       966,
       966,
       594
+    ],
+    [
+      1182,
+      917,
+      966,
+      1384
+    ],
+    [
+      1180,
+      966,
+      966,
+      1293
+    ],
+    [
+      677,
+      938,
+      966,
+      152
+    ],
+    [
+      1273,
+      938,
+      966,
+      128
+    ],
+    [
+      1731,
+      938,
+      966,
+      200
+    ],
+    [
+      675,
+      950,
+      966,
+      60
+    ],
+    [
+      1271,
+      950,
+      966,
+      60
+    ],
+    [
+      1729,
+      966,
+      966,
+      748
+    ],
+    [
+      673,
+      966,
+      966,
+      28
+    ],
+    [
+      1269,
+      966,
+      966,
+      28
     ]
   ],
   "initial_liquid_isolation": {
@@ -287,20 +355,20 @@
   ],
   "clearance": {
     "19x15": {
-      "passable_centres": 1212308,
-      "reachable_centres": 1058774,
+      "passable_centres": 1186135,
+      "reachable_centres": 1036552,
       "sites": 13,
       "missing": []
     },
     "23x19": {
-      "passable_centres": 1154429,
-      "reachable_centres": 1023575,
+      "passable_centres": 1128551,
+      "reachable_centres": 1003196,
       "sites": 13,
       "missing": []
     },
     "31x27": {
-      "passable_centres": 1048406,
-      "reachable_centres": 954957,
+      "passable_centres": 1025059,
+      "reachable_centres": 938648,
       "sites": 13,
       "missing": []
     }
@@ -315,7 +383,7 @@
         58
       ],
       "missing": [],
-      "reachable_centres": 947577
+      "reachable_centres": 931268
     },
     {
       "rectangle": [
@@ -326,7 +394,7 @@
         58
       ],
       "missing": [],
-      "reachable_centres": 947577
+      "reachable_centres": 931268
     }
   ],
   "images": [
@@ -337,7 +405,7 @@
       "width": 2048,
       "height": 1024,
       "bytes": 2099184,
-      "sha256": "b8159e317be3859dc1572d37f92d2ac6e0823221fa6804db6cbb95ef137a949a",
+      "sha256": "762a28a05e6b716db681390d3b4631b3571ca74c8b956d9d9aeaaee873b12336",
       "material_pixels_checked": 2097152
     },
     {
@@ -347,7 +415,7 @@
       "width": 485,
       "height": 600,
       "bytes": 292468,
-      "sha256": "e62495a863ed2d43f975f8b7f91a71551536e3adf5ed0df314fa198c264ce8d6",
+      "sha256": "e2325800d5b42792f05f1d0ee5990d55fc5f86d26cf0181ddf2a99f1dbf7cdf5",
       "material_pixels_checked": 291000
     },
     {
@@ -357,7 +425,7 @@
       "width": 460,
       "height": 695,
       "bytes": 321263,
-      "sha256": "059a9ac89ffa24c837c61d5f00105bd87cd1afc487ba0f362bad10cc40c3a788",
+      "sha256": "337d93db4d755b28d011ad612147a0a2c459645f102f20c276639456afa76139",
       "material_pixels_checked": 319700
     },
     {
@@ -367,7 +435,7 @@
       "width": 485,
       "height": 680,
       "bytes": 331353,
-      "sha256": "5db6973337b47daac98b81447d773d62792df4d3d91769d755c784853b2e9487",
+      "sha256": "640b5ca816f40a694800173a2136cdeb6dda9ad8edfe22c2ccfbae479f2294bf",
       "material_pixels_checked": 329800
     },
     {
@@ -377,21 +445,21 @@
       "width": 545,
       "height": 675,
       "bytes": 369423,
-      "sha256": "6464632b1267867f3c04cd63eea8304f1976f444889fb66554d394d25554f950",
+      "sha256": "c17803cc9ef8d35e4caaeaa7977648f3f5893c75b495ee16c1722afb71b00707",
       "material_pixels_checked": 367875
     },
     {
       "name": "subgrade.png",
-      "x": 860,
+      "x": 560,
       "y": 790,
-      "width": 580,
+      "width": 865,
       "height": 205,
-      "bytes": 119958,
-      "sha256": "856201def8a8245c07573d594130c5dc460111e81313c7f511cae0d2de02ac51",
-      "material_pixels_checked": 118900
+      "bytes": 178388,
+      "sha256": "e4a05e19a7dcc43ce456ac9b04192d899a2862f342d491c0434ffcedffc5441f",
+      "material_pixels_checked": 177325
     }
   ],
-  "decoded_material_pixels_compared": 3524427,
+  "decoded_material_pixels_compared": 3582852,
   "native": "NATIVE-UNTESTED",
   "installed_bridge_capacity": "UNKNOWN; source 32768 / possible old installed 4096"
 }

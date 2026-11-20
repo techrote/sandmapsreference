@@ -3,7 +3,7 @@
 // Read-only engine authority: de109d0131641d6adc8d25bb9ced7ca3d4991105
 const fs=require('node:fs'),path=require('node:path');
 const W=2048,H=1024,NAME="Nadir-4 Salt-Quench Exchange",SEED=19042647,ENGINE="de109d0131641d6adc8d25bb9ced7ca3d4991105",BASE="99a166e7fcae45eb22be1740e9f33f62faccbcc7",HASH="c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96";
-const sites=[["Arrival aerostat",80,420],["West weighing hall",215,440],["Interchange flight lock",478,415],["Vacuum skylane",554,375],["Condensate landing",956,427],["Phase-gate overlook",1055,392],["Thermal diagnostic",1473,423],["Cold-water exchange",1556,494],["Exhaust service apron",1950,424],["Safe eastern extraction",1981,625],["West subterranean hatch",502,928],["Middle pressure undercroft",1035,929],["East sump return",1605,929]],crops=[["barge",10,225,485,600],["vacuum",490,135,460,695],["thermal",975,170,485,680],["cold",1475,200,545,675],["subgrade",860,790,580,205]],policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
+const sites=[["Arrival aerostat",80,420],["West weighing hall",215,440],["Interchange flight lock",478,415],["Vacuum skylane",554,375],["Condensate landing",956,427],["Phase-gate overlook",1055,392],["Thermal diagnostic",1473,423],["Cold-water exchange",1556,494],["Exhaust service apron",1950,424],["Safe eastern extraction",1981,625],["West subterranean hatch",502,928],["Middle pressure undercroft",1035,929],["East sump return",1605,929]],crops=[["barge",10,225,485,600],["vacuum",490,135,460,695],["thermal",975,170,485,680],["cold",1475,200,545,675],["subgrade",560,790,865,205]],policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
 function world(){
 const W=2048,H=1024,g=new Uint8Array(W*H),M={W:58,S:62,P:63,G:66,I:68,C:70,Z:76,N:77,A:79,B:100,O:101,F:104,T:117,V:120,Q:122,U:123};
 function b(x,y,w,h,k){x=Math.floor(x);y=Math.floor(y);w=Math.floor(w);h=Math.floor(h);for(let Y=Math.max(0,y);Y<Math.min(H,y+h);Y++)g.fill(k,Y*W+Math.max(0,x),Y*W+Math.min(W,x+w))}
@@ -50,6 +50,34 @@ vessel(1662,626,92,94,3);vessel(1810,649,96,70,3);
 l(1708,591,1708,625,9,M.I);l(1855,592,1855,648,10,M.I);
 fr(1680,759,215,79,11,M.W);b(1675,782,44,49,0);b(1860,759,41,37,0);
 for(const [x,y,h] of [[1610,391,19],[1729,310,24],[1802,366,22],[1918,302,29]]){column(x,y,13,M.S);b(x-5,y,23,8,M.C)}
+
+ // R2 genuine material-cell functional P1 repair: industrial causality, access and undercroft.
+ // A: rooted brine cargo handling cradle, clamped hoist and entered assay control inside existing doors.
+ b(225,554,82,16,M.F);b(235,544,61,10,M.P);b(244,529,43,14,M.Q);
+ l(248,524,238,510,7,M.I);l(286,524,298,510,7,M.I);
+ b(235,493,10,56,M.T);b(296,489,10,58,M.T);b(241,484,64,9,M.S);
+ b(202,708,50,8,M.P);b(212,690,14,18,M.I);b(232,682,35,8,M.A);
+ b(275,717,15,20,M.G);b(273,711,40,6,M.V);
+ // B: separate condensate inlet/outlet line, differential valve and entered pressure assay.
+ l(676,548,676,575,8,M.I);l(676,548,742,548,7,M.G);l(742,548,794,615,8,M.I);
+ b(716,539,15,19,M.S);b(719,525,11,14,M.N);
+ b(690,800,85,9,M.P);b(699,784,15,17,M.I);b(721,775,31,9,M.A);b(756,785,12,15,M.G);
+ b(755,747,11,26,M.P);b(747,744,28,7,M.Z);
+ // C: externally serviced thermal containment and separately entered hot-chain operator workface.
+ l(1210,640,1210,674,8,M.I);l(1210,641,1286,641,8,M.V);l(1286,641,1366,661,8,M.I);
+ b(1389,708,30,8,M.P);b(1396,695,12,13,M.Z);b(1432,739,79,9,M.S);
+ b(1452,725,20,14,M.I);b(1475,717,25,8,M.A);b(1503,729,12,16,M.G);
+ // D: legible exchanger header with non-uniform stators; dry cold-recovery control.
+ l(1708,592,1767,604,8,M.I);l(1767,604,1855,593,8,M.G);
+ for(let i=0;i<4;i++){b(1745+i*26,590-i%2*7,9,27,M.V);b(1743+i*26,613,13,6,M.S);}
+ b(1726,816,84,8,M.P);b(1736,801,15,15,M.I);b(1759,792,32,9,M.N);
+ b(1809,804,14,14,M.G);b(1812,798,28,7,M.Z);
+ // E: two genuinely entered lower return stations, large side ports, distinct instrument benches.
+ fr(598,904,157,58,8,M.S);b(592,917,56,43,0);b(711,917,54,43,0);
+ b(650,950,50,8,M.P);b(655,938,12,12,M.I);b(677,930,19,8,M.N);
+ fr(1182,904,163,58,8,M.S);b(1175,917,57,43,0);b(1300,917,55,43,0);
+ b(1245,950,47,8,M.P);b(1253,938,11,12,M.I);b(1273,930,16,8,M.A);
+ b(1703,950,60,8,M.P);b(1712,938,14,12,M.I);b(1731,930,25,8,M.Z);
 return g;
 }
 
