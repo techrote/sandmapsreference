@@ -1,0 +1,286 @@
+{
+  "concept": "Aureole Delta - Xenolens Excursion Array",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 2531616,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
+  "material_histogram": {
+    "49": 20070,
+    "62": 77623,
+    "63": 16172,
+    "66": 9236,
+    "68": 56157,
+    "77": 967,
+    "79": 607,
+    "100": 204663,
+    "101": 10999,
+    "120": 1860,
+    "121": 4065,
+    "129": 4074,
+    "130": 20396,
+    "131": 10321
+  },
+  "filled_material_cells": 437210,
+  "grounded_cells": 437210,
+  "ungrounded_cells": 0,
+  "grounded_components": 1,
+  "all_solid_components": 1,
+  "physical_fixture_ties": {
+    "ties": 54,
+    "longest": 88
+  },
+  "nonoverlapping_ordered_rectangles": 6294,
+  "rectangle_work": 437210,
+  "setup_bytes": 116755,
+  "material_plane_sha256": "8fd7f15a75c4a20a1886c3769377088bd39276fb573738ad72d545cde192d4b8",
+  "setup_sha256": "b8d4fd495be47f048a6f8d5e6eab5c6c0e2759278e2ba02c049255d0ac70b43c",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 58372,
+      "sha256": "56dbe67cfb58cc75a837c34c95f0aa2407a7931527270d69eef6ff8d30059e67"
+    },
+    {
+      "name": "01-west-settlement.png",
+      "bytes": 10745,
+      "sha256": "059fe5ba6d9ca8ea7c0eac450c4206b7c58537b2c90c4695dd557288d859c02e"
+    },
+    {
+      "name": "02-polar-observatory.png",
+      "bytes": 12417,
+      "sha256": "6a90be692572b39ea395dced685a2b414e89b6a96b8a51756e2fd4efaa09835b"
+    },
+    {
+      "name": "03-xenolens.png",
+      "bytes": 17151,
+      "sha256": "b682d358fd13944df525be8dff87c9c43109abd716b79cea90dbd23ce58bb1d5"
+    },
+    {
+      "name": "04-east-quarantine.png",
+      "bytes": 10673,
+      "sha256": "8024ff6dba83bffa35d23cf1b2233359002e8d51f95d9c42e07132ca1a131c6f"
+    },
+    {
+      "name": "05-geological-return.png",
+      "bytes": 8484,
+      "sha256": "2bd3593d42d1a443daeb85ff86a3c5ce4217fc66e7886d125ff0c0f5331d0c19"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1333071,
+      "passed": 25,
+      "total": 25,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1275443,
+      "passed": 25,
+      "total": 25,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1156220,
+      "passed": 25,
+      "total": 25,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      1082,
+      446,
+      1208,
+      516
+    ],
+    "material_id": 58,
+    "purpose": "Blocks exact Xenolens diagnostics; all other 20 named destinations recoverable",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1153634,
+        "passed": 24,
+        "total": 25,
+        "bad": [
+          [
+            "Xenolens diagnostics",
+            [
+              1144,
+              476
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "West arrivals": [
+      456,
+      510
+    ],
+    "Survey nursery": [
+      245,
+      466
+    ],
+    "Rover cradle": [
+      310,
+      744
+    ],
+    "West vent": [
+      345,
+      851
+    ],
+    "Observatory crown": [
+      662,
+      282
+    ],
+    "Optical polarimeter": [
+      633,
+      353
+    ],
+    "Spectroscopy lab": [
+      696,
+      518
+    ],
+    "Polar archive": [
+      655,
+      674
+    ],
+    "Lens west access": [
+      963,
+      464
+    ],
+    "Xenolens diagnostics": [
+      1144,
+      476
+    ],
+    "Lens sky rendezvous": [
+      1140,
+      302
+    ],
+    "Lens east access": [
+      1307,
+      463
+    ],
+    "Lower inspection": [
+      1149,
+      790
+    ],
+    "Upper flight recovery": [
+      1137,
+      107
+    ],
+    "East quarantine": [
+      1549,
+      475
+    ],
+    "Scrubber lock": [
+      1597,
+      519
+    ],
+    "East cargo": [
+      1744,
+      691
+    ],
+    "Thermal recycler": [
+      1612,
+      662
+    ],
+    "Drydock balcony": [
+      1900,
+      555
+    ],
+    "Eastern ridge": [
+      1944,
+      684
+    ],
+    "West bore elevator": [
+      350,
+      919
+    ],
+    "Mineral assay": [
+      792,
+      902
+    ],
+    "Xenocore probe": [
+      1098,
+      901
+    ],
+    "Deep bore drill": [
+      1281,
+      925
+    ],
+    "East vent recovery": [
+      1670,
+      920
+    ]
+  },
+  "crops": [
+    [
+      "01-west-settlement",
+      75,
+      382,
+      475,
+      470
+    ],
+    [
+      "02-polar-observatory",
+      470,
+      125,
+      390,
+      720
+    ],
+    [
+      "03-xenolens",
+      812,
+      145,
+      650,
+      680
+    ],
+    [
+      "04-east-quarantine",
+      1450,
+      340,
+      580,
+      520
+    ],
+    [
+      "05-geological-return",
+      255,
+      765,
+      1535,
+      225
+    ]
+  ],
+  "source_art": "None; independently invented level design",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"
+}
