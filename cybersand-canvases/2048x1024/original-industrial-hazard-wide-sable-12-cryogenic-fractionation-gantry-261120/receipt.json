@@ -1,0 +1,518 @@
+{
+  "concept": "Sable-12 Cryogenic Fractionation Gantry",
+  "creator_lane": "original/industrial-hazard-wide",
+  "seed": 2026112012,
+  "world": [
+    2048,
+    1024
+  ],
+  "engine_main_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "source_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "grid_sha256": "e2b6a16be93dbbd5ebdbec1568356c69b15d5b3ee7fd820192376596aee75674",
+  "setup_sha256": "fc5278e3fe25de4e4e320b91f4237fd76ee861588e32b52b406f428524a51968",
+  "setup_json_bytes": 65572,
+  "rectangles": 3446,
+  "work": 522097,
+  "histogram": {
+    "0": 1575055,
+    "3": 7954,
+    "8": 3762,
+    "58": 140948,
+    "62": 112103,
+    "68": 14481,
+    "70": 19657,
+    "76": 921,
+    "77": 1755,
+    "79": 846,
+    "100": 72524,
+    "101": 77824,
+    "104": 21694,
+    "117": 46440,
+    "120": 1188
+  },
+  "solid_connectivity": {
+    "total": 510381,
+    "grounded": 510381,
+    "detached": 0
+  },
+  "clearance": {
+    "19x15": {
+      "visited": 1056387,
+      "reachable": 16,
+      "centres": [
+        [
+          50,
+          520
+        ],
+        [
+          346,
+          653
+        ],
+        [
+          345,
+          848
+        ],
+        [
+          753,
+          207
+        ],
+        [
+          608,
+          563
+        ],
+        [
+          753,
+          849
+        ],
+        [
+          1215,
+          303
+        ],
+        [
+          1020,
+          545
+        ],
+        [
+          1215,
+          843
+        ],
+        [
+          1586,
+          321
+        ],
+        [
+          1586,
+          620
+        ],
+        [
+          1586,
+          849
+        ],
+        [
+          1961,
+          218
+        ],
+        [
+          1961,
+          620
+        ],
+        [
+          1961,
+          844
+        ],
+        [
+          1961,
+          503
+        ]
+      ]
+    },
+    "23x19": {
+      "visited": 1009753,
+      "reachable": 16,
+      "centres": [
+        [
+          50,
+          520
+        ],
+        [
+          346,
+          653
+        ],
+        [
+          345,
+          848
+        ],
+        [
+          753,
+          207
+        ],
+        [
+          608,
+          563
+        ],
+        [
+          753,
+          849
+        ],
+        [
+          1215,
+          303
+        ],
+        [
+          1020,
+          545
+        ],
+        [
+          1215,
+          843
+        ],
+        [
+          1586,
+          321
+        ],
+        [
+          1586,
+          620
+        ],
+        [
+          1586,
+          849
+        ],
+        [
+          1961,
+          218
+        ],
+        [
+          1961,
+          620
+        ],
+        [
+          1961,
+          844
+        ],
+        [
+          1961,
+          503
+        ]
+      ]
+    },
+    "31x27": {
+      "visited": 919488,
+      "reachable": 16,
+      "centres": [
+        [
+          50,
+          520
+        ],
+        [
+          346,
+          653
+        ],
+        [
+          345,
+          848
+        ],
+        [
+          753,
+          207
+        ],
+        [
+          608,
+          563
+        ],
+        [
+          753,
+          849
+        ],
+        [
+          1215,
+          303
+        ],
+        [
+          1020,
+          545
+        ],
+        [
+          1215,
+          843
+        ],
+        [
+          1586,
+          321
+        ],
+        [
+          1586,
+          620
+        ],
+        [
+          1586,
+          849
+        ],
+        [
+          1961,
+          218
+        ],
+        [
+          1961,
+          620
+        ],
+        [
+          1961,
+          844
+        ],
+        [
+          1961,
+          503
+        ]
+      ]
+    }
+  },
+  "alternate_route": {
+    "box": [
+      980,
+      50,
+      60,
+      365
+    ],
+    "reachable": 16,
+    "visited": 900802,
+    "detours": [
+      {
+        "name": "West service-bay spawn",
+        "baseline": 0,
+        "blocked": 0,
+        "extra": 0
+      },
+      {
+        "name": "Capture control transfer",
+        "baseline": 969,
+        "blocked": 969,
+        "extra": 0
+      },
+      {
+        "name": "Intake recovery hatch",
+        "baseline": 1163,
+        "blocked": 1163,
+        "extra": 0
+      },
+      {
+        "name": "Absorber upper intake",
+        "baseline": 1106,
+        "blocked": 1106,
+        "extra": 0
+      },
+      {
+        "name": "Tri-fork inspection berth",
+        "baseline": 1589,
+        "blocked": 1589,
+        "extra": 0
+      },
+      {
+        "name": "Scrubber sump return",
+        "baseline": 1748,
+        "blocked": 1748,
+        "extra": 0
+      },
+      {
+        "name": "Cold-cassette skylight",
+        "baseline": 1664,
+        "blocked": 1916,
+        "extra": 252
+      },
+      {
+        "name": "Cryogenic sampling access",
+        "baseline": 2081,
+        "blocked": 2333,
+        "extra": 252
+      },
+      {
+        "name": "Dry isotope return bay",
+        "baseline": 2204,
+        "blocked": 2456,
+        "extra": 252
+      },
+      {
+        "name": "Membrane canopy survey",
+        "baseline": 2053,
+        "blocked": 2305,
+        "extra": 252
+      },
+      {
+        "name": "Pressure-relief inspection",
+        "baseline": 2352,
+        "blocked": 2604,
+        "extra": 252
+      },
+      {
+        "name": "Depressurisation lower loop",
+        "baseline": 2581,
+        "blocked": 2833,
+        "extra": 252
+      },
+      {
+        "name": "Collector crown survey",
+        "baseline": 2359,
+        "blocked": 2577,
+        "extra": 218
+      },
+      {
+        "name": "Fraction metrology workface",
+        "baseline": 2761,
+        "blocked": 2979,
+        "extra": 218
+      },
+      {
+        "name": "East rescue catchment",
+        "baseline": 2985,
+        "blocked": 3203,
+        "extra": 218
+      },
+      {
+        "name": "Safety extraction hatch",
+        "baseline": 2644,
+        "blocked": 2862,
+        "extra": 218
+      }
+    ]
+  },
+  "sites": [
+    [
+      "West service-bay spawn",
+      50,
+      520
+    ],
+    [
+      "Capture control transfer",
+      346,
+      653
+    ],
+    [
+      "Intake recovery hatch",
+      345,
+      848
+    ],
+    [
+      "Absorber upper intake",
+      753,
+      207
+    ],
+    [
+      "Tri-fork inspection berth",
+      608,
+      563
+    ],
+    [
+      "Scrubber sump return",
+      753,
+      849
+    ],
+    [
+      "Cold-cassette skylight",
+      1215,
+      303
+    ],
+    [
+      "Cryogenic sampling access",
+      1020,
+      545
+    ],
+    [
+      "Dry isotope return bay",
+      1215,
+      843
+    ],
+    [
+      "Membrane canopy survey",
+      1586,
+      321
+    ],
+    [
+      "Pressure-relief inspection",
+      1586,
+      620
+    ],
+    [
+      "Depressurisation lower loop",
+      1586,
+      849
+    ],
+    [
+      "Collector crown survey",
+      1961,
+      218
+    ],
+    [
+      "Fraction metrology workface",
+      1961,
+      620
+    ],
+    [
+      "East rescue catchment",
+      1961,
+      844
+    ],
+    [
+      "Safety extraction hatch",
+      1961,
+      503
+    ]
+  ],
+  "images": {
+    "overview.png": {
+      "bytes": 33508,
+      "sha256": "d1372421f7c841ecb8c05b14326d63a2da279e2fefc860f5743a55b6fb912def",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-capture-yard.png": {
+      "bytes": 7507,
+      "sha256": "36698e60aafe7c7af9d3e8bc45c531c050f291677fe3b0e7c8df7b298f3a99bc",
+      "crop": [
+        32,
+        192,
+        387,
+        700
+      ]
+    },
+    "02-trifork-absorbers.png": {
+      "bytes": 10197,
+      "sha256": "7f28323787377c52a0f11dc13b43df2b9ed6bdfc623d05f7a106017602c5c8c0",
+      "crop": [
+        420,
+        157,
+        391,
+        735
+      ]
+    },
+    "03-cryo-cassettes.png": {
+      "bytes": 7084,
+      "sha256": "610b0f401445e2eacbe4fa1c62c6486fbc890413ca855e4e38f46884e1dcd310",
+      "crop": [
+        808,
+        163,
+        454,
+        727
+      ]
+    },
+    "04-membrane-viaduct.png": {
+      "bytes": 8359,
+      "sha256": "28c36a9218fcc0d2b3275430acbb5a0c3d66a0421c6910c569f7d7109a06dc3e",
+      "crop": [
+        1256,
+        171,
+        409,
+        724
+      ]
+    },
+    "05-fraction-collectors.png": {
+      "bytes": 8541,
+      "sha256": "f65b72ab44b8b09bfcafff8e682f56f2333a276504a1474b57fffe4173745e52",
+      "crop": [
+        1657,
+        91,
+        389,
+        806
+      ]
+    },
+    "06-dry-culvert.png": {
+      "bytes": 3146,
+      "sha256": "c4e2a4fecc20f3f2eb43995085a77bd44496ca263994038be18f6658c8f3b770",
+      "crop": [
+        800,
+        760,
+        811,
+        187
+      ]
+    }
+  },
+  "flags": {
+    "native": "NATIVE-UNTESTED",
+    "fluid": "initial-four-neighbor-sealed-only",
+    "bridge": "source 32768; installed possibly 4096 UNVERIFIED",
+    "material": "only native inert solid IDs plus sealed 3 water and 8 lava"
+  }
+}
