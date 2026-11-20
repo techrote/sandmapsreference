@@ -1,163 +1,50 @@
-name: Export original landscape canvas bundle
+name: One-off exact-source original landscape visual gallery
 on:
   push:
     branches:
-      - 'artifact/original-landscapes-bundle-20261119'
+      - artifact/original-landscapes-bundle-20261119
 permissions:
   contents: read
 jobs:
-  export:
-    runs-on: ubuntu-latest
+  gallery:
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
-      - name: Read original PR 17 exact source
-        uses: actions/checkout@v4
-        with:
-          repository: techrote/sandmapsreference
-          ref: 189722d05743e81a8c10fe686daa96499ed6c5ae
-          path: src/pr17
-          fetch-depth: 1
-          filter: blob:none
-          sparse-checkout: |
-            cybersand-canvases/2048x1024/original-racing-wide-thunderclap-switchyard-261118
-          sparse-checkout-cone-mode: true
-          persist-credentials: false
-      - name: Read original PR 20 exact source
-        uses: actions/checkout@v4
-        with:
-          repository: techrote/sandmapsreference
-          ref: 47e019a299d8bec1c72301a8265ef3e99c0faaad
-          path: src/pr20
-          fetch-depth: 1
-          filter: blob:none
-          sparse-checkout: |
-            cybersand-canvases/2048x1024/original-scifi-frontier-wide-morrow-array-split-phasewell-261119
-          sparse-checkout-cone-mode: true
-          persist-credentials: false
-      - name: Read original PR 21 exact source
-        uses: actions/checkout@v4
-        with:
-          repository: techrote/sandmapsreference
-          ref: 6f5ffd5212710988c2b3defa83fb842cdf07ff36
-          path: src/pr21
-          fetch-depth: 1
-          filter: blob:none
-          sparse-checkout: |
-            cybersand-canvases/2048x1024/original-industrial-transit-wide-cinderwake-dual-harbour-interchange-261119
-          sparse-checkout-cone-mode: true
-          persist-credentials: false
-      - name: Read original PR 22 exact source
-        uses: actions/checkout@v4
-        with:
-          repository: techrote/sandmapsreference
-          ref: b0d1e5216aabb9b5e009e599ffbffcec6fd8a657
-          path: src/pr22
-          fetch-depth: 1
-          filter: blob:none
-          sparse-checkout: |
-            cybersand-canvases/2048x1024/original-scifi-biomech-wide-graftloom-slipway-261119
-          sparse-checkout-cone-mode: true
-          persist-credentials: false
-      - name: Read original PR 23 exact source
-        uses: actions/checkout@v4
-        with:
-          repository: techrote/sandmapsreference
-          ref: bb6f05ee4fbb52c536e01f69849a01c313eca42e
-          path: src/pr23
-          fetch-depth: 1
-          filter: blob:none
-          sparse-checkout: |
-            cybersand-canvases/2048x1024/original-industrial-hazard-wide-pyrewater-quarantine-ring
-            cybersand-canvases/2048x1024/original-industrial-hazard-wide-ashlight-counterflow-foundry
-            tools/original-industrial-hazard-wide
-          sparse-checkout-cone-mode: true
-          persist-credentials: false
-      - name: Read original PR 24 exact source
-        uses: actions/checkout@v4
-        with:
-          repository: techrote/sandmapsreference
-          ref: 04d47c9ae0c0de6132aa1b96fb0c082b7ef2da95
-          path: src/pr24
-          fetch-depth: 1
-          filter: blob:none
-          sparse-checkout: |
-            cybersand-canvases/2048x1024/original-megastructure-wide-meridian-scar-261119
-          sparse-checkout-cone-mode: true
-          persist-credentials: false
-      - name: Read original PR 25 exact source
-        uses: actions/checkout@v4
-        with:
-          repository: techrote/sandmapsreference
-          ref: 9d38064137c1c3be1073d204967e658e8e2235a6
-          path: src/pr25
-          fetch-depth: 1
-          filter: blob:none
-          sparse-checkout: |
-            cybersand-canvases/2048x1024/original-industrial-foundry-wide-long-pour-steelworks
-            tools/original-industrial-foundry-wide
-          sparse-checkout-cone-mode: true
-          persist-credentials: false
-      - name: Assemble standalone eight-map directory
+      - name: Fetch actual committed material-cell overview PNGs (not concept images)
         shell: bash
         run: |
-          set -euo pipefail
-          O="out/CyberSand-Original-Landscapes-2026-11-19"
-          mkdir -p "$O/maps" "$O/tools"
-          test "$(git -C src/pr17 rev-parse HEAD)" = "189722d05743e81a8c10fe686daa96499ed6c5ae"
-          test -f "src/pr17/cybersand-canvases/2048x1024/original-racing-wide-thunderclap-switchyard-261118/overview.png"
-          cp -a "src/pr17/cybersand-canvases/2048x1024/original-racing-wide-thunderclap-switchyard-261118" "$O/maps/"
-          test "$(git -C src/pr20 rev-parse HEAD)" = "47e019a299d8bec1c72301a8265ef3e99c0faaad"
-          test -f "src/pr20/cybersand-canvases/2048x1024/original-scifi-frontier-wide-morrow-array-split-phasewell-261119/overview.png"
-          cp -a "src/pr20/cybersand-canvases/2048x1024/original-scifi-frontier-wide-morrow-array-split-phasewell-261119" "$O/maps/"
-          test "$(git -C src/pr21 rev-parse HEAD)" = "6f5ffd5212710988c2b3defa83fb842cdf07ff36"
-          test -f "src/pr21/cybersand-canvases/2048x1024/original-industrial-transit-wide-cinderwake-dual-harbour-interchange-261119/overview.png"
-          cp -a "src/pr21/cybersand-canvases/2048x1024/original-industrial-transit-wide-cinderwake-dual-harbour-interchange-261119" "$O/maps/"
-          test "$(git -C src/pr22 rev-parse HEAD)" = "b0d1e5216aabb9b5e009e599ffbffcec6fd8a657"
-          test -f "src/pr22/cybersand-canvases/2048x1024/original-scifi-biomech-wide-graftloom-slipway-261119/overview.png"
-          cp -a "src/pr22/cybersand-canvases/2048x1024/original-scifi-biomech-wide-graftloom-slipway-261119" "$O/maps/"
-          test "$(git -C src/pr23 rev-parse HEAD)" = "bb6f05ee4fbb52c536e01f69849a01c313eca42e"
-          test -f "src/pr23/cybersand-canvases/2048x1024/original-industrial-hazard-wide-pyrewater-quarantine-ring/overview.png"
-          cp -a "src/pr23/cybersand-canvases/2048x1024/original-industrial-hazard-wide-pyrewater-quarantine-ring" "$O/maps/"
-          test -f "src/pr23/cybersand-canvases/2048x1024/original-industrial-hazard-wide-ashlight-counterflow-foundry/overview.png"
-          cp -a "src/pr23/cybersand-canvases/2048x1024/original-industrial-hazard-wide-ashlight-counterflow-foundry" "$O/maps/"
-          cp -a "src/pr23/tools/original-industrial-hazard-wide" "$O/tools/"
-          test "$(git -C src/pr24 rev-parse HEAD)" = "04d47c9ae0c0de6132aa1b96fb0c082b7ef2da95"
-          test -f "src/pr24/cybersand-canvases/2048x1024/original-megastructure-wide-meridian-scar-261119/overview.png"
-          cp -a "src/pr24/cybersand-canvases/2048x1024/original-megastructure-wide-meridian-scar-261119" "$O/maps/"
-          test "$(git -C src/pr25 rev-parse HEAD)" = "9d38064137c1c3be1073d204967e658e8e2235a6"
-          test -f "src/pr25/cybersand-canvases/2048x1024/original-industrial-foundry-wide-long-pour-steelworks/overview.png"
-          cp -a "src/pr25/cybersand-canvases/2048x1024/original-industrial-foundry-wide-long-pour-steelworks" "$O/maps/"
-          cp -a "src/pr25/tools/original-industrial-foundry-wide" "$O/tools/"
-          cat > "$O/README.txt" <<'BUNDLE_README_EOF'
-          CYBERSAND ORIGINAL LANDSCAPES — EXACT-HEAD SOURCE BUNDLE
-          Assembled: 19 November 2026
-          Repository: https://github.com/techrote/sandmapsreference
-          8 independent original sci-fi/industrial 2048x1024 material-cell maps from 7 unmerged Draft/HOLD PRs.
-          
-          Each maps/ directory contains an original committed Setup-v2 JSON, real material-cell overview PNG, district PNG crops, a README, and qualification/receipt information. Builder and verification source is included in map directories when held there, otherwise under tools/. No engine binary is included.
-          
-          Map                                  PR      Exact committed source SHA
-          Thunderclap Switchyard               17      189722d05743e81a8c10fe686daa96499ed6c5ae
-          Morrow Array                          20      47e019a299d8bec1c72301a8265ef3e99c0faaad
-          Cinderwake Dual Harbour              21      6f5ffd5212710988c2b3defa83fb842cdf07ff36
-          Graftloom Slipway                     22      b0d1e5216aabb9b5e009e599ffbffcec6fd8a657
-          Pyrewater Quarantine Ring            23      bb6f05ee4fbb52c536e01f69849a01c313eca42e
-          Ashlight Counterflow Foundry         23      bb6f05ee4fbb52c536e01f69849a01c313eca42e
-          The Meridian Scar                    24      04d47c9ae0c0de6132aa1b96fb0c082b7ef2da95
-          The Long Pour                        25      9d38064137c1c3be1073d204967e658e8e2235a6
-          
-          Exact PR links: https://github.com/techrote/sandmapsreference/pull/{17,20,21,22,23,24,25} (use each number individually).
-          STATUS: Independently art PASS / STATIC-PASS at the heads captured. NATIVE-UNTESTED. Not merged or owner-playtested. Windows Workbench installation/native bridge capacity may differ from source; run the supported native admission procedure before treating any of these as accepted live levels.
-                    BUNDLE_README_EOF
-          test "$(find "$O/maps" -maxdepth 1 -mindepth 1 -type d | wc -l)" = 8
-          test "$(find "$O/maps" -name 'setup*.json' -type f | wc -l)" = 8
-          test "$(find "$O/maps" -name 'overview.png' -type f | wc -l)" = 8
-          ( cd "$O"; find maps tools -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt )
-          du -sh "$O"
-      - name: Publish artifact
+          python3 - <<'PY'
+          import json, pathlib, urllib.request, hashlib, struct, time
+          items=json.loads(r'''[{"pr":57,"sha":"6ef760b800402ff683aa72f315b6a107159b5f83","folder":"original-megastructure-wide-pilgrim-gait-sixleg-civic-engine-261120","title":"Pilgrim Gait"},{"pr":69,"sha":"7fc24855cf521c90bf67f4afb08685e490473201","folder":"original-racing-wide-tungsten-sawtooth-tramworks-261120","title":"Tungsten Sawtooth Tramworks"},{"pr":53,"sha":"fc27754defff1f8501b256543d658a83f992da62","folder":"original-racing-wide-kestrel-counterweight-works-261120","title":"Kestrel Counterweight Works"},{"pr":45,"sha":"7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f","folder":"original-industrial-transit-wide-graven-keel-ship-tipper-261120","title":"Graven Keel"},{"pr":38,"sha":"46e047d46dc067f79da8907e5e91b224c9e8cc17","folder":"original-scifi-biomech-wide-nacre-spindle-court-261120","title":"Nacre Spindle Court"},{"pr":33,"sha":"0e872ce0987be7e6df047152beac470ba362c7c5","folder":"original-scifi-frontier-wide-peregrine-cleft-halcyon-drydock-261120","title":"Peregrine Cleft"},{"pr":73,"sha":"baec53549fc014f5af67e2a6e79201a7dd8134b9","folder":"original-scifi-frontier-wide-threnody-scar-foldwing-seedlift-261120","title":"Threnody Scar"},{"pr":64,"sha":"1202aea8d696e2bfecd7e4f3353c9738a9435858","folder":"original-scifi-frontier-wide-harrow-mere-spore-dam-261120","title":"Harrow Mere"},{"pr":61,"sha":"b3602ef5cbf5fbee3e1ddd729c4fc4b63fc970ea","folder":"original-industrial-transit-wide-kestrel-traverse-straddle-port-261120","title":"Kestrel Traverse"},{"pr":62,"sha":"dee9fb4c2325a4dea31435383c1f7305234cce49","folder":"original-racing-wide-lagrange-slipway-six-261120","title":"Lagrange Slipway Six"},{"pr":70,"sha":"485bdd45868e232161032bc823dbeab800d9b109","folder":"original-scifi-frontier-wide-sable-quoin-gravitic-core-261120","title":"Sable Quoin"},{"pr":65,"sha":"60ec2052b6f56a180f21e13b21b5c3b5214edb6f","folder":"original-racing-wide-serration-venturi-exchange-261120","title":"Serration Venturi"},{"pr":71,"sha":"e53a84ee829cf18a59221eade18ed7e24a3e0109","folder":"original-industrial-foundry-wide-anvilwake-twin-dock-electrosmelter-261120","title":"Anvilwake Twin-Dock"},{"pr":72,"sha":"76471e3f817e39880d88cdfa2896022c35893bd8","folder":"original-scifi-biomech-wide-asterion-packet-loom-261120","title":"Asterion Packet Loom"},{"pr":25,"sha":"9d38064137c1c3be1073d204967e658e8e2235a6","folder":"original-industrial-foundry-wide-long-pour-steelworks","title":"The Long Pour"},{"pr":22,"sha":"b0d1e5216aabb9b5e009e599ffbffcec6fd8a657","folder":"original-scifi-biomech-wide-graftloom-slipway-261119","title":"Graftloom Slipway"},{"pr":24,"sha":"04d47c9ae0c0de6132aa1b96fb0c082b7ef2da95","folder":"original-megastructure-wide-meridian-scar-261119","title":"The Meridian Scar"},{"pr":17,"sha":"189722d05743e81a8c10fe686daa96499ed6c5ae","folder":"original-racing-wide-thunderclap-switchyard-261118","title":"Thunderclap Switchyard"},{"pr":39,"sha":"99a54a6af0808f63758a15035065b11336f001f7","folder":"original-megastructure-wide-umbra-siphon-twin-horn-261120","title":"Umbra Siphon"}]''')
+          out=pathlib.Path("gallery")
+          out.mkdir(parents=True,exist_ok=True)
+          records=[]
+          for item in items:
+              path=f"cybersand-canvases/2048x1024/{item['folder']}/overview.png"
+              url=f"https://raw.githubusercontent.com/techrote/sandmapsreference/{item['sha']}/{path}"
+              body=None
+              for attempt in range(3):
+                  try:
+                      request=urllib.request.Request(url,headers={"User-Agent":"CyberSand-source-gallery/1.0"})
+                      with urllib.request.urlopen(request,timeout=75) as response:
+                          body=response.read()
+                      break
+                  except Exception:
+                      if attempt==2: raise
+                      time.sleep(attempt+1)
+              assert body[:8]==bytes.fromhex("89504e470d0a1a0a"),(item['pr'],"not PNG")
+              assert struct.unpack(">II",body[16:24])==(2048,1024),(item['pr'],"wrong size")
+              name=f"{item['pr']:03d}-{item['folder']}.png"
+              (out/name).write_bytes(body)
+              records.append({"pr":item['pr'],"title":item['title'],"sha":item['sha'],"source_path":path,"file":name,"size_bytes":len(body),"sha256":hashlib.sha256(body).hexdigest(),"url":url})
+              print(f"{item['pr']} {item['title']} {len(body)} bytes",flush=True)
+          (out/"manifest.json").write_text(json.dumps(records,indent=2)+"\n",encoding="utf-8")
+          assert len(records)==19
+          PY
+      - name: Publish untouched image archive
         uses: actions/upload-artifact@v4
         with:
-          name: cybersand-eight-original-landscapes-20261119
-          path: out/CyberSand-Original-Landscapes-2026-11-19/
+          name: cybersand-original-map-gallery-20261120
+          path: gallery/
           if-no-files-found: error
           retention-days: 30
