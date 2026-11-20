@@ -1,31 +1,63 @@
-# Rime Accord — Xenolith Jaw Excavator (R2 functional-art repair)
+# Rime Accord — Xenolith Jaw Excavator (R3)
 
-**NEW ORIGINAL no-reference science-fiction frontier material-cell world.** True orthographic XY side elevation, exact 2048×1024 cells, one entered industrial excavator and reachable service districts. **OPEN Draft/HOLD; NATIVE-UNTESTED; independent exact-R2 Art/Technical/Shepherd verdict pending.**
+**Entirely original 2048×1024 true perpendicular 2D material-cell world.**
+**OPEN DRAFT/HOLD · R3 CREATOR SOURCE-STATIC PASS · independent exact-R3 Art/Tech/Shepherd review required · NATIVE-UNTESTED.**
 
-## Reason for R2 repair
+This branch owns the original world alone. R3 repairs the independently reported residual Art P1
+on the R2 committed final material plane: the two massive boundary-anchored jaw spars now have
+a visibly gripped xenolith carried by a compact, physically supported **jaw-tip pickup → sample
+cradle → separate outfeed/receiver**. West and east retained machine apertures remain open,
+including a deliberately greater-than-Midge-width central natural air gap. On the eastern side,
+an entered quarantine room has its own three-capillary shielded assay enclosure, and the
+neighbouring freight floor has an independently legible loading fork and cargo receiver.
+All additions are **material cells**, not captions or illustrations. Previous sections, scale,
+named site positions and overflight/underpass routes remain unchanged.
 
-An independent Shepherd inspection of original R1 reported **P1 loss of almost every functional machine**: late bulk-room air carving, 47×45 site clearings and all-or-nothing disconnected-component pruning deleted both jaws, inhabited interfaces and specialised deep equipment from the final physical cell grid. R1's 32/32 reachable sites did not establish functional-art validity.
+## Reproducible exact-HEAD facts
 
-**R2 changes physical cells and fixes the order of structural authoring:** rock-rooted left and right jaw spars and gripping serrations, a guarded xenolith custody/loading transfer, receiver station, differentiated rover power / isotope preparation / quarantine / outbound freight machinery, and four mechanically distinct deep stations. The previously disconnected right jaw is rooted around a deliberately preserved upper flight gate. Structural understrata machine feet tie to the boundary-rooted geological floor. Unlike the removed R1 elements, all ten named machine regions are tested AFTER final pruning for minimum nongeological occupied cells and material diversity. There are no scenic-only overlays.
+| Physical or route invariant | R3 |
+|---|---|
+| Final material-ID plane | `2097152` cells (2048×1024) |
+| Deterministic fixed seed | `0xC1A26E` |
+| Occupied inert grounded material | `569547/569547`; no detached final solids |
+| Final rectangular edits | `3401` canonical, ordered, disjoint rectangles |
+| Accepted source limits | 32,768 rectangles, 1 MiB Setup, 32M work cells |
+| Setup-v2 JSON | `64193` bytes, 14 top-level fields |
+| Grid SHA-256 | `de43614395c07ac2207c89fb5e12d88aaba7d199815e4123c255d71fbce1520c` |
+| Setup SHA-256 | `f9ca1bb4b8368d6108971a492e3a13ddca1758e45c99dcabc5df5adb4fce73da` |
+| Midge actual actor spawn | `[164,414]` |
+| Exact named sites (19×15, 23×19, 31×27) | 32/32; 32/32; 32/32 |
+| Temporary obstacle | `[1021,539,1079,589]` blocks only custody; 31/31 others reachable |
+| Material state | accepted native inert Solid / RuleKernel::None IDs; no fluids/reactants |
+| 1:1 authentic art | 2048×1024 full indexed PNG + five exact-cell crops |
+| Source engine read-only | `7b03aa437561ec63e31fd09531171360ab60eeb4` |
+| Main map repo base | `99a166e7fcae45eb22be1740e9f33f62faccbcc7` |
 
-## Functional navigation
+Named site graph: west arrivals → occupied pilot's exchange → fabrication → left jaw monitor →
+jaw custody/outfeed → east quarantine / freight. Alternative: west shaft → open dry deep
+mechanical bays → eastern shaft → cargo, with overflight through roof/void.
 
-Spawn **West rover spawn [164,414]**; objective **East loading [1911,709]**. Operate through western inhabited rover and ore/assay workfaces, visit left and right instrumented jaw mechanisms, custody and outfeed, then reach eastern sealed quarantine and freight loading. Alternative paths connect upper-rim overflight, a central jaw flight gap and the lower excavated geological service return. Every literal one of **32/32** named sites is reachable by four-neighbour free-centre BFS using conservative full 19×15, 23×19 and 31×27 collision envelopes; no shifted targets or centre exemptions. Physical obstruction XYXY [1021,539,1079,589] removes just **Central jaw custody** while 31/31 other site destinations remain reachable at 31×27.
+The entire JSON rectangle list is lossless and non-overlapping against exactly 2,097,152 original
+material cells; the builder's dynamic flood consumes complete hull footprints on every 4-neighbour
+step without moving any target. Its real solid obstruction demonstrates continuity of alternate
+routes instead of using radius exemptions or nearest-site substitutions.
 
-## Exact source-static R2 receipts
+![2048×1024 genuine source material plane](overview.png)
 
-- **2,097,152** final full-grid material ID cells, original deterministic seed `0xC1A26E`; no AI art or source screenshots
-- **3,127** disjoint ordered Setup-v2 rectangles, **59,081** Setup JSON bytes, **562,827** work/solid cells
-- All **562,827 / 562,827** final inert solids connected to world boundary; no persistent detached structures, fluids, powders or reactive kernels
-- **12,469** unfinished prototype cells trimmed from **33** disconnected components BEFORE final encoding; ten post-trim functional-area assertions ensure this cannot silently erase intended machines again
-- Full material-ID plane SHA-256: `c5bc336a9d53b033ceae2badbf72404692ef06d347d240a0f5329cb4f1fadaea`
-- Setup-v2 JSON SHA-256: `6370a68d228669c0964fce265e59029945b800cf4a707d0328a488fe019c21a4`
-- Complete **14-key** Setup-v2 envelope; Midge five-field actor and exact spawn; ordered replay with zero differences
-- Genuine indexed-material PNG: one full **2048×1024** overview plus **five unscaled true 1:1** crops; independent PNG signature/CRC/Adler/DEFLATE decoder verified **3,469,259** exact grid-index pixels with no mismatches
-- The exact named district sites, full material histogram, all ten post-prune functional feature assertions, obstruction proof and individual image SHA-256 values are in `receipt.json`
+| Western inhabited workshops | Rooted two-jaw extractor | Custody transfer |
+|---|---|---|
+| ![West](01-west-inhabited-rover.png) | ![Jaws](02-jaw-extraction-frame.png) | ![Custody](03-custody-and-receiver.png) |
 
-Run `node build.cjs` to reproduce all eight generated binary/text assets, or `node build.cjs --verify` for byte-for-byte local verification. All files share a single fixed-seed source-grid builder.
+| Quarantine/export machinery | Lower geological service |
+|---|---|
+| ![East](04-east-quarantine-freight.png) | ![Deep](05-deep-ore-service.png) |
 
-**Current accepted READ-ONLY CyberSand source:** `techrote/cybersand/main@7b03aa437561ec63e31fd09531171360ab60eeb4` (Setup-v2 parser blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`, material catalogue `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`). **Map default source base:** `techrote/sandmapsreference/main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`. Accepted source limits: 32,768 rectangles, 1 MiB JSON, 32M work; installed bridge can fall back to 4,096, **which this R2 count fits, but capacity remains unmeasured**.
+Run `node build.cjs --verify` from this folder to regenerate and compare source JSON, receipt
+and PNGs byte-for-byte with the committed originals. Five unscaled crop rectangles, histograms,
+exact sites and post-prune functional survival checks are recorded in `receipt.json`.
 
-**NATIVE-UNTESTED:** No compatible installed Godot/Workbench/CyberDemoBridge/Rapier binary was available. No claim of runtime admission, Midge movement or collision response, physics progression, save/reopen, owner-playtest or Art acceptance. Obtain independent exact-new-HEAD Art/Technical/Shepherd requalification; do not merge, Ready, or auto-merge.
+**Installed bridge:** this requires 3401 rectangles (now below a hypothetical legacy
+4096 limit), but source capacity is not evidence of actual installed bridge compatibility.
+**NATIVE-UNTESTED**: Godot/Workbench/CyberDemoBridge/Rapier load, actual Midge steering and collisions,
+simulation advancement, and fresh-process persistence remain outside this source-only run.
+Independent exact-R3 Art/Tech/Shepherd reviews are required. No Ready/merge/owner acceptance.
