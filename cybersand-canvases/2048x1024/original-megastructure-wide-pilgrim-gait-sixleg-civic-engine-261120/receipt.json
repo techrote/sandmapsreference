@@ -1,0 +1,301 @@
+{
+  "original": true,
+  "name": "The Pilgrim Gait — Stranded Six-Leg Civic Engine",
+  "seed": 39916038,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_branch_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete",
+    "62": "SteelPlate",
+    "63": "PaintedSteel",
+    "64": "CorrugatedSteel",
+    "65": "RustedSteel",
+    "66": "SteelGrating",
+    "68": "SteelPipe",
+    "69": "CopperPipe",
+    "70": "CeramicTile",
+    "72": "DarkGlass",
+    "74": "CableBundle",
+    "75": "Insulation",
+    "76": "HazardStripe",
+    "77": "NeonCyan",
+    "78": "NeonMagenta",
+    "79": "NeonAmber",
+    "80": "LEDWhite",
+    "100": "BasaltColumns",
+    "101": "Obsidian",
+    "111": "Terrazzo",
+    "114": "AluminiumPanel",
+    "119": "BrassPanel",
+    "120": "GlassBlock",
+    "130": "CarbonFibre",
+    "131": "HeatShieldTile"
+  },
+  "histogram": {
+    "0": 1502815,
+    "58": 97137,
+    "62": 82450,
+    "63": 3329,
+    "64": 3199,
+    "65": 3466,
+    "69": 779,
+    "70": 3004,
+    "74": 6681,
+    "76": 914,
+    "77": 12677,
+    "78": 296,
+    "79": 3149,
+    "80": 224,
+    "100": 290305,
+    "101": 73550,
+    "114": 2216,
+    "120": 440,
+    "130": 2228,
+    "131": 8293
+  },
+  "painted": 594337,
+  "grounded_retained_solids": 594337,
+  "detached_retained": 0,
+  "pruned": {
+    "clusters": 61,
+    "cells": 242592
+  },
+  "rectangles": 4457,
+  "serialized_utf8_bytes": 83748,
+  "construction_work": 594337,
+  "grid_sha256": "61d8d4d2614d5e3cd708cc06ca13e8f6591601698b22b6ca56d3672c674c5e78",
+  "setup_sha256": "940f63feec4106cf406dbc840e06c9fc6466ff8909cd898440ee9cd5356c8fba",
+  "sites": {
+    "Rook berth spawn": [
+      136,
+      500
+    ],
+    "Rook starboard lantern": [
+      320,
+      294
+    ],
+    "Rook ballast return": [
+      295,
+      748
+    ],
+    "Piston wrench control": [
+      545,
+      498
+    ],
+    "Piston high hoist": [
+      692,
+      297
+    ],
+    "Piston sump bypass": [
+      687,
+      748
+    ],
+    "Gyro catenary monitor": [
+      912,
+      294
+    ],
+    "Gyro central datum": [
+      1040,
+      500
+    ],
+    "Gyro lower service": [
+      1036,
+      748
+    ],
+    "Commons library mezzanine": [
+      1329,
+      296
+    ],
+    "Commons public counter": [
+      1375,
+      499
+    ],
+    "Commons waste descent": [
+      1491,
+      749
+    ],
+    "East beacon mast": [
+      1733,
+      296
+    ],
+    "East quarantine wicket": [
+      1838,
+      498
+    ],
+    "East freight recovery": [
+      1788,
+      748
+    ],
+    "Pilgrim terminal destination": [
+      1934,
+      498
+    ]
+  },
+  "clearance": [
+    {
+      "footprint": [
+        19,
+        15
+      ],
+      "legalCentres": 1329594,
+      "connectedCentres": 978995,
+      "reached": 16,
+      "total": 16,
+      "missing": []
+    },
+    {
+      "footprint": [
+        23,
+        19
+      ],
+      "legalCentres": 1293541,
+      "connectedCentres": 958371,
+      "reached": 16,
+      "total": 16,
+      "missing": []
+    },
+    {
+      "footprint": [
+        31,
+        27
+      ],
+      "legalCentres": 1227049,
+      "connectedCentres": 919076,
+      "reached": 16,
+      "total": 16,
+      "missing": []
+    }
+  ],
+  "obstruction": {
+    "rect": [
+      990,
+      465,
+      121,
+      78
+    ],
+    "excluded_site": "Gyro central datum",
+    "results": [
+      {
+        "footprint": [
+          19,
+          15
+        ],
+        "legalCentres": 1316806,
+        "connectedCentres": 966207,
+        "reached": 15,
+        "total": 15,
+        "missing": []
+      },
+      {
+        "footprint": [
+          23,
+          19
+        ],
+        "legalCentres": 1279813,
+        "connectedCentres": 944643,
+        "reached": 15,
+        "total": 15,
+        "missing": []
+      },
+      {
+        "footprint": [
+          31,
+          27
+        ],
+        "legalCentres": 1211345,
+        "connectedCentres": 903372,
+        "reached": 15,
+        "total": 15,
+        "missing": []
+      }
+    ]
+  },
+  "images": [
+    {
+      "file": "overview.png",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 62816,
+      "sha256": "595511d70ed0b752598e7b886726209c9a3575aa8f85d0dc4bc1ce7402a91a15",
+      "verifiedCrcAndSourceIndices": true
+    },
+    {
+      "file": "01-rook-anchorage.png",
+      "rect": [
+        47,
+        137,
+        396,
+        548
+      ],
+      "bytes": 11390,
+      "sha256": "64c260e564cdb7b29509e541897bb37cf8bc72276a884e293553acdbdf892b13",
+      "verifiedCrcAndSourceIndices": true
+    },
+    {
+      "file": "02-hydraulic-cloister.png",
+      "rect": [
+        431,
+        155,
+        410,
+        581
+      ],
+      "bytes": 7037,
+      "sha256": "0a25f85df27ba2327e3a49b2c0cd12b99f6aa2cf68e3bb21ca28eb791e93c1ff",
+      "verifiedCrcAndSourceIndices": true
+    },
+    {
+      "file": "03-gyro-crucible.png",
+      "rect": [
+        842,
+        144,
+        435,
+        663
+      ],
+      "bytes": 6346,
+      "sha256": "af2d166b951ea0feab3864e587d9d3536b4c376fdaee9652241f94a9121d471a",
+      "verifiedCrcAndSourceIndices": true
+    },
+    {
+      "file": "04-commons-forum.png",
+      "rect": [
+        1242,
+        141,
+        406,
+        550
+      ],
+      "bytes": 7027,
+      "sha256": "1d621a4259847b174d02c101c05525d4227d4ba7d506aa444f569f7801179662",
+      "verifiedCrcAndSourceIndices": true
+    },
+    {
+      "file": "05-terminal-eastern-spire.png",
+      "rect": [
+        1618,
+        130,
+        402,
+        578
+      ],
+      "bytes": 11813,
+      "sha256": "08640e9f4927b9bf91af548118be3424b9b2c8e9de6221c97d5ffb266a0dcc57",
+      "verifiedCrcAndSourceIndices": true
+    }
+  ],
+  "admission": {
+    "source_rectangles": 32768,
+    "source_json_bytes": 1048576,
+    "source_work_cells": 32000000,
+    "installed_bridge_capacity": "UNKNOWN; possible legacy 4096"
+  },
+  "native": "NATIVE-UNTESTED",
+  "independent_review": "PENDING",
+  "png_note": "Creator-side fixed-Huffman DEFLATE stream generated from byte-exact committed grid; CRC and pixel indices checked before compress; independent zlib/image parity not executed"
+}
