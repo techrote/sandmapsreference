@@ -60,6 +60,10 @@ function build(){
  for(const [name,[x,y]] of Object.entries(sites))R(x-18,y-16,37,33,0);
  const post_clear_tie=tieStructures();
  for(const [name,[x,y]] of Object.entries(sites))R(x-18,y-16,37,33,0);
+ // Final wide service shafts kept genuinely open after component grounding: actual excavated cells.
+ const POST_TIE_AIRLOCKS=[[260,858,1554,71],[330,720,118,215],[1001,708,116,229],[1594,686,149,249],[964,628,210,100],[964,702,204,160]];
+ for(const [x,y,w,h] of POST_TIE_AIRLOCKS)R(x,y,w,h,0);
+ for(const [name,[x,y]] of Object.entries(sites))R(x-18,y-16,37,33,0);
 
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
