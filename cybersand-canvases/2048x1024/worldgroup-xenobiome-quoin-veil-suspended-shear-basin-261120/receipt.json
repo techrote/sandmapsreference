@@ -1,0 +1,303 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Quoin Veil Survey Network",
+  "sibling": 1,
+  "role": "Suspended Shear Basin / Crown-Reach Observation",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "donor_design_language": [
+    "wide-sable-quoin-gravitic-core",
+    "wide-threnody-scar-foldwing-seedlift"
+  ],
+  "no_geometry_donated": true,
+  "seed": "quoin-veil-shear-basin-261120-v1",
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 22116,
+    "62": 7519,
+    "66": 16763,
+    "68": 35474,
+    "77": 1409,
+    "100": 343469,
+    "101": 106939,
+    "120": 7304,
+    "129": 7179,
+    "131": 13396
+  },
+  "occupied_cells": 561568,
+  "grounded_cells": 561568,
+  "unrooted_cells": 0,
+  "connected_solid_components": 1,
+  "tie_structures": {
+    "ties": 64,
+    "longest": 184,
+    "raw_components": 65
+  },
+  "lossless_rectangles": 4308,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 561568,
+  "setup_bytes": 81089,
+  "plane_sha256": "18ba0de0c2dbd9c6231bb39bc5ce40ce291eb94532818b46b1e749ee46d86a9b",
+  "setup_sha256": "2d3cea1e31caf4733b3d716c8cd3daab498d201a98b0b19c8dc221bac7c37400",
+  "literal_sites": {
+    "West cliff arrival": [
+      147,
+      324
+    ],
+    "West assay overlook": [
+      255,
+      346
+    ],
+    "West inhabited cavern": [
+      192,
+      609
+    ],
+    "West repair egress": [
+      352,
+      612
+    ],
+    "West crest inspection": [
+      409,
+      407
+    ],
+    "West sky-cable gate": [
+      568,
+      229
+    ],
+    "Upper isotope shuttle": [
+      557,
+      375
+    ],
+    "Upper sample balcony": [
+      730,
+      374
+    ],
+    "Upper crane outlet": [
+      824,
+      259
+    ],
+    "Central sheer air": [
+      847,
+      429
+    ],
+    "Midair transfer cleft": [
+      1032,
+      402
+    ],
+    "Shear loom viewing": [
+      1128,
+      545
+    ],
+    "Lower sample station": [
+      900,
+      688
+    ],
+    "Central low-basin survey": [
+      1055,
+      735
+    ],
+    "East roof cable marker": [
+      1508,
+      220
+    ],
+    "Eastern upper survey": [
+      1393,
+      403
+    ],
+    "East island control": [
+      1553,
+      417
+    ],
+    "Eastern counterweight": [
+      1654,
+      489
+    ],
+    "East cliff quarantine": [
+      1848,
+      615
+    ],
+    "East sterile dispatch": [
+      1904,
+      587
+    ],
+    "East ridge exit": [
+      1900,
+      352
+    ],
+    "East upper overlook": [
+      1764,
+      357
+    ],
+    "Lower west rescue shaft": [
+      631,
+      899
+    ],
+    "Deep calibration store": [
+      819,
+      940
+    ],
+    "Deep isolation bay": [
+      1230,
+      939
+    ],
+    "Lower east rescue shaft": [
+      1397,
+      902
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1317310,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1268622,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1178345,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      1008,
+      378,
+      1059,
+      428
+    ],
+    "expected_blocked_site": "Midair transfer cleft",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1173627,
+      "passed": 25,
+      "total": 26,
+      "bad": [
+        {
+          "name": "Midair transfer cleft",
+          "point": [
+            1032,
+            402
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "extent": [
+        2048,
+        1024
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "bytes": 47099,
+      "sha256": "99da5bc60c4f942717c5ddf3be7d900122e398eb0e1c17f6e1f5b0f27c0cb0ed",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "01-west-cliff-habitat.png",
+      "extent": [
+        462,
+        573
+      ],
+      "origin": [
+        30,
+        278
+      ],
+      "bytes": 8706,
+      "sha256": "cd2f6495ee01620531dcc31a20636f38cf30a80ae49192227c787974e992df42",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "02-suspended-crown-shuttle.png",
+      "extent": [
+        410,
+        409
+      ],
+      "origin": [
+        481,
+        177
+      ],
+      "bytes": 5381,
+      "sha256": "268843063c7c3cfd964fdf49e34acaa305a9c638820ce7de167ef32c6ee67fe1",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "03-shear-air-basin.png",
+      "extent": [
+        464,
+        448
+      ],
+      "origin": [
+        822,
+        366
+      ],
+      "bytes": 10060,
+      "sha256": "512a6f53a7b0447858fe1134873b8161007cb8fd3bdf5b9b8e045af6867603b9",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "04-east-counterweight-quarantine.png",
+      "extent": [
+        735,
+        578
+      ],
+      "origin": [
+        1293,
+        256
+      ],
+      "bytes": 12469,
+      "sha256": "630174d2a601f5a6f2de6717fa8e9ae9039b09b4d6423e80bfbeeb83c444a0b7",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "05-deep-dry-rescue.png",
+      "extent": [
+        926,
+        182
+      ],
+      "origin": [
+        563,
+        839
+      ],
+      "bytes": 5606,
+      "sha256": "2683ce2ee7707010e9219f64dd2d3cdfdc15d85e24ee331d38d7110da4a5fdfd",
+      "indexed_material_pixel_parity": "PASS"
+    }
+  ],
+  "source_static": "CREATOR-STATIC-PASS",
+  "independent_art_technical_shepherd": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "DRAFT/HOLD"
+}
