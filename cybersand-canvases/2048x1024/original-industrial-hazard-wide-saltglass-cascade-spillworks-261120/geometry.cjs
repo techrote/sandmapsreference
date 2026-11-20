@@ -49,7 +49,7 @@ function line(x1,y1,x2,y2,t,m){let n=Math.ceil(Math.max(Math.abs(x2-x1),Math.abs
 function ring(cx,cy,rx,ry,t,m){for(let y=Math.max(0,cy-ry);y<=Math.min(H-1,cy+ry);y++){let ny=(y-cy)/ry;let wid=Math.floor(rx*Math.sqrt(Math.max(0,1-ny*ny)));let iy=(y-cy)/Math.max(1,ry-t), iw=(!isFinite(iy)||Math.abs(iy)>1)?0:Math.floor((rx-t)*Math.sqrt(1-iy*iy));rect(cx-wid,y,wid*2+1,1,m);if(Math.abs(iy)<1)rect(cx-iw,y,iw*2+1,1,0)}}
 function frame(x,y,w,h,t,m){rect(x,y,w,t,m);rect(x,y+h-t,w,t,m);rect(x,y,t,h,m);rect(x+w-t,y,t,h,m);}
 function vessel(x,y,w,h,medium,wall=58){rect(x,y,w,h,wall);rect(x+9,y+9,w-18,h-18,medium);}
-function panel(x,y,w=47){rect(x,y,w,9,70);rect(x+7,y-17,7,17,117);rect(x+w-15,y-17,7,17,117);frame(x+15,y-15,w-30,13,3,68);rect(x+20,y-11,9,5,77);}
+function panel(x,y,w=47){rect(x,y,w,9,70);rect(x+7,y-17,7,17,117);rect(x+w-15,y-17,7,17,117);frame(x+15,y-15,w-30,13,3,68);rect(x+16,y-12,8,8,77);}
 function feet(x1,x2,top){rect(x1,top,18,900-top,58);rect(x2,top,18,900-top,58);rect(x1,877,x2-x1+18,13,62);}
 // Geological load-bearing datum: deliberately asymmetric but continuous rooted material.
 for(let x=0;x<W;x+=8){let top=903+Math.round(7*Math.sin(x/85)+6*Math.sin(x/23));if(x>802&&x<1290)top=926+Math.round(5*Math.sin(x/32));if(x>1680)top=899+Math.round(4*Math.sin(x/26));rect(x,top,8,1024-top,100);}
@@ -143,6 +143,14 @@ for(const [x,y,w] of [[85,844,74],[463,845,62],[894,851,67],[1343,851,60],[1661,
 // Material IDs 58,62,68,70,76,77,100,101,104,117,120 are inert
 // fixed Solid/RuleKernel::None in accepted CyberSand; water #3 and lava
 // #8 are physically mobile: initial fully enclosed cartridges ONLY.
+
+// Physical couplers close deliberate load-path gaps in entered workfaces.
+rect(137,590,17,42,58);rect(344,589,17,43,58);
+rect(224,532,10,35,58);
+rect(861,581,16,26,58);rect(1013,544,16,31,58);rect(1152,603,16,31,58);
+rect(862,484,12,42,117);rect(1039,427,12,49,117);rect(1186,499,11,52,117);
+rect(1517,812,29,14,62);rect(1458,805,13,18,58);
+line(1268,637,1309,698,13,58);rect(1640,650,29,19,62);
 return g;
 }
 module.exports={W,H,SEED,SITES,CROPS,COLORS,materialWorld};
