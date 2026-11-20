@@ -1,0 +1,235 @@
+{
+  "kind": "RAZORBACK_PHASE_EXCHANGE_ORIGINAL_RACING_WIDE",
+  "seed": "0x5a71e206",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "rectangles": 5509,
+  "setup_json_bytes": 104277,
+  "work_visits": 669957,
+  "source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1427195,
+    "49": 10272,
+    "58": 57597,
+    "62": 88529,
+    "100": 435498,
+    "101": 24539,
+    "113": 16130,
+    "117": 22018,
+    "120": 338,
+    "122": 8429,
+    "128": 6607
+  },
+  "grounded_solids": 669957,
+  "discarded_unanchored_solid_cells": 38967,
+  "remaining_detached": 0,
+  "material_laws": "All occupied IDs 49,58,62,100,101,113,117,120,122,123,128 are immovable inert Solid / RuleKernel::None",
+  "midge": {
+    "authored_hull": [
+      4,
+      3
+    ],
+    "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      139,
+      414
+    ]
+  },
+  "sites": [
+    {
+      "name": "West Start",
+      "x": 139,
+      "y": 414
+    },
+    {
+      "name": "West Departure",
+      "x": 290,
+      "y": 413
+    },
+    {
+      "name": "Bellows Approach",
+      "x": 512,
+      "y": 411
+    },
+    {
+      "name": "Stator Divide",
+      "x": 748,
+      "y": 411
+    },
+    {
+      "name": "Phase Transfer Upper",
+      "x": 1016,
+      "y": 408
+    },
+    {
+      "name": "Ion Scrubber Upper",
+      "x": 1444,
+      "y": 406
+    },
+    {
+      "name": "East Speed Brake",
+      "x": 1760,
+      "y": 412
+    },
+    {
+      "name": "East Pivot",
+      "x": 1912,
+      "y": 537
+    },
+    {
+      "name": "East Lower",
+      "x": 1878,
+      "y": 658
+    },
+    {
+      "name": "Scrubber Return",
+      "x": 1510,
+      "y": 656
+    },
+    {
+      "name": "Exchange Return",
+      "x": 1102,
+      "y": 660
+    },
+    {
+      "name": "Bellows Return",
+      "x": 686,
+      "y": 658
+    },
+    {
+      "name": "West Return",
+      "x": 284,
+      "y": 655
+    },
+    {
+      "name": "West Ascent",
+      "x": 155,
+      "y": 535
+    },
+    {
+      "name": "Finish",
+      "x": 190,
+      "y": 414
+    },
+    {
+      "name": "Departure Control",
+      "x": 307,
+      "y": 169
+    },
+    {
+      "name": "Bellows Service",
+      "x": 567,
+      "y": 886
+    },
+    {
+      "name": "Exchange Test Cell",
+      "x": 1027,
+      "y": 896
+    },
+    {
+      "name": "Scrubber Service",
+      "x": 1507,
+      "y": 894
+    },
+    {
+      "name": "Midfield Breakout",
+      "x": 1082,
+      "y": 534
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "reached": 20,
+      "connected": 1281649
+    },
+    "23x19": {
+      "reached": 20,
+      "connected": 1255817
+    },
+    "31x27": {
+      "reached": 20,
+      "connected": 1204605
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      949,
+      365,
+      142,
+      85
+    ],
+    "remaining": 19,
+    "missing": [
+      "Phase Transfer Upper"
+    ]
+  },
+  "grid_sha256": "14c7d9cccb19a325dec82c9a67a6ddf4321a4ea68d615791984257583f7a4c9f",
+  "setup_sha256": "c2ca8b7b7c919bfb5ed37c2b4bc628a10fdf1e3eb4f33d6d3b203e58fed463f8",
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 51174,
+      "sha256": "73e2ed06937e1631298b796db868615aeed5807c93613a71901f4c49782c543a"
+    },
+    "01-west-dispatch.png": {
+      "x": 0,
+      "y": 20,
+      "w": 480,
+      "h": 512,
+      "bytes": 5317,
+      "sha256": "e2b49aeb025230f55812bae6d2fd236f180c7b4268d7317bed4a2429e51a39c1"
+    },
+    "02-bellows-run.png": {
+      "x": 397,
+      "y": 243,
+      "w": 478,
+      "h": 590,
+      "bytes": 5923,
+      "sha256": "abcbc98396ce760a1e5069d6d38f6a656e33ee94254f0a5acaf38aa1098e6bb8"
+    },
+    "03-phase-exchange.png": {
+      "x": 806,
+      "y": 200,
+      "w": 504,
+      "h": 620,
+      "bytes": 6945,
+      "sha256": "28c57a034b942dc5a77ceae265ed6a9d70ef1382989a5972352fa342e0d161e7"
+    },
+    "04-ion-scrubber.png": {
+      "x": 1265,
+      "y": 230,
+      "w": 453,
+      "h": 630,
+      "bytes": 5173,
+      "sha256": "8cf6ed99aef67986172c3dc2b9a5102b8c31417e5e6bff8811c62b56b6a4df8e"
+    },
+    "05-east-return.png": {
+      "x": 1600,
+      "y": 245,
+      "w": 448,
+      "h": 615,
+      "bytes": 6362,
+      "sha256": "6009b1afff36350f24540785eaabc786aa256404bdf1cfcb04def2970ada3e45"
+    },
+    "06-lower-service.png": {
+      "x": 836,
+      "y": 690,
+      "w": 512,
+      "h": 334,
+      "bytes": 9885,
+      "sha256": "d077c37009192db08a5a68ed0321cfbec41eedfa4193fae74974f861da0de998"
+    }
+  },
+  "native": "NATIVE-UNTESTED"
+}
