@@ -1,79 +1,47 @@
-# Kestrel-Delta Thermal Spillway — original 2048×1024 CyberSand landscape
+# Kestrel-Delta Thermal Spillway — R2 industrial process admission repair
 
-**Draft/HOLD proposed admission · author-designed side elevation, not a source-art conversion · SOURCE-STATIC CREATOR PASS · NATIVE-UNTESTED.** No Ready, merge, owner acceptance or physics-simulation claims.
+**Original 2048×1024 material-ID landscape · OPEN Draft/HOLD · exact branch HEAD is authoritative · creator SOURCE-STATIC PASS · independent Art/Technical/Shepherd R2 reviews pending · NATIVE-UNTESTED.**
 
-## Place, visual grammar, and level design
+## Root-caused P1 material changes
 
-This entirely original abandoned process plant occupies a damaged, ground-rooted basalt spillway. The x-profile is not a repeated factory wallpaper. Five different installations form a physically legible left-to-right processing sequence:
+Independent exact-R1 Shepherd review identified schematic, mostly empty processing spaces, especially below the sacrificial V-throat. R2 makes **41,479 real material-cell changes** (31,541 inserted, 9,938 reclassified, 0 erased), **zero Water/Lava cell modifications**, preserving every original source coordinate. This is authored support geometry rather than scenery or a functioning simulation.
 
-1. **Drum-shear ore assay** (x75–406): skewed cargo roof, suspended hoist, supported rotary shear cavity, upper inspector berth, independent low refuge.
-2. **Stepped thermal smelter** (x461–834): sloping upper blast canopy, **fully enclosed** hot Lava caisson, separately enclosed Water quench cassette, entered metrology workfaces and lower capture channels.
-3. **Sacrificial V-spillway** (x858–1230): high open triangular containment throat, asymmetric sloped load members, side-accessible centre, deliberately unobstructed tall negative void and deep dry slag recovery.
-4. **Cryo-ribbon reclamation** (x1268–1619): offset support terraces and two sealed Water reservoirs, upper inspection benches, downward-return service opening and unequal gauges.
-5. **Inverted plume condenser** (x1655–2015): an elevated symmetric-in-outline but off-centre service funnel with interior extraction braces, sealed Water cassette, separate front-facing worker stations and emergency exit passage.
+- **Drum-shear ore assay:** side-anchored discharge roller, weighed output drive, inspected shutter and a distinct bench physically linking cargo extraction to onward processing.
+- **Stepped thermal smelter:** accessible separate hot isolation console and cold-pressure metrology console, two contrasting grounded outlet/skimmer manifolds below the fully sealed Lava and Water cassettes.
+- **Sacrificial V spillway:** two joined, dry slag removal and assay workfaces, a graded conveyor and supported transfer into the right handling area, leaving the large airworthy throat empty.
+- **Cryo-ribbon reclamation:** an attached return coil/height sampling assembly and separate cassette relief/testing interface with individually identifiable controls.
+- **Inverted plume condenser:** apical dry exhaust duct, branched scrubber connection, front-accessible sample rack and outboard discharge-valve station.
 
-All load-bearing geometric elements use inert solid material IDs with physical boundary-rooted connectivity. This is a **material-cell representation of process machinery**, not a claim of functioning compressors, pumps, crushers, fire, gases, fluid transfers or dynamic chemistry. The visible fluids begin enclosed in material-wall vessels. Interaction rules after simulation tick zero require native testing.
+All added material is from accepted existing inert solid IDs. The inherited Water/Lava vessels remain sealed at initial state. These pipes and gauges do not implement active mechanical, gas or chemical simulation.
 
-## Exact actor spawn, checkpoints and route graph
+## Geometry, exact routes and provenance
 
-The permanent Midge spawn is **Landing inspection (235,449)**. The primary entered route connects:
-Landing inspection → Drum shear observatory → Smelter upper walk → Lava-isolation desk → West throat gate → Cascade throat → East throat gate → Cryo trestle → Coolant survey → Scrubber upper approach → Condensing gallery → Distal safety exit.
+- Source reference repository: `techrote/sandmapsreference/main@99a166e7fcae45eb22be1740e9f33f62faccbcc7` (read-only default branch).
+- Accepted engine reference: `techrote/cybersand/main@de109d0131641d6adc8d25bb9ced7ca3d4991105` (read-only).
+- Source parent R1: `36ee8b6261a5bba7e691ce2bb79aba215af02471`; R2 only in this PR's owned original-industrial-hazard folder.
+- 2048×1024 = **2,097,152 actual cells**, fixed seed `202611203`, complete generated Setup-v2 14-key root.
+- **2908 disjoint rectangles**, **54833 exact JSON bytes**, **544413 actual material work cells**; full nonoverlapping rectangle replay equals source plane.
+- SHA-256 material plane: `7b20eee1ae78e9018ef2974388fd5857c541cb05af34457457c950a8ce5747d3`; SHA-256 serialized Setup: `93f654278a5dc2e73cf845e6dee86a6a616239bc1f2734f6cae4085af5da9ee2`.
+- Boundary-grounded inert structural cells **515748/515748**, detached **0**.
+- Water `21146`; Lava `7519`; **zero** at-tick-zero fluid-to-air, fluid-to-boundary or Water/Lava contact.
+- Midge exact original named sites **15/15** at all 19×15, 23×19 and 31×27 envelopes, four-neighbour flood from literal spawn with no shifting.
+- Real solid obstruction `[1192,420,40,140]` retains **15** sites at 31×27; forced detours: Cascade throat +200; East throat gate +136; Slag recovery +130.
+- Source rectangle capacity 32768, source Setup JSON 1 MiB; installed legacy bridge possibly 4096 rectangles **NOT VERIFIED**. Source fitness does not establish native compatibility.
 
-Recoverable alternatives connect Smelter lower return, Slag recovery, and Cooling lower return with the upper processing route via physically excavated access passages. The routes are tested through free-centre **four-connected** traversability, not drawn as scenic lines. No site coordinate is shifted to a nearest legal centre.
+## Authentic final-material gallery
 
-| Exact named checkpoint | X | Y |
-|---|---:|---:|
-| Landing inspection | 235 | 449 |
-| Drum shear observatory | 369 | 571 |
-| Smelter upper walk | 555 | 475 |
-| Lava-isolation desk | 720 | 562 |
-| West throat gate | 856 | 516 |
-| Cascade throat | 1042 | 538 |
-| East throat gate | 1148 | 570 |
-| Slag recovery | 1072 | 842 |
-| Cryo trestle | 1350 | 472 |
-| Coolant survey | 1482 | 526 |
-| Scrubber upper approach | 1673 | 437 |
-| Condensing gallery | 1802 | 506 |
-| Distal safety exit | 1952 | 578 |
-| Smelter lower return | 761 | 833 |
-| Cooling lower return | 1524 | 858 |
+Every image is palette-indexed: one pixel = one real final material ID. Each crop has original 1:1 cell dimensions, not resized artwork.
 
-For each actor envelope 19×15, 23×19 and 31×27, the original spawn and **all 15 named exact centres** are strictly in-bounds, empty across the full envelope and connected. Total reachable free-centres: 19×15 **1,206,118**, 23×19 **1,164,225**, 31×27 **1,085,979**.
+- [overview.png](overview.png) — crop `0,0,2048,1024`, 32707 bytes, SHA-256 `e23cda1a8a1f96a927690d62888bb1ada1803323b3a518d75caec65a2b16c88e`
+- [01-drum-shear.png](01-drum-shear.png) — crop `40,265,395,565`, 7778 bytes, SHA-256 `fe6bda753f53ecf630f36ca0155039225aba5fe9b1e5f7b73033f7ad3fd8aae5`
+- [02-smelter-cassettes.png](02-smelter-cassettes.png) — crop `418,285,425,620`, 6765 bytes, SHA-256 `2399b1c6345df7d7d69c4cf8b1bd8902cac14c895d6db141e1806a61a8f4539d`
+- [03-spillway-throat.png](03-spillway-throat.png) — crop `824,230,430,660`, 8532 bytes, SHA-256 `7b22fcaf8b94e365009d71391e06308d5eda701142e0f1b9e1d451eb6d8945c2`
+- [04-cryo-recovery.png](04-cryo-recovery.png) — crop `1248,315,400,590`, 6774 bytes, SHA-256 `299a3bd30ad87adedfd6b25a39a1ed773d6837375c44405ba179be240d526766`
+- [05-plume-scrubber.png](05-plume-scrubber.png) — crop `1630,205,410,690`, 7738 bytes, SHA-256 `7747571b367a2a218f216160c893d9a394823cea74afbce7946b0bc25194aeb1`
+- [06-lower-culvert.png](06-lower-culvert.png) — crop `808,710,515,295`, 4329 bytes, SHA-256 `56bde5091a1c00d8333495bc3488c5ed3856a66bdb6a2b4dea5a022f54121dae`
 
-**Forced obstruction scenario:** a real injected inert-solid box at **[1192,420,40,140]** (x,y,w,h). At 31×27 the obstruction preserves **15/15** exact sites but forces genuine extra shortest-path travel: Cascade throat +200; East throat gate +136; Slag recovery +130. This tests static alternate routes, not functional retracting doors.
+Use `node build.cjs --write` from this directory to regenerate `setup.json`, `receipt.json`, and all seven authentic PNGs; `node build.cjs --verify` for serialized receipts, exact grid, all site clearances, obstruction and zlib-decoded image/cell parity. The deterministic geometry is in `geometry.cjs`, build / proof code in `build.cjs`; the committed receipt gives full histogram, site coordinates, per-image hashes and counts.
 
-## Serialized material-plane and proof
+## Strict downstream HOLD
 
-- World extent **2048×1024**, exactly **2,097,152 final material-ID cells**, fixed seed **202611203**.
-- Source: `geometry.cjs` contains this concept's authored topology, real pixel operations and sites. Generic `build.cjs` provides material-plane serialization, SHA-256, PNG generation and replay/BFS qualification, adapted from the existing accepted creator-side serialization approach; it **does not copy another world's geometry**.
-- Complete Setup-v2 **14-field root** and Midge actor manifest in `setup.json`, 45378 bytes, **2402 nonoverlapping ordered five-field rectangles** and **512872 material writes**. Zero overlap, zero invalid/out-of-bounds/material-ID edits and full exact-grid replay mismatch.
-- Source grid SHA-256: `ab2440341526b99c32881907ab2a8aa719eeeee589e2bf6c6b83e5529e5ff2f6`.
-- Exact serialized Setup UTF-8 SHA-256: `4bfa7f6e32c0ea711c4cd532fad634acdcac50d7723cbdb96de185f4ffec5ca2`.
-- Physically grounded non-fluid inert cells: **484207/484207**, detached **0**.
-- Final histogram (material ID → number of cells): `0`: 1584280, `3`: 21146, `8`: 7519, `58`: 148930, `62`: 74070, `68`: 35742, `70`: 6722, `76`: 1051, `77`: 689, `79`: 444, `100`: 93132, `101`: 86016, `104`: 9408, `117`: 26873, `120`: 1130.
-- Fluids: **21146 Water (ID 3)** and **7519 Lava (ID 8)**, both zero initially exposed faces to air and zero direct Water/Lava cardinal contacts; containers completely ringed by inert supports at initial state.
-- Source-advertised limits **32,768 rectangles**, **1 MiB JSON**, **32M work units**. Installed/legacy bridge might accept only about **4,096 rectangles**, presently **UNVERIFIED**. This map is under both numerical rectangle thresholds; a matching installed CyberDemoBridge must still confirm admission.
-- Accepted read-only CyberSand authority: `techrote/cybersand@de109d0131641d6adc8d25bb9ced7ca3d4991105`, with material enum/kernel and Setup-v2 actors/loader inspected. Sandmapsreference default base `main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`. Source contract does not prove runtime compatibility.
-
-Regenerate via `node build.cjs --write`, then `node build.cjs --verify`. Verification replays the entire edited grid, cross-checks hashes and histograms, conservative all-centre BFS, a real obstruction, material-groundedness and initially sealed fluids; `--verify` also reads committed binary PNGs using Node zlib and independently checks exact indexed material pixels against this builder's reconstructed source-grid. **Independent Art, Technical and Shepherd reviews remain pending.**
-
-## Authentic material-cell gallery
-
-Every PNG is an 8-bit indexed image, **one pixel = one final source material ID**, and all six district crops are genuine 1:1 extracts, not rescaled images or reference JPEGs.
-
-- `overview.png` — 0, 0, 2048, 1024 source-cell crop; 30503 PNG bytes; SHA-256 24ce546db75157cf0cc8dbfdea5fafcd755d725c33feadb786ddfd0ea2119363
-- `01-drum-shear.png` — 40, 265, 395, 565 source-cell crop; 7562 PNG bytes; SHA-256 437dc3b1ea01379f977d512abb2a706de489d7d9f05132fe3ddf1007955bf949
-- `02-smelter-cassettes.png` — 418, 285, 425, 620 source-cell crop; 6355 PNG bytes; SHA-256 259fe495c9afab8714c4365ba9371964a326aa850c88a64868502ac36517c422
-- `03-spillway-throat.png` — 824, 230, 430, 660 source-cell crop; 7946 PNG bytes; SHA-256 13ada35db8be336318045a694c9259b9a134bd33430affe343adedf649de2296
-- `04-cryo-recovery.png` — 1248, 315, 400, 590 source-cell crop; 6314 PNG bytes; SHA-256 c100167350d6999d14147dde24326d75cd55ab9c1b561fdc8ef773f631c05b70
-- `05-plume-scrubber.png` — 1630, 205, 410, 690 source-cell crop; 7197 PNG bytes; SHA-256 0f77b6b45f023619aa241155ad484629c9830983ff46cb5523c9fe4aca564219
-- `06-lower-culvert.png` — 808, 710, 515, 295 source-cell crop; 3623 PNG bytes; SHA-256 1404e8d3f984f8572dff3eac24d30efbd29a4c284da77e880a4e66a726bf288b
-
-`overview.png` is the full 2048×1024 palette-indexed plane. PNG files are deterministic binary outputs from this very same committed source. An actual PNG viewer successfully decoded the overview and spillway district during the creator inspection. Independent full zlib decoded material parity is provided by the committed `--verify` code path, but external exact-HEAD CI has not yet been observed.
-
-## Mandatory review and native admission HOLD
-
-Keep Draft/HOLD. Request independent same-HEAD Art, Technical and Shepherd assessment of real full-grid/crop scale, entered process functions, 15 exact Midge sites, support grounding, forced detour, initial vessel seals, actual Setup schema and installed-vs-source bridge limits.
-
-**NATIVE-UNTESTED:** no source-matched Godot Workbench, CyberDemoBridge/Rapier actor movement/collisions, ticked fluid/material evolution, material publication, or fresh-process save/reopen was executed. This is a statically proven playable *topology*, not a certified dynamic game-level runtime. The native qualification is downstream and does not block creating further independent original maps.
+Request **fresh independent R2 Art, Technical and Shepherd** reviews of this exact geometry. **NATIVE-UNTESTED:** source-matched Godot Workbench/CyberDemoBridge/Rapier actor collision and movement, actual liquid evolution, installed bridge admission, save/reopen and Windows render publication were not executed. No Ready, merge or owner acceptance is implied.

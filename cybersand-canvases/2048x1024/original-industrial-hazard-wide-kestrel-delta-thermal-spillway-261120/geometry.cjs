@@ -193,6 +193,36 @@ function materialWorld(){
  rect(1772,671,105,50,3);frame(1761,660,127,72,11,58);
  // Three exposed service platforms have direct steel-bearing legs into anchored slabs.
  rect(139,662,9,113,58);rect(365,661,9,114,58);
+
+ // R2 / Independent Shepherd P1 — rooted material-cell process machinery.
+ // Drums, valves and dry ducts are inert solid depictions, not live mechanisms.
+ // I. Drum shear: supported ore discharge, inspected roll-drive and assay gantry.
+ rect(348,757,57,12,62);rect(392,767,91,10,68);rect(417,739,31,27,117);rect(424,744,17,10,100);rect(415,760,36,7,76);rect(407,777,9,25,58);
+ line(348,759,391,769,9,104);rect(356,750,18,9,70);rect(319,716,17,9,70);rect(325,725,9,26,58);
+ frame(337,680,40,26,5,68);rect(346,701,23,6,77);rect(350,708,9,50,58);rect(377,689,13,8,76);
+ // II. Hot slag isolates and cold pressure-skimmer: different workfaces.
+ rect(571,590,70,11,70);rect(578,559,58,33,62);rect(582,565,48,20,101);rect(588,571,8,8,79);rect(604,570,15,9,76);rect(624,568,6,13,77);rect(581,585,10,12,58);rect(627,585,9,12,58);
+ rect(760,594,45,9,70);rect(771,566,27,28,62);rect(777,572,15,12,101);rect(780,574,6,7,77);rect(766,587,9,14,58);
+ rect(519,723,100,10,104);rect(526,733,15,28,58);rect(602,734,14,29,58);rect(543,742,59,8,79);rect(558,753,13,22,58);rect(591,752,11,23,58);
+ rect(660,731,117,9,68);rect(671,740,12,35,58);rect(754,741,12,35,58);rect(688,742,61,9,120);frame(696,752,47,27,6,70);rect(705,758,29,15,101);rect(710,762,9,7,77);rect(730,764,8,6,76);
+ // III. Dry slag removal / weighing below a clear V-throat with retained bypass.
+ rect(929,889,118,10,62);rect(938,866,9,25,58);rect(1029,865,9,25,58);rect(947,866,83,8,104);rect(954,852,9,14,58);rect(1018,851,9,15,58);rect(963,848,55,7,70);rect(972,852,8,13,76);line(962,878,1017,887,9,117);
+ frame(953,808,64,29,6,68);rect(969,829,30,8,120);rect(968,838,10,28,58);
+ rect(1133,886,49,11,62);rect(1140,865,9,22,58);rect(1167,859,11,28,58);frame(1128,833,54,27,6,70);rect(1143,853,26,7,79);rect(1150,861,10,19,58);
+ rect(1151,858,8,6,58); // root the second station's independent sample weigh-head
+ rect(1191,875,109,11,68);rect(1194,885,11,22,58);rect(1281,886,10,40,58);line(1182,856,1237,876,10,117);
+ // IV. Twin coolant cassettes: coil/height gauge versus relief/assay flow.
+ rect(1288,732,20,12,68);rect(1290,744,9,47,58);rect(1300,776,14,12,120);rect(1314,782,27,9,77);
+ rect(1280,744,12,12,58); // short genuine anchor to the west coolant main pier
+ rect(1345,646,58,11,70);rect(1357,654,11,22,58);rect(1391,655,10,22,58);frame(1364,611,47,29,6,62);rect(1375,633,24,7,120);rect(1377,641,9,14,58);
+ rect(1555,727,39,10,104);rect(1579,736,11,57,58);rect(1555,780,23,9,79);rect(1569,789,11,12,58);
+ rect(1499,647,66,10,68);rect(1510,653,10,23,58);rect(1552,654,9,22,58);frame(1520,610,36,31,6,70);rect(1529,632,17,7,77);rect(1536,642,8,16,58);
+ rect(1413,672,38,11,62);rect(1421,658,12,15,58);rect(1436,658,9,15,117);fastener(1426,666,76);rect(1461,671,45,12,62);rect(1472,658,10,13,58);fastener(1494,668,77);
+ // V. Condenser: apex-to-scrubber discharge duct and lower dry test rack.
+ rect(1843,288,13,332,68);rect(1847,323,5,278,101);rect(1824,594,54,12,62);rect(1819,607,11,23,58);rect(1872,606,11,31,58);rect(1840,630,22,15,76);
+ line(1844,621,1775,656,12,117);line(1855,621,1927,652,12,117);rect(1761,649,24,13,62);rect(1918,645,16,20,58);rect(1891,635,79,11,68);rect(1951,643,11,37,58);
+ rect(1910,757,57,10,70);rect(1917,738,11,20,58);rect(1951,738,10,20,58);frame(1924,709,40,31,6,62);rect(1933,732,22,7,77);rect(1937,741,9,17,58);
+ rect(1772,767,94,9,104);rect(1780,748,10,20,58);rect(1848,747,10,22,58);rect(1791,748,55,9,70);rect(1811,731,14,18,68);rect(1815,734,6,8,76);
  return g;
 }
 module.exports={W,H,SEED,SITES,CROPS,COLORS,materialWorld};

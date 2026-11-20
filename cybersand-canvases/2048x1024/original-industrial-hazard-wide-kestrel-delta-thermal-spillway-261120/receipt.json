@@ -8,36 +8,36 @@
   ],
   "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
   "source_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
-  "grid_sha256": "ab2440341526b99c32881907ab2a8aa719eeeee589e2bf6c6b83e5529e5ff2f6",
-  "setup_sha256": "4bfa7f6e32c0ea711c4cd532fad634acdcac50d7723cbdb96de185f4ffec5ca2",
-  "setup_json_bytes": 45378,
-  "rectangles": 2402,
-  "work": 512872,
+  "grid_sha256": "7b20eee1ae78e9018ef2974388fd5857c541cb05af34457457c950a8ce5747d3",
+  "setup_sha256": "93f654278a5dc2e73cf845e6dee86a6a616239bc1f2734f6cae4085af5da9ee2",
+  "setup_json_bytes": 54833,
+  "rectangles": 2908,
+  "work": 544413,
   "histogram": {
-    "0": 1584280,
+    "0": 1552739,
     "3": 21146,
     "8": 7519,
-    "58": 148930,
-    "62": 74070,
-    "68": 35742,
-    "70": 6722,
-    "76": 1051,
-    "77": 689,
-    "79": 444,
-    "100": 93132,
-    "101": 86016,
-    "104": 9408,
-    "117": 26873,
-    "120": 1130
+    "58": 151802,
+    "62": 78424,
+    "68": 43569,
+    "70": 10526,
+    "76": 2059,
+    "77": 1388,
+    "79": 1259,
+    "100": 93302,
+    "101": 88540,
+    "104": 12663,
+    "117": 30075,
+    "120": 2141
   },
   "solid_connectivity": {
-    "total": 484207,
-    "grounded": 484207,
+    "total": 515748,
+    "grounded": 515748,
     "detached": 0
   },
   "clearance": {
     "19x15": {
-      "visited": 1206118,
+      "visited": 1157846,
       "reachable": 15,
       "centres": [
         [
@@ -103,7 +103,7 @@
       ]
     },
     "23x19": {
-      "visited": 1164225,
+      "visited": 1117385,
       "reachable": 15,
       "centres": [
         [
@@ -169,7 +169,7 @@
       ]
     },
     "31x27": {
-      "visited": 1085979,
+      "visited": 1042562,
       "reachable": 15,
       "centres": [
         [
@@ -243,7 +243,7 @@
       140
     ],
     "reachable": 15,
-    "visited": 1074537,
+    "visited": 1031120,
     "detours": [
       {
         "name": "Landing inspection",
@@ -325,8 +325,8 @@
       },
       {
         "name": "Smelter lower return",
-        "baseline": 1264,
-        "blocked": 1264,
+        "baseline": 1296,
+        "blocked": 1296,
         "extra": 0
       },
       {
@@ -416,8 +416,8 @@
   ],
   "images": {
     "overview.png": {
-      "bytes": 30503,
-      "sha256": "24ce546db75157cf0cc8dbfdea5fafcd755d725c33feadb786ddfd0ea2119363",
+      "bytes": 32707,
+      "sha256": "e23cda1a8a1f96a927690d62888bb1ada1803323b3a518d75caec65a2b16c88e",
       "crop": [
         0,
         0,
@@ -426,8 +426,8 @@
       ]
     },
     "01-drum-shear.png": {
-      "bytes": 7562,
-      "sha256": "437dc3b1ea01379f977d512abb2a706de489d7d9f05132fe3ddf1007955bf949",
+      "bytes": 7778,
+      "sha256": "fe6bda753f53ecf630f36ca0155039225aba5fe9b1e5f7b73033f7ad3fd8aae5",
       "crop": [
         40,
         265,
@@ -436,8 +436,8 @@
       ]
     },
     "02-smelter-cassettes.png": {
-      "bytes": 6355,
-      "sha256": "259fe495c9afab8714c4365ba9371964a326aa850c88a64868502ac36517c422",
+      "bytes": 6765,
+      "sha256": "2399b1c6345df7d7d69c4cf8b1bd8902cac14c895d6db141e1806a61a8f4539d",
       "crop": [
         418,
         285,
@@ -446,8 +446,8 @@
       ]
     },
     "03-spillway-throat.png": {
-      "bytes": 7946,
-      "sha256": "13ada35db8be336318045a694c9259b9a134bd33430affe343adedf649de2296",
+      "bytes": 8532,
+      "sha256": "7b22fcaf8b94e365009d71391e06308d5eda701142e0f1b9e1d451eb6d8945c2",
       "crop": [
         824,
         230,
@@ -456,8 +456,8 @@
       ]
     },
     "04-cryo-recovery.png": {
-      "bytes": 6314,
-      "sha256": "c100167350d6999d14147dde24326d75cd55ab9c1b561fdc8ef773f631c05b70",
+      "bytes": 6774,
+      "sha256": "299a3bd30ad87adedfd6b25a39a1ed773d6837375c44405ba179be240d526766",
       "crop": [
         1248,
         315,
@@ -466,8 +466,8 @@
       ]
     },
     "05-plume-scrubber.png": {
-      "bytes": 7197,
-      "sha256": "0f77b6b45f023619aa241155ad484629c9830983ff46cb5523c9fe4aca564219",
+      "bytes": 7738,
+      "sha256": "7747571b367a2a218f216160c893d9a394823cea74afbce7946b0bc25194aeb1",
       "crop": [
         1630,
         205,
@@ -476,8 +476,8 @@
       ]
     },
     "06-lower-culvert.png": {
-      "bytes": 3623,
-      "sha256": "1404e8d3f984f8572dff3eac24d30efbd29a4c284da77e880a4e66a726bf288b",
+      "bytes": 4329,
+      "sha256": "56bde5091a1c00d8333495bc3488c5ed3856a66bdb6a2b4dea5a022f54121dae",
       "crop": [
         808,
         710,
