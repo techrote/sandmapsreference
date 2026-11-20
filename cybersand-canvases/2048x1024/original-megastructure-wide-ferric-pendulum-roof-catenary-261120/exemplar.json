@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "purpose": ["human_editable_canvas", "procedural_exemplar", "scripted_setpiece_source"],
+  "family": "original/megastructure-wide",
+  "map_role": "multi-island suspended transmission settlement over a deliberately spare reclamation floor",
+  "anchor_donors": [],
+  "macro_topology": "islands",
+  "density_profile": "four unequal concentrated inhabited roof-suspended clusters; long vertical gaps and open low salvage field; sparse rooted apron modules",
+  "route_grammar": {"primary": "zigzag west-to-east visits between four roof-tethered industrial pods", "alternate": "continuous low-altitude open salvage return outside the inhabited pods", "rejoin": "broad inter-pod open shafts and two outer grounded arrival stages", "obstruction": "central crossing closure at XYWH 914,625,156,154 preserves all 18 other literal sites"},
+  "strong_motifs": ["staggered suspended machine islands", "a roof-rooted irregular zigzag cableway", "opened traction gimbal", "five disconnected lower salvage aprons anchored to bedrock", "two-ended descending flight bypass"],
+  "interesting_relationships": ["roof cables visibly carry occupied platforms while an unrelated salvage settlement inhabits the lowest layer", "each cluster serves a different freight/traction/switching/reclamation purpose", "asymmetric pod heights force vertical transfers without forcing a single sealed corridor"],
+  "authoring_affordances": ["long central east-west low-field void for manual scene dressing", "empty bay below Gallows traction rotor", "open between-pod shafts usable for modular gantry bridge trials", "western/eastern salvage apron expansion seams"],
+  "setpiece_candidates": [
+    {"name": "Gallows rotor seizure", "xy": [737, 303], "possible_event": "reconfigure radial traction mechanism while lower bypass remains"},
+    {"name": "Crosswind conductor failure", "xy": [1172, 520], "possible_event": "sparks or broken bridge across entered magenta switching gallery"},
+    {"name": "Frost annex containment", "xy": [1650, 355], "possible_event": "filter breach and alternate low flight exit"},
+    {"name": "Salvage undercroft refuge", "xy": [1632, 845], "possible_event": "NPC trading, evacuation or chased arrival"}
+  ],
+  "procedural_exemplar_value": "Teaches multiple independently roof-rooted load paths, discontiguous primary level silhouettes, dense-island/low-bypass dual altitude grammars, unfilled edit-value staging and clipped ring access ports. All geometry is inert authored material cells, no scripted mechanisms.",
+  "similarity_avoidance": "Unlike Meridian Scar's one fractured central clock, Ion Parapet's continuous stormbeam, Umbra Siphon's two horns, Pilgrim Gait's grounded walking hull and Tin Canticle's double dish chasm, this map distributes its silhouettes into FOUR staggered roof-suspended islands with open low return; the main landmark is a cableway plus one opened peripheral gimbal rather than a single central monument.",
+  "diversity_axes": {
+    "macro_topology": "islands",
+    "altitude_grammar": "high_low_bypass",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "cableway",
+    "support_form": "roof_rooted",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  }
+}
