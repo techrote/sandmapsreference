@@ -16,7 +16,7 @@ for(let x=0;x<W;x++){let r=262+Math.round(16*Math.sin(x/151)+8*Math.sin(x/41));r
 // Two unequal long horizontal arteries across the whole horizontal extent.
 rect(94,390,1862,132,0);rect(112,628,1826,130,0);
 // Asymmetric, large transverse changeovers, not repeated switch matrices.
-for(const [x,w] of [[236,116],[681,129],[1066,143],[1567,121],[1807,116]])rect(x,385,w,378,0);
+for(const [x,w] of [[236,116],[1066,143],[1807,116]])rect(x,385,w,378,0);
 // Rock-light exterior crossing: the north route becomes a broad exposed cutting.
 // A visually memorable open slot rather than a sawtooth or radial brake.
 rect(901,0,290,425,0);
@@ -27,6 +27,11 @@ rect(805,542,436,83,0);rect(811,507,90,100,0);rect(1165,506,78,110,0);
 // Four entered subgrade repair bays, deliberately different widths and adjacencies.
 const bays=[[180,801,253,156,291],[763,814,232,144,857],[1261,803,248,154,1379],[1672,809,251,149,1795]];
 for(const [x,y,w,h,entry] of bays){rect(x,y,w,h,0);rect(entry-47,745,95,y+65-745,0)}
+// Grounded roof-to-median abutments retain genuinely separated upper and lower
+// arterials outside the three interchange crosscuts. They interrupt isolated
+// upper subspans but the lower arterial provides the continuous rescue passage.
+rect(487,264,28,364,M.frame);
+rect(1432,262,30,367,M.frame);
 // Deliberate long void above upper roadway: this is an editable route skyline.
 for(const [x,y,w,h] of [[120,331,325,34],[1424,316,244,48]])rect(x,y,w,h,0);
 // Material-cell engineering: cuttings have well rooted contact rails.
@@ -93,7 +98,7 @@ for(let i=0;i<5;i++){
 for(const [x,y,w,h] of [[488,756,144,53],[1462,760,115,40]])rect(x,y,w,h,0);
 // The low, shared access throat is carved AFTER machinery is mounted. It is not
 // a teleport / site exemption: actual rock removal creates full-hull tunnels.
-for(const [x,w] of [[236,116],[681,129],[1066,143],[1567,121],[1807,116]])rect(x+20,381,w-40,396,0);
+for(const [x,w] of [[236,116],[1066,143],[1807,116]])rect(x+20,381,w-40,396,0);
 for(const [x,y,w,h,entry] of bays){
  rect(entry-43,730,87,y+80-730,0);
  // The rooms have no solid membrane separating their entrance from the shaft.
@@ -108,7 +113,7 @@ const sites=[
 ['Blocked upper checksum',617,459],
 ['Exterior reveal',1018,455],['Exterior lower recovery',1023,694],
 ['Middle low through',1249,690],['Mid-east high through',1359,461],
-['Crosslink east',1618,577],['Eastern lower return',1519,697],
+['Crosslink east',1858,577],['Eastern lower return',1519,697],
 ['Final high return',1901,458],['Finish',1940,461],
 ['West ram bay',291,852],['Tension-comb bay',865,858],
 ['Catch magazine',1392,851],['Rescue cradle',1800,850],
