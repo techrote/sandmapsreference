@@ -70,6 +70,57 @@ rect(209,388,43,31,0);
 rect(340,420,42,86,0);rect(820,423,51,86,0);rect(1213,426,49,79,0);rect(1639,422,44,82,0);
 rect(183,913,58,59,0);rect(748,913,58,59,0);rect(1640,912,58,60,0);
 rect(187,968,50,5,62);rect(752,968,50,5,62);rect(1644,968,50,5,62);
+
+/* R2: independent Shepherd functional-art P1. These are dry material cells,
+ * supported by established structures. No original reactive fluids are touched.
+ * Distinct entered west assay bench and genuinely suspended cargo specimen. */
+rect(110,462,62,8,70);rect(117,470,7,13,117);rect(159,470,7,13,117);
+frame(121,440,41,23,5,62);rect(130,454,23,6,120);
+rect(141,463,6,8,117);rect(116,439,7,23,76);
+line(244,479,244,535,6,117);line(244,529,214,548,7,62);line(244,529,273,548,7,62);
+oval(244,560,41,25,117,.70);rect(225,554,39,12,100);
+line(203,550,212,561,6,76);line(276,561,285,550,6,76);
+rect(221,583,8,25,58);rect(261,583,8,25,58);
+rect(216,600,59,8,62);rect(226,595,39,5,76);
+/* Salt-pressure differential gauge, dry pump rotor, valved riser outside
+ * the water cassette's unchanged sealed steel boundary. */
+rect(572,684,65,16,62);rect(581,657,8,27,58);rect(626,657,8,27,58);
+frame(587,631,40,28,5,70);rect(598,651,18,7,120);rect(603,657,6,27,117);
+rect(702,661,63,11,62);rect(710,672,11,28,58);rect(750,672,11,28,58);
+oval(735,642,30,23,68,.67);line(735,643,751,643,6,77);
+rect(734,654,7,19,117);line(737,669,737,744,7,117);
+rect(725,712,23,6,76);rect(732,699,9,12,70);
+/* Two purpose-distinct hot/cold retort monitor workfaces, leave lower
+ * under-deck Midge bypass completely unsealed by pipework. */
+rect(1329,660,98,11,62);rect(1339,633,8,27,117);rect(1416,633,8,27,117);
+rect(1341,622,81,11,70);frame(1355,637,47,20,5,68);
+rect(1370,650,7,10,117);rect(1383,624,13,8,79);
+rect(1512,660,91,11,62);rect(1518,634,8,26,117);rect(1593,634,8,26,117);
+rect(1519,620,81,14,62);frame(1536,639,45,18,4,70);
+rect(1550,654,7,8,117);rect(1547,624,18,7,77);
+/* Three different enterable readout, control and cargo-transfer stations
+ * on the retained asymmetric exhaust fin geometry. */
+rect(1698,485,73,16,62);rect(1706,470,8,15,117);
+rect(1757,470,8,15,117);rect(1707,458,58,12,70);
+frame(1721,471,34,12,4,68);rect(1732,477,10,8,77);
+rect(1868,488,54,13,62);rect(1873,463,7,25,117);
+rect(1912,463,7,25,117);rect(1873,450,46,14,70);
+rect(1885,453,22,7,120);rect(1900,477,10,11,76);
+rect(1951,587,73,12,62);rect(1965,558,8,29,117);
+rect(2005,558,8,29,117);rect(1959,548,58,10,68);
+rect(1970,552,38,6,77);
+/* Real rooted dry inspection cabinet and dissimilar salvage-handling gantry.
+ * Existing exact void retrieval checkpoint (1032,862) remains free. */
+rect(925,954,110,9,62);rect(935,908,8,46,117);
+rect(994,902,9,52,117);rect(934,901,69,8,62);
+frame(947,917,43,29,5,68);rect(961,940,7,14,117);
+rect(959,916,23,5,77);rect(903,928,31,8,70);
+rect(910,936,7,27,117);
+rect(1094,954,98,9,62);rect(1097,896,11,58,117);
+rect(1177,918,10,36,117);line(1102,897,1182,918,9,62);
+line(1161,918,1150,935,6,76);
+rect(1122,936,54,10,68);rect(1135,946,7,8,117);
+
 return g;
 }
 module.exports={W,H,SEED,SITES,CROPS,COLORS,materialWorld};

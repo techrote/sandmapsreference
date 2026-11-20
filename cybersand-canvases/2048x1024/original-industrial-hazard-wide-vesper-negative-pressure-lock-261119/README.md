@@ -1,6 +1,19 @@
 # Vesper Negative-Pressure Lock — ORIGINAL Industrial Hazard Wide
 
-**OPEN Draft/HOLD · wholly self-authored CyberSand 2048×1024 true side-elevation material-cell world · source-static qualified only · NATIVE-UNTESTED.** No source photo, reference conversion, image-mock layer, renderer substitution, isometric projection, or functional reactor simulation.
+## R2 — actual material-cell Shepherd P1 repair (20 November 2026)
+
+Every original functional district, 14 literal named Midge sites, the asymmetric gorge, the chevron/fin skyline, both dry flight routes and all initially sealed Water/Lava are retained. New grounded collision-cell workfaces are: the western hoisted specimen and entered staffed assay bench; the brine-sluice differential gauge, solid rotor and external valve; separate hot/cold retort operator positions; distinct exhaust-fin readout, throughput and cargo-transfer stations; and two fully supported lower dry salvage/retrieval workfaces. These are **inert material structures**, not simulated pumps, reactors or controllers.
+
+**R1→R2 verified exact cell delta:** 27,692 changed material IDs (22,468 added; 0 removed; 5,224 reassigned). District deltas: intake 4,245; sluice 4,942; gorge 6,697; retort 5,822; export 5,986. **0 Water/Lava cell changes.**
+
+**R2 creator qualification:** 3396 nonoverlapping ordered rectangles; 64648 Setup-v2 UTF-8 bytes; 508734 construction cell visits; 494788/494788 grounded immobile solids (zero detached). All 14 exact sites pass 19×15, 23×19 and 31×27 free-centre four-neighbour BFS; reachable legal centre counts 19x15: 1048166; 23x19: 1012711; 31x27: 943004. The physically inserted obstruction at (1400,160) size 61×48 preserves all sites. Source-advertised 32768 and possible installed fallback 4096 rectangle ceilings are both respected, though installed native compatibility remains unverified.
+
+Full actual material plane and six original-resolution indexed-material PNG crops were regenerated. **3,411,952 decoded PNG pixels matched the material-ID plane with zero mismatches**, including full overview; individual PNG chunk CRC-32, stored-DEFLATE integrity, Adler-32 and IEND were checked. Original mobile liquid count and initial four-neighbour isolation are unchanged. Source-grid SHA-256 9e49676b9964fc1bbd408c4bfa5aa8b280bd87e8b5dee474229a4ad80024d746.
+
+**Review gate:** this is a creator-only static PASS on a new R2 source. Independent exact-new-HEAD Art, Technical and Shepherd review is required. Source-matched Godot/Workbench/CyberDemoBridge/Rapier, actual Midge flight, dynamic Water/Lava and fresh-process save/reopen remain **NATIVE-UNTESTED**. No changes to accepted engine/main/other creators.
+
+
+**OPEN Draft/HOLD · wholly self-authored CyberSand 2048×1024 true side-elevation material-cell world · creator source-static R2 qualification only · NATIVE-UNTESTED.** No source photo, reference conversion, image-mock layer, renderer substitution, isometric projection, or functional reactor simulation.
 
 A former emergency **negative-pressure waste lock** bestrides an ash ravine. The silhouette is deliberately asymmetric: the pitched west assay hangar, downraking brine-sluice platforms, severed suspension spanning an open gorge, gigantic nested **chevron** vacuum retort, and eastern three-height exhaust fins. No duplicate mirrored towers or repeating factory wallpaper. Inert machinery is authored collision material, not operating pumps, plasma or process code.
 
@@ -42,9 +55,9 @@ Every exact site has a fully in-bounds **19×15**, **23×19** and **31×27** fre
 - Read-only accepted CyberSand engine: [`de109d0131641d6adc8d25bb9ced7ca3d4991105`](https://github.com/techrote/cybersand/commit/de109d0131641d6adc8d25bb9ced7ca3d4991105); source `godot/scripts/workbench_setup.gd`, `native/include/cybersand/material.hpp`, and authored Midge 4×3 hull. Base sandmapsreference `main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`.
 - Inert, immovable and native-defined structural IDs actually used: **58, 62, 68, 70, 76, 77, 79, 100, 101, 104, 117, 120**. Grounding is 4-connected to the world boundary, checked for every inert cell. No powder- or mobile-material foundations.
 - Dynamic IDs: **Water 3 (11,044 cells)** and **Lava 8 (2,902 cells)** only in different completely solid-sealed cassettes. This establishes initial four-neighbour isolation, not live thermal/fluid stability.
-- Entire authored material plane **2,097,152 cells**; optimized ordered nonoverlapping material rectangles **2968**; work **486266** cells; Setup-v2 JSON **56861** UTF-8 bytes; structural cells **472320/472320** grounded, detached **zero**.
+- Entire authored material plane **2,097,152 cells**; optimized ordered nonoverlapping material rectangles **3396**; work **508734** cells; Setup-v2 JSON **64648** UTF-8 bytes; structural cells **494788/494788** grounded, detached **zero**.
 - Source-advertised Workbench max 32,768 rectangles, 1 MiB JSON and 32 million construction-cell work. Source declares installed fallback 4,096 if the native bridge capability is missing. This world is under both rectangle counts, but installed bridge capability is **UNVERIFIED**.
-- Exact original seed **19112603**; source-grid SHA-256 `bd153205b87439a834f135e036edc394b69c8ba606da276bf77c959c1f65018c`; setup JSON SHA-256 `8f44fed16c71be9d966ec2ccadd26352b9726a5196ae932c093518c153b1d6a3`. Histograms, all 14 destination centres, full-grid replay, image hashes, dimensions, physical-obstruction result and receipt limits are in [`receipt.json`](./receipt.json).
+- Exact original seed **19112603**; source-grid SHA-256 `9e49676b9964fc1bbd408c4bfa5aa8b280bd87e8b5dee474229a4ad80024d746`; setup JSON SHA-256 `c52cf8eaa42b8c6f1175d6257051ba8f394f699527acec2de4d763400d66986f`. Histograms, all 14 destination centres, full-grid replay, image hashes, dimensions, physical-obstruction result and receipt limits are in [`receipt.json`](./receipt.json).
 
 ## Full actual material-cell grid and true 1:1 district crops
 
