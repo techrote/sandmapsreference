@@ -1,0 +1,286 @@
+{
+  "kind": "UMBRAL_INDUCTION_DOCK_ORIGINAL_RACING_WIDE",
+  "revision": "R1",
+  "seed": "0x1d07b620",
+  "engine_main_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "material_cells": 2097152,
+  "extent": [
+    2048,
+    1024
+  ],
+  "rectangles": 4706,
+  "setup_json_bytes": 89267,
+  "work_visits": 887400,
+  "source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1209752,
+    "49": 32384,
+    "58": 195164,
+    "62": 192611,
+    "100": 325990,
+    "101": 45992,
+    "113": 19016,
+    "117": 67952,
+    "122": 8291
+  },
+  "grounded_solids": 887400,
+  "remaining_detached": 0,
+  "fluids": 0,
+  "reactive": 0,
+  "material_laws": "49 Slate / 58 ReinforcedConcrete / 62 SteelPlate / 100 BasaltColumns / 101 Obsidian / 113 ZincSheet / 117 BareIron / 122 QuartzCrystal: inert nonmoving Solid, RuleKernel None",
+  "midge": {
+    "hull": [
+      4,
+      3
+    ],
+    "model_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      150,
+      640
+    ]
+  },
+  "sites": [
+    {
+      "name": "Start / west coil lock",
+      "x": 150,
+      "y": 640
+    },
+    {
+      "name": "Impulse threshold",
+      "x": 330,
+      "y": 607
+    },
+    {
+      "name": "Freight incline",
+      "x": 595,
+      "y": 616
+    },
+    {
+      "name": "West annulus approach",
+      "x": 792,
+      "y": 521
+    },
+    {
+      "name": "Annulus main portal",
+      "x": 854,
+      "y": 496
+    },
+    {
+      "name": "Annulus core",
+      "x": 1021,
+      "y": 504
+    },
+    {
+      "name": "Upper annulus exit",
+      "x": 1203,
+      "y": 447
+    },
+    {
+      "name": "Lower annulus exit",
+      "x": 1207,
+      "y": 567
+    },
+    {
+      "name": "East coupling service",
+      "x": 1375,
+      "y": 526
+    },
+    {
+      "name": "Finned filter clearway",
+      "x": 1601,
+      "y": 547
+    },
+    {
+      "name": "East loading catcher",
+      "x": 1832,
+      "y": 620
+    },
+    {
+      "name": "East ascent",
+      "x": 1947,
+      "y": 438
+    },
+    {
+      "name": "East high return",
+      "x": 1794,
+      "y": 306
+    },
+    {
+      "name": "Northbound bypass",
+      "x": 1480,
+      "y": 322
+    },
+    {
+      "name": "Central return throat",
+      "x": 1264,
+      "y": 368
+    },
+    {
+      "name": "Upper western return",
+      "x": 704,
+      "y": 320
+    },
+    {
+      "name": "West descent",
+      "x": 274,
+      "y": 424
+    },
+    {
+      "name": "Finish / coil lock",
+      "x": 153,
+      "y": 640
+    },
+    {
+      "name": "Injector control bridge",
+      "x": 239,
+      "y": 181
+    },
+    {
+      "name": "Rail drive pulpit",
+      "x": 640,
+      "y": 195
+    },
+    {
+      "name": "Annulus survey balcony",
+      "x": 1024,
+      "y": 192
+    },
+    {
+      "name": "Cryopump switchroom",
+      "x": 1490,
+      "y": 192
+    },
+    {
+      "name": "East lift operator",
+      "x": 1850,
+      "y": 219
+    },
+    {
+      "name": "West cargo bay",
+      "x": 224,
+      "y": 816
+    },
+    {
+      "name": "Rail gearbox service",
+      "x": 640,
+      "y": 816
+    },
+    {
+      "name": "Annulus lower monitor",
+      "x": 1013,
+      "y": 815
+    },
+    {
+      "name": "Cryopump service deck",
+      "x": 1472,
+      "y": 832
+    },
+    {
+      "name": "East arrestor winch room",
+      "x": 1860,
+      "y": 825
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "connected": 950557,
+      "missing": [],
+      "reached": 28
+    },
+    "23x19": {
+      "connected": 898978,
+      "missing": [],
+      "reached": 28
+    },
+    "31x27": {
+      "connected": 807986,
+      "missing": [],
+      "reached": 28
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1146,
+      409,
+      75,
+      109
+    ],
+    "missing": [
+      "Upper annulus exit"
+    ],
+    "remaining": 27,
+    "finish_reachable": true
+  },
+  "grid_sha256": "d0eea4607896586558be498d9599b846b54d081a33754382ab53017053ffbc30",
+  "setup_sha256": "0cb13b4417a644d349328717ed43191bf37d1c784ce55fcb8aefa51d04c8667d",
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 78959,
+      "sha256": "c7cc93bb564646c26aecb1e3293c0ec117f44238780df758f5181d550097b758",
+      "parity": "source builder true; independent verifier required"
+    },
+    "01-impulse-lock.png": {
+      "x": 18,
+      "y": 90,
+      "w": 425,
+      "h": 770,
+      "bytes": 9447,
+      "sha256": "68c4e0903a62d8848d8c2e528361d4aeb5636cca72abd298b9c4538e197df172",
+      "parity": "source builder true; independent verifier required"
+    },
+    "02-incline-freight-hoists.png": {
+      "x": 417,
+      "y": 105,
+      "w": 411,
+      "h": 795,
+      "bytes": 15504,
+      "sha256": "3470c5d5661b5df2863ff1e48b4c79aabdc40994cc576ae823bd351202d52316",
+      "parity": "source builder true; independent verifier required"
+    },
+    "03-annulus-portal.png": {
+      "x": 784,
+      "y": 185,
+      "w": 468,
+      "h": 680,
+      "bytes": 16465,
+      "sha256": "df3cd669b45421d6af423893e1a9bb4a3078068474ed80adef2ec4cbc1d78694",
+      "parity": "source builder true; independent verifier required"
+    },
+    "04-cryo-coupling-plant.png": {
+      "x": 1248,
+      "y": 135,
+      "w": 405,
+      "h": 754,
+      "bytes": 13170,
+      "sha256": "8f6f14ac2f95de7cb0886fb07a04c10f4afe97e51b65b74146b8248c4165459e",
+      "parity": "source builder true; independent verifier required"
+    },
+    "05-east-braking-catcher.png": {
+      "x": 1611,
+      "y": 95,
+      "w": 429,
+      "h": 815,
+      "bytes": 15512,
+      "sha256": "e1a15776203a087e7e9ee2a6288c94fe4fc3f913cd60f502e2e11a6434439372",
+      "parity": "source builder true; independent verifier required"
+    },
+    "06-underworks-and-drive.png": {
+      "x": 391,
+      "y": 695,
+      "w": 1251,
+      "h": 329,
+      "bytes": 20716,
+      "sha256": "553bd31346252f8b6647407260b3ad313d3d4ddcbbd8dbae6514c91f000c985d",
+      "parity": "source builder true; independent verifier required"
+    }
+  },
+  "native": "NATIVE-UNTESTED; installed bridge capacity not measured; flight/collisions/save-reopen not tested"
+}
