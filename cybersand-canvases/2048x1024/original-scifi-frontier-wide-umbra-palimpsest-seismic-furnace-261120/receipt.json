@@ -1,0 +1,289 @@
+{
+  "concept": "Umbra Palimpsest - Seismic Furnace and Aurora Reclamation",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 96596006,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
+  "material_histogram": {
+    "49": 5832,
+    "62": 44435,
+    "63": 5817,
+    "66": 7810,
+    "68": 50169,
+    "77": 1847,
+    "79": 291,
+    "100": 321017,
+    "101": 9734,
+    "120": 3969,
+    "121": 8586,
+    "129": 12754,
+    "130": 3865,
+    "131": 32466
+  },
+  "filled_material_cells": 508592,
+  "grounded_cells": 508592,
+  "ungrounded_cells": 0,
+  "grounded_components": 1,
+  "all_solid_components": 1,
+  "physical_fixture_ties": null,
+  "r1_workcell_anchors": null,
+  "creator_revision": "R1 new original map; creator-only static tests; independent assessment pending",
+  "nonoverlapping_ordered_rectangles": 2236,
+  "rectangle_work": 508592,
+  "setup_bytes": 42545,
+  "material_plane_sha256": "bc9c31c7b3f8347c394abfb20307fc1546cc4066de487210bbf98ecbd33d9e26",
+  "setup_sha256": "8bef55aab258527ef913b417e32db1693c7986f7174916613439bed2cb00c212",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 53495,
+      "sha256": "590469206a10e7c1661a36f231ab0853f3886a9b18cafcbbc6d0a1f0ade3e2c8"
+    },
+    {
+      "name": "01-west-rover.png",
+      "bytes": 8953,
+      "sha256": "c0cd560e61020ea13b7dea8fdcaa0093e27b8619553077b1eea9438b26ad9649"
+    },
+    {
+      "name": "02-west-collector.png",
+      "bytes": 9356,
+      "sha256": "842b6c0dd050cde610f2c54332b8e17ecd8e43bed61864f6f73f52a8e4530856"
+    },
+    {
+      "name": "03-gantry-lab.png",
+      "bytes": 8216,
+      "sha256": "eb72dc89c03a252e810c02a0b4e5f0d60859642d02601be634cecf1e65baa3bb"
+    },
+    {
+      "name": "04-east-quarantine.png",
+      "bytes": 11147,
+      "sha256": "aa3162b628e51ca42fc2598eca94750c3b917364f564ed4988309b58948901db"
+    },
+    {
+      "name": "05-thermal-return.png",
+      "bytes": 8905,
+      "sha256": "40ae51d5aa28a84eee06044373dca839d0082050c9f7b9b27e0067a8146cd178"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1302492,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1261656,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1181452,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      1002,
+      373,
+      1080,
+      436
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only exact Mid-gantry inspection; all other named destinations remain recoverable",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1171840,
+        "passed": 25,
+        "total": 26,
+        "bad": [
+          [
+            "Mid-gantry inspection",
+            [
+              1038,
+              405
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "Rover recovery dock": [
+      126,
+      464
+    ],
+    "West assay berth": [
+      329,
+      459
+    ],
+    "West salvage mezzanine": [
+      475,
+      599
+    ],
+    "Western rescue shaft": [
+      464,
+      758
+    ],
+    "Upper west survey ledge": [
+      570,
+      285
+    ],
+    "Aurora fork west": [
+      658,
+      218
+    ],
+    "Collector west service": [
+      780,
+      487
+    ],
+    "West hydraulic gallery": [
+      853,
+      645
+    ],
+    "Mid-gantry inspection": [
+      1038,
+      405
+    ],
+    "Cradle optical lab": [
+      1086,
+      315
+    ],
+    "Central open basin": [
+      1008,
+      658
+    ],
+    "East collector service": [
+      1224,
+      487
+    ],
+    "Fork east locator": [
+      1399,
+      219
+    ],
+    "East upper weather ledge": [
+      1500,
+      308
+    ],
+    "Quarantine intake": [
+      1625,
+      403
+    ],
+    "Eastern isolation lab": [
+      1890,
+      401
+    ],
+    "Thermal displacement bay": [
+      1867,
+      543
+    ],
+    "East freight and evacuation": [
+      1798,
+      708
+    ],
+    "Eastern rescue shaft": [
+      1637,
+      766
+    ],
+    "Deep west entry": [
+      420,
+      881
+    ],
+    "Lower mineral assay": [
+      614,
+      885
+    ],
+    "Lower centrifuge": [
+      888,
+      886
+    ],
+    "Lower archive": [
+      1142,
+      888
+    ],
+    "Lower pump station": [
+      1464,
+      885
+    ],
+    "Deep east return": [
+      1632,
+      888
+    ],
+    "Upper flight corridor": [
+      1026,
+      211
+    ]
+  },
+  "crops": [
+    [
+      "01-west-rover",
+      0,
+      318,
+      555,
+      522
+    ],
+    [
+      "02-west-collector",
+      540,
+      115,
+      405,
+      635
+    ],
+    [
+      "03-gantry-lab",
+      860,
+      234,
+      475,
+      455
+    ],
+    [
+      "04-east-quarantine",
+      1495,
+      295,
+      553,
+      550
+    ],
+    [
+      "05-thermal-return",
+      350,
+      813,
+      1355,
+      199
+    ]
+  ],
+  "source_art": "None; wholly new original invented sci-fi frontier",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"
+}
