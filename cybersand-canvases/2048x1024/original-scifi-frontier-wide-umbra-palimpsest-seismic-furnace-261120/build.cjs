@@ -131,6 +131,9 @@ function build(){
  // Habitation clearances follow real excavated side-entry corridors.
  R(1546,381,430,46,0);R(1567,528,389,45,0);
  R(1543,685,409,49,0);
+ // Actual deep mechanically rooted side braces above the entered excavation.
+ L(35,822,709,737,12,M.titanium);
+ L(1297,671,2024,665,12,M.titanium);
  // Named Midge approach/recovery sites, deliberate metre-scale clear space.
  const sites={
  "Rover recovery dock":[126,464],
@@ -163,6 +166,55 @@ function build(){
  // Open all literal sites without shifting their submitted centres. These
  // conservative vestibules are inside designed larger traversable spaces.
  for(const [name,[x,y]] of Object.entries(sites))R(x-21,y-19,43,39,0);
+
+ // Deterministic structural rigging: connect orphan machine components to
+ // already rooted supports with minimal orthogonal inert service brackets.
+ // Never run cable through any conservative named Midge clearance envelope.
+ let tied=[];
+ function attachEngineeringRigging(){
+   const N=g.length,seen=new Uint8Array(N),roots=new Uint8Array(N),q=new Int32Array(N),components=[];
+   for(let k=0;k<N;k++)if(g[k]&&!seen[k]){
+     let hd=0,tl=1,edge=false,cells=[];q[0]=k;seen[k]=1;
+     while(hd<tl){let a=q[hd++],x=a%W,y=(a/W)|0;cells.push(a);
+       if(x===0||x===W-1||y===0||y===H-1)edge=true;
+       for(let z of [a-W,a+W,x>0?a-1:-1,x<W-1?a+1:-1])
+         if(z>=0&&z<N&&g[z]&&!seen[z]){seen[z]=1;q[tl++]=z;}
+     }
+     if(edge)for(const z of cells)roots[z]=1;else components.push(cells);
+   }
+   if(!components.length)return;
+   const protectedZone=new Uint8Array(N);
+   for(const [n,[cx,cy]] of Object.entries(sites))
+     for(let y=cy-20;y<=cy+20;y++)for(let x=cx-23;x<=cx+23;x++)
+       if(x>=0&&x<W&&y>=0&&y<H)protectedZone[y*W+x]=1;
+   const parent=new Int32Array(N);parent.fill(-1);let head=0,tail=0;
+   for(let k=0;k<N;k++)if(roots[k]){parent[k]=k;q[tail++]=k;}
+   while(head<tail){const a=q[head++],x=a%W;
+     for(const z of [a-W,a+W,x>0?a-1:-1,x<W-1?a+1:-1]){
+       if(z>=0&&z<N&&!g[z]&&!protectedZone[z]&&parent[z]<0){parent[z]=a;q[tail++]=z;}
+     }
+   }
+   for(const cells of components){
+     let nearest=-1,parentOf=-1,steps=0;
+     // Since BFS queue is distance ordered, the minimal recipient path is
+     // determined by distance, not scan-order or arbitrary nearest-site shift.
+     // Evaluate frontiers using one stored source-root distance map.
+     let distance=Infinity;
+     for(const a of cells){const x=a%W;
+       for(const z of [a-W,a+W,x>0?a-1:-1,x<W-1?a+1:-1])
+         if(z>=0&&z<N&&parent[z]>=0&&!g[z]){
+           let d=0,t=z;while(parent[t]!==t&&d<2048){d++;t=parent[t];}
+           if(d<distance){distance=d;nearest=a;parentOf=z;}
+         }
+     }
+     if(parentOf<0)throw Error("Unattachable structural island "+cells.length);
+     let z=parentOf,path=[];
+     while(parent[z]!==z){path.push(z);z=parent[z];if(path.length>2048)throw Error("Tie too long");}
+     for(const idx of path){let x=idx%W,y=(idx/W)|0;g[idx]=M.conduit;}
+     tied.push({cells:cells.length,tie_pixels:path.length,at:[nearest%W,(nearest/W)|0]});
+   }
+ }
+ attachEngineeringRigging();
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
  for(let y=0;y<H;y++){let next=new Map(),base=y*W;for(let x=0;x<W;){let m=g[base+x],s=x;while(x<W&&g[base+x]===m)x++;if(!m)continue;let k=s+":"+(x-s)+":"+m,idx=prev.get(k);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(k,idx);}prev=next;}
@@ -215,7 +267,7 @@ function build(){
   let b=new Uint8Array(a.reduce((s,p)=>s+p.length,0)),i=0;for(let p of a){b.set(p,i);i+=p.length;}return b;}
  const crops=[["01-west-rover",0,318,555,522],["02-west-collector",540,115,405,635],["03-gantry-lab",860,234,475,455],["04-east-quarantine",1495,295,553,550],["05-thermal-return",350,813,1355,199]];
  const images=[["overview.png",png(0,0,W,H)],...crops.map(([name,x,y,w,h])=>[name+".png",png(x,y,w,h)])];
- return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info:null,r1_workcell_anchors:null,seed:SEED};
+ return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info:tied,r1_workcell_anchors:null,seed:SEED};
 }
 
 function sha256(input){let b=typeof input==="string"?Uint8Array.from(input,c=>c.charCodeAt(0)):input;
