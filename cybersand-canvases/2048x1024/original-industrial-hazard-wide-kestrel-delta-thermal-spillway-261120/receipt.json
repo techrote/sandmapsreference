@@ -1,0 +1,495 @@
+{
+  "concept": "Kestrel-Delta Thermal Spillway",
+  "creator_lane": "original/industrial-hazard-wide",
+  "seed": 202611203,
+  "world": [
+    2048,
+    1024
+  ],
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "grid_sha256": "ab2440341526b99c32881907ab2a8aa719eeeee589e2bf6c6b83e5529e5ff2f6",
+  "setup_sha256": "4bfa7f6e32c0ea711c4cd532fad634acdcac50d7723cbdb96de185f4ffec5ca2",
+  "setup_json_bytes": 45378,
+  "rectangles": 2402,
+  "work": 512872,
+  "histogram": {
+    "0": 1584280,
+    "3": 21146,
+    "8": 7519,
+    "58": 148930,
+    "62": 74070,
+    "68": 35742,
+    "70": 6722,
+    "76": 1051,
+    "77": 689,
+    "79": 444,
+    "100": 93132,
+    "101": 86016,
+    "104": 9408,
+    "117": 26873,
+    "120": 1130
+  },
+  "solid_connectivity": {
+    "total": 484207,
+    "grounded": 484207,
+    "detached": 0
+  },
+  "clearance": {
+    "19x15": {
+      "visited": 1206118,
+      "reachable": 15,
+      "centres": [
+        [
+          235,
+          449
+        ],
+        [
+          369,
+          571
+        ],
+        [
+          555,
+          475
+        ],
+        [
+          720,
+          562
+        ],
+        [
+          856,
+          516
+        ],
+        [
+          1042,
+          538
+        ],
+        [
+          1148,
+          570
+        ],
+        [
+          1072,
+          842
+        ],
+        [
+          1350,
+          472
+        ],
+        [
+          1482,
+          526
+        ],
+        [
+          1673,
+          437
+        ],
+        [
+          1802,
+          506
+        ],
+        [
+          1952,
+          578
+        ],
+        [
+          761,
+          833
+        ],
+        [
+          1524,
+          858
+        ]
+      ]
+    },
+    "23x19": {
+      "visited": 1164225,
+      "reachable": 15,
+      "centres": [
+        [
+          235,
+          449
+        ],
+        [
+          369,
+          571
+        ],
+        [
+          555,
+          475
+        ],
+        [
+          720,
+          562
+        ],
+        [
+          856,
+          516
+        ],
+        [
+          1042,
+          538
+        ],
+        [
+          1148,
+          570
+        ],
+        [
+          1072,
+          842
+        ],
+        [
+          1350,
+          472
+        ],
+        [
+          1482,
+          526
+        ],
+        [
+          1673,
+          437
+        ],
+        [
+          1802,
+          506
+        ],
+        [
+          1952,
+          578
+        ],
+        [
+          761,
+          833
+        ],
+        [
+          1524,
+          858
+        ]
+      ]
+    },
+    "31x27": {
+      "visited": 1085979,
+      "reachable": 15,
+      "centres": [
+        [
+          235,
+          449
+        ],
+        [
+          369,
+          571
+        ],
+        [
+          555,
+          475
+        ],
+        [
+          720,
+          562
+        ],
+        [
+          856,
+          516
+        ],
+        [
+          1042,
+          538
+        ],
+        [
+          1148,
+          570
+        ],
+        [
+          1072,
+          842
+        ],
+        [
+          1350,
+          472
+        ],
+        [
+          1482,
+          526
+        ],
+        [
+          1673,
+          437
+        ],
+        [
+          1802,
+          506
+        ],
+        [
+          1952,
+          578
+        ],
+        [
+          761,
+          833
+        ],
+        [
+          1524,
+          858
+        ]
+      ]
+    }
+  },
+  "alternate_route": {
+    "box": [
+      1192,
+      420,
+      40,
+      140
+    ],
+    "reachable": 15,
+    "visited": 1074537,
+    "detours": [
+      {
+        "name": "Landing inspection",
+        "baseline": 0,
+        "blocked": 0,
+        "extra": 0
+      },
+      {
+        "name": "Drum shear observatory",
+        "baseline": 256,
+        "blocked": 256,
+        "extra": 0
+      },
+      {
+        "name": "Smelter upper walk",
+        "baseline": 1328,
+        "blocked": 1328,
+        "extra": 0
+      },
+      {
+        "name": "Lava-isolation desk",
+        "baseline": 1034,
+        "blocked": 1034,
+        "extra": 0
+      },
+      {
+        "name": "West throat gate",
+        "baseline": 956,
+        "blocked": 956,
+        "extra": 0
+      },
+      {
+        "name": "Cascade throat",
+        "baseline": 1656,
+        "blocked": 1856,
+        "extra": 200
+      },
+      {
+        "name": "East throat gate",
+        "baseline": 1582,
+        "blocked": 1718,
+        "extra": 136
+      },
+      {
+        "name": "Slag recovery",
+        "baseline": 1930,
+        "blocked": 2060,
+        "extra": 130
+      },
+      {
+        "name": "Cryo trestle",
+        "baseline": 1618,
+        "blocked": 1618,
+        "extra": 0
+      },
+      {
+        "name": "Coolant survey",
+        "baseline": 1804,
+        "blocked": 1804,
+        "extra": 0
+      },
+      {
+        "name": "Scrubber upper approach",
+        "baseline": 1906,
+        "blocked": 1906,
+        "extra": 0
+      },
+      {
+        "name": "Condensing gallery",
+        "baseline": 2104,
+        "blocked": 2104,
+        "extra": 0
+      },
+      {
+        "name": "Distal safety exit",
+        "baseline": 2438,
+        "blocked": 2438,
+        "extra": 0
+      },
+      {
+        "name": "Smelter lower return",
+        "baseline": 1264,
+        "blocked": 1264,
+        "extra": 0
+      },
+      {
+        "name": "Cooling lower return",
+        "baseline": 2350,
+        "blocked": 2350,
+        "extra": 0
+      }
+    ]
+  },
+  "sites": [
+    [
+      "Landing inspection",
+      235,
+      449
+    ],
+    [
+      "Drum shear observatory",
+      369,
+      571
+    ],
+    [
+      "Smelter upper walk",
+      555,
+      475
+    ],
+    [
+      "Lava-isolation desk",
+      720,
+      562
+    ],
+    [
+      "West throat gate",
+      856,
+      516
+    ],
+    [
+      "Cascade throat",
+      1042,
+      538
+    ],
+    [
+      "East throat gate",
+      1148,
+      570
+    ],
+    [
+      "Slag recovery",
+      1072,
+      842
+    ],
+    [
+      "Cryo trestle",
+      1350,
+      472
+    ],
+    [
+      "Coolant survey",
+      1482,
+      526
+    ],
+    [
+      "Scrubber upper approach",
+      1673,
+      437
+    ],
+    [
+      "Condensing gallery",
+      1802,
+      506
+    ],
+    [
+      "Distal safety exit",
+      1952,
+      578
+    ],
+    [
+      "Smelter lower return",
+      761,
+      833
+    ],
+    [
+      "Cooling lower return",
+      1524,
+      858
+    ]
+  ],
+  "images": {
+    "overview.png": {
+      "bytes": 30503,
+      "sha256": "24ce546db75157cf0cc8dbfdea5fafcd755d725c33feadb786ddfd0ea2119363",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-drum-shear.png": {
+      "bytes": 7562,
+      "sha256": "437dc3b1ea01379f977d512abb2a706de489d7d9f05132fe3ddf1007955bf949",
+      "crop": [
+        40,
+        265,
+        395,
+        565
+      ]
+    },
+    "02-smelter-cassettes.png": {
+      "bytes": 6355,
+      "sha256": "259fe495c9afab8714c4365ba9371964a326aa850c88a64868502ac36517c422",
+      "crop": [
+        418,
+        285,
+        425,
+        620
+      ]
+    },
+    "03-spillway-throat.png": {
+      "bytes": 7946,
+      "sha256": "13ada35db8be336318045a694c9259b9a134bd33430affe343adedf649de2296",
+      "crop": [
+        824,
+        230,
+        430,
+        660
+      ]
+    },
+    "04-cryo-recovery.png": {
+      "bytes": 6314,
+      "sha256": "c100167350d6999d14147dde24326d75cd55ab9c1b561fdc8ef773f631c05b70",
+      "crop": [
+        1248,
+        315,
+        400,
+        590
+      ]
+    },
+    "05-plume-scrubber.png": {
+      "bytes": 7197,
+      "sha256": "0f77b6b45f023619aa241155ad484629c9830983ff46cb5523c9fe4aca564219",
+      "crop": [
+        1630,
+        205,
+        410,
+        690
+      ]
+    },
+    "06-lower-culvert.png": {
+      "bytes": 3623,
+      "sha256": "1404e8d3f984f8572dff3eac24d30efbd29a4c284da77e880a4e66a726bf288b",
+      "crop": [
+        808,
+        710,
+        515,
+        295
+      ]
+    }
+  },
+  "flags": {
+    "native": "NATIVE-UNTESTED",
+    "fluid": "initial-four-neighbor-sealed-only",
+    "bridge": "source 32768; installed possibly 4096 UNVERIFIED",
+    "material": "only native inert solid IDs plus sealed 3 water and 8 lava"
+  }
+}
