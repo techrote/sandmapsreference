@@ -128,6 +128,17 @@ beam(1210,685,1204,742,13);beam(1471,692,1472,742,12);
 steel(750,675,265,21);steel(756,687,22,64);
 steel(986,687,19,67);
 /* The bottom return uses three intentional alternate exits through ribs. */
+/* Bounded functional-art P1: physically join the West held receiving
+   inventory, lower compression die and inhabited repair rooms to the rooted
+   basalt massif, preserving voids and all three actor navigation envelopes. */
+steel(715,657,18,345);
+steel(1239,178,18,264);steel(1422,177,19,265);
+steel(97,606,91,15);
+steel(90,616,100,16);
+steel(221,179,18,212);steel(185,391,50,13);
+for(let x of [230,330,430])steel(x,587,12,28);
+steel(1250,543,15,139);steel(1455,544,17,144);
+steel(798,659,19,343);
 /* Exact sites must be in air, and actual named site connection checked after
    all carving; these pockets alone do not establish reachable passages. */
 for(const [x,y] of Object.values(sites))V(x-28,y-26,57,53);
