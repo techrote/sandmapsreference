@@ -1,0 +1,290 @@
+{
+  "concept": "Harrow Mere - Basalt Spore-Dam Pneumatic Harvest",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 2543904,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
+  "material_histogram": {
+    "49": 13667,
+    "62": 54197,
+    "63": 13384,
+    "66": 7733,
+    "68": 95327,
+    "77": 1097,
+    "79": 815,
+    "100": 197152,
+    "101": 12901,
+    "120": 6060,
+    "121": 7199,
+    "129": 11115,
+    "130": 10438,
+    "131": 15023
+  },
+  "filled_material_cells": 446108,
+  "grounded_cells": 446108,
+  "ungrounded_cells": 0,
+  "grounded_components": 1,
+  "all_solid_components": 1,
+  "physical_fixture_ties": {
+    "ties": 63,
+    "longest": 87
+  },
+  "nonoverlapping_ordered_rectangles": 4513,
+  "rectangle_work": 446108,
+  "setup_bytes": 84848,
+  "material_plane_sha256": "99dc7011a47b103128b5ae341e8465d0bb6d1fb9e8897f469fe6e388c66c96f8",
+  "setup_sha256": "e79dfd178f53d1af1b59a8ec5ba32a39aee09d7ab8e227d2d742f29d9ca8eff1",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 54491,
+      "sha256": "8d26cb0af745d1c62e6f02a48d8174e7985507b7196004d94f5ae119fcb91b79"
+    },
+    {
+      "name": "01-west-sporeport.png",
+      "bytes": 8576,
+      "sha256": "66fe90cfb447ab16ce8d8c6163a7c0947ec5cb34b77222859601efe06423ea5b"
+    },
+    {
+      "name": "02-pressure-dam.png",
+      "bytes": 17998,
+      "sha256": "2dc906cb2eecf82675df6e9342cae22f97020faf7e6ac5ac48ad089ddc1d8f58"
+    },
+    {
+      "name": "03-separator-rotor.png",
+      "bytes": 17854,
+      "sha256": "57a5448fc4f4fe22e5f8ed35ddb002ca5c9f6e7b28bd94185d8245daac965112"
+    },
+    {
+      "name": "04-east-isolation.png",
+      "bytes": 8549,
+      "sha256": "2710f6797cdb81a1b0f866ed5db41d812be8a3ef2d318bc5106ff6d7ae9842e4"
+    },
+    {
+      "name": "05-geological-return.png",
+      "bytes": 7956,
+      "sha256": "5bb80c0a8eaff80ac6cd9a1d14e470ea53c7a9fa28d891dca382a438752d9b36"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1422562,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1375050,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1279086,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      997,
+      367,
+      1062,
+      428
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only exact Upper baffle catwalk; all other named destinations remain recoverable",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1262993,
+        "passed": 25,
+        "total": 26,
+        "bad": [
+          [
+            "Upper baffle catwalk",
+            [
+              1031,
+              395
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "West arrivals": [
+      254,
+      461
+    ],
+    "Spore cold intake": [
+      178,
+      615
+    ],
+    "Machinist exchange": [
+      285,
+      751
+    ],
+    "West ridge lookdown": [
+      426,
+      370
+    ],
+    "West rescue hatch": [
+      427,
+      859
+    ],
+    "Dam intake pump": [
+      749,
+      739
+    ],
+    "West baffle controls": [
+      814,
+      523
+    ],
+    "Upper sky overflight": [
+      1024,
+      157
+    ],
+    "Upper baffle catwalk": [
+      1031,
+      395
+    ],
+    "Rotor inspection": [
+      1103,
+      563
+    ],
+    "West culture assay": [
+      874,
+      605
+    ],
+    "East xenology analyzer": [
+      1161,
+      617
+    ],
+    "East duct loft": [
+      1395,
+      356
+    ],
+    "East service deck": [
+      1410,
+      735
+    ],
+    "Basin low rescue": [
+      1055,
+      825
+    ],
+    "Deep silt-free lab": [
+      645,
+      922
+    ],
+    "Deep sample centrifuge": [
+      940,
+      919
+    ],
+    "Deep mineral archive": [
+      1270,
+      921
+    ],
+    "Deep return east": [
+      1491,
+      920
+    ],
+    "East rescue hatch": [
+      1610,
+      862
+    ],
+    "Eastern decon intake": [
+      1763,
+      472
+    ],
+    "Quarantine cleanroom": [
+      1903,
+      457
+    ],
+    "Biofilter assay": [
+      1769,
+      620
+    ],
+    "East rover depot": [
+      1888,
+      759
+    ],
+    "Eastern ridge lookout": [
+      1860,
+      351
+    ],
+    "Vent spill survey": [
+      1004,
+      759
+    ]
+  },
+  "crops": [
+    [
+      "01-west-sporeport",
+      0,
+      315,
+      555,
+      602
+    ],
+    [
+      "02-pressure-dam",
+      520,
+      235,
+      680,
+      670
+    ],
+    [
+      "03-separator-rotor",
+      805,
+      335,
+      635,
+      525
+    ],
+    [
+      "04-east-isolation",
+      1510,
+      330,
+      538,
+      590
+    ],
+    [
+      "05-geological-return",
+      445,
+      817,
+      1225,
+      207
+    ]
+  ],
+  "source_art": "None; wholly new original invented sci-fi frontier",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"
+}
