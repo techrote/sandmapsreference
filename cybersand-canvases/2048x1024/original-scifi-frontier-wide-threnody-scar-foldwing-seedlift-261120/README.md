@@ -16,7 +16,7 @@ A temporary physical material wall [1002,431,1059,484] denies only 'Lift junctio
 
 ## Functional R2 material repair
 Reworked 25499 actual final material IDs (18145 additions, 0 erasures, 7354 replacements), following independently raised Art/Shepherd P1. West nursery now has a three-position custody feeder, enclosed specimen cassettes and an individual assay pipette. The centre lift has track, gripping jaws, enclosed seed payload, lowered catch and separate east receiving tray, without encroaching on the original full-envelope lower transfer. East quarantine gains a dual sterile airlock while freight handling gains overhead cargo machinery rather than repeated small box tables. Four grounded understrata processes read separately as core extraction, driven membrane rotor, radiator manifold and rover service hoist.
-These are static inert material assemblies, not functional animated devices; do not infer mechanical behaviour from their drawn forms. Seven local short structural cable ties keep new details grounded without broadening or closing the primary flight void.
+These are static inert material assemblies, not functional animated devices; do not infer mechanical behaviour from their drawn forms. Five local short structural cable ties keep new details grounded without broadening or closing the primary flight void.
 
 ## Authentic material-index evidence
 All images are 8-bit indexed PNGs with indices exactly equal to saved material IDs; overview is 2048x1024 and five district crops are genuine 1:1 subsets, not rescaled or image-generated. CRC, zlib Adler, full decode and 3446377 individual image/grid material-index comparisons passed in creator verification.
