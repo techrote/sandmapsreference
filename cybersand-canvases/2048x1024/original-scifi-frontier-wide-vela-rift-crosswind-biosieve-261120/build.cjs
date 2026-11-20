@@ -24,7 +24,7 @@ const build=function build(){
  R(228,609,150,12,M.chrome);R(252,581,69,27,M.black);R(274,571,12,10,M.amber);
  for(let x of [333,354]){R(x,568,13,39,M.blue);R(x+3,580,7,14,M.white);}
  R(335,603,11,10,M.blue);R(355,603,11,10,M.blue);R(235,618,12,25,M.steel);R(350,618,12,25,M.steel);
- R(231,754,146,13,M.titanium);L(264,754,317,709,11,M.chrome);R(303,719,57,14,M.black);
+ R(231,754,146,13,M.titanium);L(301,753,329,730,9,M.chrome);R(303,719,57,14,M.black);
  R(240,766,12,27,M.steel);R(355,765,12,27,M.steel);
  // East sterile isolation, classifier and export crane; unlike west machinery.
  R(1697,469,145,12,M.steel);R(1710,422,12,46,M.iron);R(1730,425,94,31,M.black);
@@ -32,7 +32,7 @@ const build=function build(){
  R(1706,479,12,22,M.iron);R(1824,480,12,22,M.iron);
  R(1696,608,150,13,M.ceramic);for(let x of [1715,1744,1773,1802]){R(x,576,13,31,M.blue);R(x+3,585,7,15,M.white);}
  R(1708,619,12,23,M.steel);R(1822,620,12,23,M.steel);
- R(1696,755,155,12,M.iron);L(1747,754,1795,707,12,M.chrome);R(1779,707,55,9,M.amber);
+ R(1696,755,155,12,M.iron);L(1775,754,1800,732,9,M.chrome);R(1779,707,55,9,M.amber);
  R(1704,766,12,26,M.steel);R(1833,766,12,26,M.steel);
  // Giant non-repeating sails rooted in opposite cliff walls; 2D silhouette, no perspective.
  L(409,364,626,215,26,M.steel);L(626,215,835,467,27,M.titanium);
@@ -56,6 +56,8 @@ const build=function build(){
  R(1203,909,129,13,M.steel);R(1224,885,29,23,M.black);L(1264,906,1315,859,11,M.chrome);R(1302,853,24,11,M.white);
  R(1406,907,105,12,M.iron);L(1432,906,1472,866,9,M.chrome);R(1457,863,35,9,M.titanium);
  for(let x of [591,791,1003,1208,1412])R(x,912,11,49,M.steel);
+ // Two deliberately engineered access gaps in left grounded sieve and tether.
+ R(721,338,83,82,0);R(850,556,65,66,0);
  // Physical gameplay graph: all named checkpoints are literal unmodified centre positions.
  const sites={
   "West rover spawn":[151,435],"West nursery":[390,435],
