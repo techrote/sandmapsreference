@@ -1,0 +1,328 @@
+{
+  "concept": "Bracken Rift — Braided Dispatch Ravine",
+  "original": true,
+  "seed": 2026112027,
+  "engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "d7a47d60721598a16589daf177a6ff4401b84b43",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Arrival Mooring",
+      "Dock Manifest",
+      "Counterweight Flight",
+      "West Bridge Fork",
+      "East Bridge Fork",
+      "Switching Loft",
+      "Freight Recorder",
+      "Dispatch Gate"
+    ],
+    "upper": [
+      "Upper Watch House",
+      "Upper Crane Apex",
+      "Broken Span Return",
+      "East Tower Gallery"
+    ],
+    "braided": [
+      "North Suspended Deck",
+      "South Braided Bridge",
+      "Rift Isle Gallery",
+      "Main Siding"
+    ],
+    "lower": [
+      "Underwest Bilge",
+      "Rift Drain",
+      "Below Isle Valve",
+      "Under East Drive",
+      "Customs Retained Bay"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Arrival Mooring": [
+      154,
+      442
+    ],
+    "Dock Manifest": [
+      460,
+      442
+    ],
+    "Berth Cabin": [
+      305,
+      704
+    ],
+    "Counterweight Flight": [
+      611,
+      442
+    ],
+    "West Bridge Fork": [
+      745,
+      442
+    ],
+    "North Suspended Deck": [
+      965,
+      348
+    ],
+    "Rift Isle Gallery": [
+      1080,
+      700
+    ],
+    "South Braided Bridge": [
+      1210,
+      621
+    ],
+    "East Bridge Fork": [
+      1400,
+      442
+    ],
+    "Switching Loft": [
+      1545,
+      442
+    ],
+    "Freight Recorder": [
+      1784,
+      442
+    ],
+    "Dispatch Gate": [
+      1880,
+      442
+    ],
+    "Upper Watch House": [
+      454,
+      276
+    ],
+    "Upper Crane Apex": [
+      665,
+      276
+    ],
+    "Broken Span Return": [
+      1120,
+      277
+    ],
+    "East Tower Gallery": [
+      1640,
+      277
+    ],
+    "West Counterweight Drive": [
+      596,
+      750
+    ],
+    "Main Siding": [
+      1510,
+      676
+    ],
+    "Scales": [
+      1828,
+      654
+    ],
+    "Underwest Bilge": [
+      151,
+      906
+    ],
+    "Rift Drain": [
+      962,
+      906
+    ],
+    "Below Isle Valve": [
+      1160,
+      906
+    ],
+    "Under East Drive": [
+      1530,
+      906
+    ],
+    "Customs Retained Bay": [
+      1840,
+      906
+    ]
+  },
+  "material_histogram": {
+    "0": 1570739,
+    "58": 163084,
+    "62": 151083,
+    "100": 212246
+  },
+  "stable_occupied_cells": 526413,
+  "grounded": 526413,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 0,
+  "grounding_steel_ties": 37,
+  "rectangles": 3615,
+  "rectangle_work": 526413,
+  "setup_bytes": 67128,
+  "material_plane_sha256": "c95c5346faa063fa0db1dc5650f17e08209d390a86b0d2a172e0c4e74661505d",
+  "setup_sha256": "bc9db27cc7b6b884600e3aafc5fb10a3d10988b07c14f9ba17424f0f991a70f5",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 720897,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 683468,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 605830,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      245,
+      392,
+      107,
+      103
+    ],
+    "from": "Arrival Mooring",
+    "to": "Dock Manifest",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 24,
+    "unreachable": [],
+    "distance_before_after": [
+      306,
+      434
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "47e9b102100a74d3efdc6c14b8906e4853db1ec67cb484d564e0b1fab552d254",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-freighter-drylock",
+      "rect": [
+        130,
+        520,
+        390,
+        314
+      ],
+      "bytes": 31271,
+      "sha256": "1f25703945eeb9762d56494dda8cca62ad503d2c917db2667cda3385be4a34d1",
+      "pixel_parity": 122460
+    },
+    {
+      "name": "02-counterweight-hoist",
+      "rect": [
+        510,
+        344,
+        238,
+        488
+      ],
+      "bytes": 29953,
+      "sha256": "a04ec0e6edcf879b5dacc7fab829eb6b84c3254966a93e6767470b6a8d84f7ad",
+      "pixel_parity": 116144
+    },
+    {
+      "name": "03-braided-upper-crossing",
+      "rect": [
+        728,
+        366,
+        709,
+        244
+      ],
+      "bytes": 43861,
+      "sha256": "2b6d2c2a5d8400d562ce029c37963e90155d9cb18990b5bd8a7473f35ce257ca",
+      "pixel_parity": 172996
+    },
+    {
+      "name": "04-lower-failure-span",
+      "rect": [
+        720,
+        605,
+        731,
+        231
+      ],
+      "bytes": 42689,
+      "sha256": "f1c711e88f724fc8c44ecd503554685addae90b270e3acea573ac756848c8d60",
+      "pixel_parity": 168861
+    },
+    {
+      "name": "05-east-classifier-customs",
+      "rect": [
+        1468,
+        506,
+        502,
+        328
+      ],
+      "bytes": 41841,
+      "sha256": "5e72a44c6c13640025763f6eeda1bad3af787872c57b5b59bcb503a0137bfbe1",
+      "pixel_parity": 164656
+    },
+    {
+      "name": "06-rift-recovery-gallery",
+      "rect": [
+        104,
+        847,
+        1824,
+        127
+      ],
+      "bytes": 58224,
+      "sha256": "e68b0c124976ba902e0cac7c26b8d94ad5b898c06561749c730ab9ff3cf090af",
+      "pixel_parity": 231648
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "accepted_main_max_rectangles": 32768,
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+}
