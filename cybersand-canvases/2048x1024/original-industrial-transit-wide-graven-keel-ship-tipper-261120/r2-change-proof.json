@@ -1,0 +1,151 @@
+{
+  "revision": "R2",
+  "parent_head": "7bed4ba0ac3100d85f51af6fed946452cf2fbaf4",
+  "source_engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "changes": {
+    "total": 50188,
+    "added": 33602,
+    "removed": 3509,
+    "rematerialized": 13077
+  },
+  "zones": [
+    {
+      "name": "tidal berth",
+      "bounds": [
+        112,
+        440,
+        354,
+        399
+      ],
+      "changed": 6769
+    },
+    {
+      "name": "tipper",
+      "bounds": [
+        490,
+        128,
+        431,
+        677
+      ],
+      "changed": 7388
+    },
+    {
+      "name": "crossdock",
+      "bounds": [
+        925,
+        144,
+        458,
+        642
+      ],
+      "changed": 2791
+    },
+    {
+      "name": "sorter",
+      "bounds": [
+        1370,
+        450,
+        330,
+        333
+      ],
+      "changed": 4777
+    },
+    {
+      "name": "customs",
+      "bounds": [
+        1700,
+        415,
+        348,
+        381
+      ],
+      "changed": 6250
+    },
+    {
+      "name": "underworks",
+      "bounds": [
+        920,
+        774,
+        547,
+        250
+      ],
+      "changed": 4390
+    }
+  ],
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_static_result": "PASS",
+  "source_final_grid_sha256": "7d3de7bb24abcf022723617e4764cf4c54a6ab570cf9d3554a07c155d4df856c",
+  "setup_sha256": "4c6491b58b32efe47203cda2a5b89b29576680102beb0d3708a449d157f3d7f1",
+  "rectangles": 6314,
+  "setup_bytes": 114980,
+  "zero_detached": true,
+  "sites": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reached": 22,
+      "total": 22
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reached": 22,
+      "total": 22
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reached": 22,
+      "total": 22
+    }
+  ],
+  "obstruction_31x27_distance": [
+    241,
+    263
+  ],
+  "png_source_parity": [
+    {
+      "name": "overview",
+      "pixels": 2097152,
+      "sha256": "f3b756bc3f2a26c8c23c82117d319f21b54e54e63ba57dd05fd8c774b87ca0a6"
+    },
+    {
+      "name": "01-tidal-berth",
+      "pixels": 141246,
+      "sha256": "3ea75134a44d5d9000d87a05c2e330e56ee9c51ade5c53bc67891c5a1a736b16"
+    },
+    {
+      "name": "02-tipped-hull",
+      "pixels": 291787,
+      "sha256": "1e0e1fd6366143c23b63ffab47657710cad534d6ba96726822667c1227baefdd"
+    },
+    {
+      "name": "03-crossdock",
+      "pixels": 294036,
+      "sha256": "588a75d892e19a4aacc6af36a816f5b8d72dc712040ffbe7473e269bb70f64a1"
+    },
+    {
+      "name": "04-rail-sorter",
+      "pixels": 109890,
+      "sha256": "ef023adf700075399b7d7b93729a36d906dbf35f47b5794f41388c1ae5dac0b4"
+    },
+    {
+      "name": "05-customs",
+      "pixels": 132588,
+      "sha256": "f225747871cc93592cb2e029f39e1ee59741dbb5adcdd8953e195c4f40dd99d5"
+    },
+    {
+      "name": "06-underworks",
+      "pixels": 136750,
+      "sha256": "9c4a7e617f0b70527557578f54cee372be63f8d38f519a05af95a80863af9fe9"
+    }
+  ],
+  "native": "NATIVE-UNTESTED"
+}
