@@ -1,0 +1,280 @@
+{
+  "original": true,
+  "reference_art": null,
+  "design": "The Umbra Siphon \u2014 Twin-Horn Air-Reclaim City",
+  "seed": 6189316,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "engine_material_blob_sha": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "engine_setup_blob_sha": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "size": [
+    2048,
+    1024
+  ],
+  "midge_hull": [
+    4,
+    3
+  ],
+  "material_laws": "All nonempty IDs are native accepted nonmoving inert Solid / RuleKernel::None; no fluids/reactive/granular cells.",
+  "histogram": {
+    "0": 1167063,
+    "58": 111150,
+    "62": 87320,
+    "64": 9548,
+    "65": 13812,
+    "69": 631,
+    "72": 395,
+    "74": 386,
+    "76": 2676,
+    "77": 6612,
+    "78": 10386,
+    "79": 1368,
+    "80": 17894,
+    "98": 7588,
+    "100": 304435,
+    "101": 76590,
+    "111": 13488,
+    "113": 48361,
+    "114": 27766,
+    "119": 15990,
+    "121": 4579,
+    "128": 49230,
+    "130": 83256,
+    "131": 36628
+  },
+  "rectangles": 10885,
+  "painted_work": 930089,
+  "json_utf8_bytes": 206434,
+  "grid_sha256": "5f1c0dd0463e05633ce318705d03d1b7f494ff050b02bbeb228258dfd9a850bf",
+  "setup_sha256": "c07e3f7d7144c255fc64f8a16423ed69ab2e7d093248ecfe4b077b224a899595",
+  "pruned_detached_cells": 45138,
+  "pruned_detached_components": 42,
+  "grounded_final_solids": 930089,
+  "detached_final_solids": 0,
+  "exact_sites": {
+    "Lantern Gate arrival": [
+      147,
+      460
+    ],
+    "Lantern Gate sky counter": [
+      268,
+      276
+    ],
+    "Lantern Gate lower return": [
+      284,
+      745
+    ],
+    "First Siphon feed deck": [
+      615,
+      465
+    ],
+    "First Siphon upper vent": [
+      738,
+      290
+    ],
+    "First Siphon condensate access": [
+      750,
+      748
+    ],
+    "Counterweight inspection": [
+      1084,
+      286
+    ],
+    "Central breath passage": [
+      1063,
+      472
+    ],
+    "Midspan lower transfer": [
+      1129,
+      749
+    ],
+    "Mirror Adsorber canopy": [
+      1445,
+      287
+    ],
+    "Mirror Adsorber membrane service": [
+      1418,
+      458
+    ],
+    "Mirror Adsorber lower loop": [
+      1513,
+      744
+    ],
+    "Silent Border scan gallery": [
+      1798,
+      295
+    ],
+    "Silent Border entry clearing": [
+      1800,
+      468
+    ],
+    "Silent Border service escape": [
+      1849,
+      738
+    ],
+    "East recovery beacon": [
+      1935,
+      470
+    ]
+  },
+  "clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "free_centres": 906777,
+      "spawn_reachable_centres": 596727,
+      "reached": 16,
+      "expected": 16,
+      "missing": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "free_centres": 854120,
+      "spawn_reachable_centres": 560083,
+      "reached": 16,
+      "expected": 16,
+      "missing": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "free_centres": 754961,
+      "spawn_reachable_centres": 490784,
+      "reached": 16,
+      "expected": 16,
+      "missing": []
+    }
+  ],
+  "alternate_route": {
+    "sealed_half_open_box": [
+      1017,
+      414,
+      1158,
+      533
+    ],
+    "excluded_site": "Central breath passage",
+    "checks": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "free_centres": 886682,
+        "spawn_reachable_centres": 576632,
+        "reached": 15,
+        "expected": 15,
+        "missing": []
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "free_centres": 833159,
+        "spawn_reachable_centres": 539122,
+        "reached": 15,
+        "expected": 15,
+        "missing": []
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "free_centres": 732425,
+        "spawn_reachable_centres": 468092,
+        "reached": 15,
+        "expected": 15,
+        "missing": []
+      }
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 28557,
+      "sha256": "eed2a5f5c4d983eaf81fe74793df9b2b7aab666cd56feeb8c9475353ae140a27",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "01-lantern-gate",
+      "rect": [
+        88,
+        172,
+        380,
+        469
+      ],
+      "bytes": 3696,
+      "sha256": "ec3c322505b0ae9634771971cdb79b2d16ab619d2139ce74f2f17e5af7702d56",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "02-first-siphon",
+      "rect": [
+        452,
+        115,
+        445,
+        584
+      ],
+      "bytes": 5674,
+      "sha256": "c2ae5b6396062d325d00e9fa4f70d2fe75476a631829d92fc37286aa241d823f",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "03-zero-pressure",
+      "rect": [
+        883,
+        113,
+        413,
+        591
+      ],
+      "bytes": 4301,
+      "sha256": "172f57bf39fbcbdf6e10de7a241af7204db72680bfc56208ed59b590be76f79e",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "04-mirror-adsorber",
+      "rect": [
+        1260,
+        140,
+        439,
+        564
+      ],
+      "bytes": 4342,
+      "sha256": "13d2697939705b3d00c60ed1925d196033b6631495635e3fad287dd47e7f88b7",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "05-silent-border",
+      "rect": [
+        1655,
+        174,
+        364,
+        471
+      ],
+      "bytes": 3148,
+      "sha256": "1f060ad4c659812f5401282e7711df7e937d2af0a8a7052fe26eff2a5029ce06",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    }
+  ],
+  "native": "NATIVE-UNTESTED",
+  "installed_bridge_rectangle_capacity": "UNVERIFIED; legacy fallback 4096 possible"
+}
