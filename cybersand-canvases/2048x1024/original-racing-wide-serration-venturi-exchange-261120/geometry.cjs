@@ -33,6 +33,45 @@ for(let x of [335,508,822,1106,1308,1706,1907]){box(x,72,13,47,M.Z);box(x+13,82,
 box(861,375,74,94,0);box(1501,374,79,97,0);box(1804,217,83,59,0);
 for(let [x,y,w,h] of [[147,105,188,130],[693,99,151,132],[1336,105,130,130],[1767,101,147,132]])box(x+37,y+30,w-74,h-24,0);
 for(let [x,y,w,h] of [[355,813,188,126],[960,813,174,126],[1239,812,195,127],[1635,813,183,126]])box(x+w/2-38,y-58,76,112,0);
+
+// R2 P1 creator repair: materially differentiated load-bearing machinery and race-decision portals.
+function r2beam(x,y,dx,dy,w,m){beam(x,y,x+dx,y+dy,w,m);}
+// First operator pressure lock: roof-chamber sidewall-mounted manifold/readout.
+box(157,150,45,12,M.T);box(184,137,16,13,M.Q);box(164,164,20,29,M.C);box(177,191,47,9,M.Z);
+box(290,156,39,12,M.T);box(293,139,15,17,M.Z);box(313,169,10,32,M.I);
+// Filter station: two distinct louver actuator and return telemetry workfaces.
+box(699,154,43,12,M.C);box(709,142,24,12,M.Z);box(717,166,10,32,M.I);
+box(799,151,39,12,M.T);box(807,131,22,20,M.Q);box(814,164,11,38,M.I);
+// Catalyst lab: sampled-bell and split gauge with the middle clear.
+box(1344,154,33,12,M.I);box(1348,136,21,18,M.Q);box(1354,166,13,36,M.T);
+box(1420,152,42,11,M.T);box(1427,134,27,18,M.Z);box(1440,164,12,40,M.I);
+// East dispatch inlet/return instrumentation on chamber walls.
+box(1775,158,44,11,M.C);box(1786,138,25,20,M.Q);box(1795,169,11,35,M.T);
+box(1867,153,41,11,M.T);box(1882,132,19,21,M.Z);box(1891,165,13,35,M.I);
+// Grounded workshop machinery: west pressure pump, central calibration stator, catalyst retort.
+box(384,897,48,27,M.C);box(392,870,23,27,M.I);box(401,862,8,8,M.Q);
+box(485,891,35,34,M.T);box(492,875,20,16,M.Z);box(499,867,8,8,M.Q);
+// NOTE: keep calibration mouth x1009..1085 clear: attaching a left plinth
+// resurrects a detached legacy fragment across (1035,873). Right stator only.
+box(1080,888,36,37,M.I);box(1088,870,21,18,M.Z);box(1096,863,7,7,M.Q);
+box(1264,892,50,33,M.T);box(1273,870,33,22,M.I);box(1283,856,14,14,M.Q);
+box(1371,895,40,30,M.C);box(1379,873,27,22,M.Z);box(1387,865,10,8,M.Q);
+// First ascent: distinctive weighted amber jaw rooted to upper basalt.
+r2beam(845,74,0,233,18,M.C);r2beam(845,307,34,32,14,M.Z);r2beam(845,307,32,-29,13,M.Z);
+box(834,286,27,13,M.Q);box(855,314,28,13,M.T);
+// Venturi exit/bypass: white split jaw; intentionally higher than Midge corridor.
+r2beam(1210,73,7,236,18,M.T);r2beam(1217,309,40,-28,14,M.Q);
+r2beam(1217,309,40,31,14,M.Q);box(1205,288,26,14,M.Z);
+// Outbound catalyst: fork marker signaling bypass vs descent.
+r2beam(1495,74,-13,214,17,M.C);r2beam(1482,288,-36,34,16,M.Z);
+r2beam(1482,288,34,34,16,M.I);box(1470,275,26,14,M.Q);
+// East paired entry/exit: opposed jaw profiles both rooted into right world wall.
+box(1976,461,48,18,M.Z);r2beam(1977,462,-28,-27,13,M.Z);r2beam(1977,462,-28,27,13,M.Z);
+box(1976,693,48,18,M.Q);r2beam(1976,701,-30,-28,13,M.Q);r2beam(1976,701,-30,28,13,M.Q);
+// West lap finish: inbound lap-closing pair connected to western boundary.
+box(24,422,82,15,M.Q);r2beam(107,429,20,-19,12,M.Q);
+box(24,481,88,14,M.Z);r2beam(111,487,18,19,12,M.Z);
+
 let seen=new Uint8Array(N),q=new Int32Array(N),a=0,b=0;function push(i){if(g[i]&&!seen[i]){seen[i]=1;q[b++]=i;}}for(let x=0;x<W;x++){push(x);push((H-1)*W+x);}for(let y=0;y<H;y++){push(y*W);push(y*W+W-1);}while(a<b){let i=q[a++],x=i%W,y=(i-x)/W;if(x)push(i-1);if(x<W-1)push(i+1);if(y)push(i-W);if(y<H-1)push(i+W);}let discarded=0;for(let i=0;i<N;i++)if(g[i]&&!seen[i]){g[i]=0;discarded++;}return{g,grounded:b,discarded};
 }
 function encodeRects(g){let rects=[],last=new Map();for(let y=0;y<H;y++){let cur=new Map();for(let x=0;x<W;){let v=g[y*W+x],x0=x++;while(x<W&&g[y*W+x]===v)x++;if(!v)continue;let key=x0+":"+(x-x0)+":"+v,r=last.get(key);if(r)r[3]++;else{r=[x0,y,x-x0,1,v];rects.push(r);}cur.set(key,r);}last=cur;}return {edits:rects,visits:rects.reduce((s,r)=>s+r[2]*r[3],0)};}
