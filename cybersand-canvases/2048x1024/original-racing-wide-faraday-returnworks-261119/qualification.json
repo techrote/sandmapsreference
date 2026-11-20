@@ -7,31 +7,31 @@
     1024
   ],
   "material_cells": 2097152,
-  "rectangles": 9518,
-  "setup_json_bytes": 176167,
-  "cell_visits": 742677,
+  "rectangles": 10438,
+  "setup_json_bytes": 193915,
+  "cell_visits": 758340,
   "setup_source_limits": {
     "rectangles": 32768,
     "bytes": 1048576,
     "work": 32000000
   },
   "histogram": {
-    "0": 1354475,
+    "0": 1338812,
     "3": 8976,
-    "49": 205432,
-    "58": 32514,
-    "62": 87226,
-    "100": 273513,
-    "101": 84772,
-    "113": 15788,
-    "117": 20650,
-    "122": 6750,
-    "123": 4948,
-    "128": 2108
+    "49": 205199,
+    "58": 30901,
+    "62": 93618,
+    "100": 259487,
+    "101": 80927,
+    "113": 20941,
+    "117": 33338,
+    "122": 12046,
+    "123": 9081,
+    "128": 3826
   },
   "exact_replay_mismatches": 0,
   "overlap_writes": 0,
-  "isolated_solids_excavated": 689,
+  "isolated_solids_excavated": 953,
   "remaining_detached": 0,
   "sealed_water_air_edges": 0,
   "material_laws": "IDs 49,58,62,100,101,113,117,120,122,123,128 are inert immovable Solid/RuleKernel::None; ID 3 is confined movable water",
@@ -128,17 +128,17 @@
     "19x15": {
       "reached": 15,
       "missing": [],
-      "free_centres": 1214946
+      "free_centres": 1194236
     },
     "23x19": {
       "reached": 15,
       "missing": [],
-      "free_centres": 1182816
+      "free_centres": 1161801
     },
     "31x27": {
       "reached": 15,
       "missing": [],
-      "free_centres": 1121511
+      "free_centres": 1100669
     }
   },
   "full_upper_and_lower_31x27_samples_each": 1691,
@@ -158,8 +158,9 @@
     "Reversal Throat"
   ],
   "native": "NATIVE-UNTESTED; accepted source supports 32768 rectangles but installed bridge may cap 4096",
-  "grid_sha256": "1090e36ad3a28b3d3a462b7c360ddf6e59f52e343c6e83de60d7405ee908f137",
-  "setup_json_sha256": "a8bc430b081e7db90826fc7c58345295a027353d8c4ba8fa4c57219907ebc387",
+  "repair_revision": "R2 SHEPHERD P1: rooted pulse and metrology machinery, flywheel drive and bearing workface, quench heat-exchanger channels, navigation indicators; original 15 sites preserved",
+  "grid_sha256": "51bb308e4fdc7f1cd5512df026a14058e32297b02bd231ae345a6b576b7b159e",
+  "setup_json_sha256": "99ce89658ba40a31e0284d2df2632a0f34d88223fe2fa3a96d101122e598e7bc",
   "images": [
     {
       "name": "overview.png",
@@ -169,7 +170,7 @@
         2048,
         1024
       ],
-      "sha256": "e45755edc0a77f4c2aebe65a35dc9b0b0521076112c66d3685dd94ce5522fece",
+      "sha256": "4b078193cb6808f039e8a096ee84954edf3d4d45a9c3cf3f631d29aae1008284",
       "pixels": 2097152,
       "bytes": 2099184,
       "chunk_crc": true,
@@ -184,7 +185,7 @@
         520,
         480
       ],
-      "sha256": "b5ec6e2d45544df2e9483410d96544df4024bd6922d26536f3378fca71642780",
+      "sha256": "124801082f3ad6af0a00a40cd08e4cdfd0b1e9e0a3d517c2bcab930369473be9",
       "pixels": 249600,
       "bytes": 250943,
       "chunk_crc": true,
@@ -199,7 +200,7 @@
         500,
         480
       ],
-      "sha256": "7f4b47980eea9821817a1782ba9783f5647786beb4a9a385639706a2f39b0eb2",
+      "sha256": "dfbc213b4e222d929331bdcfe585f71267fca957cecdadde5eb5f98b6d9d4d92",
       "pixels": 240000,
       "bytes": 241343,
       "chunk_crc": true,
@@ -214,7 +215,7 @@
         520,
         570
       ],
-      "sha256": "ecc772edeb40a76cd116c69bcaa7df7e41244882f275646b87e7fd3b6f44b9c2",
+      "sha256": "67f7a5bead5cc102dc19abdeaf736091f7b77619906f84d9ad30abaf6bc9759e",
       "pixels": 296400,
       "bytes": 297838,
       "chunk_crc": true,
@@ -229,7 +230,7 @@
         500,
         590
       ],
-      "sha256": "f3549534247fa0cad6dccaf5de92285aa307da34b746c6c61d86af56172a73a4",
+      "sha256": "5d61a7b13d6b68e14dd388548c66c1ea6328cedc370c41a9033f8ef7fd7bbdbb",
       "pixels": 295000,
       "bytes": 296458,
       "chunk_crc": true,
@@ -244,7 +245,7 @@
         398,
         630
       ],
-      "sha256": "6c8c9d77246f27ede45218a5a732f5ec798ae4cd31e0b31912cad0ebe5565a64",
+      "sha256": "9f53f00b37fd9ea662819393ea24b7d7b1167dacab968a2d2011f1dee29dddca",
       "pixels": 250740,
       "bytes": 252233,
       "chunk_crc": true,

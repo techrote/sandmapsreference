@@ -2,7 +2,13 @@
 
 **ORIGINAL-NO-REFERENCE | 2048 x 1024 true orthographic CyberSand material-cell world | DRAFT/HOLD | NATIVE-UNTESTED.**
 
-Original creator lane: `racing-wide`. Source branch must be created from the current sandmapsreference default HEAD; there are no source paintings, reference-image conversions, reused Thunderclap cells, isometric surfaces or perspective backgrounds. Every visible shape is a real, collidable 2D material cell, or an intentionally excavated void.
+Original creator lane: `racing-wide`. **R2 bounded independent Shepherd P1 repair; retain Draft/HOLD.** Source branch must be created from the current sandmapsreference default HEAD; there are no source paintings, reference-image conversions, reused Thunderclap cells, isometric surfaces or perspective backgrounds. Every visible shape is a real, collidable 2D material cell, or an intentionally excavated void.
+
+## R2 P1 physically authored machine-and-wayfinding repair (20 November 2026)
+
+The independent Shepherd at [PR #29](https://github.com/techrote/sandmapsreference/pull/29#issuecomment-7025450694) independently qualified the R1 grid and conservative clearances but identified unconvincingly vacant operator rooms and visually repetitive machine districts. R2 **changes actual material cells** rather than inserting a concept illustration. The accessible **Pulse Injector bay** now has a wall-rooted three-stage capacitor train, bus and opposing regulator; the **Magnet-Skein Metrology bay** has a separate probe/stepped indexed measuring rack and diagnostic terminal. Both machines attach to the original ceiling rock, leaving the centre sites and shaft entry unobstructed. The **Twin Flywheel** now includes an inert rooted large-radius drive, torque-spoked bearing and twin service couplers in the lower rock. **Quench-Wave** instead gains five cooling manifolds with repeated serpentine channels and sampling emphasis, distinct from the flywheel. Source-grid markers distinguish outbound acceleration, eastern reversal, return crests and west recovery without placing new solids in centre lanes. The static checks still require a fresh exact-HEAD independent Art, Technical and Shepherd review; these are not working powered appliances or verified racing dynamics.
+
+**R2 retained:** 15/15 exact named destinations in all three conservative Midge clearances; 14/15 in the identical physically obstructed upper-flywheel scenario; 0 detached solid cells; 0 time-zero water-to-air edges; unchanged named sites and sealed water cells. R2 generator still reconstructs and verifies the complete 2048×1024 plane and six genuine grid-indexed PNGs. No installed Godot/CyberDemoBridge/Rapier or cold reopen was exercised: **NATIVE-UNTESTED**.
 
 ## Spatial thesis and actual Midge game scale
 
@@ -37,37 +43,37 @@ Current accepted read-only CyberSand authority: [main@de109d0131641d6adc8d25bb9c
 |---|---:|
 | Dimensions | 2048 x 1024 |
 | Material grid bytes / cells | 2,097,152 |
-| Setup rectangles | 9,518 / 32,768 |
-| Setup-v2 JSON bytes | 176,167 / 1,048,576 |
-| Replayed cell visits | 742,677 / 32,000,000 |
+| Setup rectangles | 10,438 / 32,768 |
+| Setup-v2 JSON bytes | 193,915 / 1,048,576 |
+| Replayed cell visits | 758,340 / 32,000,000 |
 | Ordered overlap / mismatch | 0 / 0 |
 | Detached inert-solid cells in final plane | 0 |
-| Unsupported islands eliminated during deterministic construction | 689 |
+| Unsupported islands eliminated during deterministic construction | 953 |
 | Exposed water-to-air cardinal edges | 0 |
 | Exact named sites 19x15 / 23x19 / 31x27 | 15 / 15 / 15 |
 | Upper and lower fully clear 31x27 path samples | 1691 each |
 | Wall-blocked gate alternate | 14/15 |
-| Full material-plane SHA-256 | `1090e36ad3a28b3d3a462b7c360ddf6e59f52e343c6e83de60d7405ee908f137` |
-| Setup JSON SHA-256 | `a8bc430b081e7db90826fc7c58345295a027353d8c4ba8fa4c57219907ebc387` |
+| Full material-plane SHA-256 | `51bb308e4fdc7f1cd5512df026a14058e32297b02bd231ae345a6b576b7b159e` |
+| Setup JSON SHA-256 | `99ce89658ba40a31e0284d2df2632a0f34d88223fe2fa3a96d101122e598e7bc` |
 
 **Material law:** inert immovable `Solid / RuleKernel::None` IDs 49/58/62/100/101/113/117/120/122/123/128. The 8,976 **Water (ID 3)** cells have the actual movable Water kernel, wholly sealed inside two continuous, inert-wall containment samples; they are intentionally **not** exposed as racing spills. There are no sand/stone powders, oil, lava, reactive chemical supports or pseudo-material IDs. The generator removes disconnected solid components before encoding; the final grounded check reports zero unanchored collision solids.
 
-### Real cell histogram
+### Real cell histogram (R2 complete final grid)
 
-| Actual material ID | Cells |
+| Exact material ID | Number of cells |
 |---:|---:|
-| 0 | 1,354,475 |
+| 0 | 1,338,812 |
 | 3 | 8,976 |
-| 49 | 205,432 |
-| 58 | 32,514 |
-| 62 | 87,226 |
-| 100 | 273,513 |
-| 101 | 84,772 |
-| 113 | 15,788 |
-| 117 | 20,650 |
-| 122 | 6,750 |
-| 123 | 4,948 |
-| 128 | 2,108 |
+| 49 | 205,199 |
+| 58 | 30,901 |
+| 62 | 93,618 |
+| 100 | 259,487 |
+| 101 | 80,927 |
+| 113 | 20,941 |
+| 117 | 33,338 |
+| 122 | 12,046 |
+| 123 | 9,081 |
+| 128 | 3,826 |
 
 ### Exact named sites
 

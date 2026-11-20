@@ -69,6 +69,42 @@ function level(){
   rect(sx-8,top[sx]-10,16,8,M.U,true);
  }
 
+
+ // R2 independent Shepherd P1: rooted equipment inside the accessible operator bays.
+ rect(140,82,22,96,M.I);rect(155,94,65,13,M.T);rect(153,156,66,12,M.T);
+ for(let k=0;k<3;k++){rect(165+k*17,107,12,50,M.Z);rect(169+k*17,115,5,34,k%2?M.U:M.Q)}
+ rect(151,171,64,9,M.Z);
+ rect(340,77,26,102,M.I);rect(322,90,23,12,M.Q);rect(327,101,14,55,M.T);rect(322,153,25,11,M.Z);
+ // Metrology station: sloped indexed probe and opposing diagnostic terminal.
+ rect(550,79,21,99,M.I);rect(565,151,75,12,M.T);
+ for(let k=0;k<5;k++)rect(571+k*13,130-(k%2)*9,6,22,M.U);
+ rect(552,171,83,9,M.Z);
+ rect(765,78,23,103,M.I);rect(744,95,27,12,M.U);rect(749,107,17,57,M.T);
+ for(let k=0;k<3;k++)rect(751,114+k*13,12,5,M.Q);
+ // Flywheel drive: rooted bearing-workface, eccentric hub and radial torque spokes
+ // below the return contour; the main upper and lower flight envelopes are untouched.
+ oval(1035,727,71,66,M.T);oval(1035,727,60,55,M.I);oval(1035,727,49,44,M.Z);
+ oval(1035,727,24,22,M.Q);oval(1035,727,11,11,M.U);
+ for(let k=0;k<8;k++){let t=k*Math.PI/4;
+  beam(1035+24*Math.cos(t),727+22*Math.sin(t),1035+59*Math.cos(t),727+54*Math.sin(t),4,k%2?M.U:M.Q);
+ }
+ rect(918,718,58,13,M.I,true);rect(1098,718,91,13,M.I,true);
+ rect(942,790,32,9,M.Q,true);rect(1090,790,52,9,M.Q,true);
+ // Quench: staggered transfer headers and thermal serpentine channels in inert floor.
+ // Distinct from round flywheel; no uncontained water, reactive heat or new flight traps.
+ for(let j=0;j<5;j++){let x=1420+j*53;
+  rect(x,bottom[x]+24,37,8,j%2?M.P:M.U,true);
+  rect(x,bottom[x]+30,7,72,M.T,true);rect(x+30,bottom[x+30]+30,7,72,M.T,true);
+  rect(x,bottom[x]+94,37,8,j%2?M.Q:M.U,true);
+  for(let q=0;q<3;q++)rect(x+8+q*7,bottom[x+8+q*7]+40+q*14,8,7,M.P,true);
+ }
+ // Navigation inks live only on existing grounded material: outbound acceleration,
+ // east reversing portal, the lower three pressure crests, west recovery.
+ for(let k=0;k<8;k++){let x=350+k*38;rect(x,top[x]-6,15,5,M.Q,true)}
+ for(let k=0;k<7;k++){let x=1825+k*24;rect(x,bottom[x]+4,11,7,M.P,true)}
+ for(let x of [460,560,948,1092,1462,1558])rect(x,bottom[x]+4,20,9,M.Q,true);
+ for(let k=0;k<6;k++){let x=148+k*29;rect(x,bottom[x]+4,14,8,M.U,true)}
+
  // Every inert collision cell must touch some boundary-grounded support.
  const seen=new Uint8Array(g.length),queue=new Int32Array(g.length);let head=0,tail=0,solid=i=>g[i]!==0&&g[i]!==3;
  for(let x=0;x<W;x++)for(let i of [x,(H-1)*W+x])if(solid(i)&&!seen[i]){seen[i]=1;queue[tail++]=i}
@@ -123,6 +159,7 @@ function level(){
   sites,clearances:hull,full_upper_and_lower_31x27_samples_each:lineSamples,temporary_gate:[918,284,221,165,58],gate_bypass_31x27:closure.reached,
   districts:["Pulse Injector","Magnet-Skein Metrology","Twin Flywheel Press","Quench-Wave Exchangers","Reversal Throat"],
   native:"NATIVE-UNTESTED; accepted source supports 32768 rectangles but installed bridge may cap 4096"};
+ report.repair_revision="R2 SHEPHERD P1: rooted pulse and metrology machinery, flywheel drive and bearing workface, quench heat-exchanger channels, navigation indicators; original 15 sites preserved";
  return {grid:g,json,report};
 }
 
