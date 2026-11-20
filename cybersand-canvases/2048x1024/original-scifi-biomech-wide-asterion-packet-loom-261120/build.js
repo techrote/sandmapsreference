@@ -93,12 +93,12 @@ ${spec.districts.map((x,i)=>`${i+1}. ${x}`).join("\n")}
 Spawn is ${JSON.stringify(spec.sites.spawn_quarantine)}, finishing at ${JSON.stringify(spec.sites.finish_beacon)}. All 15 literal named sites in design.json pass 19x15, 23x19 and 31x27 conservative clearance and 4-neighbour free-centre BFS from exact spawn; each site has four legal cardinal local approaches. No target shifting or nearest-site substitution. The grounded index bench at ${JSON.stringify(spec.sites.entered_inspection)} is Midge enterable from the large centre flight void. True side elevation, no perspective/isometric platforms.
 
 ## Rebuild, physical contract and evidence
-- Reproduce locally with \`node build.js\` from this directory (Node 18+). It reconstructs all material cells from fixed-seed design.json, prunes detached nominal decorations, emits exact Setup-v2, full-grid receipt and 7 true material-indexed PNGs.
+- Reproduce locally with \`node build.js\` from this directory (Node 18+). It reconstructs all material cells from fixed-seed design.json, prunes detached nominal decorations, emits exact Setup-v2, full-grid receipt and 8 true material-indexed PNGs.
 - Source authority sandmapsreference \`${spec.base_sha}\`, read-only accepted CyberSand \`${spec.engine_sha}\`. Actual native installed bridge has NOT been tested.
 - Material grid: ${a.length} bytes/cells; SHA-256 \`${qual.grid_sha256}\`; ${qual.occupied} occupied and boundary-grounded inert solids; ${grounding.pruned} unsupported nominal cells discarded; 0 detached final solids; 0 mobile/reactive/fluid cells.
 - Source-authorized rectangle budget: ${edits.length}/32768. Setup JSON ${setupBytes.length}/1048576 bytes, work ${replayed.work}/32000000. Replay zero overlaps and mismatches.
 - Physical ${spec.obstruction.join("x")} central temporary block changes west-to-east 31x27 shortest flight from ${qual.route_distances.baseline} to ${qual.route_distances.blocked} cardinal steps. Restricted upper ${qual.route_distances.upper} and lower ${qual.route_distances.lower} bypasses each pass.
-- Full authentic indexed overview and six 1:1 material-cell district crops all have strict encoded CRC, zlib Adler, dimensions, and complete pixel parity versus the source cells.
+- Full authentic indexed overview and seven 1:1 material-cell district crops all have strict encoded CRC, zlib Adler, dimensions, and complete pixel parity versus the source cells.
 - No actual Godot/Workbench/GDExtension/Midge-Rapier trajectory, collision, world tick, fresh process save/reopen or installed DLL capacity test has occurred: NATIVE-UNTESTED. The accepted source cap of 32768 cannot be assumed to apply to old installed bridges (~4096 possible). Independent source Art/Technical/Shepherd review and owner acceptance remain separate gates. Do not merge or promote.
 
 **Geometry is author-created industrial xenotechnology, not a reference image conversion or artwork substitute.**

@@ -3,34 +3,34 @@
   "seed": 2611201547,
   "source": "ORIGINAL-NO-REFERENCE",
   "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
-  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
   "extent": [
     2048,
     1024
   ],
   "cells": 2097152,
-  "grid_sha256": "398d35d57f625e3671ca5e29a756eeba56edb4c6a564fc83ece80f022de143fe",
-  "setup_sha256": "7595bd5d32e03d68710724cd5a957d605e093621e0aa69ab426ca95197b5d645",
-  "setup_bytes": 59249,
+  "grid_sha256": "5fbf66f98a851a8b8cfc4f6223d3324ec01372cf338613a14f7ca6ad6087f37e",
+  "setup_sha256": "11b65cfcfddba2ae3e1b8c5305b25c25ac65c407f2379d2ede9d8e01ece597b2",
+  "setup_bytes": 62719,
   "materials": {
-    "0": 1363940,
-    "58": 72889,
-    "62": 121738,
-    "63": 51296,
-    "72": 7902,
-    "77": 5511,
-    "79": 9614,
-    "100": 167456,
+    "0": 1334953,
+    "58": 73678,
+    "62": 130233,
+    "63": 54652,
+    "72": 9293,
+    "77": 7262,
+    "79": 12908,
+    "100": 168928,
     "101": 238404,
-    "117": 53843,
-    "128": 4559
+    "117": 59826,
+    "128": 7015
   },
-  "occupied": 733212,
-  "grounded": 733212,
+  "occupied": 762199,
+  "grounded": 762199,
   "detached": 0,
-  "pruned_nominal_cells": 51262,
-  "rectangles": 3156,
-  "work": 733212,
+  "pruned_nominal_cells": 41083,
+  "rectangles": 3339,
+  "work": 762199,
   "replay": {
     "overlaps": 0,
     "invalid": 0,
@@ -51,7 +51,7 @@
   "physics": "Accepted native immovable Solid / RuleKernel::None; no liquids, powders or reactive cells",
   "sites": {
     "19x15": {
-      "visited_centres": 982830,
+      "visited_centres": 957590,
       "named_sites": {
         "spawn_quarantine": {
           "free": true,
@@ -134,7 +134,7 @@
       "approach": []
     },
     "23x19": {
-      "visited_centres": 948765,
+      "visited_centres": 922734,
       "named_sites": {
         "spawn_quarantine": {
           "free": true,
@@ -217,7 +217,7 @@
       "approach": []
     },
     "31x27": {
-      "visited_centres": 886344,
+      "visited_centres": 858810,
       "named_sites": {
         "spawn_quarantine": {
           "free": true,
@@ -381,7 +381,7 @@
       "w": 2048,
       "h": 1024,
       "bytes": 2098803,
-      "sha256": "ce425d1e3a0a5d15e97a9b989fed05ef1b7cf3196a29a5e7773df1d9ee48fede",
+      "sha256": "ac48e5e2932f11ee3e86b6bc4dc855664df068b2a7534beac145250d9a344373",
       "verified_pixels": 2097152,
       "crc_adler_and_exact_material_parity": true
     },
@@ -401,7 +401,7 @@
       "w": 420,
       "h": 674,
       "bytes": 284241,
-      "sha256": "36dbcaa18f9337724640c50a8fbff7b56470b59877143c59f11024e1fe5e5652",
+      "sha256": "192f30c25e907fbbf426e02170d2489584f57f1bf6166a59168a8648868059c6",
       "verified_pixels": 283080,
       "crc_adler_and_exact_material_parity": true
     },
@@ -411,7 +411,7 @@
       "w": 495,
       "h": 530,
       "bytes": 263367,
-      "sha256": "fe339f2f69712428e43dbe27d4fff6bc029643f96e7ec71bf36d179547e3a140",
+      "sha256": "6292cb6ac57284b76902dc2143d8907ef6c913e1a8ea5fe662901eaf2a6d1151",
       "verified_pixels": 262350,
       "crc_adler_and_exact_material_parity": true
     },
@@ -421,7 +421,7 @@
       "w": 475,
       "h": 260,
       "bytes": 124232,
-      "sha256": "37be4dc183a99bdbfcab1ef463a119dfde9282ceb03a17b3d10d8245e52306c1",
+      "sha256": "a94ac732659b8c3bda414b0b037db18a1a367b304158df95944d4fdf7a29bbd0",
       "verified_pixels": 123500,
       "crc_adler_and_exact_material_parity": true
     },
@@ -441,8 +441,18 @@
       "w": 408,
       "h": 674,
       "bytes": 276153,
-      "sha256": "7be5a151a17ad3079707804dce7eb78727dd072c225d14c8ef30966b2edf3ea2",
+      "sha256": "ff5509d2907a490e6bd9e9b3523088f5da05a67984cc4a15cf84b6379abaece1",
       "verified_pixels": 274992,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "07-index-handoff.png": {
+      "x": 862,
+      "y": 246,
+      "w": 370,
+      "h": 642,
+      "bytes": 238664,
+      "sha256": "772a6affc14236359d095ae4aec034ccec2b42ef3ba0acb23f4b3562365cc064",
+      "verified_pixels": 237540,
       "crc_adler_and_exact_material_parity": true
     }
   },
