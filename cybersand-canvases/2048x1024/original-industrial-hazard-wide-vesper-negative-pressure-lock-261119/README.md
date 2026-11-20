@@ -35,7 +35,7 @@ A former emergency **negative-pressure waste lock** bestrides an ash ravine. The
 | East export | 2008 | 440 |
 | Coolant recovery | 1806 | 812 |
 
-Every exact site has a fully in-bounds **19×15**, **23×19** and **31×27** free-cell envelope and is reachable from actual spawn **(245,451)** by four-neighbour free-centre BFS. The physical-obstruction test fills **[1027,491,61,48]** with solid material, reruns the 31×27 graph and still reaches **14/14** named sites. This is a conservative static test, **not** native Midge steering/collision proof.
+Every exact site has a fully in-bounds **19×15**, **23×19** and **31×27** free-cell envelope and is reachable from actual spawn **(245,451)** by four-neighbour free-centre BFS. The physical-obstruction test fills **[1400,160,61,48]** with solid material across the upper overflight lane, reruns the 31×27 graph and still reaches **14/14** named sites. Independent shortest-path measurement establishes a **forced +70-cell detour for four downstream destinations** (Thermal shield service, Fin stack control, East export, Coolant recovery), with no waypoint shifting. This tests a genuine recoverable alternative rather than an irrelevant obstruction. This is a conservative static test, **not** native Midge steering/collision proof.
 
 ## Source-grounded physical contract
 
