@@ -1,5 +1,5 @@
 {
-  "concept": "Orison Wheelhouse — Ring Indexer RoRo Port",
+  "concept": "Orison Wheelhouse â Ring Indexer RoRo Port",
   "original": true,
   "seed": 2026112026,
   "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
@@ -154,21 +154,21 @@
     ]
   },
   "material_histogram": {
-    "0": 1515434,
-    "58": 294150,
-    "62": 186716,
-    "100": 100852
+    "0": 1518743,
+    "58": 281591,
+    "62": 196315,
+    "100": 100503
   },
-  "stable_occupied_cells": 581718,
-  "grounded": 581718,
+  "stable_occupied_cells": 578409,
+  "grounded": 578409,
   "detached_cells": 0,
   "pruned_disconnected_decor_cells": 0,
-  "grounding_steel_ties": 43,
-  "rectangles": 4330,
-  "rectangle_work": 581718,
-  "setup_bytes": 80463,
-  "material_plane_sha256": "5bf8de913ea21246734a8ee57488916a3d632950c10df1d8e8071c7b5aa9cca0",
-  "setup_sha256": "d29fdd103703882f3e6ed597a8d9ede43287275175433a6580a088ffd97d8096",
+  "grounding_steel_ties": 38,
+  "rectangles": 4288,
+  "rectangle_work": 578409,
+  "setup_bytes": 79791,
+  "material_plane_sha256": "0ffe9a9ddaa968969f11607d40fa1569168afe8e967cfe63ef2c216e0c7581b0",
+  "setup_sha256": "60dadfd3cd72a1fe2e90daf3fc36f084ab2edd811ce9e77a64a3ce0c9ffde42f",
   "clearance": [
     {
       "size": [
@@ -177,7 +177,7 @@
       ],
       "reached": 23,
       "total": 23,
-      "free_centres": 1135859,
+      "free_centres": 1135734,
       "bad": [],
       "error": null
     },
@@ -188,7 +188,7 @@
       ],
       "reached": 23,
       "total": 23,
-      "free_centres": 1083181,
+      "free_centres": 1082465,
       "bad": [],
       "error": null
     },
@@ -199,7 +199,7 @@
       ],
       "reached": 23,
       "total": 23,
-      "free_centres": 981135,
+      "free_centres": 978153,
       "bad": [],
       "error": null
     }
@@ -212,8 +212,8 @@
       92,
       96
     ],
-    "from": "Mooring Arrival",
-    "to": "Dispatch Ledger",
+    "from": "Berth Approach",
+    "to": "Quay Manifest",
     "size": [
       31,
       27
@@ -235,7 +235,7 @@
         1024
       ],
       "bytes": 525537,
-      "sha256": "354b12a1be2d19e03e47700b7721816dab2f9862fb634e91abb50c289b5bbd12",
+      "sha256": "f30c01f813372dbdeca37d1d6c65a1d2b6cfb7b90f6c245224270cc142525f32",
       "pixel_parity": 2097152
     },
     {
@@ -247,7 +247,7 @@
         309
       ],
       "bytes": 29540,
-      "sha256": "9c7944477edfca7247975c186976b7740ffa76cea4d44a93fba8763b6b4a3efe",
+      "sha256": "831fd2673b4a0916fa48ad365e70ad1b8fa4910799c95d1851cff288266c1871",
       "pixel_parity": 115875
     },
     {
@@ -259,7 +259,7 @@
         617
       ],
       "bytes": 56332,
-      "sha256": "bbc6f6e16b5309af0ba61c633821111900c09b655467267dd80cda2c860640ca",
+      "sha256": "43dd8e067fcb5465e5aef42639303140f01c4c4aa3b20835e6fa6d224d4b407a",
       "pixel_parity": 221503
     },
     {
@@ -271,7 +271,7 @@
         371
       ],
       "bytes": 43221,
-      "sha256": "a43df1bedff76d90cf6a5d315eda50e470922f50cba12e5bb14148af4438e37c",
+      "sha256": "ed76c6525cf815bba5321bab4f16d6f33ece18d7454e7b5c21541ddc2fbb952d",
       "pixel_parity": 170660
     },
     {
@@ -283,7 +283,7 @@
         267
       ],
       "bytes": 27419,
-      "sha256": "cd41760dc288dd9b6c203ad0050b9ce76a045788191acac8b52e79d67ccbac91",
+      "sha256": "87cf10adb15f28f0235a8fb166434db81acc753e7746d25c247b6270d1b61bfa",
       "pixel_parity": 107067
     },
     {
@@ -307,12 +307,21 @@
         182
       ],
       "bytes": 81908,
-      "sha256": "3669e4c0fc1ac03d47df3c63f59ccd89ad7396038d7694b69021fd2608ac7e6b",
+      "sha256": "6fce274c132e5a8c1868471b7c99d903a9a36d9b965e109b080d98cf7125b094",
       "pixel_parity": 325598
     }
   ],
   "native_status": "NATIVE-UNTESTED",
   "bridge_source_max_rectangles": 32768,
   "installed_fallback_risk": 4096,
-  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity",
+  "revision": "R2",
+  "parent_head": "c10b16fb98dcd0da19783f25af358d9c6a50e8ef",
+  "exact_grid_difference_from_r1": {
+    "added": 10714,
+    "excavated": 14023,
+    "rematerialized": 8911,
+    "changed": 33648
+  },
+  "audit_response": "Bounded functional-art P1: identical custody loads at vessel, hoist, ring in/out, underworks gear room and recovery hoist, corrected route labels. Reviewer acceptance pending."
 }

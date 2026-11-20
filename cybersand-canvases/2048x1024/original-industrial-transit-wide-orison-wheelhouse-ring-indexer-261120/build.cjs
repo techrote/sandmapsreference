@@ -39,7 +39,7 @@ function boxCrate(x,y,w=55,h=25){R(x,y,w,h,M.WALL);R(x+4,y+4,w-8,7,M.STEEL);for(
 function platform(x,y,w,t=12){R(x,y,w,t,M.STEEL);}
 function wheel(x,y,r){ring(x,y,r,r,5,M.WALL);ring(x,y,r-8,r-8,3,M.STEEL);}
 function gear(x,y,r){ring(x,y,r,r,8,M.STEEL);for(let a=0;a<8;a++){let t=a*Math.PI/4;R(Math.round(x+(r-1)*Math.cos(t))-4,Math.round(y+(r-1)*Math.sin(t))-4,8,8,M.WALL);}}
-// ORISON WHEELHOUSE — genuinely original fixed material-cell section.
+// ORISON WHEELHOUSE â genuinely original fixed material-cell section.
 // Vessel -> side-on RoRo elevator -> ring indexer -> divergent classification
 // tracks -> customs. Indexed ring is NON-ANIMATED fixed steel machinery.
 // All platforms, spokes, cargo slots and return shafts are collision geometry.
@@ -223,6 +223,49 @@ for(const p of Object.values(sites))R(p[0]-24,p[1]-25,49,51,M.AIR);
 R(664,273,80,111,M.AIR);
 R(668,354,76,68,M.AIR);
 for(const p of Object.values(sites))R(p[0]-24,p[1]-25,49,51,M.AIR);
+
+/* Orison R2: fixed-custody cargo shoes are material objects, not animation.
+   Matching 54x25 freight loads mark the west deck, ring entrance and rail
+   release. The original 31x27-entered flight lanes remain open. */
+function manifestLoad(x,y) {
+  R(x,y,68,8,M.STEEL);R(x+7,y-26,54,25,M.WALL);
+  R(x+10,y-23,48,6,M.STEEL);
+  for(let j=0;j<3;j++)R(x+15+j*15,y-14,5,11,M.STEEL);
+  R(x+4,y+8,12,8,M.WALL);R(x+52,y+8,12,8,M.WALL);
+}
+// West roll-off load rests on ship foredeck ABOVE the genuine side portal.
+R(374,687,91,9,M.STEEL);R(377,668,9,21,M.WALL);
+R(451,668,10,21,M.WALL);manifestLoad(385,677);
+// Matching receiving pallet beside the working hoist, across the open shaft.
+R(542,783,94,8,M.STEEL);R(544,767,11,19,M.WALL);
+R(622,767,11,19,M.WALL);manifestLoad(555,743);
+// Ring loading shoe below the entry opening and east release cradle.
+R(963,732,103,9,M.STEEL);R(970,714,9,20,M.WALL);
+R(1055,716,10,18,M.WALL);manifestLoad(987,703);
+R(1286,739,119,11,M.STEEL);R(1299,724,10,17,M.WALL);
+R(1392,724,10,17,M.WALL);manifestLoad(1320,710);
+R(1405,746,77,8,M.STEEL);L(1480,746,1522,710,8,M.STEEL);
+// Entered pump/gear-drive workshop: deep service pit with access from lower
+// flight lane, unlike the previous shallow bench. Foundation remains rooted.
+R(530,911,247,77,M.AIR);R(530,986,247,15,M.WALL);
+R(534,911,12,75,M.STEEL);R(764,912,12,74,M.STEEL);
+ring(585,963,20,19,8,M.STEEL);ring(717,960,19,18,7,M.STEEL);
+R(552,943,61,11,M.WALL);R(690,940,54,11,M.WALL);
+R(575,951,8,30,M.STEEL);R(731,946,9,35,M.STEEL);
+R(551,978,208,8,M.STEEL);R(627,943,8,39,M.STEEL);
+R(647,942,8,40,M.STEEL);R(627,949,28,8,M.WALL);
+R(618,901,53,42,M.AIR); // 53x42 unblocked Midge entry throat
+// Customs return/service is a different, deeper, guarded recovery lift.
+R(1762,910,161,76,M.AIR);R(1762,984,161,15,M.WALL);
+R(1764,914,12,70,M.WALL);R(1910,913,12,70,M.STEEL);
+R(1780,945,35,13,M.WALL);R(1787,957,19,23,M.STEEL);
+R(1852,937,56,11,M.STEEL);R(1852,947,10,38,M.WALL);
+R(1897,948,10,37,M.WALL);R(1862,960,35,9,M.STEEL);
+L(1857,946,1880,915,7,M.STEEL);L(1902,947,1880,915,7,M.STEEL);
+R(1876,915,9,26,M.WALL);R(1873,979,19,7,M.STEEL);
+R(1800,899,45,48,M.AIR); // recovery shaft mouth
+for(const p of Object.values(sites)) R(p[0]-24,p[1]-25,49,51,M.AIR);
+
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
@@ -270,7 +313,7 @@ let setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a
 if(jbytes.length>1048576)throw Error("JSON over budget");
 let crops=[["01-ro-ro-vessel",125,513,375,309],["02-double-drum-elevator",520,197,359,617],["03-indexing-ring",924,461,460,371],["04-classification-fan",1373,552,401,267],["05-customs-terminal",1752,470,290,350],["06-machine-underworks",145,835,1789,182]];
 let images=[["overview",[0,0,W,H]],...crops.map(c=>[c[0],c.slice(1)])].map(([name,rect])=>{let data=png(g,rect),pixels=verifyPng(g,rect,data);return{name,rect,bytes:data,sha256:sha256(data),pixels};});
-let receipt={concept:"Orison Wheelhouse — Ring Indexer RoRo Port",original:true,seed:SEED,engine_sha:"7b03aa437561ec63e31fd09531171360ab60eeb4",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],route_graph:{main:["Berth Approach","Quay Manifest","Twin-Drum Gate","Indexing Ring Entry","Ring Outer Transfer","Classification Control","Freight Scan Gate","Outbound Relay"],upper:["West Crane Loft","Elevator Head","Upper Truss Way","East Semaphore"],lower:["Berth Bilge Return","Hoist Pump Gallery","Ring Axle Service","Turnout Service","Customs Recovery"]},material_ids:{"0":"Empty","100":"BasaltColumns Solid immovable None","58":"ReinforcedConcrete Solid immovable None","62":"SteelPlate Solid immovable None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,grounding_steel_ties:ties.length,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"Mooring Arrival",to:"Dispatch Ledger",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"};
+let receipt={concept:"Orison Wheelhouse â Ring Indexer RoRo Port",original:true,seed:SEED,engine_sha:"7b03aa437561ec63e31fd09531171360ab60eeb4",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],route_graph:{main:["Berth Approach","Quay Manifest","Twin-Drum Gate","Indexing Ring Entry","Ring Outer Transfer","Classification Control","Freight Scan Gate","Outbound Relay"],upper:["West Crane Loft","Elevator Head","Upper Truss Way","East Semaphore"],lower:["Berth Bilge Return","Hoist Pump Gallery","Ring Axle Service","Turnout Service","Customs Recovery"]},material_ids:{"0":"Empty","100":"BasaltColumns Solid immovable None","58":"ReinforcedConcrete Solid immovable None","62":"SteelPlate Solid immovable None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,grounding_steel_ties:ties.length,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"Berth Approach",to:"Quay Manifest",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"};
 return {g,rect,sites,crops,images,receipt,setup,json,jbytes,status,detour:{reached:detour.reached,bad:detour.bad,component:detour.component},distance:routeDistance,pruned};
 }
 return {generate,sha256,base64,utf8};
