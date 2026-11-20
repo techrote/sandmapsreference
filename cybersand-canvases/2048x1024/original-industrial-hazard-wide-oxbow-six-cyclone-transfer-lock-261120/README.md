@@ -87,3 +87,13 @@ Run `node build.cjs --write` to regenerate exact `setup.json`, `receipt.json`, t
 All seven indexed-material PNG streams were also decoded independently in the creator process using fixed-Huffman DEFLATE, per-chunk CRC-32, zlib Adler-32, original row filter-2 reconstruction and exact source-grid pixel comparison: 3656672 pixels, zero mismatches. This does not constitute independent reviewer acceptance.
 
 **SOURCE-STATIC CREATOR PASS ONLY.** Independent Art, Technical, Shepherd and Windows native admission remain due. Godot/Workbench bridge, Midge real collisions and steering, actual water/lava evolution, installed bridge rectangle admission, persistence/reopen, rendered GPU publication and engine runtime performance are **NATIVE-UNTESTED**. Keep Draft/HOLD. No engine source or schedule changes.
+
+## R2 independent Art P1 repair — 20 November 2026
+
+Creator R2 responds to exact-R1 independent Art findings: a visible dry cyclone discharge pickup and roller-fed receiving carriage towards the kiln; a separately coloured downhill kiln-hot discharge and quench-side liner; and a genuinely entered coolant-return filter drum/inspection valve with an attached return loop below the quench vessel. The architectural mechanism is inert: no pump motion, chemistry, process transport or fluid operation is claimed.
+
+**14,304 actual material ID changes**: 9,978 formerly empty cells became inert structure, 4,326 material reclassifications, zero erased cells, zero Water/Lava changes. The original silhouette, major open approaches, five districts, all literal checkpoints, two route alternatives and sealed material vessels are retained. The service pump uses boundary-grounded real cells; it is not UI decoration.
+
+Reproduce using unchanged `node build.cjs --write` and `node build.cjs --verify`. R2 exact full-plane SHA-256: `a953f1668ddcbd50bfb428934b25901ec34482ec2a20d5882db4a3efff12efd0`; Setup SHA-256: `102845097404062434e33902203760c14d42b24d0f3062f86e80127420012e27`; 2990 rectangles and 56086 JSON bytes. New binary source/gallery content has been retrieved back from GitHub and independently decoded with whole material-index pixel parity. See `qualification.md` and `receipt.json`.
+
+**Hold:** revised R2 independent Art, Technical and Shepherd reviews are pending. Installed native bridge, Godot Workbench/Rapier live Midge flight/collisions, dynamic water/lava containment and save/reopen are **NATIVE-UNTESTED**. Source limit 32,768 rectangles is distinct from possibly installed 4,096-record fallback; no capacity handshake was run. Remains OPEN Draft/HOLD, no owner acceptance, Ready or merge.
