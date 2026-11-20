@@ -1,0 +1,288 @@
+{
+  "original": true,
+  "reference_art": null,
+  "design": "The Umbra Siphon — Twin-Horn Air-Reclaim City",
+  "seed": 6189316,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "engine_material_blob_sha": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "engine_setup_blob_sha": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "size": [
+    2048,
+    1024
+  ],
+  "midge_hull": [
+    4,
+    3
+  ],
+  "material_laws": "All nonempty IDs are native accepted nonmoving inert Solid / RuleKernel::None; no fluids/reactive/granular cells.",
+  "histogram": {
+    "0": 1162305,
+    "58": 112781,
+    "62": 93732,
+    "64": 8519,
+    "65": 12519,
+    "69": 3770,
+    "72": 943,
+    "74": 386,
+    "76": 2399,
+    "77": 8373,
+    "78": 11104,
+    "79": 1368,
+    "80": 19060,
+    "98": 7588,
+    "100": 304435,
+    "101": 76590,
+    "111": 13488,
+    "113": 45491,
+    "114": 33757,
+    "119": 18090,
+    "121": 4039,
+    "128": 43191,
+    "130": 76020,
+    "131": 37204
+  },
+  "rectangles": 11681,
+  "painted_work": 934847,
+  "json_utf8_bytes": 221103,
+  "grid_sha256": "e6523777aec54d1e99254a1d15238096f990c49c499e1abf7d04bdd397ac0739",
+  "setup_sha256": "0538ca4c48ca292143478925baabd974cc17b770d57e3d8426856b682feb4c8f",
+  "pruned_detached_cells": 45138,
+  "pruned_detached_components": 42,
+  "grounded_final_solids": 934847,
+  "detached_final_solids": 0,
+  "exact_sites": {
+    "Lantern Gate arrival": [
+      147,
+      460
+    ],
+    "Lantern Gate sky counter": [
+      268,
+      276
+    ],
+    "Lantern Gate lower return": [
+      284,
+      745
+    ],
+    "First Siphon feed deck": [
+      615,
+      465
+    ],
+    "First Siphon upper vent": [
+      738,
+      290
+    ],
+    "First Siphon condensate access": [
+      750,
+      748
+    ],
+    "Counterweight inspection": [
+      1084,
+      286
+    ],
+    "Central breath passage": [
+      1063,
+      472
+    ],
+    "Midspan lower transfer": [
+      1129,
+      749
+    ],
+    "Mirror Adsorber canopy": [
+      1445,
+      287
+    ],
+    "Mirror Adsorber membrane service": [
+      1418,
+      458
+    ],
+    "Mirror Adsorber lower loop": [
+      1513,
+      744
+    ],
+    "Silent Border scan gallery": [
+      1798,
+      295
+    ],
+    "Silent Border entry clearing": [
+      1800,
+      468
+    ],
+    "Silent Border service escape": [
+      1849,
+      738
+    ],
+    "East recovery beacon": [
+      1935,
+      470
+    ]
+  },
+  "clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "free_centres": 888286,
+      "spawn_reachable_centres": 581776,
+      "reached": 16,
+      "expected": 16,
+      "missing": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "free_centres": 835205,
+      "spawn_reachable_centres": 544365,
+      "reached": 16,
+      "expected": 16,
+      "missing": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "free_centres": 736297,
+      "spawn_reachable_centres": 474092,
+      "reached": 16,
+      "expected": 16,
+      "missing": []
+    }
+  ],
+  "alternate_route": {
+    "sealed_half_open_box": [
+      1017,
+      414,
+      1158,
+      533
+    ],
+    "excluded_site": "Central breath passage",
+    "checks": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "free_centres": 868191,
+        "spawn_reachable_centres": 561681,
+        "reached": 15,
+        "expected": 15,
+        "missing": []
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "free_centres": 814244,
+        "spawn_reachable_centres": 523404,
+        "reached": 15,
+        "expected": 15,
+        "missing": []
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "free_centres": 713761,
+        "spawn_reachable_centres": 451400,
+        "reached": 15,
+        "expected": 15,
+        "missing": []
+      }
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2099184,
+      "sha256": "35a58f59e215807c4562fb681dc0380d8af23a0c71cf0091b7eb6c878ed7a101",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "01-lantern-gate",
+      "rect": [
+        88,
+        172,
+        380,
+        469
+      ],
+      "bytes": 179547,
+      "sha256": "7f5ce4aa1469e892dd11b6876ff8eb60629546e05f61fc7a8a8c255fb40a55e5",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "02-first-siphon",
+      "rect": [
+        452,
+        115,
+        445,
+        584
+      ],
+      "bytes": 261327,
+      "sha256": "3e50e42173d5a32fae3ee194eaa04df39ef72017edb579a1c742c41cd820d2eb",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "03-zero-pressure",
+      "rect": [
+        883,
+        113,
+        413,
+        591
+      ],
+      "bytes": 245537,
+      "sha256": "73fa364980da939e0c914d5669da93607028ce851a6979d5544d44d52afadbc7",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "04-mirror-adsorber",
+      "rect": [
+        1260,
+        140,
+        439,
+        564
+      ],
+      "bytes": 249023,
+      "sha256": "15811d4dcec63854948711c86d1f23bf9744f1dd7574d2af2e4009107f2f97b9",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    },
+    {
+      "name": "05-silent-border",
+      "rect": [
+        1655,
+        174,
+        364,
+        471
+      ],
+      "bytes": 172773,
+      "sha256": "f4f719cf71b1024a3e2257ef29b0c86712e02de3c1293caa6ca5847552fa0141",
+      "material_index_pixel_parity": true,
+      "png_crc_zlib_iend": true
+    }
+  ],
+  "native": "NATIVE-UNTESTED",
+  "installed_bridge_rectangle_capacity": "UNVERIFIED; legacy fallback 4096 possible",
+  "r2_changes": {
+    "total": 45646,
+    "added": 13680,
+    "removed": 8922,
+    "reassigned": 23044
+  },
+  "r2_geometry": "geometry-r2.txt",
+  "independent_current_head": "PENDING ART/TECH/SHEPHERD RE-REVIEW"
+}
