@@ -190,10 +190,39 @@ R(1957,142,27,831,M.WALL);
 for(let x of [153,371,714,1082,1556,1860])R(x-37,284,75,48,M.AIR);
 for(const p of Object.values(sites))R(p[0]-23,p[1]-25,47,51,M.AIR);
 
+
+/* Genuine entered service galleries: preserve the exact checkpoint centres,
+   expose the counterweight, classifier inspection and right beacon. */
+R(839,568,151,49,M.AIR);
+R(1589,444,52,183,M.AIR);
+R(839,445,51,179,M.AIR);
+R(1898,203,55,227,M.AIR);
+for(const p of Object.values(sites))R(p[0]-23,p[1]-25,47,51,M.AIR);
+
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
 for(let x=0;x<W;x++){let n=(H-1)*W+x;if(g[n]&&!seen[n]){seen[n]=1;q[back++]=n;}}
+while(front<back){let a=q[front++],x=a%W,y=(a/W)|0;for(let z of [a-W,a+W,a-1,a+1])if(z>=0&&z<N&&!(Math.abs(z-a)===1&&((z/W)|0)!==y)&&g[z]&&!seen[z]){seen[z]=1;q[back++]=z;}}
+
+/* Verified, rooted, inert structural ties. Every subassembly is physically
+   joined to the boundary-rooted chord or deep foundation using actual steel
+   cells. The full-width main-flight band (y358..458) is never crossed by a
+   newly introduced tie; no site is shifted or given an artificial exemption.
+   Tie endpoints and paths are computed deterministically from final geometry. */
+let above=new Int16Array(N),below=new Int16Array(N);
+for(let x=0;x<W;x++){let last=-1;for(let y=0;y<H;y++){let i=y*W+x;if(seen[i])last=y;above[i]=last;}last=-1;for(let y=H-1;y>=0;y--){let i=y*W+x;if(seen[i])last=y;below[i]=last;}}
+let visit=new Uint8Array(N),cq=new Int32Array(N),ties=[];
+function score(x,y,z){if(z<0)return Infinity;let lo=Math.min(y,z),hi=Math.max(y,z);if(lo<=458&&hi>=358)return Infinity;let s=hi-lo;
+ for(let p of Object.values(sites))if(Math.abs(x-p[0])<41&&lo<p[1]+40&&hi>p[1]-40)s+=5000;
+ for(let [a,b] of [[200,299],[830,907]])if(lo<b&&hi>a)s+=200;return s;}
+for(let i=0;i<N;i++)if(g[i]&&!seen[i]&&!visit[i]){
+ let first=0,last=1;cq[0]=i;visit[i]=1;let best=Infinity,choice=null;
+ while(first<last){let v=cq[first++],x=v%W,y=(v/W)|0;for(let z of [above[v],below[v]]){let s=score(x,y,z);if(s<best){best=s;choice=[x,y,z];}}
+ for(let j of [v-W,v+W,v-1,v+1])if(j>=0&&j<N&&!(Math.abs(j-v)===1&&((j/W)|0)!==y)&&g[j]&&!seen[j]&&!visit[j]){visit[j]=1;cq[last++]=j;}}
+ if(!choice)throw Error("Ungroundable component "+i);ties.push([choice[0],Math.min(choice[1],choice[2]),Math.abs(choice[1]-choice[2])+1,last,best]);}
+for(let [x,y,h] of ties)R(x,y,2,h,M.STEEL);
+seen.fill(0);front=0;back=0;for(let x=0;x<W;x++){let n=(H-1)*W+x;if(g[n]&&!seen[n]){seen[n]=1;q[back++]=n;}}
 while(front<back){let a=q[front++],x=a%W,y=(a/W)|0;for(let z of [a-W,a+W,a-1,a+1])if(z>=0&&z<N&&!(Math.abs(z-a)===1&&((z/W)|0)!==y)&&g[z]&&!seen[z]){seen[z]=1;q[back++]=z;}}
 let pruned=0;for(let i=0;i<N;i++)if(g[i]&&!seen[i]){g[i]=0;pruned++;}
 // Lossless disjoint ordered rectangle encoding, vertical span merged where
@@ -217,7 +246,7 @@ let setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a
 if(jbytes.length>1048576)throw Error("JSON over budget");
 let crops=[["01-graving-vessel",112,450,417,365],["02-caisson-stacklift",525,221,456,581],["03-truss-handoff",959,410,549,389],["04-hopper-classifier",1492,474,283,337],["05-east-customs",1770,469,278,338],["06-underworks",519,831,413,190]];
 let images=[["overview",[0,0,W,H]],...crops.map(c=>[c[0],c.slice(1)])].map(([name,rect])=>{let data=png(g,rect),pixels=verifyPng(g,rect,data);return{name,rect,bytes:data,sha256:sha256(data),pixels};});
-let receipt={concept:"Nacre Caisson — Drylock Ship Stacklift and Freight Truss",original:true,seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],route_graph:{main:["Mooring Arrival","Dispatch Ledger","Caisson Gate","Truss West Receiver","Overcut Transit","Truss East Receiver","Classifier Control","Dispatch Transfer","Outbound Manifest"],upper:["North Crane Catwalk","Lift Inspection Loft","Upper Freight Traverse","East Horizon Beacon"],lower:["Underkeel Pump","Hydraulic Service","Gantry Bearing Service","Rail Switch Workshop","Reclamation Return"]},material_ids:{"0":"Empty","100":"BasaltColumns Solid immovable None","58":"ReinforcedConcrete Solid immovable None","62":"SteelPlate Solid immovable None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"West launch",to:"Harbour clearance",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"};
+let receipt={concept:"Nacre Caisson — Drylock Ship Stacklift and Freight Truss",original:true,seed:SEED,engine_sha:"de109d0131641d6adc8d25bb9ced7ca3d4991105",source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",material_catalogue_blob:"dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",setup_loader_blob:"70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",extent:[W,H],route_graph:{main:["Mooring Arrival","Dispatch Ledger","Caisson Gate","Truss West Receiver","Overcut Transit","Truss East Receiver","Classifier Control","Dispatch Transfer","Outbound Manifest"],upper:["North Crane Catwalk","Lift Inspection Loft","Upper Freight Traverse","East Horizon Beacon"],lower:["Underkeel Pump","Hydraulic Service","Gantry Bearing Service","Rail Switch Workshop","Reclamation Return"]},material_ids:{"0":"Empty","100":"BasaltColumns Solid immovable None","58":"ReinforcedConcrete Solid immovable None","62":"SteelPlate Solid immovable None"},midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,detached_cells:0,pruned_disconnected_decor_cells:pruned,grounding_steel_ties:ties.length,rectangles:rect.length,rectangle_work:area,setup_bytes:jbytes.length,material_plane_sha256:sha256(g),setup_sha256:sha256(jbytes),clearance:status,obstruction:{material:58,rect:barrier,from:"West launch",to:"Harbour clearance",size:[31,27],sites_reached:detour.reached,unreachable:detour.bad,distance_before_after:routeDistance},images:images.map(z=>({name:z.name,rect:z.rect,bytes:z.bytes.length,sha256:z.sha256,pixel_parity:z.pixels})),native_status:"NATIVE-UNTESTED",bridge_source_max_rectangles:32768,installed_fallback_risk:4096,proof:"Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"};
 return {g,rect,sites,crops,images,receipt,setup,json,jbytes,status,detour:{reached:detour.reached,bad:detour.bad,component:detour.component},distance:routeDistance,pruned};
 }
 return {generate,sha256,base64,utf8};
