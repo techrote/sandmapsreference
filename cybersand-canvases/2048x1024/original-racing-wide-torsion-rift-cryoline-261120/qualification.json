@@ -1,0 +1,285 @@
+{
+  "kind": "TORSION_RIFT_CRYOLINE_ORIGINAL_RACING_WIDE",
+  "revision": "R1",
+  "seed": "0x77F12026",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "material_cells": 2097152,
+  "extent": [
+    2048,
+    1024
+  ],
+  "rectangles": 5283,
+  "setup_json_bytes": 100339,
+  "work_visits": 689230,
+  "source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1407922,
+    "49": 18250,
+    "58": 16464,
+    "62": 94829,
+    "100": 448876,
+    "101": 38658,
+    "113": 19832,
+    "117": 33537,
+    "122": 15327,
+    "128": 3457
+  },
+  "grounded_solids": 689230,
+  "discarded_detached_material_cells": 48704,
+  "remaining_detached": 0,
+  "fluid_cells": 0,
+  "reactive_cells": 0,
+  "material_laws": "All occupied IDs 49,58,62,100,101,113,117,122,128 are immovable inert Solid/RuleKernel::None; no mobile materials.",
+  "midge": {
+    "hull": [
+      4,
+      3
+    ],
+    "model_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      136,
+      629
+    ]
+  },
+  "sites": [
+    {
+      "name": "West Lock Start",
+      "x": 136,
+      "y": 629
+    },
+    {
+      "name": "Ignition Straight",
+      "x": 346,
+      "y": 629
+    },
+    {
+      "name": "Torque Foundry Approach",
+      "x": 601,
+      "y": 630
+    },
+    {
+      "name": "Rift Lower Approach",
+      "x": 910,
+      "y": 626
+    },
+    {
+      "name": "Rift Aperture High",
+      "x": 1090,
+      "y": 416
+    },
+    {
+      "name": "Rift Landing",
+      "x": 1262,
+      "y": 630
+    },
+    {
+      "name": "Cryo Lower",
+      "x": 1480,
+      "y": 626
+    },
+    {
+      "name": "East Braking",
+      "x": 1760,
+      "y": 631
+    },
+    {
+      "name": "East Recovery Pivot",
+      "x": 1910,
+      "y": 515
+    },
+    {
+      "name": "East Upper Return",
+      "x": 1900,
+      "y": 398
+    },
+    {
+      "name": "Cryo Upper",
+      "x": 1540,
+      "y": 393
+    },
+    {
+      "name": "Rift Upper",
+      "x": 1240,
+      "y": 394
+    },
+    {
+      "name": "Torque Upper",
+      "x": 766,
+      "y": 393
+    },
+    {
+      "name": "West Upper",
+      "x": 397,
+      "y": 390
+    },
+    {
+      "name": "West Dive",
+      "x": 175,
+      "y": 512
+    },
+    {
+      "name": "Finish",
+      "x": 186,
+      "y": 630
+    },
+    {
+      "name": "West Operator Loft",
+      "x": 278,
+      "y": 127
+    },
+    {
+      "name": "Torque Telemetry Loft",
+      "x": 610,
+      "y": 129
+    },
+    {
+      "name": "Rift Controller",
+      "x": 1076,
+      "y": 130
+    },
+    {
+      "name": "West Underworks",
+      "x": 225,
+      "y": 906
+    },
+    {
+      "name": "Torque Service",
+      "x": 684,
+      "y": 913
+    },
+    {
+      "name": "Cryo Vault",
+      "x": 1457,
+      "y": 915
+    },
+    {
+      "name": "East Service Bay",
+      "x": 1794,
+      "y": 917
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "connected": 1259454,
+      "reached": 23,
+      "missing": []
+    },
+    "23x19": {
+      "connected": 1229082,
+      "reached": 23,
+      "missing": []
+    },
+    "31x27": {
+      "connected": 1168916,
+      "reached": 23,
+      "missing": []
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      840,
+      590,
+      159,
+      94
+    ],
+    "material": 58,
+    "remaining": 22,
+    "missing": [
+      "Rift Lower Approach"
+    ],
+    "finish_reachable": true
+  },
+  "grid_sha256": "1e71b704c9acf8ac2880f9a470e98a4762f98e2592b18ce70878d569435fa003",
+  "setup_sha256": "6b67d7d3bcde90c1447f8ed2794d44426f7af8bab52b7e88990f45d37672865d",
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "sha256": "3c12f8a7a8a52f13b71614dac0746eb2ff39bca2625077aef36a52b4f698352f",
+      "bytes": 2099184,
+      "pixels": 2097152,
+      "crc": true,
+      "adler": true,
+      "parity": true
+    },
+    "01-west-lock.png": {
+      "x": 0,
+      "y": 28,
+      "w": 454,
+      "h": 578,
+      "sha256": "5321d3f2964dbf3b18195669ff3acef6776d437a26844b6cf0e0caaedf1b65ad",
+      "bytes": 263858,
+      "pixels": 262412,
+      "crc": true,
+      "adler": true,
+      "parity": true
+    },
+    "02-torque-foundry.png": {
+      "x": 382,
+      "y": 253,
+      "w": 478,
+      "h": 657,
+      "sha256": "428c28776cf89d118252dedb0ca68dbf91129d1bfd34e5c6aa07bf17dda73eba",
+      "bytes": 315571,
+      "pixels": 314046,
+      "crc": true,
+      "adler": true,
+      "parity": true
+    },
+    "03-rift-spire.png": {
+      "x": 829,
+      "y": 248,
+      "w": 502,
+      "h": 698,
+      "sha256": "4682c2a235f34e0a3e8d4d37ff7480499f1ec25d697f870721dabda65fb76c49",
+      "bytes": 351967,
+      "pixels": 350396,
+      "crc": true,
+      "adler": true,
+      "parity": true
+    },
+    "04-cryo-filter.png": {
+      "x": 1267,
+      "y": 226,
+      "w": 454,
+      "h": 704,
+      "sha256": "32ef0c86a9b684e9c8486ce8b57a36779ab3e8664574df0bda13bbdb69b88d8d",
+      "bytes": 321188,
+      "pixels": 319616,
+      "crc": true,
+      "adler": true,
+      "parity": true
+    },
+    "05-east-recovery.png": {
+      "x": 1650,
+      "y": 238,
+      "w": 398,
+      "h": 686,
+      "sha256": "a4b8f8838fabe8bfda8174dd99fb7614731d1ccc7b1f5c4cc36187d2957cb396",
+      "bytes": 274582,
+      "pixels": 273028,
+      "crc": true,
+      "adler": true,
+      "parity": true
+    },
+    "06-underground-services.png": {
+      "x": 459,
+      "y": 650,
+      "w": 564,
+      "h": 374,
+      "sha256": "f2613b7272e986b6debb64bde60de56423eb6d1fbbfa5974dda504901ece33be",
+      "bytes": 212173,
+      "pixels": 210936,
+      "crc": true,
+      "adler": true,
+      "parity": true
+    }
+  },
+  "native": "NATIVE-UNTESTED; installed bridge rectangle capacity is unverified, possible fallback 4096"
+}
