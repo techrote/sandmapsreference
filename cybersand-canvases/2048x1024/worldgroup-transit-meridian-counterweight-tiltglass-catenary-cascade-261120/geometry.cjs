@@ -91,17 +91,22 @@ function buildWorld(){
  // Reopen shaft cores and the main lower recovery flight path AFTER structure,
  // so decorative mechanics never silently reduce needed conservative hull space.
  for(let [x,y,w,h,entry]of bays){rect(entry-32,807,65,y+21-807,0);rect(entry-30,y,61,22,0)}
+ // Five physically open lift/return slots across the staggered mechanical
+ // flight separator; essential 31x27 portals, not site-specific snapping.
+ for(let [x,w] of [[447,85],[887,90],[1320,100],[1618,100],[1895,100]])rect(x,210,w,652,0);
+ // High transfer throat retains a literal stoppable checkpoint with a lower bypass.
+ rect(979,254,92,83,0);
  const sites=[
  ['Start intake',104,548],['West ramp',422,526],['West open dispatch',297,548],
- ['Tower low approach',604,421],['Tower inspection',638,395],
+ ['Tower low approach',604,421],['Tower inspection',622,388],
  ['Upper glide',877,401],['Blocked high interchange',1018,295],
  ['High grade return',1230,293],['Transformer rise',1372,401],
  ['Freight glide',1635,443],['Crane lookoff',1671,301],
  ['East catch',1879,561],['East turn',1938,725],
  ['Low rescue west',215,792],['Low bypass lift',629,784],
- ['Low open runway',1150,784],['East rescue',1680,786],
+ ['Low open runway',1200,789],['East rescue',1680,786],
  ['Finish',1917,781],['West ram workshop',346,923],
- ['Hoist repair workshop',933,926],['Transformer inspection bay',1430,918],
+ ['Hoist repair workshop',933,926],['Transformer inspection bay',1429,911],
  ['Crane recovery workshop',1850,920]
  ];
  const obs=[979,254,92,84];
