@@ -1,0 +1,314 @@
+{
+  "clearance": "31x27",
+  "exact_site_checks": {},
+  "primary": [
+    {
+      "from": "Start | West ignition",
+      "to": "Injector coil exit",
+      "length": 185,
+      "local_margin": 80
+    },
+    {
+      "from": "Injector coil exit",
+      "to": "Shuttle lift approach",
+      "length": 209,
+      "local_margin": 80
+    },
+    {
+      "from": "Shuttle lift approach",
+      "to": "Elevator clearance",
+      "length": 162,
+      "local_margin": 80
+    },
+    {
+      "from": "Elevator clearance",
+      "to": "Forkbridge western throat",
+      "length": 182,
+      "local_margin": 80
+    },
+    {
+      "from": "Forkbridge western throat",
+      "to": "Upper fork gate",
+      "length": 305,
+      "local_margin": 80
+    },
+    {
+      "from": "Upper fork gate",
+      "to": "Upper fork clearance",
+      "length": 144,
+      "local_margin": 80
+    },
+    {
+      "from": "Upper fork clearance",
+      "to": "Upper fork exit",
+      "length": 261,
+      "local_margin": 80
+    },
+    {
+      "from": "Upper fork exit",
+      "to": "Cargo gantry arrival",
+      "length": 249,
+      "local_margin": 80
+    },
+    {
+      "from": "Cargo gantry arrival",
+      "to": "Container loader bypass",
+      "length": 200,
+      "local_margin": 80
+    },
+    {
+      "from": "Container loader bypass",
+      "to": "Eastern capture entry",
+      "length": 297,
+      "local_margin": 80
+    },
+    {
+      "from": "Eastern capture entry",
+      "to": "East downward turn",
+      "length": 201,
+      "local_margin": 80
+    },
+    {
+      "from": "East downward turn",
+      "to": "East return approach",
+      "length": 228,
+      "local_margin": 80
+    },
+    {
+      "from": "East return approach",
+      "to": "Under cargo berth",
+      "length": 222,
+      "local_margin": 80
+    },
+    {
+      "from": "Under cargo berth",
+      "to": "Central lower return",
+      "length": 414,
+      "local_margin": 80
+    },
+    {
+      "from": "Central lower return",
+      "to": "Switch return",
+      "length": 222,
+      "local_margin": 80
+    },
+    {
+      "from": "Switch return",
+      "to": "Shuttle underpass",
+      "length": 333,
+      "local_margin": 80
+    },
+    {
+      "from": "Shuttle underpass",
+      "to": "West recovery",
+      "length": 333,
+      "local_margin": 80
+    },
+    {
+      "from": "West recovery",
+      "to": "Finish | West ignition",
+      "length": 296,
+      "local_margin": 80
+    }
+  ],
+  "alternate": [
+    {
+      "from": "Forkbridge western throat",
+      "to": "Alternative central ramp",
+      "length": 275,
+      "local_margin": 80
+    },
+    {
+      "from": "Alternative central ramp",
+      "to": "Alternative fork rejoin",
+      "length": 320,
+      "local_margin": 80
+    },
+    {
+      "from": "Alternative fork rejoin",
+      "to": "Upper fork exit",
+      "length": 133,
+      "local_margin": 80
+    }
+  ],
+  "service_access": [
+    {
+      "site": "West control platform",
+      "best": {
+        "from": "Finish | West ignition",
+        "to": "West control platform",
+        "length": 311,
+        "local_margin": 170
+      }
+    },
+    {
+      "site": "Shuttle cable operator",
+      "best": {
+        "from": "Forkbridge western throat",
+        "to": "Shuttle cable operator",
+        "length": 263,
+        "local_margin": 170
+      }
+    },
+    {
+      "site": "Forkbridge overhead signal",
+      "best": {
+        "from": "Forkbridge western throat",
+        "to": "Forkbridge overhead signal",
+        "length": 312,
+        "local_margin": 170
+      }
+    },
+    {
+      "site": "Cargo loading attendant",
+      "best": {
+        "from": "Container loader bypass",
+        "to": "Cargo loading attendant",
+        "length": 58,
+        "local_margin": 170
+      }
+    },
+    {
+      "site": "East catcher operator",
+      "best": {
+        "from": "Eastern capture entry",
+        "to": "East catcher operator",
+        "length": 363,
+        "local_margin": 170
+      }
+    },
+    {
+      "site": "Pressure service room",
+      "best": {
+        "from": "West recovery",
+        "to": "Pressure service room",
+        "length": 138,
+        "local_margin": 170
+      }
+    },
+    {
+      "site": "Shuttle gearbox service",
+      "best": {
+        "from": "Shuttle underpass",
+        "to": "Shuttle gearbox service",
+        "length": 196,
+        "local_margin": 170
+      }
+    },
+    {
+      "site": "Fork hydraulics service",
+      "best": {
+        "from": "Central lower return",
+        "to": "Fork hydraulics service",
+        "length": 131,
+        "local_margin": 170
+      }
+    },
+    {
+      "site": "Cargo filter service",
+      "best": {
+        "from": "Under cargo berth",
+        "to": "Cargo filter service",
+        "length": 160,
+        "local_margin": 170
+      }
+    },
+    {
+      "site": "Brake handoff service",
+      "best": {
+        "from": "East downward turn",
+        "to": "Brake handoff service",
+        "length": 171,
+        "local_margin": 170
+      }
+    }
+  ],
+  "blocked_alternate": [
+    {
+      "from": "Forkbridge western throat",
+      "to": "Alternative central ramp",
+      "length": 275,
+      "margin": 110
+    },
+    {
+      "from": "Alternative central ramp",
+      "to": "Alternative fork rejoin",
+      "length": 320,
+      "margin": 110
+    },
+    {
+      "from": "Alternative fork rejoin",
+      "to": "Upper fork exit",
+      "length": 133,
+      "margin": 110
+    }
+  ],
+  "blocked_return": [
+    {
+      "from": "Upper fork exit",
+      "to": "Cargo gantry arrival",
+      "length": 249,
+      "margin": 110
+    },
+    {
+      "from": "Cargo gantry arrival",
+      "to": "Container loader bypass",
+      "length": 200,
+      "margin": 110
+    },
+    {
+      "from": "Container loader bypass",
+      "to": "Eastern capture entry",
+      "length": 297,
+      "margin": 110
+    },
+    {
+      "from": "Eastern capture entry",
+      "to": "East downward turn",
+      "length": 201,
+      "margin": 110
+    },
+    {
+      "from": "East downward turn",
+      "to": "East return approach",
+      "length": 228,
+      "margin": 110
+    },
+    {
+      "from": "East return approach",
+      "to": "Under cargo berth",
+      "length": 222,
+      "margin": 110
+    },
+    {
+      "from": "Under cargo berth",
+      "to": "Central lower return",
+      "length": 414,
+      "margin": 110
+    },
+    {
+      "from": "Central lower return",
+      "to": "Switch return",
+      "length": 222,
+      "margin": 110
+    },
+    {
+      "from": "Switch return",
+      "to": "Shuttle underpass",
+      "length": 333,
+      "margin": 110
+    },
+    {
+      "from": "Shuttle underpass",
+      "to": "West recovery",
+      "length": 333,
+      "margin": 110
+    },
+    {
+      "from": "West recovery",
+      "to": "Finish | West ignition",
+      "length": 296,
+      "margin": 110
+    }
+  ]
+}
