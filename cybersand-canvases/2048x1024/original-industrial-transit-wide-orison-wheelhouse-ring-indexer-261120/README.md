@@ -1,6 +1,6 @@
-# Orison Wheelhouse â Ring Indexer RoRo Port
+# Orison Wheelhouse — Ring Indexer RoRo Port
 
-> **NEW ORIGINAL 2048Ã1024 PERPENDICULAR SIDE-ELEVATION MATERIAL-CELL WORLD Â· OPEN DRAFT/HOLD Â· SOURCE-STATIC PASS Â· NATIVE-UNTESTED.** Entirely independent industrial-transit map, not a reference-art conversion. Do not merge, Ready or infer owner acceptance.
+> **NEW ORIGINAL 2048×1024 PERPENDICULAR SIDE-ELEVATION MATERIAL-CELL WORLD · OPEN DRAFT/HOLD · SOURCE-STATIC PASS · NATIVE-UNTESTED.** Entirely independent industrial-transit map, not a reference-art conversion. Do not merge, Ready or infer owner acceptance.
 
 ## Distinctive playable place and engineered freight chain
 
@@ -8,56 +8,56 @@ A dry salt-basin **roll-on/roll-off vessel** (west) unloads through a true side 
 
 Five distinct lower service workfaces support the system: berth bilge return, elevator pump/drive maintenance, indexing axle/gear service, rail-switch brake workshop, and customs recovery. The lower transverse tunnel, upper overhead-truss overflight and central open flight band offer traversable alternatives. Hatches into the wheelhouse/hold, ring interior, hoisthead and switching gallery are physical excavations in actual material IDs. Large negative-space sky, basins and service returns contrast with dense machinery. Every rendered structural element is in the final collision material plane.
 
-**Spawn**: Berth Approach (158,413). **Goal**: Outbound Relay (1902,414). **Recommended progression:** Berth Approach â Quay Manifest â Pilot Wheelhouse / RoRo Vehicle Hold â Twin-Drum Gate â Elevator Control / Elevator Head â Indexing Ring Entry â Ring Viewing Pocket / Ring Cargo East â Ring Outer Transfer â Classification Control / Rail Switch Gallery â Freight Scan Gate â Outbound Relay.
+**Spawn**: Berth Approach (158,413). **Goal**: Outbound Relay (1902,414). **Recommended progression:** Berth Approach → Quay Manifest → Pilot Wheelhouse / RoRo Vehicle Hold → Twin-Drum Gate → Elevator Control / Elevator Head → Indexing Ring Entry → Ring Viewing Pocket / Ring Cargo East → Ring Outer Transfer → Classification Control / Rail Switch Gallery → Freight Scan Gate → Outbound Relay.
 
-**Main flight route:** Berth Approach â Quay Manifest â Twin-Drum Gate â Indexing Ring Entry â Ring Outer Transfer â Classification Control â Freight Scan Gate â Outbound Relay.
+**Main flight route:** Berth Approach → Quay Manifest → Twin-Drum Gate → Indexing Ring Entry → Ring Outer Transfer → Classification Control → Freight Scan Gate → Outbound Relay.
 
-**Alternate upper route:** West Crane Loft â Elevator Head â Upper Truss Way â East Semaphore.
+**Alternate upper route:** West Crane Loft → Elevator Head → Upper Truss Way → East Semaphore.
 
-**Recovery / bottom return:** Berth Bilge Return â Hoist Pump Gallery â Ring Axle Service â Turnout Service â Customs Recovery.
+**Recovery / bottom return:** Berth Bilge Return → Hoist Pump Gallery → Ring Axle Service → Turnout Service → Customs Recovery.
 
 ### Exact named destinations
 
-- **Berth Approach** â (158,413)
-- **Quay Manifest** â (411,413)
-- **Pilot Wheelhouse** â (254,578)
-- **RoRo Vehicle Hold** â (331,735)
-- **Twin-Drum Gate** â (650,413)
-- **Elevator Control** â (704,570)
-- **West Crane Loft** â (374,247)
-- **Elevator Head** â (704,247)
-- **Indexing Ring Entry** â (1051,414)
-- **Ring Viewing Pocket** â (1143,544)
-- **Ring Cargo East** â (1248,649)
-- **Ring Outer Transfer** â (1368,414)
-- **Classification Control** â (1575,413)
-- **Rail Switch Gallery** â (1580,686)
-- **Freight Scan Gate** â (1800,414)
-- **Outbound Relay** â (1902,414)
-- **Upper Truss Way** â (1178,247)
-- **East Semaphore** â (1870,247)
-- **Berth Bilge Return** â (270,872)
-- **Hoist Pump Gallery** â (642,872)
-- **Ring Axle Service** â (1088,872)
-- **Turnout Service** â (1540,872)
-- **Customs Recovery** â (1840,872)
+- **Berth Approach** — (158,413)
+- **Quay Manifest** — (411,413)
+- **Pilot Wheelhouse** — (254,578)
+- **RoRo Vehicle Hold** — (331,735)
+- **Twin-Drum Gate** — (650,413)
+- **Elevator Control** — (704,570)
+- **West Crane Loft** — (374,247)
+- **Elevator Head** — (704,247)
+- **Indexing Ring Entry** — (1051,414)
+- **Ring Viewing Pocket** — (1143,544)
+- **Ring Cargo East** — (1248,649)
+- **Ring Outer Transfer** — (1368,414)
+- **Classification Control** — (1575,413)
+- **Rail Switch Gallery** — (1580,686)
+- **Freight Scan Gate** — (1800,414)
+- **Outbound Relay** — (1902,414)
+- **Upper Truss Way** — (1178,247)
+- **East Semaphore** — (1870,247)
+- **Berth Bilge Return** — (270,872)
+- **Hoist Pump Gallery** — (642,872)
+- **Ring Axle Service** — (1088,872)
+- **Turnout Service** — (1540,872)
+- **Customs Recovery** — (1840,872)
 
 ## Source-specific qualification receipt
 
 | Proof | Source-static outcome |
 |---|---|
-| Canvas size | 2048Ã1024 = **2,097,152** final material-ID cells |
+| Canvas size | 2048×1024 = **2,097,152** final material-ID cells |
 | Deterministic seed | `2026112026` |
 | Material IDs | 0 empty; 58 reinforced concrete; 62 steel plate; 100 basalt columns |
 | Solid work / grounded | **581,718 / 581,718**, zero detached or intentionally uncontained falling/mobile/reactive material |
 | Ordered nonoverlapping rectangles | **4,330**, exhaustive grid replay matches |
 | Setup JSON | **80,463 bytes**, below 1,048,576 |
-| Midge conservative exact-site clearance | 23/23 at **19Ã15**, 23/23 at **23Ã19**, 23/23 at **31Ã27** |
-| Physically blocked route | Add solid XYWH `[231,363,92,96]`: 31Ã27 Berth Approach â Quay Manifest **253 â 371** centre-steps, all 23 named sites remain reachable |
+| Midge conservative exact-site clearance | 23/23 at **19×15**, 23/23 at **23×19**, 23/23 at **31×27** |
+| Physically blocked route | Add solid XYWH `[231,363,92,96]`: 31×27 Berth Approach → Quay Manifest **253 → 371** centre-steps, all 23 named sites remain reachable |
 | PNG evidence | Genuine source-cell indexed-material panorama + **six true 1:1 crops**; 7/7 raw-source pixel parity, PNG chunk CRC, zlib Adler, no scaling or composites |
 | Native execution | **NATIVE-UNTESTED** (no proven installed Godot/Workbench/CyberDemoBridge/Rapier or fresh-process save/reopen) |
 
-**Source identity:** base `sandmapsreference/main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`; read-only accepted engine authority `techrote/cybersand/main@7b03aa437561ec63e31fd09531171360ab60eeb4`; accepted Setup-v2 loader Git blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`, material catalogue blob `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`, Midge authored hull 4Ã3. Re-read source Setup-v2 maximum 32,768 rectangles; the installed bridge capacity handshake can expose a **legacy 4,096 fallback**. **This map's 4,330 records exceed fallback by 234; source compatibility is not proof of installed compatibility.** No geometry is degraded to fit an unverified fallback. No engine edits.
+**Source identity:** base `sandmapsreference/main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`; read-only accepted engine authority `techrote/cybersand/main@7b03aa437561ec63e31fd09531171360ab60eeb4`; accepted Setup-v2 loader Git blob `70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9`, material catalogue blob `dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3`, Midge authored hull 4×3. Re-read source Setup-v2 maximum 32,768 rectangles; the installed bridge capacity handshake can expose a **legacy 4,096 fallback**. **This map's 4,330 records exceed fallback by 234; source compatibility is not proof of installed compatibility.** No geometry is degraded to fit an unverified fallback. No engine edits.
 
 **SHA-256 physical cell grid** `5bf8de913ea21246734a8ee57488916a3d632950c10df1d8e8071c7b5aa9cca0`
 
@@ -85,8 +85,8 @@ These are **actual final material IDs** mapped to a fixed palette and verified p
 Request **Art / Technical / Shepherd** independent exact-HEAD source review. No exact binary-compatible installed Workbench or Godot execution was available for this source-static production. Midge flight physics, collisions, progression, replay, save/reopen and bridge 4,330-record import are **unproven**. Only change this creator-owned branch for confirmed independent P0/P1 repairs. No change to `cybersand`, original prior landscape PRs, schedules or other authors.
 
 
-## R2 â bounded functional-art P1 repair (20 November 2026)
+## R2 — bounded functional-art P1 repair (20 November 2026)
 
 This revision responds to independent exact-R1 Shepherd and Art P1s using **33,648 actual material-cell changes** (10,714 additions, 14,023 excavations, 8,911 substitutions). It retains the original fixed annular indexer, three-grade rail fan, main/upper/lower routes and all 23 literal site coordinates. Matching steel-trimmed cargo skids and capturing stops now appear at the RoRo foredeck, hoist cradle, annulus ingress and rail release. Two formerly shallow underworks stalls have a deep entered dual-gear/drive-pump workface and a guarded customs recovery lift. Those are inert *fixed* cells, not animated cargo or machinery.
 
-R2 exact committed-source static results: **2,097,152** cells, **4288** disjoint ordered rectangles, **79791** Setup JSON bytes, **578,409** grounded stable immovable solids / 0 detached, **23/23** exact destinations at each **19Ã15, 23Ã19, 31Ã27** envelope, and a physically obstructed 31Ã27 **253â371**-step route with 23/23 destinations still accessible. Full overview plus six 1:1 district crops are byte-generated from the exact cells with full pixel parity. New grid SHA-256: `0ffe9a9ddaa968969f11607d40fa1569168afe8e967cfe63ef2c216e0c7581b0`; Setup SHA-256: `60dadfd3cd72a1fe2e90daf3fc36f084ab2edd811ce9e77a64a3ce0c9ffde42f`. Independent R2 Art/Tech/Shepherd judgment is **pending**. Accepted source rectangle maximum is 32,768; the installed/legacy 4,096-capacity bridge fallback still needs a real handshake; **NATIVE-UNTESTED**. No native collision, Midge flight, persistence or CI PASS claimed.
+R2 exact committed-source static results: **2,097,152** cells, **4288** disjoint ordered rectangles, **79791** Setup JSON bytes, **578,409** grounded stable immovable solids / 0 detached, **23/23** exact destinations at each **19×15, 23×19, 31×27** envelope, and a physically obstructed 31×27 **253→371**-step route with 23/23 destinations still accessible. Full overview plus six 1:1 district crops are byte-generated from the exact cells with full pixel parity. New grid SHA-256: `0ffe9a9ddaa968969f11607d40fa1569168afe8e967cfe63ef2c216e0c7581b0`; Setup SHA-256: `60dadfd3cd72a1fe2e90daf3fc36f084ab2edd811ce9e77a64a3ce0c9ffde42f`. Independent R2 Art/Tech/Shepherd judgment is **pending**. Accepted source rectangle maximum is 32,768; the installed/legacy 4,096-capacity bridge fallback still needs a real handshake; **NATIVE-UNTESTED**. No native collision, Midge flight, persistence or CI PASS claimed.
