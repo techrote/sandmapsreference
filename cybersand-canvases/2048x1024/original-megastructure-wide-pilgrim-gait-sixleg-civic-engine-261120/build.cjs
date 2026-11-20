@@ -133,6 +133,19 @@ function worldBuild(){
  for(const [x,y] of [[181,555],[504,554],[954,557],[1375,561],[1814,560]])R(x,y,43,42,M.E);
  // Exposed walk-up trim stays outside hull clearance; 1:1 physical cutouts are not painted doors.
  for(const [x,w] of [[105,110],[280,114],[447,134],[675,116],[905,112],[1218,128],[1501,95],[1653,90],[1835,95]]){R(x,452,w,6,M.AMBER);R(x,547,w,5,M.STEEL);}
+ // R2 physical root-cause repair after direct full-map inspection: explicitly rooted superstructure.
+ // A true boundary-connected crown beam carries the asymmetrical five-district skyline.
+ R(0,179,W,23,M.STEEL); R(0,435,W,22,M.STEEL);
+ // The underbody machine-city connects through separate load struts to the grounded foot chassis.
+ R(0,558,W,17,M.CON); R(0,674,W,17,M.STEEL); R(0,835,W,32,M.CON);
+ for(const x of [154,356,494,739,944,1201,1379,1560,1684,1917]){
+   L(x,195,x+4,430,12,M.STEEL);L(x,570,x+12,852,15,M.CON);
+ }
+ // Cut actual, 50+ cell-wide Midge flight portals AFTER all load-bearing geometries are placed.
+ for(const [l,r] of [[225,277],[605,658],[861,910],[1150,1207],[1414,1462],[1748,1806],[1870,1915]])
+   R(l,263,r-l,526,M.E);
+ // West gyro egress and Commons public vertical lift: real fully contained 31x27 approaches.
+ R(891,271,73,49,M.E);R(1303,265,83,64,M.E);R(1310,265,47,212,M.E);
  // Explicit corridor-wide local recoverability at central ballast: retain both lower and upper bypasses.
  const seen=new Uint8Array(g.length),q=new Uint32Array(g.length);let detached=0,clusters=0,retained=0;for(let i=0;i<g.length;i++){if(!g[i]||seen[i])continue;let head=0,tail=1,root=false;q[0]=i;seen[i]=1;while(head<tail){const p=q[head++],x=p%W,y=(p/W)|0;if(x===0||x===W-1||y===H-1)root=true;for(const v of [p-1,p+1,p-W,p+W])if(v>=0&&v<g.length&&Math.abs(v%W-x)+Math.abs(((v/W)|0)-y)===1&&!seen[v]&&g[v]){seen[v]=1;q[tail++]=v;}}if(!root){clusters++;detached+=tail;for(let j=0;j<tail;j++)g[q[j]]=0;}else retained+=tail;}
  // Canonical horizontal runs with matching adjacent rows merged vertically; no overlap or cell loss.
