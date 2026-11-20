@@ -1,0 +1,270 @@
+{
+  "world_group": "Underroot Relay System",
+  "world_group_sibling": 2,
+  "role": "Upstream windbreak nursery, optical seed screening and asymmetric sealed isolation gate",
+  "concept": "Windbreak Nursery Isolation Gate",
+  "original_no_source": true,
+  "seed": 2535947,
+  "anchor": "wide-graftloom-slipway",
+  "anchor_head": "b0d1e5216aabb9b5e009e599ffbffcec6fd8a657",
+  "engine_main": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "material_histogram": {
+    "49": 9851,
+    "62": 28027,
+    "66": 28161,
+    "68": 69983,
+    "77": 2399,
+    "100": 130537,
+    "101": 75863,
+    "120": 8069,
+    "122": 2344,
+    "129": 12453,
+    "131": 12386
+  },
+  "filled_material_cells": 380073,
+  "grounded_cells": 380073,
+  "unrooted_cells": 0,
+  "structural_ties": {
+    "ties": 104,
+    "longest": 60
+  },
+  "rectangles": 4091,
+  "rectangle_work": 380073,
+  "setup_bytes": 75667,
+  "source_max_rectangles": 32768,
+  "source_max_bytes": 1048576,
+  "legacy_bridge_fallback": 4096,
+  "plane_sha256": "aa75948169e8ad69655d48830b87837dba508c3c4fad4206707adfdda6cd93e8",
+  "setup_sha256": "5a418e9db47abc79ac721f0da7714263ab1291954563fe61df04463e2ce38d4b",
+  "literal_sites": {
+    "West windbreak arrivals": [
+      126,
+      514
+    ],
+    "Cliff shelter loft": [
+      330,
+      525
+    ],
+    "Habitat refuge": [
+      220,
+      653
+    ],
+    "West nursery ledger": [
+      318,
+      760
+    ],
+    "West lower intake": [
+      332,
+      899
+    ],
+    "Upwind free crossing": [
+      580,
+      405
+    ],
+    "Nursery bank alpha": [
+      610,
+      664
+    ],
+    "Nursery bank beta": [
+      897,
+      635
+    ],
+    "Nursery bank gamma": [
+      1173,
+      634
+    ],
+    "Canopy signal bridge": [
+      1004,
+      383
+    ],
+    "Condensation rescue": [
+      503,
+      810
+    ],
+    "Windbreak survey pier": [
+      1377,
+      560
+    ],
+    "East clean gate top": [
+      1586,
+      296
+    ],
+    "Sealed gate throat": [
+      1582,
+      632
+    ],
+    "Quarantine sample lock": [
+      1740,
+      567
+    ],
+    "East autoclave bay": [
+      1847,
+      639
+    ],
+    "East cold dispatch": [
+      1862,
+      769
+    ],
+    "East ridge overflight": [
+      1923,
+      450
+    ],
+    "Deep irrigation valve": [
+      748,
+      878
+    ],
+    "Deep xenoseed sorter": [
+      1048,
+      884
+    ],
+    "Deep quarantine vent": [
+      1349,
+      878
+    ],
+    "East return shaft": [
+      1692,
+      901
+    ]
+  },
+  "clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1440487,
+      "passed": 22,
+      "total": 22,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1392523,
+      "passed": 22,
+      "total": 22,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1299810,
+      "passed": 22,
+      "total": 22,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "box": [
+      1564,
+      622,
+      1601,
+      643
+    ],
+    "isolated_site": "Sealed gate throat",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1296564,
+        "passed": 21,
+        "total": 22,
+        "bad": [
+          [
+            "Sealed gate throat",
+            [
+              1582,
+              632
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 65603,
+      "sha256": "080f0af6b7e44f92ba99385430832f285721a4fd5152a52990dfb842521f1d4a"
+    },
+    {
+      "name": "01-west-nursery-shelter.png",
+      "bytes": 8838,
+      "sha256": "d7ae90bc15ab9528e86d0b54ea7a83d68d165817c0bbfbb0a893f93e284c9455"
+    },
+    {
+      "name": "02-propagation-banks.png",
+      "bytes": 21514,
+      "sha256": "dd774497f04398631986fb78d7373580bb7a0fd4f78a4fa5c1ec65c0091f4b74"
+    },
+    {
+      "name": "03-distributed-windbreak.png",
+      "bytes": 13500,
+      "sha256": "b8cec8d6902240a3a21ef68213f25469bd7451f7ab184327650d4ec3cb6c65a0"
+    },
+    {
+      "name": "04-east-isolation-gate.png",
+      "bytes": 13122,
+      "sha256": "e90b89f0285b8c6c659050a864b40faabbbc21f6f04626387ab70c0b15fe477c"
+    },
+    {
+      "name": "05-deep-irrigation-works.png",
+      "bytes": 10324,
+      "sha256": "62b17ee1dd730ba8d38c1be5913674a821880f651a1706884b3e87bf566faf2f"
+    }
+  ],
+  "crops": [
+    [
+      "01-west-nursery-shelter",
+      65,
+      455,
+      520,
+      415
+    ],
+    [
+      "02-propagation-banks",
+      490,
+      525,
+      865,
+      310
+    ],
+    [
+      "03-distributed-windbreak",
+      380,
+      365,
+      1115,
+      292
+    ],
+    [
+      "04-east-isolation-gate",
+      1430,
+      320,
+      618,
+      550
+    ],
+    [
+      "05-deep-irrigation-works",
+      460,
+      837,
+      1320,
+      136
+    ]
+  ],
+  "static": "CREATOR-STATIC-PASS",
+  "native": "NATIVE-UNTESTED",
+  "independent": "PENDING",
+  "status": "DRAFT/HOLD"
+}
