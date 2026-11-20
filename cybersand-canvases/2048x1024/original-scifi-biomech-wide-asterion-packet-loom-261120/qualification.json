@@ -1,0 +1,457 @@
+{
+  "title": "Asterion Packet Loom",
+  "seed": 2611201547,
+  "source": "ORIGINAL-NO-REFERENCE",
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "grid_sha256": "398d35d57f625e3671ca5e29a756eeba56edb4c6a564fc83ece80f022de143fe",
+  "setup_sha256": "7595bd5d32e03d68710724cd5a957d605e093621e0aa69ab426ca95197b5d645",
+  "setup_bytes": 59249,
+  "materials": {
+    "0": 1363940,
+    "58": 72889,
+    "62": 121738,
+    "63": 51296,
+    "72": 7902,
+    "77": 5511,
+    "79": 9614,
+    "100": 167456,
+    "101": 238404,
+    "117": 53843,
+    "128": 4559
+  },
+  "occupied": 733212,
+  "grounded": 733212,
+  "detached": 0,
+  "pruned_nominal_cells": 51262,
+  "rectangles": 3156,
+  "work": 733212,
+  "replay": {
+    "overlaps": 0,
+    "invalid": 0,
+    "mismatches": 0
+  },
+  "valid_material_ids": [
+    58,
+    62,
+    63,
+    72,
+    77,
+    79,
+    100,
+    101,
+    117,
+    128
+  ],
+  "physics": "Accepted native immovable Solid / RuleKernel::None; no liquids, powders or reactive cells",
+  "sites": {
+    "19x15": {
+      "visited_centres": 982830,
+      "named_sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lock_service": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "scrap_rake": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "capillary_dispatch": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "slicer_operator": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_memory_bus": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "coldpress_monitor": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "heat_gill_valve": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "optic_transaction": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "freight_cassette": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "nonfree": [],
+      "lost": [],
+      "approach": []
+    },
+    "23x19": {
+      "visited_centres": 948765,
+      "named_sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lock_service": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "scrap_rake": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "capillary_dispatch": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "slicer_operator": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_memory_bus": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "coldpress_monitor": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "heat_gill_valve": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "optic_transaction": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "freight_cassette": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "nonfree": [],
+      "lost": [],
+      "approach": []
+    },
+    "31x27": {
+      "visited_centres": 886344,
+      "named_sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lock_service": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "scrap_rake": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "capillary_dispatch": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "slicer_operator": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_memory_bus": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "upper_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_escape": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "coldpress_monitor": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "heat_gill_valve": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "optic_transaction": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "freight_cassette": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "finish_beacon": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "nonfree": [],
+      "lost": [],
+      "approach": []
+    }
+  },
+  "route_distances": {
+    "baseline": 554,
+    "blocked": 708,
+    "upper": 724,
+    "lower": 796
+  },
+  "route_obstruction": [
+    959,
+    485,
+    153,
+    142
+  ],
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "lock_service": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "scrap_rake": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "capillary_dispatch": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "slicer_operator": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "upper_memory_bus": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "central_index": {
+      "directly_occluded": true,
+      "reachable": false
+    },
+    "entered_inspection": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "upper_escape": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "lower_escape": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "coldpress_monitor": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "heat_gill_valve": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "optic_transaction": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "freight_cassette": {
+      "directly_occluded": false,
+      "reachable": true
+    },
+    "finish_beacon": {
+      "directly_occluded": false,
+      "reachable": true
+    }
+  },
+  "images": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 2098803,
+      "sha256": "ce425d1e3a0a5d15e97a9b989fed05ef1b7cf3196a29a5e7773df1d9ee48fede",
+      "verified_pixels": 2097152,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "01-quarantine-intake.png": {
+      "x": 0,
+      "y": 250,
+      "w": 405,
+      "h": 660,
+      "bytes": 268447,
+      "sha256": "7d2868d3c291abbeedd2558e5042ca2ffbe383051cd656d59879f2fdfed46ad1",
+      "verified_pixels": 267300,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "02-capillary-slicer.png": {
+      "x": 405,
+      "y": 240,
+      "w": 420,
+      "h": 674,
+      "bytes": 284241,
+      "sha256": "36dbcaa18f9337724640c50a8fbff7b56470b59877143c59f11024e1fe5e5652",
+      "verified_pixels": 283080,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "03-memory-packet-loom.png": {
+      "x": 780,
+      "y": 72,
+      "w": 495,
+      "h": 530,
+      "bytes": 263367,
+      "sha256": "fe339f2f69712428e43dbe27d4fff6bc029643f96e7ec71bf36d179547e3a140",
+      "verified_pixels": 262350,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "04-entered-index-bench.png": {
+      "x": 790,
+      "y": 655,
+      "w": 475,
+      "h": 260,
+      "bytes": 124232,
+      "sha256": "37be4dc183a99bdbfcab1ef463a119dfde9282ceb03a17b3d10d8245e52306c1",
+      "verified_pixels": 123500,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "05-cryopress-gills.png": {
+      "x": 1250,
+      "y": 250,
+      "w": 410,
+      "h": 661,
+      "bytes": 272158,
+      "sha256": "68123f6b42c629d48f272ba7d0cc1ef85dbdb2e349a3a86d539a08890a98d20b",
+      "verified_pixels": 271010,
+      "crc_adler_and_exact_material_parity": true
+    },
+    "06-optical-freight.png": {
+      "x": 1640,
+      "y": 240,
+      "w": 408,
+      "h": 674,
+      "bytes": 276153,
+      "sha256": "7be5a151a17ad3079707804dce7eb78727dd072c225d14c8ef30966b2edf3ea2",
+      "verified_pixels": 274992,
+      "crc_adler_and_exact_material_parity": true
+    }
+  },
+  "source_limits": {
+    "rectangles": 32768,
+    "json_bytes": 1048576,
+    "cell_writes": 32000000
+  },
+  "installed_bridge": "NOT-VERIFIED; possible historical 4096 edit limit",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "AUTHOR-STATIC-PASS; INDEPENDENT ART/TECH/SHEPHERD PENDING"
+}
