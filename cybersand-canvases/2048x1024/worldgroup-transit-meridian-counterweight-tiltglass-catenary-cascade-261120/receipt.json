@@ -1,0 +1,322 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_MERIDIAN_TILTGLASS_CATENARY_CASCADE",
+  "revision": "R1",
+  "seed": "0x261120c4",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "donor": "Tungsten Sawtooth R2 @ 7fc24855cf521c90bf67f4afb08685e490473201; Meridian sibling contrast Latchreach c68c3e067972356f842ffd7e52f0fbd27f3d8c19, Forkfield f80acfab74f6ff21d0c07dd28795f3ed46b0fa44, Subgrade Braided Return 2ff23bbd32ac3d657fed36c90a11fa91b691c66b (design-language research only; new original geometry)",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 456909,
+  "discarded_unattached_candidate_cells": 80791,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 4222,
+  "setup_json_bytes": 79281,
+  "material_work_visits": 456909,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "f32bf927a392993587ff569aaca720aec53799239c77409475c222250de77479",
+  "setup_sha256": "4a1bf0a93a88a6933f3f1bdb3232da9b1afe34e3974a7fef799b38e591c63584",
+  "histogram": {
+    "0": 1640243,
+    "49": 96382,
+    "58": 79256,
+    "62": 13911,
+    "100": 224311,
+    "101": 15550,
+    "113": 6457,
+    "117": 18831,
+    "122": 2211
+  },
+  "sites": [
+    {
+      "name": "Start intake",
+      "x": 104,
+      "y": 548
+    },
+    {
+      "name": "West ramp",
+      "x": 422,
+      "y": 526
+    },
+    {
+      "name": "West open dispatch",
+      "x": 297,
+      "y": 548
+    },
+    {
+      "name": "Tower low approach",
+      "x": 604,
+      "y": 421
+    },
+    {
+      "name": "Tower inspection",
+      "x": 622,
+      "y": 388
+    },
+    {
+      "name": "Upper glide",
+      "x": 877,
+      "y": 401
+    },
+    {
+      "name": "Blocked high interchange",
+      "x": 1018,
+      "y": 295
+    },
+    {
+      "name": "High grade return",
+      "x": 1230,
+      "y": 293
+    },
+    {
+      "name": "Transformer rise",
+      "x": 1372,
+      "y": 401
+    },
+    {
+      "name": "Freight glide",
+      "x": 1635,
+      "y": 443
+    },
+    {
+      "name": "Crane lookoff",
+      "x": 1671,
+      "y": 301
+    },
+    {
+      "name": "East catch",
+      "x": 1879,
+      "y": 561
+    },
+    {
+      "name": "East turn",
+      "x": 1938,
+      "y": 725
+    },
+    {
+      "name": "Low rescue west",
+      "x": 215,
+      "y": 792
+    },
+    {
+      "name": "Low bypass lift",
+      "x": 629,
+      "y": 784
+    },
+    {
+      "name": "Low open runway",
+      "x": 1200,
+      "y": 789
+    },
+    {
+      "name": "East rescue",
+      "x": 1680,
+      "y": 786
+    },
+    {
+      "name": "Finish",
+      "x": 1917,
+      "y": 781
+    },
+    {
+      "name": "West ram workshop",
+      "x": 346,
+      "y": 923
+    },
+    {
+      "name": "Hoist repair workshop",
+      "x": 933,
+      "y": 926
+    },
+    {
+      "name": "Transformer inspection bay",
+      "x": 1429,
+      "y": 911
+    },
+    {
+      "name": "Crane recovery workshop",
+      "x": 1850,
+      "y": 920
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "size": [
+        19,
+        15
+      ],
+      "reachable": 22,
+      "total": 22,
+      "missing": [],
+      "visited_centres": 1391018,
+      "spawn": [
+        104,
+        548
+      ]
+    },
+    "23x19": {
+      "size": [
+        23,
+        19
+      ],
+      "reachable": 22,
+      "total": 22,
+      "missing": [],
+      "visited_centres": 1355845,
+      "spawn": [
+        104,
+        548
+      ]
+    },
+    "31x27": {
+      "size": [
+        31,
+        27
+      ],
+      "reachable": 22,
+      "total": 22,
+      "missing": [],
+      "visited_centres": 1282913,
+      "spawn": [
+        104,
+        548
+      ]
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      979,
+      254,
+      92,
+      84
+    ],
+    "material": 58,
+    "after_31x27": {
+      "size": [
+        31,
+        27
+      ],
+      "reachable": 21,
+      "total": 22,
+      "missing": [
+        "Blocked high interchange"
+      ],
+      "visited_centres": 1272818,
+      "spawn": [
+        104,
+        548
+      ]
+    },
+    "covered_site": "Blocked high interchange",
+    "other_sites_reachable": 21
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 53656,
+      "pixels": 2097152,
+      "sha256": "ed11ba10d4112d9ef4c2b4d3082fdc804c320eff23983960ec87dec1e44284c6",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-west-pulse-dock.png": {
+      "x": 50,
+      "y": 429,
+      "w": 460,
+      "h": 370,
+      "bytes": 1922,
+      "pixels": 170200,
+      "sha256": "7026c92c50ee420516d05ab0abb2a1a3f67c2d8aeaabf8664e3aa0841dec137c",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-offset-telescopic-lift.png": {
+      "x": 530,
+      "y": 232,
+      "w": 410,
+      "h": 624,
+      "bytes": 15538,
+      "pixels": 255840,
+      "sha256": "237b295db8daab723391a9f67a77705e46e7ad47a0ec0a9fd951212001de89f5",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-five-grade-cascade.png": {
+      "x": 884,
+      "y": 239,
+      "w": 490,
+      "h": 397,
+      "bytes": 7996,
+      "pixels": 194530,
+      "sha256": "e97a2224267f7e69aaeaa0d44041061b9a119a55815a2c9c55bf920fce8b9034",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-asymmetric-catenary-jib.png": {
+      "x": 1350,
+      "y": 140,
+      "w": 615,
+      "h": 590,
+      "bytes": 7762,
+      "pixels": 362850,
+      "sha256": "72649f42289bf03343086a289af84b73004ea7b88bfb48e3ab691e09c4d38435",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-low-recovery-works.png": {
+      "x": 85,
+      "y": 730,
+      "w": 1878,
+      "h": 292,
+      "bytes": 17069,
+      "pixels": 548376,
+      "sha256": "1ac0a1b7945c006711e178d79670a59d9fd684a4b087034b34660df60dda66b8",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-grounded-workface-bays.png": {
+      "x": 804,
+      "y": 790,
+      "w": 1151,
+      "h": 230,
+      "bytes": 10017,
+      "pixels": 264730,
+      "sha256": "22ea0edf10d82ee4f57d7ba0d2d1661238d80765b50bc10dae273c2c447d7820",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: no installed CyberDemoBridge, Godot/Workbench, Rapier, actual input/collision/ticks or cold save/reopen executed",
+  "independent_review": "PENDING: Art, Technical, Shepherd at exact committed HEAD",
+  "ci": "NOT CLAIMED",
+  "corpus_role": "original asymmetric open-air stepped-grade liftworks and service corridor; intentional incomplete zones are a positive authoring affordance"
+}
