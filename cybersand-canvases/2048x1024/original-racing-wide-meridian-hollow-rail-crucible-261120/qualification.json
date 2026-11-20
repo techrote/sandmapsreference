@@ -1,0 +1,302 @@
+{
+  "kind": "MERIDIAN_HOLLOW_RAIL_CRUCIBLE_ORIGINAL_RACING_WIDE",
+  "revision": "R1",
+  "seed": "0x4d455249",
+  "engine_main_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "material_cells": 2097152,
+  "extent": [
+    2048,
+    1024
+  ],
+  "rectangles": 2295,
+  "setup_json_bytes": 44091,
+  "work_visits": 628991,
+  "source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1468161,
+    "49": 41099,
+    "58": 128417,
+    "62": 28870,
+    "100": 310338,
+    "101": 22876,
+    "113": 17729,
+    "117": 70747,
+    "122": 8915
+  },
+  "grounded_solids": 628991,
+  "discarded_detached_material_cells": 18614,
+  "remaining_detached": 0,
+  "fluids": 0,
+  "reactive": 0,
+  "material_laws": "IDs 49 Slate, 58 ReinforcedConcrete, 62 SteelPlate, 100 BasaltColumns, 101 Obsidian, 113 ZincSheet, 117 BareIron, 122 QuartzCrystal; accepted read-only native: Solid, not movable, RuleKernel::None.",
+  "midge": {
+    "hull": [
+      4,
+      3
+    ],
+    "model_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      147,
+      359
+    ]
+  },
+  "sites": [
+    {
+      "name": "West launch",
+      "x": 147,
+      "y": 359
+    },
+    {
+      "name": "Throttle aperture",
+      "x": 341,
+      "y": 359
+    },
+    {
+      "name": "Transit crane outbound",
+      "x": 605,
+      "y": 358
+    },
+    {
+      "name": "Ring west approach",
+      "x": 791,
+      "y": 493
+    },
+    {
+      "name": "Crucible middle pass",
+      "x": 1050,
+      "y": 500
+    },
+    {
+      "name": "Crucible high diversion",
+      "x": 1050,
+      "y": 415
+    },
+    {
+      "name": "Crucible low diversion",
+      "x": 1050,
+      "y": 582
+    },
+    {
+      "name": "Ring east exit",
+      "x": 1297,
+      "y": 498
+    },
+    {
+      "name": "Calorimeter outgoing",
+      "x": 1536,
+      "y": 396
+    },
+    {
+      "name": "East arrestor",
+      "x": 1804,
+      "y": 385
+    },
+    {
+      "name": "East descent",
+      "x": 1900,
+      "y": 536
+    },
+    {
+      "name": "East lower recovery",
+      "x": 1880,
+      "y": 712
+    },
+    {
+      "name": "Calorimeter return",
+      "x": 1570,
+      "y": 708
+    },
+    {
+      "name": "Ring east return",
+      "x": 1309,
+      "y": 574
+    },
+    {
+      "name": "Ring inner return",
+      "x": 1038,
+      "y": 585
+    },
+    {
+      "name": "Ring west return",
+      "x": 780,
+      "y": 707
+    },
+    {
+      "name": "Crane lower return",
+      "x": 586,
+      "y": 711
+    },
+    {
+      "name": "West deceleration",
+      "x": 371,
+      "y": 704
+    },
+    {
+      "name": "West rise",
+      "x": 158,
+      "y": 543
+    },
+    {
+      "name": "Finish west rejoin",
+      "x": 161,
+      "y": 360
+    },
+    {
+      "name": "West interlock control",
+      "x": 237,
+      "y": 163
+    },
+    {
+      "name": "Transit load control",
+      "x": 676,
+      "y": 164
+    },
+    {
+      "name": "Calorimeter watch",
+      "x": 1555,
+      "y": 165
+    },
+    {
+      "name": "East arrestor watch",
+      "x": 1839,
+      "y": 174
+    },
+    {
+      "name": "West press house",
+      "x": 315,
+      "y": 854
+    },
+    {
+      "name": "Rail-drive workshop",
+      "x": 691,
+      "y": 852
+    },
+    {
+      "name": "East test shop",
+      "x": 1436,
+      "y": 860
+    },
+    {
+      "name": "Recovery winch bay",
+      "x": 1789,
+      "y": 861
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "connected": 1231612,
+      "missing": [],
+      "reached": 28
+    },
+    "23x19": {
+      "connected": 1197091,
+      "missing": [],
+      "reached": 28
+    },
+    "31x27": {
+      "connected": 1129819,
+      "missing": [],
+      "reached": 28
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1000,
+      468,
+      102,
+      75
+    ],
+    "material": 58,
+    "missing": [
+      "Crucible middle pass"
+    ],
+    "remaining": 27,
+    "finish_reachable": true
+  },
+  "grid_sha256": "58f2b8d5a3188790affa99fd2dee0281af6ac7bdf0a9fe8214ed6cc42577c894",
+  "setup_sha256": "db7a9282c6514458a06ae84c111e0d00489f1fa8a98162401a66d0eefb29c4e9",
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 61231,
+      "pixels": 2097152,
+      "sha256": "cd9ba0430bc4e417e16a44e617301f0d165fb0a80ee5a7f1696a2e8ea4f493f3",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "01-west-interlock.png": {
+      "x": 0,
+      "y": 85,
+      "w": 435,
+      "h": 720,
+      "bytes": 13111,
+      "pixels": 313200,
+      "sha256": "7533384bed4d766170714a04e422ae89a4833f789beee2fb4a48e78653f4dd20",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "02-transit-crane.png": {
+      "x": 370,
+      "y": 85,
+      "w": 460,
+      "h": 755,
+      "bytes": 9628,
+      "pixels": 347300,
+      "sha256": "5225808e987251bebfddb925564381cf4299df6f31fa01df998aed83fff6c7be",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "03-crucible-ring.png": {
+      "x": 780,
+      "y": 195,
+      "w": 545,
+      "h": 690,
+      "bytes": 10112,
+      "pixels": 376050,
+      "sha256": "ca5a2c40ceea99fed92764c65641d79427897b512bf2213068a0794628003ed7",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "04-calorimeter.png": {
+      "x": 1315,
+      "y": 85,
+      "w": 425,
+      "h": 800,
+      "bytes": 10114,
+      "pixels": 340000,
+      "sha256": "194ec7cf8502676ff62819874da65151258c0feaae2965f8777e2c51c9935424",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "05-east-arrestor.png": {
+      "x": 1680,
+      "y": 75,
+      "w": 368,
+      "h": 850,
+      "bytes": 13902,
+      "pixels": 312800,
+      "sha256": "1e2b9847e05ee68486746e49d5a959d29492ce83f1af3e3c8bd81dffc7c644fe",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    },
+    "06-lower-workshops.png": {
+      "x": 175,
+      "y": 728,
+      "w": 1660,
+      "h": 296,
+      "bytes": 14492,
+      "pixels": 491360,
+      "sha256": "a60ef986e4a9b9426571104b04e504b2570a4128104f4e3fcb067720068fd8e2",
+      "png_crc_zlib_expected": true,
+      "source_cell_pixel_map": true
+    }
+  },
+  "native": "NATIVE-UNTESTED; installed bridge 4096/32768 capacity unknown, no flight/collisions/persistence tests"
+}
