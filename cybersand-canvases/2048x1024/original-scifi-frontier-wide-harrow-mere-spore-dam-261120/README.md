@@ -31,11 +31,15 @@ Overview is exactly **2048×1024 pixels**. All five crops are true **one materia
 - Fixed-seed `build.cjs`, seed `0x26D120` (2543904 decimal); run `node build.cjs --verify` to regenerate and compare every committed file, including independent Node crypto and PNG inflation/CRC checks.
 - Accepted read-only CyberSand `main@de109d0131641d6adc8d25bb9ced7ca3d4991105` (Setup-v2, 14 root keys, actual 2048×1024 dimensions, Midge authored 4×3 rectangle).
 - Map repository source base `main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`; no engine modification.
-- Exactly **2,097,152** material ID cells; **446108 / 446108** grounded inert solids; **0** detached. No fluid, sand, unstable falling/reactive support; static Solid/None only.
-- **4513** legal ordered, disjoint, losslessly replayed 5-word rectangles. JSON **84848** bytes; construction work **446108** cells. Accepted source budgets: 32,768 rectangles, 1 MiB Setup, 32 million work.
-- Final material SHA-256 `99dc7011a47b103128b5ae341e8465d0bb6d1fb9e8897f469fe6e388c66c96f8`; Setup SHA-256 `e79dfd178f53d1af1b59a8ec5ba32a39aee09d7ab8e227d2d742f29d9ca8eff1`.
+- Exactly **2,097,152** material ID cells; **482035 / 482035** grounded inert solids; **0** detached. No fluid, sand, unstable falling/reactive support; static Solid/None only.
+- **4888** legal ordered, disjoint, losslessly replayed 5-word rectangles. JSON **91726** bytes; construction work **482035** cells. Accepted source budgets: 32,768 rectangles, 1 MiB Setup, 32 million work.
+- Final material SHA-256 `24cb3bfcd5c396b94178a52eaa83396ea9d1bb05f350e7ccde9e53fe2bdf241b`; Setup SHA-256 `2cd66a97f96c15f9d8513e6be20edbaeb62abe1d2fc7baadbbfcb5f968f59b50`.
 - Every **26/26** literal named site tested with 19×15, 23×19, 31×27 full-footprint free-centre 4-neighbour BFS, no exemptions, nearest-site replacement or shifting. Physical obstruction preserves **25/25 unaffected** sites at 31×27.
 - Full ordered replay plus byte and histogram receipts in `receipt.json`. Indexed PNG generation from same final committed plane with fixed-Huffman zlib (PNG chunk CRC, Adler-32, raw material pixel parity verified in the creator's deterministic build).
-- Installed older bridge **4,096** fallback may not admit this map's **4513** rectangles. Accepted source advertises 32,768 but that does *not* prove installed compatibility.
+- Installed older bridge **4,096** fallback may not admit this map's **4888** rectangles. Accepted source advertises 32,768 but that does *not* prove installed compatibility.
 
 **Review status:** creator static PASS only; independent exact-HEAD Art, Technical, and Shepherd P0/P1 decisions pending. **NATIVE-UNTESTED:** no compatible Godot/CyberDemoBridge/Rapier binary, real input/collisions/simulation, or fresh-process save/reopen has been demonstrated. OPEN Draft/HOLD, not Ready, not merged, no owner acceptance.
+
+
+## R2 real-cell P1 correction — 20 November 2026
+The current Shepherd exact-R1 functional-place P1 was addressed by rebuilding distinct physical machinery: western cold-spore capture/hopper and seed sieve, opposed dam compression/pressure regulators and rotor inspection, eastern decontamination/membrane filtration and freight weighing. The original long empty underdam floor is now a sequence of four materially different rooted workcells: crane-fed ore assay, mechanically legible drum centrifuge, mineral scanner/archive, and finned pump/recovery station. Lower workcell operator clearance and side entries were designed around the literal Midge centres, not by shifting destinations. Exact route receipts, obstruction, grounded structural checks and all images were regenerated from material cells and rechecked. The original dam silhouette and free aerial basin are retained. Creator STATIC-PASS only; **fresh exact-R2 independent Art/Technical/Shepherd review required**. Installed bridge and native game/persistence remain **NATIVE-UNTESTED**.

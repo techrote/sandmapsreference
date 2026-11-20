@@ -177,6 +177,66 @@ function build(){
  R(1006,254,61,170,0);R(1081,548,60,203,0);
  
  for(const [name,[x,y]] of Object.entries(sites))R(x-18,y-16,37,33,0);
+
+ // Harrow R2: real differentiated process hardware and lower entered workcells.
+ // Western cold-spore capture and keyed material intake, not repeated consoles.
+ R(93,524,125,9,M.titanium);R(108,474,25,47,M.chrome);
+ R(146,482,26,38,M.frost);R(181,501,23,19,M.glassDark);
+ L(119,475,166,457,8,M.conduit);R(160,445,12,11,M.signal);
+ R(245,522,130,11,M.steel);R(261,464,25,56,M.blue);
+ R(307,485,51,34,M.window);R(325,470,12,13,M.amber);
+ L(287,498,314,498,7,M.conduit);
+ // Seed-sieving mill and maintenance transfer below the inhabited port.
+ R(114,676,138,9,M.ceramic);R(129,624,25,48,M.chrome);
+ R(177,651,31,22,M.frost);R(213,659,25,14,M.glassDark);
+ L(149,625,218,618,8,M.conduit);
+ R(285,681,163,10,M.titanium);R(304,629,26,48,M.steel);
+ R(357,640,54,37,M.window);R(375,624,10,14,M.signal);
+ // Pressure-dam control: tall paired pistons, gauges and manifold (not spore crates).
+ R(845,473,111,10,M.titanium);R(854,398,26,72,M.chrome);
+ R(892,436,39,34,M.glassDark);R(907,422,12,13,M.signal);
+ L(874,403,941,382,8,M.conduit);
+ R(1144,472,113,11,M.steel);R(1151,394,32,76,M.frost);
+ R(1199,421,41,47,M.blue);R(1214,407,10,12,M.amber);
+ L(1180,396,1244,380,8,M.conduit);
+ // Rotor inspection has oppositely keyed ram cartridges and bearings.
+ R(901,678,82,11,M.titanium);R(919,635,24,41,M.chrome);
+ R(951,646,20,30,M.frost);R(960,634,9,10,M.signal);
+ R(1145,684,93,11,M.ceramic);R(1158,632,24,50,M.steel);
+ R(1191,649,29,33,M.glassDark);R(1202,635,9,11,M.amber);
+ // Eastern isolation: long scrubber, pressure membrane and freight weighbridge.
+ R(1642,540,129,12,M.titanium);R(1654,481,24,57,M.frost);
+ R(1700,483,30,55,M.blue);R(1742,505,20,33,M.glassDark);
+ L(1715,483,1740,464,8,M.conduit);
+ R(1814,696,179,13,M.steel);R(1827,640,26,54,M.chrome);
+ R(1871,648,61,46,M.glassDark);R(1949,663,28,30,M.window);
+ L(1848,641,1888,623,8,M.conduit);
+ // Four unlike below-dam workcells; actual ground-connected mass and
+ // introduced air thresholds preserve all original centre coordinates.
+ // A. Mineral assay chute and crane-fed comparator.
+ R(544,977,197,11,M.titanium);R(551,944,28,32,M.steel);
+ R(594,951,62,24,M.glassDark);R(606,940,34,10,M.window);
+ L(559,943,598,929,6,M.conduit);R(684,945,39,31,M.frost);
+ // B. Paired-bearing centrifuge with nested rotating-drum *geometry*.
+ R(841,977,207,11,M.titanium);ellipse(929,953,29,22,M.chrome);
+ ellipse(929,953,16,11,M.blue);R(923,942,12,20,M.window);
+ R(852,957,27,19,M.steel);R(995,948,39,28,M.glassDark);
+ L(925,935,925,913,5,M.conduit);
+ // C. Mineral archive scanner vault and suspended specimen grabber.
+ R(1169,977,197,11,M.steel);R(1178,941,23,35,M.chrome);
+ R(1217,948,50,27,M.window);R(1228,938,31,9,M.signal);
+ R(1304,951,44,24,M.glassDark);L(1189,937,1219,926,6,M.conduit);
+ // D. Thermal pump: twin manifolds, finned exchanger and side controls.
+ R(1402,977,156,11,M.ceramic);R(1417,948,25,28,M.frost);
+ R(1452,954,28,22,M.blue);R(1504,950,37,26,M.steel);
+ for(let xf=1507;xf<1542;xf+=8)R(xf,938,3,12,M.chrome);
+ R(1532,927,9,10,M.amber);
+ const r2_workcell_anchors=tieStructures();
+ // Tie work must never obstruct literal spawn or destinations.
+ for(const [name,[x,y]] of Object.entries(sites))R(x-20,y-18,41,37,0);
+
+ // Ground the cold-intake manifold outside the literal spawn envelope.
+ L(216,621,216,688,6,M.conduit);
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
  for(let y=0;y<H;y++){let next=new Map(),base=y*W;for(let x=0;x<W;){let m=g[base+x],s=x;while(x<W&&g[base+x]===m)x++;if(!m)continue;let k=s+":"+(x-s)+":"+m,idx=prev.get(k);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(k,idx);}prev=next;}
@@ -229,7 +289,7 @@ function build(){
   let b=new Uint8Array(a.reduce((s,p)=>s+p.length,0)),i=0;for(let p of a){b.set(p,i);i+=p.length;}return b;}
  const crops=[["01-west-sporeport",0,315,555,602],["02-pressure-dam",520,235,680,670],["03-separator-rotor",805,335,635,525],["04-east-isolation",1510,330,538,590],["05-geological-return",445,817,1225,207]];
  const images=[["overview.png",png(0,0,W,H)],...crops.map(([name,x,y,w,h])=>[name+".png",png(x,y,w,h)])];
- return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info,seed:SEED};
+ return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info,r2_workcell_anchors,seed:SEED};
 }
 
 function sha256(input){let b=typeof input==="string"?Uint8Array.from(input,c=>c.charCodeAt(0)):input;
@@ -237,7 +297,7 @@ const K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923
 const n=(b.length+9+63)&~63,buf=new Uint8Array(n);buf.set(b);buf[b.length]=128;let bits=b.length*8;for(let i=0;i<8;i++){buf[n-1-i]=bits&255;bits=Math.floor(bits/256);}
 let h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19],w=new Uint32Array(64);let rotr=(x,n)=>(x>>>n)|(x<<(32-n));
 for(let off=0;off<n;off+=64){for(let j=0;j<16;j++){let i=off+j*4;w[j]=((buf[i]<<24)|(buf[i+1]<<16)|(buf[i+2]<<8)|buf[i+3])>>>0;}for(let j=16;j<64;j++){let p=w[j-15],q=w[j-2];w[j]=(w[j-16]+(rotr(p,7)^rotr(p,18)^(p>>>3))+w[j-7]+(rotr(q,17)^rotr(q,19)^(q>>>10)))>>>0;}let [a,b0,c,d,e,f,g,z]=h;for(let j=0;j<64;j++){let t1=(z+(rotr(e,6)^rotr(e,11)^rotr(e,25))+((e&f)^(~e&g))+K[j]+w[j])>>>0,t2=((rotr(a,2)^rotr(a,13)^rotr(a,22))+((a&b0)^(a&c)^(b0&c)))>>>0;z=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b0;b0=a;a=(t1+t2)>>>0;}for(let j=0;j<8;j++)h[j]=(h[j]+[a,b0,c,d,e,f,g,z][j])>>>0;}return h.map(n=>n.toString(16).padStart(8,"0")).join("");}
-function makeReceipt(a){return {concept:"Harrow Mere - Basalt Spore-Dam Pneumatic Harvest",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"de109d0131641d6adc8d25bb9ced7ca3d4991105",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[997,367,1062,428],material_id:58,purpose:"Blocks only exact Upper baffle catwalk; all other named destinations remain recoverable",result:a.bypass},sites:a.sites,crops:a.crops,source_art:"None; wholly new original invented sci-fi frontier",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
+function makeReceipt(a){return {concept:"Harrow Mere - Basalt Spore-Dam Pneumatic Harvest",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"de109d0131641d6adc8d25bb9ced7ca3d4991105",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,r2_workcell_anchors:a.r2_workcell_anchors,creator_revision:'R2 functional pneumatic and below-dam workcell repair following independent Shepherd P1 2026-11-20',nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[997,367,1062,428],material_id:58,purpose:"Blocks only exact Upper baffle catwalk; all other named destinations remain recoverable",result:a.bypass},sites:a.sites,crops:a.crops,source_art:"None; wholly new original invented sci-fi frontier",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
 
 if(typeof require!=="undefined"&&require.main===module){
  const fs=require("fs"),path=require("path"),crypto=require("crypto"),zlib=require("zlib");
