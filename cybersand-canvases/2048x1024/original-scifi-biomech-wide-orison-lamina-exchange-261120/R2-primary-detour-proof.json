@@ -1,0 +1,173 @@
+{
+  "status": "AUTHOR SOURCE-STATIC / PHYSICALLY INTERRUPTED PRIMARY ROUTE PASS / NATIVE-UNTESTED",
+  "previous_head": "e4d9a8b785d81389a08912636c0e340840d0f12b",
+  "engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_grid_sha256": "cfa710d23cc2d4a3c2871dda5d132c8653a5c1eede41e1b1991f410d1675170e",
+  "envelope": [
+    31,
+    27
+  ],
+  "temporary_material_obstruction": {
+    "box": [
+      860,
+      490,
+      90,
+      110
+    ],
+    "material_id": 58,
+    "physical_cells_added_in_test_grid": 9900,
+    "not_committed_into_map": true
+  },
+  "full_route": {
+    "start": [
+      682,
+      548
+    ],
+    "goal": [
+      1339,
+      545
+    ],
+    "normal_shortest_steps": 660,
+    "blocked_shortest_steps": 790,
+    "detour_added_steps": 130
+  },
+  "local_recovery": {
+    "start": [
+      800,
+      545
+    ],
+    "goal": [
+      1010,
+      545
+    ],
+    "normal_shortest_steps": 210,
+    "blocked_shortest_steps": 346,
+    "detour_added_steps": 136
+  },
+  "restricted_routes": {
+    "high": true,
+    "low": true,
+    "high_with_solid_obstruction": true,
+    "low_with_solid_obstruction": true,
+    "obstruction": [
+      860,
+      490,
+      90,
+      110
+    ]
+  },
+  "all_named_sites": {
+    "spawn_isolation_port": {
+      "literal": [
+        126,
+        518
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "west_quarantine_hatch": {
+      "literal": [
+        255,
+        620
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "extraction_ledger": {
+      "literal": [
+        465,
+        680
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "sawtooth_spool": {
+      "literal": [
+        608,
+        500
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "upper_shuttle": {
+      "literal": [
+        975,
+        363
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "central_lamina_focus": {
+      "literal": [
+        1024,
+        532
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "entered_assay_cradle": {
+      "literal": [
+        1025,
+        831
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "lower_return": {
+      "literal": [
+        1280,
+        739
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "east_polymer_valve": {
+      "literal": [
+        1435,
+        590
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "drying_controls": {
+      "literal": [
+        1625,
+        625
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "export_cableway": {
+      "literal": [
+        1831,
+        652
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    },
+    "finish_freight_gate": {
+      "literal": [
+        1958,
+        548
+      ],
+      "clear": true,
+      "reachable": true,
+      "approaches": 4
+    }
+  },
+  "warnings": [
+    "This only proves an independent in-memory full-hull 4-neighbour physical obstruction detour, not actual native Midge flight or Rapier movement.",
+    "Baseline established route fixture and native installed bridge admission remain separately gated."
+  ]
+}
