@@ -69,9 +69,13 @@ def validate(raw):
     elif any(x not in PURPOSES for x in p): err.append("unsupported purpose value")
     for k in ["family","map_role","density_profile"]:
         if k in n and (not isinstance(n[k],str) or not n[k].strip()): err.append(k+" must be a non-empty string")
-    for k in ["macro_topology","route_grammar","strong_motifs","interesting_relationships","procedural_exemplar_value"]:
+    for k in ["macro_topology","strong_motifs","interesting_relationships","procedural_exemplar_value"]:
         if k in n and (not isinstance(n[k],list) or any(not isinstance(x,str) or not x.strip() for x in n[k])):
             err.append(k+" must be a string or array of non-empty strings")
+    if "route_grammar" in n:
+        rg=n["route_grammar"]
+        if not isinstance(rg,(list,dict)) or (isinstance(rg,list) and any(not isinstance(x,str) or not x.strip() for x in rg)):
+            err.append("route_grammar must be a string, array of strings, or named-route object")
     for k in ["authoring_affordances","setpiece_candidates"]:
         if k in n and not isinstance(n[k],list): err.append(k+" must be an item or array")
     if "anchor_donors" in n and not isinstance(n["anchor_donors"],list): err.append("anchor_donors must be an array")
