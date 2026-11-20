@@ -1,0 +1,299 @@
+// KESTREL TRAVERSE — from-scratch physical layout, strict x/y side elevation.
+// Phases: native inert terrain; drydock; grounded straddle transfer; saddle-arch
+// freight bridge; switchback classification; service-grade return.
+const g=new Uint8Array(N);
+const sites={
+"Breakwater arrival":[120,440],"Ship service gangway":[310,570],
+"Quay waybill office":[452,465],"Drydock keel service":[320,835],
+"West sky lookout":[262,165],"Crane A-frame inspection":[689,171],
+"Straddle load receiver":[738,451],"Straddle underframe":[789,624],
+"Arch west approach":[968,455],"Underarch cargo sling":[1081,462],
+"Void shipping lane":[1220,441],"Arch east approach":[1457,455],
+"Switchback signalman":[1544,468],"Upper branch siding":[1640,389],
+"Sorter transfer stage":[1723,522],"East freight manifest":[1848,472],
+"Outbound customs":[1940,464],"Upper arch flyway":[1143,165],
+"East roof lookout":[1785,166],"Pump repair station":[272,850],
+"Portal motor chamber":[700,851],"Arch undercroft repair":[1180,852],
+"Switchgear repair":[1590,852],"Outbound recovery bay":[1880,850]};
+function B(x,y,w,h,m){R(x,y,w,h,m);}
+function beam(x,y,X,Y,t,m){L(x,y,X,Y,t,m);}
+function platform(x,y,w){R(x,y,w,12,M.STEEL);}
+function cabinet(x,y,w,h){R(x,y,w,h,M.WALL);R(x+7,y+7,w-14,Math.max(5,h-15),M.STEEL);}
+// Original landscape: ship repair crescent, inland rise, deep dry central cut.
+for(let x=0;x<W;x++){
+ let y=742+Math.round(11*Math.sin(x*.008)+6*Math.sin(x*.024));
+ if(x>900&&x<1450)y+=Math.round(95*(1-Math.abs(x-1175)/275));
+ if(x>1690)y-=Math.round(51*Math.min(1,(x-1690)/358));
+ R(x,y,1,H-y,M.ROCK);
+}
+P([[0,1024],[0,339],[31,350],[57,399],[79,551],[99,767],[77,929]],M.ROCK);
+P([[2048,1024],[2048,334],[2020,354],[2008,490],[2007,802],[2041,951]],M.ROCK);
+R(0,991,W,33,M.WALL);
+P([[126,613],[170,589],[468,589],[512,648],[502,801],[126,801]],M.AIR);
+// Wide, genuinely traversable lower rail and five distinct service bays.
+R(90,793,1860,94,M.AIR);
+for(let [x,w] of [[154,235],[520,236],[931,321],[1470,224],[1794,179]]){
+ R(x,858,w,112,M.AIR);R(x,958,w,13,M.STEEL);
+}
+// Sheer/hull; one aft pilot station, ribbed keel, repair blocks.
+P([[155,711],[196,690],[303,691],[416,676],[468,698],[454,773],[403,797],[229,800],[175,755]],M.STEEL);
+P([[180,717],[212,704],[418,706],[443,704],[437,753],[396,781],[230,784],[194,748]],M.WALL);
+P([[205,715],[221,710],[403,710],[422,716],[413,754],[392,769],[229,770]],M.AIR);
+platform(211,769,212);
+P([[365,697],[365,622],[391,597],[417,604],[439,631],[446,693]],M.STEEL);
+P([[379,684],[379,632],[398,615],[419,630],[429,649],[429,684]],M.AIR);
+R(378,645,53,11,M.WALL);R(387,663,32,11,M.STEEL);
+for(let x of [197,268,347,451]){R(x,800,16,89,M.WALL);beam(x-9,803,x+23,787,8,M.STEEL);}
+cabinet(256,729,43,34);cabinet(327,733,44,28);
+R(191,784,276,15,M.STEEL);
+// Enterable waybill/work room at transfer, with actual cargo fork.
+platform(459,577,113);R(461,589,15,72,M.WALL);R(559,589,14,72,M.WALL);
+R(477,599,82,39,M.AIR);platform(475,639,93);
+cabinet(492,609,24,25);cabinet(529,607,19,28);
+beam(463,663,517,785,15,M.STEEL);
+// Straddle port: massive two-founded portal, differentiated crane rail and cage.
+// Not a cableway or bascule; stays stationary as authored physical geometry.
+for(let x of [573,834]){R(x,268,27,443,M.WALL);R(x+8,281,11,405,M.STEEL);}
+beam(587,273,680,176,18,M.STEEL);beam(680,176,848,271,17,M.WALL);
+platform(595,245,251);R(672,177,66,21,M.WALL);
+for(let k=0;k<7;k++){let x=607+k*32;beam(x,259,x+28,316,7,k%2?M.STEEL:M.WALL);}
+for(let x of [658,751]){ring(x,271,23,22,9,M.STEEL);beam(x,292,x,491,7,M.STEEL);}
+platform(639,497,144);R(653,513,120,60,M.WALL);
+R(663,523,100,36,M.AIR);platform(641,584,146);
+R(661,595,13,53,M.WALL);R(767,595,14,53,M.WALL);
+platform(583,688,257);beam(590,703,640,785,14,M.STEEL);
+beam(834,702,812,786,15,M.STEEL);
+R(571,700,16,86,M.WALL);R(830,700,17,88,M.WALL);
+beam(579,273,451,352,11,M.STEEL);beam(451,352,373,416,8,M.STEEL);
+cabinet(657,465,45,19);cabinet(710,465,54,19);
+// Iconic two-deck saddle-arch freight viaduct, inverted load slings, OPEN
+// flying void beneath; rooted on two masonry anchor buttresses.
+for(let x of [912,1450]){R(x,516,33,273,M.WALL);R(x+9,530,13,250,M.STEEL);}
+function archY(x){return 331-149*Math.sin(Math.PI*(x-933)/535);}
+for(let x=933;x<1468;x+=12){
+ let X=Math.min(1468,x+12),y=archY(x),Y=archY(X);
+ beam(x,y,X,Y,14,M.STEEL);beam(x,y+48,X,Y+48,9,M.WALL);
+ beam(x,y+(Math.floor(x/12)%2?48:0),X,Y+(Math.floor(x/12)%2?0:48),6,M.STEEL);
+}
+beam(936,330,929,550,16,M.STEEL);beam(1467,330,1468,551,16,M.STEEL);
+platform(927,557,548);R(966,569,454,11,M.WALL);
+for(let x of [1018,1190,1339]){
+ platform(x,582,90);cabinet(x+12,594,64,30);
+ for(let xx of [x+19,x+70])ring(xx,635,11,11,5,M.STEEL);
+}
+for(let x of [938,1070,1289,1462]){beam(x,575,x,747,14,M.WALL);beam(x-20,732,x+23,751,8,M.STEEL);}
+for(let [x,w] of [[963,105],[1168,123],[1371,87]]){
+ platform(x,666,w);R(x+2,678,13,58,M.WALL);
+ R(x+w-15,679,13,57,M.WALL);R(x+16,693,w-31,31,M.AIR);
+ platform(x+16,728,w-31);
+}
+// Low rail follows true terrain: no perspective tops or fake floating splines.
+beam(834,755,961,750,15,M.STEEL);beam(961,751,1200,763,16,M.STEEL);
+beam(1200,763,1455,748,16,M.STEEL);
+beam(1453,748,1518,728,14,M.STEEL);
+// Switchback classification—instead of a wheel, four switch rails, three
+// different wagon loads, an enterable interlocking cabin and signal.
+beam(1514,703,1680,616,17,M.STEEL);beam(1680,616,1810,663,15,M.STEEL);
+beam(1514,725,1723,713,12,M.WALL);beam(1723,714,1810,739,12,M.STEEL);
+for(let [x,y,w] of [[1534,585,91],[1636,546,103],[1737,607,89]]){
+ platform(x,y,w);cabinet(x+15,y-31,w-30,24);
+ for(let xx of [x+22,x+w-22])ring(xx,y+9,13,12,5,M.WALL);
+}
+R(1540,449,17,259,M.WALL);R(1545,457,8,238,M.STEEL);
+beam(1547,457,1607,403,10,M.STEEL);platform(1596,400,64);
+R(1542,643,18,77,M.WALL);R(1633,643,16,79,M.WALL);
+platform(1541,632,109);R(1562,656,64,41,M.AIR);
+beam(1552,680,1612,609,10,M.STEEL);
+beam(1609,605,1694,716,10,M.WALL);
+beam(1698,717,1769,549,9,M.STEEL);
+// Terminal three asymmetric stepped roof grades and interior examination.
+P([[1812,692],[1812,407],[1852,360],[1904,341],[1952,374],[1990,412],[2048,411],[2048,710]],M.WALL);
+P([[1840,660],[1843,438],[1872,390],[1911,377],[1940,403],[1964,447],[2009,446],[2009,664]],M.AIR);
+platform(1818,657,198);platform(1840,539,166);
+R(1854,550,14,87,M.WALL);R(1989,550,12,87,M.WALL);
+R(1872,566,118,55,M.AIR);platform(1869,626,132);
+platform(1867,414,127);R(1880,426,14,56,M.WALL);
+R(1967,426,14,56,M.WALL);cabinet(1910,438,55,22);
+platform(1862,595,106);R(1874,607,15,47,M.WALL);R(1953,606,13,48,M.STEEL);
+R(1888,615,64,24,M.AIR);
+beam(1882,748,1882,789,13,M.WALL);
+// Five functional different mechanics in lower return, attached to floor:
+platform(173,951,219);ring(244,923,32,28,9,M.STEEL);
+beam(250,943,269,959,8,M.WALL);R(319,919,14,32,M.WALL);
+platform(588,948,191);
+for(let [x,r] of [[621,19],[681,29],[736,16]]){ring(x,919,r,r,7,M.STEEL);R(x-8,943,16,13,M.WALL);}
+beam(626,920,727,919,8,M.WALL);
+platform(997,952,337);ring(1082,922,38,26,9,M.WALL);
+ring(1180,929,24,21,7,M.STEEL);beam(1117,925,1163,927,8,M.STEEL);
+R(1011,933,16,19,M.WALL);R(1269,932,16,20,M.STEEL);
+platform(1462,949,207);platform(1502,913,110);
+beam(1515,927,1570,945,8,M.STEEL);R(1592,925,14,23,M.WALL);
+platform(1772,949,185);platform(1800,915,133);
+R(1810,926,14,22,M.STEEL);
+for(let x of [1855,1912])ring(x,944,12,12,5,M.WALL);
+// Deliberate structural grounding: continuous bedrock-linked load path, but
+// reopen 75-cell wide vertical service shafts after construction.
+beam(73,751,242,781,17,M.STEEL);beam(242,781,500,778,16,M.STEEL);
+beam(500,778,590,748,16,M.WALL);beam(590,748,848,749,16,M.STEEL);
+beam(848,750,935,764,14,M.WALL);beam(1455,752,1542,742,14,M.STEEL);
+beam(1542,742,1838,746,14,M.STEEL);beam(1838,746,2027,737,15,M.WALL);
+for(let [x,y] of [[586,700],[842,700],[926,724],[1468,709],[1816,690]])beam(x,y,x,765,12,M.WALL);
+R(0,991,W,33,M.WALL);
+// Actual free-centre passages and recovery at exact authored coordinates.
+R(90,799,1860,81,M.AIR);
+for(let [x,y] of [[305,745],[691,745],[1161,749],[1577,743],[1861,739]])R(x-38,y,77,141,M.AIR);
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Authorial full-hull doors, never nearest-centre substitutions:
+// A 74-cell dockside descending service shaft, a shipyard-portal transverse
+// service gate, the straddle-side cage recovery well, and east customs entry.
+R(506,503,67,383,M.AIR);
+R(548,412,98,108,M.AIR);
+R(782,510,50,184,M.AIR);
+R(1800,431,197,95,M.AIR);
+// Redundant secondary underarch shaft into the real lower service rail.
+R(1131,572,69,313,M.AIR);
+// All exact targets remain at original authored coordinates.
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// SECOND DESIGN PASS — MATERIAL-CELL OPERATIONS, NOT AN IMAGE OVERLAY.
+// Make the drydocked ship load-bearing, inhabited and unambiguously separate
+// from dock gantry hardware; keep a Midge-width 66-cell top access.
+R(272,677,75,42,M.AIR);
+R(218,751,183,13,M.STEEL);
+for(let [x,w,h] of [[231,34,26],[277,46,31],[343,36,22]]){
+ R(x,751-h,w,h,M.WALL);R(x+4,754-h,w-8,8,M.STEEL);
+ R(x+9,746,11,8,M.STEEL);
+}
+R(352,613,86,11,M.STEEL);
+R(357,626,11,53,M.WALL);R(427,626,11,53,M.WALL);
+R(365,634,62,37,M.AIR);
+R(371,643,20,12,M.WALL);R(397,643,22,12,M.WALL);
+L(365,610,397,588,9,M.STEEL);L(397,588,435,611,10,M.STEEL);
+R(409,563,13,38,M.WALL);R(406,559,21,8,M.STEEL);
+R(436,681,14,21,M.STEEL);
+L(435,702,475,664,9,M.STEEL);
+// Dock cargo crane: asymmetric boom on the portal's grounded west footing,
+// continuous trolley cable and a distinct locked container over manifest grade.
+L(584,285,499,351,13,M.STEEL);L(499,351,419,420,11,M.WALL);
+L(493,346,625,346,9,M.STEEL);ring(536,345,13,13,5,M.WALL);
+L(534,356,534,524,6,M.STEEL);
+R(502,526,65,11,M.STEEL);R(511,537,49,38,M.WALL);
+R(518,542,35,10,M.STEEL);
+L(525,574,525,640,9,M.WALL);
+R(481,640,86,9,M.STEEL);
+// Freight straddle platform receives and exports actual load cells.
+// Join trolley sheaves to suspended cage instead of disconnected strokes.
+L(658,480,658,532,10,M.STEEL);
+L(751,480,751,529,10,M.STEEL);
+R(670,565,92,13,M.STEEL);
+R(682,576,72,33,M.WALL);
+R(686,582,64,12,M.STEEL);
+R(689,610,14,75,M.WALL);R(739,610,13,73,M.WALL);
+R(669,672,99,12,M.STEEL);
+R(606,650,45,17,M.WALL);R(614,643,30,10,M.STEEL);
+L(624,669,624,684,9,M.STEEL);
+// Arch load stations gain true tiedown connection to continuous mid-deck.
+for(let x of [1018,1190,1339]){
+ R(x+41,562,11,28,M.WALL);
+ R(x+15,586,62,14,M.STEEL);
+ R(x+19,600,54,18,M.WALL);
+ R(x+24,607,44,7,M.STEEL);
+ L(x+12,621,x+79,621,7,M.STEEL);
+}
+// Switchback load wagon/contact group, controlled yard switching frog.
+for(let [x,y,w] of [[1534,585,91],[1636,546,103],[1737,607,89]]){
+ R(x+19,y-26,w-38,26,M.WALL);
+ R(x+24,y-22,w-48,9,M.STEEL);
+ R(x+27,y+3,w-54,10,M.STEEL);
+}
+L(1524,705,1580,651,12,M.STEEL);
+L(1580,651,1688,610,11,M.STEEL);
+L(1580,651,1662,707,11,M.WALL);
+R(1571,648,15,42,M.STEEL);
+R(1685,612,16,91,M.WALL);
+R(1689,696,19,25,M.STEEL);
+// East examination conveyor / freight weighing scale has visible structure
+// and attached drive stocks; preserve a wide actual side entry.
+R(1880,566,98,12,M.STEEL);
+R(1889,579,13,37,M.WALL);R(1964,579,13,38,M.WALL);
+R(1909,592,44,12,M.WALL);R(1918,604,25,10,M.STEEL);
+L(1863,633,1910,605,10,M.STEEL);
+R(1850,641,145,12,M.STEEL);
+R(1950,618,13,23,M.WALL);
+R(1826,680,105,15,M.WALL);
+L(1829,690,1885,752,9,M.STEEL);
+// Revalidate fixed named workstations without snapping or substituting.
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Final physically authored bypasses post-detailing. Keep the laden crane
+// module; use the dedicated outward 53-cell underbridge emergency descent
+// instead of deleting the new manifest freight workface.
+R(867,465,53,424,M.AIR);
+R(553,412,94,115,M.AIR);
+R(776,509,58,190,M.AIR);
+// Preserve exact declared site centres; verify their entire hull envelopes.
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Straddle inside is an actual fly-through cargo portal, not a sealed display
+// cage. Open a 102-cell longitudinal door through crossing cable planes;
+// lower cage and adjacent right-hand recovery slot remain rooted.
+R(626,404,204,103,M.AIR);
+R(763,486,68,220,M.AIR);
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Actual culprit isolated by exact 31x27 centre scan: a 6-cell hoist cable at
+// x534 split the apparently broad portal gate into separate air components.
+// Recess it through a protected 48-cell-wide loading threshold.
+R(510,411,50,105,M.AIR);
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Final rooted portal restoration after route excavations. The starboard
+// column remains completely outside the 31x27 transverse flight doorway,
+// transmitting the A-frame and carriage weight to native bedrock at x842.
+R(839,259,23,519,M.WALL);R(846,277,9,491,M.STEEL);
+R(836,765,37,17,M.STEEL);
+R(577,245,275,16,M.STEEL);
+L(581,247,669,180,16,M.STEEL);L(734,181,851,254,17,M.STEEL);
+R(656,176,91,16,M.WALL);
+for(let x of [646,757]){
+ L(x,246,x,272,8,M.STEEL);
+ ring(x,277,21,20,8,M.STEEL);
+ L(x,296,x,395,6,M.STEEL);
+}
+for(let k=0;k<6;k++){let x=597+k*39;L(x,260,x+30,321,7,k%2?M.STEEL:M.WALL);}
+L(842,276,842,723,9,M.STEEL);
+// Distinguish the still-connected lower carriage platform from freely flying
+// doorway with two short outer-side loadbearers and a guarded steel rail.
+R(824,541,21,141,M.STEEL);
+R(698,676,145,12,M.STEEL);
+R(728,660,14,19,M.WALL);
+L(790,684,842,684,10,M.STEEL);
+// Exact authored target space always receives final physical clearance.
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// The lower 81-cell rail deliberately disconnects vertical foundations from
+// bedrock. Support the portal through a tensile upper transfer chord at y322
+// to the already rooted saddle arch instead, ABOVE the x867 emergency shaft.
+// This keeps BOTH the solid load path and lower Midge air route continuous.
+L(849,316,944,335,18,M.STEEL);
+L(849,332,939,370,11,M.WALL);
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// West drydock transfer recovers through a full 70-cell-wide service well.
+// Cargo cradle is held above the entrance by the portal's anchored beam.
+// This connects free shipping air to all five underground chambers without
+// cutting the grounded double-chord saddle arch or main crane's A-frame.
+L(471,379,591,379,12,M.STEEL);
+R(497,390,67,12,M.STEEL);R(505,402,52,19,M.WALL);
+R(512,407,37,9,M.STEEL);
+R(494,435,70,454,M.AIR);
+for(const [,site] of Object.entries(sites))R(site[0]-23,site[1]-25,47,51,M.AIR);
