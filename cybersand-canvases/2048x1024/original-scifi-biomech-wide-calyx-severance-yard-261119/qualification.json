@@ -1,0 +1,491 @@
+{
+  "title": "Calyx Severance Yard",
+  "fully_original_no_reference": true,
+  "source_seed": 19112661,
+  "accepted_engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "engine_read_only_source_blobs": {
+    "workbench_setup": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+    "material_catalogue": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+    "cyber_demo_bridge_hpp": "fced1a3fdb33c36f2e4eb5bef16fac93c37f4732"
+  },
+  "source_contract": {
+    "setup_version": 2,
+    "extent": [
+      2048,
+      1024
+    ],
+    "allowed_side_range": [
+      512,
+      2048
+    ],
+    "side_alignment": 64,
+    "source_rectangle_limit": 32768,
+    "source_json_byte_limit": 1048576,
+    "source_start_work_limit": 32000000,
+    "midge_authored_hull": [
+      4,
+      3
+    ],
+    "installed_bridge_rectangles": "UNKNOWN: may retain 4096 fallback",
+    "native_status": "NATIVE-UNTESTED"
+  },
+  "grid": {
+    "dimensions": [
+      2048,
+      1024
+    ],
+    "cells": 2097152,
+    "sha256": "18cfbe5fca6eae8bb780722f053be77ab15fcae66b454c2a5b4f64578d99db58",
+    "empty_cells": 1485022,
+    "occupied_cells": 612130,
+    "grounded_cells": 612130,
+    "detached_final": 0,
+    "nominal_unanchored_strokes_discarded": 21931,
+    "materials": {
+      "0": 1485022,
+      "58": 131183,
+      "62": 135434,
+      "63": 1975,
+      "72": 12781,
+      "77": 4942,
+      "79": 2470,
+      "100": 163633,
+      "101": 64102,
+      "113": 13857,
+      "117": 68031,
+      "120": 2269,
+      "128": 6930,
+      "130": 4523
+    },
+    "material_laws": {
+      "58": {
+        "name": "reinforced-concrete",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "62": {
+        "name": "steel-plate",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "63": {
+        "name": "painted-steel",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "72": {
+        "name": "dark-glass",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "77": {
+        "name": "neon-cyan",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "79": {
+        "name": "neon-amber",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "100": {
+        "name": "basalt-columns",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "101": {
+        "name": "obsidian",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "113": {
+        "name": "zinc-sheet",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "117": {
+        "name": "bare-iron",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "120": {
+        "name": "glass-block",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "128": {
+        "name": "polymer-panel",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      },
+      "130": {
+        "name": "carbon-fibre",
+        "state": "Solid",
+        "movable": false,
+        "kernel": "None"
+      }
+    },
+    "initial_fluids": 0,
+    "initial_powders": 0,
+    "initial_reactive": 0
+  },
+  "codec": {
+    "kind": "ordered five-field nonoverlapping rectangle edits",
+    "rectangles": 8287,
+    "replay_mismatches": 0,
+    "overlaps": 0,
+    "invalid": 0,
+    "setup_bytes": 154146,
+    "setup_sha256": "98f88be9c13ab60bc06ed1ebb27c3f546ab92555e5e0839fd8fd180003e08951",
+    "written_cells": 612130,
+    "source_rectangle_headroom": 24481
+  },
+  "route_graph": {
+    "sites": {
+      "spawn_decontamination_gate": [
+        123,
+        554
+      ],
+      "west_quarantine_readout": [
+        244,
+        556
+      ],
+      "graft_loom_assay": [
+        604,
+        466
+      ],
+      "upper_splint": [
+        1092,
+        164
+      ],
+      "ship_keel_mouth": [
+        1077,
+        480
+      ],
+      "ventral_exam_workface": [
+        1109,
+        724
+      ],
+      "east_fractionation_entry": [
+        1407,
+        471
+      ],
+      "fractionation_valves": [
+        1643,
+        574
+      ],
+      "recovery_cableway": [
+        1807,
+        617
+      ],
+      "export_service_exit": [
+        1942,
+        649
+      ]
+    },
+    "clearances": {
+      "19x15": {
+        "legal_centres": 1191667,
+        "connected_centres": 1089043,
+        "sites": {
+          "spawn_decontamination_gate": true,
+          "west_quarantine_readout": true,
+          "graft_loom_assay": true,
+          "upper_splint": true,
+          "ship_keel_mouth": true,
+          "ventral_exam_workface": true,
+          "east_fractionation_entry": true,
+          "fractionation_valves": true,
+          "recovery_cableway": true,
+          "export_service_exit": true
+        },
+        "approaches": {
+          "spawn_decontamination_gate": 4,
+          "west_quarantine_readout": 4,
+          "graft_loom_assay": 4,
+          "upper_splint": 4,
+          "ship_keel_mouth": 4,
+          "ventral_exam_workface": 4,
+          "east_fractionation_entry": 4,
+          "fractionation_valves": 4,
+          "recovery_cableway": 4,
+          "export_service_exit": 4
+        }
+      },
+      "23x19": {
+        "legal_centres": 1136641,
+        "connected_centres": 1050466,
+        "sites": {
+          "spawn_decontamination_gate": true,
+          "west_quarantine_readout": true,
+          "graft_loom_assay": true,
+          "upper_splint": true,
+          "ship_keel_mouth": true,
+          "ventral_exam_workface": true,
+          "east_fractionation_entry": true,
+          "fractionation_valves": true,
+          "recovery_cableway": true,
+          "export_service_exit": true
+        },
+        "approaches": {
+          "spawn_decontamination_gate": 4,
+          "west_quarantine_readout": 4,
+          "graft_loom_assay": 4,
+          "upper_splint": 4,
+          "ship_keel_mouth": 4,
+          "ventral_exam_workface": 4,
+          "east_fractionation_entry": 4,
+          "fractionation_valves": 4,
+          "recovery_cableway": 4,
+          "export_service_exit": 4
+        }
+      },
+      "31x27": {
+        "legal_centres": 1041822,
+        "connected_centres": 867837,
+        "sites": {
+          "spawn_decontamination_gate": true,
+          "west_quarantine_readout": true,
+          "graft_loom_assay": true,
+          "upper_splint": true,
+          "ship_keel_mouth": true,
+          "ventral_exam_workface": true,
+          "east_fractionation_entry": true,
+          "fractionation_valves": true,
+          "recovery_cableway": true,
+          "export_service_exit": true
+        },
+        "approaches": {
+          "spawn_decontamination_gate": 4,
+          "west_quarantine_readout": 4,
+          "graft_loom_assay": 4,
+          "upper_splint": 4,
+          "ship_keel_mouth": 4,
+          "ventral_exam_workface": 4,
+          "east_fractionation_entry": 4,
+          "fractionation_valves": 4,
+          "recovery_cableway": 4,
+          "export_service_exit": 4
+        }
+      },
+      "restricted_detours": {
+        "upper": {
+          "pass": true,
+          "centres": 620044,
+          "max_cross_y": 391
+        },
+        "lower": {
+          "pass": true,
+          "centres": 548591,
+          "min_cross_y": 663
+        }
+      }
+    },
+    "all_sites_all_envelopes_pass": true,
+    "restricted_bypass_constraints": {
+      "west": [
+        650,
+        550
+      ],
+      "east": [
+        1430,
+        477
+      ],
+      "central_x": [
+        730,
+        1370
+      ],
+      "upper_cross_y_max": 391,
+      "lower_cross_y_min": 663
+    },
+    "real_obstruction": {
+      "obstruction": {
+        "x": 992,
+        "y": 415,
+        "w": 192,
+        "h": 159,
+        "material_id": 58
+      },
+      "test": "31x27 centre BFS with whole-body occupancy, temporary true 192x159 solid obstruction in central through-flight",
+      "routes": {
+        "upper": {
+          "pass": true,
+          "reachable_legal_centres": 620044
+        },
+        "lower": {
+          "pass": true,
+          "reachable_legal_centres": 548591
+        }
+      }
+    }
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "box": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "png_sha256": "d2ec1f0dcde53dd3779b21aad9f66e43576ff7769795b671e9fc5924aa8ad734",
+      "indexed_pixels_sha256": "5e45e6dd88ef9572d173d0dce5112d2f558bc5f67940e11538a2f5c7585d515e",
+      "bytes": 2099184,
+      "source_cell_parity": true,
+      "png_signature": true,
+      "crc32_chunks": true,
+      "zlib_stored_blocks": true,
+      "iend": true,
+      "blob_sha": "6c766eeb083c779586540b6bed2682f35c63bb7c"
+    },
+    {
+      "name": "01-quarantine.png",
+      "box": [
+        50,
+        275,
+        410,
+        465
+      ],
+      "png_sha256": "e69f5b55443cf579b6f55db13f0b8dccada5b0e9193e41a24aa5fc36b72f6350",
+      "indexed_pixels_sha256": "9a5ed29171d49adfe3120ad019cf9ffd23f8d9b04ba140f1f7943682a456b651",
+      "bytes": 191973,
+      "source_cell_parity": true,
+      "png_signature": true,
+      "crc32_chunks": true,
+      "zlib_stored_blocks": true,
+      "iend": true,
+      "blob_sha": "f18c1f28852ee0c3f0f2ef91dcc36818fb805c8b"
+    },
+    {
+      "name": "02-graft-gantry.png",
+      "box": [
+        460,
+        30,
+        360,
+        360
+      ],
+      "png_sha256": "97eaaee200039135215b1958bd866f688d3559a0e4065de3e864afe3051b6e9f",
+      "indexed_pixels_sha256": "a3fcacd9583618e61616dba195804190548a0f01ba29c5c9b5a3b39b72180678",
+      "bytes": 130813,
+      "source_cell_parity": true,
+      "png_signature": true,
+      "crc32_chunks": true,
+      "zlib_stored_blocks": true,
+      "iend": true,
+      "blob_sha": "ef12448f91965b8d4ac36735fdc9cd7022beb5f6"
+    },
+    {
+      "name": "03-split-keel.png",
+      "box": [
+        820,
+        510,
+        490,
+        420
+      ],
+      "png_sha256": "27dde6523c999b29bcfdd1dd41b2b9a5a66b499f62f640ac07e9ac4786de100b",
+      "indexed_pixels_sha256": "7bf8bfd8894d7c26e90ab504b048ff2c7af7a62d86dc5b46594c54f15bea02f6",
+      "bytes": 207083,
+      "source_cell_parity": true,
+      "png_signature": true,
+      "crc32_chunks": true,
+      "zlib_stored_blocks": true,
+      "iend": true,
+      "blob_sha": "8c8db08e3d7468b05f01280f4eb3ec0da8fe4fd0"
+    },
+    {
+      "name": "04-fractionation.png",
+      "box": [
+        1415,
+        275,
+        384,
+        520
+      ],
+      "png_sha256": "af7e0f3c770fe1957eb83731a047be4f3ab1f4664393e761570c4d22de66ccbf",
+      "indexed_pixels_sha256": "9cc17ec433cd6700b6a5c05f784d37bd7d5e76658632e6588de16835855d8905",
+      "bytes": 201063,
+      "source_cell_parity": true,
+      "png_signature": true,
+      "crc32_chunks": true,
+      "zlib_stored_blocks": true,
+      "iend": true,
+      "blob_sha": "0846e6063b59577769e2081fe7f1cd3d225dd35f"
+    },
+    {
+      "name": "05-export.png",
+      "box": [
+        1805,
+        394,
+        207,
+        502
+      ],
+      "png_sha256": "c62264ab8d0f016ea83570286ec7adc790a6e57ea8dcb95405f2092cf29f1dbd",
+      "indexed_pixels_sha256": "6cb6cf4cbfd9dac1ecfc3bb9e65b572fddafe2a9b1ebdc6e3ef033396f87cd3f",
+      "bytes": 105269,
+      "source_cell_parity": true,
+      "png_signature": true,
+      "crc32_chunks": true,
+      "zlib_stored_blocks": true,
+      "iend": true,
+      "blob_sha": "54440672ce1f3438832f660683f4e517aaa0c5b1"
+    },
+    {
+      "name": "06-upper-keel.png",
+      "box": [
+        775,
+        95,
+        480,
+        310
+      ],
+      "png_sha256": "a58c93d4dd9cbec8e7b3d9a0c8124afba4d3a3993e82fb4523257b512f92e7b9",
+      "indexed_pixels_sha256": "7de2ac2a2151a6de27e55c6a757c29162765ae91a7d12b51977de29d415533b2",
+      "bytes": 149968,
+      "source_cell_parity": true,
+      "png_signature": true,
+      "crc32_chunks": true,
+      "zlib_stored_blocks": true,
+      "iend": true,
+      "blob_sha": "8be2007c9576e842cf7e57a0233050bea32ebd13"
+    }
+  ],
+  "reproducibility": {
+    "generator": "build.js",
+    "design": "design.json",
+    "node_command": "node build.js design.json .",
+    "source_cell_hash_is_authoritative": true,
+    "native_screen_capture": false,
+    "png_pixel_encoding": "8-bit indexed material ID (index=actual cell value), lossless 1:1 source pixels, presentation PLTE not engine runtime screenshot"
+  },
+  "limitations": [
+    "Art/Technical/Shepherd independently unreviewed at new HEAD",
+    "Native runtime not available here; no installed Windows or Linux Workbench load/collision/tick/save/reopen",
+    "All simulation is initially inert stable-solid; no chemical reaction is claimed",
+    "bridge 7541-rectangle capacity must be queried from installed binary; older 4096 fallback insufficient"
+  ],
+  "revision": {
+    "name": "R2 grounded functional-station repair",
+    "based_on_head": "40a064075555b0ea43e956d02b42235d3a8a19fb",
+    "independent_finding": "https://github.com/techrote/sandmapsreference/pull/28#issuecomment-7025440305",
+    "added_geometry_operations": 96,
+    "changed_cells": 28630,
+    "new_occupied_cells": 23722,
+    "rematerialised_cells": 4908,
+    "excavated_cells": 0,
+    "static_route_envelopes_pass": true,
+    "physical_obstruction_upper_pass": true,
+    "physical_obstruction_lower_pass": true,
+    "review": "INDEPENDENT ART/TECH/SHEPHERD REQUALIFICATION PENDING",
+    "native": "NATIVE-UNTESTED"
+  }
+}
