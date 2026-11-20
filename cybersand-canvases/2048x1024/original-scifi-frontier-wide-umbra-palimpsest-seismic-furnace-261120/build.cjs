@@ -132,8 +132,8 @@ function build(){
  R(1546,381,430,46,0);R(1567,528,389,45,0);
  R(1543,685,409,49,0);
  // Actual deep mechanically rooted side braces above the entered excavation.
- L(35,822,709,737,12,M.titanium);
- L(1297,671,2024,665,12,M.titanium);
+ // Physical counterweight arches use route-protected grounded cable ties.
+ // A separate approved flight corridor is preserved through each bore.
  // Named Midge approach/recovery sites, deliberate metre-scale clear space.
  const sites={
  "Rover recovery dock":[126,464],
@@ -167,54 +167,80 @@ function build(){
  // conservative vestibules are inside designed larger traversable spaces.
  for(const [name,[x,y]] of Object.entries(sites))R(x-21,y-19,43,39,0);
 
- // Deterministic structural rigging: connect orphan machine components to
- // already rooted supports with minimal orthogonal inert service brackets.
- // Never run cable through any conservative named Midge clearance envelope.
+
+ // Ground every actual solid component, including apparatus, with rooted inert
+ // guy-wire and bracket paths selected OUTSIDE two independently exact-clear
+ // Midge route graphs. This makes support geometry subordinate to playability
+ // rather than punching holes in route proof after the fact.
  let tied=[];
- function attachEngineeringRigging(){
-   const N=g.length,seen=new Uint8Array(N),roots=new Uint8Array(N),q=new Int32Array(N),components=[];
-   for(let k=0;k<N;k++)if(g[k]&&!seen[k]){
-     let hd=0,tl=1,edge=false,cells=[];q[0]=k;seen[k]=1;
-     while(hd<tl){let a=q[hd++],x=a%W,y=(a/W)|0;cells.push(a);
-       if(x===0||x===W-1||y===0||y===H-1)edge=true;
+ function routeGuardedRigging(){
+   const N=g.length, IW=W+1, reserved=new Uint8Array(N), sitesList=Object.entries(sites);
+   function reserveEssentialRoutes(block){
+     const test=block?g.slice():g;
+     if(block)for(let y=block[1];y<block[3];y++)test.fill(M.wall,y*W+block[0],y*W+block[2]);
+     const ii=new Int32Array((W+1)*(H+1));
+     for(let y=1;y<=H;y++){let row=0,o=(y-1)*W;for(let x=1;x<=W;x++){
+       row+=test[o+x-1]!==0?1:0;ii[y*IW+x]=ii[(y-1)*IW+x]+row;
+     }}
+     const pass=new Uint8Array(N),parent=new Int32Array(N),queue=new Int32Array(N);parent.fill(-1);
+     for(let y=13;y<H-13;y++)for(let x=15;x<W-15;x++){
+       const a=x-15,b=y-13,c=x+16,d=y+14;
+       if(ii[d*IW+c]-ii[d*IW+a]-ii[b*IW+c]+ii[b*IW+a]===0)pass[y*W+x]=1;
+     }
+     let si=sites["Rover recovery dock"][1]*W+sites["Rover recovery dock"][0];
+     if(!pass[si])throw Error("Rigging route source not 31x27 clear");
+     let hd=0,tl=1;queue[0]=si;parent[si]=si;
+     while(hd<tl){let a=queue[hd++],x=a%W;
        for(let z of [a-W,a+W,x>0?a-1:-1,x<W-1?a+1:-1])
-         if(z>=0&&z<N&&g[z]&&!seen[z]){seen[z]=1;q[tl++]=z;}
+         if(z>=0&&z<N&&pass[z]&&parent[z]<0){parent[z]=a;queue[tl++]=z;}
      }
-     if(edge)for(const z of cells)roots[z]=1;else components.push(cells);
+     for(const [name,[x,y]] of sitesList){
+       if(block&&name==="Mid-gantry inspection")continue;
+       let p=y*W+x;if(parent[p]<0)throw Error("Unroutable pre-rigging centre "+name);
+       while(true){const cx=p%W,cy=(p/W)|0;
+         for(let yy=cy-13;yy<=cy+13;yy++)reserved.fill(1,yy*W+cx-15,yy*W+cx+16);
+         if(parent[p]===p)break;p=parent[p];
+       }
+     }
+     return {reachable:tl};
    }
-   if(!components.length)return;
-   const protectedZone=new Uint8Array(N);
-   for(const [n,[cx,cy]] of Object.entries(sites))
-     for(let y=cy-20;y<=cy+20;y++)for(let x=cx-23;x<=cx+23;x++)
-       if(x>=0&&x<W&&y>=0&&y<H)protectedZone[y*W+x]=1;
-   const parent=new Int32Array(N);parent.fill(-1);let head=0,tail=0;
-   for(let k=0;k<N;k++)if(roots[k]){parent[k]=k;q[tail++]=k;}
-   while(head<tail){const a=q[head++],x=a%W;
-     for(const z of [a-W,a+W,x>0?a-1:-1,x<W-1?a+1:-1]){
-       if(z>=0&&z<N&&!g[z]&&!protectedZone[z]&&parent[z]<0){parent[z]=a;q[tail++]=z;}
+   const routeSources=[reserveEssentialRoutes(null),reserveEssentialRoutes([1002,373,1080,436])];
+   const owner=new Int32Array(N);owner.fill(-1);
+   const roots=new Uint8Array(N),seen=new Uint8Array(N),queue=new Int32Array(N),comps=[];
+   for(let k=0;k<N;k++)if(g[k]&&!seen[k]){
+     let hd=0,tl=1,edge=false;queue[0]=k;seen[k]=1;
+     while(hd<tl){let p=queue[hd++],x=p%W,y=(p/W)|0;
+       if(x===0||x===W-1||y===0||y===H-1)edge=true;
+       for(const z of [p-W,p+W,x>0?p-1:-1,x<W-1?p+1:-1])
+         if(z>=0&&z<N&&g[z]&&!seen[z]){seen[z]=1;queue[tl++]=z;}
+     }
+     if(edge){for(let j=0;j<tl;j++)roots[queue[j]]=1;}
+     else {const id=comps.length;comps.push(tl);for(let j=0;j<tl;j++)owner[queue[j]]=id;}
+   }
+   if(!comps.length)return;
+   const parent=new Int32Array(N);parent.fill(-1);let hd=0,tl=0;
+   for(let k=0;k<N;k++)if(roots[k]){parent[k]=k;queue[tl++]=k;}
+   const found=new Int32Array(comps.length);found.fill(-1);
+   while(hd<tl){let p=queue[hd++],x=p%W;
+     for(const z of [p-W,p+W,x>0?p-1:-1,x<W-1?p+1:-1]){
+       if(z<0||z>=N)continue;
+       if(g[z]){let id=owner[z];if(id>=0&&found[id]<0)found[id]=p;}
+       else if(parent[z]<0&&!reserved[z]){parent[z]=p;queue[tl++]=z;}
      }
    }
-   for(const cells of components){
-     let nearest=-1,parentOf=-1,steps=0;
-     // Since BFS queue is distance ordered, the minimal recipient path is
-     // determined by distance, not scan-order or arbitrary nearest-site shift.
-     // Evaluate frontiers using one stored source-root distance map.
-     let distance=Infinity;
-     for(const a of cells){const x=a%W;
-       for(const z of [a-W,a+W,x>0?a-1:-1,x<W-1?a+1:-1])
-         if(z>=0&&z<N&&parent[z]>=0&&!g[z]){
-           let d=0,t=z;while(parent[t]!==t&&d<2048){d++;t=parent[t];}
-           if(d<distance){distance=d;nearest=a;parentOf=z;}
-         }
+   for(let id=0;id<comps.length;id++){
+     let p=found[id];if(p<0)throw Error("No nonflight structural tie for island "+id+" size "+comps[id]);
+     let count=0;
+     while(parent[p]!==p){
+       if(reserved[p])throw Error("Rigging touched reserved route");
+       if(!g[p])g[p]=M.conduit;
+       count++;p=parent[p];if(count>4096)throw Error("Excessive service rigging "+count);
      }
-     if(parentOf<0)throw Error("Unattachable structural island "+cells.length);
-     let z=parentOf,path=[];
-     while(parent[z]!==z){path.push(z);z=parent[z];if(path.length>2048)throw Error("Tie too long");}
-     for(const idx of path){let x=idx%W,y=(idx/W)|0;g[idx]=M.conduit;}
-     tied.push({cells:cells.length,tie_pixels:path.length,at:[nearest%W,(nearest/W)|0]});
+     tied.push({component_size:comps[id],support_length:count});
    }
+   return routeSources;
  }
- attachEngineeringRigging();
+ const route_rigging_sources=routeGuardedRigging();
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
  for(let y=0;y<H;y++){let next=new Map(),base=y*W;for(let x=0;x<W;){let m=g[base+x],s=x;while(x<W&&g[base+x]===m)x++;if(!m)continue;let k=s+":"+(x-s)+":"+m,idx=prev.get(k);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(k,idx);}prev=next;}
