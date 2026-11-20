@@ -183,6 +183,33 @@ function build(){
  R(1055,894,40,9,0);
  // Reconfirm all literal site envelopes, avoiding structure across a spawn.
  for(const [name,[x,y]] of Object.entries(sites))R(x-20,y-18,41,37,0);
+
+ // R2 physical workface completion: gallery equipment placed AFTER full-width
+ // mining-airway excavation, so committed material cells actually display it.
+ // Every workface bears vertically on the solid understrata floor below y978.
+ // A. Crane-fed ore comparison, stepped scanner and counterbalanced grabber.
+ R(558,970,178,9,M.titanium);R(567,952,18,26,M.steel);
+ L(572,950,623,941,7,M.chrome);L(624,940,643,952,6,M.conduit);
+ R(604,950,45,20,M.glassDark);R(613,943,17,7,M.signal);
+ R(674,957,44,17,M.frost);R(688,945,18,12,M.iron);
+ // B. Hydraulic seismic plunger with real opposing clamp and a rotary dial.
+ R(829,973,211,8,M.steel);R(838,948,19,29,M.chrome);
+ R(864,955,36,20,M.blue);R(910,951,34,23,M.iron);
+ ellipse(959,961,17,14,M.glassDark);ellipse(959,961,7,7,M.signal);
+ R(989,957,30,18,M.frost);
+ // C. Four isotope separation cartridges, each keyed by a material-state flag.
+ R(1142,971,183,8,M.ceramic);R(1150,946,20,28,M.chrome);
+ for(let i=0;i<4;i++){let x=1182+i*32;R(x,947,23,24,i%2?M.window:M.frost);
+  R(x+5,942,9,5,i%2?M.signal:M.amber);}
+ L(1162,947,1298,940,6,M.conduit);
+ // D. Thermal dissipation fins, coolant-free gas impeller and service hatches.
+ R(1386,970,175,9,M.titanium);R(1396,945,22,29,M.iron);
+ R(1430,953,35,22,M.blue);
+ for(let x=1478;x<=1546;x+=12)R(x,941,5,34,M.chrome);
+ R(1531,938,11,11,M.amber);
+ // Two narrow rooted partitions define actual separate workcells but leave
+ // at least 35-cell high aerial cross-bay clearance above all machinery.
+ for(let x of [794,1100,1360])R(x,961,9,20,M.titanium);
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
  for(let y=0;y<H;y++){let next=new Map(),base=y*W;for(let x=0;x<W;){let m=g[base+x],s=x;while(x<W&&g[base+x]===m)x++;if(!m)continue;let k=s+":"+(x-s)+":"+m,idx=prev.get(k);if(idx===undefined){idx=rect.length;rect.push([s,y,x-s,1,m]);}else rect[idx][3]++;next.set(k,idx);}prev=next;}
