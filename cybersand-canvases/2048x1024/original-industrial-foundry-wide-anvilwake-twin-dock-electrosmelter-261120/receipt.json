@@ -1,0 +1,858 @@
+{
+  "schema": 1,
+  "original_no_source": true,
+  "concept": "Anvilwake Twin-Dock Electrosmelter",
+  "seed": 638656681,
+  "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "9555efe0d1cdbf7e9db26245a38cbeff9068a34deaf914cdda1a8b590cd8726f",
+  "setup_sha256": "d700d2d708788ed43aa2d9c0560848306c32ed7a4245d0fcf8b40508874a909e",
+  "json_bytes": 50610,
+  "rectangle_count": 2652,
+  "source_rectangle_limit": 32768,
+  "possible_installed_fallback_untested": 4096,
+  "construction_work": 957364,
+  "material_histogram": {
+    "0": 1139788,
+    "3": 6640,
+    "8": 15603,
+    "58": 262719,
+    "62": 95866,
+    "65": 129361,
+    "66": 14485,
+    "68": 30599,
+    "69": 9865,
+    "72": 20850,
+    "76": 13285,
+    "77": 1499,
+    "79": 2587,
+    "100": 231424,
+    "104": 49502,
+    "117": 23774,
+    "131": 49305
+  },
+  "ground": {
+    "total": 935121,
+    "rooted": 935121,
+    "detached": 0,
+    "repair": {
+      "components": 3,
+      "links": 9,
+      "maxSize": 475,
+      "maxLink": 7
+    }
+  },
+  "fluid": {
+    "water": 6640,
+    "lava": 15603,
+    "initial_fluid_air_faces": 0,
+    "initial_water_lava_contacts": 0
+  },
+  "flight": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 881954,
+      "connected_centres": 814243,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "Ore arrival / Midge spawn",
+          "x": 101,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 0
+        },
+        {
+          "name": "Charge gantry",
+          "x": 363,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 263
+        },
+        {
+          "name": "West recovery shaft",
+          "x": 255,
+          "y": 396,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 318
+        },
+        {
+          "name": "Left furnace",
+          "x": 476,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 376
+        },
+        {
+          "name": "Right induction crest",
+          "x": 699,
+          "y": 233,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 599
+        },
+        {
+          "name": "West transfer inspection",
+          "x": 832,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 732
+        },
+        {
+          "name": "East counterweight escape",
+          "x": 1210,
+          "y": 274,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3451
+        },
+        {
+          "name": "Ladle control gallery",
+          "x": 1186,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3517
+        },
+        {
+          "name": "Drum drive gallery",
+          "x": 1306,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3397
+        },
+        {
+          "name": "Second drum gallery",
+          "x": 1455,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1732
+        },
+        {
+          "name": "Shear booth",
+          "x": 1594,
+          "y": 233,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3108
+        },
+        {
+          "name": "Quench surveillance",
+          "x": 1741,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2962
+        },
+        {
+          "name": "East elevator shaft",
+          "x": 1882,
+          "y": 418,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2725
+        },
+        {
+          "name": "Outbound dispatch goal",
+          "x": 1970,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2999
+        },
+        {
+          "name": "West machine cellar",
+          "x": 114,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 777
+        },
+        {
+          "name": "Piston teardown",
+          "x": 440,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 917
+        },
+        {
+          "name": "Coil rebuild bay",
+          "x": 743,
+          "y": 811,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1221
+        },
+        {
+          "name": "Hydraulics laboratory",
+          "x": 1078,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1555
+        },
+        {
+          "name": "Spindle repair shop",
+          "x": 1410,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1887
+        },
+        {
+          "name": "Filter and pump cell",
+          "x": 1672,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2149
+        },
+        {
+          "name": "East lower landing",
+          "x": 1883,
+          "y": 809,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2359
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 832337,
+      "connected_centres": 776317,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "Ore arrival / Midge spawn",
+          "x": 101,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 0
+        },
+        {
+          "name": "Charge gantry",
+          "x": 363,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 263
+        },
+        {
+          "name": "West recovery shaft",
+          "x": 255,
+          "y": 396,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 318
+        },
+        {
+          "name": "Left furnace",
+          "x": 476,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 376
+        },
+        {
+          "name": "Right induction crest",
+          "x": 699,
+          "y": 233,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 599
+        },
+        {
+          "name": "West transfer inspection",
+          "x": 832,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 732
+        },
+        {
+          "name": "East counterweight escape",
+          "x": 1210,
+          "y": 274,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3459
+        },
+        {
+          "name": "Ladle control gallery",
+          "x": 1186,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3525
+        },
+        {
+          "name": "Drum drive gallery",
+          "x": 1306,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3405
+        },
+        {
+          "name": "Second drum gallery",
+          "x": 1455,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1736
+        },
+        {
+          "name": "Shear booth",
+          "x": 1594,
+          "y": 233,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3116
+        },
+        {
+          "name": "Quench surveillance",
+          "x": 1741,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2970
+        },
+        {
+          "name": "East elevator shaft",
+          "x": 1882,
+          "y": 418,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2729
+        },
+        {
+          "name": "Outbound dispatch goal",
+          "x": 1970,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3003
+        },
+        {
+          "name": "West machine cellar",
+          "x": 114,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 781
+        },
+        {
+          "name": "Piston teardown",
+          "x": 440,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 917
+        },
+        {
+          "name": "Coil rebuild bay",
+          "x": 743,
+          "y": 811,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1221
+        },
+        {
+          "name": "Hydraulics laboratory",
+          "x": 1078,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1555
+        },
+        {
+          "name": "Spindle repair shop",
+          "x": 1410,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1887
+        },
+        {
+          "name": "Filter and pump cell",
+          "x": 1672,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2149
+        },
+        {
+          "name": "East lower landing",
+          "x": 1883,
+          "y": 809,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2359
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 739799,
+      "connected_centres": 701934,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "Ore arrival / Midge spawn",
+          "x": 101,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 0
+        },
+        {
+          "name": "Charge gantry",
+          "x": 363,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 263
+        },
+        {
+          "name": "West recovery shaft",
+          "x": 255,
+          "y": 396,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 318
+        },
+        {
+          "name": "Left furnace",
+          "x": 476,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 376
+        },
+        {
+          "name": "Right induction crest",
+          "x": 699,
+          "y": 233,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 599
+        },
+        {
+          "name": "West transfer inspection",
+          "x": 832,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 732
+        },
+        {
+          "name": "East counterweight escape",
+          "x": 1210,
+          "y": 274,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3475
+        },
+        {
+          "name": "Ladle control gallery",
+          "x": 1186,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3541
+        },
+        {
+          "name": "Drum drive gallery",
+          "x": 1306,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3421
+        },
+        {
+          "name": "Second drum gallery",
+          "x": 1455,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1744
+        },
+        {
+          "name": "Shear booth",
+          "x": 1594,
+          "y": 233,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3132
+        },
+        {
+          "name": "Quench surveillance",
+          "x": 1741,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2986
+        },
+        {
+          "name": "East elevator shaft",
+          "x": 1882,
+          "y": 418,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2737
+        },
+        {
+          "name": "Outbound dispatch goal",
+          "x": 1970,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3011
+        },
+        {
+          "name": "West machine cellar",
+          "x": 114,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 789
+        },
+        {
+          "name": "Piston teardown",
+          "x": 440,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 917
+        },
+        {
+          "name": "Coil rebuild bay",
+          "x": 743,
+          "y": 811,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1221
+        },
+        {
+          "name": "Hydraulics laboratory",
+          "x": 1078,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1555
+        },
+        {
+          "name": "Spindle repair shop",
+          "x": 1410,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1887
+        },
+        {
+          "name": "Filter and pump cell",
+          "x": 1672,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2149
+        },
+        {
+          "name": "East lower landing",
+          "x": 1883,
+          "y": 809,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2359
+        }
+      ]
+    }
+  ],
+  "obstruction": {
+    "box": [
+      908,
+      790,
+      48,
+      37
+    ],
+    "flight": {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 736913,
+      "connected_centres": 699048,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "Ore arrival / Midge spawn",
+          "x": 101,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 0
+        },
+        {
+          "name": "Charge gantry",
+          "x": 363,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 263
+        },
+        {
+          "name": "West recovery shaft",
+          "x": 255,
+          "y": 396,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 318
+        },
+        {
+          "name": "Left furnace",
+          "x": 476,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 376
+        },
+        {
+          "name": "Right induction crest",
+          "x": 699,
+          "y": 233,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 599
+        },
+        {
+          "name": "West transfer inspection",
+          "x": 832,
+          "y": 231,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 732
+        },
+        {
+          "name": "East counterweight escape",
+          "x": 1210,
+          "y": 274,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3549
+        },
+        {
+          "name": "Ladle control gallery",
+          "x": 1186,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3615
+        },
+        {
+          "name": "Drum drive gallery",
+          "x": 1306,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3495
+        },
+        {
+          "name": "Second drum gallery",
+          "x": 1455,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1744
+        },
+        {
+          "name": "Shear booth",
+          "x": 1594,
+          "y": 233,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3206
+        },
+        {
+          "name": "Quench surveillance",
+          "x": 1741,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3060
+        },
+        {
+          "name": "East elevator shaft",
+          "x": 1882,
+          "y": 418,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2811
+        },
+        {
+          "name": "Outbound dispatch goal",
+          "x": 1970,
+          "y": 232,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 3085
+        },
+        {
+          "name": "West machine cellar",
+          "x": 114,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 789
+        },
+        {
+          "name": "Piston teardown",
+          "x": 440,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 917
+        },
+        {
+          "name": "Coil rebuild bay",
+          "x": 743,
+          "y": 811,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1221
+        },
+        {
+          "name": "Hydraulics laboratory",
+          "x": 1078,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1615
+        },
+        {
+          "name": "Spindle repair shop",
+          "x": 1410,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 1947
+        },
+        {
+          "name": "Filter and pump cell",
+          "x": 1672,
+          "y": 810,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2209
+        },
+        {
+          "name": "East lower landing",
+          "x": 1883,
+          "y": 809,
+          "clear": true,
+          "reached": true,
+          "shortest_4_neighbour_steps": 2421
+        }
+      ]
+    },
+    "measured_target": "Outbound dispatch goal",
+    "shortest_before": 3011,
+    "shortest_after": 3085,
+    "positive_detour": 74
+  },
+  "pngs": {
+    "overview.png": {
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2098812,
+      "sha256": "2e86c0dbaedeb1c7992c6a9334d35480dbbb71aff11d90485416041d955116af"
+    },
+    "01-ore-dock.png": {
+      "crop": [
+        51,
+        467,
+        405,
+        241
+      ],
+      "bytes": 98327,
+      "sha256": "16377f86f15e2b142b0ad604f9e9e1bd0ec41c67b9b6fc19c4babe786a792aa0"
+    },
+    "02-dual-hearths.png": {
+      "crop": [
+        405,
+        290,
+        411,
+        419
+      ],
+      "bytes": 173114,
+      "sha256": "c8cac3d132f63b96ee370df5f718b36ed61d45e0422a60094532acf1e7765e3e"
+    },
+    "03-gantry-ladle.png": {
+      "crop": [
+        808,
+        180,
+        401,
+        528
+      ],
+      "bytes": 212747,
+      "sha256": "f212bc8a9d553aa0270625a1fafe2bb4c32f8d029ae49933df7ee5de0d4a65d8"
+    },
+    "04-horizontal-drums.png": {
+      "crop": [
+        1212,
+        470,
+        401,
+        239
+      ],
+      "bytes": 96559,
+      "sha256": "f742398c9c6c90a3d288bda7e2172b89396a879cec9adac8eaba9be382be5607"
+    },
+    "05-quench-export.png": {
+      "crop": [
+        1598,
+        518,
+        405,
+        190
+      ],
+      "bytes": 77621,
+      "sha256": "f66f05066c1908fa3c689a889a67a1f5b621fd30151ff4b52a7ce4f50f186faa"
+    },
+    "06-underplant.png": {
+      "crop": [
+        55,
+        784,
+        1749,
+        115
+      ],
+      "bytes": 201741,
+      "sha256": "317af1b6ede9463253fc9643f3060cf1d3c998a69ea1a68aa0cc951d6eed0140"
+    }
+  },
+  "pixel_material_parity_count": 2952618,
+  "native": "NATIVE-UNTESTED"
+}
