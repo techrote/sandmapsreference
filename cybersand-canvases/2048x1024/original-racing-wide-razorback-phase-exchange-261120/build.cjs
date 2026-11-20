@@ -101,13 +101,28 @@ function reach(g,w,h,spawn=[139,414]){
  while(head<tail){let i=q[head++],x=i%W,y=(i-x)/W,t=i-1;if(x&&ok[t]&&!seen[t]){seen[t]=1;q[tail++]=t;}t=i+1;if(x<W-1&&ok[t]&&!seen[t]){seen[t]=1;q[tail++]=t;}t=i-W;if(y&&ok[t]&&!seen[t]){seen[t]=1;q[tail++]=t;}t=i+W;if(y<H-1&&ok[t]&&!seen[t]){seen[t]=1;q[tail++]=t;}}
  return {connected:tail,missing:SITES.filter(s=>!seen[s[2]*W+s[1]]).map(s=>s[0])};
 }
+
+function fixedZlib(raw){
+ const out=[];let hold=0,bits=0;
+ function bit(v,n){hold|=v<<bits;bits+=n;while(bits>=8){out.push(hold&255);hold>>>=8;bits-=8;}}
+ function rev(code,n){let a=0;for(let i=0;i<n;i++){a=(a<<1)|(code&1);code>>>=1;}return a;}
+ function symbol(s){let code,n;if(s<=143){code=s+48;n=8;}else if(s<=255){code=s+256;n=9;}else if(s<=279){code=s-256;n=7;}else{code=s-88;n=8;}bit(rev(code,n),n);}
+ const lens=[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258],lb=[0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0];
+ function repeat(len){let i=0;for(let j=0;j<lens.length;j++)if(lens[j]<=len)i=j;symbol(257+i);if(lb[i])bit(len-lens[i],lb[i]);bit(0,5);}
+ bit(1,1);bit(1,2);for(let i=0;i<raw.length;){let n=0;if(i>0&&raw[i]===raw[i-1]){n=1;while(i+n<raw.length&&n<258&&raw[i+n]===raw[i-1])n++;}if(n>=3){repeat(n);i+=n;}else{symbol(raw[i]);i++;}}
+ symbol(256);if(bits>0)out.push(hold&255);
+ let a=1,b=0;for(let v of raw){a=(a+v)%65521;b=(b+a)%65521;}
+ const sum=((b<<16)|a)>>>0;
+ return Buffer.from([0x78,0x01,...out,(sum>>>24)&255,(sum>>>16)&255,(sum>>>8)&255,sum&255]);
+}
+
 function pngIndexed(g,x0,y0,w,h){
  const raw=Buffer.alloc((w+1)*h);for(let y=0;y<h;y++){let d=y*(w+1),s=(y0+y)*W+x0;for(let x=0;x<w;x++)raw[d+1+x]=g[s+x];}
  const plte=Buffer.alloc(132*3),trans=Buffer.alloc(132,255);for(const [id,p]of Object.entries(PALETTE)){let i=+id;plte[i*3]=p[0];plte[i*3+1]=p[1];plte[i*3+2]=p[2];trans[i]=p[3];}
  const tab=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;tab[n]=c>>>0;}
  function chunk(n,d){let name=Buffer.from(n),len=Buffer.alloc(4),check=Buffer.alloc(4),c=0xffffffff;len.writeUInt32BE(d.length);for(let b of name)c=tab[(c^b)&255]^(c>>>8);for(let b of d)c=tab[(c^b)&255]^(c>>>8);check.writeUInt32BE((c^0xffffffff)>>>0);return Buffer.concat([len,name,d,check]);}
  const ihdr=Buffer.alloc(13);ihdr.writeUInt32BE(w,0);ihdr.writeUInt32BE(h,4);ihdr[8]=8;ihdr[9]=3;
- return Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',ihdr),chunk('PLTE',plte),chunk('tRNS',trans),chunk('IDAT',zlib.deflateSync(raw,{level:9})),chunk('IEND',Buffer.alloc(0))]);
+ return Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',ihdr),chunk('PLTE',plte),chunk('tRNS',trans),chunk('IDAT',fixedZlib(raw)),chunk('IEND',Buffer.alloc(0))]);
 }
 const CROPS=[['overview.png',0,0,W,H],['01-west-dispatch.png',0,20,480,512],['02-bellows-run.png',397,243,478,590],['03-phase-exchange.png',806,200,504,620],['04-ion-scrubber.png',1265,230,453,630],['05-east-return.png',1600,245,448,615],['06-lower-service.png',836,690,512,334]];
 function produce(){
