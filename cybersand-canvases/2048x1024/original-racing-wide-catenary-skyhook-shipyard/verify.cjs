@@ -1,10 +1,22 @@
 "use strict";
 const fs=require("node:fs"),crypto=require("node:crypto"),zlib=require("node:zlib"),assert=require("node:assert/strict");
-const {level}=require("./build.cjs");
+const {level,DEFAULT_POLICY}=require("./build.cjs");
 const H=1024,W=2048,SHA=x=>crypto.createHash("sha256").update(x).digest("hex");
 const J=fs.readFileSync(__dirname+"/setup-catenary-skyhook-shipyard.json");
 const R=JSON.parse(fs.readFileSync(__dirname+"/qualification.json","utf8"));
 const setup=JSON.parse(J.toString("utf8"));
+// Source-mirror of accepted workbench_setup.gd ROOT_KEYS and native policy defaults.
+const ROOT_KEYS=["version","extent","actors","next_id","selected","edits","response","liquid_policy","normalize","rule_radius","source","material","brush","fire"];
+assert.deepEqual(Object.keys(setup).sort(),ROOT_KEYS.slice().sort(),"Unsupported starting setup format");
+assert.deepEqual(setup.liquid_policy,DEFAULT_POLICY);
+assert.equal(setup.liquid_policy.length,55);
+assert.equal(setup.liquid_policy[0],0x4C435057);
+assert.equal(setup.liquid_policy[19],11);
+assert.equal(setup.response,"LA-SELECTIVE");
+assert.equal(setup.normalize,false);assert.equal(setup.rule_radius,2);
+assert.deepEqual(setup.source,[]);assert.equal(setup.material,2);
+assert.equal(setup.brush,8);assert.equal(setup.fire,false);
+assert.equal(setup.next_id,2);assert.equal(setup.selected,1);
 assert.equal(setup.version,2);assert.deepEqual(setup.extent,[W,H]);
 assert.deepEqual(setup.actors.map(a=>[a.model,a.spawn]),[["midge",[124,366]]]);
 assert.ok(setup.edits.length<=32768&&J.length<=1048576);

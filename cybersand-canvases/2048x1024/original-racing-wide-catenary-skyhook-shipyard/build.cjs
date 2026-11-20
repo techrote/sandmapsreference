@@ -1,4 +1,7 @@
 "use strict";
+// Exact default LiquidSolverPolicy::default_request() for accepted CyberSand de109d0131641d6adc8d25bb9ced7ca3d4991105.
+const DEFAULT_POLICY=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
+
 
 function level(){
  const W=2048,H=1024,M={BED:100,VOID:101,CON:58,STEEL:62,SLATE:49,ZINC:113,IRON:117,GLASS:120,QUARTZ:122,ICEGLASS:123,POLY:128,WATER:3};
@@ -170,6 +173,29 @@ function level(){
  rect(1838,931,106,15,M.STEEL);
  rect(1871,921,13,16,M.ZINC);rect(1888,927,28,11,M.QUARTZ);
 
+ // R2: grounded east capture and return decision gates, plus west brake gate.
+ beam(1809,ceil[1809]-12,1843,336,9,M.STEEL);
+ beam(1843,336,1868,319,7,M.QUARTZ);
+ beam(1947,ceil[1947]-10,1947,344,10,M.IRON);
+ beam(1947,344,1929,331,7,M.QUARTZ);
+ beam(1936,floor[1936]+8,1936,704,11,M.STEEL);
+ beam(1936,704,1906,719,8,M.ICEGLASS);
+ beam(1831,floor[1831]+8,1844,714,9,M.IRON);
+ beam(1844,714,1814,733,7,M.ICEGLASS);
+ beam(71,ceil[71]-9,73,336,10,M.STEEL);
+ beam(73,336,97,322,7,M.QUARTZ);
+ beam(78,floor[78]+8,85,696,10,M.IRON);
+ beam(85,696,111,713,7,M.ICEGLASS);
+ // Asymmetric berth craft, bow and stern, plus rooted handling saddle.
+ rect(922,923,36,16,M.STEEL);
+ beam(940,934,979,916,7,M.IRON);
+ rect(962,905,24,34,M.ZINC);
+ beam(980,917,1026,935,6,M.QUARTZ);
+ beam(1120,935,1181,941,8,M.IRON);
+ beam(1137,934,1180,912,7,M.ZINC);
+ beam(1163,949,1160,918,8,M.STEEL);
+ beam(1160,921,1136,913,6,M.QUARTZ);
+ beam(1088,295,1155,318,6,M.ICEGLASS);
  // Verify / excise any disconnected inert decoration produced by subtractive cutting.
  const seen=new Uint8Array(grid.length),q=new Int32Array(grid.length);let a=0,b=0;
  const solid=i=>grid[i]!==0&&grid[i]!==M.WATER;
@@ -206,7 +232,10 @@ function level(){
  const setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",
   hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
   spawn:[124,366],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],
-  next_id:2,selected:1,edits};
+  next_id:2,selected:1,edits,response:"LA-SELECTIVE",liquid_policy:DEFAULT_POLICY.slice(),normalize:false,rule_radius:2,source:[],material:2,brush:8,fire:false};
+ const ROOT_KEYS=["version","extent","actors","next_id","selected","edits","response","liquid_policy","normalize","rule_radius","source","material","brush","fire"];
+ if(JSON.stringify(Object.keys(setup).sort())!==JSON.stringify(ROOT_KEYS.sort()))throw Error("Setup-v2 ROOT_KEYS mismatch");
+ if(setup.liquid_policy.length!==55||setup.liquid_policy[0]!==0x4C435057||setup.liquid_policy[19]!==11)throw Error("native policy mismatch");
  const json=JSON.stringify(setup);if(edits.length>32768||json.length>1048576)throw Error("setup capacity "+edits.length+" "+json.length);
  let visits=0;const played=new Uint8Array(grid.length),mask=new Uint8Array(grid.length);
  for(let [x,y,w,h,m] of edits){
@@ -381,4 +410,4 @@ function packageOutputs(){
 }
 if(typeof require==='function'&&require.main===module){const fs=require('fs');const pkg=packageOutputs();for(const file of pkg.files)fs.writeFileSync(__dirname+'/'+file.name,file.content);console.log(JSON.stringify({grid_sha256:pkg.receipt.grid_sha256,setup_json_sha256:pkg.receipt.setup_json_sha256,rectangles:pkg.receipt.rectangles,sites:pkg.receipt.clearances,images:pkg.receipt.images.map(v=>v.name)},null,2));}
 
-module.exports={level,packageOutputs,sha256,pngFrom,verifyPng};
+module.exports={level,packageOutputs,sha256,pngFrom,verifyPng,base64Encode,DEFAULT_POLICY};

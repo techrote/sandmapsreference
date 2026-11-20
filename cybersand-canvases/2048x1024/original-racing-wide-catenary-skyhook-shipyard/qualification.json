@@ -7,27 +7,27 @@
     1024
   ],
   "material_cells": 2097152,
-  "rectangles": 6725,
-  "setup_json_bytes": 129046,
-  "cell_visits": 778600,
+  "rectangles": 7366,
+  "setup_json_bytes": 141554,
+  "cell_visits": 797290,
   "setup_source_limits": {
     "rectangles": 32768,
     "bytes": 1048576,
     "work": 32000000
   },
   "histogram": {
-    "0": 1318552,
+    "0": 1299862,
     "3": 9396,
     "49": 32040,
-    "58": 69925,
-    "62": 60081,
-    "100": 531948,
+    "58": 67730,
+    "62": 66561,
+    "100": 531936,
     "101": 18520,
-    "113": 17547,
-    "117": 22348,
-    "120": 2554,
-    "122": 5152,
-    "123": 6810,
+    "113": 18262,
+    "117": 30742,
+    "120": 2509,
+    "122": 7757,
+    "123": 9558,
     "128": 2279
   },
   "exact_replay_mismatches": 0,
@@ -140,17 +140,17 @@
     "19x15": {
       "reached": 17,
       "missing": [],
-      "legal_connected": 1196036
+      "legal_connected": 1159087
     },
     "23x19": {
       "reached": 17,
       "missing": [],
-      "legal_connected": 1171870
+      "legal_connected": 1132420
     },
     "31x27": {
       "reached": 17,
       "missing": [],
-      "legal_connected": 1122496
+      "legal_connected": 1078651
     }
   },
   "straight_flight_31x27_samples_each": 1813,
@@ -168,7 +168,7 @@
     "missing": [
       "Drylift Upper"
     ],
-    "legal_connected": 1097743
+    "legal_connected": 1055145
   },
   "districts": [
     "West magnetic launch and recovery",
@@ -179,8 +179,8 @@
   ],
   "route_graph": "West Launch -> Crane One -> Crane Two -> Drylift Upper -> Ballast Upper -> East Capture -> Return Descent -> East Lower -> Ballast Return -> Drydock Return -> Crane Return -> West Return -> West Brake -> West Finish; mid-height graving short-cut; independent crane/ballast workshops",
   "native": "NATIVE-UNTESTED; accepted source 32768 rectangles, installed native bridge may be legacy 4096",
-  "grid_sha256": "cf48d320ca988d94a61d1672de424f5845d8635c53791343fe67afa84fd81644",
-  "setup_json_sha256": "8efe712127be8964cad3229e26a3a941ddd194aea5e1bcf48ec84e7d55b5a3f1",
+  "grid_sha256": "4c5a25c358d3a172c71f5079826cd831dc4af7fa4cf31a59e2e03425b06f7e29",
+  "setup_json_sha256": "4236af7e673d9db51b6c98d6e28cecb871a8bd47c246983bc47a07ee09c87562",
   "images": [
     {
       "name": "overview.png",
@@ -190,7 +190,7 @@
         2048,
         1024
       ],
-      "sha256": "6e167c720845f9ddd9cf4619177c5c44e56c8ad8cd4a1aedf4495f8ae8bc5258",
+      "sha256": "06928a988c474cc52df71ed3cdde7ebc4f791c5931d56088dcdeb859956e30f0",
       "pixels": 2097152,
       "bytes": 2099184,
       "chunk_crc": true,
@@ -205,7 +205,7 @@
         470,
         515
       ],
-      "sha256": "00f65a17aefaa515072617a301d24d06439fa8d6ce18664ce642bc48e5757c2c",
+      "sha256": "d64b7d831c2147c84c4d65358cc554078736901c4b72fb7836a7feeaf2c34d15",
       "pixels": 242050,
       "bytes": 243428,
       "chunk_crc": true,
@@ -235,7 +235,7 @@
         515,
         800
       ],
-      "sha256": "7a507b1fbe9fca16cadd42f28da075378e229f7e04bb98fffc78bf3c66887217",
+      "sha256": "b9fe9253678634372c5730d648ccf6f6f2a9c9c7e82ec8c8f46084fff999751c",
       "pixels": 412000,
       "bytes": 413678,
       "chunk_crc": true,
@@ -250,7 +250,7 @@
         450,
         495
       ],
-      "sha256": "4ceebb90da19d9ae2aac5949b53d00bc84c83e75fd85765fa1a9d8d1c7d0837b",
+      "sha256": "f0a48b3c9c0d053e89d8ab0838c523f339e21a20b46ec1f8436334af38e5963a",
       "pixels": 222750,
       "bytes": 224108,
       "chunk_crc": true,
@@ -265,7 +265,7 @@
         316,
         790
       ],
-      "sha256": "29b9eb3a72081c6f877752cdb5e98d34587e07a296d2a5b6167b6eda0766cb50",
+      "sha256": "b3be8c9d9d48c6b9fce5d9863de2586d8755843308d480001b1cca6d9730ed6e",
       "pixels": 249640,
       "bytes": 251293,
       "chunk_crc": true,
