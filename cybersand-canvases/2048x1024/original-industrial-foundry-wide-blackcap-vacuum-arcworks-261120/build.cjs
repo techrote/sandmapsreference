@@ -155,6 +155,11 @@ function world(){
  }
  // Restore exact safe entrances to prevent incidental overlap with end shafts.
  rect(349,291,105,610,0);rect(1800,291,105,610,0);
+ // Real pressure-bulkhead passage is uninterrupted at 31x27: cut the underdeck gate through both buttresses.
+ // The massive roof-to-deck load column gives the isolated middle deck an actual grounded support
+ // through the roof and grounded end frames, not a fictitious floating beam.
+ rect(975,747,129,155,0);
+ rect(985,136,18,525,58);rect(988,340,12,130,65);
  // Below y747, shafts join the same open underfloor bypass without target substitution.
  const sites=[
  ["West ore spawn",89,249],["Charge skip watch",253,253],
