@@ -1,0 +1,320 @@
+{
+  "concept": "Threnody Scar - Foldwing Xenoseed Lift",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 4092282,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
+  "material_histogram": {
+    "49": 18385,
+    "62": 35655,
+    "63": 12684,
+    "66": 8202,
+    "68": 27893,
+    "77": 377,
+    "79": 137,
+    "100": 222418,
+    "101": 13887,
+    "120": 8001,
+    "121": 9656,
+    "122": 2259,
+    "129": 9920,
+    "130": 19818,
+    "131": 20273
+  },
+  "filled_material_cells": 409565,
+  "grounded_cells": 409565,
+  "ungrounded_cells": 0,
+  "grounded_components": 1,
+  "all_solid_components": 1,
+  "physical_fixture_ties": {
+    "ties": 74,
+    "longest": 116
+  },
+  "foldwing_support_anchors": {
+    "ties": 74,
+    "longest": 116,
+    "island_removed": 8279
+  },
+  "creator_revision": "R1 original foldwing xenoseed lift 2026-11-20",
+  "nonoverlapping_ordered_rectangles": 3252,
+  "rectangle_work": 409565,
+  "setup_bytes": 61640,
+  "material_plane_sha256": "d0f52f9fb46fad8ec71ceaca44f0ca5c8c08c815aa1829a288a69cf758c8f20c",
+  "setup_sha256": "b96aba62297435cc4bfac66442bb3b9805ba1619555fab75a56fc78e5a7904d9",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 44071,
+      "sha256": "e54ba21afe2ddd6571174001e25b135d005e4623a9177074b45d26ec0e6ef1db"
+    },
+    {
+      "name": "01-west-nursery.png",
+      "bytes": 8551,
+      "sha256": "8ea9caead17cef0ee8065b158fe1b49b8e2a75e84dde97a50b1ce86958fb43ad"
+    },
+    {
+      "name": "02-foldwing-west.png",
+      "bytes": 7998,
+      "sha256": "212a249df8ec57e293985259863f5c65acc2eb33111733a8777e2055e8e70cc3"
+    },
+    {
+      "name": "03-xenoseed-lift.png",
+      "bytes": 8061,
+      "sha256": "663de765fa9394ef03aaefe0f7d2aca14a00d94a1c484bccdf37fbcce87545ab"
+    },
+    {
+      "name": "04-east-quarantine.png",
+      "bytes": 8649,
+      "sha256": "174ec606a6bf6a93f968f383c241aadcf16663fa89773a4245ffa8d62a311f70"
+    },
+    {
+      "name": "05-dry-understrata.png",
+      "bytes": 6029,
+      "sha256": "1f08f45cfd50deff980b874bbb64b5df7952292e58d0045a312c529d32efd361"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1512122,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1472459,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1394540,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      1002,
+      431,
+      1059,
+      484
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only exact Lift junction; all other named destinations remain recoverable",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1387667,
+        "passed": 28,
+        "total": 29,
+        "bad": [
+          [
+            "Lift junction",
+            [
+              1029,
+              451
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "West rover intake": [
+      171,
+      443
+    ],
+    "West nursery portal": [
+      327,
+      443
+    ],
+    "West cold assay": [
+      160,
+      607
+    ],
+    "West spinner": [
+      370,
+      608
+    ],
+    "West refuge": [
+      207,
+      765
+    ],
+    "West dispatch": [
+      425,
+      762
+    ],
+    "West escarpment": [
+      473,
+      362
+    ],
+    "West rescue shaft": [
+      465,
+      822
+    ],
+    "West foldwing observation": [
+      756,
+      211
+    ],
+    "West side transfer": [
+      815,
+      573
+    ],
+    "Overflight bypass": [
+      1031,
+      144
+    ],
+    "Lift upper arrival": [
+      1016,
+      378
+    ],
+    "Lift junction": [
+      1029,
+      451
+    ],
+    "Lift lower transfer": [
+      1116,
+      594
+    ],
+    "East foldwing observation": [
+      1297,
+      207
+    ],
+    "East side transfer": [
+      1288,
+      578
+    ],
+    "West basin recovery": [
+      613,
+      716
+    ],
+    "East basin recovery": [
+      1410,
+      716
+    ],
+    "East escarpment": [
+      1584,
+      365
+    ],
+    "East sterile intake": [
+      1691,
+      450
+    ],
+    "East telemetry": [
+      1910,
+      449
+    ],
+    "East isolation": [
+      1700,
+      611
+    ],
+    "East freight": [
+      1894,
+      611
+    ],
+    "East rover garage": [
+      1902,
+      766
+    ],
+    "East rescue shaft": [
+      1615,
+      819
+    ],
+    "Understrata assay": [
+      613,
+      899
+    ],
+    "Understrata rotor": [
+      894,
+      898
+    ],
+    "Understrata heat": [
+      1158,
+      897
+    ],
+    "Understrata repair": [
+      1436,
+      897
+    ]
+  },
+  "accepted_actor_schema": [
+    "id",
+    "model",
+    "hash",
+    "spawn",
+    "options"
+  ],
+  "literal_midge_spawn": [
+    171,
+    443
+  ],
+  "crops": [
+    [
+      "01-west-nursery",
+      0,
+      334,
+      545,
+      537
+    ],
+    [
+      "02-foldwing-west",
+      518,
+      208,
+      530,
+      580
+    ],
+    [
+      "03-xenoseed-lift",
+      793,
+      245,
+      510,
+      513
+    ],
+    [
+      "04-east-quarantine",
+      1503,
+      327,
+      545,
+      540
+    ],
+    [
+      "05-dry-understrata",
+      450,
+      853,
+      1130,
+      171
+    ]
+  ],
+  "source_art": "None; wholly new original invented sci-fi frontier",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"
+}
