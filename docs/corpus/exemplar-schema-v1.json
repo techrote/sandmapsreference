@@ -4,79 +4,381 @@
   "title": "CyberSand exemplar metadata v1",
   "type": "object",
   "required": [
-    "schema_version","purpose","family","map_role","anchor_donors","macro_topology",
-    "density_profile","route_grammar","strong_motifs","interesting_relationships",
-    "authoring_affordances","setpiece_candidates","procedural_exemplar_value",
+    "schema_version",
+    "purpose",
+    "family",
+    "map_role",
+    "anchor_donors",
+    "macro_topology",
+    "density_profile",
+    "route_grammar",
+    "strong_motifs",
+    "interesting_relationships",
+    "authoring_affordances",
+    "setpiece_candidates",
+    "procedural_exemplar_value",
     "similarity_avoidance"
   ],
   "properties": {
-    "schema_version": {"const": 1},
-    "purpose": {
-      "type": "array","minItems": 1,"uniqueItems": true,
-      "items": {"enum": ["human_editable_canvas","procedural_exemplar","scripted_setpiece_source"]}
+    "schema_version": {
+      "const": 1
     },
-    "family": {"type": "string","minLength": 1},
-    "map_role": {"type": "string","minLength": 1},
+    "purpose": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "human_editable_canvas",
+          "procedural_exemplar",
+          "scripted_setpiece_source"
+        ]
+      }
+    },
+    "family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "map_role": {
+      "type": "string",
+      "minLength": 1
+    },
     "anchor_donors": {
       "type": "array",
       "items": {
         "oneOf": [
-          {"type": "string","minLength": 1},
+          {
+            "type": "string",
+            "minLength": 1
+          },
           {
             "type": "object",
-            "required": ["name"],
+            "required": [
+              "name"
+            ],
             "properties": {
-              "name": {"type": "string","minLength": 1},
-              "head_sha": {"type": "string","pattern": "^[0-9a-f]{40}$"},
-              "relationship": {"type": "string","minLength": 1}
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "head_sha": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "relationship": {
+                "type": "string",
+                "minLength": 1
+              }
             },
             "additionalProperties": true
           }
         ]
       }
     },
-    "macro_topology": {"$ref": "#/$defs/nonemptyStrings"},
-    "density_profile": {"type": "string","minLength": 1},
-    "route_grammar": {"$ref": "#/$defs/nonemptyStrings"},
-    "strong_motifs": {"$ref": "#/$defs/nonemptyStrings"},
-    "interesting_relationships": {"$ref": "#/$defs/nonemptyStrings"},
-    "authoring_affordances": {"$ref": "#/$defs/stringOrObjectArray"},
-    "setpiece_candidates": {"$ref": "#/$defs/stringOrObjectArray"},
-    "procedural_exemplar_value": {"$ref": "#/$defs/nonemptyStrings"},
-    "similarity_avoidance": {
+    "macro_topology": {
       "oneOf": [
-        {"type": "string","minLength": 1},
-        {"$ref": "#/$defs/nonemptyStrings"}
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/nonemptyStrings"
+        }
       ]
     },
-    "native_status": {"type": "string"},
+    "density_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "route_grammar": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/nonemptyStrings"
+        }
+      ]
+    },
+    "strong_motifs": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/nonemptyStrings"
+        }
+      ]
+    },
+    "interesting_relationships": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/nonemptyStrings"
+        }
+      ]
+    },
+    "authoring_affordances": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/stringOrObjectArray"
+        }
+      ]
+    },
+    "setpiece_candidates": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/stringOrObjectArray"
+        }
+      ]
+    },
+    "procedural_exemplar_value": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/nonemptyStrings"
+        }
+      ]
+    },
+    "similarity_avoidance": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/nonemptyStrings"
+        }
+      ]
+    },
+    "native_status": {
+      "type": "string"
+    },
     "diversity_axes": {
       "type": "object",
       "minProperties": 1,
       "properties": {
-        "macro_topology": {"$ref": "#/$defs/macroTopology"},
-        "altitude_grammar": {"$ref": "#/$defs/altitudeGrammar"},
-        "density_cadence": {"$ref": "#/$defs/densityCadence"},
-        "route_structure": {"$ref": "#/$defs/routeStructure"},
-        "landmark_family": {"$ref": "#/$defs/landmarkFamily"},
-        "support_form": {"$ref": "#/$defs/supportForm"},
-        "environment_relation": {"$ref": "#/$defs/environmentRelation"},
-        "incompleteness": {"$ref": "#/$defs/incompleteness"}
+        "macro_topology": {
+          "$ref": "#/$defs/macroTopology"
+        },
+        "altitude_grammar": {
+          "$ref": "#/$defs/altitudeGrammar"
+        },
+        "density_cadence": {
+          "$ref": "#/$defs/densityCadence"
+        },
+        "route_structure": {
+          "$ref": "#/$defs/routeStructure"
+        },
+        "landmark_family": {
+          "$ref": "#/$defs/landmarkFamily"
+        },
+        "support_form": {
+          "$ref": "#/$defs/supportForm"
+        },
+        "environment_relation": {
+          "$ref": "#/$defs/environmentRelation"
+        },
+        "incompleteness": {
+          "$ref": "#/$defs/incompleteness"
+        }
       },
       "additionalProperties": false
     }
   },
   "additionalProperties": true,
   "$defs": {
-    "nonemptyStrings": {"type": "array","minItems": 1,"items": {"type": "string","minLength": 1}},
-    "stringOrObjectArray": {"type": "array","items": {"oneOf": [{"type": "string","minLength": 1},{"type": "object"}]}},
-    "macroTopology": {"type": "array","minItems": 1,"items": {"enum": ["linear","braided","ring","crater","suspended","islands","nested_cavities","cascade","multi_settlement","basin","yard","corridor","bridge","vertical_fault","drydock","mixed","other"]}},
-    "altitudeGrammar": {"type": "array","minItems": 1,"items": {"enum": ["single_level","dual_level","tri_level","vertical_spine","high_low_bypass","multi_strata","mixed","other"]}},
-    "densityCadence": {"type": "array","minItems": 1,"items": {"enum": ["uniform_sparse","uniform_dense","dense_open_dense","edge_dense_center_open","alternating","clustered","mixed","other"]}},
-    "routeStructure": {"type": "array","minItems": 1,"items": {"enum": ["linear","branch_rejoin","loop","hub_spoke","parallel_lanes","layered","switchback","dead_end_recovery","mixed","other"]}},
-    "landmarkFamily": {"type": "array","minItems": 1,"items": {"enum": ["central_machine","bridge","vessel","tower","ring","rotor","crane","dish","crater","gate","gantry","basin","cableway","mixed","other"]}},
-    "supportForm": {"type": "array","minItems": 1,"items": {"enum": ["edge_rooted","floor_rooted","roof_rooted","suspended","twin_pier","multi_leg","arch","cliff_embedded","mixed","other"]}},
-    "environmentRelation": {"type": "array","minItems": 1,"items": {"enum": ["dry","fluid_containment","thermal","biological","geological","damaged","mixed","other"]}},
-    "incompleteness": {"type": "array","minItems": 1,"items": {"enum": ["finished","editable_gaps","damaged","excavation","abandoned","modular_append_zones","mixed","other"]}}
+    "nonemptyStrings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "stringOrObjectArray": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "type": "object"
+          }
+        ]
+      }
+    },
+    "macroTopology": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "linear",
+          "braided",
+          "ring",
+          "crater",
+          "suspended",
+          "islands",
+          "nested_cavities",
+          "cascade",
+          "multi_settlement",
+          "basin",
+          "yard",
+          "corridor",
+          "bridge",
+          "vertical_fault",
+          "drydock",
+          "mixed",
+          "other"
+        ]
+      }
+    },
+    "altitudeGrammar": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "single_level",
+          "dual_level",
+          "tri_level",
+          "vertical_spine",
+          "high_low_bypass",
+          "multi_strata",
+          "mixed",
+          "other"
+        ]
+      }
+    },
+    "densityCadence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "uniform_sparse",
+          "uniform_dense",
+          "dense_open_dense",
+          "edge_dense_center_open",
+          "alternating",
+          "clustered",
+          "mixed",
+          "other"
+        ]
+      }
+    },
+    "routeStructure": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "linear",
+          "branch_rejoin",
+          "loop",
+          "hub_spoke",
+          "parallel_lanes",
+          "layered",
+          "switchback",
+          "dead_end_recovery",
+          "mixed",
+          "other"
+        ]
+      }
+    },
+    "landmarkFamily": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "central_machine",
+          "bridge",
+          "vessel",
+          "tower",
+          "ring",
+          "rotor",
+          "crane",
+          "dish",
+          "crater",
+          "gate",
+          "gantry",
+          "basin",
+          "cableway",
+          "mixed",
+          "other"
+        ]
+      }
+    },
+    "supportForm": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "edge_rooted",
+          "floor_rooted",
+          "roof_rooted",
+          "suspended",
+          "twin_pier",
+          "multi_leg",
+          "arch",
+          "cliff_embedded",
+          "mixed",
+          "other"
+        ]
+      }
+    },
+    "environmentRelation": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "dry",
+          "fluid_containment",
+          "thermal",
+          "biological",
+          "geological",
+          "damaged",
+          "mixed",
+          "other"
+        ]
+      }
+    },
+    "incompleteness": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "finished",
+          "editable_gaps",
+          "damaged",
+          "excavation",
+          "abandoned",
+          "modular_append_zones",
+          "mixed",
+          "other"
+        ]
+      }
+    }
   }
 }
