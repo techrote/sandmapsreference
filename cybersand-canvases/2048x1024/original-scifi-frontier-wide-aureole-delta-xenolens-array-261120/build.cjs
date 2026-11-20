@@ -110,6 +110,60 @@ function build(){
  R(1464,626,120,87,0);R(1627,625,109,91,0);
  R(1805,631,132,91,0);R(1887,551,113,156,0);
 
+
+ // R2: real rooted equipment distinguishes named district functions and the geological return.
+ // Bored separate inspection alcoves retain the 84-cell main tunnel; side-entry from above.
+ for (let [x,w] of [[716,171],[1011,171],[1210,190]]) {
+   R(x,953,w,61,0); R(x+5,1008,w-10,6,M.steel);
+   R(x+5,982,7,30,M.titanium);R(x+w-12,982,7,30,M.titanium);
+ }
+ // Mineral assay: staggered sieves, sorting pans, mass-scale and specimen drawers.
+ R(739,997,127,9,M.titanium);R(748,989,111,8,M.chrome);
+ for(let x of [752,784,817]) {R(x,979,25,8,M.ceramic);L(x+4,979,x+9,959,4,M.chrome);L(x+20,979,x+16,959,4,M.chrome);}
+ R(843,961,14,18,M.glassDark);R(845,955,10,6,M.signal);
+ R(749,997,26,7,M.schist);R(778,997,24,7,M.iron);R(807,997,25,7,M.quartz);
+ // Xenocore probe: shielded access annulus, optical beam and powered containment.
+ ellipse(1091,980,30,25,M.titanium);ellipse(1091,980,22,17,0);
+ L(1120,982,1165,969,7,M.chrome);R(1153,961,15,21,M.glassDark);
+ R(1031,1002,131,7,M.titanium);L(1038,1002,1059,968,5,M.steel);
+ R(1068,1000,45,6,M.blue);R(1086,961,8,38,M.signal);R(1142,990,20,10,M.ceramic);
+ // Drill rig: coupled hydraulic towers, transverse drive housing, guarded bit, control/winch.
+ R(1241,1003,144,7,M.titanium);
+ for(let x of [1251,1341]){R(x,959,10,43,M.steel);R(x-4,962,18,9,M.chrome);}
+ R(1277,970,38,26,M.iron);R(1288,955,15,17,M.amber);
+ for(let y of [972,983,995])R(1281-(y%3),y,30,4,M.ceramic);
+ L(1314,991,1330,963,8,M.chrome);R(1348,979,27,21,M.blue);
+ R(1354,968,15,11,M.glassDark);R(1375,961,8,40,M.ceramic);
+ // West biology: rack-to-plenum connections and visibly filled nursery cassettes.
+ R(128,512,116,6,M.steel);
+ for(let x of [133,166,199]){R(x,491,24,19,M.frost);R(x+4,485,16,7,M.window);L(x+11,511,x+11,538,4,M.conduit);}
+ R(130,477,76,5,M.titanium);L(137,479,145,508,4,M.chrome);
+ // Polarimeter: gimballed hollow sensor and operating base.
+ ellipse(735,342,32,30,M.titanium);ellipse(735,342,25,24,0);
+ R(730,337,10,16,M.signal);L(708,364,696,377,6,M.chrome);
+ L(761,357,765,377,5,M.steel);R(714,307,44,6,M.blue);
+ // Spectroscopy: spectrometer loading rail, collimator and wavelength readouts.
+ R(576,533,92,7,M.chrome);R(587,521,49,11,M.ceramic);
+ L(610,519,610,489,5,M.titanium);R(603,480,14,10,M.signal);
+ for(let x of [642,653,664])R(x,490,5,18,M.window);
+ R(579,492,13,25,M.glassDark);
+ // Archive: specimen cassettes with multiple physically legible tiers.
+ for(let x of [576,596,616]){R(x,655,7,45,M.titanium);R(x+7,658,11,6,M.frost);R(x+7,674,11,6,M.window);R(x+7,690,11,6,M.blue);}
+ R(715,699,54,6,M.steel);R(728,679,34,19,M.glassDark);
+ R(723,675,14,5,M.amber);L(740,700,751,709,4,M.chrome);
+ // East decontamination: removable scrubber cassettes, physically staged transfer gate.
+ R(1541,557,124,8,M.steel);
+ for(let x of [1555,1590,1625]){R(x,541,19,15,M.frost);R(x+6,533,7,8,M.signal);L(x+9,557,x+9,587,4,M.conduit);}
+ R(1674,555,13,38,M.titanium);R(1679,554,4,16,M.amber);R(1687,585,25,7,M.chrome);
+ // Freight hoist with separated travelling pallet; staged heat exchanger and exhaust.
+ R(1775,732,108,9,M.steel);
+ for(let x of [1793,1850])L(x,732,x+13,702,7,M.titanium);
+ R(1810,709,38,20,M.iron);R(1818,701,22,8,M.blue);
+ L(1831,706,1831,637,5,M.chrome);R(1821,633,22,7,M.ceramic);
+ R(1565,722,95,10,M.chrome);
+ for(let x of [1573,1598,1623]){R(x,692,15,28,M.iron);R(x+3,684,9,8,M.amber);L(x+7,722,x+7,748,4,M.conduit);}
+ R(1667,710,24,15,M.glassDark);R(1674,701,10,9,M.signal);
+
  function tieStructures(){
   const N=g.length,mark=new Int32Array(N),q=new Int32Array(N),comps=[null];
   for(let k=0;k<N;k++)if(g[k]&&!mark[k]){
@@ -206,7 +260,7 @@ function build(){
  function png(x0,y0,w,h){let raw=new Uint8Array((w+1)*h);for(let y=0;y<h;y++)raw.set(g.subarray((y+y0)*W+x0,(y+y0)*W+x0+w),y*(w+1)+1);
   let a=[new Uint8Array([137,80,78,71,13,10,26,10]),chunk("IHDR",new Uint8Array([...be(w),...be(h),8,3,0,0,0])),chunk("PLTE",pal),chunk("IDAT",zip(raw)),chunk("IEND",new Uint8Array())];
   let b=new Uint8Array(a.reduce((s,p)=>s+p.length,0)),i=0;for(let p of a){b.set(p,i);i+=p.length;}return b;}
- const crops=[["01-west-settlement",75,382,475,470],["02-polar-observatory",470,125,390,720],["03-xenolens",812,145,650,680],["04-east-quarantine",1450,340,580,520],["05-geological-return",255,765,1535,225]];
+ const crops=[["01-west-settlement",75,382,475,470],["02-polar-observatory",470,125,390,720],["03-xenolens",812,145,650,680],["04-east-quarantine",1450,340,580,520],["05-geological-return",255,799,1535,225]];
  const images=[["overview.png",png(0,0,W,H)],...crops.map(([name,x,y,w,h])=>[name+".png",png(x,y,w,h)])];
  return {g,json,rect,hist,area,sites,clearances,bypass,rooted,unrooted,componentCount,rootedComponents,crops,images,tie_info,seed:SEED};
 }
@@ -216,7 +270,7 @@ const K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923
 const n=(b.length+9+63)&~63,buf=new Uint8Array(n);buf.set(b);buf[b.length]=128;let bits=b.length*8;for(let i=0;i<8;i++){buf[n-1-i]=bits&255;bits=Math.floor(bits/256);}
 let h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19],w=new Uint32Array(64);let rotr=(x,n)=>(x>>>n)|(x<<(32-n));
 for(let off=0;off<n;off+=64){for(let j=0;j<16;j++){let i=off+j*4;w[j]=((buf[i]<<24)|(buf[i+1]<<16)|(buf[i+2]<<8)|buf[i+3])>>>0;}for(let j=16;j<64;j++){let p=w[j-15],q=w[j-2];w[j]=(w[j-16]+(rotr(p,7)^rotr(p,18)^(p>>>3))+w[j-7]+(rotr(q,17)^rotr(q,19)^(q>>>10)))>>>0;}let [a,b0,c,d,e,f,g,z]=h;for(let j=0;j<64;j++){let t1=(z+(rotr(e,6)^rotr(e,11)^rotr(e,25))+((e&f)^(~e&g))+K[j]+w[j])>>>0,t2=((rotr(a,2)^rotr(a,13)^rotr(a,22))+((a&b0)^(a&c)^(b0&c)))>>>0;z=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b0;b0=a;a=(t1+t2)>>>0;}for(let j=0;j<8;j++)h[j]=(h[j]+[a,b0,c,d,e,f,g,z][j])>>>0;}return h.map(n=>n.toString(16).padStart(8,"0")).join("");}
-function makeReceipt(a){return {concept:"Aureole Delta - Xenolens Excursion Array",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"de109d0131641d6adc8d25bb9ced7ca3d4991105",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[1082,446,1208,516],material_id:58,purpose:"Blocks exact Xenolens diagnostics; all other 20 named destinations recoverable",result:a.bypass},sites:a.sites,crops:a.crops,source_art:"None; independently invented level design",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
+function makeReceipt(a){return {concept:"Aureole Delta - Xenolens Excursion Array",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"de109d0131641d6adc8d25bb9ced7ca3d4991105",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[1082,446,1208,516],material_id:58,purpose:"Blocks exact Xenolens diagnostics; 24 other named destinations remain recoverable",result:a.bypass},sites:a.sites,crops:a.crops,source_art:"None; independently invented level design",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
 
 if(typeof require!=="undefined"&&require.main===module){
  const fs=require("fs"),path=require("path"),crypto=require("crypto"),zlib=require("zlib");
