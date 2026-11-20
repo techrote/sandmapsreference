@@ -1,0 +1,325 @@
+{
+  "concept": "Cleftline Logistics — Breakwater Recovery & Hull De-rigging Basin",
+  "original": true,
+  "seed": 203354664,
+  "engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West breakwater ingress",
+      "Hull intake quay",
+      "Securement clamp ledger",
+      "Refusal inspection station",
+      "Cofferdam gate captain",
+      "Materials sorter",
+      "Recovery freight dispatch"
+    ],
+    "upper": [
+      "Upper dry inspection",
+      "Recovery gantry pilot",
+      "Crown cable switch",
+      "East bridge lookout"
+    ],
+    "salvage": [
+      "Salvage cut bay",
+      "Rigging strip station",
+      "Undercradle sampling"
+    ],
+    "recovery": [
+      "Breakwater refuge",
+      "West service return",
+      "Basin emergency bay",
+      "Rigging descent",
+      "Separator service",
+      "Eastern recovery"
+    ],
+    "underworks": [
+      "West pump station",
+      "Capstan engine vault",
+      "Basin filter gallery",
+      "Rig retrieval vault",
+      "Outbound utility exchange"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West breakwater ingress": [
+      130,
+      490
+    ],
+    "Hull intake quay": [
+      309,
+      491
+    ],
+    "Securement clamp ledger": [
+      498,
+      492
+    ],
+    "Refusal inspection station": [
+      646,
+      491
+    ],
+    "Salvage cut bay": [
+      913,
+      652
+    ],
+    "Rigging strip station": [
+      1028,
+      653
+    ],
+    "Recovery gantry pilot": [
+      900,
+      349
+    ],
+    "Crown cable switch": [
+      1160,
+      349
+    ],
+    "Upper dry inspection": [
+      374,
+      347
+    ],
+    "Cofferdam gate captain": [
+      1340,
+      492
+    ],
+    "Materials sorter": [
+      1530,
+      492
+    ],
+    "Recovery freight dispatch": [
+      1817,
+      491
+    ],
+    "East bridge lookout": [
+      1652,
+      348
+    ],
+    "Undercradle sampling": [
+      1185,
+      651
+    ],
+    "Breakwater refuge": [
+      193,
+      750
+    ],
+    "West service return": [
+      475,
+      750
+    ],
+    "Basin emergency bay": [
+      744,
+      748
+    ],
+    "Rigging descent": [
+      1118,
+      750
+    ],
+    "Separator service": [
+      1479,
+      748
+    ],
+    "Eastern recovery": [
+      1818,
+      751
+    ],
+    "West pump station": [
+      298,
+      911
+    ],
+    "Capstan engine vault": [
+      646,
+      910
+    ],
+    "Basin filter gallery": [
+      1067,
+      911
+    ],
+    "Rig retrieval vault": [
+      1438,
+      910
+    ],
+    "Outbound utility exchange": [
+      1788,
+      911
+    ]
+  },
+  "material_histogram": {
+    "0": 1526447,
+    "58": 64765,
+    "62": 269911,
+    "100": 236029
+  },
+  "stable_occupied_cells": 570705,
+  "grounded": 570705,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 55280,
+  "rectangles": 3714,
+  "rectangle_work": 570705,
+  "setup_bytes": 69124,
+  "material_plane_sha256": "abfc2da3fbd40ad3ca680263fffc94784870ffbbd3fd46fbccaf51d749ddb1d6",
+  "setup_sha256": "09bb41600e1205fa74728303ee9312097f43c0e74bd8344313d4833463a45514",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1280924,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1241162,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1165239,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      208,
+      460,
+      78,
+      81
+    ],
+    "from": "West breakwater ingress",
+    "to": "Hull intake quay",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 25,
+    "unreachable": [],
+    "distance_before_after": [
+      180,
+      268
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "fd25b2b71b4c803af940e8b4b5c240b37d56d8bf83c35b8072a936296acc9d60",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-breakwater-hull-intake",
+      "rect": [
+        108,
+        415,
+        650,
+        345
+      ],
+      "bytes": 56765,
+      "sha256": "f44eb20e5a2e6550c4c7d57b6877bbe1fd8e2c5dcfe0a1abfb203bc761895684",
+      "pixel_parity": 224250
+    },
+    {
+      "name": "02-offcentre-gantry-pilot",
+      "rect": [
+        619,
+        152,
+        811,
+        403
+      ],
+      "bytes": 82402,
+      "sha256": "184b43f324262c4a7e9869004b44a7fef150b108d107dd26734e282a309745aa",
+      "pixel_parity": 326833
+    },
+    {
+      "name": "03-rigging-strip-basin",
+      "rect": [
+        707,
+        548,
+        722,
+        322
+      ],
+      "bytes": 58789,
+      "sha256": "dc228d8a8a85307616e9e7ddfb128c313c58b61a32a4a68041aa5aa6857fe6ab",
+      "pixel_parity": 232484
+    },
+    {
+      "name": "04-recovered-cargo-dispatch",
+      "rect": [
+        1432,
+        451,
+        573,
+        335
+      ],
+      "bytes": 48760,
+      "sha256": "fdb8218433a9edc70a0fd94d03d21821f39f38ce7362bd2dcfab5fffcc46e5a1",
+      "pixel_parity": 191955
+    },
+    {
+      "name": "05-founded-recovery-works",
+      "rect": [
+        143,
+        765,
+        1790,
+        217
+      ],
+      "bytes": 97623,
+      "sha256": "79d1d2ad41ce53ae5fea3cb902b38700aa3213f3b705b6a1934bf95433bc87ab",
+      "pixel_parity": 388430
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "legacy_installed_fallback_not_applicable": true,
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+}
