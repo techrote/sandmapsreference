@@ -277,3 +277,12 @@ R(728,660,14,19,M.WALL);
 L(790,684,842,684,10,M.STEEL);
 // Exact authored target space always receives final physical clearance.
 for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// The lower 81-cell rail deliberately disconnects vertical foundations from
+// bedrock. Support the portal through a tensile upper transfer chord at y322
+// to the already rooted saddle arch instead, ABOVE the x867 emergency shaft.
+// This keeps BOTH the solid load path and lower Midge air route continuous.
+L(849,316,944,335,18,M.STEEL);
+L(849,332,939,370,11,M.WALL);
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
