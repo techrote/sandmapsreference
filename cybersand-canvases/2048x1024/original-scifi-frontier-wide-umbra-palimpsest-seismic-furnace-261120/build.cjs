@@ -127,7 +127,7 @@ function build(){
  // genuinely grounded while vaulted 90px doors cross the excavated bore.
  L(331,725,710,725,12,M.titanium);
  L(1293,709,1669,720,12,M.titanium);
- R(681,841,90,116,0);R(1270,841,90,116,0);
+ // Both collector piers continue physically into the true bottom geology.
  // Habitation clearances follow real excavated side-entry corridors.
  R(1546,381,430,46,0);R(1567,528,389,45,0);
  R(1543,685,409,49,0);
@@ -135,6 +135,11 @@ function build(){
  // Physical counterweight arches use route-protected grounded cable ties.
  // A separate approved flight corridor is preserved through each bore.
  // Named Midge approach/recovery sites, deliberate metre-scale clear space.
+ // The overhead pass-through and west rescue/assay bore were carved
+ // before registration, allowing complete 31x27 side entries and return.
+ R(946,322,175,146,0);R(470,673,166,267,0);R(383,809,298,131,0);
+ // Machine support stud fixes the quarantined lift without a flying prop.
+ R(1597,776,8,10,M.chrome);
  const sites={
  "Rover recovery dock":[126,464],
  "West assay berth":[329,459],
