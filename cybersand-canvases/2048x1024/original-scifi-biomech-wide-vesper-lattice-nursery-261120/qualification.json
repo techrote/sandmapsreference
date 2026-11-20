@@ -1,0 +1,330 @@
+{
+  "status": "AUTHOR-STATIC-PASS / INDEPENDENT-PENDING / NATIVE-UNTESTED",
+  "source": "ORIGINAL-NO-REFERENCE",
+  "engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "seed": 2611200706,
+  "grid": {
+    "width": 2048,
+    "height": 1024,
+    "cells": 2097152,
+    "sha256": "f4ceb648ce1120bb021974755c50fb9d31291bd086904e7659729669ef0eaf5f",
+    "histogram": {
+      "0": 1490677,
+      "58": 126540,
+      "62": 91312,
+      "63": 29837,
+      "72": 23477,
+      "77": 9959,
+      "79": 18040,
+      "100": 86107,
+      "101": 156798,
+      "117": 44795,
+      "128": 19610
+    },
+    "occupied": 606475,
+    "grounded": 606475,
+    "detached": 0,
+    "unanchored_nominal_pruned": 2145,
+    "unknown_materials": 0,
+    "fluids": 0,
+    "reactive": 0
+  },
+  "codec": {
+    "rectangles": 9534,
+    "source_limit": 32768,
+    "setup_bytes": 177917,
+    "source_byte_limit": 1048576,
+    "construction_work": 606475,
+    "source_work_limit": 32000000,
+    "setup_sha256": "de4f041767de14df808bb2ed743fb3e7eac003a0b65ff50108394df774460764",
+    "overlaps": 0,
+    "replay_mismatches": 0
+  },
+  "routes": {
+    "pass": true,
+    "envelopes": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "reachable_centres": 1300309,
+        "sites": {
+          "spawn_isolation_port": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "quarantine_sluice": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "root_polymerase": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_canopy_gate": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_cilia_sampling": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "nursery_core": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "specimen_exam": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "lower_recovery": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "ossuary_valve_station": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "catalyst_inspection": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "export_operator": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "finish_relay": {
+            "reachable": true,
+            "approaches": 4
+          }
+        }
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "reachable_centres": 1272363,
+        "sites": {
+          "spawn_isolation_port": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "quarantine_sluice": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "root_polymerase": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_canopy_gate": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_cilia_sampling": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "nursery_core": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "specimen_exam": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "lower_recovery": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "ossuary_valve_station": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "catalyst_inspection": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "export_operator": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "finish_relay": {
+            "reachable": true,
+            "approaches": 4
+          }
+        }
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "reachable_centres": 1219297,
+        "sites": {
+          "spawn_isolation_port": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "quarantine_sluice": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "root_polymerase": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_canopy_gate": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_cilia_sampling": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "nursery_core": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "specimen_exam": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "lower_recovery": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "ossuary_valve_station": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "catalyst_inspection": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "export_operator": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "finish_relay": {
+            "reachable": true,
+            "approaches": 4
+          }
+        },
+        "restricted": {
+          "high": true,
+          "low": true,
+          "high_with_solid_obstruction": true,
+          "low_with_solid_obstruction": true,
+          "obstruction": [
+            954,
+            446,
+            168,
+            170
+          ]
+        }
+      }
+    ]
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "box": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2099184,
+      "png_sha256": "f962fbd40026182cb6b73804a474f0404067c928d4ba52f9d88c7862727c4d7f",
+      "material_pixel_sha256": "b09c23c40aecc65a6e30d8bc154fcb0e76089ab650a1f341326edd78d2de5b97",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "01-quarantine-sluice.png",
+      "box": [
+        0,
+        510,
+        425,
+        420
+      ],
+      "bytes": 179778,
+      "png_sha256": "ed42fa2cb1ca112f93e7b25b5ac3de0f351bfa70f48ba846d8d5e0dda23d8c64",
+      "material_pixel_sha256": "71d65cf67f7e0c53b593320cc1f158d9573317a03c9ef2523364a8cd6da878e0",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "02-root-polymerase.png",
+      "box": [
+        395,
+        530,
+        360,
+        420
+      ],
+      "bytes": 152478,
+      "png_sha256": "21e8a56ef11137f2d7b5b597e212135af897959f7589629b9588972f9e837e73",
+      "material_pixel_sha256": "0f483e576459543ed1385a0be21d2424ca3b0d3410b5fdb0829a2c96e5b5a9e1",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "03-vesper-lattice-crown.png",
+      "box": [
+        700,
+        0,
+        625,
+        420
+      ],
+      "bytes": 263788,
+      "png_sha256": "17495ed528675dbc9b073f9b70463906a66303e8dd9bfb3b2f9d93c42310a0f9",
+      "material_pixel_sha256": "b1c0c27337ce8ce14c885ce28f5615a8bd239c7da141abbc17836fae64f7e828",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "04-entered-examination.png",
+      "box": [
+        868,
+        675,
+        408,
+        300
+      ],
+      "bytes": 123553,
+      "png_sha256": "ba236d5faa3ce07e8acbc98c1ba267f7673a889431bbe15d9b13cf3232ea5eaa",
+      "material_pixel_sha256": "c4a408f834c6903da17b709575d6b0bdb2de1f51874dbf38ae23a77b961e87fc",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "05-catalyst-ossuary.png",
+      "box": [
+        1290,
+        510,
+        434,
+        450
+      ],
+      "bytes": 196608,
+      "png_sha256": "d78fd69bf3e5afdc6eca81c977c10e1613afdc7e5ffa3f900b344f94ea8038db",
+      "material_pixel_sha256": "6de1a8ff648b6aee5105ce2be25ce0950f157fa2d883ba0bd426880329d6ae1f",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "06-export-relay.png",
+      "box": [
+        1700,
+        510,
+        348,
+        458
+      ],
+      "bytes": 160700,
+      "png_sha256": "18802351c4b6b143891e47d7e884b7c3b918fe574e41d4b514387e54acd25eec",
+      "material_pixel_sha256": "63b2b0068ef876c42f369981d57157349b4542b3f787a40a7457fd2c8d589d0e",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    }
+  ],
+  "warnings": [
+    "Author static qualification is not independent Art/Technical/Shepherd acceptance.",
+    "Native installed Workbench/Godot/CyberDemoBridge/Rapier and cold save/reopen NOT TESTED.",
+    "Installed bridge capacity must be checked against source 32768; legacy fallback may be 4096."
+  ]
+}
