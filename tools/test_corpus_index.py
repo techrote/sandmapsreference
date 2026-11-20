@@ -43,6 +43,13 @@ class CorpusIndexTests(unittest.TestCase):
         self.assertEqual(checked["status"],"canonical-valid")
         self.assertEqual(checked["normalized"]["similarity_avoidance"],["not another drydock"])
 
+    def test_singular_descriptive_strings_are_normalized(self):
+        value=canonical(); value["macro_topology"]="braided canyon"; value["route_grammar"]="branch and rejoin"
+        checked=ci.validate(value)
+        self.assertEqual(checked["status"],"canonical-valid")
+        self.assertEqual(checked["normalized"]["macro_topology"],["braided canyon"])
+        self.assertEqual(checked["normalized"]["route_grammar"],["branch and rejoin"])
+
     def test_legacy_is_partial_without_fabricating_missing_claims(self):
         legacy={
           "schema":"cybersand-exemplar-v1",
