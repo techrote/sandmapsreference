@@ -1,0 +1,495 @@
+{
+  "concept": "Morrow-7 Inverse Furnace",
+  "creator_lane": "original/industrial-hazard-wide",
+  "seed": 19112617,
+  "world": [
+    2048,
+    1024
+  ],
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "grid_sha256": "d6c08ec75397a1fbdcc23508e44325af757494398d10dd88f7b36df34ef55df7",
+  "setup_sha256": "17583ff2466bc6902a2c5e2372cef47418523fbde012537d4d2acdfb56fadcc7",
+  "setup_json_bytes": 52485,
+  "rectangles": 2766,
+  "work": 561870,
+  "histogram": {
+    "0": 1535282,
+    "3": 15476,
+    "8": 8470,
+    "58": 263710,
+    "62": 85520,
+    "68": 24453,
+    "70": 14404,
+    "76": 3008,
+    "77": 2205,
+    "79": 1838,
+    "100": 88002,
+    "101": 545,
+    "104": 4969,
+    "117": 47315,
+    "120": 1955
+  },
+  "solid_connectivity": {
+    "total": 537924,
+    "grounded": 537924,
+    "detached": 0
+  },
+  "clearance": {
+    "19x15": {
+      "visited": 1127092,
+      "reachable": 15,
+      "centres": [
+        [
+          228,
+          435
+        ],
+        [
+          334,
+          454
+        ],
+        [
+          465,
+          415
+        ],
+        [
+          650,
+          486
+        ],
+        [
+          833,
+          675
+        ],
+        [
+          890,
+          616
+        ],
+        [
+          1040,
+          635
+        ],
+        [
+          1051,
+          431
+        ],
+        [
+          1200,
+          835
+        ],
+        [
+          1275,
+          458
+        ],
+        [
+          1440,
+          525
+        ],
+        [
+          1550,
+          476
+        ],
+        [
+          1706,
+          460
+        ],
+        [
+          1888,
+          445
+        ],
+        [
+          1940,
+          530
+        ]
+      ]
+    },
+    "23x19": {
+      "visited": 1082740,
+      "reachable": 15,
+      "centres": [
+        [
+          228,
+          435
+        ],
+        [
+          334,
+          454
+        ],
+        [
+          465,
+          415
+        ],
+        [
+          650,
+          486
+        ],
+        [
+          833,
+          675
+        ],
+        [
+          890,
+          616
+        ],
+        [
+          1040,
+          635
+        ],
+        [
+          1051,
+          431
+        ],
+        [
+          1200,
+          835
+        ],
+        [
+          1275,
+          458
+        ],
+        [
+          1440,
+          525
+        ],
+        [
+          1550,
+          476
+        ],
+        [
+          1706,
+          460
+        ],
+        [
+          1888,
+          445
+        ],
+        [
+          1940,
+          530
+        ]
+      ]
+    },
+    "31x27": {
+      "visited": 1008843,
+      "reachable": 15,
+      "centres": [
+        [
+          228,
+          435
+        ],
+        [
+          334,
+          454
+        ],
+        [
+          465,
+          415
+        ],
+        [
+          650,
+          486
+        ],
+        [
+          833,
+          675
+        ],
+        [
+          890,
+          616
+        ],
+        [
+          1040,
+          635
+        ],
+        [
+          1051,
+          431
+        ],
+        [
+          1200,
+          835
+        ],
+        [
+          1275,
+          458
+        ],
+        [
+          1440,
+          525
+        ],
+        [
+          1550,
+          476
+        ],
+        [
+          1706,
+          460
+        ],
+        [
+          1888,
+          445
+        ],
+        [
+          1940,
+          530
+        ]
+      ]
+    }
+  },
+  "alternate_route": {
+    "box": [
+      1145,
+      250,
+      90,
+      350
+    ],
+    "reachable": 15,
+    "visited": 971724,
+    "detours": [
+      {
+        "name": "Midge induction",
+        "baseline": 0,
+        "blocked": 0,
+        "extra": 0
+      },
+      {
+        "name": "Freight assay",
+        "baseline": 125,
+        "blocked": 125,
+        "extra": 0
+      },
+      {
+        "name": "Counterwash overpass",
+        "baseline": 257,
+        "blocked": 257,
+        "extra": 0
+      },
+      {
+        "name": "Red-line observation",
+        "baseline": 657,
+        "blocked": 657,
+        "extra": 0
+      },
+      {
+        "name": "Cold cassette access",
+        "baseline": 1045,
+        "blocked": 1045,
+        "extra": 0
+      },
+      {
+        "name": "Annulus west lock",
+        "baseline": 1043,
+        "blocked": 1043,
+        "extra": 0
+      },
+      {
+        "name": "Inversion chamber",
+        "baseline": 1212,
+        "blocked": 1212,
+        "extra": 0
+      },
+      {
+        "name": "Annulus top flight",
+        "baseline": 1019,
+        "blocked": 1019,
+        "extra": 0
+      },
+      {
+        "name": "Hollow drain return",
+        "baseline": 1656,
+        "blocked": 1870,
+        "extra": 214
+      },
+      {
+        "name": "Radiator inlet",
+        "baseline": 1270,
+        "blocked": 1468,
+        "extra": 198
+      },
+      {
+        "name": "Radiator service",
+        "baseline": 1502,
+        "blocked": 1700,
+        "extra": 198
+      },
+      {
+        "name": "Baffle hatch",
+        "baseline": 1563,
+        "blocked": 1761,
+        "extra": 198
+      },
+      {
+        "name": "Collector manifold",
+        "baseline": 1703,
+        "blocked": 1901,
+        "extra": 198
+      },
+      {
+        "name": "Stack survey",
+        "baseline": 2106,
+        "blocked": 2146,
+        "extra": 40
+      },
+      {
+        "name": "Emergency vent terminal",
+        "baseline": 2165,
+        "blocked": 2205,
+        "extra": 40
+      }
+    ]
+  },
+  "sites": [
+    [
+      "Midge induction",
+      228,
+      435
+    ],
+    [
+      "Freight assay",
+      334,
+      454
+    ],
+    [
+      "Counterwash overpass",
+      465,
+      415
+    ],
+    [
+      "Red-line observation",
+      650,
+      486
+    ],
+    [
+      "Cold cassette access",
+      833,
+      675
+    ],
+    [
+      "Annulus west lock",
+      890,
+      616
+    ],
+    [
+      "Inversion chamber",
+      1040,
+      635
+    ],
+    [
+      "Annulus top flight",
+      1051,
+      431
+    ],
+    [
+      "Hollow drain return",
+      1200,
+      835
+    ],
+    [
+      "Radiator inlet",
+      1275,
+      458
+    ],
+    [
+      "Radiator service",
+      1440,
+      525
+    ],
+    [
+      "Baffle hatch",
+      1550,
+      476
+    ],
+    [
+      "Collector manifold",
+      1706,
+      460
+    ],
+    [
+      "Stack survey",
+      1888,
+      445
+    ],
+    [
+      "Emergency vent terminal",
+      1940,
+      530
+    ]
+  ],
+  "images": {
+    "overview.png": {
+      "bytes": 31194,
+      "sha256": "4c7955baec11ca39e1fb3ee9a8b6e8b87599b7f366f135d97b36f45f9b59ab37",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-freight-assay.png": {
+      "bytes": 6404,
+      "sha256": "c825f98b3911e363a6b8f5337fffa4de79eb144c931b55608c9b25534647ce76",
+      "crop": [
+        55,
+        185,
+        415,
+        510
+      ]
+    },
+    "02-counterwash.png": {
+      "bytes": 6870,
+      "sha256": "06f0ed53e5ec92a267405899b58a2b174ea1d2befa465d3e6b97e1a0851894ff",
+      "crop": [
+        405,
+        365,
+        480,
+        510
+      ]
+    },
+    "03-annulus.png": {
+      "bytes": 7466,
+      "sha256": "b63e9391389b822e359907620993ecb0007fe653b841f1bf675a3d2bf3bfde45",
+      "crop": [
+        830,
+        400,
+        455,
+        500
+      ]
+    },
+    "04-radiator.png": {
+      "bytes": 5797,
+      "sha256": "4a01b6862e2fb0b3db45534ddff07a870eaa844a50f52cd0264e985a64e0e134",
+      "crop": [
+        1230,
+        355,
+        455,
+        515
+      ]
+    },
+    "05-exhaust.png": {
+      "bytes": 6554,
+      "sha256": "2e560fc965eef84ead198cf41f213776e71f6b102b879dbf18adf1b148ebf76a",
+      "crop": [
+        1600,
+        240,
+        435,
+        600
+      ]
+    },
+    "06-recovery.png": {
+      "bytes": 4522,
+      "sha256": "f2379afef47aeaf717b07e3c803b893ab7031af15c23f3f29ab4acefc3bf7fe7",
+      "crop": [
+        830,
+        755,
+        510,
+        255
+      ]
+    }
+  },
+  "flags": {
+    "native": "NATIVE-UNTESTED",
+    "fluid": "initial-four-neighbor-sealed-only",
+    "bridge": "source 32768; installed possibly 4096 UNVERIFIED",
+    "material": "only native inert solid IDs plus sealed 3 water and 8 lava"
+  }
+}
