@@ -1,0 +1,294 @@
+{
+  "world_group": "Underroot Relay System",
+  "world_group_sibling": 3,
+  "concept": "Seepage Catchment / Basalt Pressure Frontier",
+  "role": "downstream pressure and mineral-seepage catchment; remote draw-off fault and dry inspection underflow",
+  "anchor_donors": [
+    "wide-harrow-mere-spore-dam",
+    "wide-graftloom-slipway"
+  ],
+  "anchor_heads": [
+    "1202aea8d696e2bfecd7e4f3353c9738a9435858",
+    "b0d1e5216aabb9b5e009e599ffbffcec6fd8a657"
+  ],
+  "predecessor_siblings": [
+    "https://github.com/techrote/sandmapsreference/pull/82",
+    "https://github.com/techrote/sandmapsreference/pull/88"
+  ],
+  "original_no_source": true,
+  "seed": 2536227,
+  "engine_main": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "material_histogram": {
+    "49": 14210,
+    "62": 11460,
+    "66": 16850,
+    "68": 40196,
+    "77": 162,
+    "100": 239566,
+    "101": 76134,
+    "120": 2587,
+    "129": 7441,
+    "131": 10417
+  },
+  "filled_material_cells": 419023,
+  "grounded_cells": 419023,
+  "unrooted_cells": 0,
+  "grounded_components": 1,
+  "structural_ties": {
+    "ties": 66,
+    "longest": 117,
+    "raw_components": 67
+  },
+  "rectangles": 2895,
+  "rectangle_work": 419023,
+  "setup_bytes": 54871,
+  "source_max_rectangles": 32768,
+  "source_max_setup_bytes": 1048576,
+  "plane_sha256": "4f6ad3eea3caf8286c35cab6ec6262e6a7563c96e36d34d22649494b594c1433",
+  "setup_sha256": "8203c975ca734b3316b8b9180f3be3b18111548675199309cd335cf390423833",
+  "literal_sites": {
+    "West refuge arrivals": [
+      147,
+      475
+    ],
+    "Spore pressure ledger": [
+      247,
+      613
+    ],
+    "West service bay": [
+      266,
+      736
+    ],
+    "West scarp lookout": [
+      320,
+      388
+    ],
+    "Catchment shoulder": [
+      485,
+      588
+    ],
+    "First baffle intake": [
+      631,
+      644
+    ],
+    "Second pressure terrace": [
+      782,
+      681
+    ],
+    "Lower discharge watch": [
+      999,
+      765
+    ],
+    "Crest signal perch": [
+      1094,
+      660
+    ],
+    "West atmospheric overflight": [
+      746,
+      337
+    ],
+    "High catchment air": [
+      1147,
+      312
+    ],
+    "Fault upper lip": [
+      1340,
+      374
+    ],
+    "Fault drawhead": [
+      1459,
+      520
+    ],
+    "Mid-fault service air": [
+      1468,
+      656
+    ],
+    "Fault basin rescue": [
+      1461,
+      789
+    ],
+    "Exterior fault bypass": [
+      1286,
+      522
+    ],
+    "East high overflight": [
+      1840,
+      340
+    ],
+    "East pressure survey": [
+      1853,
+      484
+    ],
+    "East isolation shelter": [
+      1925,
+      641
+    ],
+    "East telemetry berth": [
+      1832,
+      772
+    ],
+    "West underflow hatch": [
+      430,
+      868
+    ],
+    "Sediment inspection": [
+      621,
+      878
+    ],
+    "Bypass pump service": [
+      925,
+      879
+    ],
+    "Root-core survey": [
+      1158,
+      882
+    ],
+    "Fault lower return": [
+      1545,
+      885
+    ],
+    "East underflow exit": [
+      1737,
+      896
+    ]
+  },
+  "clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1500460,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1462349,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1388173,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "box": [
+      1437,
+      642,
+      1499,
+      676
+    ],
+    "isolated_site": "Mid-fault service air",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1383487,
+      "passed": 25,
+      "total": 26,
+      "bad": [
+        {
+          "name": "Mid-fault service air",
+          "point": [
+            1468,
+            656
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "crops": [
+    [
+      "01-west-refuge-and-intake",
+      35,
+      330,
+      520,
+      510
+    ],
+    [
+      "02-descending-catchment-wall",
+      424,
+      490,
+      845,
+      385
+    ],
+    [
+      "03-single-deep-drawoff-fault",
+      1260,
+      315,
+      480,
+      640
+    ],
+    [
+      "04-east-isolation-settlement",
+      1580,
+      390,
+      468,
+      465
+    ],
+    [
+      "05-dry-pressure-underflow",
+      370,
+      826,
+      1390,
+      140
+    ]
+  ],
+  "static": "CREATOR-STATIC-PASS",
+  "native": "NATIVE-UNTESTED",
+  "independent": "PENDING",
+  "status": "DRAFT/HOLD",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 39637,
+      "sha256": "d5252216adf60f62e9ee99b84a7073108027fddb658cef483f2b8bbb79aa422b"
+    },
+    {
+      "name": "01-west-refuge-and-intake.png",
+      "bytes": 8388,
+      "sha256": "b3d82ea66d1aafadc2f0b52b32c3d77e1b57e4dcb4a0cdaed1d259be90d58698"
+    },
+    {
+      "name": "02-descending-catchment-wall.png",
+      "bytes": 10832,
+      "sha256": "355a35469f617845b723326afd322bf712ddb561d63b2b09147f0a7c8b39e4bc"
+    },
+    {
+      "name": "03-single-deep-drawoff-fault.png",
+      "bytes": 9526,
+      "sha256": "07d3f2140e0bf929c628b10f02d6fa3418534f5dca12f0854024f2d4c9a172d8"
+    },
+    {
+      "name": "04-east-isolation-settlement.png",
+      "bytes": 7574,
+      "sha256": "e41b2c66298978f023c8de169e356c824c15b282179272f2b32b82d9397a96a1"
+    },
+    {
+      "name": "05-dry-pressure-underflow.png",
+      "bytes": 5007,
+      "sha256": "633f4397e50fe0c1cdfdc73778bb45840c0d8aa438f9d6ff2aae794a1cb1c52b"
+    }
+  ]
+}
