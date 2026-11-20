@@ -1,0 +1,408 @@
+{
+  "concept": "Vela Rift - Crosswind Biosieve Research Yard",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 11601182,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "map_repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "loader_source_max_rectangles": 32768,
+  "loader_source_max_json_bytes": 1048576,
+  "source_work_budget": 32000000,
+  "installed_bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only accepted inert immovable Solid/None kernels; no powders or liquids",
+  "material_histogram": {
+    "49": 17332,
+    "62": 50758,
+    "63": 3878,
+    "68": 24498,
+    "77": 140,
+    "79": 1172,
+    "100": 353056,
+    "101": 71424,
+    "121": 1905,
+    "129": 1801,
+    "130": 7491,
+    "131": 10851
+  },
+  "filled_grounded_cells": 544306,
+  "detached_final_cells": 0,
+  "prototype_disconnected_cells_removed": 23592,
+  "prototype_components_removed": 20,
+  "rectangle_count": 2200,
+  "rectangle_work": 544306,
+  "setup_bytes": 42300,
+  "grid_sha256": "8ccc3b588140d39ef1d13784aa972dbf7d5edeefc54ae032da11c4e0ea69f59d",
+  "setup_sha256": "550b9e36576c377e7618a9d9a73c509815ba73f64b7008b31d3c76de0b0fd274",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 33801,
+      "sha256": "bb9fa703d15afe5c14d44658ee4593e8a8619c8ffbdafad4a714767273190037"
+    },
+    {
+      "name": "01-west-bioscience-port.png",
+      "bytes": 7297,
+      "sha256": "aee9824aa9b9ed86280d78aa35858b283ec07d87f2734362534cc7344365bdbf"
+    },
+    {
+      "name": "02-crosswind-sails.png",
+      "bytes": 9977,
+      "sha256": "f3bcf7df30e8661f0b2f8cc8707acb8aae8004c4db2188127c8704c2b859aa51"
+    },
+    {
+      "name": "03-central-custody.png",
+      "bytes": 3492,
+      "sha256": "f0cdd81ad29fda7155757636843ae87feac7a30b15ae7fca1df2c8cb48943404"
+    },
+    {
+      "name": "04-east-quarantine-freight.png",
+      "bytes": 5254,
+      "sha256": "ad19a3d87f055a2f15bd7d4ad5d3d563f415662849272ba4c3ccff60bb393b64"
+    },
+    {
+      "name": "05-understrata-facilities.png",
+      "bytes": 4907,
+      "sha256": "d5027cc4c82e42126aa0ccf2466bdfc27a2ffb203f3d574510904f4cec5cf966"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1394424,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1361624,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1296430,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "xyxy_halfopen": [
+      1010,
+      548,
+      1059,
+      597
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only Filter custody",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1290846,
+      "passed": 28,
+      "total": 29,
+      "bad": [
+        {
+          "name": "Filter custody",
+          "xy": [
+            1035,
+            570
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "named_sites": {
+    "West rover spawn": [
+      151,
+      435
+    ],
+    "West nursery": [
+      390,
+      435
+    ],
+    "West sample lab": [
+      153,
+      576
+    ],
+    "West classifier": [
+      390,
+      580
+    ],
+    "West rover bay": [
+      152,
+      729
+    ],
+    "West service hatch": [
+      388,
+      732
+    ],
+    "West recovery throat": [
+      496,
+      707
+    ],
+    "West upper survey": [
+      625,
+      157
+    ],
+    "Left sail viewport": [
+      830,
+      527
+    ],
+    "Lower west sail": [
+      784,
+      731
+    ],
+    "High open canopy": [
+      1043,
+      153
+    ],
+    "Filter custody": [
+      1035,
+      570
+    ],
+    "East sail viewport": [
+      1223,
+      527
+    ],
+    "East upper survey": [
+      1438,
+      162
+    ],
+    "Lower east sail": [
+      1290,
+      725
+    ],
+    "East recovery throat": [
+      1542,
+      700
+    ],
+    "East sterile lock": [
+      1910,
+      433
+    ],
+    "East isolation": [
+      1647,
+      433
+    ],
+    "East classifier": [
+      1908,
+      579
+    ],
+    "East spectrometry": [
+      1643,
+      579
+    ],
+    "East cargo receiver": [
+      1913,
+      729
+    ],
+    "East dispatch": [
+      1645,
+      729
+    ],
+    "Understrata west": [
+      562,
+      843
+    ],
+    "Core sampling": [
+      682,
+      849
+    ],
+    "Membrane drive": [
+      869,
+      849
+    ],
+    "Rotor processor": [
+      1092,
+      849
+    ],
+    "Archive crane": [
+      1288,
+      850
+    ],
+    "Return hoist": [
+      1494,
+      846
+    ],
+    "Understrata east": [
+      1554,
+      846
+    ]
+  },
+  "literal_actor_spawn": [
+    151,
+    435
+  ],
+  "crops": [
+    [
+      "01-west-bioscience-port",
+      0,
+      349,
+      547,
+      460
+    ],
+    [
+      "02-crosswind-sails",
+      515,
+      147,
+      1020,
+      483
+    ],
+    [
+      "03-central-custody",
+      856,
+      510,
+      345,
+      258
+    ],
+    [
+      "04-east-quarantine-freight",
+      1501,
+      348,
+      547,
+      460
+    ],
+    [
+      "05-understrata-facilities",
+      511,
+      797,
+      1093,
+      216
+    ]
+  ],
+  "static_status": "CREATOR-STATIC-PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "Original new physical world, independent exact-head Art/Tech/Shepherd checks pending",
+  "r2_feature_survival": {
+    "west culture": {
+      "nongeological_cells": 5737,
+      "distinct_nonrock_materials": 5,
+      "histogram": {
+        "49": 600,
+        "62": 3277,
+        "77": 140,
+        "129": 448,
+        "130": 1272
+      }
+    },
+    "west assay": {
+      "nongeological_cells": 4948,
+      "distinct_nonrock_materials": 4,
+      "histogram": {
+        "62": 2162,
+        "63": 950,
+        "121": 196,
+        "131": 1640
+      }
+    },
+    "west rover": {
+      "nongeological_cells": 5210,
+      "distinct_nonrock_materials": 4,
+      "histogram": {
+        "62": 2255,
+        "68": 1831,
+        "129": 798,
+        "131": 326
+      }
+    },
+    "east quarantine": {
+      "nongeological_cells": 3806,
+      "distinct_nonrock_materials": 3,
+      "histogram": {
+        "49": 528,
+        "62": 1704,
+        "68": 1574
+      }
+    },
+    "east scan": {
+      "nongeological_cells": 3984,
+      "distinct_nonrock_materials": 3,
+      "histogram": {
+        "62": 552,
+        "68": 1518,
+        "130": 1914
+      }
+    },
+    "east freight": {
+      "nongeological_cells": 4339,
+      "distinct_nonrock_materials": 4,
+      "histogram": {
+        "49": 1805,
+        "62": 624,
+        "68": 1542,
+        "131": 368
+      }
+    },
+    "left sail": {
+      "nongeological_cells": 10154,
+      "distinct_nonrock_materials": 6,
+      "histogram": {
+        "49": 2363,
+        "62": 836,
+        "63": 1112,
+        "68": 2759,
+        "121": 1223,
+        "131": 1861
+      }
+    },
+    "right sail": {
+      "nongeological_cells": 14904,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "49": 1944,
+        "62": 7079,
+        "63": 1759,
+        "68": 1073,
+        "79": 800,
+        "130": 1816,
+        "131": 433
+      }
+    },
+    "centre custody": {
+      "nongeological_cells": 7531,
+      "distinct_nonrock_materials": 6,
+      "histogram": {
+        "62": 3713,
+        "68": 948,
+        "121": 288,
+        "129": 555,
+        "130": 1117,
+        "131": 910
+      }
+    },
+    "deep recovery": {
+      "nongeological_cells": 20803,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "49": 2642,
+        "62": 12600,
+        "68": 1618,
+        "79": 372,
+        "121": 198,
+        "130": 1372,
+        "131": 2001
+      }
+    }
+  },
+  "creator_revision": "Original crosswind biofiltration research installation 2026-11-20"
+}
