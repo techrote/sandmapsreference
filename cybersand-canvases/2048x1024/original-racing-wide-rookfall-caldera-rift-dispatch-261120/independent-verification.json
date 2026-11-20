@@ -1,0 +1,91 @@
+{
+  "schema": "rookfall-source-static-audit-v1",
+  "source_setup_sha256": "4a43f7e5bd8c1c70fef65661f6b312181d5b68524ee59f945e47919be8188499",
+  "source_grid_sha256": "a7e40902695167dfafd35bceaa3333d1c3e402c12fac85ac15577d22f94eee92",
+  "cells": 2097152,
+  "rectangles": 1655,
+  "work_cells": 475921,
+  "setup_bytes": 32657,
+  "histogram": {
+    "0": 1621231,
+    "58": 66959,
+    "62": 35462,
+    "72": 2118,
+    "100": 318199,
+    "101": 14111,
+    "113": 5670,
+    "117": 32938,
+    "122": 464
+  },
+  "grounded_solids": 475921,
+  "detached_solids": 0,
+  "falling_liquid_reactive": 0,
+  "envelopes": {
+    "19x15": {
+      "literal_sites": 28,
+      "reachable": 28,
+      "connected_free_centres": 1469046,
+      "free_components": 10
+    },
+    "23x19": {
+      "literal_sites": 28,
+      "reachable": 28,
+      "connected_free_centres": 1437267,
+      "free_components": 11
+    },
+    "31x27": {
+      "literal_sites": 28,
+      "reachable": 28,
+      "connected_free_centres": 1373742,
+      "free_components": 7
+    }
+  },
+  "physical_obstruction_xywh": [
+    997,
+    328,
+    70,
+    86
+  ],
+  "obstructed_site": "Bridge fracture aperture",
+  "obstruction_remaining_reachable_sites": 27,
+  "alternative_and_finish_reachable": true,
+  "pngs": {
+    "overview.png": {
+      "bytes": 7550,
+      "sha256": "e78209f824aedd58ca8924b2144fd3a85de8a70b68f0dec643933116834da922",
+      "pixels": 2097152
+    },
+    "01-rim-dispatch.png": {
+      "bytes": 845,
+      "sha256": "b650c30e54543c9c1329ab8cb29edbd4c109c805951e9f1b47e48388c38540ba",
+      "pixels": 157950
+    },
+    "02-cableway-descender.png": {
+      "bytes": 753,
+      "sha256": "03198e6ff7bd791667a666abfa06f6a5f292481c62b08f750d87b5da3bf52ff7",
+      "pixels": 196140
+    },
+    "03-broken-bridge.png": {
+      "bytes": 1232,
+      "sha256": "8ff37a76cbacc27a8d993a397d1ee1fd9bc5dea7bc63de3013e7acdb96ebf606",
+      "pixels": 253800
+    },
+    "04-crater-works.png": {
+      "bytes": 483,
+      "sha256": "0f7065ed0dd9d77063c2f65ec0c8417f374679ade6b36a965fafec42f96e100b",
+      "pixels": 145000
+    },
+    "05-eastern-freight-claw.png": {
+      "bytes": 1560,
+      "sha256": "37130234ec2e727ec8538f4c6d38973cc24e42420337ab3067d97957265caa32",
+      "pixels": 213900
+    },
+    "06-enterable-vaults.png": {
+      "bytes": 775,
+      "sha256": "2723ab701e11b341673327daa4290629db08c6cd5cdee15c4e4124a23bd8c583",
+      "pixels": 157500
+    }
+  },
+  "verified_png_index_pixels": 3221442,
+  "native": "NATIVE-UNTESTED"
+}
