@@ -1,0 +1,667 @@
+{
+  "schema": 1,
+  "original_no_source": true,
+  "concept": "Harrowglass Induction Bloomworks",
+  "seed": 26111947,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_plane_sha256": "aeae149888b4c1461c745ffa5806e0e547bf9a80146f70cb52816573115cd308",
+  "setup_sha256": "64add0b53d9c460fa9eaf14513bd5e1590747bd7df909129edb1f91e667cf191",
+  "json_bytes": 41551,
+  "rectangle_count": 2194,
+  "rectangle_budget": 32768,
+  "installed_bridge_fallback_unknown": 4096,
+  "construction_work": 688417,
+  "construction_work_budget": 32000000,
+  "materials": {
+    "0": 1408735,
+    "3": 18240,
+    "8": 22158,
+    "57": 23392,
+    "58": 126768,
+    "62": 211738,
+    "65": 81100,
+    "66": 23683,
+    "68": 10369,
+    "69": 17161,
+    "72": 29210,
+    "76": 4598,
+    "77": 5029,
+    "79": 2804,
+    "100": 72735,
+    "104": 19281,
+    "117": 3983,
+    "131": 16168
+  },
+  "ground": {
+    "total": 648019,
+    "rooted": 648019,
+    "detached": 0
+  },
+  "fluid_air_faces": 0,
+  "flight": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "free_centres": 1039858,
+      "connected_centres": 781405,
+      "sites": [
+        {
+          "name": "West freight spawn",
+          "x": 68,
+          "y": 495,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Ore cyclone inspection",
+          "x": 291,
+          "y": 312,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Charging aisle",
+          "x": 391,
+          "y": 562,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Induction crown",
+          "x": 579,
+          "y": 258,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Coil yard",
+          "x": 837,
+          "y": 469,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Vacuum gantry",
+          "x": 1044,
+          "y": 216,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Vacuum service port",
+          "x": 1155,
+          "y": 575,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Rolling control",
+          "x": 1445,
+          "y": 455,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Caster exit",
+          "x": 1675,
+          "y": 548,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Quench overseer",
+          "x": 1840,
+          "y": 432,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "East shipment",
+          "x": 1979,
+          "y": 570,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "West underdeck",
+          "x": 241,
+          "y": 850,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Power conduit",
+          "x": 696,
+          "y": 854,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Vacuum sump",
+          "x": 1081,
+          "y": 860,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Return tunnel",
+          "x": 1804,
+          "y": 851,
+          "free": true,
+          "reachable": true
+        }
+      ]
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "free_centres": 971477,
+      "connected_centres": 735906,
+      "sites": [
+        {
+          "name": "West freight spawn",
+          "x": 68,
+          "y": 495,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Ore cyclone inspection",
+          "x": 291,
+          "y": 312,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Charging aisle",
+          "x": 391,
+          "y": 562,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Induction crown",
+          "x": 579,
+          "y": 258,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Coil yard",
+          "x": 837,
+          "y": 469,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Vacuum gantry",
+          "x": 1044,
+          "y": 216,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Vacuum service port",
+          "x": 1155,
+          "y": 575,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Rolling control",
+          "x": 1445,
+          "y": 455,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Caster exit",
+          "x": 1675,
+          "y": 548,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Quench overseer",
+          "x": 1840,
+          "y": 432,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "East shipment",
+          "x": 1979,
+          "y": 570,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "West underdeck",
+          "x": 241,
+          "y": 850,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Power conduit",
+          "x": 696,
+          "y": 854,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Vacuum sump",
+          "x": 1081,
+          "y": 860,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Return tunnel",
+          "x": 1804,
+          "y": 851,
+          "free": true,
+          "reachable": true
+        }
+      ]
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "free_centres": 851394,
+      "connected_centres": 654657,
+      "sites": [
+        {
+          "name": "West freight spawn",
+          "x": 68,
+          "y": 495,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Ore cyclone inspection",
+          "x": 291,
+          "y": 312,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Charging aisle",
+          "x": 391,
+          "y": 562,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Induction crown",
+          "x": 579,
+          "y": 258,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Coil yard",
+          "x": 837,
+          "y": 469,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Vacuum gantry",
+          "x": 1044,
+          "y": 216,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Vacuum service port",
+          "x": 1155,
+          "y": 575,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Rolling control",
+          "x": 1445,
+          "y": 455,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Caster exit",
+          "x": 1675,
+          "y": 548,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Quench overseer",
+          "x": 1840,
+          "y": 432,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "East shipment",
+          "x": 1979,
+          "y": 570,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "West underdeck",
+          "x": 241,
+          "y": 850,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Power conduit",
+          "x": 696,
+          "y": 854,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Vacuum sump",
+          "x": 1081,
+          "y": 860,
+          "free": true,
+          "reachable": true
+        },
+        {
+          "name": "Return tunnel",
+          "x": 1804,
+          "y": 851,
+          "free": true,
+          "reachable": true
+        }
+      ]
+    }
+  ],
+  "blocked_alternative": {
+    "block": [
+      1230,
+      208,
+      68,
+      70
+    ],
+    "envelope": [
+      31,
+      27
+    ],
+    "free_centres": 841986,
+    "connected_centres": 645249,
+    "sites": [
+      {
+        "name": "West freight spawn",
+        "x": 68,
+        "y": 495,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Ore cyclone inspection",
+        "x": 291,
+        "y": 312,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Charging aisle",
+        "x": 391,
+        "y": 562,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Induction crown",
+        "x": 579,
+        "y": 258,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Coil yard",
+        "x": 837,
+        "y": 469,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Vacuum gantry",
+        "x": 1044,
+        "y": 216,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Vacuum service port",
+        "x": 1155,
+        "y": 575,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Rolling control",
+        "x": 1445,
+        "y": 455,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Caster exit",
+        "x": 1675,
+        "y": 548,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Quench overseer",
+        "x": 1840,
+        "y": 432,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "East shipment",
+        "x": 1979,
+        "y": 570,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "West underdeck",
+        "x": 241,
+        "y": 850,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Power conduit",
+        "x": 696,
+        "y": 854,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Vacuum sump",
+        "x": 1081,
+        "y": 860,
+        "free": true,
+        "reachable": true
+      },
+      {
+        "name": "Return tunnel",
+        "x": 1804,
+        "y": 851,
+        "free": true,
+        "reachable": true
+      }
+    ]
+  },
+  "named_sites": [
+    {
+      "name": "West freight spawn",
+      "x": 68,
+      "y": 495
+    },
+    {
+      "name": "Ore cyclone inspection",
+      "x": 291,
+      "y": 312
+    },
+    {
+      "name": "Charging aisle",
+      "x": 391,
+      "y": 562
+    },
+    {
+      "name": "Induction crown",
+      "x": 579,
+      "y": 258
+    },
+    {
+      "name": "Coil yard",
+      "x": 837,
+      "y": 469
+    },
+    {
+      "name": "Vacuum gantry",
+      "x": 1044,
+      "y": 216
+    },
+    {
+      "name": "Vacuum service port",
+      "x": 1155,
+      "y": 575
+    },
+    {
+      "name": "Rolling control",
+      "x": 1445,
+      "y": 455
+    },
+    {
+      "name": "Caster exit",
+      "x": 1675,
+      "y": 548
+    },
+    {
+      "name": "Quench overseer",
+      "x": 1840,
+      "y": 432
+    },
+    {
+      "name": "East shipment",
+      "x": 1979,
+      "y": 570
+    },
+    {
+      "name": "West underdeck",
+      "x": 241,
+      "y": 850
+    },
+    {
+      "name": "Power conduit",
+      "x": 696,
+      "y": 854
+    },
+    {
+      "name": "Vacuum sump",
+      "x": 1081,
+      "y": 860
+    },
+    {
+      "name": "Return tunnel",
+      "x": 1804,
+      "y": 851
+    }
+  ],
+  "pngs": {
+    "overview.png": {
+      "viewport": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 34449,
+      "sha256": "7e7d49c923bdf790d55260814f0b1318e155df3dff82d3e13d8a10e2cef39ed6"
+    },
+    "01-ore-reception.png": {
+      "viewport": [
+        50,
+        225,
+        385,
+        470
+      ],
+      "bytes": 3729,
+      "sha256": "c2a3bd2716f045f45bd228e4763efce1cebcfd1c82743ab6c904a7cdeb46b270"
+    },
+    "02-induction-spires.png": {
+      "viewport": [
+        401,
+        229,
+        457,
+        469
+      ],
+      "bytes": 4322,
+      "sha256": "ef3b659c6cdbb1b2e8792e023d40e43204dd71d509a10318d269321087c745a1"
+    },
+    "03-vacuum-arch.png": {
+      "viewport": [
+        851,
+        201,
+        386,
+        481
+      ],
+      "bytes": 3305,
+      "sha256": "30811218741ba1a6fe277c0b9a8ef5e44c9fbc5d6f2c741c24cc50aa61d8641b"
+    },
+    "04-rolling-mill.png": {
+      "viewport": [
+        1239,
+        380,
+        426,
+        318
+      ],
+      "bytes": 3283,
+      "sha256": "3c2499b5483a4197a3b31fc663c4297515d735a3ad808e4e46dd81373f9c8d9c"
+    },
+    "05-quench-departure.png": {
+      "viewport": [
+        1675,
+        383,
+        334,
+        343
+      ],
+      "bytes": 2476,
+      "sha256": "a8f8dc211984b550be015584cabc892cd239f1c7dc49ecc5a65e9dc40865619b"
+    },
+    "06-underdeck-rail.png": {
+      "viewport": [
+        50,
+        780,
+        1950,
+        213
+      ],
+      "bytes": 5851,
+      "sha256": "d2234e03c8d699e9efdc330bdfcc7c42052d0321956f02784e30b8bcc5587bbb"
+    }
+  },
+  "native": "NATIVE-UNTESTED",
+  "limitations": [
+    "No installed Windows Godot/CyberDemoBridge capacity or input/collision probe",
+    "No sustained water/lava, Rapier progression or fresh-process save/reopen test"
+  ]
+}
