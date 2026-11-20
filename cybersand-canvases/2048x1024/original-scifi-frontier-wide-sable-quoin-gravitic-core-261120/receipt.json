@@ -1,0 +1,303 @@
+{
+  "concept": "Sable Quoin - Gravitic Core Survey and Fracture Bridge",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 2535951,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
+  "material_histogram": {
+    "49": 16666,
+    "62": 29443,
+    "63": 17317,
+    "66": 19505,
+    "68": 71189,
+    "77": 558,
+    "79": 356,
+    "100": 201851,
+    "101": 5013,
+    "120": 9441,
+    "121": 7919,
+    "129": 14105,
+    "130": 7709,
+    "131": 24322
+  },
+  "filled_material_cells": 425394,
+  "grounded_cells": 425394,
+  "ungrounded_cells": 0,
+  "grounded_components": 1,
+  "all_solid_components": 1,
+  "physical_fixture_ties": {
+    "ties": 67,
+    "longest": 81
+  },
+  "r2_workcell_anchors": {
+    "ties": 0,
+    "longest": 0
+  },
+  "creator_revision": "R1 original from-scratch star-collimator engineering 2026-11-20",
+  "nonoverlapping_ordered_rectangles": 5101,
+  "rectangle_work": 425394,
+  "setup_bytes": 94864,
+  "material_plane_sha256": "593b93d0215e911f0dee4d5596d417eba54c8524ce3ea3b021417eff61a0d9e2",
+  "setup_sha256": "a81aeccbc74649caed2d625c140d190898a1f7d77d0810096f52d527e789045c",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 55580,
+      "sha256": "cbe20fb1ff0dc3a3a428c6651ecfa17dd099c9cc5016ef91be6e206561567606"
+    },
+    {
+      "name": "01-west-isotope-port.png",
+      "bytes": 9725,
+      "sha256": "49f9f32dd323dc825b5d3b8faadc4e856452fbcdb5e5e2c7e000671ca957d081"
+    },
+    {
+      "name": "02-west-collimator-support.png",
+      "bytes": 17717,
+      "sha256": "d467df234a96e2fe8ec0992632e60bc5461b53563463e68f36d5fd74b672f5d0"
+    },
+    {
+      "name": "03-star-core-laboratory.png",
+      "bytes": 17335,
+      "sha256": "c5d04595202185a77f8d53112d3e98c5febd84fa9f19184824c5f4f7ef2d3b4a"
+    },
+    {
+      "name": "04-east-sterile-depot.png",
+      "bytes": 10631,
+      "sha256": "02c7a34215c10a654400602742ce7b50b8738aa262c454aa91efa86c818736f3"
+    },
+    {
+      "name": "05-understrata-workcells.png",
+      "bytes": 5219,
+      "sha256": "88e451fc6b523d484310c6f67e1cc3a7cd92e899b97ca44ade0dfc0482d186f2"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1440570,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1389360,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1289607,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      1016,
+      329,
+      1074,
+      416
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only exact Core diagnostic viewport; all other named destinations remain recoverable",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1258705,
+        "passed": 27,
+        "total": 28,
+        "bad": [
+          [
+            "Core diagnostic viewport",
+            [
+              1043,
+              372
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "West rover arrivals": [
+      205,
+      451
+    ],
+    "West isotope dock": [
+      328,
+      453
+    ],
+    "West assay lab": [
+      166,
+      614
+    ],
+    "West machine bay": [
+      355,
+      615
+    ],
+    "West seismic studio": [
+      236,
+      759
+    ],
+    "West sparework": [
+      422,
+      759
+    ],
+    "West ridge escape": [
+      450,
+      353
+    ],
+    "West rescue throat": [
+      460,
+      863
+    ],
+    "West gantry overlook": [
+      618,
+      430
+    ],
+    "Upper sky bypass": [
+      1013,
+      125
+    ],
+    "Upper counterweight observation": [
+      1192,
+      147
+    ],
+    "West comparator": [
+      821,
+      525
+    ],
+    "Core diagnostic viewport": [
+      1043,
+      372
+    ],
+    "Core lower cathode": [
+      1049,
+      617
+    ],
+    "East comparator": [
+      1258,
+      550
+    ],
+    "West basin recovery": [
+      740,
+      713
+    ],
+    "East basin recovery": [
+      1371,
+      719
+    ],
+    "East ridge lookdown": [
+      1540,
+      364
+    ],
+    "East rescue throat": [
+      1603,
+      867
+    ],
+    "East decon": [
+      1773,
+      459
+    ],
+    "Sterile isotope lab": [
+      1901,
+      456
+    ],
+    "East scrubber": [
+      1677,
+      607
+    ],
+    "East shipping": [
+      1884,
+      612
+    ],
+    "East rover evacuation": [
+      1908,
+      755
+    ],
+    "Deep mineral assay": [
+      632,
+      918
+    ],
+    "Deep seismic press": [
+      922,
+      913
+    ],
+    "Deep isotope sorting": [
+      1228,
+      914
+    ],
+    "Deep thermal service": [
+      1468,
+      914
+    ]
+  },
+  "crops": [
+    [
+      "01-west-isotope-port",
+      0,
+      320,
+      552,
+      580
+    ],
+    [
+      "02-west-collimator-support",
+      525,
+      270,
+      600,
+      580
+    ],
+    [
+      "03-star-core-laboratory",
+      753,
+      170,
+      665,
+      620
+    ],
+    [
+      "04-east-sterile-depot",
+      1480,
+      320,
+      568,
+      580
+    ],
+    [
+      "05-understrata-workcells",
+      432,
+      811,
+      1192,
+      213
+    ]
+  ],
+  "source_art": "None; wholly new original invented sci-fi frontier",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"
+}
