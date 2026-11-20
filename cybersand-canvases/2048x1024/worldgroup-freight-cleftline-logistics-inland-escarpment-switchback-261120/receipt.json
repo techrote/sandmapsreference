@@ -1,0 +1,323 @@
+{
+  "concept": "Cleftline Logistics — Inland Escarpment Classification / Switchback Exchange",
+  "original": true,
+  "seed": 203356675,
+  "engine_sha": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Westland inbound gate",
+      "Ledger exchange",
+      "Switchback inspection",
+      "Grade shuttle west",
+      "Central transfer rail",
+      "Central sorter",
+      "Highland export bridge",
+      "Dispatch hoist"
+    ],
+    "upper": [
+      "West upland ridge",
+      "West switchback controller",
+      "Western signal gallery",
+      "Upper signal throat",
+      "Escarpment command",
+      "East ridge beacon"
+    ],
+    "low": [
+      "Low intake cavern",
+      "Rock-cut weigh room",
+      "Reverse grade tender",
+      "Gravity classification",
+      "East cutaway bins",
+      "Carrier consignment",
+      "East grade exit"
+    ],
+    "deep": [
+      "Western pressure works",
+      "Lower reversing drum",
+      "Deep belt tender",
+      "Eastern water table"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Westland inbound gate": [
+      130,
+      476
+    ],
+    "Ledger exchange": [
+      347,
+      478
+    ],
+    "West upland ridge": [
+      255,
+      252
+    ],
+    "West switchback controller": [
+      529,
+      251
+    ],
+    "Switchback inspection": [
+      560,
+      474
+    ],
+    "Grade shuttle west": [
+      764,
+      474
+    ],
+    "Central transfer rail": [
+      998,
+      477
+    ],
+    "Central sorter": [
+      1209,
+      473
+    ],
+    "Upper signal throat": [
+      915,
+      250
+    ],
+    "Western signal gallery": [
+      699,
+      255
+    ],
+    "Escarpment command": [
+      1375,
+      256
+    ],
+    "East ridge beacon": [
+      1756,
+      252
+    ],
+    "Highland export bridge": [
+      1556,
+      477
+    ],
+    "Dispatch hoist": [
+      1822,
+      475
+    ],
+    "Low intake cavern": [
+      258,
+      679
+    ],
+    "Rock-cut weigh room": [
+      471,
+      682
+    ],
+    "Reverse grade tender": [
+      757,
+      683
+    ],
+    "Gravity classification": [
+      997,
+      681
+    ],
+    "East cutaway bins": [
+      1252,
+      679
+    ],
+    "Carrier consignment": [
+      1548,
+      683
+    ],
+    "East grade exit": [
+      1833,
+      686
+    ],
+    "Western pressure works": [
+      267,
+      884
+    ],
+    "Lower reversing drum": [
+      727,
+      883
+    ],
+    "Deep belt tender": [
+      1157,
+      883
+    ],
+    "Eastern water table": [
+      1751,
+      885
+    ]
+  },
+  "material_histogram": {
+    "0": 1547682,
+    "58": 113771,
+    "62": 149322,
+    "100": 286377
+  },
+  "stable_occupied_cells": 549470,
+  "grounded": 549470,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 48780,
+  "rectangles": 4002,
+  "rectangle_work": 549470,
+  "setup_bytes": 74967,
+  "material_plane_sha256": "86e085ea28dccafe250ad7f3bf2dbf306c38ef1927c54f70c7033034b8a2beec",
+  "setup_sha256": "75449f93893466d5ed9c96b51b41a4a9c0cc5dfe4f876536778d9e4c87231749",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1258868,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1215870,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1133923,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      236,
+      433,
+      86,
+      94
+    ],
+    "from": "Westland inbound gate",
+    "to": "Switchback inspection",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 25,
+    "unreachable": [],
+    "distance_before_after": [
+      432,
+      542
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "61fe70d1665dc4529628a24eaf728d16d1c0adc20cd1de35919d03985204a7ce",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-switchback-terrace",
+      "rect": [
+        145,
+        287,
+        534,
+        300
+      ],
+      "bytes": 40685,
+      "sha256": "76e831bf4ddd9b2952c02aaa8172d1bb9639e087bcb215a08cd5452411f3d63b",
+      "pixel_parity": 160200
+    },
+    {
+      "name": "02-central-reversal-sorter",
+      "rect": [
+        730,
+        491,
+        649,
+        303
+      ],
+      "bytes": 49877,
+      "sha256": "c9fa97da5aa225fa98ffffe9090e90571017cee12a9f271dad5a500b1565c805",
+      "pixel_parity": 196647
+    },
+    {
+      "name": "03-east-highland-export",
+      "rect": [
+        1379,
+        277,
+        586,
+        316
+      ],
+      "bytes": 46953,
+      "sha256": "80b4aa47ce5715c6cd10379c85fbbc048c55f1ce10dcc13f9b0397299b74e122",
+      "pixel_parity": 185176
+    },
+    {
+      "name": "04-embedded-service-caverns",
+      "rect": [
+        120,
+        539,
+        1820,
+        268
+      ],
+      "bytes": 122398,
+      "sha256": "47845b1211337158696f50968e6e5eb6fb051459e664eba380ea48daf2a22419",
+      "pixel_parity": 487760
+    },
+    {
+      "name": "05-deep-reversing-utility",
+      "rect": [
+        148,
+        800,
+        1768,
+        194
+      ],
+      "bytes": 86132,
+      "sha256": "672f8f99923d3f651a0731b9cf3629c2a9c574a55e8cab89031e18a16e105538",
+      "pixel_parity": 342992
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "legacy_installed_fallback_not_applicable": true,
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+}

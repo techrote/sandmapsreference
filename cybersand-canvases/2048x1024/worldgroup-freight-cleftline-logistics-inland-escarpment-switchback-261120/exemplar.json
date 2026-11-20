@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Cleftline Logistics",
+  "map_role": "Inland escarpment grade-classification and switchback exchange",
+  "anchor_donors": [
+    "wide-graven-keel-ship-tipper",
+    "wide-peregrine-cleft-halcyon-drydock"
+  ],
+  "siblings": [
+    {
+      "role": "Outer Mooring Registry / Ballast Exchange",
+      "link": "https://github.com/techrote/sandmapsreference/pull/86"
+    },
+    {
+      "role": "Breakwater Recovery / Hull De-rigging Basin",
+      "link": "https://github.com/techrote/sandmapsreference/pull/90"
+    },
+    {
+      "role": "Inland Escarpment / Switchback Exchange",
+      "status": "this_map"
+    }
+  ],
+  "macro_topology": [
+    "three noncoincident high/mid/export terraces",
+    "terrain-embedded rock-cut factories",
+    "linked long diagonal switchback grades",
+    "upper atmospheric inspection bypass",
+    "fourth deep maintenance return"
+  ],
+  "density_profile": "Heavy east and western elevated workface shelves, denser central reversal machinery and rooted basalt; open central sky and deliberately unfurnished intermediate bays reserved for manual authoring",
+  "route_grammar": [
+    "westland entry via inspected main lane",
+    "elevated longitudinal bypass",
+    "central sort/reverse bays",
+    "low excavated return with four mechanical services",
+    "exact 31x27 physical-obstruction detour"
+  ],
+  "strong_motifs": [
+    "institutional basalt, reinforced concrete and bright steel",
+    "switchback cargo grades",
+    "supported rail reversing drums",
+    "embedded sorting racks",
+    "asymmetric escarpment skyline",
+    "grounded tender bays"
+  ],
+  "interesting_relationships": [
+    "salvage receives manifest from coastal siblings before interior grade sorting",
+    "north and eastern terraces have deliberately different elevations",
+    "long diagonal transfer couples rugged rock-cut shelves",
+    "low route can avoid disrupted high exchange"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "Western disused roof terrace",
+      "bbox": [
+        225,
+        300,
+        178,
+        125
+      ],
+      "role": "Unfinished industrial bay for owner detail or habitat conversion"
+    },
+    {
+      "name": "Central open countergrade",
+      "bbox": [
+        690,
+        330,
+        620,
+        190
+      ],
+      "role": "Optional crossing, scripted cargo drop or new Gentek reception"
+    },
+    {
+      "name": "Low service void",
+      "bbox": [
+        783,
+        738,
+        240,
+        102
+      ],
+      "role": "Editable machinery chamber and path rerouting seam"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Grade reversal accident",
+      "point": [
+        1220,
+        594
+      ],
+      "event_idea": "future cargo drum seizure / recovery diversion",
+      "not_scripted": true
+    },
+    {
+      "name": "Export shelf reveal",
+      "point": [
+        1756,
+        252
+      ],
+      "event_idea": "future train arrival or silhouetted convoy reveal",
+      "not_scripted": true
+    },
+    {
+      "name": "Cutaway inspection ambush",
+      "point": [
+        471,
+        682
+      ],
+      "event_idea": "future security encounter with low escape",
+      "not_scripted": true
+    },
+    {
+      "name": "Deep utility breach",
+      "point": [
+        1157,
+        883
+      ],
+      "event_idea": "future pipe break or timed underworks escape",
+      "not_scripted": true
+    }
+  ],
+  "procedural_exemplar_value": [
+    "asymmetric 3-level massif and discontinuous terrace spans",
+    "functional negative-space between inbound grade and eastern export",
+    "nested cavity-to-exterior transitions",
+    "sparse traversable transit strata with contained load paths"
+  ],
+  "similarity_avoidance": "Unlike the Cleftline outer quayside's long low ballast lattice or the Breakwater V-cut recovery basin, this is a three-terrace, earth-embedded switchback and grade-sorting landscape; no paired cranes, ship cradle, twin ring cisterns or central drydock.",
+  "engineered_state": "Only static inert solid material cells; no scripts, AI-controlled machinery, dynamic rail vehicles or SWARM simulation are claimed",
+  "validation_status": "CREATOR SOURCE-STATIC PASS; independent reviews pending; NATIVE-UNTESTED"
+}
