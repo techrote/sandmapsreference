@@ -252,3 +252,28 @@ for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
 // Recess it through a protected 48-cell-wide loading threshold.
 R(510,411,50,105,M.AIR);
 for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Final rooted portal restoration after route excavations. The starboard
+// column remains completely outside the 31x27 transverse flight doorway,
+// transmitting the A-frame and carriage weight to native bedrock at x842.
+R(839,259,23,519,M.WALL);R(846,277,9,491,M.STEEL);
+R(836,765,37,17,M.STEEL);
+R(577,245,275,16,M.STEEL);
+L(581,247,669,180,16,M.STEEL);L(734,181,851,254,17,M.STEEL);
+R(656,176,91,16,M.WALL);
+for(let x of [646,757]){
+ L(x,246,x,272,8,M.STEEL);
+ ring(x,277,21,20,8,M.STEEL);
+ L(x,296,x,395,6,M.STEEL);
+}
+for(let k=0;k<6;k++){let x=597+k*39;L(x,260,x+30,321,7,k%2?M.STEEL:M.WALL);}
+L(842,276,842,723,9,M.STEEL);
+// Distinguish the still-connected lower carriage platform from freely flying
+// doorway with two short outer-side loadbearers and a guarded steel rail.
+R(824,541,21,141,M.STEEL);
+R(698,676,145,12,M.STEEL);
+R(728,660,14,19,M.WALL);
+L(790,684,842,684,10,M.STEEL);
+// Exact authored target space always receives final physical clearance.
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
