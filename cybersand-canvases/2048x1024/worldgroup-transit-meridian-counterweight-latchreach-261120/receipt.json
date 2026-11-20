@@ -1,0 +1,295 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_MERIDIAN_COUNTERWEIGHT_LATCHREACH",
+  "revision": "R2",
+  "seed": "0x261120c2",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "7b03aa437561ec63e31fd09531171360ab60eeb4",
+  "donor": "wide-tungsten-sawtooth-tramworks, R2 head 7fc24855cf521c90bf67f4afb08685e490473201 (stylistic influence only)",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 624270,
+  "discarded_unattached_candidate_cells": 89029,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 2931,
+  "setup_json_bytes": 55317,
+  "material_work_visits": 624270,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "232780d1080ebafe93b7f9dc0fcaa023782388248ad57e4b1d4b15d7b0996963",
+  "setup_sha256": "1f455dcb8e09d3486310b94f720827b374c7d9c45194a8044d9897487d2de0a6",
+  "histogram": {
+    "0": 1472882,
+    "49": 49152,
+    "58": 70870,
+    "62": 74345,
+    "100": 353787,
+    "101": 8018,
+    "113": 12648,
+    "117": 54378,
+    "122": 1072
+  },
+  "sites": [
+    {
+      "name": "West ingress",
+      "x": 130,
+      "y": 497
+    },
+    {
+      "name": "Intake switch",
+      "x": 328,
+      "y": 494
+    },
+    {
+      "name": "High west glide",
+      "x": 482,
+      "y": 322
+    },
+    {
+      "name": "West recovery",
+      "x": 466,
+      "y": 718
+    },
+    {
+      "name": "A-frame gantry high",
+      "x": 817,
+      "y": 298
+    },
+    {
+      "name": "A-frame service lower",
+      "x": 699,
+      "y": 706
+    },
+    {
+      "name": "Crosshead upper",
+      "x": 1074,
+      "y": 309
+    },
+    {
+      "name": "Crosshead middle",
+      "x": 1098,
+      "y": 504
+    },
+    {
+      "name": "Counterweight bypass",
+      "x": 1114,
+      "y": 711
+    },
+    {
+      "name": "East mast upper",
+      "x": 1509,
+      "y": 293
+    },
+    {
+      "name": "East mast low",
+      "x": 1507,
+      "y": 708
+    },
+    {
+      "name": "Discharge approach",
+      "x": 1837,
+      "y": 487
+    },
+    {
+      "name": "Turnaround",
+      "x": 1900,
+      "y": 705
+    },
+    {
+      "name": "Return",
+      "x": 334,
+      "y": 704
+    },
+    {
+      "name": "Finish",
+      "x": 149,
+      "y": 497
+    },
+    {
+      "name": "Intake telemetry",
+      "x": 228,
+      "y": 113
+    },
+    {
+      "name": "Western switch control",
+      "x": 669,
+      "y": 109
+    },
+    {
+      "name": "Transfer signal room",
+      "x": 1335,
+      "y": 113
+    },
+    {
+      "name": "East dispatch control",
+      "x": 1847,
+      "y": 111
+    },
+    {
+      "name": "Intake shop",
+      "x": 266,
+      "y": 932
+    },
+    {
+      "name": "A-frame service",
+      "x": 690,
+      "y": 932
+    },
+    {
+      "name": "Coupler vault",
+      "x": 1020,
+      "y": 928
+    },
+    {
+      "name": "Eastern motor bay",
+      "x": 1418,
+      "y": 930
+    },
+    {
+      "name": "Recovery workshop",
+      "x": 1850,
+      "y": 932
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "connected": 1314987,
+      "missing": [],
+      "free_sites": 24
+    },
+    "23x19": {
+      "connected": 1279112,
+      "missing": [],
+      "free_sites": 24
+    },
+    "31x27": {
+      "connected": 1210010,
+      "missing": [],
+      "free_sites": 24
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1050,
+      476,
+      96,
+      56
+    ],
+    "material": 58,
+    "after_31x27": {
+      "connected": 1200096,
+      "missing": [
+        "Crosshead middle"
+      ],
+      "free_sites": 23
+    },
+    "covered_site": "Crosshead middle",
+    "other_sites_reachable": 23
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 49527,
+      "pixels": 2097152,
+      "sha256": "b83f82890028ce00389195afaa2ae45e90e329d335ecaf034fb9ea535b966efb",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-west-switch.png": {
+      "x": 0,
+      "y": 180,
+      "w": 480,
+      "h": 725,
+      "bytes": 5661,
+      "pixels": 348000,
+      "sha256": "2f7ad4a1cb64b1c809949abda179269c51df81c955198c07bdbf495d625239e3",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-a-frame-gantry.png": {
+      "x": 460,
+      "y": 175,
+      "w": 465,
+      "h": 810,
+      "bytes": 13269,
+      "pixels": 376650,
+      "sha256": "f7d7065f7d42bfc067862090c77bb76bc3980871890b90bb510377409bec9c2b",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-transfer-crosshead.png": {
+      "x": 905,
+      "y": 165,
+      "w": 447,
+      "h": 817,
+      "bytes": 9376,
+      "pixels": 365199,
+      "sha256": "bc647b416a03a97c3295b02453ae1347078c207bc9616425d0574c349335f8df",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-counterweight-mast.png": {
+      "x": 1290,
+      "y": 180,
+      "w": 430,
+      "h": 803,
+      "bytes": 6350,
+      "pixels": 345290,
+      "sha256": "b135fcd47027cee781fb700b381ac66fb324a6a1e59fada2949fcc72d0995039",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-east-dispatch.png": {
+      "x": 1680,
+      "y": 175,
+      "w": 368,
+      "h": 810,
+      "bytes": 6720,
+      "pixels": 298080,
+      "sha256": "4f9ecc6a1f9c83a08d75e4659ef77f91755c6ddd3237a5204f8db0eebfe04898",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-underworks.png": {
+      "x": 90,
+      "y": 800,
+      "w": 1868,
+      "h": 221,
+      "bytes": 15655,
+      "pixels": 412828,
+      "sha256": "c4f10608466dc3a60b447965aae184cb03aaa0947b9a3fdb388a0a8807fb6fd3",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: installed CyberDemoBridge, Godot/Workbench, Rapier, input/collision/ticks, cold save/reopen not executed",
+  "independent_review": "PENDING: Art, Technical, Shepherd exact-head",
+  "ci": "NOT CLAIMED"
+}
