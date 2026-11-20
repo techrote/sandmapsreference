@@ -245,3 +245,10 @@ for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
 R(626,404,204,103,M.AIR);
 R(763,486,68,220,M.AIR);
 for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
+
+
+// Actual culprit isolated by exact 31x27 centre scan: a 6-cell hoist cable at
+// x534 split the apparently broad portal gate into separate air components.
+// Recess it through a protected 48-cell-wide loading threshold.
+R(510,411,50,105,M.AIR);
+for(let [,s] of Object.entries(sites))R(s[0]-23,s[1]-25,47,51,M.AIR);
