@@ -1,0 +1,266 @@
+{
+  "schema": "duskline-bounded-route-audit-v1",
+  "hull": [
+    31,
+    27
+  ],
+  "margin_cells": 180,
+  "legs": [
+    {
+      "role": "primary",
+      "from": "Start / west ignition",
+      "to": "West braking fin",
+      "steps": 166,
+      "explored_centres": 53524
+    },
+    {
+      "role": "primary",
+      "from": "West braking fin",
+      "to": "Hoist crossing",
+      "steps": 198,
+      "explored_centres": 76131
+    },
+    {
+      "role": "primary",
+      "from": "Hoist crossing",
+      "to": "Pressure intake",
+      "steps": 188,
+      "explored_centres": 64542
+    },
+    {
+      "role": "primary",
+      "from": "Pressure intake",
+      "to": "Upper diaphragm gate",
+      "steps": 241,
+      "explored_centres": 89217
+    },
+    {
+      "role": "primary",
+      "from": "Upper diaphragm gate",
+      "to": "Upper transfer datum",
+      "steps": 129,
+      "explored_centres": 31913
+    },
+    {
+      "role": "primary",
+      "from": "Upper transfer datum",
+      "to": "East outlet gate",
+      "steps": 231,
+      "explored_centres": 88378
+    },
+    {
+      "role": "primary",
+      "from": "East outlet gate",
+      "to": "Condenser nose",
+      "steps": 275,
+      "explored_centres": 105157
+    },
+    {
+      "role": "primary",
+      "from": "Condenser nose",
+      "to": "Arrestor approach",
+      "steps": 238,
+      "explored_centres": 90483
+    },
+    {
+      "role": "primary",
+      "from": "Arrestor approach",
+      "to": "East capture",
+      "steps": 156,
+      "explored_centres": 44517
+    },
+    {
+      "role": "primary",
+      "from": "East capture",
+      "to": "East descent",
+      "steps": 118,
+      "explored_centres": 27283
+    },
+    {
+      "role": "primary",
+      "from": "East descent",
+      "to": "East return",
+      "steps": 194,
+      "explored_centres": 58868
+    },
+    {
+      "role": "primary",
+      "from": "East return",
+      "to": "Undercondenser return",
+      "steps": 252,
+      "explored_centres": 85098
+    },
+    {
+      "role": "primary",
+      "from": "Undercondenser return",
+      "to": "Return crossflow",
+      "steps": 251,
+      "explored_centres": 89735
+    },
+    {
+      "role": "primary",
+      "from": "Return crossflow",
+      "to": "Countershaft return",
+      "steps": 244,
+      "explored_centres": 82018
+    },
+    {
+      "role": "primary",
+      "from": "Countershaft return",
+      "to": "West service return",
+      "steps": 337,
+      "explored_centres": 127831
+    },
+    {
+      "role": "primary",
+      "from": "West service return",
+      "to": "West counterweight return",
+      "steps": 280,
+      "explored_centres": 102094
+    },
+    {
+      "role": "primary",
+      "from": "West counterweight return",
+      "to": "West climb",
+      "steps": 303,
+      "explored_centres": 124700
+    },
+    {
+      "role": "primary",
+      "from": "West climb",
+      "to": "Finish",
+      "steps": 137,
+      "explored_centres": 38020
+    },
+    {
+      "role": "alternate",
+      "from": "Pressure intake",
+      "to": "Alternate split",
+      "steps": 113,
+      "explored_centres": 25786
+    },
+    {
+      "role": "alternate",
+      "from": "Alternate split",
+      "to": "Lower bypass datum",
+      "steps": 348,
+      "explored_centres": 155443
+    },
+    {
+      "role": "alternate",
+      "from": "Lower bypass datum",
+      "to": "Lower bypass exit",
+      "steps": 306,
+      "explored_centres": 133088
+    },
+    {
+      "role": "alternate",
+      "from": "Lower bypass exit",
+      "to": "Condenser nose",
+      "steps": 301,
+      "explored_centres": 134771
+    },
+    {
+      "role": "service",
+      "from": "West braking fin",
+      "to": "West operator room",
+      "steps": 246,
+      "explored_centres": 105351
+    },
+    {
+      "role": "service",
+      "from": "Hoist crossing",
+      "to": "Damping control cell",
+      "steps": 261,
+      "explored_centres": 103864
+    },
+    {
+      "role": "service",
+      "from": "Upper transfer datum",
+      "to": "Diaphragm service interior",
+      "steps": 185,
+      "explored_centres": 62718
+    },
+    {
+      "role": "service",
+      "from": "Condenser nose",
+      "to": "Cryogenic panel",
+      "steps": 269,
+      "explored_centres": 106325
+    },
+    {
+      "role": "service",
+      "from": "Arrestor approach",
+      "to": "Brake control cupola",
+      "steps": 251,
+      "explored_centres": 102051
+    },
+    {
+      "role": "service",
+      "from": "West counterweight return",
+      "to": "West underworks vault",
+      "steps": 346,
+      "explored_centres": 134034
+    },
+    {
+      "role": "service",
+      "from": "West service return",
+      "to": "Hoist maintenance shaft",
+      "steps": 323,
+      "explored_centres": 123627
+    },
+    {
+      "role": "service",
+      "from": "Countershaft return",
+      "to": "Central pump vault",
+      "steps": 347,
+      "explored_centres": 137057
+    },
+    {
+      "role": "service",
+      "from": "Return crossflow",
+      "to": "Motor clutch vault",
+      "steps": 285,
+      "explored_centres": 101620
+    },
+    {
+      "role": "service",
+      "from": "Undercondenser return",
+      "to": "Cryo manifold vault",
+      "steps": 179,
+      "explored_centres": 58199
+    },
+    {
+      "role": "service",
+      "from": "East return",
+      "to": "East inspection vault",
+      "steps": 189,
+      "explored_centres": 58128
+    }
+  ],
+  "blocked_case_alternative": [
+    {
+      "from": "Pressure intake",
+      "to": "Alternate split",
+      "steps": 113
+    },
+    {
+      "from": "Alternate split",
+      "to": "Lower bypass datum",
+      "steps": 348
+    },
+    {
+      "from": "Lower bypass datum",
+      "to": "Lower bypass exit",
+      "steps": 306
+    },
+    {
+      "from": "Lower bypass exit",
+      "to": "Condenser nose",
+      "steps": 301
+    }
+  ],
+  "normal_pass": 33,
+  "blocked_alternative_pass": 4,
+  "route_type": "literal 4-neighbour free-centre paths, no speed/flight claim"
+}
