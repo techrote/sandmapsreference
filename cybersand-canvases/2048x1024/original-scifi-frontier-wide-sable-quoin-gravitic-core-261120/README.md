@@ -18,15 +18,15 @@ Run `node build.cjs` within this folder to reproduce the committed `setup.json`,
 
 - Accepted CyberSand read-only main: `de109d0131641d6adc8d25bb9ced7ca3d4991105`.
 - Map repository default main at branch creation: `99a166e7fcae45eb22be1740e9f33f62faccbcc7`.
-- Source final material-grid SHA-256: `593b93d0215e911f0dee4d5596d417eba54c8524ce3ea3b021417eff61a0d9e2`.
-- Source Setup-v2 SHA-256: `a81aeccbc74649caed2d625c140d190898a1f7d77d0810096f52d527e789045c`.
+- Source final material-grid SHA-256: `9021072dc0a5f2906671d17487150fdd92236d1639c7926364397a3146c9ff68`.
+- Source Setup-v2 SHA-256: `e9483425d8752532feee25a292630a731fc69ea87121b438ad37d98343a53121`.
 - Dimensions: **2048×1024 = 2,097,152 indexed material cells**.
-- Canonical lossless ordered disjoint edits: **5101**, Setup JSON **94864 bytes**, rectangle work **425394**.
-- Solids: **425394/425394 rooted**, **0 detached**, **1** final solid connected component(s).
+- Canonical lossless ordered disjoint edits: **5267**, Setup JSON **97979 bytes**, rectangle work **442895**.
+- Solids: **442895/442895 rooted**, **0 detached**, **1** final solid connected component(s).
 - All nonzero material IDs from accepted static inert solid/None catalogue; no unstable powder, mobile fluid, reactive support or free liquid.
 - Exact named checkpoints: **28/28** connected at all **19×15, 23×19, 31×27** collision envelopes with unshifted literal coordinates and complete in-bounds 4-neighbour free-centre BFS.
 - Literal physical obstruction **[1016,329,1074,416]** blocks **Core diagnostic viewport** and still permits 27/27 other destinations at conservative 31×27.
-- Source claims rectangle budget 32,768 / JSON cap 1,048,576 bytes / work 32,000,000; installed legacy CyberDemoBridge may permit only ~4,096 rectangles. **These 5101 rectangles require installed-capability revalidation.** Do not weaken design to meet unverified legacy capacity.
+- Source claims rectangle budget 32,768 / JSON cap 1,048,576 bytes / work 32,000,000; installed legacy CyberDemoBridge may permit only ~4,096 rectangles. **These 5267 rectangles require installed-capability revalidation.** Do not weaken design to meet unverified legacy capacity.
 - **NATIVE-UNTESTED:** no actual installed Godot/Workbench/CyberDemoBridge/Rapier actor play, collision, advancement, save/reopen or persistence was performed.
 
 ## Authentic images (indexed material IDs, no AI artwork)
