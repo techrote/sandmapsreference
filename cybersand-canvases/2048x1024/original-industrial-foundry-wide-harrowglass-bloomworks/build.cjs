@@ -106,6 +106,32 @@ R(268,562,9,66,M.air);R(338,530,14,120,M.air);
 // Physical hanging clamps and suspended optics tie to rooted crane or deck.
 R(940,386,15,13,M.steel);R(1085,386,15,13,M.steel);
 R(963,468,10,23,M.steel);R(1080,468,10,25,M.steel);
+
+// Explicit full-body upper crane-flight axis and navigable deep alternate transport.
+R(55,208,1940,70,M.air);
+for(const [x,w] of [[135,96],[500,90],[910,90],[1460,92],[1880,88]])R(x,689,w,171,M.air);
+R(141,590,85,109,M.air);R(1421,388,65,40,M.air);R(1145,423,26,95,M.air);
+R(380,489,58,70,M.air);
+// Load paths and floor-supported service components, evaluated by exact-cell flood.
+R(317,384,13,301,M.steel);R(160,384,10,91,M.steel);
+R(210,481,9,13,M.glass);R(230,539,10,12,M.glass);
+R(139,398,8,16,M.rust);R(309,566,16,119,M.steel);
+R(278,643,11,42,M.steel);R(126,631,10,54,M.rust);
+R(940,609,12,79,M.steel);R(1100,609,12,79,M.steel);
+R(978,376,9,109,M.copper);R(1082,376,9,109,M.copper);
+R(1751,488,10,48,M.steel);R(1821,488,10,48,M.steel);
+R(1492,928,8,50,M.copper);R(1120,932,15,46,M.steel);
+R(1187,653,12,38,M.steel);
+R(210,362,12,24,M.steel);R(1341,410,12,28,M.steel);
+R(115,630,70,8,M.steel);R(857,633,11,53,M.steel);
+R(1824,488,57,8,M.steel);R(1272,600,8,34,M.steel);
+R(1653,622,10,12,M.steel);R(105,629,7,10,M.steel);
+R(1481,381,4,7,M.air);
+// A whole-hull vacuum throat rather than a nominally open but impassable slot.
+R(1125,533,87,93,M.air);
+// Floating remnant of the removed right hatch is physically removed.
+R(1212,539,16,52,M.air);
+
 const sites=[
 ['West freight spawn',68,495],['Ore cyclone inspection',291,312],['Charging aisle',391,562],
 ['Induction crown',579,258],['Coil yard',837,469],['Vacuum gantry',1044,216],
