@@ -64,6 +64,8 @@ function build(){
  const POST_TIE_AIRLOCKS=[[260,858,1554,71],[330,720,118,215],[1001,708,116,229],[1594,686,149,249],[964,628,210,100],[964,702,204,160]];
  for(const [x,y,w,h] of POST_TIE_AIRLOCKS)R(x,y,w,h,0);
  for(const [name,[x,y]] of Object.entries(sites))R(x-18,y-16,37,33,0);
+ // High west cliff-to-commissioning load path, entirely above the excavated Midge bore: true structural tie.
+ L(204,797,519,790,24,M.titanium);
 
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
