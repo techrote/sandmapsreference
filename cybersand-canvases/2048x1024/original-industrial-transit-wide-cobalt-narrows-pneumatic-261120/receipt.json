@@ -1,0 +1,312 @@
+{
+  "concept": "Cobalt Narrows — Pneumatic Drydock Freight Siphon",
+  "original": true,
+  "seed": 202088817,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West launch",
+      "Harbour clearance",
+      "Lock-lift approach",
+      "Gorge west",
+      "Transfer throat",
+      "Distributor ingress",
+      "Customs approach",
+      "Final beacon"
+    ],
+    "high": [
+      "Upper hoist board",
+      "Siphon crown",
+      "Flyover relay"
+    ],
+    "lower": [
+      "West bilge return",
+      "Ram service return",
+      "Siphon valve return",
+      "Shunt recover",
+      "East tram return"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West launch": [
+      136,
+      382
+    ],
+    "Harbour clearance": [
+      351,
+      382
+    ],
+    "Drydock hold": [
+      323,
+      626
+    ],
+    "Lock-lift approach": [
+      585,
+      382
+    ],
+    "Twin ram cabin": [
+      718,
+      631
+    ],
+    "Upper hoist board": [
+      535,
+      252
+    ],
+    "Gorge west": [
+      814,
+      382
+    ],
+    "Siphon crown": [
+      1013,
+      248
+    ],
+    "Transfer throat": [
+      1056,
+      382
+    ],
+    "Pipe maintenance": [
+      1122,
+      631
+    ],
+    "Distributor ingress": [
+      1288,
+      382
+    ],
+    "Distributor operator": [
+      1520,
+      630
+    ],
+    "Flyover relay": [
+      1450,
+      253
+    ],
+    "Customs approach": [
+      1570,
+      382
+    ],
+    "East invoice station": [
+      1843,
+      380
+    ],
+    "Terminal tally": [
+      1869,
+      630
+    ],
+    "Final beacon": [
+      1942,
+      382
+    ],
+    "West bilge return": [
+      227,
+      854
+    ],
+    "Ram service return": [
+      613,
+      854
+    ],
+    "Siphon valve return": [
+      1030,
+      854
+    ],
+    "Shunt recover": [
+      1441,
+      854
+    ],
+    "East tram return": [
+      1810,
+      854
+    ]
+  },
+  "material_histogram": {
+    "0": 1440020,
+    "58": 264945,
+    "62": 252421,
+    "100": 139766
+  },
+  "stable_occupied_cells": 657132,
+  "grounded": 657132,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 32061,
+  "rectangles": 5587,
+  "rectangle_work": 657132,
+  "setup_bytes": 102865,
+  "material_plane_sha256": "21027c529509a9a7a778e86c4ad885e9cf8e2ae5a5e2824f203540ccfc1348f9",
+  "setup_sha256": "4a3e1dc76a0979caf855936ac4740fad044164e25208820b6bdcf9aa90531a58",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 1105923,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 1057716,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 963127,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      177,
+      344,
+      91,
+      84
+    ],
+    "from": "West launch",
+    "to": "Harbour clearance",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 22,
+    "unreachable": [],
+    "distance_before_after": [
+      215,
+      319
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "90b1d985ae163bae46df435ef3eee9e34f2800e592bb3c42c2756339c249b78a",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-harbour",
+      "rect": [
+        114,
+        439,
+        337,
+        369
+      ],
+      "bytes": 31919,
+      "sha256": "36c80db93a5b0ec76af30038ef9c18163cfe75a5cd131cd489b7b1a30a8571f7",
+      "pixel_parity": 124353
+    },
+    {
+      "name": "02-tri-ram",
+      "rect": [
+        435,
+        451,
+        358,
+        356
+      ],
+      "bytes": 32581,
+      "sha256": "31171b8700a0e1bcde40efcff2748851e2c61b2e72d489bd591fc75a13354117",
+      "pixel_parity": 127448
+    },
+    {
+      "name": "03-siphon",
+      "rect": [
+        799,
+        160,
+        477,
+        615
+      ],
+      "bytes": 74605,
+      "sha256": "25f150d0c235e936e99af35622e1b0563d266e004534f958d9ba07d0caf480b2",
+      "pixel_parity": 293355
+    },
+    {
+      "name": "04-distributor",
+      "rect": [
+        1276,
+        493,
+        379,
+        302
+      ],
+      "bytes": 29177,
+      "sha256": "3a0c9395891cca11ca71dd83fc2ee0cadc61ba14f3b545074301e2ba407d4440",
+      "pixel_parity": 114458
+    },
+    {
+      "name": "05-customs",
+      "rect": [
+        1684,
+        450,
+        355,
+        371
+      ],
+      "bytes": 33575,
+      "sha256": "db117f6531fdd33a7ed3644445bf32c83dbe13d8af26c2b2f8500e6596a829d9",
+      "pixel_parity": 131705
+    },
+    {
+      "name": "06-underworks",
+      "rect": [
+        902,
+        798,
+        700,
+        226
+      ],
+      "bytes": 39961,
+      "sha256": "64e28483da9a34cd2783933c6b3a86825ea8f34752aee7ab98f3cc498bb100f7",
+      "pixel_parity": 158200
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "installed_fallback_risk": 4096,
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+}
