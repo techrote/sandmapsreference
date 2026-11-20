@@ -162,7 +162,7 @@ function world(){
  for(let x=928;x<=1032;x+=26){r(x,846,15,32,131);r(x+4,854,7,18,72);}
  // 4: 4-bank vertical compressor, horizontal service trolley and cooler.
  r(1151,875,291,26,58);r(1160,855,274,20,62);
- for(const [x,h] of [[1177,37],[1210,54],[1250,45],[1290,32]]){r(x,855-h,19,h,131);r(x+5,867-h,10,14,72);}
+ for(const [x,h] of [[1177,22],[1210,25],[1250,17],[1290,28]]){r(x,855-h,19,h,131);r(x+5,867-h,10,14,72);}
  r(1343,843,58,21,117);r(1353,836,38,8,76);
  // 5: magnetised induction controls, feed drums and pump at separate scale.
  r(1530,879,275,22,58);r(1542,863,251,16,65);
@@ -172,6 +172,9 @@ function world(){
  r(1737,843,20,19,72);r(1743,850,8,8,79);
  // Vertical local pump beside exit shaft, distinct from boiler station.
  r(1953,863,45,38,65);r(1960,846,30,17,72);
+ r(1064,161,10,237,68); // anchored roof-to-transfer load hanger
+ r(977,625,8,40,68); // tie inspection screen into founded tooling
+ r(1576,860,8,21,68); // root underfloor electrical controller
  // All upper and lower load-bearing volumes have anchored routes.
  // Critical full-body free shafts are genuinely excavated through every deck and foreground.
  r(225,295,113,606,0);r(1818,295,115,606,0);
@@ -221,7 +224,7 @@ function audit(w,rects){
  const dx=ww>>1,dy=hh>>1,free=new Uint8Array(N);let all=0;for(let y=dy;y+hh-dy<=H;y++)for(let x=dx;x+ww-dx<=W;x++){const l=x-dx,t=y-dy,r=l+ww,b=t+hh;if(sum[b*s+r]-sum[t*s+r]-sum[b*s+l]+sum[t*s+l]===0){free[y*W+x]=1;all++;}}
  const reached=new Uint8Array(N),qq=new Int32Array(N);let first=0,last=0,sp=spawn[1]*W+spawn[0];if(free[sp]){reached[sp]=1;qq[last++]=sp;}while(first<last){let i=qq[first++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i-W,i+W])if(j>=0&&j<N&&free[j]&&!reached[j]){reached[j]=1;qq[last++]=j;}}
  const sr=sites.map(v=>({...v,clear:!!free[v.y*W+v.x],reached:!!reached[v.y*W+v.x]}));return {hull:[ww,hh],valid_centres:all,connected_centres:last,passed:sr.filter(v=>v.reached).length,sites:sr};}
- const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[1003,165,88,307],blocked=route(31,27,obstruction);
+ const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[1043,165,45,307],blocked=route(31,27,obstruction);
  return {rectangles:rects.length,work,hist,rooted:b,total,detached:total-b,airfaces,direct,flight,obstruction,blocked};
 }
 
