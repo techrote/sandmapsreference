@@ -29,7 +29,12 @@ function buildWorld(){
  // Five big excavated service stations, each with distinct purpose.
  for(let [x,y,w,h,c]of [[133,858,257,128,266],[516,863,302,123,690],[899,862,255,124,1020],[1290,859,271,127,1418],[1704,857,263,130,1850]]){box(x,y,w,h,0);box(c-50,725,100,230,0);box(x,936,41,50,M.I);for(let i=0;i<4;i++)box(x+8+i*24,947-i%2*9,13,25,i%2?M.Z:M.C);box(x+w-42,942,42,44,M.S)}
  // Functional room apparatus: compressors, switchboards, clutches, motor drums, geared cable haul.
- for(let [cx,cy]of [[210,942],[604,941],[967,941],[1357,941],[1796,938]]){ring(cx,cy,34,34,14,M.C);beam(cx-41,968,cx-45,981,10,M.I);beam(cx+38,971,cx+47,983,9,M.S)}
+ // Five different shops: actuator cam, phase stator, dog clutch, tension ram, recovery winch.
+ring(208,940,28,29,15,M.C);beam(199,971,185,981,11,M.I);box(347,905,20,67,M.Z);
+for(let i=0;i<5;i++)box(537+i*14,901+i%2*11,9,71,i%2?M.Z:M.I);beam(787,968,756,910,13,M.S);
+ring(939,943,25,27,12,M.S);box(913,959,45,26,M.C);for(let i=0;i<4;i++)box(1113+i*11,931-i%2*13,8,39,M.Z);
+beam(1328,976,1382,907,15,M.C);box(1538,922,17,53,M.S);for(let i=0;i<4;i++)box(1506+i*13,936,10,25,M.Z);
+box(1715,944,40,39,M.I);beam(1766,959,1797,912,11,M.S);ring(1800,927,18,18,8,M.C);beam(1924,976,1960,909,12,M.S);
  for(let j=0;j<8;j++){let x=61+j*250;box(x,roof[x]-10,23,8,j%2?M.Q:M.Z,true);box(x,floor[x]+4,30,8,j%2?M.Z:M.Q,true)}
  // Put conservative, non-scenic flightways through the whole construction.
  box(75,475,1915,60,0);box(75,682,1915,74,0);box(84,279,1880,55,0);
@@ -37,6 +42,25 @@ function buildWorld(){
  for(let [name,x,y]of sites){box(x-22,y-20,45,41,0);if(y<190)box(x-31,y+10,62,483-y,0);else if(y<390)box(x-31,y+10,62,493-y,0);else if(y>845)box(x-31,706,62,y-690,0);else if(y>650)box(x-31,500,62,y-486,0)}
  // Furnish uncut room walls after through routing; never obstruct named centre/hulls.
  for(let [x,y]of [[130,84],[569,81],[1228,82],[1738,85]]){box(x,y,22,79,M.I);for(let j=0;j<3;j++)box(x+18,y+11+j*23,24,8,M.Z)}
+
+// Functional mid-air and lower-flight machine silhouettes backed by the world's grounded foundations.
+// Counterweight exchange: slotted trolley, hoist-lug matrix, lower rail gearbox, signal teeth.
+beam(547,roof[547],606,407,14,M.S);beam(610,405,755,410,19,M.I);
+for(let i=0;i<5;i++){box(631+i*22,419+i%2*8,12,31,M.C);box(637+i*22,438+i%2*8,7,11,M.Z)}
+beam(977,roof[977],987,407,16,M.S);beam(986,404,1177,407,21,M.I);
+for(let i=0;i<5;i++){box(1012+i*32,422+i%2*7,21,31,M.C);box(1017+i*32,436+i%2*7,10,10,M.Z)}
+beam(1372,roof[1372],1421,407,14,M.S);beam(1423,410,1555,419,19,M.I);
+for(let i=0;i<4;i++){box(1443+i*27,429+i%2*8,14,30,M.C);box(1447+i*27,438+i%2*8,7,11,M.Z)}
+beam(1812,roof[1812],1823,406,13,M.S);beam(1823,413,1930,422,16,M.I);
+for(let i=0;i<3;i++)box(1840+i*28,428+i%2*9,18,31,M.Z);
+// Partial founded service systems, with asymmetric flight gates above and around machinery.
+beam(630,floor[630],650,594,15,M.C);beam(650,592,805,581,13,M.I);
+for(let i=0;i<5;i++)box(675+i*23,588+i%2*7,11,31,M.Z);
+beam(1004,floor[1004],1023,602,16,M.C);beam(1020,600,1154,600,16,M.I);
+for(let i=0;i<4;i++)box(1042+i*30,601+i%2*9,19,30,M.C);
+beam(1400,floor[1400],1428,594,16,M.C);beam(1425,594,1559,603,15,M.I);
+for(let i=0;i<4;i++)box(1452+i*25,610+i%2*8,14,27,M.Z);
+
  // Ensure spatially unsupported accents do not silently become floating material.
  const seen=new Uint8Array(N),q=new Int32Array(N);let h=0,t=0;function push(i){if(G[i]&&!seen[i]){seen[i]=1;q[t++]=i}}
  for(let x=0;x<W;x++){push(x);push((H-1)*W+x)}for(let y=0;y<H;y++){push(y*W);push(y*W+W-1)}
