@@ -35,3 +35,7 @@ Accepted source advertises 32,768 rectangle edits, 1,048,576 JSON bytes and 32,0
 ![Service galleries](06-service-bays.png)
 
 **Review requests:** independent Art audit on actual 1:1 district proportion and physically readable west/east decisions; independent Technical audit on full replay, hull sites, material laws and PNG parity; independent Shepherd intake with exact Git HEAD and native gate kept separate. Retain Draft/HOLD. No merge/Ready/auto-merge.
+
+## R2 creator repair: differentiated operational stations (20 November 2026)
+
+The earlier exact-head Shepherd review identified repetitive hoists, interchangeable underfloor workshops and insufficient return/descent racing cues. Revision R2 uses actual, boundary-rooted material cells: separate roof-hoisted heavy cage/inspection jack/sorting-balance loads; independent lower winding/brake mechanisms; cryogenic filtering vessels; materially distinct repair machinery; roof-backed eastbound gates and foundation-backed westbound brake signs. The principal flight void is retained, and every exact Midge centre, conservative clearance envelope, true blocked-gate alternative and material grounding must be reverified. `node build.cjs` deterministically regenerates the Setup JSON and genuine indexed-material PNGs. The lossless PNG container now uses reproducible stored DEFLATE blocks, so its binary hashes and pixel parity are inspectable independently. Source-static qualification does not imply native flight or installer compatibility.

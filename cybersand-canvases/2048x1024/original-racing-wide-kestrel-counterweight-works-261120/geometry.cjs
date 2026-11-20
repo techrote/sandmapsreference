@@ -90,6 +90,42 @@ function generate(){
  }
  // Gate colour is applied exclusively to rooted entrance skins, not free floating solid glyphs.
  beam(1778,319,1818,301,5,M.Q,true);beam(1972,716,1930,733,6,M.Z,true);
+
+ // R2: three noninterchangeable roof-rooted hoist loads: freight cage, pressure jack, sorting fork.
+ beam(500,roof[500]-6,521,273,7,M.I);beam(526,roof[526]-4,546,277,5,M.T);
+ polygon([[496,279],[549,278],[561,315],[540,331],[508,327],[488,306]],M.T);
+ box(506,285,35,8,M.Q,true);box(497,300,52,6,M.I,true);
+ for(let xx of [503,525,542])box(xx,307,6,16,M.Z,true);
+ beam(624,roof[624]-6,611,268,7,M.I);beam(611,268,609,315,7,M.T);
+ box(594,269,28,56,M.C);box(601,282,12,33,M.I,true);
+ for(let k=0;k<4;k++)box(618,275+k*12,25-2*k,6,M.Q);
+ box(584,313,48,13,M.Z);beam(630,roof[630]-6,646,296,5,M.I);
+ beam(760,roof[760]-6,758,259,7,M.I);beam(783,roof[783]-6,795,278,5,M.I);
+ polygon([[736,275],[794,277],[824,313],[816,324],[763,311]],M.T);
+ beam(746,286,809,311,5,M.Q,true);box(767,287,30,11,M.I,true);
+ beam(799,288,822,272,5,M.Z);beam(822,272,831,283,4,M.T);
+ // Distinct hoist winding, feedback clutch and sorting gearbox below lower flight corridor.
+ beam(468,floor[468]-4,500,739,12,M.C);box(491,725,34,18,M.T);box(496,729,21,9,M.Z,true);
+ beam(640,floor[640]-5,665,732,12,M.C);box(644,720,37,17,M.I);box(648,725,27,8,M.Q,true);
+ beam(750,floor[750]-5,777,746,11,M.C);box(766,733,38,14,M.T);box(772,736,25,6,M.Z,true);
+ // A separate phase separator and three rooted filter vessels in cold ballast bank.
+ beam(1279,floor[1279]-4,1300,740,14,M.C);box(1286,724,29,28,M.I);box(1295,730,12,12,M.Q,true);
+ beam(1436,floor[1436]-4,1450,716,15,M.C);box(1433,708,33,28,M.T);box(1442,714,11,12,M.Z,true);
+ beam(1579,floor[1579]-3,1560,751,15,M.C);box(1547,742,37,25,M.I);box(1557,748,16,9,M.Q,true);
+ // Four independently identifiable foundation bays, preserving the full-body aisle centres.
+ beam(146,972,155,936,11,M.C);box(154,936,42,10,M.I);box(165,921,12,16,M.T);
+ box(306,951,60,16,M.I);box(313,935,17,16,M.T);box(330,938,29,7,M.Z,true);
+ beam(823,977,829,944,9,M.C);oval(845,944,26,20,M.I);oval(845,944,16,10,0);beam(846,961,848,975,8,M.T);
+ beam(995,976,1002,937,10,M.C);beam(991,950,1019,950,7,M.Z);
+ for(let [x,height] of [[1369,26],[1534,39]]){box(x,951-height,20,height+14,M.T);box(x+5,956-height,10,15,M.Q,true);beam(x+9,959,x+9,972,8,M.C);}
+ box(1375,966,151,7,M.I);box(1385,966,25,5,M.Z,true);box(1490,966,27,5,M.Z,true);
+ beam(1771,975,1795,937,12,M.C);beam(1795,937,1837,951,7,M.T);
+ box(1917,936,23,32,M.I);beam(1925,959,1941,973,8,M.T);box(1918,943,13,9,M.Q,true);
+ // Sparse, solid-backed race direction language. No free-floating checkpoint scenery.
+ for(let x of [1050,1290,1630]){let y=roof[x]-8;beam(x,y,x+21,y+72,8,M.T);beam(x+21,y+72,x+39,y+53,6,M.Z);}
+ beam(1826,roof[1826]-5,1847,302,11,M.T);beam(1847,302,1877,325,7,M.Q);
+ for(let x of [1775,1190,735,455]){let y=floor[x]+3;beam(x,y,x-23,y-78,9,M.C);beam(x-23,y-78,x-39,y-56,5,M.Z);}
+ beam(64,floor[64]+4,81,724,10,M.T);beam(81,724,103,741,6,M.Q);
  // Mandatory full-hull access corridors, bored *after* equipment fitting; no target waivers.
  for(let mouth of [265,940,1640])box(mouth-39,138,78,267,0);
  box(967,651,91,265,0);box(898,855,133,49,0);box(891,880,76,71,0);
