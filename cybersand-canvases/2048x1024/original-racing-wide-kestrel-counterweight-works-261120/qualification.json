@@ -1,0 +1,279 @@
+{
+  "kind": "KESTREL_COUNTERWEIGHT_WORKS_ORIGINAL_RACING_WIDE",
+  "revision": "R1",
+  "seed": "0x26112026",
+  "engine_main_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "material_cells": 2097152,
+  "extent": [
+    2048,
+    1024
+  ],
+  "rectangles": 4811,
+  "setup_json_bytes": 90332,
+  "work_visits": 721499,
+  "source_limits": {
+    "rectangles": 32768,
+    "bytes": 1048576,
+    "work": 32000000
+  },
+  "histogram": {
+    "0": 1375653,
+    "49": 58068,
+    "58": 47998,
+    "62": 129741,
+    "100": 376343,
+    "101": 45661,
+    "113": 16446,
+    "117": 34032,
+    "122": 13210
+  },
+  "grounded_solids": 721499,
+  "discarded_detached_material_cells": 14188,
+  "remaining_detached": 0,
+  "fluids": 0,
+  "reactive": 0,
+  "material_laws": "49 Slate, 58 ReinforcedConcrete, 62 SteelPlate, 100 BasaltColumns, 101 Obsidian, 113 ZincSheet, 117 BareIron, 122 QuartzCrystal: static inert solid, movable=false, RuleKernel=None.",
+  "midge": {
+    "hull": [
+      4,
+      3
+    ],
+    "model_hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+    "spawn": [
+      145,
+      372
+    ]
+  },
+  "sites": [
+    {
+      "name": "Launch / start",
+      "x": 145,
+      "y": 372
+    },
+    {
+      "name": "West speed aperture",
+      "x": 335,
+      "y": 371
+    },
+    {
+      "name": "Hoist transfer 1",
+      "x": 604,
+      "y": 371
+    },
+    {
+      "name": "Interchange upper",
+      "x": 1001,
+      "y": 370
+    },
+    {
+      "name": "Cold bank outbound",
+      "x": 1430,
+      "y": 370
+    },
+    {
+      "name": "East switch approach",
+      "x": 1750,
+      "y": 370
+    },
+    {
+      "name": "East capture upper",
+      "x": 1903,
+      "y": 379
+    },
+    {
+      "name": "East descend",
+      "x": 1910,
+      "y": 526
+    },
+    {
+      "name": "East lower release",
+      "x": 1895,
+      "y": 655
+    },
+    {
+      "name": "Cold bank return",
+      "x": 1545,
+      "y": 655
+    },
+    {
+      "name": "Interchange return",
+      "x": 1117,
+      "y": 652
+    },
+    {
+      "name": "Hoist return",
+      "x": 754,
+      "y": 655
+    },
+    {
+      "name": "West brake",
+      "x": 390,
+      "y": 653
+    },
+    {
+      "name": "West ascent",
+      "x": 131,
+      "y": 522
+    },
+    {
+      "name": "Finish / west gate",
+      "x": 156,
+      "y": 372
+    },
+    {
+      "name": "Launch controller",
+      "x": 269,
+      "y": 118
+    },
+    {
+      "name": "Central supervision",
+      "x": 945,
+      "y": 119
+    },
+    {
+      "name": "East dispatcher",
+      "x": 1638,
+      "y": 125
+    },
+    {
+      "name": "West repair garage",
+      "x": 264,
+      "y": 914
+    },
+    {
+      "name": "Interchange service bay",
+      "x": 922,
+      "y": 920
+    },
+    {
+      "name": "Cryo service bay",
+      "x": 1455,
+      "y": 917
+    },
+    {
+      "name": "East recovery garage",
+      "x": 1863,
+      "y": 916
+    }
+  ],
+  "clearances": {
+    "19x15": {
+      "connected": 1182741,
+      "missing": [],
+      "reached": 22
+    },
+    "23x19": {
+      "connected": 1143914,
+      "missing": [],
+      "reached": 22
+    },
+    "31x27": {
+      "connected": 1083143,
+      "missing": [],
+      "reached": 22
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1361,
+      336,
+      150,
+      80
+    ],
+    "material": 58,
+    "missing": [
+      "Cold bank outbound"
+    ],
+    "remaining": 21,
+    "finish_reachable": true
+  },
+  "grid_sha256": "9f98242a06a7f6bb3dd1091f6907cd5cc4545534856193782b7eac3c23c86ea5",
+  "setup_sha256": "2ec152ecdde962a9f1d39621a84c05010aa5ff8fdd6df60a786e090a5413500a",
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 18096,
+      "pixels": 2097152,
+      "sha256": "faed0e4b7b8fcb0a853db7bc7ee297b8c1376008f72e44381c34f7fdfe56265a",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "01-launch-arch.png": {
+      "x": 0,
+      "y": 25,
+      "w": 445,
+      "h": 660,
+      "bytes": 2603,
+      "pixels": 293700,
+      "sha256": "1e4d1e505e04c4fa4555777d13486dce65b50065d176ad27db7ec1c29b5eb44e",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "02-hoist-cradles.png": {
+      "x": 405,
+      "y": 194,
+      "w": 469,
+      "h": 695,
+      "bytes": 3891,
+      "pixels": 325955,
+      "sha256": "d615ec9f8087ab187927353ab11813107c30eeebf8ca4dc960a472b78b35d6fd",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "03-interchange.png": {
+      "x": 810,
+      "y": 177,
+      "w": 486,
+      "h": 757,
+      "bytes": 4185,
+      "pixels": 367902,
+      "sha256": "7f7291ec977c5bf38fc44b5a874dced33b6057d501e19a3fc39ebf4a35c45f63",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "04-cryo-bank.png": {
+      "x": 1240,
+      "y": 212,
+      "w": 457,
+      "h": 706,
+      "bytes": 2897,
+      "pixels": 322642,
+      "sha256": "42b8b8d2e13047584c71e13cd2cb9af3e2c8628b2a9c19445c0108a753b0f416",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "05-east-reversal.png": {
+      "x": 1640,
+      "y": 190,
+      "w": 408,
+      "h": 760,
+      "bytes": 3161,
+      "pixels": 310080,
+      "sha256": "3ef8a190c77be1c18429b95906a3dea43c2d3b1bcd7796daaa4b27122477a1b2",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    },
+    "06-service-bays.png": {
+      "x": 763,
+      "y": 657,
+      "w": 595,
+      "h": 367,
+      "bytes": 3314,
+      "pixels": 218365,
+      "sha256": "313a5cb0ed7ec1d6cf214856a71e32b8c2036ad74cd4392e4784b45e50ac071c",
+      "crc": true,
+      "zlib": true,
+      "parity": true
+    }
+  },
+  "native": "NATIVE-UNTESTED; installed CyberDemoBridge capacity 4096-vs-32768 not measured; flight, collision, persistence untested"
+}
