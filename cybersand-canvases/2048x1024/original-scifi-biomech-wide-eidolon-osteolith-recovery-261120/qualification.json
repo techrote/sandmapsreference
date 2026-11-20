@@ -1,0 +1,330 @@
+{
+  "status": "AUTHOR-STATIC-PASS / INDEPENDENT-PENDING / NATIVE-UNTESTED",
+  "source": "ORIGINAL-NO-REFERENCE",
+  "engine_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "seed": 2611200717,
+  "grid": {
+    "width": 2048,
+    "height": 1024,
+    "cells": 2097152,
+    "sha256": "160711c60f99c01f990710b9f48544b090eb540c0e6b50ec4636d97e9e1464b5",
+    "histogram": {
+      "0": 1327306,
+      "58": 166439,
+      "62": 108804,
+      "63": 18902,
+      "72": 13182,
+      "77": 6796,
+      "79": 14807,
+      "100": 80191,
+      "101": 262408,
+      "117": 69273,
+      "128": 29044
+    },
+    "occupied": 769846,
+    "grounded": 769846,
+    "detached": 0,
+    "unanchored_nominal_pruned": 11304,
+    "unknown_materials": 0,
+    "fluids": 0,
+    "reactive": 0
+  },
+  "codec": {
+    "rectangles": 11045,
+    "source_limit": 32768,
+    "setup_bytes": 205992,
+    "source_byte_limit": 1048576,
+    "construction_work": 769846,
+    "source_work_limit": 32000000,
+    "setup_sha256": "ebf2f6d4973888049574c82a3293655c1ac8253bac7005e4decc442f9f677e6a",
+    "overlaps": 0,
+    "replay_mismatches": 0
+  },
+  "routes": {
+    "pass": true,
+    "envelopes": [
+      {
+        "envelope": [
+          19,
+          15
+        ],
+        "reachable_centres": 1167195,
+        "sites": {
+          "spawn_isolation_port": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "salvage_rib_intake": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "bone_mill_ramp": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "high_drift": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "central_shear": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "entered_osteolith_press": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "low_return": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "east_calcifier": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "secondary_valve": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_hoist": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "export_operator": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "finish_relay": {
+            "reachable": true,
+            "approaches": 4
+          }
+        }
+      },
+      {
+        "envelope": [
+          23,
+          19
+        ],
+        "reachable_centres": 1138891,
+        "sites": {
+          "spawn_isolation_port": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "salvage_rib_intake": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "bone_mill_ramp": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "high_drift": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "central_shear": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "entered_osteolith_press": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "low_return": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "east_calcifier": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "secondary_valve": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_hoist": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "export_operator": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "finish_relay": {
+            "reachable": true,
+            "approaches": 4
+          }
+        }
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "reachable_centres": 1080925,
+        "sites": {
+          "spawn_isolation_port": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "salvage_rib_intake": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "bone_mill_ramp": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "high_drift": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "central_shear": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "entered_osteolith_press": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "low_return": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "east_calcifier": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "secondary_valve": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "upper_hoist": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "export_operator": {
+            "reachable": true,
+            "approaches": 4
+          },
+          "finish_relay": {
+            "reachable": true,
+            "approaches": 4
+          }
+        },
+        "restricted": {
+          "high": true,
+          "low": true,
+          "high_with_solid_obstruction": true,
+          "low_with_solid_obstruction": true,
+          "obstruction": [
+            945,
+            509,
+            178,
+            171
+          ]
+        }
+      }
+    ]
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "box": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2099184,
+      "png_sha256": "3f69369264c1d1aa1ee28dc1b793f63fedc464e28816984ebe116a8e76798722",
+      "material_pixel_sha256": "5c1372a7704735d778ab091fffc0037f1bbf98218a3a41f2588c169316178458",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "01-west-rib-intake.png",
+      "box": [
+        0,
+        503,
+        410,
+        455
+      ],
+      "bytes": 187863,
+      "png_sha256": "7918561eb3b7c02a4aa2f67a731ab6f2f4f9041ff79391b644ea8c0d0d1ecfae",
+      "material_pixel_sha256": "15f3b9e6785675fdbce0a5c5cbb44063dde1806ecdd39f8f1a91d7a737215fe9",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "02-osteolith-mill.png",
+      "box": [
+        378,
+        535,
+        403,
+        422
+      ],
+      "bytes": 171346,
+      "png_sha256": "e76b1df74a12e67bdfb8fbf02fd04ae5f5d78b738a19cb50c86e89e046664331",
+      "material_pixel_sha256": "21125a5a10be2f830b58fb63850e43f9dc04e86673c98c327995996a1d3ab31c",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "03-vaulted-shear-head.png",
+      "box": [
+        749,
+        43,
+        510,
+        443
+      ],
+      "bytes": 227236,
+      "png_sha256": "17b4f8bbc1e43a194afd06aafdfcb68cd53de894f5f062f6accc96a26bd136b8",
+      "material_pixel_sha256": "a08781da078a11475ede07690f7e1d8f0d34ee08145e3288390ab870a84ef864",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "04-entered-shear-press.png",
+      "box": [
+        819,
+        698,
+        486,
+        270
+      ],
+      "bytes": 132348,
+      "png_sha256": "876300b012405dd92df8e83d39455d9d660bfab02a6da100772ad1c2a1f02309",
+      "material_pixel_sha256": "9b3460ca6469d6f55cd82014800c0963856c45502d9937f9b17b56d5f9207328",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "05-calcifier-transfer.png",
+      "box": [
+        1284,
+        523,
+        425,
+        445
+      ],
+      "bytes": 190428,
+      "png_sha256": "18b53a6d97ad9aa8b7d6251b6ad733892997087f5f73a5a6f5f0a876fe86e036",
+      "material_pixel_sha256": "0aa28b6b9c1e97107b7742a5effe6ef1d853f8ad45815e43bd83c4ab7a7ca0d8",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    },
+    {
+      "name": "06-extraction-relay.png",
+      "box": [
+        1685,
+        520,
+        363,
+        448
+      ],
+      "bytes": 163930,
+      "png_sha256": "f0f5b6ee7abff6e695e690947fe6c2fbc68b6335bc5788c992ca62db1353b02b",
+      "material_pixel_sha256": "d668d27fbf7b39193d11655280c08f3664fabe819a24883ac8e91f6d0e7c3c86",
+      "signature_crc_zlib_iend_pixel_parity": "PASS"
+    }
+  ],
+  "warnings": [
+    "Author static qualification is not independent Art/Technical/Shepherd acceptance.",
+    "Native installed Workbench/Godot/CyberDemoBridge/Rapier and cold save/reopen NOT TESTED.",
+    "Installed bridge capacity must be checked against source 32768; legacy fallback may be 4096."
+  ]
+}
