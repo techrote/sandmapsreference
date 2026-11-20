@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-frontier-wide",
+  "map_role": "subterranean multi-colony nested-cavity route grammar and event-stage corpus source",
+  "anchor_donors": [],
+  "macro_topology": "three nonidentical excavated bedrock cavities, inter-cavity diaphragms, three sky stacks and an extended lower service return",
+  "density_profile": "dense grounded strata and useful lower industrial modules frame three very large intentional flyable voids; vacant expansion niches deliberately retained",
+  "route_grammar": {
+    "spawn": "West airlock",
+    "primary": "west colony via surface/bore access to central relay and eastern quarantine",
+    "alternatives": [
+      "three-sky-stack surface overflight",
+      "long lower service gallery via west/central/east shafts"
+    ],
+    "tested_site_count": 33,
+    "obstruction": {
+      "site": "Relay cradle",
+      "box": [
+        1014,
+        457,
+        1067,
+        512
+      ],
+      "unaffected_reachable": 32
+    }
+  },
+  "strong_motifs": [
+    "nested elliptical geological cavities",
+    "irregular altitude progression",
+    "distinct fault-jaw and compression-arch throats",
+    "grounded buttresses and a laterally tied rock slab",
+    "three exposed atmospheric intakes",
+    "four different deep-loop equipment islands"
+  ],
+  "interesting_relationships": [
+    "settlements below a shared weather-exposed overland plane",
+    "paired high/low navigation routes separated by dense strata",
+    "machine islands sit near large deliberately unfilled expansion voids",
+    "quarantine and rover dispatch flank the eastern relief shaft"
+  ],
+  "authoring_affordances": [
+    "unused bay near western bore junction",
+    "service loop expansion seams at x626–714 and x1378–1482",
+    "repairable/replaceable geological diaphragms",
+    "vacant cavity mezzanine volumes"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Fault-jaw bridge failure",
+      "area": [
+        566,
+        332,
+        740,
+        435
+      ],
+      "event_type": "collapse/reroute",
+      "scripted": false
+    },
+    {
+      "name": "Central relay activation",
+      "area": [
+        975,
+        447,
+        1110,
+        520
+      ],
+      "event_type": "machine activation",
+      "scripted": false
+    },
+    {
+      "name": "Eastern quarantine stand",
+      "area": [
+        1500,
+        517,
+        1662,
+        615
+      ],
+      "event_type": "NPC holdout",
+      "scripted": false
+    },
+    {
+      "name": "Lower freight arrival",
+      "area": [
+        1500,
+        840,
+        1760,
+        922
+      ],
+      "event_type": "freight/chase",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Demonstrates stratified cave-void carving, route braid via multiple elevation layers, roof-buttress closure, sparse but distinct inhabited workfaces, and negative-space expansion seams.",
+  "similarity_avoidance": "Unlike Vela Rift's exposed asymmetric twin sails, Penumbral Sink's mirrored reflector and Threnody Scar's single foldwing over a rift, the spatial thesis is mostly subterranean: three dissimilar cavity settlements connected by bore and surface passages plus a broad dry understrata return.",
+  "native_status": "NATIVE-UNTESTED",
+  "source_grid_sha256": "95c4062f52694ec7a7664723692014043e8e593f1036ef72a748a7a96fbbbf5a"
+}
