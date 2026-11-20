@@ -16,51 +16,59 @@
   "installed_bridge_legacy_capacity_risk": 4096,
   "material_rule_assumption": "Only accepted inert immovable Solid/None kernels; no powders or liquids",
   "material_histogram": {
-    "49": 12632,
-    "62": 14664,
-    "68": 1764,
-    "100": 346667,
-    "101": 85632
+    "49": 29886,
+    "62": 41312,
+    "63": 4178,
+    "66": 1666,
+    "68": 35430,
+    "77": 432,
+    "79": 1193,
+    "100": 343165,
+    "101": 85632,
+    "121": 970,
+    "129": 2687,
+    "130": 4800,
+    "131": 11476
   },
-  "filled_grounded_cells": 461359,
+  "filled_grounded_cells": 562827,
   "detached_final_cells": 0,
-  "prototype_disconnected_cells_removed": 67809,
-  "prototype_components_removed": 43,
-  "rectangle_count": 243,
-  "rectangle_work": 461359,
-  "setup_bytes": 5475,
-  "grid_sha256": "2259a955bcd963de89b78ea808162962cd7d2d718336ea71bbccf9bb90d2960a",
-  "setup_sha256": "f6ad00a476d8941b2b4597abf36f871f7a692675c2bba6aad2ed3abe23bfbf18",
+  "prototype_disconnected_cells_removed": 12469,
+  "prototype_components_removed": 33,
+  "rectangle_count": 3127,
+  "rectangle_work": 562827,
+  "setup_bytes": 59081,
+  "grid_sha256": "c5bc336a9d53b033ceae2badbf72404692ef06d347d240a0f5329cb4f1fadaea",
+  "setup_sha256": "6370a68d228669c0964fce265e59029945b800cf4a707d0328a488fe019c21a4",
   "images": [
     {
       "name": "overview.png",
-      "bytes": 19537,
-      "sha256": "e8cb2b5e21066919e2c7d87eebba9875e09a62c1411ad7bc7310cad3a30536f3"
+      "bytes": 37016,
+      "sha256": "f76b4a487952045ca4de7bb7ea2098200a1019a70508b6fba0b00fa5fff53918"
     },
     {
       "name": "01-west-inhabited-rover.png",
-      "bytes": 4158,
-      "sha256": "3668653f3632eeb291fcd6c64faf3b27260f6cc0a7ec8edc0047c06b4d3ee38a"
+      "bytes": 5917,
+      "sha256": "aa08e58b9ec761183436d47b491527082b294f73ab64f187cea2829cf483fda3"
     },
     {
       "name": "02-jaw-extraction-frame.png",
-      "bytes": 3090,
-      "sha256": "147c210eab446e6dec1d23e9297600c6bbfdd5990cefa8d1166ba5a8db004b88"
+      "bytes": 13281,
+      "sha256": "6a8f5e0d4949f9763780b9c8462dd22226887c9a4f1cd800896bc1a4862b4115"
     },
     {
       "name": "03-custody-and-receiver.png",
-      "bytes": 1805,
-      "sha256": "a797c217fe3b41cc6527f182f563ac2516ab63d4389f7221613dce4d17ca8a39"
+      "bytes": 9810,
+      "sha256": "c8f366998b007fa0820c7e257facf1bb641fa3818fc26948ffa86843601ce1bf"
     },
     {
       "name": "04-east-quarantine-freight.png",
-      "bytes": 4150,
-      "sha256": "b3f33e9311ab728812b4f21b2b4adc3a7c2bfa311361f431c1c8ec8308c0e69b"
+      "bytes": 5720,
+      "sha256": "805df430908d45c0cfedbb889bb274cb9cabe07216f378e89e7943061efaa8b1"
     },
     {
       "name": "05-deep-ore-service.png",
-      "bytes": 2556,
-      "sha256": "5108f028296235dba259cc1b00b4606f013417728360e83f7cb7603c1dc5ba0b"
+      "bytes": 7023,
+      "sha256": "d255228897a186107b57e7f9df989005fda7aac3690f0db1036174aca3cbce7c"
     }
   ],
   "clearance": [
@@ -69,7 +77,7 @@
         19,
         15
       ],
-      "centres": 1555683,
+      "centres": 1374839,
       "passed": 32,
       "total": 32,
       "bad": []
@@ -79,7 +87,7 @@
         23,
         19
       ],
-      "centres": 1534071,
+      "centres": 1337542,
       "passed": 32,
       "total": 32,
       "bad": []
@@ -89,7 +97,7 @@
         31,
         27
       ],
-      "centres": 1490982,
+      "centres": 1265015,
       "passed": 32,
       "total": 32,
       "bad": []
@@ -109,7 +117,7 @@
         31,
         27
       ],
-      "centres": 1484294,
+      "centres": 1258380,
       "passed": 31,
       "total": 32,
       "bad": [
@@ -295,7 +303,130 @@
       198
     ]
   ],
-  "static_status": "CREATOR-STATIC-PASS",
+  "static_status": "CREATOR-STATIC-PASS-R2",
   "native_status": "NATIVE-UNTESTED",
-  "independent_reviews": "PENDING"
+  "independent_reviews": "R1 functional-art P1 addressed in final physical cells; independent exact-R2 Art/Tech/Shepherd RECHECK REQUIRED",
+  "r2_feature_survival": {
+    "west-interior": {
+      "nongeological_cells": 13792,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "49": 9073,
+        "62": 1118,
+        "77": 384,
+        "79": 468,
+        "121": 287,
+        "130": 1472,
+        "131": 990
+      }
+    },
+    "east-interior": {
+      "nongeological_cells": 13535,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "62": 8736,
+        "63": 1569,
+        "68": 891,
+        "121": 149,
+        "129": 1178,
+        "130": 989,
+        "131": 23
+      }
+    },
+    "west-anchored-jaw": {
+      "nongeological_cells": 20265,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "49": 1039,
+        "62": 4281,
+        "66": 970,
+        "68": 10236,
+        "79": 128,
+        "129": 72,
+        "131": 3539
+      }
+    },
+    "east-anchored-jaw": {
+      "nongeological_cells": 20693,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "49": 5919,
+        "62": 3682,
+        "66": 343,
+        "68": 7517,
+        "77": 48,
+        "129": 760,
+        "131": 2424
+      }
+    },
+    "custody-pickup": {
+      "nongeological_cells": 2864,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "49": 538,
+        "66": 2,
+        "68": 325,
+        "79": 396,
+        "129": 153,
+        "130": 656,
+        "131": 794
+      }
+    },
+    "outfeed-receiver": {
+      "nongeological_cells": 4261,
+      "distinct_nonrock_materials": 7,
+      "histogram": {
+        "49": 532,
+        "62": 533,
+        "66": 447,
+        "68": 1103,
+        "77": 48,
+        "129": 996,
+        "131": 602
+      }
+    },
+    "core-probe": {
+      "nongeological_cells": 3156,
+      "distinct_nonrock_materials": 4,
+      "histogram": {
+        "49": 591,
+        "62": 1197,
+        "68": 137,
+        "131": 1231
+      }
+    },
+    "gear-reducer": {
+      "nongeological_cells": 4519,
+      "distinct_nonrock_materials": 5,
+      "histogram": {
+        "49": 705,
+        "62": 1188,
+        "68": 1255,
+        "79": 329,
+        "131": 1042
+      }
+    },
+    "spectral-array": {
+      "nongeological_cells": 5938,
+      "distinct_nonrock_materials": 4,
+      "histogram": {
+        "62": 1557,
+        "63": 2164,
+        "121": 534,
+        "130": 1683
+      }
+    },
+    "return-hoist": {
+      "nongeological_cells": 5023,
+      "distinct_nonrock_materials": 5,
+      "histogram": {
+        "49": 1753,
+        "62": 1566,
+        "63": 445,
+        "68": 696,
+        "131": 563
+      }
+    }
+  },
+  "creator_revision": "R2 supported two-jaw industrial mechanism and physical workstations 2026-11-20"
 }

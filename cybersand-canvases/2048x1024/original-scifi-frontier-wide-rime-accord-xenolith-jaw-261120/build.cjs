@@ -85,6 +85,52 @@ const build=function build(){
  "East rover freight":[1754,711],"East loading":[1911,709]
  };
  for(let [n,[x,y]] of Object.entries(sites))R(x-23,y-22,47,45,0);
+ 
+  // R2 physically attached workfaces, placed AFTER the destructive late bulk-room and site cuts.
+  // Distinct jaw frame, guarded custody, sheltered workstations and four entered deep machines.
+  L(405,355,900,459,25,M.steel);L(1660,355,1195,455,27,M.titanium);
+  L(900,459,988,426,22,M.chrome);L(1195,455,1150,485,23,M.iron);
+  L(988,426,968,635,19,M.titanium);L(1150,485,1177,638,21,M.steel);
+  for(let j=0;j<6;j++){let y=482+j*26;L(980-j*3,y,950-j*4,y+17,9,M.titanium);L(1132+j*3,y,1175+j*4,y+18,9,M.titanium);}
+  L(968,634,1009,654,11,M.chrome);L(1177,638,1122,656,11,M.chrome);
+  
+ // R2 custody material handoff: anchored guide, captured xenolith, sensor and
+ // gated receiving rack, separated by a full playable centre flight gap.
+ L(971,637,974,682,8,M.iron);R(938,679,82,8,M.ceramic);
+ R(994,662,33,12,M.amber);R(1002,653,17,9,M.black);
+ L(1176,635,1182,679,9,M.steel);R(1158,676,95,9,M.titanium);
+ R(1205,660,36,13,M.black);R(1228,654,8,6,M.signal);
+// Twelve distinct anchored gear stations in six room levels.
+  for(let [x,y] of [[92,470],[280,470],[92,619],[280,619],[92,766],[280,766],
+                     [1724,470],[1870,470],[1724,619],[1870,619],[1724,766],[1870,766]])R(x,y-28,7,28,M.steel);
+  R(99,448,90,11,M.chrome);R(111,436,24,12,M.amber);R(156,429,8,19,M.signal);
+  R(286,448,76,10,M.ceramic);R(300,431,17,17,M.white);
+  L(108,590,162,599,8,M.chrome);R(117,583,48,10,M.black);
+  R(289,587,68,11,M.blue);for(let k=0;k<4;k++)R(299+k*15,575,7,13,M.white);
+  L(96,738,175,746,11,M.iron);R(121,731,18,10,M.amber);
+  R(286,737,76,10,M.ceramic);R(290,725,8,15,M.signal);R(350,725,8,15,M.signal);
+  R(1732,446,73,11,M.blue);R(1747,433,45,12,M.black);
+  R(1877,446,75,11,M.ceramic);for(let k=0;k<4;k++)R(1881+k*17,435,8,10,M.white);
+  R(1732,587,82,10,M.iron);L(1739,587,1773,574,7,M.chrome);
+  R(1878,591,79,9,M.blue);for(let k=0;k<3;k++)R(1886+k*25,576,12,14,M.glass);
+  R(1733,740,78,10,M.chrome);R(1760,723,16,20,M.amber);
+  R(1877,739,78,12,M.titanium);R(1894,720,45,20,M.black);
+  // Four contrasting machinery stations bolted through bedrock top.
+  for(let x of [636,823,1030,1281])R(x,923,9,25,M.steel);
+  R(644,905,84,12,M.chrome);L(650,904,694,878,10,M.iron);R(705,870,22,12,M.white);
+  R(834,900,102,12,M.titanium);L(888,901,907,879,13,M.chrome);L(907,879,930,903,13,M.chrome);R(884,877,22,14,M.amber);
+  R(1043,906,122,10,M.ceramic);for(let i=0;i<6;i++){R(1052+i*17,876,9,29,M.blue);R(1055+i*17,883,3,13,M.white);}
+  R(1293,903,106,11,M.iron);L(1307,902,1319,872,10,M.chrome);L(1319,872,1384,869,10,M.titanium);R(1381,870,12,29,M.blue);
+  
+ // Deep machine feet actually touch the grounded understrata.
+ R(648,911,9,42,M.steel);R(841,907,9,45,M.titanium);
+ R(1052,905,9,47,M.steel);R(1300,904,9,48,M.steel);
+// Conservative exact-centre keepouts; no shifting any site.
+  for(let [,p] of Object.entries(sites))R(p[0]-17,p[1]-15,35,31,0);
+
+ // Preserve an explicit safe slot between the two jaw crown beams.
+ R(1013,378,127,112,0);
+
  // All deposited solids must be boundary-rooted. Prune only disconnected prototypes,
  // then independently verify final connectedness, exact replay and route graph.
  let seen=new Uint8Array(N),q=new Int32Array(N),removed=0,removedGroups=0;
@@ -95,6 +141,34 @@ const build=function build(){
   }
   if(!edge){removedGroups++;removed+=t;for(let z=0;z<t;z++)g[q[z]]=0;}
  }
+
+  // R2 hard fail if any independently distinguishable functional area was
+  // accidentally cleared or pruned. Count FINAL persisted materials, not the
+  // prototype brush calls. Rock/schist cannot satisfy this invariant.
+  const zones=[
+    ["west-interior",80,420,380,775,2000,5],
+    ["east-interior",1700,420,1980,775,2000,5],
+    ["west-anchored-jaw",790,400,1010,670,3500,5],
+    ["east-anchored-jaw",1120,400,1330,670,3500,5],
+    ["custody-pickup",920,630,1035,710,1000,5],
+    ["outfeed-receiver",1140,630,1280,710,1000,5],
+    ["core-probe",630,869,740,940,1200,4],
+    ["gear-reducer",815,869,955,940,1200,4],
+    ["spectral-array",1030,869,1180,940,1200,4],
+    ["return-hoist",1270,865,1420,940,1200,4]
+  ];
+  let r2Features={};
+  for(let [name,x0,y0,x1,y1,minCells,minKinds] of zones){
+    let counts={},total=0;
+    for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++){
+      let m=g[y*W+x];if(!m||m===M.rock||m===M.schist)continue;
+      counts[m]=(counts[m]||0)+1;total++;
+    }
+    let kinds=Object.keys(counts).length;
+    if(total<minCells||kinds<minKinds)throw Error("R2 required functional feature lost "+name+" "+total+"/"+kinds);
+    r2Features[name]={nongeological_cells:total,distinct_nonrock_materials:kinds,histogram:counts};
+  }
+
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(N);
  for(let y=0;y<H;y++){let next=new Map(),b=y*W;for(let x=0;x<W;){let m=g[b+x],s=x;while(x<W&&g[b+x]===m)x++;if(!m)continue;let key=s+":"+(x-s)+":"+m,i=prev.get(key);if(i===undefined){i=rect.length;rect.push([s,y,x-s,1,m]);}else rect[i][3]++;next.set(key,i);}prev=next;}
  for(let [x,y,w,h,m] of rect){area+=w*h;hist[m]=(hist[m]||0)+w*h;for(let j=y;j<y+h;j++)replay.fill(m,j*W+x,j*W+x+w);}
@@ -140,7 +214,7 @@ const build=function build(){
   let b=new Uint8Array(p.reduce((s,x)=>s+x.length,0)),i=0;for(let x of p){b.set(x,i);i+=x.length;}return b;}
  let crops=[["01-west-inhabited-rover",0,306,557,477],["02-jaw-extraction-frame",530,344,990,419],["03-custody-and-receiver",759,440,618,341],["04-east-quarantine-freight",1490,306,558,475],["05-deep-ore-service",484,814,1090,198]];
  let images=[["overview.png",png(0,0,W,H)],...crops.map(([name,x,y,w,h])=>[name+".png",png(x,y,w,h)])];
- return {g,json,rect,hist,area,removed,removedGroups,sites,clearances,blocked,obstacle,crops,images,seed};
+ return {g,json,rect,hist,area,removed,removedGroups,sites,clearances,blocked,obstacle,crops,images,seed,r2Features};
 };
 const hash=function hash(b){if(typeof b==="string")b=Uint8Array.from(b,c=>c.charCodeAt(0));
  const K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
@@ -151,7 +225,7 @@ const hash=function hash(b){if(typeof b==="string")b=Uint8Array.from(b,c=>c.char
   for(let j=0;j<8;j++)h[j]=(h[j]+[a,b,c,d,e,f,g,k][j])>>>0;}
  return h.map(v=>v.toString(16).padStart(8,"0")).join("");
 };
-const receipt=function receipt(a,sha){return {concept:"Rime Accord - Xenolith Jaw Excavator",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"7b03aa437561ec63e31fd09531171360ab60eeb4",map_repo_base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",loader_source_max_rectangles:32768,loader_source_max_json_bytes:1048576,source_work_budget:32000000,installed_bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only accepted inert immovable Solid/None kernels; no powders or liquids",material_histogram:a.hist,filled_grounded_cells:a.area,detached_final_cells:0,prototype_disconnected_cells_removed:a.removed,prototype_components_removed:a.removedGroups,rectangle_count:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,grid_sha256:sha(a.g),setup_sha256:sha(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha(b)})),clearance:a.clearances,obstruction:{xyxy_halfopen:a.obstacle,material_id:58,purpose:"Blocks only Central jaw custody",result:a.blocked},named_sites:a.sites,literal_actor_spawn:a.sites["West rover spawn"],crops:a.crops,static_status:"CREATOR-STATIC-PASS",native_status:"NATIVE-UNTESTED",independent_reviews:"PENDING"};};
+const receipt=function receipt(a,sha){return {concept:"Rime Accord - Xenolith Jaw Excavator",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"7b03aa437561ec63e31fd09531171360ab60eeb4",map_repo_base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",loader_source_max_rectangles:32768,loader_source_max_json_bytes:1048576,source_work_budget:32000000,installed_bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only accepted inert immovable Solid/None kernels; no powders or liquids",material_histogram:a.hist,filled_grounded_cells:a.area,detached_final_cells:0,prototype_disconnected_cells_removed:a.removed,prototype_components_removed:a.removedGroups,rectangle_count:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,grid_sha256:sha(a.g),setup_sha256:sha(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha(b)})),clearance:a.clearances,obstruction:{xyxy_halfopen:a.obstacle,material_id:58,purpose:"Blocks only Central jaw custody",result:a.blocked},named_sites:a.sites,literal_actor_spawn:a.sites["West rover spawn"],crops:a.crops,static_status:"CREATOR-STATIC-PASS-R2",native_status:"NATIVE-UNTESTED",independent_reviews:"R1 functional-art P1 addressed in final physical cells; independent exact-R2 Art/Tech/Shepherd RECHECK REQUIRED",r2_feature_survival:a.r2Features,creator_revision:"R2 supported two-jaw industrial mechanism and physical workstations 2026-11-20"};};
 const a=build(),r=receipt(a,hash);let ok=true;
 for(const [name,data] of [["setup.json",a.json],["receipt.json",JSON.stringify(r,null,2)+"\n"],...a.images]){let expected=typeof data==="string"?Buffer.from(data,"utf8"):Buffer.from(data),f=path.join(__dirname,name);if(process.argv.includes("--verify")){if(!fs.existsSync(f)||!expected.equals(fs.readFileSync(f))){console.error("MISMATCH "+name);ok=false;}}else fs.writeFileSync(f,expected);}
 console.log(JSON.stringify({cells:a.g.length,rectangles:a.rect.length,solid:a.area,sites:Object.keys(a.sites).length,obstruction:a.blocked.bad,hash:r.grid_sha256,verified:ok}));if(!ok)process.exit(1);
