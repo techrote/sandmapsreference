@@ -99,6 +99,24 @@ function materialWorld(){
  R(1724,893,292,13,62);R(1740,852,13,41,58);R(1995,851,13,42,58);
  F(1780,852,69,30,7,117);R(1796,875,35,6,77);R(1816,881,10,14,58);
  R(1865,872,64,13,70);R(1884,885,13,9,58);
+
+ // Authored Midge-scale flight ports, access stairs and incident-recovery galleries.
+ // These are real excavations through walls/roofs, never map-space teleportation.
+ R(255,290,79,85,0); // freight roof's two-sided sky hatch
+ R(350,387,94,140,0); // freight customs side airlock
+ R(794,392,92,164,0); // separator/bell transfer airlock
+ R(921,492,39,92,0); // bell's left throat
+ R(1080,491,43,99,0); // bell's right throat
+ R(1177,402,94,170,0); // retort approach flight
+ R(1590,405,100,177,0); // filter transfer flight
+ R(383,515,45,389,0); // west maintenance descent
+ R(802,540,52,367,0); // separator west/east dry descent
+ R(1203,552,54,348,0); // compressor recovery descent
+ R(1633,553,50,347,0); // filter lower approach
+ R(348,827,70,58,0); // floor-level freight service hatch
+ R(780,827,69,61,0); // cold separator underflow port
+ R(1168,824,71,66,0); // bell's undercroft return door
+ R(1652,829,56,58,0); // media collection return door
  // Literal site envelope excavation (not shifted coordinates or nearest-point lookup).
  for(let [name,x,y] of SITES){for(let yy=y-16;yy<=y+16;yy++)for(let xx=x-19;xx<=x+19;xx++)if(g[yy*W+xx]===3||g[yy*W+xx]===8)throw Error('site hits fluid '+name);R(x-19,y-16,39,33,0)}
  const solid=v=>v!==0&&v!==3&&v!==8;
