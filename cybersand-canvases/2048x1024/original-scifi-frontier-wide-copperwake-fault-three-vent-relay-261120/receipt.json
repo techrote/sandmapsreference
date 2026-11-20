@@ -1,0 +1,381 @@
+{
+  "concept": "Copperwake Fault — Three-Vent Relay Colonies",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 12644353,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "map_repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "loader_source_max_rectangles": 32768,
+  "loader_source_max_json_bytes": 1048576,
+  "source_work_budget": 32000000,
+  "material_rule_assumption": "Only inert immovable Solid/None accepted kernels; no powders or liquids",
+  "material_histogram": {
+    "49": 24720,
+    "62": 28384,
+    "63": 835,
+    "68": 7512,
+    "79": 1165,
+    "100": 545571,
+    "101": 123323,
+    "121": 726,
+    "129": 5436,
+    "130": 4185,
+    "131": 3594
+  },
+  "filled_grounded_cells": 745451,
+  "detached_final_cells": 0,
+  "prototype_disconnected_cells_removed": 12454,
+  "prototype_components_removed": 15,
+  "rectangle_count": 2696,
+  "rectangle_work": 745451,
+  "setup_bytes": 52783,
+  "grid_sha256": "95c4062f52694ec7a7664723692014043e8e593f1036ef72a748a7a96fbbbf5a",
+  "setup_sha256": "0934ad2f1258862e642b6de494355ce23790cfc7a9cdc8314f3c7ddb3adcce1a",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 41980,
+      "sha256": "811a2d455f8dbdfddd23c3d3dbba9523d704e4618c9a27785494d4891239b59c"
+    },
+    {
+      "name": "01-west-colony.png",
+      "bytes": 6613,
+      "sha256": "65b19c85dfeaf659035c0510e7a85e194a462dd6f0c0896bd6885e8990e3948c"
+    },
+    {
+      "name": "02-mid-relay.png",
+      "bytes": 9147,
+      "sha256": "1ad95fa02a21e1885dd2c2bbf7bea71c7392d7ddd382f74d530dad9830a1863e"
+    },
+    {
+      "name": "03-east-quarantine.png",
+      "bytes": 8115,
+      "sha256": "fe5c04fdbada5e066dcf8b1642124c011e8d1e8bb871137e6bbcb05d88cd8acb"
+    },
+    {
+      "name": "04-deep-return.png",
+      "bytes": 7945,
+      "sha256": "655c29828b6bdacef212368789d653bdee7351a3e5d0b4a54ada5fad35bfcb43"
+    },
+    {
+      "name": "05-upper-vent-network.png",
+      "bytes": 7191,
+      "sha256": "19ce2bb45bb052b71301ca29fbfa5a44bd0c02ff0178869dacbb9f9b9893109b"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1198492,
+      "passed": 33,
+      "total": 33,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1162602,
+      "passed": 33,
+      "total": 33,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1091859,
+      "passed": 33,
+      "total": 33,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "xyxy_halfopen": [
+      1014,
+      457,
+      1067,
+      512
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only Relay cradle; all named alternatives remain",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1085136,
+      "passed": 32,
+      "total": 33,
+      "bad": [
+        {
+          "name": "Relay cradle",
+          "xy": [
+            1040,
+            486
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "named_sites": {
+    "West airlock": [
+      191,
+      417
+    ],
+    "West clinic": [
+      364,
+      417
+    ],
+    "West nursery": [
+      456,
+      370
+    ],
+    "West overhead": [
+      332,
+      307
+    ],
+    "West spare bay": [
+      465,
+      496
+    ],
+    "West shaft foot": [
+      317,
+      544
+    ],
+    "West sky vent": [
+      302,
+      232
+    ],
+    "West surface": [
+      132,
+      121
+    ],
+    "Surface transit": [
+      649,
+      127
+    ],
+    "Mid upper intake": [
+      1040,
+      240
+    ],
+    "Mid roof gallery": [
+      1053,
+      354
+    ],
+    "West transfer": [
+      675,
+      476
+    ],
+    "Mid assay": [
+      833,
+      478
+    ],
+    "Relay cradle": [
+      1040,
+      486
+    ],
+    "Mid archive": [
+      1199,
+      494
+    ],
+    "Mid garden": [
+      970,
+      600
+    ],
+    "Mid shaft return": [
+      1046,
+      700
+    ],
+    "Mid deep return": [
+      1044,
+      844
+    ],
+    "East transfer": [
+      1476,
+      477
+    ],
+    "East quarantine": [
+      1598,
+      426
+    ],
+    "East rover service": [
+      1851,
+      427
+    ],
+    "East lift staging": [
+      1715,
+      544
+    ],
+    "East sky vent": [
+      1768,
+      234
+    ],
+    "East lookout": [
+      1919,
+      375
+    ],
+    "East surface": [
+      1917,
+      125
+    ],
+    "Deep west return": [
+      287,
+      846
+    ],
+    "Deep ore sieve": [
+      518,
+      845
+    ],
+    "Deep relay buffer": [
+      902,
+      847
+    ],
+    "Deep assay sampler": [
+      1315,
+      845
+    ],
+    "Deep freight": [
+      1647,
+      845
+    ],
+    "Deep exit": [
+      1813,
+      845
+    ],
+    "West low bypass": [
+      629,
+      844
+    ],
+    "East low bypass": [
+      1418,
+      844
+    ]
+  },
+  "literal_actor_spawn": [
+    191,
+    417
+  ],
+  "crops": [
+    [
+      "01-west-colony",
+      80,
+      265,
+      540,
+      425
+    ],
+    [
+      "02-mid-relay",
+      718,
+      276,
+      680,
+      500
+    ],
+    [
+      "03-east-quarantine",
+      1476,
+      242,
+      572,
+      465
+    ],
+    [
+      "04-deep-return",
+      338,
+      744,
+      1420,
+      240
+    ],
+    [
+      "05-upper-vent-network",
+      174,
+      0,
+      1670,
+      330
+    ]
+  ],
+  "feature_survival": {
+    "West living": {
+      "nongeological_cells": 8330,
+      "histogram": {
+        "49": 2720,
+        "62": 4546,
+        "68": 506,
+        "130": 160,
+        "131": 398
+      }
+    },
+    "Mid assay": {
+      "nongeological_cells": 8314,
+      "histogram": {
+        "49": 1736,
+        "62": 1920,
+        "63": 160,
+        "68": 1568,
+        "121": 240,
+        "129": 1141,
+        "130": 1353,
+        "131": 196
+      }
+    },
+    "Mid archive": {
+      "nongeological_cells": 5434,
+      "histogram": {
+        "49": 1530,
+        "62": 3330,
+        "79": 70,
+        "130": 293,
+        "131": 211
+      }
+    },
+    "East sterile": {
+      "nongeological_cells": 4850,
+      "histogram": {
+        "49": 1649,
+        "62": 2008,
+        "63": 84,
+        "129": 679,
+        "130": 269,
+        "131": 161
+      }
+    },
+    "East freight": {
+      "nongeological_cells": 3841,
+      "histogram": {
+        "49": 29,
+        "68": 2147,
+        "79": 154,
+        "129": 1336,
+        "131": 175
+      }
+    },
+    "Deep loop": {
+      "nongeological_cells": 18131,
+      "histogram": {
+        "49": 4006,
+        "62": 4911,
+        "63": 591,
+        "68": 1965,
+        "79": 541,
+        "121": 486,
+        "129": 2280,
+        "130": 2110,
+        "131": 1241
+      }
+    }
+  },
+  "static_status": "CREATOR-STATIC-PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "Exact-HEAD independent Art/Tech/Shepherd pending",
+  "creator_revision": "New nested-cavern three-vent fault-colony exemplar, 2026-11-20"
+}
