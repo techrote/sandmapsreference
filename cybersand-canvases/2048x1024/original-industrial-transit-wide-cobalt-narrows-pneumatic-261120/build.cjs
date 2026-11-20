@@ -194,6 +194,93 @@ beam(410,749,444,702,12,M.STEEL);
 
 
 
+
+// R2 P1 functional-art repair, 20 November 2026. These actual material cells
+// add physically legible freight transfer and independently identifiable
+// underworks. No scenic art; all routes remain source-exact and full-hull.
+const priorCertifiedGrid=g.slice();
+function crateR2(x,y,w=57,h=24){
+ R(x,y,w,h,M.WALL);R(x+4,y+4,w-8,7,M.STEEL);
+ for(let t=x+14;t<x+w-5;t+=19)R(t,y+12,5,h-15,M.STEEL);
+}
+// Serviced berth with matched manifest containers and mooring-offload yoke.
+R(193,749,207,12,M.STEEL);
+for(let x of [215,273,332])crateR2(x,718,49,23);
+R(396,676,12,80,M.STEEL);L(404,690,436,651,9,M.WALL);
+R(434,651,38,11,M.STEEL);
+// Twin-ram intake, pistons, freight cages and handoff to suction line.
+R(500,653,150,12,M.STEEL);crateR2(542,624,80,26);
+R(534,581,123,11,M.STEEL);crateR2(560,554,67,23);
+R(683,604,43,12,M.STEEL);R(681,620,17,52,M.WALL);
+// Cargo siphon: clamp, sealed loads, discharge receiver and live-pressure desk
+// in the already physically grounded central transfer.
+R(937,476,201,12,M.STEEL);R(971,490,14,27,M.STEEL);
+R(1116,488,12,28,M.WALL);R(964,522,179,12,M.STEEL);
+crateR2(980,535,65,25);crateR2(1065,535,61,25);
+R(973,565,163,12,M.STEEL);R(988,577,17,61,M.WALL);
+R(1118,575,15,62,M.STEEL);R(999,640,136,11,M.STEEL);
+R(1255,570,70,12,M.STEEL);crateR2(1286,583,60,25);
+// Three distinct tiered rail loads and material switch/stop.
+R(1360,612,62,11,M.STEEL);crateR2(1365,586,49,25);
+R(1457,577,67,12,M.STEEL);crateR2(1463,552,51,25);
+R(1535,605,87,12,M.WALL);crateR2(1541,578,53,26);
+L(1475,605,1518,653,9,M.STEEL);
+// Actual enterable customs weighbridge, scanner, tally and dispatch cage.
+R(1757,661,150,13,M.STEEL);R(1782,694,111,12,M.WALL);
+crateR2(1797,635,67,26);R(1776,620,114,11,M.WALL);
+R(1779,631,12,37,M.STEEL);R(1881,630,12,36,M.STEEL);
+R(1894,614,25,75,M.WALL);R(1918,614,13,18,M.STEEL);
+R(1740,722,170,13,M.STEEL);
+// Unlike bare duplicated wheels, five return bays carry separate machinery.
+R(224,947,142,13,M.WALL);R(242,921,18,28,M.STEEL);
+L(260,929,307,929,9,M.WALL);R(310,925,28,22,M.STEEL);
+R(551,945,209,13,M.STEEL);R(596,912,19,37,M.WALL);
+R(621,914,61,12,M.STEEL);R(638,927,40,24,M.WALL);
+R(967,945,246,12,M.STEEL);R(993,914,15,32,M.WALL);
+R(1014,908,69,10,M.WALL);R(1041,918,13,30,M.STEEL);
+L(1080,916,1124,936,9,M.STEEL);
+R(1371,945,243,12,M.STEEL);L(1404,940,1450,915,10,M.WALL);
+R(1509,914,17,34,M.STEEL);
+R(1763,939,181,13,M.STEEL);R(1796,914,20,25,M.WALL);
+R(1822,919,62,12,M.WALL);R(1840,931,37,13,M.STEEL);
+// Grounded original's certified centre paths become actual 31x27 excavation
+// in the new grid, BOTH without and WITH the physical west-berth blockage.
+// No invalid nearest-site path, envelope exception or shifted site is used.
+function protectOriginalPaths(ob){
+ let width=W+1,ii=new Int32Array(width*(H+1));
+ for(let y=1;y<=H;y++){let run=0;for(let x=1;x<=W;x++){
+ run+=priorCertifiedGrid[(y-1)*W+x-1]===0?0:1;
+ ii[y*width+x]=ii[(y-1)*width+x]+run;}}
+ let legal=new Uint8Array(N),parents=new Int32Array(N),queue=new Int32Array(N);
+ parents.fill(-1);
+ for(let y=13;y<H-13;y++)for(let x=15;x<W-15;x++){
+  let l=x-15,t=y-13,r=l+31,b=t+27;
+  if(ii[b*width+r]-ii[b*width+l]-ii[t*width+r]+ii[t*width+l]!==0)continue;
+  if(ob&&l<ob[0]+ob[2]&&r>ob[0]&&t<ob[1]+ob[3]&&b>ob[1])continue;
+  legal[y*W+x]=1;
+ }
+ let spawn=sites["West launch"],root=spawn[1]*W+spawn[0],first=0,last=0;
+ queue[last++]=root;parents[root]=root;
+ while(first<last){let a=queue[first++],y=(a/W)|0;
+  for(let b of [a-W,a+W,a-1,a+1]){
+   if(b<0||b>=N||(Math.abs(b-a)===1&&((b/W)|0)!==y)||!legal[b]||parents[b]!==-1)continue;
+   parents[b]=a;queue[last++]=b;
+  }}
+ let keep=new Uint8Array(N);
+ for(let [name,p] of Object.entries(sites)){
+  let n=p[1]*W+p[0];if(parents[n]===-1)throw Error("previous certified path lost "+name);
+  while(n!==root){
+   let x=n%W,y=(n/W)|0;
+   for(let yy=y-13;yy<=y+13;yy++)keep.fill(1,yy*W+x-15,yy*W+x+16);
+   n=parents[n];
+  }
+ }
+ for(let i=0;i<N;i++)if(keep[i]&&!priorCertifiedGrid[i])g[i]=0;
+}
+protectOriginalPaths(null);
+protectOriginalPaths([177,344,91,84]);
+for(const point of Object.values(sites))R(point[0]-23,point[1]-25,47,51,M.AIR);
+
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
