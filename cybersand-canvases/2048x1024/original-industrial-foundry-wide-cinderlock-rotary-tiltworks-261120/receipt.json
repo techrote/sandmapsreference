@@ -8,40 +8,40 @@
     2048,
     1024
   ],
-  "plane_sha256": "0829682212e54470c0fb83745c11212fb70f922708c8c8964db85addc1ec5be6",
-  "setup_sha256": "f8f3be184a59c51418b112552e289ebc0c963dcfdd09b72e58382103a569fa53",
-  "json_bytes": 53226,
-  "rectangle_count": 2858,
+  "plane_sha256": "493d1d88426df5d7eb39636eec2a8e828b2a174acbf056b1cebd2c623d5c06fd",
+  "setup_sha256": "953f4f82c2fe508349bd9a4d531c2798ef2ad90a05db10b5f5aa3f769cd0bd1f",
+  "json_bytes": 64913,
+  "rectangle_count": 3473,
   "source_rectangle_limit": 32768,
   "possible_installed_fallback_untested": 4096,
-  "construction_work": 918955,
+  "construction_work": 958064,
   "material_histogram": {
-    "0": 1178197,
+    "0": 1139088,
     "3": 8736,
     "8": 34017,
     "57": 9113,
-    "58": 227103,
-    "62": 201605,
-    "65": 71738,
-    "66": 28316,
-    "68": 11314,
-    "69": 1401,
-    "72": 2905,
-    "76": 9571,
-    "77": 2843,
-    "79": 2911,
+    "58": 233644,
+    "62": 196352,
+    "65": 78643,
+    "66": 28259,
+    "68": 18552,
+    "69": 6463,
+    "72": 4701,
+    "76": 11008,
+    "77": 2633,
+    "79": 3923,
     "100": 216964,
-    "104": 44707,
-    "117": 8139,
-    "131": 37572
+    "104": 46002,
+    "117": 17407,
+    "131": 41647
   },
   "ground": {
-    "total": 876202,
-    "rooted": 876202,
+    "total": 915311,
+    "rooted": 915311,
     "detached": 0,
     "repair": {
-      "components": 13,
-      "links": 89,
+      "components": 22,
+      "links": 110,
       "maxSize": 4099,
       "maxLink": 50
     }
@@ -58,8 +58,8 @@
         19,
         15
       ],
-      "valid_centres": 964908,
-      "connected_centres": 726426,
+      "valid_centres": 918884,
+      "connected_centres": 689749,
       "passed": 16,
       "sites": [
         {
@@ -181,8 +181,8 @@
         23,
         19
       ],
-      "valid_centres": 921031,
-      "connected_centres": 698419,
+      "valid_centres": 875716,
+      "connected_centres": 661753,
       "passed": 16,
       "sites": [
         {
@@ -304,8 +304,8 @@
         31,
         27
       ],
-      "valid_centres": 839340,
-      "connected_centres": 643609,
+      "valid_centres": 795739,
+      "connected_centres": 606859,
       "passed": 16,
       "sites": [
         {
@@ -435,8 +435,8 @@
         31,
         27
       ],
-      "valid_centres": 831605,
-      "connected_centres": 635874,
+      "valid_centres": 788004,
+      "connected_centres": 599124,
       "passed": 16,
       "sites": [
         {
@@ -563,7 +563,7 @@
         1024
       ],
       "bytes": 2098812,
-      "sha256": "f117fb2aa9d73bd96464a5565fbc6d798048ada5194b89aad1a3b2c5aa81a1a1"
+      "sha256": "7a05fdd40658fdeb15c8ea1a8afda9b7640060520f36c6aa9eb544485333cc3e"
     },
     "01-ore-reception.png": {
       "crop": [
@@ -573,7 +573,7 @@
         307
       ],
       "bytes": 120518,
-      "sha256": "396890db2a7b704985b894e96a7b1c100346d9b9dbcddeaf31fe60320feed2f9"
+      "sha256": "0ac57c6b1a37921bb819e707993863d0cb8d68604ab6b226cb8c500410d3d0b3"
     },
     "02-canted-rotary-kiln.png": {
       "crop": [
@@ -583,7 +583,7 @@
         376
       ],
       "bytes": 209171,
-      "sha256": "ca0103ac81eabcabe8f1939faafe763eec0089ec2ed2a7f63be52dc515e275f9"
+      "sha256": "8b0e3f3332eb6328778a23a6572e5f0f2b246a4865d1151a2ebbcc948f86cc11"
     },
     "03-crucible-transfer.png": {
       "crop": [
@@ -593,7 +593,7 @@
         321
       ],
       "bytes": 80731,
-      "sha256": "6f11511723b25af9edded33f7bc10cfb9d9c7a1c9b11641d9df8517f01f588c4"
+      "sha256": "7c152bb4b1459375b0846f663d346952b6ead08e7be962d662faf07db8cca72a"
     },
     "04-billet-casting.png": {
       "crop": [
@@ -603,7 +603,7 @@
         316
       ],
       "bytes": 130357,
-      "sha256": "86cef46aebdf6d4da79241aa6213ffa37095ca876e83fad3eac79cebe2debe4d"
+      "sha256": "a35df536b4a797df4b7af4e50f449c1e8fc57f527f8df8654059869b983f4c87"
     },
     "05-sealed-quench.png": {
       "crop": [
@@ -613,7 +613,7 @@
         221
       ],
       "bytes": 59704,
-      "sha256": "c6c78c6450c71c5a63c3432bf6af626bd979eed14cb275d383941d37aaf463bf"
+      "sha256": "536e112ae87e718279860b12b59c5e5cd792db141745c717ae70a0602f8c85c2"
     },
     "06-service-undercroft.png": {
       "crop": [
@@ -623,7 +623,7 @@
         131
       ],
       "bytes": 230003,
-      "sha256": "59cf16a8e94f33e875d8227256ec3da9d08d729ae8e03722ce85abbe45d201c9"
+      "sha256": "344a78e9562ba48fa596f73972fb6c06f7ecc749b0a34821642c52ac2164809b"
     }
   },
   "pixel_material_parity_count": 2923063,
