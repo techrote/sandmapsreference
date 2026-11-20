@@ -203,6 +203,27 @@ function materialWorld(){
  rect(410,539,13,387,58);line(389,522,416,549,12,58);
  rect(398,818,12,110,58);rect(211,309,13,274,58);
  line(328,644,353,579,10,58);
+
+ // R2: source Art-P1 handoffs. Actual grounded inert material, not simulated machinery.
+ // Separate cyclone pickup/cradle/rollers joined to the kiln feed under maintained flight clearance.
+ rect(771,818,132,11,62);
+ line(783,816,832,799,10,117);line(832,799,874,817,10,117);
+ rect(801,786,78,12,70);rect(810,776,15,10,104);rect(856,775,13,11,104);
+ for(let i=0;i<5;i++)rect(803+i*15,795,7,7,76);
+ rect(797,810,12,15,58);rect(881,807,12,20,58);
+ // Differentiated kiln hot-feed/discharge liner to quench staging.
+ rect(1210,821,113,11,62);line(1234,819,1295,804,10,117);
+ rect(1251,791,57,11,104);rect(1260,783,10,8,79);rect(1293,783,10,8,79);
+ rect(1309,803,11,21,58);rect(1320,824,12,16,58);
+ // Entered named deep-return coolant pump/filter and a sealed static return-loop housing.
+ rect(1228,906,144,13,62);rect(1240,914,12,12,58);rect(1356,914,12,12,58);
+ frame(1247,862,71,42,9,68);rect(1262,876,39,8,117);
+ rect(1260,904,11,5,58);rect(1297,904,11,5,58);
+ arc(1274,882,21,18,7,117);rect(1268,875,12,11,77);
+ rect(1302,893,15,10,70);rect(1305,882,8,10,79);
+ line(1314,889,1438,889,9,68);rect(1381,889,12,33,58);
+ line(1438,889,1441,740,9,68);line(1441,741,1456,735,9,68);
+ rect(1242,872,9,6,76);rect(1301,873,9,6,77);
  return g;
 }
 module.exports={W,H,SEED,SITES,CROPS,COLORS,materialWorld};
