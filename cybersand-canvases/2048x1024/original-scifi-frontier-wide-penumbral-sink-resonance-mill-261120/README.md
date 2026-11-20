@@ -1,41 +1,59 @@
-# Penumbral Sink — Split-Mirror Resonance Mill
+# Penumbral Sink - Split-Mirror Resonance Mill (R2)
 
-**Entirely original 2048×1024 CyberSand material-cell level**, never based on reference art. True perpendicular side-elevation geometry. Author-only source-static evidence; **OPEN DRAFT/HOLD, NATIVE-UNTESTED, independent exact-head Art / Technical / Shepherd review requested**.
+**Original 2048x1024 orthographic CyberSand material-cell world. OPEN Draft/HOLD.**
+**Creator source-static PASS; independent R2 Art / Technical / Shepherd pending; NATIVE-UNTESTED.**
 
-## Situation and districts
+## R2 physical art repair
 
-An off-world resonance-milling installation is bored into opposed basalt shelves around a hollow, fractured elliptical acoustic collector. The double-crescent mirror is an actual material structure, broken into entered portals rather than a painted background. Arrival is **West rover arrivals (180,445)**; the playable objective is **East rover freight (1900,779)** by surveying the instrument hall and returning cargo east.
+Independent R1 Art and Shepherd reviews identified two genuine P1 defects, now amended in
+**actual final material cells** rather than caption-only art.
 
-1. **West rover/compression service:** real vehicle receiving, high-pressure drive, controls, sample handling.
-2. **West listening/biomaterial laboratory:** entered chambers, instrument cassettes, protected station and human-scale walkways.
-3. **Split elliptical acoustic reflector:** twin broken baffles, rooted trusses, opened lateral ports and upper observation routes.
-4. **Mill pressure-control and specimen transfer:** separated operational benches, twin lift cords, indexed core handling.
-5. **East quarantine and mineral processing:** physically different isolator, classifier, radiation archive, rover freight.
-6. **Deep quarry return:** four distinguishable ore, rotary pressure, thermal and rover-recovery workfaces.
+* **Inlet -> mill contact -> outfeed:** The central entered workbench now contains an
+  open specimen feed with rollers, a coaxial milling drum and guarded stylus, a distinct
+  receiving cradle with examination cassette, and a real thin tether linking the mirror's
+  measurement channel. All parts are tied to the original mill platform; Midge targets
+  and ring portals are not moved or filled.
+* **Four different deep industrial workfaces:** The lower return now features a stepped
+  core-sampling sieve, a hub-and-ring pressure rotor, a rack of individual sealed
+  specimen cassettes, and an asymmetric rover recovery hoist. These occupy the existing
+  accessible service bays above their rooted deck surfaces.
 
-## Real flight paths
+The original interrupted elliptical dish, inhabited west/east escarpments, upper bypass,
+main basin and underground service return remain unchanged in purpose and topology.
 
-Main: west arrival → main cross-sink passage → ring ports / mill transfer → eastern service hall. Overflight bypass traverses the roof of the broken mirror. Lower basin and deep maintenance return provide separate recovery paths via left and right rescue shafts. Exact 32 named sites and their literal XY centres are in `receipt.json`; no nearest-reachable substitution.
+## Reproducibility and static clearance
 
-The temporary physical obstruction `[1006,547,1067,606]` (XYXY) intentionally isolates *Mill drop transfer* only; the other **31/31** targets remain reachable under the complete **31×27** envelope. All **32/32** exact sites pass baseline exhaustive 4-neighbour flood at **19×15, 23×19, 31×27**.
+* Fixed-seed authoring source: `build.cjs`. Run `node build.cjs --verify` after checkout;
+  the builder includes independent Node crypto SHA256, zlib decode, PNG chunk CRC and
+  every-pixel grid comparison. Run without `--verify` to regenerate.
+* Accepted engine main (read-only): `7b03aa437561ec63e31fd09531171360ab60eeb4`.
+  Sandmapsreference original parent main: `99a166e7fcae45eb22be1740e9f33f62faccbcc7`.
+* Material plane: **2,097,152 final IDs**, SHA256 `131bf0dbf4e32dfa7bd61315cc138b9c827bf88e8d08e42c06d29ff07de06ad5`.
+  Inert grounded cells: **468048 / 468048**, detached: **0**;
+  all authored nonempty IDs are established immobile Solid/None kernel materials.
+* Canonical ordered nonoverlapping rectangles: **3421**, source budget
+  32,768; JSON **64791 bytes** (source max 1 MiB), paint work **468048**
+  (source max 32M). Legacy installed bridge limit of ~4,096 may be insufficient
+  depending on deployed binaries. This does not establish installed capability.
+* Literal named-site traversal **32/32, 32/32, 32/32**
+  for 19x15, 23x19, 31x27 full-envelope cardinal BFS. Physical obstruction at
+  half-open XYXY [1006,547,1067,606] blocks only Mill drop transfer while leaving
+  the other 31 exact destinations reachable via genuine recovery circulation.
+* True indexed material output: 1 complete 2048x1024 overview and five authentic
+  1:1 district crops. No photos, source art, AI rendering or fake native screenshots.
+  Publisher independently decoded **3811728 / 3811728** generated pixels, validating
+  full material index parity, CRC and Adler. The exact committed files should be
+  separately refetched by independent auditors before their verdict.
+* The accepted source supports these edits, but actual Godot/CyberDemoBridge/Rapier
+  load, simulated movement, collision and cold save/reopen remain **NATIVE-UNTESTED**.
 
-## Source-static qualification
+## Exact source-cell gallery
 
-- Accepted CyberSand source: `7b03aa437561ec63e31fd09531171360ab60eeb4` (read-only). Reference repository base: `99a166e7fcae45eb22be1740e9f33f62faccbcc7`.
-- Deterministic builder and fixed seed: `build.cjs`. Run `node build.cjs` to regenerate; `node build.cjs --verify` to compare exact outputs, CRCs, zlib stream and pixel parity.
-- Actual final material plane: **2,097,152 ID cells**, SHA-256 `9ce7895ddbb5b38490c1f1a88c44e29775ce36ab5f8eb38f853c936e3243b604`.
-- **2936** lossless nonoverlapping ordered five-field rectangles, **55681** bytes of Setup-v2 JSON, **452048 / 452048** inert occupied boundary-grounded solids, **0** ungrounded, no fluids/unsafe sand foundations.
-- Authored source loader permits 32,768 rectangles / 1 MiB / 32M paint visits. Installed CyberDemoBridge capability is **not measured**; possible legacy 4,096 capacity must be checked rather than assumed.
-- Creator-side deterministic replay and route checks: **PASS**. No native Godot, Rapier, Midge flight, physics advancement or fresh-process persistence executed; **NATIVE-UNTESTED**.
-- Complete indexed-material authentic PNG overview and five **unscaled 1:1 crops** are generated solely from the final material ID plane. No source art, photographs, AI pictures or Workbench screenshot substitutions.
-
-## Committed indexed-material gallery
-
-![Complete world, 2048×1024](overview.png)
+![Complete 2048x1024 world](overview.png)
 ![West inhabited compressor](01-west-compressor.png)
-![Fractured elliptical acoustic mirror](02-split-mirror.png)
-![Working resonance mill](03-mill-chamber.png)
-![East quarantine and ore service](04-east-quarantine.png)
-![Deep mechanised recovery](05-deep-machinery.png)
+![Interrupted elliptical acoustic reflector](02-split-mirror.png)
+![R2 process: intake, mill and outfeed](03-mill-chamber.png)
+![East entered quarantine](04-east-quarantine.png)
+![R2 differentiated deep workbays](05-deep-machinery.png)
 
-Only this map's own exclusive output directory may be modified. No Ready promotion, merge or owner acceptance is implied.
+Only this existing original-world output folder is altered. No merge or owner acceptance.

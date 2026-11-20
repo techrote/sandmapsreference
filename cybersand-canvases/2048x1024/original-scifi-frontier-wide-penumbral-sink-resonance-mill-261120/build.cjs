@@ -150,6 +150,55 @@ function build(){
  const r2_workcell_anchors={ties:tie_info.ties,longest:tie_info.longest,island_removed};
 
  /* Old generator geometry not used. */
+
+ // PENUMBRAL_R2_REPAIR: independently requested mill-process and lower-return
+ // machinery are physical IDs added AFTER named-site clearance and island repair.
+ // Open upper 31x27 flight envelopes remain empty; all devices are loadbearing
+ // and seat directly on existing deck surfaces or the grounded lower floor.
+ // (A) Mill inlet: open-bed coaxial clamp, offset metering fingers, feed rollers.
+ R(846,665,155,12,M.titanium);R(851,655,146,7,M.chrome);
+ R(858,639,16,14,M.iron);R(877,649,20,5,M.blue);
+ for(let k=0;k<6;k++){R(886+k*17,652,11,8,k&1?M.frost:M.window);}
+ L(860,644,880,621,6,M.conduit);R(875,616,19,12,M.signal);
+ // (B) Central physical milling contact: guarded drum and staggered stylus.
+ R(1002,668,105,14,M.steel);R(1010,661,87,7,M.ceramic);
+ ellipse(1050,643,40,19,M.chrome);ellipse(1050,643,29,13,M.glassDark);
+ ellipse(1050,643,13,6,M.iron);R(1045,635,11,5,M.amber);
+ R(1017,620,9,18,M.conduit);L(1020,620,1046,631,6,M.titanium);
+ R(1084,618,13,23,M.frost);L(1091,616,1111,600,5,M.conduit);
+ // (C) Outfeed: distinct receiving cradle and indexed examination cassette.
+ R(1115,662,104,14,M.ceramic);R(1122,656,93,5,M.chrome);
+ R(1131,636,13,18,M.iron);R(1150,637,43,16,M.window);
+ R(1197,622,13,31,M.signal);R(1162,628,16,8,M.amber);
+ L(1151,638,1131,628,5,M.conduit);
+ // Real readout/tether carried to mirror baffle, without filling ring portal.
+ L(993,612,997,635,5,M.conduit);L(997,635,1013,639,5,M.blue);
+ // Deep bay (1): serrated core-bite assay and a graduated optical sampler.
+ R(619,923,153,13,M.titanium);R(629,914,133,8,M.chrome);
+ for(let k=0;k<6;k++){R(635+k*17,909,10,12,k&1?M.quartz:M.iron);}
+ R(642,899,14,11,M.conduit);L(649,899,676,908,5,M.chrome);
+ // Deep bay (2): pressure rotor with concentric physical hubs/guard.
+ R(836,923,177,13,M.iron);ellipse(910,925,36,18,M.chrome);
+ ellipse(910,925,25,12,M.glassDark);ellipse(910,925,11,7,M.amber);
+ R(960,913,45,16,M.window);R(980,906,11,9,M.signal);
+ // Deep bay (3): upright sealed sample-archive rack, individual glass cassettes.
+ R(1080,924,162,13,M.titanium);R(1092,910,11,14,M.steel);
+ for(let k=0;k<6;k++){let x=1110+k*19;R(x,909,13,17,k&1?M.window:M.frost);R(x+3,906,7,4,M.signal);}
+ R(1224,909,12,16,M.iron);
+ // Deep bay (4): asymmetric rover recovery hitch and low hoist.
+ R(1325,926,153,12,M.ceramic);R(1332,915,29,11,M.iron);
+ L(1363,923,1393,913,7,M.chrome);
+ R(1394,915,58,18,M.glassDark);R(1450,917,12,14,M.amber);
+ R(1461,919,14,11,M.steel);
+ // Distinct non-rock meaningful material must survive into final cell plane.
+ const featureRegions=[
+  ["mill operation",850,615,1224,684,600],
+  ["ore assay",612,905,785,941,250],
+  ["pressure rotor",812,905,1025,941,250],
+  ["archive",1055,904,1262,941,250],
+  ["rover recovery",1300,907,1500,942,250]
+ ];
+ // Component tethering follows; region check happens after it.
  const detail_ties=tieStructures();
  // Compact canonical full-row run vertical coalescing: 5-element ordered edits.
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(g.length);
@@ -216,7 +265,7 @@ const K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923
 const n=(b.length+9+63)&~63,buf=new Uint8Array(n);buf.set(b);buf[b.length]=128;let bits=b.length*8;for(let i=0;i<8;i++){buf[n-1-i]=bits&255;bits=Math.floor(bits/256);}
 let h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19],w=new Uint32Array(64);let rotr=(x,n)=>(x>>>n)|(x<<(32-n));
 for(let off=0;off<n;off+=64){for(let j=0;j<16;j++){let i=off+j*4;w[j]=((buf[i]<<24)|(buf[i+1]<<16)|(buf[i+2]<<8)|buf[i+3])>>>0;}for(let j=16;j<64;j++){let p=w[j-15],q=w[j-2];w[j]=(w[j-16]+(rotr(p,7)^rotr(p,18)^(p>>>3))+w[j-7]+(rotr(q,17)^rotr(q,19)^(q>>>10)))>>>0;}let [a,b0,c,d,e,f,g,z]=h;for(let j=0;j<64;j++){let t1=(z+(rotr(e,6)^rotr(e,11)^rotr(e,25))+((e&f)^(~e&g))+K[j]+w[j])>>>0,t2=((rotr(a,2)^rotr(a,13)^rotr(a,22))+((a&b0)^(a&c)^(b0&c)))>>>0;z=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b0;b0=a;a=(t1+t2)>>>0;}for(let j=0;j<8;j++)h[j]=(h[j]+[a,b0,c,d,e,f,g,z][j])>>>0;}return h.map(n=>n.toString(16).padStart(8,"0")).join("");}
-function makeReceipt(a){return {concept:"Penumbral Sink - Split-Mirror Resonance Mill",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"7b03aa437561ec63e31fd09531171360ab60eeb4",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,resonance_support_anchors:a.r2_workcell_anchors,detail_ties:a.detail_ties,creator_revision:'R1 original acoustic quarry 2026-11-20',nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[1006,547,1067,606],material_id:58,purpose:"Blocks only exact Mill drop transfer; all other named destinations remain recoverable",result:a.bypass},sites:a.sites,accepted_actor_schema:["id","model","hash","spawn","options"],literal_midge_spawn:a.sites["West rover arrivals"],crops:a.crops,source_art:"None. Original quarry, broken elliptical mirror and inhabited machinery",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
+function makeReceipt(a){return {concept:"Penumbral Sink - Split-Mirror Resonance Mill",lane:"original/scifi-frontier-wide",original_no_source:true,seed:a.seed,extent:[2048,1024],material_cell_count:a.g.length,engine_accepted_main:"7b03aa437561ec63e31fd09531171360ab60eeb4",reference_repo_default_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",source_loader_max_rectangles:32768,source_loader_max_setup_bytes:1048576,source_rectangle_work_budget:32000000,bridge_legacy_capacity_risk:4096,material_rule_assumption:"Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",material_histogram:a.hist,filled_material_cells:a.area,grounded_cells:a.rooted,ungrounded_cells:a.unrooted,grounded_components:a.rootedComponents,all_solid_components:a.componentCount,physical_fixture_ties:a.tie_info,resonance_support_anchors:a.r2_workcell_anchors,detail_ties:a.detail_ties,creator_revision:'R2 P1 grounded mill transaction and differentiated deep machinery 2026-11-20',nonoverlapping_ordered_rectangles:a.rect.length,rectangle_work:a.area,setup_bytes:a.json.length,material_plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),images:a.images.map(([name,b])=>({name,bytes:b.length,sha256:sha256(b)})),clearance:a.clearances,physical_obstruction:{cell_box_xyxy:[1006,547,1067,606],material_id:58,purpose:"Blocks only exact Mill drop transfer; all other named destinations remain recoverable",result:a.bypass},sites:a.sites,accepted_actor_schema:["id","model","hash","spawn","options"],literal_midge_spawn:a.sites["West rover arrivals"],crops:a.crops,source_art:"None. Original quarry, broken elliptical mirror and inhabited machinery",static_construction:"PASS",native_status:"NATIVE-UNTESTED",review_status:"Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"};}
 
 if(typeof require!=="undefined"&&require.main===module){
  const fs=require("fs"),path=require("path"),crypto=require("crypto"),zlib=require("zlib");
