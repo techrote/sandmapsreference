@@ -1,0 +1,290 @@
+{
+  "concept": "Kestrel Hollow - Cryogenic Mass Driver",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 2539552,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Only catalogue-supported static inert immobile Solid/None IDs; no powder, fluids, reactive or combustible foundation",
+  "material_histogram": {
+    "49": 12035,
+    "62": 91087,
+    "63": 7386,
+    "66": 4281,
+    "68": 79038,
+    "77": 2476,
+    "79": 876,
+    "100": 178862,
+    "101": 10401,
+    "120": 3041,
+    "121": 2221,
+    "129": 4297,
+    "130": 12907,
+    "131": 20446
+  },
+  "filled_material_cells": 429354,
+  "grounded_cells": 429354,
+  "ungrounded_cells": 0,
+  "grounded_components": 1,
+  "all_solid_components": 1,
+  "physical_fixture_ties": {
+    "ties": 56,
+    "longest": 98
+  },
+  "nonoverlapping_ordered_rectangles": 6903,
+  "rectangle_work": 429354,
+  "setup_bytes": 128549,
+  "material_plane_sha256": "b3f00e8d5a90ee99884437280b6debd01dd5fda256e3a1486997ab62241903f6",
+  "setup_sha256": "0620559fcbda2dab4b102f3769164428b9ac1f9f9babb6c32976c14405edaefc",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 67687,
+      "sha256": "f0d400fb41c0e40713009e80b49b4fc2f4980ebea1c2bf216e4ad8494f6cd373"
+    },
+    {
+      "name": "01-west-intake.png",
+      "bytes": 12467,
+      "sha256": "9c70a07172eace65313281e1abe136067ed3ea1f6faa93273750be2576eaa48d"
+    },
+    {
+      "name": "02-accelerator-gantry.png",
+      "bytes": 15192,
+      "sha256": "d16897236b8b9f0a6d1960134ccbb5a4e29f5e9c90389e867e7a77f7a994974d"
+    },
+    {
+      "name": "03-switching-observatory.png",
+      "bytes": 20558,
+      "sha256": "7dab700265b42bb5d9aee57e0251ec6a8de768686a1dd428146cb53528d3fb1b"
+    },
+    {
+      "name": "04-east-quarantine.png",
+      "bytes": 12234,
+      "sha256": "d320e932433ccbdb51008b811650b0230dd91730cd69f0e12defbc6c494f5da1"
+    },
+    {
+      "name": "05-underground-return.png",
+      "bytes": 9455,
+      "sha256": "42fbdd8c43b047d6a0d07d56c403b1f565e0cad3a928fdb5aa29e9ece8a653d1"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1374589,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1321238,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1219757,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      1082,
+      446,
+      1208,
+      516
+    ],
+    "material_id": 58,
+    "purpose": "Blocks exact Core switching lab; all other named destinations remain recoverable",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1218917,
+        "passed": 25,
+        "total": 26,
+        "bad": [
+          [
+            "Core switching lab",
+            [
+              1053,
+              364
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "West arrivals": [
+      376,
+      626
+    ],
+    "Cryo cartridge intake": [
+      180,
+      481
+    ],
+    "Pilots exchange": [
+      272,
+      610
+    ],
+    "Payload machining": [
+      293,
+      762
+    ],
+    "West service shaft": [
+      366,
+      854
+    ],
+    "Meteorology crown": [
+      736,
+      256
+    ],
+    "Storm sampler": [
+      727,
+      349
+    ],
+    "Telemetry middeck": [
+      735,
+      490
+    ],
+    "Driver west gate": [
+      554,
+      574
+    ],
+    "Coil bank alpha": [
+      820,
+      623
+    ],
+    "Mass driver flight lane": [
+      930,
+      550
+    ],
+    "Core switching lab": [
+      1053,
+      364
+    ],
+    "Upper recovery": [
+      1120,
+      157
+    ],
+    "Coil bank beta": [
+      1272,
+      602
+    ],
+    "Launch nose": [
+      1467,
+      280
+    ],
+    "East quarantine": [
+      1780,
+      470
+    ],
+    "Scrubber transfer": [
+      1910,
+      572
+    ],
+    "Freight handling": [
+      1770,
+      647
+    ],
+    "Condenser plant": [
+      1901,
+      742
+    ],
+    "East ridge exit": [
+      1945,
+      405
+    ],
+    "West bore rescue": [
+      369,
+      920
+    ],
+    "Fossil sorting": [
+      634,
+      909
+    ],
+    "Cable splice vault": [
+      1003,
+      905
+    ],
+    "Thermal return": [
+      1370,
+      919
+    ],
+    "East bore rescue": [
+      1739,
+      904
+    ],
+    "Driver underside": [
+      1080,
+      742
+    ]
+  },
+  "crops": [
+    [
+      "01-west-intake",
+      0,
+      360,
+      560,
+      560
+    ],
+    [
+      "02-accelerator-gantry",
+      430,
+      400,
+      630,
+      470
+    ],
+    [
+      "03-switching-observatory",
+      600,
+      110,
+      730,
+      635
+    ],
+    [
+      "04-east-quarantine",
+      1510,
+      345,
+      538,
+      560
+    ],
+    [
+      "05-underground-return",
+      450,
+      820,
+      1215,
+      204
+    ]
+  ],
+  "source_art": "None; independently invented level design",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Await independent exact-head Art / Technical / Shepherd; Draft/HOLD"
+}
