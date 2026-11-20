@@ -1,0 +1,313 @@
+{
+  "concept": "Graven Keel — Ship-Tipper Crossdock",
+  "original": true,
+  "seed": 152731237,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West tidal ingress",
+      "Keel ledger room",
+      "Hull tipper intake",
+      "Cradle operator bay",
+      "Slipway transfer throat",
+      "Crossdock pick station",
+      "Forked rail switch",
+      "East dispatch loading",
+      "Outbound overlook"
+    ],
+    "upper": [
+      "Tipper upper gantry",
+      "South truss inspection",
+      "Crane bridge crown"
+    ],
+    "lower": [
+      "West bilge recover",
+      "Tipper hydraulic service",
+      "Midspan valve room",
+      "Rail relay rescue",
+      "East tram recovery"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West tidal ingress": [
+      125,
+      425
+    ],
+    "Keel ledger room": [
+      315,
+      476
+    ],
+    "Dry berth interior": [
+      338,
+      695
+    ],
+    "Hull tipper intake": [
+      568,
+      425
+    ],
+    "Tipper upper gantry": [
+      718,
+      174
+    ],
+    "Cradle operator bay": [
+      833,
+      478
+    ],
+    "Tipper keel gallery": [
+      783,
+      659
+    ],
+    "Slipway transfer throat": [
+      960,
+      425
+    ],
+    "South truss inspection": [
+      1120,
+      180
+    ],
+    "Crossdock pick station": [
+      1109,
+      475
+    ],
+    "Crane bridge crown": [
+      1322,
+      196
+    ],
+    "Crossdock cargo bay": [
+      1318,
+      594
+    ],
+    "Forked rail switch": [
+      1478,
+      425
+    ],
+    "Classification underside": [
+      1550,
+      671
+    ],
+    "East dispatch loading": [
+      1783,
+      422
+    ],
+    "Terminal assay bay": [
+      1825,
+      609
+    ],
+    "Outbound overlook": [
+      1953,
+      429
+    ],
+    "West bilge recover": [
+      258,
+      839
+    ],
+    "Tipper hydraulic service": [
+      693,
+      844
+    ],
+    "Midspan valve room": [
+      1119,
+      843
+    ],
+    "Rail relay rescue": [
+      1506,
+      841
+    ],
+    "East tram recovery": [
+      1845,
+      840
+    ]
+  },
+  "material_histogram": {
+    "0": 1551326,
+    "58": 225300,
+    "62": 170802,
+    "100": 149724
+  },
+  "stable_occupied_cells": 545826,
+  "grounded": 545826,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 36157,
+  "rectangles": 6270,
+  "rectangle_work": 545826,
+  "setup_bytes": 114002,
+  "material_plane_sha256": "288ce2183de671411599d2ac36bdb7a6e71d2598c625bc38f3afbe3b015caeec",
+  "setup_sha256": "5113d095025c6e99a9f653452ecbd4a1696e1c810c15e9fedee4c44cfedd0a0f",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 841167,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 805959,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 739903,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      169,
+      363,
+      75,
+      111
+    ],
+    "from": "West tidal ingress",
+    "to": "Keel ledger room",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 22,
+    "unreachable": [],
+    "distance_before_after": [
+      241,
+      263
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "09c0a83bd84106fc73b09909c376db34a272f0802b734d61d6b2d3a34d0d65c8",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-tidal-berth",
+      "rect": [
+        112,
+        440,
+        354,
+        399
+      ],
+      "bytes": 36095,
+      "sha256": "663fd46d7d1fa832f9d2e3bc9e2d5f9046fb89c19e82e067e709859f78144639",
+      "pixel_parity": 141246
+    },
+    {
+      "name": "02-tipped-hull",
+      "rect": [
+        490,
+        128,
+        431,
+        677
+      ],
+      "bytes": 73983,
+      "sha256": "f21259ac0db92edf5074407b5e847ed2020458e5b0ffd866c381257ba7022b1c",
+      "pixel_parity": 291787
+    },
+    {
+      "name": "03-crossdock",
+      "rect": [
+        925,
+        144,
+        458,
+        642
+      ],
+      "bytes": 74662,
+      "sha256": "6f81d7c5e8f9386772c29e50db7323378361660bc72ed8e5b6c991512b069c6e",
+      "pixel_parity": 294036
+    },
+    {
+      "name": "04-rail-sorter",
+      "rect": [
+        1370,
+        450,
+        330,
+        333
+      ],
+      "bytes": 28157,
+      "sha256": "7ffa0a9c3c8af86d6421e02d4a017aca11dd690697453a760e24585c793daf6f",
+      "pixel_parity": 109890
+    },
+    {
+      "name": "05-customs",
+      "rect": [
+        1700,
+        415,
+        348,
+        381
+      ],
+      "bytes": 33713,
+      "sha256": "611759bea9cee2040e361ec83f965f48bd556a4df0f85552af8402957d479ec0",
+      "pixel_parity": 132588
+    },
+    {
+      "name": "06-underworks",
+      "rect": [
+        920,
+        774,
+        547,
+        250
+      ],
+      "bytes": 34685,
+      "sha256": "2976b9e0f08b8b72d850df825392aeff21bf93e342da381474c8b5eeda58a32b",
+      "pixel_parity": 136750
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "installed_fallback_risk": 4096,
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+}
