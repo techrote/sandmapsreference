@@ -1,0 +1,311 @@
+{
+  "concept": "Nacre Fault - Biofoundry Cableway",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 2536736,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "reference_repo_default_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_loader_max_rectangles": 32768,
+  "source_loader_max_setup_bytes": 1048576,
+  "source_rectangle_work_budget": 32000000,
+  "bridge_legacy_capacity_risk": 4096,
+  "material_rule_assumption": "Accepted catalog inert static solid IDs only (Basalt/Obsidian and architectural solids), no fluid or reactive foundation",
+  "material_histogram": {
+    "49": 8246,
+    "62": 41281,
+    "63": 10070,
+    "66": 18351,
+    "68": 43824,
+    "77": 896,
+    "79": 732,
+    "100": 206151,
+    "101": 12054,
+    "120": 10498,
+    "121": 6521,
+    "129": 10722,
+    "130": 7457,
+    "131": 14901
+  },
+  "filled_material_cells": 391704,
+  "grounded_cells": 391704,
+  "ungrounded_cells": 0,
+  "grounded_components": 1,
+  "all_solid_components": 1,
+  "physical_fixture_ties": {
+    "ties": 91,
+    "longest": 104
+  },
+  "final_anchor_ties": {
+    "ties": 1,
+    "longest": 47
+  },
+  "p1_functional_workcell_anchors": {
+    "ties": 14,
+    "longest": 3
+  },
+  "creator_revision": "R2 distinct material-cell workfaces responding to the 2026-11-20 exact-HEAD Shepherd P1; original travel graph and named centres retained",
+  "nonoverlapping_ordered_rectangles": 4623,
+  "rectangle_work": 391704,
+  "setup_bytes": 86643,
+  "material_plane_sha256": "12b9e615b0f7dd47029ef615b4daf5dd9abc1d92027d5fa4fcbd981d094dc85b",
+  "setup_sha256": "337d696bac9ab7b6b9312b0482bca3f081ade55df50c89a8d5d48e414dc42e3d",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 54904,
+      "sha256": "85e03e4ec45fa1d7698a02662da1d1439b74efd6370fcd6e0371dba797e2d6cd"
+    },
+    {
+      "name": "01-west-rover.png",
+      "bytes": 10511,
+      "sha256": "b324c141b7dacbf466e739316e64f8e4cdb82bb2ac005acd1d83891cd8fa89bc"
+    },
+    {
+      "name": "02-seedfoundry.png",
+      "bytes": 11223,
+      "sha256": "c434a956255368dfe59d26639f66b603621fd2ab3b9e18aa7c9feac85404a526"
+    },
+    {
+      "name": "03-cable-transfer.png",
+      "bytes": 4536,
+      "sha256": "6bb94510d32b59ad0399fce019f21d681e4b0cd3ffed90715f7ca40eba597008"
+    },
+    {
+      "name": "04-xenoculture.png",
+      "bytes": 8015,
+      "sha256": "22672c0acde67ccbe108ced66a0a73b291c8f9a40538f46caac391c0870773be"
+    },
+    {
+      "name": "05-east-quarantine.png",
+      "bytes": 10084,
+      "sha256": "4a676c186cba03619db10db68b313f60d6f29a402c18283993413bb5b00dd9f0"
+    },
+    {
+      "name": "06-underfault.png",
+      "bytes": 8453,
+      "sha256": "baf21a3cb41f9a8d518a74afaf6859d24907abce1cfc2e0113891c33332a2e3a"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1479768,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1435007,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1349055,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "cell_box_xyxy": [
+      964,
+      495,
+      1039,
+      557
+    ],
+    "material_id": 58,
+    "purpose": "Blocks only literal central Midline service hatch; all other sites recover over the high guideway and below the fault",
+    "result": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "centres": 1341620,
+        "passed": 25,
+        "total": 26,
+        "bad": [
+          [
+            "Midline service hatch",
+            [
+              1000,
+              526
+            ],
+            false
+          ]
+        ]
+      }
+    ]
+  },
+  "sites": {
+    "West rover checkpoint": [
+      228,
+      552
+    ],
+    "Rover crane": [
+      159,
+      412
+    ],
+    "Biofoundry assay": [
+      211,
+      652
+    ],
+    "Specimen freezer": [
+      261,
+      793
+    ],
+    "West cliff turnout": [
+      466,
+      731
+    ],
+    "Winch lookout": [
+      527,
+      365
+    ],
+    "Upper guideway west": [
+      700,
+      324
+    ],
+    "Seedfoundry entry": [
+      773,
+      521
+    ],
+    "Seedfoundry lower lab": [
+      810,
+      630
+    ],
+    "Midline service hatch": [
+      1000,
+      526
+    ],
+    "Lagrange transfer": [
+      1006,
+      360
+    ],
+    "Cableway sky recovery": [
+      1023,
+      120
+    ],
+    "Xenoculture east": [
+      1233,
+      527
+    ],
+    "Quarantine research pod": [
+      1252,
+      627
+    ],
+    "Upper guideway east": [
+      1379,
+      330
+    ],
+    "East aero stairs": [
+      1507,
+      706
+    ],
+    "Eastern decon": [
+      1760,
+      440
+    ],
+    "East xenoculture library": [
+      1841,
+      570
+    ],
+    "Freight battery room": [
+      1815,
+      710
+    ],
+    "East descent": [
+      1748,
+      905
+    ],
+    "Underfault geoarchive": [
+      606,
+      914
+    ],
+    "Return pump plant": [
+      866,
+      914
+    ],
+    "Biomass reclaimed store": [
+      1151,
+      914
+    ],
+    "Deep climatology": [
+      1451,
+      915
+    ],
+    "Open basin recovery": [
+      1027,
+      794
+    ],
+    "Ridge observation": [
+      1822,
+      365
+    ]
+  },
+  "crops": [
+    [
+      "01-west-rover",
+      0,
+      310,
+      500,
+      574
+    ],
+    [
+      "02-seedfoundry",
+      534,
+      268,
+      435,
+      506
+    ],
+    [
+      "03-cable-transfer",
+      907,
+      275,
+      277,
+      469
+    ],
+    [
+      "04-xenoculture",
+      1109,
+      285,
+      446,
+      490
+    ],
+    [
+      "05-east-quarantine",
+      1590,
+      346,
+      458,
+      546
+    ],
+    [
+      "06-underfault",
+      468,
+      843,
+      1150,
+      181
+    ]
+  ],
+  "source_art": "None; original science fiction level geometry",
+  "static_construction": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "review_status": "Independent exact-head Art / Technical / Shepherd pending; Draft/HOLD"
+}
