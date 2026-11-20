@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-transit-wide",
+  "lane": "industrial-transit-wide",
+  "map_role": "Asymmetric freight transfer between a harbour settlement and distant rail/customs settlement across a nested dry ravine",
+  "anchor_donors": [],
+  "macro_topology": "Braided upper and lower cross-rift bridges, isolated middle island, two asymmetrically developed settlements, and a connected deep recovery gallery",
+  "density_profile": "Dense west ship-and-counterweight, deliberately open suspended ravine, dense east rail-classification and inspection, thin underworks",
+  "route_grammar": {
+    "main": "West mooring → mid-height open-air service ribbon → East dispatch",
+    "upper": "Four reached overhead maintenance galleries",
+    "braided": "High bridge and broken lower service spur produce genuine different interwoven routes",
+    "lower": "Deep recovery gallery with vertical return shafts and optional edit niches",
+    "detour": "Source-grid solid obstruction on approach produces real path-length increase with all sites retained"
+  },
+  "strong_motifs": [
+    "tapered drylocked cargo freighter with entered hull",
+    "two unequally placed counterweight drums",
+    "two nonparallel crossing freight bridges",
+    "an actual interrupted lower span",
+    "asymmetric ravine-island basalt load path",
+    "stepped eastern classifier and inspection towers"
+  ],
+  "interesting_relationships": [
+    "The high viaduct is mostly suspended over a vast editable gorge void",
+    "The missing lower span is visible directly below the serviceable high bridge",
+    "Eastern dispatch levels descend while western dock/hoist rises",
+    "Deep maintenance passages pass under disconnected topographical districts, returning through multiple shafts"
+  ],
+  "authoring_affordances": [
+    "Open cross-rift space reserved for later SWARM/GENTEK bridge modules",
+    "Broken lower-service-bridge seam suitable for human extension or collapse event",
+    "Sparse middle-island interior for procedural machinery",
+    "Lightly provisioned recovery niches deliberately left editable"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Lower-bridge severance",
+      "at": [
+        1004,
+        666
+      ],
+      "kind": "collapse / chase",
+      "geometry": "Unconnected rail ends with another reachable route overhead; no scripted collapse"
+    },
+    {
+      "name": "Counterweight actuator",
+      "at": [
+        576,
+        365
+      ],
+      "kind": "activation / holdout",
+      "geometry": "Visible inert paired drum at an entered maintenance aperture"
+    },
+    {
+      "name": "Gorge island",
+      "at": [
+        1080,
+        790
+      ],
+      "kind": "reveal / ambush / modular-construction",
+      "geometry": "Central nested partly excavated basalt mass with deep return"
+    },
+    {
+      "name": "Customs dispatch",
+      "at": [
+        1840,
+        654
+      ],
+      "kind": "arrival / NPC exchange",
+      "geometry": "Rail-to-measuring-platform handoff in the east terminal"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Braided independent freight route alternatives versus one straight arch",
+    "Asymmetric double settlement load adjacency",
+    "Deliberately severed yet safely bypassable lower bridge",
+    "Three vertically overlapping route layers with actual free-hull portals",
+    "Large negative-space allocation adjacent to compact functional districts"
+  ],
+  "similarity_avoidance": "Unlike Orison's single central ring, Nacre's stacklift or Calder's stepped continuous inclines, this design uses a separated basalt island and two nonparallel bridges, with an unfinished lower span and wide largely unbuilt central basin.",
+  "material_contract": {
+    "extent": [
+      2048,
+      1024
+    ],
+    "ids": [
+      0,
+      58,
+      62,
+      100
+    ],
+    "native_behavior": "static inert solids; no mobile fluids",
+    "actor": "Midge",
+    "envelopes": [
+      [
+        19,
+        15
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        31,
+        27
+      ]
+    ]
+  },
+  "source_static_status": "QUALIFIED",
+  "native_status": "NATIVE-UNTESTED",
+  "receipts": "receipt.json"
+}
