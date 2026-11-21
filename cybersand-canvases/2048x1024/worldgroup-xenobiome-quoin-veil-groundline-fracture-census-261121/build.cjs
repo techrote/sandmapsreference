@@ -104,6 +104,9 @@ const build=function build(){
   [342,928,1735,928,88],[882,651,882,810,83],
   [1431,652,1431,810,83],[1069,809,1069,928,82],
   [950,808,972,859,48]])L(x,y,X,Y,t,0);
+ // Roofline high bypass across the two grounded instrument compound walls:
+ // a separate, broad Midge fly-through around the central census interlock.
+ L(515,650,515,500,95,0); L(515,500,811,500,95,0); L(811,500,811,651,95,0);
  const sites={
  "West census rover arrival":[125,651],"West inhabited bunks":[235,651],
  "West assay sorters":[402,651],"West service throat":[342,753],

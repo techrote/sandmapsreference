@@ -1,0 +1,311 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Quoin Veil Survey Network",
+  "sibling": 3,
+  "role": "Groundline Fracture Census Commons / Settled Survey Infield",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "d5b0371501eb7ccd32c261f738b4a2612218fbc1",
+  "donor_design_language": [
+    "wide-sable-quoin-gravitic-core",
+    "wide-threnody-scar-foldwing-seedlift"
+  ],
+  "no_geometry_donated": true,
+  "seed": "quoin-veil-groundline-census-261121-v1",
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 13525,
+    "62": 11538,
+    "66": 6080,
+    "68": 17647,
+    "77": 2546,
+    "100": 238688,
+    "101": 59663,
+    "120": 2760,
+    "129": 1823,
+    "131": 5735
+  },
+  "occupied_cells": 360005,
+  "grounded_cells": 360005,
+  "unrooted_cells": 0,
+  "connected_solid_components": 1,
+  "tie_structures": {
+    "ties": 33,
+    "longest": 92,
+    "raw_components": 34
+  },
+  "lossless_rectangles": 1454,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 360005,
+  "setup_bytes": 28064,
+  "plane_sha256": "d07814ecd5e81bd03681bc02488387be911927175a602391bebcf0bc3113f98a",
+  "setup_sha256": "85ad5014db03efc46f84d3ecca864d41ca8466c3226c123c638f5853f90e7bd6",
+  "literal_sites": {
+    "West census rover arrival": [
+      125,
+      651
+    ],
+    "West inhabited bunks": [
+      235,
+      651
+    ],
+    "West assay sorters": [
+      402,
+      651
+    ],
+    "West service throat": [
+      342,
+      753
+    ],
+    "West shallow fracture": [
+      522,
+      651
+    ],
+    "Nomad transponder niche": [
+      644,
+      651
+    ],
+    "Infield census west": [
+      780,
+      651
+    ],
+    "Census commons centre": [
+      920,
+      651
+    ],
+    "Groundline census interlock": [
+      1007,
+      651
+    ],
+    "East sample court": [
+      1144,
+      651
+    ],
+    "Offset fault overpass": [
+      1207,
+      651
+    ],
+    "Vacant lab append seam": [
+      1392,
+      651
+    ],
+    "East habitat corridor": [
+      1545,
+      651
+    ],
+    "Quarantine thresh": [
+      1670,
+      651
+    ],
+    "Seed custody docks": [
+      1805,
+      651
+    ],
+    "Broken satellite store": [
+      1900,
+      651
+    ],
+    "Far east evacuation": [
+      1963,
+      651
+    ],
+    "Underwest loop entry": [
+      342,
+      810
+    ],
+    "West tunnel relay": [
+      560,
+      810
+    ],
+    "Infield underside assay": [
+      850,
+      810
+    ],
+    "Undercommons branch": [
+      1069,
+      810
+    ],
+    "Eastern underroute sort": [
+      1380,
+      810
+    ],
+    "East loop ascent": [
+      1735,
+      810
+    ],
+    "Deep western branch": [
+      342,
+      928
+    ],
+    "Deep service rest": [
+      628,
+      928
+    ],
+    "Deep bypass junction": [
+      1069,
+      928
+    ],
+    "Deep east service": [
+      1493,
+      928
+    ],
+    "Deep east rescue": [
+      1735,
+      928
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1585367,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1547781,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1479349,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      974,
+      612,
+      1041,
+      690
+    ],
+    "expected_blocked_site": "Groundline census interlock",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1474454,
+      "passed": 27,
+      "total": 28,
+      "bad": [
+        {
+          "name": "Groundline census interlock",
+          "point": [
+            1007,
+            651
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "extent": [
+        2048,
+        1024
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "bytes": 28497,
+      "sha256": "3e3dab8a5b1efa857b119af7661d543bf3deb8f637deb1143320a65dbda90d7c",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "01-west-inhabited-assay.png",
+      "extent": [
+        494,
+        272
+      ],
+      "origin": [
+        53,
+        517
+      ],
+      "bytes": 4646,
+      "sha256": "6be7d9ab283c8060627430d2a35d311c63cb2f9c6b8527923debe3b7569b3350",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "02-settled-census-infield.png",
+      "extent": [
+        553,
+        271
+      ],
+      "origin": [
+        570,
+        514
+      ],
+      "bytes": 5107,
+      "sha256": "4cfc96df851378af42fbea05e0048f0233f8800c0841b87cbb42752cf4d75172",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "03-offset-faults-court.png",
+      "extent": [
+        449,
+        312
+      ],
+      "origin": [
+        1022,
+        551
+      ],
+      "bytes": 3790,
+      "sha256": "ce598ecbefe050d589f5001dd4848a20cde9b1d678b0a8f2271dc35fe954f786",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "04-quarantine-damaged-store.png",
+      "extent": [
+        567,
+        281
+      ],
+      "origin": [
+        1471,
+        539
+      ],
+      "bytes": 5421,
+      "sha256": "12da898b6fdc2040f62249b80ccf699dd37b9176bfc4ba5862b7cc6bfaa4dd31",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "05-dry-twin-service-loop.png",
+      "extent": [
+        1468,
+        240
+      ],
+      "origin": [
+        303,
+        757
+      ],
+      "bytes": 4648,
+      "sha256": "03f70040463997be6a51d031f3d0df76afbbfe82c2b6dc92246e6a507a351662",
+      "indexed_material_pixel_parity": "PASS"
+    }
+  ],
+  "source_static": "CREATOR-STATIC-PASS",
+  "independent_art_technical_shepherd": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "DRAFT/HOLD"
+}

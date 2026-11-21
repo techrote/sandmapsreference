@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Quoin Veil Survey Network",
+  "lane": "Xenobiome / Frontier Clusters",
+  "map_role": "Sibling 03 — Groundline Fracture Census Commons / Settled Survey Infield",
+  "anchor_donors": [
+    {
+      "anchor": "wide-sable-quoin-gravitic-core",
+      "design_language": "seismic registration and gravimetric survey stations, not coordinates or geometry"
+    },
+    {
+      "anchor": "wide-threnody-scar-foldwing-seedlift",
+      "design_language": "quarantine handling, xenoseed custody and diagnostic materials, not routes or structures"
+    }
+  ],
+  "macro_topology": [
+    "multi_settlement",
+    "yard"
+  ],
+  "density_profile": "alternating inhabited roof clusters and lightly instrumented shallow fault openings; a deep, sparse double-service-loop",
+  "route_grammar": {
+    "primary": "Long inhabited groundline West census rover arrival → west assay → central commons → eastern quarantine → Far east evacuation",
+    "alternate": "Dry upper service lane around below-ground census infield, plus separated deeper rescue lane and two end lifts; roofline overpass avoids western transponder closure",
+    "branching": "Local end shafts, infield drops, long lower loop, mid-route rejoin, and one short intentional non-through instrument niche"
+  },
+  "strong_motifs": [
+    "distributed low-rise inhabited census roofs",
+    "low geological fracture bridging",
+    "seismic transponder and isotope sorters",
+    "paired long parallel underground service lines",
+    "damaged freestanding eastern satellite store",
+    "quarantine seed custody slots"
+  ],
+  "interesting_relationships": [
+    "Three offset surface settlements share distinct local workfaces, not one flagship machine",
+    "Long flat horizontal groundline is interrupted by shallow geological fractures, with large open editing intervals",
+    "Parallel deep lanes connect at both ends and via a central lift, supplying a genuine interlock bypass",
+    "Broken east satellite structure contrasts with fully inhabited census and quarantine clusters"
+  ],
+  "authoring_affordances": [
+    {
+      "site": "Western transponder shoulder",
+      "point": [
+        644,
+        651
+      ],
+      "use": "Underdeveloped civil utility seam for further sampling or NPC services"
+    },
+    {
+      "site": "Vacant assay append seam",
+      "point": [
+        1392,
+        651
+      ],
+      "use": "Explicit open expansion bay, side workface or procedural modular connector"
+    },
+    {
+      "site": "Twin service lane / lower dry bypass",
+      "point": [
+        1069,
+        928
+      ],
+      "use": "Edit and reroute sheltered staging / chase / repair without filling the entire lower void"
+    },
+    {
+      "site": "Damaged east satellite",
+      "point": [
+        1900,
+        651
+      ],
+      "use": "Vacant damaged outbuilding for manual reconstruction, collapse or scripted salvage"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Census interlock interruption",
+      "center": [
+        1007,
+        651
+      ],
+      "kind": "obstruction or checkpoint failure",
+      "exits": "Roofline flyover and subterranean service loop; verified all other 27 sites accessible after obstruction"
+    },
+    {
+      "name": "Civic census hall encounter",
+      "center": [
+        920,
+        651
+      ],
+      "kind": "NPC settlement / arrival",
+      "exits": "Groundline west/east, central undercommons drop"
+    },
+    {
+      "name": "Vacant assay append",
+      "center": [
+        1392,
+        651
+      ],
+      "kind": "manual modular lab expansion",
+      "exits": "Primary groundline and nearby eastern underroute drop"
+    },
+    {
+      "name": "Broken satellite reclaim",
+      "center": [
+        1900,
+        651
+      ],
+      "kind": "damaged landmark / repair or ambush",
+      "exits": "Quarantine groundline and far-east evacuation"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Low-rise distributed habitat grammar rather than giant central devices or cliff-edge opposition",
+    "Shallow geological interruptions bridged by grounded civil spans",
+    "Layered service-loop, long horizontal travel and alternate roofline circulation",
+    "Deliberate unfinished/damaged peripheral structures as human-edit or event sources"
+  ],
+  "similarity_avoidance": "Unlike Quoin Veil 01's facing suspended V crater and Quoin Veil 02's steep buried multi-cavity ascent, this sibling is shallow, horizontally connected and inhabited in separated clusters. It explicitly avoids triple hanging platforms, large central cavities, giant collimator machinery and repeating tall masts.",
+  "diversity_axes": {
+    "macro_topology": [
+      "multi_settlement",
+      "yard"
+    ],
+    "altitude_grammar": [
+      "tri_level"
+    ],
+    "density_cadence": [
+      "alternating"
+    ],
+    "route_structure": [
+      "loop",
+      "parallel_lanes",
+      "layered"
+    ],
+    "landmark_family": [
+      "bridge",
+      "gate"
+    ],
+    "support_form": [
+      "floor_rooted",
+      "mixed"
+    ],
+    "environment_relation": [
+      "geological",
+      "biological",
+      "damaged"
+    ],
+    "incompleteness": [
+      "editable_gaps",
+      "damaged",
+      "modular_append_zones"
+    ]
+  },
+  "geometry_evidence": {
+    "literal_sites": {
+      "West census rover arrival": [
+        125,
+        651
+      ],
+      "West inhabited bunks": [
+        235,
+        651
+      ],
+      "West assay sorters": [
+        402,
+        651
+      ],
+      "West service throat": [
+        342,
+        753
+      ],
+      "West shallow fracture": [
+        522,
+        651
+      ],
+      "Nomad transponder niche": [
+        644,
+        651
+      ],
+      "Infield census west": [
+        780,
+        651
+      ],
+      "Census commons centre": [
+        920,
+        651
+      ],
+      "Groundline census interlock": [
+        1007,
+        651
+      ],
+      "East sample court": [
+        1144,
+        651
+      ],
+      "Offset fault overpass": [
+        1207,
+        651
+      ],
+      "Vacant lab append seam": [
+        1392,
+        651
+      ],
+      "East habitat corridor": [
+        1545,
+        651
+      ],
+      "Quarantine thresh": [
+        1670,
+        651
+      ],
+      "Seed custody docks": [
+        1805,
+        651
+      ],
+      "Broken satellite store": [
+        1900,
+        651
+      ],
+      "Far east evacuation": [
+        1963,
+        651
+      ],
+      "Underwest loop entry": [
+        342,
+        810
+      ],
+      "West tunnel relay": [
+        560,
+        810
+      ],
+      "Infield underside assay": [
+        850,
+        810
+      ],
+      "Undercommons branch": [
+        1069,
+        810
+      ],
+      "Eastern underroute sort": [
+        1380,
+        810
+      ],
+      "East loop ascent": [
+        1735,
+        810
+      ],
+      "Deep western branch": [
+        342,
+        928
+      ],
+      "Deep service rest": [
+        628,
+        928
+      ],
+      "Deep bypass junction": [
+        1069,
+        928
+      ],
+      "Deep east service": [
+        1493,
+        928
+      ],
+      "Deep east rescue": [
+        1735,
+        928
+      ]
+    },
+    "roofline_bypass": "West assay x515 to census vestibule x811 at y500 before rejoining groundline",
+    "service_entrances": [
+      [
+        342,
+        810
+      ],
+      [
+        1735,
+        810
+      ]
+    ],
+    "verified_obstruction": {
+      "box": [
+        974,
+        612,
+        1041,
+        690
+      ],
+      "blocked": "Groundline census interlock",
+      "other_sites_reachable": 27
+    }
+  }
+}
