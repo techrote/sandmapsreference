@@ -23,9 +23,9 @@ The deterministic fixed-seed builder regenerates `setup.json`, `receipt.json`, `
 - Source public grid SHA-256 `de56ecc67744576902ff681768932747cf291608b89adc5078730fc2bfc3f9a3` (source PR claim).
 - Portrait base `sandmapsreference/main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`.
 - Accepted CyberSand read-only schema/material/actor authority `techrote/cybersand/main@69209acaffb34ebe18c45e19290b5976b7fb2c82`.
-- Portrait plane SHA-256 `f770b78e2c84be82874b57d8545f9dae756ef6b7a56937c2dc54c8a39d44992f`; full material cells 2,097,152.
-- Lossless disjoint rectangles **1053/32,768**; JSON bytes **20597/1,048,576**; material writes **661970**.
-- Stable rooted structure **659879/659879**, 0 detached; **31237** provisional unsupported decorative cells explicitly pruned prior to final material plane.
+- Portrait plane SHA-256 `42a7283ce19865ed5d8ddb0506196d45750199352b0af415f6102208cb0957ae`; full material cells 2,097,152.
+- Lossless disjoint rectangles **1120/32,768**; JSON bytes **21862/1,048,576**; material writes **669192**.
+- Stable rooted structure **667101/667101**, 0 detached; **31237** provisional unsupported decorative cells explicitly pruned prior to final material plane.
 - Fully enclosed initial water/lava **1092/999**; 0 exposed faces; 0 water–lava touching contacts.
 - Exact full-hull Midge **18/18, 18/18, 18/18** at 19×15 / 23×19 / 31×27. Physical blockage `[441,880,151,113]` keeps **18/18** sites and forces **214 → 356** exact 31×27 West mid interlock→East mid assay four-neighbour steps.
 - **3523590** actual material-index PNG pixels checked by the builder (overview + six 1:1 crops), zero disagreements. PNG integrity, CRC, stored DEFLATE and SHA-256 are recorded in `receipt.json`.
@@ -43,3 +43,7 @@ The deterministic fixed-seed builder regenerates `setup.json`, `receipt.json`, `
 ## Delivery gate
 
 **Draft/HOLD, NATIVE-UNTESTED**: source-static checks executed inside authoring JS, *not* actual Godot/Workbench/CyberDemoBridge/Rapier, material physics advancement, dynamic collision, hot load, save/reopen. No native PASS, CI PASS, independent Art/Technical/Shepherd acceptance or owner sign-off is claimed. Request independent exact-HEAD review, preserve authoring voids and source PR unchanged.
+
+## R1 bounded portrait repair — current child HEAD
+
+Independent source-static Art REWORK on parent 9e3e80d5f6dbe1e307e0d4afc1460402328e9cd3 identified missing coupled two-well scientific handoffs, not inadequate overall architecture. This child adds two dissimilar, rock-connected paired census interfaces in original cell coordinates: an upper copper/optical transfer at y≈837–926 and a lower stepped assay handoff at y≈1014–1103. Both preserve substantial open-air receiver gaps, Midge navigation and the two original measurement annuli. Altered cells: 7495; exact inclusive bbox `[274,824,834,1102]`. Baseline and after images: compare original parent `03-mid-assay.png`/`04-west-quarantine.png` to their child-HEAD equivalents (and the full material overview). Updated source-static replay and indexed PNG parity pass; **independent Art/Technical delta reviews and Windows native actor/load/save tests are still pending**. The original parent/donor branches remain unchanged.
