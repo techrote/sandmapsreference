@@ -1,0 +1,297 @@
+{
+  "title": "Yarrow-3 Severed Cable-Recovery Works",
+  "seed": 2026112106,
+  "canvas_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_main_readonly": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "source_grid_dimensions": [
+    2048,
+    1024
+  ],
+  "final_material_cells": 2097152,
+  "material_sha256": "5d5c04a329e1357181a69ee452465c6af51abc4111a50aadb15b99442cf14045",
+  "setup_sha256": "1a34dbd6857beb159d5a9e7c5abccbd8c1a1706fcc33e57253dddb55cd04e96c",
+  "setup_bytes": 33169,
+  "rectangles": 1735,
+  "work_cells": 437127,
+  "histogram": {
+    "0": 1660025,
+    "3": 240,
+    "8": 323,
+    "58": 192127,
+    "100": 135982,
+    "101": 69632,
+    "117": 37628,
+    "120": 1195
+  },
+  "solids": {
+    "total": 436564,
+    "grounded": 436564,
+    "detached": 0
+  },
+  "fluid_cells": 563,
+  "clearance": {
+    "19x15": {
+      "sites": 15,
+      "centres": 1298254
+    },
+    "23x19": {
+      "sites": 15,
+      "centres": 1253708
+    },
+    "31x27": {
+      "sites": 15,
+      "centres": 1167469
+    }
+  },
+  "obstruction": {
+    "obstruction": [
+      1012,
+      0,
+      76,
+      350
+    ],
+    "sites": 15,
+    "detours": [
+      {
+        "name": "Arrival",
+        "added": 0,
+        "original": 0,
+        "obstructed": 0
+      },
+      {
+        "name": "Decon workface",
+        "added": 0,
+        "original": 415,
+        "obstructed": 415
+      },
+      {
+        "name": "West rescue",
+        "added": 0,
+        "original": 740,
+        "obstructed": 740
+      },
+      {
+        "name": "Cyclone canopy",
+        "added": 0,
+        "original": 550,
+        "obstructed": 550
+      },
+      {
+        "name": "Cyclone floor",
+        "added": 0,
+        "original": 1005,
+        "obstructed": 1005
+      },
+      {
+        "name": "Cyclone recovery",
+        "added": 0,
+        "original": 1160,
+        "obstructed": 1160
+      },
+      {
+        "name": "West cable approach",
+        "added": 0,
+        "original": 855,
+        "obstructed": 855
+      },
+      {
+        "name": "Central salvage",
+        "added": 0,
+        "original": 1550,
+        "obstructed": 1550
+      },
+      {
+        "name": "Quench canopy",
+        "added": 226,
+        "original": 1325,
+        "obstructed": 1551
+      },
+      {
+        "name": "Quench inspection",
+        "added": 138,
+        "original": 1755,
+        "obstructed": 1893
+      },
+      {
+        "name": "Quench recovery",
+        "added": 138,
+        "original": 1905,
+        "obstructed": 2043
+      },
+      {
+        "name": "East canopy",
+        "added": 226,
+        "original": 1705,
+        "obstructed": 1931
+      },
+      {
+        "name": "Gasometer inspection",
+        "added": 218,
+        "original": 2135,
+        "obstructed": 2353
+      },
+      {
+        "name": "East recovery",
+        "added": 218,
+        "original": 2285,
+        "obstructed": 2503
+      },
+      {
+        "name": "Extraction",
+        "added": 226,
+        "original": 1915,
+        "obstructed": 2141
+      }
+    ]
+  },
+  "sites": [
+    [
+      "Arrival",
+      65,
+      250
+    ],
+    [
+      "Decon workface",
+      260,
+      470
+    ],
+    [
+      "West rescue",
+      270,
+      785
+    ],
+    [
+      "Cyclone canopy",
+      615,
+      250
+    ],
+    [
+      "Cyclone floor",
+      690,
+      630
+    ],
+    [
+      "Cyclone recovery",
+      690,
+      785
+    ],
+    [
+      "West cable approach",
+      920,
+      250
+    ],
+    [
+      "Central salvage",
+      1070,
+      795
+    ],
+    [
+      "Quench canopy",
+      1390,
+      250
+    ],
+    [
+      "Quench inspection",
+      1435,
+      635
+    ],
+    [
+      "Quench recovery",
+      1435,
+      785
+    ],
+    [
+      "East canopy",
+      1770,
+      250
+    ],
+    [
+      "Gasometer inspection",
+      1820,
+      630
+    ],
+    [
+      "East recovery",
+      1820,
+      780
+    ],
+    [
+      "Extraction",
+      1980,
+      250
+    ]
+  ],
+  "images": {
+    "overview.png": {
+      "bytes": 26550,
+      "sha256": "51a299778e5c6c28a7403485ef28dedb59bcee9d3a7f5b71e5e00f09348e9b55",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-decon.png": {
+      "bytes": 6668,
+      "sha256": "d4864c792b0a4d0e6c87c08d0998c3d0d59163496d5f7bb7f1e084434e0f128b",
+      "crop": [
+        10,
+        160,
+        470,
+        720
+      ]
+    },
+    "02-separator.png": {
+      "bytes": 8388,
+      "sha256": "99687bc05dd55133d468295d2d44d4c7a2b77c3b84a4e10881695c2ed4645471",
+      "crop": [
+        474,
+        150,
+        435,
+        730
+      ]
+    },
+    "03-severed-cable.png": {
+      "bytes": 6458,
+      "sha256": "5af59d8a809dfc59015c782e23c2936f7deb5084cb0080b6d46d544a8ea3d4f8",
+      "crop": [
+        895,
+        155,
+        340,
+        715
+      ]
+    },
+    "04-quench.png": {
+      "bytes": 6955,
+      "sha256": "fa46d9c683d1987373f1a0a44cc1e51382e434e8cd576a357e03f433887ffb58",
+      "crop": [
+        1210,
+        150,
+        440,
+        730
+      ]
+    },
+    "05-gasometer.png": {
+      "bytes": 7078,
+      "sha256": "f37d644b5ba15c9ba082a024106812fdcc448dfa8604e832eecc79114cb24d57",
+      "crop": [
+        1590,
+        150,
+        448,
+        730
+      ]
+    },
+    "06-rescue.png": {
+      "bytes": 3491,
+      "sha256": "e63723594e99706c18470ec2c5986aacac25992ec5945d643da821175bc94806",
+      "crop": [
+        390,
+        685,
+        1290,
+        220
+      ]
+    }
+  },
+  "status": "CREATOR-STATIC PASS / NATIVE-UNTESTED"
+}
