@@ -32,80 +32,80 @@ const line=(x,y,X,Y,t=8,m=M.STEEL)=>L(x,y,X,Y,t,m);
 /* NEW KEELBONE 03: a continuous ground-embedded, densely covered horizontal industrial
    quarter. Not opposed cliff shoulders around a central void; five enterable bays,
    separate inspect/haul/undercut passages, shafts and positive freight fixtures. */
-B(0,285,W,H-285);
-B(65,270,412,15);B(505,255,346,30);B(855,241,381,44);
-B(1338,269,352,16);B(1710,266,275,19);
-/* Three long routes with very different topological functions */
-V(52,456,1950,85);V(73,339,1917,96);V(66,806,1920,79);
-/* Different-scale occupied process bays */
-V(114,559,365,196);V(498,579,319,173);V(833,556,399,219);
-V(1239,580,315,180);V(1570,556,356,207);V(1905,588,143,169);
-/* Cross-shafts, doorway reveals, upper interchange */
-for(const [x,y,w] of [[222,353,96],[625,356,92],[1015,360,103],[1411,354,94],[1803,358,101]])V(x,y,w,525);
-for(const [x,y,w] of [[235,525,126],[604,530,133],[969,523,146],[1348,525,136],[1700,523,137],[1947,520,85]])V(x,y,w,108);
-for(const [x,y,w] of [[164,405,105],[697,410,100],[1088,414,90],[1600,413,106],[1883,403,105]])V(x,y,w,166);
-/* One far-eastern roof breach permits upper sky recovery without severing the massive continuous roof load path. */
-V(1975,0,73,560);
-/* Continuous supported long roof; divided upper workwalk and underfloor branch */
-for(const [x,w] of [[71,170],[322,242],[759,268],[1185,195],[1491,177],[1770,198]])St(x,434,w,10);
-for(const [x,w] of [[65,165],[327,245],[755,259],[1142,211],[1499,213],[1784,195]])St(x,539,w,9);
-St(70,885,1910,13);
-for(const [x,w] of [[78,135],[337,248],[755,275],[1161,245],[1520,245],[1817,160]])St(x,793,w,10);
-/* Load path: five deep buttress spines attach the covered roof to the
-   material ribs between unlike halls; each has a free underpass via the deep return.
-   This makes the roof a continuous grounded structural system, not a false suspended facade. */
-for(const [x,depth] of [[478,565],[815,575],[1223,570],[1551,560],[1880,560]])C(x,291,18,depth-291);
-/* Bay 1: wet stripping / freight receiver trough; all fluids abstract, no active material */
-C(126,564,16,189);St(141,741,318,15);C(454,568,15,186);
-C(161,683,14,57);St(173,678,122,12);C(282,657,15,34);
-St(306,701,124,14);C(329,671,18,31);C(416,687,15,52);
-St(215,728,118,10);St(207,721,12,10);C(326,716,13,12);
-St(157,584,139,10);C(161,594,12,37);St(350,589,100,10);
-C(395,600,14,48);St(396,642,53,9);
-St(87,530,189,9);C(100,535,15,27);St(348,529,173,8);C(487,523,13,27);
-/* Bay 2: magnetic sorter with distinct collectors and release bin */
-C(507,585,14,162);St(512,735,295,15);C(802,589,13,159);
-C(538,676,14,61);St(551,669,119,12);C(658,653,16,23);
-St(688,694,102,11);C(768,704,17,30);St(542,600,205,9);C(545,610,14,29);
-St(734,618,55,9);C(739,626,13,28);
-line(571,627,612,651,10);line(618,650,660,627,10);
-St(646,722,115,10);C(645,711,12,22);St(541,526,227,8);
-/* Bay 3: founded torque dismantling and handed-down parcel die */
-C(841,569,18,192);C(1200,568,19,190);St(844,759,365,13);
-St(880,592,291,12);C(886,606,15,126);C(1164,606,14,126);
-St(894,695,103,13);C(895,705,16,52);
-St(1054,716,101,13);C(1136,686,17,29);
-St(935,650,102,11);C(938,658,12,35);C(1025,664,13,27);
-St(1036,587,98,12);C(1095,598,13,45);
-line(1101,642,1134,680,11);line(1000,701,1073,729,12);
-C(868,338,19,88);St(886,350,180,10);C(1175,338,18,88);
-St(1106,389,62,10);C(1110,396,17,32);
-/* Bay 4: duty receiving, counted ledger and export */
-C(1250,584,14,167);St(1258,744,283,13);C(1525,584,14,168);
-C(1290,661,13,81);St(1300,657,94,11);C(1386,671,12,70);
-St(1412,702,103,11);C(1462,681,17,21);
-St(1270,597,99,10);C(1275,607,11,38);
-St(1455,617,72,9);C(1490,626,11,41);St(1258,530,230,9);
-/* Bay 5: compact inhabited repair/refuge, distinct domestic equipment and safe exit */
-C(1580,561,17,192);St(1587,746,323,13);C(1907,561,17,192);
-St(1620,688,92,11);C(1622,699,13,45);St(1735,716,117,12);C(1836,686,18,31);
-St(1770,592,108,9);C(1792,604,13,35);St(1600,585,83,11);C(1607,597,14,28);
-St(1613,527,232,10);C(1900,649,18,90);St(1904,734,131,13);
-/* Substantial roof elevation landmarks belong to one broad span, not separate cliffs */
-C(96,218,22,68);St(99,213,121,13);C(202,226,16,55);
-C(874,201,22,83);St(878,191,148,14);C(1007,204,20,81);
-C(1240,185,20,101);St(1239,181,113,14);C(1336,194,16,91);
-C(1544,195,17,87);St(1547,185,104,15);C(1647,204,17,81);
-C(1836,212,16,73);St(1839,209,115,14);
-line(100,226,170,284,12);line(874,206,946,285,12);
-line(1339,195,1294,278,10);line(1554,200,1624,276,9);
-C(676,170,9,103);C(782,196,10,92);St(657,164,139,12);
-St(697,221,70,8);C(1100,149,11,120);C(1190,149,12,120);
-St(1088,140,120,13);St(1128,209,42,9);
-C(1852,158,11,121);C(1962,157,10,123);St(1846,149,131,12);St(1882,211,63,10);
-/* Broken open eastern expansion joint and below-grade byway */
-V(1981,583,67,163);St(1954,739,94,11);C(1931,724,12,25);St(1988,698,60,11);
-for(const [x,w] of [[155,66],[550,69],[930,92],[1320,78],[1700,75]])St(x,865,w,8);
+
+/* One immense covered, continuous below-grade factory chamber — no isolated
+   rock islands and no cliff-to-cliff gash. Shell wraps both ends and roots to
+   the world floor. Mezzanines hang from roof, machinery stands on bedrock. */
+B(0,276,W,H-276);
+B(85,259,355,17); B(476,250,350,26);B(864,238,325,38);
+B(1310,254,340,22);B(1715,265,249,11);
+V(69,329,1949,557); /* long upper + middle + lower freely flyable cavity */
+V(1969,0,79,583);  /* emergency sky exit from right cargo exchange */
+/* Two local process mezzanines and one long observation walkway; not
+   dividing walls: Midge can pass above or underneath the support web. */
+for(const [x,w] of [[85,298],[433,289],[785,321],[1150,277],[1461,243],[1776,222]])St(x,431,w,11);
+for(const [x,w] of [[135,177],[513,182],[878,199],[1301,171],[1649,186]])St(x,546,w,10);
+for(const [x,w] of [[79,206],[339,214],[619,230],[898,253],[1241,225],[1544,197],[1815,151]])St(x,876,w,10);
+/* Roof-connected truss and walk supports, staggered to keep air passages */
+for(const [x,len] of [[120,151],[425,156],[811,165],[1200,152],[1507,148],[1863,148]])C(x,280,15,len);
+for(const [x,y,X,Y] of [[130,300,197,428],[434,305,512,426],[817,295,887,427],[1209,294,1281,430],[1514,294,1582,430],[1872,294,1941,430]])line(x,y,X,Y,8);
+/* Roofline crane houses and freight ventilation monuments, fully joined */
+C(107,202,22,79);St(106,194,130,14);C(221,207,17,70);
+C(500,176,23,100);St(498,166,139,13);C(623,184,18,93);
+C(888,161,20,116);St(887,149,141,13);C(1016,174,18,102);
+C(1336,195,21,83);St(1335,185,124,14);C(1447,202,18,76);
+C(1750,214,20,64);St(1747,202,125,14);C(1860,214,18,64);
+line(112,215,186,278,11);line(506,183,573,277,11);
+line(898,172,957,276,11);line(1344,199,1416,278,10);
+/* District I — dry reclamation washwork. Actual long catch trough with
+   fed staging lip, sideentered operator shelf and receiving crate. */
+C(118,668,17,220);C(457,646,19,241);St(130,650,322,13);
+St(131,827,319,13);C(150,746,20,83);St(168,738,107,12);
+C(256,724,17,20);St(301,765,126,14);C(308,743,14,26);
+C(409,765,17,60);St(195,814,121,10);St(150,672,115,11);
+C(187,682,15,56);St(343,688,96,12);C(382,699,17,54);
+St(88,555,172,9);C(118,565,12,46);
+/* District II — polarized sorter grid with opposed fork tines and
+   a real grounded receiving cradle, unlike the fluid-collection tools. */
+C(500,624,18,261);C(808,610,17,275);St(502,608,305,13);
+St(510,837,297,13);C(531,738,16,98);St(546,729,123,13);
+C(650,702,17,30);St(681,770,105,12);C(765,779,15,58);
+line(568,671,615,702,12);line(620,702,659,671,12);
+St(555,796,109,12);C(557,807,12,27);St(704,665,68,11);
+C(714,676,14,55);St(509,557,181,9);
+/* District III — torque spindle press is a wide founded tool with
+   visibly separate infeed, press and receiver surfaces, not a sky crane */
+C(851,592,19,296);C(1196,576,19,310);St(860,580,335,15);
+St(858,846,343,13);C(881,720,17,125);St(896,713,123,12);
+C(994,689,19,24);St(1036,767,131,14);C(1150,720,17,47);
+St(916,648,111,15);C(919,663,17,37);C(1014,672,18,27);
+St(1070,618,115,12);C(1131,630,15,61);
+line(957,706,1017,766,12);line(1162,713,1094,777,10);
+St(874,556,130,10);
+/* District IV — entered bonded ledger / custody with raised counters,
+   two distinctive staffed transaction windows and a lower dispatch rack */
+C(1232,662,16,225);C(1536,647,18,238);
+St(1244,647,299,12);St(1244,843,297,12);
+C(1260,738,17,106);St(1274,726,122,13);C(1382,702,15,26);
+St(1412,765,113,13);C(1492,739,17,26);
+St(1264,679,102,10);C(1292,689,17,34);
+St(1440,694,82,11);C(1469,705,16,32);
+St(1271,564,171,10);
+/* District V — inhabited repair and refugee workrooms, physical bed,
+   locker, workshop and safe egress; east fractured bay remains editable. */
+C(1572,663,18,224);C(1933,628,19,258);
+St(1582,636,340,12);St(1586,846,334,12);
+C(1604,735,16,108);St(1618,726,91,12);C(1687,709,15,18);
+St(1740,776,135,13);C(1850,743,18,33);
+St(1770,679,96,12);C(1786,691,13,48);
+St(1596,671,86,10);C(1605,680,15,43);
+C(1895,684,18,149);St(1890,820,158,12);
+St(1750,557,175,12);C(1840,570,13,45);
+/* Asymmetric modular firebreak and damaged append zone. Empty volume retained. */
+V(1980,606,68,168);St(1969,813,79,12);
+C(1972,791,15,22);
+/* Observed failure point / alternative-route pressure window (unscripted) */
+St(889,522,77,11);C(896,533,15,36);
 /* Clear every named conservative 31x27 actor envelope */
 for(const [x,y] of Object.values(sites))V(x-26,y-25,53,51);
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
@@ -123,7 +123,7 @@ hist[0]=N-area;
 let int=new Int32Array((W+1)*(H+1)),S=W+1;for(let y=1;y<=H;y++){let sum=0,o=(y-1)*W;for(let x=1;x<=W;x++){sum+=g[o+x-1]!==0?1:0;int[y*S+x]=int[(y-1)*S+x]+sum;}}
 function clear(x,y,w,h){let a=x-(w>>1),b=y-(h>>1),c=a+w,d=b+h;return a>=0&&b>=0&&c<=W&&d<=H&&int[d*S+c]-int[d*S+a]-int[b*S+c]+int[b*S+a]===0;}
 function BFS(w,h,ob){let pass=new Uint8Array(N),seen=new Uint8Array(N),queue=new Int32Array(N),first=0,last=0;let ox=ob?.[0]||-1,oy=ob?.[1]||-1,ow=ob?.[2]||0,oh=ob?.[3]||0;for(let y=h>>1;y<H-(h>>1);y++)for(let x=w>>1;x<W-(w>>1);x++){if(!clear(x,y,w,h))continue;let left=x-(w>>1),top=y-(h>>1);if(ob&&left<ox+ow&&left+w>ox&&top<oy+oh&&top+h>oy)continue;pass[y*W+x]=1;}let spawn=sites["Western intake"],n=spawn[1]*W+spawn[0];if(!pass[n])return {size:[w,h],error:"spawn blocked",pos:spawn};seen[n]=1;queue[last++]=n;while(first<last){let a=queue[first++],x=a%W,y=(a/W)|0;for(let b of [a-W,a+W,a-1,a+1])if(b>=0&&b<N&&!(Math.abs(a-b)===1&&((b/W)|0)!==y)&&pass[b]&&!seen[b]){seen[b]=1;queue[last++]=b;}}let bad=Object.entries(sites).filter(([n,p])=>!seen[p[1]*W+p[0]]).map(([n,p])=>({name:n,xy:p,clear:clear(p[0],p[1],w,h)}));return {size:[w,h],reached:Object.keys(sites).length-bad.length,total:Object.keys(sites).length,component:last,bad,pass,seen};}
-let routes=[[19,15],[23,19],[31,27]].map(([w,h])=>BFS(w,h,null)),barrier=[944,448,142,94],detour=BFS(31,27,barrier);
+let routes=[[19,15],[23,19],[31,27]].map(([w,h])=>BFS(w,h,null)),barrier=[931,412,132,341],detour=BFS(31,27,barrier);
 function dist(pass,start,end){let a=start[1]*W+start[0],b=end[1]*W+end[0],seen=new Int32Array(N),Q=new Int32Array(N),first=0,last=0;if(!pass[a]||!pass[b])return -1;Q[last++]=a;seen[a]=1;while(first<last){let n=Q[first++];if(n===b)return (seen[n]-1);let x=n%W,y=(n/W)|0;for(let v of [n-W,n+W,n-1,n+1])if(v>=0&&v<N&&!(Math.abs(n-v)===1&&((v/W)|0)!==y)&&pass[v]&&!seen[v]){seen[v]=seen[n]+1;Q[last++]=v;}}return -1;}
 let start=sites["Sorting rail"],finish=sites["Eastern export"];
 let routeDistance=[dist(routes[2].pass,start,finish),dist(detour.pass,start,finish)];
