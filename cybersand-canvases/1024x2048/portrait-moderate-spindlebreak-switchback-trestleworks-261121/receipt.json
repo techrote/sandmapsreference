@@ -15,32 +15,32 @@
     2048
   ],
   "cells": 2097152,
-  "source_grid_sha256": "30c6668a34341b172d231e4d257175a76b35b314e15dfb468a218d4970c56397",
-  "setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
-  "setup_bytes": 21244,
-  "rectangles": 1070,
-  "construction_work": 807881,
+  "source_grid_sha256": "1d788c0193e8b9e6511ad6c81bb0a7c5533d539deed73747beb9b80716451ce9",
+  "setup_sha256": "4dc2ab471ce88794b94a16afc3398ef9976304f24456fc432203203d8e33f943",
+  "setup_bytes": 26135,
+  "rectangles": 1330,
+  "construction_work": 840248,
   "material_histogram": {
-    "0": 1289271,
+    "0": 1256904,
     "3": 2542,
     "8": 2645,
-    "58": 122526,
-    "62": 28053,
-    "65": 14216,
-    "68": 17600,
-    "69": 3576,
+    "58": 132788,
+    "62": 33736,
+    "65": 15509,
+    "68": 30426,
+    "69": 3870,
     "76": 672,
-    "79": 596,
-    "100": 548917,
+    "79": 1013,
+    "100": 549386,
     "104": 26237,
-    "117": 23714,
-    "131": 16587
+    "117": 23957,
+    "131": 17467
   },
   "ground": {
-    "total": 802694,
-    "rooted": 802694,
+    "total": 835061,
+    "rooted": 835061,
     "detached": 0,
-    "pruned_provisional": 32544
+    "pruned_provisional": 16088
   },
   "fluid": {
     "water": 2542,
@@ -54,8 +54,8 @@
         19,
         15
       ],
-      "valid_centres": 1117174,
-      "connected_centres": 1092373,
+      "valid_centres": 1048548,
+      "connected_centres": 994952,
       "passed": 21,
       "sites": [
         {
@@ -212,8 +212,8 @@
         23,
         19
       ],
-      "valid_centres": 1079201,
-      "connected_centres": 1060021,
+      "valid_centres": 1003334,
+      "connected_centres": 959504,
       "passed": 21,
       "sites": [
         {
@@ -370,8 +370,8 @@
         31,
         27
       ],
-      "valid_centres": 1007805,
-      "connected_centres": 995563,
+      "valid_centres": 919258,
+      "connected_centres": 886637,
       "passed": 21,
       "sites": [
         {
@@ -535,8 +535,8 @@
       31,
       27
     ],
-    "valid_centres": 993390,
-    "connected_centres": 981148,
+    "valid_centres": 904843,
+    "connected_centres": 872222,
     "passed": 21,
     "sites": [
       {
@@ -692,6 +692,156 @@
     "direct": 187,
     "obstructed": 337
   },
+  "portal_routes": {
+    "high": {
+      "hull": [
+        31,
+        27
+      ],
+      "proof": "ordered literal free-centre portal path; no forced shortest route or native test",
+      "centres": [
+        {
+          "name": "cable west launch",
+          "xy": [
+            345,
+            799
+          ]
+        },
+        {
+          "name": "upper cable service gap",
+          "xy": [
+            488,
+            800
+          ]
+        },
+        {
+          "name": "suspended deck Midge opening",
+          "xy": [
+            565,
+            915
+          ]
+        },
+        {
+          "name": "east deck receiving slot",
+          "xy": [
+            735,
+            902
+          ]
+        },
+        {
+          "name": "cable east arrival",
+          "xy": [
+            773,
+            904
+          ]
+        }
+      ],
+      "legs": [
+        {
+          "from": "cable west launch",
+          "to": "upper cable service gap",
+          "steps": 144
+        },
+        {
+          "from": "upper cable service gap",
+          "to": "suspended deck Midge opening",
+          "steps": 192
+        },
+        {
+          "from": "suspended deck Midge opening",
+          "to": "east deck receiving slot",
+          "steps": 183
+        },
+        {
+          "from": "east deck receiving slot",
+          "to": "cable east arrival",
+          "steps": 40
+        }
+      ],
+      "total_steps": 559,
+      "clear_and_connected": true
+    },
+    "low": {
+      "hull": [
+        31,
+        27
+      ],
+      "proof": "ordered literal free-centre portal path; no forced shortest route or native test",
+      "centres": [
+        {
+          "name": "west heavy-truss footing",
+          "xy": [
+            327,
+            1156
+          ]
+        },
+        {
+          "name": "west load-bearing gate",
+          "xy": [
+            370,
+            1118
+          ]
+        },
+        {
+          "name": "intermediate lower switchback",
+          "xy": [
+            505,
+            1170
+          ]
+        },
+        {
+          "name": "lower chord access hatch",
+          "xy": [
+            520,
+            1252
+          ]
+        },
+        {
+          "name": "east load-bearing gate",
+          "xy": [
+            690,
+            1105
+          ]
+        },
+        {
+          "name": "east heavy-truss footing",
+          "xy": [
+            756,
+            1192
+          ]
+        }
+      ],
+      "legs": [
+        {
+          "from": "west heavy-truss footing",
+          "to": "west load-bearing gate",
+          "steps": 81
+        },
+        {
+          "from": "west load-bearing gate",
+          "to": "intermediate lower switchback",
+          "steps": 235
+        },
+        {
+          "from": "intermediate lower switchback",
+          "to": "lower chord access hatch",
+          "steps": 97
+        },
+        {
+          "from": "lower chord access hatch",
+          "to": "east load-bearing gate",
+          "steps": 357
+        },
+        {
+          "from": "east load-bearing gate",
+          "to": "east heavy-truss footing",
+          "steps": 153
+        }
+      ],
+      "total_steps": 923,
+      "clear_and_connected": true
+    }
+  },
   "pngs": {
     "overview.png": {
       "xywh": [
@@ -701,7 +851,7 @@
         2048
       ],
       "bytes": 2099836,
-      "sha256": "d9517f9ca7486c4ce0e504e552bfc118c1ac070d85a8f6c5bfbe7b29dae35000"
+      "sha256": "89d030dd011da58cedf5f766cfc4cb5d50192b6d8df7c65f5144c964aff805ce"
     },
     "01-ore-intake.png": {
       "xywh": [
@@ -721,7 +871,7 @@
         370
       ],
       "bytes": 304266,
-      "sha256": "a75d6e65230441bd38b28bddb4526afad1c4200bfe810d8c9f189d7b832e290a"
+      "sha256": "5e1aa836b1c803972619fcaeea5fa754dff97a04364ab35f36972b60f7e1573e"
     },
     "03-high-cableway.png": {
       "xywh": [
@@ -731,7 +881,7 @@
         260
       ],
       "bytes": 215251,
-      "sha256": "bc3720fb606ac3cd7baee72c7634bbb7bd16f8deedc4c4d5d41627632ef8e9ed"
+      "sha256": "1b6360a9fea3838d1bd081c3184df2eaedb441f4067685044c4dacd24cb08c55"
     },
     "04-lower-trestle.png": {
       "xywh": [
@@ -741,7 +891,7 @@
         280
       ],
       "bytes": 231771,
-      "sha256": "0c63281466bca4241c73fff205b1873c936d20219e9c4618641f3cdc43559e17"
+      "sha256": "b97ca88d96e4656dc933167f24ca2cbb3c3461eba207616517954da55b4a1ab0"
     },
     "05-casting-ramways.png": {
       "xywh": [
@@ -751,7 +901,7 @@
         372
       ],
       "bytes": 177558,
-      "sha256": "969d11b7438315e0521b6dc5383629c7b1399044491bd21573ca10e6da7e1904"
+      "sha256": "d84695b05418e0f7ae2ab14541920ca302676218fd659fccf797e297e464caa9"
     },
     "06-quench-export.png": {
       "xywh": [
