@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-frontier-wide",
+  "map_role": "three-strata fault-crossing frontier medical, mining, seismographic and quarantine colony",
+  "anchor_donors": [],
+  "macro_topology": "asymmetric vertical tectonic fault with laddered frontier settlements",
+  "density_profile": "inhabited compact edge stations alternate with an enormous open central fault and archaeological undercuts",
+  "route_grammar": {
+    "main": [
+      "Rover clinic spawn",
+      "Western clinic",
+      "Ore triage",
+      "West fault crossing",
+      "Mid-shear bypass",
+      "East rift landing",
+      "East clinic",
+      "East custody",
+      "Quarantine recorder"
+    ],
+    "alternatives": [
+      [
+        "West lookout",
+        "Upper rift flyover",
+        "East seismic gantry",
+        "East observation"
+      ],
+      [
+        "West logistics shaft",
+        "West mining approach",
+        "Deep fault landing",
+        "East archival shaft",
+        "East lower vault"
+      ]
+    ],
+    "obstruction": "Quarantine recorder",
+    "all_sites_count": 38
+  },
+  "strong_motifs": [
+    "two geologically unequal bedrock shoulders with large open fault void",
+    "three deliberately staggered crossings and independent sky overflight",
+    "unequal twin seismographic fork aerial",
+    "anchored upper rover clinic, mining terrace and east biological receiving",
+    "physically excavated archival passages across lower strata"
+  ],
+  "interesting_relationships": [
+    "the landing route interleaves settlement, fault exposure, bridge and extraction rather than a single continuous surface",
+    "upper and lower flight routes bypass one blocked machine control site",
+    "the active seismic aerial is supported by a differently rooted eastern colony, not a scenic freestanding monolith",
+    "four reachable lower work areas preserve unfilled excavation seams"
+  ],
+  "authoring_affordances": [
+    "wide central fault available for scripted collapse or bridge repair",
+    "unused eastern cantilever to grow a Gentek settlement",
+    "left and right abandoned subterranean bays for local NPC stories",
+    "shaft interfaces available for example-derived vertical routing grammar"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Central break bridge",
+      "region": [
+        934,
+        740,
+        1150,
+        831
+      ],
+      "type": "bridge failure / chase",
+      "scripted": false
+    },
+    {
+      "name": "Seismic aerial",
+      "region": [
+        1420,
+        110,
+        1780,
+        390
+      ],
+      "type": "machinery activation/reveal",
+      "scripted": false
+    },
+    {
+      "name": "Quarantine recorder",
+      "region": [
+        1510,
+        620,
+        1660,
+        711
+      ],
+      "type": "lockdown or holdout",
+      "scripted": false
+    },
+    {
+      "name": "Fault deep landing",
+      "region": [
+        890,
+        850,
+        1190,
+        1000
+      ],
+      "type": "rescue and departure",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "A reusable multi-strata vertical-fault grammar: discrete rooted edge settlements, 3 different offset cross-fault joints, multiple bypass levels and editable excavated archive cells.",
+  "similarity_avoidance": "Unlike Arid Helm's entered vessel, Serrate Meridian's lateral gate corridor and Orison's isolated islands, this composition is an open tall shear with offset crossing technologies and vertical neighbourhood separation.",
+  "diversity_axes": {
+    "macro_topology": "vertical_fault",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "layered",
+    "landmark_family": "tower",
+    "support_form": "mixed",
+    "environment_relation": "geological",
+    "incompleteness": "modular_append_zones"
+  },
+  "grid_sha256": "b0e18f57cbaac0dc065e2b35de9708754316a59b822e5a8c055af6e07c8ff2eb",
+  "native": "NATIVE-UNTESTED"
+}

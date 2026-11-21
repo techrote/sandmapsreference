@@ -1,0 +1,337 @@
+{
+  "concept": "Orthant Fault — Seismic Ladder Colonies",
+  "seed": 78584946,
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_family": "original/scifi-frontier-wide",
+  "map_base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_authority_sha": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "actor_model": "midge",
+  "actor_sha256": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+  "material_cells": 2097152,
+  "grid_sha256": "b0e18f57cbaac0dc065e2b35de9708754316a59b822e5a8c055af6e07c8ff2eb",
+  "setup_sha256": "78aef4aaa144a11edfbb19ba32ab14b1443ac719a454404d4d870bc1b340e187",
+  "ordered_rectangles": 452,
+  "setup_bytes": 9380,
+  "construction_work_cells": 263339,
+  "source_limits": {
+    "max_rectangles": 32768,
+    "max_setup_bytes": 1048576,
+    "max_work_cells": 32000000
+  },
+  "material_histogram": {
+    "49": 17627,
+    "62": 12664,
+    "68": 8097,
+    "100": 158034,
+    "101": 60673,
+    "131": 6244
+  },
+  "occupied_final_cells": 263339,
+  "grounded_final_cells": 263339,
+  "detached_final_cells": 0,
+  "unstable_mobile_liquid_reactive_cells": 0,
+  "provisional_discarded": 87124,
+  "discarded_groups": 41,
+  "district_footprints": {
+    "clinic": 5592,
+    "ore": 1197,
+    "fault": 20372,
+    "seismic": 5304,
+    "subgrade": 12276
+  },
+  "sites": {
+    "Rover clinic spawn": [
+      180,
+      417
+    ],
+    "Western clinic": [
+      425,
+      418
+    ],
+    "West lookout": [
+      370,
+      300
+    ],
+    "Cliff triage": [
+      182,
+      608
+    ],
+    "West assay cavern": [
+      179,
+      763
+    ],
+    "West buried archive": [
+      219,
+      862
+    ],
+    "West logistics shaft": [
+      456,
+      805
+    ],
+    "Ore triage": [
+      627,
+      674
+    ],
+    "Rover service": [
+      698,
+      612
+    ],
+    "West mining approach": [
+      769,
+      652
+    ],
+    "West fault crossing": [
+      864,
+      516
+    ],
+    "High cable landing": [
+      1010,
+      371
+    ],
+    "Upper rift flyover": [
+      1037,
+      207
+    ],
+    "Mid-shear bypass": [
+      1085,
+      539
+    ],
+    "East rift landing": [
+      1191,
+      553
+    ],
+    "East seismic gantry": [
+      1381,
+      348
+    ],
+    "Crown sensor": [
+      1571,
+      78
+    ],
+    "Easterly mast": [
+      1812,
+      310
+    ],
+    "East observation": [
+      1874,
+      430
+    ],
+    "East clinic": [
+      1399,
+      426
+    ],
+    "East survey deck": [
+      1647,
+      409
+    ],
+    "East custody": [
+      1465,
+      667
+    ],
+    "Quarantine recorder": [
+      1559,
+      662
+    ],
+    "East biosieve": [
+      1741,
+      657
+    ],
+    "East cliff diagnostics": [
+      1915,
+      652
+    ],
+    "East lower vault": [
+      1914,
+      795
+    ],
+    "East archival shaft": [
+      1651,
+      806
+    ],
+    "East sterile return": [
+      1496,
+      829
+    ],
+    "Deep fault landing": [
+      1067,
+      862
+    ],
+    "Fault lower assay": [
+      950,
+      896
+    ],
+    "Break bridge west": [
+      900,
+      736
+    ],
+    "Break bridge east": [
+      1192,
+      719
+    ],
+    "West outer survey": [
+      40,
+      800
+    ],
+    "East outer survey": [
+      2007,
+      741
+    ],
+    "Deep left ore store": [
+      690,
+      879
+    ],
+    "Deep right sample store": [
+      1347,
+      887
+    ],
+    "Fault rescue reserve": [
+      1137,
+      681
+    ],
+    "Upper western rover pad": [
+      536,
+      529
+    ]
+  },
+  "literal_spawn": [
+    180,
+    417
+  ],
+  "hull_clearance_BFS": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1720851,
+      "passed": 38,
+      "total": 38,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1692096,
+      "passed": 38,
+      "total": 38,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1634801,
+      "passed": 38,
+      "total": 38,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "rect_xyxy": [
+      1537,
+      642,
+      1580,
+      683
+    ],
+    "material_id": 58,
+    "excluded": "Quarantine recorder",
+    "after_BFS": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1629910,
+      "passed": 37,
+      "total": 38,
+      "bad": [
+        {
+          "name": "Quarantine recorder",
+          "xy": [
+            1559,
+            662
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "size": 36725,
+      "sha256": "4caa145988f90044229a0e76d43a01911ad45cbbc9a0737e5f541bf88ca49513"
+    },
+    {
+      "name": "01-rover-clinic.png",
+      "size": 5578,
+      "sha256": "74526c738f09a227dbb5cbb2f95304eef462d5456856d7dd4506fd607163c749"
+    },
+    {
+      "name": "02-ore-and-west-fault.png",
+      "size": 3211,
+      "sha256": "8e50bbab8395a4ccbeb49cdcfe215d77018824d16d19dfad542517f769793052"
+    },
+    {
+      "name": "03-braided-bridges.png",
+      "size": 7728,
+      "sha256": "b2471f1f07e79c733f34bd0964422ef5601e9deb2db744795d9c4583d6ac1b5e"
+    },
+    {
+      "name": "04-forked-seismic-tower.png",
+      "size": 6758,
+      "sha256": "c82745173d523f3a30513db4e3a7cc9bbc0cc5c1236f631bf559dc1bc94ec1e5"
+    },
+    {
+      "name": "05-deep-fault-archives.png",
+      "size": 14626,
+      "sha256": "7542eac5ef45ecb1cda4740fde95ad0f0bcd19d4dfbc581d21081c5f26011c79"
+    }
+  ],
+  "crop_windows": [
+    [
+      "01-rover-clinic",
+      35,
+      265,
+      560,
+      440
+    ],
+    [
+      "02-ore-and-west-fault",
+      380,
+      455,
+      530,
+      445
+    ],
+    [
+      "03-braided-bridges",
+      760,
+      300,
+      560,
+      610
+    ],
+    [
+      "04-forked-seismic-tower",
+      1290,
+      70,
+      730,
+      645
+    ],
+    [
+      "05-deep-fault-archives",
+      100,
+      730,
+      1870,
+      290
+    ]
+  ],
+  "laws": "All final occupied IDs are accepted stationary Solid/None. No fluids, falling sand, combustible or reactive foundations.",
+  "static": "CREATOR-STATIC-PASS",
+  "native": "NATIVE-UNTESTED",
+  "independent_review": "Art/Tech/Shepherd pending"
+}
