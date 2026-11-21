@@ -76,7 +76,7 @@ function layoutWorld(){
  }
  // Three distinct sloped cargo ramps as real side-view beams, separated in height.
  l(390,1340,459,1281,10,117);l(377,1595,451,1515,11,117);
- l(404,1852,450,1788,11,117);
+ // Third rail ramp intentionally removed to allow lower full-hull exit.
  // East counterweight/recovery side corridor, cliff-supported and entered.
  b(752,1279,151,14,58);b(839,1261,52,18,65);
  b(850,1267,29,11,131);b(882,1293,15,66,68);
@@ -96,7 +96,12 @@ function layoutWorld(){
  b(649,1919,12,21,58);
  // Sparse short electrical conduits rooted in side rock.
  for(let y=400;y<=1820;y+=167){b(105,y,16,57,69);b(110,y+4,17,8,79);b(896,y+60,19,48,68);b(884,y+62,18,9,76);}
- // Exact authored site envelopes: no nearest-site shifting or collision waivers.
+ 
+// Actual entered lower 31x27 ship-to-rail passages, rather than visual-only links.
+b(490,1321,101,101,0);b(419,1431,57,128,0);
+b(618,1461,74,129,0);b(489,1630,102,73,0);
+b(418,1690,66,228,0);
+// Exact authored site envelopes: no nearest-site shifting or collision waivers.
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
  // Delete inert fragments without a rooted 4-neighbour load path; report removed count.
  const solid=id=>id!==0&&id!==3&&id!==8,seen=new Uint8Array(g.length),q=new Int32Array(g.length);
