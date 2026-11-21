@@ -108,6 +108,14 @@ V(258,413,70,425);V(899,539,82,296);
 // All major load paths continue below the former roofline to bedrock.
 for(const x of [130,442,461,515,1489,1524,1562,1650,1666,1697,1932,1976])
  C(x,805,20,116);
+// Distinctive inhabited assay/export cells have a founded east roof and a
+// 92-cell Midge-wide open freight lift; neither room is a sealed display box.
+C(1842,561,22,355);
+St(1713,641,153,13);St(1747,710,150,15);
+C(1875,721,18,195);St(1860,777,95,14);
+St(1885,690,83,13);St(1838,612,91,12);
+C(1900,625,13,68);St(1698,791,151,13);
+V(1739,551,92,359);
 // Literal exact named-site 73x65 clearance envelopes.
 for(const [x,y] of Object.values(sites))V(x-36,y-32,73,65);
 
