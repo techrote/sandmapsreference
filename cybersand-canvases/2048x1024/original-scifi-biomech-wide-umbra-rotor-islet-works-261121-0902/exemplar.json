@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-biomech-wide",
+  "map_role": "Dry xenocore salvage industrial islets with two open intersecting mechanical rotors over a central flight junction, real upper/lower diversions and deliberately damaged freight edge.",
+  "anchor_donors": [],
+  "macro_topology": [
+    "islands",
+    "yard"
+  ],
+  "density_profile": "Alternating solid-dense quarantine, stepped low-volume stamping islands, open twin-wheel sky volume, an airy suspended fractionation comb and a damaged export edge with intentional reconstruction gaps.",
+  "route_grammar": {
+    "whole_world": "Spawn [78,695], quarantine access and desk, stepping islets, open rotor underside, entered central examination, east processor, broken cargo pier and departure [1975,694]; all 19 exact sites reachable under three hull envelopes.",
+    "primary_central_crossing": "Exact open-centre 31x27 BFS from [786,694] to [1256,696]: 472 centre steps before physical blockage.",
+    "real_obstruction": "Closing the full material occupancy rectangle [985,695,124,104] increases the central 31x27 traversal to 498 steps without losing any of the 19 named sites.",
+    "upper": "The same blocked crossing through x981–1112 restricted to y<=635 takes 590 four-neighbour steps.",
+    "lower": "A separate lower bypass through x981–1112 restricted to y>=830, above the inspection deck, takes 740 steps.",
+    "entered_interiors": "Western specimen rack, two cut below-ground maintenance archives [460–670] and [1480–1690] with open accessible shafts, and two-faced grounded central workface.",
+    "recovery": "All 19 literal named sites have four cardinally adjacent free centres at 19x15, 23x19 and 31x27; direct fixed-site BFS, without shifting."
+  },
+  "strong_motifs": [
+    "Two intersecting off-axis open 11- and 12-sided mechanically supported salvage rotors, distinct diameters and spokes",
+    "Uncoupled suspended xenocore wheels over open unobstructed low flight volume",
+    "Three unlike stepped industrial stamping islets with independent support members and dry processing trays",
+    "Ceiling-carried four-fin vascular separator contrasting with multi-legged lower machinery",
+    "Two-sided grounded inspection/caliper station below spinning-equipment altitude",
+    "Damaged angular cargo gantry with missing join to an unmated hull socket"
+  ],
+  "interesting_relationships": [
+    "Rooftop anchors and grounded individual machine supports use opposite load paths without blocking the midlevel rotor approach",
+    "An intentionally sparse open hub is a playable switching volume, not a large hollow decorative hall",
+    "High/low detours are tested using actual opaque rectangle occupancy around the central station",
+    "Distinct islet shapes, paired rotors and interrupted crane reveal composable parts for future SWARM/GENTEK grammar"
+  ],
+  "authoring_affordances": [
+    {
+      "site": "west_archive",
+      "rect": [
+        460,
+        975,
+        210,
+        41
+      ],
+      "detail": "Entered cut underfloor pocket with shaft from industrial stamping approach, deliberately sparse for later machinery and NPCs"
+    },
+    {
+      "site": "rotor_lower_switch",
+      "rect": [
+        854,
+        652,
+        340,
+        206
+      ],
+      "detail": "Open central flyable switching floor under two wheels; preserve route lanes while human-authoring events or crossings"
+    },
+    {
+      "site": "east_archive",
+      "rect": [
+        1480,
+        975,
+        210,
+        41
+      ],
+      "detail": "Second independent underfloor maintenance cavity with cut shaft and vacant installation wall"
+    },
+    {
+      "site": "broken_freight_coupler",
+      "rect": [
+        1742,
+        686,
+        250,
+        111
+      ],
+      "detail": "Interrupted cargo cantilever with deliberately unmated hull socket and room for reroutable bridge or crane completion"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "type": "machinery_activation",
+      "rect": [
+        796,
+        191,
+        450,
+        320
+      ],
+      "staging": "Twin spoke-ring xenocore rotors could synchronize or release a casket; no event is scripted"
+    },
+    {
+      "type": "branch_rejoin_obstruction",
+      "rect": [
+        985,
+        695,
+        124,
+        104
+      ],
+      "staging": "Physical central passage closure triggers verified independently restricted upper and lower alternatives; no event is scripted"
+    },
+    {
+      "type": "inspection_holdout",
+      "rect": [
+        946,
+        834,
+        237,
+        119
+      ],
+      "staging": "Two-sided caliper workface with open local Midge recovery and rear aerial exit"
+    },
+    {
+      "type": "damaged_departure",
+      "rect": [
+        1726,
+        413,
+        291,
+        410
+      ],
+      "staging": "Broken freight boom and isolated cargo spindle suitable for departure, chase or collapsible segment"
+    }
+  ],
+  "procedural_exemplar_value": "An independent recipe for asymmetric paired-spoke polygonal rotor construction, heterogeneous dry platforms/islets, roof-to-ground load-path contrast, regionally guaranteed dual bypass clearances, and separately entered underground optional rooms.",
+  "similarity_avoidance": "Unlike Vanta's single large roof packet cableway, Euryale's cavity series, Kordex's distributed settlements, Ophion's basin bridge and Khepri's solid octagonal kiln, Umbra uses TWO visually open offset counter-rotor rings in a deliberately empty switchyard, with small independent processing islets and a damaged cargo coupling.",
+  "diversity_axes": {
+    "macro_topology": "islands",
+    "altitude_grammar": "high_low_bypass",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "rotor",
+    "support_form": "mixed",
+    "environment_relation": "dry",
+    "incompleteness": "damaged"
+  }
+}
