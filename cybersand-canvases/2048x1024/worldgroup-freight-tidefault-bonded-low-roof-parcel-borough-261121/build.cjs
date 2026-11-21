@@ -148,6 +148,12 @@ St(1039,787,135,14);
 V(941,533,88,207);
 V(1124,502,116,239);
 V(1030,781,101,115);
+/* Broad true entrance courts cut through dense habitable roofs; independent
+   utility ladders carry the route into the central underworks and east escape. */
+V(1384,472,102,316);
+V(1800,548,127,244);
+V(1420,780,108,116);
+V(1820,780,108,116);
 for(const [x,y] of Object.values(sites))V(x-37,y-34,75,69);
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
