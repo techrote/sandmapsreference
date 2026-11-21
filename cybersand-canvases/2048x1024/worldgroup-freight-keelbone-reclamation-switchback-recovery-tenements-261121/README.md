@@ -19,7 +19,7 @@ The recurring family vocabulary is basalt-embedded, founded hard-wall and struct
 - **Entered tenements and machine rooms:** Crew canteen → Rinsing room → Press service → Press receiver → Repair ward → East domestic booth
 - **Independent basal return:** West under-return → Central under-return → East under-return
 
-Exact authored Midge spawn: `[115,520]`. The JSON receipt lists all 24 literal named site coordinates. Traversal uses a full in-bounds, four-neighbour collision-occupancy clearance (not nearest-site substitution) for 19×15, 23×19 and 31×27 collision hulls. A temporary extra 58-material physical obstruction at `[936,450,120,150]` raises the First component switch → Machine transit route from **530 to 698** centre steps while keeping all named destinations reachable. This is a static route model; it does **not** prove piloted native flight.
+Exact authored Midge spawn: `[115,520]`. The JSON receipt lists all 24 literal named site coordinates. Traversal uses a full in-bounds, four-neighbour collision-occupancy clearance (not nearest-site substitution) for 19×15, 23×19 and 31×27 collision hulls. A temporary extra 58-material physical obstruction at `[936,450,120,150]` raises the First component switch → Machine transit route from **586 to 706** centre steps while keeping all named destinations reachable. This is a static route model; it does **not** prove piloted native flight.
 
 ## Exact creator-source verification
 
@@ -27,17 +27,17 @@ Exact authored Midge spawn: `[115,520]`. The JSON receipt lists all 24 literal n
 |---|---|
 | Complete material-cell plane | 2048×1024 = 2,097,152 |
 | IDs | 0 Empty; 58 ReinforcedConcrete; 62 SteelPlate; 100 BasaltColumns (stable immovable solids) |
-| Final occupied grounded cells | 590,805 / 590,805 |
+| Final occupied grounded cells | 620,012 / 620,012 |
 | Detached final solid cells | 0 |
-| Discarded ungrounded intermediate cells | 177,594 |
-| Lossless disjoint Setup-v2 rectangles | 115 / 32,768 source limit |
-| Setup bytes | 2998 / 1,048,576 |
-| Rectangle work | 590805 / 32,000,000 |
+| Discarded ungrounded intermediate cells | 166,848 |
+| Lossless disjoint Setup-v2 rectangles | 138 / 32,768 source limit |
+| Setup bytes | 3452 / 1,048,576 |
+| Rectangle work | 620012 / 32,000,000 |
 | Invalid/overlapping writes | 0 |
 | Exact three-hull named destinations | 24/24 · 24/24 · 24/24 |
-| Temporary material obstruction detour | 530 → 698 cardinal centre steps |
+| Temporary material obstruction detour | 586 → 706 cardinal centre steps |
 | Indexed authentic material PNGs | 6/6; full CRC / Adler / source-pixel parity |
-| Full material-plane SHA-256 | `b46b82b791f15bb0baab030df3637dc681b240daf7cfb313a19d01c8bb0c6d99` |
+| Full material-plane SHA-256 | `41fe54c481d9dcf951e72c80851ab641c3383c82164ba4a9d8d51d0b88499d74` |
 | Source CyberSand accepted main | `f7e056c9b8791106e22f2d1c295043783d8a9701` (read-only) |
 | Source sandmapsreference main | `99a166e7fcae45eb22be1740e9f33f62faccbcc7` |
 | Native Workbench / Bridge / Rapier / Midge ticks / fresh-process save | **NATIVE-UNTESTED** |

@@ -165,21 +165,21 @@
     ]
   },
   "material_histogram": {
-    "0": 1506347,
-    "58": 15999,
-    "62": 39883,
-    "100": 534923
+    "0": 1477140,
+    "58": 26091,
+    "62": 50376,
+    "100": 543545
   },
-  "stable_occupied_cells": 590805,
-  "grounded": 590805,
+  "stable_occupied_cells": 620012,
+  "grounded": 620012,
   "detached_cells": 0,
-  "pruned_disconnected_decor_cells": 177594,
+  "pruned_disconnected_decor_cells": 166848,
   "invalid_writes": 0,
-  "rectangles": 115,
-  "rectangle_work": 590805,
-  "setup_bytes": 2998,
-  "material_plane_sha256": "b46b82b791f15bb0baab030df3637dc681b240daf7cfb313a19d01c8bb0c6d99",
-  "setup_sha256": "e68456676ff9b959c794af36813a8cd34fc1765562d194223d929019d49d7d86",
+  "rectangles": 138,
+  "rectangle_work": 620012,
+  "setup_bytes": 3452,
+  "material_plane_sha256": "41fe54c481d9dcf951e72c80851ab641c3383c82164ba4a9d8d51d0b88499d74",
+  "setup_sha256": "09bc3ac17ff49fffae23ce8e3974921b861907e783398d180b57d0cdbdd9dcb4",
   "clearance": [
     {
       "size": [
@@ -188,7 +188,7 @@
       ],
       "reached": 24,
       "total": 24,
-      "free_centres": 1371790,
+      "free_centres": 1327578,
       "bad": [],
       "error": null
     },
@@ -199,7 +199,7 @@
       ],
       "reached": 24,
       "total": 24,
-      "free_centres": 1346522,
+      "free_centres": 1298146,
       "bad": [],
       "error": null
     },
@@ -210,7 +210,7 @@
       ],
       "reached": 24,
       "total": 24,
-      "free_centres": 1296100,
+      "free_centres": 1239431,
       "bad": [],
       "error": null
     }
@@ -232,8 +232,8 @@
     "sites_reached": 24,
     "unreachable": [],
     "distance_before_after": [
-      530,
-      698
+      586,
+      706
     ]
   },
   "images": [
@@ -246,7 +246,7 @@
         1024
       ],
       "bytes": 525537,
-      "sha256": "c66eb78f9bf93bfbdc78f7a56da192faeb6702b21e4e2156de7a1ea0a98d430f",
+      "sha256": "fa1a4b057073ab979e6a1cc399e050305d6366c3d50d42343d6d3bb2bcb9dbf0",
       "pixel_parity": 2097152
     },
     {
@@ -270,20 +270,20 @@
         482
       ],
       "bytes": 45011,
-      "sha256": "61f4b810b0d40e927224daa7d91b67d3d5d443b2fc6457a38ce078828baa7ac9",
+      "sha256": "7803df925731b499753cdb0fa5865708127933d3f64e7bd848b44889658e5a1a",
       "pixel_parity": 175930
     },
     {
       "name": "03-central-reclaim",
       "rect": [
-        822,
-        335,
-        400,
-        500
+        817,
+        240,
+        560,
+        620
       ],
-      "bytes": 50685,
-      "sha256": "adc1a28c16a9796b6010651f3969be86344cbb7f1db16dc25235383371967fac",
-      "pixel_parity": 200000
+      "bytes": 87610,
+      "sha256": "3a9c61f7daae3580d16002270c1546e68e14dfba3b6c71e11d1091aac0191768",
+      "pixel_parity": 347200
     },
     {
       "name": "04-repair-atelier",
@@ -294,7 +294,7 @@
         506
       ],
       "bytes": 52809,
-      "sha256": "b240dc4151cca8b6306f3ed42b97608c613ef6506e47fb6738555c56859a105e",
+      "sha256": "0c05b94f870708118a8f5aae69a8d58856b5242b4c93dd42c309ce18360c0d82",
       "pixel_parity": 207460
     },
     {
@@ -306,7 +306,7 @@
         519
       ],
       "bytes": 65579,
-      "sha256": "4e9e9573d9f80b82b5d517c00cb16d0eee502abdaa51f3533be4c0bdf277917a",
+      "sha256": "ed5c4f3831b5a0e074964d7aeb29df6e5ad5563d27e26275bbef39bfbf0e933b",
       "pixel_parity": 259500
     }
   ],

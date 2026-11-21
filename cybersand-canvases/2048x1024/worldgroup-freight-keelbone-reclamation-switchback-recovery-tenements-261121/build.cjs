@@ -81,6 +81,17 @@ C(1815,669,20,39);C(1919,647,16,111);St(1900,747,112,11);
 /* Founded connection loads and lower passable relief arch */
 for(const x of [201,445,568,784,929,1116,1256,1492,1630,1832])C(x,753,13,38);
 St(84,772,1886,15);
+/* Conspicuous bottom-founded crane exchange and physical receiving bridge. */
+C(84,774,18,115);
+C(1530,435,24,339);St(867,438,678,12);
+St(1047,445,15,75);C(1052,518,13,22);
+C(905,603,18,169);C(1170,604,18,168);
+St(911,615,265,13);St(925,727,241,13);
+St(934,685,60,11);St(1110,676,55,11);
+C(1115,685,18,41);
+line(914,630,970,680,11,M.STEEL);
+line(1175,631,1122,674,11,M.STEEL);
+
 for(const [x,w] of [[125,94],[490,122],[846,85],[1165,105],[1594,140]])St(x,785,w,10);
 V(682,762,128,58);V(1125,760,133,62);
 /* Bounded entryways intentionally cut through framing; no site trapped by a nominal room */
@@ -114,7 +125,7 @@ if(rect.length>32768||area>32000000)throw Error("budget "+rect.length+"/"+area);
 const policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
 let setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:sites["West arrival booth"],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits:rect,response:"LA-SELECTIVE",liquid_policy:policy,normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false},json=JSON.stringify(setup),jbytes=utf8(json);
 if(jbytes.length>1048576)throw Error("JSON over budget");
-let crops=[["01-ledger-tenements",110,315,420,477],["02-rinse-sorting",465,329,365,482],["03-central-reclaim",822,335,400,500],["04-repair-atelier",1160,310,410,506],["05-east-tenements",1510,312,500,519]];
+let crops=[["01-ledger-tenements",110,315,420,477],["02-rinse-sorting",465,329,365,482],["03-central-reclaim",817,240,560,620],["04-repair-atelier",1160,310,410,506],["05-east-tenements",1510,312,500,519]];
 let images=[["overview",[0,0,W,H]],...crops.map(c=>[c[0],c.slice(1)])].map(([name,rect])=>{let data=png(g,rect),pixels=verifyPng(g,rect,data);return{name,rect,bytes:data,sha256:sha256(data),pixels};});
 let receipt={
 concept:"Keelbone Reclamation Vaults — Switchback Recovery Tenements / Crossed Component Relay",
