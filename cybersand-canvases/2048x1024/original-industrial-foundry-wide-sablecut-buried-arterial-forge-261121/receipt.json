@@ -1,0 +1,814 @@
+{
+  "schema": 1,
+  "original_no_source": true,
+  "concept": "Sablecut Buried Arterial Forge",
+  "seed": 261121311,
+  "base_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_sha": "d5b0371501eb7ccd32c261f738b4a2612218fbc1",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "aa945ea39145b6889ca47af2de55ef59f2f4a42128c3cc589f2183be91fb9508",
+  "setup_sha256": "e325b53d43d4c53b50372993081486f7d441c1cab89098c172b97af30f387a25",
+  "json_bytes": 19639,
+  "rectangle_count": 995,
+  "source_rectangle_limit": 32768,
+  "construction_work": 1237938,
+  "material_histogram": {
+    "0": 859214,
+    "3": 8576,
+    "8": 9878,
+    "58": 184429,
+    "62": 55308,
+    "65": 40761,
+    "68": 30398,
+    "69": 6286,
+    "76": 4151,
+    "77": 360,
+    "79": 2310,
+    "100": 816259,
+    "104": 18120,
+    "117": 26878,
+    "131": 34224
+  },
+  "ground": {
+    "total": 1219484,
+    "rooted": 1219484,
+    "detached": 0,
+    "finalisation": {
+      "preliminary": {
+        "components": 47,
+        "links": 2481,
+        "maxLink": 272
+      },
+      "unrooted_components_repaired": 10,
+      "anchors": [
+        [
+          400,
+          253,
+          0,
+          25674
+        ],
+        [
+          1500,
+          253,
+          0,
+          27664
+        ],
+        [
+          656,
+          636,
+          1023,
+          50130
+        ],
+        [
+          1703,
+          439,
+          1023,
+          5940
+        ],
+        [
+          713,
+          446,
+          1023,
+          3108
+        ],
+        [
+          882,
+          671,
+          1023,
+          16714
+        ],
+        [
+          1496,
+          669,
+          1023,
+          28106
+        ],
+        [
+          1272,
+          684,
+          1023,
+          17372
+        ],
+        [
+          997,
+          621,
+          1023,
+          2382
+        ],
+        [
+          1228,
+          600,
+          1023,
+          1738
+        ]
+      ],
+      "excavated_scraps": 5312
+    }
+  },
+  "fluid": {
+    "water": 8576,
+    "lava": 9878,
+    "exposed_air_faces": 0,
+    "water_lava_contacts": 0
+  },
+  "flight": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 644217,
+      "connected_centres": 522941,
+      "passed": 20,
+      "sites": [
+        {
+          "name": "West gallery spawn",
+          "x": 110,
+          "y": 363,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore exchange",
+          "x": 237,
+          "y": 365,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Excavator gallery",
+          "x": 313,
+          "y": 382,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace approach",
+          "x": 454,
+          "y": 366,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace upper inspection",
+          "x": 584,
+          "y": 359,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle reception",
+          "x": 775,
+          "y": 376,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle carriage",
+          "x": 930,
+          "y": 367,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster threshold",
+          "x": 1095,
+          "y": 367,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Hammer observation",
+          "x": 1265,
+          "y": 367,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench approach",
+          "x": 1457,
+          "y": 368,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight platform",
+          "x": 1847,
+          "y": 366,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 1955,
+          "y": 370,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West overhead",
+          "x": 302,
+          "y": 205,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central overhead",
+          "x": 1107,
+          "y": 204,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East overhead",
+          "x": 1738,
+          "y": 204,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West repair shaft",
+          "x": 393,
+          "y": 557,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Underplant service",
+          "x": 551,
+          "y": 703,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster undercroft",
+          "x": 1123,
+          "y": 716,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East return",
+          "x": 1727,
+          "y": 681,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper ladle bypass",
+          "x": 888,
+          "y": 206,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 600946,
+      "connected_centres": 493519,
+      "passed": 20,
+      "sites": [
+        {
+          "name": "West gallery spawn",
+          "x": 110,
+          "y": 363,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore exchange",
+          "x": 237,
+          "y": 365,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Excavator gallery",
+          "x": 313,
+          "y": 382,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace approach",
+          "x": 454,
+          "y": 366,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace upper inspection",
+          "x": 584,
+          "y": 359,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle reception",
+          "x": 775,
+          "y": 376,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle carriage",
+          "x": 930,
+          "y": 367,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster threshold",
+          "x": 1095,
+          "y": 367,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Hammer observation",
+          "x": 1265,
+          "y": 367,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench approach",
+          "x": 1457,
+          "y": 368,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight platform",
+          "x": 1847,
+          "y": 366,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 1955,
+          "y": 370,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West overhead",
+          "x": 302,
+          "y": 205,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central overhead",
+          "x": 1107,
+          "y": 204,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East overhead",
+          "x": 1738,
+          "y": 204,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West repair shaft",
+          "x": 393,
+          "y": 557,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Underplant service",
+          "x": 551,
+          "y": 703,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster undercroft",
+          "x": 1123,
+          "y": 716,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East return",
+          "x": 1727,
+          "y": 681,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper ladle bypass",
+          "x": 888,
+          "y": 206,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 523451,
+      "connected_centres": 444352,
+      "passed": 20,
+      "sites": [
+        {
+          "name": "West gallery spawn",
+          "x": 110,
+          "y": 363,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore exchange",
+          "x": 237,
+          "y": 365,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Excavator gallery",
+          "x": 313,
+          "y": 382,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace approach",
+          "x": 454,
+          "y": 366,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace upper inspection",
+          "x": 584,
+          "y": 359,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle reception",
+          "x": 775,
+          "y": 376,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle carriage",
+          "x": 930,
+          "y": 367,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster threshold",
+          "x": 1095,
+          "y": 367,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Hammer observation",
+          "x": 1265,
+          "y": 367,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench approach",
+          "x": 1457,
+          "y": 368,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight platform",
+          "x": 1847,
+          "y": 366,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 1955,
+          "y": 370,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West overhead",
+          "x": 302,
+          "y": 205,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central overhead",
+          "x": 1107,
+          "y": 204,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East overhead",
+          "x": 1738,
+          "y": 204,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West repair shaft",
+          "x": 393,
+          "y": 557,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Underplant service",
+          "x": 551,
+          "y": 703,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster undercroft",
+          "x": 1123,
+          "y": 716,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East return",
+          "x": 1727,
+          "y": 681,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper ladle bypass",
+          "x": 888,
+          "y": 206,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "obstruction": [
+    965,
+    306,
+    86,
+    128
+  ],
+  "blocked": {
+    "hull": [
+      31,
+      27
+    ],
+    "valid_centres": 508723,
+    "connected_centres": 429624,
+    "passed": 20,
+    "sites": [
+      {
+        "name": "West gallery spawn",
+        "x": 110,
+        "y": 363,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ore exchange",
+        "x": 237,
+        "y": 365,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Excavator gallery",
+        "x": 313,
+        "y": 382,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Furnace approach",
+        "x": 454,
+        "y": 366,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Furnace upper inspection",
+        "x": 584,
+        "y": 359,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ladle reception",
+        "x": 775,
+        "y": 376,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ladle carriage",
+        "x": 930,
+        "y": 367,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Caster threshold",
+        "x": 1095,
+        "y": 367,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Hammer observation",
+        "x": 1265,
+        "y": 367,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Quench approach",
+        "x": 1457,
+        "y": 368,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Freight platform",
+        "x": 1847,
+        "y": 366,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "East rim goal",
+        "x": 1955,
+        "y": 370,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "West overhead",
+        "x": 302,
+        "y": 205,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Central overhead",
+        "x": 1107,
+        "y": 204,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "East overhead",
+        "x": 1738,
+        "y": 204,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "West repair shaft",
+        "x": 393,
+        "y": 557,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Underplant service",
+        "x": 551,
+        "y": 703,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Caster undercroft",
+        "x": 1123,
+        "y": 716,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "East return",
+        "x": 1727,
+        "y": 681,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Upper ladle bypass",
+        "x": 888,
+        "y": 206,
+        "clear": true,
+        "reached": true
+      }
+    ]
+  },
+  "shortest_goal": {
+    "direct": {
+      "steps": 1852,
+      "visited": 419514
+    },
+    "blocked": {
+      "steps": 1994,
+      "visited": 412379
+    },
+    "detour": 142
+  },
+  "pngs": {
+    "overview.png": {
+      "xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "sha256": "e9c519289775894b2687d1b83fb27619c3733ec4edbfc03a6b0e8bcc7c098d61",
+      "bytes": 2098812
+    },
+    "01-ore-exchange.png": {
+      "xywh": [
+        55,
+        253,
+        379,
+        368
+      ],
+      "sha256": "b864366cb2859d0d694403764bbf78114b1479ad82c3f4bbd60a3abd4cedc6c8",
+      "bytes": 140326
+    },
+    "02-thermal-furnace.png": {
+      "xywh": [
+        383,
+        267,
+        374,
+        405
+      ],
+      "sha256": "f5ff078269c97df5f64679303c465cdbfd47300fbf14a9d7be7a2031b35c71fa",
+      "bytes": 152361
+    },
+    "03-ladle-haul.png": {
+      "xywh": [
+        726,
+        245,
+        373,
+        396
+      ],
+      "sha256": "7ea30e59d7324fc18338774c7270f2dcf4498d55ae6e80e4ca312207bdac8c79",
+      "bytes": 148590
+    },
+    "04-dual-hammer-caster.png": {
+      "xywh": [
+        1039,
+        426,
+        416,
+        347
+      ],
+      "sha256": "f939d49e0e7400750c1cdbdec56a750adf23d6b8dac9a3207038b6f3bae60f56",
+      "bytes": 145185
+    },
+    "05-quench-shaft.png": {
+      "xywh": [
+        1400,
+        411,
+        379,
+        392
+      ],
+      "sha256": "3472acdfe7d023a31f6298eb6580e33c06905e08397746c93c6904f8d7660503",
+      "bytes": 149446
+    },
+    "06-east-dispatch.png": {
+      "xywh": [
+        1716,
+        244,
+        332,
+        396
+      ],
+      "sha256": "aa3115e54c91e57a49e6cce569c1a194549ab2461c8842c9a02b621917157fc3",
+      "bytes": 132354
+    }
+  },
+  "material_pixel_parity": 2960194,
+  "native": "NATIVE-UNTESTED"
+}

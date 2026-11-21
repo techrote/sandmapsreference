@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-foundry-wide",
+  "map_role": "Subterranean three-artery pressure forge with excavation and repair zones",
+  "anchor_donors": [],
+  "macro_topology": "Nested underground chambers in continuous rooted basalt, linked by long parallel process/inspection/return arteries",
+  "density_profile": "Dense functional machines separated by deliberate flyable rock-cut halls and unfurnished excavation seams",
+  "route_grammar": {
+    "main": [
+      "West gallery spawn",
+      "Ore exchange",
+      "Furnace approach",
+      "Ladle reception",
+      "Caster threshold",
+      "Hammer observation",
+      "Quench approach",
+      "Freight platform",
+      "East rim goal"
+    ],
+    "alternative": [
+      "West overhead",
+      "Upper ladle bypass",
+      "Central overhead",
+      "East overhead",
+      "Freight platform"
+    ],
+    "recovery": [
+      "West repair shaft",
+      "Underplant service",
+      "Caster undercroft",
+      "East return"
+    ]
+  },
+  "strong_motifs": [
+    "Three horizontal underground transport arteries",
+    "Open Midge-scale inter-gallery access shafts",
+    "Two sealed reactive fluid cores in a credible furnace-to-quench process",
+    "Paired straight-stroke casting ram",
+    "Rooted rock vault and inspection-truss distinction",
+    "Deliberate excavated append seams"
+  ],
+  "interesting_relationships": [
+    "The geological mass serves as structure rather than scenery",
+    "A real obstruction forces detour through separate vertical circulation",
+    "Thermal and water modules are kept physically separate",
+    "Upper inspection loops and underplant recovery serve the same central production sequence"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "West mould service seam",
+      "region_xywh": [
+        805,
+        480,
+        104,
+        144
+      ],
+      "use": "future inspection control room",
+      "state": "unfinished"
+    },
+    {
+      "name": "Underplant extension cut",
+      "region_xywh": [
+        1195,
+        705,
+        312,
+        125
+      ],
+      "use": "SWARM/GENTEK modular-assembly experiments",
+      "state": "empty carved annex"
+    },
+    {
+      "name": "Freight salvage shaft",
+      "region_xywh": [
+        1832,
+        593,
+        97,
+        116
+      ],
+      "use": "NPC supply or salvage stage",
+      "state": "partially fitted"
+    },
+    {
+      "name": "Quench access service alcove",
+      "region_xywh": [
+        1401,
+        435,
+        351,
+        286
+      ],
+      "use": "future thermal gate control",
+      "state": "functional shell with editable air"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Main arterial cave-in",
+      "anchor": "Caster threshold",
+      "kind": "route_obstruction",
+      "staging": "overhead bypass and east rejoin"
+    },
+    {
+      "name": "Twin ram activation",
+      "anchor": "Hammer observation",
+      "kind": "machinery_activation",
+      "staging": "accessible pressure press chamber"
+    },
+    {
+      "name": "Furnace emergency isolation",
+      "anchor": "Furnace approach",
+      "kind": "thermal_release",
+      "staging": "initially enclosed lava core"
+    },
+    {
+      "name": "East freight departure",
+      "anchor": "Freight platform",
+      "kind": "departure",
+      "staging": "loading rail and vertical service access"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Three-layer excavated traffic graph with actual whole-hull site proof",
+    "Geological envelope as positive structural grammar",
+    "Underground furnace and straight-line press rather than exposed circular landmarks",
+    "Undeveloped but route-safe service and expansion seams"
+  ],
+  "similarity_avoidance": "Distinct from Vespergate's open ring caldera, Saltglass's discontinuous high islands, and the flat stripworks family: this is an enclosed interior with multiple long communicating excavations and paired linear hammers.",
+  "diversity_axes": {
+    "macro_topology": "nested_cavities",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "layered",
+    "landmark_family": "central_machine",
+    "support_form": "cliff_embedded",
+    "environment_relation": "geological",
+    "incompleteness": "excavation"
+  },
+  "engine_contract": {
+    "accepted_main": "d5b0371501eb7ccd32c261f738b4a2612218fbc1",
+    "setup_version": 2,
+    "rectangle_limit": 32768
+  },
+  "static_proof": {
+    "cells": 2097152,
+    "plane_sha256": "aa945ea39145b6889ca47af2de55ef59f2f4a42128c3cc589f2183be91fb9508",
+    "rectangles": 995,
+    "obstructed_sites": 20
+  }
+}
