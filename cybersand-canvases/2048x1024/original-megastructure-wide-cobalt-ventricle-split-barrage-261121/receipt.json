@@ -1,0 +1,369 @@
+{
+  "title": "The Cobalt Ventricle — Split-Barrage Valve City",
+  "generated_utc_date": "2026-11-21",
+  "builder_seed": 202611210647,
+  "source_authority": "techrote/cybersand/main@f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "schema_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "material_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "world": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "grid_sha256": "e76f280ee631d604c037f307bfafedbd2dad23d198133f4a7084c9848a2ee803",
+  "setup_sha256": "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+  "setup_bytes": 59904,
+  "rectangles": 3229,
+  "rectangle_budget": 32768,
+  "construction_work": 497202,
+  "grounded_inert_solids": 497202,
+  "removed_detached_cells": 31852,
+  "retained_detached_cells": 0,
+  "material_histogram": {
+    "0": 1599950,
+    "58": 107100,
+    "62": 79302,
+    "63": 22972,
+    "64": 3842,
+    "65": 9,
+    "66": 29902,
+    "68": 840,
+    "69": 5500,
+    "72": 3296,
+    "76": 1165,
+    "77": 580,
+    "79": 204,
+    "80": 1270,
+    "98": 788,
+    "100": 237590,
+    "101": 578,
+    "111": 450,
+    "119": 1814
+  },
+  "material_laws": {
+    "58": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "62": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "63": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "64": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "65": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "66": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "68": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "69": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "72": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "76": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "77": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "79": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "80": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "98": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "100": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "101": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "111": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "119": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    }
+  },
+  "mobile_cells": 0,
+  "liquid_cells": 0,
+  "reactive_cells": 0,
+  "sites": {
+    "West inlet Midge spawn": [
+      70,
+      583
+    ],
+    "Inlet terrace overlook": [
+      212,
+      270
+    ],
+    "Commons customs floor": [
+      344,
+      662
+    ],
+    "Western cargo descent": [
+      723,
+      730
+    ],
+    "Pulse gate upper bypass": [
+      742,
+      223
+    ],
+    "Pulse governor hall": [
+      500,
+      541
+    ],
+    "Hydraulic collar inspection": [
+      806,
+      700
+    ],
+    "West gate face": [
+      824,
+      477
+    ],
+    "Central pressure datum": [
+      1027,
+      530
+    ],
+    "Ventricle upper release": [
+      1056,
+      281
+    ],
+    "Dry return access": [
+      1024,
+      792
+    ],
+    "Opposite valve tower": [
+      1203,
+      457
+    ],
+    "Eastern upper bypass": [
+      1302,
+      215
+    ],
+    "Governor controls": [
+      1461,
+      572
+    ],
+    "Governor lower service": [
+      1315,
+      784
+    ],
+    "Egress civic desk": [
+      1780,
+      480
+    ],
+    "Eastern cargo sorting": [
+      1805,
+      635
+    ],
+    "Terminal emergency pocket": [
+      1657,
+      764
+    ],
+    "East daylight departure": [
+      1970,
+      641
+    ]
+  },
+  "clearance": [
+    {
+      "footprint": [
+        19,
+        15
+      ],
+      "free_centres": 1360428,
+      "component": 1271938,
+      "reachable": 19,
+      "missing": [],
+      "blocked_sites": []
+    },
+    {
+      "footprint": [
+        23,
+        19
+      ],
+      "free_centres": 1309326,
+      "component": 1235028,
+      "reachable": 19,
+      "missing": [],
+      "blocked_sites": []
+    },
+    {
+      "footprint": [
+        31,
+        27
+      ],
+      "free_centres": 1214771,
+      "component": 1163372,
+      "reachable": 19,
+      "missing": [],
+      "blocked_sites": []
+    }
+  ],
+  "obstruction_xywh": [
+    991,
+    510,
+    82,
+    61
+  ],
+  "clearance_with_obstruction": [
+    {
+      "footprint": [
+        19,
+        15
+      ],
+      "free_centres": 1352928,
+      "component": 1264438,
+      "reachable": 18,
+      "missing": [
+        "Central pressure datum"
+      ],
+      "blocked_sites": [
+        "Central pressure datum"
+      ]
+    },
+    {
+      "footprint": [
+        23,
+        19
+      ],
+      "free_centres": 1301110,
+      "component": 1226812,
+      "reachable": 18,
+      "missing": [
+        "Central pressure datum"
+      ],
+      "blocked_sites": [
+        "Central pressure datum"
+      ]
+    },
+    {
+      "footprint": [
+        31,
+        27
+      ],
+      "free_centres": 1205027,
+      "component": 1153628,
+      "reachable": 18,
+      "missing": [
+        "Central pressure datum"
+      ],
+      "blocked_sites": [
+        "Central pressure datum"
+      ]
+    }
+  ],
+  "images": {
+    "overview.png": {
+      "sha256": "7aa890632197067d33058ee98ad70917ab9b03d4e65cd176457cc57c0467e03c",
+      "bytes": 61999,
+      "origin": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-inlet-commune.png": {
+      "sha256": "35abcdfb955b7aa66af59b67c64c4d67fe8a77e2af52b36551cc6705943d2a59",
+      "bytes": 10654,
+      "origin": [
+        65,
+        305,
+        370,
+        505
+      ]
+    },
+    "02-pulse-gate.png": {
+      "sha256": "f3229562a3b315a2a69087de581be2cc5015d0bea2377774458ea58b62777bc9",
+      "bytes": 14385,
+      "origin": [
+        410,
+        270,
+        438,
+        580
+      ]
+    },
+    "03-dry-ventricle.png": {
+      "sha256": "b61cc37e0a596a75989589dbe1a90395777e83eda0b74fea0668cafe7017cc91",
+      "bytes": 8301,
+      "origin": [
+        805,
+        225,
+        460,
+        610
+      ]
+    },
+    "04-governor-house.png": {
+      "sha256": "ab6be526bc4491e541ac5d7e4cfd8ccc48757d6f723921a46d637a4619626350",
+      "bytes": 10565,
+      "origin": [
+        1270,
+        340,
+        360,
+        520
+      ]
+    },
+    "05-egress-freight.png": {
+      "sha256": "d0ac456db905d164ca333bd082a91bd3bc0272438f39eef7592eba0615d5801e",
+      "bytes": 9444,
+      "origin": [
+        1635,
+        330,
+        360,
+        535
+      ]
+    }
+  },
+  "native_status": "NATIVE-UNTESTED",
+  "independent_review": "PENDING",
+  "ci_status": "UNVERIFIED"
+}
