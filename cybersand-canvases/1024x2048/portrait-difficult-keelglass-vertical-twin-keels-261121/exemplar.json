@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "portrait/difficult",
+  "map_role": "Difficult horizontal industrial drydock → vertical double-keel transfer, showing unequal inhabited workshop adjacency around a central lift and dock-return loop",
+  "anchor_donors": [
+    {
+      "pr": 160,
+      "head": "cf47967470e402693957ab04ebfb3fe6d787d943",
+      "path": "cybersand-canvases/2048x1024/original-industrial-foundry-wide-keelglass-twin-drydock-261121/"
+    }
+  ],
+  "macro_topology": "Nested left-upper and right-lower drydock cavities around a tall central freight lift, with a right-hand return shaft",
+  "density_profile": "Dense upper ore and kilns, open central lift, dense dock A and caster, open offset bypass, concentrated lower drydock/quench and freight exit",
+  "route_grammar": {
+    "main": [
+      "West entry spawn",
+      "Ore window",
+      "Upper kiln inspection",
+      "Arc furnace face",
+      "Ladle platform",
+      "Dock A upper lip",
+      "Caster watch",
+      "Dock B upper lip",
+      "Quench watch",
+      "Freight inspection",
+      "East rim goal"
+    ],
+    "alternate": [
+      "Bypass high mouth",
+      "Right maintenance return",
+      "Bypass low mouth"
+    ],
+    "recovery": [
+      "Ore return gallery",
+      "Keel A inspection",
+      "Keel B inspection",
+      "Quench service",
+      "Lower shaft return"
+    ]
+  },
+  "strong_motifs": [
+    "Two vertically separated and unequal excavated hull cradles",
+    "Continuous wide flyable rock-cut spine",
+    "Independent right-side branch-and-rejoin corridor",
+    "Twin sealed refractory furnace cores and suspended ladle",
+    "Dry return gantries and sealed quench tank",
+    "Material-cell hall thresholds sized for conservative Midge envelopes"
+  ],
+  "interesting_relationships": [
+    "Reversed dock adjacency: previous side-by-side hulls now offset in altitude on opposite walls of one shared hoist",
+    "Dangerous production is high while quench and freight are placed below, creating readable vertical industrial causality",
+    "Upper ram-caster workshop and lower unfinished keel share an entered bypass, not a visually implied path"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "Dock A repair void",
+      "region_xywh": [
+        165,
+        863,
+        182,
+        80
+      ],
+      "use": "Modular hull retrofit and worker/NPC rendezvous"
+    },
+    {
+      "name": "High hoist void",
+      "region_xywh": [
+        407,
+        760,
+        206,
+        105
+      ],
+      "use": "Crane movement or reveal"
+    },
+    {
+      "name": "Right bypass return",
+      "region_xywh": [
+        688,
+        1158,
+        88,
+        100
+      ],
+      "use": "Unscripted machinery hazard or alternate-flight chase"
+    },
+    {
+      "name": "Lower dock extension",
+      "region_xywh": [
+        685,
+        1342,
+        155,
+        58
+      ],
+      "use": "Future SWARM receiver placement"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Lift obstruction and right bypass",
+      "anchor": "Bypass high mouth",
+      "kind": "reroutable_chase"
+    },
+    {
+      "name": "Upper keel cradle failure",
+      "anchor": "Keel A inspection",
+      "kind": "bridge_failure"
+    },
+    {
+      "name": "Quench valve containment",
+      "anchor": "Quench watch",
+      "kind": "thermal_release"
+    },
+    {
+      "name": "Lower freight departure",
+      "anchor": "East rim goal",
+      "kind": "arrival_departure"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Architecture-preserving aspect transfer with substantially different district graph",
+    "Rule vocabulary for vertically staged industrial ecology linked by a shared hoist",
+    "Contrast of open vertical circulation and layered cavity structures",
+    "Graph-preserving alternative route with physical obstruction and return proof"
+  ],
+  "similarity_avoidance": "Unlike original Keelglass's same-altitude side-by-side 2048-wide drydocks and other narrow shafts formed by cropping, this retains twin vessels but relocates them onto opposing sides of a tall 1024×2048 stratified facility with a new return grammar.",
+  "diversity_axes": {
+    "macro_topology": "nested_cavities",
+    "altitude_grammar": "vertical_spine",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "vessel",
+    "support_form": "cliff_embedded",
+    "environment_relation": "fluid_containment",
+    "incompleteness": "modular_append_zones"
+  },
+  "aspect_transfer": {
+    "schema_version": 1,
+    "programme": "PORTRAIT-001",
+    "difficulty": "DIFFICULT",
+    "source": {
+      "repository": "techrote/sandmapsreference",
+      "pr": 160,
+      "head": "cf47967470e402693957ab04ebfb3fe6d787d943",
+      "path": "cybersand-canvases/2048x1024/original-industrial-foundry-wide-keelglass-twin-drydock-261121/",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "material_plane_sha256": "4838b856e0b2c4e10e0abb67f7562553cfe318089c61d9c7b9db5cfc5b49ec1a"
+    },
+    "target": {
+      "dimensions": [
+        1024,
+        2048
+      ],
+      "seed": 202611211133,
+      "material_plane_sha256": "7d8775ba992138e8cfe3075a4d54a1607037e110da4a4a4bf6e53b7b1aa99345"
+    },
+    "preserved": [
+      "Two unequal excavated drydock hull cradles with distinct completion states",
+      "Ore-handling, paired sealed refractory furnace throats, hanging ladle, unequal casters, sealed quench and freight terminal as a linked manufacturing ecology",
+      "Actual entered maintenance workspaces and strongly rooted stationary engineering",
+      "Major negative-space flight circulation and incomplete edit sockets"
+    ],
+    "transformed": [
+      "Horizontal twin-drydock skyline is recomposed into upper-left and lower-right hull works, separated by more than 400 cells of altitude",
+      "Original long production rail becomes a vertically ordered exchange: ore upper-left, furnace upper-right, ladle mid-high, casters mid-right, quench low-left, freight bottom-right",
+      "Original broad over-dock flight becomes an exposed 224-cell-wide central lift with side portals at asymmetric levels",
+      "Original upper gantry alternative becomes a separate industrial-caster-to-dock maintenance return usable during a real central shaft obstruction",
+      "Dock hulls are redesigned as different U-keel and broken-backed hull sections at true native material-cell scale"
+    ],
+    "discarded": [
+      "Source's full-length straight 2048-wide rail run",
+      "Original side-by-side simultaneous-drydock arrangement",
+      "Horizontal walk-away departure direction and four-ram exact spacing",
+      "Source-specific platform coordinates, vessel geometry, source pixel placements and route graph"
+    ],
+    "newly_introduced": [
+      "Deep shared vertical hoist chamber between alternating machinery clusters",
+      "Right-hand caster–lower-keel bypass with two full-envelope access ports",
+      "Distinct upper and lower return/rest inspection rooms",
+      "New staged shaft obstruction proving a 70-step flight detour while retaining all 18 literal sites",
+      "Vertical sightline reveal and two unused modular extension sockets"
+    ],
+    "scale_note": "Retains approximately source Midge-to-door proportion: explicit whole-hull 19×15, 23×19 and 31×27 clearance; all material pixels authored anew, no rotation, crop, stretch or source-grid transplant."
+  }
+}
