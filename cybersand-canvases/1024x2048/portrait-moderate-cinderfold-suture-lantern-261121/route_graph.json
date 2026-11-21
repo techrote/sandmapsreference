@@ -1,0 +1,586 @@
+{
+  "spawn": "High suture arrival",
+  "goal": "Lower dispatch hatch",
+  "sites": [
+    {
+      "name": "High suture arrival",
+      "xy": [
+        573,
+        152
+      ]
+    },
+    {
+      "name": "Registry chamber",
+      "xy": [
+        230,
+        347
+      ]
+    },
+    {
+      "name": "Intake dispatch",
+      "xy": [
+        286,
+        446
+      ]
+    },
+    {
+      "name": "West diagnostic",
+      "xy": [
+        245,
+        638
+      ]
+    },
+    {
+      "name": "Blue assay shelf",
+      "xy": [
+        267,
+        756
+      ]
+    },
+    {
+      "name": "Open upper crossing",
+      "xy": [
+        577,
+        797
+      ]
+    },
+    {
+      "name": "East selector",
+      "xy": [
+        819,
+        931
+      ]
+    },
+    {
+      "name": "Sterile assay",
+      "xy": [
+        818,
+        1010
+      ]
+    },
+    {
+      "name": "Right sterile entry",
+      "xy": [
+        791,
+        1065
+      ]
+    },
+    {
+      "name": "Sterile return midpassage",
+      "xy": [
+        788,
+        1178
+      ]
+    },
+    {
+      "name": "Right sterile lower mouth",
+      "xy": [
+        794,
+        1347
+      ]
+    },
+    {
+      "name": "Isolation counters",
+      "xy": [
+        823,
+        1456
+      ]
+    },
+    {
+      "name": "Central return rejoin",
+      "xy": [
+        558,
+        1395
+      ]
+    },
+    {
+      "name": "Left unfinished archive",
+      "xy": [
+        189,
+        1650
+      ]
+    },
+    {
+      "name": "Archive outer mouth",
+      "xy": [
+        399,
+        1578
+      ]
+    },
+    {
+      "name": "Low service connection",
+      "xy": [
+        534,
+        1665
+      ]
+    },
+    {
+      "name": "Buried dispatch repair",
+      "xy": [
+        395,
+        1811
+      ]
+    },
+    {
+      "name": "Lower dispatch hatch",
+      "xy": [
+        553,
+        1867
+      ]
+    }
+  ],
+  "primary": [
+    "High suture arrival",
+    "Registry chamber",
+    "West diagnostic",
+    "Open upper crossing",
+    "East selector",
+    "Isolation counters",
+    "Lower dispatch hatch"
+  ],
+  "branches": [
+    [
+      "East selector",
+      "Right sterile entry",
+      "Sterile return midpassage",
+      "Right sterile lower mouth",
+      "Central return rejoin"
+    ],
+    [
+      "Left unfinished archive",
+      "Archive outer mouth",
+      "Low service connection",
+      "Buried dispatch repair"
+    ]
+  ],
+  "obstruction": {
+    "rect": [
+      462,
+      1053,
+      220,
+      184
+    ],
+    "site_count_post_obstruction": 18,
+    "route": {
+      "direct": 1773,
+      "obstructed": 1983,
+      "shortest_path_uses_sterile_return": false,
+      "entered_return_waypoint_reachable_after_obstruction": true,
+      "alternate_via": "Sterile return midpassage",
+      "alternate_existence_proof": "both literal via and goal centres are in spawn's 31x27 free-centre connected component under the physical obstruction"
+    }
+  },
+  "exact_hull_results": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 1106806,
+      "connected_centres": 1105099,
+      "passed": 18,
+      "sites": [
+        {
+          "name": "High suture arrival",
+          "x": 573,
+          "y": 152,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Registry chamber",
+          "x": 230,
+          "y": 347,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Intake dispatch",
+          "x": 286,
+          "y": 446,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West diagnostic",
+          "x": 245,
+          "y": 638,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Blue assay shelf",
+          "x": 267,
+          "y": 756,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Open upper crossing",
+          "x": 577,
+          "y": 797,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East selector",
+          "x": 819,
+          "y": 931,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Sterile assay",
+          "x": 818,
+          "y": 1010,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Right sterile entry",
+          "x": 791,
+          "y": 1065,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Sterile return midpassage",
+          "x": 788,
+          "y": 1178,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Right sterile lower mouth",
+          "x": 794,
+          "y": 1347,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Isolation counters",
+          "x": 823,
+          "y": 1456,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central return rejoin",
+          "x": 558,
+          "y": 1395,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Left unfinished archive",
+          "x": 189,
+          "y": 1650,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Archive outer mouth",
+          "x": 399,
+          "y": 1578,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Low service connection",
+          "x": 534,
+          "y": 1665,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Buried dispatch repair",
+          "x": 395,
+          "y": 1811,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Lower dispatch hatch",
+          "x": 553,
+          "y": 1867,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 1082349,
+      "connected_centres": 1081549,
+      "passed": 18,
+      "sites": [
+        {
+          "name": "High suture arrival",
+          "x": 573,
+          "y": 152,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Registry chamber",
+          "x": 230,
+          "y": 347,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Intake dispatch",
+          "x": 286,
+          "y": 446,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West diagnostic",
+          "x": 245,
+          "y": 638,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Blue assay shelf",
+          "x": 267,
+          "y": 756,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Open upper crossing",
+          "x": 577,
+          "y": 797,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East selector",
+          "x": 819,
+          "y": 931,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Sterile assay",
+          "x": 818,
+          "y": 1010,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Right sterile entry",
+          "x": 791,
+          "y": 1065,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Sterile return midpassage",
+          "x": 788,
+          "y": 1178,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Right sterile lower mouth",
+          "x": 794,
+          "y": 1347,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Isolation counters",
+          "x": 823,
+          "y": 1456,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central return rejoin",
+          "x": 558,
+          "y": 1395,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Left unfinished archive",
+          "x": 189,
+          "y": 1650,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Archive outer mouth",
+          "x": 399,
+          "y": 1578,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Low service connection",
+          "x": 534,
+          "y": 1665,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Buried dispatch repair",
+          "x": 395,
+          "y": 1811,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Lower dispatch hatch",
+          "x": 553,
+          "y": 1867,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 1034626,
+      "connected_centres": 1034626,
+      "passed": 18,
+      "sites": [
+        {
+          "name": "High suture arrival",
+          "x": 573,
+          "y": 152,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Registry chamber",
+          "x": 230,
+          "y": 347,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Intake dispatch",
+          "x": 286,
+          "y": 446,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West diagnostic",
+          "x": 245,
+          "y": 638,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Blue assay shelf",
+          "x": 267,
+          "y": 756,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Open upper crossing",
+          "x": 577,
+          "y": 797,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East selector",
+          "x": 819,
+          "y": 931,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Sterile assay",
+          "x": 818,
+          "y": 1010,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Right sterile entry",
+          "x": 791,
+          "y": 1065,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Sterile return midpassage",
+          "x": 788,
+          "y": 1178,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Right sterile lower mouth",
+          "x": 794,
+          "y": 1347,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Isolation counters",
+          "x": 823,
+          "y": 1456,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central return rejoin",
+          "x": 558,
+          "y": 1395,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Left unfinished archive",
+          "x": 189,
+          "y": 1650,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Archive outer mouth",
+          "x": 399,
+          "y": 1578,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Low service connection",
+          "x": 534,
+          "y": 1665,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Buried dispatch repair",
+          "x": 395,
+          "y": 1811,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Lower dispatch hatch",
+          "x": 553,
+          "y": 1867,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ]
+}
