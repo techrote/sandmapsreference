@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "portrait/difficult",
+  "map_role": "split bank wreck salvaging and descending freight dispatch",
+  "anchor_donors": [
+    {
+      "source_pr": 124,
+      "source_head": "99616a8c8d2475ad4145a8489c0cc8850b1bd783",
+      "role": "visual identity and logistics, never coordinates"
+    }
+  ],
+  "macro_topology": "mixed",
+  "density_profile": "asymmetric grounded dense upper ship/crane, open ruptured middle shelves, dense low rail and sparse left repairs",
+  "route_grammar": {
+    "main": [
+      "Arrival Mooring",
+      "Entered Salvage Hold",
+      "Lift Seam",
+      "Press Threshold",
+      "Press Chamber",
+      "Right Freight Relay",
+      "Rail Grade One"
+    ],
+    "upper": [
+      "Ship Bridge",
+      "Drylock Threshold",
+      "Fractured Crane Crown",
+      "Salvage Magnet",
+      "East Broken Trestle"
+    ],
+    "return": [
+      "West Broken Trestle",
+      "Salvage Control",
+      "West Relay",
+      "West Maintenance",
+      "Deep Repair Bay",
+      "Central Recovery"
+    ],
+    "east": [
+      "Compression Yard",
+      "Upper Return",
+      "Customs Lookout",
+      "Rail Grade Two",
+      "Lower East Service"
+    ]
+  },
+  "strong_motifs": [
+    "breached side-view steel freighter and drylock",
+    "opposed broken cargo crane with working-height magnet",
+    "three differently supported, split cargo trestles",
+    "open entered press frame",
+    "three tiered export rails and lower repair pocket"
+  ],
+  "interesting_relationships": [
+    "wrecked ship must hand cargo across a shaft to the higher opposed crane",
+    "mid-height split trestle stations mediate crane-to-press sorting",
+    "customs is directly above rail while underworks returns on west bank"
+  ],
+  "authoring_affordances": [
+    "repairable trestle seams",
+    "unfinished west maintenance modules",
+    "press activation hall",
+    "magnet drop area"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Breached ship",
+      "rect": [
+        185,
+        398,
+        160,
+        91
+      ],
+      "role": "salvage ambush"
+    },
+    {
+      "name": "Suspended salvage magnet",
+      "rect": [
+        548,
+        500,
+        119,
+        180
+      ],
+      "role": "activation"
+    },
+    {
+      "name": "Press station",
+      "rect": [
+        804,
+        1123,
+        124,
+        160
+      ],
+      "role": "switch/holdout"
+    },
+    {
+      "name": "Broken tier three",
+      "rect": [
+        384,
+        1350,
+        255,
+        100
+      ],
+      "role": "bridge construction"
+    }
+  ],
+  "procedural_exemplar_value": "Broken trestle and freight path migration from wide yard into a split-bank vertical industrial machine with underworks reroutes.",
+  "similarity_avoidance": "Unlike Rookstrand's uninterrupted stacklock and donor Warden's low-wide salvage apron, opposing banks stay physically fractured, with tier-specific cargo functions.",
+  "diversity_axes": {
+    "macro_topology": "mixed",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "layered",
+    "landmark_family": "crane",
+    "support_form": "edge_rooted",
+    "environment_relation": "damaged",
+    "incompleteness": "modular_append_zones"
+  },
+  "geometry_source": "design.json",
+  "material_plane_sha256": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81"
+}

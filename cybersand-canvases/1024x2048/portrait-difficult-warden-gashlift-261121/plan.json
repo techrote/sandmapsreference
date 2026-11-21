@@ -1,0 +1,196 @@
+{
+  "title": "Warden Gashlift — Split Keel Salvage Stack",
+  "extent": [
+    1024,
+    2048
+  ],
+  "seed": 2111202647,
+  "source": {
+    "source_extent": [
+      2048,
+      1024
+    ],
+    "target_extent": [
+      1024,
+      2048
+    ],
+    "source_pr": 124,
+    "source_head": "99616a8c8d2475ad4145a8489c0cc8850b1bd783",
+    "source_map_path": "cybersand-canvases/2048x1024/original-industrial-transit-wide-warden-scrapline-fractured-trestle-261121/",
+    "difficulty": "DIFFICULT",
+    "preserved": [
+      "breached entered freighter hull distinct from drylock and broken crane",
+      "three deliberately interrupted supported salvage trestle stages",
+      "compression sorter and tiered rail/customs dispatch",
+      "accessible maintenance/cargo recovery and unfinished trestle seams"
+    ],
+    "transformed": [
+      "horizontal wrecking yard becomes vertical, asymmetric split-bank shipbreaking stack",
+      "three source trestles now form staggered disconnected handoff stages",
+      "freighter and crane oppose across a vertical transfer void rather than sharing one quay",
+      "east rail/customs and west repair become lower cross-shaft branches"
+    ],
+    "discarded": [
+      "original source pixel and site coordinates, raster, horizon and route order",
+      "source lateral parallel trestle positioning"
+    ],
+    "newly_introduced": [
+      "long axial hoist throat with recoverable obstruction",
+      "three disparate cargo staging elevations and distinct press interior",
+      "deep return repair and customs lookout separated by broad negative space",
+      "literal 24-site conservative Midge clearance and independently recomputable obstruction proof"
+    ]
+  },
+  "source_engine_main": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "stages": [
+    "high breached drylock",
+    "right broken crane",
+    "fractured cargo handoffs",
+    "entered salvage compression",
+    "deep customs and graded rail",
+    "left western repair return"
+  ],
+  "route_graph": {
+    "main": [
+      "Arrival Mooring",
+      "Entered Salvage Hold",
+      "Lift Seam",
+      "Press Threshold",
+      "Press Chamber",
+      "Right Freight Relay",
+      "Rail Grade One"
+    ],
+    "upper": [
+      "Ship Bridge",
+      "Drylock Threshold",
+      "Fractured Crane Crown",
+      "Salvage Magnet",
+      "East Broken Trestle"
+    ],
+    "return": [
+      "West Broken Trestle",
+      "Salvage Control",
+      "West Relay",
+      "West Maintenance",
+      "Deep Repair Bay",
+      "Central Recovery"
+    ],
+    "east": [
+      "Compression Yard",
+      "Upper Return",
+      "Customs Lookout",
+      "Rail Grade Two",
+      "Lower East Service"
+    ]
+  },
+  "sites": {
+    "Arrival Mooring": [
+      225,
+      273
+    ],
+    "Ship Bridge": [
+      248,
+      357
+    ],
+    "Entered Salvage Hold": [
+      262,
+      418
+    ],
+    "Drylock Threshold": [
+      153,
+      534
+    ],
+    "Fractured Crane Crown": [
+      744,
+      220
+    ],
+    "Salvage Magnet": [
+      557,
+      607
+    ],
+    "West Broken Trestle": [
+      270,
+      719
+    ],
+    "East Broken Trestle": [
+      774,
+      657
+    ],
+    "Lift Seam": [
+      500,
+      843
+    ],
+    "Salvage Control": [
+      258,
+      952
+    ],
+    "Press Threshold": [
+      713,
+      1050
+    ],
+    "Compression Yard": [
+      831,
+      1060
+    ],
+    "Press Chamber": [
+      856,
+      1190
+    ],
+    "Upper Return": [
+      500,
+      1201
+    ],
+    "West Relay": [
+      255,
+      1318
+    ],
+    "Right Freight Relay": [
+      750,
+      1383
+    ],
+    "Customs Lookout": [
+      793,
+      1490
+    ],
+    "Sky Freight Departure": [
+      745,
+      1590
+    ],
+    "Rail Grade One": [
+      767,
+      1690
+    ],
+    "Rail Grade Two": [
+      768,
+      1790
+    ],
+    "Lower East Service": [
+      782,
+      1920
+    ],
+    "West Maintenance": [
+      235,
+      1718
+    ],
+    "Deep Repair Bay": [
+      218,
+      1826
+    ],
+    "Central Recovery": [
+      497,
+      1800
+    ]
+  },
+  "obstruction": {
+    "from": "Lift Seam",
+    "to": "Upper Return",
+    "rect": [
+      440,
+      947,
+      116,
+      85
+    ]
+  },
+  "retained_source_scale": true,
+  "note": "Final explicitly authored Midge-width service portals cut through repairable trestle ends, entered machine hulls, western return galleries and east rail grades; no endpoint substitutions. Roof-entry cabin breach allows 31×27 Midge envelope to enter hold at original literal site without coordinate alteration. Cabin sidewalls explicitly founded to upper freighter hull with entered hold and interrupted upper hatch; cabin/hold not confused with separate right-bank dock crane."
+}
