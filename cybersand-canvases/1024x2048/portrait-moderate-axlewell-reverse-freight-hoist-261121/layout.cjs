@@ -47,6 +47,7 @@ function layoutWorld(){
  // Hoist crown rotor; open-sided containment ensures Midge navigation.
  const ring=(cx,cy,r,t,mat)=>{const pts=[];for(let j=0;j<8;j++){const u=2*Math.PI*j/8;pts.push([cx+Math.cos(u)*r,cy+Math.sin(u)*r]);}for(let j=0;j<8;j++){let a=pts[j],c=pts[(j+1)%8];l(a[0],a[1],c[0],c[1],t,mat);}};
  ring(527,680,68,11,117);
+ b(587,673,320,13,68); // Physically rooted hoist rotor to east cliff under large freight span.
  b(517,607,17,18,79);b(450,676,19,13,76);b(589,676,12,13,76);
  b(562,609,122,10,68);b(670,609,11,34,68);
  // Side rails at 2 elevations with strong geology/rooted struts.
