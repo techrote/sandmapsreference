@@ -32,7 +32,7 @@ const build=function build(){
  }
  // Each upper settlement deck is pinned down into its mesa by paired deep piers.
  function deck(x,y,w,pierXs){R(x,y,w,13,M.steel);R(x,y-7,w,7,M.titanium);for(const a of pierXs){
-  R(a,y,13,250,M.iron);R(a+4,y+10,5,240,M.chrome);
+  R(a,y,13,116,M.iron);R(a+4,y+10,5,106,M.chrome);
   L(a+6,y+140,Math.max(x+6,a-35),y+7,7,M.titanium);
  }}
  deck(119,456,287,[162,337]);deck(534,529,268,[581,761]);
@@ -99,6 +99,7 @@ const build=function build(){
  R(819,630,82,8,M.steel);L(819,636,786,531,10,M.iron);
  R(1265,601,95,9,M.titanium);L(1269,601,1215,515,9,M.iron);
  R(1698,623,91,8,M.iron);L(1712,627,1663,465,9,M.chrome);
+ R(1297,580,65,73,0); // leave damaged crane-side flyable gap
  R(1724,601,63,68,0); // broken deep-truss gap allows local recovery
  for(const [x,y] of [[184,447],[300,445],[590,520],[688,519],[984,502],
  [1179,502],[1447,451],[1592,451],[1852,570],[1981,567]])R(x,y,5,7,M.signal);
@@ -111,7 +112,7 @@ const build=function build(){
  "Crane control":[1135,392],"Crane lift station":[1001,393],
  "Crane hook approach":[1276,373],"Central instrument vault":[1074,714],
  "Central eastern bore":[1308,696],"Central western crossing":[915,622],
- "Fourth island biocustody":[1490,415],"Quarantine dispatch":[1570,407],
+ "Fourth island biocustody":[1534,389],"Quarantine dispatch":[1570,407],
  "Fourth deep clinic":[1512,677],"Fourth eastern portal":[1757,666],
  "Outer beacon launch":[1903,467],"Ferry freight":[1965,485],
  "Far east deep shelter":[1907,772],"Last western slot":[1728,698],
@@ -119,6 +120,11 @@ const build=function build(){
  "West boundary scan":[45,720],"East boundary scan":[2010,370],
  "Upper sky return":[805,191]
  };
+ // Source-authored ground pins: remaining bridge limbs, roof and ore cassettes.
+ R(945,305,12,271,M.iron);
+ R(560,308,12,330,M.iron);R(743,288,7,14,M.iron);R(1615,380,9,98,M.steel);
+ R(277,693,11,14,M.iron);R(697,738,8,15,M.iron);R(1146,766,8,15,M.iron);R(1570,733,8,17,M.iron);R(1948,821,8,14,M.iron);
+ R(839,268,83,210,0); // Midge-class rescue gap through damaged tram and cable diagonal
  // Midge 31x27 keepouts at exact named locations, no target substitutions.
  for(const p of Object.values(sites))R(p[0]-19,p[1]-17,39,35,0);
  // Remove only unreachable as-yet uncommitted prototype fragments.

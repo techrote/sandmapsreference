@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-frontier-wide",
+  "anchor_donors": [],
+  "map_role": "fractured volcanic island chain with five rooted settlements, deliberately broken tram cantilevers, central crane, enterable side-cut service vaults and flight-scale rescue byways",
+  "macro_topology": "five floor-rooted geological island-mesas separated by actual air ravines, with two fragmented high transit spans and one immense asymmetrical crane",
+  "density_profile": "clustered workface modules alternate with large open air and rock voids; five usable underground rooms and three incomplete expansion interfaces",
+  "route_grammar": {
+    "spawn": "West triage arrival",
+    "primary": "western med-bay to thermal audit and salvage crane through eastern bioquarantine to rescue ferry",
+    "alternatives": [
+      "elevated open-sky flight over broken beams",
+      "ravine underflight and side-cut vault entrances",
+      "southbound deep bypass with reversible canyon climbs"
+    ],
+    "named_sites": 31,
+    "obstruction": {
+      "site": "Broken transfer inspection",
+      "box": [
+        653,
+        249,
+        694,
+        290
+      ],
+      "unaffected_reachable": 30
+    }
+  },
+  "strong_motifs": [
+    "asymmetric basalt islands under five settlement deck elevations",
+    "two realistically fractured tram limbs with independent piers",
+    "crane mast/jib with anchored triangulated load-path",
+    "entered underground rock-cut instrument vaults",
+    "five district-specific machinery silhouettes",
+    "exposed lateral recovery corridors and incomplete scaffold seams"
+  ],
+  "interesting_relationships": [
+    "slender transit components root into geological islands rather than float in air",
+    "the interrupted high route is optional for a flight actor and the canyons have deep return options",
+    "inhabited settlements sit above useful but separately accessible rock-cut rooms",
+    "the giant crane creates a dominant vertical movement landmark above a salvage yard"
+  ],
+  "authoring_affordances": [
+    "sheared tram ends can accept a destructible span",
+    "an open crane loading pocket has unused machinery slots",
+    "unfurnished geothermal assay space can receive hand-authored NPC/parts",
+    "eastern deep support stub can become a future attached world area"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Damaged high tram interruption",
+      "area": [
+        440,
+        230,
+        910,
+        370
+      ],
+      "event_type": "bridge failure or chase/rejoin",
+      "scripted": false
+    },
+    {
+      "name": "Heavy crane lift",
+      "area": [
+        1000,
+        145,
+        1360,
+        530
+      ],
+      "event_type": "crane activation and rescue",
+      "scripted": false
+    },
+    {
+      "name": "Eastern quarantine withdrawal",
+      "area": [
+        1380,
+        370,
+        1750,
+        740
+      ],
+      "event_type": "holdout with deep escape",
+      "scripted": false
+    },
+    {
+      "name": "Departure ferry arrival",
+      "area": [
+        1790,
+        435,
+        2045,
+        620
+      ],
+      "event_type": "landing/rescue",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "An example-derived generator can infer fragmented transit assemblies rooted by differing local geological supports, five nonuniform settlement nodes, deliberate traversable ravine gaps, and rejoinable underground chamber modules.",
+  "similarity_avoidance": "Contrasts with Nivelle's roof-hung settlements and counterweights, Cairnstep's descending terrace cascade, Copperwake's enclosed connected cavern network, and Penumbral's annular reflector: five isolated-in-profile mesa settlements with disconnected tram spans and a single central mechanical crane.",
+  "diversity_axes": {
+    "macro_topology": "islands",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "crane",
+    "support_form": "floor_rooted",
+    "environment_relation": "geological",
+    "incompleteness": "damaged"
+  },
+  "native_status": "NATIVE-UNTESTED",
+  "source_grid_sha256": "74e0cf09f84cf2033d90bef5e20cf5a342dcd779931eb2ff5ee5d9312a4b8013"
+}

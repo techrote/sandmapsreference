@@ -1,0 +1,313 @@
+{
+  "concept": "Orison Strand — Fracture-Island Salvage Exchange",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 12625681,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "map_repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "loader_source_max_rectangles": 32768,
+  "loader_source_max_json_bytes": 1048576,
+  "source_work_budget": 32000000,
+  "material_rule_assumption": "All final nonzero cells drawn from current validated inert Solid/None native material palette; no powders, fluids, lava or acid.",
+  "material_histogram": {
+    "49": 43274,
+    "62": 24388,
+    "63": 2266,
+    "68": 30674,
+    "77": 2010,
+    "79": 1454,
+    "100": 575000,
+    "101": 94876,
+    "121": 2470,
+    "129": 13552,
+    "130": 15516,
+    "131": 16641
+  },
+  "filled_grounded_cells": 822121,
+  "detached_final_cells": 0,
+  "final_fluid_cells": 0,
+  "prototype_disconnected_cells_removed": 382,
+  "prototype_components_removed": 3,
+  "rectangle_count": 3911,
+  "rectangle_work": 822121,
+  "setup_bytes": 74008,
+  "grid_sha256": "74e0cf09f84cf2033d90bef5e20cf5a342dcd779931eb2ff5ee5d9312a4b8013",
+  "setup_sha256": "81630b82106d42ae9966530f2c7927c2e96f67a68e5824d98229387e57ad15a5",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 212943,
+      "sha256": "250aeaef6ff19aaac785cc4a3dcdfe1e3c8571cf1aba547e437a6202d59faaf7"
+    },
+    {
+      "name": "01-medical-transit.png",
+      "bytes": 18724,
+      "sha256": "72555dbc43263faf0c1f1f650147a554bf3194b58c19d921f459acc11df32a61"
+    },
+    {
+      "name": "02-west-deep-vaults.png",
+      "bytes": 48365,
+      "sha256": "1d2437413697ee91f1c2ffd44983f24e3b84cbe605e375613287c12fc5ceba79"
+    },
+    {
+      "name": "03-salvage-crane.png",
+      "bytes": 34641,
+      "sha256": "6b0eedd041cdf49f0592d2d9232d3f6053ff822a20c5c562c02a22f30a8e3370"
+    },
+    {
+      "name": "04-quarantine-interchange.png",
+      "bytes": 43210,
+      "sha256": "493e03efbc6b68a6e5a8b0316bd216e0bc2c5b92576730850f09f9512c9871e3"
+    },
+    {
+      "name": "05-deep-service-rooms.png",
+      "bytes": 81459,
+      "sha256": "7685565ec681ebeffabda174632463377914365080f709f556f191091c33edc5"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1061300,
+      "passed": 31,
+      "total": 31,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1019856,
+      "passed": 31,
+      "total": 31,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 945767,
+      "passed": 31,
+      "total": 31,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "xyxy_halfopen": [
+      653,
+      249,
+      694,
+      290
+    ],
+    "material_id": 58,
+    "purpose": "Physically obstruct the isolated damaged-rail inspection destination; preserve all other named sites",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 941010,
+      "passed": 30,
+      "total": 31,
+      "bad": [
+        {
+          "name": "Broken transfer inspection",
+          "xy": [
+            673,
+            268
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "named_sites": {
+    "West triage arrival": [
+      205,
+      408
+    ],
+    "West medical bay": [
+      279,
+      412
+    ],
+    "West side apron": [
+      451,
+      404
+    ],
+    "West low vault": [
+      239,
+      652
+    ],
+    "West vault outlet": [
+      452,
+      666
+    ],
+    "Second island air gate": [
+      545,
+      396
+    ],
+    "Thermal assay": [
+      677,
+      419
+    ],
+    "Second underpass": [
+      514,
+      627
+    ],
+    "Second deep lab": [
+      666,
+      685
+    ],
+    "Second eastern saddle": [
+      842,
+      432
+    ],
+    "Broken transfer inspection": [
+      673,
+      268
+    ],
+    "West transit lookout": [
+      412,
+      268
+    ],
+    "Crane control": [
+      1135,
+      392
+    ],
+    "Crane lift station": [
+      1001,
+      393
+    ],
+    "Crane hook approach": [
+      1276,
+      373
+    ],
+    "Central instrument vault": [
+      1074,
+      714
+    ],
+    "Central eastern bore": [
+      1308,
+      696
+    ],
+    "Central western crossing": [
+      915,
+      622
+    ],
+    "Fourth island biocustody": [
+      1534,
+      389
+    ],
+    "Quarantine dispatch": [
+      1570,
+      407
+    ],
+    "Fourth deep clinic": [
+      1512,
+      677
+    ],
+    "Fourth eastern portal": [
+      1757,
+      666
+    ],
+    "Outer beacon launch": [
+      1903,
+      467
+    ],
+    "Ferry freight": [
+      1965,
+      485
+    ],
+    "Far east deep shelter": [
+      1907,
+      772
+    ],
+    "Last western slot": [
+      1728,
+      698
+    ],
+    "High overflight": [
+      1131,
+      109
+    ],
+    "Deep canyon bypass": [
+      899,
+      786
+    ],
+    "West boundary scan": [
+      45,
+      720
+    ],
+    "East boundary scan": [
+      2010,
+      370
+    ],
+    "Upper sky return": [
+      805,
+      191
+    ]
+  },
+  "literal_actor_spawn": [
+    205,
+    408
+  ],
+  "crops": [
+    [
+      "01-medical-transit",
+      65,
+      230,
+      650,
+      350
+    ],
+    [
+      "02-west-deep-vaults",
+      388,
+      460,
+      600,
+      520
+    ],
+    [
+      "03-salvage-crane",
+      889,
+      109,
+      660,
+      560
+    ],
+    [
+      "04-quarantine-interchange",
+      1320,
+      338,
+      720,
+      478
+    ],
+    [
+      "05-deep-service-rooms",
+      940,
+      563,
+      970,
+      450
+    ]
+  ],
+  "surviving_functional_footprints": {
+    "west_medical": 13235,
+    "thermal_assay": 14405,
+    "central_crane": 35377,
+    "biocustody": 14124,
+    "departure": 11175,
+    "subsurface_workfaces": 29542
+  },
+  "static_status": "CREATOR-STATIC-PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "Independent exact-HEAD Art/Technical/Shepherd pending",
+  "creator_revision": "First source-authored fracture-island/multi-settlement salvage interchange, 2026-11-21"
+}

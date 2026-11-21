@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "kind": "source-grid named-site navigation proof; schematic routes, NOT separately certified local edge trajectories",
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_grid_sha256": "74e0cf09f84cf2033d90bef5e20cf5a342dcd779931eb2ff5ee5d9312a4b8013",
+  "conservative_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_bfs_proof": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1061300,
+      "passed": 31,
+      "total": 31,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1019856,
+      "passed": 31,
+      "total": 31,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 945767,
+      "passed": 31,
+      "total": 31,
+      "bad": []
+    }
+  ],
+  "obstruction_test": {
+    "xyxy_halfopen": [
+      653,
+      249,
+      694,
+      290
+    ],
+    "material_id": 58,
+    "purpose": "Physically obstruct the isolated damaged-rail inspection destination; preserve all other named sites",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 941010,
+      "passed": 30,
+      "total": 31,
+      "bad": [
+        {
+          "name": "Broken transfer inspection",
+          "xy": [
+            673,
+            268
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "spawn": "West triage arrival",
+  "named_sites": {
+    "West triage arrival": [
+      205,
+      408
+    ],
+    "West medical bay": [
+      279,
+      412
+    ],
+    "West side apron": [
+      451,
+      404
+    ],
+    "West low vault": [
+      239,
+      652
+    ],
+    "West vault outlet": [
+      452,
+      666
+    ],
+    "Second island air gate": [
+      545,
+      396
+    ],
+    "Thermal assay": [
+      677,
+      419
+    ],
+    "Second underpass": [
+      514,
+      627
+    ],
+    "Second deep lab": [
+      666,
+      685
+    ],
+    "Second eastern saddle": [
+      842,
+      432
+    ],
+    "Broken transfer inspection": [
+      673,
+      268
+    ],
+    "West transit lookout": [
+      412,
+      268
+    ],
+    "Crane control": [
+      1135,
+      392
+    ],
+    "Crane lift station": [
+      1001,
+      393
+    ],
+    "Crane hook approach": [
+      1276,
+      373
+    ],
+    "Central instrument vault": [
+      1074,
+      714
+    ],
+    "Central eastern bore": [
+      1308,
+      696
+    ],
+    "Central western crossing": [
+      915,
+      622
+    ],
+    "Fourth island biocustody": [
+      1534,
+      389
+    ],
+    "Quarantine dispatch": [
+      1570,
+      407
+    ],
+    "Fourth deep clinic": [
+      1512,
+      677
+    ],
+    "Fourth eastern portal": [
+      1757,
+      666
+    ],
+    "Outer beacon launch": [
+      1903,
+      467
+    ],
+    "Ferry freight": [
+      1965,
+      485
+    ],
+    "Far east deep shelter": [
+      1907,
+      772
+    ],
+    "Last western slot": [
+      1728,
+      698
+    ],
+    "High overflight": [
+      1131,
+      109
+    ],
+    "Deep canyon bypass": [
+      899,
+      786
+    ],
+    "West boundary scan": [
+      45,
+      720
+    ],
+    "East boundary scan": [
+      2010,
+      370
+    ],
+    "Upper sky return": [
+      805,
+      191
+    ]
+  },
+  "routes": {
+    "primary": [
+      "West triage arrival",
+      "West medical bay",
+      "West side apron",
+      "Second island air gate",
+      "Thermal assay",
+      "Second eastern saddle",
+      "Crane lift station",
+      "Crane control",
+      "Crane hook approach",
+      "Fourth island biocustody",
+      "Quarantine dispatch",
+      "Fourth eastern portal",
+      "Outer beacon launch",
+      "Ferry freight"
+    ],
+    "overflight": [
+      "West transit lookout",
+      "Broken transfer inspection",
+      "Upper sky return",
+      "High overflight",
+      "Crane hook approach",
+      "Outer beacon launch"
+    ],
+    "deep_recovery": [
+      "West triage arrival",
+      "West low vault",
+      "West vault outlet",
+      "Second underpass",
+      "Second deep lab",
+      "Deep canyon bypass",
+      "Central western crossing",
+      "Central instrument vault",
+      "Central eastern bore",
+      "Fourth deep clinic",
+      "Last western slot",
+      "Far east deep shelter",
+      "Ferry freight"
+    ],
+    "external_surveys": [
+      "West boundary scan",
+      "Second island air gate",
+      "Crane lift station",
+      "Central eastern bore",
+      "Fourth eastern portal",
+      "East boundary scan"
+    ]
+  },
+  "route_semantics": "Every literal site was proved free and reachable from the literal spawn by exhaustive 4-neighbour BFS at every listed full rectangular Midge envelope. Routes are architectural traversal groupings; no claim is made that each listed consecutive edge is a unique local shortest path. The unobstructed grid is undirected, so all reached destinations admit a return to spawn."
+}
