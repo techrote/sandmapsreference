@@ -189,28 +189,316 @@
       "minProperties": 1,
       "properties": {
         "macro_topology": {
-          "$ref": "#/$defs/macroTopology"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "linear",
+                "braided",
+                "ring",
+                "crater",
+                "suspended",
+                "islands",
+                "nested_cavities",
+                "cascade",
+                "multi_settlement",
+                "basin",
+                "yard",
+                "corridor",
+                "bridge",
+                "vertical_fault",
+                "drydock",
+                "mixed",
+                "other"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "linear",
+                  "braided",
+                  "ring",
+                  "crater",
+                  "suspended",
+                  "islands",
+                  "nested_cavities",
+                  "cascade",
+                  "multi_settlement",
+                  "basin",
+                  "yard",
+                  "corridor",
+                  "bridge",
+                  "vertical_fault",
+                  "drydock",
+                  "mixed",
+                  "other"
+                ]
+              }
+            }
+          ]
         },
         "altitude_grammar": {
-          "$ref": "#/$defs/altitudeGrammar"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "single_level",
+                "dual_level",
+                "tri_level",
+                "vertical_spine",
+                "high_low_bypass",
+                "multi_strata",
+                "mixed",
+                "other"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "single_level",
+                  "dual_level",
+                  "tri_level",
+                  "vertical_spine",
+                  "high_low_bypass",
+                  "multi_strata",
+                  "mixed",
+                  "other"
+                ]
+              }
+            }
+          ]
         },
         "density_cadence": {
-          "$ref": "#/$defs/densityCadence"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "uniform_sparse",
+                "uniform_dense",
+                "dense_open_dense",
+                "edge_dense_center_open",
+                "alternating",
+                "clustered",
+                "mixed",
+                "other"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "uniform_sparse",
+                  "uniform_dense",
+                  "dense_open_dense",
+                  "edge_dense_center_open",
+                  "alternating",
+                  "clustered",
+                  "mixed",
+                  "other"
+                ]
+              }
+            }
+          ]
         },
         "route_structure": {
-          "$ref": "#/$defs/routeStructure"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "linear",
+                "branch_rejoin",
+                "loop",
+                "hub_spoke",
+                "parallel_lanes",
+                "layered",
+                "switchback",
+                "dead_end_recovery",
+                "mixed",
+                "other"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "linear",
+                  "branch_rejoin",
+                  "loop",
+                  "hub_spoke",
+                  "parallel_lanes",
+                  "layered",
+                  "switchback",
+                  "dead_end_recovery",
+                  "mixed",
+                  "other"
+                ]
+              }
+            }
+          ]
         },
         "landmark_family": {
-          "$ref": "#/$defs/landmarkFamily"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "central_machine",
+                "bridge",
+                "vessel",
+                "tower",
+                "ring",
+                "rotor",
+                "crane",
+                "dish",
+                "crater",
+                "gate",
+                "gantry",
+                "basin",
+                "cableway",
+                "mixed",
+                "other"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "central_machine",
+                  "bridge",
+                  "vessel",
+                  "tower",
+                  "ring",
+                  "rotor",
+                  "crane",
+                  "dish",
+                  "crater",
+                  "gate",
+                  "gantry",
+                  "basin",
+                  "cableway",
+                  "mixed",
+                  "other"
+                ]
+              }
+            }
+          ]
         },
         "support_form": {
-          "$ref": "#/$defs/supportForm"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "edge_rooted",
+                "floor_rooted",
+                "roof_rooted",
+                "suspended",
+                "twin_pier",
+                "multi_leg",
+                "arch",
+                "cliff_embedded",
+                "mixed",
+                "other"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "edge_rooted",
+                  "floor_rooted",
+                  "roof_rooted",
+                  "suspended",
+                  "twin_pier",
+                  "multi_leg",
+                  "arch",
+                  "cliff_embedded",
+                  "mixed",
+                  "other"
+                ]
+              }
+            }
+          ]
         },
         "environment_relation": {
-          "$ref": "#/$defs/environmentRelation"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "dry",
+                "fluid_containment",
+                "thermal",
+                "biological",
+                "geological",
+                "damaged",
+                "mixed",
+                "other"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "dry",
+                  "fluid_containment",
+                  "thermal",
+                  "biological",
+                  "geological",
+                  "damaged",
+                  "mixed",
+                  "other"
+                ]
+              }
+            }
+          ]
         },
         "incompleteness": {
-          "$ref": "#/$defs/incompleteness"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "finished",
+                "editable_gaps",
+                "damaged",
+                "excavation",
+                "abandoned",
+                "modular_append_zones",
+                "mixed",
+                "other"
+              ]
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "finished",
+                  "editable_gaps",
+                  "damaged",
+                  "excavation",
+                  "abandoned",
+                  "modular_append_zones",
+                  "mixed",
+                  "other"
+                ]
+              }
+            }
+          ]
         }
       },
       "additionalProperties": false
