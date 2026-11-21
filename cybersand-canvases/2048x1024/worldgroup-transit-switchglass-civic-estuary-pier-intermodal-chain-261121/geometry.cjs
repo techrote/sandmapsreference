@@ -115,20 +115,20 @@ function buildWorld(){
  // Long-void sightlines and alternate high aerial entry are intentional, not missing finish.
  // Route sites: exact conservative full hull centres, no nearest-point snapping.
  const sites=[
-  ["West embarkation",119,535],["West tram ticket",208,599],["West repair gallery",124,900],
-  ["West expansion pier",302,694],["Open strait approach",398,594],
-  ["Cable exchange arrival",612,550],["Battery pier operator",727,549],
-  ["Haul power inspection",629,843],["Battery shaft recovery",701,750],
+  ["West embarkation",119,535],["West tram ticket",204,519],["West repair gallery",124,900],
+  ["West expansion pier",313,691],["Open strait approach",398,525],
+  ["Cable exchange arrival",612,550],["Battery pier operator",720,555],
+  ["Haul power inspection",642,873],["Battery shaft recovery",701,750],
   ["Upper aerial handoff",912,530],["Cargo mole entry",1017,619],
-  ["Cargo crane dispatch",1118,631],["Freight scale",1238,635],
+  ["Cargo crane dispatch",1118,631],["Freight scale",1196,611],
   ["Mole maintenance cell",1093,904],["Lower cargo rescue",1166,796],
-  ["Central severable cable span",1390,623],["Signal islet approach",1485,523],
-  ["Upper semaphore gallery",1593,462],["Signal relay operator",1690,529],
-  ["Brake signal service",1525,787],["Remote signal shaft",1582,694],
-  ["Outer bridge approach",1812,595],["Rescue watchtower",1972,654],
-  ["Outer exit",2015,697]
+  ["Central severable cable span",1390,558],["Signal islet approach",1485,523],
+  ["Upper semaphore gallery",1695,346],["Signal relay operator",1732,513],
+  ["Brake signal service",1529,788],["Remote signal shaft",1582,694],
+  ["Outer bridge approach",1812,595],["Rescue watchtower",1946,631],
+  ["Outer exit",1924,671]
  ];
- const obs=[1343,560,96,124];
+ const obs=[1343,507,96,124];
  const crops=[
   ["overview.png",0,0,W,H],
   ["01-west-passenger-arrival.png",0,490,410,520],
@@ -138,6 +138,12 @@ function buildWorld(){
   ["05-rescue-tower-and-estuary.png",1712,465,336,559],
   ["06-cable-strut-and-broken-spur.png",286,572,708,380]
  ];
+ // Open civic pier entries and high/low catenary transfer breaks; all are material cells.
+ rect(159,551,78,115,0);rect(683,441,76,222,0);
+ rect(416,564,86,108,0); // under-strait egress through freight wire
+ rect(1122,675,93,47,0);rect(1541,579,91,49,0);
+ // A split in the remote signal arch makes an honest open-to-sky full-envelope emergency entry.
+ rect(1595,373,35,75,0);
  // Erase only truly unattached preliminary decorative solids; retain all grounded engineering.
  const attached=new Uint8Array(N),q=new Int32Array(N);let tail=0,head=0;
  function push(z){if(g[z]&&!attached[z]){attached[z]=1;q[tail++]=z;}}
