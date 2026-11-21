@@ -74,6 +74,8 @@ function world(){
  for(let y of [365,745,1298,1668]){b(353,y,35,11,49);b(637,y+31,42,11,131);}
  // Full-scale alternative drill portals from core to east return corridor.
  b(594,793,112,146,0);b(590,1170,119,148,0);
+ // Entered opposed full-hull diagnostic doorways, not scenic instrument gaps.
+ b(590,404,226,87,0);b(591,523,253,83,0);
  // Literal site clearance (not a hidden waiver, search or substituted waypoint).
  for(const s of sites)b(s.x-20,s.y-18,41,37,0);
  // Physically keep only stable boundary-connected material; never mimic air with pseudo-materials.
