@@ -1,0 +1,553 @@
+{
+  "version": 1,
+  "not_authorized_for_execution": true,
+  "scope": "NONFINAL, advisory feature-level Astra directions. No Gold selection, Astra run or authoring writes.",
+  "counts": {
+    "WEAK": 14,
+    "GOOD": 11,
+    "INTENTIONAL": 10,
+    "PENDING": 3
+  },
+  "groups": {
+    "DO-PRESERVE": [
+      {
+        "state_id": "P185-OFFSET-RING-HIERARCHY@9e3e80d5f6dbe1e307e0d4afc1460402328e9cd3",
+        "pr": 185,
+        "review": "https://github.com/techrote/sandmapsreference/pull/185#issuecomment-7062923758",
+        "window_xyxy": [
+          545,
+          90,
+          1000,
+          550
+        ],
+        "brief": "Preserve the ring/station hierarchy; any additions must distinguish the mid-bank exchange, not erase the rings.",
+        "protect": "Two offset annuli, optical mast and opposite calibration banks",
+        "avoid": "Annulus interiors and unobstructed measurement/flight gaps"
+      },
+      {
+        "state_id": "P186-UPPER-SEISMIC-FORK@598e8792b32a4922008b6d3dcb9208d21f03e477",
+        "pr": 186,
+        "review": "https://github.com/techrote/sandmapsreference/pull/186#issuecomment-7062924203",
+        "window_xyxy": [
+          578,
+          218,
+          953,
+          670
+        ],
+        "brief": "Preserve fork and independent rock-rooted support; only bounded repair elsewhere.",
+        "protect": "East seismic fork against unequal west clinic/ore banks",
+        "avoid": "Air around fork arms for actor flight/reveal"
+      },
+      {
+        "state_id": "P188-STERILE-SIDE-RETURN@e0742d30dec30cf48d002abdbc1973928dcc9388",
+        "pr": 188,
+        "review": "https://github.com/techrote/sandmapsreference/pull/188#issuecomment-7064471710",
+        "window_xyxy": [
+          684,
+          776,
+          883,
+          1344
+        ],
+        "brief": "Preserve right-gallery mouth, whole-hull clearance and obstruction behaviour during biology repair.",
+        "protect": "Upper culture bank to eastern sterile return to export",
+        "avoid": "Clear emergency gallery and route mouth"
+      },
+      {
+        "state_id": "P191-EIGHT-SPOKE-ROTOR@52820f48fb1f5dca10342aa47d89abaf5c281595",
+        "pr": 191,
+        "review": "https://github.com/techrote/sandmapsreference/pull/191#issuecomment-7064472858",
+        "window_xyxy": [
+          305,
+          1025,
+          770,
+          1430
+        ],
+        "brief": "Do not overwrite rotor or two flank clearances while repairing settlement identity.",
+        "protect": "Eight-spoke rotor and diagonal ladle-to-caster process order",
+        "avoid": "Central rotor sightline and two flank flight routes"
+      },
+      {
+        "state_id": "P192-FURNACE-LADLE-PROCESS@101203a124f0ee3ac5613d38956e72f0faae8685",
+        "pr": 192,
+        "review": "https://github.com/techrote/sandmapsreference/pull/192#issuecomment-7064489973",
+        "window_xyxy": [
+          100,
+          420,
+          920,
+          790
+        ],
+        "brief": "Preserve process stages and contained initial fluids; do not replace with generic truss detail.",
+        "protect": "Ore → furnace → ladle → caster → quench causal sequence",
+        "avoid": "Furnace/ladle maintenance voids"
+      },
+      {
+        "state_id": "P196-BREACHED-ENTERED-FREIGHTER@64fd7061385fd96e5673484e1a12a70e11333386",
+        "pr": 196,
+        "review": "https://github.com/techrote/sandmapsreference/pull/196#issuecomment-7067659159",
+        "window_xyxy": [
+          82,
+          308,
+          477,
+          670
+        ],
+        "brief": "Preserve ship hull, exposed entry and separate crane; do not redesign vessel.",
+        "protect": "Breached ship → independent crane → middle relay",
+        "avoid": "Breached access and cargo staging pockets"
+      },
+      {
+        "state_id": "P184-DUAL-ALTITUDE-KEEL-CRADLES@e45f9794f318761db02fbe82ad623c2b1da96196",
+        "pr": 184,
+        "review": "https://github.com/techrote/sandmapsreference/pull/184#issuecomment-7062923366",
+        "window_xyxy": [
+          77,
+          801,
+          427,
+          1182
+        ],
+        "brief": "Preserve both unequal supports and their load relationship; optional narrative correction only.",
+        "protect": "Dual cradles at unlike elevations and process chain",
+        "avoid": "Central hoist void"
+      },
+      {
+        "state_id": "P187-REVERSE-FREIGHT-HOIST@fdda5cc98885bbe1ef101a7fa7ef42466962a141",
+        "pr": 187,
+        "review": "https://github.com/techrote/sandmapsreference/pull/187#issuecomment-7062924614",
+        "window_xyxy": [
+          370,
+          640,
+          745,
+          1110
+        ],
+        "brief": "Preserve vertical hoist and uneven level interfaces.",
+        "protect": "High-right vessel to mid hoist to west classifier stages",
+        "avoid": "Hoist shaft and clearance around counterweight"
+      },
+      {
+        "state_id": "P189-UNEQUAL-ROOTED-EXTRUDERS@54be92a43375f1089508dd610bbfdce0f6af74d2",
+        "pr": 189,
+        "review": "https://github.com/techrote/sandmapsreference/pull/189#issuecomment-7064472031",
+        "window_xyxy": [
+          125,
+          1010,
+          905,
+          1552
+        ],
+        "brief": "Preserve disjoint process machines and the explicitly discarded continuous roof identity.",
+        "protect": "Ore→furnace→ladle→extruders→quench",
+        "avoid": "Central cargo and flight spine"
+      },
+      {
+        "state_id": "P193-TWIN-SORTER-THROATS@54e2e2b4e9d6bd7113396cf6a2bc61409367cd44",
+        "pr": 193,
+        "review": "https://github.com/techrote/sandmapsreference/pull/193#issuecomment-7066007172",
+        "window_xyxy": [
+          540,
+          1140,
+          900,
+          1470
+        ],
+        "brief": "Preserve twin throats and separate rail/customs stage.",
+        "protect": "Upper vessel/crane → relay → twin classifier → customs",
+        "avoid": "Adjacent lower access/returns"
+      },
+      {
+        "state_id": "P197-OPPOSED-BASCULE-LEAVES@3b0253d387578bda3af00a6edc97833219df64a9",
+        "pr": 197,
+        "review": "https://github.com/techrote/sandmapsreference/pull/197#issuecomment-7067659564",
+        "window_xyxy": [
+          250,
+          700,
+          870,
+          1140
+        ],
+        "brief": "Preserve oppositional geometry, hinge roots and distinct leaf supports; do not claim live actuation.",
+        "protect": "Ferry/crane → paired bascule → ten-spoke rotor → rail",
+        "avoid": "Central V-throat flight space"
+      }
+    ],
+    "DO-REPAIR": [
+      {
+        "state_id": "P185-CROSSBANK-ASSAY@9e3e80d5f6dbe1e307e0d4afc1460402328e9cd3",
+        "pr": 185,
+        "review": "https://github.com/techrote/sandmapsreference/pull/185#issuecomment-7062923758",
+        "window_xyxy": [
+          240,
+          739,
+          803,
+          1185
+        ],
+        "brief": "Clarify one or two different, support-connected instrument exchanges in y≈740–1150, or explicitly narrow the preserved-coupling claim.",
+        "protect": "Opposing banks and mid-height assay link",
+        "avoid": "Main open flight atrium and thin editable sockets"
+      },
+      {
+        "state_id": "P186-EAST-DRILL-PORTAL@598e8792b32a4922008b6d3dcb9208d21f03e477",
+        "pr": 186,
+        "review": "https://github.com/techrote/sandmapsreference/pull/186#issuecomment-7062924203",
+        "window_xyxy": [
+          574,
+          893,
+          951,
+          1361
+        ],
+        "brief": "Add structurally attached side-entry workface and show forced upper→middle→lower waypoint passage, or narrow the forced-bypass claim.",
+        "protect": "Entered right drill upper/middle/lower route relation",
+        "avoid": "Central fault flight clearance and exposed geological shear"
+      },
+      {
+        "state_id": "P186-CROSSING-TECH-GRAMMAR@598e8792b32a4922008b6d3dcb9208d21f03e477",
+        "pr": 186,
+        "review": "https://github.com/techrote/sandmapsreference/pull/186#issuecomment-7062924203",
+        "window_xyxy": [
+          72,
+          752,
+          486,
+          1199
+        ],
+        "brief": "Make one upper/mid crossing terminal and one low fractured rejoin physically different, with grounded attachments.",
+        "protect": "Separate high, ore-stage and broken-low crossing identities",
+        "avoid": "Discontinuous joints and main shear negative space"
+      },
+      {
+        "state_id": "P188-HANGING-CULTURE-FAMILIES@e0742d30dec30cf48d002abdbc1973928dcc9388",
+        "pr": 188,
+        "review": "https://github.com/techrote/sandmapsreference/pull/188#issuecomment-7064471710",
+        "window_xyxy": [
+          193,
+          379,
+          711,
+          887
+        ],
+        "brief": "Strengthen 3–5 unlike roof-supported sleeves and at least one clearly suspended cassette at y≈160–800.",
+        "protect": "Canopy → culture → custody vertical process",
+        "avoid": "Flight lumen and unworked lower bays"
+      },
+      {
+        "state_id": "P190-EAST-ENTERED-VAULT@089d2cdb6b06b40d53ce9c4c83ef34192567454d",
+        "pr": 190,
+        "review": "https://github.com/techrote/sandmapsreference/pull/190#issuecomment-7064472415",
+        "window_xyxy": [
+          587,
+          847,
+          1010,
+          1414
+        ],
+        "brief": "Carve two materially unlike entered side chambers around right selector/isolation y≈900–1500 with open thresholds.",
+        "protect": "Registry → assay → selector → quarantine custody chain",
+        "avoid": "Main dry vertical drop and archival reserve"
+      },
+      {
+        "state_id": "P190-WEST-DIAGNOSTIC-THRESHOLD@089d2cdb6b06b40d53ce9c4c83ef34192567454d",
+        "pr": 190,
+        "review": "https://github.com/techrote/sandmapsreference/pull/190#issuecomment-7064472415",
+        "window_xyxy": [
+          124,
+          537,
+          636,
+          849
+        ],
+        "brief": "Distinguish registry from diagnostic with one grounded partial wall or identifiable entry transition.",
+        "protect": "Upper west registry versus diagnostic workface distinction",
+        "avoid": "Flight shaft and nearby archive expansion space"
+      },
+      {
+        "state_id": "P191-UPPER-WORKER-HILLTOWN@52820f48fb1f5dca10342aa47d89abaf5c281595",
+        "pr": 191,
+        "review": "https://github.com/techrote/sandmapsreference/pull/191#issuecomment-7064472858",
+        "window_xyxy": [
+          98,
+          205,
+          518,
+          455
+        ],
+        "brief": "Add one or two grounded entered hilltown roofs/intake/work rooms without relocating the furnace.",
+        "protect": "Upper village feeding hot process",
+        "avoid": "Open high air and machinery envelopes"
+      },
+      {
+        "state_id": "P191-MID-GUILD-SETTLEMENT@52820f48fb1f5dca10342aa47d89abaf5c281595",
+        "pr": 191,
+        "review": "https://github.com/techrote/sandmapsreference/pull/191#issuecomment-7064472858",
+        "window_xyxy": [
+          620,
+          775,
+          932,
+          1154
+        ],
+        "brief": "Add a recognizably entered guild doorway/toolroom and crew handoff with grounded walls.",
+        "protect": "Middle guild to caster/rotor relationship",
+        "avoid": "Open rotor handling space"
+      },
+      {
+        "state_id": "P191-LOWER-EXPORT-VILLAGE@52820f48fb1f5dca10342aa47d89abaf5c281595",
+        "pr": 191,
+        "review": "https://github.com/techrote/sandmapsreference/pull/191#issuecomment-7064472858",
+        "window_xyxy": [
+          632,
+          1680,
+          932,
+          1982
+        ],
+        "brief": "Add compact nonrepeated dispatch shelters with distinct entries, preserving lower clearance.",
+        "protect": "Low freight settlement to export and quench",
+        "avoid": "Lower freight channel and access"
+      },
+      {
+        "state_id": "P192-HIGH-TENSION-CROSSING@101203a124f0ee3ac5613d38956e72f0faae8685",
+        "pr": 192,
+        "review": "https://github.com/techrote/sandmapsreference/pull/192#issuecomment-7064489973",
+        "window_xyxy": [
+          100,
+          735,
+          925,
+          995
+        ],
+        "brief": "Add opposed anchors, continuous tension path and readable load handoff while retaining hull-passable openings.",
+        "protect": "Upper cable supports on two banks distinct from lower truss",
+        "avoid": "Main fault flight corridor and safety gaps"
+      },
+      {
+        "state_id": "P192-LOWER-TRUSS-CROSSING@101203a124f0ee3ac5613d38956e72f0faae8685",
+        "pr": 192,
+        "review": "https://github.com/techrote/sandmapsreference/pull/192#issuecomment-7064489973",
+        "window_xyxy": [
+          100,
+          1000,
+          925,
+          1280
+        ],
+        "brief": "Clarify V-braced triangulated pier-to-pier mechanism, bank entries and 31×27 portal route if claimed.",
+        "protect": "Low founded truss mechanically unlike high cable",
+        "avoid": "Fault gaps and traversable side-channel"
+      },
+      {
+        "state_id": "P196-SALVAGE-MAGNET-HANDOFF@64fd7061385fd96e5673484e1a12a70e11333386",
+        "pr": 196,
+        "review": "https://github.com/techrote/sandmapsreference/pull/196#issuecomment-7067659159",
+        "window_xyxy": [
+          528,
+          193,
+          946,
+          663
+        ],
+        "brief": "Shape distinct static gripping head and opposing receiving stage, not simulated magnetic actuation.",
+        "protect": "Separate ship, crane and receiving lift",
+        "avoid": "Open crossing air between left hull and right crane"
+      },
+      {
+        "state_id": "P196-PRESS-COMPRESSION-CELL@64fd7061385fd96e5673484e1a12a70e11333386",
+        "pr": 196,
+        "review": "https://github.com/techrote/sandmapsreference/pull/196#issuecomment-7067659159",
+        "window_xyxy": [
+          600,
+          1033,
+          944,
+          1355
+        ],
+        "brief": "Add opposed compression jaws/piston and accessible sorting bay at the entered press threshold.",
+        "protect": "Press threshold → sort → lower rail chain",
+        "avoid": "31×27 side access and shaft centre"
+      },
+      {
+        "state_id": "P196-BROKEN-TRESTLE-PAIRS@64fd7061385fd96e5673484e1a12a70e11333386",
+        "pr": 196,
+        "review": "https://github.com/techrote/sandmapsreference/pull/196#issuecomment-7067659159",
+        "window_xyxy": [
+          80,
+          668,
+          944,
+          1108
+        ],
+        "brief": "Differentiate two joint ends with fracture/brace/cargo staging, retaining passable disconnects.",
+        "protect": "Two asymmetrically damaged cargo interfaces and alternate rescue",
+        "avoid": "Unbridged fault void and flight clearance"
+      }
+    ],
+    "DO-NOT-FILL": [
+      {
+        "state_id": "P185-LOWER-EDITABLE-ATRIUM@9e3e80d5f6dbe1e307e0d4afc1460402328e9cd3",
+        "pr": 185,
+        "review": "https://github.com/techrote/sandmapsreference/pull/185#issuecomment-7062923758",
+        "window_xyxy": [
+          145,
+          1598,
+          975,
+          2028
+        ],
+        "brief": "No infill requested; keep void clear during a mid-assay repair.",
+        "protect": "Lower extraction, quarantine and side survey ledges remain accessible",
+        "avoid": "Large lower atrium and unfinished sockets"
+      },
+      {
+        "state_id": "P188-LOWER-CIVIC-VOID@e0742d30dec30cf48d002abdbc1973928dcc9388",
+        "pr": 188,
+        "review": "https://github.com/techrote/sandmapsreference/pull/188#issuecomment-7064471710",
+        "window_xyxy": [
+          130,
+          1307,
+          890,
+          1706
+        ],
+        "brief": "Keep basal coves empty unless new event staging has independent evidence.",
+        "protect": "Basal extraction and sterile return remain distinct",
+        "avoid": "Lower edit sockets and open traversal volume"
+      },
+      {
+        "state_id": "P190-BURIED-ARCHIVE-RESERVE@089d2cdb6b06b40d53ce9c4c83ef34192567454d",
+        "pr": 190,
+        "review": "https://github.com/techrote/sandmapsreference/pull/190#issuecomment-7064472415",
+        "window_xyxy": [
+          95,
+          1220,
+          1001,
+          1807
+        ],
+        "brief": "No additional archive furnishings as part of vault-identity repair.",
+        "protect": "Keep quarantine separate from diagnostic and dry central route",
+        "avoid": "Unfinished archive area"
+      },
+      {
+        "state_id": "P192-CENTRAL-FAULT-GAP@101203a124f0ee3ac5613d38956e72f0faae8685",
+        "pr": 192,
+        "review": "https://github.com/techrote/sandmapsreference/pull/192#issuecomment-7064489973",
+        "window_xyxy": [
+          100,
+          1000,
+          925,
+          1280
+        ],
+        "brief": "Keep substantial open central shaft and two intentional clearance bands.",
+        "protect": "Separation between upper and lower engineering systems",
+        "avoid": "Main fault volume and deliberately unfinished joins"
+      },
+      {
+        "state_id": "P196-LOWER-WEST-RESERVE@64fd7061385fd96e5673484e1a12a70e11333386",
+        "pr": 196,
+        "review": "https://github.com/techrote/sandmapsreference/pull/196#issuecomment-7067659159",
+        "window_xyxy": [
+          82,
+          1665,
+          644,
+          1975
+        ],
+        "brief": "Do not fill; retain left recovery and bottom return during functional repairs.",
+        "protect": "Left underworks to central recovery and eastern freight",
+        "avoid": "Broad lower shaft and west recovery space"
+      },
+      {
+        "state_id": "P184-QUENCH-SERVICE-POCKETS@e45f9794f318761db02fbe82ad623c2b1da96196",
+        "pr": 184,
+        "review": "https://github.com/techrote/sandmapsreference/pull/184#issuecomment-7062923366",
+        "window_xyxy": [
+          76,
+          1446,
+          424,
+          1823
+        ],
+        "brief": "No mandatory infill or machinery promotion.",
+        "protect": "Quench to downstream freight and upper/lower cradle access",
+        "avoid": "Service pockets and hoist flight channel"
+      },
+      {
+        "state_id": "P187-EAST-RETURN-AFFORDANCE@fdda5cc98885bbe1ef101a7fa7ef42466962a141",
+        "pr": 187,
+        "review": "https://github.com/techrote/sandmapsreference/pull/187#issuecomment-7062924614",
+        "window_xyxy": [
+          652,
+          1055,
+          1003,
+          1647
+        ],
+        "brief": "Keep side lane accessible under existing obstruction route.",
+        "protect": "Mid hoist → east service → lower exit",
+        "avoid": "Counterweight and return airspace"
+      },
+      {
+        "state_id": "P189-LOWER-FREIGHT-EDIT-SEAM@54be92a43375f1089508dd610bbfdce0f6af74d2",
+        "pr": 189,
+        "review": "https://github.com/techrote/sandmapsreference/pull/189#issuecomment-7064472031",
+        "window_xyxy": [
+          124,
+          1745,
+          904,
+          1956
+        ],
+        "brief": "Keep vacant cargo/repair gaps, no furnishing P1.",
+        "protect": "Quench isolation → freight departure",
+        "avoid": "Lower expansion and flight clearance"
+      },
+      {
+        "state_id": "P193-RECOVERY-EDIT-BAYS@54e2e2b4e9d6bd7113396cf6a2bc61409367cd44",
+        "pr": 193,
+        "review": "https://github.com/techrote/sandmapsreference/pull/193#issuecomment-7066007172",
+        "window_xyxy": [
+          90,
+          1450,
+          710,
+          1760
+        ],
+        "brief": "No compulsory edits; preserve alternate flight access.",
+        "protect": "Low maintenance/recovery separated from sorters",
+        "avoid": "Side edit pockets and under-sorted recovery route"
+      },
+      {
+        "state_id": "P197-UNDERINVERT-RESERVE@3b0253d387578bda3af00a6edc97833219df64a9",
+        "pr": 197,
+        "review": "https://github.com/techrote/sandmapsreference/pull/197#issuecomment-7067659564",
+        "window_xyxy": [
+          90,
+          1520,
+          645,
+          1990
+        ],
+        "brief": "Preserve under-invert edit potential and 31×27 route.",
+        "protect": "Lower under-invert ↔ customs/departure relationship",
+        "avoid": "West service recesses and open shaft"
+      }
+    ],
+    "DO-NOT-ASSERT": [
+      {
+        "state_id": "P186-FORCED-BYPASS-CLAIM@598e8792b32a4922008b6d3dcb9208d21f03e477",
+        "pr": 186,
+        "review": "https://github.com/techrote/sandmapsreference/pull/186#issuecomment-7062924203",
+        "window_xyxy": [
+          574,
+          893,
+          951,
+          1361
+        ],
+        "brief": "Require explicit waypoint-constrained side-entry evidence under the real block, or describe it only as shaft-side avoidance.",
+        "protect": "Preserve all 22 literal sites and the alternate clear-centre path",
+        "avoid": "Unobstructed shaft and unneeded side-gallery air"
+      },
+      {
+        "state_id": "P190-FORCED-STERILE-CLAIM@089d2cdb6b06b40d53ce9c4c83ef34192567454d",
+        "pr": 190,
+        "review": "https://github.com/techrote/sandmapsreference/pull/190#issuecomment-7064472415",
+        "window_xyxy": [
+          587,
+          847,
+          1010,
+          1414
+        ],
+        "brief": "Show upper portal→midpassage→lower portal on a 31×27 blocked path or narrow description to optional service gallery.",
+        "protect": "18 literal site centres and genuine central obstruction",
+        "avoid": "Unentered portion of main flight shaft"
+      },
+      {
+        "state_id": "P184-FORCED-SIDE-WORKSHOP-CLAIM@e45f9794f318761db02fbe82ad623c2b1da96196",
+        "pr": 184,
+        "review": "https://github.com/techrote/sandmapsreference/pull/184#issuecomment-7062923366",
+        "window_xyxy": [
+          611,
+          833,
+          971,
+          1173
+        ],
+        "brief": "Reword as shaft-side detour or add exact waypoint-constrained proof; no geometry repair necessary.",
+        "protect": "18 exact 31×27 sites and existing connected paths",
+        "avoid": "Side workshop and central hoist void"
+      }
+    ]
+  }
+}
