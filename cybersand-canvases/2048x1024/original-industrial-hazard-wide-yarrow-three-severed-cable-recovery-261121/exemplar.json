@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-hazard-wide",
+  "map_role": "four anchored aerial processing clusters and a deliberately severed cableway over dry recovery access",
+  "anchor_donors": [],
+  "macro_topology": [
+    "islands",
+    "bridge"
+  ],
+  "density_profile": "four dense unequal specialist stations and open centrally interrupted cable spans above a dry low-density rescue stratum",
+  "route_grammar": {
+    "main": "west decon → cyclone doublet → sagging broken cable bridge → stepped quench → double-rooted gasometer → extraction",
+    "alternatives": [
+      "upper sky approach",
+      "underbridge rescue return",
+      "five 94-cell vertical access shafts"
+    ],
+    "rejoin": "east safety berth"
+  },
+  "strong_motifs": [
+    "severed sagging cable bridge over recoverable negative space",
+    "unequal double-cyclone trident array",
+    "three distinct sealed quench-clamp structures",
+    "asymmetric gasometer roof",
+    "rooted narrow steel support piers"
+  ],
+  "interesting_relationships": [
+    "upper transit and lower emergency recovery lanes remain connected by genuine full Midge-sized air shafts",
+    "broken bridge can be a set-piece source while preserving flight bypass",
+    "unused bays deliberately provide human editing and modular-growth seams"
+  ],
+  "authoring_affordances": [
+    "west dry decontamination berth",
+    "central missing span repair",
+    "underbridge survivor salvage site",
+    "east extraction annex"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "central broken maintenance span",
+      "event": "bridge collapse/restore",
+      "scripted": false
+    },
+    {
+      "site": "west dry lower berth",
+      "event": "NPC arrival and triage",
+      "scripted": false
+    },
+    {
+      "site": "quench clamp core",
+      "event": "future hazard release",
+      "scripted": false
+    },
+    {
+      "site": "gasometer approach",
+      "event": "extraction chase",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Genuinely segmented islands with nonrepeated engineering load paths, physically open rejoin shafts and high/low route layering, not another process-line or crater.",
+  "similarity_avoidance": "Different from Cairn-9 central crater/ring and Oxbow-6 process conveyor: four distinct raised processing islands, broken long cableway, five full-height flight shafts and broad underdeck rescue affordances.",
+  "diversity_axes": {
+    "macro_topology": "islands",
+    "altitude_grammar": "high_low_bypass",
+    "density_cadence": "clustered",
+    "route_structure": "layered",
+    "landmark_family": "cableway",
+    "support_form": "multi_leg",
+    "environment_relation": "fluid_containment",
+    "incompleteness": "modular_append_zones"
+  },
+  "sites": [
+    {
+      "name": "Arrival",
+      "x": 65,
+      "y": 250
+    },
+    {
+      "name": "Decon workface",
+      "x": 260,
+      "y": 470
+    },
+    {
+      "name": "West rescue",
+      "x": 270,
+      "y": 785
+    },
+    {
+      "name": "Cyclone canopy",
+      "x": 615,
+      "y": 250
+    },
+    {
+      "name": "Cyclone floor",
+      "x": 690,
+      "y": 630
+    },
+    {
+      "name": "Cyclone recovery",
+      "x": 690,
+      "y": 785
+    },
+    {
+      "name": "West cable approach",
+      "x": 920,
+      "y": 250
+    },
+    {
+      "name": "Central salvage",
+      "x": 1070,
+      "y": 795
+    },
+    {
+      "name": "Quench canopy",
+      "x": 1390,
+      "y": 250
+    },
+    {
+      "name": "Quench inspection",
+      "x": 1435,
+      "y": 635
+    },
+    {
+      "name": "Quench recovery",
+      "x": 1435,
+      "y": 785
+    },
+    {
+      "name": "East canopy",
+      "x": 1770,
+      "y": 250
+    },
+    {
+      "name": "Gasometer inspection",
+      "x": 1820,
+      "y": 630
+    },
+    {
+      "name": "East recovery",
+      "x": 1820,
+      "y": 780
+    },
+    {
+      "name": "Extraction",
+      "x": 1980,
+      "y": 250
+    }
+  ]
+}

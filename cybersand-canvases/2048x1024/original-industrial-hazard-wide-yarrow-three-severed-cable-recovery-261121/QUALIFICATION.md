@@ -1,0 +1,5 @@
+# Source-static evidence — Yarrow-3 Severed Cable-Recovery Works
+
+Exact 2,097,152 final cells; source grid SHA256 `5d5c04a329e1357181a69ee452465c6af51abc4111a50aadb15b99442cf14045`. 1735 bounded disjoint replay-exact Setup-v2 five-field rectangles, 33169 bytes JSON, 437127 material construction writes. All 436564 stable inert cells boundary-rooted; zero detached. 563 initially contained Water/Lava cells, zero open cardinal contacts or direct opposite reactive contacts; not dynamic-fluid proof.
+
+15/15 literal checkpoints at full 19×15, 23×19, 31×27 Midge envelopes and actual four-neighbor collision-free centre BFS. Actual obstruction `1012,0,76,350` preserves 15/15 with forced downstream detour. One full 2048×1024 indexed PNG + six genuine 1:1 crops. PNG source writer implements CRC/DEFLATE; `node build.cjs --verify` performs independent zlib inflation and pixel equality but remote post-commit rerun not performed here. Accepted CyberSand source 32,768 rectangles and 1MiB Setup contract satisfied. Godot/Workbench/CyberDemoBridge/Rapier native admission, dynamic water, save/reopen **NATIVE-UNTESTED**. Independent Art/Tech/Shepherd outstanding; OPEN Draft/HOLD.
