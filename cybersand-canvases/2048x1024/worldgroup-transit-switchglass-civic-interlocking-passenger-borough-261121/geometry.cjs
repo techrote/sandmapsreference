@@ -118,6 +118,13 @@ function buildWorld(){
  for(const p of precincts){rect(p.x,625,22,119,0);rect(p.x+p.w-21,625,22,119,0);rect(p.partition,627,16,114,0);}
  // Re-clear shaft-throats and the actual 31x27 corridor after furnishing.
  for(const x of shafts)rect(x-42,696,84,304,0);
+ // Two large genuine roof hatches form an elevated inter-borough bypass when the surface tram threshold fails.
+ // They clear all roof/fascia thickness and give >31x27 Midge space between occupied concourse and open sky.
+ rect(788,532,78,133,0);
+ rect(1034,478,94,165,0);
+ // Surviving parapets frame rather than obstruct both hatch mouths.
+ rect(781,555,7,22,M.iron);rect(866,555,7,22,M.iron);
+ rect(1026,483,8,20,M.frame);rect(1128,483,8,20,M.frame);
  // Intentional crop coverages follow the final material plane exactly.
  const sites=[
  ["West street arrival",68,685],["West passenger hall",184,683],
