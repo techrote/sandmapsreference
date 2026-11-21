@@ -21,29 +21,29 @@
     117,
     122
   ],
-  "grounded_inert_solids": 509048,
-  "discarded_unattached_candidate_cells": 76135,
+  "grounded_inert_solids": 542652,
+  "discarded_unattached_candidate_cells": 39354,
   "remaining_detached": 0,
   "fluid_granular_reactive": 0,
-  "rectangle_count": 3463,
-  "setup_json_bytes": 64863,
-  "material_work_visits": 509048,
+  "rectangle_count": 3651,
+  "setup_json_bytes": 68368,
+  "material_work_visits": 542652,
   "source_limits": {
     "rectangles": 32768,
     "setup_bytes": 1048576,
     "material_work": 32000000
   },
-  "grid_sha256": "959cab0d9c79afeb10a1699d0cabebefb600f4784e5f32733b904d15d0bddfbe",
-  "setup_sha256": "a58e031223d286c5fd79176498118463da4f46dceb6dbaac9716c43a69a80a47",
+  "grid_sha256": "8bbe86bcd89f6438475f4f9ffae2ee2e86397fbeab56b5113cbd4b5b71b5b06f",
+  "setup_sha256": "3e2d7b71dd2577b972feea227d65a85455cab53de28d2f24b404a1f7fa6c4ced",
   "histogram": {
-    "0": 1588104,
-    "49": 57872,
-    "58": 27710,
-    "62": 28027,
+    "0": 1554500,
+    "49": 82634,
+    "58": 32185,
+    "62": 32512,
     "100": 328100,
     "101": 21218,
-    "113": 432,
-    "117": 44689,
+    "113": 918,
+    "117": 44085,
     "122": 1000
   },
   "sites": [
@@ -207,7 +207,7 @@
       "reachable": 30,
       "total": 30,
       "missing": [],
-      "visited_centres": 1196274
+      "visited_centres": 1151317
     },
     "23x19": {
       "hull": [
@@ -217,7 +217,7 @@
       "reachable": 30,
       "total": 30,
       "missing": [],
-      "visited_centres": 1155004
+      "visited_centres": 1106600
     },
     "31x27": {
       "hull": [
@@ -227,7 +227,7 @@
       "reachable": 30,
       "total": 30,
       "missing": [],
-      "visited_centres": 1077883
+      "visited_centres": 1022113
     }
   },
   "physical_obstruction": {
@@ -248,7 +248,7 @@
       "missing": [
         "West sky hatch"
       ],
-      "visited_centres": 1041861
+      "visited_centres": 988510
     },
     "covered_site": "West sky hatch",
     "other_sites_reachable": 29
@@ -271,9 +271,9 @@
       "y": 0,
       "w": 2048,
       "h": 1024,
-      "bytes": 45195,
+      "bytes": 47305,
       "pixels": 2097152,
-      "sha256": "9e41538455fff755e9b5678409d4ec384b29b1c778b29ce04226d014600eabf7",
+      "sha256": "11d6d010607b6c1d05f50f65e003e3a03c04b079de6cd6adbaf1afbdcca189c1",
       "source_grid_parity": "encoder direct material-index pixels",
       "crc32": true,
       "zlib_fixed_deflate": true
@@ -295,9 +295,9 @@
       "y": 90,
       "w": 620,
       "h": 450,
-      "bytes": 11168,
+      "bytes": 12402,
       "pixels": 279000,
-      "sha256": "ef1205e4ff2806f9053265c6bf68d98aa10a93fd12f43e8261b3f92c8dca7a93",
+      "sha256": "a74f0130351d5ca428c1cdf98ef4ae1c84a35c181a411c769e86a9faadd1317b",
       "source_grid_parity": "encoder direct material-index pixels",
       "crc32": true,
       "zlib_fixed_deflate": true
@@ -307,9 +307,9 @@
       "y": 368,
       "w": 382,
       "h": 405,
-      "bytes": 2162,
+      "bytes": 2551,
       "pixels": 154710,
-      "sha256": "355668419e962a0b3cf1c0f376661813a772196d78a461eb4a83ba48607a6343",
+      "sha256": "29cb50c52e0780f2fcbb207ce66c8cc783ddb008ef0cf645066baa43ad42839d",
       "source_grid_parity": "encoder direct material-index pixels",
       "crc32": true,
       "zlib_fixed_deflate": true
@@ -319,9 +319,9 @@
       "y": 560,
       "w": 690,
       "h": 464,
-      "bytes": 6448,
+      "bytes": 6534,
       "pixels": 320160,
-      "sha256": "33a56b31eceb441ad068e74f893af60c76778085c6f28e53f87e83cb1ecd4fcd",
+      "sha256": "4e82b24d2be64f8467a3df3cc555b348ebc39d8b1fd21c2f2260737849eaccf3",
       "source_grid_parity": "encoder direct material-index pixels",
       "crc32": true,
       "zlib_fixed_deflate": true

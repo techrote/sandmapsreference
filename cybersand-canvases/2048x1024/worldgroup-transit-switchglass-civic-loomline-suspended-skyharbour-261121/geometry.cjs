@@ -130,10 +130,9 @@ function buildWorld(){
  // Preserve BOTH canopy passages: no structural ornament may obstruct their 160px apertures.
  rect(510,481,164,75,0);
  rect(1440,481,160,75,0);
- // Rooted suspended crossover truss AND independently entered passenger descent.
- line(488,504,479,343,8,M.frame);
- line(479,343,716,343,7,M.steel);
- line(716,343,684,504,8,M.frame);
+ // Full-length central diaphragm is rooted through a dedicated tensile kingpost;
+ // the emergency passenger aperture remains physically independent of the west hatch.
+ line(950,83,950,512,8,M.frame);
  rect(270,493,135,65,0);
  // Four shop fixtures are tied into their room floors after final shaft cuts.
  for(const [x,y] of [[51,979],[506,981],[997,982],[1759,981]]){
