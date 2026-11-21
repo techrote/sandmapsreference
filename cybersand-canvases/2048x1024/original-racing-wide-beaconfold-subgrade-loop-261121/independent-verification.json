@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "source_grid_sha256": "27dcac692d9e327b6b54ab458e66f5562874e1a191bd7ec201412e987fe00f9a",
+  "setup_sha256": "6cb39024c62543d121b65ae99ec029f3fe0a019e3798c985e39fac37007da528",
+  "material_histogram": {
+    "0": 1657179,
+    "58": 48738,
+    "62": 51982,
+    "72": 162,
+    "100": 135021,
+    "101": 18032,
+    "113": 21784,
+    "117": 161242,
+    "122": 3012
+  },
+  "rectangle_count": 3068,
+  "rectangle_work": 439973,
+  "solid_components": 1,
+  "grounded_solids": 439973,
+  "detached_solids": 0,
+  "failing_ids": [],
+  "pngs_verified": [
+    {
+      "name": "overview.png",
+      "size": [
+        2048,
+        1024
+      ],
+      "full_pixel_parity": true
+    },
+    {
+      "name": "01-west-staging-and-shaft.png",
+      "size": [
+        400,
+        590
+      ],
+      "full_pixel_parity": true
+    },
+    {
+      "name": "02-telemetry-needle.png",
+      "size": [
+        415,
+        705
+      ],
+      "full_pixel_parity": true
+    },
+    {
+      "name": "03-beacon-crown.png",
+      "size": [
+        460,
+        695
+      ],
+      "full_pixel_parity": true
+    },
+    {
+      "name": "04-high-low-transfer.png",
+      "size": [
+        440,
+        680
+      ],
+      "full_pixel_parity": true
+    },
+    {
+      "name": "05-east-turn-and-mast.png",
+      "size": [
+        398,
+        710
+      ],
+      "full_pixel_parity": true
+    },
+    {
+      "name": "06-subgrade-express-and-rooms.png",
+      "size": [
+        1070,
+        225
+      ],
+      "full_pixel_parity": true
+    }
+  ],
+  "sites": {
+    "19x15": {
+      "valid_sites": 27,
+      "total_sites": 27,
+      "component_centres": 1276939,
+      "bad": []
+    },
+    "23x19": {
+      "valid_sites": 27,
+      "total_sites": 27,
+      "component_centres": 1191621,
+      "bad": []
+    },
+    "31x27": {
+      "valid_sites": 27,
+      "total_sites": 27,
+      "component_centres": 1087436,
+      "bad": []
+    }
+  },
+  "with_obstruction": {
+    "19x15": {
+      "valid_sites": 26,
+      "absent": [
+        "High suspension cue"
+      ]
+    },
+    "23x19": {
+      "valid_sites": 26,
+      "absent": [
+        "High suspension cue"
+      ]
+    },
+    "31x27": {
+      "valid_sites": 26,
+      "absent": [
+        "High suspension cue"
+      ]
+    }
+  },
+  "native": "NATIVE-UNTESTED"
+}

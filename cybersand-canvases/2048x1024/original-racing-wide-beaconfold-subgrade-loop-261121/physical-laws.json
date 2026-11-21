@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "source": "techrote/cybersand native/include/cybersand/material.hpp and godot/scripts/workbench_setup.gd",
+  "accepted_engine_main_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "material_state_summary": {
+    "0": "Empty, reserved for air",
+    "58": "Hard wall, immobile solid",
+    "62": "Concrete, immobile solid",
+    "72": "Dark glass, immobile solid",
+    "100": "Basalt columns, immobile solid",
+    "101": "Obsidian, immobile solid",
+    "113": "Zinc sheet, immobile solid",
+    "117": "Bare iron, immobile solid",
+    "122": "Quartz crystal, immobile solid"
+  },
+  "nonempty_physics": "All drawn cell IDs are fixed solid materials with no powder/liquid mobility; no reactive/falling/liquid cells authored",
+  "grounding_method": "Independent 4-neighbour solid connected-component labeling, requiring every component to touch the full-grid boundary",
+  "grounding": "verified by verify.py; numeric counts in independent-verification.json",
+  "rectangle_budget": 32768,
+  "json_byte_budget": 1048576,
+  "native": "NATIVE-UNTESTED"
+}
