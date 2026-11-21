@@ -29,3 +29,7 @@ The static 31×27 Midge hull gate test inserts **89×97 solid material at (1012,
 **Unscripted event seams:** severable high-crest bypass, broken dead-end rescue, pitline repair/NPC event, eastern reverse-turn chase.
 
 **Qualification boundary:** creator-generated source-static data and image hashes are not independent Art/Technical/Shepherd approval. No current native Godot/Workbench/CyberDemoBridge/Rapier ticks, movement/collision or cold save/reopen executed: **NATIVE-UNTESTED**. Keep Draft/HOLD; do not merge or mark Ready.
+
+## Loader-fatal Setup-v2 P0 correction
+
+The previous committed Setup used obsolete seven-key `world_policy`. This exact-HEAD repair restores the accepted strict 14-key Setup-v2 envelope, updates both verifier and generator and refreshes complete Setup receipt. Material-plane hash, collision routes and all indexed PNG images are unchanged. NATIVE-UNTESTED; independent exact-head review pending.
