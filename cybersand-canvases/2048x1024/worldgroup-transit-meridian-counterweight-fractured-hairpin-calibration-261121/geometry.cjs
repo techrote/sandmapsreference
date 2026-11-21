@@ -59,10 +59,19 @@ function buildWorld(){
  chain([[981,703],[1022,788],[1070,874]],41,0);chain([[1770,755],[1738,788],[1742,829]],41,0);
  // Intentional physical start and finish relief from the western/righthand exterior, connected to the course.
  chain([[80,447],[105,493]],43,0);chain([[1940,838],[1982,798]],43,0);
+ // Five unequal inhabited load-path piers anchor otherwise detached terrace wedges.
+// They change real travel: pilots use aboveground clearance or the braided recovery crossovers.
+ line(520,530,520,1015,10,M.frame);
+ line(1090,660,1090,1015,10,M.iron);
+ line(1650,675,1650,1015,10,M.frame);
+ line(610,808,610,1015,9,M.iron);
+ line(1475,800,1475,1015,9,M.steel);
+ // Pitline access is a geometric opening, not a label: clear service-channel throats.
+ for(let [x,y,w,h,entry] of pits)line(entry,846,entry,y+45,36,0);
  const sites=[
  ["West staging",105,493],["Pulse calibration rise",292,542],["First crest",470,623],
  ["Western inner rejoin",654,593],["Midline diagnostic",871,580],["High hairpin apex",1080,473],
- ["High apex return",1237,553],["East brake marker",1660,608],["East U turnaround",1916,660],
+ ["Severable crest",1056,603],["High apex return",1237,553],["East brake marker",1660,608],["East U turnaround",1916,660],
  ["East double-back",1770,755],["East pit approach",1601,728],["Second-grade instrument",1382,721],
  ["Middle B return",981,703],["West cutback",388,706],["West U turnaround",248,753],
  ["Deep lap entry",422,842],["Deep camber check",862,834],["Third recovery rejoin",1070,874],
