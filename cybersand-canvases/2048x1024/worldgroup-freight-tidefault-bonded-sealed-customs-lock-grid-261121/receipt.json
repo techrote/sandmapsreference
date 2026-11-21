@@ -1,0 +1,321 @@
+{
+  "concept": "Tidefault Bonded Freight — Sealed Customs-Lock Grid / Abandoned Pressure Ward",
+  "original": true,
+  "seed": 119402263,
+  "engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West bonded intake",
+      "Arrival weigh registry",
+      "First inspection lock",
+      "Seal witness office",
+      "Bond vault threshold",
+      "Custody sorter",
+      "Pressure gate crossing",
+      "Isolation checkpoint",
+      "Abandoned annex entry",
+      "East bonded exit"
+    ],
+    "upper": [
+      "West signal parapet",
+      "Ledger watch",
+      "Overhead bond signal",
+      "High ward monitor",
+      "Ruined annex lookout"
+    ],
+    "interior": [
+      "West tally room",
+      "Sample seal laboratory",
+      "Bonded rack chamber",
+      "Custody inspection vault",
+      "Dry lock equipment",
+      "Quarantine custody",
+      "Damaged archive"
+    ],
+    "lower": [
+      "West underpass",
+      "Central maintenance return",
+      "East evacuation culvert"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West bonded intake": [
+      125,
+      463
+    ],
+    "Arrival weigh registry": [
+      340,
+      462
+    ],
+    "First inspection lock": [
+      555,
+      463
+    ],
+    "Seal witness office": [
+      744,
+      462
+    ],
+    "Bond vault threshold": [
+      1012,
+      460
+    ],
+    "Custody sorter": [
+      1245,
+      460
+    ],
+    "Pressure gate crossing": [
+      1440,
+      459
+    ],
+    "Isolation checkpoint": [
+      1646,
+      460
+    ],
+    "Abandoned annex entry": [
+      1786,
+      459
+    ],
+    "East bonded exit": [
+      1921,
+      462
+    ],
+    "West signal parapet": [
+      215,
+      262
+    ],
+    "Ledger watch": [
+      489,
+      282
+    ],
+    "Overhead bond signal": [
+      885,
+      254
+    ],
+    "High ward monitor": [
+      1450,
+      255
+    ],
+    "Ruined annex lookout": [
+      1830,
+      278
+    ],
+    "West tally room": [
+      192,
+      694
+    ],
+    "Sample seal laboratory": [
+      402,
+      690
+    ],
+    "Bonded rack chamber": [
+      778,
+      709
+    ],
+    "Custody inspection vault": [
+      1010,
+      707
+    ],
+    "Dry lock equipment": [
+      1325,
+      692
+    ],
+    "Quarantine custody": [
+      1536,
+      703
+    ],
+    "Damaged archive": [
+      1844,
+      712
+    ],
+    "West underpass": [
+      280,
+      826
+    ],
+    "Central maintenance return": [
+      875,
+      827
+    ],
+    "East evacuation culvert": [
+      1709,
+      828
+    ]
+  },
+  "material_histogram": {
+    "0": 1601252,
+    "58": 168138,
+    "62": 27964,
+    "100": 299798
+  },
+  "stable_occupied_cells": 495900,
+  "grounded": 495900,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 26294,
+  "invalid_writes": 0,
+  "rectangles": 503,
+  "rectangle_work": 495900,
+  "setup_bytes": 10449,
+  "material_plane_sha256": "ff5509d3167f6576c5df469ddcc99f53e4afaa95013c1e6d13d2b9a149ea1cca",
+  "setup_sha256": "98c5b49c0006e0a89d30271e9b53ef8071a740b83403fc97b7293e15a76800cc",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1320567,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1280050,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1201124,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      370,
+      272,
+      100,
+      96
+    ],
+    "from": "Arrival weigh registry",
+    "to": "Bond vault threshold",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 25,
+    "unreachable": [],
+    "distance_before_after": [
+      1022,
+      1078
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "e6aaf01591082afdaaf41da9c45d65673fbed88923144d25677f7f7860e6e4a7",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-bond-ledgers",
+      "rect": [
+        78,
+        304,
+        498,
+        490
+      ],
+      "bytes": 61925,
+      "sha256": "707e358c60d56e359b96ef33ed5d5e3de772132466f8602ecb77c15c1f3c6c1c",
+      "pixel_parity": 244020
+    },
+    {
+      "name": "02-vault-cell-grid",
+      "rect": [
+        576,
+        293,
+        493,
+        506
+      ],
+      "bytes": 63435,
+      "sha256": "770bf734abe932ac0de9cff9793f6d4e1a595f5c04e88a7078e5a6146cf745d3",
+      "pixel_parity": 249458
+    },
+    {
+      "name": "03-pressure-locks",
+      "rect": [
+        1080,
+        309,
+        508,
+        495
+      ],
+      "bytes": 63545,
+      "sha256": "c32e83639f9c836239b4db9e32f90c912e9aa3d77e79feb78cceab3f28b0dacd",
+      "pixel_parity": 251460
+    },
+    {
+      "name": "04-abandoned-ward",
+      "rect": [
+        1570,
+        376,
+        470,
+        490
+      ],
+      "bytes": 58495,
+      "sha256": "d085d261b34cc08a7a92931b6d135e1236b92638f01c6b725c35eebcc997b93a",
+      "pixel_parity": 230300
+    },
+    {
+      "name": "05-lower-relief-ways",
+      "rect": [
+        86,
+        739,
+        1850,
+        205
+      ],
+      "bytes": 95310,
+      "sha256": "2db72fa0bf367588fbcbd5e3e034b6935162a3af6187f60839c8eca77b5f0597",
+      "pixel_parity": 379250
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Complete material plane, lossless disjoint Setup-v2 replay, exact conservative 19x15/23x19/31x27 routes, physical obstruction detour and indexed PNG integrity/parity"
+}
