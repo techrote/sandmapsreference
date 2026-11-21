@@ -15,29 +15,29 @@
     2048
   ],
   "cells": 2097152,
-  "source_grid_sha256": "0a0b8670ce0320eb29b71213bf8c23e4876bde79fc2bb9a69028a9f8ccbe4bdf",
-  "setup_sha256": "fbaaacd57072c04b1d833870d5a278075b5698ab0d370aa3d7428d1448be81d6",
-  "setup_bytes": 12368,
-  "rectangles": 613,
-  "construction_work": 867058,
+  "source_grid_sha256": "b86a0dfbe75f87b887642f8e90c8a5d9d43dadafcec24379076d2c000bb6a3da",
+  "setup_sha256": "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+  "setup_bytes": 15099,
+  "rectangles": 758,
+  "construction_work": 887918,
   "material_histogram": {
-    "0": 1230094,
-    "49": 35850,
-    "62": 32701,
-    "63": 2697,
-    "68": 25158,
-    "77": 2303,
-    "79": 1818,
-    "100": 423162,
-    "101": 288630,
+    "0": 1209234,
+    "49": 41249,
+    "62": 36681,
+    "63": 3228,
+    "68": 31153,
+    "77": 2561,
+    "79": 1948,
+    "100": 422973,
+    "101": 287708,
     "121": 4316,
-    "129": 25372,
-    "130": 22891,
-    "131": 2160
+    "129": 29412,
+    "130": 24046,
+    "131": 2643
   },
   "ground": {
-    "total": 867058,
-    "rooted": 867058,
+    "total": 887918,
+    "rooted": 887918,
     "detached": 0,
     "pruned_provisional": 65868
   },
@@ -53,8 +53,8 @@
         19,
         15
       ],
-      "valid_centres": 1079036,
-      "connected_centres": 1062850,
+      "valid_centres": 1046321,
+      "connected_centres": 1029402,
       "passed": 22,
       "sites": [
         {
@@ -218,8 +218,8 @@
         23,
         19
       ],
-      "valid_centres": 1044872,
-      "connected_centres": 1032490,
+      "valid_centres": 1010500,
+      "connected_centres": 997768,
       "passed": 22,
       "sites": [
         {
@@ -383,8 +383,8 @@
         31,
         27
       ],
-      "valid_centres": 982139,
-      "connected_centres": 975099,
+      "valid_centres": 944849,
+      "connected_centres": 937809,
       "passed": 22,
       "sites": [
         {
@@ -555,8 +555,8 @@
       31,
       27
     ],
-    "valid_centres": 953955,
-    "connected_centres": 946915,
+    "valid_centres": 916665,
+    "connected_centres": 909625,
     "passed": 22,
     "sites": [
       {
@@ -725,19 +725,32 @@
     "original_parent_head": "598e8792b32a4922008b6d3dcb9208d21f03e477",
     "original_setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
     "independent_baseline_review": "https://github.com/techrote/sandmapsreference/pull/186#issuecomment-7062924203",
-    "altered_material_cells": 23520,
+    "altered_material_cells": 45566,
     "changed_bbox_xyxy": [
       361,
-      625,
+      613,
       955,
       1785
     ],
     "grounded_support": true,
+    "independent_art_delta_review": "https://github.com/techrote/sandmapsreference/pull/203#issuecomment-7069837914",
+    "prior_first_child_head": "10b045c8de8d4037d02ab998adc2b215ef4c2e23",
+    "entered_mouth_centres": [
+      [
+        835,
+        1070
+      ],
+      [
+        825,
+        1208
+      ]
+    ],
     "scope": [
-      "upper tension terminal at x361..655/y625..693; retaining central shear",
-      "ore-stage sender at x370..488/y1085..1143",
-      "fractured low left/right joint x373..946/y1568..1785",
-      "east drill workface/entry markers x839..955/y858..1265"
+      "opposed high-tension cantilevers/counterweight and central flight gap x371..650/y613..693",
+      "separate mid cargo sender x480..527/y1102..1140",
+      "entered east-bank upper inspection mouth and workhead x809..952/y988..1156",
+      "entered lower east-bank compressed return x808..931/y1165..1260",
+      "first R2 work kept: low fracture and original drill markers x373..955/y858..1785"
     ],
     "unchanged_and_protected": [
       "existing 22 literal waypoints",
@@ -755,10 +768,24 @@
         252,
         79
       ],
+      "entered_mouths": [
+        {
+          "name": "Upper drill inspection mouth",
+          "x": 835,
+          "y": 1070
+        },
+        {
+          "name": "Lower drill return mouth",
+          "x": 825,
+          "y": 1208
+        }
+      ],
       "ordered_waypoints": [
         "Upper fault spawn",
         "East drill bypass upper",
+        "Upper drill inspection mouth",
         "East drill bypass middle",
+        "Lower drill return mouth",
         "East drill bypass lower",
         "Lower fault rejoin",
         "Deep fault exit"
@@ -772,15 +799,27 @@
         },
         {
           "from": "East drill bypass upper",
+          "to": "Upper drill inspection mouth",
+          "min_x": 700,
+          "steps": 247
+        },
+        {
+          "from": "Upper drill inspection mouth",
           "to": "East drill bypass middle",
           "min_x": 700,
-          "steps": 194
+          "steps": 57
         },
         {
           "from": "East drill bypass middle",
+          "to": "Lower drill return mouth",
+          "min_x": 700,
+          "steps": 181
+        },
+        {
+          "from": "Lower drill return mouth",
           "to": "East drill bypass lower",
           "min_x": 700,
-          "steps": 169
+          "steps": 78
         },
         {
           "from": "East drill bypass lower",
@@ -795,10 +834,10 @@
           "steps": 671
         }
       ],
-      "total_steps": 2322,
+      "total_steps": 2522,
       "unconstrained_obstructed_shortest": 2072,
       "forced_shortest": false,
-      "interpretation": "Physically obstructed ordered literal-waypoint route exists; the unrestricted shortest path remains shaft-side and is not asserted to enter the drill gallery. Interior drill legs restrict the free-centre path to x>=700."
+      "interpretation": "Physically obstructed ordered literal route enters both exact 31x27 upper inspection and lower return mouth centres; unrestricted shortest stays shaft-side and is NOT forced through either room. Interior side-gallery legs restrict free-centre x>=700."
     },
     "source_static_only": true,
     "native": "NATIVE-UNTESTED"
@@ -812,7 +851,7 @@
         2048
       ],
       "bytes": 2099836,
-      "sha256": "387ca87200567e5369dcfd36b2458160a715991d3e6bd058f67527b781cb3384"
+      "sha256": "76f1257cdf70ee4d6b09675b7237a29847d425c82c9e6c8a833ab92e279046c4"
     },
     "01-west-clinic.png": {
       "xywh": [
@@ -832,7 +871,7 @@
         452
       ],
       "bytes": 170438,
-      "sha256": "fdacf17ddf3f3fc161be8265c7685f160f94fcaf9e37d0cfa84a7224722c16f0"
+      "sha256": "838fe3354e8ff502b747779d9521553e88337389058531616cffe9ec31ade7ea"
     },
     "03-ore-transfer.png": {
       "xywh": [
@@ -842,7 +881,7 @@
         447
       ],
       "bytes": 185991,
-      "sha256": "a26b96b96654cc23745a2ebef1f20b6f4ed05c89634a0d3f6f14dbf6bc345a4c"
+      "sha256": "a22ac4a5198ec81c919f73ac8bf1cdc76cd05a8f35765cd5ffe579f16a7923a8"
     },
     "04-east-drill-bypass.png": {
       "xywh": [
@@ -852,7 +891,7 @@
         468
       ],
       "bytes": 177390,
-      "sha256": "36275d8bf379290fedba7d95d3fc71a1ec2ea05f35c46176963bd3c7d15faa40"
+      "sha256": "8faf1f7a1fb8b3c5ef4072568f8b25ca4ea9007f7fe3de3aeb3253697b076da8"
     },
     "05-quarantine.png": {
       "xywh": [
@@ -873,8 +912,28 @@
       ],
       "bytes": 296533,
       "sha256": "b3a32de2e2182301f8a0886ab62c7f241488f8fbaedd5d79fb515ee05eba0637"
+    },
+    "07-high-tension-joint.png": {
+      "xywh": [
+        344,
+        597,
+        374,
+        178
+      ],
+      "bytes": 67231,
+      "sha256": "731b18828a723e27619c91be23c8cd3a57a7341b6a81d221a330fa2870401a98"
+    },
+    "08-cargo-drill-interface.png": {
+      "xywh": [
+        345,
+        990,
+        606,
+        292
+      ],
+      "bytes": 177730,
+      "sha256": "27bfb2c968daf87b21249c65cffcbf6f0cd299b65f8454ab34ae2e35c12f6fc3"
     }
   },
-  "pixel_parity": 3221244,
+  "pixel_parity": 3464768,
   "native": "NATIVE-UNTESTED"
 }

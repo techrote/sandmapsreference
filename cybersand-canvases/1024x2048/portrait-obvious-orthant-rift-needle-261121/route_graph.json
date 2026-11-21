@@ -697,10 +697,24 @@
       252,
       79
     ],
+    "entered_mouths": [
+      {
+        "name": "Upper drill inspection mouth",
+        "x": 835,
+        "y": 1070
+      },
+      {
+        "name": "Lower drill return mouth",
+        "x": 825,
+        "y": 1208
+      }
+    ],
     "ordered_waypoints": [
       "Upper fault spawn",
       "East drill bypass upper",
+      "Upper drill inspection mouth",
       "East drill bypass middle",
+      "Lower drill return mouth",
       "East drill bypass lower",
       "Lower fault rejoin",
       "Deep fault exit"
@@ -714,15 +728,27 @@
       },
       {
         "from": "East drill bypass upper",
+        "to": "Upper drill inspection mouth",
+        "min_x": 700,
+        "steps": 247
+      },
+      {
+        "from": "Upper drill inspection mouth",
         "to": "East drill bypass middle",
         "min_x": 700,
-        "steps": 194
+        "steps": 57
       },
       {
         "from": "East drill bypass middle",
+        "to": "Lower drill return mouth",
+        "min_x": 700,
+        "steps": 181
+      },
+      {
+        "from": "Lower drill return mouth",
         "to": "East drill bypass lower",
         "min_x": 700,
-        "steps": 169
+        "steps": 78
       },
       {
         "from": "East drill bypass lower",
@@ -737,9 +763,9 @@
         "steps": 671
       }
     ],
-    "total_steps": 2322,
+    "total_steps": 2522,
     "unconstrained_obstructed_shortest": 2072,
     "forced_shortest": false,
-    "interpretation": "Physically obstructed ordered literal-waypoint route exists; the unrestricted shortest path remains shaft-side and is not asserted to enter the drill gallery. Interior drill legs restrict the free-centre path to x>=700."
+    "interpretation": "Physically obstructed ordered literal route enters both exact 31x27 upper inspection and lower return mouth centres; unrestricted shortest stays shaft-side and is NOT forced through either room. Interior side-gallery legs restrict free-centre x>=700."
   }
 }
