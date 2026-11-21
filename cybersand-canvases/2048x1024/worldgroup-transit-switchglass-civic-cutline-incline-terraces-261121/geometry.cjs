@@ -151,7 +151,7 @@ function buildWorld(){
  ["Outpost exit",1983,310],["Crest recovery shaft",1642,520],
  ["Upper repair alcove",1630,581]
  ];
- const obs=[1170,461,85,94];
+ const obs=[1146,389,135,166];
  const crops=[
  ["overview.png",0,0,W,H],
  ["01-low-passenger-freight-arrival.png",40,625,535,365],
