@@ -1,0 +1,306 @@
+{
+  "concept": "Vesper Cantilever — Freight-Cable Descent and Deep Service Return",
+  "original": true,
+  "seed": 2111202617,
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_contract": {
+    "cybersand_accepted_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+    "sandmapsreference_default_source": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "setup_version": 2,
+    "max_construction_rectangles": 32768
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "reinforced concrete inert immovable solid",
+    "62": "steel plate inert immovable solid",
+    "100": "basalt columns inert immovable solid"
+  },
+  "material_plane_sha256": "916b41382b72e5f28f8d99a596f47818467a62aa30bd66ab430c663b1e62a643",
+  "setup_sha256": "409acc9ef53150c47a14ab806f21b41faf2206924a9e02e1b5742b1e3727ec40",
+  "setup_bytes": 41631,
+  "rectangles": 2239,
+  "rectangle_work": 361320,
+  "cells": 2097152,
+  "histogram": {
+    "0": 1735832,
+    "58": 32078,
+    "62": 121815,
+    "100": 207427
+  },
+  "grounded_stable_solids": 361320,
+  "detached_solids": 0,
+  "initial_fluid_cells": 0,
+  "reactive_or_falling_cells": 0,
+  "overlapping_records": 0,
+  "ordered_replay_equal": true,
+  "exact_sites": {
+    "West Dock Arrival": [
+      130,
+      635
+    ],
+    "Open Cargo Hold": [
+      280,
+      776
+    ],
+    "Fore Cabin": [
+      193,
+      719
+    ],
+    "Haulage Winch": [
+      447,
+      615
+    ],
+    "Hoist Gallery": [
+      520,
+      515
+    ],
+    "Hoist Crown": [
+      530,
+      280
+    ],
+    "Cable Carrier A": [
+      714,
+      485
+    ],
+    "High Cable Passage": [
+      811,
+      260
+    ],
+    "Midair Split": [
+      982,
+      538
+    ],
+    "Sorter Stage": [
+      1195,
+      612
+    ],
+    "Cable Carrier B": [
+      1310,
+      605
+    ],
+    "East Cable Terminus": [
+      1500,
+      477
+    ],
+    "Eastern Rail Gate": [
+      1662,
+      661
+    ],
+    "Customs Scanner": [
+      1866,
+      711
+    ],
+    "Dispatch Outlook": [
+      1950,
+      598
+    ],
+    "Central Canyon": [
+      810,
+      670
+    ],
+    "West Recovery Shaft": [
+      317,
+      880
+    ],
+    "West Tunnel": [
+      370,
+      961
+    ],
+    "Mid Tunnel": [
+      902,
+      960
+    ],
+    "East Tunnel": [
+      1597,
+      960
+    ],
+    "East Recovery Shaft": [
+      1769,
+      895
+    ],
+    "Return Vista": [
+      1435,
+      796
+    ]
+  },
+  "route_graph": {
+    "main": [
+      "West Dock Arrival",
+      "Open Cargo Hold",
+      "Haulage Winch",
+      "Hoist Gallery",
+      "Midair Split",
+      "Sorter Stage",
+      "Eastern Rail Gate",
+      "Customs Scanner"
+    ],
+    "upper": [
+      "Hoist Crown",
+      "High Cable Passage",
+      "Cable Carrier A",
+      "Midair Split",
+      "East Cable Terminus",
+      "Dispatch Outlook"
+    ],
+    "lower": [
+      "West Recovery Shaft",
+      "West Tunnel",
+      "Mid Tunnel",
+      "East Tunnel",
+      "East Recovery Shaft",
+      "Eastern Rail Gate"
+    ],
+    "fallback": [
+      "Central Canyon",
+      "Return Vista",
+      "East Recovery Shaft"
+    ]
+  },
+  "authored_midge_hull": [
+    4,
+    3
+  ],
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "free_centres": 1492397,
+      "sites_reached": 22,
+      "total_sites": 22,
+      "bad": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "free_centres": 1442880,
+      "sites_reached": 22,
+      "total_sites": 22,
+      "bad": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "free_centres": 1353051,
+      "sites_reached": 22,
+      "total_sites": 22,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "rect": [
+      565,
+      528,
+      25,
+      13
+    ],
+    "from": "West Dock Arrival",
+    "to": "Central Canyon",
+    "conservative_hull": [
+      31,
+      27
+    ],
+    "distance_before": 923,
+    "distance_after": 957,
+    "all_sites_still_reachable": true,
+    "return_route": true
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 50938,
+      "sha256": "424c369c1aee6395a4f9085bd6315f807acddfb2e7511fdca1686e3e97cb3d17",
+      "indexed_material_pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-freighter-drydock.png",
+      "rect": [
+        40,
+        540,
+        530,
+        333
+      ],
+      "bytes": 8435,
+      "sha256": "10de1a615165776a1653430a63a24f50eb280ce5fa75d911c74bc2936adec678",
+      "indexed_material_pixel_parity": 176490
+    },
+    {
+      "name": "02-counterweight-hoist.png",
+      "rect": [
+        402,
+        250,
+        334,
+        580
+      ],
+      "bytes": 11048,
+      "sha256": "f13d0ea831b865ab21fa248b66c1b4cce72288261ea1366f32f3dea203c81bf9",
+      "indexed_material_pixel_parity": 193720
+    },
+    {
+      "name": "03-cableway-over-chasm.png",
+      "rect": [
+        690,
+        240,
+        650,
+        460
+      ],
+      "bytes": 7130,
+      "sha256": "b72793b14a0803e391a7ff94523980defd83c6bb843e821b0ec0c11998aafcac",
+      "indexed_material_pixel_parity": 299000
+    },
+    {
+      "name": "04-sorting-cantilever.png",
+      "rect": [
+        1020,
+        525,
+        450,
+        365
+      ],
+      "bytes": 9207,
+      "sha256": "68db736a3c5c5e532f9e4af7145bc3e8bb03146ef6260fa38041dcd5e2ae2e8c",
+      "indexed_material_pixel_parity": 164250
+    },
+    {
+      "name": "05-rail-customs.png",
+      "rect": [
+        1460,
+        520,
+        580,
+        365
+      ],
+      "bytes": 14792,
+      "sha256": "5574215145bd0de410ac201aae00a27fcdb94ef0009bca6024fadcb7deaecba8",
+      "indexed_material_pixel_parity": 211700
+    },
+    {
+      "name": "06-void-underworks.png",
+      "rect": [
+        250,
+        885,
+        1540,
+        112
+      ],
+      "bytes": 4007,
+      "sha256": "2bb487601ee75194e73700b997f1fedd243a3046984205c649c911a1c994b75a",
+      "indexed_material_pixel_parity": 172480
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "PENDING",
+  "github_actions_exact_head": "NOT-CHECKED",
+  "proof": "Exhaustive source cells, 4-neighbour bottom-rooting, disjoint rectangle replay, three literal full-envelope 4-neighbour reachability and physical obstruction detour; source-indexed PNG parity."
+}
