@@ -18,9 +18,9 @@ function generate(){
 
 const g=new Uint8Array(N),sites={
 "West bonded intake":[125,463],"Arrival weigh registry":[340,462],
-"First inspection lock":[595,463],"Seal witness office":[810,462],
-"Bond vault threshold":[1012,460],"Custody sorter":[1190,460],
-"Pressure gate crossing":[1365,459],"Isolation checkpoint":[1551,460],
+"First inspection lock":[555,463],"Seal witness office":[744,462],
+"Bond vault threshold":[1012,460],"Custody sorter":[1245,460],
+"Pressure gate crossing":[1440,459],"Isolation checkpoint":[1646,460],
 "Abandoned annex entry":[1786,459],"East bonded exit":[1921,462],
 "West signal parapet":[215,262],"Ledger watch":[489,282],
 "Overhead bond signal":[885,254],"High ward monitor":[1450,255],
@@ -94,6 +94,11 @@ for(let [x,w] of [[151,133],[815,145],[1192,122],[1799,104]])V(x,852,w,68);
 for(let x of [204,698,1180,1725])V(x-42,518,85,340);
 V(79,426,1939,101);
 for(const [x,y] of Object.values(sites))V(x-23,y-21,47,43);
+/* Engineered rooted load paths: reclaim the formerly disconnected heavy
+   vaulted districts as fully founded structures, not floating decorations.
+   Distinctly spaced piers preserve open over-roof Midge alternatives. */
+for(const [x,y,w] of [[74,592,20],[533,592,20],[571,554,20],[1038,554,20],[1082,562,20],[1536,562,20],[1573,604,20],[1967,604,20]])B(x,y,w,1000-y);
+for(const [x,y,w] of [[150,329,16],[302,329,17],[466,356,17],[601,356,17],[798,300,16],[928,300,16],[866,370,16],[975,370,16],[1036,341,17],[1187,341,17],[1385,304,17],[1534,304,17],[1460,362,16],[1569,362,16],[1591,382,17],[1722,382,17]])C(x,y,w,1000-y);
 B(0,1000,W,24);
 
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
