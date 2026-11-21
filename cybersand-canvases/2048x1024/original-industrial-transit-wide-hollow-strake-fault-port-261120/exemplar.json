@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-transit-wide",
+  "map_role": "West drydock through fixed hoist to roof-suspended transport, entered geological cargo vault, low rail return and eastern dispatch",
+  "anchor_donors": [],
+  "macro_topology": "Nested rock chambers and cliff-embedded freight workfaces with a high gantry and separate low bypass",
+  "density_profile": "Dense port, open high gantry, nested central excavations, staggered east sorter, partly empty underworks",
+  "route_grammar": {
+    "main": "West port → roof gantry over fault → east customs",
+    "interior": "Entered fault chambers with upper and lower access",
+    "alternative": "Low underfault return with independently reached maintenance bays",
+    "recovery": "Shaft connections at western, central and eastern junctions"
+  },
+  "strong_motifs": [
+    "Enterable geological fault machine vault",
+    "Roof-rooted full-width industrial gantry",
+    "Differentiated freighter cabin, hull and dock hardware",
+    "Stationary unequal twin-drum hoist",
+    "Staggered east three-grade rail sorter",
+    "Underfault low return and deliberately vacant bays"
+  ],
+  "interesting_relationships": [
+    "Cargo vault nested inside obstacle with through-connection to upper gantry and low bypass",
+    "Natural solid monolith supplies both dangerous obstacle and highly usable modular architecture",
+    "Heavy harbour loading grades up to overhead sorting then down to east rail tiers",
+    "Two independent flight bands allow route closure, chase and recovery without scripting"
+  ],
+  "authoring_affordances": [
+    "Additional rock-workface carving locations",
+    "Unfurnished low maintenance bays",
+    "Replaceable overhead span over existing low return",
+    "Unused near-east customs interior for human editing"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "High bridge break",
+      "at": [
+        1100,
+        327
+      ],
+      "kind": "collapse/chase",
+      "geometry": "Fixed high chord above independently navigable underfault bypass"
+    },
+    {
+      "name": "Nested vault operation",
+      "at": [
+        1051,
+        471
+      ],
+      "kind": "holdout/machine activation",
+      "geometry": "Entered central rock chamber with vertical exits"
+    },
+    {
+      "name": "Drylock departure",
+      "at": [
+        319,
+        672
+      ],
+      "kind": "arrival/departure",
+      "geometry": "Differentiated vessel and rooted berth with fixed freight hoist"
+    },
+    {
+      "name": "Underfault reveal",
+      "at": [
+        1049,
+        770
+      ],
+      "kind": "chase/reveal",
+      "geometry": "Low return network beneath central rock vault"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Nested chamber excavation/transport grammar",
+    "Roof-rooted freight spans separated from excavated basement return",
+    "Functional industrial cliff load paths",
+    "Useful deliberately unfinished machine workfaces"
+  ],
+  "similarity_avoidance": "Unlike Bracken Rift's void-centred braided gorge and interrupted open lower bridge, this map has a solid entered fault mass, stacked cavern circulation and a roof-gantry/low-return pair. Unlike Orison it has no annular indexer.",
+  "diversity_axes": {
+    "macro_topology": "nested_cavities",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "layered",
+    "landmark_family": "gantry",
+    "support_form": "cliff_embedded",
+    "environment_relation": "geological",
+    "incompleteness": "modular_append_zones"
+  },
+  "source_static_status": "CREATOR-STATIC-PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "receipts": "receipt.json"
+}
