@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-foundry-wide",
+  "map_role": "Fault-stepped smeltery with aerial tension-cable logistics, a separate deep-pier bridge and asymmetric casting terraces.",
+  "anchor_donors": [],
+  "macro_topology": "One geologically rooted vertical fault with unequal shelves, two structurally independent bridge routes and excavated workshops",
+  "density_profile": "Dense ore-furnace and caster-quench ends with a deliberately open fault valley and sparse underplant niches",
+  "route_grammar": {
+    "main": [
+      "West fault spawn",
+      "Ore dock",
+      "Thermal oversight",
+      "Ladle gallery",
+      "Fault basin",
+      "Caster inspection",
+      "Quench inspection",
+      "Freight elevator",
+      "East rim goal"
+    ],
+    "upper": [
+      "Upper west",
+      "Cableway west",
+      "Cableway east"
+    ],
+    "lower": [
+      "West service recess",
+      "Underbridge traverse",
+      "Fault return",
+      "Eastern annex"
+    ]
+  },
+  "strong_motifs": [
+    "Twin rooted cableway towers",
+    "Lower crossing with deep fault piers",
+    "Sealed furnace and quench cores",
+    "Pivot suspended ladle",
+    "Unequal three-rotor caster",
+    "Rail freight davit"
+  ],
+  "interesting_relationships": [
+    "Twin-altitude routes reconnect after fault crossing",
+    "Geological rock steps determine factory layout",
+    "Industrial dense-to-open contrast creates editable seams",
+    "Lower repair cavities support future scripted encounters"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "west service recess",
+      "region_xywh": [
+        476,
+        750,
+        152,
+        101
+      ],
+      "use": "human maintenance refit"
+    },
+    {
+      "name": "fault crossing",
+      "region_xywh": [
+        710,
+        700,
+        360,
+        92
+      ],
+      "use": "chase bridge / collapse"
+    },
+    {
+      "name": "east undercroft",
+      "region_xywh": [
+        1170,
+        829,
+        286,
+        94
+      ],
+      "use": "modular Gentek append"
+    },
+    {
+      "name": "freight annex",
+      "region_xywh": [
+        1804,
+        731,
+        164,
+        88
+      ],
+      "use": "future NPC arrival"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Tension cable failure",
+      "anchor": "Cableway west",
+      "kind": "bridge_failure"
+    },
+    {
+      "name": "Casting activation",
+      "anchor": "Roller observation",
+      "kind": "machine_activation"
+    },
+    {
+      "name": "Contained quench release",
+      "anchor": "Quench diagnostics",
+      "kind": "hazard_release"
+    },
+    {
+      "name": "Freight departure",
+      "anchor": "Freight elevator",
+      "kind": "departure"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Fault-step load path grammar",
+    "Twin-altitude navigation with 31x27 collision proof",
+    "Layered suspension and geology-rooted reinforcement",
+    "Unfinished repair pockets"
+  ],
+  "similarity_avoidance": "Unlike the buried Sablecut arterials, Vespergate caldera ring, Saltglass island chain and flat Crownstep, the key topology is a cross-fault cableway plus deeper pier bridge.",
+  "diversity_axes": {
+    "macro_topology": "vertical_fault",
+    "altitude_grammar": "high_low_bypass",
+    "density_cadence": "clustered",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "cableway",
+    "support_form": "twin_pier",
+    "environment_relation": "geological",
+    "incompleteness": "modular_append_zones"
+  },
+  "engine_contract": {
+    "accepted_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+    "rectangle_limit": 32768
+  },
+  "static_proof": {
+    "cells": 2097152,
+    "sha256": "0c4f5136ef437bf27f00227f7cea4312b6fff7ff2aa228c1fdab1689043caf69",
+    "rectangles": 2075,
+    "obstructed_sites": 17
+  }
+}
