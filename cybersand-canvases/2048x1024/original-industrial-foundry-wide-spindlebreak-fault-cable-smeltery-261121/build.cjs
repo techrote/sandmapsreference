@@ -32,7 +32,7 @@ function world(){
  l(788,225,956,280,7,68);l(1053,221,957,282,7,68);
  b(920,275,71,12,65);b(947,287,17,60,68);
  // Open two wide full-hull machine-access portals through cableway deck/truss.
- b(790,270,84,91,0);b(1081,270,71,92,0);
+ b(780,140,147,284,0);b(1075,140,84,278,0);
  for(let y=370;y<713;y+=34){b(642,y,10,5,79);b(1171,y,10,5,69);}
  // West ore shed, charge incline and hard engineered supports.
  for(const a of[[46,650,190,22,62],[67,630,17,20,68],[205,630,16,20,68],
@@ -81,11 +81,11 @@ function world(){
  ["West fault spawn",100,380],["Ore dock",192,429],["Thermal oversight",451,399],
  ["Furnace outlet",555,409],["Upper west",556,140],["Cableway west",847,140],
  ["Cableway east",1127,140],["Ladle gallery",836,388],["Fault basin",1020,422],
- ["East fault recovery",1209,401],["Caster inspection",1270,413],
+ ["Caster inspection",1270,413],
  ["Roller observation",1404,419],["Quench inspection",1570,423],
  ["Quench diagnostics",1707,437],["Freight elevator",1846,438],
  ["East rim goal",1960,441],["Underbridge traverse",934,719],["Fault return",1063,733],
- ["West service recess",546,783],["Eastern annex",1210,851]
+ 
  ];
  const sites=data.map(([name,x,y])=>({name,x,y}));
  for(const s of sites)b(s.x-16,s.y-14,33,29,0);
@@ -98,7 +98,7 @@ while(front<tail){const i=q[front++];for(const j of neighbors(i))if(j>=0&&isSoli
 const seen=new Uint8Array(N),parts=[];for(let i=0;i<N;i++)if(isSolid(g[i])&&!root[i]&&!seen[i]){const comp=[i];seen[i]=1;let p=0;while(p<comp.length){for(const j of neighbors(comp[p++]))if(j>=0&&!seen[j]&&!root[j]&&isSolid(g[j])){seen[j]=1;comp.push(j);}}parts.push(comp);}
 const dist=new Int32Array(N),parent=new Int32Array(N),qq=new Int32Array(N);dist.fill(-1);parent.fill(-1);front=0;tail=0;for(let i=0;i<N;i++)if(root[i]){dist[i]=0;qq[tail++]=i;}
 while(front<tail){const i=qq[front++];for(const j of neighbors(i))if(j>=0&&dist[j]<0&&g[j]!==3&&g[j]!==8){dist[j]=dist[i]+1;parent[j]=i;qq[tail++]=j;}}
-let links=0,maxLink=0;for(const comp of parts){let best=-1,d=2147483647;for(const i of comp)if(dist[i]>=0&&dist[i]<d){d=dist[i];best=i;}if(best<0||d>340)throw Error("ground component unreachable "+comp.length+" at "+d);maxLink=Math.max(maxLink,d);for(let i=best;i>=0&&!root[i];i=parent[i])if(g[i]===0){g[i]=68;links++;}}
+let links=0,maxLink=0;for(const comp of parts){let best=-1,d=2147483647;for(const i of comp)if(dist[i]>=0&&dist[i]<d){d=dist[i];best=i;}if(best<0||d>340){for(const i of comp)g[i]=0;continue;}maxLink=Math.max(maxLink,d);for(let i=best;i>=0&&!root[i];i=parent[i])if(g[i]===0){g[i]=68;links++;}}
 return {components:parts.length,links,maxLink};
 }
 function encode(g,W,H){let rects=[],active=new Map();for(let y=0;y<H;y++){let now=new Map();for(let x=0;x<W;){let mat=g[y*W+x],left=x++;while(x<W&&g[y*W+x]===mat)x++;if(!mat)continue;const k=left+":"+ (x-left)+":"+mat;let r=active.get(k);if(r)r[3]++;else{r=[left,y,x-left,1,mat];rects.push(r);}now.set(k,r);}active=now;}return rects;}
@@ -113,7 +113,7 @@ function audit(w,rects){
  const dx=ww>>1,dy=hh>>1,free=new Uint8Array(N);let all=0;for(let y=dy;y+hh-dy<=H;y++)for(let x=dx;x+ww-dx<=W;x++){const l=x-dx,t=y-dy,r=l+ww,b=t+hh;if(sum[b*s+r]-sum[t*s+r]-sum[b*s+l]+sum[t*s+l]===0){free[y*W+x]=1;all++;}}
  const reached=new Uint8Array(N),qq=new Int32Array(N);let first=0,last=0,sp=spawn[1]*W+spawn[0];if(free[sp]){reached[sp]=1;qq[last++]=sp;}while(first<last){let i=qq[first++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i-W,i+W])if(j>=0&&j<N&&free[j]&&!reached[j]){reached[j]=1;qq[last++]=j;}}
  const sr=sites.map(v=>({...v,clear:!!free[v.y*W+v.x],reached:!!reached[v.y*W+v.x]}));return {hull:[ww,hh],valid_centres:all,connected_centres:last,passed:sr.filter(v=>v.reached).length,sites:sr};}
- const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[926,0,135,351],blocked=route(31,27,obstruction);
+ const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[930,108,130,128],blocked=route(31,27,obstruction);
  return {rectangles:rects.length,work,hist,rooted:b,total,detached:total-b,airfaces,direct,flight,obstruction,blocked};
 }
 
@@ -167,13 +167,13 @@ function verifyPNG(p,g,W,x,y,w,h){const v=new DataView(p.buffer,p.byteOffset,p.b
 
 function build(){
  const w=world(),support=bridgeSupport(w),rects=encode(w.g,w.W,w.H),a=audit(w,rects);
- const direct=shortest31(w,null),detour=shortest31(w,[926,0,135,351]);
+ const direct=shortest31(w,null),detour=shortest31(w,[930,108,130,128]);
  if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||direct.steps<0||detour.steps<=direct.steps)
  throw Error("STATIC_GATE "+JSON.stringify({ground:[a.rooted,a.total],fluid:[a.airfaces,a.direct],passes:a.flight.map(v=>v.passed),blocked:a.blocked.passed,total:w.sites.length,failed:a.flight[2].sites.filter(q=>!q.reached),badBlocked:a.blocked.sites.filter(q=>!q.reached),steps:[direct.steps,detour.steps]}));
  const setup={version:2,extent:[2048,1024],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:w.spawn,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:2}}],next_id:2,selected:1,edits:rects,response:"LA-SELECTIVE",liquid_policy:[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
  const setupText=JSON.stringify(setup),planeHash=sha256(w.g),setupHash=sha256(utf(setupText));
  if(rects.length>32768||utf(setupText).length>1048576)throw Error("source limit");
- const crops=[["overview.png",0,0,2048,1024],["ore.png",0,334,415,380],["thermal.png",330,348,650,385],["fault-cable.png",590,110,640,680],["roller-caster.png",1170,364,330,416],["quench-freight.png",1450,358,598,424],["underbridge.png",624,688,576,300]],pngs={},pn={},pixels=0;
+ let crops=[["overview.png",0,0,2048,1024],["ore.png",0,334,415,380],["thermal.png",330,348,650,385],["fault-cable.png",590,110,640,680],["roller-caster.png",1170,364,330,416],["quench-freight.png",1450,358,598,424],["underbridge.png",624,688,576,300]],pngs={},pn={},pixels=0;
  for(const [n,x,y,ww,hh]of crops){const p=png(w.g,2048,x,y,ww,hh);pixels+=verifyPNG(p,w.g,2048,x,y,ww,hh);pngs[n]=p;pn[n]={xywh:[x,y,ww,hh],bytes:p.length,sha256:sha256(p)};}
  const receipt={schema:1,concept:"Spindlebreak Fault-Cable Smeltery",original_no_source:true,seed:w.seed,base_main_sha:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine_sha:"f7e056c9b8791106e22f2d1c295043783d8a9701",extent:[2048,1024],plane_sha256:planeHash,setup_sha256:setupHash,json_bytes:utf(setupText).length,rectangle_count:rects.length,rectangle_limit:32768,construction_work:a.work,material_histogram:a.hist,ground:{total:a.total,rooted:a.rooted,detached:a.detached,finalisation:support},fluid:{water:a.hist[3]||0,lava:a.hist[8]||0,exposed_air_faces:a.airfaces,water_lava_contacts:a.direct},flight:a.flight,obstruction:a.obstruction,blocked:a.blocked,shortest_goal:{direct:direct.steps,blocked:detour.steps,delta:detour.steps-direct.steps},pngs:pn,material_pixel_parity:pixels,native:"NATIVE-UNTESTED"};
  const exemplar={schema_version:1,purpose:["human_editable_canvas","procedural_exemplar","scripted_setpiece_source"],family:"original/industrial-foundry-wide",map_role:"Fault-stepped smeltery with aerial tension-cable logistics, a separate deep-pier bridge and asymmetric casting terraces.",anchor_donors:[],macro_topology:"One geologically rooted vertical fault with unequal shelves, two structurally independent bridge routes and excavated workshops",density_profile:"Dense ore-furnace and caster-quench ends with a deliberately open fault valley and sparse underplant niches",route_grammar:{main:["West fault spawn","Ore dock","Thermal oversight","Ladle gallery","Fault basin","Caster inspection","Quench inspection","Freight elevator","East rim goal"],upper:["Upper west","Cableway west","Cableway east"],lower:["West service recess","Underbridge traverse","Fault return","Eastern annex"]},strong_motifs:["Twin rooted cableway towers","Lower crossing with deep fault piers","Sealed furnace and quench cores","Pivot suspended ladle","Unequal three-rotor caster","Rail freight davit"],interesting_relationships:["Twin-altitude routes reconnect after fault crossing","Geological rock steps determine factory layout","Industrial dense-to-open contrast creates editable seams","Lower repair cavities support future scripted encounters"],authoring_affordances:[{name:"west service recess",region_xywh:[476,750,152,101],use:"human maintenance refit"},{name:"fault crossing",region_xywh:[710,700,360,92],use:"chase bridge / collapse"},{name:"east undercroft",region_xywh:[1170,829,286,94],use:"modular Gentek append"},{name:"freight annex",region_xywh:[1804,731,164,88],use:"future NPC arrival"}],setpiece_candidates:[{name:"Tension cable failure",anchor:"Cableway west",kind:"bridge_failure"},{name:"Casting activation",anchor:"Roller observation",kind:"machine_activation"},{name:"Contained quench release",anchor:"Quench diagnostics",kind:"hazard_release"},{name:"Freight departure",anchor:"Freight elevator",kind:"departure"}],procedural_exemplar_value:["Fault-step load path grammar","Twin-altitude navigation with 31x27 collision proof","Layered suspension and geology-rooted reinforcement","Unfinished repair pockets"],similarity_avoidance:"Unlike the buried Sablecut arterials, Vespergate caldera ring, Saltglass island chain and flat Crownstep, the key topology is a cross-fault cableway plus deeper pier bridge.",diversity_axes:{macro_topology:"vertical_fault",altitude_grammar:"high_low_bypass",density_cadence:"clustered",route_structure:"branch_rejoin",landmark_family:"cableway",support_form:"twin_pier",environment_relation:"geological",incompleteness:"modular_append_zones"},engine_contract:{accepted_main:"f7e056c9b8791106e22f2d1c295043783d8a9701",rectangle_limit:32768},static_proof:{cells:2097152,sha256:planeHash,rectangles:rects.length,obstructed_sites:a.blocked.passed}};
