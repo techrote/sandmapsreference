@@ -1,0 +1,311 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_MERIDIAN_INGOT_QUARTER_VENTURI_LOCKWORKS",
+  "revision": "R1",
+  "seed": "0x261121c5",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "8d07e04459a2705a6f96c908c0b565a483cc5beb",
+  "donor": "Tungsten Sawtooth R2 @ 7fc24855cf521c90bf67f4afb08685e490473201; Meridian sibling contrast Latchreach c68c3e067972356f842ffd7e52f0fbd27f3d8c19, Forkfield f80acfab74f6ff21d0c07dd28795f3ed46b0fa44, Subgrade Braided Return 2ff23bbd32ac3d657fed36c90a11fa91b691c66b, Tiltglass c78f5d73b2253a6c129fbc871e3c042b3c7a19fb (design-language research only; new original geometry)",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 747094,
+  "discarded_unattached_candidate_cells": 80847,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 2593,
+  "setup_json_bytes": 49932,
+  "material_work_visits": 747094,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "bee61157199a35f58d5921e4f90b2715a05dab3f6ba29bafc7d3b010284421c7",
+  "setup_sha256": "2c182b4266af8cee7d744c90e77085bf624213babad78c0bd5ecaa07cdcb7789",
+  "histogram": {
+    "0": 1350058,
+    "49": 133889,
+    "58": 35259,
+    "62": 29176,
+    "100": 495166,
+    "101": 21494,
+    "113": 1918,
+    "117": 28336,
+    "122": 1856
+  },
+  "sites": [
+    {
+      "name": "West launch",
+      "x": 111,
+      "y": 493
+    },
+    {
+      "name": "Pressure slide inspection",
+      "x": 244,
+      "y": 494
+    },
+    {
+      "name": "West shop street",
+      "x": 470,
+      "y": 557
+    },
+    {
+      "name": "West roof operator",
+      "x": 215,
+      "y": 111
+    },
+    {
+      "name": "West high service",
+      "x": 614,
+      "y": 118
+    },
+    {
+      "name": "West freight court",
+      "x": 534,
+      "y": 603
+    },
+    {
+      "name": "Venturi west lip",
+      "x": 713,
+      "y": 449
+    },
+    {
+      "name": "Upper throat lookout",
+      "x": 928,
+      "y": 452
+    },
+    {
+      "name": "High vent interlock",
+      "x": 1056,
+      "y": 469
+    },
+    {
+      "name": "Venturi east lip",
+      "x": 1351,
+      "y": 462
+    },
+    {
+      "name": "East switching court",
+      "x": 1504,
+      "y": 509
+    },
+    {
+      "name": "East control",
+      "x": 1415,
+      "y": 108
+    },
+    {
+      "name": "East roof dispatcher",
+      "x": 1838,
+      "y": 117
+    },
+    {
+      "name": "East cylinder yard",
+      "x": 1813,
+      "y": 489
+    },
+    {
+      "name": "East launch gate",
+      "x": 1944,
+      "y": 506
+    },
+    {
+      "name": "West low recovery",
+      "x": 701,
+      "y": 743
+    },
+    {
+      "name": "Under-throat recovery",
+      "x": 1033,
+      "y": 779
+    },
+    {
+      "name": "East low return",
+      "x": 1350,
+      "y": 736
+    },
+    {
+      "name": "East finish",
+      "x": 1948,
+      "y": 771
+    },
+    {
+      "name": "West service bay",
+      "x": 239,
+      "y": 920
+    },
+    {
+      "name": "Middle service bay",
+      "x": 625,
+      "y": 922
+    },
+    {
+      "name": "East gear bay",
+      "x": 1382,
+      "y": 922
+    },
+    {
+      "name": "East recovery shop",
+      "x": 1822,
+      "y": 922
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 23,
+      "total": 23,
+      "missing": [],
+      "visited_centres": 1187016
+    },
+    "23x19": {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 23,
+      "total": 23,
+      "missing": [],
+      "visited_centres": 1153141
+    },
+    "31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 23,
+      "total": 23,
+      "missing": [],
+      "visited_centres": 1087025
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1005,
+      425,
+      102,
+      91
+    ],
+    "material": 58,
+    "after_31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 22,
+      "total": 23,
+      "missing": [
+        "High vent interlock"
+      ],
+      "visited_centres": 1071581
+    },
+    "covered_site": "High vent interlock",
+    "other_sites_reachable": 22
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 46367,
+      "pixels": 2097152,
+      "sha256": "9b83d00bf4ad2573eb50fcb4d03d25641e78c5f7baedc96c9f60e9a6223cd13f",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-west-mixed-use-press.png": {
+      "x": 38,
+      "y": 246,
+      "w": 542,
+      "h": 610,
+      "bytes": 4798,
+      "pixels": 330620,
+      "sha256": "deb199afbac832ac9402c02dc04dacf70b0bdad426a17f0607d26de481ab1643",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-roof-inspection-vaults.png": {
+      "x": 488,
+      "y": 8,
+      "w": 1124,
+      "h": 408,
+      "bytes": 11868,
+      "pixels": 458592,
+      "sha256": "78ee353b595c36d07e4b4e27d900acdb28b4c56577aab8a0a3c1434225f971e5",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-venturi-lockworks.png": {
+      "x": 689,
+      "y": 193,
+      "w": 657,
+      "h": 630,
+      "bytes": 12494,
+      "pixels": 413910,
+      "sha256": "a610b171e1fcadd2809bb42fbd5edf2c3b0b460e48e7e5147dd4fc57cb6bfad1",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-east-industrial-quarter.png": {
+      "x": 1300,
+      "y": 269,
+      "w": 706,
+      "h": 592,
+      "bytes": 7697,
+      "pixels": 417952,
+      "sha256": "99f1f5d1d7ad7690f3b45d2d946fbdd7c73663e8984e19e4953979f23d5f9eec",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-underworks-recovery.png": {
+      "x": 77,
+      "y": 739,
+      "w": 1876,
+      "h": 283,
+      "bytes": 14643,
+      "pixels": 530908,
+      "sha256": "f1946286d4274bcab152c1fab9ad2069a045b1b97fe8352fae3697eeb3fdcffd",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-interlock-closure.png": {
+      "x": 870,
+      "y": 329,
+      "w": 385,
+      "h": 311,
+      "bytes": 2812,
+      "pixels": 119735,
+      "sha256": "89418c11cdd2b9f0a4ba3ef2c7a6a247c339b67f69c9fc7e7b32be1d3bf7e1c3",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: no installed CyberDemoBridge, Godot/Workbench, Rapier, actual input/collision/ticks or cold save/reopen executed",
+  "independent_review": "PENDING: Art, Technical, Shepherd at exact committed HEAD",
+  "ci": "NOT CLAIMED",
+  "corpus_role": "original nested pressure-vault Venturi gates, paired opposed compression jaws and entered underfloor recovery shops; intentionally empty authoring lanes preserved"
+}
