@@ -132,6 +132,8 @@ function buildWorld(){
  for(const [x,y] of [[420,519],[565,573],[876,573],[1012,502],[1290,502],[1531,556],[1868,556]]){
    rect(x,422,10,y-422,M.steel);rect(x-6,y-3,22,7,M.plate);
  }
+ // Actual open catenary transit portals align with the two roof hatches: the emergency upper detour passes OVER the live trunk.
+ rect(783,402,91,29,0);rect(1029,402,106,29,0);
  // Intentional crop coverages follow the final material plane exactly.
  const sites=[
  ["West street arrival",68,685],["West passenger hall",184,683],
