@@ -23,7 +23,7 @@ const sites={
 "Workers shelter":[1418,775],"Quarantine roof":[1846,367],"Eastern dispatch":[1956,567],
 "West gantry sky":[301,347],"Grading chimney":[780,335],"Upper court bridge":[1285,422],
 "Quarantine upper":[1560,412],"West underworks":[67,812],"Grading underworks":[704,803],
-"Hub underpass":[1226,809],"Registry underpass":[1525,758],"East underworks":[1995,816],
+"Hub underpass":[1220,584],"Registry underpass":[1525,758],"East underworks":[1995,816],
 "Western signal tower":[447,227],"Grading roof lantern":[1014,219],"Quarantine mast lookout":[1895,198],
 "Broken annex":[2010,771],"Transfer shelf":[1242,710],"Workers repair bay":[1480,730],
 "Quarantine interview":[1830,736],"Keel receiving platform":[676,665]};
@@ -112,6 +112,10 @@ V(1495,797,81,84);
  one positive steel transfer member ties both non-identical courts to a
  bedrock column without sealing the 31x27 free-flight approaches. */
 St(1536,817,439,18); C(1690,817,24,118);
+/* Load-bearing quarantine ridge: central counterweight shaft joins the
+  non-repeated serrated roof to the lower founded receiving beam. */
+St(1600,489,334,16); C(1775,490,22,442);
+V(664,780,75,124);
 /* Deliberately broken east annex and open authoring air. */
 V(1986,471,62,244);St(1948,824,98,14);
 line(1967,824,2036,790,11);St(1937,493,63,10);
