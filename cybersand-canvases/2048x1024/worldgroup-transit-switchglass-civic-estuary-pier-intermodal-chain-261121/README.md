@@ -15,7 +15,7 @@ These piers are separated by *real navigable space*. The low, partly demolished 
 
 ## Contract, reconstruction and review
 - Full plane: **2048×1024 = 2,097,152** material indices, legal inert cells 49,58,62,100,101,113,117,122 and empty 0.
-- Replay: **2032** non-overlapping Setup-v2 rectangles; **38987** UTF-8 Setup JSON bytes.
+- Replay: **2032** non-overlapping Setup-v2 rectangles; **39096** UTF-8 Setup JSON bytes.
 - Grounded solids: **302785** / all final solids. Material grid SHA-256: `3804dd4973f1ad84ecc4daa14cd63201ac31c0987dedc4cefbd94fa6780a64d9`.
 - Conservative Midge exact literal free centres: **24/24** at 19×15, 23×19 and 31×27.
 - Obstruction: [1343,507,96,124] material closure affects only the named severable centre; **23/24** other exact sites reachable. Independent full-hull shortest-path reference: Freight scale to Signal islet approach **377 → 437** steps (+60), not teleporting.
@@ -25,3 +25,7 @@ These piers are separated by *real navigable space*. The low, partly demolished 
 - Godot/Workbench/CyberDemoBridge/Rapier movement, contact, tick progression and fresh-process save/reopen: **NATIVE-UNTESTED**. Committed Node verifier has not yet been executed independently; external Art/Technical/Shepherd review pending.
 
 Corpus intent: editable structural grammar and staged event opportunities; leave bounded vacant sites and sky/underpier negative space intact. `exemplar.json` is a corpus annotation, not engine protocol. No engine or donor sources changed.
+
+## Loader-fatal Setup-v2 schema correction
+
+The prior generated Setup carried obsolete seven-root `world_policy`. This exact-HEAD correction replaces it with the accepted strict fourteen root keys and updates builder, independent verifier and setup/hash receipts. The material-plane SHA-256, every source cell, Midge site, obstruction detour and all published PNG bytes are unchanged. Native gameplay is still NATIVE-UNTESTED.
