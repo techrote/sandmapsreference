@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "project": "FEATURE-ATLAS-001",
+  "snapshot_utc": "2026-11-21",
+  "purpose": "Append-only evidence-locality notes; immutable 38 baseline records and their independent classifications remain untouched",
+  "entries": [
+    {
+      "addendum_id": "LOC-184-DUAL-KEEL-SECOND-SITE-001",
+      "state_id": "P184-DUAL-ALTITUDE-KEEL-CRADLES@e45f9794f318761db02fbe82ad623c2b1da96196",
+      "portrait_pr": 184,
+      "portrait_head": "e45f9794f318761db02fbe82ad623c2b1da96196",
+      "kind": "MULTI_WINDOW_RELATIONSHIP",
+      "baseline_window_role": "First upper/left cradle only, not a single bbox enclosing both cradles",
+      "supplementary_crops": [
+        {
+          "file": "05-lower-drydock.png",
+          "xywh": [
+            618,
+            1202,
+            350,
+            380
+          ],
+          "sha256": "ef9fdeb840af5c576d9d890cf5bf0f921df2351b221e1b3a4fabeab653c6c491",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/e45f9794f318761db02fbe82ad623c2b1da96196/cybersand-canvases/1024x2048/portrait-difficult-keelglass-vertical-twin-keels-261121/05-lower-drydock.png",
+          "role": "Second (right/lower) cradle"
+        }
+      ],
+      "site_points": [],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/184#issuecomment-7062923366",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7069740824",
+      "scope": "GOOD/HIGH unchanged. Independent transfer reviewer examined the full map. Two disjoint material crop windows support the two-site relationship; neither crop alone encloses the whole feature.",
+      "limits": "Coordinates and SHA-256 from committed receipt; no new manager-run remote image byte parity, dynamic machinery, or native test."
+    },
+    {
+      "addendum_id": "LOC-184-WEST-BYPASS-SITE-002",
+      "state_id": "P184-FORCED-SIDE-WORKSHOP-CLAIM@e45f9794f318761db02fbe82ad623c2b1da96196",
+      "portrait_pr": 184,
+      "portrait_head": "e45f9794f318761db02fbe82ad623c2b1da96196",
+      "kind": "WAYPOINT_CLAIM_CAVEAT",
+      "baseline_window_role": "East-caster context only; does not contain either west-side bypass mouth",
+      "supplementary_crops": [],
+      "site_points": [
+        {
+          "name": "Bypass high mouth",
+          "xy": [
+            330,
+            1080
+          ]
+        },
+        {
+          "name": "Bypass low mouth",
+          "xy": [
+            320,
+            1321
+          ]
+        }
+      ],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/184#issuecomment-7062923366",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7069740824",
+      "scope": "PENDING/DO-NOT-ASSERT unchanged. Obstructed-route distance 1906→1976 supports a detour, not compulsory visitation of west-side named mouths. No exact entered-workshop route witness established.",
+      "limits": "Points are literal centres from committed receipt, not feature bbox. Route locality remains unverified; avoid interpreting east-caster PNG as bypass proof."
+    },
+    {
+      "addendum_id": "LOC-187-REVERSE-FREIGHT-CHAIN-003",
+      "state_id": "P187-REVERSE-FREIGHT-HOIST@fdda5cc98885bbe1ef101a7fa7ef42466962a141",
+      "portrait_pr": 187,
+      "portrait_head": "fdda5cc98885bbe1ef101a7fa7ef42466962a141",
+      "kind": "MULTI_WINDOW_RELATIONSHIP",
+      "baseline_window_role": "Original centre-hoist crop shows only one local transfer stage of a spatial chain",
+      "supplementary_crops": [
+        {
+          "file": "01-east-arrival-ship.png",
+          "xywh": [
+            570,
+            80,
+            432,
+            407
+          ],
+          "sha256": "37a569a377f223f76b47c612d9d2e6cc4d918da949bcc6520abe435e9ee642f4",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/fdda5cc98885bbe1ef101a7fa7ef42466962a141/cybersand-canvases/1024x2048/portrait-moderate-axlewell-reverse-freight-hoist-261121/01-east-arrival-ship.png",
+          "role": "High-right freighter"
+        },
+        {
+          "file": "02-crane-customs.png",
+          "xywh": [
+            108,
+            330,
+            798,
+            380
+          ],
+          "sha256": "e00a1963261b1dc2a4a1d3b52d299e6ea38e18a9f069b7c97b6c06cd3a742d3d",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/fdda5cc98885bbe1ef101a7fa7ef42466962a141/cybersand-canvases/1024x2048/portrait-moderate-axlewell-reverse-freight-hoist-261121/02-crane-customs.png",
+          "role": "Opposed customs and crane handoff"
+        },
+        {
+          "file": "05-west-classifier.png",
+          "xywh": [
+            108,
+            1210,
+            399,
+            581
+          ],
+          "sha256": "2c567ebd2c1c9bb4b30ed6be312c2bdc2b364864c6d78eccb49d6760febd9a38",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/fdda5cc98885bbe1ef101a7fa7ef42466962a141/cybersand-canvases/1024x2048/portrait-moderate-axlewell-reverse-freight-hoist-261121/05-west-classifier.png",
+          "role": "Three descending classifier stages"
+        },
+        {
+          "file": "06-lower-rail-dispatch.png",
+          "xywh": [
+            106,
+            1645,
+            799,
+            395
+          ],
+          "sha256": "2f974d57cd3a6130086784d8fa52278c6a338d42572ef46f4eb951ca806ea71f",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/fdda5cc98885bbe1ef101a7fa7ef42466962a141/cybersand-canvases/1024x2048/portrait-moderate-axlewell-reverse-freight-hoist-261121/06-lower-rail-dispatch.png",
+          "role": "Lower dispatch"
+        }
+      ],
+      "site_points": [],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/187#issuecomment-7062924614",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7069781482",
+      "scope": "GOOD/HIGH unchanged. The complete chain is spatially distributed across five true 1:1 windows including original 03-central-hoist.png; this is relational exemplar evidence, not a single tight feature bbox or native cargo actuation proof.",
+      "limits": "Original reviewer independently assessed source-static full map and crops; manager confirmed immutable receipt hashes/coordinates, not new PNG binary parity or native cargo simulation."
+    }
+  ]
+}
