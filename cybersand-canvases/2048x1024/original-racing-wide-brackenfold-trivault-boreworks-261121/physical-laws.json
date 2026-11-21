@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "engine_main_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "validated_against": "accepted read-only workbench_setup.gd and native material descriptor validity; static one-component 4-neighbour grounding, no native dynamics",
+  "material_ids": {
+    "58": "reinforced concrete",
+    "62": "steel plate",
+    "72": "dark glass",
+    "100": "basalt columns",
+    "101": "obsidian",
+    "113": "zinc sheet",
+    "117": "bare iron",
+    "122": "quartz crystal"
+  },
+  "stable_hard_solid_ids": [
+    58,
+    62,
+    72,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "valid_actual_final_cells": 2097152,
+  "solid_cells": 988948,
+  "grounded_solid_cells": 988948,
+  "fluid_cells": 0,
+  "falling_or_mobile_cells": 0,
+  "reactive_present_cells": 0,
+  "invalid_material_ids": 0,
+  "detached_components": 0,
+  "physics_caveat": "Dry isolated material IDs; some individual metals may have chemistry on foreign contact but there are no fluid/reactive cells in this authored final plane. Solid contact and Rapier response are NATIVE-UNTESTED.",
+  "grounding_semantics": "Every occupied material cell belongs to one 4-neighbour component physically rooted at the world boundary. Geology and mechanical ties use the actual material plane.",
+  "native": "NATIVE-UNTESTED"
+}
