@@ -32,6 +32,25 @@ for(const v of G)hist[v]=(hist[v]||0)+1;
 assert(JSON.stringify(hist)===JSON.stringify(receipt.histogram),'histogram differs');
 assert(w.clear['19x15'].reachable===w.sites.length&&w.clear['23x19'].reachable===w.sites.length&&w.clear['31x27'].reachable===w.sites.length,'full-hull sites fail');
 assert(w.blocked.reachable===w.sites.length-1&&w.blocked.missing.length===1&&w.blocked.missing[0]==='Central severable cable span','physical hard-block mismatch');
+
+function shortest(from,to,block){
+ const a=w.sites.find(s=>s[0]===from),b=w.sites.find(s=>s[0]===to);
+ assert(a&&b,'missing detour site');
+ const rx=15,ry=13,stride=W+1,P=new Int32Array((W+1)*(H+1));
+ for(let y=0;y<H;y++){let run=0;for(let x=0;x<W;x++){const solid=G[y*W+x]!==0||(block&&x>=block[0]&&x<block[0]+block[2]&&y>=block[1]&&y<block[1]+block[3]);run+=solid?1:0;P[(y+1)*stride+x+1]=P[y*stride+x+1]+run;}}
+ const free=new Uint8Array(N);
+ for(let y=ry;y<H-ry;y++)for(let x=rx;x<W-rx;x++){let l=x-rx,r=x+rx+1,t=y-ry,d=y+ry+1;if(P[d*stride+r]-P[t*stride+r]-P[d*stride+l]+P[t*stride+l]===0)free[y*W+x]=1;}
+ const start=a[2]*W+a[1],goal=b[2]*W+b[1];
+ assert(free[start]&&free[goal],'detour endpoint collides');
+ const q=new Int32Array(N),distance=new Int32Array(N);distance.fill(-1);distance[start]=0;let hd=0,tl=0;q[tl++]=start;
+ while(hd<tl){let z=q[hd++],x=z%W;if(z===goal)return distance[z];for(let v of [x>0?z-1:-1,x<W-1?z+1:-1,z>=W?z-W:-1,z+W<N?z+W:-1])if(v>=0&&free[v]&&distance[v]===-1){distance[v]=distance[z]+1;q[tl++]=v;}}
+ throw Error('no physical bypass between '+from+' and '+to);
+}
+const route=receipt.route_detour;
+assert(route&&route.hull[0]===31&&route.hull[1]===27,'detour contract missing');
+const before=shortest(route.from,route.to,null),after=shortest(route.from,route.to,w.obs);
+assert(before===route.baseline_steps&&after===route.obstructed_steps&&after-before===route.extra_steps&&after>before,'actual detour not reproducible');
+
 // Verify remote/publication PNGs independently with standard zlib, CRC and 1:1 pixel parity.
 const files=[];
 for(const [filename,x0,y0,ww,hh] of w.crops){
