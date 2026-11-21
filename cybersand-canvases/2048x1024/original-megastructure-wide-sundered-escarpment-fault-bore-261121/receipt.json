@@ -1,0 +1,242 @@
+{
+  "schema": "creator-static-v1",
+  "seed": 222188833,
+  "extent": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "grid_sha256": "2374343475cc9e55775d3b2d8104510a657ccc53d031993f362c611f807292f4",
+  "setup_sha256": "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+  "setup_bytes": 94178,
+  "rectangles": 4905,
+  "construction_work_cells": 678957,
+  "histogram": {
+    "0": 1418195,
+    "58": 18976,
+    "62": 44258,
+    "64": 3913,
+    "65": 7978,
+    "68": 1571,
+    "69": 2558,
+    "72": 524,
+    "74": 7321,
+    "76": 3713,
+    "77": 624,
+    "79": 1573,
+    "80": 223,
+    "100": 484253,
+    "101": 84897,
+    "114": 8675,
+    "119": 3604,
+    "120": 468,
+    "130": 1810,
+    "131": 2018
+  },
+  "grounded_solids": 678957,
+  "detached_retained": 0,
+  "removed_disconnected": 93800,
+  "spawn": [
+    144,
+    477
+  ],
+  "sites": {
+    "Western daylight dock": [
+      144,
+      477
+    ],
+    "Customs flight deck": [
+      272,
+      484
+    ],
+    "West upper permit booth": [
+      338,
+      327
+    ],
+    "West lower slip": [
+      310,
+      806
+    ],
+    "Torsion mill west entry": [
+      520,
+      534
+    ],
+    "Torsion mill balancing floor": [
+      672,
+      563
+    ],
+    "Grinding gallery overpass": [
+      731,
+      315
+    ],
+    "Torsion mill escape shaft": [
+      785,
+      809
+    ],
+    "Central fault lift datum": [
+      1011,
+      558
+    ],
+    "Central fault high lookout": [
+      1038,
+      290
+    ],
+    "Central lower chain room": [
+      1084,
+      811
+    ],
+    "Archive west approach": [
+      1261,
+      628
+    ],
+    "Archive register console": [
+      1410,
+      634
+    ],
+    "Archive upper collector": [
+      1422,
+      330
+    ],
+    "East low sump refuge": [
+      1574,
+      807
+    ],
+    "East freight viaduct": [
+      1684,
+      542
+    ],
+    "East departures court": [
+      1831,
+      469
+    ],
+    "Exit daylight gantry": [
+      1920,
+      474
+    ]
+  },
+  "clearances": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 18,
+      "total": 18,
+      "missing": [],
+      "component_centres": 1191988
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 18,
+      "total": 18,
+      "missing": [],
+      "component_centres": 1150067
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 18,
+      "total": 18,
+      "missing": [],
+      "component_centres": 1079449
+    }
+  ],
+  "physical_obstruction_xywh": [
+    966,
+    530,
+    134,
+    111
+  ],
+  "obstructed_routes": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 17,
+      "total": 18,
+      "missing": [
+        "Central fault lift datum"
+      ],
+      "component_centres": 1172988
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 17,
+      "total": 18,
+      "missing": [
+        "Central fault lift datum"
+      ],
+      "component_centres": 1129943
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 17,
+      "total": 18,
+      "missing": [
+        "Central fault lift datum"
+      ],
+      "component_centres": 1056981
+    }
+  ],
+  "gallery_crops_xyxy": {
+    "01-throat-customs.png": [
+      80,
+      280,
+      460,
+      708
+    ],
+    "02-torsion-mill.png": [
+      432,
+      282,
+      824,
+      752
+    ],
+    "03-fault-lift.png": [
+      808,
+      259,
+      1240,
+      755
+    ],
+    "04-cooling-archive.png": [
+      1170,
+      312,
+      1600,
+      807
+    ],
+    "05-reclaimer-terminal.png": [
+      1574,
+      284,
+      1984,
+      738
+    ]
+  },
+  "file_sha256": {
+    "overview.png": "f480181ffedd837b4f580f520c1f1fdb2e284fc29aff0b4c8a390b910a71f7ed",
+    "01-throat-customs.png": "afddabc7d48a92b5bcbeac62759ababa1bc37adee1ad7d140fc582fdc9f64cfe",
+    "02-torsion-mill.png": "58e316472b6d8f65a7d3e92e2ef79121b88f9953ef946d59edcac73044604563",
+    "03-fault-lift.png": "b964ef66ce9033bd6607095e441160e388e4ede79dba57a698e0e3e027903401",
+    "04-cooling-archive.png": "b7e60ab7852a2752cf87e8195ea21cb4e431c440492ea92d320461018ed663eb",
+    "05-reclaimer-terminal.png": "77693d84d2ff85df2b5a6ca1e974fc990c27d9c0dbd533ca0fb0c479a0a33e61",
+    "setup.json": "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b"
+  },
+  "source_contract": {
+    "engine_main_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+    "setup_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+    "material_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+    "sandmapsreference_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "native_status": "NATIVE-UNTESTED"
+  },
+  "material_contract": "Every occupied index from the accepted inert Solid/None material subset; 0 is empty."
+}

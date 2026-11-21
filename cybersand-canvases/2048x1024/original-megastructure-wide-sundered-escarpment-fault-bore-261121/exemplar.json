@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "purpose": ["human_editable_canvas", "procedural_exemplar", "scripted_setpiece_source"],
+  "family": "original/megastructure-wide",
+  "map_role": "fault-embedded nested-cavern city, with deliberate excavation and multi-stratum bypasses",
+  "anchor_donors": [],
+  "macro_topology": ["nested_cavities", "vertical_fault"],
+  "density_profile": "two roof-rooted civic-industrial banks around a deliberately open fault-shaft void; five entered workfaces, rock teeth, and three below-bore expansion pockets",
+  "route_grammar": {
+    "primary": "west customs to torsion mill to central fault lift, then archive cooling and eastern departure, descending through chambered rock",
+    "alternate": "staggered overroof upper transfers and continuous low salvage/recovery bore with six cross-level shafts",
+    "obstruction": "134 by 111 actual material closure at XY 966,530 excludes only the centre-lift datum; the other 17 literal sites remain reached"
+  },
+  "strong_motifs": ["diagonal opposed fault strata", "split daylight mouth through rock roof", "three distinct deep excavated sub-bore niches", "unequal ceiling-bolted workface pods", "three large asymmetric rock teeth", "lower emergency gallery"],
+  "interesting_relationships": ["connected natural stone carries both the built habitation and the overroof evacuation grammar", "the open middle excavation has two exits at widely separated altitudes", "civic archives occupy a different rock pocket from the mill and west inspection", "future scripted failure of the central lift does not close the remaining 17 destinations"],
+  "authoring_affordances": ["unfinished floor or mining seam in the western loading cavern", "vacant bay beside the centre lower pressure-analysis trench", "multiple side excavations around the fault daylight shaft", "eastern downstream socket left unoccupied", "two structurally useful wide air voids for manually placed modules"],
+  "setpiece_candidates": [
+    {"name": "Daylight fault reveal", "xy": [1038,290], "possible_event": "arrival or sudden overhead discovery in a natural vertical shaft; no event is implemented"},
+    {"name": "Fault lift bridge break", "xy": [1011,558], "possible_event": "breakaway lift cage or reroutable crossing, independently proven to have alternate exits"},
+    {"name": "Lower winch recovery", "xy": [441,901], "possible_event": "start inert hoist mechanism for an NPC or cargo recovery setpiece"},
+    {"name": "Eastern salvage settlement", "xy": [1648,902], "possible_event": "NPC arrival, inspection and shipment from the deep service pocket"}
+  ],
+  "procedural_exemplar_value": "Tests a different class of generation grammar: subtractive nested caves, opposed diagonal geological load paths, roof-suspended entered facilities, three rooted deep-bore pockets, and upper/main/lower transfer proofs. Empty bays are explicit editable sockets rather than failure to furnish.",
+  "similarity_avoidance": "Unlike the previously accepted single-clock Meridian Scar, continuous stormbeam Ion Parapet, two-horn Umbra Siphon, six-leg Pilgrim Gait, twin-dish Tin Canticle and four roof-island Ferric Pendulum, this corpus outlier is primarily an excavated geological interior with a diagonal double fault, three service pockets beneath the return route, and a split daylight access shaft; its strongest mass is actual rock rather than exposed machine architecture.",
+  "diversity_axes": {
+    "macro_topology": "nested_cavities",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "layered",
+    "landmark_family": "gantry",
+    "support_form": "cliff_embedded",
+    "environment_relation": "geological",
+    "incompleteness": "excavation"
+  }
+}
