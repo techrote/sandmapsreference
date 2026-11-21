@@ -1,0 +1,129 @@
+name: Native admission Windows pilot
+
+on:
+  workflow_dispatch:
+  # TEMPORARY DRAFT BOOTSTRAP: one exact branch + explicit request-file change.
+  # Removed before owner handoff. No map event or schedule can trigger this job.
+  push:
+    branches: [codex/canvas-native-ci-001]
+    paths: [.github/native-admission/pilot-request.json]
+
+permissions: {}
+
+concurrency:
+  group: canvas-native-ci-001-windows
+  cancel-in-progress: false
+
+jobs:
+  qualify:
+    name: Windows native qualification
+    runs-on: windows-2022
+    timeout-minutes: 35
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      artifact_id: ${{ steps.upload.outputs.artifact-id }}
+    env:
+      PYTHONUTF8: '1'
+      PYTHONUNBUFFERED: '1'
+      GIT_LFS_SKIP_SMUDGE: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Validate bounded request and source
+        shell: pwsh
+        run: |
+          python -c "from tools.native_admission.common import read_json,require; p=read_json('.github/native-admission/pilot-request.json'); require(p['programme']=='CANVAS-NATIVE-CI-001' and type(p['sequence']) is int and 1<=p['sequence']<=3 and p['prs']==[25,26,17,22] and p['workers']==2, 'bounded pilot request rejected')"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m unittest discover -s tests/native_admission -p 'test_*.py'
+          exit $LASTEXITCODE
+      - name: Resolve exact accepted engine and immutable fixtures
+        id: plan
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          python -m tools.native_admission.discovery --output build/plan.json --fixtures build/fixtures
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -c "import os; from tools.native_admission.common import read_json; p=read_json('build/plan.json'); open(os.environ['GITHUB_OUTPUT'],'a').write('engine_sha='+p['engine']['head_sha']+'\n')"
+      - name: Read exact accepted engine source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: techrote/cybersand
+          ref: ${{ steps.plan.outputs.engine_sha }}
+          path: engine
+          lfs: false
+          persist-credentials: false
+      - name: Materialize selected pinned Rapier dependency
+        shell: pwsh
+        run: |
+          git -C engine lfs pull --include="godot/addons/godot-rapier2d/bin/libgodot_rapier.windows.x86_64-pc-windows-msvc.dll" --exclude=""
+          exit $LASTEXITCODE
+      - name: Acquire and verify source-matched native runtime
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          python -m tools.native_admission.runtime prepare --plan build/plan.json --engine-root engine --work-root build/runtime --output build/runtime.json
+          exit $LASTEXITCODE
+      - name: Execute real native load physics save and reopen
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          python -m tools.native_admission.runner --plan build/plan.json --runtime build/runtime.json --output build/evidence --work-root build/workers --workers 2 1> build/coordinator.stdout.log 2> build/coordinator.stderr.log
+          $code = $LASTEXITCODE
+          Get-Content build/coordinator.stdout.log
+          Get-Content build/coordinator.stderr.log
+          if (Test-Path build/evidence) { Copy-Item build/coordinator.*.log build/evidence/ }
+          exit $code
+      - name: Export and read back complete evidence ZIP
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          python -m tools.native_admission.evidence export --directory build/evidence --output build/native-evidence.zip
+          exit $LASTEXITCODE
+      - name: Retain immutable qualification evidence
+        id: upload
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build/native-evidence.zip
+          if-no-files-found: error
+          retention-days: 90
+
+  publish:
+    name: Verify and publish evidence
+    needs: qualify
+    if: always() && needs.qualify.outputs.artifact_id != ''
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Validate artifact provenance and atomically publish evidence ref
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          QUALIFICATION_ARTIFACT_ID: ${{ needs.qualify.outputs.artifact_id }}
+        run: |
+          python3 -m tools.native_admission.publisher --artifact-id "$QUALIFICATION_ARTIFACT_ID" --run-id "$GITHUB_RUN_ID" --attempt "$GITHUB_RUN_ATTEMPT" --workflow-sha "$GITHUB_SHA" --output build/publication.json
+      - name: Retain publication receipt
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: publication-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build/publication.json
+          if-no-files-found: error
+          retention-days: 90
