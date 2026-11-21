@@ -1,0 +1,47 @@
+name: CORPUS-INDEX-001
+
+on:
+  push:
+    branches: [corpus-index-001]
+    paths:
+      - 'tools/corpus_index.py'
+      - 'tools/test_corpus_index.py'
+      - 'docs/corpus/**'
+      - '.github/workflows/corpus-index.yml'
+  pull_request:
+    paths:
+      - 'tools/corpus_index.py'
+      - 'tools/test_corpus_index.py'
+      - 'docs/corpus/**'
+      - '.github/workflows/corpus-index.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  corpus-index:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Pure validator/indexer tests
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/corpus_index.py tools/test_corpus_index.py
+          python3 tools/test_corpus_index.py
+      - name: Build live open-PR corpus snapshot
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 tools/corpus_index.py index-github --repo "${GITHUB_REPOSITORY}" --output-dir build/corpus-index
+          cat build/corpus-index/diversity-report.md >> "${GITHUB_STEP_SUMMARY}"
+      - name: Retain corpus snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: corpus-index-001-${{ github.sha }}
+          path: build/corpus-index/
+          if-no-files-found: error
+          retention-days: 14
