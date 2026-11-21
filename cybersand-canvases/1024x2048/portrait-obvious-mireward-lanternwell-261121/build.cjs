@@ -118,6 +118,62 @@ function world(){
  // One partial isolation wall, intentionally entered around its right-hand wicket.
  b(721,1529,93,13,121);b(726,1517,16,12,49);
  b(821,1540,21,22,79);
+
+ // R3 PORTRAIT-REPAIR-001: four unlike roof-fed culture/work assemblies.
+ // A: WESTERN SPORE-COMB -- a branching roof receptor, ribbed culture ladders,
+ // and differently sized assay receptacles; do not close the flight lumen.
+ l(374,254,414,303,9,49); l(414,303,453,345,7,49);
+ b(403,294,33,9,68); b(425,302,8,51,49); b(439,344,42,8,62);
+ b(443,351,11,77,130); b(458,351,17,63,129);
+ b(445,361,24,7,131); b(451,368,8,15,79);
+ l(400,322,378,370,6,49); b(372,367,48,9,68);
+ for(const [y,w] of [[387,34],[408,42],[434,29],[463,49]]){b(368,y,w,6,62);b(372,y+7,Math.max(12,w-13),9,130);}
+ l(384,487,360,535,7,49); b(345,528,44,8,68);
+ b(350,536,12,22,130); b(368,538,13,14,129); b(354,544,6,7,77);
+ // B: WESTERN INOCULATION RACK -- roof-suspended exchange steps, nested
+ // culture chambers and reagent flasks opposite the western seed registry.
+ l(337,402,300,437,9,49);b(287,437,53,11,68);
+ b(291,448,13,81,49);b(326,448,12,107,49);
+ b(299,471,33,11,62);b(304,484,23,41,130);b(310,496,10,19,0);
+ b(300,535,39,8,131);b(309,543,15,24,129);b(312,551,8,8,79);
+ l(327,556,343,598,7,49);b(325,595,51,8,62);
+ b(346,605,27,45,130);b(354,616,12,21,0);b(342,654,35,7,68);
+ l(343,600,324,658,6,49);
+ // C: EASTERN GERMINATION BLADDERS -- three different vessels held by
+ // the east roof's industrial span and joined by visible sterile machinery.
+ l(868,457,821,496,10,49);b(794,489,64,9,68);
+ l(814,496,803,529,7,49);l(835,495,851,540,7,49);
+ b(788,528,39,9,62);b(789,537,10,61,130);b(799,587,29,10,131);
+ b(812,541,8,32,63);b(804,575,14,7,79);
+ b(833,539,45,9,62);b(841,548,28,89,129);
+ b(849,560,14,65,0);b(850,578,12,19,77);b(839,640,37,9,68);
+ l(802,604,779,644,7,49);b(768,645,40,8,68);
+ b(769,653,36,36,130);b(777,659,18,19,0);b(775,680,24,7,131);
+ // ART-P1 SECOND PASS (after independent Art REWORK): recognisable organic
+ // culture membranes rather than two purely skeletal industrial frames.
+ // The two existing west/east roof rigs, entrances and protected voids remain.
+ function cultureLobe(cx,cy,rx,ry,skin,seed){
+   for(let dy=-ry;dy<=ry;dy+=3){const norm=dy/ry,spread=Math.sqrt(Math.max(0,1-norm*norm));const skew=Math.round(3*Math.sin((dy+seed)/17)+2*norm);const width=Math.max(3,Math.round(rx*spread));b(cx-width+skew,cy+dy,width*2+1,Math.min(3,cy+ry-(cy+dy)+1),skin);}
+   for(let dy=-Math.floor(ry*.62);dy<=Math.floor(ry*.62);dy+=3){const spread=Math.sqrt(Math.max(0,1-(dy/(ry*.68))**2));const width=Math.max(2,Math.round(rx*.49*spread));b(cx-width+2,cy+dy,width*2+1,3,129);}
+   for(const [x,y] of [[cx-7,cy-ry*.18],[cx+6,cy+ry*.18],[cx-2,cy+ry*.43]]){b(Math.round(x),Math.round(y),6,9,63);b(Math.round(x)+2,Math.round(y)+3,2,3,77);}
+ }
+ // West spore comb: roof-fed long culture sleeve and asymmetric budding brood.
+ b(398,375,9,19,130);cultureLobe(402,438,28,50,130,5);
+ l(407,477,421,493,9,130);cultureLobe(423,507,21,33,130,21);
+ l(385,486,369,531,8,130);b(365,531,16,10,130);
+ // East custody: separately outlined mother and daughter germination bladders.
+ b(845,522,11,25,130);cultureLobe(850,582,23,55,130,32);
+ l(832,578,813,569,10,130);cultureLobe(808,588,16,34,130,54);
+ b(846,633,16,12,131);
+ // D: MID-AIR EXCHANGE CASSETTE -- a roof-fed cargo cradle with
+ // staggered processing cups and an unfinished receiving elbow below.
+ l(591,525,573,690,8,49);b(562,687,49,8,68);
+ l(572,688,556,722,7,49);b(552,719,84,10,62);
+ b(558,731,22,33,130);b(564,739,10,14,77);
+ b(588,731,35,21,129);b(597,737,18,9,63);
+ b(627,719,10,56,49);b(561,777,77,9,68);
+ b(605,785,43,8,131);b(638,791,9,19,49);
+
  // The named centres are literal design clearances authored into real material cells.
  for(const s of sites)b(s.x-19,s.y-17,39,35,0);
 
@@ -160,7 +216,7 @@ function audit(w,rects){
 
 // Exhaustive shortest path on the full 31x27 FREE-CENTRE 4-neighbour grid:
 // no nearest-site substitution, Manhattan shortcut or missing 2D collision checks.
-function shortest31(world,block){
+function shortest31(world,block,fromXY=null,toXY=null,minCenterX=0){
  const {W,H,spawn,sites}=world,g=block?world.g.slice():world.g;
  if(block){const[x,y,ww,hh]=block;for(let yy=y;yy<y+hh;yy++)g.fill(58,yy*W+x,yy*W+x+ww);}
  const S=W+1,integral=new Int32Array(S*(H+1));
@@ -171,25 +227,26 @@ function shortest31(world,block){
   if(integral[b*S+rr]-integral[t*S+rr]-integral[b*S+l]+integral[t*S+l]===0)free[y*W+x]=1;
  }
  const end=sites.find(q=>q.name==="Basal export airlock");if(!end)throw Error("missing literal goal");
- const start=spawn[1]*W+spawn[0],finish=end.y*W+end.x,dist=new Int32Array(W*H),parent=new Int32Array(W*H),queue=new Int32Array(W*H);
+ const from=fromXY||spawn,to=toXY||[end.x,end.y],start=from[1]*W+from[0],finish=to[1]*W+to[0],dist=new Int32Array(W*H),parent=new Int32Array(W*H),queue=new Int32Array(W*H);
  dist.fill(-1);let front=0,tail=0;
- if(!free[start]||!free[finish])throw Error("literal spawn/goal blocked");
+ if(!free[start]||!free[finish]||from[0]<minCenterX||to[0]<minCenterX)throw Error("literal full-hull route endpoint blocked");
  queue[tail++]=start;dist[start]=0;
  while(front<tail&&dist[finish]===-1){
   const i=queue[front++],x=i%W;
   for(const j of[x?i-1:-1,x+1<W?i+1:-1,i-W,i+W]){
-   if(j>=0&&j<W*H&&free[j]&&dist[j]===-1){dist[j]=dist[i]+1;parent[j]=i;queue[tail++]=j;}
+   if(j>=0&&j<W*H&&j%W>=minCenterX&&free[j]&&dist[j]===-1){dist[j]=dist[i]+1;parent[j]=i;queue[tail++]=j;}
   }
  }
- let entered=0,atLevel=[],walked=0;
+ let entered=0,atLevel=[],walked=0,portalWaypointsVisited=[];const portalSites=sites.filter(s=>["Side loop upper entry","Side sterile riser","Side loop lower exit"].includes(s.name));
  if(dist[finish]>=0){for(let i=finish;i!==start;i=parent[i]){
   if(i<0||walked>W*H)throw Error("invalid route parent");
   const x=i%W,y=(i/W)|0;
+  for(const site of portalSites)if(x===site.x&&y===site.y)portalWaypointsVisited.push(site.name);
   if(y>=945&&y<=1045&&x>=716&&x<=855)entered++;
   if(y===1000&&atLevel.length<5)atLevel.push([x,y]);
   walked++;
  }}
- return {steps:dist[finish],visited:tail,entered_side_gallery_cells:entered,crossing_at_y1000:atLevel};
+ return {steps:dist[finish],visited:tail,entered_side_gallery_cells:entered,crossing_at_y1000:atLevel,portal_waypoints_visited:portalWaypointsVisited.reverse()};
 }
 
 function concat(arr){const n=arr.reduce((p,a)=>p+a.length,0),out=new Uint8Array(n);let j=0;for(const a of arr){out.set(a,j);j+=a.length;}return out;}
@@ -216,31 +273,46 @@ function verifyPNG(p,g,W,x,y,w,h){const v=new DataView(p.buffer,p.byteOffset,p.b
 
 
 function build(){
- const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),direct=shortest31(w,null),detour=shortest31(w,[330,939,375,107]);
- if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||detour.steps<=direct.steps||detour.entered_side_gallery_cells<30)
+ const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),physicalBlock=[330,939,375,107],direct=shortest31(w,null),detour=shortest31(w,physicalBlock);
+ const portalNames=["Canopy arrival","Side loop upper entry","Side sterile riser","Side loop lower exit","Basal export airlock"];
+ const portalPoints=portalNames.map(name=>{const s=w.sites.find(p=>p.name===name);if(!s)throw Error("missing literal gallery portal "+name);return {name,xy:[s.x,s.y]};});
+ const portalLegs=portalPoints.slice(0,-1).map((p,i)=>shortest31(w,physicalBlock,p.xy,portalPoints[i+1].xy,(i===1||i===2)?716:0).steps);
+ const orderedPortal={claim:"OPTIONAL_ORDERED_PORTAL_TRAVERSAL_NOT_SHORTEST",hull:[31,27],physical_obstruction:physicalBlock,waypoints:portalPoints,leg_steps:portalLegs,total_steps:portalLegs.reduce((a,b)=>a+b,0),interior_min_center_x:716,interior_leg_indices:[1,2],method:"literal full-hull 4-neighbour free-centre BFS under physical obstruction; required waypoints in order; interior legs constrained to x>=716"};
+ if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||detour.steps<=direct.steps||detour.entered_side_gallery_cells<30||detour.portal_waypoints_visited.length!==0||portalLegs.some(v=>v<0)||orderedPortal.total_steps<=detour.steps)
  throw Error("STATIC_GATE "+JSON.stringify({detached:a.detached,fluid:[a.airfaces,a.direct],passed:a.flight.map(f=>f.passed),bad:a.flight[2].sites.filter(s=>!s.reached),blocked:a.blocked.passed,steps:[direct.steps,detour.steps]}));
  const setup={version:2,extent:[1024,2048],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:w.spawn,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:2}}],next_id:2,selected:1,edits:rects,response:"LA-SELECTIVE",liquid_policy:[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
  const setupText=JSON.stringify(setup),sha=sha256(w.g),setupSHA=sha256(utf(setupText));if(rects.length>32768||utf(setupText).length>1048576)throw Error("Setup limit");
- const crops=[["overview.png",0,0,1024,2048],["01-canopy-registry.png",133,145,250,310],["02-unequal-hanging-pods.png",193,379,518,508],["03-midair-exchange.png",415,748,459,528],["04-entered-sterile-return.png",684,776,199,568],["05-lower-civic-coves.png",130,1307,760,399],["06-basal-salvage.png",155,1724,716,215]],pngs={},pngMeta={};let px=0;
+ const crops=[["overview.png",0,0,1024,2048],["01-canopy-registry.png",133,145,250,310],["02-unequal-hanging-pods.png",193,379,518,508],["03-midair-exchange.png",415,748,459,528],["04-entered-sterile-return.png",684,776,199,568],["05-lower-civic-coves.png",130,1307,760,399],["06-basal-salvage.png",155,1724,716,215],["07-western-cultures.png",285,240,208,440],["08-eastern-bladders.png",750,430,140,300],["09-midair-cassette.png",535,605,140,225]],pngs={},pngMeta={};let px=0;
  for(const [n,x,y,ww,hh]of crops){const p=png(w.g,w.W,x,y,ww,hh);px+=verifyPNG(p,w.g,w.W,x,y,ww,hh);pngs[n]=p;pngMeta[n]={xywh:[x,y,ww,hh],bytes:p.length,sha256:sha256(p)};}
- const receipt={schema:1,trial:"PORTRAIT-001",difficulty:"OBVIOUS",source:{pr:143,head:"cfbeddaccdc81a8e1dcfa924b4c089dbbe65cf41",path:"cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-vesper-inverted-root-orchard-261121/"},base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine:"69209acaffb34ebe18c45e19290b5976b7fb2c82",seed:w.seed,dimensions:[1024,2048],cells:2097152,source_grid_sha256:sha,setup_sha256:setupSHA,setup_bytes:utf(setupText).length,rectangles:rects.length,construction_work:a.work,material_histogram:a.hist,ground:{total:a.total,rooted:a.rooted,detached:a.detached,pruned_provisional:w.discarded_ungrounded},fluid:{water:a.hist[3]||0,lava:a.hist[8]||0,exposed_faces:a.airfaces,water_lava_contacts:a.direct},hulls:a.flight,physical_obstruction:a.obstruction,obstructed:a.blocked,goal_distance:{direct:direct.steps,obstructed:detour.steps,forced_side_gallery_path_cells:detour.entered_side_gallery_cells,crossing_at_y1000:detour.crossing_at_y1000},pngs:pngMeta,pixel_parity:px,native:"NATIVE-UNTESTED"};
+ const receipt={schema:1,trial:"PORTRAIT-001",difficulty:"OBVIOUS",source:{pr:143,head:"cfbeddaccdc81a8e1dcfa924b4c089dbbe65cf41",path:"cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-vesper-inverted-root-orchard-261121/"},base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine:"69209acaffb34ebe18c45e19290b5976b7fb2c82",seed:w.seed,dimensions:[1024,2048],cells:2097152,source_grid_sha256:sha,setup_sha256:setupSHA,setup_bytes:utf(setupText).length,rectangles:rects.length,construction_work:a.work,material_histogram:a.hist,ground:{total:a.total,rooted:a.rooted,detached:a.detached,pruned_provisional:w.discarded_ungrounded},fluid:{water:a.hist[3]||0,lava:a.hist[8]||0,exposed_faces:a.airfaces,water_lava_contacts:a.direct},hulls:a.flight,physical_obstruction:a.obstruction,obstructed:a.blocked,goal_distance:{direct:direct.steps,obstructed:detour.steps,shortest_gallery_fringe_overlap_cells:detour.entered_side_gallery_cells,shortest_crossing_at_y1000:detour.crossing_at_y1000,shortest_portal_waypoints_visited:detour.portal_waypoints_visited,optional_ordered_portal:orderedPortal},pngs:pngMeta,pixel_parity:px,native:"NATIVE-UNTESTED"};
+receipt.repair={
+ programme:"PORTRAIT-REPAIR-001",lane:"R3",parent_portrait_pr:188,
+ parent_exact_head:"e0742d30dec30cf48d002abdbc1973928dcc9388",
+ independent_rework_comment:"https://github.com/techrote/sandmapsreference/pull/188#issuecomment-7064471710",
+ baseline_grid_sha256:"d839766373ef4e7a964ede02298118ff4c0de2b4a0d96fcde4c0ec8e73d3b6fd",
+ changed_final_material_cells:29392,changed_bbox_xyxy:[287,250,877,809],
+ assemblies:["west spore-comb with staggered living root sleeves","west stepped inoculation rack","east paired unequal membrane germination bladders","roof-fed midair exchange cassette"],
+ preserved:["entered right sterile gallery","22 literal destinations","optional 31x27 ordered sterile-gallery traversal under physical obstruction","lower empty sockets and central aerial lumen"],
+ art_p1_followup:{review:"https://github.com/techrote/sandmapsreference/pull/204#issuecomment-7070529801",source_head:"111ed0aac2860626bfccce47f61215d0e6b927ad",changed_material_cells_from_prior_child:12829,changed_bbox_xyxy:[372,375,876,710],scope:"two existing upper culture rigs only; no lower/gallery edits"},evidence_class:"SOURCE_STATIC_ONLY",independent_art_review:"PENDING_NEW_HEAD",independent_technical_review:"PENDING_NEW_HEAD",
+ native:"NATIVE-UNTESTED"
+};
 const aspect_transfer={
  source_extent:[2048,1024],target_extent:[1024,2048],source_pr:143,
  source_head:"cfbeddaccdc81a8e1dcfa924b4c089dbbe65cf41",
  source_map_path:"cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-vesper-inverted-root-orchard-261121/",
  difficulty:"OBVIOUS",
  preserved:["one continuous canopy rooted into boundary geology","variable-depth suspended root cultures and biocustody sleeves","asymmetric western seed registration and eastern quarantine","free central light-and-flight lumen","separate dry basal repair and cargo release"],
- transformed:["one wide horizontal roof exchange becomes a deep dual-atrium inoculation descent","left-right customs transaction becomes upper west registration to lower east isolation","twin interrupted lateral cables become one short suspended midair transfer","wide ground salvage is now a physically entered basal dispatch terminal"],
+ transformed:["one wide horizontal roof exchange becomes a deep dual-atrium inoculation descent","left-right customs transaction becomes upper west registration to lower east isolation","twin interrupted lateral cables become one short suspended midair transfer","west root-fed twin culture membranes and stepped inoculation racks contrasted with unequal east mother/daughter germination bladders","wide ground salvage is now a physically entered basal dispatch terminal"],
  discarded:["original source coordinate and bridge lengths","original lateral district ordering","repeated equal-height canopy cassettes"],
- newly_introduced:["roof-grown deep rootfall observation and distinct vertical capsule families","enclosed right bank sterile maintenance return with upper and lower portals","opposite-side basal medical/sterile custody coves","staged salvage ledger with two outward dispatch docks"]
+ newly_introduced:["roof-grown deep rootfall observation and distinct vertical capsule families","four new roof-connected biological work assemblies with staggered stepped, comb, bladder and exchange-cassette geometry","enclosed right bank sterile maintenance return with upper and lower portals","opposite-side basal medical/sterile custody coves","staged salvage ledger with two outward dispatch docks"]
 };
 const route_graph={
- spawn:"Upper fault spawn",goal:"Basal export airlock",
+ spawn:"Canopy arrival",goal:"Basal export airlock",
  sites:w.sites.map(s=>({name:s.name,xy:[s.x,s.y]})),
  primary:["Canopy arrival","Suspension exchange","Atrium middle watch","Central return junction","Open lower transit","Basal export airlock"],
  branches:[["Canopy arrival","West root registry","West inoculation bench","Suspension exchange"],["East lumen interpreter","East nursery landing","Atrium middle watch"],["Side loop upper entry","Side sterile riser","Side loop lower exit","Central return junction"],["Left spore assay","West basal salvage","West biodiagnostic room","Open lower transit"],["East quarantine arrival","East isolation wicket","Basal ledger room"]],
  exact_hull_results:a.flight.map(q=>({hull:q.hull,sites:q.sites})),
- obstruction:{rect:[330,939,375,107],material:58,goal_distance_direct:direct.steps,goal_distance_obstructed:detour.steps,forced_side_gallery_path_cells:detour.entered_side_gallery_cells,crossing_at_y1000:detour.crossing_at_y1000,all_named_sites_reachable_after:a.blocked.passed}
+ obstruction:{rect:[330,939,375,107],material:58,goal_distance_direct:direct.steps,goal_distance_obstructed:detour.steps,shortest_gallery_fringe_overlap_cells:detour.entered_side_gallery_cells,shortest_crossing_at_y1000:detour.crossing_at_y1000,shortest_portal_waypoints_visited:detour.portal_waypoints_visited,optional_ordered_portal:orderedPortal,all_named_sites_reachable_after:a.blocked.passed}
 };
 const exemplar={
  schema_version:1,purpose:["human_editable_canvas","procedural_exemplar","scripted_setpiece_source"],
@@ -248,8 +320,8 @@ const exemplar={
  anchor_donors:[{source_pr:143,source_head:aspect_transfer.source_head}],macro_topology:"roof-rooted deep hanging cultural descent and lower opposed medical and quarantine coves",
  density_profile:"dense ceiling-root production, open vertical lumen, occupied side inspection chambers, dry basal repair",
  route_grammar:{"main":route_graph.primary,"alternate":route_graph.branches},
- strong_motifs:["continuous rocky roof root and unequal living culture tails","unlike western registrar and eastern sterile lanterns","three distinct suspended capsule lengths","physically entered eastern sterile return","entered midlevel spore assay and opposed late medical and quarantine coves"],
- interesting_relationships:["horizontal opposed communal exchange converted into vertical culture custody sequence","different-depth canopy load paths project into a single unfilled flight lumen","separate entered sterile return reroutes around blocked central airshaft","low salvage hall has distinct entry/exit processing"],
+ strong_motifs:["continuous rocky roof root and unequal living culture tails","unlike western registrar and eastern sterile lanterns","west organic culture sleeves, east asymmetric living bladders, stepped inoculation rack and roof-fed cassette","physically entered eastern sterile return","entered midlevel spore assay and opposed late medical and quarantine coves"],
+ interesting_relationships:["horizontal opposed communal exchange converted into vertical culture custody sequence","different-depth canopy load paths project into a single unfilled flight lumen","optional ordered traversal of entered sterile return is physically possible under blockage; unrestricted shortest blocked route only skims its outer fringe","low salvage hall has distinct entry/exit processing"],
  authoring_affordances:["deliberately open central lumen for future aerial chase and rootfall","modular inoculation append sockets on suspended shafts","a dead-end west spore assay and two service recesses beside entered side return","dry bottom repair extensions for manual or procedural parts"],
  setpiece_candidates:[{name:"living-root release",region:[365,355,683,810],scripted:false},{name:"sterile return lockdown",region:[685,820,877,1300],scripted:false},{name:"quarantine custody",region:[710,1404,874,1677],scripted:false},{name:"basal shipment departure",region:[157,1770,859,1935],scripted:false}],
  procedural_exemplar_value:"Vertical inversion of a horizontally rooted bioindustrial exchange: preserve ceiling-born load paths, vary hanging capsule types and lengths, bring separated communities together through actual entered side passages without closing the central aerial lumen.",
@@ -265,9 +337,10 @@ const readme=[
  "Source owned folder "+aspect_transfer.source_map_path,
  "Read-only accepted engine authority techrote/cybersand/main@69209acaffb34ebe18c45e19290b5976b7fb2c82.",
  "Not a crop, stretch, rotation, scale or coordinate transplant. The roof-grown biological exchange has become a multi-stage vertical custody sequence.",
- "Real side-embedded sterile return portals enable the physical-obstruction recovery. Inoculation, hanging roots, isolation and basal salvage remain distinguishable.",
+ "Under the real central obstruction, the entered sterile side return permits an OPTIONAL ordered 31x27 traversal (938+145+238+931=2252 steps); the unrestricted 2146-step shortest only skims its outer fringe and is NOT forced through the named portals. Inoculation, roots, isolation and salvage remain distinct.",
+ "R3 source-static Art-P1 correction: two existing upper rigs now have filled, asymmetric, chambered biological culture sleeves (west) and mother/daughter germination bladders (east). Parent-to-child final delta 29392 material cells in x287..877/y250..809; from preceding child 12829 cells changed only x372..876/y375..710. Gallery, ordered optional portal route, 22 sites, lower voids and cassette remain protected. New-HEAD independent Art and Technical verdicts PENDING.",
  "The central airy lumen and uncultured sockets are intentionally open future authoring spaces. The capsules and processes are *inert geometry*, not simulated growing biology.",
- "Regenerate and verify entire Setup, receipt, route graph, aspect transfer, exemplar and 7 true indexed-material PNGs with: node build.cjs",
+ "Regenerate and verify entire Setup, receipt, route graph, aspect transfer, exemplar and 10 true indexed-material PNGs with: node build.cjs",
  "All Midge checks are full literal-site free-centre four-neighbour BFS with 19x15, 23x19 and 31x27 hulls. No native gameplay, collision, evolving biological simulation or persistence was executed.",
  "No source branch edits, Ready promotion, merge, or owner acceptance."
 ].join("\n")+"\n";

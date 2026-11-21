@@ -1,5 +1,5 @@
 {
-  "spawn": "Upper fault spawn",
+  "spawn": "Canopy arrival",
   "goal": "Basal export airlock",
   "sites": [
     {
@@ -693,13 +693,77 @@
     "material": 58,
     "goal_distance_direct": 1724,
     "goal_distance_obstructed": 2146,
-    "forced_side_gallery_path_cells": 101,
-    "crossing_at_y1000": [
+    "shortest_gallery_fringe_overlap_cells": 101,
+    "shortest_crossing_at_y1000": [
       [
         720,
         1000
       ]
     ],
+    "shortest_portal_waypoints_visited": [],
+    "optional_ordered_portal": {
+      "claim": "OPTIONAL_ORDERED_PORTAL_TRAVERSAL_NOT_SHORTEST",
+      "hull": [
+        31,
+        27
+      ],
+      "physical_obstruction": [
+        330,
+        939,
+        375,
+        107
+      ],
+      "waypoints": [
+        {
+          "name": "Canopy arrival",
+          "xy": [
+            505,
+            185
+          ]
+        },
+        {
+          "name": "Side loop upper entry",
+          "xy": [
+            772,
+            856
+          ]
+        },
+        {
+          "name": "Side sterile riser",
+          "xy": [
+            773,
+            1000
+          ]
+        },
+        {
+          "name": "Side loop lower exit",
+          "xy": [
+            772,
+            1237
+          ]
+        },
+        {
+          "name": "Basal export airlock",
+          "xy": [
+            509,
+            1905
+          ]
+        }
+      ],
+      "leg_steps": [
+        938,
+        145,
+        238,
+        931
+      ],
+      "total_steps": 2252,
+      "interior_min_center_x": 716,
+      "interior_leg_indices": [
+        1,
+        2
+      ],
+      "method": "literal full-hull 4-neighbour free-centre BFS under physical obstruction; required waypoints in order; interior legs constrained to x>=716"
+    },
     "all_named_sites_reachable_after": 22
   }
 }
