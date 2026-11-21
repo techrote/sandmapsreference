@@ -1,0 +1,284 @@
+{
+  "concept": "Cairnstep Divide — Five-Tier Xenocascade Yard",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 12853025,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "map_repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "loader_source_max_rectangles": 32768,
+  "loader_source_max_json_bytes": 1048576,
+  "source_work_budget": 32000000,
+  "material_rule_assumption": "Inert Solid/None source-authorized IDs only; no powders, fluids or reactive materials",
+  "material_histogram": {
+    "49": 29901,
+    "62": 25146,
+    "63": 424,
+    "68": 11193,
+    "77": 953,
+    "79": 1113,
+    "100": 477967,
+    "101": 88324,
+    "121": 510,
+    "129": 1950,
+    "130": 5043,
+    "131": 2748
+  },
+  "filled_grounded_cells": 645272,
+  "detached_final_cells": 0,
+  "prototype_disconnected_cells_removed": 15341,
+  "prototype_components_removed": 15,
+  "rectangle_count": 1381,
+  "rectangle_work": 645272,
+  "setup_bytes": 26911,
+  "grid_sha256": "29520625c24ec49efac6a518085abe9c9098c7825c6b19d601349f3e3654797d",
+  "setup_sha256": "03fe485c3b44c350da03855f83d397937f170408213863f1b69dc98a2d09a672",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 76528,
+      "sha256": "43a440acf811a254b671efa1e8f5f7293aa7965228113e2ad06d262267397ca3"
+    },
+    {
+      "name": "01-west-rover.png",
+      "bytes": 10701,
+      "sha256": "aa547ed35b97e6e767f9d4093d6f60a71f640027a8ad5c76b5baf8b9fceeddad"
+    },
+    {
+      "name": "02-central-sorter.png",
+      "bytes": 10544,
+      "sha256": "8f85ef7fb1e3ee995f7fa32b31bf2613c178e9ec5dbd3c3b2ad551823bc2e794"
+    },
+    {
+      "name": "03-east-quarantine.png",
+      "bytes": 16391,
+      "sha256": "b1bc76f5aa0e0c89ddb970fd3732aa6dd5445e725c82dc06e5da67d82da443f4"
+    },
+    {
+      "name": "04-terrace-verandas.png",
+      "bytes": 46262,
+      "sha256": "1d8f8ecd8aa0604e680dc03f39e6740d491a565ba8d2005488fdb969882ecfba"
+    },
+    {
+      "name": "05-switchback-sky.png",
+      "bytes": 12970,
+      "sha256": "7c844fd71ec6e54e6672c83bd48f78b5f64dd602ee4361cf1ee32245e6cfc18a"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1265631,
+      "passed": 24,
+      "total": 24,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1243483,
+      "passed": 24,
+      "total": 24,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1200142,
+      "passed": 24,
+      "total": 24,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "xyxy_halfopen": [
+      983,
+      325,
+      1021,
+      365
+    ],
+    "material_id": 58,
+    "purpose": "Test-only wall blocks elevated High mixing switch, retaining other routes",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1195654,
+      "passed": 23,
+      "total": 24,
+      "bad": [
+        {
+          "name": "High mixing switch",
+          "xy": [
+            1002,
+            346
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "named_sites": {
+    "West airlock": [
+      186,
+      508
+    ],
+    "West clinic": [
+      263,
+      505
+    ],
+    "West rover apron": [
+      325,
+      506
+    ],
+    "West lookout": [
+      354,
+      342
+    ],
+    "West baseline": [
+      50,
+      419
+    ],
+    "First gate approach": [
+      459,
+      420
+    ],
+    "Assay landing": [
+      574,
+      564
+    ],
+    "Assay incubator": [
+      675,
+      561
+    ],
+    "Assay weather deck": [
+      714,
+      439
+    ],
+    "Mid ore sorting": [
+      913,
+      620
+    ],
+    "Mid xenoparticle assay": [
+      1009,
+      612
+    ],
+    "High mixing switch": [
+      1002,
+      346
+    ],
+    "Mid transfer lookout": [
+      1110,
+      473
+    ],
+    "Biofilter landing": [
+      1272,
+      662
+    ],
+    "Biofilter test bay": [
+      1378,
+      658
+    ],
+    "Second gate lookout": [
+      1505,
+      503
+    ],
+    "Quarantine approach": [
+      1640,
+      602
+    ],
+    "Sterile export": [
+      1769,
+      693
+    ],
+    "Eastern relief dock": [
+      1914,
+      620
+    ],
+    "Relief high balcony": [
+      1980,
+      563
+    ],
+    "East relief lookout": [
+      2020,
+      418
+    ],
+    "Upper overflight": [
+      1070,
+      210
+    ],
+    "West upper loop": [
+      620,
+      270
+    ],
+    "East upper loop": [
+      1622,
+      260
+    ]
+  },
+  "literal_actor_spawn": [
+    186,
+    508
+  ],
+  "crops": [
+    [
+      "01-west-rover",
+      70,
+      356,
+      610,
+      370
+    ],
+    [
+      "02-central-sorter",
+      716,
+      464,
+      620,
+      380
+    ],
+    [
+      "03-east-quarantine",
+      1450,
+      562,
+      598,
+      396
+    ],
+    [
+      "04-terrace-verandas",
+      250,
+      590,
+      1520,
+      400
+    ],
+    [
+      "05-switchback-sky",
+      300,
+      220,
+      1500,
+      480
+    ]
+  ],
+  "feature_survival": {
+    "west": 11690,
+    "assay": 7797,
+    "sorter": 8385,
+    "biofilter": 8396,
+    "quarantine": 10917,
+    "east": 9005
+  },
+  "static_status": "CREATOR-STATIC-PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "Exact-HEAD independent Art/Technical/Shepherd pending",
+  "creator_revision": "Original geological dry cascade exemplar, 2026-11-21"
+}
