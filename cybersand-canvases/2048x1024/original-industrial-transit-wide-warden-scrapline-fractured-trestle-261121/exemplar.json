@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-transit-wide",
+  "map_role": "damaged but operational freighter salvage and rail export yard",
+  "anchor_donors": [],
+  "macro_topology": "yard",
+  "density_profile": "clustered machinery and settlement on both edges, discontinuous trestles and editable central voids",
+  "route_grammar": {
+    "main": [
+      "Arrival Mooring",
+      "Ship Hold",
+      "Crane Load",
+      "Open Transfer Seam",
+      "Freight Gallery West",
+      "Freight Gallery East",
+      "Salvage Outlook",
+      "Customs Gate"
+    ],
+    "upper": [
+      "Crane Crown",
+      "West Trestle Underside",
+      "Open Transfer Seam",
+      "Customs Gate"
+    ],
+    "industrial": [
+      "Hanging Magnet",
+      "Press Intake",
+      "Rail Marshal",
+      "Customs Inspector"
+    ],
+    "lower": [
+      "West Pump",
+      "Central Workshop",
+      "East Recovery"
+    ]
+  },
+  "strong_motifs": [
+    "entered steel freighter hull and breached cargo hold",
+    "three separated elevated freight trestle segments",
+    "fractured crane diagonal with magnet",
+    "grounded two-door salvage compression station",
+    "multi-grade wagon dispatch and customs",
+    "excavated maintenance chambers"
+  ],
+  "interesting_relationships": [
+    "damaged suspension spans still support usable alternate flyways",
+    "ship cabin/hull distinguishable from dockside and crane foundations",
+    "broken cargo transfer stages coexist with working salvage sorting and rail dispatch",
+    "human-editable underworks directly under the active sorting route"
+  ],
+  "authoring_affordances": [
+    "unbuilt trestle joints and accessible return paths",
+    "ship cargo breach",
+    "empty repair chambers",
+    "press actuation interior"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Broken trestle rejoin",
+      "rect": [
+        751,
+        225,
+        70,
+        100
+      ],
+      "role": "Bridge failure and reroutable seam"
+    },
+    {
+      "name": "Stranded ship hatch",
+      "rect": [
+        345,
+        646,
+        110,
+        111
+      ],
+      "role": "Holdout or salvage arrival"
+    },
+    {
+      "name": "Press switch hall",
+      "rect": [
+        980,
+        568,
+        195,
+        280
+      ],
+      "role": "Equipment activation with two exits"
+    },
+    {
+      "name": "West pump expansion",
+      "rect": [
+        135,
+        873,
+        218,
+        74
+      ],
+      "role": "Human editable underground machinery bay"
+    }
+  ],
+  "procedural_exemplar_value": "Reusable broken-trestle load paths, supports, intact/damaged handoff relationships and two-level recovery, without filling intentional expansion voids.",
+  "similarity_avoidance": "Unlike Bracken Rift's two gorge bridges, Orison's working circular indexer and Hollow Strake's geology-first fault, this map uses visibly failed short trestle spans, a salvaged hull and clustered machine-yard chambers.",
+  "diversity_axes": {
+    "macro_topology": "yard",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "clustered",
+    "route_structure": "layered",
+    "landmark_family": "crane",
+    "support_form": "multi_leg",
+    "environment_relation": "damaged",
+    "incompleteness": "modular_append_zones"
+  },
+  "geometry_source": "design.json",
+  "material_plane_sha256": "1c6d5228867b07ffb29227adafd8455f40988c2e5f7ef2efb87b2276546fe748"
+}
