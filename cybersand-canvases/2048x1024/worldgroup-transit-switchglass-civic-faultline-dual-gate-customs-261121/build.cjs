@@ -51,6 +51,10 @@ function png(grid,W,palette,x0,y0,w,h){
 function ascii(s){let out=new Uint8Array(s.length);for(let i=0;i<s.length;i++){let c=s.charCodeAt(i);if(c>127)throw Error("non-ascii "+c);out[i]=c}return out}
 function buildFiles(){
  const w=buildWorld();
+ const requiredRoot=["version","extent","actors","next_id","selected","edits","response","liquid_policy","normalize","rule_radius","source","material","brush","fire"].sort();
+ if(JSON.stringify(Object.keys(w.setup).sort())!==JSON.stringify(requiredRoot))throw Error("P0 invalid accepted 14-field Setup-v2 root");
+ if(JSON.stringify(Object.keys(w.setup.actors[0]).sort())!==JSON.stringify(["id","model","hash","spawn","options"].sort())||w.setup.actors[0].spawn.length!==2)throw Error("P0 invalid Midge actor schema");
+ if(w.setup.liquid_policy.length<1||w.setup.liquid_policy.length>4096||w.setup.response!=="LA-SELECTIVE")throw Error("P0 invalid engine policy schema");
  if(w.N!==2097152||w.grounded!==w.visits||w.edits.length>32768||Object.values(w.clear).some(a=>a.missing.length)||w.blocked.reachable!==w.sites.length-1||w.blocked.missing[0]!=='Upper severable gate')throw Error("source-static route or obstruction invalid");
  const rawSetup=JSON.stringify(w.setup),cells=new Uint8Array(w.N),used=new Uint8Array(w.N);let total=0;
  for(let [x,y,ww,hh,m] of w.edits){if(x<0||y<0||x+ww>w.W||y+hh>w.H||ww<1||hh<1||!w.palette[m])throw Error("invalid rect");
