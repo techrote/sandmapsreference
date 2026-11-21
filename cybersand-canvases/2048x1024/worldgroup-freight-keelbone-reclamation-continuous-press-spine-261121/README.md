@@ -24,10 +24,10 @@ No source art was traced. Graven Keel's supported industrial load relationships 
 |---|---|
 | Material extent | 2048×1024 = 2,097,152 cells |
 | Materials | 0 Empty; 100 BasaltColumns; 58 ReinforcedConcrete; 62 SteelPlate (inert, immovable) |
-| Grid SHA-256 | `099df1d2fd9490f84e9712286d10f4ec250f926ac8413673e9a03f98847c49e6` |
-| Setup-v2 disjoint rectangles | 1,939 / 32,768 cap |
-| Setup JSON | 36,331 bytes / 1,048,576 cap |
-| Ground-rooted occupied cells | 685,711 / 685,711 after deliberate removal of 29,110 disconnected decoration cells |
+| Grid SHA-256 | `76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c` |
+| Setup-v2 disjoint rectangles | 1,974 / 32,768 cap |
+| Setup JSON | 37,016 bytes / 1,048,576 cap |
+| Ground-rooted occupied cells | 700,419 / 700,419 after deliberate removal of 27,850 disconnected decoration cells |
 | Invalid IDs, overlapping edits or out-of-bounds writes | 0 |
 | Spawn and exact sites, 19×15 / 23×19 / 31×27 | 27/27 each |
 | Physical obstruction with all 31×27 sites reachable | 1241 → 1375 steps |
@@ -47,3 +47,7 @@ Source-matched policy/actor authority: accepted `techrote/cybersand` main `f7e05
 - `01-wet-strip.png`, `02-magnet-sort.png`, `03-torque-spine.png`, `04-ledger-custody.png`, `05-crew-emergency.png`: genuine 1:1 unscaled crops from the identical committed material array.
 
 **Review request:** Art should examine scale-readable process relationships and the domestic/duty windows, *not require optional gap filling*. Technical should execute `node build.cjs --verify`, `node verify.cjs`, then native runtime only when source-matched binaries are actually installed. Shepherd should review donor originality, family distinctions and exact-HEAD evidence. Remain Draft/HOLD: no Ready, merge, auto-merge or owner-acceptance claim.
+
+## R2 bounded Art-P1 material repair — 21 November 2026
+
+Independent Art review on predecessor `e7b8516c5336d01b1a1178fe994b2b4d1436a8b5` confirmed the sorter-to-torque physical handoff was too ambiguous and the ledger read as another open post frame ([review](https://github.com/techrote/sandmapsreference/pull/159#issuecomment-7059763855)). This revision changes the committed **material cells**: a continuous material tray bridges the sorter output to a founded, downturned torque receiver; a distinct entered bonded-duty portal has a counter and side opening. The roof, five workfaces, 27 literal sites, alternate flight and deliberately vacant authoring annex are retained. In-process source-static Setup replay and six genuine indexed-material PNG pixel/CRC/Adler checks pass. Standalone `node verify.cjs` and compatible Godot/Workbench/Rapier have not been executed in this session. Preserve Draft/HOLD pending independent exact-new-HEAD reviews.

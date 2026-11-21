@@ -106,6 +106,18 @@ St(1750,557,175,12);C(1840,570,13,45);
 V(840,628,58,115);V(1186,667,57,116);
 V(1223,692,62,113);V(1513,708,69,113);
 V(832,778,76,84);V(1201,779,75,91);
+/* R2 Art P1: sorter -> torque has a physically continuous tray, a driven
+   press intake and a lower receiver on grounded foundations. Deliberately
+   avoids occupying any exact named Midge envelope. */
+St(764,754,196,13); C(778,757,17,81); St(947,742,99,13);
+C(1017,740,18,108); St(953,791,86,14);
+C(977,753,17,36); St(940,789,91,12);
+/* R2 bonded ledger: distinct counter/portal with a 69x84 side access
+   rather than a repeated post rack. Surrounding blank bay retained. */
+C(1316,684,18,160); St(1326,680,186,14);
+C(1496,694,17,148); St(1379,772,125,15);
+C(1450,786,17,57); St(1358,723,97,13);
+V(1304,744,69,84);
 /* Asymmetric modular firebreak and damaged append zone. Empty volume retained. */
 V(1980,606,68,168);St(1969,813,79,12);
 C(1972,791,15,22);
