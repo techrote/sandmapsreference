@@ -144,6 +144,15 @@ function layoutWorld(){
  // Additional grade-separated open truss portal (drawbars terminate at
  // its two inspection abutments rather than becoming an impassable fence).
  b(451,1110,158,124,0);
+ // R6 collision-sized worker/flight apertures in the suspension hanger bays
+ // and heavy-truss bearing portals. These are deliberate engineered openings,
+ // NOT proof that the unconstrained shortest route chooses the crossings.
+ for(const x of [213,294,404,474,663,737,822])b(x-15,799,36,67,0);
+ b(473,1236,97,40,0); // lower chord Midge inspection hatch
+ b(790,725,62,143,0); // high cable east receiver airway
+ b(716,876,53,59,0); // east access to suspended transfer deck
+ b(337,1089,65,61,0); // lower truss west bearing gate
+ b(652,1070,74,74,0); // lower truss east bearing gate
  // Full conservative site envelope clearing is *literal* and before support
  // component pruning. Never search for a shifted replacement site.
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
