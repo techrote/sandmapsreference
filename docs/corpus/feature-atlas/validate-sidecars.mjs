@@ -43,7 +43,9 @@ const seenStates=new Set(),childHeads=new Map(), parents=new Set();
 for(const q of queue.records){
  ok(q.stage==='POST_REPAIR_CANDIDATE_ONLY'&&q.review_status==='AWAITING_INDEPENDENT_ART_AND_TECHNICAL'&&q.native_status==='NATIVE-UNTESTED','candidate incorrectly marked accepted');
  ok(q.classification===null&&q.independent_art_review_url===null&&q.independent_technical_review_url===null,'candidate incorrectly self-reviewed');
- ok(!seenStates.has(q.provisional_state_id)&&!states.has(q.provisional_state_id),'duplicate state ID');
+ ok(!seenStates.has(q.provisional_state_id),'duplicate historical candidate ID');
+ const promoted=states.get(q.provisional_state_id);
+ if(promoted)ok(promoted.stage==='POST_REPAIR'&&promoted.provenance.material_pr===q.material_pr&&promoted.provenance.portrait_head===q.material_head&&promoted.lineage.before_state_id===q.baseline_state_id,'candidate vs reviewed state lineage drift');
  seenStates.add(q.provisional_state_id);
  const old=states.get(q.baseline_state_id);
  ok(old&&old.stage==='BASELINE','unmatched original baseline state');
@@ -58,4 +60,5 @@ for(const q of queue.records){
  childHeads.set(q.material_pr,q.material_head);parents.add(q.portrait_pr);
 }
 ok(parents.size===7&&childHeads.size===7,'missing original seven repair lanes');
-console.log('FEATURE-ATLAS SIDECARS PASS: '+add.entries.length+' locality addenda, '+queue.records.length+' UNREVIEWED candidate state IDs, '+parents.size+' repair lanes; immutable baseline '+lock.locked_first_lines+' unchanged');
+const promotedCount=queue.records.filter(q=>states.has(q.provisional_state_id)).length;
+console.log('FEATURE-ATLAS SIDECARS PASS: '+add.entries.length+' locality addenda, '+queue.records.length+' historical candidate IDs ('+promotedCount+' now Art-reviewed exact-HEAD canonical states), '+parents.size+' repair lanes; immutable baseline '+lock.locked_first_lines+' unchanged');
