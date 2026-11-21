@@ -70,7 +70,9 @@ function build(){
  R(x,y,w,8,M.shield);R(x+2,y+8,8,h,M.pipe);R(x+w-10,y+8,8,h,M.pipe);R(x+21,y+16,45,28,M.glass);R(x+30,y+8,10,7,M.cyan);R(x+81,y+18,24,19,M.amber);}
  L(1585,509,1602,858,15,M.steel);L(1907,708,1932,859,13,M.pipe);
  R(1562,778,109,8,M.steel);R(1581,749,35,28,M.blue);L(1803,437,1976,398,9,M.grate);R(1969,385,15,32,M.amber);
- // Three physically open shafts are cut AFTER the inhabited ground polygons.
+ // Full-hull entered vertical sterile-air passage, through upper roof and lower radial workfaces.
+ R(1605,395,75,303,0);R(1653,642,155,55,0);
+  // Three physically open shafts are cut AFTER the inhabited ground polygons.
  for(let [x,w,top] of [[202,97,758],[984,115,769],[1741,121,757]])R(x,top,w,983-top,0);
  // Thinner floor-mounted lower field instruments leave a full-hull passable upper gallery.
  for(let [x,y,w] of [[109,976,93],[403,976,102],[744,976,96],[1158,976,114],[1466,976,114],[1834,976,91]]){
@@ -98,7 +100,7 @@ function build(){
 
 
  const reconciled=tie();
- const sites={"West arrival basin":[75,365],"West registry porch":[150,438],"West propagator":[383,463],"West foundry lookdown":[410,414],"West high bypass":[510,249],"Outer rim west":[585,492],"North west loop":[782,245],"North culture crown":[1015,211],"North east loop":[1279,240],"East outer rim":[1490,400],"East upper bypass":[1530,233],"East quarantine approach":[1685,402],"East clean vault":[1851,518],"East skyline exit":[1970,310],"Eastern dispatch":[1950,663],"Eastern low shelf":[1660,694],"South west rim":[696,773],"South east rim":[1240,804],"Biosieve inner west":[910,535],"Living core":[1050,541],"Biosieve inner east":[1180,550],"Censer lower cusp":[1046,711],"West descent mouth":[248,811],"Middle descent mouth":[1037,803],"East descent mouth":[1801,813],"West dry transit":[421,923],"Centre dry transit":[1065,923],"East dry transit":[1536,923],"East purge interlock":[1740,663]};
+ const sites={"West arrival basin":[75,365],"West registry porch":[150,438],"West propagator":[383,463],"West foundry lookdown":[410,414],"West high bypass":[510,249],"Outer rim west":[585,492],"North west loop":[782,245],"North culture crown":[1015,211],"North east loop":[1279,240],"East outer rim":[1490,400],"East upper bypass":[1530,233],"East quarantine approach":[1685,402],"East clean vault":[1851,518],"East skyline exit":[1970,310],"Eastern dispatch":[1995,668],"Eastern low shelf":[1655,673],"South west rim":[696,773],"South east rim":[1315,730],"Biosieve inner west":[910,535],"Living core":[1050,541],"Biosieve inner east":[1180,550],"Censer lower cusp":[1046,711],"West descent mouth":[248,835],"Middle descent mouth":[1037,803],"East descent mouth":[1801,813],"West dry transit":[421,923],"Centre dry transit":[1065,923],"East dry transit":[1536,923],"East purge interlock":[1740,663]};
  const ties={joins:tieCount+reconciled.ties,max_span:reconciled.max_span};
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(N),overlap=0;
  for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){let v=g[o+x],s=x;while(x<W&&g[o+x]===v)x++;if(!v)continue;let key=s+":"+(x-s)+":"+v,i=prev.get(key);if(i===undefined){i=rect.length;rect.push([s,y,x-s,1,v]);}else rect[i][3]++;next.set(key,i);}prev=next;}
