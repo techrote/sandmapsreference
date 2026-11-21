@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-transit-wide",
+  "map_role": "high-to-low cableway freight transfer with cantilever sorter, dock and lower recovery",
+  "anchor_donors": [],
+  "macro_topology": [
+    "cascade",
+    "suspended"
+  ],
+  "density_profile": "dense West freighter and East customs/rail separated by a long tiered aerial cargo void and one compact midspan sorting stage",
+  "strong_motifs": [
+    "three visibly repeated freight carriages on a descending dual cable",
+    "high west rooted counterweight hoist and lower east cable mast",
+    "cantilever sorting stage supported by a single rock-rooted service spine",
+    "whole-hull side-on drylocked freighter distinct from dock hoist",
+    "multi-grade east export rail and entered customs scale",
+    "unbroken low return tunnel with vertical rescue shafts"
+  ],
+  "interesting_relationships": [
+    "a cableway gains altitude descent from two separated masts without bridging the flight void with a solid floor",
+    "small central sorter serves cable carriage release and rail receivers",
+    "a deep, unobstructed return path contrasts with interrupted upper service platforms"
+  ],
+  "authoring_affordances": [
+    "removable cable carriage for scripted events",
+    "unused adjacent cargo cradle",
+    "unprogrammed sorter lift controls",
+    "deep service tunnel expansion alcoves"
+  ],
+  "procedural_exemplar_value": "Suspended diagonal cable truss loads, asymmetrical falling-altitude cable transport, distant load custody stages and recovery underpasses as a source for SWARM/GENTEK part grammars.",
+  "similarity_avoidance": "Unlike Orison's central horizontal indexing ring, Bracken's parallel ravine bridges, and Warden's fragmented salvage trestles, Vesper uses a continuous descending diagonal cable with sparse suspended pods, a mono-spine sorter and a fully separate deep return.",
+  "diversity_axes": {
+    "macro_topology": "cascade",
+    "altitude_grammar": "high_low_bypass",
+    "density_cadence": "dense_open_dense",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "cableway",
+    "support_form": "mixed",
+    "environment_relation": "dry",
+    "incompleteness": "editable_gaps"
+  },
+  "route_grammar": {
+    "main": [
+      "West Dock Arrival",
+      "Open Cargo Hold",
+      "Haulage Winch",
+      "Hoist Gallery",
+      "Midair Split",
+      "Sorter Stage",
+      "Eastern Rail Gate",
+      "Customs Scanner"
+    ],
+    "upper": [
+      "Hoist Crown",
+      "High Cable Passage",
+      "Cable Carrier A",
+      "Midair Split",
+      "East Cable Terminus",
+      "Dispatch Outlook"
+    ],
+    "lower": [
+      "West Recovery Shaft",
+      "West Tunnel",
+      "Mid Tunnel",
+      "East Tunnel",
+      "East Recovery Shaft",
+      "Eastern Rail Gate"
+    ],
+    "fallback": [
+      "Central Canyon",
+      "Return Vista",
+      "East Recovery Shaft"
+    ]
+  },
+  "geometry_source": "design.json",
+  "material_plane_sha256": "db80209b2d16572f4d37d884255ec8b85474864f16805cb119c5f2442f44f5f4"
+}
