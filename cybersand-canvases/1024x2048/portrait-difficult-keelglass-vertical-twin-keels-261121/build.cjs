@@ -75,6 +75,8 @@ b(397,88,224,1840,0);
 for(const q of [[359,290,58,88],[614,478,77,112],[356,936,66,107],[612,928,75,101],[352,1055,66,100],[353,1304,69,74],[608,1314,81,131],[349,1579,77,121],[338,1675,83,109],[606,1774,86,124]])b(...q,0);
 // Only authored literal site footprints are carved; no waiver, relocation, radius exception.
 for(const p of sites)b(p.x-19,p.y-17,39,35,0);
+// Bypass drill into right-hand caster/keel maintenance shaft.
+b(668,1060,128,286,0);b(611,1052,112,94,0);b(612,1280,112,123,0);
 // Remove truly unsupported inert fragments (not retained as pseudo-foundations).
 const solid=id=>id!==0&&id!==3&&id!==8,seen=new Uint8Array(g.length),q=new Int32Array(g.length);let a=0,z=0;
 const add=i=>{if(solid(g[i])&&!seen[i]){seen[i]=1;q[z++]=i;}};
@@ -97,6 +99,10 @@ for(let i=0;i<g.length;i++)if(original[i]&&!extra[i]){
 }
 seen.fill(0);a=0;z=0;for(let x=0;x<W;x++){add(x);add((H-1)*W+x);}for(let y=0;y<H;y++){add(y*W);add(y*W+W-1);}
 while(a<z){let i=q[a++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i>=W?i-W:-1,i+W<g.length?i+W:-1])if(j>=0)add(j);}
+// Retain 70-cell clearance across the brace at the bifurcation.
+b(710,1139,70,58,0);
+seen.fill(0);a=0;z=0;for(let x=0;x<W;x++){add(x);add((H-1)*W+x);}for(let y=0;y<H;y++){add(y*W);add(y*W+W-1);}
+while(a<z){let i=q[a++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i>=W?i-W:-1,i+W<g.length?i+W:-1])if(j>=0)add(j);}
 let lost=0;for(let i=0;i<g.length;i++)if(solid(g[i])&&!seen[i]){g[i]=0;lost++;}
 return {W,H,g,M,seed,sites,spawn:[sites[0].x,sites[0].y],discarded_ungrounded:lost,braceCount,bracedCells};
 }
@@ -112,7 +118,7 @@ function audit(w,rects){
  const dx=ww>>1,dy=hh>>1,free=new Uint8Array(N);let all=0;for(let y=dy;y+hh-dy<=H;y++)for(let x=dx;x+ww-dx<=W;x++){const l=x-dx,t=y-dy,r=l+ww,b=t+hh;if(sum[b*s+r]-sum[t*s+r]-sum[b*s+l]+sum[t*s+l]===0){free[y*W+x]=1;all++;}}
  const reached=new Uint8Array(N),qq=new Int32Array(N);let first=0,last=0,sp=spawn[1]*W+spawn[0];if(free[sp]){reached[sp]=1;qq[last++]=sp;}while(first<last){let i=qq[first++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i-W,i+W])if(j>=0&&j<N&&free[j]&&!reached[j]){reached[j]=1;qq[last++]=j;}}
  const sr=sites.map(v=>({...v,clear:!!free[v.y*W+v.x],reached:!!reached[v.y*W+v.x]}));return {hull:[ww,hh],valid_centres:all,connected_centres:last,passed:sr.filter(v=>v.reached).length,sites:sr};}
- const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[453,956,132,157],blocked=route(31,27,obstruction);
+ const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[391,1160,256,87],blocked=route(31,27,obstruction);
  return {rectangles:rects.length,work,hist,rooted:b,total,detached:total-b,airfaces,direct,flight,obstruction,blocked};
 }
 
@@ -167,12 +173,12 @@ function verifyPNG(p,g,W,x,y,w,h){const v=new DataView(p.buffer,p.byteOffset,p.b
 
 
 function build(){
- const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),direct=shortest31(w,null),detour=shortest31(w,[453,956,132,157]);
+ const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),direct=shortest31(w,null),detour=shortest31(w,[391,1160,256,87]);
  if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||detour.steps<=direct.steps)
  throw Error("STATIC_GATE "+JSON.stringify({detached:a.detached,fluid:[a.airfaces,a.direct],passed:a.flight.map(f=>f.passed),bad:a.flight[2].sites.filter(s=>!s.reached),blocked:a.blocked.passed,steps:[direct.steps,detour.steps]}));
  const setup={version:2,extent:[1024,2048],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:w.spawn,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:2}}],next_id:2,selected:1,edits:rects,response:"LA-SELECTIVE",liquid_policy:[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
  const setupText=JSON.stringify(setup),sha=sha256(w.g),setupSHA=sha256(utf(setupText));if(rects.length>32768||utf(setupText).length>1048576)throw Error("Setup limit");
- const crops=[["overview.png",0,0,1024,2048],["01-ore-hoist.png",76,159,346,320],["02-twin-furnaces.png",624,290,344,392],["03-upper-drydock.png",77,801,350,381],["04-casters-and-return.png",611,833,360,340],["05-lower-drydock.png",618,1202,350,380],["06-quench-maintenance.png",76,1446,348,377],["07-freight-exit.png",610,1655,360,379]],pngs={},pngMeta={},px=0;
+ const crops=[["overview.png",0,0,1024,2048],["01-ore-hoist.png",76,159,346,320],["02-twin-furnaces.png",624,290,344,392],["03-upper-drydock.png",77,801,350,381],["04-casters-and-return.png",611,833,360,340],["05-lower-drydock.png",618,1202,350,380],["06-quench-maintenance.png",76,1446,348,377],["07-freight-exit.png",610,1655,360,379]],pngs={},pngMeta={};let px=0;
  for(const [n,x,y,ww,hh]of crops){const p=png(w.g,w.W,x,y,ww,hh);px+=verifyPNG(p,w.g,w.W,x,y,ww,hh);pngs[n]=p;pngMeta[n]={xywh:[x,y,ww,hh],bytes:p.length,sha256:sha256(p)};}
  const receipt={schema:1,trial:"PORTRAIT-001",difficulty:"DIFFICULT",source:{pr:160,head:"cf47967470e402693957ab04ebfb3fe6d787d943",path:"cybersand-canvases/2048x1024/original-industrial-foundry-wide-keelglass-twin-drydock-261121/"},base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine:"69209acaffb34ebe18c45e19290b5976b7fb2c82",seed:w.seed,dimensions:[1024,2048],cells:2097152,source_grid_sha256:sha,setup_sha256:setupSHA,setup_bytes:utf(setupText).length,rectangles:rects.length,construction_work:a.work,material_histogram:a.hist,ground:{total:a.total,rooted:a.rooted,detached:a.detached,pruned_provisional:w.discarded_ungrounded},fluid:{water:a.hist[3]||0,lava:a.hist[8]||0,exposed_faces:a.airfaces,water_lava_contacts:a.direct},hulls:a.flight,physical_obstruction:a.obstruction,obstructed:a.blocked,goal_distance:{direct:direct.steps,obstructed:detour.steps},pngs:pngMeta,pixel_parity:px,native:"NATIVE-UNTESTED"};
  return {setupText,receipt,pngs};
