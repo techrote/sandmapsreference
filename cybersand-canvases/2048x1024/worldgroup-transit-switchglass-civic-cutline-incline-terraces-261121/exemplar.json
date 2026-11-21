@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Switchglass Civic Transit",
+  "sibling_number": 2,
+  "lane": "mechanical_transit",
+  "map_role": "Cutline Incline / Terraced Hillside Transfer — asymmetric high-grade passenger/freight hillside and cut-and-cover emergency transport below a four-section rail climb",
+  "anchor_donors": [
+    {
+      "name": "wide-tungsten-sawtooth-tramworks",
+      "head_sha": "7fc24855cf521c90bf67f4afb08685e490473201",
+      "relationship": "dry amber/steel switch language, recovery design and topological route decisions only; no copied wheels, baffles, coordinates, pixel layouts or source code"
+    }
+  ],
+  "macro_topology": [
+    "seven-step west-to-east industrial escarpment",
+    "four suspended-looking yet genuinely floor-supported grades of tram incline",
+    "five unequal station precincts",
+    "five connected cut-and-cover emergency intervals excavated from geological foundations"
+  ],
+  "density_profile": "Five occupied terraces and excavated lower service pockets bracket long exposed rail and deliberately open flight sky, with an uneven cadence and preserved manual editing margins.",
+  "route_grammar": {
+    "primary": "Low west arrival and freight hall (62,755) ascend exposed graded approaches via mid passenger transfer (740,620), central switch (1208,494), upper signal settlement (1515,367), and crest outpost exit (1983,310)",
+    "alternative": "A real excavated recovery line joins five different-height undertrack galleries through intersecting shafts; multiple surface vertical entries permit rejoin upstream/downstream of a blocked graded switching threshold",
+    "obstacle": "Source-static material closure [1170,461,85,94] hides the severable switch center; twenty-five other literal named destinations remain accessible at full 31x27 conservative Midge hull"
+  },
+  "strong_motifs": [
+    "seven uneven geological terrace faces with boundary-attached survey graduations",
+    "four disjoint diagonal tram/catenary segments and foundation-tied bents",
+    "small unequal passenger, traction, signal and freight settlements at distinct altitudes",
+    "five true excavated undertrack maintenance workfaces",
+    "damaged off-axis transfer spur reserved for human reconstruction"
+  ],
+  "interesting_relationships": [
+    "Exposed grade climb above a connected excavated emergency relief line",
+    "Raised passenger use beside freight processing instead of another flat civic street",
+    "Interrupted tram structure expresses grade switching and human repair opportunities",
+    "Roof loads descend through station piers into a progressively rising rock mass"
+  ],
+  "authoring_affordances": [
+    "Blocked grade switch and its lower recovery line support a later gate/collapse event",
+    "Open transfer alcoves can receive SWARM or GENTEK modules without altering the main route",
+    "Broken high transfer spur is a deliberately incomplete, reroutable bridge socket",
+    "Wide upper sky permits hand-authored signal canopies or scripted vehicle arrival"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Graded switch failure",
+      "site": [
+        1208,
+        494
+      ],
+      "kind": "damaged routing / blockage",
+      "unscripted": true
+    },
+    {
+      "name": "Undertrack evacuation",
+      "site": [
+        1084,
+        739
+      ],
+      "kind": "recovery / hostile encounter",
+      "unscripted": true
+    },
+    {
+      "name": "Hillside passenger transfer",
+      "site": [
+        740,
+        620
+      ],
+      "kind": "NPC arrival and freight handoff",
+      "unscripted": true
+    },
+    {
+      "name": "Damaged upper transfer spur",
+      "site": [
+        1407,
+        380
+      ],
+      "kind": "rebuildable collapse / chase break",
+      "unscripted": true
+    }
+  ],
+  "procedural_exemplar_value": "A distinct modular hillside grammar: topographical terraces, incline support bent, cabin-to-terrace adjacency, vertical shaft/down-grade relief connection, segmented cut-and-cover service vault and damaged cantilever edit socket.",
+  "similarity_avoidance": "Rejects Switchglass 01's four level boulevard canopies and disconnected basement cells, Meridian's central Venturi/rotor machinery, Quoin's twin fault shafts and Fractured Hairpin's repetitive outdoor racing turnbacks. Uses an irregular rising cliff, linked excavation and five dispersed civilian/freight units.",
+  "diversity_axes": {
+    "macro_topology": [
+      "cascade"
+    ],
+    "altitude_grammar": [
+      "multi_strata"
+    ],
+    "density_cadence": [
+      "clustered",
+      "dense_open_dense"
+    ],
+    "route_structure": [
+      "branch_rejoin",
+      "layered"
+    ],
+    "landmark_family": [
+      "cableway",
+      "bridge"
+    ],
+    "support_form": [
+      "cliff_embedded",
+      "floor_rooted"
+    ],
+    "environment_relation": [
+      "geological",
+      "dry"
+    ],
+    "incompleteness": [
+      "damaged",
+      "editable_gaps"
+    ]
+  },
+  "verification_scope": "CREATOR_SOURCE_STATIC_ONLY; independent Art, Technical, Shepherd and actual native Godot/Rapier/Workbench qualification remain separate; corpus metadata is not a Setup contract."
+}
