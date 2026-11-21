@@ -6,7 +6,7 @@ function build(){
  const BASE="99a166e7fcae45eb22be1740e9f33f62faccbcc7";
  const ENGINE="f7e056c9b8791106e22f2d1c295043783d8a9701";
  const PAL={0:[8,19,30],3:[47,127,210],8:[241,78,31],58:[119,123,128],100:[45,60,78],101:[28,39,55],117:[157,182,198],120:[84,185,182]};
- const SITES=[["Arrival",154,216],["Feed upper",244,213],["Feed transfer",240,639],["Feed recovery",237,789],["Fractionator upper",633,215],["Solvent assay",630,640],["Solvent return",627,789],["Suspension crown",1004,214],["Hull transfer",1003,643],["Drydock underside",1090,792],["Keel approach",1191,214],["Quench upper",1493,212],["Quench sample",1495,640],["Quench recovery",1491,788],["Exhaust upper",1828,212],["Exhaust berth",1828,645],["Exhaust recovery",1827,790],["Departure",1910,211]];
+ const SITES=[["Arrival",154,216],["Feed upper",244,213],["Feed transfer",240,639],["Feed recovery",237,789],["Fractionator upper",633,215],["Solvent assay",630,640],["Solvent return",627,789],["Suspension crown",1004,214],["Hull transfer",1003,643],["Drydock underside",1090,792],["Keel approach",1191,214],["Quench upper",1493,212],["Quench sample",1495,640],["Quench recovery",1491,788],["Exhaust upper",1828,212],["Exhaust berth",1828,645],["Exhaust recovery",1827,790],["Departure",1907,646]];
  const CROPS=[["01-feed-assay",106,318,380,536],["02-solvent-columns",468,317,375,539],["03-suspended-hull",826,314,500,510],["04-quench-chain",1342,318,363,540],["05-exhaust-dispatch",1703,314,340,553],["06-drydock-pit",745,587,703,283]];
  const LIQ=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
  const g=new Uint8Array(N);
@@ -89,6 +89,28 @@ function build(){
  for(let [x,top,bottom] of [[239,255,756],[626,254,756],[1002,254,756],[1190,254,756],[1494,254,757],[1827,254,757]])
     rect(x-36,top,72,bottom-top,0);
  for(let [,x,y] of SITES)rect(x-18,y-16,37,33,0);
+
+ function rootComponents(){
+   let seen=new Uint8Array(N),q=new Int32Array(N),rooted=0;
+   for(let p=0;p<N;p++){
+     if(seen[p]||!g[p]||g[p]===3||g[p]===8)continue;
+     let h=0,t=1,roots=false,top=H,bot=0,mem=[];q[0]=p;seen[p]=1;
+     while(h<t){let k=q[h++],x=k%W,y=(k/W)|0;mem.push(k);top=Math.min(top,y);bot=Math.max(bot,y);
+       if(!x||x===W-1||!y||y===H-1)roots=true;
+       for(let d of [-W,W,-1,1]){let v=k+d;if(v<0||v>=N||(d===-1&&x===0)||(d===1&&x===W-1)||seen[v]||!g[v]||g[v]===3||g[v]===8)continue;seen[v]=1;q[t++]=v;}}
+     if(roots)continue;
+     const anchor=top<680?0:H-1;let selected=null,best=H+1;
+     for(let k of mem){let x=k%W,y=(k/W)|0,lo=Math.min(y,anchor),hi=Math.max(y,anchor),d=hi-lo;
+       if(d>=best||x<10||x>=W-10)continue;
+       if(SITES.some(s=>Math.abs(s[1]-x)<27&&s[2]>=lo-20&&s[2]<=hi+20))continue;
+       let valid=true;for(let j=lo;j<=hi&&valid;j++)for(let dx=0;dx<3;dx++)if(g[j*W+x+dx]===3||g[j*W+x+dx]===8){valid=false;break}
+       if(valid){selected=[x,lo,d+1];best=d;}}
+     if(!selected)throw Error("unrootable component y="+top+".."+bot+" size="+t);
+     rect(selected[0],selected[1],3,selected[2],58);rooted++;
+   }
+   return rooted;
+ }
+ const ties=rootComponents();
  return qualify();
  function structural(){
    let mask=new Uint8Array(N),seen=new Uint8Array(N),queue=new Int32Array(N),n=0,t=0,h=0;
@@ -199,7 +221,7 @@ function build(){
      clearance[w+"x"+h]={reached:SITES.length,centres:z.centres};
      if(w===31)base=z.dist;
    }
-   const barrier=[960,0,60,270],blocked=g.slice();
+   const barrier=[897,0,54,340],blocked=g.slice();
    for(let y=0;y<barrier[3];y++)blocked.fill(58,y*W+barrier[0],y*W+barrier[0]+barrier[2]);
    let detours={},forced=0;
    for(let [w,h] of [[19,15],[23,19],[31,27]]){
