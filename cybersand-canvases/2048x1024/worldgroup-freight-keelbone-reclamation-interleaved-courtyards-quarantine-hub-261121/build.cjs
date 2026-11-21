@@ -85,6 +85,16 @@ line(1220,748,1361,721,17);C(1304,729,20,119);St(1286,717,90,16);
 St(1848,751,126,16);C(1884,765,22,81);
 line(1918,749,1997,705,15);St(1969,697,79,13);
 C(1995,709,13,139);V(1999,580,49,106);
+/* Bounded load-path correction: portals sever their first two uprights;
+   independent roof-bearing piers ground the ring and the quarantine terraces. */
+C(810,472,24,382);line(819,477,874,474,20);
+C(1271,470,24,384);line(1210,461,1281,482,20);
+C(1450,494,25,359);C(1656,442,26,410);
+St(1380,510,106,15);St(1582,438,101,18);
+St(1554,434,88,13);
+/* Manifestly different interior thresholds under the warehouse roof. */
+St(1434,767,122,16);C(1508,781,20,66);
+St(1642,730,135,13);C(1706,742,17,106);
 /* Offset signals and incomplete interchange spur. */
 C(1562,347,17,96);St(1534,336,101,13);
 line(1586,340,1612,282,10);line(1611,282,1657,319,10);
