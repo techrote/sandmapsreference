@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Tidefault Bonded Freight Districts",
+  "lane": "worldgroup-freight",
+  "map_role": "Low-rise parcel reception, sorting, entered bonded examination, inhabited tariff ward and damaged export handoff",
+  "anchor_donors": [
+    {
+      "slug": "wide-graven-keel-ship-tipper",
+      "pr": 45,
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f"
+    },
+    {
+      "slug": "wide-peregrine-cleft-halcyon-drydock",
+      "pr": 33,
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5"
+    }
+  ],
+  "macro_topology": [
+    "Five unequal low freight halls joined by interrupted cargo bridges and large roof courtyards",
+    "Single below-grade recovery band with branch-rejoin returns"
+  ],
+  "density_profile": "Compact roofed workfaces and equipment clusters below enormous editable upper air; especially open inter-hall roof approaches",
+  "route_grammar": {
+    "main": "Nine open mid-altitude literal sites across western intake to damaged export",
+    "upper": "Five roof and semaphore inspection sites with a true obstruction bypass",
+    "interior": "Nine entered cargo/ledger/receiving/worker sites connected through broad roof courts",
+    "recovery": "Five lower under-service sites reached through independent descents"
+  },
+  "strong_motifs": [
+    "five asymmetric low stepped industrial rooflines",
+    "supported parcel hoist and two-grade sorter",
+    "physically separated bonded receipt/examination/release",
+    "inhabited multi-register workers ward",
+    "deep intact floor footing and reroutable return",
+    "fractured outer export canopy"
+  ],
+  "interesting_relationships": [
+    "Cargo goes from west berth hook and roller receiver into an explicitly sloping stepped classifier",
+    "Bonded receipt and examination are physically bounded unequal workfaces, with independent roof courts",
+    "Worker settlement has a different density, load-path form and use than freight transfer",
+    "Upper bypass, entered interiors, and deep return provide three spatial operating levels",
+    "Exterior low open roof silhouette contrasts with unexpectedly entered below-roof customs cells"
+  ],
+  "authoring_affordances": [
+    "vacant upper shipping approach for future hand-authored flight events",
+    "unfurnished loading bays for SWARM/GENTEK part placement",
+    "partially removed east export canopy as a damage-and-recovery seam",
+    "deep utility niches for NPC/repair authoring"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "West manifest and berth load enclosure",
+      "purpose": "customs lockdown and static crane release set piece",
+      "scripted": false
+    },
+    {
+      "site": "Classification conveyor and bonded examination",
+      "purpose": "contraband sort/inspection encounter or transfer failure",
+      "scripted": false
+    },
+    {
+      "site": "Workers sleeping ward / rooftop entry court",
+      "purpose": "inhabited checkpoint or local NPC settlement",
+      "scripted": false
+    },
+    {
+      "site": "Damaged export nose / East derelict escape",
+      "purpose": "collapse-and-recovery chase or rescue event",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "A compact multi-workface low-roofed cargo borough with unequal hall silhouettes, staged handoff mechanics, dual entered bonded rooms, distinct inhabited services and independent deep recovery. Demonstrates non-pier support, cuttable topological access seams, and modular storage/routing features for future SWARM/GENTEK derivation.",
+  "similarity_avoidance": "Unlike Tidefault 01 serial elevated custody gates, Tidefault 02 horizontal return arches, Tidefault 03 cliff-buried repository and Tidefault 04 seven high signal stilts: five relatively low, unequal roofed freighting districts trade a giant central apparatus for repeated unlike entered transactions and roof-open access courts. Deliberate empty high sky is retained.",
+  "diversity_axes": {
+    "macro_topology": [
+      "mixed",
+      "yard"
+    ],
+    "altitude_grammar": [
+      "tri_level",
+      "high_low_bypass"
+    ],
+    "density_cadence": [
+      "dense_open_dense",
+      "clustered"
+    ],
+    "route_structure": [
+      "branch_rejoin",
+      "layered"
+    ],
+    "landmark_family": [
+      "gantry",
+      "gate"
+    ],
+    "support_form": [
+      "floor_rooted",
+      "multi_leg"
+    ],
+    "environment_relation": [
+      "dry",
+      "damaged"
+    ],
+    "incompleteness": [
+      "editable_gaps",
+      "damaged"
+    ]
+  }
+}

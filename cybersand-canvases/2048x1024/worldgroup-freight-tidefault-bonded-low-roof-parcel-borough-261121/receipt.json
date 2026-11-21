@@ -1,0 +1,336 @@
+{
+  "concept": "Tidefault Bonded Freight — Low-Roof Parcel Borough / Stepped Customs Arcade",
+  "original": true,
+  "seed": 40568097,
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Western parcel arrival",
+      "Manifest crane approach",
+      "First bonded intake",
+      "Sorter service crossing",
+      "Inner custody exchange",
+      "Parcel despatch bridge",
+      "Workers ward frontage",
+      "Outbound cargo tally",
+      "Damaged export nose"
+    ],
+    "upper": [
+      "Roof arrival lookout",
+      "Western roof dispatcher",
+      "Midroof bridge witness",
+      "Eastern roof inspector",
+      "Outer roof semaphore"
+    ],
+    "interior": [
+      "West harbour registry",
+      "Berth load enclosure",
+      "First hand-sorting bay",
+      "Classification conveyor bay",
+      "Bonded receipt cell",
+      "Secured examination chamber",
+      "Workers sleeping ward",
+      "East bonded exit office",
+      "Damaged release dock"
+    ],
+    "lower": [
+      "West floor return",
+      "Parcel maintenance reach",
+      "Bonded utility crossing",
+      "Inhabited ward rescue",
+      "East derelict escape"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Western parcel arrival": [
+      134,
+      475
+    ],
+    "Manifest crane approach": [
+      356,
+      475
+    ],
+    "First bonded intake": [
+      549,
+      475
+    ],
+    "Sorter service crossing": [
+      780,
+      475
+    ],
+    "Inner custody exchange": [
+      1012,
+      475
+    ],
+    "Parcel despatch bridge": [
+      1232,
+      475
+    ],
+    "Workers ward frontage": [
+      1436,
+      475
+    ],
+    "Outbound cargo tally": [
+      1678,
+      475
+    ],
+    "Damaged export nose": [
+      1902,
+      475
+    ],
+    "Roof arrival lookout": [
+      205,
+      280
+    ],
+    "Western roof dispatcher": [
+      620,
+      280
+    ],
+    "Midroof bridge witness": [
+      1018,
+      280
+    ],
+    "Eastern roof inspector": [
+      1460,
+      280
+    ],
+    "Outer roof semaphore": [
+      1838,
+      280
+    ],
+    "West harbour registry": [
+      212,
+      748
+    ],
+    "Berth load enclosure": [
+      367,
+      748
+    ],
+    "First hand-sorting bay": [
+      557,
+      748
+    ],
+    "Classification conveyor bay": [
+      781,
+      748
+    ],
+    "Bonded receipt cell": [
+      966,
+      748
+    ],
+    "Secured examination chamber": [
+      1170,
+      748
+    ],
+    "Workers sleeping ward": [
+      1405,
+      748
+    ],
+    "East bonded exit office": [
+      1572,
+      748
+    ],
+    "Damaged release dock": [
+      1850,
+      748
+    ],
+    "West floor return": [
+      216,
+      856
+    ],
+    "Parcel maintenance reach": [
+      629,
+      856
+    ],
+    "Bonded utility crossing": [
+      1048,
+      856
+    ],
+    "Inhabited ward rescue": [
+      1475,
+      856
+    ],
+    "East derelict escape": [
+      1865,
+      856
+    ]
+  },
+  "material_histogram": {
+    "0": 1699549,
+    "58": 132502,
+    "62": 54349,
+    "100": 210752
+  },
+  "stable_occupied_cells": 397603,
+  "grounded": 397603,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 22557,
+  "invalid_writes": 0,
+  "rectangles": 1107,
+  "rectangle_work": 397603,
+  "setup_bytes": 21105,
+  "material_plane_sha256": "b6d36f82c2da0ae13e5515c5e2a04b660bb29e2abb47c93321c755c3b759b3bb",
+  "setup_sha256": "2e600e8b6d876096a8448174eee4eb4a517fa03999003245d6e84bd654a97421",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 28,
+      "total": 28,
+      "free_centres": 1539679,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 28,
+      "total": 28,
+      "free_centres": 1507684,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 28,
+      "total": 28,
+      "free_centres": 1445942,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      850,
+      180,
+      110,
+      250
+    ],
+    "from": "Western roof dispatcher",
+    "to": "Eastern roof inspector",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 28,
+    "unreachable": [],
+    "distance_before_after": [
+      840,
+      1068
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "84a75aca09910d6e3bdf8884f9ce9cd9cb9b4408532587f3c9dd5d9206bf1f6c",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-arrival",
+      "rect": [
+        68,
+        470,
+        363,
+        356
+      ],
+      "bytes": 32937,
+      "sha256": "c3e60ddad85b89b9b37b1595b6636394e0fe95a13e76ecc51fd2cd0c824d3fea",
+      "pixel_parity": 129228
+    },
+    {
+      "name": "02-roofed-sorter",
+      "rect": [
+        440,
+        486,
+        376,
+        347
+      ],
+      "bytes": 33150,
+      "sha256": "34b0ca1d67ed10ac0d7ceced5dc96219541114b15d4ec5bc315286a234246000",
+      "pixel_parity": 130472
+    },
+    {
+      "name": "03-bonded-exchange",
+      "rect": [
+        833,
+        545,
+        448,
+        306
+      ],
+      "bytes": 34763,
+      "sha256": "3629e0da6b198c2b14852c0c3dcc3ac1e2fec7c7c131c949083b6b6d6ea8ad7b",
+      "pixel_parity": 137088
+    },
+    {
+      "name": "04-workers-borough",
+      "rect": [
+        1302,
+        469,
+        338,
+        384
+      ],
+      "bytes": 33209,
+      "sha256": "3d0ba39b4812641334c668cb7f8c82a7a07160f65f333e9521af5eaad259537b",
+      "pixel_parity": 129792
+    },
+    {
+      "name": "05-broken-export-underworks",
+      "rect": [
+        1652,
+        546,
+        353,
+        364
+      ],
+      "bytes": 32945,
+      "sha256": "73fa03785477813fe09feae9df338db0b3580089530b97ffbddc7ac947cb3848",
+      "pixel_parity": 128492
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Exact full-grid lossless replay; three full Midge envelopes; physical obstruction detour; source PNG CRC/Adler and pixel parity; five unequal low-rise freight halls, physically distinct bonded transactions, populated ward, cargo transfer and deep recovery"
+}
