@@ -111,6 +111,7 @@ function layoutWorld(){
  b(644,1190,70,126,0);
  // Independent western bypass, through the old service terrace shoulder.
  b(301,1233,86,114,0);
+ b(248,1174,112,171,0);
  // Exact literal checkpoint clearance in final source plane (not substituted
  // during BFS); corridors must remain navigable at 31x27 after this.
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
