@@ -14,7 +14,7 @@ A genuine *excavated*, stepped system of service pockets occupies the geological
 
 - **Primary:** west arrival (62,755), low freight hall (282,707), first incline (435,685), passenger transfer (740,620), central exchange (1056,480), switch threshold (1189,466), high signal town (1515,367), crest freight arrival (1755,315), outpost exit (1983,310).
 - **Emergency:** five actually excavated but structurally separated horizontal service sections at staggered elevations; surface-to-underground shafts at x528, x787, x1084, x1373, x1642 with founded workface equipment.
-- **Physical obstruction:** actual closure `[1170,461,85,94]` covers the literal **Severable graded switch**. All 25 other named destinations remain static-accessible even at 31×27 conservative Midge clearance. The alternative route uses actual grade gaps and the open upper approach; it does not imply a physically continuous subterranean tunnel.
+- **Physical obstruction:** actual closure `[1146,389,135,166]` covers the literal **Severable graded switch**. All 25 other named destinations remain static-accessible even at 31×27 conservative Midge clearance. Exact full-hull shortest path from central fare exchange to the third terrace transfer rises from **503 to 587** four-neighbour cell steps after the real grade-gate closure (**+84**, forced upper deviation). The alternative route uses actual grade gaps and the open upper approach; it does not imply a physically continuous subterranean tunnel.
 - **Authoring:** damage/edit spur near (1407,380), arrival/market staging, steep thermal-free ore transfer and lower evacuation. No scripted events.
 
 ## Reproduction and qualification boundaries
