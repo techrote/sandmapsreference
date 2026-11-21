@@ -23,7 +23,7 @@ const sites={
 "Western roof watch":[322,374],"Sorting roof watch":[590,370],"Upper branch":[1165,378],
 "Eastern upper walkway":[1590,370],"West underworks":[145,836],"Sorting underworks":[605,835],
 "Torque underworks":[1045,839],"Ledger underworks":[1410,835],"East underworks":[1850,836],
-"Open roof shaft":[720,144],"Exhaust rooftop":[1135,125],"Worker emergency chimney":[1895,155],
+"Roof signal platform":[720,144],"Exhaust rooftop":[1135,125],"Emergency sky lookout":[1895,155],
 "Abandoned annex entry":[1980,665],"Lift lower transfer":[1060,750],"Repair service niche":[1604,705]};
 function R(x,y,w,h,m){x=Math.max(0,Math.floor(x));y=Math.max(0,Math.floor(y));w=Math.max(0,Math.ceil(w));h=Math.max(0,Math.ceil(h));if(x>=W||y>=H)return;for(let yy=y;yy<Math.min(H,y+h);yy++)g.fill(m,yy*W+x,yy*W+Math.min(W,x+w));}
 function L(x,y,X,Y,t=8,m=M.STEEL){let dx=X-x,dy=Y-y,d=dx*dx+dy*dy,rad=t/2;for(let yy=Math.max(0,Math.floor(Math.min(y,Y)-rad));yy<Math.min(H,Math.ceil(Math.max(y,Y)+rad+1));yy++)for(let xx=Math.max(0,Math.floor(Math.min(x,X)-rad));xx<Math.min(W,Math.ceil(Math.max(x,X)+rad+1));xx++){let s=Math.max(0,Math.min(1,((xx-x)*dx+(yy-y)*dy)/(d||1)));if((xx-x-s*dx)**2+(yy-y-s*dy)**2<=rad*rad)g[yy*W+xx]=m;}}
@@ -44,7 +44,8 @@ V(1239,580,315,180);V(1570,556,356,207);V(1905,588,143,169);
 for(const [x,y,w] of [[222,353,96],[625,356,92],[1015,360,103],[1411,354,94],[1803,358,101]])V(x,y,w,525);
 for(const [x,y,w] of [[235,525,126],[604,530,133],[969,523,146],[1348,525,136],[1700,523,137],[1947,520,85]])V(x,y,w,108);
 for(const [x,y,w] of [[164,405,105],[697,410,100],[1088,414,90],[1600,413,106],[1883,403,105]])V(x,y,w,166);
-V(685,0,95,361);V(1862,0,98,373);V(1095,0,90,348);V(1880,288,116,110);
+/* One far-eastern roof breach permits upper sky recovery without severing the massive continuous roof load path. */
+V(1975,0,73,560);
 /* Continuous supported long roof; divided upper workwalk and underfloor branch */
 for(const [x,w] of [[71,170],[322,242],[759,268],[1185,195],[1491,177],[1770,198]])St(x,434,w,10);
 for(const [x,w] of [[65,165],[327,245],[755,259],[1142,211],[1499,213],[1784,195]])St(x,539,w,9);
@@ -135,7 +136,7 @@ concept:"Keelbone Reclamation Vaults — Continuous Covered Reclaim Spine / Five
 original:true,seed:SEED,engine_sha:"f7e056c9b8791106e22f2d1c295043783d8a9701",
 source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",
 extent:[W,H],
-route_graph:{main:["Western intake","Sorting rail","Torque drive","Ledger registry","Eastern export","Abandoned annex entry"],upper:["Western roof watch","Sorting roof watch","Torque inspection","Upper branch","Ledger loft","Eastern upper walkway","Crew roof maintenance"],workcells:["Wet-strip vestibule","Catch tray","Magnet sorter","Repair service niche","Workers refuge"],lower:["West underworks","Sorting underworks","Torque underworks","Lift lower transfer","Ledger underworks","East underworks"],sky:["Open roof shaft","Exhaust rooftop","Worker emergency chimney"]},
+route_graph:{main:["Western intake","Sorting rail","Torque drive","Ledger registry","Eastern export","Abandoned annex entry"],upper:["Western roof watch","Sorting roof watch","Torque inspection","Upper branch","Ledger loft","Eastern upper walkway","Crew roof maintenance"],workcells:["Wet-strip vestibule","Catch tray","Magnet sorter","Repair service niche","Workers refuge"],lower:["West underworks","Sorting underworks","Torque underworks","Lift lower transfer","Ledger underworks","East underworks"],sky:["Roof signal platform","Exhaust rooftop","Worker emergency chimney"]},
 material_ids:{"0":"Empty","100":"BasaltColumns Solid immovable None","58":"ReinforcedConcrete Solid immovable None","62":"SteelPlate Solid immovable None"},
 midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],
 exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,
