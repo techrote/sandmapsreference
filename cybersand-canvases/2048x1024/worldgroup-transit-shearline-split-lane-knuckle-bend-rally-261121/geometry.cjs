@@ -43,7 +43,7 @@ function buildWorld(){
  rect(584,738,75,12,M.steel);rect(608,750,22,20,M.amber);
  // Wide interval at centre provides visible reset before the reverse bend.
  joined([[902,505],[974,442],[1058,473]],11,M.iron);
- line(971,442,982,132,8,M.frame);
+ // mid-span roof-to-island closed-wall link omitted for actual safe bypass
  rect(925,360,124,13,M.plate);rect(966,374,24,20,M.amber);
  joined([[919,773],[995,729],[1070,753]],8,M.steel);
  line(999,731,1021,893,8,M.frame);
@@ -75,17 +75,25 @@ function buildWorld(){
  for(const [x,y] of [[174,976],[666,974],[957,974],[1796,966]]){
   rect(x,y,43,10,M.frame);rect(x+12,y-20,14,20,M.amber);
  }
+ // Actual diverge/rejoin pass-throughs. Bounded excavations are not
+ // script-only teleportation: every 31x27 hull centre has clear material.
+ // The upper risky A crest blocks independently; low bypass remains viable.
+ rect(438,164,97,706,0);rect(948,165,99,705,0);rect(1604,165,93,702,0);
+ rect(812,577,105,208,0);rect(1052,573,100,195,0);
+ rect(168,626,125,315,0);rect(1781,510,143,435,0);
+ // Two true pit entrances pierce continuous industrial overhangs.
+ rect(180,355,110,75,0);rect(1800,245,99,255,0);
  const sites=[
  ["West rally start",110,326],["West launch rail",281,340],
  ["A fast approach",418,326],["A risky crest",683,231],
- ["A leading turn",556,471],["A south shelter",648,626],
+ ["A leading turn",535,625],["A south shelter",648,626],
  ["A lower bypass",707,800],["A clear rejoin",936,425],
  ["Mid timing post",1013,308],["Mid lower muster",981,659],
  ["B fast approach",1068,293],["B risky lip",1354,277],
  ["B lower shelter",1352,688],["B turnback",1483,440],
- ["B clear rejoin",1644,374],["East brake entry",1732,351],
+ ["B clear rejoin",1620,337],["East brake entry",1679,310],
  ["Damaged spur",1820,470],["Outer catch",2014,520],
- ["East rescue return",1953,798],["West lower passage",441,785],
+ ["East rescue return",2008,800],["West lower passage",441,785],
  ["Center lower passage",994,800],["East lower passage",1638,808],
  ["West pit shaft",232,838],["West pit bench",263,974],
  ["A tuning shaft",717,855],["A tuning bench",768,973],
