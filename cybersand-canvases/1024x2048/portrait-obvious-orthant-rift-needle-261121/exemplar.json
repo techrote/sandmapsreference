@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "portrait/obvious/orthant-rift-needle",
+  "map_role": "asymmetric alternating-station seismic fault with entered rescue bypass",
+  "anchor_donors": [
+    {
+      "source_pr": 177,
+      "source_head": "ed15c1b7d8be98548d087b247ed54b4a70498b01"
+    }
+  ],
+  "macro_topology": "asymmetric vertical tectonic fault with alternating rock-borne frontier pockets",
+  "density_profile": "compact inhabited/industrial pockets alternating on either side of a broad permanent open fault",
+  "route_grammar": {
+    "main": [
+      "Upper fault spawn",
+      "West rover clinic",
+      "Upper bridge landing",
+      "Mid fault exchange",
+      "Lower fault rejoin",
+      "Fault archive overlook",
+      "Deep fault exit"
+    ],
+    "alternate": [
+      [
+        "Upper fault spawn",
+        "East seismic dispatch",
+        "Fork receiver station",
+        "Upper bridge landing"
+      ],
+      [
+        "East drill bypass upper",
+        "East drill bypass middle",
+        "East drill bypass lower",
+        "Lower fault rejoin"
+      ],
+      [
+        "West bore rescue",
+        "West lower survey",
+        "West buried archives",
+        "Lower recovery dock"
+      ]
+    ]
+  },
+  "strong_motifs": [
+    "bank-rooted forked seismic aerial",
+    "western clinic to mineral triage",
+    "eastern bore bypass and quarantine",
+    "lower double-sided archives and recorder",
+    "fractured three-level crossing technology"
+  ],
+  "interesting_relationships": [
+    "source pairwise horizontal crossings become vertical left-right station alternation",
+    "one vertical rift corridor meets actual right-bank entered bypass",
+    "medic and mine support work differ from seismic and bio-custody",
+    "deep archive recovery remains reachable when central fault is obstructed"
+  ],
+  "authoring_affordances": [
+    "large reserved central fault void for live collapse scripting",
+    "unfurnished right maintenance cut for modular Gentek parts",
+    "left deep excavation seam for manual archaeology",
+    "separate broken low bridge ends for SWARM joint closure"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "seismic mast activation",
+      "region": [
+        600,
+        225,
+        935,
+        626
+      ],
+      "scripted": false
+    },
+    {
+      "name": "fault lane collapse",
+      "region": [
+        386,
+        905,
+        935,
+        1320
+      ],
+      "scripted": false
+    },
+    {
+      "name": "quarantine lockdown",
+      "region": [
+        590,
+        1335,
+        942,
+        1660
+      ],
+      "scripted": false
+    },
+    {
+      "name": "deep archive rescue",
+      "region": [
+        82,
+        1655,
+        945,
+        1966
+      ],
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Vertical transfer of a wide two-bank engineering world: stations alternate height/side while a real independently entered branch bypass preserves main-flight recovery and future authored voids.",
+  "similarity_avoidance": "Unlike the source Orthant's lateral fault colony, this portrait descends through sequential left/right stations, adds a separate right drill return and paired deep archive terminal without copying any source coordinates.",
+  "diversity_axes": {
+    "macro_topology": "vertical_fault",
+    "altitude_grammar": "vertical_spine",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "tower",
+    "support_form": "cliff_embedded",
+    "environment_relation": "geological",
+    "incompleteness": "modular_append_zones"
+  },
+  "grid_sha256": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
+  "native": "NATIVE-UNTESTED"
+}
