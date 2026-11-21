@@ -1,0 +1,315 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Mireward Levee Communes",
+  "sibling": 5,
+  "role": "Sundered Spore Ark / Excavated Drydock Quarantine",
+  "seed": "mireward-sundered-spore-ark-drydock-261121-v1",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donors": [
+    {
+      "slug": "wide-harrow-mere-spore-dam",
+      "pr": 64,
+      "head": "1202aea8d696e2bfecd7e4f3353c9738a9435858"
+    },
+    {
+      "slug": "wide-graftloom-slipway",
+      "pr": 22,
+      "head": "b0d1e5216aabb9b5e009e599ffbffcec6fd8a657"
+    },
+    {
+      "slug": "wide-threnody-scar-foldwing-seedlift",
+      "pr": 73,
+      "head": "00cb6b6b86b875d8b81cc387c711aa56f172d9dd"
+    }
+  ],
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 9745,
+    "62": 57100,
+    "66": 19121,
+    "68": 11521,
+    "77": 3396,
+    "79": 1939,
+    "100": 189718,
+    "101": 67920,
+    "120": 7157,
+    "129": 810,
+    "131": 16380
+  },
+  "occupied_cells": 384807,
+  "grounded_cells": 384807,
+  "detached_cells": 0,
+  "solid_components": 1,
+  "physical_tethers": {
+    "joins": 39,
+    "max_span": 112
+  },
+  "lossless_rectangles": 3406,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 384807,
+  "setup_bytes": 64531,
+  "plane_sha256": "f4c82dcb67b3c0370ba0db436c8e369a75e872867e6780e6568a75298ea010c3",
+  "setup_sha256": "20af0789ad0bb4aa79c587b7527b93c3b697edacb16c4704e2942cafda2ff573",
+  "literal_sites": {
+    "West intake arrival": [
+      99,
+      395
+    ],
+    "West seed ledger": [
+      255,
+      449
+    ],
+    "West reed filters": [
+      141,
+      505
+    ],
+    "West upper portal": [
+      356,
+      343
+    ],
+    "West drydock lip": [
+      416,
+      541
+    ],
+    "Port crane crown": [
+      535,
+      157
+    ],
+    "Port gantry flight": [
+      704,
+      338
+    ],
+    "Port vessel overlook": [
+      793,
+      419
+    ],
+    "Port open berth": [
+      855,
+      744
+    ],
+    "Mid dock upper void": [
+      1021,
+      300
+    ],
+    "Broken keel reveal": [
+      1016,
+      614
+    ],
+    "Drydock lower workface": [
+      1019,
+      691
+    ],
+    "East hull overlook": [
+      1182,
+      398
+    ],
+    "Starboard gantry head": [
+      1402,
+      174
+    ],
+    "East crane inspection": [
+      1594,
+      404
+    ],
+    "East quarantine approach": [
+      1661,
+      477
+    ],
+    "East sterile cabin": [
+      1825,
+      467
+    ],
+    "East freight clearance": [
+      1953,
+      425
+    ],
+    "Distant export sky": [
+      2015,
+      304
+    ],
+    "West descent entrance": [
+      275,
+      851
+    ],
+    "Central descent entrance": [
+      1024,
+      862
+    ],
+    "East descent entrance": [
+      1812,
+      772
+    ],
+    "West deep recovery": [
+      467,
+      971
+    ],
+    "Central deep recovery": [
+      1160,
+      972
+    ],
+    "East deep recovery": [
+      1552,
+      974
+    ],
+    "Eastern purge berth": [
+      1776,
+      477
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable_centres": 1414662,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable_centres": 1361839,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1277328,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      1746,
+      447,
+      1806,
+      510
+    ],
+    "blocked_site": "Eastern purge berth",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1269318,
+      "passed": 25,
+      "total": 26,
+      "bad": [
+        {
+          "name": "Eastern purge berth",
+          "point": [
+            1776,
+            477
+          ]
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "origin": [
+        0,
+        0
+      ],
+      "extent": [
+        2048,
+        1024
+      ],
+      "bytes": 50460,
+      "sha256": "1f4b4e7d25bbb776f576cd07b28867f7a2df79afadd1a48a3c8867c761a7c6ae",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "01-west-intake.png",
+      "origin": [
+        24,
+        445
+      ],
+      "extent": [
+        552,
+        432
+      ],
+      "bytes": 9801,
+      "sha256": "bacc8a871600e4e672ae76f10a2e01f9593fcdca0e3d2e5030f55a86a9f9367e",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "02-twin-gantry.png",
+      "origin": [
+        460,
+        180
+      ],
+      "extent": [
+        1150,
+        375
+      ],
+      "bytes": 12953,
+      "sha256": "b38dd5020c55e0cf9cba8097ad0896c4f7f28c3cecf4fee1d255b33b2e2c6bae",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "03-sundered-ark.png",
+      "origin": [
+        603,
+        470
+      ],
+      "extent": [
+        844,
+        345
+      ],
+      "bytes": 11474,
+      "sha256": "320547d0a0cc32675acb123d62f2cf005965b03eb2d6b7266a1df1e08762a5d8",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "04-east-quarantine.png",
+      "origin": [
+        1575,
+        440
+      ],
+      "extent": [
+        473,
+        445
+      ],
+      "bytes": 10098,
+      "sha256": "dc5f85ae739f3c7cf58eebc564e41782159502ca31fb1e75bacb36fe17bf805c",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "05-deep-service.png",
+      "origin": [
+        70,
+        830
+      ],
+      "extent": [
+        1858,
+        194
+      ],
+      "bytes": 8769,
+      "sha256": "318338a048882090d034df9cff0080c095aa6e717dff53193290d8bfe376827c",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    }
+  ],
+  "qualification": "CREATOR-STATIC-PASS",
+  "independent_reviews": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "OPEN DRAFT/HOLD",
+  "caveat": "Static full-hull reachability is not dynamic gameplay or persistence verification."
+}
