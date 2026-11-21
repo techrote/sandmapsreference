@@ -120,8 +120,7 @@ function build(){
  }
 
 
- const reconciled=tie();
-
+ 
  const sites={
  "West intake arrival":[99,395],
  "West seed ledger":[255,449],
