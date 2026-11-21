@@ -1,0 +1,39 @@
+{
+  "classification": "source-static structural/physics law receipt",
+  "engine_authority_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "materials": {
+    "inert_kernel_assumption": "hard immobile solids from accepted source materials",
+    "identifiers": [
+      58,
+      62,
+      72,
+      100,
+      101,
+      113,
+      117,
+      122
+    ],
+    "histogram": {
+      "0": 1637065,
+      "58": 58976,
+      "62": 13092,
+      "100": 343987,
+      "101": 7449,
+      "113": 4569,
+      "117": 30550,
+      "122": 1464
+    },
+    "unsupported_fluids_or_reactive_cells": 0
+  },
+  "cell_count": 2097152,
+  "source_grid_sha256": "55e1b97ad5b34337a33eb7401e4afc70d3b04cf18103c4f811f37670473c6051",
+  "boundary_rooted_solids": 460087,
+  "solid_components": 1,
+  "construction_rectangles": 1585,
+  "construction_work": 460087,
+  "native_status": "NATIVE-UNTESTED",
+  "limitations": [
+    "source-static groundedness is not live Rapier stability",
+    "no native actor collision or persisted scene evidence"
+  ]
+}

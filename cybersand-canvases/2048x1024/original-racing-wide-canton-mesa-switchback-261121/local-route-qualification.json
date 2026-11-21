@@ -1,0 +1,613 @@
+{
+  "envelopes": {
+    "19x15": {
+      "reachable": 31,
+      "sites": 31,
+      "failed": [],
+      "four_cardinal_clear": 31,
+      "four_cardinal_failed": []
+    },
+    "23x19": {
+      "reachable": 31,
+      "sites": 31,
+      "failed": [],
+      "four_cardinal_clear": 31,
+      "four_cardinal_failed": []
+    },
+    "31x27": {
+      "reachable": 31,
+      "sites": 31,
+      "failed": [],
+      "four_cardinal_clear": 31,
+      "four_cardinal_failed": []
+    }
+  },
+  "leg_margin_cells": 220,
+  "local_legs": {
+    "primary": [
+      {
+        "from": "West launch gantry",
+        "to": "West guide sail",
+        "bbox": [
+          0,
+          0,
+          539,
+          438
+        ],
+        "pass": true
+      },
+      {
+        "from": "West guide sail",
+        "to": "Rim signal crown",
+        "bbox": [
+          98,
+          0,
+          701,
+          436
+        ],
+        "pass": true
+      },
+      {
+        "from": "Rim signal crown",
+        "to": "Central flyover",
+        "bbox": [
+          358,
+          0,
+          699,
+          436
+        ],
+        "pass": true
+      },
+      {
+        "from": "Central flyover",
+        "to": "Upper breakaway cue",
+        "bbox": [
+          616,
+          0,
+          661,
+          434
+        ],
+        "pass": true
+      },
+      {
+        "from": "Upper breakaway cue",
+        "to": "North valley flank",
+        "bbox": [
+          836,
+          0,
+          645,
+          434
+        ],
+        "pass": true
+      },
+      {
+        "from": "North valley flank",
+        "to": "East tensile beacon",
+        "bbox": [
+          1040,
+          0,
+          711,
+          436
+        ],
+        "pass": true
+      },
+      {
+        "from": "East tensile beacon",
+        "to": "East crane approach",
+        "bbox": [
+          1310,
+          0,
+          691,
+          440
+        ],
+        "pass": true
+      },
+      {
+        "from": "East crane approach",
+        "to": "Eastern dive mouth",
+        "bbox": [
+          1560,
+          0,
+          488,
+          461
+        ],
+        "pass": true
+      },
+      {
+        "from": "Eastern dive mouth",
+        "to": "East quick drop",
+        "bbox": [
+          1690,
+          20,
+          358,
+          585
+        ],
+        "pass": true
+      },
+      {
+        "from": "East quick drop",
+        "to": "East turnaround",
+        "bbox": [
+          1690,
+          164,
+          358,
+          585
+        ],
+        "pass": true
+      },
+      {
+        "from": "East turnaround",
+        "to": "Eastern return guide",
+        "bbox": [
+          1510,
+          301,
+          538,
+          448
+        ],
+        "pass": true
+      },
+      {
+        "from": "Eastern return guide",
+        "to": "Far depot return",
+        "bbox": [
+          1260,
+          299,
+          691,
+          443
+        ],
+        "pass": true
+      },
+      {
+        "from": "Far depot return",
+        "to": "Central basin return",
+        "bbox": [
+          940,
+          299,
+          761,
+          446
+        ],
+        "pass": true
+      },
+      {
+        "from": "Central basin return",
+        "to": "West transfer return",
+        "bbox": [
+          635,
+          304,
+          746,
+          444
+        ],
+        "pass": true
+      },
+      {
+        "from": "West transfer return",
+        "to": "Ramp-side return",
+        "bbox": [
+          292,
+          301,
+          784,
+          447
+        ],
+        "pass": true
+      },
+      {
+        "from": "Ramp-side return",
+        "to": "West finish",
+        "bbox": [
+          0,
+          301,
+          733,
+          441
+        ],
+        "pass": true
+      }
+    ],
+    "alternative": [
+      {
+        "from": "West launch gantry",
+        "to": "West drop gate",
+        "bbox": [
+          0,
+          0,
+          331,
+          603
+        ],
+        "pass": true
+      },
+      {
+        "from": "West drop gate",
+        "to": "Western service cruise",
+        "bbox": [
+          0,
+          162,
+          536,
+          570
+        ],
+        "pass": true
+      },
+      {
+        "from": "Western service cruise",
+        "to": "Basin lateral",
+        "bbox": [
+          95,
+          291,
+          806,
+          450
+        ],
+        "pass": true
+      },
+      {
+        "from": "Basin lateral",
+        "to": "Middle canton passage",
+        "bbox": [
+          460,
+          297,
+          778,
+          444
+        ],
+        "pass": true
+      },
+      {
+        "from": "Middle canton passage",
+        "to": "East market lateral",
+        "bbox": [
+          797,
+          297,
+          779,
+          443
+        ],
+        "pass": true
+      },
+      {
+        "from": "East market lateral",
+        "to": "Eastern interchange",
+        "bbox": [
+          1135,
+          295,
+          771,
+          445
+        ],
+        "pass": true
+      },
+      {
+        "from": "Eastern interchange",
+        "to": "East turnaround",
+        "bbox": [
+          1465,
+          295,
+          583,
+          454
+        ],
+        "pass": true
+      },
+      {
+        "from": "East turnaround",
+        "to": "Eastern return guide",
+        "bbox": [
+          1510,
+          301,
+          538,
+          448
+        ],
+        "pass": true
+      },
+      {
+        "from": "Eastern return guide",
+        "to": "Far depot return",
+        "bbox": [
+          1260,
+          299,
+          691,
+          443
+        ],
+        "pass": true
+      },
+      {
+        "from": "Far depot return",
+        "to": "Central basin return",
+        "bbox": [
+          940,
+          299,
+          761,
+          446
+        ],
+        "pass": true
+      },
+      {
+        "from": "Central basin return",
+        "to": "West transfer return",
+        "bbox": [
+          635,
+          304,
+          746,
+          444
+        ],
+        "pass": true
+      },
+      {
+        "from": "West transfer return",
+        "to": "Ramp-side return",
+        "bbox": [
+          292,
+          301,
+          784,
+          447
+        ],
+        "pass": true
+      },
+      {
+        "from": "Ramp-side return",
+        "to": "West finish",
+        "bbox": [
+          0,
+          301,
+          733,
+          441
+        ],
+        "pass": true
+      }
+    ],
+    "service": [
+      {
+        "from": "Western service cruise",
+        "to": "West machinist chamber",
+        "bbox": [
+          55,
+          291,
+          481,
+          733
+        ],
+        "pass": true
+      },
+      {
+        "from": "Western service cruise",
+        "to": "West pump bridge",
+        "bbox": [
+          95,
+          291,
+          536,
+          553
+        ],
+        "pass": true
+      },
+      {
+        "from": "Basin lateral",
+        "to": "Old load cellar",
+        "bbox": [
+          460,
+          300,
+          571,
+          724
+        ],
+        "pass": true
+      },
+      {
+        "from": "Middle canton passage",
+        "to": "Central survey stage",
+        "bbox": [
+          797,
+          297,
+          471,
+          613
+        ],
+        "pass": true
+      },
+      {
+        "from": "Eastern interchange",
+        "to": "East fabricator lookout",
+        "bbox": [
+          1390,
+          295,
+          516,
+          504
+        ],
+        "pass": true
+      },
+      {
+        "from": "East turnaround",
+        "to": "Deep east annex",
+        "bbox": [
+          1619,
+          308,
+          429,
+          716
+        ],
+        "pass": true
+      },
+      {
+        "from": "Central basin return",
+        "to": "Deep middle spur",
+        "bbox": [
+          940,
+          304,
+          493,
+          720
+        ],
+        "pass": true
+      },
+      {
+        "from": "Basin lateral",
+        "to": "Mesa view stair",
+        "bbox": [
+          460,
+          300,
+          516,
+          560
+        ],
+        "pass": true
+      }
+    ],
+    "blocked_alternative": [
+      {
+        "from": "West launch gantry",
+        "to": "West drop gate",
+        "bbox": [
+          0,
+          0,
+          331,
+          603
+        ],
+        "pass": true
+      },
+      {
+        "from": "West drop gate",
+        "to": "Western service cruise",
+        "bbox": [
+          0,
+          162,
+          536,
+          570
+        ],
+        "pass": true
+      },
+      {
+        "from": "Western service cruise",
+        "to": "Basin lateral",
+        "bbox": [
+          95,
+          291,
+          806,
+          450
+        ],
+        "pass": true
+      },
+      {
+        "from": "Basin lateral",
+        "to": "Middle canton passage",
+        "bbox": [
+          460,
+          297,
+          778,
+          444
+        ],
+        "pass": true
+      },
+      {
+        "from": "Middle canton passage",
+        "to": "East market lateral",
+        "bbox": [
+          797,
+          297,
+          779,
+          443
+        ],
+        "pass": true
+      },
+      {
+        "from": "East market lateral",
+        "to": "Eastern interchange",
+        "bbox": [
+          1135,
+          295,
+          771,
+          445
+        ],
+        "pass": true
+      },
+      {
+        "from": "Eastern interchange",
+        "to": "East turnaround",
+        "bbox": [
+          1465,
+          295,
+          583,
+          454
+        ],
+        "pass": true
+      },
+      {
+        "from": "East turnaround",
+        "to": "Eastern return guide",
+        "bbox": [
+          1510,
+          301,
+          538,
+          448
+        ],
+        "pass": true
+      },
+      {
+        "from": "Eastern return guide",
+        "to": "Far depot return",
+        "bbox": [
+          1260,
+          299,
+          691,
+          443
+        ],
+        "pass": true
+      },
+      {
+        "from": "Far depot return",
+        "to": "Central basin return",
+        "bbox": [
+          940,
+          299,
+          761,
+          446
+        ],
+        "pass": true
+      },
+      {
+        "from": "Central basin return",
+        "to": "West transfer return",
+        "bbox": [
+          635,
+          304,
+          746,
+          444
+        ],
+        "pass": true
+      },
+      {
+        "from": "West transfer return",
+        "to": "Ramp-side return",
+        "bbox": [
+          292,
+          301,
+          784,
+          447
+        ],
+        "pass": true
+      },
+      {
+        "from": "Ramp-side return",
+        "to": "West finish",
+        "bbox": [
+          0,
+          301,
+          733,
+          441
+        ],
+        "pass": true
+      }
+    ]
+  },
+  "blocked_case": {
+    "19x15": {
+      "reachable": 30,
+      "unreachable": [
+        "Upper breakaway cue"
+      ],
+      "finish_survives": true,
+      "alternative_destinations_survive": true
+    },
+    "23x19": {
+      "reachable": 30,
+      "unreachable": [
+        "Upper breakaway cue"
+      ],
+      "finish_survives": true,
+      "alternative_destinations_survive": true
+    },
+    "31x27": {
+      "reachable": 30,
+      "unreachable": [
+        "Upper breakaway cue"
+      ],
+      "finish_survives": true,
+      "alternative_destinations_survive": true
+    }
+  },
+  "status": "SOURCE-STATIC PASS / NATIVE-UNTESTED"
+}
