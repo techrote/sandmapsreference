@@ -178,6 +178,8 @@ St(1010,735,54,12);C(1021,707,10,28);C(1054,702,13,36);
 St(1321,742,52,10);C(1333,704,12,35);C(1363,716,9,26);
 St(1604,741,66,11);C(1622,701,13,40);C(1650,717,9,24);
 St(1817,744,68,9);C(1830,704,12,39);
+/* Conservative exact-point clearance after all authored fixtures. */
+for(const [x,y] of Object.values(sites))V(x-34,y-30,69,61);
 
 
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
