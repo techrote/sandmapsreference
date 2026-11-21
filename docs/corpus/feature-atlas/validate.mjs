@@ -2,10 +2,16 @@
 // FEATURE-ATLAS-001: zero-dependency structural, provenance and identity checker.
 // Run: node docs/corpus/feature-atlas/validate.mjs
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const dir=dirname(fileURLToPath(import.meta.url));
-const rows=readFileSync(resolve(dir,'states.v1.jsonl'),'utf8').split(/\r?\n/).filter(Boolean);
+const data=readFileSync(resolve(dir,'states.v1.jsonl'),'utf8');
+const rows=data.split(/\r?\n/).filter(Boolean);
+const baseline=JSON.parse(readFileSync(resolve(dir,'baseline.lock.v1.json'),'utf8'));
+const lockedText=rows.slice(0,baseline.locked_first_lines).join('\n')+'\n';
+const gitBlob=createHash('sha1').update('blob '+Buffer.byteLength(lockedText)+'\0').update(lockedText).digest('hex');
+if(rows.length<baseline.locked_first_lines||gitBlob!==baseline.git_blob_sha1)throw Error('Immutable initial feature-state prefix modified or deleted');
 const manifest=JSON.parse(readFileSync(resolve(dir,'manifest.v1.json'),'utf8'));
 const schema=JSON.parse(readFileSync(resolve(dir,'schema.v1.json'),'utf8'));
 if(schema.properties.schema_version.const!==1) throw Error('Wrong schema');
@@ -59,6 +65,6 @@ for(const s of known.values())if(s.stage==='POST_REPAIR'){
  assert(base.stage==='BASELINE',s.state_id+' wrong baseline');
 }
 assert(Object.keys(byPR).length===manifest.portraits.length,'manifest portrait count mismatch');
-for(const x of manifest.portraits){assert(byPR[x.pr]===x.records,'manifest count '+x.pr);const r=[...known.values()].find(s=>s.provenance.portrait_pr===x.pr);assert(r.provenance.portrait_head===x.head&&r.provenance.donor_head===x.donor_head,'manifest head '+x.pr)}
+for(const x of manifest.portraits){assert(byPR[x.pr]===x.records,'manifest count '+x.pr);const r=[...known.values()].find(s=>s.provenance.portrait_pr===x.pr&&s.stage!=='POST_REPAIR');assert(r.provenance.portrait_head===x.head&&r.provenance.donor_head===x.donor_head,'manifest head '+x.pr)}
 assert(rows.length===manifest.state_count,'manifest state count');
 console.log('FEATURE-ATLAS v1 PASS: '+rows.length+' immutable states, '+known.size+' unique IDs, '+Object.keys(byPR).length+' portraits; '+JSON.stringify(counts));
