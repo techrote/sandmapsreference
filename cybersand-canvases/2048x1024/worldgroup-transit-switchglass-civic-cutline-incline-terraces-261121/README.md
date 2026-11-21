@@ -26,3 +26,7 @@ Contract: accepted CyberSand `main` `f7e056c9b8791106e22f2d1c295043783d8a9701`, 
 **NATIVE-UNTESTED:** No execution of Godot/Workbench/CyberDemoBridge/Rapier, actual movement/collision/ticks or cold save/reopen is claimed. The geometry is a conservative source-static playable candidate pending true native evaluation.
 
 `exemplar.json` contains eight controlled diversity-axis classifications, material-based structural motifs, unusual relationships, unscripted set-piece candidates and deliberate modular authoring gaps.
+
+## Loader-fatal Setup-v2 P0 correction
+
+The previous committed Setup used obsolete seven-key `world_policy`. This exact-HEAD repair restores the accepted strict 14-key Setup-v2 envelope, updates both verifier and generator and refreshes complete Setup receipt. Material-plane hash, collision routes and all indexed PNG images are unchanged. NATIVE-UNTESTED; independent exact-head review pending.
