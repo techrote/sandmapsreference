@@ -128,6 +128,9 @@ function buildWorld(){
    rect(p.x,p.base-126,19,99,0);
    rect(p.x+p.w-18,p.base-126,19,99,0);
  }
+ // The actual mid-hill public lift is an open-to-sky rescue throat, not
+ // an invisible teleport through a sealed station roof / diagonal track.
+ rect(753,466,77,399,0);
  for(const [x,y,h] of [[528,747,194],[787,647,202],[1084,557,211],[1373,469,230],[1642,382,224]])rect(x-42,y,84,h,0);
  // Lower emergency inlets are open to each main undertrack corridor; this is physical excavation.
  // The grade-gap and skyline guarantee both surface and emergency branch/rejoin alternatives.
@@ -136,13 +139,13 @@ function buildWorld(){
  ["West freight workface",282,707],["West platform lip",322,705],
  ["First incline pass",435,685],["Low recovery shaft",528,829],
  ["Freight return machinery",482,899],
- ["Mid transfer landing",638,643],["Terraced passenger hall",740,620],
+ ["Mid transfer landing",686,560],["Terraced passenger hall",716,566],
  ["Incline-hauler observation",920,455],["Mid cutline shaft",787,752],
  ["Mid service switchbox",800,813],
- ["Central fare exchange",1056,480],["Severable graded switch",1208,494],
- ["Third terrace transfer",1320,437],["Central lower recovery",1084,739],
+ ["Central fare exchange",1056,480],["Severable graded switch",1208,526],
+ ["Third terrace transfer",1320,493],["Central lower recovery",1084,739],
  ["Cable machinery room",1085,730],
- ["Upper incline approach",1450,357],["Signal hill settlement",1515,367],
+ ["Upper incline approach",1450,357],["Signal hill settlement",1508,345],
  ["High emergency shaft",1373,589],["Switchgear service room",1340,656],
  ["Upper freight arrival",1755,315],["Crest platform hall",1872,310],
  ["Outpost exit",1983,310],["Crest recovery shaft",1642,520],
