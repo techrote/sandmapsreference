@@ -146,6 +146,15 @@ for(const [x,y] of [[296,476],[755,489],[1269,466],[1669,499]]){
 }
 /* Authored exact human/Midge destinations are deliberate clear cells; 
    preserve room thresholds and the nonfurnished central flight domain. */
+/* Real physical entry: irregular overhead lift slots and founded emergency
+   hatches link the separately entered customs rooms to traversable sky. */
+for(const [x,y,w,h] of [
+  [269,342,72,371],[490,545,76,164],[751,418,45,304],
+  [918,406,72,321],[1135,420,62,143],[1571,425,82,300],
+  [1690,567,45,166],[1910,559,35,173],
+  [181,729,70,135],[645,731,65,139],[1078,719,70,151],
+  [1534,720,73,145],[1850,715,70,151]
+])V(x,y,w,h);
 for(const [x,y] of Object.values(sites))V(x-34,y-30,69,61);
 
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
