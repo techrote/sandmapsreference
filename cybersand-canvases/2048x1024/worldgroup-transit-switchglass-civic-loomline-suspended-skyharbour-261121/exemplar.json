@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Switchglass Civic Transit",
+  "lane": "worldgroup/transit",
+  "map_role": "Sibling 06 — suspended passenger/freight signal interchange",
+  "anchor_donors": [
+    {
+      "name": "wide-tungsten-sawtooth-tramworks",
+      "pr": 69,
+      "head": "7fc24855cf521c90bf67f4afb08685e490473201",
+      "role": "Read-only steel, signal and recovery route culture; no geometry or pixel reuse"
+    }
+  ],
+  "macro_topology": "suspended",
+  "density_profile": "clustered heavy aerial dispatch/cargo workfaces around a broad negative-space lower return and four excavated salvage bays",
+  "route_grammar": {
+    "upper": "wide signal sky and suspended dispatch gantry",
+    "lower": "underhanging freight/recovery sky",
+    "crossings": "two large full-hull sky hatches and independent west passenger descent",
+    "obstruction": "temporary closed West sky hatch forces physical passenger descent"
+  },
+  "strong_motifs": [
+    "nonradial hung tram diaphragm",
+    "roof-rooted tensile cableway",
+    "passenger canopy and dispatch loft",
+    "eastern cargo gantry",
+    "physically entered lower repair rooms"
+  ],
+  "interesting_relationships": [
+    "suspended roof/cable load paths and large clear traversable lower void",
+    "full-hull alternate wayfinding when main hatch closed",
+    "four excavated shops with physical entry shafts",
+    "damaged underdeck spur remains editable"
+  ],
+  "authoring_affordances": [
+    "centre vacant flythrough for manual install",
+    "damaged freight transfer socket",
+    "four physically entered maintenance rooms",
+    "optional underdeck connection bays"
+  ],
+  "setpiece_candidates": [
+    "blocked main sky hatch, emergency passenger recovery",
+    "hung freight release",
+    "failed bridge reconstruction",
+    "technician encounter in open salvage bay"
+  ],
+  "procedural_exemplar_value": "Captures roof-rooted suspended transport, vertical-choice corridors, real surviving alt-route and modular attachment points distinct from ground-dominated precedents.",
+  "similarity_avoidance": "Unlike Switchglass 01 boulevard, 02 hillside, 03 pier chain, 04 basin or 05 vertical fault, the horizontal hanging tram diaphragm is the dominant obstacle and skyline. No wheel or baffle cloning.",
+  "diversity_axes": {
+    "macro_topology": "suspended",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "cableway",
+    "support_form": "roof_rooted",
+    "environment_relation": "dry",
+    "incompleteness": "editable_gaps"
+  },
+  "native_qualification": "NATIVE-UNTESTED",
+  "event_scripts_implemented": false
+}
