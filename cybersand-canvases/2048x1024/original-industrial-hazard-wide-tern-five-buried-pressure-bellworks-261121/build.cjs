@@ -127,8 +127,8 @@ function build(){
    for(let p=last;prev[p]!==p;p=prev[p])if(!g[p])g[p]=58;
    return true;
  }
- function sha(a){
-   let b=typeof a==="string"?Uint8Array.from(a.split("").map(c=>c.charCodeAt(0))):a;
+ function sha(input){
+   let b=typeof input==="string"?Uint8Array.from(input.split("").map(c=>c.charCodeAt(0))):input;
    let K=[],Hh=[];for(let n=2;K.length<64;n++){let q=true;for(let j=2;j*j<=n;j++)if(n%j===0){q=false;break}if(q)K.push(Math.floor((n**(1/3)%1)*4294967296)>>>0)}
    for(let n=2;Hh.length<8;n++){let q=true;for(let j=2;j*j<=n;j++)if(n%j===0){q=false;break}if(q)Hh.push(Math.floor((Math.sqrt(n)%1)*4294967296)>>>0)}
    let L=b.length,T=Math.ceil((L+9)/64)*64,a=new Uint8Array(T);a.set(b);a[L]=128;
