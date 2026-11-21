@@ -20,21 +20,21 @@
       2048
     ],
     "path": "cybersand-canvases/1024x2048/portrait-moderate-spindlebreak-switchback-trestleworks-261121/",
-    "material_plane_sha256": "30c6668a34341b172d231e4d257175a76b35b314e15dfb468a218d4970c56397",
+    "material_plane_sha256": "5110336538bb8be20fe2c6b70d689b658faaf2c531f2f73acc7cb8d161ebccb0",
     "seed": 202611211531
   },
   "base_repository_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
   "accepted_engine_main_read_only": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
   "preserved": [
-    "Distinct high cableway and separate lower grounded fault-crossing truss",
+    "Wide donor's distinct tension-aerial and grounded heavy-truss engineering concepts remain: the high cable is now an intentionally BROKEN pair of opposed winches, not an intact operational cross-bank haul; the lower structure is a rooted navigable braced truss",
     "Original causal ore→sealed furnace→travelling ladle→unequal casting rollers→quench→freight industry",
     "Fault-supported uneven terraces, exposed maintenance void and multiple flight/return choices",
     "Durable dry worker service bays and fully sealed Water/Lava"
   ],
   "transformed": [
     "Source single wide left-right geological fracture becomes alternating bank-to-bank vertical switchback with at least four different levels",
-    "Wide cable line becomes a high diagonal tension loop with an actual engineered Midge-aperture gate",
-    "Deep rooted truss becomes a separate V-braced underpass with its own entirely different flyable portal",
+    "High transverse logistics become an opposed bank-rooted pulley/winch machine with TWO terminating rope tracks, matched broken-coupling faces and an explicit 61-cell-wide Midge-passable cable-interruption slot; NO continuous source-cell wire or operational through-service is asserted",
+    "Deep rooted truss becomes a lower triangulated through-truss with left and right bank-rooted load paths, entered bearing gates and a lower-chord access hatch; opening clearances are structural service features",
     "Industrial left-to-right logistics transformed to upper-left ore and furnace, right-suspended ladle, left-lower rollers, right quench, left-bottom dispatch"
   ],
   "discarded": [
@@ -43,10 +43,12 @@
     "Source original cable and lower bridge coordinates and shot framing"
   ],
   "newly_introduced": [
-    "Four-stage bank-alternating folded sequence retaining two distinct structural crossings",
-    "Two Midge-scale genuinely open pass-through engineered cable/truss portals",
+    "Two intentionally unlike high/low structural languages: interrupted upper cableway and source-static traversable lower bank-rooted V-truss; only the latter is claimed as a structurally braced crossing",
+    "Exact ordered waypoint routes through the high cable/deck service portals and the lower truss bearing/keel access apertures (31×27 free-centre source-static only)",
     "Downshifted three-roller caster galleries and lower right sealed quench plant",
-    "Clear spare expansion sites at interrupted-cable crossing, lower truss, caster bay and freight undercroft"
+    "Clear spare expansion sites at interrupted-cable crossing, lower truss, caster bay and freight undercroft",
+    "Second-pass west/east opposed-bank hex sheaves and guy-wire backstays, overhead paired hauling lines and an explicit 61-cell-wide 31x27-friendly sky exchange break; not a full opaque air barrier",
+    "Third-pass matched amber broken coupling heads and torn short rope ends at x453..560,y660..680, protecting original x476..536,y629..711 deliberate air seam"
   ],
   "preservation_scale": "1:1 physical cell size and conservative Midge geometry; no rotation, crop, stretch, source-image or source-grid-cell transplant",
   "navigation": {
@@ -74,8 +76,111 @@
     "direct_steps": 187,
     "obstructed_steps": 337,
     "all_literal_sites_reachable": true,
-    "return_available": true
+    "return_available": true,
+    "portal_routes_31x27": {
+      "high": {
+        "named_centres": [
+          {
+            "name": "cable west launch",
+            "xy": [
+              345,
+              799
+            ]
+          },
+          {
+            "name": "upper cable service gap",
+            "xy": [
+              488,
+              800
+            ]
+          },
+          {
+            "name": "suspended deck Midge opening",
+            "xy": [
+              565,
+              915
+            ]
+          },
+          {
+            "name": "east deck receiving slot",
+            "xy": [
+              735,
+              902
+            ]
+          },
+          {
+            "name": "cable east arrival",
+            "xy": [
+              773,
+              904
+            ]
+          }
+        ],
+        "segment_steps": [
+          168,
+          192,
+          183,
+          40
+        ],
+        "total_steps": 583
+      },
+      "low": {
+        "named_centres": [
+          {
+            "name": "west heavy-truss footing",
+            "xy": [
+              327,
+              1156
+            ]
+          },
+          {
+            "name": "west load-bearing gate",
+            "xy": [
+              370,
+              1118
+            ]
+          },
+          {
+            "name": "intermediate lower switchback",
+            "xy": [
+              505,
+              1170
+            ]
+          },
+          {
+            "name": "lower chord access hatch",
+            "xy": [
+              520,
+              1252
+            ]
+          },
+          {
+            "name": "east load-bearing gate",
+            "xy": [
+              690,
+              1105
+            ]
+          },
+          {
+            "name": "east heavy-truss footing",
+            "xy": [
+              756,
+              1192
+            ]
+          }
+        ],
+        "segment_steps": [
+          81,
+          235,
+          97,
+          357,
+          153
+        ],
+        "total_steps": 923
+      },
+      "scope": "Constructible ordered portal route, NOT forced unconstrained shortest-route selection or native flight"
+    }
   },
-  "qualification": "SOURCE-STATIC-PASS; NATIVE-UNTESTED",
-  "acceptance": "OPEN DRAFT/HOLD; independent Art/Technical/Shepherd and dynamic native operation remain"
+  "qualification": "R6 THIRD-PASS BUILDER SOURCE-STATIC PASS; second-child exact HEAD 510bd91cacb4f1d777aff236d8ab3e8c51de192b independent Art REWORK on intact-service overclaim; this new after-state Art/Technical re-review PENDING; NATIVE-UNTESTED",
+  "acceptance": "OPEN DRAFT/HOLD child repair; original parent/source unchanged; no Ready, merge, native or Gold acceptance"
 }
