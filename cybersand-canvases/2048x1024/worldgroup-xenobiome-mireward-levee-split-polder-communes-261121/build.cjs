@@ -71,17 +71,20 @@ function build(){
  cabinet(1852,882,52,28,M.blue,M.amber);cabinet(1940,882,52,29,M.glass,M.cyan);
  // Open expansion interfaces, not obligatory decorations.
  for(let [x,y] of [[340,757],[782,810],[1324,794],[1710,805]]){R(x,y,40,9,M.steel);L(x+8,y,x+24,y-23,5,M.grate);}
+ // True Midge-width entered gates: remove rock/deck/pier through five different island access shafts.
+ // Carving *after* fixtures removes colliding construction, then structural hardware is re-tethered.
+ for(let [x,y,w,h] of [[258,531,72,372],[709,602,78,311],[1205,512,85,416],[1606,642,82,291],[1791,634,88,298],[493,714,75,219]])R(x,y,w,h,0);
  // Physically tether every isolated authoring fixture into the bedrock before encoding.
  let tieCount=0;for(let pass=0;pass<2;pass++){let seen=new Uint8Array(N),queue=new Int32Array(N),links=[];for(let i=0;i<N;i++)if(g[i]&&!seen[i]){let hd=0,tl=1,rooted=false;seen[i]=1;queue[0]=i;while(hd<tl){let p=queue[hd++],x=p%W,y=p/W|0;if(!x||x===W-1||!y||y===H-1)rooted=true;for(let j of [p-W,p+W,x?p-1:-1,x<W-1?p+1:-1])if(j>=0&&j<N&&g[j]&&!seen[j]){seen[j]=1;queue[tl++]=j;}}if(!rooted)links.push(i);}for(let p of links){let x=p%W,y=p/W|0;L(x,y,x,1010,5,M.grate);tieCount++;}if(!links.length)break;}
  const sites={
- "West arrival sky":[94,548],"West council deck":[205,544],"West seed ledger":[165,714],"West cold registry":[167,819],
- "First polder air crossing":[444,553],"First dry catchment":[445,839],"Reed purge deck":[627,633],
+ "West arrival sky":[94,548],"West council deck":[205,510],"West seed ledger":[165,714],"West cold registry":[167,819],
+ "First polder air crossing":[444,553],"First dry catchment":[445,839],"Reed purge deck":[640,565],
  "Mycelial sieve":[608,785],"Polder shelf":[814,757],"Second high arch":[862,554],
  "Canopy transit interlock":[947,451],"Canopy bypass apex":[1105,427],
- "Hospice outer deck":[1187,550],"Central examination":[1096,736],
+ "Hospice outer deck":[1187,438],"Central examination":[1096,736],
  "Central lower culture":[1090,829],"Quarantine upper flight":[1491,649],
  "Quarantine decontamination":[1547,814],"Eastern low polder":[1365,760],
- "Third bridge outlet":[1386,609],"West recovery rim":[358,576],
+ "Third bridge outlet":[1386,535],"West recovery rim":[358,576],
  "Far east dispatch":[1912,551],"Far east postal hall":[1941,716],
  "Far east secondary sampling":[1927,817],"East expansion horizon":[1734,520],
  "Underbridge salvage site":[1699,775],"Middle dry bypass":[902,437]
