@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "programme": "PORTRAIT-001",
+  "creator": "B",
+  "difficulty": "MODERATE",
+  "source": {
+    "repository": "techrote/sandmapsreference",
+    "pr": 135,
+    "head": "a3f9962a0107d07bca1116940fde1c825ac76a4f",
+    "path": "cybersand-canvases/2048x1024/original-industrial-foundry-wide-spindlebreak-fault-cable-smeltery-261121/",
+    "dimensions": [
+      2048,
+      1024
+    ],
+    "material_plane_sha256": "0c4f5136ef437bf27f00227f7cea4312b6fff7ff2aa228c1fdab1689043caf69"
+  },
+  "target": {
+    "dimensions": [
+      1024,
+      2048
+    ],
+    "path": "cybersand-canvases/1024x2048/portrait-moderate-spindlebreak-switchback-trestleworks-261121/",
+    "material_plane_sha256": "30c6668a34341b172d231e4d257175a76b35b314e15dfb468a218d4970c56397",
+    "seed": 202611211531
+  },
+  "base_repository_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "preserved": [
+    "Distinct high cableway and separate lower grounded fault-crossing truss",
+    "Original causal ore→sealed furnace→travelling ladle→unequal casting rollers→quench→freight industry",
+    "Fault-supported uneven terraces, exposed maintenance void and multiple flight/return choices",
+    "Durable dry worker service bays and fully sealed Water/Lava"
+  ],
+  "transformed": [
+    "Source single wide left-right geological fracture becomes alternating bank-to-bank vertical switchback with at least four different levels",
+    "Wide cable line becomes a high diagonal tension loop with an actual engineered Midge-aperture gate",
+    "Deep rooted truss becomes a separate V-braced underpass with its own entirely different flyable portal",
+    "Industrial left-to-right logistics transformed to upper-left ore and furnace, right-suspended ladle, left-lower rollers, right quench, left-bottom dispatch"
+  ],
+  "discarded": [
+    "Original 2048×1024 terrain coordinates, distinctive horizontal span proportions and exact material-cell placements",
+    "Original east-freight position and original horizontal direct/obstructed Midge route",
+    "Source original cable and lower bridge coordinates and shot framing"
+  ],
+  "newly_introduced": [
+    "Four-stage bank-alternating folded sequence retaining two distinct structural crossings",
+    "Two Midge-scale genuinely open pass-through engineered cable/truss portals",
+    "Downshifted three-roller caster galleries and lower right sealed quench plant",
+    "Clear spare expansion sites at interrupted-cable crossing, lower truss, caster bay and freight undercroft"
+  ],
+  "preservation_scale": "1:1 physical cell size and conservative Midge geometry; no rotation, crop, stretch, source-image or source-grid-cell transplant",
+  "navigation": {
+    "hulls": [
+      [
+        19,
+        15
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        31,
+        27
+      ]
+    ],
+    "named_sites": 21,
+    "obstruction_xywh": [
+      440,
+      1010,
+      125,
+      67
+    ],
+    "direct_steps": 187,
+    "obstructed_steps": 337,
+    "all_literal_sites_reachable": true,
+    "return_available": true
+  },
+  "qualification": "SOURCE-STATIC-PASS; NATIVE-UNTESTED",
+  "acceptance": "OPEN DRAFT/HOLD; independent Art/Technical/Shepherd and dynamic native operation remain"
+}
