@@ -82,6 +82,11 @@ function build(){
  // Deliberate vacant assembly/breach sockets - incomplete by design.
  for(let [x,y,w] of [[421,402,91],[885,557,113],[1232,701,116],[1612,790,109]]) {
  R(x,y,w,7,M.steel);R(x+8,y-12,16,12,M.amber);}
+ // Re-open all full-hull vertical contacts into the dry trunk AFTER assembly placement.
+ // These are explicitly entered service clearances, not cosmetic teleports.
+ R(30,917,1988,52,0);
+ for(let v of [[296,831,88,140],[680,833,93,138],[1003,830,110,141],
+ [1205,828,94,141],[1520,825,95,146],[1852,822,91,147]])R(...v,0);
  let tieCount=0;
  function tie(){
   let mark=new Int32Array(N),q=new Int32Array(N),parts=[{edge:true}],edges=new Map();
@@ -101,15 +106,15 @@ function build(){
 
  const reconciled=tie();
  const sites={
- "West arrival sky":[71,270],"Seed ledger upper":[175,469],"Registry lower archive":[204,615],
- "West crown grade":[458,389],"Second stave assay":[561,506],"Second filter chamber":[588,614],
+ "West arrival sky":[71,270],"Seed ledger upper":[175,469],"Registry lower archive":[204,599],
+ "West crown grade":[458,362],"Second stave assay":[659,581],"Second filter chamber":[718,589],
  "Dry upper filter return":[733,789],"Stave assembly rim":[798,546],
  "High fungal spool site":[1108,320],"Transfer canopy upper":[1050,293],
- "Transfer loom lower":[974,722],"Underloom exchange":[1093,832],
- "Sterile side-hatch":[1249,711],"Quarantine flight":[1396,744],
- "Quarantine chamber":[1442,875],"Waste return west":[251,940],
- "Waste return east":[1634,941],"Fourth cascade lip":[1693,813],
- "Outfall survey sky":[1870,742],"Outfall hall":[1889,920],
+ "Transfer loom lower":[1054,683],"Underloom exchange":[1093,832],
+ "Sterile side-hatch":[1250,740],"Quarantine flight":[1420,682],
+ "Quarantine chamber":[1384,852],"Waste return west":[251,940],
+ "Waste return east":[1634,941],"Fourth cascade lip":[1720,739],
+ "Outfall survey sky":[1870,742],"Outfall hall":[1889,940],
  "Eastern recovery":[1940,732],"Canopy release vista":[1165,257],
  "Distant dry intake":[121,254],"Damaged reed-hauler":[807,450],
  "Midpass bypass":[1192,938],"Downhill post":[1585,721],
