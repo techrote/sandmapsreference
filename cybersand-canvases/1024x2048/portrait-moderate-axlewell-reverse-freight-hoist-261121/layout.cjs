@@ -101,6 +101,7 @@ function layoutWorld(){
 b(490,1321,101,101,0);b(419,1431,57,128,0);
 b(618,1461,74,129,0);b(489,1630,102,73,0);
 b(418,1690,66,228,0);
+b(390,1821,37,102,0); // Entered >31-cell freight exit doorway through the final right-classifier post.
 // Exact authored site envelopes: no nearest-site shifting or collision waivers.
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
  // Delete inert fragments without a rooted 4-neighbour load path; report removed count.
