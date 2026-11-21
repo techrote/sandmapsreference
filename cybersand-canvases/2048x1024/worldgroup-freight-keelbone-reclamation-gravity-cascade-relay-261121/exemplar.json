@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "lane": "worldgroup-freight",
+  "family": "Keelbone Reclamation Vaults",
+  "map_role": "Sibling 05 — gravity-powered descending classification cascade, counterweight transfer, inhabited assay and return",
+  "anchor_donors": [
+    {
+      "name": "wide-graven-keel-ship-tipper",
+      "pr": 45,
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f"
+    },
+    {
+      "name": "wide-peregrine-cleft-halcyon-drydock",
+      "pr": 33,
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5"
+    }
+  ],
+  "macro_topology": "One-way stepped gravity cargo cascade falling through four unequal grounded work terraces, with a discontinuous high inspection cable, a counterweight hoist at east and independent lower-return openings",
+  "density_profile": "Unequal dense western intake and east crew quarters enclose four irregularly spaced, progressively lower sparse transfer machines; expansive high negative space is intentional",
+  "route_grammar": {
+    "main": "West arrivals → intake apron → first gravity sorter → second classifier → third assay ledge → fourth consolidation → counterweight receiver → east cargo registration/export",
+    "alternate": "Climb above western roof, use two disconnected highline sections through a 106-wide roof aperture, then pass the eastern reclaimer above its counterweight",
+    "recovery": "Three distinct shaft-mouth landings in an open-founded lower maintenance bypass at x≈281, x≈936 and x≈1791; all 22 literal checkpoints at 31x27 are connected",
+    "obstruction": "A real 101×123 material obstruction [983,334,101,123] raises highline west→east conservative 31x27 cardinal distance from 670 to 794 while retaining all 22 sites"
+  },
+  "strong_motifs": [
+    "Four non-identical sequential stepped gravity chutes and receiving lips",
+    "Split, founded upper inspection cable with a navigable intentional clearance aperture",
+    "Counterweight circular relay attached to twin machine legs",
+    "West hull clamp and repaired roofed 59-cell side-entered east assay/custody room with receiver-to-staffed-counter threshold",
+    "Small steel transfer trays against dark exposed air and large geological rooted plinths"
+  ],
+  "interesting_relationships": [
+    "Cargo descends in physically adjacent tier-to-tier delivery chutes, not a duplicated horizontal manufacturing row",
+    "High cable is discontinuous specifically to avoid making a sealed 2D gameplay enclosure",
+    "Main cargo flights and 3 lower relief approaches rejoin after real wall/roof apertures",
+    "Inhabited east freight house uses founded roof and actual lift side opening",
+    "No scripted machinery, NPC spawning or fluid chemistry is falsely implied",
+    "R2 Art-P1 physical east receiver lip at (1750,681) precedes an entered roofed assay/custody station (1854..1998,557..821), without blocking lower relief."
+  ],
+  "authoring_affordances": [
+    "Open 500-plus-cell upper sky for manual machine/bridge extensions",
+    "Unfitted freight stock pads below first and third chutes",
+    "106-cell cable break designed for future GENTEK attachment or collapse",
+    "Partially finished eastern freight annex and repair benches"
+  ],
+  "setpiece_candidates": [
+    "First-to-second gravity chute release or obstruction",
+    "Cable-gap crossing with optional bridge-failure event",
+    "Counterweight relay activation / reversal",
+    "Inhabited assay freight-lift rendezvous and emergency export"
+  ],
+  "procedural_exemplar_value": "Tests four unequal successive gravity drops, nonrepeated altitude grammar, physically grounded diagonal load transitions and a high bypass that remains fully traversable at 31x27. Useful as SWARM/GENTEK gravity-chain and cable-aperture source geometry.",
+  "similarity_avoidance": "Unlike Keelbone 01/02 opposed basalt excavations, Keelbone 03 continuous repeated roof factories and Keelbone 04 central rotor/reclamation courts, this composition teaches progressive altitude loss, sparse-wide intervals and a gated noncontinuous high cable; not merely another material palette.",
+  "diversity_axes": {
+    "macro_topology": "cascade",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "layered",
+    "landmark_family": "cableway",
+    "support_form": "multi_leg",
+    "environment_relation": "geological",
+    "incompleteness": "editable_gaps"
+  }
+}
