@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "reconciled_utc_date": "2026-11-21",
+  "authority": "GitHub child PRs #202–#208 and independent exact-HEAD comments",
+  "immutable_baseline_count": 38,
+  "art_reviewed_feature_after_states": 19,
+  "original_creator_candidates": 25,
+  "gate": "Zero of seven current child HEADs have combined independent Art+Technical admission; all HOLD, NATIVE-UNTESTED.",
+  "children": [
+    {
+      "repair_pr": 202,
+      "parent_portrait_pr": 185,
+      "exact_current_head": "d139f2a2868daa4b09d5e39c71d3638190dda705",
+      "art_current_head": "PASS",
+      "technical_current_head": "PENDING",
+      "art_review_url": "https://github.com/techrote/sandmapsreference/pull/202#issuecomment-7070529467",
+      "canonical_art_reviewed_states": 3,
+      "prior_reviewed_heads": [],
+      "native": "NATIVE-UNTESTED"
+    },
+    {
+      "repair_pr": 203,
+      "parent_portrait_pr": 186,
+      "exact_current_head": "922a27926ea7338e9a1ce09fc64222b1094a9737",
+      "art_current_head": "PENDING_NEW_HEAD",
+      "technical_current_head": "PENDING_NEW_HEAD",
+      "art_review_url": null,
+      "canonical_art_reviewed_states": 0,
+      "prior_reviewed_heads": [
+        {
+          "head": "10b045c8de8d4037d02ab998adc2b215ef4c2e23",
+          "finding": "Art REWORK",
+          "url": "https://github.com/techrote/sandmapsreference/pull/203#issuecomment-7069837914",
+          "other_finding": "Technical SOURCE-STATIC PASS",
+          "other_url": "https://github.com/techrote/sandmapsreference/pull/203#issuecomment-7069885834"
+        }
+      ],
+      "native": "NATIVE-UNTESTED"
+    },
+    {
+      "repair_pr": 204,
+      "parent_portrait_pr": 188,
+      "exact_current_head": "111ed0aac2860626bfccce47f61215d0e6b927ad",
+      "art_current_head": "REWORK",
+      "technical_current_head": "PENDING_METADATA_DELTA",
+      "art_review_url": "https://github.com/techrote/sandmapsreference/pull/204#issuecomment-7070529801",
+      "canonical_art_reviewed_states": 3,
+      "prior_reviewed_heads": [
+        {
+          "head": "0c34e8569a9db1428bd33f03392b33e5bc4ebbab",
+          "finding": "Technical REWORK (metadata/evidence-only)",
+          "url": "https://github.com/techrote/sandmapsreference/pull/204#issuecomment-7069888479",
+          "other_finding": null,
+          "other_url": null
+        }
+      ],
+      "native": "NATIVE-UNTESTED"
+    },
+    {
+      "repair_pr": 205,
+      "parent_portrait_pr": 190,
+      "exact_current_head": "16bfa32b8b45dea015b723d72919041773f50ea2",
+      "art_current_head": "PENDING_NEW_HEAD",
+      "technical_current_head": "PENDING_NEW_HEAD",
+      "art_review_url": null,
+      "canonical_art_reviewed_states": 0,
+      "prior_reviewed_heads": [
+        {
+          "head": "6e670da369b6ac856b821dbebb929ab27a2a126a",
+          "finding": "Art REWORK",
+          "url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453",
+          "other_finding": null,
+          "other_url": null
+        }
+      ],
+      "native": "NATIVE-UNTESTED"
+    },
+    {
+      "repair_pr": 206,
+      "parent_portrait_pr": 191,
+      "exact_current_head": "88e6364bd50d1cb1ee017d2c74b5b1e3eef9a8b5",
+      "art_current_head": "PASS",
+      "technical_current_head": "PENDING",
+      "art_review_url": "https://github.com/techrote/sandmapsreference/pull/206#issuecomment-7070530096",
+      "canonical_art_reviewed_states": 4,
+      "prior_reviewed_heads": [],
+      "native": "NATIVE-UNTESTED"
+    },
+    {
+      "repair_pr": 207,
+      "parent_portrait_pr": 192,
+      "exact_current_head": "510bd91cacb4f1d777aff236d8ab3e8c51de192b",
+      "art_current_head": "REWORK",
+      "technical_current_head": "PENDING",
+      "art_review_url": "https://github.com/techrote/sandmapsreference/pull/207#issuecomment-7070530443",
+      "canonical_art_reviewed_states": 4,
+      "prior_reviewed_heads": [
+        {
+          "head": "077777751d8757b127e95e028404b1cb2067f2b0",
+          "finding": "Art REWORK",
+          "url": "https://github.com/techrote/sandmapsreference/pull/207#issuecomment-7069842512",
+          "other_finding": null,
+          "other_url": null
+        }
+      ],
+      "native": "NATIVE-UNTESTED"
+    },
+    {
+      "repair_pr": 208,
+      "parent_portrait_pr": 196,
+      "exact_current_head": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+      "art_current_head": "PASS",
+      "technical_current_head": "PENDING",
+      "art_review_url": "https://github.com/techrote/sandmapsreference/pull/208#issuecomment-7069843190",
+      "canonical_art_reviewed_states": 5,
+      "prior_reviewed_heads": [],
+      "native": "NATIVE-UNTESTED"
+    }
+  ]
+}
