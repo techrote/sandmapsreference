@@ -99,6 +99,9 @@ function build(){
   return {raw_components:parts.length-1,ties:joins,max_span};
  }
 
+ // Far outfall is a three-floor *entered* worktown, not an unreachable decorative facade.
+ // One independent sky hatch, transverse hall door, and stairwell-scale lower slot.
+ for(let [x,y,w,h] of [[1805,494,67,206],[1849,666,87,105],[1892,743,73,112]])R(x,y,w,h,0);
  const reconciled=tie();
  const sites={
  "West arrival sky":[94,548],"West council deck":[205,510],"West seed ledger":[165,714],"West cold registry":[167,819],
