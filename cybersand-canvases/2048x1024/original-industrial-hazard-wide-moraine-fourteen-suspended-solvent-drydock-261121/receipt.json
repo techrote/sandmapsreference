@@ -9,24 +9,24 @@
     1024
   ],
   "final_material_cells": 2097152,
-  "material_sha256": "8830a8dbc55115bd57122c0301ad8ca5b5e72944b65c116e30fe1845fba8e1a6",
-  "setup_sha256": "11eba3583eed8251a1ad0de5164449fc3e535771804fa5920b711c5d06e48b52",
-  "setup_bytes": 35093,
-  "rectangle_count": 1786,
-  "work_cells": 973840,
+  "material_sha256": "d381b254ee9f5c16ee704d8dc8c6b514df4267989d0bd940481e4884b624c7a5",
+  "setup_sha256": "144774127919808eb028d8cf8b81ce7387c612ce5d02457757fe583ca140f05f",
+  "setup_bytes": 40162,
+  "rectangle_count": 2051,
+  "work_cells": 981508,
   "histogram": {
-    "0": 1123312,
+    "0": 1115644,
     "3": 7933,
     "8": 4405,
-    "58": 200290,
-    "100": 450176,
+    "58": 202671,
+    "100": 450279,
     "101": 211391,
-    "117": 98128,
+    "117": 103312,
     "120": 1517
   },
   "structural": {
-    "total": 961502,
-    "grounded": 961502,
+    "total": 969170,
+    "grounded": 969170,
     "detached": 0
   },
   "initial_fluid_cells": 12338,
@@ -126,15 +126,15 @@
   "clearance": {
     "19x15": {
       "reached": 18,
-      "centres": 739431
+      "centres": 734765
     },
     "23x19": {
       "reached": 18,
-      "centres": 688002
+      "centres": 682985
     },
     "31x27": {
       "reached": 18,
-      "centres": 558831
+      "centres": 553287
     }
   },
   "obstruction": {
@@ -144,7 +144,7 @@
       65,
       92
     ],
-    "forced_detours": 9,
+    "forced_detours": 10,
     "added_steps_at_31x27": {
       "Arrival": 0,
       "Feed upper": 0,
@@ -156,7 +156,7 @@
       "Suspension crown": 0,
       "Hull transfer": 70,
       "Drydock underside": 70,
-      "Keel approach": 0,
+      "Keel approach": 30,
       "Quench upper": 70,
       "Quench sample": 70,
       "Quench recovery": 70,
@@ -179,8 +179,8 @@
   },
   "images": {
     "overview.png": {
-      "bytes": 25668,
-      "sha256": "1b62a7b2d2545f098ad3efac6c9b90b3db7b40349ffd6372157f49f3ef34852b",
+      "bytes": 26688,
+      "sha256": "03c59b32134b9ec5e3777ef88fb2e4812c0032b68e461f15de0e12368ae09b1f",
       "crop": [
         0,
         0,
@@ -209,8 +209,8 @@
       ]
     },
     "03-suspended-hull.png": {
-      "bytes": 5845,
-      "sha256": "f054d52eb33cb9b7a4976d00269ca221d712ab82d713e4482da8ce8f90dc0659",
+      "bytes": 6910,
+      "sha256": "257bf3fa247b1ff74581bdfd59ecc0aec75fd620d1d7f02769e4c79bdca01517",
       "crop": [
         826,
         314,
@@ -239,8 +239,8 @@
       ]
     },
     "06-drydock-pit.png": {
-      "bytes": 3255,
-      "sha256": "205983339194963b5a33dcc43245cf54990edc69894215d365e489f8868dd3cb",
+      "bytes": 3269,
+      "sha256": "6127c2731b0a32890451fce87fae8d2df90684744d6aea0c11be259e1c6428f0",
       "crop": [
         745,
         587,

@@ -61,6 +61,25 @@ function build(){
  rect(855,696,108,13,117);rect(1249,689,116,14,117);
  line(885,690,944,648,12,58);line(1270,688,1338,646,12,58);
  rect(942,691,12,71,58);rect(1271,689,12,72,58);
+ // R2 independent Art P1: repair central salvage hull legibility beneath the hoist.
+ // A long tapered, damaged hull with an entered rib/hold and actual pickup anchors.
+ line(920,489,950,537,10,117);line(940,549,1015,588,14,58);
+ line(1015,588,1171,587,15,58);line(1171,587,1254,554,14,58);
+ line(1254,554,1310,493,12,117);line(1310,493,1267,477,11,117);
+ line(1267,477,1208,491,11,58);line(1208,491,1168,508,10,58);
+ rect(1002,532,166,12,117);
+ rect(1018,544,13,42,58);rect(1156,544,14,42,58);
+ rect(1031,550,125,11,58);rect(1034,562,114,5,117);
+ // Enterable open hold: unlike previous disconnected U/keel fragment.
+ rect(1045,499,10,51,117);rect(1138,508,10,42,117);
+ line(1048,503,1065,480,8,58);line(1142,509,1165,488,8,117);
+ rect(1065,480,73,10,117);
+ // Opposed hangers pick up the hull and tie into existing grounded roof structure.
+ line(1109,448,1100,484,10,58);line(1100,484,1080,499,10,117);
+ line(1269,411,1240,482,9,58);line(1240,482,1208,499,10,117);
+ line(935,519,921,532,9,58);line(925,536,944,556,10,58);
+ rect(950,555,31,8,117);line(1274,524,1290,516,7,117);
+ rect(1178,568,31,7,117);
  // D: three physically isolated quench samples and equipment bypass.
  rect(1356,464,20,403,58);rect(1667,461,18,418,58);
  line(1370,457,1474,389,13,117);line(1474,389,1671,469,12,117);

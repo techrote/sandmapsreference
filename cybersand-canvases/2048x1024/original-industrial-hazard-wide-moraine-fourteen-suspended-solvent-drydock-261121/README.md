@@ -4,6 +4,10 @@
 
 **Design thesis:** An overhead, boundary-rooted industrial gantry loads an inverted suspended salvage hull above a deliberately open drydock basin. Unequal ground-rooted workfaces, overhead drops, two solvent columns, sealed quench samples, lower salvage annexes and a distinct outbound gasometer make a new industrial *support and altitude grammar*, rather than another line of furnished compartments. Side elevation is orthographic, without perspective floor tops. Nothing here reuses a source/reference image or geometry from an earlier map.
 
+## R2 independent Art P1 repair (21 November 2026)
+
+The central drydock hoist now lifts a recognizable tapered, damaged ship-hull profile rather than an ambiguous small keel cradle. The new physically attached load pickup, asymmetric broken stern and pointed bow, visible ribs, and entered inspection hold are authored as actual inert material cells. Existing main, high, and low flight routes, six wells, open drydock bay and isolated fluids remain intact. This is a static design repair, **not** a simulated hoisting mechanism or native playtest. Reproduced setup, gallery, receipt and hashes below correspond to R2 and require fresh independent Art/Tech/Shepherd review.
+
 ## Functional districts and actual flight sites
 
 1. **Incoming reagent / weighbridge** — dry arrival, receiving hopper, inspection and lower recovery.
@@ -19,15 +23,15 @@ There are **18 literal named checkpoints** and six access wells connecting a hig
 | Measure | Exact creator result |
 |---|---:|
 | Source extent | 2048 × 1024 = **2,097,152 final material IDs** |
-| Setup-v2 ordered, nonoverlapping rectangles | **1,786** |
-| Exact Setup JSON bytes | **35,093** |
-| Source-grid SHA256 | `8830a8dbc55115bd57122c0301ad8ca5b5e72944b65c116e30fe1845fba8e1a6` |
-| Setup JSON SHA256 | `11eba3583eed8251a1ad0de5164449fc3e535771804fa5920b711c5d06e48b52` |
-| Boundary-rooted inert structural cells | **961,502 / 961,502**, zero detached |
+| Setup-v2 ordered, nonoverlapping rectangles | **2051** |
+| Exact Setup JSON bytes | **40162** |
+| Source-grid SHA256 | `d381b254ee9f5c16ee704d8dc8c6b514df4267989d0bd940481e4884b624c7a5` |
+| Setup JSON SHA256 | `144774127919808eb028d8cf8b81ce7387c612ce5d02457757fe583ca140f05f` |
+| Boundary-rooted inert structural cells | **969170 / 969170**, zero detached |
 | Initially sealed Water/Lava cells | **12,338**, zero cardinal air/mixed-fluid contacts |
 | Exact checkpoint clearance/reachability | **18/18** with **19×15, 23×19, 31×27** masks |
 | Real obstruction | `[845,607,65,92]` |
-| Obstruction recovery | **18/18** retained; nine 31×27 forced detours, **+70** centre steps each |
+| Obstruction recovery | **18/18** retained; ten forced 31×27 detours, **+30 to +70** centre steps |
 | PNG gallery | One genuine full-grid indexed-material overview + six genuine native-resolution 1:1 crops |
 
 Deterministic fixed seed: `2026112106`. Reproduction: run `node build.cjs --write` inside this folder; `node build.cjs --verify` byte-compares source-generated Setup, receipt and PNGs against committed bytes. `receipt.json` contains source-grid/Setup/PNG SHA256, per-material histogram, used/written cell counts, exhaustive ordered replay identity, literal site list, BFS clearance and obstruction receipts. Images are **indexed original material IDs**, not AI illustrations or claimed native screenshots.
