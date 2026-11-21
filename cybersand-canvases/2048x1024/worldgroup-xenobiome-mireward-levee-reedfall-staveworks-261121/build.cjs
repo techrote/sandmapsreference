@@ -107,11 +107,11 @@ function build(){
  const reconciled=tie();
  const sites={
  "West arrival sky":[71,270],"Seed ledger upper":[175,469],"Registry lower archive":[204,599],
- "West crown grade":[458,362],"Second stave assay":[659,581],"Second filter chamber":[718,589],
+ "West crown grade":[458,362],"Second stave assay":[705,596],"Second filter chamber":[718,589],
  "Dry upper filter return":[733,789],"Stave assembly rim":[798,546],
  "High fungal spool site":[1108,320],"Transfer canopy upper":[1050,293],
- "Transfer loom lower":[1054,683],"Underloom exchange":[1093,832],
- "Sterile side-hatch":[1250,740],"Quarantine flight":[1420,682],
+ "Transfer loom lower":[1074,711],"Underloom exchange":[1093,832],
+ "Sterile side-hatch":[1240,663],"Quarantine flight":[1420,682],
  "Quarantine chamber":[1384,852],"Waste return west":[251,940],
  "Waste return east":[1634,941],"Fourth cascade lip":[1720,739],
  "Outfall survey sky":[1870,742],"Outfall hall":[1889,940],
