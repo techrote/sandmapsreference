@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "snapshot_utc_date": "2026-11-21",
+  "scope": "Independent source-static Technical receipts joined to exact child SHA; NEVER native acceptance or owner signoff",
+  "records": [
+    {
+      "pr": 202,
+      "head": "d139f2a2868daa4b09d5e39c71d3638190dda705",
+      "url": "https://github.com/techrote/sandmapsreference/pull/202#issuecomment-7070611840",
+      "rectangles": 1120,
+      "rooted_solids": 667101,
+      "sites": 18,
+      "liquid": "1092 Water and 999 Lava, independently sealed",
+      "route": "West mid interlock to East mid assay 31x27 obstacle 214 -> 356 steps; not a bridge traversal",
+      "png": "03-mid-assay.png binary hash matched receipt (not independently decoded full pixel parity)",
+      "note": "Independent material replay, grounded solids, 19x15/23x19/31x27 four-neighbour literal sites and blocker PASS; Art PASS independently.",
+      "technical_verdict": "SOURCE_STATIC_PASS",
+      "native_status": "NATIVE-UNTESTED",
+      "reviewed_feature_states": [
+        "P185-CROSSBANK-ASSAY@d139f2a2868daa4b09d5e39c71d3638190dda705",
+        "P185-OFFSET-RING-HIERARCHY@d139f2a2868daa4b09d5e39c71d3638190dda705",
+        "P185-LOWER-EDITABLE-ATRIUM@d139f2a2868daa4b09d5e39c71d3638190dda705"
+      ],
+      "limits": "Source-static Setup replay and route proofs only. No executed source-matched Godot/bridge/Rapier movement, collision, hazard dynamics or cold save/reopen. Image binary identity != all pixel parity; Node generator re-execution and exact-head CI not demonstrated."
+    },
+    {
+      "pr": 204,
+      "head": "111ed0aac2860626bfccce47f61215d0e6b927ad",
+      "url": "https://github.com/techrote/sandmapsreference/pull/204#issuecomment-7070614419",
+      "rectangles": 582,
+      "rooted_solids": 1004652,
+      "sites": 22,
+      "liquid": "zero initial fluids",
+      "route": "Block: unrestricted 2146-step shortest skips sterile portals; optional ordered 2252-step route via (772,856),(773,1000),(772,1237) is independently verified",
+      "png": "08-eastern-bladders.png binary hash matched receipt (not independently decoded full parity)",
+      "note": "Prior Technical P1 fixed: route_graph spawn is Canopy arrival, optional vs forced claims accurately separated; Art remains REWORK.",
+      "technical_verdict": "SOURCE_STATIC_PASS",
+      "native_status": "NATIVE-UNTESTED",
+      "reviewed_feature_states": [
+        "P188-HANGING-CULTURE-FAMILIES@111ed0aac2860626bfccce47f61215d0e6b927ad",
+        "P188-STERILE-SIDE-RETURN@111ed0aac2860626bfccce47f61215d0e6b927ad",
+        "P188-LOWER-CIVIC-VOID@111ed0aac2860626bfccce47f61215d0e6b927ad"
+      ],
+      "limits": "Source-static Setup replay and route proofs only. No executed source-matched Godot/bridge/Rapier movement, collision, hazard dynamics or cold save/reopen. Image binary identity != all pixel parity; Node generator re-execution and exact-head CI not demonstrated."
+    },
+    {
+      "pr": 208,
+      "head": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+      "url": "https://github.com/techrote/sandmapsreference/pull/208#issuecomment-7070609209",
+      "rectangles": 1256,
+      "rooted_solids": 552475,
+      "sites": 24,
+      "liquid": "zero initial fluids",
+      "route": "Lift Seam -> Upper Return 31x27 obstruction 358 -> 500 steps",
+      "png": "overview.png exact committed binary SHA-256 matches receipt; no independent full decoded pixel parity",
+      "note": "Independent 24 literal site tests at three hull sizes and blocker; Art PASS independently.",
+      "technical_verdict": "SOURCE_STATIC_PASS",
+      "native_status": "NATIVE-UNTESTED",
+      "reviewed_feature_states": [
+        "P196-SALVAGE-MAGNET-HANDOFF@94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+        "P196-PRESS-COMPRESSION-CELL@94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+        "P196-BROKEN-TRESTLE-PAIRS@94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+        "P196-BREACHED-ENTERED-FREIGHTER@94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+        "P196-LOWER-WEST-RESERVE@94eccd23024254fbbfb02cd6cdfef8753dd89c3c"
+      ],
+      "limits": "Source-static Setup replay and route proofs only. No executed source-matched Godot/bridge/Rapier movement, collision, hazard dynamics or cold save/reopen. Image binary identity != all pixel parity; Node generator re-execution and exact-head CI not demonstrated."
+    }
+  ]
+}
