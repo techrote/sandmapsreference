@@ -1,9 +1,8 @@
+# One-time bounded push proof completed in run 44926405122.
+# Automatic trigger deliberately deactivated for Draft/HOLD handoff.
 name: Native admission final source proof
 
 on:
-  push:
-    branches: [codex/canvas-native-ci-001-proof]
-    paths: [.github/native-admission/final-proof.json]
   workflow_dispatch:
 
 permissions: {}

@@ -1,9 +1,8 @@
+# One-time independent consumer proof completed in run 44926691939.
+# Automatic trigger deliberately deactivated for Draft/HOLD handoff.
 name: Native admission final consumer proof
 
 on:
-  push:
-    branches: [codex/canvas-native-ci-001-proof]
-    paths: [.github/native-admission/final-consumer-proof.json]
   workflow_dispatch:
 
 permissions:
