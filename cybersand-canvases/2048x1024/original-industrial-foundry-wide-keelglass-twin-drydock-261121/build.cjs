@@ -15,7 +15,7 @@ function world(){
  const ring=(cx,cy,rx,ry,t,m)=>{for(let yy=-ry;yy<=ry;yy++){let outer=Math.floor(rx*Math.sqrt(Math.max(0,1-yy*yy/(ry*ry)))),inner=(ry>t&&Math.abs(yy)<ry-t)?Math.floor((rx-t)*Math.sqrt(Math.max(0,1-yy*yy/((ry-t)*(ry-t))))):-1;if(outer>inner){b(cx-outer,cy+yy,outer-inner,1,m);b(cx+inner+1,cy+yy,outer-inner,1,m);}}};
  let s=seed;const rand=()=>{s^=s<<13;s^=s>>>17;s^=s<<5;return(s>>>0)/4294967296;};
  // Three distinct structural levels: atmospheric cantilever, dock gantries, excavated twin keel cradles.
- b(0,948,W,76,100); b(0,853,W,95,100);
+ b(0,0,W,24,100); b(0,948,W,76,100); b(0,853,W,95,100);
  for(let x=0;x<W;){let width=Math.min(60+Math.floor(rand()*95),W-x);b(x,820,width,33,100);b(x,815,width,5,58);x+=width;}
  // Excavation first: drydock A has a deep open service well, B has a different displaced sill.
  b(490,775,496,217,0);b(505,791,468,199,0);
@@ -105,10 +105,28 @@ function world(){
  // Clear only authentic destination envelopes, not arbitrary moved targets.
  for(const p of sites)b(p.x-17,p.y-15,35,31,0);
  // Re-root isolated fragments only when necessary, preserving destination cells.
- for(let pass=0;pass<2;pass++){let cs=components();if(!cs.length)break;for(const c of cs){let at=c[0];for(let k=0;k<c.length;k+=Math.max(1,Math.floor(c.length/500))){let p=c[k];if((p/W|0)>(at/W|0))at=p;}let x=at%W,y=(at/W)|0;b(x,y,2,H-y,68);}}
+ // Delay final component rooting until the clear over-dock flyway and literal landing footprints are secured.
  // Preserve exact actor endpoints, then reconnect only truly isolated remnants away from every endpoint.
  for(const p of sites)b(p.x-17,p.y-15,35,31,0);
- for(let pass=0;pass<3;pass++){let cs=components();if(!cs.length)break;for(const c of cs){let at=-1,best=-1;for(let k=0;k<c.length;k+=Math.max(1,Math.floor(c.length/1400))){let i=c[k],x=i%W,y=(i/W)|0;if(sites.some(p=>Math.abs(p.x-x)<55))continue;if(y>best){best=y;at=i;}}if(at<0)at=c[c.length-1];let x=at%W,y=(at/W)|0;b(x,y,2,H-y,68);}}
+ 
+ // Corridor is a real 88-cell-high air void with a separate bypass overhead; do not put load-bearing pillars across it.
+ b(38,650,1972,88,0);
+ for(const p of sites)b(p.x-17,p.y-15,35,31,0);
+ for(let pass=0;pass<4;pass++){
+   const cs=components();if(!cs.length)break;
+   for(const c of cs){
+     let lo=H,hi=0,upper=-1,lower=-1;
+     for(let k=0;k<c.length;k+=Math.max(1,Math.floor(c.length/1000))){
+       const i=c[k],x=i%W,y=(i/W)|0;
+       if(sites.some(p=>Math.abs(p.x-x)<60))continue;
+       if(y<lo){lo=y;upper=i;}if(y>hi){hi=y;lower=i;}
+     }
+     if(upper<0){for(const i of c){let y=i/W|0;if(y<lo){upper=i;lo=y;}if(y>hi){lower=i;hi=y;}}}
+     if(lo<650 && upper>=0){let x=upper%W,y=upper/W|0;b(x,24,2,Math.max(1,y-23),68);}
+     else if(lower>=0){let x=lower%W,y=lower/W|0;b(x,y,2,H-y,68);}
+   }
+ }
+
  return {W,H,g,M,seed,sites,spawn:[95,690]};
 }
 
