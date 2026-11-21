@@ -125,7 +125,7 @@ function buildWorld(){
  // The grade-gap and skyline guarantee both surface and emergency branch/rejoin alternatives.
  const sites=[
  ["West arrival apron",62,755],["Low passenger hall",194,746],
- ["West freight workface",282,755],["West platform lip",354,743],
+ ["West freight workface",282,707],["West platform lip",322,705],
  ["First incline pass",435,685],["Low recovery shaft",528,829],
  ["Freight return machinery",482,899],
  ["Mid transfer landing",638,643],["Terraced passenger hall",740,620],
