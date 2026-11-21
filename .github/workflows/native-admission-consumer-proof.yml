@@ -1,0 +1,18 @@
+name: Native admission final consumer proof
+
+on:
+  push:
+    branches: [codex/canvas-native-ci-001-proof]
+    paths: [.github/native-admission/final-consumer-proof.json]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  consumer:
+    permissions:
+      contents: read
+      actions: read
+    uses: techrote/sandmapsreference/.github/workflows/native-admission-consumer.yml@f034b84484b1204c183149220c8135499827e7fd
