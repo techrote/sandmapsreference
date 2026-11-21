@@ -108,6 +108,38 @@ class ConsumerTests(unittest.TestCase):
         self.assertEqual(result["results"][0]["status"], "NATIVE_PASS_PENDING_HEAD")
         self.assertFalse(result["results"][0]["current"])
 
+    def test_required_implementation_excludes_older_producer_for_same_map_and_runtime(self):
+        fixture = NativeFixture()
+        fixture.execution["implementation_sha"] = "b" * 40
+        fixture.sync()
+        older = fixture.records()[0]
+        fixture.execution["implementation_sha"] = "e" * 40
+        fixture.sync()
+        current = fixture.records()[0]
+        self.assertEqual(older["map"], current["map"])
+        self.assertEqual(older["runtime"], current["runtime"])
+        self.assertEqual(older["execution"]["origin"], current["execution"]["origin"])
+        args = {"expected_dll": current["runtime"]["native_dll_sha256"],
+                "origin": "github-hosted-windows", "implementation_sha": "e" * 40}
+        missing = consumer.consume(ConsumerClient(), [older], [25], **args)
+        self.assertEqual(missing["status"], "NOT_ACCEPTED")
+        self.assertEqual(missing["results"][0]["status"], "MISSING")
+        accepted = consumer.consume(ConsumerClient(), [older, current], [25], **args)
+        self.assertEqual(accepted["status"], "VERIFIED_CURRENT")
+        self.assertEqual(accepted["required_implementation_sha"], "e" * 40)
+        self.assertEqual(accepted["results"][0]["record_ids"], [current["record_id"]])
+        self.assertNotEqual(current["execution"]["workflow_sha"], "e" * 40)
+
+    def test_required_implementation_uses_legacy_caller_only_when_implementation_absent(self):
+        records = NativeFixture().records()
+        args = {"expected_dll": records[0]["runtime"]["native_dll_sha256"],
+                "origin": "github-hosted-windows"}
+        accepted = consumer.consume(ConsumerClient(), records, [25], implementation_sha="d" * 40, **args)
+        self.assertEqual(accepted["status"], "VERIFIED_CURRENT")
+        excluded = consumer.consume(ConsumerClient(), records, [25], implementation_sha="e" * 40, **args)
+        self.assertEqual(excluded["status"], "NOT_ACCEPTED")
+        self.assertEqual(excluded["results"][0]["status"], "MISSING")
+
     def test_wrong_dll_new_engine_or_missing_pr_never_borrow_old_pass(self):
         records = NativeFixture().records()
         client = ConsumerClient()

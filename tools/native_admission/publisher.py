@@ -71,6 +71,7 @@ class Writer:
 
 
 def publish(writer, run: dict, records: list[dict], *, extra_files=None) -> dict:
+    catalog.validate_publication(run, records)
     for retry in range(4):
         ref_exists = True
         try:
@@ -103,6 +104,7 @@ def publish(writer, run: dict, records: list[dict], *, extra_files=None) -> dict
             # may see a newer HEAD/time; it must retain the immutable first record.
             for field in ("run_key", "origin", "run_id", "attempt", "archive_sha256", "artifact", "workflow_sha", "manifest_sha256"):
                 require(old.get(field) == run.get(field), "immutable publication source contradiction")
+            require(old.get("implementation_sha", old.get("workflow_sha")) == run.get("implementation_sha", run.get("workflow_sha")), "immutable implementation source contradiction")
             return {"status": "ALREADY_PUBLISHED", "commit": head, "run_key": run["run_key"],
                     "records": len(old["record_ids"]), "archive_sha256": run["archive_sha256"]}
         updated, changed, did_change = catalog.merge(index, run, records)
@@ -152,7 +154,9 @@ def verified_actions_bundle(client, artifact_id: int, run_id: str, attempt: int,
     api_run = client.get_json(base + "/actions/runs/" + run_id + "/attempts/" + str(attempt))
     require(str(api_run.get("id")) == run_id and api_run.get("run_attempt") == attempt, "wrong workflow attempt")
     require(api_run.get("head_sha") == workflow_sha, "workflow source mismatch")
-    require(api_run.get("path") == ".github/workflows/native-admission-windows.yml", "wrong producer workflow")
+    workflow_path = ".github/workflows/native-admission-windows.yml"
+    proof_path = ".github/workflows/native-admission-proof.yml"
+    require(api_run.get("path") in (workflow_path, proof_path), "wrong producer workflow")
     require(api_run.get("event") in ("push", "workflow_dispatch"), "unexpected qualification trigger")
     artifact = client.get_json(base + "/actions/artifacts/" + str(artifact_id))
     require(artifact.get("id") == artifact_id and artifact.get("expired") is False, "artifact absent/expired")
@@ -174,12 +178,23 @@ def verified_actions_bundle(client, artifact_id: int, run_id: str, attempt: int,
     e = run["execution"]
     require(str(e.get("run_id")) == run_id and e.get("attempt") == attempt, "embedded workflow attempt mismatch")
     require(e.get("workflow_sha") == workflow_sha, "embedded workflow source mismatch")
+    implementation_sha = e.get("implementation_sha", workflow_sha)
+    if api_run["path"] == workflow_path:
+        require(implementation_sha == workflow_sha, "direct workflow implementation mismatch")
+    else:
+        require(api_run.get("head_branch") == "codex/canvas-native-ci-001-proof", "wrong one-time proof branch")
+        matches = [w for w in api_run.get("referenced_workflows", [])
+                   if str(w.get("path", "")).split("@", 1)[0] == f"{REPOSITORY}/{workflow_path}"]
+        require(len(matches) == 1 and matches[0].get("path") == f"{REPOSITORY}/{workflow_path}@{implementation_sha}" and
+                matches[0].get("sha") == implementation_sha, "reusable workflow is not bound to exact implementation source")
     jobs = client.get_json(base + "/actions/runs/" + run_id + "/attempts/" + str(attempt) + "/jobs?per_page=100")
     require(jobs.get("total_count", 0) <= 100, "job inventory truncated")
     matching = [j for j in jobs.get("jobs", []) if str(j.get("id")) == str(e.get("job_id"))]
     require(len(matching) == 1, "qualification job missing")
     job = matching[0]
-    require(job.get("name") == "Windows native qualification" and job.get("status") == "completed", "qualification job incomplete")
+    job_name = job.get("name", "")
+    require((job_name == "Windows native qualification" or job_name.endswith(" / Windows native qualification")) and
+            job_name == e.get("job_name") and job.get("status") == "completed", "qualification job incomplete")
     require("windows-2022" in job.get("labels", []) and "self-hosted" not in job.get("labels", []), "unapproved runner")
     require(job.get("conclusion") in ("success", "failure"), "cancelled qualification cannot publish")
     # Verify source artifact provenance independently of the unprivileged runner's claims.
@@ -228,7 +243,7 @@ def verified_actions_bundle(client, artifact_id: int, run_id: str, attempt: int,
     publication = {"schema": "cybersand-native-publication-v1", "run_key": run_key,
                    "origin": "github-hosted-windows", "run_id": run_id, "attempt": attempt,
                    "archive_sha256": sha256(archive), "artifact": artifact_info,
-                   "workflow_sha": workflow_sha, "record_ids": [r["record_id"] for r in records],
+                   "workflow_sha": workflow_sha, "implementation_sha": implementation_sha, "record_ids": [r["record_id"] for r in records],
                    "manifest_sha256": sha256(files["manifest.json"]), "validation": "VERIFIED"}
     return publication, records
 

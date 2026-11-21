@@ -134,10 +134,16 @@ class NativeFixture:
 
 
 def publication(records, run_id="1234", archive_sha=None):
-    return {"schema": "cybersand-native-publication-v1", "run_key": "test-" + run_id,
+    result = {"schema": "cybersand-native-publication-v1", "run_key": "test-" + run_id,
             "origin": records[0]["execution"]["origin"], "run_id": run_id, "attempt": 1,
             "archive_sha256": archive_sha or records[0]["evidence"]["archive_sha256"],
             "record_ids": [r["record_id"] for r in records], "validation": "VERIFIED"}
+    execution = records[0]["execution"]
+    if execution["origin"] == "github-hosted-windows":
+        result["workflow_sha"] = execution["workflow_sha"]
+        if "implementation_sha" in execution:
+            result["implementation_sha"] = execution["implementation_sha"]
+    return result
 
 
 class EvidenceTests(unittest.TestCase):

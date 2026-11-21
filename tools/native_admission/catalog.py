@@ -34,9 +34,7 @@ def validate_index(index: dict) -> dict:
     return index
 
 
-def merge(index: dict, run: dict, records: list[dict]) -> tuple[dict, dict[str, bytes], bool]:
-    """Return an atomic change set; never remove or replace existing observations."""
-    validate_index(index)
+def validate_publication(run: dict, records: list[dict]) -> None:
     require(isinstance(run, dict) and isinstance(run.get("run_key"), str), "missing run key")
     ids = [record.get("record_id") for record in records]
     require(len(ids) == len(set(ids)) and isinstance(run.get("record_ids"), list) and
@@ -47,6 +45,17 @@ def merge(index: dict, run: dict, records: list[dict]) -> tuple[dict, dict[str, 
         require(record["execution"]["origin"] == run.get("origin") and record["execution"]["run_id"] == run.get("run_id") and
                 record["evidence"].get("archive_sha256", record["evidence"].get("index_sha256")) == run.get("archive_sha256"),
                 "publication record/run provenance contradiction")
+        if run["origin"].startswith("github-hosted"):
+            e = record["execution"]
+            require(e.get("workflow_sha") == run.get("workflow_sha") and e.get("attempt") == run.get("attempt") and
+                    e.get("implementation_sha", e.get("workflow_sha")) == run.get("implementation_sha", run.get("workflow_sha")),
+                    "publication implementation source contradiction")
+
+
+def merge(index: dict, run: dict, records: list[dict]) -> tuple[dict, dict[str, bytes], bool]:
+    """Return an atomic change set; never remove or replace existing observations."""
+    validate_index(index)
+    validate_publication(run, records)
     key = run["run_key"]
     require(1 <= len(key) <= 180 and all(c.isalnum() or c in "-." for c in key), "unsafe run key")
     run_path = f"{PREFIX}/runs/{key}.json"
@@ -113,6 +122,7 @@ def read_snapshot(fetch) -> tuple[dict, list[dict]]:
         require(isinstance(record_ids, list) and len(record_ids) == len(set(record_ids)), "invalid run record inventory")
         require(set(record_ids) == {x["record_id"] for x in index["records"] if x["run_key"] == entry["run_key"]},
                 "run record inventory contradiction")
+        validate_publication(run, [r for r in records if r["record_id"] in record_ids])
         for record in records:
             if record["record_id"] in record_ids:
                 require(record["execution"]["origin"] == run.get("origin") and record["execution"]["run_id"] == run.get("run_id") and

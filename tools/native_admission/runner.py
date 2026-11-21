@@ -634,7 +634,10 @@ def execution_identity(client) -> dict:
     job = matches[0]
     return {"origin": "github-hosted-windows", "repository": repository, "run_id": run_id,
             "attempt": int(attempt), "workflow_ref": os.environ.get("GITHUB_WORKFLOW_REF"),
-            "workflow_sha": os.environ.get("GITHUB_WORKFLOW_SHA"), "job_name": job["name"], "job_id": str(job["id"]),
+            "workflow_sha": os.environ.get("GITHUB_SHA"),
+            "workflow_definition_sha": os.environ.get("GITHUB_WORKFLOW_SHA"),
+            "implementation_sha": git(Path(__file__).resolve().parents[2], "rev-parse", "HEAD"),
+            "job_name": job["name"], "job_id": str(job["id"]),
             "runner_os": os.environ.get("RUNNER_OS"), "runner_environment": os.environ["RUNNER_ENVIRONMENT"],
             "runner_labels": job["labels"], "started_at": utc_now(), "finished_at": None}
 

@@ -1,0 +1,6 @@
+# Infrastructure custody hashes must have the same bytes on Linux and Windows.
+tools/native_admission/** text eol=lf
+tests/native_admission/** text eol=lf
+docs/native-admission/** text eol=lf
+.github/workflows/native-admission*.yml text eol=lf
+.github/native-admission/*.json text eol=lf

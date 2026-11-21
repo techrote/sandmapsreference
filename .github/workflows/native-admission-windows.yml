@@ -2,11 +2,7 @@ name: Native admission Windows pilot
 
 on:
   workflow_dispatch:
-  # TEMPORARY DRAFT BOOTSTRAP: one exact branch + explicit request-file change.
-  # Removed before owner handoff. No map event or schedule can trigger this job.
-  push:
-    branches: [codex/canvas-native-ci-001]
-    paths: [.github/native-admission/pilot-request.json]
+  workflow_call:
 
 permissions: {}
 
@@ -29,8 +25,38 @@ jobs:
       PYTHONUNBUFFERED: '1'
       GIT_LFS_SKIP_SMUDGE: '1'
     steps:
+      - name: Resolve trusted implementation revision
+        id: implementation
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: python
+        run: |
+          import json, os, re, urllib.request
+          repo = os.environ['GITHUB_REPOSITORY']
+          assert repo == 'techrote/sandmapsreference'
+          run_id = os.environ['GITHUB_RUN_ID']
+          assert run_id.isdigit()
+          request = urllib.request.Request('https://api.github.com/repos/' + repo + '/actions/runs/' + run_id,
+              headers={'Authorization': 'Bearer ' + os.environ['GITHUB_TOKEN'], 'Accept': 'application/vnd.github+json', 'User-Agent': 'CyberSand-Final-Source'})
+          with urllib.request.urlopen(request, timeout=20) as response:
+              run = json.load(response)
+          workflow = '.github/workflows/native-admission-windows.yml'
+          if run['path'] == workflow:
+              source = run['head_sha']
+              assert source == os.environ['GITHUB_SHA']
+          else:
+              assert run['path'] == '.github/workflows/native-admission-proof.yml'
+              assert run['head_branch'] == 'codex/canvas-native-ci-001-proof'
+              matches = [w for w in run.get('referenced_workflows', [])
+                  if w.get('path') == repo + '/' + workflow + '@' + w.get('sha', '')]
+              assert len(matches) == 1
+              source = matches[0]['sha']
+          assert re.fullmatch('[0-9a-f]{40}', source)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('sha=' + source + '\n')
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
+          ref: ${{ steps.implementation.outputs.sha }}
           persist-credentials: false
           sparse-checkout: |
             .github
@@ -115,8 +141,38 @@ jobs:
       contents: write
       actions: read
     steps:
+      - name: Resolve trusted implementation revision
+        id: implementation
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: python
+        run: |
+          import json, os, re, urllib.request
+          repo = os.environ['GITHUB_REPOSITORY']
+          assert repo == 'techrote/sandmapsreference'
+          run_id = os.environ['GITHUB_RUN_ID']
+          assert run_id.isdigit()
+          request = urllib.request.Request('https://api.github.com/repos/' + repo + '/actions/runs/' + run_id,
+              headers={'Authorization': 'Bearer ' + os.environ['GITHUB_TOKEN'], 'Accept': 'application/vnd.github+json', 'User-Agent': 'CyberSand-Final-Source'})
+          with urllib.request.urlopen(request, timeout=20) as response:
+              run = json.load(response)
+          workflow = '.github/workflows/native-admission-windows.yml'
+          if run['path'] == workflow:
+              source = run['head_sha']
+              assert source == os.environ['GITHUB_SHA']
+          else:
+              assert run['path'] == '.github/workflows/native-admission-proof.yml'
+              assert run['head_branch'] == 'codex/canvas-native-ci-001-proof'
+              matches = [w for w in run.get('referenced_workflows', [])
+                  if w.get('path') == repo + '/' + workflow + '@' + w.get('sha', '')]
+              assert len(matches) == 1
+              source = matches[0]['sha']
+          assert re.fullmatch('[0-9a-f]{40}', source)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('sha=' + source + '\n')
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
+          ref: ${{ steps.implementation.outputs.sha }}
           persist-credentials: false
           sparse-checkout: |
             .github

@@ -63,6 +63,9 @@ and executed on Windows before native qualification.
 The independent consumer workflow starts from a clean checkout and reads one
 immutable evidence commit. No local owner files or qualification-job state are
 available to it. It validates index, record and run hashes and exact identities.
+The hosted smoke proof additionally uses `--require-own-source`, requiring a
+producer from its own exact implementation commit. An earlier hosted pass for
+the same map and runtime cannot satisfy that final-source demonstration.
 
 ```bash
 python3 -m tools.native_admission.consumer \
@@ -100,14 +103,29 @@ in `missing_evidence`; archived logs and receipts are not relabelled as hosted C
 Original verification errors and reconciliation sidecars are retained by hash.
 Summary-only qualification-index exports cannot establish a verified PASS.
 
-## Bootstrap and scheduling
+## Draft execution and scheduling
 
-New workflows need a supported Draft-branch execution route before any merge.
-The temporary proof uses exactly `codex/canvas-native-ci-001` plus an explicit
-request-file path. The initial resource budget is at most three four-map native
-pilot runs. Those push triggers will be removed before delivery. Manual
-`workflow_dispatch` is the eventual entry point after owner acceptance; no cron,
-automatic map trigger, paid runner or production schedule is enabled here.
+The native and consumer workflows expose only `workflow_dispatch` and
+`workflow_call`. Their prototype push triggers have been removed. A disposable
+caller on exactly `codex/canvas-native-ci-001-proof` can invoke the reusable
+workflow pinned to the final implementation commit before any merge. Its own
+one-time push trigger is deactivated after the proof; it is not a production
+automation. The caller must grant `contents: write` and `actions: read` to the
+native reusable workflow so its separate publisher can run; the called native
+job explicitly downgrades its own token to read-only.
+
+Before checkout, trusted inline code resolves the implementation from GitHub's
+official run and `referenced_workflows` metadata. It accepts only the known
+workflow and proof-branch paths and a single exact SHA. There is no arbitrary
+checkout-ref input. Evidence records distinguish the caller's commit from the
+actual implementation checkout. The publisher independently validates that
+reference chain, and the separate consumer requires that same implementation.
+
+The initial resource budget is at most three Windows pilot jobs; the first
+stopped at a test gate before any native execution. Manual `workflow_dispatch`
+is the entry point after owner acceptance and default-branch availability. There
+is no cron, automatic map qualification, paid runner or production schedule.
+Cheap source checks are scoped to infrastructure paths and never run Godot.
 
 The historical Original Canvas Native Admission schedule was observed paused;
 this implementation does not edit it. Routine execution can move to this system
@@ -121,3 +139,32 @@ evidence ref. A rejected or interrupted publication leaves the old index intact;
 repeat publication against the same artifact to recover. An expiring Actions
 artifact does not delete immutable metadata, but raw revalidation requires a
 retained original ZIP. A temporary API failure never proves stale or PASS.
+
+## Demonstrated baseline and owner reproduction
+
+The first complete native/publication demonstration is Actions run
+`44924882225`, implementation `9d70f1e07aa3e554136fe7de31e88f611494532e`.
+All four pilot maps passed; independent consumer run `44925254764` consumed the
+published index from a clean checkout. These are historical baseline identities,
+not claims about a future implementation revision. The PR handoff supplies the
+subsequent exact final-source proof and current evidence commit.
+
+An owner can reproduce an already qualified exact-source run without merging or
+reactivating a push trigger:
+
+```bash
+gh run view RUN_ID --repo techrote/sandmapsreference
+gh run rerun RUN_ID --repo techrote/sandmapsreference
+gh run download RUN_ID --repo techrote/sandmapsreference --name native-evidence-RUN_ID-ATTEMPT
+python3 -m tools.native_admission.evidence verify native-evidence.zip
+```
+
+Use the actual run ID and attempt from the owner handoff or Actions metadata.
+Rerunning is an explicit bounded owner action; this implementation does not do
+it automatically. The original run's commit-pinned reusable source remains
+available after its disposable caller trigger is deactivated.
+
+The live compact index is at
+`https://raw.githubusercontent.com/techrote/sandmapsreference/refs/heads/evidence/native-admission/native-admission/v1/latest.json`.
+Consumers resolve and pin the evidence branch commit before fetching its index,
+checksum and records, so a concurrent publication cannot mix snapshots.

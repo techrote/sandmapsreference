@@ -87,6 +87,9 @@ class ActionsClient:
     def __init__(self, fixture=None):
         self.fixture = fixture or NativeFixture()
         f = self.fixture
+        f.execution.setdefault("job_name", "Windows native qualification")
+        f.execution.setdefault("implementation_sha", f.execution["workflow_sha"])
+        f.sync()
         self.archive = f.archive()
         self.wrapper = packed({"native-evidence.zip": self.archive}, manifest=False)
         self.head_state = "VERIFIED_CURRENT"
@@ -130,7 +133,91 @@ def check_bundle(client):
     return publisher.verified_actions_bundle(client, 10, "1234", 1, "d" * 40)
 
 
+def proof_client(implementation_sha="b" * 40, referenced_sha="b" * 40):
+    fixture = NativeFixture()
+    fixture.execution.update(implementation_sha=implementation_sha,
+                             job_name="Native proof / Windows native qualification")
+    fixture.sync()
+    client = ActionsClient(fixture)
+    client.json[f"/repos/{REPOSITORY}/actions/runs/1234/attempts/1"].update(
+        path=".github/workflows/native-admission-proof.yml", head_branch="codex/canvas-native-ci-001-proof",
+        referenced_workflows=[{"path": f"{REPOSITORY}/.github/workflows/native-admission-windows.yml@{referenced_sha}",
+                               "sha": referenced_sha}])
+    client.json[f"/repos/{REPOSITORY}/actions/runs/1234/attempts/1/jobs?per_page=100"]["jobs"][0]["name"] = fixture.execution["job_name"]
+    return client
+
+
 class PublisherTests(unittest.TestCase):
+    def test_exact_reusable_workflow_source_and_caller_are_separate_identities(self):
+        run, records = check_bundle(proof_client())
+        self.assertEqual(run["workflow_sha"], "d" * 40)
+        self.assertEqual(run["implementation_sha"], "b" * 40)
+        self.assertEqual(records[0]["execution"]["workflow_sha"], "d" * 40)
+        self.assertEqual(records[0]["execution"]["implementation_sha"], "b" * 40)
+        self.assertEqual(records[0]["execution"]["job_name"], "Native proof / Windows native qualification")
+
+    def test_reusable_missing_or_wrong_reference_and_branch_reject(self):
+        key = f"/repos/{REPOSITORY}/actions/runs/1234/attempts/1"
+        wrong_entries = [[],
+            [{"path": f"{REPOSITORY}/.github/workflows/native-admission-windows.yml@{'b' * 40}", "sha": "c" * 40}],
+            [{"path": f"other/repository/.github/workflows/native-admission-windows.yml@{'b' * 40}", "sha": "b" * 40}],
+            [{"path": f"{REPOSITORY}/.github/workflows/another.yml@{'b' * 40}", "sha": "b" * 40}],
+            [{"path": f"{REPOSITORY}/.github/workflows/native-admission-windows.yml@refs/heads/main", "sha": "b" * 40}],
+            [{"path": f"{REPOSITORY}/.github/workflows/native-admission-windows.yml@{'b' * 40}", "sha": "b" * 40}] * 2,
+            [{"path": f"{REPOSITORY}/.github/workflows/native-admission-windows.yml@{'b' * 40}", "sha": "b" * 40},
+             {"path": f"{REPOSITORY}/.github/workflows/native-admission-windows.yml@{'f' * 40}", "sha": "f" * 40}]]
+        for entries in wrong_entries:
+            client = proof_client()
+            client.json[key]["referenced_workflows"] = entries
+            with self.subTest(entries=entries), self.assertRaises(IntegrityError):
+                check_bundle(client)
+        for branch in (None, "main", "codex/canvas-native-ci-001-proof-other"):
+            client = proof_client()
+            client.json[key]["head_branch"] = branch
+            with self.subTest(branch=branch), self.assertRaises(IntegrityError):
+                check_bundle(client)
+        client = proof_client()
+        del client.json[key]["referenced_workflows"]
+        with self.assertRaises(IntegrityError):
+            check_bundle(client)
+
+    def test_forged_implementation_and_direct_source_divergence_reject(self):
+        with self.assertRaisesRegex(IntegrityError, "implementation source"):
+            check_bundle(proof_client(implementation_sha="f" * 40))
+        fixture = NativeFixture()
+        fixture.execution["implementation_sha"] = "b" * 40
+        with self.assertRaisesRegex(IntegrityError, "direct workflow implementation"):
+            check_bundle(ActionsClient(fixture))
+
+    def test_reusable_job_must_match_recorded_actual_job_name(self):
+        for job_name in ("Windows native qualification", "Other proof / Windows native qualification",
+                         "Native proof / Fake native qualification"):
+            client = proof_client()
+            client.json[f"/repos/{REPOSITORY}/actions/runs/1234/attempts/1/jobs?per_page=100"]["jobs"][0]["name"] = job_name
+            with self.subTest(job_name=job_name), self.assertRaises(IntegrityError):
+                check_bundle(client)
+
+    def test_reusable_retry_rejects_changed_run_implementation(self):
+        run, records = check_bundle(proof_client())
+        writer = MemoryWriter()
+        initial = publisher.publish(writer, run, records)
+        self.assertEqual(publisher.publish(writer, run, records)["commit"], initial["commit"])
+        changed_run = {**run, "implementation_sha": "f" * 40}
+        with self.assertRaisesRegex(IntegrityError, "implementation source"):
+            publisher.publish(writer, changed_run, records)
+        self.assertEqual(writer.head, initial["commit"])
+
+    def test_reusable_retry_rejects_record_implementation_inconsistent_with_run(self):
+        run, records = check_bundle(proof_client())
+        writer = MemoryWriter()
+        publisher.publish(writer, run, records)
+        changed_records = copy.deepcopy(records)
+        changed_records[0]["execution"]["implementation_sha"] = "f" * 40
+        changed_records[0]["record_id"] = record_id(changed_records[0])
+        changed_run = {**run, "record_ids": [changed_records[0]["record_id"]]}
+        with self.assertRaises(IntegrityError):
+            publisher.publish(writer, changed_run, changed_records)
+
     def test_full_artifact_upstream_blob_chain_and_publication_head(self):
         for state, expected in (("VERIFIED_CURRENT", "PASS_BASIC_NATIVE"), ("UNVERIFIED", "NATIVE_PASS_PENDING_HEAD"),
                                 ("STALE_CONFIRMED", "STALE_CONFIRMED"), ("CLOSED", "CLOSED")):
