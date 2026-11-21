@@ -74,6 +74,7 @@ function buildFiles(){
   grid_sha256:sha256(w.g),setup_sha256:sha256(ascii(rawSetup)),histogram:w.histogram,
   sites:w.sites.map(([name,x,y])=>({name,x,y})),midge_clearances:w.clear,
   physical_obstruction:{xywh:w.obs,material:58,after_31x27:w.blocked,covered_site:"Central severable cable span",other_sites_reachable:w.blocked.reachable},
+  route_detour:{from:"Freight scale",to:"Signal islet approach",hull:[31,27],baseline_steps:377,obstructed_steps:437,extra_steps:60,method:"Conservative full-envelope 4-connected shortest path under actual material closure"},
   pngs,native:"NATIVE-UNTESTED: No exact-build Godot/Workbench/CyberDemoBridge/Rapier load, collision, ticks or fresh-process save/reopen executed",
   independent_review:"PENDING: independent Art, Technical and Shepherd exact-HEAD review",
   ci:"NOT CLAIMED",
