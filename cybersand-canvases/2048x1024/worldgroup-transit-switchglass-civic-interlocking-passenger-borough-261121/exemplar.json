@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Switchglass Civic Transit",
+  "sibling_number": 1,
+  "lane": "mechanical_transit",
+  "map_role": "Interlocking Passenger Borough — four inhabited tram stations, surface pedestrian crossings, roof-hatch bypass, separated undercity service galleries",
+  "anchor_donors": [
+    {
+      "name": "wide-tungsten-sawtooth-tramworks",
+      "head_sha": "7fc24855cf521c90bf67f4afb08685e490473201",
+      "relationship": "dry steel and amber signal semantics, recoverable route-choice culture only; no copied rotor, baffle, route coordinates or geometry"
+    }
+  ],
+  "macro_topology": [
+    "four uneven inhabited transit precincts with their own supported canopies",
+    "two catenary portals create an upper emergency walk/flight bypass",
+    "four shaft-entered lower service quarters linked by surface transit; intentionally discontinuous low gallery"
+  ],
+  "density_profile": "Clustered low-rise staffed civic districts beneath deliberately open sky; strong roofs/roads/catenary, individual furnished workfaces and reserved passenger/workshop gaps",
+  "route_grammar": {
+    "primary": "West arrival (68,685) → ticket concourse (254,683) → market arcade (807,682) → central transit threshold (950,682) → municipal dispatch (1250,684) → eastern depot (1821,685) → east exit (1963,687)",
+    "upper_bypass": "Market roof aperture at x788..866 rises through first catenary opening at x783..874; fly across upper sky and descend through second catenary and municipal-roof opening x1034..1128; route remains when central street gate is closed",
+    "lower_recovery": "Four physically entered vertical shafts into separated basement service/repair rooms. Recovery sectors reconnect through accessible surface halls; they are not falsely presented as one uninterrupted buried tunnel",
+    "obstruction": "83×103 solid closure at XY (916,631) covers only Severable tram threshold (950,682). All remaining 22 exact sites including East city exit remain connected at 31×27."
+  },
+  "strong_motifs": [
+    "asymmetric passenger-hall canopy, market arcade, municipal signal office and elongated depot roof",
+    "overhead signal catenary with two *real* through-openings",
+    "separated entered freight, cable, archive and recovery cellar chambers",
+    "real surface hall door openings and independent inhabited interior workshops"
+  ],
+  "interesting_relationships": [
+    "a high weather-protected tram-service skyline versus navigable low civic streets",
+    "two roof and catenary apertures turn the municipal failure scenario into an aerial diversion",
+    "township service basements have explicit vertical entries; roof/market/freight functions are adjacent rather than a single central machine",
+    "structural bridges, foundation piers and catenary anchors physically connect all surviving material"
+  ],
+  "authoring_affordances": [
+    "open sky reserved for visual cues and aerial editing",
+    "market stalls and low station halls with incomplete human-editable fixtures",
+    "four entered lower service rooms with deliberate expansion seams",
+    "east depot arrival stage and central failed-gate corridor have unassigned event space"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Severable central passenger threshold",
+      "location": [
+        950,
+        682
+      ],
+      "role": "physical gate closure and upper emergency bypass; no scripting"
+    },
+    {
+      "name": "Market-to-municipal aerial transfer",
+      "location": [
+        834,
+        516
+      ],
+      "role": "two roof/catenary apertures suitable for pursuit or system outage staging"
+    },
+    {
+      "name": "Lower archive/freight encounter",
+      "location": [
+        763,
+        950
+      ],
+      "role": "entered repair-custody chambers, possible NPC encounter"
+    },
+    {
+      "name": "East tram depot arrival",
+      "location": [
+        1821,
+        685
+      ],
+      "role": "passenger arrival/departure or equipment activation space"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "modular civic-neighbourhood adjacency rather than single monumental transport machine",
+    "roofed passenger halls anchored by shared real signal trunk and founded road piers",
+    "two genuine aerial portals furnishing bypass topology over surface obstruction",
+    "repeated but unequal live room entrances and source-grounded workface equipment",
+    "four physically entered belowground cells linked by multistratum surface circulation"
+  ],
+  "similarity_avoidance": [
+    "Against Meridian #87/#92: not a gantry/switch matrix field or uninhabited yard",
+    "Against Meridian #105/#112: no long carved racing troughs or suspended hoist cascades",
+    "Against Meridian #118: no huge central compression throat with flanking jaws",
+    "Against Meridian #129: not an unroofed hairpin speed course; topology driven by civic transit/market/pedestrian access",
+    "Against Tungsten #69: no large radial brake or repeating mechanical sawtooth baffles"
+  ],
+  "diversity_axes": {
+    "macro_topology": [
+      "multi_settlement",
+      "mixed"
+    ],
+    "altitude_grammar": [
+      "multi_strata"
+    ],
+    "density_cadence": [
+      "clustered",
+      "edge_dense_center_open"
+    ],
+    "route_structure": [
+      "branch_rejoin",
+      "layered"
+    ],
+    "landmark_family": [
+      "bridge",
+      "gate"
+    ],
+    "support_form": [
+      "edge_rooted",
+      "floor_rooted",
+      "roof_rooted"
+    ],
+    "environment_relation": [
+      "dry"
+    ],
+    "incompleteness": [
+      "editable_gaps",
+      "modular_append_zones"
+    ]
+  },
+  "source_static_status": "Creator deterministic Setup-v2 replay, full-hull literal-site 23/23 all three clearances, physical obstruction 22/23, indexed PNG generation, zero surviving detached solids; independent external qualification pending",
+  "native_status": "NATIVE-UNTESTED"
+}

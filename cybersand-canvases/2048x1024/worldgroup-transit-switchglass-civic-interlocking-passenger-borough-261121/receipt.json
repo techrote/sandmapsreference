@@ -1,0 +1,311 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_SWITCHGLASS_INTERLOCKING_PASSENGER_BOROUGH",
+  "revision": "R1",
+  "seed": "0x261121d1",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donor": "Primary Tungsten Sawtooth @ 7fc24855cf521c90bf67f4afb08685e490473201 (signal/amber motifs only); all six Meridian sibling heads used for diversity contrast; original civic borough geometry",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 357460,
+  "discarded_unattached_candidate_cells": 37278,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 380,
+  "setup_json_bytes": 8052,
+  "material_work_visits": 357460,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "496d98966fc8cab666df56b7cf5fed6e3b2db520edb688b054f542f2b992faf1",
+  "setup_sha256": "99dc9608bdd4c271050b2b8f5126a52f82e1b6e36ca3d3af0e62301cccc397a9",
+  "histogram": {
+    "0": 1739692,
+    "49": 78145,
+    "58": 10213,
+    "62": 42239,
+    "100": 192763,
+    "101": 12698,
+    "113": 3556,
+    "117": 15976,
+    "122": 1870
+  },
+  "sites": [
+    {
+      "name": "West street arrival",
+      "x": 68,
+      "y": 685
+    },
+    {
+      "name": "West passenger hall",
+      "x": 184,
+      "y": 683
+    },
+    {
+      "name": "Ticket counters",
+      "x": 254,
+      "y": 683
+    },
+    {
+      "name": "West platform transfer",
+      "x": 422,
+      "y": 683
+    },
+    {
+      "name": "West archive shaft",
+      "x": 359,
+      "y": 866
+    },
+    {
+      "name": "West luggage archive",
+      "x": 340,
+      "y": 950
+    },
+    {
+      "name": "Market west portal",
+      "x": 515,
+      "y": 681
+    },
+    {
+      "name": "Market traders hall",
+      "x": 611,
+      "y": 684
+    },
+    {
+      "name": "Market service hall",
+      "x": 807,
+      "y": 682
+    },
+    {
+      "name": "Market goods underpass",
+      "x": 761,
+      "y": 865
+    },
+    {
+      "name": "Market freight cellar",
+      "x": 763,
+      "y": 950
+    },
+    {
+      "name": "Market east interchange",
+      "x": 881,
+      "y": 679
+    },
+    {
+      "name": "Severable tram threshold",
+      "x": 950,
+      "y": 682
+    },
+    {
+      "name": "Dispatch reception",
+      "x": 1047,
+      "y": 680
+    },
+    {
+      "name": "Interlocking desk",
+      "x": 1250,
+      "y": 684
+    },
+    {
+      "name": "Dispatch undercity",
+      "x": 1175,
+      "y": 865
+    },
+    {
+      "name": "Cable relay room",
+      "x": 1180,
+      "y": 952
+    },
+    {
+      "name": "Eastern bridge landing",
+      "x": 1404,
+      "y": 682
+    },
+    {
+      "name": "Depot line intake",
+      "x": 1511,
+      "y": 680
+    },
+    {
+      "name": "East maintenance benches",
+      "x": 1821,
+      "y": 685
+    },
+    {
+      "name": "Depot lower servicing",
+      "x": 1734,
+      "y": 862
+    },
+    {
+      "name": "Recovery machinery workshop",
+      "x": 1745,
+      "y": 950
+    },
+    {
+      "name": "East city exit",
+      "x": 1963,
+      "y": 687
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 23,
+      "total": 23,
+      "missing": [],
+      "visited_centres": 1452962
+    },
+    "23x19": {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 23,
+      "total": 23,
+      "missing": [],
+      "visited_centres": 1413561
+    },
+    "31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 23,
+      "total": 23,
+      "missing": [],
+      "visited_centres": 1337219
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      916,
+      631,
+      83,
+      103
+    ],
+    "material": 58,
+    "after_31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 22,
+      "total": 23,
+      "missing": [
+        "Severable tram threshold"
+      ],
+      "visited_centres": 1324075
+    },
+    "covered_site": "Severable tram threshold",
+    "other_sites_reachable": 22
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 31812,
+      "pixels": 2097152,
+      "sha256": "4874a1d810e9d7ae085818fc03f7bd6514a794263e40648b7afdbe5b045c7024",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-west-passenger-terminal.png": {
+      "x": 60,
+      "y": 445,
+      "w": 490,
+      "h": 382,
+      "bytes": 4831,
+      "pixels": 187180,
+      "sha256": "f589a7e2e28c5275dcb5e0fcd7e4a2dc696b05ac6870d8216dab50a3c283f7f0",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-market-arcade-and-transfer.png": {
+      "x": 515,
+      "y": 500,
+      "w": 485,
+      "h": 345,
+      "bytes": 3815,
+      "pixels": 167325,
+      "sha256": "6bdbd77977465ff39aa2b24b869989ca0f4f72b265f158164f61ef4eaced722e",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-municipal-signal-borough.png": {
+      "x": 938,
+      "y": 391,
+      "w": 477,
+      "h": 460,
+      "bytes": 4705,
+      "pixels": 219420,
+      "sha256": "7f82f74a480413ae85b4cba270e4a846e141b0625224379a9de327dedf6f194a",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-east-depot-and-outpost.png": {
+      "x": 1428,
+      "y": 477,
+      "w": 596,
+      "h": 357,
+      "bytes": 5640,
+      "pixels": 212772,
+      "sha256": "6baa11590ba9a761d72e43685759ebcf418713a57d22d971274d83fa977da1e5",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-undertram-service-galleries.png": {
+      "x": 135,
+      "y": 792,
+      "w": 1050,
+      "h": 232,
+      "bytes": 6318,
+      "pixels": 243600,
+      "sha256": "eaaa2496be060e2de78feeb54a8413f4f283e13e771605d49d07c9af423aebe5",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-eastern-lower-recovery.png": {
+      "x": 1060,
+      "y": 792,
+      "w": 964,
+      "h": 232,
+      "bytes": 5214,
+      "pixels": 223648,
+      "sha256": "d2bd149edaa5f7918664f1253fc7e5d998fed7b88fbf532f3aaa1b3d67971ddd",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: no installed CyberDemoBridge, Godot/Workbench, Rapier, actual input/collision/ticks or cold save/reopen executed",
+  "independent_review": "PENDING: Art, Technical, Shepherd at exact committed HEAD",
+  "ci": "NOT CLAIMED",
+  "corpus_role": "four unequal inhabited civic tram precincts, roof-hatch and cableway emergency bypass, segmented lower service galleries and editable workshops"
+}
