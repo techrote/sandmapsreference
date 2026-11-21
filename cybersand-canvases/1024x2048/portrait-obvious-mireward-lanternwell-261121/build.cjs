@@ -149,6 +149,22 @@ function world(){
  b(849,560,14,65,0);b(850,578,12,19,77);b(839,640,37,9,68);
  l(802,604,779,644,7,49);b(768,645,40,8,68);
  b(769,653,36,36,130);b(777,659,18,19,0);b(775,680,24,7,131);
+ // ART-P1 SECOND PASS (after independent Art REWORK): recognisable organic
+ // culture membranes rather than two purely skeletal industrial frames.
+ // The two existing west/east roof rigs, entrances and protected voids remain.
+ function cultureLobe(cx,cy,rx,ry,skin,seed){
+   for(let dy=-ry;dy<=ry;dy+=3){const norm=dy/ry,spread=Math.sqrt(Math.max(0,1-norm*norm));const skew=Math.round(3*Math.sin((dy+seed)/17)+2*norm);const width=Math.max(3,Math.round(rx*spread));b(cx-width+skew,cy+dy,width*2+1,Math.min(3,cy+ry-(cy+dy)+1),skin);}
+   for(let dy=-Math.floor(ry*.62);dy<=Math.floor(ry*.62);dy+=3){const spread=Math.sqrt(Math.max(0,1-(dy/(ry*.68))**2));const width=Math.max(2,Math.round(rx*.49*spread));b(cx-width+2,cy+dy,width*2+1,3,129);}
+   for(const [x,y] of [[cx-7,cy-ry*.18],[cx+6,cy+ry*.18],[cx-2,cy+ry*.43]]){b(Math.round(x),Math.round(y),6,9,63);b(Math.round(x)+2,Math.round(y)+3,2,3,77);}
+ }
+ // West spore comb: roof-fed long culture sleeve and asymmetric budding brood.
+ b(398,375,9,19,130);cultureLobe(402,438,28,50,130,5);
+ l(407,477,421,493,9,130);cultureLobe(423,507,21,33,130,21);
+ l(385,486,369,531,8,130);b(365,531,16,10,130);
+ // East custody: separately outlined mother and daughter germination bladders.
+ b(845,522,11,25,130);cultureLobe(850,582,23,55,130,32);
+ l(832,578,813,569,10,130);cultureLobe(808,588,16,34,130,54);
+ b(846,633,16,12,131);
  // D: MID-AIR EXCHANGE CASSETTE -- a roof-fed cargo cradle with
  // staggered processing cups and an unfinished receiving elbow below.
  l(591,525,573,690,8,49);b(562,687,49,8,68);
@@ -274,10 +290,10 @@ receipt.repair={
  parent_exact_head:"e0742d30dec30cf48d002abdbc1973928dcc9388",
  independent_rework_comment:"https://github.com/techrote/sandmapsreference/pull/188#issuecomment-7064471710",
  baseline_grid_sha256:"d839766373ef4e7a964ede02298118ff4c0de2b4a0d96fcde4c0ec8e73d3b6fd",
- changed_final_material_cells:19898,changed_bbox_xyxy:[287,250,877,809],
- assemblies:["west spore-comb receptor","west stepped inoculation rack","east unequal germination bladders","roof-fed midair exchange cassette"],
+ changed_final_material_cells:29392,changed_bbox_xyxy:[287,250,877,809],
+ assemblies:["west spore-comb with staggered living root sleeves","west stepped inoculation rack","east paired unequal membrane germination bladders","roof-fed midair exchange cassette"],
  preserved:["entered right sterile gallery","22 literal destinations","optional 31x27 ordered sterile-gallery traversal under physical obstruction","lower empty sockets and central aerial lumen"],
- evidence_class:"SOURCE_STATIC_ONLY",independent_art_review:"PENDING",independent_technical_review:"PENDING",
+ art_p1_followup:{review:"https://github.com/techrote/sandmapsreference/pull/204#issuecomment-7070529801",source_head:"111ed0aac2860626bfccce47f61215d0e6b927ad",changed_material_cells_from_prior_child:12829,changed_bbox_xyxy:[372,375,876,710],scope:"two existing upper culture rigs only; no lower/gallery edits"},evidence_class:"SOURCE_STATIC_ONLY",independent_art_review:"PENDING_NEW_HEAD",independent_technical_review:"PENDING_NEW_HEAD",
  native:"NATIVE-UNTESTED"
 };
 const aspect_transfer={
@@ -286,7 +302,7 @@ const aspect_transfer={
  source_map_path:"cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-vesper-inverted-root-orchard-261121/",
  difficulty:"OBVIOUS",
  preserved:["one continuous canopy rooted into boundary geology","variable-depth suspended root cultures and biocustody sleeves","asymmetric western seed registration and eastern quarantine","free central light-and-flight lumen","separate dry basal repair and cargo release"],
- transformed:["one wide horizontal roof exchange becomes a deep dual-atrium inoculation descent","left-right customs transaction becomes upper west registration to lower east isolation","twin interrupted lateral cables become one short suspended midair transfer","differentiated western spore-comb and inoculation racks versus eastern sterilised germination bladders","wide ground salvage is now a physically entered basal dispatch terminal"],
+ transformed:["one wide horizontal roof exchange becomes a deep dual-atrium inoculation descent","left-right customs transaction becomes upper west registration to lower east isolation","twin interrupted lateral cables become one short suspended midair transfer","west root-fed twin culture membranes and stepped inoculation racks contrasted with unequal east mother/daughter germination bladders","wide ground salvage is now a physically entered basal dispatch terminal"],
  discarded:["original source coordinate and bridge lengths","original lateral district ordering","repeated equal-height canopy cassettes"],
  newly_introduced:["roof-grown deep rootfall observation and distinct vertical capsule families","four new roof-connected biological work assemblies with staggered stepped, comb, bladder and exchange-cassette geometry","enclosed right bank sterile maintenance return with upper and lower portals","opposite-side basal medical/sterile custody coves","staged salvage ledger with two outward dispatch docks"]
 };
@@ -304,7 +320,7 @@ const exemplar={
  anchor_donors:[{source_pr:143,source_head:aspect_transfer.source_head}],macro_topology:"roof-rooted deep hanging cultural descent and lower opposed medical and quarantine coves",
  density_profile:"dense ceiling-root production, open vertical lumen, occupied side inspection chambers, dry basal repair",
  route_grammar:{"main":route_graph.primary,"alternate":route_graph.branches},
- strong_motifs:["continuous rocky roof root and unequal living culture tails","unlike western registrar and eastern sterile lanterns","four unlike suspended productive culture/work assemblies","physically entered eastern sterile return","entered midlevel spore assay and opposed late medical and quarantine coves"],
+ strong_motifs:["continuous rocky roof root and unequal living culture tails","unlike western registrar and eastern sterile lanterns","west organic culture sleeves, east asymmetric living bladders, stepped inoculation rack and roof-fed cassette","physically entered eastern sterile return","entered midlevel spore assay and opposed late medical and quarantine coves"],
  interesting_relationships:["horizontal opposed communal exchange converted into vertical culture custody sequence","different-depth canopy load paths project into a single unfilled flight lumen","optional ordered traversal of entered sterile return is physically possible under blockage; unrestricted shortest blocked route only skims its outer fringe","low salvage hall has distinct entry/exit processing"],
  authoring_affordances:["deliberately open central lumen for future aerial chase and rootfall","modular inoculation append sockets on suspended shafts","a dead-end west spore assay and two service recesses beside entered side return","dry bottom repair extensions for manual or procedural parts"],
  setpiece_candidates:[{name:"living-root release",region:[365,355,683,810],scripted:false},{name:"sterile return lockdown",region:[685,820,877,1300],scripted:false},{name:"quarantine custody",region:[710,1404,874,1677],scripted:false},{name:"basal shipment departure",region:[157,1770,859,1935],scripted:false}],
@@ -322,7 +338,7 @@ const readme=[
  "Read-only accepted engine authority techrote/cybersand/main@69209acaffb34ebe18c45e19290b5976b7fb2c82.",
  "Not a crop, stretch, rotation, scale or coordinate transplant. The roof-grown biological exchange has become a multi-stage vertical custody sequence.",
  "Under the real central obstruction, the entered sterile side return permits an OPTIONAL ordered 31x27 traversal (938+145+238+931=2252 steps); the unrestricted 2146-step shortest only skims its outer fringe and is NOT forced through the named portals. Inoculation, roots, isolation and salvage remain distinct.",
- "R3 bounded repair: four unequal, roof-fed spore-comb, stepped western inoculation rack, eastern germination bladders and midair exchange cassette in upper x287..877 / y250..809. The entered side sterile route and all deeper voids are unaltered. Independent Art/Technical reviews are PENDING.",
+ "R3 source-static Art-P1 correction: two existing upper rigs now have filled, asymmetric, chambered biological culture sleeves (west) and mother/daughter germination bladders (east). Parent-to-child final delta 29392 material cells in x287..877/y250..809; from preceding child 12829 cells changed only x372..876/y375..710. Gallery, ordered optional portal route, 22 sites, lower voids and cassette remain protected. New-HEAD independent Art and Technical verdicts PENDING.",
  "The central airy lumen and uncultured sockets are intentionally open future authoring spaces. The capsules and processes are *inert geometry*, not simulated growing biology.",
  "Regenerate and verify entire Setup, receipt, route graph, aspect transfer, exemplar and 10 true indexed-material PNGs with: node build.cjs",
  "All Midge checks are full literal-site free-centre four-neighbour BFS with 19x15, 23x19 and 31x27 hulls. No native gameplay, collision, evolving biological simulation or persistence was executed.",
