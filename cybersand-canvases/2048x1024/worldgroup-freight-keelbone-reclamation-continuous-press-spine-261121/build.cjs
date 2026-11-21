@@ -51,6 +51,10 @@ for(const [x,w] of [[71,170],[322,242],[759,268],[1185,195],[1491,177],[1770,198
 for(const [x,w] of [[65,165],[327,245],[755,259],[1142,211],[1499,213],[1784,195]])St(x,539,w,9);
 St(70,885,1910,13);
 for(const [x,w] of [[78,135],[337,248],[755,275],[1161,245],[1520,245],[1817,160]])St(x,793,w,10);
+/* Load path: five deep buttress spines attach the covered roof to the
+   material ribs between unlike halls; each has a free underpass via the deep return.
+   This makes the roof a continuous grounded structural system, not a false suspended facade. */
+for(const [x,depth] of [[478,565],[815,575],[1223,570],[1551,560],[1880,560]])C(x,291,18,depth-291);
 /* Bay 1: wet stripping / freight receiver trough; all fluids abstract, no active material */
 C(126,564,16,189);St(141,741,318,15);C(454,568,15,186);
 C(161,683,14,57);St(173,678,122,12);C(282,657,15,34);
