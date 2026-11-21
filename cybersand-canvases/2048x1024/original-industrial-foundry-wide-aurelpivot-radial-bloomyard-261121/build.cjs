@@ -116,7 +116,48 @@ function world(){
    }
  }
  if(orphan().length)throw Error("detached geometry remains");
- return {g,W,H,M,seed,sites,spawn:[55,771],tethers};
+
+ // Actual Midge-scale maintenance ports: exact site coordinates are never moved.
+ // Carve 43x39 fully free corridors, with deliberate bends around sealed fluids.
+ const corridors=[],spawn=[55,771],STRIDE=W+1;
+ function integ(test){const a=new Int32Array((H+1)*STRIDE);for(let y=1;y<=H;y++){let r=0;for(let x=1;x<=W;x++){r+=test(g[(y-1)*W+x-1])?1:0;a[y*STRIDE+x]=a[(y-1)*STRIDE+x]+r;}}return a;}
+ function rectsum(a,x,y,ww,hh){return a[(y+hh)*STRIDE+x+ww]-a[y*STRIDE+x+ww]-a[(y+hh)*STRIDE+x]+a[y*STRIDE+x];}
+ function reachable(){
+  let a=integ(v=>v!==0),free=new Uint8Array(W*H);
+  for(let y=13;y+14<=H;y++)for(let x=15;x+16<=W;x++)if(rectsum(a,x-15,y-13,31,27)===0)free[y*W+x]=1;
+  let seen=new Uint8Array(W*H),q=new Int32Array(W*H),i=0,n=0,start=spawn[1]*W+spawn[0];
+  if(!free[start])throw Error("spawn invalid after access");
+  seen[start]=1;q[n++]=start;
+  while(i<n){let k=q[i++],x=k%W;for(let j of[x?k-1:-1,x<W-1?k+1:-1,k>=W?k-W:-1,k+W<W*H?k+W:-1])if(j>=0&&free[j]&&!seen[j]){seen[j]=1;q[n++]=j;}}
+  return seen;
+ }
+ for(let k=0;k<sites.length;k++){
+  const graph=reachable(),p=sites.find(q=>!graph[q.y*W+q.x]);
+  if(!p)break;
+  const solids=integ(v=>v!==0),fluid=integ(v=>v===3||v===8);
+  let choice=null;
+  let left=Math.max(38,p.x-570),right=Math.min(W-39,p.x+570),top=Math.max(37,p.y-570),bottom=Math.min(H-38,p.y+570);
+  for(let yy=top;yy<=bottom;yy+=15)for(let xx=left;xx<=right;xx+=15){
+   if(!graph[yy*W+xx])continue;
+   for(let mode=0;mode<2;mode++){
+     let nodes=mode===0?[[p.x,p.y],[xx,p.y],[xx,yy]]:[[p.x,p.y],[p.x,yy],[xx,yy]],rs=[],cost=0,bad=false;
+     for(let z=0;z<2;z++){
+       let [ax,ay]=nodes[z],[bx,by]=nodes[z+1],x=Math.min(ax,bx)-21,y=Math.min(ay,by)-19,w=Math.abs(ax-bx)+43,h=Math.abs(ay-by)+39;
+       if(x<9||y<9||x+w+9>W||y+h+9>H||rectsum(fluid,x-9,y-9,w+18,h+18)){bad=true;break;}
+       cost+=4*rectsum(solids,x,y,w,h)+Math.abs(ax-bx)+Math.abs(ay-by);
+       rs.push([x,y,w,h]);
+     }
+     if(!bad&&(!choice||cost<choice.cost))choice={site:p.name,join:[xx,yy],boxes:rs,cost};
+   }
+  }
+  if(!choice)throw Error("no protected material-cell access route for "+p.name);
+  let removed=0;for(let [x,y,ww,hh]of choice.boxes){removed+=rectsum(solids,x,y,ww,hh);b(x,y,ww,hh,0);}
+  corridors.push({site:p.name,to:choice.join,removed,boxes:choice.boxes});
+ }
+ const check=reachable();
+ if(sites.some(p=>!check[p.y*W+p.x]))throw Error("new real corridors incomplete");
+
+ return {g,W,H,M,seed,sites,spawn,tethers,corridors};
 }
 
 
