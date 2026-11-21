@@ -98,9 +98,9 @@ function build(){
  // Three service wells give a physically open alternative to high dock flight.
  for(let [x,w,top] of [[222,107,788],[971,123,785],[1753,119,705]])R(x,top,w,996-top,0);
  // Bottom inspection stations below full-hull-safe service roof.
- for(let [x,w] of [[112,95],[429,101],[738,119],[1154,92],[1467,99],[1855,82]]){
-   R(x,991,w,4,M.grate);R(x+13,986,19,4,M.glass);R(x+46,984,7,6,M.slate);R(x+w-17,985,9,5,M.cyan);
- }
+ // Deliberately keep the entire 50-cell-high basal service clear for all Midge envelopes.
+ // Empty bays are reserved for later manual construction and scripted traffic.
+ R(60,1005,1921,7,M.schist);
  // Contrasting upper intake and quarantine pylons remain open to the sky.
  L(159,557,207,904,10,M.pipe);L(1905,551,1948,900,11,M.steel);
  let tieCount=0;
