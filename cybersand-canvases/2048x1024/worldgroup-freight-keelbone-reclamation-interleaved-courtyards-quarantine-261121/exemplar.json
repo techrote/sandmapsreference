@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "lane": "worldgroup-freight",
+  "family": "Keelbone Reclamation Vaults",
+  "map_role": "Sibling 04 — interleaved dirty-keel receiving, rotor-grading, inhabited worker quarantine and bonded export",
+  "anchor_donors": [
+    {
+      "name": "wide-graven-keel-ship-tipper",
+      "pr": 45,
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f"
+    },
+    {
+      "name": "wide-peregrine-cleft-halcyon-drydock",
+      "pr": 33,
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5"
+    }
+  ],
+  "macro_topology": "Three unequal, interleaved industrial courts: low curved keel receiving to the west; peaked circular rotor-grader at centre; serrated enclosed bonded-quarantine court at east. A small inhabited ledger/service hub and fragmented lower recovery line mediate the transitions.",
+  "density_profile": "Three highly distinct clustered machine silhouettes separated by very large intentionally editable sky and low service voids; small lower habitation/custody quarters retain partly unfurnished rooms.",
+  "route_grammar": {
+    "main": "Western lift apron → open strip/clamp approach → Grading air lane → grading exchange → worker hub → entered quarantine registry → east dispatch",
+    "alternate": "Wide upper sky above the low receiving canopy, tall rotor gable and serrated quarantine roof; multiple branch/rejoin choices around supported shafts",
+    "lower": "Separate left and right anchored relief accesses and several partly interrupted subterranean transfer/maintenance galleries; recovery into the main flight volume through real entered apertures",
+    "obstruction": "Temporary physical 95×96-cell occupancy barrier [1700,670,95,96] interrupts quarantine registry → interview shortest 31×27 flight path, lengthening it from 271 to 357 cardinal steps without losing any of 29 named sites"
+  },
+  "strong_motifs": [
+    "Unequal zigzag intake canopy with broad double-rib broken-keel cradle and actual receiving trays",
+    "Tall peaked lifting/rotor grading hall with two grounded concentric steel arcs and rooted load paths",
+    "Low staggered inhabited work hub with entered uneven openings and stepped custody counters",
+    "Asymmetric serrated quarantine roof with nested receiving arches and a protected export porch",
+    "Deep founded concrete posts, pale steel trays and black editable high-volume negative space"
+  ],
+  "interesting_relationships": [
+    "Reclaimed hull rests inside a double-curved clamp on supported receiving floor and feeds a side transfer to grading",
+    "Circular grading rotor is rooted through a load-bearing shaft and directly adjacent to a narrow crew exchange",
+    "Short service hub mediates rather than duplicates the two very different great industrial courts",
+    "A real 31×27-body obstruction between registry and quarantine interview changes the selected cardinal path while leaving alternate access",
+    "Deliberately broken eastern annex is an uncompleted modular continuation, not an omitted gameplay prerequisite"
+  ],
+  "authoring_affordances": [
+    "Large unoccupied sky above all three unlike rooflines",
+    "Unfitted west salvage and central rotor equipment sockets for manual SWARM/GENTEK stroke authoring",
+    "Underfloor service and recovery pockets with replaceable platforms and stair shafts",
+    "Unfinished eastern dispatch outboard spur for scripted departure or next-zone handoff",
+    "Partially furnished worker refuge that can receive NPC, decoration or customs-event fixtures"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "Double-rib keel cradle",
+      "purpose": "Unscripted clamp activation, cutaway hull fragment or arrival/retrieval reveal; roomy air approach",
+      "scripted": false
+    },
+    {
+      "site": "Rotor-grader and south receiver",
+      "purpose": "Parcel sorter activation or machine failure with alternative upper and lower access",
+      "scripted": false
+    },
+    {
+      "site": "Worker quarantine registry",
+      "purpose": "NPC checkpoint, holdout, package confiscation or emergency relocation; stepped exits",
+      "scripted": false
+    },
+    {
+      "site": "Broken east dispatch annex",
+      "purpose": "Reroutable export departure, bridge fracture, chase exit or authored modular extension",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Tests clustered unlike industrial machine silhouettes joined by a small inhabited interface, arch/ring vs jagged canopy load path, fractured export edge and original single-grid alternative-route proof. Useful as independent structural-parts, district-transition and example-derived grammar training geometry.",
+  "similarity_avoidance": "Avoids Keelbone 01/02 opposed rock shoulders and central void, Keelbone 03's repeated identical U-frame roof bays, Tidefault's isolated custody stilts, and the anchor donors' vessel/tipper/drydock contours, exact routes, coordinates and pixel streams. Family resemblance is industrial supports and freight transactions, not a copied spatial template.",
+  "diversity_axes": {
+    "macro_topology": "mixed",
+    "altitude_grammar": "dual_level",
+    "density_cadence": "clustered",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "rotor",
+    "support_form": "mixed",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  }
+}
