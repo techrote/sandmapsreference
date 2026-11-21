@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Cinderfold Seed Courier Districts",
+  "lane": "Xenobiome / Frontier Clusters",
+  "map_role": "Sibling 01 — Fold-Seam Courier Hamlet / Clustered Seed-Custody Works",
+  "anchor_donors": [
+    "wide-threnody-scar-foldwing-seedlift",
+    "wide-graftloom-slipway"
+  ],
+  "macro_topology": [
+    "multi_settlement",
+    "corridor"
+  ],
+  "density_profile": "Four deliberately unequal, densely furnished, partly roof-bounded inhabited work blocks separated by short open gaps; south of the courier lanes is a sparse, excavated rescue gallery",
+  "route_grammar": {
+    "primary": "West couriers and ledgers via traversable lateral hallways through tiered assay, refuge clinic and sterile east dispatch",
+    "alternate": "Upper mezzanine/roof overflight plus a shorter below-grade service return with three fully open access wells",
+    "recovery": "One isolated sterile lock obstruction leaves the other exact named destinations accessible, with east and undercroft alternatives retained"
+  },
+  "strong_motifs": [
+    "four different folded-brace roof silhouettes",
+    "entered living courier and specimen workfaces",
+    "inequivalent diagnostic ledgers and refuge benches",
+    "short staggered connectors",
+    "damaged quarantined east annex",
+    "ground-bounded three-well service gallery"
+  ],
+  "interesting_relationships": [
+    "Inhabited workface density occupies multiple staggered small halls rather than an enormous central vessel or open basin",
+    "Public courier movement is tangential to raised assay and sterile mezzanines",
+    "High roof load paths terminate through irregularly anchored support ribs",
+    "Three wells link the work-block footings to a bounded subterranean recovery strip"
+  ],
+  "authoring_affordances": [
+    {
+      "site": "Public west handoff",
+      "center": [
+        244,
+        774
+      ],
+      "use": "NPC courier reception and later scene scripting"
+    },
+    {
+      "site": "Assay upper throat",
+      "center": [
+        745,
+        572
+      ],
+      "use": "Microscope tools and example-derived diagnostic microfills"
+    },
+    {
+      "site": "Refuge lower hall",
+      "center": [
+        1131,
+        787
+      ],
+      "use": "Settlement decoration and encounter staging"
+    },
+    {
+      "site": "Damaged eastern annex",
+      "center": [
+        1981,
+        783
+      ],
+      "use": "Future modular extension or collapse-repair event"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Specimen handover",
+      "center": [
+        793,
+        769
+      ],
+      "kind": "machine activation",
+      "exits": "West public entry and east assay exit"
+    },
+    {
+      "name": "Courier clinic encounter",
+      "center": [
+        1131,
+        787
+      ],
+      "kind": "NPC settlement interaction",
+      "exits": "West and east interblock hallways"
+    },
+    {
+      "name": "Sterile breach",
+      "center": [
+        1813,
+        663
+      ],
+      "kind": "isolation holdout",
+      "exits": "Entered hall and adjacent eastern inspection"
+    },
+    {
+      "name": "Annex repair reveal",
+      "center": [
+        1981,
+        783
+      ],
+      "kind": "damaged extension",
+      "exits": "East delivery and outside sky"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Clustered multi-settlement spatial grammar with roof-profile variety",
+    "Unequal small process machines within a truly materialized courier quarter",
+    "Three shaft entrances and a bounded dry bypass instead of a full-width huge underworld",
+    "Sterile/public adjacency and manually repairable modular append seam"
+  ],
+  "similarity_avoidance": "Unlike existing Mireward drydock, broken annular commons, inverted orchard, polder islands or Quoin Veil fault architecture, this is a compact lateral seed-courier settlement built as four different roof-bounded inhabitable production quarters with close staggered links and only a shallow rescue tunnel.",
+  "diversity_axes": {
+    "macro_topology": [
+      "multi_settlement",
+      "corridor"
+    ],
+    "altitude_grammar": [
+      "dual_level"
+    ],
+    "density_cadence": [
+      "alternating"
+    ],
+    "route_structure": [
+      "branch_rejoin",
+      "parallel_lanes"
+    ],
+    "landmark_family": [
+      "gate",
+      "gantry"
+    ],
+    "support_form": [
+      "floor_rooted",
+      "mixed"
+    ],
+    "environment_relation": [
+      "biological",
+      "damaged"
+    ],
+    "incompleteness": [
+      "editable_gaps",
+      "damaged"
+    ]
+  },
+  "geometry_evidence": {
+    "literal_sites": {
+      "West arrivals": [
+        73,
+        769
+      ],
+      "West seed ledger": [
+        244,
+        774
+      ],
+      "West outpass": [
+        416,
+        769
+      ],
+      "West roof outlook": [
+        245,
+        458
+      ],
+      "West public connector": [
+        526,
+        766
+      ],
+      "Assay public entry": [
+        637,
+        771
+      ],
+      "Seed receipt desk": [
+        793,
+        769
+      ],
+      "Assay upper gallery": [
+        745,
+        572
+      ],
+      "Assay exterior lookout": [
+        831,
+        344
+      ],
+      "Assay exit": [
+        951,
+        770
+      ],
+      "Refuge western link": [
+        1022,
+        779
+      ],
+      "Refuge clinic": [
+        1131,
+        787
+      ],
+      "Refuge seed custody": [
+        1357,
+        785
+      ],
+      "Refuge throat": [
+        1203,
+        715
+      ],
+      "East exchange": [
+        1489,
+        784
+      ],
+      "Quarantine public hall": [
+        1597,
+        781
+      ],
+      "Quarantine sterile intake": [
+        1742,
+        775
+      ],
+      "Quarantine east inspection": [
+        1863,
+        779
+      ],
+      "Quarantine upper hatch": [
+        1693,
+        592
+      ],
+      "Damaged wing entry": [
+        1981,
+        783
+      ],
+      "Eastern delivery outdoors": [
+        2029,
+        692
+      ],
+      "West recovery descent": [
+        440,
+        879
+      ],
+      "Central recovery descent": [
+        1030,
+        882
+      ],
+      "East recovery descent": [
+        1597,
+        882
+      ],
+      "West belowgrade service": [
+        627,
+        952
+      ],
+      "Central belowgrade service": [
+        1139,
+        952
+      ],
+      "East belowgrade service": [
+        1480,
+        951
+      ],
+      "Sterile lock": [
+        1813,
+        663
+      ]
+    },
+    "obstruction_box": [
+      1795,
+      639,
+      1832,
+      682
+    ],
+    "material_grid_sha256": "27ec751e8ff7bb3c43467addc2cd64a0f92f016391cd307f3b1767a6cfcabcd0"
+  }
+}
