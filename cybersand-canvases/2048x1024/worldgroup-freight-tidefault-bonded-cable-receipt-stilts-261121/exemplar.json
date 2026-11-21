@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Tidefault Bonded Freight Districts",
+  "lane": "worldgroup-freight",
+  "map_role": "Outer aerial freight reconsignment and split cargo-receipt exchange, with signal and casualty-recovery infrastructure",
+  "anchor_donors": [
+    {
+      "slug": "wide-graven-keel-ship-tipper",
+      "pr": 45,
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f"
+    },
+    {
+      "slug": "wide-peregrine-cleft-halcyon-drydock",
+      "pr": 33,
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5"
+    }
+  ],
+  "macro_topology": [
+    "five uneven cargo workface clusters distributed along seven floor-rooted stilt/cable spines",
+    "noncontiguous vertical occupation and large continuous sky void"
+  ],
+  "density_profile": "Alternating compact entered workshops and high-volume aerial gaps; especially open central and upper flight approaches",
+  "route_grammar": {
+    "main": "Left-to-right mid-level aerial cargo passage through nine literal stations; workfaces separated by actual porticoes and pier stems",
+    "upper": "Five landmark watch points across staggered signal outriggers; physical obstruction requires upper/lateral bypass",
+    "interior": "Seven side-entered inspection/repair/receiving workfaces at the lower inhabited altitude",
+    "recovery": "Five lower emergency-maintenance destinations, with a separate route beneath the high freight system"
+  },
+  "strong_motifs": [
+    "rooted slender asymmetric signal piers",
+    "short distinct cantilever cranes with small represented loads",
+    "nested bonded receiving trays",
+    "side-entered tally and winch booths",
+    "deep service footings",
+    "unfinished outer signal release nose"
+  ],
+  "interesting_relationships": [
+    "Quayside tally is separate from suspended receipt and operator care, rather than a continuous warehouse",
+    "Hoist lines and receipt stages occur at different heights and asymmetrical distances",
+    "Long exposed cable span above cargo workfaces contrasts with physically grounded return cellars",
+    "Independent elevated signal watch and lower emergency escape permit route rerouting"
+  ],
+  "authoring_affordances": [
+    "Empty air spans between the pier load paths for human-authored hull transfers",
+    "Unfurnished east outer signal spur for future modular rescue construction",
+    "Shallow alternate high route for a cable-break event",
+    "Deep under-deck pockets for small procedural machinery or NPC encounters"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "Quayside tally / West berth inspection",
+      "purpose": "customs inspection and loading-queue lockdown",
+      "scripted": false
+    },
+    {
+      "site": "Transfer hook approach / Overhead cargo exchange",
+      "purpose": "suspended-load failure, player reroute or workface activation",
+      "scripted": false
+    },
+    {
+      "site": "Inhabited tariff ward",
+      "purpose": "worker NPC settlement or bonded-cargo handoff",
+      "scripted": false
+    },
+    {
+      "site": "Damaged launch relay / Emergency pier recovery",
+      "purpose": "signal-collapse evacuation and lower return",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Original long-span sparse port morphology with seven differently loaded rooted stilts, interrupted aerial workfaces, unlike elevation profiles, discrete narrow entered chambers, and paired high/low flight access. Offers SWARM/GENTEK examples of small machines and grounded supports occupying a monumental open void.",
+  "similarity_avoidance": "Rejects Tidefault 01 serial customs wall/tower thresholds, Tidefault 02 low grounded arches, Tidefault 03 cliff-buried central repository, and Cleftline's excavated basins or horizontal factory-city. Most surface area is open air, distributed with unlike stilt shafts and several small entered workfaces, not another giant central machine.",
+  "diversity_axes": {
+    "macro_topology": [
+      "islands",
+      "mixed"
+    ],
+    "altitude_grammar": [
+      "multi_strata",
+      "high_low_bypass"
+    ],
+    "density_cadence": [
+      "alternating",
+      "clustered"
+    ],
+    "route_structure": [
+      "parallel_lanes",
+      "branch_rejoin"
+    ],
+    "landmark_family": [
+      "crane",
+      "gantry"
+    ],
+    "support_form": [
+      "floor_rooted",
+      "multi_leg"
+    ],
+    "environment_relation": [
+      "dry",
+      "damaged"
+    ],
+    "incompleteness": [
+      "editable_gaps",
+      "modular_append_zones"
+    ]
+  },
+  "evidence": {
+    "extent": [
+      2048,
+      1024
+    ],
+    "material_plane_sha256": "dc9652082fb7b9cbc5874117b5e82df275754969baba871b88cbc70b5eb059c1",
+    "setup_sha256": "0923a26729424b662737283c97768226a1b92402def439ff12886006b15327f0",
+    "rectangles": 1447,
+    "grounded_cells": 443977,
+    "named_sites": 26,
+    "conservative_hulls": [
+      [
+        19,
+        15
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        31,
+        27
+      ]
+    ],
+    "physical_obstruction_distance": [
+      1109,
+      1197
+    ],
+    "images": [
+      {
+        "name": "overview",
+        "pixels": 2097152,
+        "sha256": "ac0a5c841ab96dc5d81920a1adb9bd6e55da767df3dc19b9036f7decb30a9e6f"
+      },
+      {
+        "name": "01-west-berth",
+        "pixels": 177694,
+        "sha256": "88289f849b03dee4c45025227cfc3a1919dbc91f345fbd5283336cd8b8d9072e"
+      },
+      {
+        "name": "02-straddle-hoists",
+        "pixels": 243080,
+        "sha256": "b1d85eb2f20e7e2953f06c30c7a82ac17339eca692b55b9d822618f1b5b586bb"
+      },
+      {
+        "name": "03-mid-cargo-exchange",
+        "pixels": 223130,
+        "sha256": "d971de9f34c2a74833d72c7f2663e35b07081ed7ed3d1dd463ba2c5256dfd348"
+      },
+      {
+        "name": "04-east-tariff-ward",
+        "pixels": 211680,
+        "sha256": "9c505893af08e27505900af17447d85460bed62291e66c7f3198bed495cd71b2"
+      },
+      {
+        "name": "05-lower-recovery",
+        "pixels": 345950,
+        "sha256": "4b8963ea6919e269651cc391d31835036566e47f5ba0a79e346e46c00ec34ad5"
+      }
+    ],
+    "native_status": "NATIVE-UNTESTED"
+  }
+}
