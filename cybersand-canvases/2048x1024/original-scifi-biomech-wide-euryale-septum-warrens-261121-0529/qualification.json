@@ -1,0 +1,468 @@
+{
+  "source": "ORIGINAL-NO-REFERENCE",
+  "seed": 2611210529,
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "read_only_engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_cell_count": 2097152,
+  "grid_sha256": "9eaa9db235c8758d17346d8fab44e49026f53117e7c057475245c7f0964d2045",
+  "setup_sha256": "f82e4715d60851d0aff0c3b76b951f7f308a0a71c95337da7675bcb1262ec307",
+  "setup_bytes": 5008,
+  "setup_root_keys": [
+    "version",
+    "extent",
+    "actors",
+    "next_id",
+    "selected",
+    "edits",
+    "response",
+    "liquid_policy",
+    "normalize",
+    "rule_radius",
+    "source",
+    "material",
+    "brush",
+    "fire"
+  ],
+  "rectangle_count": 215,
+  "rectangle_limit_source": 32768,
+  "native_installation_status": "NATIVE-UNTESTED: source supports 32768; compatible Godot/bridge binary not executed",
+  "construction_writes": 343221,
+  "write_limit": 32000000,
+  "material_histogram": {
+    "0": 1753931,
+    "58": 31328,
+    "62": 23404,
+    "77": 5947,
+    "79": 988,
+    "100": 96040,
+    "101": 92160,
+    "117": 89225,
+    "128": 4129
+  },
+  "occupied": 343221,
+  "grounded": 343221,
+  "nominal_unsupported_removed": 35174,
+  "detached_final": 0,
+  "fluid_falling_reactive_final": 0,
+  "rectangle_overlap_count": 0,
+  "replay_cell_mismatches": 0,
+  "canonical_rectangle_reencode_identity": true,
+  "sites": {
+    "19x15": {
+      "visited_centres": 1168378,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_lab": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rib_lab": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rib_interior": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "septum_hub": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "septum_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "assay_interior": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "fractionator": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_gate_inner": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_shelves": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "freight_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "departure": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "23x19": {
+      "visited_centres": 1129084,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_lab": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rib_lab": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rib_interior": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "septum_hub": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "septum_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "assay_interior": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "fractionator": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_gate_inner": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_shelves": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "freight_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "departure": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "31x27": {
+      "visited_centres": 1051472,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_lab": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rib_lab": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rib_interior": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "septum_hub": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "septum_inspection": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "assay_interior": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "fractionator": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_gate_inner": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_shelves": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "freight_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "departure": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    }
+  },
+  "obstruction": [
+    958,
+    610,
+    162,
+    99
+  ],
+  "route_bans": {
+    "xmin": 954,
+    "xmax": 1109,
+    "upper_max_y": 600,
+    "lower_min_y": 856
+  },
+  "route_distances": {
+    "baseline": 2077,
+    "blocked": 2145,
+    "upper": 2145,
+    "lower": 2521
+  },
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "covered": false,
+      "reachable": true
+    },
+    "quarantine_lab": {
+      "covered": false,
+      "reachable": true
+    },
+    "quarantine_lower": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_gate": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_vault": {
+      "covered": false,
+      "reachable": true
+    },
+    "rib_lab": {
+      "covered": false,
+      "reachable": true
+    },
+    "rib_interior": {
+      "covered": false,
+      "reachable": true
+    },
+    "septum_hub": {
+      "covered": true,
+      "reachable": false
+    },
+    "septum_inspection": {
+      "covered": false,
+      "reachable": true
+    },
+    "assay_interior": {
+      "covered": false,
+      "reachable": true
+    },
+    "fractionator": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_gate_inner": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_shelves": {
+      "covered": false,
+      "reachable": true
+    },
+    "freight_lower": {
+      "covered": false,
+      "reachable": true
+    },
+    "departure": {
+      "covered": false,
+      "reachable": true
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "bytes": 1049790,
+      "sha256": "878e9270bda62fa6eac012eda73a922f00c44557300c0e7329302565e7528313",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-west-vesicle-quarantine.png": {
+      "bytes": 127805,
+      "sha256": "e50a6dc4a9c0aa4c1f18e09363e5b269156db6e874c347865b153f2c4b7bfbc7",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        32,
+        395,
+        450,
+        565
+      ]
+    },
+    "02-near-septum-cavity.png": {
+      "bytes": 116755,
+      "sha256": "2439adff383225ac3d3b893c70ca23826d3605c36b16767b93081830cee5aef6",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        472,
+        370,
+        430,
+        540
+      ]
+    },
+    "03-mnemonic-receiver.png": {
+      "bytes": 159505,
+      "sha256": "0c7d09d7d1ab394873509fb0a9ca11df1124781d57369d9ff6bad3e6bc1a2d4e",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        776,
+        88,
+        500,
+        635
+      ]
+    },
+    "04-entered-diagnostic-workface.png": {
+      "bytes": 129283,
+      "sha256": "ea084a5c7565eb237b33fa14239ff0d034bb11924cbc4cc6f600c5c22d5dedcf",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        997,
+        428,
+        465,
+        552
+      ]
+    },
+    "05-eastern-fractionation.png": {
+      "bytes": 134116,
+      "sha256": "c8565961a1f652cd6f3622c5042acdeb170bcd49526514aee9e9cbcbc3073127",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1510,
+        406,
+        479,
+        556
+      ]
+    },
+    "06-incomplete-freight-quay.png": {
+      "bytes": 92185,
+      "sha256": "e2e355289786ab73aa16537f0168e00f345155557206088e66f5515c56606f3f",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1660,
+        480,
+        369,
+        495
+      ]
+    }
+  },
+  "author_static_status": "PASS",
+  "independent_reviews": "PENDING",
+  "native_status": "NATIVE-UNTESTED"
+}

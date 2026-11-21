@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-biomech-wide",
+  "map_role": "Nested roof-hung xenoseptum archive and differential dry fractionation with Midge-enterable cavities, grounded maintenance station and bypassable central seam",
+  "anchor_donors": [],
+  "macro_topology": [
+    "nested_cavities",
+    "corridor"
+  ],
+  "density_profile": "Alternating dense entered machine-organic cavities and open routed floor galleries; sparse external sky and vacant machine seams",
+  "route_grammar": {
+    "direct": "spawn_quarantine > west_gate > west_vault > rib_lab > septum_hub > fractionator > east_gate_inner > departure",
+    "upper": "Physical-obstruction detour at central x=954..1109 constrained to y<=600",
+    "lower": "Physical-obstruction detour at central x=954..1109 constrained to y>=856",
+    "recovery": "Every exact site retains full-hull 4-neighbour reach and four-cardinal local recovery"
+  },
+  "strong_motifs": [
+    "Five cliff-rooted load-bearing septa with Midge-sized transverse passage gates",
+    "Four unequally sized entered assay capsules hanging under a continuous roof",
+    "A roof-rooted oversized mnemonic dish receiver",
+    "Accessible two-stand examination workface in the lower machine tier",
+    "Asymmetric western quarantine hoist and eastern dry fractionator tiers"
+  ],
+  "interesting_relationships": [
+    "Nested entered capsule geometries separate machine inspection from the floor recovery tier",
+    "A physical mid-route obstruction preserves upper and lower constrained detours",
+    "Diagnostic staging and incompleteness remain useful for SWARM/GENTEK grammar extraction",
+    "Discontinuous production fixtures contrast with a continuous cliff-rooted shelter"
+  ],
+  "authoring_affordances": [
+    {
+      "site": "capsule_attachment_seams",
+      "rect": [
+        810,
+        570,
+        440,
+        150
+      ],
+      "detail": "Open couplings for future example-derived modular processing bridges"
+    },
+    {
+      "site": "underside_service_volume",
+      "rect": [
+        772,
+        781,
+        545,
+        156
+      ],
+      "detail": "Intentional editing void beside a grounded reachable inspection bench"
+    },
+    {
+      "site": "western_expansion_socket",
+      "rect": [
+        332,
+        528,
+        160,
+        196
+      ],
+      "detail": "Vacant lift or quarantine sluice attachment"
+    },
+    {
+      "site": "quay_dispatch_gap",
+      "rect": [
+        1848,
+        605,
+        163,
+        221
+      ],
+      "detail": "Incomplete cargo departure area with several exposed support ledges"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "type": "machinery_activation",
+      "rect": [
+        816,
+        103,
+        362,
+        316
+      ],
+      "staging": "Roof-rooted receiver and visible suspended assay machinery, no active event"
+    },
+    {
+      "type": "ambush_holdout",
+      "rect": [
+        1085,
+        864,
+        212,
+        100
+      ],
+      "staging": "Entered diagnostic workface below recoverable machine routes"
+    },
+    {
+      "type": "reroutable_bridge",
+      "rect": [
+        938,
+        587,
+        226,
+        135
+      ],
+      "staging": "Central middle-route closure with independently constrained upper/lower bypasses"
+    },
+    {
+      "type": "arrival_departure",
+      "rect": [
+        1850,
+        586,
+        166,
+        245
+      ],
+      "staging": "Dry freight stage with editable incompleteness"
+    }
+  ],
+  "procedural_exemplar_value": "A modular-grammar exemplar for separately supported cliff septa, varied entered assay pods, split-altitude bypasses and authorable incomplete machine interfaces",
+  "similarity_avoidance": "Contrasts with Aperture Suture's open crater ring, Ophion's fault bridge, Kordex's distributed triport and Mnemosyne's singular tall machine through contiguous nested entered interiors and side-by-side compartment gates",
+  "diversity_axes": {
+    "macro_topology": "nested_cavities",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "parallel_lanes",
+    "landmark_family": "dish",
+    "support_form": "roof_rooted",
+    "environment_relation": "biological",
+    "incompleteness": "editable_gaps"
+  }
+}
