@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-biomech-wide",
+  "map_role": "Broken annular memory-transfer collar spanning a stepped excavated crater with side-mouth entries, outer switchback capture and editable dry dispatch appendage",
+  "anchor_donors": [],
+  "macro_topology": [
+    "crater",
+    "ring"
+  ],
+  "density_profile": "Edge workshops and closely packed desiccation tiers enclosing a broad unfilled machine-eye, entered inspection deck and open lower crater",
+  "route_grammar": {
+    "direct": "spawn_quarantine -> rim_switchback -> ring_west -> ring_eyepiece -> ring_east -> east_rail -> east_gate",
+    "upper": "Pass over interrupted annular crest before rejoining right-side dispatch",
+    "lower": "Enter side-mouth, descend the split annulus into excavated belly, cross below the retina, rise through the eastern hinge aperture",
+    "recovery": "All 16 named exact Midge sites locally four-cardinal flyable at all three hull envelopes"
+  },
+  "strong_motifs": [
+    "large deliberately broken polygonal memory-retina ring",
+    "excavated exposed basal service trench and opposed rim edges",
+    "western floor-and-ceiling-rooted switchback crane array",
+    "central supported midair two-piece examination platform with open cellar access",
+    "uneven four-level biologic desiccator grades",
+    "incomplete external shipbone ejection spur"
+  ],
+  "interesting_relationships": [
+    "continuous grounded load paths around a ring intentionally interrupted for 2D flight traversal",
+    "central lower opening is both a future repair seam and a qualified Midge detour",
+    "quarantine and export workfaces remain asymmetrical despite a circular central landmark",
+    "switchback external machine decks contrast with the partly bare inner crater"
+  ],
+  "authoring_affordances": [
+    {
+      "site": "retina_hoop_missing_segments",
+      "rect": [
+        880,
+        695,
+        286,
+        103
+      ],
+      "detail": "two interrupted annular seams for re-tensioning, destructible bridge placement or player-repair tooling"
+    },
+    {
+      "site": "open_crater_belly",
+      "rect": [
+        804,
+        815,
+        446,
+        151
+      ],
+      "detail": "open machine-adjacent underground authoring canvas with access from annular side mouths"
+    },
+    {
+      "site": "western_gantry_crossover",
+      "rect": [
+        430,
+        481,
+        172,
+        146
+      ],
+      "detail": "conservative 31×27 passages between rooted loading bays for an interactive lift or repair"
+    },
+    {
+      "site": "east_unequipped_keel_spur",
+      "rect": [
+        1772,
+        606,
+        230,
+        126
+      ],
+      "detail": "vacant send-off stage with cargo attachment interfaces"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "type": "machinery_activation",
+      "rect": [
+        824,
+        240,
+        445,
+        523
+      ],
+      "staging": "large annular transfer with entered inspection station; no event logic included"
+    },
+    {
+      "type": "reroutable_bridge",
+      "rect": [
+        956,
+        746,
+        169,
+        80
+      ],
+      "staging": "separated lower hoop registration stubs with qualified lower alternative"
+    },
+    {
+      "type": "chase_corridor",
+      "rect": [
+        756,
+        780,
+        552,
+        190
+      ],
+      "staging": "open crater-belly path under visible interrupted hoop"
+    },
+    {
+      "type": "arrival_departure",
+      "rect": [
+        1780,
+        567,
+        220,
+        173
+      ],
+      "staging": "unfinished keel export apron and hanging fork"
+    }
+  ],
+  "procedural_exemplar_value": "Nonrepeating annular support arcs and intentional structural interruptions demonstrate fault-tolerant machine-ring grammars, floor-to-ceiling gantry transitions, branched vertical routes and human-editable cavities that remain exactly flyable.",
+  "similarity_avoidance": "Unlike Ophion's long fault bridge, Kordex's distributed settlements, Mnemosyne's central vertical monolith and Khepri's closed kiln, this map uses a broken load-bearing annulus over a deeply excavated open belly with entered inner workface and qualified lower aperture crossing.",
+  "diversity_axes": {
+    "macro_topology": "crater",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "ring",
+    "support_form": "mixed",
+    "environment_relation": "geological",
+    "incompleteness": "modular_append_zones"
+  },
+  "native_qualification": "NATIVE-UNTESTED",
+  "evidence": {
+    "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+    "source_base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "grid_sha256": "7f4a8c31f120f5a871ca79310e7ccba524bde4273e16c1193ef9b919aa412a6f",
+    "site_count": 16,
+    "rectangle_count": 1522,
+    "route_distances": {
+      "baseline": 2002,
+      "blocked": 2038,
+      "upper": 2436,
+      "lower": 2356
+    }
+  }
+}

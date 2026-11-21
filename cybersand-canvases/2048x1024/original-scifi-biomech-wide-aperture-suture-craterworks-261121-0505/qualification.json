@@ -1,0 +1,488 @@
+{
+  "source": "ORIGINAL-NO-REFERENCE",
+  "seed": 2611210505,
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "read_only_engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_cell_count": 2097152,
+  "grid_sha256": "7f4a8c31f120f5a871ca79310e7ccba524bde4273e16c1193ef9b919aa412a6f",
+  "setup_sha256": "b56f669897b13ec1316df65d98e178a8653d076b308c826e3bb06f59ba2f2aea",
+  "setup_bytes": 29611,
+  "setup_root_keys": [
+    "version",
+    "extent",
+    "actors",
+    "next_id",
+    "selected",
+    "edits",
+    "response",
+    "liquid_policy",
+    "normalize",
+    "rule_radius",
+    "source",
+    "material",
+    "brush",
+    "fire"
+  ],
+  "rectangle_count": 1522,
+  "rectangle_limit_source": 32768,
+  "native_installation_status": "NATIVE-UNTESTED: source supports 32768; compatible Godot/bridge binary not executed",
+  "construction_writes": 424803,
+  "write_limit": 32000000,
+  "material_histogram": {
+    "0": 1672349,
+    "58": 28672,
+    "62": 88052,
+    "63": 4076,
+    "77": 967,
+    "79": 315,
+    "100": 37670,
+    "101": 236786,
+    "117": 27257,
+    "128": 1008
+  },
+  "occupied": 424803,
+  "grounded": 424803,
+  "nominal_unsupported_removed": 63160,
+  "detached_final": 0,
+  "fluid_falling_reactive_final": 0,
+  "rectangle_overlap_count": 0,
+  "replay_cell_mismatches": 0,
+  "canonical_rectangle_reencode_identity": true,
+  "sites": {
+    "19x15": {
+      "visited_centres": 1310224,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_custody": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_staging": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rim_switchback": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rim_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "ring_west": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "ring_eyepiece": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "inspection_bench": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_belly": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_control": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "ring_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_desiccator": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_rail": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "outbound": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "23x19": {
+      "visited_centres": 1275007,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_custody": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_staging": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rim_switchback": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rim_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "ring_west": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "ring_eyepiece": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "inspection_bench": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_belly": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_control": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "ring_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_desiccator": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_rail": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "outbound": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "31x27": {
+      "visited_centres": 1214636,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_custody": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_staging": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rim_switchback": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "rim_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "ring_west": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "ring_eyepiece": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "inspection_bench": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_belly": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "lower_control": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "ring_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_desiccator": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_rail": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "outbound": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    }
+  },
+  "obstruction": [
+    925,
+    438,
+    230,
+    178
+  ],
+  "route_bans": {
+    "xmin": 960,
+    "xmax": 1120,
+    "upper_max_y": 371,
+    "lower_min_y": 788
+  },
+  "route_distances": {
+    "baseline": 2002,
+    "blocked": 2038,
+    "upper": 2436,
+    "lower": 2356
+  },
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_custody": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_staging": {
+      "covered": false,
+      "reachable": true
+    },
+    "rim_switchback": {
+      "covered": false,
+      "reachable": true
+    },
+    "rim_lower": {
+      "covered": false,
+      "reachable": true
+    },
+    "ring_west": {
+      "covered": false,
+      "reachable": true
+    },
+    "ring_eyepiece": {
+      "covered": false,
+      "reachable": true
+    },
+    "inspection_bench": {
+      "covered": false,
+      "reachable": true
+    },
+    "central_belly": {
+      "covered": false,
+      "reachable": true
+    },
+    "lower_control": {
+      "covered": false,
+      "reachable": true
+    },
+    "ring_east": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_desiccator": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_lower": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_rail": {
+      "covered": false,
+      "reachable": true
+    },
+    "outbound": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_gate": {
+      "covered": false,
+      "reachable": true
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "bytes": 1049790,
+      "sha256": "11ecf3034da39f6d81561574268dcd31e833d8465425b64ce5e4805170ce5cb5",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-quarantine-podium.png": {
+      "bytes": 98377,
+      "sha256": "61153980027f7c24f6815c6b1ed27a75d3cbbf0039e4d718f75e83455e18bddb",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        46,
+        421,
+        409,
+        477
+      ]
+    },
+    "02-west-switchback.png": {
+      "bytes": 134164,
+      "sha256": "5b1d11d73704fee9a7a9a70155c051ef0b26fdb158ea8d6e9e31f3e07fa4e442",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        400,
+        221,
+        374,
+        713
+      ]
+    },
+    "03-suture-retina.png": {
+      "bytes": 195608,
+      "sha256": "13a1bbfaada2189dfda0b02614fecfae7f20b9e006caf802e0a509db807c1619",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        718,
+        211,
+        654,
+        596
+      ]
+    },
+    "04-crater-cellar.png": {
+      "bytes": 69690,
+      "sha256": "79fbed4907a7a6f920f5ec77127ce407072282c870d53671f00b6f7d0e1f40aa",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        766,
+        771,
+        547,
+        253
+      ]
+    },
+    "05-desiccation-switchbacks.png": {
+      "bytes": 109779,
+      "sha256": "7827702b1c2135520bb4342f95f1495635258d9cf7650d1e342a97bd05b47241",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1382,
+        303,
+        366,
+        596
+      ]
+    },
+    "06-east-freight-spur.png": {
+      "bytes": 86981,
+      "sha256": "ac664ac3680a8de0f95357fe3f451de0bc178d9eacaeb5badeef91401bacc874",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1712,
+        384,
+        335,
+        514
+      ]
+    }
+  },
+  "author_static_status": "PASS",
+  "independent_reviews": "PENDING",
+  "native_status": "NATIVE-UNTESTED"
+}
