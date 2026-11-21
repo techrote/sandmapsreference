@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "programme": "PORTRAIT-REPAIR-001",
+  "lane": "R5",
+  "portrait_pr": 191,
+  "original_portrait_head": "52820f48fb1f5dca10342aa47d89abaf5c281595",
+  "source_wide_pr": 174,
+  "source_wide_head": "b28196503b51b88b129076f2808ec4920c2d7c40",
+  "original_reviewer": "https://github.com/techrote/sandmapsreference/pull/191#issuecomment-7064472858",
+  "baseline_atlas_handoff": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7069547287",
+  "dimensions": [
+    1024,
+    2048
+  ],
+  "cells": 2097152,
+  "material_grid_sha256": "a1bc1fcf7216b5ca60d4b551a5524c8779ca1cfacc1de821489bfe046255e073",
+  "setup_sha256": "2af2c569df0ece15b594b74ad48b0ed6abe7692230364495afeeabb8a8699c7c",
+  "original_grid_sha256": "effa9981f5bdde53344ed6cc4effb14a9341df00de03b53db1de593c2d629bf2",
+  "changed_final_material_cells": 36532,
+  "changed_extent_inclusive_xyxy": [
+    92,
+    162,
+    931,
+    1913
+  ],
+  "changed_regions": {
+    "upper_ore_hilltown": 16926,
+    "mid_right_guild": 10154,
+    "lower_freight_village": 9452,
+    "other": 0
+  },
+  "preserved_exact_material_cells": {
+    "rotor_rectangle_xyxy": [
+      305,
+      1050,
+      640,
+      1360
+    ],
+    "rotor_changes": 0,
+    "flank_window_xyxy": [
+      248,
+      1174,
+      714,
+      1345
+    ],
+    "flank_changes": 0
+  },
+  "foundation_diagnosis": "two original small cabins had one-cell connection gaps and were pruned by grounded-solid cleanup",
+  "repair_method": "Ground original cabins, preserve other shells, add three different bank-tied workfronts and real full-hull entered door/roof accesses",
+  "technical": {
+    "rectangles": 1320,
+    "limit": 32768,
+    "setup_bytes": 26130,
+    "grounded_solids": 737080,
+    "detached": 0,
+    "pruned_provisional": 11245,
+    "fluid": {
+      "water": 2002,
+      "lava": 3120,
+      "exposed_faces": 0,
+      "water_lava_contacts": 0
+    },
+    "named_sites_each_hull": 19,
+    "additional_portal_waypoints": 12,
+    "hulls": [
+      {
+        "hull": [
+          19,
+          15
+        ],
+        "passed": 31
+      },
+      {
+        "hull": [
+          23,
+          19
+        ],
+        "passed": 31
+      },
+      {
+        "hull": [
+          31,
+          27
+        ],
+        "passed": 31
+      }
+    ],
+    "blocked_total_sites": 31,
+    "obstruction": [
+      470,
+      913,
+      80,
+      40
+    ],
+    "goal_distance": {
+      "direct": 208,
+      "obstructed": 304
+    },
+    "entered_workfront_routes": {
+      "ore": {
+        "waypoints": [
+          [
+            393,
+            218
+          ],
+          [
+            366,
+            218
+          ],
+          [
+            341,
+            218
+          ],
+          [
+            290,
+            215
+          ]
+        ],
+        "legs": [
+          27,
+          25,
+          54
+        ],
+        "steps": 106
+      },
+      "guild": {
+        "waypoints": [
+          [
+            753,
+            795
+          ],
+          [
+            753,
+            819
+          ],
+          [
+            752,
+            846
+          ],
+          [
+            751,
+            872
+          ]
+        ],
+        "legs": [
+          24,
+          28,
+          27
+        ],
+        "steps": 79
+      },
+      "freight": {
+        "waypoints": [
+          [
+            865,
+            1590
+          ],
+          [
+            865,
+            1630
+          ],
+          [
+            865,
+            1670
+          ],
+          [
+            865,
+            1715
+          ]
+        ],
+        "legs": [
+          40,
+          40,
+          45
+        ],
+        "steps": 125
+      }
+    },
+    "png_pixel_parity": 2940400,
+    "pngs": {
+      "overview.png": {
+        "xywh": [
+          0,
+          0,
+          1024,
+          2048
+        ],
+        "bytes": 2099836,
+        "sha256": "480247ad08f921b863b98dc965a20cae4c02bceaf70574e14e3d2a1a930db3b1"
+      },
+      "01-ore-hilltown.png": {
+        "xywh": [
+          98,
+          205,
+          420,
+          250
+        ],
+        "bytes": 105731,
+        "sha256": "eaf7b563b5b6e49b6d43d9175da78e1776cb1aecc1a7c32694ca6724e65e5d7e"
+      },
+      "02-thermal-transfer.png": {
+        "xywh": [
+          98,
+          443,
+          565,
+          375
+        ],
+        "bytes": 212741,
+        "sha256": "ec2afbf3390b54756ca294aeffd18bcdafa691020901647e51815abd4840b68e"
+      },
+      "03-guild-casters.png": {
+        "xywh": [
+          620,
+          775,
+          312,
+          379
+        ],
+        "bytes": 119108,
+        "sha256": "134a9b7e6555e49a4a39088cc27dc81ab92296a3fc0d8b9b774b015893de1bfd"
+      },
+      "04-central-rotoryard.png": {
+        "xywh": [
+          305,
+          1025,
+          465,
+          405
+        ],
+        "bytes": 189216,
+        "sha256": "d71a8db7355ed04d993d09b96d5f36caf69daeb808a3a81b364ac4d9e817d1aa"
+      },
+      "05-quench-terrace.png": {
+        "xywh": [
+          98,
+          1430,
+          380,
+          340
+        ],
+        "bytes": 130021,
+        "sha256": "44405b45a190c7da6b9d64f6b1b1e502b7ad019714b2c019f56366f0a16a9727"
+      },
+      "06-export-village.png": {
+        "xywh": [
+          632,
+          1680,
+          300,
+          302
+        ],
+        "bytes": 91383,
+        "sha256": "09d263ec99f38d71967b3a7f1e5a527a089c844f00f34060774101ce354e682e"
+      }
+    }
+  },
+  "process_chain_and_voids": "Eight-spoke grounded rotor, hot chain, quench, freight and original western/eastern side recovery untouched",
+  "limitations": [
+    "Native Godot/Workbench/CyberDemoBridge/Rapier collision/simulation/save-reopen not run",
+    "Art and Technical acceptance require separate exact-child reviews",
+    "Ordered local portal itinerary is an available path, not an assertion about unconstrained shortest-path choice"
+  ]
+}
