@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Cinderfold Seed Courier Districts",
+  "lane": "Xenobiome / Frontier Clusters",
+  "map_role": "Sibling 03 - Buried Assay Interchange / Seed-Vault Croft",
+  "anchor_donors": [
+    "wide-threnody-scar-foldwing-seedlift",
+    "wide-graftloom-slipway"
+  ],
+  "macro_topology": [
+    "nested_cavities",
+    "corridor"
+  ],
+  "density_profile": "Dense irregular roof-enclosed intake, laboratory, quarantine and refuge inside a thick geological mass. Vast sparse exterior and two largely vacant underground relief pockets.",
+  "route_grammar": {
+    "primary": "An entered four-cell intake, diagnosis, isolation, refuge network over a continuous rock-enclosed service spine",
+    "alternate": "Two independent short branch-rejoin dry service routes, one under receiving and diagnosis, another under quarantine and refuge",
+    "recovery": "Separate lower loops admit 31x27 full hulls; a physical diagnostic wicket obstruction leaves all other literal stations reachable"
+  },
+  "strong_motifs": [
+    "nested unequal rock-cut workfaces",
+    "real unlike receiving, diagnostic and isolation equipment at human scale",
+    "buried xenoseed medical refuge",
+    "asymmetric folded-brace geological ridge",
+    "two short independently usable below-grade return corridors",
+    "unfinished acoustic excavation"
+  ],
+  "interesting_relationships": [
+    "Unlike the aerial trestles, four chambers occupy a single continuous mass but use different interior proportions and threshold geometry",
+    "Two small return branches connect pairs of distant chambers without occupying the whole canvas underground",
+    "The intake, assay, isolation and refuge have distinct large mechanical interfaces, not identical palettes"
+  ],
+  "authoring_affordances": [
+    {
+      "site": "Unfinished ridge archive",
+      "center": [
+        683,
+        386
+      ],
+      "use": "Excavate a new specimen observatory"
+    },
+    {
+      "site": "Receiving east margin",
+      "center": [
+        371,
+        597
+      ],
+      "use": "Staffed freight encounter or extra sample racks"
+    },
+    {
+      "site": "Assay chamber",
+      "center": [
+        682,
+        550
+      ],
+      "use": "Enlarge diagnostic machine or trigger a later scripted sequence"
+    },
+    {
+      "site": "Under-rock eastern loop",
+      "center": [
+        1471,
+        873
+      ],
+      "use": "Construct a reroutable maintenance/evacuation branch"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Cold courier arrival",
+      "center": [
+        53,
+        607
+      ],
+      "kind": "arrival and NPC encounter",
+      "exits": "Western exterior and interior receiving room"
+    },
+    {
+      "name": "Sample drum activation",
+      "center": [
+        682,
+        550
+      ],
+      "kind": "machine activation",
+      "exits": "Room side passage and service spine"
+    },
+    {
+      "name": "Quarantine wicket",
+      "center": [
+        819,
+        543
+      ],
+      "kind": "holdout or seal",
+      "exits": "Assay loft and lower branch-rejoin circulation"
+    },
+    {
+      "name": "Eastern service recovery",
+      "center": [
+        1471,
+        873
+      ],
+      "kind": "chase or controlled excavation",
+      "exits": "Two separate maintenance-loop mouths"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Thick geological envelope over Midge-entered multi-function chambers",
+    "Compact branch/rejoin loops as small reusable authoring modules",
+    "Nonnatural mechanical fittings rooted into biologically interpreted cliff strata",
+    "Unfinished chambers and sockets intentionally left for manual and SWARM/GENTEK authoring"
+  ],
+  "similarity_avoidance": "Unlike Cinderfold Sibling 01 open gabled post sheds or Sibling 02 airy braided two-level trestles, this is an almost entirely cliff-embedded nested-cavity quarter with separate short low-level returns.",
+  "diversity_axes": {
+    "macro_topology": [
+      "nested_cavities",
+      "corridor"
+    ],
+    "altitude_grammar": [
+      "dual_level"
+    ],
+    "density_cadence": [
+      "clustered"
+    ],
+    "route_structure": [
+      "branch_rejoin"
+    ],
+    "landmark_family": [
+      "gate"
+    ],
+    "support_form": [
+      "cliff_embedded",
+      "edge_rooted"
+    ],
+    "environment_relation": [
+      "geological",
+      "biological"
+    ],
+    "incompleteness": [
+      "excavation",
+      "editable_gaps"
+    ]
+  },
+  "geometry_evidence": {
+    "literal_sites": {
+      "Outer seed approach": [
+        53,
+        607
+      ],
+      "Receiving clerk bay": [
+        172,
+        583
+      ],
+      "Receiving freight latch": [
+        371,
+        597
+      ],
+      "Receiving south hatch": [
+        273,
+        690
+      ],
+      "Main west spine": [
+        476,
+        732
+      ],
+      "Diagnostic observation booth": [
+        682,
+        550
+      ],
+      "Diagnostic counter-a": [
+        778,
+        567
+      ],
+      "Assay sterility wicket": [
+        819,
+        543
+      ],
+      "Assay west threshold": [
+        675,
+        685
+      ],
+      "Diagnostic deep passage": [
+        923,
+        731
+      ],
+      "Isolation intake": [
+        1085,
+        575
+      ],
+      "Isolation quarantine pocket": [
+        1322,
+        569
+      ],
+      "Isolation eastern gate": [
+        1336,
+        579
+      ],
+      "Sterile control floor": [
+        1258,
+        681
+      ],
+      "Main east spine": [
+        1484,
+        731
+      ],
+      "Refuge medical alcove": [
+        1623,
+        559
+      ],
+      "Refuge courier bunks": [
+        1765,
+        588
+      ],
+      "Refuge east exit": [
+        1880,
+        585
+      ],
+      "Receiving lower drop": [
+        403,
+        803
+      ],
+      "Dry loop A west": [
+        604,
+        851
+      ],
+      "Dry loop A centre": [
+        663,
+        860
+      ],
+      "Dry loop A east": [
+        867,
+        850
+      ],
+      "Isolation lower drop": [
+        1186,
+        816
+      ],
+      "Dry loop B west": [
+        1370,
+        862
+      ],
+      "Dry loop B centre": [
+        1471,
+        873
+      ],
+      "Dry loop B east": [
+        1711,
+        850
+      ],
+      "Dry assay expansion": [
+        610,
+        913
+      ],
+      "Dry archive cavity": [
+        1518,
+        908
+      ]
+    },
+    "obstruction_box": [
+      800,
+      524,
+      840,
+      562
+    ],
+    "plane_sha256": "747146c2d24e0baebe361d223074b86e93b9aaf40a9467e83c83ee72498b3d3e"
+  }
+}

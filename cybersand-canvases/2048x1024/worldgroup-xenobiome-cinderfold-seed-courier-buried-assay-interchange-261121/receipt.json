@@ -1,0 +1,342 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Cinderfold Seed Courier Districts",
+  "sibling": 3,
+  "role": "Buried Assay Interchange / Seed-Vault Croft",
+  "seed": "cinderfold-buried-assay-interchange-261121-v1-0x624ba721",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "donors": [
+    {
+      "slug": "wide-threnody-scar-foldwing-seedlift",
+      "pr": 73,
+      "head": "00cb6b6b86b875d8b81cc387c711aa56f172d9dd"
+    },
+    {
+      "slug": "wide-graftloom-slipway",
+      "pr": 22,
+      "head": "b0d1e5216aabb9b5e009e599ffbffcec6fd8a657"
+    }
+  ],
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 1700,
+    "62": 10858,
+    "66": 11565,
+    "68": 3876,
+    "77": 1860,
+    "79": 1240,
+    "100": 498319,
+    "101": 90314,
+    "120": 6884,
+    "129": 3357,
+    "131": 10844
+  },
+  "occupied_cells": 640817,
+  "grounded_cells": 640817,
+  "detached_cells": 0,
+  "solid_components": 3,
+  "physical_tethers": {
+    "raw_components": 69,
+    "ties": 66,
+    "max_span": 51
+  },
+  "lossless_rectangles": 2493,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 640817,
+  "setup_bytes": 48215,
+  "plane_sha256": "747146c2d24e0baebe361d223074b86e93b9aaf40a9467e83c83ee72498b3d3e",
+  "setup_sha256": "4db6d8bb7d341122e8b5418ce6ea7d5d7d049777c974d3b0417d35ffee8d5aa7",
+  "literal_sites": {
+    "Outer seed approach": [
+      53,
+      607
+    ],
+    "Receiving clerk bay": [
+      172,
+      583
+    ],
+    "Receiving freight latch": [
+      371,
+      597
+    ],
+    "Receiving south hatch": [
+      273,
+      690
+    ],
+    "Main west spine": [
+      476,
+      732
+    ],
+    "Diagnostic observation booth": [
+      682,
+      550
+    ],
+    "Diagnostic counter-a": [
+      778,
+      567
+    ],
+    "Assay sterility wicket": [
+      819,
+      543
+    ],
+    "Assay west threshold": [
+      675,
+      685
+    ],
+    "Diagnostic deep passage": [
+      923,
+      731
+    ],
+    "Isolation intake": [
+      1085,
+      575
+    ],
+    "Isolation quarantine pocket": [
+      1322,
+      569
+    ],
+    "Isolation eastern gate": [
+      1336,
+      579
+    ],
+    "Sterile control floor": [
+      1258,
+      681
+    ],
+    "Main east spine": [
+      1484,
+      731
+    ],
+    "Refuge medical alcove": [
+      1623,
+      559
+    ],
+    "Refuge courier bunks": [
+      1765,
+      588
+    ],
+    "Refuge east exit": [
+      1880,
+      585
+    ],
+    "Receiving lower drop": [
+      403,
+      803
+    ],
+    "Dry loop A west": [
+      604,
+      851
+    ],
+    "Dry loop A centre": [
+      663,
+      860
+    ],
+    "Dry loop A east": [
+      867,
+      850
+    ],
+    "Isolation lower drop": [
+      1186,
+      816
+    ],
+    "Dry loop B west": [
+      1370,
+      862
+    ],
+    "Dry loop B centre": [
+      1471,
+      873
+    ],
+    "Dry loop B east": [
+      1711,
+      850
+    ],
+    "Dry assay expansion": [
+      610,
+      913
+    ],
+    "Dry archive cavity": [
+      1518,
+      908
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable_centres": 400966,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable_centres": 363854,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 294133,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      800,
+      524,
+      840,
+      562
+    ],
+    "blocked_site": "Assay sterility wicket",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 290227,
+      "passed": 27,
+      "total": 28,
+      "bad": [
+        {
+          "name": "Assay sterility wicket",
+          "point": [
+            819,
+            543
+          ],
+          "occupied": 0
+        }
+      ]
+    }
+  },
+  "two_restricted_short_returns": {
+    "western": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 12638,
+      "passed": 3,
+      "total": 3,
+      "bad": []
+    },
+    "eastern": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 17283,
+      "passed": 3,
+      "total": 3,
+      "bad": []
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "origin": [
+        0,
+        0
+      ],
+      "extent": [
+        2048,
+        1024
+      ],
+      "bytes": 37378,
+      "sha256": "0985d810d577234e13925b37ee6ea1f39a33a65a6e799217269a09757d216d0f",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "01-receiving-vault.png",
+      "origin": [
+        35,
+        479
+      ],
+      "extent": [
+        452,
+        305
+      ],
+      "bytes": 4936,
+      "sha256": "cba182871fade1ab5061b45d0a11bbd8041738b5c4a548cc4ff16c18aeb04ec1",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "02-diagnostic-lab.png",
+      "origin": [
+        480,
+        420
+      ],
+      "extent": [
+        488,
+        351
+      ],
+      "bytes": 6832,
+      "sha256": "7cf853e6421d229640d8e3934ecb7ea717bc3f62109ad7250bdd6e59be869164",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "03-sterile-isolation.png",
+      "origin": [
+        992,
+        493
+      ],
+      "extent": [
+        485,
+        282
+      ],
+      "bytes": 5933,
+      "sha256": "8b9499916a707f6d74296db3b21f4cd449a876593e5c43d45439d63541efdbeb",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "04-refuge-croft.png",
+      "origin": [
+        1489,
+        454
+      ],
+      "extent": [
+        559,
+        338
+      ],
+      "bytes": 6522,
+      "sha256": "00011fddca46cf4a7d0ab64695089b2863394a055db1f79e5c68379d1be65978",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "05-two-short-recovery-loops.png",
+      "origin": [
+        305,
+        750
+      ],
+      "extent": [
+        1496,
+        241
+      ],
+      "bytes": 7945,
+      "sha256": "d9a12ad7e7872fbf0ce4227401485e5f184d5b26c572b895bf24bda7deab3917",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    }
+  ],
+  "qualification": "CREATOR-STATIC-PASS",
+  "independent_reviews": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "OPEN DRAFT/HOLD",
+  "caveat": "Full-body static free-centre routes are not actual native Rapier movement, simulation ticks or persistence."
+}
