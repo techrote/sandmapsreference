@@ -15,29 +15,30 @@
     2048
   ],
   "cells": 2097152,
-  "source_grid_sha256": "d839766373ef4e7a964ede02298118ff4c0de2b4a0d96fcde4c0ec8e73d3b6fd",
-  "setup_sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
-  "setup_bytes": 6526,
-  "rectangles": 305,
-  "construction_work": 986942,
+  "source_grid_sha256": "208458a59a52f9d3a0d2ae7cc2f4d1e9a1014de232835f3eb4f41fe5ff341f2f",
+  "setup_sha256": "594bfc44d41552b6476c3f45795fd4c6cc2d9106ff9506acbe968d38fea608d1",
+  "setup_bytes": 11439,
+  "rectangles": 582,
+  "construction_work": 1004652,
   "material_histogram": {
-    "0": 1110210,
-    "49": 42516,
-    "62": 12565,
-    "63": 770,
-    "68": 17503,
-    "79": 660,
+    "0": 1092500,
+    "49": 47939,
+    "62": 15513,
+    "63": 932,
+    "68": 19277,
+    "77": 570,
+    "79": 780,
     "100": 592219,
     "101": 305932,
-    "129": 4303,
-    "130": 9934,
-    "131": 540
+    "129": 7230,
+    "130": 13038,
+    "131": 1222
   },
   "ground": {
-    "total": 986942,
-    "rooted": 986942,
+    "total": 1004652,
+    "rooted": 1004652,
     "detached": 0,
-    "pruned_provisional": 80008
+    "pruned_provisional": 81341
   },
   "fluid": {
     "water": 0,
@@ -51,8 +52,8 @@
         19,
         15
       ],
-      "valid_centres": 969010,
-      "connected_centres": 945613,
+      "valid_centres": 936711,
+      "connected_centres": 911948,
       "passed": 22,
       "sites": [
         {
@@ -216,8 +217,8 @@
         23,
         19
       ],
-      "valid_centres": 938900,
-      "connected_centres": 919257,
+      "valid_centres": 905369,
+      "connected_centres": 884833,
       "passed": 22,
       "sites": [
         {
@@ -381,8 +382,8 @@
         31,
         27
       ],
-      "valid_centres": 885501,
-      "connected_centres": 870328,
+      "valid_centres": 850409,
+      "connected_centres": 835127,
       "passed": 22,
       "sites": [
         {
@@ -553,8 +554,8 @@
       31,
       27
     ],
-    "valid_centres": 837621,
-    "connected_centres": 822448,
+    "valid_centres": 802529,
+    "connected_centres": 787247,
     "passed": 22,
     "sites": [
       {
@@ -733,7 +734,7 @@
         2048
       ],
       "bytes": 2099836,
-      "sha256": "4909a99487d9681312c005f08c05f5483d0bf61a632a4d67cb2cc3b25003a131"
+      "sha256": "1106b1327c4fffa82e759fe191f2cfa2ec252405016cac420c0b43130eba0166"
     },
     "01-canopy-registry.png": {
       "xywh": [
@@ -743,7 +744,7 @@
         310
       ],
       "bytes": 78291,
-      "sha256": "4ceeae26cf1bd5164064a4093579acea58bb6d08052dc2af62ba41e30d3e37f8"
+      "sha256": "54f2125625412c98a29bc9dc7e5358ee90b066eab3c8efec1e69db53346f6b24"
     },
     "02-unequal-hanging-pods.png": {
       "xywh": [
@@ -753,7 +754,7 @@
         508
       ],
       "bytes": 264148,
-      "sha256": "4cce8e75c24bf877bcbc7331febc39cc8acf983ef97fe1700f1aa07051810f83"
+      "sha256": "c58f3ab40196b9018c1c13d98fd2c606925b1d11e5e353d19eeebad0e9f6fda3"
     },
     "03-midair-exchange.png": {
       "xywh": [
@@ -763,7 +764,7 @@
         528
       ],
       "bytes": 243371,
-      "sha256": "81fc95d5d37a328ef7487403ef4dbb12338583614c12c8c3259306bba14a2484"
+      "sha256": "8e28f6e004717b136aa0c88cef174dd2cd1b02e24c5fe11e6df90ca910e43e48"
     },
     "04-entered-sterile-return.png": {
       "xywh": [
@@ -794,8 +795,69 @@
       ],
       "bytes": 154641,
       "sha256": "4f88b82732eb3e3091fd0845735457b4c5d541778fa5bc194e64c68c5ddf1078"
+    },
+    "07-western-cultures.png": {
+      "xywh": [
+        285,
+        240,
+        208,
+        440
+      ],
+      "bytes": 92441,
+      "sha256": "fe4778ca1a957c78ec3c3a108bda9af5b729838953662fd438004e39c8e1d1ed"
+    },
+    "08-eastern-bladders.png": {
+      "xywh": [
+        750,
+        430,
+        140,
+        300
+      ],
+      "bytes": 42776,
+      "sha256": "b19c5837f2eb1ef20eb9ae149194f6fc5bf825455a02aa40a12a42ef575ead9d"
+    },
+    "09-midair-cassette.png": {
+      "xywh": [
+        535,
+        605,
+        140,
+        225
+      ],
+      "bytes": 32201,
+      "sha256": "3835bea6b298b3a3d87093217cce290d259030ac235d3263bebc486adbb19579"
     }
   },
-  "pixel_parity": 3250360,
-  "native": "NATIVE-UNTESTED"
+  "pixel_parity": 3415380,
+  "native": "NATIVE-UNTESTED",
+  "repair": {
+    "programme": "PORTRAIT-REPAIR-001",
+    "lane": "R3",
+    "parent_portrait_pr": 188,
+    "parent_exact_head": "e0742d30dec30cf48d002abdbc1973928dcc9388",
+    "independent_rework_comment": "https://github.com/techrote/sandmapsreference/pull/188#issuecomment-7064471710",
+    "baseline_grid_sha256": "d839766373ef4e7a964ede02298118ff4c0de2b4a0d96fcde4c0ec8e73d3b6fd",
+    "changed_final_material_cells": 19898,
+    "changed_bbox_xyxy": [
+      287,
+      250,
+      877,
+      809
+    ],
+    "assemblies": [
+      "west spore-comb receptor",
+      "west stepped inoculation rack",
+      "east unequal germination bladders",
+      "roof-fed midair exchange cassette"
+    ],
+    "preserved": [
+      "entered right sterile gallery",
+      "22 literal destinations",
+      "31x27 obstructed right-gallery detour",
+      "lower empty sockets and central aerial lumen"
+    ],
+    "evidence_class": "SOURCE_STATIC_ONLY",
+    "independent_art_review": "PENDING",
+    "independent_technical_review": "PENDING",
+    "native": "NATIVE-UNTESTED"
+  }
 }
