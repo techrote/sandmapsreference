@@ -15,29 +15,29 @@
     2048
   ],
   "cells": 2097152,
-  "source_grid_sha256": "ea6ced6c47b2df2956ffa9281babe46d3dcbb8325dad8131a65555d02c7f6837",
-  "setup_sha256": "35cb217fbad8ea53198c52e02a9bb2a41dda242c478e44626a0ece27ec3c39b3",
-  "setup_bytes": 4238,
-  "rectangles": 179,
-  "construction_work": 884464,
+  "source_grid_sha256": "853d65e4e100318ac7a0dd2f75d8ee637c5acca145853227e460f3deed8c2018",
+  "setup_sha256": "52ed104105e40d34e877d4e644c12c5e3341b120f37a10649924ec9ea4ef5f80",
+  "setup_bytes": 6108,
+  "rectangles": 277,
+  "construction_work": 919173,
   "material_histogram": {
-    "0": 1212688,
-    "49": 9282,
-    "62": 15984,
-    "63": 1476,
-    "68": 10620,
-    "77": 273,
+    "0": 1177979,
+    "49": 14359,
+    "62": 17188,
+    "63": 1572,
+    "68": 10316,
+    "77": 427,
     "79": 1162,
-    "100": 345981,
-    "101": 479000,
-    "129": 10033,
-    "130": 10653
+    "100": 347651,
+    "101": 502533,
+    "129": 11523,
+    "130": 12442
   },
   "ground": {
-    "total": 884464,
-    "rooted": 884464,
+    "total": 919173,
+    "rooted": 919173,
     "detached": 0,
-    "pruned_provisional": 53719
+    "pruned_provisional": 59160
   },
   "fluid": {
     "water": 0,
@@ -51,8 +51,8 @@
         19,
         15
       ],
-      "valid_centres": 1106806,
-      "connected_centres": 1105099,
+      "valid_centres": 1056931,
+      "connected_centres": 1051968,
       "passed": 18,
       "sites": [
         {
@@ -188,8 +188,8 @@
         23,
         19
       ],
-      "valid_centres": 1082349,
-      "connected_centres": 1081549,
+      "valid_centres": 1028846,
+      "connected_centres": 1023405,
       "passed": 18,
       "sites": [
         {
@@ -325,8 +325,8 @@
         31,
         27
       ],
-      "valid_centres": 1034626,
-      "connected_centres": 1034626,
+      "valid_centres": 974991,
+      "connected_centres": 972228,
       "passed": 18,
       "sites": [
         {
@@ -469,8 +469,8 @@
       31,
       27
     ],
-    "valid_centres": 989476,
-    "connected_centres": 989476,
+    "valid_centres": 929841,
+    "connected_centres": 927078,
     "passed": 18,
     "sites": [
       {
@@ -618,7 +618,7 @@
         2048
       ],
       "bytes": 2099836,
-      "sha256": "3b9a6a91c10d4e20f3de16caca57ee00a5a6919dfbc865e411fab451cf9e690c"
+      "sha256": "bf80467af3ed886876c75df5c0bc413e50e716174e97176944e5dec9b239c63f"
     },
     "01-upper-seed-registry.png": {
       "xywh": [
@@ -628,7 +628,7 @@
         271
       ],
       "bytes": 142761,
-      "sha256": "e543b8c33b493578a5cb899222ef288c89523455d06790b2b86807cd0a17004e"
+      "sha256": "22a9429d58475f9c2e9584a8eaf2e7f11a7eb4513cfe17bc17536311a05edf1a"
     },
     "02-west-diagnostics.png": {
       "xywh": [
@@ -638,7 +638,7 @@
         312
       ],
       "bytes": 160542,
-      "sha256": "339901fbb4e832d13532637907be8cc8fe1155667c43bb7774afebc6c4638458"
+      "sha256": "8325e622bd8a75cc62549fef0b8404ae3d0090e4850f8361915c25a1df4d2aa9"
     },
     "03-bridge-assay.png": {
       "xywh": [
@@ -648,7 +648,7 @@
         239
       ],
       "bytes": 71942,
-      "sha256": "0b72905e90a3f3f23374021c68402f3fbca46ccc0fd085f3c1964d3c59d125d0"
+      "sha256": "9d89a3bb8261dbcf2c163fbc6b38c5207bc8e812bc2e638102b5c3cbbb8784c1"
     },
     "04-east-sterile-service.png": {
       "xywh": [
@@ -658,7 +658,7 @@
         567
       ],
       "bytes": 240899,
-      "sha256": "d9911d5fcd149d18fa70256ba9b344cb5884a9bbebee956f6a439349c39321af"
+      "sha256": "f72a4d1b8dd9d5333fe24ecbc0e560a78f53d1ceccaab7512b38cf431d774837"
     },
     "05-lower-quarantine-archive.png": {
       "xywh": [
@@ -668,7 +668,7 @@
         587
       ],
       "bytes": 532925,
-      "sha256": "fe29d9862cf0da29e7548a75d88efab75dddfc76c24f55e7b907293559764b65"
+      "sha256": "194159107918a1a79f51b770019cf47b5b3635627d6fbe502436aa9d5b09e3d4"
     },
     "06-buried-repair.png": {
       "xywh": [
@@ -682,5 +682,123 @@
     }
   },
   "pixel_parity": 3374393,
-  "native": "NATIVE-UNTESTED"
+  "native": "NATIVE-UNTESTED",
+  "r4_waypoint_proof": {
+    "hull": [
+      31,
+      27
+    ],
+    "obstruction": [
+      462,
+      1053,
+      220,
+      184
+    ],
+    "method": "exact 31x27 clearance via integral image; literal 4-neighbour BFS; ordered segment backtracking",
+    "four_vault_portals": [
+      {
+        "name": "registry high gate",
+        "site": "Registry chamber",
+        "point": [
+          500,
+          359
+        ],
+        "opening_cells": 70,
+        "route": {
+          "steps": 282,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        }
+      },
+      {
+        "name": "diagnostic low gate",
+        "site": "West diagnostic",
+        "point": [
+          515,
+          780
+        ],
+        "opening_cells": 86,
+        "route": {
+          "steps": 412,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        }
+      },
+      {
+        "name": "selector west gate",
+        "site": "East selector",
+        "point": [
+          626,
+          945
+        ],
+        "opening_cells": 74,
+        "route": {
+          "steps": 207,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        }
+      },
+      {
+        "name": "quarantine west gate",
+        "site": "Right sterile lower mouth",
+        "point": [
+          627,
+          1344
+        ],
+        "opening_cells": 80,
+        "route": {
+          "steps": 170,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        }
+      }
+    ],
+    "ordered_waypoints": [
+      "High suture arrival",
+      "Right sterile entry",
+      "Sterile return midpassage",
+      "Right sterile lower mouth",
+      "Lower dispatch hatch"
+    ],
+    "segments": [
+      {
+        "from": "High suture arrival",
+        "to": "Right sterile entry",
+        "steps": 1131,
+        "sterile_neck_centres": 0,
+        "upper_neck": false,
+        "lower_neck": false
+      },
+      {
+        "from": "Right sterile entry",
+        "to": "Sterile return midpassage",
+        "steps": 116,
+        "sterile_neck_centres": 33,
+        "upper_neck": true,
+        "lower_neck": false
+      },
+      {
+        "from": "Sterile return midpassage",
+        "to": "Right sterile lower mouth",
+        "steps": 175,
+        "sterile_neck_centres": 40,
+        "upper_neck": false,
+        "lower_neck": true
+      },
+      {
+        "from": "Right sterile lower mouth",
+        "to": "Lower dispatch hatch",
+        "steps": 761,
+        "sterile_neck_centres": 0,
+        "upper_neck": false,
+        "lower_neck": false
+      }
+    ],
+    "via_distance": 2183,
+    "forced_shortest": false
+  }
 }
