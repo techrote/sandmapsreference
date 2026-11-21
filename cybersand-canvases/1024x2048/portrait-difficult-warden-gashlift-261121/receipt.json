@@ -1,0 +1,316 @@
+{
+  "concept": "Warden Gashlift — Split Keel Salvage Stack",
+  "original": false,
+  "aspect_transfer": true,
+  "pruned_ungrounded": 19643,
+  "seed": 2111202647,
+  "extent": [
+    1024,
+    2048
+  ],
+  "source_contract": {
+    "cybersand_accepted_main": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+    "sandmapsreference_default_source": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "setup_version": 2,
+    "max_construction_rectangles": 32768
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "reinforced concrete inert immovable solid",
+    "62": "steel plate inert immovable solid",
+    "100": "basalt columns inert immovable solid"
+  },
+  "material_plane_sha256": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81",
+  "setup_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+  "setup_bytes": 18694,
+  "rectangles": 981,
+  "rectangle_work": 536734,
+  "cells": 2097152,
+  "histogram": {
+    "0": 1560418,
+    "58": 12484,
+    "62": 141094,
+    "100": 383156
+  },
+  "grounded_stable_solids": 536734,
+  "detached_solids": 0,
+  "initial_fluid_cells": 0,
+  "reactive_or_falling_cells": 0,
+  "overlapping_records": 0,
+  "ordered_replay_equal": true,
+  "exact_sites": {
+    "Arrival Mooring": [
+      225,
+      273
+    ],
+    "Ship Bridge": [
+      248,
+      357
+    ],
+    "Entered Salvage Hold": [
+      262,
+      418
+    ],
+    "Drylock Threshold": [
+      153,
+      534
+    ],
+    "Fractured Crane Crown": [
+      744,
+      220
+    ],
+    "Salvage Magnet": [
+      557,
+      607
+    ],
+    "West Broken Trestle": [
+      270,
+      719
+    ],
+    "East Broken Trestle": [
+      774,
+      657
+    ],
+    "Lift Seam": [
+      500,
+      843
+    ],
+    "Salvage Control": [
+      258,
+      952
+    ],
+    "Press Threshold": [
+      713,
+      1050
+    ],
+    "Compression Yard": [
+      831,
+      1060
+    ],
+    "Press Chamber": [
+      856,
+      1190
+    ],
+    "Upper Return": [
+      500,
+      1201
+    ],
+    "West Relay": [
+      255,
+      1318
+    ],
+    "Right Freight Relay": [
+      750,
+      1383
+    ],
+    "Customs Lookout": [
+      793,
+      1490
+    ],
+    "Sky Freight Departure": [
+      745,
+      1590
+    ],
+    "Rail Grade One": [
+      767,
+      1690
+    ],
+    "Rail Grade Two": [
+      768,
+      1790
+    ],
+    "Lower East Service": [
+      782,
+      1920
+    ],
+    "West Maintenance": [
+      235,
+      1718
+    ],
+    "Deep Repair Bay": [
+      218,
+      1826
+    ],
+    "Central Recovery": [
+      497,
+      1800
+    ]
+  },
+  "route_graph": {
+    "main": [
+      "Arrival Mooring",
+      "Entered Salvage Hold",
+      "Lift Seam",
+      "Press Threshold",
+      "Press Chamber",
+      "Right Freight Relay",
+      "Rail Grade One"
+    ],
+    "upper": [
+      "Ship Bridge",
+      "Drylock Threshold",
+      "Fractured Crane Crown",
+      "Salvage Magnet",
+      "East Broken Trestle"
+    ],
+    "return": [
+      "West Broken Trestle",
+      "Salvage Control",
+      "West Relay",
+      "West Maintenance",
+      "Deep Repair Bay",
+      "Central Recovery"
+    ],
+    "east": [
+      "Compression Yard",
+      "Upper Return",
+      "Customs Lookout",
+      "Rail Grade Two",
+      "Lower East Service"
+    ]
+  },
+  "authored_midge_hull": [
+    4,
+    3
+  ],
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "free_centres": 1371138,
+      "sites_reached": 24,
+      "total_sites": 24,
+      "bad": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "free_centres": 1327144,
+      "sites_reached": 24,
+      "total_sites": 24,
+      "bad": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "free_centres": 1243581,
+      "sites_reached": 24,
+      "total_sites": 24,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "from": "Lift Seam",
+    "to": "Upper Return",
+    "rect": [
+      440,
+      947,
+      116,
+      85
+    ],
+    "conservative_hull": [
+      31,
+      27
+    ],
+    "distance_before": 358,
+    "distance_after": 500,
+    "all_sites_still_reachable": true,
+    "return_route": true
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "rect": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "bytes": 44247,
+      "sha256": "a4b978c693e6e71b556028715e32ebc79b41dc022d9a7c99bd4c8ec9c24334ea",
+      "indexed_material_pixel_parity": 2097152
+    },
+    {
+      "name": "01-entered-breached-ship.png",
+      "rect": [
+        82,
+        308,
+        395,
+        362
+      ],
+      "bytes": 3143,
+      "sha256": "27592221f6cadef9aba1982727f79bc7887b3d751a474aa53491bf40946dba5b",
+      "indexed_material_pixel_parity": 142990
+    },
+    {
+      "name": "02-crane-magnet.png",
+      "rect": [
+        528,
+        193,
+        418,
+        470
+      ],
+      "bytes": 7328,
+      "sha256": "4ba76cda52ca869ca58f609955f960769c3222815fc930eb1592832aa7808e91",
+      "indexed_material_pixel_parity": 196460
+    },
+    {
+      "name": "03-fractured-trestle-relay.png",
+      "rect": [
+        80,
+        668,
+        864,
+        440
+      ],
+      "bytes": 8394,
+      "sha256": "c514a00df2f68680672924b3910d212af8b350682a7be1b0fdaf66237d613b9a",
+      "indexed_material_pixel_parity": 380160
+    },
+    {
+      "name": "04-salvage-press.png",
+      "rect": [
+        600,
+        1033,
+        344,
+        322
+      ],
+      "bytes": 2956,
+      "sha256": "0f5ede80189a6f2cde81e96a9e0aaca5785ccfe3b8c0b458370e7d2c5e3b326b",
+      "indexed_material_pixel_parity": 110768
+    },
+    {
+      "name": "05-customs-rail-grades.png",
+      "rect": [
+        629,
+        1420,
+        315,
+        520
+      ],
+      "bytes": 7113,
+      "sha256": "b45a2291a0f496beb9a4e20184d950839a21654955594c2bcdb7e1599e4cab08",
+      "indexed_material_pixel_parity": 163800
+    },
+    {
+      "name": "06-west-lower-return.png",
+      "rect": [
+        82,
+        1665,
+        562,
+        310
+      ],
+      "bytes": 3151,
+      "sha256": "c47a2c55877dd31ce395d61186a176fec5598de4cfca98ce358e7bba224100b1",
+      "indexed_material_pixel_parity": 174220
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "PENDING",
+  "github_actions_exact_head": "NOT-CHECKED",
+  "proof": "Exhaustive source cells, 4-neighbour bottom-rooting, disjoint rectangle replay, three literal full-envelope 4-neighbour reachability and physical obstruction detour; source-indexed PNG parity."
+}
