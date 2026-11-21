@@ -76,27 +76,33 @@ function layoutWorld(){
  b(557,736,104,31,104);b(572,746,74,13,131);
  l(563,704,706,645,9,117);l(648,704,791,645,9,117);
  b(676,774,100,15,58);b(728,789,12,65,68);
- // HIGH tension cableway: non-iso side view, high catenary through y790-900.
- // Both cable endpoints are rooted in different geological bank piers.
- b(103,751,181,17,58);b(122,768,11,133,68);
- b(769,835,156,19,58);b(856,801,13,35,68);
- l(132,770,299,802,10,117);l(299,802,492,862,8,117);
- l(492,862,660,888,9,117);l(660,888,850,835,10,117);
- l(290,791,327,850,7,68);l(477,853,482,910,7,68);
- l(658,879,654,930,7,68);b(640,927,103,12,62);
+ // R6 HIGH: opposed bank-rooted receiving mast heads and two taut wires.
+ // Light catenary and suspension hangers; distinct from lower compression truss.
+ b(137,718,15,65,68);b(131,715,39,11,62);b(137,747,33,12,58);
+ b(861,748,15,109,68);b(850,744,43,11,62);b(849,828,43,12,58);
+ for(const p of [[149,725,280,743],[280,743,430,762],[430,762,584,776],[584,776,718,774],[718,774,871,753]])l(...p,7,117);
+ for(const p of [[149,740,280,758],[280,758,430,777],[430,777,584,791],[584,791,718,789],[718,789,871,768]])l(...p,5,68);
+ l(137,748,209,835,8,117);l(861,776,812,854,8,117);
+ for(const [x,top,bottom] of [[213,747,908],[294,755,911],[404,774,917],[474,784,919],[663,788,930],[737,780,927],[822,766,924]])b(x,top,6,bottom-top,68);
+ l(226,908,500,921,12,62);l(623,933,859,926,12,62);
+ b(101,902,127,21,58);b(854,923,71,15,58);
+ // Two staggered engineered Midge-safe apertures; route witness still pending.
+ b(452,738,78,87,0);b(508,873,121,83,0);
+ b(494,908,12,31,117);b(632,917,12,32,117);
+ b(496,912,9,9,79);b(632,920,9,9,79);
  // Fault zig-zag control balconies and a deliberately vacant crossover bay.
  b(100,954,166,17,58);b(120,935,87,19,62);
  b(795,960,130,15,58);b(823,945,82,15,62);
  b(106,1026,142,15,58);b(828,1021,97,14,58);
- // LOWER rooted truss: separate engineerable alternative, with TWO distinct
- // converging load paths, not another cable repeat.
- b(100,1111,178,21,58);b(747,1090,178,22,58);
- l(270,1109,416,1168,12,117);l(416,1168,567,1128,12,117);
- l(567,1128,751,1093,12,117);
- l(270,1109,409,1210,9,68);l(409,1210,568,1128,10,117);
- l(568,1128,733,1195,9,68);
- b(363,1190,105,14,62);b(585,1194,129,14,62);
- b(335,1204,12,80,68);b(690,1207,12,76,68);
+ // R6 LOW: independently rooted, genuinely triangulated through-truss.
+ b(100,1108,180,25,58);b(744,1090,181,22,58);
+ l(258,1118,451,1118,13,117);l(610,1105,821,1105,13,117);
+ l(118,1207,271,1247,13,58);l(271,1247,813,1247,13,58);
+ l(813,1247,876,1109,13,58);
+ for(const [x1,y1,x2,y2] of [[267,1118,302,1246],[302,1246,363,1118],[363,1118,438,1247],[438,1247,443,1118],[614,1105,619,1247],[619,1247,693,1105],[693,1105,742,1247],[742,1247,813,1105]])l(x1,y1,x2,y2,10,68);
+ b(303,1240,16,39,58);b(753,1240,16,48,58);
+ b(436,1108,13,143,68);b(613,1102,13,149,68);
+ b(436,1111,12,14,79);b(613,1109,12,14,79);
  // Lower left *three unlike rollers*, not a row of cloned caster stamps.
  b(128,1276,246,21,58);b(142,1297,175,11,62);
  b(168,1237,22,39,68);b(262,1255,14,21,69);
@@ -134,10 +140,10 @@ function layoutWorld(){
  // Engineered clear-height cableway gate: the tension cables divide around
  // an open 31x27-compatible passage, preserving separate cable and lower-truss
  // motifs instead of a closed wire across the sole descent.
- b(662,838,126,114,0);
+ b(508,873,121,83,0);
  // Additional grade-separated open truss portal (drawbars terminate at
  // its two inspection abutments rather than becoming an impassable fence).
- b(454,1063,151,175,0);
+ b(451,1110,158,124,0);
  // Full conservative site envelope clearing is *literal* and before support
  // component pruning. Never search for a shifted replacement site.
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
