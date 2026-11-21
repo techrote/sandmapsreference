@@ -9,6 +9,9 @@ function digest(b){return crypto.createHash('sha256').update(b).digest('hex')}
 function crc32(b){let c=0xffffffff;for(const v of b){c^=v;for(let j=0;j<8;j++)c=(c>>>1)^((c&1)?0xedb88320:0)}return (c^0xffffffff)>>>0}
 const root=__dirname,setupBytes=fs.readFileSync(path.join(root,'setup.json')),receiptBytes=fs.readFileSync(path.join(root,'receipt.json'));
 const setup=JSON.parse(setupBytes),receipt=JSON.parse(receiptBytes),w=buildWorld(),W=w.W,H=w.H,N=W*H;
+const required=["version","extent","actors","next_id","selected","edits","response","liquid_policy","normalize","rule_radius","source","material","brush","fire"].sort();
+assert(JSON.stringify(Object.keys(setup).sort())===JSON.stringify(required),'P0: exact accepted Setup-v2 root schema mismatch');
+assert(JSON.stringify(Object.keys(setup.actors[0]).sort())===JSON.stringify(["id","model","hash","spawn","options"].sort()),'P0: exact actor schema mismatch');
 assert(setup.version===2&&setup.extent[0]===W&&setup.extent[1]===H,'wrong Setup version/extent');
 assert(setup.actors.length===1&&setup.actors[0].model==='midge','wrong actor contract');
 assert(Array.isArray(setup.edits)&&setup.edits.length===receipt.rectangle_count&&setup.edits.length<=32768,'wrong rectangle budget');
