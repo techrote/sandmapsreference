@@ -1,0 +1,318 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Mireward Levee Communes",
+  "sibling": 3,
+  "role": "Vesper Inverted Root Orchard / Hanging Culture Exchange",
+  "seed": "mireward-vesper-inverted-root-orchard-261121-v1",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donors": [
+    {
+      "slug": "wide-harrow-mere-spore-dam",
+      "pr": 64,
+      "head": "1202aea8d696e2bfecd7e4f3353c9738a9435858"
+    },
+    {
+      "slug": "wide-threnody-scar-foldwing-seedlift",
+      "pr": 73,
+      "head": "00cb6b6b86b875d8b81cc387c711aa56f172d9dd"
+    }
+  ],
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 8581,
+    "62": 42307,
+    "66": 60901,
+    "68": 45041,
+    "77": 2567,
+    "79": 8013,
+    "100": 346157,
+    "101": 120832,
+    "120": 16481,
+    "129": 10973,
+    "131": 66234
+  },
+  "occupied_cells": 728087,
+  "grounded_cells": 728087,
+  "detached_cells": 0,
+  "solid_components": 2,
+  "physical_tethers": {
+    "joins": 64,
+    "max_span": 75
+  },
+  "lossless_rectangles": 5901,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 728087,
+  "setup_bytes": 110560,
+  "plane_sha256": "5d42c98d9af8d7c9b1874b7660087d8f4c270941bf7ea623ec4e6167a6e6d082",
+  "setup_sha256": "de1c005902efee3285f3251c07544472460ae41514889670e3fb6b80536e8b4d",
+  "literal_sites": {
+    "West arrival lumen": [
+      72,
+      188
+    ],
+    "West root registrar approach": [
+      75,
+      320
+    ],
+    "West cold dock approach": [
+      75,
+      532
+    ],
+    "West flight spill": [
+      345,
+      667
+    ],
+    "West low salvage": [
+      255,
+      850
+    ],
+    "West dry undercroft": [
+      255,
+      946
+    ],
+    "Inverted orchard west": [
+      525,
+      594
+    ],
+    "First sieve recovery": [
+      615,
+      711
+    ],
+    "Root-column transfer": [
+      795,
+      662
+    ],
+    "Crown oversight bridge": [
+      1245,
+      196
+    ],
+    "High customs threshold": [
+      1245,
+      402
+    ],
+    "Central flight lumen": [
+      1086,
+      692
+    ],
+    "Centre lower return": [
+      975,
+      850
+    ],
+    "Eastern sieve access": [
+      1335,
+      632
+    ],
+    "Hanging inoculation bay": [
+      1515,
+      616
+    ],
+    "East quarantine loft": [
+      1605,
+      609
+    ],
+    "East cryo lantern approach": [
+      1965,
+      300
+    ],
+    "East lantern underdeck": [
+      1875,
+      500
+    ],
+    "East ravine arrival": [
+      1994,
+      687
+    ],
+    "Eastern dry vault": [
+      1810,
+      916
+    ],
+    "West dry way": [
+      165,
+      950
+    ],
+    "Mid dry way": [
+      802,
+      957
+    ],
+    "East dry way": [
+      1527,
+      958
+    ],
+    "Outer orchard sightline": [
+      1155,
+      780
+    ],
+    "Unfinished culture spur": [
+      407,
+      689
+    ],
+    "Upper rail wing": [
+      1245,
+      560
+    ],
+    "Lower assay spill": [
+      1335,
+      738
+    ],
+    "Exchange customs chamber": [
+      1155,
+      842
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable_centres": 623290,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable_centres": 582484,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 502021,
+      "passed": 28,
+      "total": 28,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      1124,
+      815,
+      1192,
+      877
+    ],
+    "blocked_site": "Exchange customs chamber",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 493397,
+      "passed": 27,
+      "total": 28,
+      "bad": [
+        {
+          "name": "Exchange customs chamber",
+          "point": [
+            1155,
+            842
+          ]
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "origin": [
+        0,
+        0
+      ],
+      "extent": [
+        2048,
+        1024
+      ],
+      "bytes": 140644,
+      "sha256": "084ad92ae166f825a385b9f233f64203bc494641c7e34f042a7eeee2b084e2d2",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "01-west-root-registrar.png",
+      "origin": [
+        60,
+        171
+      ],
+      "extent": [
+        390,
+        442
+      ],
+      "bytes": 15115,
+      "sha256": "3b8031f315ef896e612d24943aaea5f79d25c79cb5194e784949938ce04a9d72",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "02-inverted-orchard.png",
+      "origin": [
+        465,
+        160
+      ],
+      "extent": [
+        513,
+        574
+      ],
+      "bytes": 38281,
+      "sha256": "e45bba156b5e717166657b4fcb02d62094bd478ec5c03221d12cd50cfda7d569",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "03-open-flight-lumen.png",
+      "origin": [
+        855,
+        180
+      ],
+      "extent": [
+        424,
+        671
+      ],
+      "bytes": 28377,
+      "sha256": "3ff384918d51c4923b87c6d1d83d8198eccf9726e9dacfa84328c586f3718cba",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "04-eastern-quarantine.png",
+      "origin": [
+        1440,
+        200
+      ],
+      "extent": [
+        497,
+        551
+      ],
+      "bytes": 24704,
+      "sha256": "1effc13359d7e1ff10d607402a632ea70fadcc80c64e1f84ed72dfd7fa326a23",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "05-dry-undercroft.png",
+      "origin": [
+        1110,
+        695
+      ],
+      "extent": [
+        770,
+        313
+      ],
+      "bytes": 6240,
+      "sha256": "1642dfb04cc7254c6ad7a83a721cecec3a92fa0fa45e9d93a3e496faebbf1cb6",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    }
+  ],
+  "qualification": "CREATOR-STATIC-PASS",
+  "independent_reviews": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "OPEN DRAFT/HOLD",
+  "caveat": "Accepted 32768 source rectangles distinct from unmeasured 4096 installed bridge fallback"
+}
