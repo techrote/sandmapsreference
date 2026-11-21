@@ -122,6 +122,11 @@ function buildWorld(){
  rect(1806,664,110,114,0);
  // Open west roof passenger canopy so it has a second physical ingress.
  rect(173,275,86,215,0);
+ // Architectural access slots to hanging control rooms and entered low-level bays.
+ rect(1048,115,113,327,0);
+ rect(1700,210,100,251,0);
+ rect(70,739,176,152,0);
+ rect(1771,731,241,169,0);
  // Preserve BOTH canopy passages: no structural ornament may obstruct their 160px apertures.
  rect(510,481,164,75,0);
  rect(1440,481,160,75,0);
@@ -132,12 +137,12 @@ function buildWorld(){
 
 
  const sites=[
-  ["West embarkation",110,301],["West ticket gantry",330,266],
+  ["West embarkation",110,301],["West ticket gantry",284,292],
   ["West windward signal",445,377],["Suspended transfer west",705,216],
-  ["Suspended transfer centre",1080,146],["Top operator gallery",1090,148],
+  ["Suspended transfer centre",1093,165],["Top operator gallery",1125,265],
   ["Eastern weather gauge",1735,260],["Remote dispatch",1960,285],
   ["Upper west hatch approach",583,422],["West sky hatch",584,519],
-  ["West hatch recovery",585,614],["Upper east hatch approach",1507,421],
+  ["West hatch recovery",585,650],["Upper east hatch approach",1507,421],
   ["East sky hatch",1528,519],["East hatch recovery",1530,612],
   ["West underdeck passenger",290,598],["West lower signal",470,628],
   ["Central salvage arrival",833,584],["Central freight bypass",1069,577],
