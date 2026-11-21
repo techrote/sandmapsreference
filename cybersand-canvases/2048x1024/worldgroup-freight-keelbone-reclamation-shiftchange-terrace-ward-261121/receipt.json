@@ -1,0 +1,332 @@
+{
+  "concept": "Keelbone Reclamation Vaults — Shift-Change Terrace Ward / Civic Safe Return",
+  "original": true,
+  "seed": 40570928,
+  "engine_sha": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West crew arrival",
+      "West shift muster",
+      "Locker change hall",
+      "Decontamination intake",
+      "Shower sluice",
+      "Clean release",
+      "Canteen entry",
+      "Kitchen service",
+      "Canteen exit",
+      "Clinic triage",
+      "Clean treatment",
+      "Ward discharge",
+      "Pay registry",
+      "Freight crew ledger",
+      "East export muster"
+    ],
+    "high": [
+      "West roof bypass",
+      "Decontamination roof",
+      "Terrace observation",
+      "Clinic roof bypass",
+      "East emergency roof"
+    ],
+    "lower": [
+      "West lower safe return",
+      "Mid lower safe return",
+      "East lower safe return"
+    ],
+    "entered": [
+      "Locker change hall",
+      "Shower sluice",
+      "Kitchen service",
+      "Clean treatment",
+      "Freight crew ledger"
+    ],
+    "staging": [
+      "Damaged refuge",
+      "Clinic medicine store"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West crew arrival": [
+      82,
+      678
+    ],
+    "West shift muster": [
+      190,
+      665
+    ],
+    "Locker change hall": [
+      350,
+      670
+    ],
+    "Hoist overlook": [
+      418,
+      393
+    ],
+    "Decontamination intake": [
+      524,
+      664
+    ],
+    "Shower sluice": [
+      632,
+      671
+    ],
+    "Clean release": [
+      749,
+      673
+    ],
+    "Canteen entry": [
+      880,
+      661
+    ],
+    "Kitchen service": [
+      977,
+      669
+    ],
+    "Canteen exit": [
+      1187,
+      666
+    ],
+    "Clinic triage": [
+      1297,
+      657
+    ],
+    "Clean treatment": [
+      1435,
+      667
+    ],
+    "Ward discharge": [
+      1561,
+      665
+    ],
+    "Pay registry": [
+      1677,
+      667
+    ],
+    "Freight crew ledger": [
+      1782,
+      674
+    ],
+    "East export muster": [
+      1918,
+      679
+    ],
+    "Damaged refuge": [
+      1989,
+      764
+    ],
+    "West lower safe return": [
+      305,
+      883
+    ],
+    "Mid lower safe return": [
+      989,
+      888
+    ],
+    "East lower safe return": [
+      1730,
+      888
+    ],
+    "West roof bypass": [
+      340,
+      351
+    ],
+    "Decontamination roof": [
+      640,
+      350
+    ],
+    "Terrace observation": [
+      1014,
+      354
+    ],
+    "Clinic roof bypass": [
+      1484,
+      378
+    ],
+    "East emergency roof": [
+      1770,
+      389
+    ],
+    "Clinic medicine store": [
+      1512,
+      575
+    ]
+  },
+  "material_histogram": {
+    "0": 1781192,
+    "58": 33102,
+    "62": 29609,
+    "100": 253249
+  },
+  "stable_occupied_cells": 315960,
+  "grounded": 315960,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 202898,
+  "invalid_writes": 0,
+  "rectangles": 183,
+  "rectangle_work": 315960,
+  "setup_bytes": 4124,
+  "material_plane_sha256": "2c1e8c8d265d68ded6d9ec2059a1524f99df05e8a052985b0428dfc6a2956225",
+  "setup_sha256": "9a180247b2c9d9485c507aa6efb540d61e1a802a479d6733ddc9bb2207672490",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 26,
+      "total": 26,
+      "free_centres": 1700429,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 26,
+      "total": 26,
+      "free_centres": 1682968,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 26,
+      "total": 26,
+      "free_centres": 1648816,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      1006,
+      610,
+      87,
+      105
+    ],
+    "from": "Kitchen service",
+    "to": "Canteen exit",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 26,
+    "unreachable": [],
+    "distance_before_after": [
+      213,
+      331
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "6cdb16dfac69a889371618862858ca1143fc3e4b66ad30bd2f9d7e35d9cf3554",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-shift-lockers",
+      "rect": [
+        112,
+        469,
+        412,
+        444
+      ],
+      "bytes": 46361,
+      "sha256": "28c1363df65519b47e497e9d78f3a1d0e9d5d66b50171bc481279622de295c67",
+      "pixel_parity": 182928
+    },
+    {
+      "name": "02-decontamination",
+      "rect": [
+        468,
+        521,
+        374,
+        393
+      ],
+      "bytes": 37520,
+      "sha256": "a63ab6b45544d5d3c9fec7c1aaf417771ef4a9e77be5621990ed8ad42b759e95",
+      "pixel_parity": 146982
+    },
+    {
+      "name": "03-entered-canteen",
+      "rect": [
+        826,
+        438,
+        416,
+        479
+      ],
+      "bytes": 50480,
+      "sha256": "6367685098f3d8493dfc81a2215a9d6c254862157d1bf58f726eefc996bb8c49",
+      "pixel_parity": 199264
+    },
+    {
+      "name": "04-clinic-ward",
+      "rect": [
+        1260,
+        495,
+        399,
+        422
+      ],
+      "bytes": 42807,
+      "sha256": "3bea0b376298aba7b8e75895864abb44c10e3f9384a69300716538e4d9485c7c",
+      "pixel_parity": 168378
+    },
+    {
+      "name": "05-ledger-refuge",
+      "rect": [
+        1640,
+        523,
+        408,
+        409
+      ],
+      "bytes": 42312,
+      "sha256": "7f84f9c6a88d6da04352b7c940fb01522c035287c65cac45c105e8b78fd26247",
+      "pixel_parity": 166872
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Exact source-static replay; bottom-rooted solids; three Midge hulls; physical obstruction and alternative; authentic PNG pixel parity"
+}

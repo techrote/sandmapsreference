@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "lane": "worldgroup-freight",
+  "family": "Keelbone Reclamation Vaults",
+  "map_role": "Sibling 06 — low-rise inhabited shift-change support, lockers, decontamination, canteen, clinic, payroll and emergency return",
+  "anchor_donors": [
+    {
+      "name": "wide-graven-keel-ship-tipper",
+      "pr": 45,
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f"
+    },
+    {
+      "name": "wide-peregrine-cleft-halcyon-drydock",
+      "pr": 33,
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5"
+    }
+  ],
+  "macro_topology": "Five uneven grounded enclosed civic units with entered side doors, small separating sky courts, broken east refuge and three connections to lower return",
+  "density_profile": "Dense at five interrupted low-rise complexes, short intervening outdoor air courts; broad above-roof sky kept clear for authoring",
+  "route_grammar": {
+    "main": "shift arrival → lockers → decontamination → canteen/servery → clinical support → pay records → export crew and damaged refuge",
+    "alternate": "Flight above five uneven roof crowns by outdoor light court gaps",
+    "recovery": "Three shaft mouths into a continuous lower bedrock-founded gallery",
+    "obstruction": "31×27 physical obstruction [1006,610,87,105] forces a canteen service-to-exit detour with all 26 sites still connected"
+  },
+  "strong_motifs": [
+    "Five structurally unlike civic-industrial roof cutaways",
+    "Actual side-entered worker rooms and decontamination vestibules",
+    "Founded steel serving/medical counters",
+    "Simple grounded freight-crew ledger desks rather than large rotors",
+    "Three lower emergency-return shafts and broken outer refuge"
+  ],
+  "interesting_relationships": [
+    "Shift-change sequence provides human-scale operational infrastructure for adjacent salvage freight worlds",
+    "Connected entered roofed units are contrasted with open sky and an undercroft bypass",
+    "Roof load paths require dedicated uninterrupted piers while door thresholds remain physically open"
+  ],
+  "authoring_affordances": [
+    "Vacant upper sky to add arrivals or cranes",
+    "Unused clinic cubicles for human edits",
+    "Damaged east refuge seam for reroutable collapse set piece",
+    "Lower tunnel for later evacuation chase"
+  ],
+  "setpiece_candidates": [
+    "Worker muster/NPC encounter",
+    "Decontamination lockdown with alternate route",
+    "Clinic emergency rescue/holdout",
+    "Damaged export refuge and lower evacuation"
+  ],
+  "procedural_exemplar_value": "Teaches small room adjacency, practical civic-support topology, rooted roofs, 31×27 side entries and undercroft recovery as contrast to giant heavy industrial machine exemplars",
+  "similarity_avoidance": "Explicitly unlike Keelbone 01/02 excavated voids, 03 repeated press halls, 04 rotor courtyard and 05 sparse gravity cascade: five compact enclosed worker/civic habitats connected through short corridors; no central machine, wheel or long cable",
+  "diversity_axes": {
+    "macro_topology": "multi_settlement",
+    "altitude_grammar": "tri_level",
+    "density_cadence": "clustered",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "mixed",
+    "support_form": "floor_rooted",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  }
+}
