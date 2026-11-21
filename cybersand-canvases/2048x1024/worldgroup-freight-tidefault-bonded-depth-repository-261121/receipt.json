@@ -1,0 +1,326 @@
+{
+  "concept": "Tidefault Bonded Freight — Bonded Depth Repository / Entered Custody Worktown",
+  "original": true,
+  "seed": 120201679,
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West depth intake",
+      "External weigh apron",
+      "Inclined cargo capture",
+      "First bond threshold",
+      "Ledger interlock",
+      "Archive transfer",
+      "Upper pallet receiver",
+      "Crew dispatch",
+      "East freight release"
+    ],
+    "upper": [
+      "West cliff gallery",
+      "Roof assay watch",
+      "Central aperture watch",
+      "East relief gallery",
+      "Outbound roof lookout"
+    ],
+    "interior": [
+      "West weighing chamber",
+      "Intake inspector's cell",
+      "Nested ledger vault",
+      "Bond sample room",
+      "Restricted freight stack",
+      "Inhabited bond ward",
+      "East recovery locker"
+    ],
+    "lower": [
+      "West underworks",
+      "Archive ventilation",
+      "Lower recovery hall",
+      "Return maintenance",
+      "Emergency export"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West depth intake": [
+      125,
+      535
+    ],
+    "External weigh apron": [
+      335,
+      535
+    ],
+    "Inclined cargo capture": [
+      560,
+      535
+    ],
+    "First bond threshold": [
+      745,
+      535
+    ],
+    "Ledger interlock": [
+      945,
+      535
+    ],
+    "Archive transfer": [
+      1150,
+      535
+    ],
+    "Upper pallet receiver": [
+      1370,
+      535
+    ],
+    "Crew dispatch": [
+      1600,
+      535
+    ],
+    "East freight release": [
+      1905,
+      535
+    ],
+    "West cliff gallery": [
+      220,
+      329
+    ],
+    "Roof assay watch": [
+      655,
+      329
+    ],
+    "Central aperture watch": [
+      1050,
+      329
+    ],
+    "East relief gallery": [
+      1480,
+      329
+    ],
+    "Outbound roof lookout": [
+      1860,
+      329
+    ],
+    "West weighing chamber": [
+      320,
+      691
+    ],
+    "Intake inspector's cell": [
+      530,
+      691
+    ],
+    "Nested ledger vault": [
+      805,
+      692
+    ],
+    "Bond sample room": [
+      1090,
+      691
+    ],
+    "Restricted freight stack": [
+      1295,
+      692
+    ],
+    "Inhabited bond ward": [
+      1510,
+      692
+    ],
+    "East recovery locker": [
+      1800,
+      691
+    ],
+    "West underworks": [
+      200,
+      835
+    ],
+    "Archive ventilation": [
+      660,
+      835
+    ],
+    "Lower recovery hall": [
+      1100,
+      835
+    ],
+    "Return maintenance": [
+      1570,
+      835
+    ],
+    "Emergency export": [
+      1890,
+      835
+    ]
+  },
+  "material_histogram": {
+    "0": 1331298,
+    "58": 89072,
+    "62": 78247,
+    "100": 598535
+  },
+  "stable_occupied_cells": 765854,
+  "grounded": 765854,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 59806,
+  "invalid_writes": 0,
+  "rectangles": 336,
+  "rectangle_work": 765854,
+  "setup_bytes": 7165,
+  "material_plane_sha256": "99fe028cff48118eb32750050348ab8f08252cf0871c9e1e4abc14d55b9261d5",
+  "setup_sha256": "10c4e73130b4be05a92268b8d4ec0213aaa24cf45c495f5c2d7ac7558172c27d",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 26,
+      "total": 26,
+      "free_centres": 827210,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 26,
+      "total": 26,
+      "free_centres": 792121,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 26,
+      "total": 26,
+      "free_centres": 729245,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      844,
+      286,
+      116,
+      89
+    ],
+    "from": "Roof assay watch",
+    "to": "East relief gallery",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 26,
+    "unreachable": [],
+    "distance_before_after": [
+      825,
+      943
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "a8c345044c0ef807fca53322e214691a23038ac6b222eec9b3c8b9bf35b88a69",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-weighing",
+      "rect": [
+        105,
+        423,
+        475,
+        365
+      ],
+      "bytes": 43985,
+      "sha256": "157d75e0380262ff6582771ae75bf5c131d8588fc1e48ad5d7134a9e1e454266",
+      "pixel_parity": 173375
+    },
+    {
+      "name": "02-bond-vaults",
+      "rect": [
+        640,
+        394,
+        740,
+        382
+      ],
+      "bytes": 71242,
+      "sha256": "e5733f04f2c078da5b9a19a7ac4b1181a2b7aa287a7fcfc5a89659a15364a32e",
+      "pixel_parity": 282680
+    },
+    {
+      "name": "03-east-worktown",
+      "rect": [
+        1396,
+        410,
+        552,
+        377
+      ],
+      "bytes": 52588,
+      "sha256": "190f0dc48a89443ebcf36e7b3e8252cea5d7e6ee617e8a626b359c822fcc1501",
+      "pixel_parity": 208104
+    },
+    {
+      "name": "04-roof-gallery",
+      "rect": [
+        88,
+        226,
+        1870,
+        213
+      ],
+      "bytes": 100087,
+      "sha256": "ab36443d01c8224617cce51c50dc45a97852f31879d8634b767898ce76ccf1dd",
+      "pixel_parity": 398310
+    },
+    {
+      "name": "05-deep-return",
+      "rect": [
+        80,
+        725,
+        1885,
+        204
+      ],
+      "bytes": 96682,
+      "sha256": "9a1bd0e5e544cf643524130e86f290647e01e3e73b223200c95723774622dff4",
+      "pixel_parity": 384540
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Complete material plane, lossless disjoint Setup-v2 replay, exact conservative 19x15/23x19/31x27 routes, physical obstruction detour and indexed PNG integrity/parity; enclosed terrain-embedded custody cells and staggered entered inspection pockets"
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Tidefault Bonded Freight Districts",
+  "lane": "worldgroup-freight",
+  "map_role": "Bonded Depth Repository / Entered Custody Worktown",
+  "anchor_donors": [
+    {
+      "name": "wide-graven-keel-ship-tipper",
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f",
+      "pr": 45
+    },
+    {
+      "name": "wide-peregrine-cleft-halcyon-drydock",
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5",
+      "pr": 33
+    }
+  ],
+  "macro_topology": [
+    "nested_cavities",
+    "mixed"
+  ],
+  "density_profile": "Edge-rooted dense intake and inhabited east dispatch enclose a deliberately large central void, with discrete entered bond/assay rooms and a sparse overhead inspection bridge.",
+  "route_grammar": {
+    "main": "nine west-to-east freight stations at y535 with handling threshold departures",
+    "upper": "five high roof and assay sites through a cliff-founded upper canopy",
+    "interior": "seven different entered custody/worktown stations with alternative side entries",
+    "lower": "five deep recovery sites at y835, branch and return"
+  },
+  "strong_motifs": [
+    "exposed orthographic bedrock shelves",
+    "single long roof-inspection service bridge",
+    "unequal side-entered concrete vaults",
+    "restrained steel ledger/cradle interfaces",
+    "inhabited east recovery worktown",
+    "independent low emergency return"
+  ],
+  "interesting_relationships": [
+    "West weighing and inclined capture feed entered ledger/assay rooms, unlike a free-standing decorative crane",
+    "A cliff-rooted ledge carries retained archival rooms without furnishing the middle void",
+    "The east worktown is serviced by a distinct return-and-export track",
+    "Upper inspection and lower emergency paths remain available after a source-solid obstruction"
+  ],
+  "authoring_affordances": [
+    "Large empty central excavation for future authored multi-level industrial insertions",
+    "Separate underworks corridor with routing and potential vent shutdown stages",
+    "Extendable custody room bays and human-adjustable thresholds",
+    "Long canopy provides a procedural support-span exemplar"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "West weighbridge",
+      "purpose": "arrival custody lockdown",
+      "scripted": false
+    },
+    {
+      "site": "Nested ledger vault",
+      "purpose": "quarantine sample reveal and authored NPC interaction",
+      "scripted": false
+    },
+    {
+      "site": "East inhabited worktown",
+      "purpose": "repair ward and dispatch dialogue",
+      "scripted": false
+    },
+    {
+      "site": "Underworks ventilation",
+      "purpose": "bridge closure, escape or depressurisation route",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Cliff-rooted asymmetrical cavity settlement, long cross-void supported steel gallery, side-entered differentiated archive pockets and alternate strata routes with highly editable voids; suitable for SWARM/GENTEK modular part and set-piece grammar inference.",
+  "similarity_avoidance": "Unlike Tidefault 01's serial tall customs gates, Tidefault 02's exposed low arches, and Cleftline's open port, inclined salvage basin or low causeways; a substantially different underground repository/worktown with bridge-and-vault load paths.",
+  "diversity_axes": {
+    "macro_topology": [
+      "nested_cavities",
+      "mixed"
+    ],
+    "altitude_grammar": [
+      "multi_strata",
+      "high_low_bypass"
+    ],
+    "density_cadence": [
+      "edge_dense_center_open",
+      "clustered"
+    ],
+    "route_structure": [
+      "layered",
+      "branch_rejoin"
+    ],
+    "landmark_family": [
+      "bridge",
+      "gate"
+    ],
+    "support_form": [
+      "edge_rooted",
+      "cliff_embedded"
+    ],
+    "environment_relation": [
+      "geological",
+      "dry"
+    ],
+    "incompleteness": [
+      "excavation",
+      "editable_gaps"
+    ]
+  },
+  "evidence": {
+    "full_extent": [
+      2048,
+      1024
+    ],
+    "material_plane_sha256": "99fe028cff48118eb32750050348ab8f08252cf0871c9e1e4abc14d55b9261d5",
+    "setup_sha256": "10c4e73130b4be05a92268b8d4ec0213aaa24cf45c495f5c2d7ac7558172c27d",
+    "named_sites": 26,
+    "native_status": "NATIVE-UNTESTED"
+  }
+}
