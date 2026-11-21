@@ -79,7 +79,7 @@ function world(){
  b(839,325,84,12,62);b(855,337,14,67,68);b(907,336,11,63,68);
  b(1080,315,82,11,117);b(1124,326,13,51,68);
  // Literal Midge sites intentionally live in clear space by functional faces.
- const sites=[["West spawn",90,788],["Ore intake",192,477],["West crane",326,687],
+ const sites=[["West spawn",55,771],["Ore intake",192,477],["West crane",326,687],
  ["Primary furnace watch",418,689],["Secondary induction watch",749,757],
  ["Rotor upper port",994,307],["Rotor side port",1188,599],
  ["Caster A",1345,572],["Caster B",1334,786],["Quench service",1480,776],
@@ -116,7 +116,7 @@ function world(){
    }
  }
  if(orphan().length)throw Error("detached geometry remains");
- return {g,W,H,M,seed,sites,spawn:[90,788],tethers};
+ return {g,W,H,M,seed,sites,spawn:[55,771],tethers};
 }
 
 
