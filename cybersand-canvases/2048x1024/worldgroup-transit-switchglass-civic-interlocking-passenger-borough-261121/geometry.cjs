@@ -125,6 +125,13 @@ function buildWorld(){
  // Surviving parapets frame rather than obstruct both hatch mouths.
  rect(781,555,7,22,M.iron);rect(866,555,7,22,M.iron);
  rect(1026,483,8,20,M.frame);rect(1128,483,8,20,M.frame);
+ // Independent top-boundary-supported civic catenary carries separated roof portions above the vehicle/pedestrian passage.
+ // Functional signal/energy trunk, not a repeated giant central wheel or decorative floating skyline.
+ rect(45,412,1948,10,M.frame);
+ rect(45,412,13,109,M.frame);rect(1980,412,13,372,M.frame);
+ for(const [x,y] of [[420,519],[565,573],[876,573],[1012,502],[1290,502],[1531,556],[1868,556]]){
+   rect(x,422,10,y-422,M.steel);rect(x-6,y-3,22,7,M.plate);
+ }
  // Intentional crop coverages follow the final material plane exactly.
  const sites=[
  ["West street arrival",68,685],["West passenger hall",184,683],
