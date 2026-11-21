@@ -72,7 +72,7 @@ function build(){
  // Open expansion interfaces, not obligatory decorations.
  for(let [x,y] of [[340,757],[782,810],[1324,794],[1710,805]]){R(x,y,40,9,M.steel);L(x+8,y,x+24,y-23,5,M.grate);}
  // Physically tether every isolated authoring fixture into the bedrock before encoding.
- let ties=0;for(let pass=0;pass<2;pass++){let seen=new Uint8Array(N),queue=new Int32Array(N),links=[];for(let i=0;i<N;i++)if(g[i]&&!seen[i]){let hd=0,tl=1,rooted=false;seen[i]=1;queue[0]=i;while(hd<tl){let p=queue[hd++],x=p%W,y=p/W|0;if(!x||x===W-1||!y||y===H-1)rooted=true;for(let j of [p-W,p+W,x?p-1:-1,x<W-1?p+1:-1])if(j>=0&&j<N&&g[j]&&!seen[j]){seen[j]=1;queue[tl++]=j;}}if(!rooted)links.push(i);}for(let p of links){let x=p%W,y=p/W|0;L(x,y,x,1010,5,M.grate);ties++;}if(!links.length)break;}
+ let tieCount=0;for(let pass=0;pass<2;pass++){let seen=new Uint8Array(N),queue=new Int32Array(N),links=[];for(let i=0;i<N;i++)if(g[i]&&!seen[i]){let hd=0,tl=1,rooted=false;seen[i]=1;queue[0]=i;while(hd<tl){let p=queue[hd++],x=p%W,y=p/W|0;if(!x||x===W-1||!y||y===H-1)rooted=true;for(let j of [p-W,p+W,x?p-1:-1,x<W-1?p+1:-1])if(j>=0&&j<N&&g[j]&&!seen[j]){seen[j]=1;queue[tl++]=j;}}if(!rooted)links.push(i);}for(let p of links){let x=p%W,y=p/W|0;L(x,y,x,1010,5,M.grate);tieCount++;}if(!links.length)break;}
  const sites={
  "West arrival sky":[94,548],"West council deck":[205,544],"West seed ledger":[165,714],"West cold registry":[167,819],
  "First polder air crossing":[444,553],"First dry catchment":[445,839],"Reed purge deck":[627,633],
@@ -86,7 +86,7 @@ function build(){
  "Far east secondary sampling":[1927,817],"East expansion horizon":[1734,520],
  "Underbridge salvage site":[1699,775],"Middle dry bypass":[902,437]
  };
- const ties={joins:ties,max_span:0};
+ const ties={joins:tieCount,max_span:0};
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(N),overlap=0;
  for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){let v=g[o+x],s=x;while(x<W&&g[o+x]===v)x++;if(!v)continue;let key=s+":"+(x-s)+":"+v,i=prev.get(key);if(i===undefined){i=rect.length;rect.push([s,y,x-s,1,v]);}else rect[i][3]++;next.set(key,i);}prev=next;}
  for(let [x,y,w,h,v] of rect){hist[v]=(hist[v]||0)+w*h;area+=w*h;for(let j=y;j<y+h;j++){for(let i=x;i<x+w;i++)if(replay[j*W+i])overlap++;replay.fill(v,j*W+x,j*W+x+w);}}
