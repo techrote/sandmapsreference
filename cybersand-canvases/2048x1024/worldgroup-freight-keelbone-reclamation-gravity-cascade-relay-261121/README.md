@@ -1,5 +1,12 @@
 # Keelbone Reclamation Vaults — Sibling 05: Gravity Cascade Relay / Counterweight Return
 
+## R2 — bounded independent Art P1 functional repair (21 November 2026)
+
+**Revised exact material plane**: SHA-256 `6d8375c7f02a69f95e7beb6e103394206e52214675ac771a83958d82d6c7cc3f`; **1696** legal disjoint rectangles, **458064** rooted solids, **32363** Setup bytes, zero invalid writes. **22/22** literal Midge sites at each of 19×15, 23×19, 31×27. Physical obstruction preserves **670 → 794** step alternate route.
+
+The east-side staffing/examination face now has a supported cutaway roof, 59-cell side doorway, founded receiving lip and an inner bonded custody countertop. This is a bounded fix for the exact-cell Art REWORK on the prior HEAD; the west hull intake, four downhill gravity chutes, broken upper cable and lower relief shaft remain materially intact. All regenerated images come from the new full material plane. **Re-review R2 independently; NATIVE-UNTESTED.** The source-static figures farther below refer to R1 and are superseded where changed.
+
+
 **Original CyberSand 2048×1024 material-cell world. OPEN Draft/HOLD, creator SOURCE-STATIC PASS, NATIVE-UNTESTED. Do not merge or mark Ready.**
 
 World-group: Freight / Drydock / Port Systems. Family: Keelbone Reclamation Vaults. Sibling 05. Operational role: elevated hull intake → staged gravity classification and parcel transfer → counterweighted salvage hoist → inhabited assay, staff and bonded dispatch.

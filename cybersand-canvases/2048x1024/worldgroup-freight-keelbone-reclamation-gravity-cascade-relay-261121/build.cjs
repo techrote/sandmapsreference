@@ -116,6 +116,17 @@ C(1875,721,18,195);St(1860,777,95,14);
 St(1885,690,83,13);St(1838,612,91,12);
 C(1900,625,13,68);St(1698,791,151,13);
 V(1739,551,92,359);
+// R2 independent Art-P1: East assay/custody is now a distinctly roofed,
+// side-entered workface rather than a disconnected exposed rack diagram.
+// Receiver lip -> entered bonded counter; all shaft routes remain open.
+C(1854,571,18,240); C(1980,570,18,241);
+St(1852,557,147,15); St(1850,805,151,16);
+V(1844,620,59,104);
+St(1750,681,113,12); C(1763,693,16,18);
+St(1862,681,92,13); C(1936,694,14,38);
+St(1874,734,97,13); C(1950,747,16,63);
+St(1882,591,78,11); C(1900,602,12,35);
+V(1846,626,59,87);
 // Literal exact named-site 73x65 clearance envelopes.
 for(const [x,y] of Object.values(sites))V(x-36,y-32,73,65);
 
