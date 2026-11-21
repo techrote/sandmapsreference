@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/racing-wide",
+  "map_role": "Dry industrial fault-line exchange: asymmetrically grounded geological shears, bored maintenance chambers and exposed fault transfer",
+  "anchor_donors": [],
+  "macro_topology": "vertical_fault",
+  "density_profile": "Two heavy offset cliff masses, a wide empty shear void between them, built-up bore interiors, open launch/turnaround margins; purposeful unfinished underworks",
+  "route_grammar": {
+    "primary": "West launch \u2192 eastbound high skyline \u2192 eastern descent and lateral inversion climb \u2192 central-fault drop \u2192 westbound underworks \u2192 West finish",
+    "alternative": "Split off near west bluff into middle fault breaching carriage; rejoin eastern crest/turn, independently survives physical upper route obstruction",
+    "return": "A high-low switchback at the eastern cliff avoids pretending the bonded support cable is passable at low altitude; deliberate upper detour before westbound lower return"
+  },
+  "strong_motifs": [
+    "Two unequal cliff shear masses with a sharply open central vertical gap",
+    "Broken opposing mid-level bridge cantilevers and a separately rooted low fracture traverse",
+    "Cliff-embedded glass-fronted control chambers and open-sided maintenance caves",
+    "Boundary-anchored tension catenaries explaining elevated load paths"
+  ],
+  "interesting_relationships": [
+    "Upper open-air eastbound route has visual exposure over split geological shelves, unlike the hidden-bore westbound return",
+    "Structural tie-backs constrain access and force a topographically meaningful eastern inversion",
+    "Asymmetrical left and right excavations connect as service sites without automatically becoming straight racing shortcuts",
+    "Lower counter-traverse below the open fault is a physical brace, not a fake free-air platform"
+  ],
+  "authoring_affordances": [
+    "Open center fault kept mostly empty for a future moving lift or collapse sequence",
+    "Western inspection pocket offers a natural modular equipment attachment seam",
+    "Eastern diagnostic cavity leaves a deliberate vacant lower bay",
+    "West launch-side service yard remains spacious for hand-authored props and NPC encounters"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Shear-gate crossing collapse",
+      "location_xy": [
+        993,
+        483
+      ],
+      "site_type": "breakable bridge reveal",
+      "scripted": false
+    },
+    {
+      "name": "Fault lower traverse activation",
+      "location_xy": [
+        1010,
+        756
+      ],
+      "site_type": "machinery activation or temporary crossing",
+      "scripted": false
+    },
+    {
+      "name": "Western hidden crew rescue",
+      "location_xy": [
+        608,
+        493
+      ],
+      "site_type": "NPC holdout / maintenance encounter",
+      "scripted": false
+    },
+    {
+      "name": "Eastern brake horn capture",
+      "location_xy": [
+        1911,
+        806
+      ],
+      "site_type": "arrival/departure industrial stage",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Terminally anchored tensile roof integration across a complete through-bored geology",
+    "Dual cliffs with void between and complementary different-height service chambers",
+    "Cliff load-bearing cable grammar that makes a return course intentionally switch back",
+    "Two physically distinct fault-crossing landmarks, one broken and one service traversal"
+  ],
+  "similarity_avoidance": "Not another central ring/rotor, alternating race baffles, freestanding five-settlement mesa, suspended island chain, horizontal drydock vessel or crater arch; foreground is the fault break between two asymmetric rock units and physical tether supports.",
+  "diversity_axes": {
+    "macro_topology": "vertical_fault",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "dense_open_dense",
+    "route_structure": "switchback",
+    "landmark_family": "bridge",
+    "support_form": "cliff_embedded",
+    "environment_relation": "geological",
+    "incompleteness": "editable_gaps"
+  },
+  "authority": {
+    "accepted_cybersand_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+    "sandmapsreference_main_at_authoring": "99a166e7fcae45eb22be1740e9f33f62faccbcc7"
+  },
+  "qualification": "AUTHOR-SOURCE-STATIC PASS; NATIVE-UNTESTED; DRAFT/HOLD; independent Art/Technical/Shepherd review requested"
+}
