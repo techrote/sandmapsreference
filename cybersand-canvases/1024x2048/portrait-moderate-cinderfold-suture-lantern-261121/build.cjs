@@ -94,6 +94,17 @@ function world(){
  b(900,1489,45,48,130);b(900,1520,45,16,68);
  // Genuine lower portal through old crossing shelf; no actor-centre shifting.
  b(764,1320,92,17,0);
+  // R4 follow-up to independent Art REWORK: unlike entered diagnostic and east custody threshold.
+ b(151,549,338,18,101);b(348,567,26,80,101);b(348,731,26,79,101);
+ b(382,567,100,17,100);b(418,549,12,31,101);
+ b(425,656,14,82,0); // physical 82-cell opening in existing hanger; not a decorative entrance
+ b(160,688,126,12,62);b(161,674,12,26,49);b(390,686,42,14,68);
+ // Selector offset internal airlock gate, outside original west entry and sterile neck.
+ b(657,863,15,68,101);b(657,1002,15,116,101);
+ b(697,862,126,14,101);b(679,1030,62,12,62);
+ // Unequal lower quarantine vestibule, preserving literal Midge clearance.
+ b(636,1228,44,95,101);b(636,1393,44,143,101);
+ b(680,1228,66,16,101);b(696,1244,13,48,101);
  // Site hulls are literal authored centres with 39x35 local clean safety, not shifted.
  for(const s of sites)b(s.x-19,s.y-17,39,35,0);
  // Make every inert cell boundary-grounded, discarding only provisional loose detail.
@@ -234,6 +245,10 @@ function build(){
 
  r.readme="# Cinderfold Suture Lantern — Entered Vault Exchange\n\nPORTRAIT-001 Creator A · MODERATE #1 · 1024×2048 · Draft/HOLD · NATIVE-UNTESTED\n\nRead-only source original PR #175 @ "+S+" in "+P+"\nRead-only CyberSand main @ 69209acaffb34ebe18c45e19290b5976b7fb2c82. Corpus main @ 99a166e7fcae45eb22be1740e9f33f62faccbcc7.\n\nNo crop, rotation, stretch, source coordinate/geometry/pixel reuse or donor branch mutation. Actual 2D material cells. Distinct entering seed vaults, assays, selection and isolation, with separate sterile return.\n\n`node build.cjs` reproducibly generates exact Setup-v2 JSON, SHA and physical-law receipts, full-grid authentic indexed overview, six useful true 1:1 district crops, aspect transfer, route and exemplar. Native flight, collision and persistence NATIVE-UNTESTED. No merge or Ready.\n";
  r.readme+="\\n## R4 bounded repair (separate child branch)\\n\\nBaseline exact portrait HEAD: 089d2cdb6b06b40d53ce9c4c83ef34192567454d. Four distinct 31x27-clear physical chamber thresholds and 81-cell sterile neck. Full obstruction-checked ordered waypoint proof in receipt.json and route_graph.json; not claimed to be the forced shortest route. No change to 18 original centres, central open shaft or unfinished west archive. The parent PNG gallery remains the immutable BEFORE reference; child PNGs are generated from real edited cells. Independent Art/Technical and live Godot/Rapier/persistence still pending.\\n";
+ r.receipt.r4_second_stage={"baseline_child_head":"6e670da369b6ac856b821dbebb929ab27a2a126a","independent_art_review":"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453","design":"distinct diagnostic vaulted pair with actual double-portal entry and offset east selector/quarantine thresholds","delta":{"changed":28613,"air_to_solid":23078,"solid_to_air":2556,"material_replacement":2979,"protected_archive_changes":0},"bbox_inclusive":[151,549,822,1528],"new_head_art":"PENDING","new_head_technical":"PENDING","native":"NATIVE-UNTESTED"};
+ r.aspect_transfer.repair_r4_second_stage={"baseline_child_head":"6e670da369b6ac856b821dbebb929ab27a2a126a","independent_art_review":"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453","preserved":["18 fixed site centres","east 81-cell sterile neck","central Midge flight shaft","entire y>=1546 lower archive"],"scope":"West diagnostic nested threshold and east selector/quarantine separate usable thresholds","new_head_independent_review":"PENDING"};
+ r.exemplar.repair_r4_second_stage={"baseline_child_head":"6e670da369b6ac856b821dbebb929ab27a2a126a","independent_art_review":"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453","preserved":["18 fixed site centres","east 81-cell sterile neck","central Midge flight shaft","entire y>=1546 lower archive"],"scope":"West diagnostic nested threshold and east selector/quarantine separate usable thresholds","new_head_independent_review":"PENDING"};
+ r.readme+="\n## Review-driven second bounded R4 repair\n\nAfter independent Art REWORK of first-child HEAD 6e670da369b6ac856b821dbebb929ab27a2a126a, the west diagnostics now has a stepped grounded roof and two traversable successive vault portals; east selector and quarantine have distinct offset internal thresholds. This stage modifies 28,613 real material cells, all within [151,549,822,1528], and leaves every cell at y>=1546 unchanged. Exact 31x27 named routes and ordered sterile return are regenerated. Re-review is required; NATIVE-UNTESTED.\n";
  return r;
 }
 if(typeof require!=="undefined" && typeof module!=="undefined" && require.main===module){const fs=require("fs"),path=require("path"),d=process.argv[2]||__dirname;fs.mkdirSync(d,{recursive:true});const a=build();fs.writeFileSync(path.join(d,"setup.json"),a.setupText);fs.writeFileSync(path.join(d,"receipt.json"),JSON.stringify(a.receipt,null,2)+"\n");for(const[n,v]of Object.entries(a.pngs))fs.writeFileSync(path.join(d,n),v);for(const [n,v] of [["aspect_transfer.json",a.aspect_transfer],["route_graph.json",a.route_graph],["exemplar.json",a.exemplar]])fs.writeFileSync(path.join(d,n),JSON.stringify(v,null,2)+"\n");fs.writeFileSync(path.join(d,"README.md"),a.readme);console.log(a.receipt);}

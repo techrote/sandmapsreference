@@ -110,7 +110,7 @@
     "environment_relation": "geological",
     "incompleteness": "excavation"
   },
-  "grid_sha256": "853d65e4e100318ac7a0dd2f75d8ee637c5acca145853227e460f3deed8c2018",
+  "grid_sha256": "95ac2164246d39967f3aaab2dffc470f102ab3d09dc9d96f305e650943b91ed8",
   "native": "NATIVE-UNTESTED",
   "repair_r4": {
     "source_parent": "089d2cdb6b06b40d53ce9c4c83ef34192567454d",
@@ -126,5 +126,17 @@
       "sterile 81-cell neck",
       "quarantine-side door"
     ]
+  },
+  "repair_r4_second_stage": {
+    "baseline_child_head": "6e670da369b6ac856b821dbebb929ab27a2a126a",
+    "independent_art_review": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453",
+    "preserved": [
+      "18 fixed site centres",
+      "east 81-cell sterile neck",
+      "central Midge flight shaft",
+      "entire y>=1546 lower archive"
+    ],
+    "scope": "West diagnostic nested threshold and east selector/quarantine separate usable thresholds",
+    "new_head_independent_review": "PENDING"
   }
 }
