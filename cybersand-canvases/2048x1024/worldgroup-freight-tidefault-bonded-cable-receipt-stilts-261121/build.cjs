@@ -156,6 +156,29 @@ for(const [x,y,w,h] of [
   [175,714,88,164],[649,405,72,472],[1077,714,84,170],
   [1530,707,91,171],[1847,703,80,181]
 ])V(x,y,w,h);for(const [x,y] of Object.values(sites))V(x-34,y-30,69,61);
+/* Overhead windward signal scaffolds: not part of the flight clearance
+   machinery. Rooted to five independent vertical load paths; purposefully
+   staggered to avoid the repeated central-machine / uniform-highline motif. */
+for(const [x,y,beam,drop] of [
+  [143,181,108,52],[407,230,76,42],
+  [626,168,102,69],[895,243,75,43],
+  [1204,174,118,77],[1518,231,99,58],[1873,192,133,60]
+]){
+  C(x,y,18,Math.max(0,465-y));
+  St(x-19,y+drop,beam,13);
+  line(x+8,y+17,x+beam-31,y+drop,12,M.WALL);
+  St(x+beam-46,y+drop+14,16,30);
+  St(x-26,y-14,59,12);
+}
+ /* Navigable cargo-town fixtures, unequal real physical workfaces placed
+    outside deliberately empty named-site footprints. */
+St(196,738,47,9);C(201,705,10,31);C(229,700,13,37);
+St(560,738,46,10);C(580,706,13,34);C(604,701,9,35);
+St(1010,735,54,12);C(1021,707,10,28);C(1054,702,13,36);
+St(1321,742,52,10);C(1333,704,12,35);C(1363,716,9,26);
+St(1604,741,66,11);C(1622,701,13,40);C(1650,717,9,24);
+St(1817,744,68,9);C(1830,704,12,39);
+
 
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
