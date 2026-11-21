@@ -1,0 +1,333 @@
+{
+  "concept": "Keelbone Reclamation Vaults — Continuous Covered Reclaim Spine / Five-Quarter Cargo Exchange",
+  "original": true,
+  "seed": 40568624,
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Western intake",
+      "Sorting rail",
+      "Torque drive control",
+      "Ledger registry",
+      "Eastern export",
+      "Abandoned annex entry"
+    ],
+    "upper": [
+      "Western roof watch",
+      "Sorting roof watch",
+      "Torque inspection",
+      "Upper branch",
+      "Ledger loft",
+      "Eastern upper walkway",
+      "Crew roof maintenance"
+    ],
+    "workcells": [
+      "Wet-strip vestibule",
+      "Catch-tray control",
+      "Magnet sorter",
+      "Repair service niche",
+      "Workers refuge"
+    ],
+    "lower": [
+      "West relief gate",
+      "Sorter relief gate",
+      "Torque relief gate",
+      "Torque parcel overlook",
+      "Ledger relief gate",
+      "East relief gate"
+    ],
+    "sky": [
+      "Roof signal platform",
+      "Exhaust rooftop",
+      "Worker emergency chimney"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Western intake": [
+      115,
+      489
+    ],
+    "Wet-strip vestibule": [
+      311,
+      614
+    ],
+    "Catch-tray control": [
+      418,
+      580
+    ],
+    "Magnet sorter": [
+      665,
+      625
+    ],
+    "Sorting rail": [
+      710,
+      489
+    ],
+    "Torque drive control": [
+      1090,
+      512
+    ],
+    "Torque inspection": [
+      965,
+      377
+    ],
+    "Ledger registry": [
+      1370,
+      625
+    ],
+    "Ledger loft": [
+      1398,
+      377
+    ],
+    "Workers refuge": [
+      1746,
+      620
+    ],
+    "Crew roof maintenance": [
+      1750,
+      374
+    ],
+    "Eastern export": [
+      1950,
+      488
+    ],
+    "Western roof watch": [
+      322,
+      374
+    ],
+    "Sorting roof watch": [
+      590,
+      370
+    ],
+    "Upper branch": [
+      1165,
+      378
+    ],
+    "Eastern upper walkway": [
+      1590,
+      370
+    ],
+    "West relief gate": [
+      145,
+      499
+    ],
+    "Sorter relief gate": [
+      605,
+      502
+    ],
+    "Torque relief gate": [
+      1081,
+      499
+    ],
+    "Ledger relief gate": [
+      1410,
+      502
+    ],
+    "East relief gate": [
+      1850,
+      502
+    ],
+    "Roof signal platform": [
+      720,
+      144
+    ],
+    "Exhaust rooftop": [
+      1135,
+      125
+    ],
+    "Emergency sky lookout": [
+      1895,
+      155
+    ],
+    "Abandoned annex entry": [
+      1980,
+      665
+    ],
+    "Torque parcel overlook": [
+      1100,
+      532
+    ],
+    "Repair service niche": [
+      1604,
+      705
+    ]
+  },
+  "material_histogram": {
+    "0": 1396733,
+    "58": 130229,
+    "62": 116363,
+    "100": 453827
+  },
+  "stable_occupied_cells": 700419,
+  "grounded": 700419,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 27850,
+  "invalid_writes": 0,
+  "rectangles": 1974,
+  "rectangle_work": 700419,
+  "setup_bytes": 37016,
+  "material_plane_sha256": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c",
+  "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 27,
+      "total": 27,
+      "free_centres": 1003630,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 27,
+      "total": 27,
+      "free_centres": 962662,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 27,
+      "total": 27,
+      "free_centres": 879292,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      778,
+      460,
+      75,
+      83
+    ],
+    "from": "Sorting rail",
+    "to": "Eastern export",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 27,
+    "unreachable": [],
+    "distance_before_after": [
+      1241,
+      1375
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "4dc78b7e7dd3246469488027e09587b13e8175c3be39a0413982c67f85880a74",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-wet-strip",
+      "rect": [
+        95,
+        320,
+        420,
+        481
+      ],
+      "bytes": 51171,
+      "sha256": "6e677b9e51959a5da211ba2e550d028a5a9faef83f3896f9dbc78fc205667f29",
+      "pixel_parity": 202020
+    },
+    {
+      "name": "02-magnet-sort",
+      "rect": [
+        480,
+        323,
+        365,
+        477
+      ],
+      "bytes": 44546,
+      "sha256": "5c5224e55c1708e1ee208b789e60b68585f0d79c53f66aa21f00a6ca5e95c2a2",
+      "pixel_parity": 174105
+    },
+    {
+      "name": "03-torque-spine",
+      "rect": [
+        814,
+        294,
+        445,
+        544
+      ],
+      "bytes": 61657,
+      "sha256": "e0a048ca1a0a0d1cfda09bdb300d425ee7c4f5149d8d9a99136e79364491a2ef",
+      "pixel_parity": 242080
+    },
+    {
+      "name": "04-ledger-custody",
+      "rect": [
+        1221,
+        300,
+        372,
+        530
+      ],
+      "bytes": 50005,
+      "sha256": "0e126f815cf2cd84e02a1461e0e626870c1ce93c775ac496b9b6e4159d90d84c",
+      "pixel_parity": 197160
+    },
+    {
+      "name": "05-crew-emergency",
+      "rect": [
+        1544,
+        271,
+        504,
+        608
+      ],
+      "bytes": 77406,
+      "sha256": "0292d3f81b834755c351ffb7d2185384777f6949df6d49037d270121de3601e0",
+      "pixel_parity": 306432
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Exact replay, rooted material supports, three-hull routing, genuine main-aisle block detour, 2-bit indexed material PNG parity"
+}

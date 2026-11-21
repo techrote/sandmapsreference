@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Keelbone Reclamation Vaults",
+  "lane": "worldgroup-freight",
+  "map_role": "Sibling 03 — continuous covered industrial quarter: strip, magnetic sort, torque disassembly, bonded registry, crew repair and broken annex",
+  "anchor_donors": [
+    {
+      "name": "wide-graven-keel-ship-tipper",
+      "pr": 45,
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f"
+    },
+    {
+      "name": "wide-peregrine-cleft-halcyon-drydock",
+      "pr": 33,
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5"
+    }
+  ],
+  "macro_topology": "Single very long roofed industrial cavity with five unlike working districts, a high suspended inspection span, middle parcel artery, low foundations and a narrow right-hand sky breach.",
+  "density_profile": "Five dense and variably sized workfaces separated by deliberately editable high-air bays; roof equipment is continuous, lower workshops punctuated.",
+  "route_grammar": {
+    "main": "Western intake → Sorting rail → Torque drive control → Ledger registry → Eastern export",
+    "upper": "Rooftop sky return through far-east breach and six staggered supported mezzanines over the factory quarter",
+    "lower": "Independent free flight around equipment foundations and under-support gaps, reconnecting into the same middle cargo aisle",
+    "obstruction": "Physical rectangle at [778,460,75,83] intersects the 31×27 sorting-to-export primary path; flight over equipment/inspection space yields an actual longer traversable route"
+  },
+  "strong_motifs": [
+    "A single long rock-backed roof carrying five unequal signal/truss housings",
+    "Staggered roof hangers and deep founded workshop columns, rather than two opposed high cliffs",
+    "Dry catch trough and infeed at western strip workface",
+    "Opposed magnetic sorter fork, grounded billet stands and relay bin",
+    "Physical torque press arms with infeed, die and receiving platform",
+    "Bonded duty window, cargo-counter ledges and low worktown service interfaces",
+    "Inhabited repair/worker shelf assembly with broken eastern annex"
+  ],
+  "interesting_relationships": [
+    "Stripper catch receiver hands stocked material toward the forked sorter",
+    "Sorter releases into a distinct torque press rather than a shared overhead crane",
+    "Torque parcel path leads into duty counters and then crew repair/export",
+    "Mezzanines, machine-level aisle and low workfaces offer several obstruction recovery choices",
+    "The far east breach is the single air connection between a covered factory and its roof skyline"
+  ],
+  "authoring_affordances": [
+    "Unfurnished air over the five separate industrial workfaces can take modular pipes, lifts and NPC staging",
+    "Wide editable spans between unlike mezzanines",
+    "Dry, unfinished outboard annex on east margin",
+    "Replaceable machine receiver and duty-window fronts",
+    "Unused roofline station pads for authored crane/vent assets"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "Sorter-to-press handoff",
+      "purpose": "Unscriped machine activation, parcel interception or temporary mid-aisle closure with an upper detour",
+      "scripted": false
+    },
+    {
+      "site": "Torque receiver bay",
+      "purpose": "Destructible press or component release, with higher and lower approach",
+      "scripted": false
+    },
+    {
+      "site": "Bonded duty ledger",
+      "purpose": "NPC customs/refuge negotiation or cargo seizure at a physically entered workface",
+      "scripted": false
+    },
+    {
+      "site": "Damaged eastern annex and roof breach",
+      "purpose": "Firebreak escape, arrival/reveal or manual extension toward later world siblings",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "A distinct corpus sample of long roof-connected industrial spatial grammar: strong continuous cover, different grounded machinery relations, staggered vertical supports, five entered workfaces, sparse high voids and actual blocked-route alternative. Avoids giant central empty basin / opposed cliffs found in Keelbone 01/02.",
+  "similarity_avoidance": "Unlike Keelbone 01's high-opposed excavation and Keelbone 02's opposed basalt shoulders, this is one dense continuous lateral covered factory. It does not reuse the donors' vessel silhouette, arcing tipper, drydock chasm, crane geometry, routes, named sites or pixels. Unlike Tidefault's isolated warehouses or stilts, all districts share a continuous physical roof.",
+  "diversity_axes": {
+    "macro_topology": "corridor",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "mixed",
+    "support_form": "mixed",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  }
+}
