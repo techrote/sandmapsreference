@@ -33,7 +33,15 @@ for(const a of add.entries){
  ok(a.portrait_pr===s.provenance.portrait_pr&&a.portrait_head===s.provenance.portrait_head,'addendum identity mismatch');
  ok(a.independent_review_url===s.evidence.reviewer_url,'review not same original head');
  ok(a.locality_review_url.startsWith('https://github.com/techrote/sandmapsreference/issues/200#issuecomment-'),'locality auditor missing');
- ok(['MULTI_WINDOW_RELATIONSHIP','WAYPOINT_CLAIM_CAVEAT'].includes(a.kind),'bad locality kind');
+ ok(['MULTI_WINDOW_RELATIONSHIP','WAYPOINT_CLAIM_CAVEAT','OVERLAPPING_EVIDENCE_EDIT_BOUNDARY'].includes(a.kind),'bad locality kind');
+ if(a.kind==='OVERLAPPING_EVIDENCE_EDIT_BOUNDARY'){
+   const p=states.get(a.protected_state_id);
+   ok(p&&p.stage!=='POST_REPAIR'&&p.provenance.portrait_pr===s.provenance.portrait_pr&&p.provenance.portrait_head===s.provenance.portrait_head,'protected feature missing or wrong HEAD');
+   const u=s.location.evidence_window_xyxy,v=p.location.evidence_window_xyxy;
+   const overlap=[Math.max(u[0],v[0]),Math.max(u[1],v[1]),Math.min(u[2],v[2]),Math.min(u[3],v[3])];
+   ok(JSON.stringify(overlap)===JSON.stringify(a.overlap_evidence_xyxy)&&overlap[2]>overlap[0]&&overlap[3]>overlap[1],'evidence window overlap mismatch');
+   ok(typeof a.safe_edit_interpretation==='string'&&a.safe_edit_interpretation.length>40,'missing safe edit boundary');
+ }
  ok(Array.isArray(a.supplementary_crops)&&Array.isArray(a.site_points),'missing supplement');
  ok(a.scope.length>40&&a.limits.length>25,'poor caveat');
  for(const c of a.supplementary_crops)anchor(s,c);
