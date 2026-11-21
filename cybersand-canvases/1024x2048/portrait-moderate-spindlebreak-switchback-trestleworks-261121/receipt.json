@@ -1,0 +1,769 @@
+{
+  "schema": 1,
+  "trial": "PORTRAIT-001",
+  "difficulty": "MODERATE",
+  "source": {
+    "pr": 135,
+    "head": "a3f9962a0107d07bca1116940fde1c825ac76a4f",
+    "path": "cybersand-canvases/2048x1024/original-industrial-foundry-wide-spindlebreak-fault-cable-smeltery-261121/"
+  },
+  "base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "seed": 202611211531,
+  "dimensions": [
+    1024,
+    2048
+  ],
+  "cells": 2097152,
+  "source_grid_sha256": "30c6668a34341b172d231e4d257175a76b35b314e15dfb468a218d4970c56397",
+  "setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+  "setup_bytes": 21244,
+  "rectangles": 1070,
+  "construction_work": 807881,
+  "material_histogram": {
+    "0": 1289271,
+    "3": 2542,
+    "8": 2645,
+    "58": 122526,
+    "62": 28053,
+    "65": 14216,
+    "68": 17600,
+    "69": 3576,
+    "76": 672,
+    "79": 596,
+    "100": 548917,
+    "104": 26237,
+    "117": 23714,
+    "131": 16587
+  },
+  "ground": {
+    "total": 802694,
+    "rooted": 802694,
+    "detached": 0,
+    "pruned_provisional": 32544
+  },
+  "fluid": {
+    "water": 2542,
+    "lava": 2645,
+    "exposed_faces": 0,
+    "water_lava_contacts": 0
+  },
+  "hulls": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 1117174,
+      "connected_centres": 1092373,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "West rim arrival",
+          "x": 495,
+          "y": 148,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore intake watch",
+          "x": 441,
+          "y": 285,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore exchange gantry",
+          "x": 461,
+          "y": 386,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Enclosed furnace face",
+          "x": 420,
+          "y": 518,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace relief return",
+          "x": 527,
+          "y": 600,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Suspended ladle watch",
+          "x": 550,
+          "y": 710,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle port inspection",
+          "x": 763,
+          "y": 736,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway upper launch",
+          "x": 345,
+          "y": 799,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway high crossing",
+          "x": 550,
+          "y": 840,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway east arrival",
+          "x": 773,
+          "y": 904,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Switchback crown",
+          "x": 502,
+          "y": 986,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Lower switchback landing",
+          "x": 505,
+          "y": 1170,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trestle western footing",
+          "x": 327,
+          "y": 1156,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trestle eastern footing",
+          "x": 756,
+          "y": 1192,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster upper roller",
+          "x": 487,
+          "y": 1340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster lower roller",
+          "x": 498,
+          "y": 1453,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster maintenance",
+          "x": 503,
+          "y": 1531,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench valve house",
+          "x": 573,
+          "y": 1646,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench recovery balcony",
+          "x": 458,
+          "y": 1765,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dispatch freight loft",
+          "x": 519,
+          "y": 1890,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Exit freight goal",
+          "x": 508,
+          "y": 1953,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 1079201,
+      "connected_centres": 1060021,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "West rim arrival",
+          "x": 495,
+          "y": 148,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore intake watch",
+          "x": 441,
+          "y": 285,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore exchange gantry",
+          "x": 461,
+          "y": 386,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Enclosed furnace face",
+          "x": 420,
+          "y": 518,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace relief return",
+          "x": 527,
+          "y": 600,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Suspended ladle watch",
+          "x": 550,
+          "y": 710,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle port inspection",
+          "x": 763,
+          "y": 736,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway upper launch",
+          "x": 345,
+          "y": 799,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway high crossing",
+          "x": 550,
+          "y": 840,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway east arrival",
+          "x": 773,
+          "y": 904,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Switchback crown",
+          "x": 502,
+          "y": 986,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Lower switchback landing",
+          "x": 505,
+          "y": 1170,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trestle western footing",
+          "x": 327,
+          "y": 1156,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trestle eastern footing",
+          "x": 756,
+          "y": 1192,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster upper roller",
+          "x": 487,
+          "y": 1340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster lower roller",
+          "x": 498,
+          "y": 1453,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster maintenance",
+          "x": 503,
+          "y": 1531,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench valve house",
+          "x": 573,
+          "y": 1646,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench recovery balcony",
+          "x": 458,
+          "y": 1765,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dispatch freight loft",
+          "x": 519,
+          "y": 1890,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Exit freight goal",
+          "x": 508,
+          "y": 1953,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 1007805,
+      "connected_centres": 995563,
+      "passed": 21,
+      "sites": [
+        {
+          "name": "West rim arrival",
+          "x": 495,
+          "y": 148,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore intake watch",
+          "x": 441,
+          "y": 285,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore exchange gantry",
+          "x": 461,
+          "y": 386,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Enclosed furnace face",
+          "x": 420,
+          "y": 518,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace relief return",
+          "x": 527,
+          "y": 600,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Suspended ladle watch",
+          "x": 550,
+          "y": 710,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle port inspection",
+          "x": 763,
+          "y": 736,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway upper launch",
+          "x": 345,
+          "y": 799,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway high crossing",
+          "x": 550,
+          "y": 840,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway east arrival",
+          "x": 773,
+          "y": 904,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Switchback crown",
+          "x": 502,
+          "y": 986,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Lower switchback landing",
+          "x": 505,
+          "y": 1170,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trestle western footing",
+          "x": 327,
+          "y": 1156,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Trestle eastern footing",
+          "x": 756,
+          "y": 1192,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster upper roller",
+          "x": 487,
+          "y": 1340,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster lower roller",
+          "x": 498,
+          "y": 1453,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster maintenance",
+          "x": 503,
+          "y": 1531,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench valve house",
+          "x": 573,
+          "y": 1646,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench recovery balcony",
+          "x": 458,
+          "y": 1765,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dispatch freight loft",
+          "x": 519,
+          "y": 1890,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Exit freight goal",
+          "x": 508,
+          "y": 1953,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "physical_obstruction": [
+    440,
+    1010,
+    125,
+    67
+  ],
+  "obstructed": {
+    "hull": [
+      31,
+      27
+    ],
+    "valid_centres": 993390,
+    "connected_centres": 981148,
+    "passed": 21,
+    "sites": [
+      {
+        "name": "West rim arrival",
+        "x": 495,
+        "y": 148,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ore intake watch",
+        "x": 441,
+        "y": 285,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ore exchange gantry",
+        "x": 461,
+        "y": 386,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Enclosed furnace face",
+        "x": 420,
+        "y": 518,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Furnace relief return",
+        "x": 527,
+        "y": 600,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Suspended ladle watch",
+        "x": 550,
+        "y": 710,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ladle port inspection",
+        "x": 763,
+        "y": 736,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Cableway upper launch",
+        "x": 345,
+        "y": 799,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Cableway high crossing",
+        "x": 550,
+        "y": 840,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Cableway east arrival",
+        "x": 773,
+        "y": 904,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Switchback crown",
+        "x": 502,
+        "y": 986,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Lower switchback landing",
+        "x": 505,
+        "y": 1170,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Trestle western footing",
+        "x": 327,
+        "y": 1156,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Trestle eastern footing",
+        "x": 756,
+        "y": 1192,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Caster upper roller",
+        "x": 487,
+        "y": 1340,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Caster lower roller",
+        "x": 498,
+        "y": 1453,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Caster maintenance",
+        "x": 503,
+        "y": 1531,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Quench valve house",
+        "x": 573,
+        "y": 1646,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Quench recovery balcony",
+        "x": 458,
+        "y": 1765,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Dispatch freight loft",
+        "x": 519,
+        "y": 1890,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Exit freight goal",
+        "x": 508,
+        "y": 1953,
+        "clear": true,
+        "reached": true
+      }
+    ]
+  },
+  "goal_distance": {
+    "direct": 187,
+    "obstructed": 337
+  },
+  "pngs": {
+    "overview.png": {
+      "xywh": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "bytes": 2099836,
+      "sha256": "d9517f9ca7486c4ce0e504e552bfc118c1ac070d85a8f6c5bfbe7b29dae35000"
+    },
+    "01-ore-intake.png": {
+      "xywh": [
+        100,
+        175,
+        420,
+        305
+      ],
+      "bytes": 128886,
+      "sha256": "fb79c5a3c499540031c04cbe38d18f2c556f727f2dc99e5fdf7a96cdaba43322"
+    },
+    "02-furnace-ladle.png": {
+      "xywh": [
+        100,
+        420,
+        820,
+        370
+      ],
+      "bytes": 304266,
+      "sha256": "a75d6e65230441bd38b28bddb4526afad1c4200bfe810d8c9f189d7b832e290a"
+    },
+    "03-high-cableway.png": {
+      "xywh": [
+        100,
+        735,
+        825,
+        260
+      ],
+      "bytes": 215251,
+      "sha256": "bc3720fb606ac3cd7baee72c7634bbb7bd16f8deedc4c4d5d41627632ef8e9ed"
+    },
+    "04-lower-trestle.png": {
+      "xywh": [
+        100,
+        1000,
+        825,
+        280
+      ],
+      "bytes": 231771,
+      "sha256": "0c63281466bca4241c73fff205b1873c936d20219e9c4618641f3cdc43559e17"
+    },
+    "05-casting-ramways.png": {
+      "xywh": [
+        100,
+        1230,
+        475,
+        372
+      ],
+      "bytes": 177558,
+      "sha256": "969d11b7438315e0521b6dc5383629c7b1399044491bd21573ca10e6da7e1904"
+    },
+    "06-quench-export.png": {
+      "xywh": [
+        100,
+        1530,
+        825,
+        446
+      ],
+      "bytes": 368897,
+      "sha256": "7aa7b54b99f58a66534754e2150f73b6f7d3f59486aaa965545682f3588b79f9"
+    }
+  },
+  "pixel_parity": 3518802,
+  "native": "NATIVE-UNTESTED"
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "portrait/moderate",
+  "map_role": "Alternating fault-bank switchback industry with separate high tension cable and lower metal trestle",
+  "anchor_donors": [
+    {
+      "source_pr": 135,
+      "head": "a3f9962a0107d07bca1116940fde1c825ac76a4f",
+      "relationship": "Architectural concept donor, no source geometry transferred"
+    }
+  ],
+  "macro_topology": "vertical_fault",
+  "density_profile": "Alternating dense left-hand ore/furnace/roller clusters and right-hand suspended ladle/quench groups, separated by two airy distinct fault crossings",
+  "route_grammar": {
+    "main": [
+      "West rim arrival",
+      "Ore intake watch",
+      "Enclosed furnace face",
+      "Suspended ladle watch",
+      "Cableway high crossing",
+      "Switchback crown",
+      "Lower switchback landing",
+      "Trestle eastern footing",
+      "Caster upper roller",
+      "Caster lower roller",
+      "Quench valve house",
+      "Exit freight goal"
+    ],
+    "upper": [
+      "Cableway upper launch",
+      "Cableway east arrival",
+      "Switchback crown"
+    ],
+    "lower": [
+      "Lower switchback landing",
+      "Trestle western footing",
+      "Trestle eastern footing"
+    ],
+    "recovery": [
+      "Furnace relief return",
+      "Caster maintenance",
+      "Quench recovery balcony",
+      "Dispatch freight loft"
+    ]
+  },
+  "strong_motifs": [
+    "Unequal basalt fault shoulders and alternating rooted working terraces",
+    "High open tension-cable rig with a true hull-passable engineered gap",
+    "Separate lower braced truss with its own original clearance-height portal",
+    "Two unlike enclosed static thermal/fluid process vessels",
+    "Three unequal casting rams and a departure cable crane",
+    "Different-sized entered ore, inspection and freight cabins"
+  ],
+  "interesting_relationships": [
+    "Horizontal fault crossing recomposed into a four-way vertical folded interchange rather than a generic wall-shaft descent",
+    "Separate aerial cable and heavy lower truss are real material structures, not one repeated footbridge",
+    "Industrial work cycles alternate bank affiliation as process flows from above to below",
+    "The literal centre-to-centre obstruction leaves a 150-step flight detour and 21 reachable sites"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "Upper cable break gate",
+      "region_xywh": [
+        662,
+        838,
+        126,
+        114
+      ],
+      "use": "Airworthy cable-failure or rescue set piece"
+    },
+    {
+      "name": "Lower truss access portal",
+      "region_xywh": [
+        454,
+        1063,
+        151,
+        175
+      ],
+      "use": "Re-routable brace or bridge overhaul"
+    },
+    {
+      "name": "Western caster spare bay",
+      "region_xywh": [
+        390,
+        1350,
+        155,
+        185
+      ],
+      "use": "Human-editor machine extension"
+    },
+    {
+      "name": "Quench-to-dispatch void",
+      "region_xywh": [
+        420,
+        1700,
+        270,
+        120
+      ],
+      "use": "NPC servicing or holdout entry seam"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Cableway interruption",
+      "anchor": "Cableway high crossing",
+      "kind": "bridge_failure"
+    },
+    {
+      "name": "Trestle pursuit",
+      "anchor": "Lower switchback landing",
+      "kind": "chase"
+    },
+    {
+      "name": "Caster line power-up",
+      "anchor": "Caster upper roller",
+      "kind": "machinery_activation"
+    },
+    {
+      "name": "Freight evacuation",
+      "anchor": "Exit freight goal",
+      "kind": "departure"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "One fault reinterpreted as alternating altitude-defined bank connections",
+    "True independent overhead cable and underfoot truss motifs",
+    "Clearance-notch structural crossing contract preserving playable alternate routes",
+    "Dense process clusters with useful unfilled editing volumes and haphazard industrial platforms"
+  ],
+  "similarity_avoidance": "Unlike wide Spindlebreak's single great transverse fault, and unlike Quoin/Nadirspan portrait near-straight wall shafts, this source-authored composition folds the transit chain into dissimilar left-right-altitude switchback plant platforms, with two independently engineered gate crossings and an offset freight base.",
+  "diversity_axes": {
+    "macro_topology": "vertical_fault",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "switchback",
+    "landmark_family": "cableway",
+    "support_form": "mixed",
+    "environment_relation": "thermal",
+    "incompleteness": "editable_gaps"
+  }
+}
