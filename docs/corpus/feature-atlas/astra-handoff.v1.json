@@ -549,5 +549,30 @@
         "avoid": "Side workshop and central hoist void"
       }
     ]
-  }
+  },
+  "evidence_locality_addenda": {
+    "file": "evidence-addenda.v1.json",
+    "policy": "Join these corrections by immutable state_id. Never infer complete multi-site feature coverage from one local crop or a compelled route from detour length.",
+    "entries": [
+      {
+        "state_id": "P184-DUAL-ALTITUDE-KEEL-CRADLES@e45f9794f318761db02fbe82ad623c2b1da96196",
+        "addendum_id": "LOC-184-DUAL-KEEL-SECOND-SITE-001",
+        "treatment": "DO-PRESERVE",
+        "warning": "Use both disjoint upper/lower cradle windows; no single crop encloses dual cradles."
+      },
+      {
+        "state_id": "P184-FORCED-SIDE-WORKSHOP-CLAIM@e45f9794f318761db02fbe82ad623c2b1da96196",
+        "addendum_id": "LOC-184-WEST-BYPASS-SITE-002",
+        "treatment": "DO-NOT-ASSERT",
+        "warning": "Original caster crop contains neither west bypass mouth; 1906→1976 route detour does not prove entrance."
+      },
+      {
+        "state_id": "P187-REVERSE-FREIGHT-HOIST@fdda5cc98885bbe1ef101a7fa7ef42466962a141",
+        "addendum_id": "LOC-187-REVERSE-FREIGHT-CHAIN-003",
+        "treatment": "DO-PRESERVE",
+        "warning": "Use ship, customs, hoist, classifier and dispatch windows as a multi-window chain; no native cargo simulation is claimed."
+      }
+    ]
+  },
+  "unreviewed_repair_candidate_ledger": "repair-candidates.v1.json — 25 provisional feature-state IDs across seven child PRs; NEVER export as independently accepted repair outcomes until same-HEAD Art/Technical review."
 }
