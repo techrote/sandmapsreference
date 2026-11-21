@@ -140,6 +140,29 @@ function buildWorld(){
  for(const [x,y]of [[265,969],[966,978],[1772,966]]){
   rect(x,y,36,10,M.frame);rect(x+13,y-18,11,18,M.amber);
  }
+
+ // R2 material-cell P1 repair: directional portals actually rooted in divider.
+ // Both high approach and low rejoin brackets occupy solid-backed sides of
+ // two 159px weave exchanges: open central Midge corridor is preserved.
+ for(const [x,y] of [[509,445],[1312,451]]){
+  line(x+15,y+56,x+15,505,8,M.steel);
+  line(x-28,y+8,x+18,y-10,8,M.iron);
+  line(x-26,y+31,x+18,y+7,7,M.iron);
+  rect(x-25,y+40,55,9,M.amber);
+  rect(x+8,y+19,18,23,M.ivory);
+ }
+ for(const [x,y] of [[724,542],[1524,542]]){
+  line(x+15,y-4,x+15,y+63,9,M.steel);
+  line(x+4,y+36,x+63,y+54,8,M.iron);
+  line(x+10,y+58,x+62,y+73,7,M.iron);
+  rect(x+2,y+19,42,11,M.ivory);
+  rect(x+22,y+31,19,15,M.amber);
+ }
+ joined([[468,482],[499,475],[534,489]],6,M.plate);
+ joined([[1275,480],[1309,478],[1339,489]],6,M.plate);
+ joined([[715,575],[733,584],[780,598]],6,M.plate);
+ joined([[1514,577],[1540,586],[1590,600]],6,M.plate);
+
  // Final access slots clear ornamental bracing only at two weave exchanges.
  rect(545,475,159,105,0);
  rect(1345,475,159,105,0);

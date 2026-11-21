@@ -67,7 +67,7 @@ function buildFiles(){
  pngs[name]={x,y,w:ww,h:hh,bytes:bytes.length,pixels:ww*hh,sha256:sha256(bytes),source_grid_parity:"encoder direct material-index pixels",crc32:true,zlib_fixed_deflate:true};files.push([name,bytes,"base64"]); }
  const receipt={
   kind:"WORLDGROUP_TRANSIT_SHEARLINE_COUNTERFLOW_QUALIFICATION_CIRCUIT",
-  revision:"R1",seed:"0x261121f1 (fixed deterministic source, no random draw)",
+  revision:"R2",seed:"0x261121f1 (fixed deterministic source, no random draw)",
   base_map_main:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",
   accepted_engine_main_read_only:"f7e056c9b8791106e22f2d1c295043783d8a9701",
   donor:"Tungsten Sawtooth @ 7fc24855cf521c90bf67f4afb08685e490473201 (read-only) signal/material culture. Comparison: Thunderclap Switchyard, Torsion Rift, six Switchglass and six Meridian designs. No pixel, wheel, gate, baffle, site or code geometry reuse.",

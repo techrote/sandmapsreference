@@ -1,6 +1,6 @@
 {
   "kind": "WORLDGROUP_TRANSIT_SHEARLINE_COUNTERFLOW_QUALIFICATION_CIRCUIT",
-  "revision": "R1",
+  "revision": "R2",
   "seed": "0x261121f1 (fixed deterministic source, no random draw)",
   "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
   "accepted_engine_main_read_only": "f7e056c9b8791106e22f2d1c295043783d8a9701",
@@ -21,30 +21,30 @@
     117,
     122
   ],
-  "grounded_inert_solids": 478612,
-  "discarded_unattached_candidate_cells": 68741,
+  "grounded_inert_solids": 486340,
+  "discarded_unattached_candidate_cells": 69516,
   "remaining_detached": 0,
   "fluid_granular_reactive": 0,
-  "rectangle_count": 2016,
-  "setup_json_bytes": 37937,
-  "material_work_visits": 478612,
+  "rectangle_count": 2396,
+  "setup_json_bytes": 44876,
+  "material_work_visits": 486340,
   "source_limits": {
     "rectangles": 32768,
     "setup_bytes": 1048576,
     "material_work": 32000000
   },
-  "grid_sha256": "5720d65966099ad9bd36facfc5a4de65081dc5c1273a642a6f3ce0acbc9d4a91",
-  "setup_sha256": "5d5dc26b558ff3745c77be31c8849a07b530a8fe523e43f49e1e8999d8c8b5aa",
+  "grid_sha256": "e201e05caa7c82d75e0a1e4327ba631eb2ff714ef528ef0eeb37e44bc53cb46c",
+  "setup_sha256": "5118b657f85793f701d62b840aa2ed3ea368a96a22978e7e4bbbdf0ec58d0dea",
   "histogram": {
-    "0": 1618540,
-    "49": 57210,
-    "58": 21792,
-    "62": 33836,
+    "0": 1610812,
+    "49": 57035,
+    "58": 25065,
+    "62": 35716,
     "100": 314351,
     "101": 17353,
-    "113": 1349,
-    "117": 32415,
-    "122": 306
+    "113": 2520,
+    "117": 32915,
+    "122": 1385
   },
   "sites": [
     {
@@ -192,7 +192,7 @@
       "reachable": 27,
       "total": 27,
       "missing": [],
-      "visited_centres": 1381720
+      "visited_centres": 1372074
     },
     "23x19": {
       "hull": [
@@ -202,7 +202,7 @@
       "reachable": 27,
       "total": 27,
       "missing": [],
-      "visited_centres": 1349751
+      "visited_centres": 1339988
     },
     "31x27": {
       "hull": [
@@ -212,7 +212,7 @@
       "reachable": 27,
       "total": 27,
       "missing": [],
-      "visited_centres": 1286162
+      "visited_centres": 1276104
     }
   },
   "physical_obstruction": {
@@ -233,7 +233,7 @@
       "missing": [
         "Upper overtake shelf"
       ],
-      "visited_centres": 1263365
+      "visited_centres": 1253307
     },
     "covered_site": "Upper overtake shelf",
     "other_sites_reachable": 26
@@ -256,9 +256,9 @@
       "y": 0,
       "w": 2048,
       "h": 1024,
-      "bytes": 35747,
+      "bytes": 37394,
       "pixels": 2097152,
-      "sha256": "e9b405f198531680022218a65a0f4659bf42c9b6a1845bb75ceb15cec379b91c",
+      "sha256": "12d402a4ee27b99a62b1c5dda2443b552e683bd0ed53ab0850b5b9f9a869702c",
       "source_grid_parity": "encoder direct material-index pixels",
       "crc32": true,
       "zlib_fixed_deflate": true
@@ -268,9 +268,9 @@
       "y": 165,
       "w": 510,
       "h": 590,
-      "bytes": 7327,
+      "bytes": 7538,
       "pixels": 300900,
-      "sha256": "4ddef5509cf5ccba657839a6c7ec53773127e55e6cb20b423536a4a22c179859",
+      "sha256": "4f8cabbb94c0c70e6fb6841dc8496e99435740aac879d83d4a5863d475480df9",
       "source_grid_parity": "encoder direct material-index pixels",
       "crc32": true,
       "zlib_fixed_deflate": true
@@ -280,9 +280,9 @@
       "y": 348,
       "w": 490,
       "h": 435,
-      "bytes": 3735,
+      "bytes": 4645,
       "pixels": 213150,
-      "sha256": "a9d61dcdfa9b87bb49bac5b807a834987210542f125f8182e111a0ffa89d9649",
+      "sha256": "dafacbf44d6dfefa921de3c61e167d3c2af4f7160c5c8c3b721b956b4406526c",
       "source_grid_parity": "encoder direct material-index pixels",
       "crc32": true,
       "zlib_fixed_deflate": true
@@ -292,9 +292,9 @@
       "y": 235,
       "w": 545,
       "h": 650,
-      "bytes": 8165,
+      "bytes": 8565,
       "pixels": 354250,
-      "sha256": "9c9231c8f00d20ffe5d134cf8e525a2438792e9ec468435f92279d97a40bdda7",
+      "sha256": "af170574d0bd5d6766262355f5aa137d2cf3b45ffaa93834ba103e6285f4d249",
       "source_grid_parity": "encoder direct material-index pixels",
       "crc32": true,
       "zlib_fixed_deflate": true
@@ -304,9 +304,9 @@
       "y": 348,
       "w": 482,
       "h": 435,
-      "bytes": 2599,
+      "bytes": 3058,
       "pixels": 209670,
-      "sha256": "64c71402026e53b7e05789b389130915d8c69aea50dbd913b8c65b6bf0f1aed0",
+      "sha256": "80864b1d4a88174f1a78abbd0463d68ed07a17ca62e8003ae1f53fb898a23d3e",
       "source_grid_parity": "encoder direct material-index pixels",
       "crc32": true,
       "zlib_fixed_deflate": true

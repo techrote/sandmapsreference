@@ -6,6 +6,10 @@
 
 First **Shearline Split-Lane Trials** sibling, a dedicated high-speed/safe-line time-trial, passing and recovery level. Work is confined to this new folder and its own exclusive branch. Source baseline: `sandmapsreference/main@99a166e7fcae45eb22be1740e9f33f62faccbcc7`. The engine authority was inspected READ-ONLY at `techrote/cybersand/main@f7e056c9b8791106e22f2d1c295043783d8a9701`. Primary read-only design anchor: Tungsten Sawtooth Tramworks #69 R2 @ `7fc24855cf521c90bf67f4afb08685e490473201`; borrow material/signal culture and recoverable hard-block logic, **not** pixels, radial wheel, sawteeth, geometry or site coordinates. The 6 Meridian and 6 Switchglass exemplars plus Thunderclap Switchyard and Torsion Rift were compared to avoid repeated faults, cabins and machine-centred visuals.
 
+## R2 art P1 repair — signal legibility
+
+Added large steel/iron approach and return brackets at **both** Alpha/Beta grade exchanges, physically rooted in the existing traction separator and differentiated by amber/ivory speed/safety marks. Their 159px open centres and safe-return flightband remain physically clear. Recomputed 31x27 Midge connectivity, high obstruction causality, and regenerated all Setup/PNG receipts; no native gameplay asserted.
+
 ## Functional race architecture
 
 - **West timing launch:** an asymmetric acceleration/timing gallery and clear upper-race entry.
