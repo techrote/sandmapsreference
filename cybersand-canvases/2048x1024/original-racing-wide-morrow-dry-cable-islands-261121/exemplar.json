@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "purpose": ["human_editable_canvas", "procedural_exemplar", "scripted_setpiece_source"],
+  "family": "original/racing-wide",
+  "map_role": "Three uneven dry industrial cable islands in an open-air suspension archipelago, with a real lower return flyway and selectively entered basal repair spaces",
+  "anchor_donors": [],
+  "macro_topology": ["islands", "suspended", "basin"],
+  "density_profile": "Dense west/east suspended districts, sparse mid-span suspended tension net, intentionally open lower flyway and partially emptied repair pockets",
+  "route_grammar": {
+    "primary": "West upper launch to east horn checkpoint, descend via east transfer gap, west along free under-sling corridor to lower west finish",
+    "alternative": "West upper launch to east worktown, skip east horn and descend through the transfer gap to westbound lower return; available after solid horn obstruction",
+    "rejoin": "The two courses rejoin near the east lower reversal, then share the lower corridor"
+  },
+  "strong_motifs": ["Whole-width tension arch rooted at world edges", "Unequal under-slung habitation decks", "Triangulated empty midspan freight bridge", "Dry excavation pockets beneath lower route", "Distinctive V-arrestor at eastern boundary"],
+  "interesting_relationships": ["Upper traversable sky and lower corridor are divided by a structural suspension arch but joined by a literal eastern transfer throat", "Industrial islands remain physically attached to boundary cables even where full-width lower racing corridor interrupts vertical legs", "Upper ring of factories surrounds a deliberately unbuilt freight basin"],
+  "authoring_affordances": ["Empty central cistern excavation can accept future falling-cell events", "Bare west and east basal workshops permit human furnishing", "Short southeast utility spur can grow into modular drydock machinery", "Upper central freight cable can receive procedural part grammars without moving the actor-clear route"],
+  "setpiece_candidates": [
+    {"name":"Mid-span cable failure","area_xywh":[825,340,362,245],"suggested_use":"Future bridge-failure event on open tensile span; upper sky and low return remain separate editing opportunities"},
+    {"name":"East reversal gate","area_xywh":[1690,290,345,505],"suggested_use":"Future route switch/arrival cue; no scripted gate shipped"},
+    {"name":"Central cistern release","area_xywh":[755,875,555,136],"suggested_use":"Future fluid or thermal scenario after fresh simulation qualification; final map remains dry"},
+    {"name":"Suspended crew arrival","area_xywh":[1300,455,320,265],"suggested_use":"Optional NPC/actor encounter and expansion into empty industrial bay"}
+  ],
+  "procedural_exemplar_value": "Extract rooted cable-edge attachment plus nonuniform suspended inhabited islands, independent elevation corridors, side-exit switching, and intentional vacant maintenance bays as reusable spatial grammars",
+  "similarity_avoidance": "Unlike Beaconfold's ground-rooted beacon skyline and long excavated express, this is a cable-supported cluster of work islands over an exposed dry basin, with an unexcavated open-air under-sling return. Unlike Aster's two stranded hulls, there are no vessels; unlike Rookfall's geological caldera, the central gap is mechanical and tension-supported.",
+  "diversity_axes": {
+    "macro_topology": "islands", "altitude_grammar": "dual_level", "density_cadence": "clustered",
+    "route_structure": "branch_rejoin", "landmark_family": "cableway", "support_form": "suspended",
+    "environment_relation": "dry", "incompleteness": "editable_gaps"
+  }
+}

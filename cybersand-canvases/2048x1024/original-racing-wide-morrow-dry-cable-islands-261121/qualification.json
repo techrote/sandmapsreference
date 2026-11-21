@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "title": "Morrow Dry Cable Islands",
+  "status": "SOURCE-STATIC QUALIFICATION / NATIVE-UNTESTED",
+  "seed": 1297044050,
+  "engine_main_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "reference_main_sha_at_branch": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "grid_dimensions": [
+    2048,
+    1024
+  ],
+  "source_grid_sha256": "2a8219d0157bed6e3d8934989d065feb74559c08f110b632dbaa13914055c244",
+  "setup_sha256": "417c35256f87e6e58c2c875db33afe88df6622f7e160c31194f7a39c8caf0229",
+  "setup_bytes": 52173,
+  "rectangle_count": 2654,
+  "rectangle_work": 315074,
+  "material_histogram": {
+    "0": 1782078,
+    "58": 44989,
+    "62": 28267,
+    "100": 111668,
+    "101": 11678,
+    "113": 9680,
+    "117": 107008,
+    "122": 1784
+  },
+  "sites": {
+    "Launch western quay": [
+      96,
+      276
+    ],
+    "West split lintel": [
+      278,
+      284
+    ],
+    "Upper cablewest": [
+      464,
+      275
+    ],
+    "Tern anchor crown": [
+      689,
+      251
+    ],
+    "Open central crossing": [
+      1007,
+      261
+    ],
+    "Cable tail beacon": [
+      1261,
+      275
+    ],
+    "East worktown approach": [
+      1515,
+      264
+    ],
+    "East horn throat": [
+      1864,
+      286
+    ],
+    "East lower reversal": [
+      1933,
+      787
+    ],
+    "Return terminal": [
+      1773,
+      780
+    ],
+    "Lower cistern causeway": [
+      1551,
+      755
+    ],
+    "Basin east overlook": [
+      1280,
+      782
+    ],
+    "Central undercable traverse": [
+      1051,
+      775
+    ],
+    "Basin west overlook": [
+      791,
+      757
+    ],
+    "West maintenance return": [
+      547,
+      796
+    ],
+    "West lower quay": [
+      232,
+      776
+    ],
+    "Finish threshold": [
+      101,
+      795
+    ],
+    "West signal cockpit": [
+      152,
+      475
+    ],
+    "Quay repair bay": [
+      368,
+      636
+    ],
+    "Tern cable supervisor": [
+      608,
+      531
+    ],
+    "Tern underside service": [
+      733,
+      656
+    ],
+    "Central latch inspection": [
+      1167,
+      540
+    ],
+    "Eastern tram dispatch": [
+      1420,
+      511
+    ],
+    "East inverter galley": [
+      1597,
+      613
+    ],
+    "Breakwater hoist workshop": [
+      1853,
+      625
+    ],
+    "Basal west repair pocket": [
+      501,
+      947
+    ],
+    "Basal east repair pocket": [
+      1584,
+      949
+    ]
+  },
+  "primary_route": [
+    "Launch western quay",
+    "West split lintel",
+    "Upper cablewest",
+    "Tern anchor crown",
+    "Open central crossing",
+    "Cable tail beacon",
+    "East worktown approach",
+    "East horn throat",
+    "East lower reversal",
+    "Return terminal",
+    "Lower cistern causeway",
+    "Basin east overlook",
+    "Central undercable traverse",
+    "Basin west overlook",
+    "West maintenance return",
+    "West lower quay",
+    "Finish threshold"
+  ],
+  "alternate_route": [
+    "Launch western quay",
+    "West split lintel",
+    "Upper cablewest",
+    "Tern anchor crown",
+    "Open central crossing",
+    "Cable tail beacon",
+    "East worktown approach",
+    "East lower reversal",
+    "Return terminal",
+    "Lower cistern causeway",
+    "Basin east overlook",
+    "Central undercable traverse",
+    "Basin west overlook",
+    "West maintenance return",
+    "West lower quay",
+    "Finish threshold"
+  ],
+  "obstruction_xywh": [
+    1832,
+    240,
+    75,
+    88
+  ],
+  "blocked_site": "East horn throat",
+  "png_crops": {
+    "overview.png": [
+      0,
+      0,
+      2048,
+      1024
+    ],
+    "01-west-quay.png": [
+      20,
+      255,
+      450,
+      680
+    ],
+    "02-tern-cable-anchor.png": [
+      410,
+      205,
+      460,
+      680
+    ],
+    "03-cistern-basin-bridge.png": [
+      775,
+      230,
+      500,
+      690
+    ],
+    "04-east-worktown.png": [
+      1300,
+      280,
+      435,
+      675
+    ],
+    "05-catcher-horn.png": [
+      1700,
+      280,
+      335,
+      675
+    ],
+    "06-lower-underworks.png": [
+      500,
+      735,
+      1040,
+      284
+    ]
+  },
+  "verified_png_pixels": 3876062,
+  "apparent_bridges_are_material": true,
+  "native": "NATIVE-UNTESTED"
+}
