@@ -106,6 +106,39 @@ function world(){
  for(let y=0;y<H;y++){add(y*W);add(y*W+W-1);}
  while(a<z){let i=q[a++],x=i%W;for(const j of [x?i-1:-1,x<W-1?i+1:-1,i>=W?i-W:-1,i+W<g.length?i+W:-1])if(j>=0)add(j);}
  let lost=0;for(let i=0;i<g.length;i++)if(g[i]&&!seen[i]){g[i]=0;lost++;}
+// PORTRAIT-REPAIR-001 R2. Narrow bank-anchored crossings and drill instrumentation, AFTER source prune.
+ b(361,650,24,43,49);
+ b(372,644,77,9,68);
+ l(380,651,479,679,7,49);
+ b(451,658,24,22,130);
+ b(458,662,10,10,77);
+ b(635,637,20,44,49);
+ b(585,645,60,8,68);
+ b(611,625,22,19,131);
+ b(615,630,12,8,77);
+ b(628,632,12,29,49);
+ b(370,1087,21,56,49);
+ b(384,1085,104,10,68);
+ b(394,1100,52,28,129);
+ b(415,1107,19,13,79);
+ l(463,1118,481,1139,7,49);
+ l(378,1568,389,1700,7,49);
+ b(373,1667,17,49,49);
+ b(390,1666,53,10,68);
+ b(443,1667,23,19,129);
+ b(450,1672,12,8,79);
+ l(459,1683,480,1719,7,49);
+ b(923,1685,23,100,49);
+ l(931,1700,670,1729,7,68);
+ b(681,1720,25,20,129);
+ b(919,858,23,83,49);
+ l(929,878,839,882,7,62);
+ b(844,878,22,26,130);
+ b(854,883,10,10,77);
+ b(925,1150,30,115,49);
+ l(943,1184,833,1190,7,62);
+ b(842,1191,24,24,130);
+ b(849,1196,11,10,63);
  return {W,H,g,M,seed,sites,spawn:[sites[0].x,sites[0].y],discarded_ungrounded:lost,braceCount:0,bracedCells:0};
 }
 function encode(g,W,H){let rects=[],active=new Map();for(let y=0;y<H;y++){let now=new Map();for(let x=0;x<W;){let mat=g[y*W+x],left=x++;while(x<W&&g[y*W+x]===mat)x++;if(!mat)continue;const k=left+":"+ (x-left)+":"+mat;let r=active.get(k);if(r)r[3]++;else{r=[left,y,x-left,1,mat];rects.push(r);}now.set(k,r);}active=now;}return rects;}
@@ -151,6 +184,19 @@ function shortest31(world,block){
  return {steps:dist[finish],visited:tail};
 }
 
+
+function drillWaypointProof31(world,block){
+ const {W,H,sites}=world,N=W*H,g=world.g.slice(),[bx,by,bw,bh]=block;
+ for(let y=by;y<by+bh;y++)g.fill(58,y*W+bx,y*W+bx+bw);
+ const S=W+1,I=new Int32Array(S*(H+1));for(let y=1;y<=H;y++){let run=0;for(let x=1;x<=W;x++){run+=g[(y-1)*W+x-1]!==0?1:0;I[y*S+x]=I[(y-1)*S+x]+run;}}
+ const free=new Uint8Array(N);for(let y=13;y+14<=H;y++)for(let x=15;x+16<=W;x++){let a=x-15,t=y-13,r=a+31,d=t+27;if(I[d*S+r]-I[t*S+r]-I[d*S+a]+I[t*S+a]===0)free[y*W+x]=1;}
+ function segment(first,last,minx){const start=sites.find(s=>s.name===first),end=sites.find(s=>s.name===last);if(!start||!end)throw Error("missing literal waypoint");const startId=start.y*W+start.x,finish=end.y*W+end.x,dist=new Int32Array(N),q=new Int32Array(N);dist.fill(-1);let a=0,z=0;if(!free[startId]||!free[finish]||start.x<minx||end.x<minx)return -1;q[z++]=startId;dist[startId]=0;while(a<z&&dist[finish]<0){let i=q[a++],x=i%W;for(const j of[x>minx?i-1:-1,x+1<W?i+1:-1,i-W,i+W])if(j>=0&&j<N&&j%W>=minx&&free[j]&&dist[j]<0){dist[j]=dist[i]+1;q[z++]=j;}}return dist[finish];}
+ const names=["Upper fault spawn","East drill bypass upper","East drill bypass middle","East drill bypass lower","Lower fault rejoin","Deep fault exit"],legs=[];
+ for(let i=1;i<names.length;i++){const minx=(i===2||i===3)?700:0,steps=segment(names[i-1],names[i],minx);if(steps<0)throw Error("drill waypoint "+names[i]);legs.push({from:names[i-1],to:names[i],min_x:minx,steps});}
+ const shortest=shortest31(world,block).steps;
+ return {hull:[31,27],obstruction:block,ordered_waypoints:names,legs,total_steps:legs.reduce((a,e)=>a+e.steps,0),unconstrained_obstructed_shortest:shortest,forced_shortest:false,interpretation:"Physically obstructed ordered literal-waypoint route exists; the unrestricted shortest path remains shaft-side and is not asserted to enter the drill gallery. Interior drill legs restrict the free-centre path to x>=700."};
+}
+
 function concat(arr){const n=arr.reduce((p,a)=>p+a.length,0),out=new Uint8Array(n);let j=0;for(const a of arr){out.set(a,j);j+=a.length;}return out;}
 
 function b32(k){return Uint8Array.of((k>>>24)&255,(k>>>16)&255,(k>>>8)&255,k&255);}
@@ -175,14 +221,14 @@ function verifyPNG(p,g,W,x,y,w,h){const v=new DataView(p.buffer,p.byteOffset,p.b
 
 
 function build(){
- const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),direct=shortest31(w,null),detour=shortest31(w,[389,980,252,79]);
- if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||detour.steps<=direct.steps)
+ const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),direct=shortest31(w,null),detour=shortest31(w,[389,980,252,79]),drill=drillWaypointProof31(w,[389,980,252,79]);
+ if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||detour.steps<=direct.steps||drill.legs.some(e=>e.steps<0))
  throw Error("STATIC_GATE "+JSON.stringify({detached:a.detached,fluid:[a.airfaces,a.direct],passed:a.flight.map(f=>f.passed),bad:a.flight[2].sites.filter(s=>!s.reached),blocked:a.blocked.passed,steps:[direct.steps,detour.steps]}));
  const setup={version:2,extent:[1024,2048],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:w.spawn,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:2}}],next_id:2,selected:1,edits:rects,response:"LA-SELECTIVE",liquid_policy:[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
  const setupText=JSON.stringify(setup),sha=sha256(w.g),setupSHA=sha256(utf(setupText));if(rects.length>32768||utf(setupText).length>1048576)throw Error("Setup limit");
  const crops=[["overview.png",0,0,1024,2048],["01-west-clinic.png",58,161,402,402],["02-seismic-fork.png",578,218,375,452],["03-ore-transfer.png",72,752,414,447],["04-east-drill-bypass.png",574,893,377,468],["05-quarantine.png",582,1312,370,367],["06-buried-archives.png",60,1639,888,333]],pngs={},pngMeta={};let px=0;
  for(const [n,x,y,ww,hh]of crops){const p=png(w.g,w.W,x,y,ww,hh);px+=verifyPNG(p,w.g,w.W,x,y,ww,hh);pngs[n]=p;pngMeta[n]={xywh:[x,y,ww,hh],bytes:p.length,sha256:sha256(p)};}
- const receipt={schema:1,trial:"PORTRAIT-001",difficulty:"OBVIOUS",source:{pr:177,head:"ed15c1b7d8be98548d087b247ed54b4a70498b01",path:"cybersand-canvases/2048x1024/original-scifi-frontier-wide-orthant-fault-seismic-ladder-261121/"},base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine:"69209acaffb34ebe18c45e19290b5976b7fb2c82",seed:w.seed,dimensions:[1024,2048],cells:2097152,source_grid_sha256:sha,setup_sha256:setupSHA,setup_bytes:utf(setupText).length,rectangles:rects.length,construction_work:a.work,material_histogram:a.hist,ground:{total:a.total,rooted:a.rooted,detached:a.detached,pruned_provisional:w.discarded_ungrounded},fluid:{water:a.hist[3]||0,lava:a.hist[8]||0,exposed_faces:a.airfaces,water_lava_contacts:a.direct},hulls:a.flight,physical_obstruction:a.obstruction,obstructed:a.blocked,goal_distance:{direct:direct.steps,obstructed:detour.steps},pngs:pngMeta,pixel_parity:px,native:"NATIVE-UNTESTED"};
+ const receipt={schema:1,trial:"PORTRAIT-001",difficulty:"OBVIOUS",source:{pr:177,head:"ed15c1b7d8be98548d087b247ed54b4a70498b01",path:"cybersand-canvases/2048x1024/original-scifi-frontier-wide-orthant-fault-seismic-ladder-261121/"},base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine:"69209acaffb34ebe18c45e19290b5976b7fb2c82",seed:w.seed,dimensions:[1024,2048],cells:2097152,source_grid_sha256:sha,setup_sha256:setupSHA,setup_bytes:utf(setupText).length,rectangles:rects.length,construction_work:a.work,material_histogram:a.hist,ground:{total:a.total,rooted:a.rooted,detached:a.detached,pruned_provisional:w.discarded_ungrounded},fluid:{water:a.hist[3]||0,lava:a.hist[8]||0,exposed_faces:a.airfaces,water_lava_contacts:a.direct},hulls:a.flight,physical_obstruction:a.obstruction,obstructed:a.blocked,goal_distance:{direct:direct.steps,obstructed:detour.steps},repair:{programme:"PORTRAIT-REPAIR-001",lane:"R2 Orthant",original_parent_head:"598e8792b32a4922008b6d3dcb9208d21f03e477",original_setup_sha256:"195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",independent_baseline_review:"https://github.com/techrote/sandmapsreference/pull/186#issuecomment-7062924203",altered_material_cells:23520,changed_bbox_xyxy:[361,625,955,1785],grounded_support:true,scope:["upper tension terminal at x361..655/y625..693; retaining central shear","ore-stage sender at x370..488/y1085..1143","fractured low left/right joint x373..946/y1568..1785","east drill workface/entry markers x839..955/y858..1265"],unchanged_and_protected:["existing 22 literal waypoints","west clinic, east fork, quarantine and entered archives","unfurnished fault void and broken joints"],drill,source_static_only:true,native:"NATIVE-UNTESTED"},pngs:pngMeta,pixel_parity:px,native:"NATIVE-UNTESTED"};
 const aspect_transfer={
  source_extent:[2048,1024],target_extent:[1024,2048],source_pr:177,
  source_head:"ed15c1b7d8be98548d087b247ed54b4a70498b01",
@@ -191,7 +237,7 @@ const aspect_transfer={
  preserved:["unequal tectonic fault banks with root-connected engineering","western rover clinic and ore-processing settlement","asymmetric twin-pronged seismic receiver on an eastern station","eastern biological custody and deep entered archives","multiple broken or offset crossings and open editable shear"],
  transformed:["horizontal western/eastern districts into alternating left/right altitude-separated stations","source three crossing grades into distinct high cable inspection, ore-stage cantilevers and fractured lower deck","two-bank wide survey into descending flight itinerary with opposite-side archive endpoints","wide seismic mast into vertical rock-supported twin fork around an upper east station"],
  discarded:["original pixel positions and landmark coordinates","source exact bridge lengths and horizontal ordering","wide aspect edge-to-edge overflight"],
- newly_introduced:["continuous east drill-gallery bypass around a physical 252x79 fault obstruction","deep central recovery dock linking separated archive chambers","vacant right maintenance and left bore expansion seams","right-to-left alternate return levels that rejoin a new lower fault exit"]
+ newly_introduced:["obstruction-surviving entered east drill-gallery route via ordered upper, middle, lower literal waypoints; not forced as shortest route","deep central recovery dock linking separated archive chambers","vacant right maintenance and left bore expansion seams","right-to-left alternate return levels that rejoin a new lower fault exit"]
 };
 const route_graph={
  spawn:"Upper fault spawn",goal:"Deep fault exit",
@@ -199,7 +245,7 @@ const route_graph={
  primary:["Upper fault spawn","West rover clinic","Upper bridge landing","Mid fault exchange","Lower fault rejoin","Fault archive overlook","Deep fault exit"],
  branches:[["Upper fault spawn","East seismic dispatch","Fork receiver station","Upper bridge landing"],["East drill bypass upper","East drill bypass middle","East drill bypass lower","Lower fault rejoin"],["West bore rescue","West lower survey","West buried archives","Lower recovery dock"]],
  exact_hull_results:a.flight.map(q=>({hull:q.hull,sites:q.sites})),
- obstruction:{rect:[389,980,252,79],material:58,goal_distance_direct:direct.steps,goal_distance_obstructed:detour.steps,all_named_sites_reachable_after:a.blocked.passed}
+ obstruction:{rect:[389,980,252,79],material:58,goal_distance_direct:direct.steps,goal_distance_obstructed:detour.steps,all_named_sites_reachable_after:a.blocked.passed},ordered_drill_obstructed:drill
 };
 const exemplar={
  schema_version:1,purpose:["human_editable_canvas","procedural_exemplar","scripted_setpiece_source"],
@@ -211,10 +257,10 @@ const exemplar={
  interesting_relationships:["source pairwise horizontal crossings become vertical left-right station alternation","one vertical rift corridor meets actual right-bank entered bypass","medic and mine support work differ from seismic and bio-custody","deep archive recovery remains reachable when central fault is obstructed"],
  authoring_affordances:["large reserved central fault void for live collapse scripting","unfurnished right maintenance cut for modular Gentek parts","left deep excavation seam for manual archaeology","separate broken low bridge ends for SWARM joint closure"],
  setpiece_candidates:[{name:"seismic mast activation",region:[600,225,935,626],scripted:false},{name:"fault lane collapse",region:[386,905,935,1320],scripted:false},{name:"quarantine lockdown",region:[590,1335,942,1660],scripted:false},{name:"deep archive rescue",region:[82,1655,945,1966],scripted:false}],
- procedural_exemplar_value:"Vertical transfer of a wide two-bank engineering world: stations alternate height/side while a real independently entered branch bypass preserves main-flight recovery and future authored voids.",
+ procedural_exemplar_value:"Portrait two-bank crossing vocabulary: attached high tension receiver, ore-stage cargo sender and separated low fracture; right gallery has an ordered measured alternative under the block, not a forced shortest path.",
  similarity_avoidance:"Unlike the source Orthant's lateral fault colony, this portrait descends through sequential left/right stations, adds a separate right drill return and paired deep archive terminal without copying any source coordinates.",
  diversity_axes:{macro_topology:"vertical_fault",altitude_grammar:"vertical_spine",density_cadence:"alternating",route_structure:"branch_rejoin",landmark_family:"tower",support_form:"cliff_embedded",environment_relation:"geological",incompleteness:"modular_append_zones"},
- grid_sha256:sha,native:"NATIVE-UNTESTED"
+ grid_sha256:sha,repair_parent_head:"598e8792b32a4922008b6d3dcb9208d21f03e477",native:"NATIVE-UNTESTED"
 };
 const readme=[
  "# Rift Needle - Alternating Seismic Stations",
@@ -228,6 +274,8 @@ const readme=[
  "The reproducible standalone Node.js builder regenerates exact Setup, receipt, route_graph, aspect_transfer, exemplar and all indexed-material PNGs. Run node build.cjs .",
  "Six full-resolution 1:1 crops plus an authentic 1024x2048 indexed overview derive exclusively from the final committed material plane.",
  "The 19x15, 23x19 and 31x27 whole-hull free-centre BFS uses literal sites and four-neighbour movement. Actual installed Workbench/Rapier and cold save-reopen are NOT TESTED.",
+ "R2 bounded repair: distinct attached crossing technologies and drilled east-wall guide rails; blocked 31x27 ordered upper/middle/lower side-gallery waypoint route is proven, but not a forced shortest detour.",
+ "Independent Art and Technical review required; original portrait and donor branches unchanged.",
  "No merge/Ready promotion or owner acceptance."
 ].join("\n")+"\n";
  return {setupText,receipt,pngs,aspect_transfer,route_graph,exemplar,readme};

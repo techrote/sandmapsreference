@@ -6,7 +6,9 @@ Source folder cybersand-canvases/2048x1024/original-scifi-frontier-wide-orthant-
 Read-only engine authority techrote/cybersand/main@69209acaffb34ebe18c45e19290b5976b7fb2c82.
 A genuinely new recomposition: alternating west rover clinic, east seismic mast, west ore, east quarantine and paired deep archives along a tall fault. An entered east drill gallery bypasses a real obstacle.
 The map is not rotated, cropped, scaled or coordinate-transplanted from the original. It retains deliberate editing voids.
-The reproducible standalone Node.js builder regenerates exact Setup, receipt, route_graph, aspect_transfer, exemplar and all indexed-material PNGs. Run node build.cjs .
+The reproducible standalone Node.js builder regenerates exact Setup, receipt, route_graph, aspect_transfer, exemplar and all indexed PNGs. Run node build.cjs .
 Six full-resolution 1:1 crops plus an authentic 1024x2048 indexed overview derive exclusively from the final committed material plane.
 The 19x15, 23x19 and 31x27 whole-hull free-centre BFS uses literal sites and four-neighbour movement. Actual installed Workbench/Rapier and cold save-reopen are NOT TESTED.
+R2 bounded repair: distinct attached crossing technologies and drilled east-wall guide rails; blocked 31x27 ordered upper/middle/lower side-gallery waypoint route is proven, but not a forced shortest detour.
+Independent Art and Technical review required; original portrait and donor branches unchanged.
 No merge/Ready promotion or owner acceptance.

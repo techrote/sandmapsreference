@@ -15,29 +15,29 @@
     2048
   ],
   "cells": 2097152,
-  "source_grid_sha256": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
-  "setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
-  "setup_bytes": 7690,
-  "rectangles": 363,
-  "construction_work": 848031,
+  "source_grid_sha256": "0a0b8670ce0320eb29b71213bf8c23e4876bde79fc2bb9a69028a9f8ccbe4bdf",
+  "setup_sha256": "fbaaacd57072c04b1d833870d5a278075b5698ab0d370aa3d7428d1448be81d6",
+  "setup_bytes": 12368,
+  "rectangles": 613,
+  "construction_work": 867058,
   "material_histogram": {
-    "0": 1249121,
-    "49": 22419,
-    "62": 31961,
-    "63": 2587,
-    "68": 21295,
-    "77": 2007,
-    "79": 1475,
-    "100": 424536,
-    "101": 290525,
+    "0": 1230094,
+    "49": 35850,
+    "62": 32701,
+    "63": 2697,
+    "68": 25158,
+    "77": 2303,
+    "79": 1818,
+    "100": 423162,
+    "101": 288630,
     "121": 4316,
-    "129": 23487,
-    "130": 21525,
-    "131": 1898
+    "129": 25372,
+    "130": 22891,
+    "131": 2160
   },
   "ground": {
-    "total": 848031,
-    "rooted": 848031,
+    "total": 867058,
+    "rooted": 867058,
     "detached": 0,
     "pruned_provisional": 65868
   },
@@ -53,8 +53,8 @@
         19,
         15
       ],
-      "valid_centres": 1113322,
-      "connected_centres": 1097205,
+      "valid_centres": 1079036,
+      "connected_centres": 1062850,
       "passed": 22,
       "sites": [
         {
@@ -218,8 +218,8 @@
         23,
         19
       ],
-      "valid_centres": 1082556,
-      "connected_centres": 1070177,
+      "valid_centres": 1044872,
+      "connected_centres": 1032490,
       "passed": 22,
       "sites": [
         {
@@ -383,8 +383,8 @@
         31,
         27
       ],
-      "valid_centres": 1026455,
-      "connected_centres": 1019415,
+      "valid_centres": 982139,
+      "connected_centres": 975099,
       "passed": 22,
       "sites": [
         {
@@ -555,8 +555,8 @@
       31,
       27
     ],
-    "valid_centres": 998271,
-    "connected_centres": 991231,
+    "valid_centres": 953955,
+    "connected_centres": 946915,
     "passed": 22,
     "sites": [
       {
@@ -719,6 +719,90 @@
     "direct": 1916,
     "obstructed": 2072
   },
+  "repair": {
+    "programme": "PORTRAIT-REPAIR-001",
+    "lane": "R2 Orthant",
+    "original_parent_head": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+    "original_setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+    "independent_baseline_review": "https://github.com/techrote/sandmapsreference/pull/186#issuecomment-7062924203",
+    "altered_material_cells": 23520,
+    "changed_bbox_xyxy": [
+      361,
+      625,
+      955,
+      1785
+    ],
+    "grounded_support": true,
+    "scope": [
+      "upper tension terminal at x361..655/y625..693; retaining central shear",
+      "ore-stage sender at x370..488/y1085..1143",
+      "fractured low left/right joint x373..946/y1568..1785",
+      "east drill workface/entry markers x839..955/y858..1265"
+    ],
+    "unchanged_and_protected": [
+      "existing 22 literal waypoints",
+      "west clinic, east fork, quarantine and entered archives",
+      "unfurnished fault void and broken joints"
+    ],
+    "drill": {
+      "hull": [
+        31,
+        27
+      ],
+      "obstruction": [
+        389,
+        980,
+        252,
+        79
+      ],
+      "ordered_waypoints": [
+        "Upper fault spawn",
+        "East drill bypass upper",
+        "East drill bypass middle",
+        "East drill bypass lower",
+        "Lower fault rejoin",
+        "Deep fault exit"
+      ],
+      "legs": [
+        {
+          "from": "Upper fault spawn",
+          "to": "East drill bypass upper",
+          "min_x": 0,
+          "steps": 1012
+        },
+        {
+          "from": "East drill bypass upper",
+          "to": "East drill bypass middle",
+          "min_x": 700,
+          "steps": 194
+        },
+        {
+          "from": "East drill bypass middle",
+          "to": "East drill bypass lower",
+          "min_x": 700,
+          "steps": 169
+        },
+        {
+          "from": "East drill bypass lower",
+          "to": "Lower fault rejoin",
+          "min_x": 0,
+          "steps": 276
+        },
+        {
+          "from": "Lower fault rejoin",
+          "to": "Deep fault exit",
+          "min_x": 0,
+          "steps": 671
+        }
+      ],
+      "total_steps": 2322,
+      "unconstrained_obstructed_shortest": 2072,
+      "forced_shortest": false,
+      "interpretation": "Physically obstructed ordered literal-waypoint route exists; the unrestricted shortest path remains shaft-side and is not asserted to enter the drill gallery. Interior drill legs restrict the free-centre path to x>=700."
+    },
+    "source_static_only": true,
+    "native": "NATIVE-UNTESTED"
+  },
   "pngs": {
     "overview.png": {
       "xywh": [
@@ -728,7 +812,7 @@
         2048
       ],
       "bytes": 2099836,
-      "sha256": "46f3f66d3121e76e85f377ee9796217e07d5c8df611ba3b478037db1a99b6dae"
+      "sha256": "387ca87200567e5369dcfd36b2458160a715991d3e6bd058f67527b781cb3384"
     },
     "01-west-clinic.png": {
       "xywh": [
@@ -748,7 +832,7 @@
         452
       ],
       "bytes": 170438,
-      "sha256": "47c315d5872a21f2d36244cb95abee518d548673b663b84a0ca9c2ab782771f4"
+      "sha256": "fdacf17ddf3f3fc161be8265c7685f160f94fcaf9e37d0cfa84a7224722c16f0"
     },
     "03-ore-transfer.png": {
       "xywh": [
@@ -758,7 +842,7 @@
         447
       ],
       "bytes": 185991,
-      "sha256": "f7e3b7014e1621e0ea0a58403e7f79b84145ba82fc60bf1ab8d58f6b55410bab"
+      "sha256": "a26b96b96654cc23745a2ebef1f20b6f4ed05c89634a0d3f6f14dbf6bc345a4c"
     },
     "04-east-drill-bypass.png": {
       "xywh": [
@@ -768,7 +852,7 @@
         468
       ],
       "bytes": 177390,
-      "sha256": "a83d8a30ea10d52043830789dbe8107dd5d5d492a79f5774aafbf332990eff11"
+      "sha256": "36275d8bf379290fedba7d95d3fc71a1ec2ea05f35c46176963bd3c7d15faa40"
     },
     "05-quarantine.png": {
       "xywh": [
@@ -788,7 +872,7 @@
         333
       ],
       "bytes": 296533,
-      "sha256": "e185964121b454aa37941b56613b4b1ab22cb3d3c15dfc493e77ff69b469473d"
+      "sha256": "b3a32de2e2182301f8a0886ab62c7f241488f8fbaedd5d79fb515ee05eba0637"
     }
   },
   "pixel_parity": 3221244,

@@ -685,5 +685,61 @@
     "goal_distance_direct": 1916,
     "goal_distance_obstructed": 2072,
     "all_named_sites_reachable_after": 22
+  },
+  "ordered_drill_obstructed": {
+    "hull": [
+      31,
+      27
+    ],
+    "obstruction": [
+      389,
+      980,
+      252,
+      79
+    ],
+    "ordered_waypoints": [
+      "Upper fault spawn",
+      "East drill bypass upper",
+      "East drill bypass middle",
+      "East drill bypass lower",
+      "Lower fault rejoin",
+      "Deep fault exit"
+    ],
+    "legs": [
+      {
+        "from": "Upper fault spawn",
+        "to": "East drill bypass upper",
+        "min_x": 0,
+        "steps": 1012
+      },
+      {
+        "from": "East drill bypass upper",
+        "to": "East drill bypass middle",
+        "min_x": 700,
+        "steps": 194
+      },
+      {
+        "from": "East drill bypass middle",
+        "to": "East drill bypass lower",
+        "min_x": 700,
+        "steps": 169
+      },
+      {
+        "from": "East drill bypass lower",
+        "to": "Lower fault rejoin",
+        "min_x": 0,
+        "steps": 276
+      },
+      {
+        "from": "Lower fault rejoin",
+        "to": "Deep fault exit",
+        "min_x": 0,
+        "steps": 671
+      }
+    ],
+    "total_steps": 2322,
+    "unconstrained_obstructed_shortest": 2072,
+    "forced_shortest": false,
+    "interpretation": "Physically obstructed ordered literal-waypoint route exists; the unrestricted shortest path remains shaft-side and is not asserted to enter the drill gallery. Interior drill legs restrict the free-centre path to x>=700."
   }
 }
