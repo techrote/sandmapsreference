@@ -1,0 +1,303 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Quoin Veil Survey Network",
+  "sibling": 2,
+  "role": "Oblique Fault Cartography / Embedded Resonance Galleries",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "donor_design_language": [
+    "wide-sable-quoin-gravitic-core",
+    "wide-threnody-scar-foldwing-seedlift"
+  ],
+  "no_geometry_donated": true,
+  "seed": "quoin-veil-fault-cartography-261121-v1",
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 10995,
+    "62": 6746,
+    "66": 5838,
+    "68": 13363,
+    "77": 452,
+    "100": 669118,
+    "101": 118920,
+    "120": 1567,
+    "129": 3509,
+    "131": 3701
+  },
+  "occupied_cells": 834209,
+  "grounded_cells": 834209,
+  "unrooted_cells": 0,
+  "connected_solid_components": 1,
+  "tie_structures": {
+    "ties": 26,
+    "longest": 169,
+    "raw_components": 27
+  },
+  "lossless_rectangles": 3889,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 834209,
+  "setup_bytes": 75972,
+  "plane_sha256": "30551fcb42ee1890b816e152ee7a55e07beee2358f05853620c93f23e9fa7134",
+  "setup_sha256": "462937a50dcb95a019cda836f132798b0127470faa1e61c3f2b8d38e6b27bb5e",
+  "literal_sites": {
+    "West seismic rover arrival": [
+      171,
+      724
+    ],
+    "West protected custody": [
+      232,
+      728
+    ],
+    "Western undercut junction": [
+      326,
+      695
+    ],
+    "Low acoustic refuge": [
+      408,
+      532
+    ],
+    "Embedded calibration A": [
+      520,
+      632
+    ],
+    "Casing handoff": [
+      685,
+      584
+    ],
+    "Spare side geode": [
+      641,
+      451
+    ],
+    "Embedded calibration B": [
+      857,
+      531
+    ],
+    "Sonic gate entrance": [
+      956,
+      498
+    ],
+    "Upper sonic interlock": [
+      1039,
+      474
+    ],
+    "Seismic comparator": [
+      1142,
+      457
+    ],
+    "Append-pocket entry": [
+      1085,
+      672
+    ],
+    "Phase comparator east": [
+      1233,
+      435
+    ],
+    "Unfurnished attachment seam": [
+      1261,
+      627
+    ],
+    "Embedded survey D": [
+      1440,
+      367
+    ],
+    "Observation slit entrance": [
+      1580,
+      347
+    ],
+    "Exposed observation cut": [
+      1660,
+      225
+    ],
+    "East sheltered assay": [
+      1810,
+      405
+    ],
+    "Eastern rover dispatch": [
+      1967,
+      444
+    ],
+    "West rescue drop": [
+      400,
+      863
+    ],
+    "Underfault relay A": [
+      609,
+      840
+    ],
+    "Deep alternate signal": [
+      814,
+      844
+    ],
+    "Deep tilted core": [
+      1030,
+      774
+    ],
+    "Underfault refuge": [
+      1210,
+      768
+    ],
+    "Lower eastern calibration": [
+      1444,
+      743
+    ],
+    "Emergency east ascent": [
+      1674,
+      771
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1112961,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1078503,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1010431,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      1006,
+      443,
+      1073,
+      509
+    ],
+    "expected_blocked_site": "Upper sonic interlock",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1001963,
+      "passed": 25,
+      "total": 26,
+      "bad": [
+        {
+          "name": "Upper sonic interlock",
+          "point": [
+            1039,
+            474
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "extent": [
+        2048,
+        1024
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "bytes": 36559,
+      "sha256": "9466679b4d5d939e070193c25db9651d8fbf1906e1ecaf0a57db517c44844436",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "01-west-seismic-rover-ingress.png",
+      "extent": [
+        414,
+        348
+      ],
+      "origin": [
+        21,
+        583
+      ],
+      "bytes": 5654,
+      "sha256": "d555292e89977d7192355dd3f16e325515e2b0aeb7280b75e5044450273cd97d",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "02-embedded-calibration-galleries.png",
+      "extent": [
+        559,
+        385
+      ],
+      "origin": [
+        407,
+        391
+      ],
+      "bytes": 7184,
+      "sha256": "e775caff0f833fd506234c38877165fa41f564328b05bbe89e05f2263460a863",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "03-resonance-comparator-fault.png",
+      "extent": [
+        393,
+        376
+      ],
+      "origin": [
+        964,
+        339
+      ],
+      "bytes": 4521,
+      "sha256": "1bd4b9855e5d2e273c9e5d6ec6543aee7bf4ba53d608723dce3c9a31ca80130f",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "04-high-observation-quarantine.png",
+      "extent": [
+        646,
+        423
+      ],
+      "origin": [
+        1370,
+        154
+      ],
+      "bytes": 7860,
+      "sha256": "0e0af2a0b27dfea222ebe5214442ad37b1b8a136dff03be66dfcf7b299f51d03",
+      "indexed_material_pixel_parity": "PASS"
+    },
+    {
+      "name": "05-stepped-emergency-adit.png",
+      "extent": [
+        1369,
+        273
+      ],
+      "origin": [
+        355,
+        722
+      ],
+      "bytes": 6373,
+      "sha256": "d195458951df3044567fffa1ad229f95fdbbfe09ec75a0fe098e055c2ccc52b8",
+      "indexed_material_pixel_parity": "PASS"
+    }
+  ],
+  "source_static": "CREATOR-STATIC-PASS",
+  "independent_art_technical_shepherd": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "DRAFT/HOLD"
+}
