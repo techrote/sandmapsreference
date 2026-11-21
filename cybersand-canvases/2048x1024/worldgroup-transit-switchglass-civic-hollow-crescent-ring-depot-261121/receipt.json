@@ -1,0 +1,333 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_SWITCHGLASS_HOLLOW_CRESCENT_RING_DEPOT",
+  "revision": "R1",
+  "seed": "0x261121d4 (fixed, no random draw)",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donor": "Tungsten Sawtooth @ 7fc24855cf521c90bf67f4afb08685e490473201 read-only: dry signal/energy-switch culture. Switchglass 01–03 and Meridian 01–06 used solely as structural contrast; zero donor geometry copied.",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 377436,
+  "discarded_unattached_candidate_cells": 14693,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 3265,
+  "setup_json_bytes": 62201,
+  "material_work_visits": 377436,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "272bf5d49482d362ca0c624087e309faad820815a3b27f659c6412cd2db863b1",
+  "setup_sha256": "2d2b516e650d19df3117fa91d098d7127d6dbe2d5157bf599b26a06e9fd6eb6b",
+  "histogram": {
+    "0": 1719716,
+    "49": 56358,
+    "58": 55488,
+    "62": 40916,
+    "100": 173370,
+    "101": 13114,
+    "113": 6006,
+    "117": 30328,
+    "122": 1856
+  },
+  "sites": [
+    {
+      "name": "West arrival",
+      "x": 111,
+      "y": 515
+    },
+    {
+      "name": "West ticket precinct",
+      "x": 198,
+      "y": 620
+    },
+    {
+      "name": "West underworks",
+      "x": 138,
+      "y": 908
+    },
+    {
+      "name": "Western ascent seam",
+      "x": 320,
+      "y": 520
+    },
+    {
+      "name": "Outer bow crest",
+      "x": 988,
+      "y": 284
+    },
+    {
+      "name": "West ram control",
+      "x": 575,
+      "y": 548
+    },
+    {
+      "name": "Ram workshop",
+      "x": 545,
+      "y": 963
+    },
+    {
+      "name": "Incline escape shaft",
+      "x": 610,
+      "y": 850
+    },
+    {
+      "name": "West inner grade",
+      "x": 474,
+      "y": 637
+    },
+    {
+      "name": "Crescent low crossing",
+      "x": 768,
+      "y": 649
+    },
+    {
+      "name": "Basin dispatch",
+      "x": 1026,
+      "y": 820
+    },
+    {
+      "name": "Basin lower repair",
+      "x": 1032,
+      "y": 991
+    },
+    {
+      "name": "Basin shaft recovery",
+      "x": 1012,
+      "y": 913
+    },
+    {
+      "name": "Central high switch",
+      "x": 1055,
+      "y": 510
+    },
+    {
+      "name": "Physical severable midspan",
+      "x": 1168,
+      "y": 290
+    },
+    {
+      "name": "Outer eastern crest",
+      "x": 1362,
+      "y": 359
+    },
+    {
+      "name": "Eastern signal master",
+      "x": 1580,
+      "y": 390
+    },
+    {
+      "name": "East freight approach",
+      "x": 1448,
+      "y": 714
+    },
+    {
+      "name": "East brake works",
+      "x": 1480,
+      "y": 962
+    },
+    {
+      "name": "East shaft recovery",
+      "x": 1472,
+      "y": 874
+    },
+    {
+      "name": "Return east grade",
+      "x": 1744,
+      "y": 580
+    },
+    {
+      "name": "Eastern passenger freight",
+      "x": 1970,
+      "y": 595
+    },
+    {
+      "name": "East undertrack works",
+      "x": 1777,
+      "y": 893
+    },
+    {
+      "name": "Eastern return shaft",
+      "x": 1842,
+      "y": 778
+    },
+    {
+      "name": "Outbound finish",
+      "x": 2022,
+      "y": 555
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 25,
+      "total": 25,
+      "missing": [],
+      "visited_centres": 1474524
+    },
+    "23x19": {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 25,
+      "total": 25,
+      "missing": [],
+      "visited_centres": 1442680
+    },
+    "31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 25,
+      "total": 25,
+      "missing": [],
+      "visited_centres": 1380192
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1120,
+      240,
+      96,
+      115
+    ],
+    "material": 58,
+    "after_31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 24,
+      "total": 25,
+      "missing": [
+        "Physical severable midspan"
+      ],
+      "visited_centres": 1364426
+    },
+    "covered_site": "Physical severable midspan",
+    "other_sites_reachable": 24
+  },
+  "route_detour": {
+    "from": "Outer bow crest",
+    "to": "Outer eastern crest",
+    "hull": [
+      31,
+      27
+    ],
+    "baseline_steps": 449,
+    "obstructed_steps": 565,
+    "extra_steps": 116,
+    "method": "Conservative 31x27 full-envelope four-neighbour shortest path with genuine material closure"
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 52815,
+      "pixels": 2097152,
+      "sha256": "e3662abce830bcd357ca4cffa7aa4722172cca4b7a8e8dc88b4c1b59e4d7ccf1",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-ticket-ram-west.png": {
+      "x": 0,
+      "y": 456,
+      "w": 520,
+      "h": 568,
+      "bytes": 8812,
+      "pixels": 295360,
+      "sha256": "592d641dc9cece7fa898f73b54734688dcc5739d992f73f4157148079bd52722",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-elevated-outer-bow.png": {
+      "x": 430,
+      "y": 274,
+      "w": 687,
+      "h": 500,
+      "bytes": 8458,
+      "pixels": 343500,
+      "sha256": "91f2dff5ad781d6a53233b2d95913494aeaa3638ee5b03ad10aa9c40461de473",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-basin-shunting-gantry.png": {
+      "x": 815,
+      "y": 587,
+      "w": 445,
+      "h": 437,
+      "bytes": 7234,
+      "pixels": 194465,
+      "sha256": "a56d0c5bdc85070f082876e520be9a686a448966e1fa1e8e1ea702ed6ca63c5d",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-signal-brake-east.png": {
+      "x": 1284,
+      "y": 371,
+      "w": 403,
+      "h": 653,
+      "bytes": 9629,
+      "pixels": 263159,
+      "sha256": "85c91e5a698bdc79de9d9dd0c8f711d9d88821fe86bd8e12edf3308819f445e9",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-departure-return-east.png": {
+      "x": 1662,
+      "y": 489,
+      "w": 386,
+      "h": 535,
+      "bytes": 7428,
+      "pixels": 206510,
+      "sha256": "95ff86f95149c087dab0265b7af8dd9da6d67410d3947a5305b8b993f141514c",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-nested-repair-chambers.png": {
+      "x": 398,
+      "y": 788,
+      "w": 910,
+      "h": 236,
+      "bytes": 9480,
+      "pixels": 214760,
+      "sha256": "52cfaca4e08f7d9823ad97644a7dc1f1cf0c71f77ab6192cd8de61172e3b6128",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: No exact-build Godot/Workbench/CyberDemoBridge/Rapier load, collision, ticks or fresh-process save/reopen executed",
+  "independent_review": "PENDING: independent Art, Technical and Shepherd exact-HEAD review",
+  "ci": "NOT CLAIMED",
+  "corpus_role": "Original hollow basin mechanical interlock with two bowed tram grades, five excavation-entry shafts, rooted twin-leg viaduct supports, asymmetric dispatch/haul/brake districts and preserve-for-editing open central lens"
+}

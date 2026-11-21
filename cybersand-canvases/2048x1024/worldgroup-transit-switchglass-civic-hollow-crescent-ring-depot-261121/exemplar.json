@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Switchglass Civic Transit",
+  "sibling_number": 4,
+  "lane": "mechanical_transit",
+  "map_role": "Hollow Crescent Ring Depot — concave twin-grade freight interchange, basin settlement and five entered calibration/repair districts",
+  "anchor_donors": [
+    {
+      "name": "wide-tungsten-sawtooth-tramworks",
+      "head_sha": "7fc24855cf521c90bf67f4afb08685e490473201",
+      "relationship": "Shared industrial steel/amber signal semantics and recoverable tram switching; no source geometry, wheel, baffle, route, name or coordinates reused"
+    }
+  ],
+  "macro_topology": [
+    "Five-tier U-shaped load-bearing basin; opposed outer and inner bowed tram grades joined at distant side returns",
+    "Five full-hull relief cut-throughs cross the interchanges; support towers have distinct asymmetrical base elevations",
+    "Rooted freight/dispatch/repair facilities on both rims, in the basin and in open subterranean bays"
+  ],
+  "density_profile": "Both basin rims and the southern workshop pockets are equipped while the central aerial crescent remains deliberately sparse; long upper sky sightlines and vacancies retained for editing.",
+  "route_grammar": {
+    "primary": "West arrival (111,515) through the outer bowed transfer and upper crescent crest (988,284), eastern signal master (1580,390) and outbound finish (2022,555)",
+    "secondary": "Inner low-grade spillway with supported braces, basin dispatch (1026,820), five full-envelope opened excavation shafts and service escape sites",
+    "obstruction": "A 96x115 source-material closure at [1120,240] occludes only Physical severable midspan (1168,290); 24/25 other exact centres remain connected at conservative 31x27. The Outer bow crest to Outer eastern crest shortest 31x27 path grows from 449 to 565 (+116) steps."
+  },
+  "strong_motifs": [
+    "Deep concave municipal freight basin rather than separate islands or long horizontal boulevard",
+    "Two unequal bowed grade-lines with cut-through transfer gaps, not an engineered rotor",
+    "Braced twin-leg viaduct support families anchored into five different bedrock elevations",
+    "Grounded ram plant, nonrotating inner shunting gantry and remote asymmetric brake telegraph",
+    "Five intentionally unfinished subterranean repair shops connected by physically traversable relief slots"
+  ],
+  "interesting_relationships": [
+    "Aerial outer switching is mirrored by interior lower recovery but faces five different ground elevations",
+    "Load-bearing piers create usable separate dispatch/settlement underfaces",
+    "A high grade closure can coexist with a functioning lower basin and all five entered shops",
+    "Unused lower bays and aerial grade gaps act as module attachment opportunities"
+  ],
+  "authoring_affordances": [
+    "Wide central crescent void for future Gentek modular assemblies",
+    "Five unfinished entered underworks for manual human improvement",
+    "Two opposed grade returns suitable for example-derived switching variants",
+    "Static gantry attachment sockets for later scripted rescue, cargo or signal scenes"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "High interlock closure",
+      "site": [
+        1168,
+        290
+      ],
+      "kind": "track-failure-and-reroute",
+      "unscripted": true
+    },
+    {
+      "name": "Basin salvage muster",
+      "site": [
+        1026,
+        820
+      ],
+      "kind": "NPC-settlement-or-holdout",
+      "unscripted": true
+    },
+    {
+      "name": "Eastern semaphore exchange",
+      "site": [
+        1580,
+        390
+      ],
+      "kind": "signal-activation",
+      "unscripted": true
+    },
+    {
+      "name": "Workshop reconstruction",
+      "site": [
+        1032,
+        991
+      ],
+      "kind": "modular-underworks-expansion",
+      "unscripted": true
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Concave multilevel support/route grammar; layers contain real cross-passages",
+    "Site-defined closure and documented conservative branch detour",
+    "Workshops under different founder heights demonstrate shaft-to-room relationships",
+    "Gaps and service rooms deliberately remain partial for human and procedural embellishment"
+  ],
+  "similarity_avoidance": "Unlike Switchglass 01's civic boulevard, 02's uphill geological cascade, 03's separated estuary islands and Meridian's rotor/chicane families, this is a single massive concave grounded depot with interleaved internal/external grade routes and five relief passages. Its repeated vertical voids are physical clearances, not alternating sawtooth baffles.",
+  "diversity_axes": {
+    "macro_topology": "basin",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "layered",
+    "landmark_family": "gantry",
+    "support_form": "twin_pier",
+    "environment_relation": "dry",
+    "incompleteness": "editable_gaps"
+  },
+  "native_qualification": "NATIVE-UNTESTED",
+  "event_scripts_implemented": false
+}
