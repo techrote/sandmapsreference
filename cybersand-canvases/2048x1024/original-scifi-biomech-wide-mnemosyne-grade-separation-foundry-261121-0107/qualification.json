@@ -1,0 +1,500 @@
+{
+  "source": "ORIGINAL-NO-REFERENCE",
+  "seed": 2611210107,
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "read_only_engine_sha": "d5b0371501eb7ccd32c261f738b4a2612218fbc1",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_cell_count": 2097152,
+  "grid_sha256": "6c8ba3450ad68017ec97c63c6b97524ea3d1b3172eb9f43722ba81eb5c931647",
+  "setup_sha256": "dc4c9a892128781a4d336c714d6cf4635afb93b6036f7f174b1c2bef3a8d910a",
+  "setup_bytes": 13897,
+  "setup_root_keys": [
+    "version",
+    "extent",
+    "actors",
+    "next_id",
+    "selected",
+    "edits",
+    "response",
+    "liquid_policy",
+    "normalize",
+    "rule_radius",
+    "source",
+    "material",
+    "brush",
+    "fire"
+  ],
+  "rectangle_count": 700,
+  "rectangle_limit_source": 32768,
+  "native_installation_status": "NATIVE-UNTESTED: source supports 32768; compatible Godot/bridge binary not executed",
+  "construction_writes": 471659,
+  "write_limit": 32000000,
+  "material_histogram": {
+    "0": 1625493,
+    "58": 94205,
+    "62": 60787,
+    "63": 4856,
+    "77": 3615,
+    "79": 3691,
+    "100": 58425,
+    "101": 226778,
+    "117": 7236,
+    "128": 12066
+  },
+  "occupied": 471659,
+  "grounded": 471659,
+  "nominal_unsupported_removed": 60763,
+  "detached_final": 0,
+  "fluid_falling_reactive_final": 0,
+  "rectangle_overlap_count": 0,
+  "replay_cell_mismatches": 0,
+  "canonical_rectangle_reencode_identity": true,
+  "sites": {
+    "19x15": {
+      "visited_centres": 1311208,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_above": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "choir_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "choir_under": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_tunnel": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_hatch": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "core_crown": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "core_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_tunnel": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "anneal_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "anneal_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_overlook": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "23x19": {
+      "visited_centres": 1280852,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_above": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "choir_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "choir_under": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_tunnel": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_hatch": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "core_crown": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "core_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_tunnel": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "anneal_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "anneal_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_overlook": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "31x27": {
+      "visited_centres": 1221920,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_console": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "intake_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_above": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "choir_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "choir_under": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_tunnel": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_hatch": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "entered_index": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "core_crown": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "core_east": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "east_tunnel": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "anneal_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "anneal_lower": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_overlook": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "export_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    }
+  },
+  "obstruction": [
+    865,
+    260,
+    90,
+    80
+  ],
+  "route_bans": {
+    "xmin": 981,
+    "xmax": 1120,
+    "upper_max_y": 230,
+    "lower_min_y": 330
+  },
+  "route_distances": {
+    "baseline": 2463,
+    "blocked": 2635,
+    "upper": 2667,
+    "lower": 2635
+  },
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "covered": false,
+      "reachable": true
+    },
+    "intake_console": {
+      "covered": false,
+      "reachable": true
+    },
+    "intake_lower": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_above": {
+      "covered": false,
+      "reachable": true
+    },
+    "choir_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "choir_under": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_tunnel": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_hatch": {
+      "covered": false,
+      "reachable": true
+    },
+    "entered_index": {
+      "covered": false,
+      "reachable": true
+    },
+    "core_crown": {
+      "covered": false,
+      "reachable": true
+    },
+    "core_east": {
+      "covered": false,
+      "reachable": true
+    },
+    "east_tunnel": {
+      "covered": false,
+      "reachable": true
+    },
+    "anneal_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "anneal_lower": {
+      "covered": false,
+      "reachable": true
+    },
+    "export_overlook": {
+      "covered": false,
+      "reachable": true
+    },
+    "export_gate": {
+      "covered": false,
+      "reachable": true
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "bytes": 1049790,
+      "sha256": "1c1d90bee182dc7594371b962ba2fda5dab128160049f2117148b68e6269800e",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-quarantine.png": {
+      "bytes": 86845,
+      "sha256": "7265786bdfa80d1dc6da1e508c67ba843f77a7dcc87896b6da6e3d2ba22bcf70",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        55,
+        355,
+        352,
+        490
+      ]
+    },
+    "02-packet-choir.png": {
+      "bytes": 124900,
+      "sha256": "2d8d0f7f251387f42f82cf8de47e6ff7401d00291e0d2f5f5004758edc750d97",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        424,
+        0,
+        351,
+        705
+      ]
+    },
+    "03-core-crown.png": {
+      "bytes": 52190,
+      "sha256": "3a802c2c84e7d0740ff95b8aec742c43f90a07226f9e962ad4e7bda79083eac4",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        882,
+        223,
+        333,
+        310
+      ]
+    },
+    "04-entered-station.png": {
+      "bytes": 62739,
+      "sha256": "1c48a5543a3d292bf28127b56a60c2a53851163e72a96f1eecf2aae8f07c58ee",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        898,
+        456,
+        319,
+        389
+      ]
+    },
+    "05-annealing-steps.png": {
+      "bytes": 129223,
+      "sha256": "b49f28ddc53c1fea67e566a7b08be2f42fbdafd961cc436b5bda5bb2098cc82e",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1260,
+        275,
+        422,
+        609
+      ]
+    },
+    "06-departure-pier.png": {
+      "bytes": 127789,
+      "sha256": "ef6a94879af8f703041cbce965a6aa6a1984fd206dc98673e0b192143e2d1bef",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1700,
+        122,
+        344,
+        738
+      ]
+    },
+    "07-under-core-tunnel.png": {
+      "bytes": 62011,
+      "sha256": "fdc647db98d8cfc5b73f0fc5c052012e1166a9e5df41bbe046ff27adfff4d35f",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        808,
+        765,
+        475,
+        259
+      ]
+    }
+  },
+  "author_static_status": "PASS",
+  "independent_reviews": "PENDING",
+  "native_status": "NATIVE-UNTESTED"
+}
