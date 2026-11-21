@@ -110,9 +110,30 @@ hist[0]=N-area;
 let int=new Int32Array((W+1)*(H+1)),S=W+1;for(let y=1;y<=H;y++){let sum=0,o=(y-1)*W;for(let x=1;x<=W;x++){sum+=g[o+x-1]!==0?1:0;int[y*S+x]=int[(y-1)*S+x]+sum;}}
 function clear(x,y,w,h){let a=x-(w>>1),b=y-(h>>1),c=a+w,d=b+h;return a>=0&&b>=0&&c<=W&&d<=H&&int[d*S+c]-int[d*S+a]-int[b*S+c]+int[b*S+a]===0;}
 function BFS(w,h,ob){let pass=new Uint8Array(N),seen=new Uint8Array(N),queue=new Int32Array(N),first=0,last=0;let ox=ob?.[0]||-1,oy=ob?.[1]||-1,ow=ob?.[2]||0,oh=ob?.[3]||0;for(let y=h>>1;y<H-(h>>1);y++)for(let x=w>>1;x<W-(w>>1);x++){if(!clear(x,y,w,h))continue;let left=x-(w>>1),top=y-(h>>1);if(ob&&left<ox+ow&&left+w>ox&&top<oy+oh&&top+h>oy)continue;pass[y*W+x]=1;}let spawn=sites["West arrival"],n=spawn[1]*W+spawn[0];if(!pass[n])return {size:[w,h],error:"spawn blocked",pos:spawn};seen[n]=1;queue[last++]=n;while(first<last){let a=queue[first++],x=a%W,y=(a/W)|0;for(let b of [a-W,a+W,a-1,a+1])if(b>=0&&b<N&&!(Math.abs(a-b)===1&&((b/W)|0)!==y)&&pass[b]&&!seen[b]){seen[b]=1;queue[last++]=b;}}let bad=Object.entries(sites).filter(([n,p])=>!seen[p[1]*W+p[0]]).map(([n,p])=>({name:n,xy:p,clear:clear(p[0],p[1],w,h)}));return {size:[w,h],reached:Object.keys(sites).length-bad.length,total:Object.keys(sites).length,component:last,bad,pass,seen};}
-let routes=[[19,15],[23,19],[31,27]].map(([w,h])=>BFS(w,h,null)),barrier=[1000,245,95,205],detour=BFS(31,27,barrier);
+let routes=[[19,15],[23,19],[31,27]].map(([w,h])=>BFS(w,h,null)),barrier=null,detour=null;
 function dist(pass,start,end){let a=start[1]*W+start[0],b=end[1]*W+end[0],seen=new Int32Array(N),Q=new Int32Array(N),first=0,last=0;if(!pass[a]||!pass[b])return -1;Q[last++]=a;seen[a]=1;while(first<last){let n=Q[first++];if(n===b)return (seen[n]-1);let x=n%W,y=(n/W)|0;for(let v of [n-W,n+W,n-1,n+1])if(v>=0&&v<N&&!(Math.abs(n-v)===1&&((v/W)|0)!==y)&&pass[v]&&!seen[v]){seen[v]=seen[n]+1;Q[last++]=v;}}return -1;}
 let start=sites["West arrival"],finish=sites["East departure"];
+
+/* Courtyard source-static physical obstruction selection. Use a true path
+   reconstructed from the committed full 31x27 clearance map and choose the
+   first obstruction which increases the path without isolating named sites. */
+let pp=new Int32Array(N),QQ=new Int32Array(N),head=0,tail=0;
+pp.fill(-1);let ss=start[1]*W+start[0],ee=finish[1]*W+finish[0];QQ[tail++]=ss;pp[ss]=ss;
+while(head<tail&&pp[ee]<0){let n=QQ[head++],x=n%W,y=(n/W)|0;for(let b of [n-W,n+W,n-1,n+1])if(b>=0&&b<N&&!(Math.abs(n-b)===1&&((b/W)|0)!==y)&&pp[b]<0&&routes[2].pass[b]){pp[b]=n;QQ[tail++]=b;}}
+if(pp[ee]<0)throw Error("No baseline 31x27 path");
+let way=[];for(let n=ee;n!==ss;n=pp[n])way.push(n);way.push(ss);way.reverse();
+let baseline=dist(routes[2].pass,start,finish);
+for(let frac of [0.26,0.35,0.44,0.52,0.6,0.7,0.78,0.17,0.86]){
+let n=way[Math.floor(way.length*frac)],x=n%W,y=(n/W)|0;
+for(let [ow,oh] of [[80,100],[120,140],[165,155]]){
+let ob=[Math.max(0,x-Math.floor(ow/2)),Math.max(0,y-Math.floor(oh/2)),ow,oh];
+let test=BFS(31,27,ob);if(test.reached!==Object.keys(sites).length)continue;
+let dd=dist(test.pass,start,finish);
+if(dd>baseline){barrier=ob;detour=test;break;}
+}
+if(barrier)break;
+}
+if(!barrier)throw Error("No physical detour found");
 let routeDistance=[dist(routes[2].pass,start,finish),dist(detour.pass,start,finish)];
 let status=routes.map(r=>({size:r.size,reached:r.reached,total:r.total,free_centres:r.component,bad:r.bad,error:r.error||null}));
 if(status.some(x=>x.reached!==x.total)||detour.reached!==Object.keys(sites).length||routeDistance[0]<0||routeDistance[1]<=routeDistance[0])throw Error('Exact Midge clearance, route or obstruction qualification failure '+JSON.stringify({status,detour:detour.bad,routeDistance}));
