@@ -16,15 +16,15 @@ function base64(a){const t="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 function generate(){
 const g=new Uint8Array(N);
 const sites={
-"Western intake":[115,489],"Wet-strip vestibule":[311,614],"Catch tray":[425,705],
-"Magnet sorter":[665,625],"Sorting rail":[710,489],"Torque drive":[1090,618],
+"Western intake":[115,489],"Wet-strip vestibule":[311,614],"Catch-tray control":[418,580],
+"Magnet sorter":[665,625],"Sorting rail":[710,489],"Torque drive control":[1090,512],
 "Torque inspection":[965,377],"Ledger registry":[1370,625],"Ledger loft":[1398,377],
 "Workers refuge":[1746,620],"Crew roof maintenance":[1750,374],"Eastern export":[1950,488],
 "Western roof watch":[322,374],"Sorting roof watch":[590,370],"Upper branch":[1165,378],
-"Eastern upper walkway":[1590,370],"West underworks":[145,836],"Sorting underworks":[605,835],
-"Torque underworks":[1045,839],"Ledger underworks":[1410,835],"East underworks":[1850,836],
+"Eastern upper walkway":[1590,370],"West relief gate":[145,499],"Sorter relief gate":[605,502],
+"Torque relief gate":[1081,499],"Ledger relief gate":[1410,502],"East relief gate":[1850,502],
 "Roof signal platform":[720,144],"Exhaust rooftop":[1135,125],"Emergency sky lookout":[1895,155],
-"Abandoned annex entry":[1980,665],"Lift lower transfer":[1060,750],"Repair service niche":[1604,705]};
+"Abandoned annex entry":[1980,665],"Torque parcel overlook":[1100,532],"Repair service niche":[1604,705]};
 function R(x,y,w,h,m){x=Math.max(0,Math.floor(x));y=Math.max(0,Math.floor(y));w=Math.max(0,Math.ceil(w));h=Math.max(0,Math.ceil(h));if(x>=W||y>=H)return;for(let yy=y;yy<Math.min(H,y+h);yy++)g.fill(m,yy*W+x,yy*W+Math.min(W,x+w));}
 function L(x,y,X,Y,t=8,m=M.STEEL){let dx=X-x,dy=Y-y,d=dx*dx+dy*dy,rad=t/2;for(let yy=Math.max(0,Math.floor(Math.min(y,Y)-rad));yy<Math.min(H,Math.ceil(Math.max(y,Y)+rad+1));yy++)for(let xx=Math.max(0,Math.floor(Math.min(x,X)-rad));xx<Math.min(W,Math.ceil(Math.max(x,X)+rad+1));xx++){let s=Math.max(0,Math.min(1,((xx-x)*dx+(yy-y)*dy)/(d||1)));if((xx-x-s*dx)**2+(yy-y-s*dy)**2<=rad*rad)g[yy*W+xx]=m;}}
 const B=(...a)=>R(...a,M.ROCK),C=(...a)=>R(...a,M.WALL),St=(...a)=>R(...a,M.STEEL),V=(...a)=>R(...a,M.AIR);
@@ -136,7 +136,7 @@ hist[0]=N-area;
 let int=new Int32Array((W+1)*(H+1)),S=W+1;for(let y=1;y<=H;y++){let sum=0,o=(y-1)*W;for(let x=1;x<=W;x++){sum+=g[o+x-1]!==0?1:0;int[y*S+x]=int[(y-1)*S+x]+sum;}}
 function clear(x,y,w,h){let a=x-(w>>1),b=y-(h>>1),c=a+w,d=b+h;return a>=0&&b>=0&&c<=W&&d<=H&&int[d*S+c]-int[d*S+a]-int[b*S+c]+int[b*S+a]===0;}
 function BFS(w,h,ob){let pass=new Uint8Array(N),seen=new Uint8Array(N),queue=new Int32Array(N),first=0,last=0;let ox=ob?.[0]||-1,oy=ob?.[1]||-1,ow=ob?.[2]||0,oh=ob?.[3]||0;for(let y=h>>1;y<H-(h>>1);y++)for(let x=w>>1;x<W-(w>>1);x++){if(!clear(x,y,w,h))continue;let left=x-(w>>1),top=y-(h>>1);if(ob&&left<ox+ow&&left+w>ox&&top<oy+oh&&top+h>oy)continue;pass[y*W+x]=1;}let spawn=sites["Western intake"],n=spawn[1]*W+spawn[0];if(!pass[n])return {size:[w,h],error:"spawn blocked",pos:spawn};seen[n]=1;queue[last++]=n;while(first<last){let a=queue[first++],x=a%W,y=(a/W)|0;for(let b of [a-W,a+W,a-1,a+1])if(b>=0&&b<N&&!(Math.abs(a-b)===1&&((b/W)|0)!==y)&&pass[b]&&!seen[b]){seen[b]=1;queue[last++]=b;}}let bad=Object.entries(sites).filter(([n,p])=>!seen[p[1]*W+p[0]]).map(([n,p])=>({name:n,xy:p,clear:clear(p[0],p[1],w,h)}));return {size:[w,h],reached:Object.keys(sites).length-bad.length,total:Object.keys(sites).length,component:last,bad,pass,seen};}
-let routes=[[19,15],[23,19],[31,27]].map(([w,h])=>BFS(w,h,null)),barrier=[931,449,132,114],detour=BFS(31,27,barrier);
+let routes=[[19,15],[23,19],[31,27]].map(([w,h])=>BFS(w,h,null)),barrier=[930,449,102,115],detour=BFS(31,27,barrier);
 function dist(pass,start,end){let a=start[1]*W+start[0],b=end[1]*W+end[0],seen=new Int32Array(N),Q=new Int32Array(N),first=0,last=0;if(!pass[a]||!pass[b])return -1;Q[last++]=a;seen[a]=1;while(first<last){let n=Q[first++];if(n===b)return (seen[n]-1);let x=n%W,y=(n/W)|0;for(let v of [n-W,n+W,n-1,n+1])if(v>=0&&v<N&&!(Math.abs(n-v)===1&&((v/W)|0)!==y)&&pass[v]&&!seen[v]){seen[v]=seen[n]+1;Q[last++]=v;}}return -1;}
 let start=sites["Sorting rail"],finish=sites["Eastern export"];
 let routeDistance=[dist(routes[2].pass,start,finish),dist(detour.pass,start,finish)];
@@ -153,7 +153,7 @@ concept:"Keelbone Reclamation Vaults — Continuous Covered Reclaim Spine / Five
 original:true,seed:SEED,engine_sha:"f7e056c9b8791106e22f2d1c295043783d8a9701",
 source_reference_head:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",
 extent:[W,H],
-route_graph:{main:["Western intake","Sorting rail","Torque drive","Ledger registry","Eastern export","Abandoned annex entry"],upper:["Western roof watch","Sorting roof watch","Torque inspection","Upper branch","Ledger loft","Eastern upper walkway","Crew roof maintenance"],workcells:["Wet-strip vestibule","Catch tray","Magnet sorter","Repair service niche","Workers refuge"],lower:["West underworks","Sorting underworks","Torque underworks","Lift lower transfer","Ledger underworks","East underworks"],sky:["Roof signal platform","Exhaust rooftop","Worker emergency chimney"]},
+route_graph:{main:["Western intake","Sorting rail","Torque drive control","Ledger registry","Eastern export","Abandoned annex entry"],upper:["Western roof watch","Sorting roof watch","Torque inspection","Upper branch","Ledger loft","Eastern upper walkway","Crew roof maintenance"],workcells:["Wet-strip vestibule","Catch-tray control","Magnet sorter","Repair service niche","Workers refuge"],lower:["West relief gate","Sorter relief gate","Torque relief gate","Torque parcel overlook","Ledger relief gate","East relief gate"],sky:["Roof signal platform","Exhaust rooftop","Worker emergency chimney"]},
 material_ids:{"0":"Empty","100":"BasaltColumns Solid immovable None","58":"ReinforcedConcrete Solid immovable None","62":"SteelPlate Solid immovable None"},
 midge_authored_hull:[4,3],hull_envelopes:[[19,15],[23,19],[31,27]],
 exact_sites:sites,material_histogram:hist,stable_occupied_cells:area,grounded:area,
