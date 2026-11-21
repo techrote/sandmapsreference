@@ -1,0 +1,247 @@
+{
+  "title": "Larkspur-17 Stepped Thermal Cascade Retorts",
+  "seed": 2026112117,
+  "source_repo": "techrote/sandmapsreference",
+  "base_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_material_cells": 2097152,
+  "material_sha256": "a5e8ca1394af46f71eabc313b07bd99e6f5f087e1240b4147bbd3b8c87178608",
+  "setup_sha256": "53640683c247e6fa560e94e2ee4854872d6110ea566cd8217700c11f4dffbbe4",
+  "setup_bytes": 23416,
+  "rectangle_count": 1183,
+  "work_cells": 609031,
+  "histogram": {
+    "0": 1488121,
+    "3": 7268,
+    "8": 1824,
+    "58": 140957,
+    "100": 157719,
+    "101": 245270,
+    "117": 53327,
+    "120": 2666
+  },
+  "structural": {
+    "total": 599939,
+    "grounded": 599939,
+    "detached": 0
+  },
+  "initial_fluid_cells": 9092,
+  "initial_fluid_open_or_mixed_faces": 0,
+  "sites": [
+    [
+      "West entry",
+      111,
+      142
+    ],
+    [
+      "Scale-room upper",
+      312,
+      174
+    ],
+    [
+      "Receiving gallery",
+      351,
+      321
+    ],
+    [
+      "Receiving recovery",
+      339,
+      839
+    ],
+    [
+      "Retort transfer crown",
+      598,
+      165
+    ],
+    [
+      "Hot retort access",
+      697,
+      394
+    ],
+    [
+      "Retort recovery",
+      683,
+      841
+    ],
+    [
+      "Quench bridge",
+      943,
+      168
+    ],
+    [
+      "Quench inspection",
+      1048,
+      476
+    ],
+    [
+      "Quench recovery",
+      1045,
+      840
+    ],
+    [
+      "Cyclone crossover",
+      1290,
+      160
+    ],
+    [
+      "Ash return",
+      1391,
+      567
+    ],
+    [
+      "Ash recovery",
+      1372,
+      837
+    ],
+    [
+      "Fraction collector",
+      1637,
+      157
+    ],
+    [
+      "Export workface",
+      1743,
+      650
+    ],
+    [
+      "Export recovery",
+      1699,
+      839
+    ],
+    [
+      "East exit",
+      1910,
+      161
+    ]
+  ],
+  "clearance": {
+    "19x15": {
+      "reached": 17,
+      "centres": 1287297
+    },
+    "23x19": {
+      "reached": 17,
+      "centres": 1243489
+    },
+    "31x27": {
+      "reached": 17,
+      "centres": 1163635
+    }
+  },
+  "obstruction": {
+    "rectangle": [
+      784,
+      0,
+      63,
+      346
+    ],
+    "forced_detours": 13,
+    "added_steps_at_31x27": {
+      "West entry": 0,
+      "Scale-room upper": 0,
+      "Receiving gallery": 28,
+      "Receiving recovery": 28,
+      "Retort transfer crown": 0,
+      "Hot retort access": 0,
+      "Retort recovery": 28,
+      "Quench bridge": 382,
+      "Quench inspection": 28,
+      "Quench recovery": 28,
+      "Cyclone crossover": 398,
+      "Ash return": 28,
+      "Ash recovery": 28,
+      "Fraction collector": 404,
+      "Export workface": 28,
+      "Export recovery": 28,
+      "East exit": 396
+    }
+  },
+  "routes": {
+    "main": "receiving -> stepped thermal retorts -> contained quench -> cyclone ash return -> export bottlers",
+    "alternative": "upper air plus lower flyable maintenance return and wide service shafts",
+    "interconnects": [
+      "cask weighbridge",
+      "twin retort towers",
+      "sealed quench",
+      "ash cyclone",
+      "outbound bottle staging"
+    ]
+  },
+  "images": {
+    "overview.png": {
+      "bytes": 23347,
+      "sha256": "e616aceb57558564a381cc97d1b28b8212804a2402c3fd54fc0eaa3eeb58ec78",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-cask-weighbridge.png": {
+      "bytes": 4433,
+      "sha256": "c420e428cdaf2214cf6f42677179cd4becbe9f3e22a9aeab9fe19238ba49c65d",
+      "crop": [
+        98,
+        220,
+        375,
+        412
+      ]
+    },
+    "02-thermal-retorts.png": {
+      "bytes": 4434,
+      "sha256": "ef4c95ad23d778013718b229a3799858ac803805b43c32b71388483016daf622",
+      "crop": [
+        446,
+        255,
+        378,
+        470
+      ]
+    },
+    "03-quench-siphon.png": {
+      "bytes": 5299,
+      "sha256": "e4f973c56d097e791a7dd4f4da0a6a908ec25a24c9dedbe40cc3cfbd813fe5f8",
+      "crop": [
+        791,
+        310,
+        397,
+        510
+      ]
+    },
+    "04-ash-cyclone.png": {
+      "bytes": 5729,
+      "sha256": "5d6b3fbc474f4d139e959532cee4e87cb2202170f86e76e18989a1b05b129584",
+      "crop": [
+        1125,
+        400,
+        404,
+        480
+      ]
+    },
+    "05-export-bottler.png": {
+      "bytes": 4263,
+      "sha256": "39aa3284637ed47a125ced5529f96b8aa3a1774224b85cd31cad0af32f8fa0b4",
+      "crop": [
+        1484,
+        475,
+        443,
+        430
+      ]
+    },
+    "06-cascade-transfers.png": {
+      "bytes": 6829,
+      "sha256": "af8b4fbff0092e63d7a49399a74956bb9021e1bf0bcba556b8c00ec21a975150",
+      "crop": [
+        649,
+        164,
+        765,
+        444
+      ]
+    }
+  },
+  "status": "CREATOR SOURCE-STATIC PASS / NATIVE-UNTESTED"
+}
