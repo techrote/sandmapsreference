@@ -571,8 +571,32 @@
         "addendum_id": "LOC-187-REVERSE-FREIGHT-CHAIN-003",
         "treatment": "DO-PRESERVE",
         "warning": "Use ship, customs, hoist, classifier and dispatch windows as a multi-window chain; no native cargo simulation is claimed."
+      },
+      {
+        "state_id": "P193-TWIN-SORTER-THROATS@54e2e2b4e9d6bd7113396cf6a2bc61409367cd44",
+        "addendum_id": "LOC-193-ROOKSTRAND-CHAIN-004",
+        "treatment": "DO-PRESERVE",
+        "warning": "GOOD/HIGH unchanged. One twin-sorter 1:1 window genuinely contains both throats; it cannot alone substantiate the upper ship/crane -> relay -> dual classifier -> customs whole-map relationship. Join actual committed windows."
+      },
+      {
+        "state_id": "P197-OPPOSED-BASCULE-LEAVES@3b0253d387578bda3af00a6edc97833219df64a9",
+        "addendum_id": "LOC-197-SILT-PROCESS-CHAIN-005",
+        "treatment": "DO-PRESERVE",
+        "warning": "GOOD/HIGH unchanged. The existing authentic throat window shows BOTH opposed bascule leaves locally; separate committed windows establish source-static ferry/crane -> hinge leaves -> rotary indexer -> rail relationship. Do not imply actuation."
+      },
+      {
+        "state_id": "P192-LOWER-TRUSS-CROSSING@101203a124f0ee3ac5613d38956e72f0faae8685",
+        "addendum_id": "LOC-192-TRUSS-FAULT-BOUNDARY-006",
+        "treatment": "DO-NOT-FILL AND BOUNDED DO-REPAIR",
+        "warning": "Require exact supported geometry and independent review; NEVER automatically select entire WEAK crop as DO-REPAIR or override INTENTIONAL/DO-NOT-FILL."
+      },
+      {
+        "state_id": "P190-EAST-ENTERED-VAULT@089d2cdb6b06b40d53ce9c4c83ef34192567454d",
+        "addendum_id": "LOC-190-EAST-ARCHIVE-BOUNDARY-007",
+        "treatment": "DO-NOT-FILL AND BOUNDED DO-REPAIR",
+        "warning": "Require exact supported geometry and independent review; NEVER automatically select entire WEAK crop as DO-REPAIR or override INTENTIONAL/DO-NOT-FILL."
       }
     ]
   },
-  "unreviewed_repair_candidate_ledger": "repair-candidates.v1.json — 25 provisional feature-state IDs across seven child PRs; NEVER export as independently accepted repair outcomes until same-HEAD Art/Technical review."
+  "unreviewed_repair_candidate_ledger": "repair-candidates.v1.json retains 25 historical provisional IDs; 11 match independently Art-reviewed canonical states. Current-head review queue lives in repair-head-register.v1.json; no current child has combined Art+Technical acceptance."
 }
