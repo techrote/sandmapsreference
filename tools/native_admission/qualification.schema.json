@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cybersand-native-admission-v1",
+  "title": "Exact-source native admission observation",
+  "type": "object",
+  "required": ["schema", "record_id", "map", "runtime", "execution", "qualification", "provenance", "evidence"],
+  "properties": {
+    "schema": {"const": "cybersand-native-admission-v1"},
+    "record_id": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "map": {
+      "type": "object", "required": ["repository", "pr", "head_sha", "setup_path", "setup_sha256"],
+      "properties": {
+        "repository": {"const": "techrote/sandmapsreference"},
+        "pr": {"type": "integer", "minimum": 1},
+        "head_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "setup_path": {"type": "string", "maxLength": 320},
+        "setup_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "runtime": {
+      "type": "object", "required": ["repository", "engine_sha", "native_dll_sha256", "godot_version"],
+      "properties": {
+        "repository": {"const": "techrote/cybersand"},
+        "engine_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "native_dll_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "godot_version": {"type": "string", "pattern": "^4\\.7"}
+      }
+    },
+    "execution": {
+      "type": "object", "required": ["origin", "run_id"],
+      "properties": {
+        "origin": {"enum": ["owner-local-windows", "github-hosted-windows", "github-hosted-linux"]},
+        "run_id": {"type": "string", "minLength": 1, "maxLength": 100}
+      }
+    },
+    "qualification": {
+      "type": "object", "required": ["basic_native", "collision", "hazards", "gui"],
+      "properties": {
+        "basic_native": {"enum": ["PASS_BASIC_NATIVE", "NATIVE_PASS_PENDING_HEAD", "NATIVE_PASS_PENDING_EVIDENCE", "STALE_CONFIRMED", "FAIL_NATIVE", "CLOSED", "INCOMPLETE"]},
+        "collision": {"const": "UNTESTED"}, "hazards": {"const": "UNTESTED"}, "gui": {"const": "UNTESTED"}
+      }
+    },
+    "provenance": {
+      "type": "object", "required": ["quality"],
+      "properties": {"quality": {"enum": ["raw-evidence-verified", "historical-reconciled", "summary-only", "unverified-report"]}}
+    },
+    "evidence": {"type": "object"}
+  }
+}

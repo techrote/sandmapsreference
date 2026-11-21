@@ -1,0 +1,71 @@
+name: Native admission independent consumer
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: canvas-native-ci-001-consumer
+  cancel-in-progress: false
+
+jobs:
+  consume:
+    name: Independent read-only evidence consumer
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - name: Resolve trusted implementation revision
+        id: implementation
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: python
+        run: |
+          import json, os, re, urllib.request
+          repo = os.environ['GITHUB_REPOSITORY']
+          assert repo == 'techrote/sandmapsreference'
+          run_id = os.environ['GITHUB_RUN_ID']
+          assert run_id.isdigit()
+          request = urllib.request.Request('https://api.github.com/repos/' + repo + '/actions/runs/' + run_id,
+              headers={'Authorization': 'Bearer ' + os.environ['GITHUB_TOKEN'], 'Accept': 'application/vnd.github+json', 'User-Agent': 'CyberSand-Final-Source'})
+          with urllib.request.urlopen(request, timeout=20) as response:
+              run = json.load(response)
+          workflow = '.github/workflows/native-admission-consumer.yml'
+          if run['path'] == workflow:
+              source = run['head_sha']
+              assert source == os.environ['GITHUB_SHA']
+          else:
+              assert run['path'] == '.github/workflows/native-admission-consumer-proof.yml'
+              assert run['head_branch'] == 'codex/canvas-native-ci-001-proof'
+              matches = [w for w in run.get('referenced_workflows', [])
+                  if w.get('path') == repo + '/' + workflow + '@' + w.get('sha', '')]
+              assert len(matches) == 1
+              source = matches[0]['sha']
+          assert re.fullmatch('[0-9a-f]{40}', source)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('sha=' + source + '\n')
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ steps.implementation.outputs.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            .github
+            tools/native_admission
+            tests/native_admission
+            docs/native-admission
+      - name: Read one immutable evidence snapshot and prove exact-source queries
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 -m tools.native_admission.consumer --prs 25,26,17,22 --native-dll-sha256 7231276de9362327816b67fb457e1eb5e836402f34c22684fd41250b315f0a6a --origin github-hosted-windows --require-own-source --prove-superseded --output build/consumer.json
+      - name: Retain independent consumer result
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-consumer-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build/consumer.json
+          if-no-files-found: error
+          retention-days: 90
