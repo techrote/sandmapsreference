@@ -1,0 +1,253 @@
+{
+  "title": "Moraine-14 Suspended Solvent Drydock",
+  "seed": 2026112106,
+  "source_repo": "techrote/sandmapsreference",
+  "base_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_material_cells": 2097152,
+  "material_sha256": "d381b254ee9f5c16ee704d8dc8c6b514df4267989d0bd940481e4884b624c7a5",
+  "setup_sha256": "144774127919808eb028d8cf8b81ce7387c612ce5d02457757fe583ca140f05f",
+  "setup_bytes": 40162,
+  "rectangle_count": 2051,
+  "work_cells": 981508,
+  "histogram": {
+    "0": 1115644,
+    "3": 7933,
+    "8": 4405,
+    "58": 202671,
+    "100": 450279,
+    "101": 211391,
+    "117": 103312,
+    "120": 1517
+  },
+  "structural": {
+    "total": 969170,
+    "grounded": 969170,
+    "detached": 0
+  },
+  "initial_fluid_cells": 12338,
+  "initial_fluid_open_or_mixed_faces": 0,
+  "sites": [
+    [
+      "Arrival",
+      154,
+      216
+    ],
+    [
+      "Feed upper",
+      244,
+      213
+    ],
+    [
+      "Feed transfer",
+      240,
+      639
+    ],
+    [
+      "Feed recovery",
+      237,
+      789
+    ],
+    [
+      "Fractionator upper",
+      633,
+      215
+    ],
+    [
+      "Solvent assay",
+      630,
+      640
+    ],
+    [
+      "Solvent return",
+      627,
+      789
+    ],
+    [
+      "Suspension crown",
+      1004,
+      214
+    ],
+    [
+      "Hull transfer",
+      1003,
+      643
+    ],
+    [
+      "Drydock underside",
+      1090,
+      792
+    ],
+    [
+      "Keel approach",
+      1191,
+      214
+    ],
+    [
+      "Quench upper",
+      1493,
+      212
+    ],
+    [
+      "Quench sample",
+      1495,
+      640
+    ],
+    [
+      "Quench recovery",
+      1491,
+      788
+    ],
+    [
+      "Exhaust upper",
+      1828,
+      212
+    ],
+    [
+      "Exhaust berth",
+      1828,
+      645
+    ],
+    [
+      "Exhaust recovery",
+      1827,
+      790
+    ],
+    [
+      "Departure",
+      1907,
+      646
+    ]
+  ],
+  "clearance": {
+    "19x15": {
+      "reached": 18,
+      "centres": 734765
+    },
+    "23x19": {
+      "reached": 18,
+      "centres": 682985
+    },
+    "31x27": {
+      "reached": 18,
+      "centres": 553287
+    }
+  },
+  "obstruction": {
+    "rectangle": [
+      845,
+      607,
+      65,
+      92
+    ],
+    "forced_detours": 10,
+    "added_steps_at_31x27": {
+      "Arrival": 0,
+      "Feed upper": 0,
+      "Feed transfer": 0,
+      "Feed recovery": 0,
+      "Fractionator upper": 0,
+      "Solvent assay": 0,
+      "Solvent return": 0,
+      "Suspension crown": 0,
+      "Hull transfer": 70,
+      "Drydock underside": 70,
+      "Keel approach": 30,
+      "Quench upper": 70,
+      "Quench sample": 70,
+      "Quench recovery": 70,
+      "Exhaust upper": 70,
+      "Exhaust berth": 70,
+      "Exhaust recovery": 70,
+      "Departure": 70
+    }
+  },
+  "routes": {
+    "main": "roof-rooted gantry -> six service wells -> suspended drydock and exit",
+    "alternative": "gantry public air -> cross-access shafts -> lower drydock recovery -> east departure",
+    "interconnects": [
+      "reagent weighbridge",
+      "unequal solvent columns",
+      "roof-hung drydock hull",
+      "three isolated quench cells",
+      "dispatch gasometers"
+    ]
+  },
+  "images": {
+    "overview.png": {
+      "bytes": 26688,
+      "sha256": "03c59b32134b9ec5e3777ef88fb2e4812c0032b68e461f15de0e12368ae09b1f",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-feed-assay.png": {
+      "bytes": 5042,
+      "sha256": "a6e977ed5444c005b2d8683458f1ea2992f53807ecffbf9bfffd8260fcb40e32",
+      "crop": [
+        106,
+        318,
+        380,
+        536
+      ]
+    },
+    "02-solvent-columns.png": {
+      "bytes": 4998,
+      "sha256": "c67b0c10b4290fc74b8d4187cc6b248b671864cbd0c0e893a0e86bc0f0d11c30",
+      "crop": [
+        468,
+        317,
+        375,
+        539
+      ]
+    },
+    "03-suspended-hull.png": {
+      "bytes": 6910,
+      "sha256": "257bf3fa247b1ff74581bdfd59ecc0aec75fd620d1d7f02769e4c79bdca01517",
+      "crop": [
+        826,
+        314,
+        500,
+        510
+      ]
+    },
+    "04-quench-chain.png": {
+      "bytes": 5040,
+      "sha256": "aac4611b73531339e708ec039fb32f6b02082c2b01773cb7b1de89b140b13f2c",
+      "crop": [
+        1342,
+        318,
+        363,
+        540
+      ]
+    },
+    "05-exhaust-dispatch.png": {
+      "bytes": 5384,
+      "sha256": "4be9d86da6843f79653ebe55d7754cfd1aa9779c147d2338338e9d4abad8d8e8",
+      "crop": [
+        1703,
+        314,
+        340,
+        553
+      ]
+    },
+    "06-drydock-pit.png": {
+      "bytes": 3269,
+      "sha256": "6127c2731b0a32890451fce87fae8d2df90684744d6aea0c11be259e1c6428f0",
+      "crop": [
+        745,
+        587,
+        703,
+        283
+      ]
+    }
+  },
+  "status": "SOURCE-STATIC PASS / NATIVE-UNTESTED"
+}
