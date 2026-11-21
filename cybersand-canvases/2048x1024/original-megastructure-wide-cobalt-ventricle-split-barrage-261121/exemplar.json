@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/megastructure-wide",
+  "map_role": "split-barrage dry flood-control settlement and inspectable valve modules",
+  "anchor_donors": [],
+  "macro_topology": [
+    "basin",
+    "bridge"
+  ],
+  "density_profile": "west and east active settlement density around a deliberately open dry central decompression basin",
+  "route_grammar": {
+    "main": "West inlet / pulse inspection / central valve datum / east governor / daylight egress",
+    "upper": "West gate overlook / release jib / opposite upper deck",
+    "lower": "Western cargo descent / lower dry service / eastern freight sorting",
+    "obstruction": "blocking the central pressure datum leaves an upper or lower local bypass and return"
+  },
+  "strong_motifs": [
+    "two opposite leaning ground-rooted floodgate blades",
+    "open central dry pressure ventricle",
+    "irregular articulated gatework rather than repeated trays",
+    "separate operator houses and off-axis relief galleries"
+  ],
+  "interesting_relationships": [
+    "inhabited west and export east bracket a substantially unoccupied editable pressure basin",
+    "diagonal gate blades carry short orthogonal works platforms",
+    "high release and lower salvage passages afford two distinct routing rhythms"
+  ],
+  "authoring_affordances": [
+    "central dry basin usable for future fluid event without pre-spawned mobile water",
+    "unfurnished lower valve pockets",
+    "west overhead service jib can be expanded by hand",
+    "east freight bay permits new modular attachments"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Main dry-gate closure",
+      "site": "Central pressure datum",
+      "kind": "bridge_failure",
+      "scripted": false
+    },
+    {
+      "name": "Pressure-release reveal",
+      "site": "Ventricle upper release",
+      "kind": "machinery_activation",
+      "scripted": false
+    },
+    {
+      "name": "Export holdout",
+      "site": "Eastern cargo sorting",
+      "kind": "npc_encounter",
+      "scripted": false
+    },
+    {
+      "name": "Lower emergency return",
+      "site": "Dry return access",
+      "kind": "recovery_chase",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "paired counter-inclined grounded superstructures with keyed void and asymmetrical inhabited banks; root-to-web-to-gallery hierarchy for procedural load-path grammars",
+  "similarity_avoidance": "Compared with Ferric Pendulum roof islands, Sundered Escarpment nested caves, Tin Canticle twin dish and Pilgrim Gait six legs, uses an open dry engineered basin, opposing ground-rooted diagonal gate leaves, and asymmetric mixed civic-industrial banks.",
+  "diversity_axes": {
+    "macro_topology": "basin",
+    "altitude_grammar": "tri_level",
+    "density_cadence": "dense_open_dense",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "gate",
+    "support_form": "twin_pier",
+    "environment_relation": "fluid_containment",
+    "incompleteness": "modular_append_zones"
+  }
+}
