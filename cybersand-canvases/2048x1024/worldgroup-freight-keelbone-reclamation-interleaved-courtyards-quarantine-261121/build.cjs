@@ -22,8 +22,8 @@ const sites={
 "Rotor lookout":[1044,294],"Quarantine registry":[1650,645],"Tariff lookout":[1660,408],
 "Workers shelter":[1418,775],"Quarantine roof":[1846,367],"Eastern dispatch":[1956,567],
 "West gantry sky":[301,347],"Grading chimney":[780,335],"Upper court bridge":[1285,422],
-"Quarantine upper":[1560,412],"West underworks":[340,842],"Grading underworks":[823,842],
-"Hub underpass":[1214,847],"Registry underpass":[1530,851],"East underworks":[1740,873],
+"Quarantine upper":[1560,412],"West underworks":[67,812],"Grading underworks":[704,803],
+"Hub underpass":[1226,809],"Registry underpass":[1525,758],"East underworks":[1995,816],
 "Western signal tower":[447,227],"Grading roof lantern":[1014,219],"Quarantine mast lookout":[1895,198],
 "Broken annex":[2010,771],"Transfer shelf":[1242,710],"Workers repair bay":[1480,730],
 "Quarantine interview":[1830,736],"Keel receiving platform":[676,665]};
@@ -108,6 +108,10 @@ C(1250,626,19,307);C(1484,610,20,324);
 V(605,562,86,100);V(1192,700,83,97);V(1549,687,82,96);
 V(318,801,76,76);V(810,795,76,84);V(1210,798,77,86);
 V(1495,797,81,84);
+/* Opposed founded service beam behind the entered eastern custody rooms:
+ one positive steel transfer member ties both non-identical courts to a
+ bedrock column without sealing the 31x27 free-flight approaches. */
+St(1536,817,439,18); C(1690,817,24,118);
 /* Deliberately broken east annex and open authoring air. */
 V(1986,471,62,244);St(1948,824,98,14);
 line(1967,824,2036,790,11);St(1937,493,63,10);
