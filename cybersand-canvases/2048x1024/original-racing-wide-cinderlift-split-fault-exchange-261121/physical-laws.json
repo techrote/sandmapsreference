@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "engine_main_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "validated_against": "accepted workbench_setup.gd, microscenario_contract.gd and current original-landscape material-kernel audit",
+  "material_ids": {
+    "58": "hard wall",
+    "62": "concrete",
+    "72": "glass",
+    "100": "basalt",
+    "101": "obsidian",
+    "113": "zinc",
+    "117": "iron",
+    "122": "quartz"
+  },
+  "stable_inert_solid_ids": [
+    58,
+    62,
+    72,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "solid_cells": 657915,
+  "grounded_solid_cells": 657915,
+  "fluid_cells": 0,
+  "falling_or_mobile_cells": 0,
+  "reactive_cells": 0,
+  "invalid_material_ids": 0,
+  "detached_components": 0,
+  "grounding_semantics": "Independent 4-cardinal connected-component audit: every solid cell boundary-connected; rock roofs are physically tethered with explicit cell material to side-wall foundations; no actor collision assumptions beyond static envelope.",
+  "native": "NATIVE-UNTESTED"
+}

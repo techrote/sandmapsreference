@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "title": "Cinderlift Split-Fault Exchange",
+  "status": "SOURCE-STATIC-INDEPENDENT-PASS / NATIVE-UNTESTED",
+  "seed": 3251827729,
+  "engine_main_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "reference_main_sha_at_branch": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_plane_sha256": "6f4e6b8cf69ea2c01cc9b7d8f96cde11e633cc6de33090c50431171892f87694",
+  "setup_sha256": "6fe7716af5cce7d700d7a4d4c75e58ec94fa49e1082c1748739325f02b850641",
+  "setup_bytes": 79728,
+  "rectangle_count": 4110,
+  "rectangle_work": 657915,
+  "material_histogram": {
+    "0": 1439237,
+    "58": 152597,
+    "62": 34712,
+    "72": 1482,
+    "100": 370267,
+    "101": 60029,
+    "113": 13077,
+    "117": 24071,
+    "122": 1680
+  },
+  "sites": {
+    "West launch": [
+      104,
+      245
+    ],
+    "West alignment": [
+      244,
+      245
+    ],
+    "West switchhouse signal": [
+      342,
+      247
+    ],
+    "Shear bluff ingress": [
+      491,
+      238
+    ],
+    "West switch cusp": [
+      680,
+      247
+    ],
+    "Fault west eyebrow": [
+      828,
+      239
+    ],
+    "High fault witness": [
+      1034,
+      239
+    ],
+    "Fault east eyebrow": [
+      1196,
+      239
+    ],
+    "East cliff overflight": [
+      1415,
+      228
+    ],
+    "East conductor crest": [
+      1625,
+      224
+    ],
+    "East outbound gantry": [
+      1775,
+      245
+    ],
+    "East turnaround": [
+      1911,
+      377
+    ],
+    "East low catcher": [
+      1882,
+      642
+    ],
+    "East lower approach": [
+      1777,
+      652
+    ],
+    "East repair bore": [
+      1600,
+      656
+    ],
+    "East bellows bore": [
+      1448,
+      658
+    ],
+    "East fault threshold": [
+      1190,
+      655
+    ],
+    "Fault lower crossover": [
+      1033,
+      664
+    ],
+    "West fault threshold": [
+      908,
+      655
+    ],
+    "West counterweight bore": [
+      695,
+      662
+    ],
+    "West repair bore": [
+      492,
+      663
+    ],
+    "West return mouth": [
+      281,
+      657
+    ],
+    "West finish": [
+      118,
+      659
+    ],
+    "West lift return": [
+      135,
+      452
+    ],
+    "Midlevel west approach": [
+      881,
+      538
+    ],
+    "Midlevel fault breach": [
+      1026,
+      472
+    ],
+    "Midlevel east approach": [
+      1230,
+      475
+    ],
+    "Western upper switchroom": [
+      608,
+      493
+    ],
+    "Western deep inspection": [
+      798,
+      754
+    ],
+    "Eastern upper bellows room": [
+      1468,
+      499
+    ],
+    "Eastern deep diagnostics": [
+      1294,
+      766
+    ],
+    "Midfault lookout": [
+      966,
+      555
+    ],
+    "Eastern lower dispatch": [
+      1675,
+      661
+    ],
+    "Western toolbox bay": [
+      559,
+      757
+    ]
+  },
+  "primary_route": [
+    "West launch",
+    "West alignment",
+    "West switchhouse signal",
+    "Shear bluff ingress",
+    "West switch cusp",
+    "Fault west eyebrow",
+    "High fault witness",
+    "Fault east eyebrow",
+    "East cliff overflight",
+    "East conductor crest",
+    "East outbound gantry",
+    "East turnaround",
+    "East low catcher",
+    "East lower approach",
+    "East conductor crest",
+    "Fault east eyebrow",
+    "East fault threshold",
+    "Fault lower crossover",
+    "West fault threshold",
+    "West counterweight bore",
+    "West repair bore",
+    "West return mouth",
+    "West finish"
+  ],
+  "alternate_route": [
+    "West launch",
+    "West alignment",
+    "West switchhouse signal",
+    "Shear bluff ingress",
+    "West switch cusp",
+    "Midlevel west approach",
+    "Midlevel fault breach",
+    "Midlevel east approach",
+    "East cliff overflight",
+    "East conductor crest",
+    "East outbound gantry",
+    "East turnaround",
+    "East low catcher",
+    "East lower approach",
+    "East conductor crest",
+    "Fault east eyebrow",
+    "East fault threshold",
+    "Fault lower crossover",
+    "West fault threshold",
+    "West counterweight bore",
+    "West repair bore",
+    "West return mouth",
+    "West finish"
+  ],
+  "service_route": [
+    "West finish",
+    "West lift return",
+    "West finish",
+    "West counterweight bore",
+    "Western upper switchroom",
+    "West counterweight bore",
+    "Western toolbox bay",
+    "West counterweight bore",
+    "Western deep inspection",
+    "Fault lower crossover",
+    "Midfault lookout",
+    "Fault lower crossover",
+    "East fault threshold",
+    "East repair bore",
+    "East bellows bore",
+    "Eastern deep diagnostics",
+    "East bellows bore",
+    "East fault threshold",
+    "East bellows bore",
+    "Eastern upper bellows room",
+    "East bellows bore",
+    "Eastern lower dispatch"
+  ],
+  "obstruction_xywh": [
+    987,
+    185,
+    99,
+    112
+  ],
+  "blocked_site": "High fault witness",
+  "png_crops": {
+    "overview.png": [
+      0,
+      0,
+      2048,
+      1024
+    ],
+    "01-west-switchhouse.png": [
+      50,
+      115,
+      430,
+      440
+    ],
+    "02-shear-bluff-rooms.png": [
+      390,
+      300,
+      470,
+      515
+    ],
+    "03-fault-spanning-breaches.png": [
+      795,
+      200,
+      480,
+      620
+    ],
+    "04-east-bellows-and-crest.png": [
+      1230,
+      290,
+      505,
+      525
+    ],
+    "05-east-turnaround.png": [
+      1640,
+      160,
+      405,
+      625
+    ],
+    "06-deep-diagnostics.png": [
+      650,
+      580,
+      780,
+      410
+    ]
+  },
+  "png_index_pixels": 3664052,
+  "native": "NATIVE-UNTESTED",
+  "source_grid_bytes": 2097152,
+  "rectangle_budget": 32768,
+  "setup_byte_budget": 1048576,
+  "accepted_material_semantics": "Stable native inert solids only: hard wall, concrete, basalt, obsidian, zinc, iron, quartz and glass; 0 grains/liquid/reactive/movable material cells",
+  "native_execution": "Not performed; no matching installed Godot/Workbench/CyberDemoBridge/Rapier binary available to this run",
+  "actual_actor_hull_from_current_main": [
+    4,
+    3
+  ],
+  "conservative_actor_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ]
+}
