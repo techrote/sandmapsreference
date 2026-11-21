@@ -1,0 +1,777 @@
+{
+  "schema_version": 1,
+  "map": "Aster Duplex Shipbreak",
+  "source_setup_sha256": "9bc54ca2e4c6437642af77e7e67653feec33d7aa3d8899e631014dc26ad041f8",
+  "source_grid_sha256": "417d2b21f345adea790b8bb840463062972ed788951c885d945971aab83bea6b",
+  "cells": 2097152,
+  "rectangles": 3210,
+  "construction_work": 487409,
+  "setup_bytes": 62308,
+  "material_histogram": {
+    "0": 1609743,
+    "58": 106265,
+    "62": 31905,
+    "72": 3610,
+    "100": 206136,
+    "101": 18712,
+    "113": 15126,
+    "117": 104006,
+    "122": 1649
+  },
+  "rooted_inert_solids": 487409,
+  "unrooted_solids": 0,
+  "mobile_falling_reactive_fluid_cells": 0,
+  "canonical_rectangle_equality": true,
+  "ordered_replay_overlaps": 0,
+  "exact_literal_sites": {
+    "Start / west breaker launch": [
+      162,
+      351
+    ],
+    "West injection fork": [
+      375,
+      342
+    ],
+    "Cutter bow arrival chute": [
+      487,
+      616
+    ],
+    "Cutter fore service hold": [
+      640,
+      489
+    ],
+    "Cutter main salvage hold": [
+      755,
+      488
+    ],
+    "Cutter aft cargo gallery": [
+      885,
+      486
+    ],
+    "Interstice crane approach": [
+      1065,
+      580
+    ],
+    "Double hull separation vista": [
+      1090,
+      540
+    ],
+    "Lower hull foredeck": [
+      1200,
+      476
+    ],
+    "Lower hull forward hold": [
+      1283,
+      604
+    ],
+    "Lower hull mid hold": [
+      1410,
+      612
+    ],
+    "Lower hull aft hold": [
+      1585,
+      605
+    ],
+    "East signal portal": [
+      1755,
+      468
+    ],
+    "East braking capture": [
+      1845,
+      580
+    ],
+    "East reversal pocket": [
+      1970,
+      720
+    ],
+    "Lower east return": [
+      1770,
+      760
+    ],
+    "Lower second vessel return": [
+      1530,
+      775
+    ],
+    "Under forward vessel": [
+      1320,
+      773
+    ],
+    "Under second bow": [
+      1190,
+      755
+    ],
+    "Under crane bridge": [
+      1080,
+      750
+    ],
+    "Below cutter stern": [
+      920,
+      745
+    ],
+    "Below cutter bow": [
+      590,
+      740
+    ],
+    "West recovery throat": [
+      375,
+      740
+    ],
+    "Finish / west customs": [
+      180,
+      351
+    ],
+    "West entered service vault": [
+      210,
+      940
+    ],
+    "Centre shaft portal": [
+      1120,
+      855
+    ],
+    "Under-crane service room": [
+      1100,
+      950
+    ],
+    "Lower shipbreaking vault": [
+      1533,
+      943
+    ],
+    "East salvage vault": [
+      1890,
+      940
+    ],
+    "Lower winch staging": [
+      1030,
+      615
+    ]
+  },
+  "clearance": {
+    "19x15": {
+      "literal_sites": 30,
+      "reachable": 30,
+      "connected_free_centres": 1133035,
+      "free_components": 17
+    },
+    "23x19": {
+      "literal_sites": 30,
+      "reachable": 30,
+      "connected_free_centres": 1034893,
+      "free_components": 17
+    },
+    "31x27": {
+      "literal_sites": 30,
+      "reachable": 30,
+      "connected_free_centres": 942962,
+      "free_components": 19
+    }
+  },
+  "obstruction_xywh": [
+    864,
+    466,
+    52,
+    66
+  ],
+  "obstruction": {
+    "19x15": {
+      "remaining_sites": 29,
+      "blocked_sites": [
+        "Cutter aft cargo gallery"
+      ],
+      "finish_reachable": true,
+      "connected_free_centres": 1128275
+    },
+    "23x19": {
+      "remaining_sites": 29,
+      "blocked_sites": [
+        "Cutter aft cargo gallery"
+      ],
+      "finish_reachable": true,
+      "connected_free_centres": 1030137
+    },
+    "31x27": {
+      "remaining_sites": 29,
+      "blocked_sites": [
+        "Cutter aft cargo gallery"
+      ],
+      "finish_reachable": true,
+      "connected_free_centres": 938214
+    }
+  },
+  "primary_leg_proofs": [
+    {
+      "from": "Start / west breaker launch",
+      "to": "West injection fork",
+      "padding": 85,
+      "rect": [
+        77,
+        257,
+        384,
+        180
+      ],
+      "full_body_free_centres": 56865
+    },
+    {
+      "from": "West injection fork",
+      "to": "Cutter bow arrival chute",
+      "padding": 85,
+      "rect": [
+        290,
+        257,
+        283,
+        445
+      ],
+      "full_body_free_centres": 81328
+    },
+    {
+      "from": "Cutter bow arrival chute",
+      "to": "Below cutter bow",
+      "padding": 85,
+      "rect": [
+        402,
+        531,
+        274,
+        295
+      ],
+      "full_body_free_centres": 68780
+    },
+    {
+      "from": "Below cutter bow",
+      "to": "Below cutter stern",
+      "padding": 85,
+      "rect": [
+        505,
+        655,
+        501,
+        176
+      ],
+      "full_body_free_centres": 84326
+    },
+    {
+      "from": "Below cutter stern",
+      "to": "Under crane bridge",
+      "padding": 85,
+      "rect": [
+        835,
+        660,
+        331,
+        176
+      ],
+      "full_body_free_centres": 54814
+    },
+    {
+      "from": "Under crane bridge",
+      "to": "Under second bow",
+      "padding": 85,
+      "rect": [
+        995,
+        665,
+        281,
+        176
+      ],
+      "full_body_free_centres": 46410
+    },
+    {
+      "from": "Under second bow",
+      "to": "Under forward vessel",
+      "padding": 85,
+      "rect": [
+        1105,
+        670,
+        301,
+        189
+      ],
+      "full_body_free_centres": 43098
+    },
+    {
+      "from": "Under forward vessel",
+      "to": "Lower second vessel return",
+      "padding": 85,
+      "rect": [
+        1235,
+        688,
+        381,
+        173
+      ],
+      "full_body_free_centres": 50459
+    },
+    {
+      "from": "Lower second vessel return",
+      "to": "Lower east return",
+      "padding": 85,
+      "rect": [
+        1445,
+        675,
+        411,
+        186
+      ],
+      "full_body_free_centres": 61566
+    },
+    {
+      "from": "Lower east return",
+      "to": "East reversal pocket",
+      "padding": 85,
+      "rect": [
+        1685,
+        635,
+        363,
+        211
+      ],
+      "full_body_free_centres": 59538
+    },
+    {
+      "from": "East reversal pocket",
+      "to": "East braking capture",
+      "padding": 85,
+      "rect": [
+        1760,
+        495,
+        288,
+        311
+      ],
+      "full_body_free_centres": 48934
+    },
+    {
+      "from": "East braking capture",
+      "to": "East signal portal",
+      "padding": 135,
+      "rect": [
+        1620,
+        333,
+        361,
+        383
+      ],
+      "full_body_free_centres": 73574
+    },
+    {
+      "from": "East signal portal",
+      "to": "Lower hull aft hold",
+      "padding": 85,
+      "rect": [
+        1500,
+        383,
+        341,
+        308
+      ],
+      "full_body_free_centres": 44661
+    },
+    {
+      "from": "Lower hull aft hold",
+      "to": "Lower hull mid hold",
+      "padding": 135,
+      "rect": [
+        1275,
+        470,
+        446,
+        278
+      ],
+      "full_body_free_centres": 55907
+    },
+    {
+      "from": "Lower hull mid hold",
+      "to": "Lower hull forward hold",
+      "padding": 135,
+      "rect": [
+        1148,
+        469,
+        398,
+        279
+      ],
+      "full_body_free_centres": 48217
+    },
+    {
+      "from": "Lower hull forward hold",
+      "to": "Lower hull foredeck",
+      "padding": 85,
+      "rect": [
+        1115,
+        391,
+        254,
+        299
+      ],
+      "full_body_free_centres": 24972
+    },
+    {
+      "from": "Lower hull foredeck",
+      "to": "Interstice crane approach",
+      "padding": 85,
+      "rect": [
+        980,
+        391,
+        306,
+        275
+      ],
+      "full_body_free_centres": 42838
+    },
+    {
+      "from": "Interstice crane approach",
+      "to": "Cutter aft cargo gallery",
+      "padding": 85,
+      "rect": [
+        800,
+        401,
+        351,
+        265
+      ],
+      "full_body_free_centres": 55266
+    },
+    {
+      "from": "Cutter aft cargo gallery",
+      "to": "Cutter main salvage hold",
+      "padding": 135,
+      "rect": [
+        620,
+        351,
+        401,
+        273
+      ],
+      "full_body_free_centres": 42518
+    },
+    {
+      "from": "Cutter main salvage hold",
+      "to": "Cutter fore service hold",
+      "padding": 85,
+      "rect": [
+        555,
+        403,
+        286,
+        172
+      ],
+      "full_body_free_centres": 10935
+    },
+    {
+      "from": "Cutter fore service hold",
+      "to": "West recovery throat",
+      "padding": 135,
+      "rect": [
+        240,
+        354,
+        536,
+        522
+      ],
+      "full_body_free_centres": 154267
+    },
+    {
+      "from": "West recovery throat",
+      "to": "Finish / west customs",
+      "padding": 85,
+      "rect": [
+        95,
+        266,
+        366,
+        560
+      ],
+      "full_body_free_centres": 91270
+    }
+  ],
+  "blocked_alternative_leg_proofs": [
+    {
+      "from": "Start / west breaker launch",
+      "to": "West injection fork",
+      "padding": 85,
+      "rect": [
+        77,
+        257,
+        384,
+        180
+      ],
+      "full_body_free_centres": 56865
+    },
+    {
+      "from": "West injection fork",
+      "to": "Cutter bow arrival chute",
+      "padding": 85,
+      "rect": [
+        290,
+        257,
+        283,
+        445
+      ],
+      "full_body_free_centres": 81328
+    },
+    {
+      "from": "Cutter bow arrival chute",
+      "to": "Below cutter bow",
+      "padding": 85,
+      "rect": [
+        402,
+        531,
+        274,
+        295
+      ],
+      "full_body_free_centres": 68780
+    },
+    {
+      "from": "Below cutter bow",
+      "to": "Below cutter stern",
+      "padding": 85,
+      "rect": [
+        505,
+        655,
+        501,
+        176
+      ],
+      "full_body_free_centres": 84326
+    },
+    {
+      "from": "Below cutter stern",
+      "to": "Under crane bridge",
+      "padding": 85,
+      "rect": [
+        835,
+        660,
+        331,
+        176
+      ],
+      "full_body_free_centres": 54814
+    },
+    {
+      "from": "Under crane bridge",
+      "to": "Under second bow",
+      "padding": 85,
+      "rect": [
+        995,
+        665,
+        281,
+        176
+      ],
+      "full_body_free_centres": 46410
+    },
+    {
+      "from": "Under second bow",
+      "to": "Under forward vessel",
+      "padding": 85,
+      "rect": [
+        1105,
+        670,
+        301,
+        189
+      ],
+      "full_body_free_centres": 43098
+    },
+    {
+      "from": "Under forward vessel",
+      "to": "Lower second vessel return",
+      "padding": 85,
+      "rect": [
+        1235,
+        688,
+        381,
+        173
+      ],
+      "full_body_free_centres": 50459
+    },
+    {
+      "from": "Lower second vessel return",
+      "to": "Lower east return",
+      "padding": 85,
+      "rect": [
+        1445,
+        675,
+        411,
+        186
+      ],
+      "full_body_free_centres": 61566
+    },
+    {
+      "from": "Lower east return",
+      "to": "East reversal pocket",
+      "padding": 85,
+      "rect": [
+        1685,
+        635,
+        363,
+        211
+      ],
+      "full_body_free_centres": 59538
+    },
+    {
+      "from": "East reversal pocket",
+      "to": "Lower east return",
+      "padding": 85,
+      "rect": [
+        1685,
+        635,
+        363,
+        211
+      ],
+      "full_body_free_centres": 59538
+    },
+    {
+      "from": "Lower east return",
+      "to": "Lower second vessel return",
+      "padding": 85,
+      "rect": [
+        1445,
+        675,
+        411,
+        186
+      ],
+      "full_body_free_centres": 61566
+    },
+    {
+      "from": "Lower second vessel return",
+      "to": "Under forward vessel",
+      "padding": 85,
+      "rect": [
+        1235,
+        688,
+        381,
+        173
+      ],
+      "full_body_free_centres": 50459
+    },
+    {
+      "from": "Under forward vessel",
+      "to": "Under second bow",
+      "padding": 85,
+      "rect": [
+        1105,
+        670,
+        301,
+        189
+      ],
+      "full_body_free_centres": 43098
+    },
+    {
+      "from": "Under second bow",
+      "to": "Under crane bridge",
+      "padding": 85,
+      "rect": [
+        995,
+        665,
+        281,
+        176
+      ],
+      "full_body_free_centres": 46410
+    },
+    {
+      "from": "Under crane bridge",
+      "to": "Below cutter stern",
+      "padding": 85,
+      "rect": [
+        835,
+        660,
+        331,
+        176
+      ],
+      "full_body_free_centres": 54814
+    },
+    {
+      "from": "Below cutter stern",
+      "to": "Below cutter bow",
+      "padding": 85,
+      "rect": [
+        505,
+        655,
+        501,
+        176
+      ],
+      "full_body_free_centres": 84326
+    },
+    {
+      "from": "Below cutter bow",
+      "to": "West recovery throat",
+      "padding": 85,
+      "rect": [
+        290,
+        655,
+        386,
+        171
+      ],
+      "full_body_free_centres": 52462
+    },
+    {
+      "from": "West recovery throat",
+      "to": "Finish / west customs",
+      "padding": 85,
+      "rect": [
+        95,
+        266,
+        366,
+        560
+      ],
+      "full_body_free_centres": 91270
+    }
+  ],
+  "pngs": {
+    "overview.png": {
+      "extent": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "sha256": "eaa180dfa3b282cfea35d3c58e003e332bda99a93c84935c8c4d36fe480bd1a4",
+      "pixels": 2097152,
+      "bytes": 18503
+    },
+    "01-west-breakers.png": {
+      "extent": [
+        34,
+        350,
+        390,
+        520
+      ],
+      "sha256": "02b6f9ef1f7f012a7b54522a793772a534808aa8aa3690556c60628c1a2bfd53",
+      "pixels": 202800,
+      "bytes": 1846
+    },
+    "02-raised-hull.png": {
+      "extent": [
+        390,
+        375,
+        660,
+        390
+      ],
+      "sha256": "3c0337ba6369424f1a796ec7846b8364355313ea97e04c48e21bb9596fd22a9c",
+      "pixels": 257400,
+      "bytes": 2752
+    },
+    "03-suspended-interstice.png": {
+      "extent": [
+        1000,
+        235,
+        235,
+        610
+      ],
+      "sha256": "79cc00d8b0852712043adde55e97edc61133dc6b7a32fd96e678821e8102377d",
+      "pixels": 143350,
+      "bytes": 2260
+    },
+    "04-lower-salvage-hull.png": {
+      "extent": [
+        1160,
+        490,
+        570,
+        365
+      ],
+      "sha256": "fa87c389b48406bdcefeab660463a29aab03ce3f74d74100f3fd3c65b244ced9",
+      "pixels": 208050,
+      "bytes": 3081
+    },
+    "05-eastern-slip-gate.png": {
+      "extent": [
+        1700,
+        340,
+        330,
+        520
+      ],
+      "sha256": "88b269d1b2a505d6146080a5cc3518e33c9e6782eb696de694f7aedaa3733f0f",
+      "pixels": 171600,
+      "bytes": 2372
+    },
+    "06-bedrock-vaults.png": {
+      "extent": [
+        850,
+        745,
+        760,
+        260
+      ],
+      "sha256": "63bc973738304bd27f37bada71e20925c34454fd0b7ac63cf2d63e33b57de46f",
+      "pixels": 197600,
+      "bytes": 1959
+    }
+  },
+  "verified_material_png_pixels": 3277952,
+  "native": "NATIVE-UNTESTED"
+}
