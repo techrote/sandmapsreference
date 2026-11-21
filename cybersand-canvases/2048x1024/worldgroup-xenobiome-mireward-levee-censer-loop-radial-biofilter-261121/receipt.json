@@ -1,0 +1,322 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Mireward Levee Communes",
+  "sibling": 4,
+  "role": "Censer Loop / Radial Biofilter Commons",
+  "seed": "mireward-censer-loop-radial-biofilter-261121-v1",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donors": [
+    {
+      "slug": "wide-harrow-mere-spore-dam",
+      "pr": 64,
+      "head": "1202aea8d696e2bfecd7e4f3353c9738a9435858"
+    },
+    {
+      "slug": "wide-graftloom-slipway",
+      "pr": 22,
+      "head": "b0d1e5216aabb9b5e009e599ffbffcec6fd8a657"
+    }
+  ],
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 8167,
+    "62": 53398,
+    "66": 16854,
+    "68": 15607,
+    "77": 3807,
+    "79": 2730,
+    "100": 202491,
+    "101": 67584,
+    "120": 20264,
+    "129": 6065,
+    "131": 12381
+  },
+  "occupied_cells": 409348,
+  "grounded_cells": 409348,
+  "detached_cells": 0,
+  "solid_components": 1,
+  "physical_tethers": {
+    "joins": 80,
+    "max_span": 72
+  },
+  "lossless_rectangles": 3881,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 409348,
+  "setup_bytes": 72573,
+  "plane_sha256": "0d958f92a1f578702056d72363622e2de204c6267f204485585b59096574cff4",
+  "setup_sha256": "2df38530c76e11f461d88b86413ce03edbb79b07f84a61738b4b7b5a0a6a6886",
+  "literal_sites": {
+    "West arrival basin": [
+      75,
+      365
+    ],
+    "West registry porch": [
+      150,
+      438
+    ],
+    "West propagator": [
+      383,
+      463
+    ],
+    "West foundry lookdown": [
+      410,
+      414
+    ],
+    "West high bypass": [
+      510,
+      249
+    ],
+    "Outer rim west": [
+      585,
+      492
+    ],
+    "North west loop": [
+      782,
+      245
+    ],
+    "North culture crown": [
+      1015,
+      211
+    ],
+    "North east loop": [
+      1279,
+      240
+    ],
+    "East outer rim": [
+      1490,
+      400
+    ],
+    "East upper bypass": [
+      1530,
+      233
+    ],
+    "East quarantine approach": [
+      1685,
+      402
+    ],
+    "East clean vault": [
+      1851,
+      518
+    ],
+    "East skyline exit": [
+      1970,
+      310
+    ],
+    "Eastern dispatch": [
+      1995,
+      668
+    ],
+    "Eastern low shelf": [
+      1655,
+      673
+    ],
+    "South west rim": [
+      696,
+      773
+    ],
+    "South east rim": [
+      1315,
+      730
+    ],
+    "Biosieve inner west": [
+      910,
+      535
+    ],
+    "Living core": [
+      1050,
+      541
+    ],
+    "Biosieve inner east": [
+      1180,
+      550
+    ],
+    "Censer lower cusp": [
+      1046,
+      711
+    ],
+    "West descent mouth": [
+      248,
+      835
+    ],
+    "Middle descent mouth": [
+      1037,
+      803
+    ],
+    "East descent mouth": [
+      1801,
+      813
+    ],
+    "West dry transit": [
+      421,
+      923
+    ],
+    "Centre dry transit": [
+      1065,
+      923
+    ],
+    "East dry transit": [
+      1536,
+      923
+    ],
+    "East purge interlock": [
+      1740,
+      663
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable_centres": 1430558,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable_centres": 1375157,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1269883,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      1710,
+      635,
+      1770,
+      695
+    ],
+    "blocked_site": "East purge interlock",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1260174,
+      "passed": 28,
+      "total": 29,
+      "bad": [
+        {
+          "name": "East purge interlock",
+          "point": [
+            1740,
+            663
+          ]
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "origin": [
+        0,
+        0
+      ],
+      "extent": [
+        2048,
+        1024
+      ],
+      "bytes": 52306,
+      "sha256": "f16b2326744563242e9f8635a975c531292b5ec3f15d54d025c56d2d780336c2",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "01-west-registry.png",
+      "origin": [
+        30,
+        400
+      ],
+      "extent": [
+        510,
+        460
+      ],
+      "bytes": 8961,
+      "sha256": "c1909c21ec30f7e1f3ea76f3c8420c5f54927e13b32ca4b438c2c42693afa8b8",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "02-annular-north.png",
+      "origin": [
+        610,
+        180
+      ],
+      "extent": [
+        790,
+        430
+      ],
+      "bytes": 12046,
+      "sha256": "9d1fe2fc4c0fe70c4357e5f335c330431b2ff5b62a57ed64c5f8a6f646da0e09",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "03-censer-culture.png",
+      "origin": [
+        660,
+        420
+      ],
+      "extent": [
+        730,
+        415
+      ],
+      "bytes": 13462,
+      "sha256": "6998f575bf72ecfd5d50c1971b144110cc213b75f2645d18bfebedbd254f8d46",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "04-east-purge.png",
+      "origin": [
+        1510,
+        360
+      ],
+      "extent": [
+        538,
+        495
+      ],
+      "bytes": 9697,
+      "sha256": "243af52a997bd59556713be3e557870b03d7f15d66a4baa0ef14cf944ef05fa7",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    },
+    {
+      "name": "05-dry-return.png",
+      "origin": [
+        190,
+        855
+      ],
+      "extent": [
+        1690,
+        169
+      ],
+      "bytes": 5462,
+      "sha256": "b336c210f41f130984f99a7cd7056c3bc36aa2ea6010a7735862979a94b5fb6e",
+      "pixel_parity": "DIRECT_FROM_EXACT_FINAL_GRID"
+    }
+  ],
+  "qualification": "CREATOR-STATIC-PASS",
+  "independent_reviews": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "OPEN DRAFT/HOLD",
+  "caveat": "Accepted 32768 source rectangles distinct from unmeasured 4096 installed bridge fallback"
+}
