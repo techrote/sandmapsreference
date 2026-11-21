@@ -1,0 +1,247 @@
+{
+  "title": "Tern-5 Buried Pressure Bellworks",
+  "seed": 2026112105,
+  "source_repo": "techrote/sandmapsreference",
+  "base_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_material_cells": 2097152,
+  "material_sha256": "31602d1009b5b7ae11e50389e5fe7ca08f76628ea6c6b142ea19f6988d5f7ce6",
+  "setup_sha256": "8129ba54cb336759d498b64a207b3db03e72fceb21d842504bce8a1d5a9a295d",
+  "setup_bytes": 67675,
+  "rectangle_count": 3475,
+  "work_cells": 629078,
+  "histogram": {
+    "0": 1468074,
+    "3": 12208,
+    "8": 4738,
+    "58": 98097,
+    "100": 302247,
+    "101": 159029,
+    "117": 51776,
+    "120": 983
+  },
+  "structural": {
+    "total": 612132,
+    "grounded": 612132,
+    "detached": 0
+  },
+  "initial_fluid_cells": 16946,
+  "initial_fluid_open_or_mixed_faces": 0,
+  "sites": [
+    [
+      "Arrival",
+      66,
+      242
+    ],
+    [
+      "West hoist",
+      236,
+      275
+    ],
+    [
+      "Ore assay",
+      237,
+      617
+    ],
+    [
+      "Ore recovery",
+      235,
+      837
+    ],
+    [
+      "Pressure bell overlook",
+      632,
+      265
+    ],
+    [
+      "Bell inspection",
+      633,
+      617
+    ],
+    [
+      "Bell recovery",
+      631,
+      839
+    ],
+    [
+      "Winding head",
+      1035,
+      255
+    ],
+    [
+      "Equalizer service",
+      1035,
+      619
+    ],
+    [
+      "Deep transfer",
+      1033,
+      836
+    ],
+    [
+      "Quench lookout",
+      1448,
+      265
+    ],
+    [
+      "Quench inspection",
+      1447,
+      625
+    ],
+    [
+      "Quench recovery",
+      1446,
+      838
+    ],
+    [
+      "Exhaust approach",
+      1863,
+      262
+    ],
+    [
+      "Exhaust scrubber",
+      1862,
+      627
+    ],
+    [
+      "Exhaust return",
+      1861,
+      840
+    ],
+    [
+      "Extraction",
+      1979,
+      246
+    ]
+  ],
+  "clearance": {
+    "19x15": {
+      "reached": 17,
+      "centres": 1182938
+    },
+    "23x19": {
+      "reached": 17,
+      "centres": 1133797
+    },
+    "31x27": {
+      "reached": 17,
+      "centres": 1050237
+    }
+  },
+  "obstruction": {
+    "rectangle": [
+      1205,
+      0,
+      72,
+      332
+    ],
+    "forced_detours": 3,
+    "added_steps_at_31x27": {
+      "Arrival": 0,
+      "West hoist": 0,
+      "Ore assay": 0,
+      "Ore recovery": 0,
+      "Pressure bell overlook": 0,
+      "Bell inspection": 0,
+      "Bell recovery": 0,
+      "Winding head": 0,
+      "Equalizer service": 0,
+      "Deep transfer": 0,
+      "Quench lookout": 160,
+      "Quench inspection": 0,
+      "Quench recovery": 0,
+      "Exhaust approach": 166,
+      "Exhaust scrubber": 0,
+      "Exhaust return": 0,
+      "Extraction": 198
+    }
+  },
+  "routes": {
+    "main": "high dry airway -> five vertical portals -> mid-process transfer -> extraction",
+    "alternative": "five portals -> lower lateral recovery gallery -> rejoin east exit",
+    "interconnects": [
+      "west ore assay",
+      "twin pressure bells",
+      "central winding equalizer",
+      "quench vessels",
+      "exhaust clarifier"
+    ]
+  },
+  "images": {
+    "overview.png": {
+      "bytes": 34607,
+      "sha256": "adc768ac16ee4fd796df8a64dba52b9720ebfbe8870109619649119e694b34fd",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-ore-receiver.png": {
+      "bytes": 7499,
+      "sha256": "8aee990c98e3b2b69a849f1215fc943cd20211ba4e2dc8520640f2dbf5fabe4c",
+      "crop": [
+        40,
+        315,
+        405,
+        606
+      ]
+    },
+    "02-pressure-bells.png": {
+      "bytes": 9079,
+      "sha256": "3ddc43f60fcbd05e8e09e0100faa1bd91dee285d5824f745f40835b63bb00eb5",
+      "crop": [
+        463,
+        313,
+        428,
+        600
+      ]
+    },
+    "03-equalizer-headshaft.png": {
+      "bytes": 7638,
+      "sha256": "8c4d4ffdd5c8767847f6c485acb67f2680dac7aa79f357fe10ed2f7f7e8184e1",
+      "crop": [
+        888,
+        282,
+        411,
+        645
+      ]
+    },
+    "04-quench-cell.png": {
+      "bytes": 7278,
+      "sha256": "35c29d7ef195b39fd4184b62abedf0f8a09b96ae82c6cb4e7a2af07bf021dbcf",
+      "crop": [
+        1295,
+        315,
+        430,
+        605
+      ]
+    },
+    "05-exhaust-clarifier.png": {
+      "bytes": 7224,
+      "sha256": "22d72d7e054670df03b0223287fac6f38d19d3dead4d37bf6f805f04c6904b08",
+      "crop": [
+        1710,
+        311,
+        330,
+        614
+      ]
+    },
+    "06-deep-recovery.png": {
+      "bytes": 3039,
+      "sha256": "674b75c0f656cb00cbeb1492cfae2db668ef1507ec6846bb14a60702a56280a1",
+      "crop": [
+        410,
+        790,
+        1258,
+        133
+      ]
+    }
+  },
+  "status": "SOURCE-STATIC PASS / NATIVE-UNTESTED"
+}
