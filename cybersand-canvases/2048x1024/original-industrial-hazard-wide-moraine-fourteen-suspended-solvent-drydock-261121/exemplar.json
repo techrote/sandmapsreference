@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "title": "Moraine-14 Suspended Solvent Drydock",
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-hazard-wide",
+  "map_role": "Roof-suspended industrial drydock with a large negative-space salvage basin and reusable top/bottom support grammar",
+  "anchor_donors": [],
+  "macro_topology": "drydock",
+  "density_profile": "Dense, uneven receiving/solvent/quench/dispatch shoulders frame a broad, deliberately underworked central dry pit and suspended salvage hull.",
+  "route_grammar": {
+    "main": "Public overhead sky airway descends through six wide service wells into the dry, continuous mid-level transfer lane and returns to the eastern outbound berth.",
+    "alternative": "Low drydock recovery lane parallels the mid-level trunk, allowing a reroute around a real [845,607,65,92] obstruction; all 18 exact sites remain reachable.",
+    "site_count": 18,
+    "clearance_envelopes": [
+      [
+        19,
+        15
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        31,
+        27
+      ]
+    ]
+  },
+  "strong_motifs": [
+    "Continuous boundary-rooted overhead gantry and asymmetric hanger lengths",
+    "Large inverted U-shaped suspended salvage hull above empty drydock pit",
+    "Ground-rooted workfaces opposing roof-hung industrial equipment",
+    "Two uneven solvent columns and three separate sealed quench sample containers",
+    "Unfurnished expansion platforms along the lower drydock and dispatch approaches"
+  ],
+  "interesting_relationships": [
+    "Top anchored gantry/cantilever meets lower rooted industrial cradles without requiring a filled exhibition hall",
+    "Vertical service wells turn three public altitude strata into repeatable branch/rejoin patterns",
+    "Contiguous central negative space separates the hull silhouette from the outer processing districts",
+    "Five industrial steps occupy unequal working volumes across the same salvage facility"
+  ],
+  "authoring_affordances": [
+    "Drydock pit beneath the suspended hull remains mostly empty for later manual objects, actors and brushwork",
+    "Unused lower service platforms east and west are bounded annex/settlement insertion seams",
+    "Suspension lines and cradle braces provide modular receptor and editable failure-link examples",
+    "Alternative lower lane preserves routes around a blocked mid-deck span"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "hull hanger break",
+      "region": [
+        855,
+        350,
+        1308,
+        585
+      ],
+      "function": "Future load-release or suspended-bridge failure stage; no event scripted",
+      "exit_logic": "Mid-level recovery lane and adjacent wide wells"
+    },
+    {
+      "site": "solvent assay failure",
+      "region": [
+        487,
+        375,
+        820,
+        614
+      ],
+      "function": "Future sample leak / contained fire response sequence; current fluids only initial static samples",
+      "exit_logic": "Nearby service well, dry low passage"
+    },
+    {
+      "site": "quench control override",
+      "region": [
+        1350,
+        390,
+        1688,
+        612
+      ],
+      "function": "Potential isolate/activate/quench interactive set piece; inert cells are not working pumps",
+      "exit_logic": "Dry mid-level transfer and lower recovery"
+    },
+    {
+      "site": "empty drydock infill",
+      "region": [
+        745,
+        680,
+        1349,
+        880
+      ],
+      "function": "Future authored NPC works yard, salvage machinery, crane landing or chase encounter",
+      "exit_logic": "Two longitudinal public lanes"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Roof-hung vs floor-rooted component clustering and a real nontrivial support load path",
+    "Gantry-and-hull motif with asymmetric braces suitable for template extraction",
+    "Large negative space with upper/middle/lower transit and physically provable bypass",
+    "Exposed optional authoring seams to support manual improvement and scripted stage design"
+  ],
+  "similarity_avoidance": "Unlike Tern-5's continuous enclosing geology, Ilex-8's fault spine, Cairn-9's annular crater and Yarrow-3's broken cable-connected islands, this level uses a continuous overhead rail, active-looking but inert suspended U-hull, open drydock void, and mixed roof/floor supports.",
+  "diversity_axes": {
+    "macro_topology": "drydock",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "layered",
+    "landmark_family": "gantry",
+    "support_form": "mixed",
+    "environment_relation": "fluid_containment",
+    "incompleteness": "modular_append_zones"
+  },
+  "physical_truth": "Only initial material-cell geometry is proven. Water and Lava are initially sealed. Mechanical drawings and inert pixel structures do not execute cranes, quenching, chemistry or events. Native Workbench flight and evolving fluids remain untested."
+}
