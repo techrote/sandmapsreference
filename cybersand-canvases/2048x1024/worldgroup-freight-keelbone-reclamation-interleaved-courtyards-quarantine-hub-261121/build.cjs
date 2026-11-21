@@ -104,6 +104,12 @@ St(572,590,128,14);St(730,620,132,12);line(693,591,744,627,12);
 V(80,868,1887,71);V(673,802,76,137);V(1326,810,78,129);V(1805,810,66,129);
 V(632,421,81,90);V(777,476,83,85);
 V(541,696,79,85);V(1175,740,84,67);
+/* Outboard bonded dispatch and grounded record office. This is deliberately
+   compact; the central unused quarantine apron is retained as editable air. */
+C(1967,634,22,219);St(1878,625,161,15);C(2025,651,19,198);
+St(1877,813,168,15);St(1914,752,112,14);
+C(1919,766,18,45);St(1947,695,82,13);
+V(1952,671,67,93);
 for(const [x,y] of Object.values(sites))V(x-27,y-26,55,53);
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
@@ -151,7 +157,7 @@ if(rect.length>32768||area>32000000)throw Error("budget "+rect.length+"/"+area);
 const policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
 let setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:sites["West arrival"],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits:rect,response:"LA-SELECTIVE",liquid_policy:policy,normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false},json=JSON.stringify(setup),jbytes=utf8(json);
 if(jbytes.length>1048576)throw Error("JSON over budget");
-let crops=[["01-intake-court",90,398,555,470],["02-worker-hub",565,250,315,595],["03-ring-grader",835,360,450,499],["04-quarantine",1295,370,570,482],["05-undercroft",1260,752,788,230]];
+let crops=[["01-intake-court",90,398,555,470],["02-worker-hub",565,250,315,595],["03-ring-grader",835,360,450,499],["04-outboard-dispatch",1775,502,273,376],["05-undercroft",1260,752,788,230]];
 let images=[["overview",[0,0,W,H]],...crops.map(c=>[c[0],c.slice(1)])].map(([name,rect])=>{let data=png(g,rect),pixels=verifyPng(g,rect,data);return{name,rect,bytes:data,sha256:sha256(data),pixels};});
 let receipt={
 concept:"Keelbone Reclamation Vaults — Interleaved Recovery Courts / Worker Quarantine Hub",
