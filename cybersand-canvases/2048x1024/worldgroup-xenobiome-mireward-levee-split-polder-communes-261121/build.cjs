@@ -84,6 +84,22 @@ function build(){
  // These remain actual geometry edits and keep every named site at its fixed literal location.
  for(let [x,y,w,h] of [[419,783,70,121],[598,743,74,91],[1106,691,78,99],
  [1107,808,76,54],[1333,707,70,102],[1658,719,78,109],[1887,672,77,187]])R(x,y,w,h,0);
+ function tie(){
+  let mark=new Int32Array(N),q=new Int32Array(N),parts=[{edge:true}],edges=new Map();
+  for(let i=0;i<N;i++)if(g[i]&&!mark[i]){let id=parts.length,h=0,t=1,edge=false;q[0]=i;mark[i]=id;while(h<t){let a=q[h++],x=a%W,y=a/W|0;if(!x||x===W-1||!y||y===H-1)edge=true;for(let b of [a-W,a+W,x?a-1:-1,x<W-1?a+1:-1])if(b>=0&&b<N&&g[b]&&!mark[b]){mark[b]=id;q[t++]=b;}}parts.push({edge,count:t});}
+  let owner=new Int32Array(N),origin=new Int32Array(N),dist=new Uint16Array(N),qq=new Int32Array(N),h=0,t=0;
+  for(let i=0;i<N;i++)if(mark[i]){owner[i]=mark[i];origin[i]=i;qq[t++]=i;}
+  while(h<t){let a=qq[h++],x=a%W,v=owner[a];for(let b of [a-W,a+W,x?a-1:-1,x<W-1?a+1:-1])if(b>=0&&b<N){
+   if(!owner[b]){owner[b]=v;origin[b]=origin[a];dist[b]=dist[a]+1;qq[t++]=b;}
+   else if(owner[b]!==v){let key=Math.min(v,owner[b])+":"+Math.max(v,owner[b]),len=dist[a]+dist[b]+1,z=edges.get(key);if(!z||len<z.len)edges.set(key,{a:origin[a],b:origin[b],oa:v,ob:owner[b],len});}}}
+  let parent=new Int32Array(parts.length);for(let i=0;i<parts.length;i++)parent[i]=parts[i].edge?0:i;
+  function root(a){while(parent[a]!==a){parent[a]=parent[parent[a]];a=parent[a];}return a;}
+  let joins=0,max_span=0;for(let e of [...edges.values()].sort((a,b)=>a.len-b.len)){let a=root(e.oa),b=root(e.ob);if(a===b)continue;L(e.a%W,e.a/W|0,e.b%W,e.b/W|0,4,M.grate);parent[a]=b;joins++;max_span=Math.max(max_span,e.len);}
+  for(let i=1;i<parts.length;i++)if(root(i)!==root(0))throw Error("Disconnected rock "+i);
+  return {raw_components:parts.length-1,ties:joins,max_span};
+ }
+
+ const reconciled=tie();
  const sites={
  "West arrival sky":[94,548],"West council deck":[205,510],"West seed ledger":[165,714],"West cold registry":[167,819],
  "First polder air crossing":[444,553],"First dry catchment":[445,839],"Reed purge deck":[640,565],
@@ -97,7 +113,7 @@ function build(){
  "Far east secondary sampling":[1927,817],"East expansion horizon":[1734,520],
  "Underbridge salvage site":[1699,775],"Middle dry bypass":[902,437]
  };
- const ties={joins:tieCount,max_span:0};
+ const ties={joins:tieCount+reconciled.ties,max_span:reconciled.max_span};
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(N),overlap=0;
  for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){let v=g[o+x],s=x;while(x<W&&g[o+x]===v)x++;if(!v)continue;let key=s+":"+(x-s)+":"+v,i=prev.get(key);if(i===undefined){i=rect.length;rect.push([s,y,x-s,1,v]);}else rect[i][3]++;next.set(key,i);}prev=next;}
  for(let [x,y,w,h,v] of rect){hist[v]=(hist[v]||0)+w*h;area+=w*h;for(let j=y;j<y+h;j++){for(let i=x;i<x+w;i++)if(replay[j*W+i])overlap++;replay.fill(v,j*W+x,j*W+x+w);}}
