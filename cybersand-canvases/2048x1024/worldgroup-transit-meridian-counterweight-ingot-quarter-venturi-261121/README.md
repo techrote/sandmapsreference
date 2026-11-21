@@ -23,14 +23,14 @@ Potential *unscripted* event/edit hooks: central pressure-lock activation/shutdo
 | Grounded solid cells / final detached | 747094 / 0 |
 | Detached candidate cells discarded during grounding | 80847 |
 | Non-overlapping Setup-v2 rectangles | 2593 / 32768 |
-| Setup JSON bytes | 49932 / 1048576 |
+| Setup JSON bytes | 50041 / 1048576 |
 | Material visits / work budget | 747094 / 32000000 |
 | Full Setup source-to-replay equality | All 2,097,152 cells |
 | Exact Midge clearance sites | 23/23 at 19×15, 23×19, 31×27 |
 | Physical 102×91 closure | 22/23, only high interlock blocked |
 | Indexed PNGs | 1 whole map + 6 true 1:1 material-derived crops |
 | Grid SHA-256 | `bee61157199a35f58d5921e4f90b2715a05dab3f6ba29bafc7d3b010284421c7` |
-| Setup SHA-256 | `2c182b4266af8cee7d744c90e77085bf624213babad78c0bd5ecaa07cdcb7789` |
+| Setup SHA-256 | `21b1d6333573cf813560a3e55abe8ccda3115ad61ee8c8344829262313ad80b3` |
 | Native Workbench/Godot/CyberDemoBridge/Rapier flight, save/reopen | NATIVE-UNTESTED |
 | Independent Art/Technical/Shepherd | PENDING |
 
@@ -55,3 +55,7 @@ Potential *unscripted* event/edit hooks: central pressure-lock activation/shutdo
 ![High interlock](./06-interlock-closure.png)
 
 **Retain Draft/HOLD**. No owner acceptance, Ready, merge or auto-merge. Real native qualification and independent review must use the exact PR HEAD.
+
+## Loader-fatal Setup-v2 P0 correction
+
+The previous committed Setup used obsolete seven-key `world_policy`. This exact-HEAD repair restores the accepted strict 14-key Setup-v2 envelope, updates both verifier and generator and refreshes complete Setup receipt. Material-plane hash, collision routes and all indexed PNG images are unchanged. NATIVE-UNTESTED; independent exact-head review pending.
