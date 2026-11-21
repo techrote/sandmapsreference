@@ -1,0 +1,125 @@
+{
+  "result": "STATIC-RECONSTRUCTION-PASS",
+  "native": "NATIVE-UNTESTED",
+  "engine_ref": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "grid_sha256": "2374343475cc9e55775d3b2d8104510a657ccc53d031993f362c611f807292f4",
+  "setup_sha256": "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+  "rectangles": 4905,
+  "full_grid_cells": 2097152,
+  "solid_cells": 678957,
+  "full_hull_routes": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 18,
+      "total": 18,
+      "missing": [],
+      "component_centres": 1191988
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 18,
+      "total": 18,
+      "missing": [],
+      "component_centres": 1150067
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 18,
+      "total": 18,
+      "missing": [],
+      "component_centres": 1079449
+    }
+  ],
+  "obstruction_routes": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 17,
+      "total": 18,
+      "missing": [
+        "Central fault lift datum"
+      ],
+      "component_centres": 1172988
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 17,
+      "total": 18,
+      "missing": [
+        "Central fault lift datum"
+      ],
+      "component_centres": 1129943
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 17,
+      "total": 18,
+      "missing": [
+        "Central fault lift datum"
+      ],
+      "component_centres": 1056981
+    }
+  ],
+  "pngs": [
+    {
+      "file": "overview.png",
+      "indexed_pixels": 2097152,
+      "sha256": "f480181ffedd837b4f580f520c1f1fdb2e284fc29aff0b4c8a390b910a71f7ed",
+      "png_crc": true,
+      "grid_parity": true
+    },
+    {
+      "file": "01-throat-customs.png",
+      "indexed_pixels": 162640,
+      "sha256": "afddabc7d48a92b5bcbeac62759ababa1bc37adee1ad7d140fc582fdc9f64cfe",
+      "png_crc": true,
+      "grid_parity": true
+    },
+    {
+      "file": "02-torsion-mill.png",
+      "indexed_pixels": 184240,
+      "sha256": "58e316472b6d8f65a7d3e92e2ef79121b88f9953ef946d59edcac73044604563",
+      "png_crc": true,
+      "grid_parity": true
+    },
+    {
+      "file": "03-fault-lift.png",
+      "indexed_pixels": 214272,
+      "sha256": "b964ef66ce9033bd6607095e441160e388e4ede79dba57a698e0e3e027903401",
+      "png_crc": true,
+      "grid_parity": true
+    },
+    {
+      "file": "04-cooling-archive.png",
+      "indexed_pixels": 212850,
+      "sha256": "b7e60ab7852a2752cf87e8195ea21cb4e431c440492ea92d320461018ed663eb",
+      "png_crc": true,
+      "grid_parity": true
+    },
+    {
+      "file": "05-reclaimer-terminal.png",
+      "indexed_pixels": 186140,
+      "sha256": "77693d84d2ff85df2b5a6ca1e974fc990c27d9c0dbd533ca0fb0c479a0a33e61",
+      "png_crc": true,
+      "grid_parity": true
+    }
+  ],
+  "png_pixels_verified": 3057294
+}
