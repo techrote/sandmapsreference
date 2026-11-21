@@ -162,7 +162,54 @@ function build(){
  const crops=[["overview.png",0,0,1024,2048],["01-west-clinic.png",58,161,402,402],["02-seismic-fork.png",578,218,375,452],["03-ore-transfer.png",72,752,414,447],["04-east-drill-bypass.png",574,893,377,468],["05-quarantine.png",582,1312,370,367],["06-buried-archives.png",60,1639,888,333]],pngs={},pngMeta={};let px=0;
  for(const [n,x,y,ww,hh]of crops){const p=png(w.g,w.W,x,y,ww,hh);px+=verifyPNG(p,w.g,w.W,x,y,ww,hh);pngs[n]=p;pngMeta[n]={xywh:[x,y,ww,hh],bytes:p.length,sha256:sha256(p)};}
  const receipt={schema:1,trial:"PORTRAIT-001",difficulty:"OBVIOUS",source:{pr:177,head:"ed15c1b7d8be98548d087b247ed54b4a70498b01",path:"cybersand-canvases/2048x1024/original-scifi-frontier-wide-orthant-fault-seismic-ladder-261121/"},base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine:"69209acaffb34ebe18c45e19290b5976b7fb2c82",seed:w.seed,dimensions:[1024,2048],cells:2097152,source_grid_sha256:sha,setup_sha256:setupSHA,setup_bytes:utf(setupText).length,rectangles:rects.length,construction_work:a.work,material_histogram:a.hist,ground:{total:a.total,rooted:a.rooted,detached:a.detached,pruned_provisional:w.discarded_ungrounded},fluid:{water:a.hist[3]||0,lava:a.hist[8]||0,exposed_faces:a.airfaces,water_lava_contacts:a.direct},hulls:a.flight,physical_obstruction:a.obstruction,obstructed:a.blocked,goal_distance:{direct:direct.steps,obstructed:detour.steps},pngs:pngMeta,pixel_parity:px,native:"NATIVE-UNTESTED"};
- return {setupText,receipt,pngs};
+const aspect_transfer={
+ source_extent:[2048,1024],target_extent:[1024,2048],source_pr:177,
+ source_head:"ed15c1b7d8be98548d087b247ed54b4a70498b01",
+ source_map_path:"cybersand-canvases/2048x1024/original-scifi-frontier-wide-orthant-fault-seismic-ladder-261121/",
+ difficulty:"OBVIOUS",
+ preserved:["unequal tectonic fault banks with root-connected engineering","western rover clinic and ore-processing settlement","asymmetric twin-pronged seismic receiver on an eastern station","eastern biological custody and deep entered archives","multiple broken or offset crossings and open editable shear"],
+ transformed:["horizontal western/eastern districts into alternating left/right altitude-separated stations","source three crossing grades into distinct high cable inspection, ore-stage cantilevers and fractured lower deck","two-bank wide survey into descending flight itinerary with opposite-side archive endpoints","wide seismic mast into vertical rock-supported twin fork around an upper east station"],
+ discarded:["original pixel positions and landmark coordinates","source exact bridge lengths and horizontal ordering","wide aspect edge-to-edge overflight"],
+ newly_introduced:["continuous east drill-gallery bypass around a physical 252x79 fault obstruction","deep central recovery dock linking separated archive chambers","vacant right maintenance and left bore expansion seams","right-to-left alternate return levels that rejoin a new lower fault exit"]
+};
+const route_graph={
+ spawn:"Upper fault spawn",goal:"Deep fault exit",
+ sites:w.sites.map(s=>({name:s.name,xy:[s.x,s.y]})),
+ primary:["Upper fault spawn","West rover clinic","Upper bridge landing","Mid fault exchange","Lower fault rejoin","Fault archive overlook","Deep fault exit"],
+ branches:[["Upper fault spawn","East seismic dispatch","Fork receiver station","Upper bridge landing"],["East drill bypass upper","East drill bypass middle","East drill bypass lower","Lower fault rejoin"],["West bore rescue","West lower survey","West buried archives","Lower recovery dock"]],
+ exact_hull_results:a.flight.map(q=>({hull:q.hull,sites:q.sites})),
+ obstruction:{rect:[389,980,252,79],material:58,goal_distance_direct:direct.steps,goal_distance_obstructed:detour.steps,all_named_sites_reachable_after:a.blocked.passed}
+};
+const exemplar={
+ schema_version:1,purpose:["human_editable_canvas","procedural_exemplar","scripted_setpiece_source"],
+ family:"portrait/obvious/orthant-rift-needle",map_role:"asymmetric alternating-station seismic fault with entered rescue bypass",
+ anchor_donors:[{source_pr:177,source_head:aspect_transfer.source_head}],macro_topology:"asymmetric vertical tectonic fault with alternating rock-borne frontier pockets",
+ density_profile:"compact inhabited/industrial pockets alternating on either side of a broad permanent open fault",
+ route_grammar:{"main":route_graph.primary,"alternate":route_graph.branches},
+ strong_motifs:["bank-rooted forked seismic aerial","western clinic to mineral triage","eastern bore bypass and quarantine","lower double-sided archives and recorder","fractured three-level crossing technology"],
+ interesting_relationships:["source pairwise horizontal crossings become vertical left-right station alternation","one vertical rift corridor meets actual right-bank entered bypass","medic and mine support work differ from seismic and bio-custody","deep archive recovery remains reachable when central fault is obstructed"],
+ authoring_affordances:["large reserved central fault void for live collapse scripting","unfurnished right maintenance cut for modular Gentek parts","left deep excavation seam for manual archaeology","separate broken low bridge ends for SWARM joint closure"],
+ setpiece_candidates:[{name:"seismic mast activation",region:[600,225,935,626],scripted:false},{name:"fault lane collapse",region:[386,905,935,1320],scripted:false},{name:"quarantine lockdown",region:[590,1335,942,1660],scripted:false},{name:"deep archive rescue",region:[82,1655,945,1966],scripted:false}],
+ procedural_exemplar_value:"Vertical transfer of a wide two-bank engineering world: stations alternate height/side while a real independently entered branch bypass preserves main-flight recovery and future authored voids.",
+ similarity_avoidance:"Unlike the source Orthant's lateral fault colony, this portrait descends through sequential left/right stations, adds a separate right drill return and paired deep archive terminal without copying any source coordinates.",
+ diversity_axes:{macro_topology:"vertical_fault",altitude_grammar:"vertical_spine",density_cadence:"alternating",route_structure:"branch_rejoin",landmark_family:"tower",support_form:"cliff_embedded",environment_relation:"geological",incompleteness:"modular_append_zones"},
+ grid_sha256:sha,native:"NATIVE-UNTESTED"
+};
+const readme=[
+ "# Rift Needle - Alternating Seismic Stations",
+ "",
+ "PORTRAIT-001 Creator A | OBVIOUS | 1024x2048 actual material cells | Draft/HOLD | NATIVE-UNTESTED",
+ "Source Orthant Fault PR #177 exact HEAD "+aspect_transfer.source_head,
+ "Source folder "+aspect_transfer.source_map_path,
+ "Read-only engine authority techrote/cybersand/main@69209acaffb34ebe18c45e19290b5976b7fb2c82.",
+ "A genuinely new recomposition: alternating west rover clinic, east seismic mast, west ore, east quarantine and paired deep archives along a tall fault. An entered east drill gallery bypasses a real obstacle.",
+ "The map is not rotated, cropped, scaled or coordinate-transplanted from the original. It retains deliberate editing voids.",
+ "The reproducible standalone Node.js builder regenerates exact Setup, receipt, route_graph, aspect_transfer, exemplar and all indexed-material PNGs. Run node build.cjs .",
+ "Six full-resolution 1:1 crops plus an authentic 1024x2048 indexed overview derive exclusively from the final committed material plane.",
+ "The 19x15, 23x19 and 31x27 whole-hull free-centre BFS uses literal sites and four-neighbour movement. Actual installed Workbench/Rapier and cold save-reopen are NOT TESTED.",
+ "No merge/Ready promotion or owner acceptance."
+].join("\n")+"\n";
+ return {setupText,receipt,pngs,aspect_transfer,route_graph,exemplar,readme};
 }
-if(typeof require!=="undefined" && typeof module!=="undefined" && require.main===module){const fs=require("fs"),path=require("path"),d=process.argv[2]||__dirname;fs.mkdirSync(d,{recursive:true});const a=build();fs.writeFileSync(path.join(d,"setup.json"),a.setupText);fs.writeFileSync(path.join(d,"receipt.json"),JSON.stringify(a.receipt,null,2)+"\n");for(const[n,v]of Object.entries(a.pngs))fs.writeFileSync(path.join(d,n),v);console.log(a.receipt);}
+if(typeof require!=="undefined" && typeof module!=="undefined" && require.main===module){const fs=require("fs"),path=require("path"),d=process.argv[2]||__dirname;fs.mkdirSync(d,{recursive:true});const a=build();fs.writeFileSync(path.join(d,"setup.json"),a.setupText);fs.writeFileSync(path.join(d,"receipt.json"),JSON.stringify(a.receipt,null,2)+"\n");for(const[n,v]of Object.entries(a.pngs))fs.writeFileSync(path.join(d,n),v);for(const [n,v] of [["aspect_transfer.json",a.aspect_transfer],["route_graph.json",a.route_graph],["exemplar.json",a.exemplar]])fs.writeFileSync(path.join(d,n),JSON.stringify(v,null,2)+"\n");fs.writeFileSync(path.join(d,"README.md"),a.readme);console.log(a.receipt);}
 if(typeof module!=="undefined")module.exports={build,world,encode,audit,shortest31,png,verifyPNG};
