@@ -1,0 +1,657 @@
+{
+  "schema": 1,
+  "concept": "Spindlebreak Fault-Cable Smeltery",
+  "original_no_source": true,
+  "seed": 261121347,
+  "base_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "extent": [
+    2048,
+    1024
+  ],
+  "plane_sha256": "0c4f5136ef437bf27f00227f7cea4312b6fff7ff2aa228c1fdab1689043caf69",
+  "setup_sha256": "4c4c0b2665c4fca23999ae89290feeeb2b1fa004cdc60bba50139f8b1a8d610e",
+  "json_bytes": 39988,
+  "rectangle_count": 2075,
+  "rectangle_limit": 32768,
+  "construction_work": 680201,
+  "material_histogram": {
+    "0": 1416951,
+    "3": 9620,
+    "8": 6715,
+    "58": 105885,
+    "62": 62492,
+    "65": 36262,
+    "68": 27743,
+    "69": 6643,
+    "76": 6101,
+    "79": 1982,
+    "100": 349965,
+    "104": 12807,
+    "117": 29986,
+    "131": 24000
+  },
+  "ground": {
+    "total": 663866,
+    "rooted": 663866,
+    "detached": 0,
+    "finalisation": {
+      "components": 34,
+      "links": 939,
+      "maxLink": 288
+    }
+  },
+  "fluid": {
+    "water": 9620,
+    "lava": 6715,
+    "exposed_air_faces": 0,
+    "water_lava_contacts": 0
+  },
+  "flight": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 1184485,
+      "connected_centres": 1077954,
+      "passed": 17,
+      "sites": [
+        {
+          "name": "West fault spawn",
+          "x": 100,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore dock",
+          "x": 192,
+          "y": 429,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Thermal oversight",
+          "x": 451,
+          "y": 399,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace outlet",
+          "x": 555,
+          "y": 409,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper west",
+          "x": 556,
+          "y": 140,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway west",
+          "x": 847,
+          "y": 140,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway east",
+          "x": 1127,
+          "y": 140,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle gallery",
+          "x": 836,
+          "y": 388,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Fault basin",
+          "x": 1020,
+          "y": 422,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster inspection",
+          "x": 1270,
+          "y": 413,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roller observation",
+          "x": 1404,
+          "y": 419,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1570,
+          "y": 423,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench diagnostics",
+          "x": 1707,
+          "y": 437,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight elevator",
+          "x": 1846,
+          "y": 438,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 1960,
+          "y": 441,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Underbridge traverse",
+          "x": 934,
+          "y": 719,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Fault return",
+          "x": 1063,
+          "y": 733,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 1136405,
+      "connected_centres": 1044087,
+      "passed": 17,
+      "sites": [
+        {
+          "name": "West fault spawn",
+          "x": 100,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore dock",
+          "x": 192,
+          "y": 429,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Thermal oversight",
+          "x": 451,
+          "y": 399,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace outlet",
+          "x": 555,
+          "y": 409,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper west",
+          "x": 556,
+          "y": 140,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway west",
+          "x": 847,
+          "y": 140,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway east",
+          "x": 1127,
+          "y": 140,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle gallery",
+          "x": 836,
+          "y": 388,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Fault basin",
+          "x": 1020,
+          "y": 422,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster inspection",
+          "x": 1270,
+          "y": 413,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roller observation",
+          "x": 1404,
+          "y": 419,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1570,
+          "y": 423,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench diagnostics",
+          "x": 1707,
+          "y": 437,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight elevator",
+          "x": 1846,
+          "y": 438,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 1960,
+          "y": 441,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Underbridge traverse",
+          "x": 934,
+          "y": 719,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Fault return",
+          "x": 1063,
+          "y": 733,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 1047983,
+      "connected_centres": 971310,
+      "passed": 17,
+      "sites": [
+        {
+          "name": "West fault spawn",
+          "x": 100,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore dock",
+          "x": 192,
+          "y": 429,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Thermal oversight",
+          "x": 451,
+          "y": 399,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Furnace outlet",
+          "x": 555,
+          "y": 409,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper west",
+          "x": 556,
+          "y": 140,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway west",
+          "x": 847,
+          "y": 140,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Cableway east",
+          "x": 1127,
+          "y": 140,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle gallery",
+          "x": 836,
+          "y": 388,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Fault basin",
+          "x": 1020,
+          "y": 422,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster inspection",
+          "x": 1270,
+          "y": 413,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Roller observation",
+          "x": 1404,
+          "y": 419,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench inspection",
+          "x": 1570,
+          "y": 423,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench diagnostics",
+          "x": 1707,
+          "y": 437,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight elevator",
+          "x": 1846,
+          "y": 438,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 1960,
+          "y": 441,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Underbridge traverse",
+          "x": 934,
+          "y": 719,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Fault return",
+          "x": 1063,
+          "y": 733,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "obstruction": [
+    930,
+    108,
+    130,
+    128
+  ],
+  "blocked": {
+    "hull": [
+      31,
+      27
+    ],
+    "valid_centres": 1029858,
+    "connected_centres": 953185,
+    "passed": 17,
+    "sites": [
+      {
+        "name": "West fault spawn",
+        "x": 100,
+        "y": 380,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ore dock",
+        "x": 192,
+        "y": 429,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Thermal oversight",
+        "x": 451,
+        "y": 399,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Furnace outlet",
+        "x": 555,
+        "y": 409,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Upper west",
+        "x": 556,
+        "y": 140,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Cableway west",
+        "x": 847,
+        "y": 140,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Cableway east",
+        "x": 1127,
+        "y": 140,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ladle gallery",
+        "x": 836,
+        "y": 388,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Fault basin",
+        "x": 1020,
+        "y": 422,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Caster inspection",
+        "x": 1270,
+        "y": 413,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Roller observation",
+        "x": 1404,
+        "y": 419,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Quench inspection",
+        "x": 1570,
+        "y": 423,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Quench diagnostics",
+        "x": 1707,
+        "y": 437,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Freight elevator",
+        "x": 1846,
+        "y": 438,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "East rim goal",
+        "x": 1960,
+        "y": 441,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Underbridge traverse",
+        "x": 934,
+        "y": 719,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Fault return",
+        "x": 1063,
+        "y": 733,
+        "clear": true,
+        "reached": true
+      }
+    ]
+  },
+  "shortest_goal": {
+    "direct": 2485,
+    "blocked": 2575,
+    "delta": 90
+  },
+  "pngs": {
+    "overview.png": {
+      "xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2098812,
+      "sha256": "5a7abf7418ffcdff64b3f1a083bf55f8766a6e52ffe6326f9a384d6ca97f69ff"
+    },
+    "ore.png": {
+      "xywh": [
+        0,
+        334,
+        415,
+        380
+      ],
+      "bytes": 158566,
+      "sha256": "ab6b40eac38171ec3423f23d3bc6aee75bf18575f4206e161a02f4dc432b5a63"
+    },
+    "thermal.png": {
+      "xywh": [
+        330,
+        348,
+        650,
+        385
+      ],
+      "bytes": 251126,
+      "sha256": "a98ad432ef344d1942167b81bde5315750fb3098ea93d5af2a3a17d3ae1ba5cc"
+    },
+    "fault-cable.png": {
+      "xywh": [
+        590,
+        110,
+        640,
+        680
+      ],
+      "bytes": 436386,
+      "sha256": "3e6669390e45f95982d35ba204f0d3fe0b84fc2bf2f343d116400bbfd95b9ddf"
+    },
+    "roller-caster.png": {
+      "xywh": [
+        1170,
+        364,
+        330,
+        416
+      ],
+      "bytes": 138182,
+      "sha256": "6d9d0621e6c684a68efa235ff3dcea1ca513bab9d9fc17111392c8789ac255ea"
+    },
+    "quench-freight.png": {
+      "xywh": [
+        1450,
+        358,
+        598,
+        424
+      ],
+      "bytes": 254467,
+      "sha256": "837e0fa7dcaf9d8bfbd3975df0572cbf5a4a71dd4ecfc4a301b067322e52401b"
+    },
+    "underbridge.png": {
+      "xywh": [
+        624,
+        688,
+        576,
+        300
+      ],
+      "bytes": 173586,
+      "sha256": "2be61409058b58dcf45a78be025c01386f10c5b5920a90011347a4bfa491ceec"
+    }
+  },
+  "material_pixel_parity": 3503934,
+  "native": "NATIVE-UNTESTED"
+}
