@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Shearline Split-Lane Trials",
+  "lane": "worldgroup/transit",
+  "map_role": "Sibling 02 — Knuckle-Bend Rally / Pit Chicane District, two opposed racing S-bends and four entered service workfaces",
+  "anchor_donors": [
+    {
+      "name": "wide-tungsten-sawtooth-tramworks",
+      "pr": 69,
+      "head": "7fc24855cf521c90bf67f4afb08685e490473201",
+      "role": "Read-only steel/amber/ivory timing signal and supported industrial load-path culture; no anchor geometry, pixels or routes reused"
+    }
+  ],
+  "macro_topology": "braided",
+  "density_profile": "dense west timing and heavy two-knuckle bends alternating with open central sightline, smaller equipped undertrack workfaces and spare racing expansion voids",
+  "route_grammar": {
+    "risky_fast": "upper asymmetric crest around Knuckle A and reverse-camber Knuckle B with straight launch/rejoin approaches",
+    "sheltered": "two substantially lower, physically traversable bypasses through actual excavated slalom and service slots",
+    "interchanges": "bounded full-hull cut-throughs at west pit, A transfer, centre inspection, B infield and eastern rescue, plus alternate undertrack apertures",
+    "obstruction": "temporary inert [511,178,98,196] upper approach closure; all 30 sites still reachable at 31x27, shortest A approach→A crest 360→494 (+134) centre steps"
+  },
+  "strong_motifs": [
+    "opposed asymmetrical S-shaped grounded racing knuckles",
+    "short amber-flagged risky upper crests",
+    "sheltered under-ridge rally bends",
+    "roof-rooted A right knuckle tendon",
+    "static eastern three-leg brake harp",
+    "four entered differently sized undertrack workfaces",
+    "recoverable broken eastern spur"
+  ],
+  "interesting_relationships": [
+    "Knuckle A rises rapidly then descends while Knuckle B reverses the camber and extends farther toward the rescue district",
+    "different branch/rejoin approaches use clear carved material openings, rather than visually ambiguous open-air gaps",
+    "temporary upper-track obstruction makes sheltered recovery more expensive but remains physically feasible",
+    "large industrial silhouettes reserve empty authoring sockets without sealing their pit access"
+  ],
+  "authoring_affordances": [
+    "west timing launch and NPC/checkpoint placement",
+    "sheltered racing bypass for manually authored speed/risk events",
+    "central inspection room and vacant off-track staging",
+    "damaged east spur suitable for user repair, bridge-failure or chase staging",
+    "four entered equipment bays for SWARM-derived part assembly"
+  ],
+  "setpiece_candidates": [
+    "rally start/timing gate",
+    "A camber obstacle and alternative detour",
+    "center slalom chase or service holdout",
+    "east air-brake harp and broken-spur rescue"
+  ],
+  "procedural_exemplar_value": "Corpus exemplar of two deliberately different S-bend racing modules, real high/low alternate choices, multiple full-hull rejoin gateways and grounded machinery whose material obstruction changes the shortest conservative route.",
+  "similarity_avoidance": "Unlike sibling 01's long, mostly straight fast/safe counterflow, this scene relies on opposed knuckle-shaped solid ridge surfaces, a compressed chicane/reset cadence, asymmetric camber, larger per-turn landmarks and entered repair pockets. No radial wheel, alternating sawtooth baffles, vertical fault, civic canopy or pier-chain repetition.",
+  "diversity_axes": {
+    "macro_topology": "braided",
+    "altitude_grammar": "tri_level",
+    "density_cadence": "dense_open_dense",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "mixed",
+    "support_form": "mixed",
+    "environment_relation": "dry",
+    "incompleteness": "editable_gaps"
+  },
+  "native_qualification": "NATIVE-UNTESTED",
+  "event_scripts_implemented": false
+}
