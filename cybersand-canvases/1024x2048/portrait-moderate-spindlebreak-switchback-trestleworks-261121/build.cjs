@@ -51,6 +51,34 @@ function shortest31(world,block){
  return {steps:dist[finish],visited:tail};
 }
 
+// Explicit ordered path through each **literal** 31x27 Midge portal centre.
+// This proves feasible traversability, not a forced autonomous route, cinematic
+// crossing, native physics or optimal shortest path through the portal.
+function witness31(world,named,block){
+ const {W,H}=world,N=W*H,grid=block?world.g.slice():world.g,S=W+1,integral=new Int32Array(S*(H+1));
+ if(block){const [x,y,w,h]=block;for(let yy=y;yy<y+h;yy++)grid.fill(58,yy*W+x,yy*W+x+w);}
+ for(let y=1;y<=H;y++){let run=0;for(let x=1;x<=W;x++){run+=grid[(y-1)*W+x-1]?1:0;integral[y*S+x]=integral[(y-1)*S+x]+run;}}
+ const free=new Uint8Array(N);for(let y=13;y+14<=H;y++)for(let x=15;x+16<=W;x++){
+  const l=x-15,t=y-13,r=l+31,b=t+27;
+  if(integral[b*S+r]-integral[t*S+r]-integral[b*S+l]+integral[t*S+l]===0)free[y*W+x]=1;
+ }
+ const legs=[],queue=new Int32Array(N),visit=new Int32Array(N);let total=0,serial=0;
+ for(let k=1;k<named.length;k++){
+  const from=named[k-1],to=named[k],start=from.xy[1]*W+from.xy[0],goal=to.xy[1]*W+to.xy[0];
+  if(!free[start]||!free[goal])throw Error("portal centre blocked "+from.name+" -> "+to.name);
+  serial++;let a=0,z=0;queue[z++]=start;visit[start]=serial;const dist=new Int32Array(N);let found=false;
+  while(a<z){
+   let i=queue[a++];if(i===goal){found=true;break;}let x=i%W;
+   for(const j of [x?i-1:-1,x<W-1?i+1:-1,i>=W?i-W:-1,i+W<N?i+W:-1])
+    if(j>=0&&free[j]&&visit[j]!==serial){visit[j]=serial;dist[j]=dist[i]+1;queue[z++]=j;}
+  }
+  if(!found)throw Error("portal chain disconnected "+from.name+" -> "+to.name);
+  total+=dist[goal];legs.push({from:from.name,to:to.name,steps:dist[goal]});
+ }
+ return {hull:[31,27],proof:"ordered literal free-centre portal path; no forced shortest route or native test",
+  centres:named,legs,total_steps:total,clear_and_connected:true};
+}
+
 function concat(arr){const n=arr.reduce((p,a)=>p+a.length,0),out=new Uint8Array(n);let j=0;for(const a of arr){out.set(a,j);j+=a.length;}return out;}
 
 function b32(k){return Uint8Array.of((k>>>24)&255,(k>>>16)&255,(k>>>8)&255,k&255);}
@@ -78,11 +106,28 @@ function build(){
  const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),direct=shortest31(w,null),detour=shortest31(w,[440,1010,125,67]);
  if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||detour.steps<=direct.steps)
  throw Error("STATIC_GATE "+JSON.stringify({detached:a.detached,fluid:[a.airfaces,a.direct],passed:a.flight.map(f=>f.passed),bad:a.flight[2].sites.filter(s=>!s.reached),blocked:a.blocked.passed,steps:[direct.steps,detour.steps]}));
+ const portal_routes={
+  high:witness31(w,[
+   {name:"cable west launch",xy:[345,799]},
+   {name:"upper cable service gap",xy:[488,800]},
+   {name:"suspended deck Midge opening",xy:[565,915]},
+   {name:"east deck receiving slot",xy:[735,902]},
+   {name:"cable east arrival",xy:[773,904]}
+  ]),
+  low:witness31(w,[
+   {name:"west heavy-truss footing",xy:[327,1156]},
+   {name:"west load-bearing gate",xy:[370,1118]},
+   {name:"intermediate lower switchback",xy:[505,1170]},
+   {name:"lower chord access hatch",xy:[520,1252]},
+   {name:"east load-bearing gate",xy:[690,1105]},
+   {name:"east heavy-truss footing",xy:[756,1192]}
+  ])
+ };
  const setup={version:2,extent:[1024,2048],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:w.spawn,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:2}}],next_id:2,selected:1,edits:rects,response:"LA-SELECTIVE",liquid_policy:[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
  const setupText=JSON.stringify(setup),sha=sha256(w.g),setupSHA=sha256(utf(setupText));if(rects.length>32768||utf(setupText).length>1048576)throw Error("Setup limit");
  const crops=[["overview.png",0,0,1024,2048],["01-ore-intake.png",100,175,420,305],["02-furnace-ladle.png",100,420,820,370],["03-high-cableway.png",100,735,825,260],["04-lower-trestle.png",100,1000,825,280],["05-casting-ramways.png",100,1230,475,372],["06-quench-export.png",100,1530,825,446]],pngs={},pngMeta={};let px=0;
  for(const [n,x,y,ww,hh]of crops){const p=png(w.g,w.W,x,y,ww,hh);px+=verifyPNG(p,w.g,w.W,x,y,ww,hh);pngs[n]=p;pngMeta[n]={xywh:[x,y,ww,hh],bytes:p.length,sha256:sha256(p)};}
- const receipt={schema:1,trial:"PORTRAIT-001",difficulty:"MODERATE",source:{pr:135,head:"a3f9962a0107d07bca1116940fde1c825ac76a4f",path:"cybersand-canvases/2048x1024/original-industrial-foundry-wide-spindlebreak-fault-cable-smeltery-261121/"},base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine:"69209acaffb34ebe18c45e19290b5976b7fb2c82",seed:w.seed,dimensions:[1024,2048],cells:2097152,source_grid_sha256:sha,setup_sha256:setupSHA,setup_bytes:utf(setupText).length,rectangles:rects.length,construction_work:a.work,material_histogram:a.hist,ground:{total:a.total,rooted:a.rooted,detached:a.detached,pruned_provisional:w.discarded_ungrounded},fluid:{water:a.hist[3]||0,lava:a.hist[8]||0,exposed_faces:a.airfaces,water_lava_contacts:a.direct},hulls:a.flight,physical_obstruction:a.obstruction,obstructed:a.blocked,goal_distance:{direct:direct.steps,obstructed:detour.steps},pngs:pngMeta,pixel_parity:px,native:"NATIVE-UNTESTED"};
+ const receipt={schema:1,trial:"PORTRAIT-001",difficulty:"MODERATE",source:{pr:135,head:"a3f9962a0107d07bca1116940fde1c825ac76a4f",path:"cybersand-canvases/2048x1024/original-industrial-foundry-wide-spindlebreak-fault-cable-smeltery-261121/"},base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine:"69209acaffb34ebe18c45e19290b5976b7fb2c82",seed:w.seed,dimensions:[1024,2048],cells:2097152,source_grid_sha256:sha,setup_sha256:setupSHA,setup_bytes:utf(setupText).length,rectangles:rects.length,construction_work:a.work,material_histogram:a.hist,ground:{total:a.total,rooted:a.rooted,detached:a.detached,pruned_provisional:w.discarded_ungrounded},fluid:{water:a.hist[3]||0,lava:a.hist[8]||0,exposed_faces:a.airfaces,water_lava_contacts:a.direct},hulls:a.flight,physical_obstruction:a.obstruction,obstructed:a.blocked,goal_distance:{direct:direct.steps,obstructed:detour.steps},portal_routes,pngs:pngMeta,pixel_parity:px,native:"NATIVE-UNTESTED"};
  return {setupText,receipt,pngs};
 }
 if(typeof require!=="undefined" && typeof module!=="undefined" && require.main===module){const fs=require("fs"),path=require("path"),d=process.argv[2]||__dirname;fs.mkdirSync(d,{recursive:true});const a=build();fs.writeFileSync(path.join(d,"setup.json"),a.setupText);fs.writeFileSync(path.join(d,"receipt.json"),JSON.stringify(a.receipt,null,2)+"\n");for(const[n,v]of Object.entries(a.pngs))fs.writeFileSync(path.join(d,n),v);console.log(a.receipt);}
