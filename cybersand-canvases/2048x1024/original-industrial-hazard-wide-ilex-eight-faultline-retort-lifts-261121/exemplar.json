@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-hazard-wide",
+  "map_role": "Unequal cliff-rooted retort and quench workhouses flanking a recoverable fault-spindle",
+  "anchor_donors": [],
+  "macro_topology": [
+    "vertical_fault",
+    "nested_cavities"
+  ],
+  "density_profile": "machine-dense west and east shoulders, open central fault throat and sparse editable underdeck bays",
+  "route_grammar": {
+    "main": "arrival -> manifold canopy -> retort upper -> spindle upper -> quench canopy -> exhaust overlook -> extraction",
+    "alternatives": [
+      "four open public 47-cell vertical access throats",
+      "entered intermediate process galleries",
+      "underdeck salvage and recovery routes"
+    ],
+    "obstruction": [
+      926,
+      0,
+      62,
+      355
+    ]
+  },
+  "strong_motifs": [
+    "opposed grounded tectonic shear ribs",
+    "unequal retort arches",
+    "obliquely supported open central lift spindle",
+    "triple quench housings",
+    "asymmetric extraction exhaust"
+  ],
+  "interesting_relationships": [
+    "a geological fault divides workhouses without eliminating sky and dry return routes",
+    "water and lava specimens are contained in inert rooted cells",
+    "the missing transfer is a real material gap",
+    "workbays are intentionally left available for human authoring"
+  ],
+  "authoring_affordances": [
+    "west underdeck salvage",
+    "retort service alcove",
+    "fault lift activation slot",
+    "quench transfer bay",
+    "eastern evacuation gallery"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "fault-spindle",
+      "event": "lift/chase",
+      "scripted": false
+    },
+    {
+      "site": "interrupted gantry",
+      "event": "bridge collapse/repair",
+      "scripted": false
+    },
+    {
+      "site": "quench house",
+      "event": "future contained thermal release",
+      "scripted": false
+    },
+    {
+      "site": "extraction",
+      "event": "NPC evacuation",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Faultside engineering and a dense-open-dense route grammar give an alternative to symmetric crater rings and disconnected cable islands.",
+  "similarity_avoidance": "Unlike Cairn-9's crater annulus or Yarrow-3's broken cableway islands, this map has floor-rooted opposing shear cliffs, a joined central spindle, entered multi-storey workhouses and asymmetric eastern extraction.",
+  "diversity_axes": {
+    "macro_topology": "vertical_fault",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "layered",
+    "landmark_family": "tower",
+    "support_form": "mixed",
+    "environment_relation": "geological",
+    "incompleteness": "editable_gaps"
+  },
+  "sites": [
+    {
+      "name": "Arrival",
+      "x": 62,
+      "y": 238
+    },
+    {
+      "name": "Manifold canopy",
+      "x": 265,
+      "y": 239
+    },
+    {
+      "name": "Manifold assay",
+      "x": 268,
+      "y": 558
+    },
+    {
+      "name": "Manifold salvage",
+      "x": 265,
+      "y": 820
+    },
+    {
+      "name": "Retort overlook",
+      "x": 624,
+      "y": 240
+    },
+    {
+      "name": "Retort station",
+      "x": 622,
+      "y": 605
+    },
+    {
+      "name": "Retort return",
+      "x": 618,
+      "y": 816
+    },
+    {
+      "name": "West fault edge",
+      "x": 817,
+      "y": 245
+    },
+    {
+      "name": "Fault recovery",
+      "x": 969,
+      "y": 819
+    },
+    {
+      "name": "Spindle overlook",
+      "x": 1095,
+      "y": 252
+    },
+    {
+      "name": "Spindle service",
+      "x": 1090,
+      "y": 635
+    },
+    {
+      "name": "Quench canopy",
+      "x": 1472,
+      "y": 246
+    },
+    {
+      "name": "Quench station",
+      "x": 1494,
+      "y": 623
+    },
+    {
+      "name": "Quench recovery",
+      "x": 1501,
+      "y": 821
+    },
+    {
+      "name": "Exhaust overlook",
+      "x": 1838,
+      "y": 245
+    },
+    {
+      "name": "Exhaust salvage",
+      "x": 1857,
+      "y": 821
+    },
+    {
+      "name": "Extraction",
+      "x": 1981,
+      "y": 243
+    }
+  ]
+}

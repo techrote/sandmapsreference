@@ -1,0 +1,319 @@
+{
+  "title": "Ilex-8 Faultline Retort Lifts",
+  "seed": 2026112108,
+  "canvas_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_main_readonly": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "source_grid_dimensions": [
+    2048,
+    1024
+  ],
+  "final_material_cells": 2097152,
+  "material_sha256": "07c171f92283ad39a3a4a5eda6697b092db580e2531afe3e4238505476c27b57",
+  "setup_sha256": "3e38b2c1ac417cf3f2ed153307eb4b3793f7217dbb0d5e0255d46e6ba93b6e18",
+  "setup_bytes": 45382,
+  "rectangles": 2358,
+  "work_cells": 508891,
+  "histogram": {
+    "0": 1588261,
+    "3": 3122,
+    "8": 2016,
+    "58": 169604,
+    "100": 171389,
+    "101": 109470,
+    "117": 50768,
+    "120": 2522
+  },
+  "solids": {
+    "total": 503753,
+    "grounded": 503753,
+    "detached": 0
+  },
+  "fluid_cells": 5138,
+  "clearance": {
+    "19x15": {
+      "sites": 17,
+      "centres": 1202001
+    },
+    "23x19": {
+      "sites": 17,
+      "centres": 1121452
+    },
+    "31x27": {
+      "sites": 17,
+      "centres": 1030567
+    }
+  },
+  "obstruction": {
+    "obstruction": [
+      926,
+      0,
+      62,
+      355
+    ],
+    "sites": 17,
+    "detours": [
+      {
+        "name": "Arrival",
+        "added": 0,
+        "original": 0,
+        "obstructed": 0
+      },
+      {
+        "name": "Manifold canopy",
+        "added": 0,
+        "original": 204,
+        "obstructed": 204
+      },
+      {
+        "name": "Manifold assay",
+        "added": 0,
+        "original": 884,
+        "obstructed": 884
+      },
+      {
+        "name": "Manifold salvage",
+        "added": 0,
+        "original": 1149,
+        "obstructed": 1149
+      },
+      {
+        "name": "Retort overlook",
+        "added": 0,
+        "original": 564,
+        "obstructed": 564
+      },
+      {
+        "name": "Retort station",
+        "added": 0,
+        "original": 1341,
+        "obstructed": 1341
+      },
+      {
+        "name": "Retort return",
+        "added": 0,
+        "original": 1556,
+        "obstructed": 1556
+      },
+      {
+        "name": "West fault edge",
+        "added": 0,
+        "original": 762,
+        "obstructed": 762
+      },
+      {
+        "name": "Fault recovery",
+        "added": 0,
+        "original": 1542,
+        "obstructed": 1542
+      },
+      {
+        "name": "Spindle overlook",
+        "added": 232,
+        "original": 1047,
+        "obstructed": 1279
+      },
+      {
+        "name": "Spindle service",
+        "added": 0,
+        "original": 1425,
+        "obstructed": 1425
+      },
+      {
+        "name": "Quench canopy",
+        "added": 244,
+        "original": 1418,
+        "obstructed": 1662
+      },
+      {
+        "name": "Quench station",
+        "added": 32,
+        "original": 1817,
+        "obstructed": 1849
+      },
+      {
+        "name": "Quench recovery",
+        "added": 32,
+        "original": 2022,
+        "obstructed": 2054
+      },
+      {
+        "name": "Exhaust overlook",
+        "added": 246,
+        "original": 1783,
+        "obstructed": 2029
+      },
+      {
+        "name": "Exhaust salvage",
+        "added": 32,
+        "original": 2378,
+        "obstructed": 2410
+      },
+      {
+        "name": "Extraction",
+        "added": 250,
+        "original": 1924,
+        "obstructed": 2174
+      }
+    ]
+  },
+  "sites": [
+    [
+      "Arrival",
+      62,
+      238
+    ],
+    [
+      "Manifold canopy",
+      265,
+      239
+    ],
+    [
+      "Manifold assay",
+      268,
+      558
+    ],
+    [
+      "Manifold salvage",
+      265,
+      820
+    ],
+    [
+      "Retort overlook",
+      624,
+      240
+    ],
+    [
+      "Retort station",
+      622,
+      605
+    ],
+    [
+      "Retort return",
+      618,
+      816
+    ],
+    [
+      "West fault edge",
+      817,
+      245
+    ],
+    [
+      "Fault recovery",
+      969,
+      819
+    ],
+    [
+      "Spindle overlook",
+      1095,
+      252
+    ],
+    [
+      "Spindle service",
+      1090,
+      635
+    ],
+    [
+      "Quench canopy",
+      1472,
+      246
+    ],
+    [
+      "Quench station",
+      1494,
+      623
+    ],
+    [
+      "Quench recovery",
+      1501,
+      821
+    ],
+    [
+      "Exhaust overlook",
+      1838,
+      245
+    ],
+    [
+      "Exhaust salvage",
+      1857,
+      821
+    ],
+    [
+      "Extraction",
+      1981,
+      243
+    ]
+  ],
+  "images": {
+    "overview.png": {
+      "bytes": 30295,
+      "sha256": "8fbd16fa3fc65f45defe0a18289fb372a27da6f9c8b53af0507d3575c6482383",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-manifold.png": {
+      "bytes": 7346,
+      "sha256": "9d1a934144de269414626216803d50557c31f77d3acc358bada60aa1c8375450",
+      "crop": [
+        38,
+        308,
+        418,
+        605
+      ]
+    },
+    "02-retorts.png": {
+      "bytes": 6697,
+      "sha256": "9144558860eb2bf5325358237d46ce3e473f8a935c21a83642db5714c3f41699",
+      "crop": [
+        471,
+        324,
+        340,
+        596
+      ]
+    },
+    "03-fault-spindle.png": {
+      "bytes": 7315,
+      "sha256": "cceb387987fef8f9f5b537055423f3d4bbd9b46f1e2ef810e45d8e0125f3e4e3",
+      "crop": [
+        807,
+        316,
+        510,
+        600
+      ]
+    },
+    "04-quench.png": {
+      "bytes": 6686,
+      "sha256": "c8f17215f43559d11bd16270985f36daaf27a607f158f503b6cc55d4c2b00afc",
+      "crop": [
+        1335,
+        320,
+        441,
+        602
+      ]
+    },
+    "05-exhaust.png": {
+      "bytes": 5973,
+      "sha256": "4522db86e98d890cbb85b62438fc302d14c655de5ece27607c8d6d97dbc61439",
+      "crop": [
+        1780,
+        309,
+        257,
+        602
+      ]
+    },
+    "06-recovery.png": {
+      "bytes": 2706,
+      "sha256": "2ab055fae6ef1416674400ffb3484108a5f704485e3e6ae912f7a27bf1b3f986",
+      "crop": [
+        707,
+        719,
+        670,
+        205
+      ]
+    }
+  },
+  "status": "CREATOR-STATIC PASS / NATIVE-UNTESTED"
+}
