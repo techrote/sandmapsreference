@@ -221,7 +221,7 @@ function build(){
      clearance[w+"x"+h]={reached:SITES.length,centres:z.centres};
      if(w===31)base=z.dist;
    }
-   const barrier=[895,0,79,438],blocked=g.slice();
+   const barrier=[895,0,79,340],blocked=g.slice();
    for(let y=0;y<barrier[3];y++)blocked.fill(58,y*W+barrier[0],y*W+barrier[0]+barrier[2]);
    let detours={},forced=0;
    for(let [w,h] of [[19,15],[23,19],[31,27]]){
