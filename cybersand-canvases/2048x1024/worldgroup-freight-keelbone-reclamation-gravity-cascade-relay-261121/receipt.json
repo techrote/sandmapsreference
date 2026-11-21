@@ -1,0 +1,309 @@
+{
+  "concept": "Keelbone Reclamation Vaults — Gravity Cascade Relay / Counterweight Return",
+  "original": true,
+  "seed": 40569139,
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West arrivals",
+      "Hull intake apron",
+      "First gravity sorter",
+      "Second classifier",
+      "Third assay ledge",
+      "Fourth consolidation",
+      "Reclaimer receiver",
+      "East cargo registration",
+      "East export"
+    ],
+    "high": [
+      "Western ledger sky",
+      "Highline west",
+      "Mid shaft overlook",
+      "Highline east",
+      "Upper counterweight",
+      "Counterweight crane"
+    ],
+    "lower": [
+      "West lower relief",
+      "Central lower relief",
+      "East lower relief"
+    ],
+    "quarters": [
+      "Crew portal",
+      "East cargo registration",
+      "East export"
+    ],
+    "staging": [
+      "Upper observation",
+      "Damaged dock socket"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West arrivals": [
+      80,
+      541
+    ],
+    "Western ledger sky": [
+      294,
+      342
+    ],
+    "Hull intake apron": [
+      459,
+      419
+    ],
+    "Clamp servicing": [
+      475,
+      659
+    ],
+    "Highline west": [
+      650,
+      382
+    ],
+    "Highline east": [
+      1320,
+      382
+    ],
+    "First gravity sorter": [
+      609,
+      453
+    ],
+    "Second classifier": [
+      862,
+      548
+    ],
+    "Third assay ledge": [
+      1081,
+      632
+    ],
+    "Fourth consolidation": [
+      1378,
+      715
+    ],
+    "Mid shaft overlook": [
+      1140,
+      329
+    ],
+    "Upper counterweight": [
+      1551,
+      220
+    ],
+    "Counterweight crane": [
+      1640,
+      479
+    ],
+    "Reclaimer receiver": [
+      1455,
+      680
+    ],
+    "East cargo registration": [
+      1739,
+      623
+    ],
+    "Crew portal": [
+      1663,
+      593
+    ],
+    "East export": [
+      1998,
+      617
+    ],
+    "Damaged dock socket": [
+      2010,
+      748
+    ],
+    "West lower relief": [
+      281,
+      866
+    ],
+    "Central lower relief": [
+      936,
+      868
+    ],
+    "East lower relief": [
+      1791,
+      865
+    ],
+    "Upper observation": [
+      1036,
+      131
+    ]
+  },
+  "material_histogram": {
+    "0": 1643015,
+    "58": 106573,
+    "62": 106955,
+    "100": 240609
+  },
+  "stable_occupied_cells": 454137,
+  "grounded": 454137,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 10421,
+  "invalid_writes": 0,
+  "rectangles": 1683,
+  "rectangle_work": 454137,
+  "setup_bytes": 32116,
+  "material_plane_sha256": "23e57f0d3adf5ecbd98b91838e1a9eba178771dace856245c1ea30ddb2ab4d07",
+  "setup_sha256": "bfe5880d60cee965c19a5c1cd33449883e8b09314dc88d846e6c55f758a0c6ce",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 1322321,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 1289500,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 22,
+      "total": 22,
+      "free_centres": 1226499,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      983,
+      334,
+      101,
+      123
+    ],
+    "from": "Highline west",
+    "to": "Highline east",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 22,
+    "unreachable": [],
+    "distance_before_after": [
+      670,
+      794
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "07af9f6e69b652fd6f1b3da6f6c1d988408104e21835668173602bc7b99396ae",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-hull-intake",
+      "rect": [
+        90,
+        390,
+        450,
+        436
+      ],
+      "bytes": 49889,
+      "sha256": "95c780b7c038ac1224f0c10419c9ab983c8b1d5337917d68f683cba1c4df3db1",
+      "pixel_parity": 196200
+    },
+    {
+      "name": "02-upper-gravity-steps",
+      "rect": [
+        469,
+        240,
+        537,
+        565
+      ],
+      "bytes": 77030,
+      "sha256": "635774d7b4feae31a93c947315368840934c65318fa3edbea4e1bd5082264aaa",
+      "pixel_parity": 303405
+    },
+    {
+      "name": "03-third-assay-shelf",
+      "rect": [
+        960,
+        385,
+        505,
+        440
+      ],
+      "bytes": 56505,
+      "sha256": "583b112a0d6c5929e66f3ad335360feaa2d68f40af5d25270d4b50ecfc3d0d7e",
+      "pixel_parity": 222200
+    },
+    {
+      "name": "04-counterweight-reclaimer",
+      "rect": [
+        1400,
+        205,
+        356,
+        624
+      ],
+      "bytes": 56345,
+      "sha256": "8d0fe8558a8bd6626a67a36db4a6ed6f5b9723fe2376300b3b03ec01981a1f07",
+      "pixel_parity": 222144
+    },
+    {
+      "name": "05-inhabited-export-relief",
+      "rect": [
+        1650,
+        501,
+        398,
+        512
+      ],
+      "bytes": 51897,
+      "sha256": "4a1768b5999a3ba475926beb146e1e903927cfe797fbc2d312e78ffe5b98570b",
+      "pixel_parity": 203776
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Exact source-static replay; bottom-rooted solids; three Midge hulls; physical obstruction and alternative; authentic PNG pixel parity"
+}
