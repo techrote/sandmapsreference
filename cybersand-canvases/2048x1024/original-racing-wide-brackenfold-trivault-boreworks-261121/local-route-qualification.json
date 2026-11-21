@@ -1,0 +1,71 @@
+{
+  "status": "SOURCE-STATIC-ROUTE-PASS / NATIVE-UNTESTED",
+  "literal_named_sites": 34,
+  "hull_result": {
+    "19x15": {
+      "site_count": 34,
+      "reachable": 34,
+      "blocked_surviving": 33,
+      "local_approaches_passed": 34,
+      "unexpected_failures": {
+        "primary": [],
+        "blocked": [],
+        "approach": []
+      }
+    },
+    "23x19": {
+      "site_count": 34,
+      "reachable": 34,
+      "blocked_surviving": 33,
+      "local_approaches_passed": 34,
+      "unexpected_failures": {
+        "primary": [],
+        "blocked": [],
+        "approach": []
+      }
+    },
+    "31x27": {
+      "site_count": 34,
+      "reachable": 34,
+      "blocked_surviving": 33,
+      "local_approaches_passed": 34,
+      "unexpected_failures": {
+        "primary": [],
+        "blocked": [],
+        "approach": []
+      }
+    }
+  },
+  "local_legs": {
+    "primary": {
+      "tested": 22,
+      "passed": 22,
+      "failed": []
+    },
+    "alternative": {
+      "tested": 21,
+      "passed": 21,
+      "failed": []
+    },
+    "blocked_alternative": {
+      "tested": 21,
+      "passed": 21,
+      "failed": []
+    },
+    "service": {
+      "tested": 20,
+      "passed": 20,
+      "failed": []
+    }
+  },
+  "local_leg_halo_cells": 400,
+  "physical_obstruction_xywh": [
+    758,
+    267,
+    86,
+    105
+  ],
+  "obstructed_site": "North tri-vault throat",
+  "site_target_substitution": false,
+  "native": "NATIVE-UNTESTED"
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "purpose": ["human_editable_canvas", "procedural_exemplar", "scripted_setpiece_source"],
+  "family": "original/racing-wide",
+  "map_role": "Entirely underground tri-vault pressure-relay quarry: three unequal excavated industrial cavities with upper eastbound bore, midheight alternate, deep westbound return and entered service pockets",
+  "anchor_donors": [],
+  "macro_topology": ["nested_cavities", "corridor"],
+  "density_profile": "Large distinct uneven mined cavities in an otherwise dense geological envelope, with concentrated working rigs, a long quiet return bore and deliberately excavatable foundation seams",
+  "route_grammar": {
+    "primary": "West ignition nest to raised west bore, across rooted diaphragm gates and all three subterranean vaults, down the east turning gallery, west along the deep repair return to the west finish",
+    "alternative": "At the first vault leave the high north gate and enter the midheight South tri-vault bypass; rejoin in the eastern condenser vault, then descend and return on the shared lower bore",
+    "obstruction": "A physical upper gate solid closure covers the named North tri-vault throat, while the middle bypass and the finish remain 31x27 accessible from the unchanged spawn",
+    "recovery": "West recovery shaft and low-bore return are connected with the starting room; top and bottom service chambers are actual entered cave pockets"
+  },
+  "strong_motifs": ["Three asymmetrically carved underground mineral caverns", "Two roof-to-floor mineral diaphragms with three navigation-grade gate elevations", "Rock-tied fan hoist", "Central split pressure arms and diagnostic tower", "Deep industrial maintenance spaces carved into bedrock", "Stepped east return elbow"],
+  "interesting_relationships": ["The two grounded inter-cavern diaphragms encode a repeatable nested-cavity adjacency grammar, but each has distinct upper and middle passage geometry", "Engineering rigs are tethered by actual load-bearing material cells to geological roots, not isolated non-colliding scenery", "A mid-height bypass avoids the destructible upper gate without replacing the western finish or lower return", "The exposed service-pod alcoves are off the core race path but accessed by vertical shafts"],
+  "authoring_affordances": ["Open unused sides of each vault can receive later procedural building parts", "Unoccupied basal mine tongues at the first and third vaults are intentionally editable", "Three real service rooms support future NPC workstations without occupying route lanes", "The central pressure-diaphragm gap can gain machinery and shutters if native flight tests establish clearances"],
+  "setpiece_candidates": [
+    {"name":"North diaphragm failure", "area_xywh":[731,248,129,144], "suggested_use":"Future cave bulkhead collapse across the high gate; mid-height avoidance is preauthored, no event implemented"},
+    {"name":"Central saltfold activation", "area_xywh":[879,470,287,258], "suggested_use":"Future pressure-arm movement or signalling, without altering today's deterministic static material receipt"},
+    {"name":"Third-vault condenser ambush", "area_xywh":[1330,445,356,261], "suggested_use":"Future actor encounter with multiple vertically separated exits"},
+    {"name":"West workshop excavation", "area_xywh":[434,826,301,120], "suggested_use":"Future human-authored maintenance expansion and low-bore access"}
+  ],
+  "procedural_exemplar_value": "A grounded-rock negative-space grammar: start from unequal cavities within a fully supported solid envelope, connect them using three independently navigable bore bands, insert load-bearing industrial equipment while retaining conservative flyable clearance, and preserve unfinished service pockets for later architectural grammars.",
+  "similarity_avoidance": "Unlike Cinderlift's opposing open-air cliffs, Morrow's suspended islands, Aster's exposed paired hulls, Beaconfold's sky towers above an underground express, or Rookfall's single open caldera, this is a roof-closed, multi-cavity quarry with three repeated-but-nonidentical pressure vaults and longitudinal internal gate relationships. It contains no ship, sky race section, annular central rotor or broken bridge motif.",
+  "diversity_axes": {
+    "macro_topology": "nested_cavities",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "clustered",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "central_machine",
+    "support_form": "cliff_embedded",
+    "environment_relation": "geological",
+    "incompleteness": "excavation"
+  }
+}

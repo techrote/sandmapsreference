@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "title": "Brackenfold Tri-Vault Boreworks",
+  "status": "SOURCE-STATIC-AUTHOR-CANDIDATE / NATIVE-UNTESTED",
+  "seed": 2997645089,
+  "engine_main_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "reference_main_sha_at_branch": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_cells": 2097152,
+  "material_plane_sha256": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+  "setup_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+  "setup_bytes": 78808,
+  "rectangle_count": 4072,
+  "rectangle_work": 988948,
+  "material_histogram": {
+    "0": 1108204,
+    "58": 148197,
+    "62": 17107,
+    "72": 1152,
+    "100": 419330,
+    "101": 372373,
+    "113": 7949,
+    "117": 21609,
+    "122": 1231
+  },
+  "sites": {
+    "West ignition nest": [
+      125,
+      312
+    ],
+    "West pressure latch": [
+      257,
+      317
+    ],
+    "West bearing": [
+      406,
+      303
+    ],
+    "Vault one crown": [
+      567,
+      295
+    ],
+    "Vault one switch": [
+      679,
+      321
+    ],
+    "North tri-vault throat": [
+      809,
+      317
+    ],
+    "Triple vault skylane": [
+      988,
+      281
+    ],
+    "Central saltfold beacon": [
+      1115,
+      279
+    ],
+    "East upper throat": [
+      1298,
+      319
+    ],
+    "East condenser arm": [
+      1443,
+      338
+    ],
+    "Third vault overflight": [
+      1615,
+      329
+    ],
+    "East collector": [
+      1770,
+      352
+    ],
+    "East return elbow": [
+      1892,
+      487
+    ],
+    "East low catch": [
+      1889,
+      715
+    ],
+    "East foundry return": [
+      1717,
+      739
+    ],
+    "Third vault low": [
+      1550,
+      746
+    ],
+    "Mid seam low": [
+      1338,
+      760
+    ],
+    "Central low relay": [
+      1120,
+      780
+    ],
+    "Central sub-bore": [
+      951,
+      788
+    ],
+    "Vault one return": [
+      610,
+      761
+    ],
+    "West repair return": [
+      533,
+      748
+    ],
+    "West lower approach": [
+      364,
+      740
+    ],
+    "West finish": [
+      154,
+      735
+    ],
+    "West recovery shaft": [
+      151,
+      526
+    ],
+    "South tri-vault bypass": [
+      791,
+      532
+    ],
+    "Central bypass wicket": [
+      976,
+      539
+    ],
+    "East bypass wicket": [
+      1174,
+      540
+    ],
+    "East lower approach": [
+      1415,
+      529
+    ],
+    "West upper control": [
+      509,
+      176
+    ],
+    "Central roof control": [
+      1087,
+      165
+    ],
+    "East ceiling laboratory": [
+      1571,
+      191
+    ],
+    "West basal workshop": [
+      497,
+      853
+    ],
+    "Central basal workshop": [
+      1080,
+      883
+    ],
+    "East basal workshop": [
+      1604,
+      855
+    ]
+  },
+  "start_site": "West ignition nest",
+  "finish_site": "West finish",
+  "primary_route": [
+    "West ignition nest",
+    "West pressure latch",
+    "West bearing",
+    "Vault one crown",
+    "Vault one switch",
+    "North tri-vault throat",
+    "Triple vault skylane",
+    "Central saltfold beacon",
+    "East upper throat",
+    "East condenser arm",
+    "Third vault overflight",
+    "East collector",
+    "East return elbow",
+    "East low catch",
+    "East foundry return",
+    "Third vault low",
+    "Mid seam low",
+    "Central low relay",
+    "Central sub-bore",
+    "Vault one return",
+    "West repair return",
+    "West lower approach",
+    "West finish"
+  ],
+  "alternate_route": [
+    "West ignition nest",
+    "West pressure latch",
+    "West bearing",
+    "Vault one crown",
+    "Vault one switch",
+    "South tri-vault bypass",
+    "Central bypass wicket",
+    "East bypass wicket",
+    "East lower approach",
+    "Third vault overflight",
+    "East collector",
+    "East return elbow",
+    "East low catch",
+    "East foundry return",
+    "Third vault low",
+    "Mid seam low",
+    "Central low relay",
+    "Central sub-bore",
+    "Vault one return",
+    "West repair return",
+    "West lower approach",
+    "West finish"
+  ],
+  "service_route": [
+    "West finish",
+    "West recovery shaft",
+    "West ignition nest",
+    "Vault one crown",
+    "West upper control",
+    "Vault one crown",
+    "Vault one return",
+    "West basal workshop",
+    "Vault one return",
+    "Triple vault skylane",
+    "Central roof control",
+    "Triple vault skylane",
+    "Central low relay",
+    "Central basal workshop",
+    "Central low relay",
+    "Third vault overflight",
+    "East ceiling laboratory",
+    "Third vault overflight",
+    "Third vault low",
+    "East basal workshop",
+    "Third vault low"
+  ],
+  "obstruction_xywh": [
+    758,
+    267,
+    86,
+    105
+  ],
+  "blocked_site": "North tri-vault throat",
+  "png_crops": {
+    "overview.png": [
+      0,
+      0,
+      2048,
+      1024
+    ],
+    "01-west-ignition-nest.png": [
+      50,
+      150,
+      390,
+      635
+    ],
+    "02-first-vault-hoists.png": [
+      316,
+      115,
+      500,
+      680
+    ],
+    "03-central-saltfold-hub.png": [
+      757,
+      115,
+      515,
+      760
+    ],
+    "04-east-condenser-bore.png": [
+      1240,
+      145,
+      510,
+      680
+    ],
+    "05-east-catcher-switch.png": [
+      1630,
+      230,
+      413,
+      620
+    ],
+    "06-deep-service-pockets.png": [
+      590,
+      650,
+      875,
+      365
+    ]
+  },
+  "png_index_pixels": 3998437,
+  "material_law_assumptions": {
+    "inert_solid_ids": [
+      58,
+      62,
+      72,
+      100,
+      101,
+      113,
+      117,
+      122
+    ],
+    "fluid_falling_mobile_reactive_cells": 0
+  },
+  "native": "NATIVE-UNTESTED"
+}
