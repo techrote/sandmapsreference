@@ -131,6 +131,18 @@ V(54,822,1910,59); /* continuous deep recovery airway, rerouted by grounded ribs
    must be genuinely founded, rather than cosmetically hovering. */
 for(const [x,y] of [[116,614],[493,572],[863,630],[1344,547],[1744,627]])
  C(x,y,30,922-y);
+/* Additional grounded low roof borough mass, with distinct inhabited
+   storey registers rather than another sparse piers-and-trays repetition. */
+C(1090,627,21,295);
+C(1517,546,21,376);
+C(1970,642,18,278);
+St(1344,641,193,17);St(1345,805,203,16);
+St(1396,682,126,14);
+C(1482,703,17,18);
+St(1738,651,247,18);St(1750,790,215,15);
+C(1841,778,24,18);
+St(1039,787,135,14);
+/* Distinct tariff and port office thresholds stay open at the Midge width. */
 /* Dedicated paired, roof-open customs vent wells and an inward deep exit.
    They retain separate cage/receipt fixtures and a side-entry transfer path. */
 V(941,533,88,207);
