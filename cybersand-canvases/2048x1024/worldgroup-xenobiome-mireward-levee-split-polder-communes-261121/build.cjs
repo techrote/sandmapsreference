@@ -80,6 +80,10 @@ function build(){
  [1067,800,156,52],[1331,719,81,83],[1846,681,175,65],[1846,781,170,75],[1659,727,99,95]])R(x,y,w,h,0);
  // Physically tether every isolated authoring fixture into the bedrock before encoding.
  let tieCount=0;for(let pass=0;pass<2;pass++){let seen=new Uint8Array(N),queue=new Int32Array(N),links=[];for(let i=0;i<N;i++)if(g[i]&&!seen[i]){let hd=0,tl=1,rooted=false;seen[i]=1;queue[0]=i;while(hd<tl){let p=queue[hd++],x=p%W,y=p/W|0;if(!x||x===W-1||!y||y===H-1)rooted=true;for(let j of [p-W,p+W,x?p-1:-1,x<W-1?p+1:-1])if(j>=0&&j<N&&g[j]&&!seen[j]){seen[j]=1;queue[tl++]=j;}}if(!rooted)links.push(i);}for(let p of links){let x=p%W,y=p/W|0;L(x,y,x,1010,5,M.grate);tieCount++;}if(!links.length)break;}
+ // Positive side-entry doors through structurally redundant tether/piers, sized to 31x27.
+ // These remain actual geometry edits and keep every named site at its fixed literal location.
+ for(let [x,y,w,h] of [[419,783,70,121],[598,743,74,91],[1106,691,78,99],
+ [1107,808,76,54],[1333,707,70,102],[1658,719,78,109],[1887,672,77,187]])R(x,y,w,h,0);
  const sites={
  "West arrival sky":[94,548],"West council deck":[205,510],"West seed ledger":[165,714],"West cold registry":[167,819],
  "First polder air crossing":[444,553],"First dry catchment":[445,839],"Reed purge deck":[640,565],
