@@ -1,0 +1,306 @@
+{
+  "concept": "Hollow Strake — Entered Fault Freight Port",
+  "original": true,
+  "seed": 2026112033,
+  "engine_sha": "de58bf1997ca75825cf3b29e046dc1c1022c45bf",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "d7a47d60721598a16589daf177a6ff4401b84b43",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Arrival Mooring",
+      "Upper West Gantry",
+      "Overfault Ropeway",
+      "Upper East Gantry",
+      "Dock Manifest"
+    ],
+    "entered_cavern": [
+      "West Vault Aperture",
+      "Central Vault",
+      "East Vault Aperture"
+    ],
+    "lower": [
+      "West Return",
+      "Underfault Return",
+      "East Return"
+    ],
+    "cargo": [
+      "Freighter Hold",
+      "Dock Transfer",
+      "Rail Sorting",
+      "Customs Inspection"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Arrival Mooring": [
+      154,
+      438
+    ],
+    "Dock Manifest": [
+      1880,
+      438
+    ],
+    "Freighter Hold": [
+      318,
+      671
+    ],
+    "Dock Transfer": [
+      577,
+      438
+    ],
+    "Upper West Gantry": [
+      712,
+      264
+    ],
+    "Overfault Ropeway": [
+      1039,
+      264
+    ],
+    "Upper East Gantry": [
+      1475,
+      264
+    ],
+    "West Vault Aperture": [
+      907,
+      471
+    ],
+    "Central Vault": [
+      1051,
+      471
+    ],
+    "East Vault Aperture": [
+      1194,
+      471
+    ],
+    "West Return": [
+      581,
+      770
+    ],
+    "Underfault Return": [
+      1049,
+      770
+    ],
+    "East Return": [
+      1520,
+      770
+    ],
+    "Rail Sorting": [
+      1620,
+      665
+    ],
+    "Customs Inspection": [
+      1840,
+      665
+    ],
+    "West Pump": [
+      290,
+      868
+    ],
+    "Fault Brake": [
+      971,
+      868
+    ],
+    "East Recovery": [
+      1730,
+      868
+    ],
+    "West Shaft": [
+      500,
+      631
+    ],
+    "East Shaft": [
+      1450,
+      438
+    ]
+  },
+  "material_histogram": {
+    "0": 1671857,
+    "58": 43683,
+    "62": 78036,
+    "100": 303576
+  },
+  "stable_occupied_cells": 425295,
+  "grounded": 425295,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 169285,
+  "grounding_steel_ties": 0,
+  "rectangles": 769,
+  "rectangle_work": 425295,
+  "setup_bytes": 14983,
+  "material_plane_sha256": "2f180a516c1e534083eab5bfe0b7d118a6b5f6c859043a1889f3645607952c89",
+  "setup_sha256": "0b0dbaf04c3f6f5b88950a245f45363d7598692c7b2b3b790a45ade8252e38ef",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 20,
+      "total": 20,
+      "free_centres": 1241934,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 20,
+      "total": 20,
+      "free_centres": 1230137,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 20,
+      "total": 20,
+      "free_centres": 1206843,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      1094,
+      400,
+      80,
+      140
+    ],
+    "from": "Arrival Mooring",
+    "to": "Dock Manifest",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 20,
+    "unreachable": [],
+    "distance_before_after": [
+      1726,
+      1830
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "f25a88c00b5c18e7f1512e430a71159c04bb4fb7c20b783075d11d2de24316f2",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-entered-freighter",
+      "rect": [
+        113,
+        508,
+        369,
+        319
+      ],
+      "bytes": 30171,
+      "sha256": "69e4cd032d24557f4ffb48402900706dbb89bc64791a17c2f6e424e31696523d",
+      "pixel_parity": 117711
+    },
+    {
+      "name": "02-twin-hoist",
+      "rect": [
+        469,
+        411,
+        248,
+        410
+      ],
+      "bytes": 26015,
+      "sha256": "3c543e6f276ce53ba78f51561c267940202197cf2943ccabbb4a90f93b79e802",
+      "pixel_parity": 101680
+    },
+    {
+      "name": "03-roof-freight-gantry",
+      "rect": [
+        706,
+        156,
+        678,
+        220
+      ],
+      "bytes": 37805,
+      "sha256": "23985c13eff42c8d2c5e9496c8b35d6c6120e3dc6a2477432d7bceb64b8efefc",
+      "pixel_parity": 149160
+    },
+    {
+      "name": "04-fault-cargo-vaults",
+      "rect": [
+        785,
+        355,
+        558,
+        470
+      ],
+      "bytes": 66460,
+      "sha256": "b241e66ea1e4ec9937ee87f46d7c5c017c0eeb048f0fe435d47c10d8ad5f2306",
+      "pixel_parity": 262260
+    },
+    {
+      "name": "05-east-rail-dispatch",
+      "rect": [
+        1409,
+        502,
+        559,
+        330
+      ],
+      "bytes": 46715,
+      "sha256": "aa47994ca93c37cb3b21e99907c7059e9ff5e4a2bac7a7e51b31731a246c285c",
+      "pixel_parity": 184470
+    },
+    {
+      "name": "06-low-return-works",
+      "rect": [
+        108,
+        817,
+        1817,
+        121
+      ],
+      "bytes": 55361,
+      "sha256": "3c7d210fa7ddb2131d4f91cc701f2ba7859b5b18615f4914484c1049ab076613",
+      "pixel_parity": 219857
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "accepted_main_max_rectangles": 32768,
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+}
