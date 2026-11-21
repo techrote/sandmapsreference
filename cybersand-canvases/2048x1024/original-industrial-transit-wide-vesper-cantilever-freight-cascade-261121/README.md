@@ -6,8 +6,8 @@ A full-side-on west freighter under its own open wheelhouse, twin-root counterwe
 
 ## Source-static qualification
 
-- SHA-256 grid: 916b41382b72e5f28f8d99a596f47818467a62aa30bd66ab430c663b1e62a643
-- 2239 disjoint Setup-v2 rectangles, 41631 JSON bytes, 361320 inert solids; 361320 bottom grounded.
+- SHA-256 grid: db80209b2d16572f4d37d884255ec8b85474864f16805cb119c5f2442f44f5f4
+- 2334 disjoint Setup-v2 rectangles, 43342 JSON bytes, 362479 inert solids; 362479 bottom grounded.
 - All 22 literal Midge sites pass full-body BFS at 19x15, 23x19 and 31x27.
 - Real obstruction detour 923 to 957 steps at 31x27, preserving all sites.
 - Complete grid and PNG parity checked during fixed-seed generation.
