@@ -76,7 +76,7 @@ function layoutWorld(){
  b(557,736,104,31,104);b(572,746,74,13,131);
  l(563,704,706,645,9,117);l(648,704,791,645,9,117);
  b(676,774,100,15,58);b(728,789,12,65,68);
- // R6 HIGH: opposed bank-rooted receiving mast heads and two taut wires.
+ // R6 HIGH: bank-rooted receiving heads with paired tension cables interrupted at Midge portal.
  // Light catenary and suspension hangers; distinct from lower compression truss.
  b(137,718,15,65,68);b(131,715,39,11,62);b(137,747,33,12,58);
  b(861,748,15,109,68);b(850,744,43,11,62);b(849,828,43,12,58);
@@ -176,6 +176,15 @@ function layoutWorld(){
  b(436,656,13,33,62);b(440,663,8,8,79);
  b(560,655,13,33,62);b(559,664,9,9,79);
  b(476,629,61,83,0); // conservative 31x27 overhead service break
+ // R6 bounded Art-P1 third pass: two opposed *broken* haul couplings.
+ // Matching clutches and torn strands make deliberate interruption legible;
+ // they do not suggest an operable continuous rope across the Midge gate.
+ // Preserve every air cell in x476..536,y629..711; NO 2D sealing span.
+ b(453,660,18,21,117);b(458,665,9,11,79);
+ b(543,660,18,21,117);b(547,665,9,11,79);
+ l(468,667,473,661,3,68);l(468,672,473,678,3,68);
+ l(545,667,539,661,3,68);l(545,672,539,678,3,68);
+
 
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
  const solid=id=>id!==0&&id!==3&&id!==8,seen=new Uint8Array(g.length),q=new Int32Array(g.length);let a=0,z=0;
