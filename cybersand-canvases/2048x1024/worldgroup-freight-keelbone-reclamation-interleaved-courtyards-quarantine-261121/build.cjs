@@ -116,6 +116,10 @@ St(1536,817,439,18); C(1690,817,24,118);
   non-repeated serrated roof to the lower founded receiving beam. */
 St(1600,489,334,16); C(1775,490,22,442);
 V(664,780,75,124);
+/* Three explicitly entered quarantine thresholds: door through
+ outer wall; room-to-room central portal; shelf stair aperture. */
+V(1544,662,94,130);V(1758,687,75,117);V(1621,651,83,65);
+V(674,712,89,92);
 /* Deliberately broken east annex and open authoring air. */
 V(1986,471,62,244);St(1948,824,98,14);
 line(1967,824,2036,790,11);St(1937,493,63,10);
