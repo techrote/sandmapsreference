@@ -1,0 +1,339 @@
+{
+  "concept": "Keelbone Reclamation Vaults — Interleaved Reclaim Courtyards / Worker Quarantine Hub",
+  "original": true,
+  "seed": 40568915,
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "Western lift apron",
+      "Strip entry",
+      "Grading air lane",
+      "Grading exchange",
+      "Transfer shelf",
+      "Quarantine registry",
+      "Eastern dispatch"
+    ],
+    "upper": [
+      "West gantry sky",
+      "Rotor lookout",
+      "Upper court bridge",
+      "Quarantine upper",
+      "Quarantine roof"
+    ],
+    "workcells": [
+      "Hull clamp control",
+      "Grading forks",
+      "Workers shelter",
+      "Workers repair bay",
+      "Quarantine interview"
+    ],
+    "lower": [
+      "West underworks",
+      "Grading underworks",
+      "Hub underpass",
+      "Registry underpass",
+      "East underworks"
+    ],
+    "sky": [
+      "Western signal tower",
+      "Grading roof lantern",
+      "Quarantine mast lookout"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "Western lift apron": [
+      112,
+      582
+    ],
+    "Strip entry": [
+      100,
+      708
+    ],
+    "Hull clamp control": [
+      674,
+      619
+    ],
+    "Grading forks": [
+      705,
+      530
+    ],
+    "Grading air lane": [
+      730,
+      695
+    ],
+    "Grading exchange": [
+      1110,
+      715
+    ],
+    "Rotor lookout": [
+      1044,
+      294
+    ],
+    "Quarantine registry": [
+      1650,
+      645
+    ],
+    "Tariff lookout": [
+      1660,
+      408
+    ],
+    "Workers shelter": [
+      1418,
+      775
+    ],
+    "Quarantine roof": [
+      1846,
+      367
+    ],
+    "Eastern dispatch": [
+      1956,
+      567
+    ],
+    "West gantry sky": [
+      301,
+      347
+    ],
+    "Grading chimney": [
+      780,
+      335
+    ],
+    "Upper court bridge": [
+      1285,
+      422
+    ],
+    "Quarantine upper": [
+      1560,
+      412
+    ],
+    "West underworks": [
+      67,
+      812
+    ],
+    "Grading underworks": [
+      704,
+      803
+    ],
+    "Hub underpass": [
+      1220,
+      584
+    ],
+    "Registry underpass": [
+      1525,
+      758
+    ],
+    "East underworks": [
+      1995,
+      816
+    ],
+    "Western signal tower": [
+      447,
+      227
+    ],
+    "Grading roof lantern": [
+      1014,
+      219
+    ],
+    "Quarantine mast lookout": [
+      1895,
+      198
+    ],
+    "Broken annex": [
+      2010,
+      771
+    ],
+    "Transfer shelf": [
+      1242,
+      710
+    ],
+    "Workers repair bay": [
+      1480,
+      730
+    ],
+    "Quarantine interview": [
+      1830,
+      736
+    ],
+    "Keel receiving platform": [
+      676,
+      665
+    ]
+  },
+  "material_histogram": {
+    "0": 1608749,
+    "58": 100409,
+    "62": 169043,
+    "100": 218951
+  },
+  "stable_occupied_cells": 488403,
+  "grounded": 488403,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 30506,
+  "invalid_writes": 0,
+  "rectangles": 2390,
+  "rectangle_work": 488403,
+  "setup_bytes": 44865,
+  "material_plane_sha256": "9509244b4bd4ab7fd31f3601d3a637e692bc885fe92392ffbd864ed504e1d574",
+  "setup_sha256": "2c45f8a039addbd387c43dd0ebf2511baa6db9213b10d76b5b217e3a67b78779",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 29,
+      "total": 29,
+      "free_centres": 1153469,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 29,
+      "total": 29,
+      "free_centres": 1118714,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 29,
+      "total": 29,
+      "free_centres": 1058691,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      1700,
+      670,
+      95,
+      96
+    ],
+    "from": "Quarantine registry",
+    "to": "Quarantine interview",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 29,
+    "unreachable": [],
+    "distance_before_after": [
+      271,
+      357
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "324769d8c914a91acf3722d1b7e7f39269571febee80c7a19c6e3ecefd6a3d31",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-keel-receiving",
+      "rect": [
+        88,
+        380,
+        603,
+        482
+      ],
+      "bytes": 73454,
+      "sha256": "d96aa0b11da3f9a83344b27a34dd6feeb747a12ae974ac290a0c000c371172fc",
+      "pixel_parity": 290646
+    },
+    {
+      "name": "02-rotor-grading",
+      "rect": [
+        695,
+        255,
+        573,
+        581
+      ],
+      "bytes": 84435,
+      "sha256": "3774047a94bf18f3653a76f9308025f8720813b7005ea4ca2be7472e7a52da69",
+      "pixel_parity": 332913
+    },
+    {
+      "name": "03-worker-hub",
+      "rect": [
+        1205,
+        490,
+        350,
+        380
+      ],
+      "bytes": 34005,
+      "sha256": "2465487d35afb00f948f5411c6b40b04a8ad6430581d299c5539ea585e088008",
+      "pixel_parity": 133000
+    },
+    {
+      "name": "04-quarantine-arch",
+      "rect": [
+        1530,
+        365,
+        511,
+        508
+      ],
+      "bytes": 65717,
+      "sha256": "604238e3ef61ca639545da87f696036d3c1e3aea08aa19a4320cfaed03a30030",
+      "pixel_parity": 259588
+    },
+    {
+      "name": "05-service-underworks",
+      "rect": [
+        585,
+        760,
+        1000,
+        253
+      ],
+      "bytes": 63688,
+      "sha256": "9deae813a44b995db67610c06ff6bc2f2406465c48f8cd89efa200cc7df391d5",
+      "pixel_parity": 253000
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Exact source-static replay; bottom-rooted solids; three Midge hulls; physical obstruction and alternative; authentic PNG pixel parity"
+}
