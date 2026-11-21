@@ -130,6 +130,11 @@ function buildWorld(){
  // Preserve BOTH canopy passages: no structural ornament may obstruct their 160px apertures.
  rect(510,481,164,75,0);
  rect(1440,481,160,75,0);
+ // Rooted suspended crossover truss AND independently entered passenger descent.
+ line(488,504,479,343,8,M.frame);
+ line(479,343,716,343,7,M.steel);
+ line(716,343,684,504,8,M.frame);
+ rect(270,493,135,65,0);
  // Four shop fixtures are tied into their room floors after final shaft cuts.
  for(const [x,y] of [[51,979],[506,981],[997,982],[1759,981]]){
   rect(x,y,38,10,M.iron);rect(x+12,y-12,14,12,M.amber);
@@ -192,7 +197,7 @@ function buildWorld(){
  const closed=free(obs,31,27),blocked=reach(closed,[31,27]);
  let start=sites.find(s=>s[0]==="Upper west hatch approach"),end=sites.find(s=>s[0]==="West hatch recovery");
  let before=flood(full["31x27"],start,end).distance,after=flood(closed,start,end).distance;
- const detour={from:start[0],to:end[0],hull:[31,27],baseline_steps:before,obstructed_steps:after,extra_steps:after-before,method:"Conservative full 31x27 Midge hull BFS between literal high gate approaches, forcing east sky hatch traversal after west hatch obstruction"};
+ const detour={from:start[0],to:end[0],hull:[31,27],baseline_steps:before,obstructed_steps:after,extra_steps:after-before,method:"Conservative full 31x27 Midge hull BFS between literal high gate approaches, forcing the passenger relief descent after west hatch obstruction"};
  const setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:MODEL,spawn:[sites[0][1],sites[0][2]],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits,response:"LA-SELECTIVE",liquid_policy:POLICY,normalize:false,rule_radius:2,source:[],material:2,brush:8,fire:false};
  return {W,H,N,g,M,palette,sites,obs,crops,edits,visits,detached,histogram,grounded:visits,clear,blocked,detour,setup};
 }
