@@ -1,0 +1,356 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_SHEARLINE_KNUCKLE_BEND_RALLY_PIT_CHICANE",
+  "revision": "R1",
+  "seed": "0x261121f2 (fixed deterministic source, no random draw)",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "donor": "Tungsten Sawtooth Tramworks @ 7fc24855cf521c90bf67f4afb08685e490473201 (read-only) steel and industrial timing signal culture. Comparison with Shearline 01 and existing racing/Transit corpus. Distinct twin S-bend chicanes, supported recovery and pit entrances; no anchor pixels, wheel, baffles, site or course cloned.",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 669453,
+  "discarded_unattached_candidate_cells": 38127,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 5488,
+  "setup_json_bytes": 104511,
+  "material_work_visits": 669453,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "f095b06ddfeb05f537427e5857a99c2ed7cf92477f2156979e0567b9e7132769",
+  "setup_sha256": "c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf",
+  "histogram": {
+    "0": 1427699,
+    "49": 101564,
+    "58": 30046,
+    "62": 41471,
+    "100": 387101,
+    "101": 23550,
+    "113": 1324,
+    "117": 83453,
+    "122": 944
+  },
+  "sites": [
+    {
+      "name": "West rally start",
+      "x": 110,
+      "y": 326
+    },
+    {
+      "name": "West launch rail",
+      "x": 281,
+      "y": 340
+    },
+    {
+      "name": "A fast approach",
+      "x": 418,
+      "y": 326
+    },
+    {
+      "name": "A risky crest",
+      "x": 683,
+      "y": 231
+    },
+    {
+      "name": "A leading turn",
+      "x": 535,
+      "y": 625
+    },
+    {
+      "name": "A south shelter",
+      "x": 648,
+      "y": 626
+    },
+    {
+      "name": "A lower bypass",
+      "x": 707,
+      "y": 800
+    },
+    {
+      "name": "A clear rejoin",
+      "x": 936,
+      "y": 425
+    },
+    {
+      "name": "Mid timing post",
+      "x": 1013,
+      "y": 308
+    },
+    {
+      "name": "Mid lower muster",
+      "x": 981,
+      "y": 659
+    },
+    {
+      "name": "B fast approach",
+      "x": 1068,
+      "y": 293
+    },
+    {
+      "name": "B risky lip",
+      "x": 1354,
+      "y": 277
+    },
+    {
+      "name": "B lower shelter",
+      "x": 1352,
+      "y": 688
+    },
+    {
+      "name": "B turnback",
+      "x": 1483,
+      "y": 440
+    },
+    {
+      "name": "B clear rejoin",
+      "x": 1620,
+      "y": 337
+    },
+    {
+      "name": "East brake entry",
+      "x": 1679,
+      "y": 310
+    },
+    {
+      "name": "Damaged spur",
+      "x": 1820,
+      "y": 470
+    },
+    {
+      "name": "Outer catch",
+      "x": 2014,
+      "y": 520
+    },
+    {
+      "name": "East rescue return",
+      "x": 2008,
+      "y": 800
+    },
+    {
+      "name": "West lower passage",
+      "x": 441,
+      "y": 785
+    },
+    {
+      "name": "Center lower passage",
+      "x": 994,
+      "y": 800
+    },
+    {
+      "name": "East lower passage",
+      "x": 1638,
+      "y": 808
+    },
+    {
+      "name": "West pit shaft",
+      "x": 232,
+      "y": 838
+    },
+    {
+      "name": "West pit bench",
+      "x": 263,
+      "y": 974
+    },
+    {
+      "name": "A tuning shaft",
+      "x": 717,
+      "y": 855
+    },
+    {
+      "name": "A tuning bench",
+      "x": 768,
+      "y": 973
+    },
+    {
+      "name": "Mid check shaft",
+      "x": 1004,
+      "y": 850
+    },
+    {
+      "name": "Mid check bench",
+      "x": 1053,
+      "y": 979
+    },
+    {
+      "name": "East rescue shaft",
+      "x": 1840,
+      "y": 829
+    },
+    {
+      "name": "East rescue bench",
+      "x": 1904,
+      "y": 964
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 30,
+      "total": 30,
+      "missing": [],
+      "visited_centres": 1206186
+    },
+    "23x19": {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 30,
+      "total": 30,
+      "missing": [],
+      "visited_centres": 1165413
+    },
+    "31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 30,
+      "total": 30,
+      "missing": [],
+      "visited_centres": 1088558
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      511,
+      178,
+      98,
+      196
+    ],
+    "material": 58,
+    "after_31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 30,
+      "total": 30,
+      "missing": [],
+      "visited_centres": 1069876
+    },
+    "covered_site": null,
+    "other_sites_reachable": 30
+  },
+  "route_detour": {
+    "from": "A fast approach",
+    "to": "A risky crest",
+    "hull": [
+      31,
+      27
+    ],
+    "baseline_steps": 360,
+    "obstructed_steps": 494,
+    "extra_steps": 134,
+    "method": "Conservative full 31x27 centre BFS between A fast approach and A risky crest, with a real temporary 98x196 material obstruction on the short elevated approach; all sites remain reachable via the longer sheltered bypass"
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 55104,
+      "pixels": 2097152,
+      "sha256": "c0bd05e276a706b7199d329d64afb82877e561a0ba4069f9b5013df981826395",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-rally-launch-and-timing.png": {
+      "x": 0,
+      "y": 140,
+      "w": 490,
+      "h": 690,
+      "bytes": 10350,
+      "pixels": 338100,
+      "sha256": "4ef2624871e489c7b4ac4b1dad6798d44bf3672c0c043bf845c4863838ac845b",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-knuckle-a-risky-sheltered.png": {
+      "x": 385,
+      "y": 172,
+      "w": 555,
+      "h": 675,
+      "bytes": 12267,
+      "pixels": 374625,
+      "sha256": "09352ae427273a9fb6ea70b16126335df568b7adbe0f7ef6f1eec8bec22b9d25",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-mid-span-transfer-and-pit.png": {
+      "x": 855,
+      "y": 233,
+      "w": 445,
+      "h": 755,
+      "bytes": 10837,
+      "pixels": 335975,
+      "sha256": "d4eda39d181ec3cb168bc1bf62efc4e0bdbe7b0989c8753f90d39e9d88ce32ef",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-reverse-camber-knuckle-b.png": {
+      "x": 1102,
+      "y": 187,
+      "w": 570,
+      "h": 665,
+      "bytes": 14319,
+      "pixels": 379050,
+      "sha256": "c3a54c30aaf030cd283a8c6314653169e3e71d292020a40c535893d66035ea09",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-east-brake-damaged-spur.png": {
+      "x": 1640,
+      "y": 183,
+      "w": 408,
+      "h": 650,
+      "bytes": 5640,
+      "pixels": 265200,
+      "sha256": "05d29a638f0a428e3f9577279211f547c3c70b0d0e5106247f8143259ed5b65c",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-entered-service-bays.png": {
+      "x": 0,
+      "y": 785,
+      "w": 2048,
+      "h": 239,
+      "bytes": 13724,
+      "pixels": 489472,
+      "sha256": "60c4f36c55ee85be1806ea1724e0151dca789c54fc761b6cbc04387cc4b48115",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: No exact-build Godot/Workbench/CyberDemoBridge/Rapier load, collision, ticks or fresh-process save/reopen executed",
+  "independent_review": "PENDING: independent Art, Technical and Shepherd exact-HEAD review",
+  "ci": "NOT CLAIMED",
+  "corpus_role": "Original opposed-knuckle asymmetric S-bend rally with elevated risky crest choices, dual sheltered lower detours, a bounded causal obstacle, four entered operator/repair/rescue workfaces, and unfinished eastern brake spur."
+}
