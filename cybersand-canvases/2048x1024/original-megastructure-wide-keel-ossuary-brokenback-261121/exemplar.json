@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/megastructure-wide",
+  "map_role": "drydock with embedded life-support ship interior, grounded keel cradles, separate shift-work settlements",
+  "anchor_donors": [],
+  "macro_topology": [
+    "drydock",
+    "corridor"
+  ],
+  "density_profile": "asymmetric two dense edge settlements; segmented entered vessel sections, sparse high-air damage gaps, lower anchorwork and vacant berths",
+  "route_grammar": {
+    "main": "Tug exchange / aft engine / hollow keel / navigation spire / salvage lock",
+    "upper": "separate roof, gantry and main-hull skylight routes",
+    "lower": "continuous service apron and underkeel maintenance return",
+    "obstruction": "single drive datum obstructed; top and lower free-air bypasses preserve access"
+  },
+  "strong_motifs": [
+    "grounded cradle-supported fractured generation ark cutaway",
+    "broken-back lens hull with entered salvage chambers",
+    "asymmetrical navigation spire",
+    "opposed salvage cranes"
+  ],
+  "interesting_relationships": [
+    "physical keel cradles punctuate open lower service void",
+    "service engineering passes below occupied hull compartments",
+    "civilian tug registration shares only a narrow transfer with stern extraction",
+    "shipboard voids act as expansion seams"
+  ],
+  "authoring_affordances": [
+    "spare underkeel dock for hand-built machine setpiece",
+    "unfurnished starboard bilge bay",
+    "upper keel skylight with optional scripted arrival",
+    "lower berth expansion seam below nave"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Aft propulsion unseating",
+      "site": "Aft engine exchange",
+      "kind": "machinery_activation",
+      "scripted": false
+    },
+    {
+      "name": "Keel-bearing failure",
+      "site": "Underkeel service",
+      "kind": "collapse_recovery",
+      "scripted": false
+    },
+    {
+      "name": "Onboard hull-boarder holdout",
+      "site": "Vessel drive chamber",
+      "kind": "npc_encounter",
+      "scripted": false
+    },
+    {
+      "name": "Departure crane reveal",
+      "site": "East freight marshalling",
+      "kind": "arrival_departure",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "fractured vessel-shaped entered superstructure; grounded repeated but varying keel supports; dual internal/external service grammar and asymmetrical civic-industrial dock edges",
+  "similarity_avoidance": "Unlike the basin gate of Cobalt Ventricle, Ferric roof islands, Sundered rock cavities or Tin double dish, this is a fractured entered vessel with two deliberate full-height damage seams, grounded repair cradles, with compartment portals, full-height spire and unfilled berth seams.",
+  "diversity_axes": {
+    "macro_topology": "drydock",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "layered",
+    "landmark_family": "vessel",
+    "support_form": "multi_leg",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  }
+}
