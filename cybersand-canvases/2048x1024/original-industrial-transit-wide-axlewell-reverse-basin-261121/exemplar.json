@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "industrial-transit-wide",
+  "map_role": "reverse-flow basin port with central three-tier cargo interchange and deep service return",
+  "anchor_donors": [],
+  "macro_topology": [
+    "basin",
+    "mixed"
+  ],
+  "density_profile": "Dense west dispatch and east drydock flank a spacious excavated basin and heavily articulated central hoist",
+  "strong_motifs": [
+    "east-end entered freighter",
+    "central portal hoist with two door elevations",
+    "roof-rooted cargo span",
+    "west triple-grade freight sorting",
+    "two vertical rock access shafts",
+    "central emergency ladder-sized clearance through basin bottom into maintenance return"
+  ],
+  "interesting_relationships": [
+    "reversed freight direction east-to-west",
+    "load transfer from starboard dock to basin hub to west dispatch",
+    "upper and underfloor routes rejoin at opposite banks",
+    "service-pier spacing establishes procedural attachment grammar"
+  ],
+  "authoring_affordances": [
+    "vacant west basin floor for human-built furnaces",
+    "reentrant subgrade alcoves for modular repair galleries",
+    "underbuilt upper-relay service pockets",
+    "central deep basin pocket is deliberately reserved as an unpromised isolated editing cavity; no Midge destination is assigned inside"
+  ],
+  "setpiece_candidates": [
+    "ship arrival and holdout",
+    "central hoist activation stage",
+    "upper truss failure with lower reroute",
+    "underfloor repair ambush with two exits"
+  ],
+  "procedural_exemplar_value": "Provides central vertical freight hub plus two cross-basin route layers and owner-editable repair chambers, with material-rooted static transport geometry.",
+  "similarity_avoidance": "Reverses the normal western ship to eastern rail orientation, avoids four-island segmentation and the single descending catenary; uses a central hoist as routing hub rather than a ring or braided bridge.",
+  "diversity_axes": {
+    "macro_topology": "basin",
+    "altitude_grammar": "vertical_spine",
+    "density_cadence": "dense_open_dense",
+    "route_structure": "layered",
+    "landmark_family": "central_machine",
+    "support_form": "multi_leg",
+    "environment_relation": "dry",
+    "incompleteness": "editable_gaps"
+  },
+  "route_grammar": {
+    "primary": [
+      "East Spawn",
+      "Ship Dock Crane",
+      "Roof Exchange",
+      "Hub Crown",
+      "Upper Relay West",
+      "Signal Loft",
+      "West Rail Concourse"
+    ],
+    "lower": [
+      "Ship Cargo Hold",
+      "Eastern Cargo Airlock",
+      "East Rock Access",
+      "Eastern Maintenance",
+      "Western Maintenance",
+      "West Rock Access",
+      "West Basin Approach",
+      "Western Departure"
+    ],
+    "hub": [
+      "Hub Crown",
+      "Hub Transfer",
+      "Hub Service",
+      "Hub Lower",
+      "Western Maintenance"
+    ],
+    "recovery": [
+      "Ship Dock Crane",
+      "East Rock Access",
+      "Eastern Maintenance",
+      "Western Maintenance",
+      "West Rock Access",
+      "West Basin Approach"
+    ]
+  },
+  "geometry_source": "design.json",
+  "material_plane_sha256": "b18b3f2f0bb6b16bae85f0a48bce62179cb244417089c048db5a8b06faa8e442"
+}
