@@ -1,0 +1,287 @@
+{
+  "concept": "Warden Scrapline — Fractured Trestle Salvage Port",
+  "original": true,
+  "seed": 2026112102,
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_contract": {
+    "cybersand_accepted_main": "8d07e04459a2705a6f96c908c0b565a483cc5beb",
+    "sandmapsreference_default_source": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "setup_version": 2,
+    "max_construction_rectangles": 32768
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "reinforced concrete inert immovable solid",
+    "62": "steel plate inert immovable solid",
+    "100": "basalt columns inert immovable solid"
+  },
+  "material_plane_sha256": "1c6d5228867b07ffb29227adafd8455f40988c2e5f7ef2efb87b2276546fe748",
+  "setup_sha256": "11944e7542af554fcd81c28a4818e2e84c73d1aedb9054874d7150ae337e2c63",
+  "setup_bytes": 22413,
+  "rectangles": 1174,
+  "rectangle_work": 420352,
+  "cells": 2097152,
+  "histogram": {
+    "0": 1676800,
+    "58": 130507,
+    "62": 135943,
+    "100": 153902
+  },
+  "grounded_stable_solids": 420352,
+  "detached_solids": 0,
+  "initial_fluid_cells": 0,
+  "reactive_or_falling_cells": 0,
+  "overlapping_records": 0,
+  "ordered_replay_equal": true,
+  "exact_sites": {
+    "Arrival Mooring": [
+      162,
+      432
+    ],
+    "Freighter Bridge": [
+      283,
+      637
+    ],
+    "Ship Hold": [
+      360,
+      711
+    ],
+    "Crane Load": [
+      544,
+      419
+    ],
+    "Crane Crown": [
+      760,
+      192
+    ],
+    "West Trestle Underside": [
+      676,
+      294
+    ],
+    "Open Transfer Seam": [
+      783,
+      298
+    ],
+    "Freight Gallery West": [
+      1010,
+      344
+    ],
+    "Freight Gallery East": [
+      1132,
+      344
+    ],
+    "Press Intake": [
+      1073,
+      719
+    ],
+    "Hanging Magnet": [
+      825,
+      641
+    ],
+    "Salvage Outlook": [
+      1429,
+      565
+    ],
+    "Rail Marshal": [
+      1695,
+      712
+    ],
+    "Customs Gate": [
+      1852,
+      423
+    ],
+    "Customs Inspector": [
+      1859,
+      593
+    ],
+    "West Pump": [
+      308,
+      917
+    ],
+    "Central Workshop": [
+      790,
+      927
+    ],
+    "East Recovery": [
+      1848,
+      934
+    ]
+  },
+  "route_graph": {
+    "main": [
+      "Arrival Mooring",
+      "Ship Hold",
+      "Crane Load",
+      "Open Transfer Seam",
+      "Freight Gallery West",
+      "Freight Gallery East",
+      "Salvage Outlook",
+      "Customs Gate"
+    ],
+    "upper": [
+      "Crane Crown",
+      "West Trestle Underside",
+      "Open Transfer Seam",
+      "Customs Gate"
+    ],
+    "industrial": [
+      "Hanging Magnet",
+      "Press Intake",
+      "Rail Marshal",
+      "Customs Inspector"
+    ],
+    "lower": [
+      "West Pump",
+      "Central Workshop",
+      "East Recovery"
+    ]
+  },
+  "authored_midge_hull": [
+    4,
+    3
+  ],
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "free_centres": 1395051,
+      "sites_reached": 18,
+      "total_sites": 18,
+      "bad": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "free_centres": 1332720,
+      "sites_reached": 18,
+      "total_sites": 18,
+      "bad": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "free_centres": 1217683,
+      "sites_reached": 18,
+      "total_sites": 18,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "rect": [
+      1037,
+      307,
+      74,
+      95
+    ],
+    "from": "Freight Gallery West",
+    "to": "Freight Gallery East",
+    "material": 58,
+    "conservative_hull": [
+      31,
+      27
+    ],
+    "distance_before": 122,
+    "distance_after": 224,
+    "all_sites_still_reachable": true,
+    "return_route": true
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 62534,
+      "sha256": "ef25290c9aa0c8d8d6340e2d8b6d7956fed5ba8356d3d73b093df7daea002b80",
+      "indexed_material_pixel_parity": 2097152
+    },
+    {
+      "name": "01-derelict-freighter.png",
+      "rect": [
+        65,
+        558,
+        520,
+        286
+      ],
+      "bytes": 8096,
+      "sha256": "eaae0336a4ed4cd0108aa694564227de258526b4770993bbfe3e32ab9c985bbc",
+      "indexed_material_pixel_parity": 148720
+    },
+    {
+      "name": "02-damaged-crane-and-trestle.png",
+      "rect": [
+        420,
+        235,
+        519,
+        460
+      ],
+      "bytes": 13635,
+      "sha256": "e54447e015c63650e9be06aebcab1243d15172438aa349465bef36ffccc4ac4e",
+      "indexed_material_pixel_parity": 238740
+    },
+    {
+      "name": "03-press-and-broken-relay.png",
+      "rect": [
+        914,
+        351,
+        442,
+        502
+      ],
+      "bytes": 9795,
+      "sha256": "f79f8b782bf1d5a9b4cc3c841aac806d3c87950a236d6adde6f82c74da56b647",
+      "indexed_material_pixel_parity": 221884
+    },
+    {
+      "name": "04-scrap-to-rail-yard.png",
+      "rect": [
+        1230,
+        476,
+        479,
+        407
+      ],
+      "bytes": 7348,
+      "sha256": "cdfe400212c9fa55a25a72812cee054277e653f094c20c7cc0dfc5603ee86a3b",
+      "indexed_material_pixel_parity": 194953
+    },
+    {
+      "name": "05-customs-dispatch.png",
+      "rect": [
+        1695,
+        454,
+        340,
+        397
+      ],
+      "bytes": 10166,
+      "sha256": "5915f8f7a02984afa24206edf47adaf7ee8733f6779c8ef7eddd88989e70cb31",
+      "indexed_material_pixel_parity": 134980
+    },
+    {
+      "name": "06-underground-service-lanes.png",
+      "rect": [
+        107,
+        852,
+        1874,
+        117
+      ],
+      "bytes": 13870,
+      "sha256": "0d027bff67106d5ebfabba79d90fd7bc470b52007ccf094856cdbe9fa9304bdc",
+      "indexed_material_pixel_parity": 219258
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "PENDING",
+  "github_actions_exact_head": "NOT-CHECKED",
+  "proof": "Exhaustive source cells, 4-neighbour bottom-rooting, disjoint rectangle replay, three literal full-envelope 4-neighbour reachability and physical obstruction detour; source-indexed PNG parity."
+}
