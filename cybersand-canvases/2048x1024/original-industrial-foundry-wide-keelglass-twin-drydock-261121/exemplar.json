@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-foundry-wide",
+  "map_role": "Open-air dockside smeltery between two deeply excavated drydock vessel cradles with separate industrial service routes",
+  "anchor_donors": [],
+  "macro_topology": "Twin excavated, unequal drydocks below two distinct rail and gantry strata; functional foundry feeds two hull maintenance and freight zones",
+  "density_profile": "Dense western furnaces and terminal, broad exposed upper industrial void, lower two concentrated vessel drydocks with intentional vacant edit pockets",
+  "route_grammar": {
+    "main": [
+      "West arrival",
+      "Ore hoist",
+      "Arc furnace face",
+      "Ladle stage",
+      "Caster station",
+      "Quench watch",
+      "Freight winch",
+      "East rim goal"
+    ],
+    "alternate": [
+      "Upper gantry west",
+      "Upper gantry east"
+    ],
+    "recovery": [
+      "Dry-dock A lip",
+      "Keel A inspection",
+      "Drydock B lip",
+      "Keel B inspection",
+      "West repair annex",
+      "East shop"
+    ]
+  },
+  "strong_motifs": [
+    "Unequal twin grounded drydock pits",
+    "Two differently framed static vessel hulls",
+    "Paired refractory arc furnace throats",
+    "Four unequal linear caster rams",
+    "Tall gantry and separate freight rail",
+    "Open unfinished worker pockets"
+  ],
+  "interesting_relationships": [
+    "Industrial smelter overhead feeds large grounded drydock production and inspection sites below",
+    "Upper travel bridge bypasses congested main approach",
+    "Two drydock hull silhouettes have intentionally different excavation and construction states"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "Drydock A retrofit",
+      "region_xywh": [
+        645,
+        795,
+        190,
+        55
+      ],
+      "use": "Unscripted shipyard construction and SWARM modules"
+    },
+    {
+      "name": "Drydock B extension",
+      "region_xywh": [
+        1300,
+        808,
+        180,
+        66
+      ],
+      "use": "Incomplete vessel-factory additions"
+    },
+    {
+      "name": "Caster gantry",
+      "region_xywh": [
+        990,
+        563,
+        178,
+        60
+      ],
+      "use": "Future gantry malfunction or NPC holdout"
+    },
+    {
+      "name": "Freight departure",
+      "region_xywh": [
+        1771,
+        688,
+        171,
+        66
+      ],
+      "use": "Future cargo escape set piece"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Keel cradle release",
+      "anchor": "Keel A inspection",
+      "kind": "cradle_failure"
+    },
+    {
+      "name": "Caster stoppage",
+      "anchor": "Caster station",
+      "kind": "industrial_holdout"
+    },
+    {
+      "name": "Quench valve incident",
+      "anchor": "Quench watch",
+      "kind": "thermal_release"
+    },
+    {
+      "name": "Freight evacuation",
+      "anchor": "East rim goal",
+      "kind": "departure"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Grounded vessel-in-excavation grammar for procedural drydock generation",
+    "Asymmetric double service troughs contrasting high production gantry",
+    "Parallel altitude districts and surviving whole-hull alternate routes",
+    "Unfilled dock construction seams for future composition"
+  ],
+  "similarity_avoidance": "Unlike Nadirspan's ceiling-hung plant, Spindlebreak's vertical geological fault, Saltglass's separate exposed islands and Vespergate's single ring crater, this map is an engineered side-elevation twin-drydock yard dominated by grounded steel ship-hulls and two excavated work basins.",
+  "diversity_axes": {
+    "macro_topology": "drydock",
+    "altitude_grammar": "tri_level",
+    "density_cadence": "dense_open_dense",
+    "route_structure": "layered",
+    "landmark_family": "vessel",
+    "support_form": "multi_leg",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  }
+}
