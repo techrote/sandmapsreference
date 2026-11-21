@@ -1,0 +1,343 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_SHEARLINE_COUNTERFLOW_QUALIFICATION_CIRCUIT",
+  "revision": "R2",
+  "seed": "0x261121f1 (fixed deterministic source, no random draw)",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donor": "Tungsten Sawtooth @ 7fc24855cf521c90bf67f4afb08685e490473201 (read-only) signal/material culture. Comparison: Thunderclap Switchyard, Torsion Rift, six Switchglass and six Meridian designs. No pixel, wheel, gate, baffle, site or code geometry reuse.",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 486340,
+  "discarded_unattached_candidate_cells": 69516,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 2396,
+  "setup_json_bytes": 44876,
+  "material_work_visits": 486340,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "e201e05caa7c82d75e0a1e4327ba631eb2ff714ef528ef0eeb37e44bc53cb46c",
+  "setup_sha256": "5118b657f85793f701d62b840aa2ed3ea368a96a22978e7e4bbbdf0ec58d0dea",
+  "histogram": {
+    "0": 1610812,
+    "49": 57035,
+    "58": 25065,
+    "62": 35716,
+    "100": 314351,
+    "101": 17353,
+    "113": 2520,
+    "117": 32915,
+    "122": 1385
+  },
+  "sites": [
+    {
+      "name": "West timing launch",
+      "x": 113,
+      "y": 324
+    },
+    {
+      "name": "West upper signal",
+      "x": 254,
+      "y": 277
+    },
+    {
+      "name": "Alpha fast approach",
+      "x": 492,
+      "y": 401
+    },
+    {
+      "name": "Alpha weave gate",
+      "x": 624,
+      "y": 518
+    },
+    {
+      "name": "Alpha safe exit",
+      "x": 742,
+      "y": 651
+    },
+    {
+      "name": "Upper overtake shelf",
+      "x": 795,
+      "y": 390
+    },
+    {
+      "name": "Central racing line",
+      "x": 1026,
+      "y": 392
+    },
+    {
+      "name": "Upper relay gauge",
+      "x": 1057,
+      "y": 365
+    },
+    {
+      "name": "Central lower return",
+      "x": 1061,
+      "y": 651
+    },
+    {
+      "name": "Counterflow lower relay",
+      "x": 1018,
+      "y": 729
+    },
+    {
+      "name": "Beta fast approach",
+      "x": 1326,
+      "y": 408
+    },
+    {
+      "name": "Beta weave gate",
+      "x": 1427,
+      "y": 519
+    },
+    {
+      "name": "Beta sheltered approach",
+      "x": 1558,
+      "y": 650
+    },
+    {
+      "name": "East fast brake",
+      "x": 1673,
+      "y": 320
+    },
+    {
+      "name": "Outer catch",
+      "x": 1980,
+      "y": 462
+    },
+    {
+      "name": "East lower rescue",
+      "x": 1940,
+      "y": 754
+    },
+    {
+      "name": "Underpass middle",
+      "x": 1242,
+      "y": 663
+    },
+    {
+      "name": "West lower safe",
+      "x": 433,
+      "y": 670
+    },
+    {
+      "name": "Western recovery",
+      "x": 142,
+      "y": 656
+    },
+    {
+      "name": "Damaged spur reveal",
+      "x": 1722,
+      "y": 435
+    },
+    {
+      "name": "West pit shaft",
+      "x": 278,
+      "y": 832
+    },
+    {
+      "name": "West pit workface",
+      "x": 322,
+      "y": 972
+    },
+    {
+      "name": "Central pit shaft",
+      "x": 1035,
+      "y": 835
+    },
+    {
+      "name": "Central pit workface",
+      "x": 1091,
+      "y": 968
+    },
+    {
+      "name": "East rescue shaft",
+      "x": 1807,
+      "y": 806
+    },
+    {
+      "name": "East rescue room",
+      "x": 1860,
+      "y": 948
+    },
+    {
+      "name": "Finish lower",
+      "x": 2011,
+      "y": 786
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 27,
+      "total": 27,
+      "missing": [],
+      "visited_centres": 1372074
+    },
+    "23x19": {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 27,
+      "total": 27,
+      "missing": [],
+      "visited_centres": 1339988
+    },
+    "31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 27,
+      "total": 27,
+      "missing": [],
+      "visited_centres": 1276104
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      750,
+      335,
+      123,
+      123
+    ],
+    "material": 58,
+    "after_31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 26,
+      "total": 27,
+      "missing": [
+        "Upper overtake shelf"
+      ],
+      "visited_centres": 1253307
+    },
+    "covered_site": "Upper overtake shelf",
+    "other_sites_reachable": 26
+  },
+  "route_detour": {
+    "from": "Alpha fast approach",
+    "to": "Central racing line",
+    "hull": [
+      31,
+      27
+    ],
+    "baseline_steps": 543,
+    "obstructed_steps": 683,
+    "extra_steps": 140,
+    "method": "Conservative full 31x27 Midge hull BFS between literal high gate approaches, forcing a 31x27 high-line passing detour around the covered upper overtake checkpoint"
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 37394,
+      "pixels": 2097152,
+      "sha256": "12d402a4ee27b99a62b1c5dda2443b552e683bd0ed53ab0850b5b9f9a869702c",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-launch-impulse-and-timing.png": {
+      "x": 0,
+      "y": 165,
+      "w": 510,
+      "h": 590,
+      "bytes": 7538,
+      "pixels": 300900,
+      "sha256": "4f8cabbb94c0c70e6fb6841dc8496e99435740aac879d83d4a5863d475480df9",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-alpha-grade-splice.png": {
+      "x": 375,
+      "y": 348,
+      "w": 490,
+      "h": 435,
+      "bytes": 4645,
+      "pixels": 213150,
+      "sha256": "dafacbf44d6dfefa921de3c61e167d3c2af4f7160c5c8c3b721b956b4406526c",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-counterflow-metering.png": {
+      "x": 790,
+      "y": 235,
+      "w": 545,
+      "h": 650,
+      "bytes": 8565,
+      "pixels": 354250,
+      "sha256": "af170574d0bd5d6766262355f5aa137d2cf3b45ffaa93834ba103e6285f4d249",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-beta-passing-exchange.png": {
+      "x": 1248,
+      "y": 348,
+      "w": 482,
+      "h": 435,
+      "bytes": 3058,
+      "pixels": 209670,
+      "sha256": "80864b1d4a88174f1a78abbd0463d68ed07a17ca62e8003ae1f53fb898a23d3e",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-brake-harp-and-damaged-spur.png": {
+      "x": 1640,
+      "y": 240,
+      "w": 408,
+      "h": 620,
+      "bytes": 3359,
+      "pixels": 252960,
+      "sha256": "883c0c645e636d27e1a735dfcd870801ce3ab27b4d683869ddabbdf0a9e0b26b",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-entered-pit-services.png": {
+      "x": 0,
+      "y": 789,
+      "w": 2048,
+      "h": 235,
+      "bytes": 11899,
+      "pixels": 481280,
+      "sha256": "225e7caa3cc44779cf28a6fc3f8e78dc95a3f78f44f9f369f6b06747c71ea72f",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: No exact-build Godot/Workbench/CyberDemoBridge/Rapier load, collision, ticks or fresh-process save/reopen executed",
+  "independent_review": "PENDING: independent Art, Technical and Shepherd exact-HEAD review",
+  "ci": "NOT CLAIMED",
+  "corpus_role": "Original braided split-lane racing circuit with two real alpha/beta weave exchanges, a long high-speed lane, broad continuous sheltered low counterflow, lane-brake harp, intentional broken spur, and three Midge-entered pit/dispatch/rescue workfaces."
+}
