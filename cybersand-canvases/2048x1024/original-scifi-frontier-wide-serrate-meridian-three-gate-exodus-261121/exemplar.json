@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-frontier-wide",
+  "map_role": "asymmetric three-gate customs interchange, west rescue clinic, phasewell yard, eastern bioquarantine, three entered subgrade service compartments",
+  "anchor_donors": [],
+  "macro_topology": "longitudinal industrial migration corridor of three unlike founded portals above fractured but entered service vaults",
+  "density_profile": "inhabited western dense cluster, first security inspection, intentionally sparse central customs plaza, complex actuator, east medical-quarantine worktown",
+  "route_grammar": {
+    "spawn": "Clinic arrival",
+    "primary": "west clinic to intake portal / phasewell customs / eastern quarantine / outbound evacuation",
+    "alternatives": [
+      "open-sky high route above the real gateheads",
+      "in-ground service shafts from three different districts with surface return",
+      "wide gate apertures and western vehicle-apron detour"
+    ],
+    "named_sites": 33,
+    "obstruction_site": "Phasewell control",
+    "obstruction_box": [
+      1072,
+      555,
+      1114,
+      597
+    ],
+    "remaining_reachable": 32
+  },
+  "strong_motifs": [
+    "three unlike braced gate heads, each with real Midge clearance portals",
+    "load-bearing geological abutments deliberately break continuous underground rails rather than pretending full through service",
+    "partly open clinic and quarantine rooms at ordinary Midge scale",
+    "sparse but enterable central staging yard and branching survey routes",
+    "separate 72-cell-wide descent shafts to each industrial cellar"
+  ],
+  "interesting_relationships": [
+    "frontier security gates and sparse social yard form lateral working infrastructure rather than isolated landscape monuments",
+    "floor-rooted and cliff-embedded load paths differ among gatehouses",
+    "each inaccessible undercroft segment can escape through its own shaft",
+    "direct atmospheric overflight coexists with restricted foot-scale manufacturing rooms"
+  ],
+  "authoring_affordances": [
+    "vacant central customs yard for human-built scripted encounters",
+    "unfurnished east-west apron seams for Gentek modular parts",
+    "each deep workface can be hand-detailed without altering the main flyway",
+    "gate openings make viable collapse/lockdown event candidates"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "West inbound checkpoint",
+      "area": [
+        400,
+        350,
+        752,
+        814
+      ],
+      "event_type": "security lockdown or convoy approach",
+      "scripted": false
+    },
+    {
+      "name": "Phasewell service interruption",
+      "area": [
+        928,
+        240,
+        1242,
+        740
+      ],
+      "event_type": "machine activation / inspection outage",
+      "scripted": false
+    },
+    {
+      "name": "East quarantine transfer",
+      "area": [
+        1515,
+        542,
+        1945,
+        754
+      ],
+      "event_type": "holdout / medical rescue",
+      "scripted": false
+    },
+    {
+      "name": "Three entered freight cellars",
+      "area": [
+        170,
+        840,
+        1910,
+        1000
+      ],
+      "event_type": "recovery / separate equipment finds",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Exemplar of genuinely different gate superstructures, physical load paths, nested room thresholds, editable central negative space and independently entered rail undercrofts.",
+  "similarity_avoidance": "Not an Orison-style island chain, Nivelle roof-suspension, Cairnstep cascading landscape, Copperwake nested cavity or Penumbral ring mill; it teaches a lateral security-gate settlement and open customs court.",
+  "diversity_axes": {
+    "macro_topology": "corridor",
+    "altitude_grammar": "high_low_bypass",
+    "density_cadence": "dense_open_dense",
+    "route_structure": "parallel_lanes",
+    "landmark_family": "gate",
+    "support_form": "mixed",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  },
+  "native_status": "NATIVE-UNTESTED",
+  "source_grid_sha256": "1f719835c89a884ea11cefa0bf1a918d61aca1a83048263c17bf38dbbe014731"
+}

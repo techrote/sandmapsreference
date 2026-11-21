@@ -1,0 +1,321 @@
+{
+  "concept": "Serrate Meridian - Three-Gate Exodus Spine",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 5474833,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "map_repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "loader_source_max_rectangles": 32768,
+  "loader_source_max_json_bytes": 1048576,
+  "source_work_budget": 32000000,
+  "material_rule_assumption": "Only accepted inert Solid/None IDs; no fluid, falling, mobile, reactive or unsupported final material.",
+  "material_histogram": {
+    "49": 112544,
+    "62": 59011,
+    "63": 796,
+    "68": 22181,
+    "77": 698,
+    "79": 1138,
+    "100": 131685,
+    "101": 44135,
+    "121": 2273,
+    "129": 5837,
+    "130": 7049,
+    "131": 13378
+  },
+  "filled_grounded_cells": 400725,
+  "detached_final_cells": 0,
+  "final_fluid_cells": 0,
+  "provisional_disconnected_cells_removed": 20436,
+  "provisional_components_removed": 21,
+  "rectangle_count": 2012,
+  "rectangle_work": 400725,
+  "setup_bytes": 38298,
+  "grid_sha256": "1f719835c89a884ea11cefa0bf1a918d61aca1a83048263c17bf38dbbe014731",
+  "setup_sha256": "d653eccd777d62315ffb76e070ff25743978e3e34935e1b7fc566c6f2b9ebe84",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 63333,
+      "sha256": "1968ae5f064cf25f7a85cd551f90ad08d32457eb7bc653c3684b3b231390fa16"
+    },
+    {
+      "name": "01-clinic-and-west-airlock.png",
+      "bytes": 14042,
+      "sha256": "cf868e21298caf3eacd8c3852270f1d93d62420c54169e5cfb79638ca490f9c1"
+    },
+    {
+      "name": "02-inbound-gate.png",
+      "bytes": 15129,
+      "sha256": "717f650fbf974a75775fc422c9a24a145f4fc4503f6e36f6d7722453b7e8feee"
+    },
+    {
+      "name": "03-central-phase-actuator.png",
+      "bytes": 17751,
+      "sha256": "e1442a51db499b7e84d859490d0299ea40b9d66ac0c8422179e9038137878086"
+    },
+    {
+      "name": "04-east-quarantine.png",
+      "bytes": 9859,
+      "sha256": "1429ee72ac1481f3174674ca2dec599405ff76df99743d6236d4cbfc742a19da"
+    },
+    {
+      "name": "05-subgrade-artery.png",
+      "bytes": 23267,
+      "sha256": "0735b99c792dc5814b5f67d2dffc044f46ec1abd6eb3e16b0b5ad62cef922a76"
+    }
+  ],
+  "clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1454030,
+      "passed": 33,
+      "total": 33,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1408051,
+      "passed": 33,
+      "total": 33,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1311071,
+      "passed": 33,
+      "total": 33,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "xyxy_halfopen": [
+      1072,
+      555,
+      1114,
+      597
+    ],
+    "material_id": 58,
+    "site": "Phasewell control",
+    "purpose": "Physical 42x42 actuator-service blockage, all 32 other named sites retained with full-size 31x27 return.",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1306175,
+      "passed": 32,
+      "total": 33,
+      "bad": [
+        {
+          "name": "Phasewell control",
+          "xy": [
+            1093,
+            576
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "named_sites": {
+    "Clinic arrival": [
+      176,
+      592
+    ],
+    "Triage desk": [
+      304,
+      590
+    ],
+    "Upper clinic hatch": [
+      269,
+      486
+    ],
+    "Rover dispatch": [
+      364,
+      699
+    ],
+    "Inbound crosswind apron": [
+      472,
+      592
+    ],
+    "Intake scanner": [
+      556,
+      559
+    ],
+    "Western lookout": [
+      550,
+      290
+    ],
+    "Intake low exit": [
+      597,
+      788
+    ],
+    "First shaft landing": [
+      283,
+      851
+    ],
+    "West sample tunnel": [
+      395,
+      942
+    ],
+    "Subgrade utility": [
+      572,
+      939
+    ],
+    "Phasewell sky antenna": [
+      1096,
+      167
+    ],
+    "Phasewell east winch": [
+      1272,
+      562
+    ],
+    "Phasewell control": [
+      1093,
+      576
+    ],
+    "Customs lockdown pocket": [
+      800,
+      727
+    ],
+    "Customs open staging": [
+      758,
+      786
+    ],
+    "Central deep assay": [
+      833,
+      937
+    ],
+    "Second shaft landing": [
+      1069,
+      849
+    ],
+    "Deep actuator rail": [
+      1120,
+      938
+    ],
+    "Underground transfer": [
+      1321,
+      942
+    ],
+    "Biofilter inspection": [
+      1494,
+      503
+    ],
+    "Eastern gate watch": [
+      1510,
+      291
+    ],
+    "Quarantine lift": [
+      1640,
+      589
+    ],
+    "Bio-custody": [
+      1715,
+      585
+    ],
+    "Eastern medbay": [
+      1852,
+      592
+    ],
+    "Evacuation pad": [
+      1992,
+      581
+    ],
+    "Third shaft landing": [
+      1817,
+      850
+    ],
+    "East deep custody": [
+      1514,
+      936
+    ],
+    "Return freight cellar": [
+      1698,
+      939
+    ],
+    "Deep eastern exit": [
+      1868,
+      939
+    ],
+    "West boundary survey": [
+      47,
+      715
+    ],
+    "East boundary survey": [
+      2014,
+      790
+    ],
+    "Overflight return": [
+      1768,
+      152
+    ]
+  },
+  "literal_actor_spawn": [
+    176,
+    592
+  ],
+  "crops": [
+    [
+      "01-clinic-and-west-airlock",
+      50,
+      430,
+      630,
+      430
+    ],
+    [
+      "02-inbound-gate",
+      385,
+      290,
+      545,
+      550
+    ],
+    [
+      "03-central-phase-actuator",
+      875,
+      190,
+      560,
+      625
+    ],
+    [
+      "04-east-quarantine",
+      1410,
+      315,
+      625,
+      520
+    ],
+    [
+      "05-subgrade-artery",
+      170,
+      735,
+      1720,
+      285
+    ]
+  ],
+  "surviving_functional_footprints": {
+    "clinic": 9419,
+    "intake": 34856,
+    "phasewell": 56915,
+    "quarantine": 14363,
+    "deep_recovery": 23445
+  },
+  "static_status": "CREATOR-STATIC-PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "Exact-HEAD Art/Technical/Shepherd reviews pending",
+  "creator_revision": "Original rooted multi-gate customs switchyard, 2026-11-21"
+}

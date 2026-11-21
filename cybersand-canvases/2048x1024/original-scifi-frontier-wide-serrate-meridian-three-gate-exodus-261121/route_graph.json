@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "kind": "literal all-centre 4-neighbour BFS at three envelopes, plus qualitative route groupings; no assertion of distinct locally certified inter-site edges",
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_grid_sha256": "1f719835c89a884ea11cefa0bf1a918d61aca1a83048263c17bf38dbbe014731",
+  "spawn": "Clinic arrival",
+  "named_sites": {
+    "Clinic arrival": [
+      176,
+      592
+    ],
+    "Triage desk": [
+      304,
+      590
+    ],
+    "Upper clinic hatch": [
+      269,
+      486
+    ],
+    "Rover dispatch": [
+      364,
+      699
+    ],
+    "Inbound crosswind apron": [
+      472,
+      592
+    ],
+    "Intake scanner": [
+      556,
+      559
+    ],
+    "Western lookout": [
+      550,
+      290
+    ],
+    "Intake low exit": [
+      597,
+      788
+    ],
+    "First shaft landing": [
+      283,
+      851
+    ],
+    "West sample tunnel": [
+      395,
+      942
+    ],
+    "Subgrade utility": [
+      572,
+      939
+    ],
+    "Phasewell sky antenna": [
+      1096,
+      167
+    ],
+    "Phasewell east winch": [
+      1272,
+      562
+    ],
+    "Phasewell control": [
+      1093,
+      576
+    ],
+    "Customs lockdown pocket": [
+      800,
+      727
+    ],
+    "Customs open staging": [
+      758,
+      786
+    ],
+    "Central deep assay": [
+      833,
+      937
+    ],
+    "Second shaft landing": [
+      1069,
+      849
+    ],
+    "Deep actuator rail": [
+      1120,
+      938
+    ],
+    "Underground transfer": [
+      1321,
+      942
+    ],
+    "Biofilter inspection": [
+      1494,
+      503
+    ],
+    "Eastern gate watch": [
+      1510,
+      291
+    ],
+    "Quarantine lift": [
+      1640,
+      589
+    ],
+    "Bio-custody": [
+      1715,
+      585
+    ],
+    "Eastern medbay": [
+      1852,
+      592
+    ],
+    "Evacuation pad": [
+      1992,
+      581
+    ],
+    "Third shaft landing": [
+      1817,
+      850
+    ],
+    "East deep custody": [
+      1514,
+      936
+    ],
+    "Return freight cellar": [
+      1698,
+      939
+    ],
+    "Deep eastern exit": [
+      1868,
+      939
+    ],
+    "West boundary survey": [
+      47,
+      715
+    ],
+    "East boundary survey": [
+      2014,
+      790
+    ],
+    "Overflight return": [
+      1768,
+      152
+    ]
+  },
+  "conservative_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_bfs_proof": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1454030,
+      "passed": 33,
+      "total": 33,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1408051,
+      "passed": 33,
+      "total": 33,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1311071,
+      "passed": 33,
+      "total": 33,
+      "bad": []
+    }
+  ],
+  "obstruction_test": {
+    "xyxy_halfopen": [
+      1072,
+      555,
+      1114,
+      597
+    ],
+    "material_id": 58,
+    "excluded_site": "Phasewell control",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1306175,
+      "passed": 32,
+      "total": 33,
+      "bad": [
+        {
+          "name": "Phasewell control",
+          "xy": [
+            1093,
+            576
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "routes": {
+    "primary": [
+      "Clinic arrival",
+      "Triage desk",
+      "Inbound crosswind apron",
+      "Intake scanner",
+      "Customs lockdown pocket",
+      "Phasewell control",
+      "Biofilter inspection",
+      "Bio-custody",
+      "Eastern medbay",
+      "Evacuation pad"
+    ],
+    "high_bypass": [
+      "Upper clinic hatch",
+      "Western lookout",
+      "Phasewell sky antenna",
+      "Eastern gate watch",
+      "Overflight return",
+      "Evacuation pad"
+    ],
+    "west_service": [
+      "Clinic arrival",
+      "First shaft landing",
+      "West sample tunnel",
+      "Subgrade utility"
+    ],
+    "central_service": [
+      "Customs open staging",
+      "Second shaft landing",
+      "Central deep assay",
+      "Deep actuator rail",
+      "Underground transfer"
+    ],
+    "east_service": [
+      "Quarantine lift",
+      "Third shaft landing",
+      "East deep custody",
+      "Return freight cellar",
+      "Deep eastern exit"
+    ]
+  },
+  "truthfulness": "A structural grounding wall breaks the underground through passage: users must return to open sky / use other entered shafts. All exact sites are connected to literal spawn at each envelope, permitting reversible navigation."
+}
