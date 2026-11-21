@@ -106,7 +106,7 @@ V(1699,427,75,109);
 /* Enterable side ports connect deep vaults to the exterior rather than
    leaving sealed internal Midge islands between founded pier walls. */
 V(284,422,63,124);
-V(912,422,65,126);
+V(772,417,150,141);
 V(1509,415,110,135);
 /* Side-enterable upper-to-lower maintenance ducts and editing receptors. */
 for(const [name,p] of Object.entries(sites)){if(p[1]>=600)V(p[0]-25,515,51,367);}
