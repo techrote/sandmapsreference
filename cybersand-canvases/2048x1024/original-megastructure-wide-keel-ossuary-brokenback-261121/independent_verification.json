@@ -1,0 +1,188 @@
+{
+  "source_static": "PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "independent_method": "ordered setup replay + integral-image conservative clearance + deque 4-cardinal BFS + PNG CRC/decoded-pixel parity",
+  "engine_authority": "techrote/cybersand/main@69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "setup_sha256": "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+  "grid_sha256": "e33499bc4b8e6779e28aa04b2fe30f0670cefc8fe3d7574d80740dcaf2a17b2d",
+  "world": [
+    2048,
+    1024
+  ],
+  "cells": 2097152,
+  "rectangles": 3770,
+  "setup_bytes": 69866,
+  "construction_work": 464115,
+  "retained_inert_boundary_rooted": 464115,
+  "retained_detached": 0,
+  "occupied_material_ids": [
+    58,
+    62,
+    63,
+    64,
+    65,
+    66,
+    69,
+    72,
+    76,
+    77,
+    80,
+    98,
+    100,
+    101,
+    119
+  ],
+  "material_histogram": {
+    "0": 1633037,
+    "58": 112750,
+    "62": 85103,
+    "63": 78290,
+    "64": 8141,
+    "65": 996,
+    "66": 31631,
+    "69": 6898,
+    "72": 2868,
+    "76": 4048,
+    "77": 453,
+    "80": 311,
+    "98": 1960,
+    "100": 128067,
+    "101": 361,
+    "119": 2238
+  },
+  "site_checks": [
+    {
+      "footprint": [
+        19,
+        15
+      ],
+      "reachable": 20,
+      "missing": [],
+      "component": 1244537
+    },
+    {
+      "footprint": [
+        23,
+        19
+      ],
+      "reachable": 20,
+      "missing": [],
+      "component": 1194862
+    },
+    {
+      "footprint": [
+        31,
+        27
+      ],
+      "reachable": 20,
+      "missing": [],
+      "component": 1097723
+    }
+  ],
+  "obstructed_checks": [
+    {
+      "footprint": [
+        19,
+        15
+      ],
+      "reachable": 19,
+      "missing": [
+        "Dry sealed machine datum"
+      ],
+      "component": 1238243
+    },
+    {
+      "footprint": [
+        23,
+        19
+      ],
+      "reachable": 19,
+      "missing": [
+        "Dry sealed machine datum"
+      ],
+      "component": 1188060
+    },
+    {
+      "footprint": [
+        31,
+        27
+      ],
+      "reachable": 19,
+      "missing": [
+        "Dry sealed machine datum"
+      ],
+      "component": 1089905
+    }
+  ],
+  "images": {
+    "overview.png": {
+      "sha256": "b39f1f64d69e938589300de400b99736ed3be7de54fcc625eabced6a7ea47e69",
+      "material_pixel_parity": true,
+      "pixels": 2097152,
+      "extent": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-tug-exchange.png": {
+      "sha256": "17c2b4ba30e0a7459da0654e4bfcf54372cd7021c7e01f7e2cfd2aa11049dd7f",
+      "material_pixel_parity": true,
+      "pixels": 289800,
+      "extent": [
+        70,
+        160,
+        420,
+        690
+      ]
+    },
+    "02-propulsion-slip.png": {
+      "sha256": "089a30e32f6011a829cffc123214cc5f72a52254602271221bfd947ed4829fd5",
+      "material_pixel_parity": true,
+      "pixels": 161200,
+      "extent": [
+        465,
+        398,
+        310,
+        520
+      ]
+    },
+    "03-hollow-keel.png": {
+      "sha256": "9e84296ccade719d56d4ff09bb07ffa40e97031caa582ecb84661f65c895ae12",
+      "material_pixel_parity": true,
+      "pixels": 353760,
+      "extent": [
+        770,
+        294,
+        660,
+        536
+      ]
+    },
+    "04-astrograph-spire.png": {
+      "sha256": "e8acc8f9c723c62976a973ef100a6290723c9c99a7ee15c8ae340736f1f0ee10",
+      "material_pixel_parity": true,
+      "pixels": 231150,
+      "extent": [
+        1430,
+        183,
+        335,
+        690
+      ]
+    },
+    "05-salvage-lock.png": {
+      "sha256": "c32702e273e6702feebd04bda5a6f5a0f12f0169371c8963e3ec212641890e13",
+      "material_pixel_parity": true,
+      "pixels": 131750,
+      "extent": [
+        1740,
+        380,
+        250,
+        527
+      ]
+    }
+  },
+  "total_authentic_source_pixels_tested": 3264812,
+  "art_or_technical_external_review": false,
+  "native_tests_performed": false
+}

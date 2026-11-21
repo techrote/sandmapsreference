@@ -1,0 +1,371 @@
+{
+  "title": "Keel Ossuary \u2014 Broken-Back Ark Drydock",
+  "generated_utc_date": "2026-11-21",
+  "builder_seed": 202611211056,
+  "source_authority": "techrote/cybersand/main@69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "schema_blob": "760268107874198c2323dd590d8c0921692c5ba4",
+  "material_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "actor_catalog_blob": "78e146cf8f9e724d5587bd10db85abb460f3b0fd",
+  "world": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "grid_sha256": "e33499bc4b8e6779e28aa04b2fe30f0670cefc8fe3d7574d80740dcaf2a17b2d",
+  "setup_sha256": "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+  "setup_bytes": 69866,
+  "rectangles": 3770,
+  "rectangle_budget": 32768,
+  "construction_work": 464115,
+  "grounded_inert_solids": 464115,
+  "removed_detached_cells": 15664,
+  "retained_detached_cells": 0,
+  "material_histogram": {
+    "0": 1633037,
+    "58": 112750,
+    "62": 85103,
+    "63": 78290,
+    "64": 8141,
+    "65": 996,
+    "66": 31631,
+    "69": 6898,
+    "72": 2868,
+    "76": 4048,
+    "77": 453,
+    "80": 311,
+    "98": 1960,
+    "100": 128067,
+    "101": 361,
+    "119": 2238
+  },
+  "material_laws": {
+    "58": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "62": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "63": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "64": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "65": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "66": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "69": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "72": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "76": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "77": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "80": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "98": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "100": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "101": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    },
+    "119": {
+      "state": "Solid",
+      "kernel": "None",
+      "movable": false
+    }
+  },
+  "mobile_cells": 0,
+  "liquid_cells": 0,
+  "reactive_cells": 0,
+  "sites": {
+    "West tug launch": [
+      78,
+      780
+    ],
+    "Customs arrival apron": [
+      205,
+      775
+    ],
+    "Tug roof signal": [
+      295,
+      209
+    ],
+    "Public hatch upper": [
+      188,
+      596
+    ],
+    "West hoist crossing": [
+      432,
+      704
+    ],
+    "Aft engine exchange": [
+      615,
+      710
+    ],
+    "Stern entry throat": [
+      790,
+      582
+    ],
+    "Upper hull promenade": [
+      907,
+      492
+    ],
+    "Vessel drive chamber": [
+      1115,
+      582
+    ],
+    "Dry sealed machine datum": [
+      1055,
+      600
+    ],
+    "Underkeel service": [
+      1080,
+      864
+    ],
+    "Upper keel signal bridge": [
+      1094,
+      268
+    ],
+    "Bow cabin": [
+      1384,
+      582
+    ],
+    "Starboard bilge well": [
+      1328,
+      849
+    ],
+    "Astrograph upper port": [
+      1526,
+      366
+    ],
+    "Astrograph mid controls": [
+      1663,
+      564
+    ],
+    "Navigation lower workshop": [
+      1644,
+      819
+    ],
+    "East salvage lock": [
+      1881,
+      670
+    ],
+    "East freight marshalling": [
+      1878,
+      872
+    ],
+    "Departure eastern daylight": [
+      1977,
+      782
+    ]
+  },
+  "spawn": "West tug launch",
+  "goal": "Departure eastern daylight",
+  "clearance": [
+    {
+      "footprint": [
+        19,
+        15
+      ],
+      "reachable": 20,
+      "missing": [],
+      "component": 1244537
+    },
+    {
+      "footprint": [
+        23,
+        19
+      ],
+      "reachable": 20,
+      "missing": [],
+      "component": 1194862
+    },
+    {
+      "footprint": [
+        31,
+        27
+      ],
+      "reachable": 20,
+      "missing": [],
+      "component": 1097723
+    }
+  ],
+  "obstruction_xywh": [
+    1024,
+    574,
+    74,
+    58
+  ],
+  "clearance_with_obstruction": [
+    {
+      "footprint": [
+        19,
+        15
+      ],
+      "reachable": 19,
+      "missing": [
+        "Dry sealed machine datum"
+      ],
+      "component": 1238243
+    },
+    {
+      "footprint": [
+        23,
+        19
+      ],
+      "reachable": 19,
+      "missing": [
+        "Dry sealed machine datum"
+      ],
+      "component": 1188060
+    },
+    {
+      "footprint": [
+        31,
+        27
+      ],
+      "reachable": 19,
+      "missing": [
+        "Dry sealed machine datum"
+      ],
+      "component": 1089905
+    }
+  ],
+  "route_graph": {
+    "main": [
+      "West tug launch",
+      "Customs arrival apron",
+      "West hoist crossing",
+      "Aft engine exchange",
+      "Stern entry throat",
+      "Vessel drive chamber",
+      "Bow cabin",
+      "Astrograph mid controls",
+      "East salvage lock",
+      "Departure eastern daylight"
+    ],
+    "upper": [
+      "Tug roof signal",
+      "Upper hull promenade",
+      "Upper keel signal bridge",
+      "Astrograph upper port"
+    ],
+    "lower": [
+      "Public hatch upper",
+      "Aft engine exchange",
+      "Underkeel service",
+      "Starboard bilge well",
+      "East freight marshalling"
+    ],
+    "recovery": [
+      "Underkeel service",
+      "Starboard bilge well",
+      "Navigation lower workshop",
+      "East freight marshalling"
+    ]
+  },
+  "images": {
+    "overview.png": {
+      "origin": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "sha256": "b39f1f64d69e938589300de400b99736ed3be7de54fcc625eabced6a7ea47e69"
+    },
+    "01-tug-exchange.png": {
+      "origin": [
+        70,
+        160,
+        420,
+        690
+      ],
+      "sha256": "17c2b4ba30e0a7459da0654e4bfcf54372cd7021c7e01f7e2cfd2aa11049dd7f"
+    },
+    "02-propulsion-slip.png": {
+      "origin": [
+        465,
+        398,
+        310,
+        520
+      ],
+      "sha256": "089a30e32f6011a829cffc123214cc5f72a52254602271221bfd947ed4829fd5"
+    },
+    "03-hollow-keel.png": {
+      "origin": [
+        770,
+        294,
+        660,
+        536
+      ],
+      "sha256": "9e84296ccade719d56d4ff09bb07ffa40e97031caa582ecb84661f65c895ae12"
+    },
+    "04-astrograph-spire.png": {
+      "origin": [
+        1430,
+        183,
+        335,
+        690
+      ],
+      "sha256": "e8acc8f9c723c62976a973ef100a6290723c9c99a7ee15c8ae340736f1f0ee10"
+    },
+    "05-salvage-lock.png": {
+      "origin": [
+        1740,
+        380,
+        250,
+        527
+      ],
+      "sha256": "c32702e273e6702feebd04bda5a6f5a0f12f0169371c8963e3ec212641890e13"
+    }
+  },
+  "native_status": "NATIVE-UNTESTED",
+  "tests_not_performed": [
+    "Godot Workbench load",
+    "Midge native Rapier contact/advance",
+    "save/cold reopen",
+    "independent third-party audit"
+  ]
+}
