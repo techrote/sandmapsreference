@@ -124,6 +124,7 @@ def _archive(path: Path) -> tuple[dict[str, bytes], str]:
             entries = archive.infolist()
             _require(0 < len(entries) <= MAX_FILES, "Archive member limit exceeded")
             for entry in entries:
+                _path(entry.orig_filename[:-1] if entry.is_dir() else entry.orig_filename)
                 name = entry.filename[:-1] if entry.is_dir() else entry.filename
                 _path(name)
                 folded = name.casefold()

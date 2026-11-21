@@ -16,7 +16,7 @@ import urllib.request
 
 from . import catalog
 from .common import (EVIDENCE_BRANCH, PREFIX, REPOSITORY, IntegrityError,
-                     canonical_bytes, load_json, record_id, require, safe_zip, sha256, validate_record)
+                     canonical_bytes, load_json, record_id, require, safe_path, safe_zip, sha256, validate_record)
 from .evidence import verify_archive
 from .github import GitHubClient, GitHubError
 
@@ -110,10 +110,12 @@ def publish(writer, run: dict, records: list[dict], *, extra_files=None) -> dict
             return {"status": "ALREADY_PUBLISHED", "commit": head, "run_key": run["run_key"], "records": len(records)}
         if extra_files:
             for name, data in extra_files.items():
+                safe_path(name)
                 require(name.startswith(PREFIX + "/schemas/") or name == PREFIX + "/README.md", "extra evidence path forbidden")
                 changed[name] = data
         tree_entries = []
         for path, data in sorted(changed.items()):
+            safe_path(path)
             require(path.startswith(PREFIX + "/"), "publisher escaped evidence prefix")
             blob = writer.write("POST", "/git/blobs", {"content": base64.b64encode(data).decode("ascii"), "encoding": "base64"})
             tree_entries.append({"path": path, "mode": "100644", "type": "blob", "sha": blob["sha"]})

@@ -23,6 +23,11 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
+          sparse-checkout: |
+            .github
+            tools/native_admission
+            tests/native_admission
+            docs/native-admission
       - name: Read one immutable evidence snapshot and prove exact-source queries
         env:
           GITHUB_TOKEN: ${{ github.token }}

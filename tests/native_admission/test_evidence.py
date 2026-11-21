@@ -8,6 +8,7 @@ from pathlib import Path
 import stat
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
 from tools.native_admission.common import (ENGINE_REPOSITORY, REPOSITORY, IntegrityError,
@@ -40,6 +41,9 @@ def packed(files, manifest=True):
     with zipfile.ZipFile(stream, "w", zipfile.ZIP_DEFLATED) as archive:
         for key, value in members.items():
             item = zipfile.ZipInfo(key)
+            # Preserve deliberately hostile names even on Windows, where the
+            # ZipInfo constructor otherwise normalizes the test input away.
+            item.filename = item.orig_filename = key
             item.external_attr = 0o100644 << 16
             archive.writestr(item, value)
     return stream.getvalue()
@@ -129,10 +133,11 @@ class NativeFixture:
             "artifact_url": f"https://github.com/{REPOSITORY}/actions/runs/{self.execution['run_id']}/artifacts/10"})[1]
 
 
-def publication(records, run_id="1234", archive_sha="1" * 64):
+def publication(records, run_id="1234", archive_sha=None):
     return {"schema": "cybersand-native-publication-v1", "run_key": "test-" + run_id,
             "origin": records[0]["execution"]["origin"], "run_id": run_id, "attempt": 1,
-            "archive_sha256": archive_sha, "record_ids": [r["record_id"] for r in records], "validation": "VERIFIED"}
+            "archive_sha256": archive_sha or records[0]["evidence"]["archive_sha256"],
+            "record_ids": [r["record_id"] for r in records], "validation": "VERIFIED"}
 
 
 class EvidenceTests(unittest.TestCase):
@@ -172,7 +177,7 @@ class EvidenceTests(unittest.TestCase):
                 verify_manifest(changed)
 
     def test_traversal_symlink_case_collision_and_windows_aliases_rejected(self):
-        for name in ("../escape", "/absolute", "a\\escape", "a/file:stream", "a/NUL.txt", "a/trailing."):
+        for name in ("../escape", "/absolute", "a\\escape", "a/file:stream", "a/NUL.txt", "a/trailing.", "a\x00hidden"):
             with self.subTest(name=name), self.assertRaises(IntegrityError):
                 safe_zip(packed({name: b"test"}, manifest=False))
         with self.assertRaises(IntegrityError):
@@ -273,6 +278,58 @@ class EvidenceTests(unittest.TestCase):
         fixture.sync()
         with self.assertRaises(IntegrityError):
             verify_archive(fixture.archive())
+
+    def test_directed_drive_requires_command_ticks_and_geometric_projection(self):
+        for changes in ({"drive_key": "S"}, {"drive_ticks_elapsed": 19}, {"drive_ticks_elapsed": True},
+                        {"drive_start": None}, {"directed_up_displacement_cells": 0.0},
+                        {"drive_end": [117.0, 448.0]}, {"drive_end": [115.0, 450.0]},
+                        {"directed_up_displacement_cells": 2000.0}):
+            fixture = NativeFixture()
+            fixture.qualifications[0]["load_evidence"]["receipt"].update(changes)
+            fixture.sync()
+            with self.subTest(changes=changes), self.assertRaises(IntegrityError):
+                verify_archive(fixture.archive())
+
+    def test_incomplete_export_retains_verified_diagnostics_without_publishability(self):
+        fixture = NativeFixture()
+        fixture.qualifications[0]["reopen_evidence"] = None
+        fixture.sync()
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "evidence"
+            for key, data in fixture.files.items():
+                path = source / key
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(data)
+            output = Path(directory) / "diagnostic.zip"
+            result = export(source, output)
+            self.assertEqual(result["status"], "REJECTED")
+            self.assertEqual(result["publication"], "FORBIDDEN_INCOMPLETE_EVIDENCE")
+            self.assertTrue(result["missing_evidence"])
+            files = safe_zip(output)
+            verify_manifest(files)
+            self.assertEqual(files["maps/0/load.stdout.log"], fixture.files["maps/0/load.stdout.log"])
+            with self.assertRaises(IntegrityError):
+                verify_archive(output)
+
+    def test_archive_resource_limits_and_strict_json(self):
+        raw = packed({"one": b"x" * 100, "two": b"y"}, manifest=False)
+        for limits in ({"max_archive": 10}, {"max_entries": 1}, {"max_member": 99}, {"max_expanded": 100}):
+            with self.subTest(limits=limits), self.assertRaises(IntegrityError):
+                safe_zip(raw, **limits)
+        for raw in (b'{"x":1,"x":2}', b'{"x":NaN}', b'{"x":1e999}', b'{"x":"\\ud800"}'):
+            with self.subTest(raw=raw), self.assertRaises(IntegrityError):
+                load_json(raw)
+
+    def test_export_does_not_package_tokens(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "evidence"
+            source.mkdir()
+            secret = "SYNTHETIC_TEST_SECRET_123456"
+            (source / "stdout.log").write_text(secret)
+            output = Path(directory) / "unsafe.zip"
+            with patch.dict(os.environ, {"GITHUB_TOKEN": secret}), self.assertRaises(IntegrityError):
+                export(source, output)
+            self.assertFalse(output.exists())
 
 
 if __name__ == "__main__":

@@ -16,7 +16,7 @@ from tools.native_admission import runtime
 class RuntimeTests(unittest.TestCase):
     def test_archive_rejects_traversal_symlink_case_alias_and_windows_names(self):
         cases = [("../escape", None), ("a/../../escape", None), ("C:/escape", None),
-                 ("a\\b", None), ("AUX.txt", None), ("folder./x", None),
+                 ("a\\b", None), ("a\x00hidden", None), ("AUX.txt", None), ("folder./x", None),
                  ("link", stat.S_IFLNK | 0o777)]
         with tempfile.TemporaryDirectory() as name:
             root = Path(name)
@@ -24,6 +24,7 @@ class RuntimeTests(unittest.TestCase):
                 archive = root / f"{index}.zip"
                 with zipfile.ZipFile(archive, "w") as z:
                     info = zipfile.ZipInfo(member)
+                    info.filename = info.orig_filename = member
                     if mode:
                         info.external_attr = mode << 16
                     z.writestr(info, b"target")

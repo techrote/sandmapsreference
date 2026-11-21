@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from .common import (INDEX_SCHEMA, PREFIX, IntegrityError, canonical_bytes,
-                     load_json, require, sha256, validate_record)
+                     load_json, require, safe_path, sha256, validate_record)
 
 
 def empty_index() -> dict:
@@ -29,6 +29,7 @@ def validate_index(index: dict) -> dict:
         require(key and key not in run_seen, "duplicate/missing run key")
         run_seen.add(key)
         require(entry.get("path") == f"{PREFIX}/runs/{key}.json", "index run path mismatch")
+        safe_path(entry["path"])
     require(all(entry.get("run_key") in run_seen for entry in index["records"]), "orphan record without indexed run")
     return index
 

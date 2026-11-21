@@ -25,5 +25,10 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
+          sparse-checkout: |
+            .github
+            tools/native_admission
+            tests/native_admission
+            docs/native-admission
       - name: Run deterministic negative and integrity tests
         run: python3 -m unittest discover -s tests/native_admission -p 'test_*.py' -v

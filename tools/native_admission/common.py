@@ -134,6 +134,9 @@ def safe_zip(path_or_bytes, *, max_archive=MAX_ARCHIVE, max_expanded=MAX_EXPANDE
         with zipfile.ZipFile(io.BytesIO(raw)) as archive:
             require(len(archive.infolist()) <= max_entries, "archive file-count budget exceeded")
             for info in archive.infolist():
+                # ZipInfo normalizes backslashes on Windows and truncates NULs.
+                # Validate the raw central-directory name before that normalization.
+                safe_path(info.orig_filename.rstrip("/") if info.is_dir() else info.orig_filename)
                 name = info.filename.rstrip("/") if info.is_dir() else info.filename
                 safe_path(name)
                 folded = name.casefold()

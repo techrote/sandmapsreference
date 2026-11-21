@@ -81,6 +81,7 @@ def safe_extract(archive: Path, target: Path, *, maximum: int = MAX_UNPACKED) ->
         seen = set()
         names = []
         for item in infos:
+            safe_relative(item.orig_filename.rstrip("/"))
             name = item.filename.rstrip("/")
             safe_relative(name)
             folded = name.casefold()
