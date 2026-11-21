@@ -20,7 +20,7 @@
       2048
     ],
     "path": "cybersand-canvases/1024x2048/portrait-difficult-cinderward-triptych-rotorcity-261121/",
-    "material_plane_sha256": "effa9981f5bdde53344ed6cc4effb14a9341df00de03b53db1de593c2d629bf2",
+    "material_plane_sha256": "a1bc1fcf7216b5ca60d4b551a5524c8779ca1cfacc1de821489bfe046255e073",
     "seed": 202611211457
   },
   "base_repository_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
@@ -76,5 +76,19 @@
     "return_available": true
   },
   "qualification": "SOURCE-STATIC-PASS; NATIVE-UNTESTED",
-  "acceptance": "OPEN DRAFT/HOLD; independent Art/Tech/Shepherd and native gates remain"
+  "acceptance": "OPEN DRAFT/HOLD; independent Art/Tech/Shepherd and native gates remain",
+  "repair_001": {
+    "lane": "R5",
+    "parent_portrait_pr": 191,
+    "parent_portrait_head": "52820f48fb1f5dca10342aa47d89abaf5c281595",
+    "scope": "restore three unlike entered worker/workfront districts; single stacked repair only",
+    "preserved": "single eight-spoke rotor, furnace-ladle-caster-quench-freight chain, both open flanks and authoring voids",
+    "added_regions": [
+      "ore bank civic sorting loft and households",
+      "right-bank guild tool loft and entered crew room",
+      "export gantry lodge and rail customs workfront"
+    ],
+    "source_static_only": true,
+    "native": "NATIVE-UNTESTED"
+  }
 }

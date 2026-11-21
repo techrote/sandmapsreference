@@ -112,6 +112,64 @@ function layoutWorld(){
  // Independent western bypass, through the old service terrace shoulder.
  b(301,1233,86,114,0);
  b(248,1174,112,171,0);
+
+ // PORTRAIT-REPAIR-001 R5: three unlike inhabited civic/workfront clusters.
+ // Existing hilltown and guild roof modules had one-cell foundation gaps and
+ // were pruned as detached; stitch their load paths before ground audit.
+ b(169,372,18,7,68);        // ore household -> cliff-anchored terrace y375
+ b(744,900,19,8,68);        // caster crew house -> right-bank shelf y906
+ // Roof apertures and flank-accessible chambers; no sealed scenic façades.
+ b(170,292,42,13,0);b(306,311,43,12,0);
+ b(726,823,43,12,0);b(842,798,42,12,0);
+ b(175,1602,42,12,0);b(331,1626,43,12,0);
+ b(741,1811,43,12,0);b(851,1841,40,12,0);
+ // Upper-left: ore sorters' hill quarter. A cliff-cantilever sorting loft,
+ // bins, roof-mounted waterless signal and visibly unequal family shelters.
+ b(98,214,76,11,62);b(112,225,11,53,68);
+ b(125,226,49,10,117);b(137,240,23,25,131);
+ b(145,246,8,27,69);b(153,257,13,9,79);
+ b(98,274,74,10,58);b(115,281,12,35,68);
+ b(276,285,99,9,117);b(291,294,14,17,68);
+ b(350,297,12,14,69);b(355,300,7,8,79);
+ b(214,349,26,10,62);b(214,331,10,19,68);
+ // Guild: right-cliff cantilever tool loft, paired workbench below,
+ // asymmetrical crew crossing and ceramic/copper gauge benches.
+ b(856,742,76,12,62);b(910,753,12,43,68);
+ b(873,769,35,16,131);b(878,784,10,14,69);
+ b(891,756,9,12,79);
+ b(818,873,114,11,117);b(872,884,12,22,68);
+ b(883,891,28,10,69);b(886,902,10,4,79);
+ b(874,1024,58,12,62);b(887,1036,11,38,68);
+ b(907,1041,18,16,131);b(908,1057,9,16,69);
+ // Freight village: inhabited upper gantry lodge, entered roof-open
+ // dispatch desk and lower crew customs booth tied to established rail.
+ b(808,1644,124,12,62);b(812,1656,11,77,65);
+ b(911,1656,11,77,65);b(808,1731,124,13,58);
+ b(832,1671,25,17,79);b(870,1688,25,15,131);
+ b(845,1644,43,12,0);b(812,1685,11,40,0);
+ b(834,1731,12,19,68);
+ b(648,1817,67,11,62);b(648,1817,10,94,65);
+ b(705,1817,10,94,65);b(648,1901,67,11,58);
+ b(676,1908,16,6,68);b(658,1841,13,11,79);
+ b(686,1841,15,12,131);b(669,1817,38,12,0);
+ b(648,1850,11,42,0);
+
+ // R5 entered ore-town staging loft: a west-bank anchored workfront with
+ // an exposed 42-cell east portal. Original tiny residence shells remain.
+ b(98,247,265,12,58);b(190,164,173,12,62);
+ l(98,168,190,168,12,117);
+ b(350,176,13,71,65);b(350,197,13,42,0);
+ b(208,180,15,16,69);b(225,181,14,11,79);
+ b(320,181,12,15,131);b(333,183,8,13,68);
+ // Protect full 31x27 access; a decorative hatch alone is not proof of
+ // an entered room. Remove interfering near-ceiling fixtures and beams.
+ b(150,304,28,21,0);b(199,304,28,21,0);
+ b(303,282,55,16,0);
+ b(840,1606,53,20,0);
+ b(832,1671,25,17,0);b(870,1688,25,15,0);
+ b(824,1672,13,11,79);b(904,1690,10,13,131);
+ // Keep protected rotor and its two entire flank clearances untouched.
+
  // Exact literal checkpoint clearance in final source plane (not substituted
  // during BFS); corridors must remain navigable at 31x27 after this.
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
