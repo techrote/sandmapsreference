@@ -1,0 +1,305 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Mireward Levee Communes",
+  "sibling": 2,
+  "role": "Reedfall Staveworks / Downhill Biofilter Terraces",
+  "seed": "mireward-reedfall-staveworks-261121-v1",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donors": [
+    "wide-harrow-mere-spore-dam",
+    "wide-graftloom-slipway"
+  ],
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 7622,
+    "62": 13520,
+    "66": 16031,
+    "68": 8831,
+    "77": 5872,
+    "79": 1745,
+    "100": 258979,
+    "101": 79872,
+    "120": 13615,
+    "129": 11656,
+    "131": 21471
+  },
+  "occupied_cells": 439214,
+  "grounded_cells": 439214,
+  "detached_cells": 0,
+  "solid_components": 1,
+  "physical_tethers": {
+    "joins": 38,
+    "max_span": 53
+  },
+  "lossless_rectangles": 2131,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 439214,
+  "setup_bytes": 40319,
+  "plane_sha256": "21845d3facfd9f63f976d437813a0a209116904b0b405220e1a67bdf7cf8aa4e",
+  "setup_sha256": "0f61cd4ffa258b612e1cc43cda7a2659a2a33db2918ce2bbad7911d2b8e96143",
+  "literal_sites": {
+    "West arrival sky": [
+      71,
+      270
+    ],
+    "Seed ledger upper": [
+      175,
+      469
+    ],
+    "Registry lower archive": [
+      204,
+      599
+    ],
+    "West crown grade": [
+      458,
+      362
+    ],
+    "Second stave assay": [
+      705,
+      596
+    ],
+    "Second filter chamber": [
+      718,
+      589
+    ],
+    "Dry upper filter return": [
+      733,
+      789
+    ],
+    "Stave assembly rim": [
+      798,
+      546
+    ],
+    "High fungal spool site": [
+      1108,
+      320
+    ],
+    "Transfer canopy upper": [
+      1050,
+      293
+    ],
+    "Transfer loom lower": [
+      1074,
+      711
+    ],
+    "Underloom exchange": [
+      1093,
+      832
+    ],
+    "Sterile side-hatch": [
+      1240,
+      663
+    ],
+    "Quarantine flight": [
+      1420,
+      682
+    ],
+    "Quarantine chamber": [
+      1384,
+      852
+    ],
+    "Waste return west": [
+      251,
+      940
+    ],
+    "Waste return east": [
+      1634,
+      941
+    ],
+    "Fourth cascade lip": [
+      1720,
+      739
+    ],
+    "Outfall survey sky": [
+      1870,
+      742
+    ],
+    "Outfall hall": [
+      1889,
+      940
+    ],
+    "Eastern recovery": [
+      1940,
+      732
+    ],
+    "Canopy release vista": [
+      1165,
+      257
+    ],
+    "Distant dry intake": [
+      121,
+      254
+    ],
+    "Damaged reed-hauler": [
+      807,
+      450
+    ],
+    "Midpass bypass": [
+      1192,
+      938
+    ],
+    "Downhill post": [
+      1585,
+      721
+    ],
+    "East evacuation deck": [
+      2010,
+      806
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable_centres": 1440811,
+      "passed": 27,
+      "total": 27,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable_centres": 1390371,
+      "passed": 27,
+      "total": 27,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1311526,
+      "passed": 27,
+      "total": 27,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      1076,
+      292,
+      1143,
+      350
+    ],
+    "blocked_site": "High fungal spool site",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1303626,
+      "passed": 26,
+      "total": 27,
+      "bad": [
+        {
+          "name": "High fungal spool site",
+          "point": [
+            1108,
+            320
+          ]
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "origin": [
+        0,
+        0
+      ],
+      "extent": [
+        2048,
+        1024
+      ],
+      "bytes": 47355,
+      "sha256": "12820e1fdbba321bafb11667fc78cd075c96d39a01fda2c7e8c82c1ce7e39dfc",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "01-crest-seed-ledger.png",
+      "origin": [
+        35,
+        294
+      ],
+      "extent": [
+        406,
+        420
+      ],
+      "bytes": 7314,
+      "sha256": "35b78cc9c62af24de91f4c4f6c57d2ece7610dd4092472e9a42c3295fd7dae90",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "02-stave-biofilter.png",
+      "origin": [
+        438,
+        429
+      ],
+      "extent": [
+        407,
+        450
+      ],
+      "bytes": 9408,
+      "sha256": "be90db98597a33a9270a4cffd534332094f2618ee826da8070c782efc94cfcff",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "03-fungal-transfer-loom.png",
+      "origin": [
+        822,
+        285
+      ],
+      "extent": [
+        492,
+        618
+      ],
+      "bytes": 13632,
+      "sha256": "2eb04553a811baf5626b546d515583db97c2d6940245f5ef9b0d38cc0b8f6f9b",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "04-sterile-quarantine.png",
+      "origin": [
+        1286,
+        707
+      ],
+      "extent": [
+        393,
+        265
+      ],
+      "bytes": 6109,
+      "sha256": "d0acfe109d4afb78717976f6d8e0fdb05d6d8ad096c6a46585af4759a944a691",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "05-downhill-outfall.png",
+      "origin": [
+        1690,
+        716
+      ],
+      "extent": [
+        355,
+        278
+      ],
+      "bytes": 3899,
+      "sha256": "2c209b332ddb31485456e12d40a19fb46a93b9411be49f41ca15308afd8392d0",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    }
+  ],
+  "qualification": "CREATOR-STATIC-PASS",
+  "independent_reviews": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "OPEN DRAFT/HOLD"
+}
