@@ -17,16 +17,16 @@ function base64(a){const t="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 function generate(){
 const g=new Uint8Array(N);
 const sites={
-"Western lift apron":[112,582],"Strip entry":[280,699],"Hull clamp control":[425,623],
-"Grading forks":[920,495],"Grading air lane":[730,695],"Grading exchange":[1110,715],
-"Rotor lookout":[940,341],"Quarantine registry":[1650,645],"Tariff lookout":[1660,408],
+"Western lift apron":[112,582],"Strip entry":[100,708],"Hull clamp control":[674,619],
+"Grading forks":[705,530],"Grading air lane":[730,695],"Grading exchange":[1110,715],
+"Rotor lookout":[1044,294],"Quarantine registry":[1650,645],"Tariff lookout":[1660,408],
 "Workers shelter":[1418,775],"Quarantine roof":[1846,367],"Eastern dispatch":[1956,567],
 "West gantry sky":[301,347],"Grading chimney":[780,335],"Upper court bridge":[1285,422],
-"Quarantine upper":[1560,412],"West underworks":[330,870],"Grading underworks":[807,871],
-"Hub underpass":[1224,873],"Registry underpass":[1490,873],"East underworks":[1740,873],
+"Quarantine upper":[1560,412],"West underworks":[340,842],"Grading underworks":[823,842],
+"Hub underpass":[1214,847],"Registry underpass":[1530,851],"East underworks":[1740,873],
 "Western signal tower":[447,227],"Grading roof lantern":[1014,219],"Quarantine mast lookout":[1895,198],
 "Broken annex":[2010,771],"Transfer shelf":[1242,710],"Workers repair bay":[1480,730],
-"Quarantine interview":[1830,736],"Keel receiving platform":[610,725]};
+"Quarantine interview":[1830,736],"Keel receiving platform":[676,665]};
 function R(x,y,w,h,m){x=Math.max(0,Math.floor(x));y=Math.max(0,Math.floor(y));w=Math.max(0,Math.ceil(w));h=Math.max(0,Math.ceil(h));if(x>=W||y>=H)return;for(let yy=y;yy<Math.min(H,y+h);yy++)g.fill(m,yy*W+x,yy*W+Math.min(W,x+w));}
 function L(x,y,X,Y,t=8,m=M.STEEL){let dx=X-x,dy=Y-y,d=dx*dx+dy*dy,rad=t/2;for(let yy=Math.max(0,Math.floor(Math.min(y,Y)-rad));yy<Math.min(H,Math.ceil(Math.max(y,Y)+rad+1));yy++)for(let xx=Math.max(0,Math.floor(Math.min(x,X)-rad));xx<Math.min(W,Math.ceil(Math.max(x,X)+rad+1));xx++){let s=Math.max(0,Math.min(1,((xx-x)*dx+(yy-y)*dy)/(d||1)));if((xx-x-s*dx)**2+(yy-y-s*dy)**2<=rad*rad)g[yy*W+xx]=m;}}
 const B=(...a)=>R(...a,M.ROCK),C=(...a)=>R(...a,M.WALL),St=(...a)=>R(...a,M.STEEL),V=(...a)=>R(...a,M.AIR);
@@ -100,6 +100,14 @@ St(1673,633,197,15);V(1721,649,80,73);
 St(1810,765,75,14);C(1829,777,16,25);
 St(1928,698,120,13);C(1969,715,17,117);
 St(1567,601,117,11);C(1601,612,14,60);
+/* Actual bottom-connected load paths for the quarantine court and inhabited
+ hub; floor-to-founding columns survive all occupancy-correction passes. */
+C(1559,560,20,368);C(1930,528,22,400);
+C(1250,626,19,307);C(1484,610,20,324);
+/* Open intentionally entered side doors instead of sealed display frames. */
+V(605,562,86,100);V(1192,700,83,97);V(1549,687,82,96);
+V(318,801,76,76);V(810,795,76,84);V(1210,798,77,86);
+V(1495,797,81,84);
 /* Deliberately broken east annex and open authoring air. */
 V(1986,471,62,244);St(1948,824,98,14);
 line(1967,824,2036,790,11);St(1937,493,63,10);
