@@ -1,0 +1,43 @@
+name: Native admission independent consumer
+
+on:
+  workflow_dispatch:
+  # TEMPORARY DRAFT BOOTSTRAP, removed before owner handoff.
+  push:
+    branches: [codex/canvas-native-ci-001]
+    paths: [.github/native-admission/consumer-request.json]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: canvas-native-ci-001-consumer
+  cancel-in-progress: false
+
+jobs:
+  consume:
+    name: Independent read-only evidence consumer
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            .github
+            tools/native_admission
+            tests/native_admission
+            docs/native-admission
+      - name: Read one immutable evidence snapshot and prove exact-source queries
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 -m tools.native_admission.consumer --prs 25,26,17,22 --native-dll-sha256 7231276de9362327816b67fb457e1eb5e836402f34c22684fd41250b315f0a6a --origin github-hosted-windows --prove-superseded --output build/consumer.json
+      - name: Retain independent consumer result
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-consumer-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build/consumer.json
+          if-no-files-found: error
+          retention-days: 90
