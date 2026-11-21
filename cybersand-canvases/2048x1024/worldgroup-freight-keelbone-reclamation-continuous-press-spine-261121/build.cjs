@@ -111,6 +111,14 @@ V(1980,606,68,168);St(1969,813,79,12);
 C(1972,791,15,22);
 /* Observed failure point / alternative-route pressure window (unscripted) */
 St(889,522,77,11);C(896,533,15,36);
+/* Independent real load paths for each component workface: connect small
+   suspended steel shelves and tool arms into the floor, not disconnected greebles.
+   Deliberately offset from named Midge routes and parcel infeed doors. */
+for(const [x,top,w] of [
+[161,638,18],[341,679,17],[551,592,18],[736,604,16],
+[899,573,18],[973,641,18],[1146,609,16],
+[1280,627,18],[1462,668,18],[1647,659,17],[1816,667,18]
+])C(x,top,w,885-top);
 /* Clear every named conservative 31x27 actor envelope */
 for(const [x,y] of Object.values(sites))V(x-26,y-25,53,51);
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
