@@ -1,0 +1,776 @@
+{
+  "schema_version": 1,
+  "concept": "Cinderward Three-Village Rotoryard",
+  "original_no_source": true,
+  "seed": 261121958,
+  "base_main_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_grid_sha256": "d8cfc766ef16358e7e06b565a13b1f7eda610968443da72ecb7b56446aea880c",
+  "setup_sha256": "e5c59ff254e6169964c6d7d774511e2f2fa10369ee953cfec3f753a0ec1f0472",
+  "json_bytes": 58549,
+  "rectangle_count": 3100,
+  "rectangle_limit": 32768,
+  "construction_work": 718971,
+  "material_histogram": {
+    "0": 1378181,
+    "3": 4250,
+    "8": 4760,
+    "58": 79684,
+    "62": 58294,
+    "65": 17836,
+    "68": 58812,
+    "69": 10400,
+    "76": 889,
+    "79": 3922,
+    "100": 378330,
+    "104": 12349,
+    "117": 64850,
+    "131": 24595
+  },
+  "ground": {
+    "total": 709961,
+    "rooted": 709961,
+    "detached": 0
+  },
+  "fluid": {
+    "water": 4250,
+    "lava": 4760,
+    "initial_air_faces": 0,
+    "water_lava_contacts": 0
+  },
+  "spawn": [
+    96,
+    611
+  ],
+  "route_sites": [
+    {
+      "name": "West arrival",
+      "x": 96,
+      "y": 611
+    },
+    {
+      "name": "Ore hamlet",
+      "x": 262,
+      "y": 612
+    },
+    {
+      "name": "Smelter face",
+      "x": 438,
+      "y": 612
+    },
+    {
+      "name": "West junction",
+      "x": 584,
+      "y": 612
+    },
+    {
+      "name": "Aerial west",
+      "x": 540,
+      "y": 438
+    },
+    {
+      "name": "Guild inlet",
+      "x": 735,
+      "y": 613
+    },
+    {
+      "name": "Ladle handoff",
+      "x": 903,
+      "y": 613
+    },
+    {
+      "name": "Rotor lookout",
+      "x": 1147,
+      "y": 612
+    },
+    {
+      "name": "Aerial caster",
+      "x": 1192,
+      "y": 437
+    },
+    {
+      "name": "Guild outfeed",
+      "x": 1305,
+      "y": 612
+    },
+    {
+      "name": "East maintenance",
+      "x": 1433,
+      "y": 612
+    },
+    {
+      "name": "Quench laboratory",
+      "x": 1552,
+      "y": 612
+    },
+    {
+      "name": "Quench controls",
+      "x": 1682,
+      "y": 612
+    },
+    {
+      "name": "Aerial east",
+      "x": 1741,
+      "y": 438
+    },
+    {
+      "name": "Freight terminal",
+      "x": 1841,
+      "y": 613
+    },
+    {
+      "name": "East export goal",
+      "x": 1950,
+      "y": 612
+    }
+  ],
+  "flights": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "connected_centres": 891884,
+      "passed": 16,
+      "sites": [
+        {
+          "name": "West arrival",
+          "x": 96,
+          "y": 611,
+          "clear": true,
+          "steps": 0,
+          "reached": true
+        },
+        {
+          "name": "Ore hamlet",
+          "x": 262,
+          "y": 612,
+          "clear": true,
+          "steps": 167,
+          "reached": true
+        },
+        {
+          "name": "Smelter face",
+          "x": 438,
+          "y": 612,
+          "clear": true,
+          "steps": 343,
+          "reached": true
+        },
+        {
+          "name": "West junction",
+          "x": 584,
+          "y": 612,
+          "clear": true,
+          "steps": 489,
+          "reached": true
+        },
+        {
+          "name": "Aerial west",
+          "x": 540,
+          "y": 438,
+          "clear": true,
+          "steps": 617,
+          "reached": true
+        },
+        {
+          "name": "Guild inlet",
+          "x": 735,
+          "y": 613,
+          "clear": true,
+          "steps": 641,
+          "reached": true
+        },
+        {
+          "name": "Ladle handoff",
+          "x": 903,
+          "y": 613,
+          "clear": true,
+          "steps": 809,
+          "reached": true
+        },
+        {
+          "name": "Rotor lookout",
+          "x": 1147,
+          "y": 612,
+          "clear": true,
+          "steps": 1052,
+          "reached": true
+        },
+        {
+          "name": "Aerial caster",
+          "x": 1192,
+          "y": 437,
+          "clear": true,
+          "steps": 1270,
+          "reached": true
+        },
+        {
+          "name": "Guild outfeed",
+          "x": 1305,
+          "y": 612,
+          "clear": true,
+          "steps": 1210,
+          "reached": true
+        },
+        {
+          "name": "East maintenance",
+          "x": 1433,
+          "y": 612,
+          "clear": true,
+          "steps": 1338,
+          "reached": true
+        },
+        {
+          "name": "Quench laboratory",
+          "x": 1552,
+          "y": 612,
+          "clear": true,
+          "steps": 1457,
+          "reached": true
+        },
+        {
+          "name": "Quench controls",
+          "x": 1682,
+          "y": 612,
+          "clear": true,
+          "steps": 1587,
+          "reached": true
+        },
+        {
+          "name": "Aerial east",
+          "x": 1741,
+          "y": 438,
+          "clear": true,
+          "steps": 1818,
+          "reached": true
+        },
+        {
+          "name": "Freight terminal",
+          "x": 1841,
+          "y": 613,
+          "clear": true,
+          "steps": 1747,
+          "reached": true
+        },
+        {
+          "name": "East export goal",
+          "x": 1950,
+          "y": 612,
+          "clear": true,
+          "steps": 1855,
+          "reached": true
+        }
+      ],
+      "goal_steps": 1855
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "connected_centres": 861189,
+      "passed": 16,
+      "sites": [
+        {
+          "name": "West arrival",
+          "x": 96,
+          "y": 611,
+          "clear": true,
+          "steps": 0,
+          "reached": true
+        },
+        {
+          "name": "Ore hamlet",
+          "x": 262,
+          "y": 612,
+          "clear": true,
+          "steps": 167,
+          "reached": true
+        },
+        {
+          "name": "Smelter face",
+          "x": 438,
+          "y": 612,
+          "clear": true,
+          "steps": 343,
+          "reached": true
+        },
+        {
+          "name": "West junction",
+          "x": 584,
+          "y": 612,
+          "clear": true,
+          "steps": 489,
+          "reached": true
+        },
+        {
+          "name": "Aerial west",
+          "x": 540,
+          "y": 438,
+          "clear": true,
+          "steps": 617,
+          "reached": true
+        },
+        {
+          "name": "Guild inlet",
+          "x": 735,
+          "y": 613,
+          "clear": true,
+          "steps": 641,
+          "reached": true
+        },
+        {
+          "name": "Ladle handoff",
+          "x": 903,
+          "y": 613,
+          "clear": true,
+          "steps": 809,
+          "reached": true
+        },
+        {
+          "name": "Rotor lookout",
+          "x": 1147,
+          "y": 612,
+          "clear": true,
+          "steps": 1052,
+          "reached": true
+        },
+        {
+          "name": "Aerial caster",
+          "x": 1192,
+          "y": 437,
+          "clear": true,
+          "steps": 1270,
+          "reached": true
+        },
+        {
+          "name": "Guild outfeed",
+          "x": 1305,
+          "y": 612,
+          "clear": true,
+          "steps": 1210,
+          "reached": true
+        },
+        {
+          "name": "East maintenance",
+          "x": 1433,
+          "y": 612,
+          "clear": true,
+          "steps": 1338,
+          "reached": true
+        },
+        {
+          "name": "Quench laboratory",
+          "x": 1552,
+          "y": 612,
+          "clear": true,
+          "steps": 1457,
+          "reached": true
+        },
+        {
+          "name": "Quench controls",
+          "x": 1682,
+          "y": 612,
+          "clear": true,
+          "steps": 1587,
+          "reached": true
+        },
+        {
+          "name": "Aerial east",
+          "x": 1741,
+          "y": 438,
+          "clear": true,
+          "steps": 1818,
+          "reached": true
+        },
+        {
+          "name": "Freight terminal",
+          "x": 1841,
+          "y": 613,
+          "clear": true,
+          "steps": 1747,
+          "reached": true
+        },
+        {
+          "name": "East export goal",
+          "x": 1950,
+          "y": 612,
+          "clear": true,
+          "steps": 1855,
+          "reached": true
+        }
+      ],
+      "goal_steps": 1855
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "connected_centres": 813314,
+      "passed": 16,
+      "sites": [
+        {
+          "name": "West arrival",
+          "x": 96,
+          "y": 611,
+          "clear": true,
+          "steps": 0,
+          "reached": true
+        },
+        {
+          "name": "Ore hamlet",
+          "x": 262,
+          "y": 612,
+          "clear": true,
+          "steps": 167,
+          "reached": true
+        },
+        {
+          "name": "Smelter face",
+          "x": 438,
+          "y": 612,
+          "clear": true,
+          "steps": 343,
+          "reached": true
+        },
+        {
+          "name": "West junction",
+          "x": 584,
+          "y": 612,
+          "clear": true,
+          "steps": 489,
+          "reached": true
+        },
+        {
+          "name": "Aerial west",
+          "x": 540,
+          "y": 438,
+          "clear": true,
+          "steps": 617,
+          "reached": true
+        },
+        {
+          "name": "Guild inlet",
+          "x": 735,
+          "y": 613,
+          "clear": true,
+          "steps": 641,
+          "reached": true
+        },
+        {
+          "name": "Ladle handoff",
+          "x": 903,
+          "y": 613,
+          "clear": true,
+          "steps": 809,
+          "reached": true
+        },
+        {
+          "name": "Rotor lookout",
+          "x": 1147,
+          "y": 612,
+          "clear": true,
+          "steps": 1052,
+          "reached": true
+        },
+        {
+          "name": "Aerial caster",
+          "x": 1192,
+          "y": 437,
+          "clear": true,
+          "steps": 1270,
+          "reached": true
+        },
+        {
+          "name": "Guild outfeed",
+          "x": 1305,
+          "y": 612,
+          "clear": true,
+          "steps": 1210,
+          "reached": true
+        },
+        {
+          "name": "East maintenance",
+          "x": 1433,
+          "y": 612,
+          "clear": true,
+          "steps": 1338,
+          "reached": true
+        },
+        {
+          "name": "Quench laboratory",
+          "x": 1552,
+          "y": 612,
+          "clear": true,
+          "steps": 1457,
+          "reached": true
+        },
+        {
+          "name": "Quench controls",
+          "x": 1682,
+          "y": 612,
+          "clear": true,
+          "steps": 1587,
+          "reached": true
+        },
+        {
+          "name": "Aerial east",
+          "x": 1741,
+          "y": 438,
+          "clear": true,
+          "steps": 1818,
+          "reached": true
+        },
+        {
+          "name": "Freight terminal",
+          "x": 1841,
+          "y": 613,
+          "clear": true,
+          "steps": 1747,
+          "reached": true
+        },
+        {
+          "name": "East export goal",
+          "x": 1950,
+          "y": 612,
+          "clear": true,
+          "steps": 1855,
+          "reached": true
+        }
+      ],
+      "goal_steps": 1855
+    }
+  ],
+  "obstruction": [
+    1016,
+    550,
+    80,
+    128
+  ],
+  "blocked": {
+    "hull": [
+      31,
+      27
+    ],
+    "connected_centres": 799606,
+    "passed": 16,
+    "sites": [
+      {
+        "name": "West arrival",
+        "x": 96,
+        "y": 611,
+        "clear": true,
+        "steps": 0,
+        "reached": true
+      },
+      {
+        "name": "Ore hamlet",
+        "x": 262,
+        "y": 612,
+        "clear": true,
+        "steps": 167,
+        "reached": true
+      },
+      {
+        "name": "Smelter face",
+        "x": 438,
+        "y": 612,
+        "clear": true,
+        "steps": 343,
+        "reached": true
+      },
+      {
+        "name": "West junction",
+        "x": 584,
+        "y": 612,
+        "clear": true,
+        "steps": 489,
+        "reached": true
+      },
+      {
+        "name": "Aerial west",
+        "x": 540,
+        "y": 438,
+        "clear": true,
+        "steps": 617,
+        "reached": true
+      },
+      {
+        "name": "Guild inlet",
+        "x": 735,
+        "y": 613,
+        "clear": true,
+        "steps": 641,
+        "reached": true
+      },
+      {
+        "name": "Ladle handoff",
+        "x": 903,
+        "y": 613,
+        "clear": true,
+        "steps": 809,
+        "reached": true
+      },
+      {
+        "name": "Rotor lookout",
+        "x": 1147,
+        "y": 612,
+        "clear": true,
+        "steps": 1202,
+        "reached": true
+      },
+      {
+        "name": "Aerial caster",
+        "x": 1192,
+        "y": 437,
+        "clear": true,
+        "steps": 1270,
+        "reached": true
+      },
+      {
+        "name": "Guild outfeed",
+        "x": 1305,
+        "y": 612,
+        "clear": true,
+        "steps": 1360,
+        "reached": true
+      },
+      {
+        "name": "East maintenance",
+        "x": 1433,
+        "y": 612,
+        "clear": true,
+        "steps": 1488,
+        "reached": true
+      },
+      {
+        "name": "Quench laboratory",
+        "x": 1552,
+        "y": 612,
+        "clear": true,
+        "steps": 1607,
+        "reached": true
+      },
+      {
+        "name": "Quench controls",
+        "x": 1682,
+        "y": 612,
+        "clear": true,
+        "steps": 1737,
+        "reached": true
+      },
+      {
+        "name": "Aerial east",
+        "x": 1741,
+        "y": 438,
+        "clear": true,
+        "steps": 1818,
+        "reached": true
+      },
+      {
+        "name": "Freight terminal",
+        "x": 1841,
+        "y": 613,
+        "clear": true,
+        "steps": 1897,
+        "reached": true
+      },
+      {
+        "name": "East export goal",
+        "x": 1950,
+        "y": 612,
+        "clear": true,
+        "steps": 2005,
+        "reached": true
+      }
+    ],
+    "goal_steps": 2005
+  },
+  "shortest_goal": {
+    "direct": 1855,
+    "blocked": 2005,
+    "delta": 150
+  },
+  "pngs": {
+    "overview.png": {
+      "xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 2098812,
+      "sha256": "e9d44fc8b220358f3fa57b865b481519ec41bc6b25c1a64704876ee94b294731"
+    },
+    "01-west-cottages.png": {
+      "xywh": [
+        46,
+        655,
+        515,
+        218
+      ],
+      "bytes": 112969,
+      "sha256": "8c22035f3c13fb6bdb3e4f49418d6ada1d010fb015dca2e17be73e8743e582fb"
+    },
+    "02-refractory-skyline.png": {
+      "xywh": [
+        142,
+        184,
+        499,
+        248
+      ],
+      "bytes": 124481,
+      "sha256": "c5645d3d7fb0a1cba0ac5e429b7d60e9c9c03f30dfe8c2f8c1cf6ffcda14d3b6"
+    },
+    "03-ladle-and-casters.png": {
+      "xywh": [
+        707,
+        212,
+        682,
+        236
+      ],
+      "bytes": 161674,
+      "sha256": "7bcfb4526458d0a4f5c4e4b09bdcd8a87637a2e104fc3dbeef3b500e5f2dd18c"
+    },
+    "04-central-rotoryard.png": {
+      "xywh": [
+        698,
+        671,
+        701,
+        216
+      ],
+      "bytes": 152118,
+      "sha256": "3f74bfdb632f6895bf2f12c589eb61e3c4300b739025f545cd2af2bb572125fd"
+    },
+    "05-quench-rail-village.png": {
+      "xywh": [
+        1444,
+        655,
+        572,
+        231
+      ],
+      "bytes": 132849,
+      "sha256": "076701c5e84861cb81a82f9951b45e8b2991a5a610c648cd86bb26c47fa3550f"
+    },
+    "06-upper-airway.png": {
+      "xywh": [
+        746,
+        411,
+        650,
+        273
+      ],
+      "bytes": 178209,
+      "sha256": "5edc2739f6bf9d277256347fce801a82c5fe0bc9c1c2cfcdb52194781a24d269"
+    }
+  },
+  "pixel_parity": 2955124,
+  "native": "NATIVE-UNTESTED",
+  "independent_review": "PENDING",
+  "ci": "NOT_RUN"
+}
