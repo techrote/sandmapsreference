@@ -83,6 +83,8 @@ function buildWorld(){
  rect(168,626,125,315,0);rect(1781,510,143,435,0);
  // Two true pit entrances pierce continuous industrial overhangs.
  rect(180,355,110,75,0);rect(1800,245,99,255,0);
+ // Strong roof-rooted right A tendon preserves the second Knuckle's full mass.
+ line(815,107,813,428,8,M.frame);
  const sites=[
  ["West rally start",110,326],["West launch rail",281,340],
  ["A fast approach",418,326],["A risky crest",683,231],
@@ -100,7 +102,7 @@ function buildWorld(){
  ["Mid check shaft",1004,850],["Mid check bench",1053,979],
  ["East rescue shaft",1840,829],["East rescue bench",1904,964]
  ];
- const obs=[637,118,135,319];
+ const obs=[511,178,98,196];
  const crops=[["overview.png",0,0,W,H],
  ["01-rally-launch-and-timing.png",0,140,490,690],
  ["02-knuckle-a-risky-sheltered.png",385,172,555,675],
@@ -135,9 +137,9 @@ function buildWorld(){
  function reach(open,wh){const r=flood(open,sites[0]);let missing=sites.filter(s=>!r.seen[s[2]*W+s[1]]).map(s=>s[0]);return {hull:wh,reachable:sites.length-missing.length,total:sites.length,missing,visited_centres:r.visited};}
  const clear={},full={};for(let wh of [[19,15],[23,19],[31,27]]){full[wh.join("x")]=free(null,...wh);clear[wh.join("x")]=reach(full[wh.join("x")],wh);}
  const closed=free(obs,31,27),blocked=reach(closed,[31,27]);
- let start=sites.find(s=>s[0]==="A fast approach"),end=sites.find(s=>s[0]==="A clear rejoin");
+ let start=sites.find(s=>s[0]==="A fast approach"),end=sites.find(s=>s[0]==="A risky crest");
  let before=flood(full["31x27"],start,end).distance,after=flood(closed,start,end).distance;
- const detour={from:start[0],to:end[0],hull:[31,27],baseline_steps:before,obstructed_steps:after,extra_steps:after-before,method:"Conservative full 31x27 hull BFS measures alternate sheltered passage after the upper A crest is physically blocked"};
+ const detour={from:start[0],to:end[0],hull:[31,27],baseline_steps:before,obstructed_steps:after,extra_steps:after-before,method:"Conservative full 31x27 centre BFS between A fast approach and A risky crest, with a real temporary 98x196 material obstruction on the short elevated approach; all sites remain reachable via the longer sheltered bypass"};
  const setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:MODEL,spawn:[sites[0][1],sites[0][2]],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits,response:"LA-SELECTIVE",liquid_policy:POLICY,normalize:false,rule_radius:2,source:[],material:2,brush:8,fire:false};
  return {W,H,N,g,M,palette,sites,obs,crops,edits,visits,detached,histogram,grounded:visits,clear,blocked,detour,setup};
 }
