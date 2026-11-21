@@ -1,0 +1,301 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Mireward Levee Communes",
+  "sibling": 1,
+  "role": "Split-Polder Mycelial Settlements / Dry Reed Outfalls",
+  "seed": "mireward-polder-261121-v1",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donors": [
+    "wide-harrow-mere-spore-dam",
+    "wide-graftloom-slipway"
+  ],
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 20848,
+    "62": 27435,
+    "66": 18248,
+    "68": 7940,
+    "77": 1754,
+    "79": 1744,
+    "100": 255923,
+    "101": 48684,
+    "120": 11651,
+    "129": 9938,
+    "131": 9757
+  },
+  "occupied_cells": 413922,
+  "grounded_cells": 413922,
+  "detached_cells": 0,
+  "solid_components": 1,
+  "physical_tethers": {
+    "joins": 16,
+    "max_span": 76
+  },
+  "lossless_rectangles": 2280,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 413922,
+  "setup_bytes": 44106,
+  "plane_sha256": "8c9db7ef68a6c531b400703839af6877339beb1334a7c3215decab165aa03175",
+  "setup_sha256": "8e30c044d5bd1c2c7324e5b1400b638364449c722057005acfdf6a0b8df8a6b2",
+  "literal_sites": {
+    "West arrival sky": [
+      94,
+      548
+    ],
+    "West council deck": [
+      205,
+      510
+    ],
+    "West seed ledger": [
+      165,
+      714
+    ],
+    "West cold registry": [
+      167,
+      819
+    ],
+    "First polder air crossing": [
+      444,
+      553
+    ],
+    "First dry catchment": [
+      445,
+      839
+    ],
+    "Reed purge deck": [
+      640,
+      565
+    ],
+    "Mycelial sieve": [
+      608,
+      785
+    ],
+    "Polder shelf": [
+      814,
+      757
+    ],
+    "Second high arch": [
+      862,
+      554
+    ],
+    "Canopy transit interlock": [
+      947,
+      451
+    ],
+    "Canopy bypass apex": [
+      1105,
+      427
+    ],
+    "Hospice outer deck": [
+      1187,
+      438
+    ],
+    "Central examination": [
+      1096,
+      736
+    ],
+    "Central lower culture": [
+      1090,
+      829
+    ],
+    "Quarantine upper flight": [
+      1491,
+      649
+    ],
+    "Quarantine decontamination": [
+      1547,
+      814
+    ],
+    "Eastern low polder": [
+      1365,
+      760
+    ],
+    "Third bridge outlet": [
+      1386,
+      535
+    ],
+    "West recovery rim": [
+      358,
+      576
+    ],
+    "Far east dispatch": [
+      1912,
+      551
+    ],
+    "Far east postal hall": [
+      1941,
+      716
+    ],
+    "Far east secondary sampling": [
+      1927,
+      817
+    ],
+    "East expansion horizon": [
+      1734,
+      520
+    ],
+    "Underbridge salvage site": [
+      1699,
+      775
+    ],
+    "Middle dry bypass": [
+      902,
+      437
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable_centres": 1487835,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable_centres": 1450923,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1378346,
+      "passed": 26,
+      "total": 26,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      918,
+      415,
+      980,
+      477
+    ],
+    "blocked_site": "Canopy transit interlock",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1370250,
+      "passed": 25,
+      "total": 26,
+      "bad": [
+        {
+          "name": "Canopy transit interlock",
+          "point": [
+            947,
+            451
+          ]
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "origin": [
+        0,
+        0
+      ],
+      "extent": [
+        2048,
+        1024
+      ],
+      "bytes": 58963,
+      "sha256": "a8a79fe6ccdcd7b55a5fd03f7ffbaf934bb6bdb5b6ce4f1cc0f3b857b71afcd8",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "01-seed-ledger-west.png",
+      "origin": [
+        22,
+        510
+      ],
+      "extent": [
+        391,
+        400
+      ],
+      "bytes": 9137,
+      "sha256": "4c1772a4f0f9c9a39cf3b65e70796044c7bff73e7f04ab89b83bd0732b341851",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "02-reed-purge-island.png",
+      "origin": [
+        434,
+        570
+      ],
+      "extent": [
+        403,
+        391
+      ],
+      "bytes": 8813,
+      "sha256": "f558b6d1a7c66943ea9bb367601edb2f70b51f935f1b3c3eb400a902cd771be1",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "03-biological-hospice.png",
+      "origin": [
+        907,
+        480
+      ],
+      "extent": [
+        407,
+        466
+      ],
+      "bytes": 11145,
+      "sha256": "c126c6c9e5c58642dd0bd37238d72301b2c03bac806185fa31af54416a9b2ddc",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "04-quarantine-east.png",
+      "origin": [
+        1350,
+        585
+      ],
+      "extent": [
+        394,
+        380
+      ],
+      "bytes": 8745,
+      "sha256": "fd035d182bd5b0b3b1b0fc4460a416e868de2d5b612600939931bd225be243cd",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "05-remote-outfall.png",
+      "origin": [
+        1712,
+        508
+      ],
+      "extent": [
+        336,
+        472
+      ],
+      "bytes": 9859,
+      "sha256": "26b073c0667374612ba2a1363d480030dd7fa5ffb65a55caf0625cba684f4f63",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    }
+  ],
+  "qualification": "CREATOR-STATIC-PASS",
+  "independent_reviews": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "OPEN DRAFT/HOLD"
+}
