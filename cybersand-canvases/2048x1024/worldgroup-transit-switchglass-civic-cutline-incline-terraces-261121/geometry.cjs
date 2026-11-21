@@ -115,6 +115,14 @@ function buildWorld(){
    rect(x+5,y+9,13,23,M.frame);
    rect(x+w-19,y+9,13,21,M.frame);
  }
+
+ // Founded bridge-load ribs reconnect every excavated hillside cap to the deep
+ // boundary-grounded rock. These deliberately divide some lower service pockets;
+ // recovery can climb through the large neighboring shafts to the next grade.
+ for(const [x,top] of [[404,866],[603,712],[864,625],[1023,625],[1264,552],[1541,464],[1817,394]]){
+   rect(x,top,21,H-top,M.frame);
+   rect(x-9,top,39,12,M.plate);
+ }
  // Recut formal east / west access and underwork shafts *after* furnishing to preserve exact interiors.
  for(const p of precincts){
    rect(p.x,p.base-126,19,99,0);
