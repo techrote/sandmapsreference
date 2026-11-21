@@ -30,3 +30,17 @@ Each map has a matching `preview-*.png` for visual inspection.
 ## Windows game-data location
 
 The installer uses `%APPDATA%\Godot\app_userdata\Cyber Sand Reference Sandbox\workbench\`, the default path for the current Godot project name. The installer refuses to replace existing setup files. If your Godot user-data root was customised, install manually into its actual `user://workbench` folder.
+
+## Actual material-cell previews
+
+The previews below are generated directly from the same committed Setup-v2 rectangle records. They show authoring-time materials, not simulated evolved states.
+
+![Copperline Switchyard Trials](preview-copperline-switchyard-trials.svg)
+
+![Tidelock Hydraulic Spillway](preview-tidelock-hydraulic-spillway.svg)
+
+![Bloomglass Ruin Conservatory](preview-bloomglass-ruin-conservatory.svg)
+
+## Reproduce source from its authoring code
+
+Run `python -m pip install numpy pillow` followed by `python author_exemplars.py` from this folder. It writes new maps and previews under `_generated/` and never modifies the committed JSON. The three generated Setup-v2 JSONs have been compared byte-for-byte against the committed originals. For acceptance work, see [qa-acceptance-checklist.md](qa-acceptance-checklist.md).
