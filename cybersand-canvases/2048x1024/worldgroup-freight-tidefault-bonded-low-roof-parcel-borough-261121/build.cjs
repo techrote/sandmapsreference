@@ -131,6 +131,11 @@ V(54,822,1910,59); /* continuous deep recovery airway, rerouted by grounded ribs
    must be genuinely founded, rather than cosmetically hovering. */
 for(const [x,y] of [[116,614],[493,572],[863,630],[1344,547],[1744,627]])
  C(x,y,30,922-y);
+/* Dedicated paired, roof-open customs vent wells and an inward deep exit.
+   They retain separate cage/receipt fixtures and a side-entry transfer path. */
+V(941,609,88,116);
+V(1124,607,116,123);
+V(1030,781,101,115);
 for(const [x,y] of Object.values(sites))V(x-37,y-34,75,69);
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
