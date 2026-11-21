@@ -1,0 +1,348 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_SWITCHGLASS_FAULTLINE_DUAL_GATE_CUSTOMS",
+  "revision": "R1",
+  "seed": "0x261121c5 (fixed, no random draw)",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donor": "Tungsten Sawtooth @ 7fc24855cf521c90bf67f4afb08685e490473201 read-only: signal energy switching; Switchglass 01-04 and Meridian 01-06 used as structural contrasts, not geometry donors.",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 325476,
+  "discarded_unattached_candidate_cells": 106953,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 1382,
+  "setup_json_bytes": 26440,
+  "material_work_visits": 325476,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "00ccf794f85919429667e39a67715a5f5710febcf97a96e9ae0ae84cdcee6fda",
+  "setup_sha256": "d6316aa4c8788103dca5fe84453068c73174d3c5bafb418f54d71d973b0cd80b",
+  "histogram": {
+    "0": 1771676,
+    "49": 25384,
+    "58": 21314,
+    "62": 23283,
+    "100": 221913,
+    "101": 18178,
+    "113": 569,
+    "117": 14531,
+    "122": 304
+  },
+  "sites": [
+    {
+      "name": "West arrival",
+      "x": 100,
+      "y": 591
+    },
+    {
+      "name": "West ticket ward",
+      "x": 205,
+      "y": 626
+    },
+    {
+      "name": "West operator desk",
+      "x": 415,
+      "y": 550
+    },
+    {
+      "name": "West upper signal",
+      "x": 504,
+      "y": 320
+    },
+    {
+      "name": "West cliff office",
+      "x": 712,
+      "y": 514
+    },
+    {
+      "name": "West engineering workshop",
+      "x": 494,
+      "y": 918
+    },
+    {
+      "name": "West entrant recovery",
+      "x": 154,
+      "y": 816
+    },
+    {
+      "name": "West nearfield service",
+      "x": 116,
+      "y": 906
+    },
+    {
+      "name": "West switchshaft",
+      "x": 452,
+      "y": 800
+    },
+    {
+      "name": "West low yard",
+      "x": 808,
+      "y": 775
+    },
+    {
+      "name": "West high vestibule",
+      "x": 922,
+      "y": 352
+    },
+    {
+      "name": "Upper severable gate",
+      "x": 1034,
+      "y": 370
+    },
+    {
+      "name": "East high vestibule",
+      "x": 1206,
+      "y": 367
+    },
+    {
+      "name": "East signal relay",
+      "x": 1470,
+      "y": 331
+    },
+    {
+      "name": "East cliff operations",
+      "x": 1256,
+      "y": 538
+    },
+    {
+      "name": "East west customs",
+      "x": 1635,
+      "y": 580
+    },
+    {
+      "name": "East customs signal",
+      "x": 1700,
+      "y": 586
+    },
+    {
+      "name": "East departure ward",
+      "x": 1964,
+      "y": 638
+    },
+    {
+      "name": "East works underfloor",
+      "x": 1868,
+      "y": 913
+    },
+    {
+      "name": "East recovery shaft",
+      "x": 1900,
+      "y": 814
+    },
+    {
+      "name": "East shaft one",
+      "x": 1622,
+      "y": 815
+    },
+    {
+      "name": "East first workshop",
+      "x": 1568,
+      "y": 913
+    },
+    {
+      "name": "West low gate approach",
+      "x": 824,
+      "y": 771
+    },
+    {
+      "name": "Low escape gate",
+      "x": 1026,
+      "y": 775
+    },
+    {
+      "name": "East low gate approach",
+      "x": 1210,
+      "y": 775
+    },
+    {
+      "name": "West salvage",
+      "x": 872,
+      "y": 886
+    },
+    {
+      "name": "East salvage",
+      "x": 1308,
+      "y": 893
+    },
+    {
+      "name": "Outbound finish",
+      "x": 2015,
+      "y": 646
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 28,
+      "total": 28,
+      "missing": [],
+      "visited_centres": 1553208
+    },
+    "23x19": {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 28,
+      "total": 28,
+      "missing": [],
+      "visited_centres": 1526782
+    },
+    "31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 28,
+      "total": 28,
+      "missing": [],
+      "visited_centres": 1474363
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      984,
+      319,
+      112,
+      158
+    ],
+    "material": 58,
+    "after_31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 27,
+      "total": 28,
+      "missing": [
+        "Upper severable gate"
+      ],
+      "visited_centres": 1451785
+    },
+    "covered_site": "Upper severable gate",
+    "other_sites_reachable": 27
+  },
+  "route_detour": {
+    "from": "West high vestibule",
+    "to": "East high vestibule",
+    "hull": [
+      31,
+      27
+    ],
+    "baseline_steps": 299,
+    "obstructed_steps": 545,
+    "extra_steps": 246,
+    "method": "Conservative full 31x27 Midge hull BFS between literal high gate approaches, forcing low cut-through after temporary physical upper closure"
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 36405,
+      "pixels": 2097152,
+      "sha256": "92001552027248ef486e4b70efc5998ae70325b77a92799bd9ae6b6e29c0d764",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-arrival-customs-west.png": {
+      "x": 0,
+      "y": 528,
+      "w": 550,
+      "h": 496,
+      "bytes": 6453,
+      "pixels": 272800,
+      "sha256": "1ad53126c1dfe9cb7645161118194cc285a0d19a516ff867abf44c215789aad4",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-west-cantilever.png": {
+      "x": 384,
+      "y": 206,
+      "w": 564,
+      "h": 628,
+      "bytes": 9604,
+      "pixels": 354192,
+      "sha256": "6bdf71cabe156fc8f7b009b25c7c9d572e52abfe38090c658f3bc43d55da8a3f",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-dual-gate-fault.png": {
+      "x": 856,
+      "y": 0,
+      "w": 383,
+      "h": 992,
+      "bytes": 6616,
+      "pixels": 379936,
+      "sha256": "c9be58a6c27a18acfa6af45ea01f21488f933012ef1061303d7bc46cfbeb76ce",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-east-customs-ward.png": {
+      "x": 1240,
+      "y": 449,
+      "w": 536,
+      "h": 575,
+      "bytes": 6789,
+      "pixels": 308200,
+      "sha256": "cb476c68fca4e075574f1ca1c9167f055887f8e9946e6ee673340d0b77acb5c5",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-eastern-signal.png": {
+      "x": 1777,
+      "y": 431,
+      "w": 271,
+      "h": 593,
+      "bytes": 2821,
+      "pixels": 160703,
+      "sha256": "7a4edccc45d32ffaa9d13daaca9c3e9145a7a7d008668899c1083c6e13be4937",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-underfault-bypass.png": {
+      "x": 705,
+      "y": 715,
+      "w": 695,
+      "h": 309,
+      "bytes": 5949,
+      "pixels": 214755,
+      "sha256": "f26e211e3874823f1e805376653ed3642431f7091ff0efe76e2053057ac30e06",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: No exact-build Godot/Workbench/CyberDemoBridge/Rapier load, collision, ticks or fresh-process save/reopen executed",
+  "independent_review": "PENDING: independent Art, Technical and Shepherd exact-HEAD review",
+  "ci": "NOT CLAIMED",
+  "corpus_role": "Original asymmetric vertical-fault civic customs settlement with two fully cut passages, separate anchored high cableway and low engineering recovery, six inhabited/industrial workfaces, excavated repair shops and open extension sockets"
+}
