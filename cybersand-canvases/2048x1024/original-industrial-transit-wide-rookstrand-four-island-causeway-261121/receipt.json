@@ -1,0 +1,292 @@
+{
+  "concept": "Rookstrand — Four-Island Intermodal Causeway",
+  "original": true,
+  "seed": 2111202633,
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_contract": {
+    "cybersand_accepted_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+    "sandmapsreference_default_source": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "setup_version": 2,
+    "max_construction_rectangles": 32768
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "reinforced concrete inert immovable solid",
+    "62": "steel plate inert immovable solid",
+    "100": "basalt columns inert immovable solid"
+  },
+  "material_plane_sha256": "89175378f3c5af1b3592e775be70742974b2c52cce8c56aeff041571a608151b",
+  "setup_sha256": "71a860ff7f2c17c1f4e23bafd56425926e426282860dcb71120ba58fe984791f",
+  "setup_bytes": 30568,
+  "rectangles": 1632,
+  "rectangle_work": 417623,
+  "cells": 2097152,
+  "histogram": {
+    "0": 1679529,
+    "58": 14981,
+    "62": 78837,
+    "100": 323805
+  },
+  "grounded_stable_solids": 417623,
+  "detached_solids": 0,
+  "initial_fluid_cells": 0,
+  "reactive_or_falling_cells": 0,
+  "overlapping_records": 0,
+  "ordered_replay_equal": true,
+  "exact_sites": {
+    "West Spawn": [
+      67,
+      702
+    ],
+    "Drylocked Freighter": [
+      274,
+      691
+    ],
+    "Captain Cabin": [
+      171,
+      649
+    ],
+    "Crane Crown": [
+      397,
+      412
+    ],
+    "First Pier": [
+      622,
+      497
+    ],
+    "Pier One Return": [
+      697,
+      749
+    ],
+    "High Relay House": [
+      1008,
+      334
+    ],
+    "Relay Forecourt": [
+      1130,
+      335
+    ],
+    "Sky Utility": [
+      1155,
+      222
+    ],
+    "Roof Control": [
+      1240,
+      361
+    ],
+    "Relay Platform": [
+      1015,
+      422
+    ],
+    "Sorter Arrival": [
+      1196,
+      455
+    ],
+    "Two-Chute Exit": [
+      1450,
+      452
+    ],
+    "Pier Two Recovery": [
+      803,
+      737
+    ],
+    "Eastern Security": [
+      1540,
+      535
+    ],
+    "Rail Interchange": [
+      1849,
+      640
+    ],
+    "Customs Outlook": [
+      2002,
+      541
+    ],
+    "Pier Four Landing": [
+      1718,
+      569
+    ]
+  },
+  "route_graph": {
+    "main": [
+      "West Spawn",
+      "Drylocked Freighter",
+      "Crane Crown",
+      "First Pier",
+      "High Relay House",
+      "Sorter Arrival",
+      "Eastern Security",
+      "Rail Interchange",
+      "Customs Outlook"
+    ],
+    "upper": [
+      "Captain Cabin",
+      "Crane Crown",
+      "High Relay House",
+      "Sky Utility",
+      "Roof Control",
+      "Two-Chute Exit",
+      "Pier Four Landing"
+    ],
+    "lower": [
+      "Captain Cabin",
+      "Pier One Return",
+      "Pier Two Recovery",
+      "Rail Interchange"
+    ],
+    "secondary": [
+      "First Pier",
+      "Relay Forecourt",
+      "Relay Platform",
+      "Sorter Arrival",
+      "Two-Chute Exit"
+    ]
+  },
+  "authored_midge_hull": [
+    4,
+    3
+  ],
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "free_centres": 1495664,
+      "sites_reached": 18,
+      "total_sites": 18,
+      "bad": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "free_centres": 1455012,
+      "sites_reached": 18,
+      "total_sites": 18,
+      "bad": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "free_centres": 1380985,
+      "sites_reached": 18,
+      "total_sites": 18,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "rect": [
+      1322,
+      218,
+      82,
+      91
+    ],
+    "from": "Sorter Arrival",
+    "to": "Two-Chute Exit",
+    "conservative_hull": [
+      31,
+      27
+    ],
+    "distance_before": 887,
+    "distance_after": 995,
+    "all_sites_still_reachable": true,
+    "return_route": true
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 38506,
+      "sha256": "034d8a1986a09d2ce2cf9daa7e6434ad490ec868ff0e4ec0c4b930cbf1bdbbfb",
+      "indexed_material_pixel_parity": 2097152
+    },
+    {
+      "name": "01-shipyard.png",
+      "rect": [
+        30,
+        420,
+        515,
+        416
+      ],
+      "bytes": 7843,
+      "sha256": "76f0985948605855eff55e91f090186760515b9eeded250d7c7b1c207e685220",
+      "indexed_material_pixel_parity": 214240
+    },
+    {
+      "name": "02-pier-one-ramp.png",
+      "rect": [
+        354,
+        431,
+        490,
+        395
+      ],
+      "bytes": 9583,
+      "sha256": "0f8fcb6b2524a9155880b540add6cb8d456b8cd78b7039b1b0c02d8431723736",
+      "indexed_material_pixel_parity": 193550
+    },
+    {
+      "name": "03-upper-service-girder.png",
+      "rect": [
+        837,
+        197,
+        555,
+        350
+      ],
+      "bytes": 7829,
+      "sha256": "1dc61f7070da1f4ab1d372002ca1a1ae9ea14f41c95e82553ef5d794a95433a2",
+      "indexed_material_pixel_parity": 194250
+    },
+    {
+      "name": "04-sorter-island.png",
+      "rect": [
+        1100,
+        433,
+        464,
+        398
+      ],
+      "bytes": 6633,
+      "sha256": "f3f73254144a6659525fad179e5a1a9dd9739d45ac89d716324e06070c8352ee",
+      "indexed_material_pixel_parity": 184672
+    },
+    {
+      "name": "05-east-dispatch.png",
+      "rect": [
+        1523,
+        533,
+        517,
+        322
+      ],
+      "bytes": 7115,
+      "sha256": "7e4a1b4e84a3e64422d4f50d794abd7eb3b1f4167ed13294bfc7ed842588ffb0",
+      "indexed_material_pixel_parity": 166474
+    },
+    {
+      "name": "06-editable-recovery.png",
+      "rect": [
+        382,
+        752,
+        1388,
+        214
+      ],
+      "bytes": 7963,
+      "sha256": "c1d6c680240631f29e90758bdd621989800edfbb79f83cca46bea53306a1ea55",
+      "indexed_material_pixel_parity": 297032
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "PENDING",
+  "github_actions_exact_head": "NOT-CHECKED",
+  "proof": "Exhaustive source cells, 4-neighbour bottom-rooting, disjoint rectangle replay, three literal full-envelope 4-neighbour reachability and physical obstruction detour; source-indexed PNG parity."
+}

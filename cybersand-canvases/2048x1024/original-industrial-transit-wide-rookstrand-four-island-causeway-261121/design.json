@@ -1042,6 +1042,168 @@
       21,
       10,
       58
+    ],
+    [
+      "R",
+      154,
+      764,
+      8,
+      26,
+      62
+    ],
+    [
+      "R",
+      321,
+      763,
+      8,
+      27,
+      62
+    ],
+    [
+      "R",
+      596,
+      590,
+      9,
+      19,
+      62
+    ],
+    [
+      "R",
+      1961,
+      646,
+      14,
+      8,
+      62
+    ],
+    [
+      "R",
+      619,
+      598,
+      67,
+      26,
+      0
+    ],
+    [
+      "R",
+      985,
+      439,
+      74,
+      26,
+      0
+    ],
+    [
+      "R",
+      1158,
+      538,
+      60,
+      25,
+      0
+    ],
+    [
+      "R",
+      1021,
+      267,
+      70,
+      45,
+      0
+    ],
+    [
+      "R",
+      1031,
+      358,
+      66,
+      28,
+      0
+    ],
+    [
+      "R",
+      1694,
+      559,
+      57,
+      35,
+      0
+    ],
+    [
+      "R",
+      869,
+      450,
+      7,
+      17,
+      62
+    ],
+    [
+      "R",
+      952,
+      374,
+      8,
+      15,
+      62
+    ],
+    [
+      "L",
+      1140,
+      547,
+      1281,
+      614,
+      6,
+      62
+    ],
+    [
+      "L",
+      1731,
+      599,
+      1758,
+      629,
+      4,
+      62
+    ],
+    [
+      "R",
+      638,
+      529,
+      54,
+      29,
+      0
+    ],
+    [
+      "R",
+      993,
+      356,
+      39,
+      33,
+      0
+    ],
+    [
+      "R",
+      992,
+      266,
+      32,
+      48,
+      0
+    ],
+    [
+      "R",
+      401,
+      588,
+      51,
+      60,
+      0
+    ],
+    [
+      "R",
+      475,
+      618,
+      15,
+      13,
+      62
+    ],
+    [
+      "R",
+      1708,
+      640,
+      52,
+      32,
+      0
     ]
   ],
   "sites": {
@@ -1061,17 +1223,9 @@
       397,
       412
     ],
-    "Western Recovery": [
-      393,
-      879
-    ],
     "First Pier": [
       622,
       497
-    ],
-    "Ramp Throat": [
-      741,
-      510
     ],
     "Pier One Return": [
       697,
@@ -1105,17 +1259,9 @@
       1450,
       452
     ],
-    "Deep Basin": [
-      1136,
-      704
-    ],
     "Pier Two Recovery": [
       803,
       737
-    ],
-    "Pier Three Recovery": [
-      1215,
-      862
     ],
     "Eastern Security": [
       1540,
@@ -1128,14 +1274,6 @@
     "Customs Outlook": [
       2002,
       541
-    ],
-    "East Recovery": [
-      1729,
-      885
-    ],
-    "West Maintenance": [
-      363,
-      854
     ],
     "Pier Four Landing": [
       1718,
@@ -1157,7 +1295,6 @@
     "upper": [
       "Captain Cabin",
       "Crane Crown",
-      "Ramp Throat",
       "High Relay House",
       "Sky Utility",
       "Roof Control",
@@ -1165,13 +1302,10 @@
       "Pier Four Landing"
     ],
     "lower": [
-      "Western Recovery",
-      "West Maintenance",
+      "Captain Cabin",
       "Pier One Return",
       "Pier Two Recovery",
-      "Deep Basin",
-      "Pier Three Recovery",
-      "East Recovery"
+      "Rail Interchange"
     ],
     "secondary": [
       "First Pier",
@@ -1183,13 +1317,13 @@
   },
   "obstruction": {
     "rect": [
-      975,
-      515,
-      94,
-      163
+      1322,
+      218,
+      82,
+      91
     ],
-    "from": "First Pier",
-    "to": "Deep Basin"
+    "from": "Sorter Arrival",
+    "to": "Two-Chute Exit"
   },
   "crops": [
     [
@@ -1347,5 +1481,5 @@
       "incompleteness": "modular_append_zones"
     }
   },
-  "readme_intro": "Four independent basalt freight islands, ship receiving berth and grounded loading crane, distinct-height inclined freight ramps, a second overhead utility truss, central twin-sorter chutes, three-level rail dispatch and four accessible bedrock maintenance bays. All freighters, rail and crane features are fixed material cells; no native dynamic machinery or cargo movement is claimed."
+  "readme_intro": "Four independent basalt freight islands, an entered west freighter, a distinct dock crane and cargo gradients, high utility girder, central twin-sorter chutes, three-grade railway and deliberate unentered basalt editing recesses. Eighteen exact authored flight destinations and upper/lower traversal alternatives are source-static qualified. All equipment is stationary geometry; no animated cargo movement or native gameplay test is claimed."
 }
