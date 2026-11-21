@@ -1,0 +1,317 @@
+{
+  "concept": "Axlewell — Reverse-Flow Basin Freight Port",
+  "original": true,
+  "seed": 21112026319,
+  "extent": [
+    2048,
+    1024
+  ],
+  "source_contract": {
+    "cybersand_accepted_main": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+    "sandmapsreference_default_source": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "setup_version": 2,
+    "max_construction_rectangles": 32768
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "reinforced concrete inert immovable solid",
+    "62": "steel plate inert immovable solid",
+    "100": "basalt columns inert immovable solid"
+  },
+  "material_plane_sha256": "b18b3f2f0bb6b16bae85f0a48bce62179cb244417089c048db5a8b06faa8e442",
+  "setup_sha256": "7287a270ceb52c1017ac1a0452859f7cddfadba1d610dc09d62bccdac8a9669c",
+  "setup_bytes": 57395,
+  "rectangles": 3040,
+  "rectangle_work": 341838,
+  "cells": 2097152,
+  "histogram": {
+    "0": 1755314,
+    "58": 19399,
+    "62": 143263,
+    "100": 179176
+  },
+  "grounded_stable_solids": 341838,
+  "detached_solids": 0,
+  "initial_fluid_cells": 0,
+  "reactive_or_falling_cells": 0,
+  "overlapping_records": 0,
+  "ordered_replay_equal": true,
+  "exact_sites": {
+    "East Spawn": [
+      1840,
+      597
+    ],
+    "Ship Cargo Hold": [
+      1824,
+      779
+    ],
+    "Captain Cabin": [
+      1939,
+      683
+    ],
+    "Ship Dock Crane": [
+      1518,
+      440
+    ],
+    "Eastern Cargo Airlock": [
+      1557,
+      680
+    ],
+    "Customs Dispatch": [
+      1835,
+      546
+    ],
+    "Upper Relay West": [
+      744,
+      242
+    ],
+    "Hub Crown": [
+      1037,
+      175
+    ],
+    "Hub Transfer": [
+      1039,
+      411
+    ],
+    "Hub Service": [
+      1039,
+      658
+    ],
+    "Hub Lower": [
+      1038,
+      825
+    ],
+    "West Rail Concourse": [
+      210,
+      758
+    ],
+    "Signal Loft": [
+      194,
+      686
+    ],
+    "Western Departure": [
+      100,
+      598
+    ],
+    "West Basin Approach": [
+      642,
+      575
+    ],
+    "West Rock Access": [
+      546,
+      891
+    ],
+    "East Rock Access": [
+      1525,
+      896
+    ],
+    "Western Maintenance": [
+      758,
+      983
+    ],
+    "Eastern Maintenance": [
+      1265,
+      983
+    ],
+    "Roof Exchange": [
+      1328,
+      238
+    ],
+    "Western Air Gate": [
+      432,
+      659
+    ]
+  },
+  "route_graph": {
+    "primary": [
+      "East Spawn",
+      "Ship Dock Crane",
+      "Roof Exchange",
+      "Hub Crown",
+      "Upper Relay West",
+      "Signal Loft",
+      "West Rail Concourse"
+    ],
+    "lower": [
+      "Ship Cargo Hold",
+      "Eastern Cargo Airlock",
+      "East Rock Access",
+      "Eastern Maintenance",
+      "Western Maintenance",
+      "West Rock Access",
+      "West Basin Approach",
+      "Western Departure"
+    ],
+    "hub": [
+      "Hub Crown",
+      "Hub Transfer",
+      "Hub Service",
+      "Hub Lower",
+      "Western Maintenance"
+    ],
+    "recovery": [
+      "Ship Dock Crane",
+      "East Rock Access",
+      "Eastern Maintenance",
+      "Western Maintenance",
+      "West Rock Access",
+      "West Basin Approach"
+    ]
+  },
+  "authored_midge_hull": [
+    4,
+    3
+  ],
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "free_centres": 1488157,
+      "sites_reached": 21,
+      "total_sites": 21,
+      "bad": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "free_centres": 1429834,
+      "sites_reached": 21,
+      "total_sites": 21,
+      "bad": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "free_centres": 1319486,
+      "sites_reached": 21,
+      "total_sites": 21,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "from": "Western Maintenance",
+    "to": "Eastern Maintenance",
+    "rect": [
+      899,
+      971,
+      78,
+      11
+    ],
+    "conservative_hull": [
+      31,
+      27
+    ],
+    "distance_before": 507,
+    "distance_after": 531,
+    "all_sites_still_reachable": true,
+    "return_route": true
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 49237,
+      "sha256": "4f72fe58e01e27ceaea929b5b81e2ffe3de7f57f66b60e3f0c1b3b4ca54cb709",
+      "indexed_material_pixel_parity": 2097152
+    },
+    {
+      "name": "01-east-vessel.png",
+      "rect": [
+        1590,
+        552,
+        455,
+        340
+      ],
+      "bytes": 6545,
+      "sha256": "79ea0abf64a1d5277f485cd35609b771f1f811c313531881fa2c9dc0e1517997",
+      "indexed_material_pixel_parity": 154700
+    },
+    {
+      "name": "02-crane-and-dock.png",
+      "rect": [
+        1400,
+        385,
+        460,
+        440
+      ],
+      "bytes": 8330,
+      "sha256": "623540eca8e5dbd366aa7168a18c9f30e42023dbf69ee46fe3ec6cc853f2e4d6",
+      "indexed_material_pixel_parity": 202400
+    },
+    {
+      "name": "03-hub-crown.png",
+      "rect": [
+        816,
+        170,
+        474,
+        435
+      ],
+      "bytes": 8039,
+      "sha256": "68810f8ccaf61a9a46bff023290d5d8f4c96de37ec0c3c9c85952660ab3a5a02",
+      "indexed_material_pixel_parity": 206190
+    },
+    {
+      "name": "04-hub-underworks.png",
+      "rect": [
+        815,
+        525,
+        470,
+        490
+      ],
+      "bytes": 11432,
+      "sha256": "89dd0db406672043f4c43496854d3554ce483b0bf66cda82eae601259a462427",
+      "indexed_material_pixel_parity": 230300
+    },
+    {
+      "name": "05-west-dispatch.png",
+      "rect": [
+        38,
+        527,
+        435,
+        360
+      ],
+      "bytes": 7822,
+      "sha256": "cea02c88221c42ed1d6fa2d9a4fe845a4107e2db7ff425f1babe25b3a053f544",
+      "indexed_material_pixel_parity": 156600
+    },
+    {
+      "name": "06-service-return.png",
+      "rect": [
+        510,
+        824,
+        1070,
+        195
+      ],
+      "bytes": 10385,
+      "sha256": "f2ea6c2d37714ad57a6929f30ebe38bdfdca61ddd1385c99d942129ab26b4b8d",
+      "indexed_material_pixel_parity": 208650
+    },
+    {
+      "name": "07-basin-void.png",
+      "rect": [
+        428,
+        495,
+        630,
+        420
+      ],
+      "bytes": 11513,
+      "sha256": "04794b4e442871d5cd319156967db1798f993e2cf8fabe8c5d1cd0d9e6a713da",
+      "indexed_material_pixel_parity": 264600
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "PENDING",
+  "github_actions_exact_head": "NOT-CHECKED",
+  "proof": "Exhaustive source cells, 4-neighbour bottom-rooting, disjoint rectangle replay, three literal full-envelope 4-neighbour reachability and physical obstruction detour; source-indexed PNG parity."
+}
