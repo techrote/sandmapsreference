@@ -40,7 +40,8 @@ for(let i=0;i<rows.length;i++){
  assert(['HIGH','MEDIUM','LOW'].includes(s.confidence),prefix+'confidence');
  assert(['INDEPENDENT_TRANSFER_PASS','INDEPENDENT_TRANSFER_REWORK','AWAITING_INDEPENDENT_REVIEW','DISPUTED'].includes(s.review_status),prefix+'review status');
  assert(s.native_status==='NATIVE-UNTESTED',prefix+'native evidence must be separately qualified');
- assert(typeof e.reviewer_url==='string'&&e.reviewer_url.includes('/pull/'+p.portrait_pr+'#'),prefix+'review URL');
+ assert(typeof e.reviewer_url==='string'&&e.reviewer_url.includes('/pull/'+(s.stage==='POST_REPAIR'?p.material_pr:p.portrait_pr)+'#'),prefix+'review URL');
+ if(s.stage==='POST_REPAIR')assert(Number.isInteger(p.material_pr)&&p.material_pr>0&&sha.test(p.parent_portrait_head)&&p.parent_portrait_head!==p.portrait_head,prefix+'child/parent identity');
  assert(e.overview_url.includes('/'+p.portrait_head+'/'+p.map_folder+'overview.png'),prefix+'overview not exact head');
  assert(e.crop_name&&e.crop_url?.includes('/'+p.portrait_head+'/'+p.map_folder+e.crop_name),prefix+'crop not exact head');
  assert(hash.test(e.crop_sha256),prefix+'missing receipt crop SHA');
