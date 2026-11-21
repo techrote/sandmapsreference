@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Tidefault Bonded Freight Districts",
+  "map_role": "Quarantine Return Arches / Fallen Evacuation Spur",
+  "lane": "worldgroup-freight",
+  "anchor_donors": [
+    {
+      "name": "wide-graven-keel-ship-tipper",
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f",
+      "pr": 45
+    },
+    {
+      "name": "wide-peregrine-cleft-halcyon-drydock",
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5",
+      "pr": 33
+    }
+  ],
+  "macro_topology": [
+    "yard",
+    "corridor"
+  ],
+  "density_profile": "Clusters of short floor-rooted receiving arches and steel workfaces beneath a very large intentionally unoccupied flight space. The ground-dominant scaffold is deliberately sparse.",
+  "route_grammar": {
+    "primary": "West return arrival across five low material-cell industrial workfaces to the fallen emergency return",
+    "upper": "High flyable overflight/inspection route with exposed navigation clearances",
+    "lower": "Low flyable return across grounded machinery and open bays; each named site source-cell cleared",
+    "recovery": "Alternate upper bypass and lower open gaps rejoin around rooted posts; obstacle route proven"
+  },
+  "strong_motifs": [
+    "low unequal concrete arches",
+    "steel classification chute and grounded return trays",
+    "basalt shelf foundation",
+    "freight handoff at screen-height",
+    "earthquake-failed east emergency nose"
+  ],
+  "interesting_relationships": [
+    "Arriving cargo stamped in west low arch before classification and quarantine exchange",
+    "Upper open-air flight level provides alternate path over diverse grounded workfaces",
+    "Incomplete east freight support offers a future authored collapse/set-piece"
+  ],
+  "authoring_affordances": [
+    "Broad deliberately empty high flight space for cranes, scripts and manual structures",
+    "Vacant spaces between grounded arches suitable for Gentek modular additions",
+    "Undeveloped workfaces and damaged recovery nose with alternate escape"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "West return stamping",
+      "purpose": "arrival customs holdout",
+      "scripted": false
+    },
+    {
+      "site": "Classifier hook",
+      "purpose": "machinery activation/failed cargo handoff",
+      "scripted": false
+    },
+    {
+      "site": "Quarantine exchange",
+      "purpose": "NPC inspection and reveal",
+      "scripted": false
+    },
+    {
+      "site": "East emergency nose",
+      "purpose": "bridge failure/evacuation",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Short unequal grounded arch modules, open side passages, sparse freight-processing handoff fixtures and source-cell anchored damage exemplars teach different structural relationships from the taller customs-lock grid.",
+  "similarity_avoidance": "Deliberately unlike sibling 01's tall serial pressure gates, Cleftline's V-cut salvage basin and escarpment switchbacks; preserves a wide, low, largely unfinished freight return grammar.",
+  "diversity_axes": {
+    "macro_topology": "yard",
+    "altitude_grammar": "high_low_bypass",
+    "density_cadence": "clustered",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "bridge",
+    "support_form": "floor_rooted",
+    "environment_relation": "damaged",
+    "incompleteness": "editable_gaps"
+  },
+  "evidence": {
+    "full_extent": [
+      2048,
+      1024
+    ],
+    "material_plane_sha256": "0ea0bd719ea6658e56655267f05ca37bf6a9534fb9d450299be0a7f1d5bb6fc8",
+    "named_sites": 25,
+    "native_status": "NATIVE-UNTESTED"
+  }
+}
