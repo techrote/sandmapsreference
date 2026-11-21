@@ -149,13 +149,13 @@ for(const [x,y] of [[296,476],[755,489],[1269,466],[1669,499]]){
 /* Real physical entry: irregular overhead lift slots and founded emergency
    hatches link the separately entered customs rooms to traversable sky. */
 for(const [x,y,w,h] of [
-  [269,342,72,371],[490,545,76,164],[751,418,45,304],
-  [918,406,72,321],[1135,420,62,143],[1571,425,82,300],
-  [1690,567,45,166],[1910,559,35,173],
-  [181,729,70,135],[645,731,65,139],[1078,719,70,151],
-  [1534,720,73,145],[1850,715,70,151]
-])V(x,y,w,h);
-for(const [x,y] of Object.values(sites))V(x-34,y-30,69,61);
+  [269,224,82,505],[480,224,90,503],[684,225,77,411],
+  [743,223,57,505],[918,225,90,510],[1135,225,65,343],
+  [1328,223,86,415],[1569,225,92,512],
+  [1690,548,53,194],[1909,537,49,210],
+  [175,714,88,164],[649,405,72,472],[1077,714,84,170],
+  [1530,707,91,171],[1847,703,80,181]
+])V(x,y,w,h);for(const [x,y] of Object.values(sites))V(x-34,y-30,69,61);
 
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
