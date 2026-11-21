@@ -107,6 +107,40 @@ const build=function build(){
  R(455,740,96,95,0);R(603,695,104,113,0);
  R(1380,700,99,155,0);R(1744,700,83,155,0);
  R(1900,698,81,105,0);R(1022,608,101,143,0);
+
+ // Retained rooted site-specific apparatus; every workface has a mechanical load path.
+ // West colony: diagnostic benches, air analyser, blue sample carrier.
+ R(211,420,55,38,M.ceramic);R(226,428,19,14,M.blue);R(240,417,9,11,M.signal);
+ R(274,400,12,58,M.iron);R(282,435,55,23,M.black);
+ R(293,441,14,11,M.amber);R(363,421,32,37,M.white);R(377,434,12,13,M.blue);
+ R(487,410,19,48,M.chrome);R(495,416,10,17,M.amber);
+ // West ore terrace: guarded crusher, spec meter and forklift bed rooted in mining platform.
+ R(391,677,60,39,M.black);R(406,683,22,18,M.amber);R(401,711,13,8,M.iron);
+ R(519,647,67,69,M.ceramic);R(534,661,21,32,M.blue);R(570,648,10,68,M.iron);
+ L(529,652,572,707,8,M.titanium);L(570,653,532,706,8,M.chrome);
+ R(643,674,53,42,M.black);R(653,684,15,13,M.signal);
+ R(706,681,35,35,M.white);R(721,690,12,14,M.blue);
+ // East seismography: multi-height receiver and signal repeater with material legs.
+ R(1452,432,59,45,M.ceramic);R(1463,443,17,19,M.blue);
+ R(1489,421,11,56,M.chrome);R(1502,420,8,14,M.signal);
+ R(1642,436,35,41,M.black);R(1652,446,14,13,M.amber);
+ R(1810,414,53,64,M.white);R(1825,430,16,22,M.blue);
+ R(1862,460,19,17,M.iron);
+ // Quarantine: two-section reverse-flow exhaust, isolated biomass docket, rover loading.
+ R(1395,681,54,36,M.black);R(1407,690,18,11,M.amber);
+ R(1494,686,30,31,M.ceramic);R(1503,692,15,14,M.blue);
+ R(1615,668,74,49,M.ceramic);R(1632,677,19,24,M.blue);
+ R(1677,677,12,40,M.chrome);R(1683,662,9,15,M.signal);
+ R(1778,683,44,35,M.black);R(1790,692,16,12,M.amber);
+ // Lower rock-cut instrument rooms, equipment tied directly to their actual floors.
+ R(278,863,34,40,M.white);R(289,870,15,12,M.blue);
+ R(322,874,28,27,M.black);R(327,882,13,11,M.signal);
+ R(1888,855,36,38,M.ceramic);R(1900,861,15,15,M.amber);
+ R(1964,859,28,35,M.black);R(1971,869,11,12,M.blue);
+ // The fault's debris monitor and re-route panel physically share the continuous service deck.
+ R(983,939,25,46,M.iron);R(1015,940,38,45,M.black);R(1024,948,15,18,M.signal);
+ R(1095,950,51,35,M.ceramic);R(1110,958,15,11,M.blue);
+
  // Discard only provisional non-boundary-grounded material before publication.
  let seen=new Uint8Array(N),q=new Int32Array(N),removed=0,removedGroups=0;
  for(let k=0;k<N;k++)if(g[k]&&!seen[k]){let h=0,t=1,edge=false;seen[k]=1;q[0]=k;
