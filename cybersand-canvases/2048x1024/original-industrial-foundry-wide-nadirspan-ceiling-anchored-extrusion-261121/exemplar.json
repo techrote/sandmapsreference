@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-foundry-wide",
+  "map_role": "Ceiling-anchored inverted foundry with dry undercroft and paired local upper/lower Midge transit",
+  "anchor_donors": [],
+  "macro_topology": "A continuous geologic roof supports an inverted industrial machine line above sparse ground service rooms",
+  "density_profile": "Dense roof-hung furnace, ladle, extrusion die and quench modules; open flight return and unfinished lower bays",
+  "route_grammar": {
+    "main": [
+      "West arrival",
+      "Ore sling",
+      "Furnace face",
+      "Ladle watch",
+      "Caster below",
+      "Quench lookout",
+      "Freight station",
+      "East rim goal"
+    ],
+    "alternate": [
+      "Aerial junction west",
+      "Die crown",
+      "Aerial junction east"
+    ],
+    "recovery": [
+      "West undercroft",
+      "Caster repair pit",
+      "Quench underpass",
+      "East footbridge"
+    ]
+  },
+  "strong_motifs": [
+    "Continuous roof-rooted suspension",
+    "Two sealed hot vessels",
+    "Triple unequal extrusion rotors",
+    "Local bypass over physical blocked corridor",
+    "Editable dry repair rooms",
+    "Overhead freight davit"
+  ],
+  "interesting_relationships": [
+    "Roof load-bearing inverses the conventional floor-rooted grammar",
+    "Low flight path and upper detour rejoin at clear shafts",
+    "Industrial modules above empty workshop expansion sites"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "west undercroft",
+      "region_xywh": [
+        278,
+        821,
+        230,
+        82
+      ],
+      "use": "worker repair expansion"
+    },
+    {
+      "name": "caster service undercroft",
+      "region_xywh": [
+        948,
+        836,
+        222,
+        95
+      ],
+      "use": "SWARM modular assembly"
+    },
+    {
+      "name": "quench maintenance",
+      "region_xywh": [
+        1276,
+        808,
+        218,
+        104
+      ],
+      "use": "unscripted thermal event"
+    },
+    {
+      "name": "east freight expansion",
+      "region_xywh": [
+        1830,
+        744,
+        177,
+        76
+      ],
+      "use": "arrival/departure stage"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Furnace isolation",
+      "anchor": "Furnace face",
+      "kind": "thermal_isolation"
+    },
+    {
+      "name": "Extruder activation",
+      "anchor": "Die crown",
+      "kind": "machine_activation"
+    },
+    {
+      "name": "Quench pressure event",
+      "anchor": "Quench lookout",
+      "kind": "hazard_release"
+    },
+    {
+      "name": "Freight departure",
+      "anchor": "East rim goal",
+      "kind": "departure"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Roof-rooted structural grammar",
+    "Layered flight topology with genuine solid obstruction rejoin",
+    "Spare unscripted lower service rooms",
+    "Distinctive inverted casting production flow"
+  ],
+  "similarity_avoidance": "Unlike Spindlebreak's fault cable crossing, Sablecut's rock arterials, Vespergate's annulus and Saltglass's separate land islands, Nadirspan suspends the entire functional plant from one continuous roof.",
+  "diversity_axes": {
+    "macro_topology": "suspended",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "clustered",
+    "route_structure": "parallel_lanes",
+    "landmark_family": "rotor",
+    "support_form": "roof_rooted",
+    "environment_relation": "thermal",
+    "incompleteness": "editable_gaps"
+  }
+}
