@@ -56,6 +56,12 @@ class CorpusIndexTests(unittest.TestCase):
         self.assertEqual(checked["status"],"canonical-valid")
         self.assertEqual(checked["normalized"]["route_grammar"]["upper"],"high bypass")
 
+    def test_scalar_diversity_axis_is_normalized(self):
+        value=canonical(); value["diversity_axes"]["macro_topology"]="yard"
+        checked=ci.validate(value)
+        self.assertEqual(checked["status"],"canonical-valid")
+        self.assertEqual(checked["normalized"]["diversity_axes"]["macro_topology"],["yard"])
+
     def test_legacy_is_partial_without_fabricating_missing_claims(self):
         legacy={
           "schema":"cybersand-exemplar-v1",
