@@ -106,6 +106,9 @@ function layoutWorld(){
  b(841,1900,91,12,76);
  // Functional warning signals rooted in station architecture.
  for(const [x,y] of [[113,405],[911,793],[113,1320],[912,1485],[116,1760],[905,1960]]){b(x,y,13,40,69);b(x+2,y+8,9,12,79);}
+ // Aperture between rotor rim and the staggered guild bridge: a legitimate
+ // 70-cell-wide all-hull recovery passage, not a decorative closed slot.
+ b(644,1190,70,126,0);
  // Exact literal checkpoint clearance in final source plane (not substituted
  // during BFS); corridors must remain navigable at 31x27 after this.
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
