@@ -112,6 +112,7 @@ function layoutWorld(){
  // Right bottom quench: sealed material-grade water chamber + ledge.
  b(728,1564,175,112,104);b(741,1577,149,85,131);
  b(760,1590,112,59,104);b(775,1604,82,31,3);
+ b(895,1600,30,18,58); // quench load reaches the exact east geological boundary
  b(746,1542,14,22,68);b(865,1545,14,19,69);
  b(687,1679,238,20,58);b(716,1699,153,11,62);
  b(861,1710,11,87,68);
@@ -130,6 +131,10 @@ function layoutWorld(){
  b(100,1950,342,19,58);b(116,1931,192,19,62);
  // Grounded route beacons at distinct tectonic ledges.
  for(const [x,y] of [[113,602],[904,710],[112,995],[903,1350],[113,1630],[906,1915]]){b(x,y,14,49,69);b(x+3,y+11,8,14,79);}
+ // Engineered clear-height cableway gate: the tension cables divide around
+ // an open 31x27-compatible passage, preserving separate cable and lower-truss
+ // motifs instead of a closed wire across the sole descent.
+ b(662,838,126,114,0);
  // Full conservative site envelope clearing is *literal* and before support
  // component pruning. Never search for a shifted replacement site.
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
