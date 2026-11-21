@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-biomech-wide",
+  "map_role": "Dry extraterrestrial mnemonic-transshipment cascade with a roof-rooted packet cableway, spatially separated inspection workface and genuinely grade-separated Midge detours",
+  "anchor_donors": [],
+  "macro_topology": [
+    "cascade",
+    "suspended"
+  ],
+  "density_profile": "Alternating left-quarantine box, low exchange gantries, tall open cableway, roof-fin processor, broken right freight pier; long uninterrupted flight voids are intentionally retained",
+  "route_grammar": {
+    "direct": "spawn_quarantine > quarantine_inside > west_transfer > cablewest_gate > central_switch > cableeast_gate > freight_landing > departure, with a 109-cell-high dry main artery",
+    "upper": "After center obstruction x966–1099/y668–752, a 107-cell-high air corridor at y469–575 rejoins at the two vertical junctions",
+    "lower": "Alternative dry lower crossing at y820–900 via vertical junctions x799–877 and x1200–1277; no water, falling, or simulated hazards",
+    "entered": "A west specimen housing, two excavated underground vaults and a central two-sided grounded examination workface are qualified at exact named Midge centres",
+    "recovery": "All 17 exact named sites admit 19x15, 23x19 and 31x27 centres and four cardinal local movement steps"
+  },
+  "strong_motifs": [
+    "One roof-rooted tall diagonal tension cradle feeding an independent giant polygonal packet cableway",
+    "Five distinctly spaced upper hanger cassettes with physical suspension paths",
+    "Low-capillary intake and stepped staging contrasted with a huge vacant central flight bay",
+    "Four asymmetrical roof-supplied dry separator fins over a second service rack",
+    "An opened-out two-sided inspection workface grounded to the floor beneath the main cableway",
+    "Distinctly incomplete twin-crane delivery pier above a sunken archive seam"
+  ],
+  "interesting_relationships": [
+    "The primary cable load path is roof-connected, unlike a floor-borne enclosed reactor",
+    "Flight access is a three-altitude, physical-obstruction-tested lane system rather than a single staircase",
+    "Upper hanging cassettes feed a lower reached diagnostic station without sealing the middle into a vessel",
+    "Two subground optional editing rooms have separate drop-in shafts connected to the same aerial route"
+  ],
+  "authoring_affordances": [
+    {
+      "site": "west_service_sublevel",
+      "rect": [
+        530,
+        920,
+        179,
+        87
+      ],
+      "detail": "Dry excavated maintenance annex and broad shaft; open for later human parts"
+    },
+    {
+      "site": "central_vacant_splice",
+      "rect": [
+        897,
+        620,
+        294,
+        181
+      ],
+      "detail": "Wide deliberate route-safe volume under active packet cableway for a future event or machinery insertion"
+    },
+    {
+      "site": "east_maintenance_sublevel",
+      "rect": [
+        1497,
+        917,
+        174,
+        90
+      ],
+      "detail": "Second independent excavated human-editable vault with an aerial access throat"
+    },
+    {
+      "site": "unfinished_dispatch_socket",
+      "rect": [
+        1809,
+        757,
+        142,
+        101
+      ],
+      "detail": "Drydock crane coupling vacancy for reroutable cargo, NPC staging, or scripted departure"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "type": "bridge_failure",
+      "rect": [
+        966,
+        668,
+        134,
+        85
+      ],
+      "staging": "A real central airway closure diverts flight to both separately qualified upper and lower lanes; no event implemented"
+    },
+    {
+      "type": "machinery_activation",
+      "rect": [
+        804,
+        213,
+        510,
+        271
+      ],
+      "staging": "Roof-hung cableway cassette array with distinct support hierarchy"
+    },
+    {
+      "type": "ambush_holdout",
+      "rect": [
+        1016,
+        887,
+        227,
+        79
+      ],
+      "staging": "Grounded inspection console has two distinct examination faces with open aerial escape"
+    },
+    {
+      "type": "arrival_departure",
+      "rect": [
+        1722,
+        504,
+        290,
+        372
+      ],
+      "staging": "Asymmetric unfinished export crane stage and alternate dry exits"
+    }
+  ],
+  "procedural_exemplar_value": "A separable grammar for roof-rooted diagonal trusses, variable length cassette hangers, disconnected/unfinished freight appendages, three-lane physical rerouting and optional excavated subsurface editing chambers",
+  "similarity_avoidance": "Unlike Euryale's side-by-side nested cavities, Ophion's crossing bridge, Kordex's distributed settlements and Mnemosyne's single tall fault, this has a high polygonal hanger cableway carried by roof tension masts above an almost empty multi-lane switching atrium and separated subgrade archives",
+  "diversity_axes": {
+    "macro_topology": "cascade",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "parallel_lanes",
+    "landmark_family": "cableway",
+    "support_form": "roof_rooted",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  }
+}

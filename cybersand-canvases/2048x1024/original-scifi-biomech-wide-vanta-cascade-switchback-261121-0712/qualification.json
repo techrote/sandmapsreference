@@ -1,0 +1,505 @@
+{
+  "source": "ORIGINAL-NO-REFERENCE",
+  "seed": 2611210712,
+  "base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "read_only_engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_cell_count": 2097152,
+  "grid_sha256": "6b1b2642997254f3d77ec28dd7c1e4e942270a894f893bfb79bad89d3829bb53",
+  "setup_sha256": "6d9c4f9fc513316ac239073fea9f0a2a2221f89ac968cf47d3c09dc2a8eec843",
+  "setup_bytes": 37422,
+  "setup_root_keys": [
+    "version",
+    "extent",
+    "actors",
+    "next_id",
+    "selected",
+    "edits",
+    "response",
+    "liquid_policy",
+    "normalize",
+    "rule_radius",
+    "source",
+    "material",
+    "brush",
+    "fire"
+  ],
+  "rectangle_count": 1895,
+  "rectangle_limit_source": 32768,
+  "native_installation_status": "NATIVE-UNTESTED: source supports 32768; compatible Godot/bridge binary not executed",
+  "construction_writes": 315336,
+  "write_limit": 32000000,
+  "material_histogram": {
+    "0": 1781816,
+    "58": 51798,
+    "62": 4159,
+    "77": 265,
+    "100": 76465,
+    "101": 83971,
+    "117": 93002,
+    "128": 5676
+  },
+  "occupied": 315336,
+  "grounded": 315336,
+  "nominal_unsupported_removed": 39484,
+  "detached_final": 0,
+  "fluid_falling_reactive_final": 0,
+  "rectangle_overlap_count": 0,
+  "replay_cell_mismatches": 0,
+  "canonical_rectangle_reencode_identity": true,
+  "sites": {
+    "19x15": {
+      "visited_centres": 1460621,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_inside": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_transfer": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "capillary_exchange": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "capillary_high": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "first_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cablewest_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cable_hanger": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cable_maintenance": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_switch": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cableeast_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "biofin_gallery": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "biofin_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "second_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "freight_landing": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "departure": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "23x19": {
+      "visited_centres": 1418549,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_inside": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_transfer": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "capillary_exchange": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "capillary_high": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "first_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cablewest_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cable_hanger": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cable_maintenance": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_switch": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cableeast_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "biofin_gallery": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "biofin_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "second_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "freight_landing": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "departure": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    },
+    "31x27": {
+      "visited_centres": 1339080,
+      "sites": {
+        "spawn_quarantine": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_inside": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "quarantine_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "west_transfer": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "capillary_exchange": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "capillary_high": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "first_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cablewest_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cable_hanger": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cable_maintenance": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "central_switch": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "cableeast_gate": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "biofin_gallery": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "biofin_upper": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "second_vault": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "freight_landing": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        },
+        "departure": {
+          "free": true,
+          "reachable": true,
+          "four_cardinal_approaches": true
+        }
+      },
+      "failed": []
+    }
+  },
+  "obstruction": [
+    966,
+    668,
+    134,
+    85
+  ],
+  "route_bans": {
+    "xmin": 962,
+    "xmax": 1097,
+    "upper_max_y": 637,
+    "lower_min_y": 811
+  },
+  "route_distances": {
+    "baseline": 1904,
+    "blocked": 1994,
+    "upper": 2028,
+    "lower": 2128
+  },
+  "obstructed_sites": {
+    "spawn_quarantine": {
+      "covered": false,
+      "reachable": true
+    },
+    "quarantine_inside": {
+      "covered": false,
+      "reachable": true
+    },
+    "quarantine_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "west_transfer": {
+      "covered": false,
+      "reachable": true
+    },
+    "capillary_exchange": {
+      "covered": false,
+      "reachable": true
+    },
+    "capillary_high": {
+      "covered": false,
+      "reachable": true
+    },
+    "first_vault": {
+      "covered": false,
+      "reachable": true
+    },
+    "cablewest_gate": {
+      "covered": false,
+      "reachable": true
+    },
+    "cable_hanger": {
+      "covered": false,
+      "reachable": true
+    },
+    "cable_maintenance": {
+      "covered": false,
+      "reachable": true
+    },
+    "central_switch": {
+      "covered": false,
+      "reachable": true
+    },
+    "cableeast_gate": {
+      "covered": false,
+      "reachable": true
+    },
+    "biofin_gallery": {
+      "covered": false,
+      "reachable": true
+    },
+    "biofin_upper": {
+      "covered": false,
+      "reachable": true
+    },
+    "second_vault": {
+      "covered": false,
+      "reachable": true
+    },
+    "freight_landing": {
+      "covered": false,
+      "reachable": true
+    },
+    "departure": {
+      "covered": false,
+      "reachable": true
+    }
+  },
+  "pngs": {
+    "overview.png": {
+      "bytes": 1049790,
+      "sha256": "2f318fce4a6653a2eb2f0976a50778b7baed0947d2255b062a4d3859aaad8541",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-quarantine-airlock.png": {
+      "bytes": 111301,
+      "sha256": "c8fa588694442bdb8bf6b68b87569dc21df12b8d2ea499d3e01faa26ba8122af",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        27,
+        451,
+        423,
+        522
+      ]
+    },
+    "02-exchange-switchback.png": {
+      "bytes": 116079,
+      "sha256": "6a88743ad7b7c98758a5b9a7553864957cfb813b334bf6c6aad9f95d713da541",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        401,
+        426,
+        421,
+        547
+      ]
+    },
+    "03-packet-cableway.png": {
+      "bytes": 183666,
+      "sha256": "4f6f86ce5bcea19f440f795024c0ebc841b077171f0e278b1047406b2994c7cc",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        737,
+        169,
+        615,
+        594
+      ]
+    },
+    "04-central-inspection.png": {
+      "bytes": 60610,
+      "sha256": "dc5906bde3c2061dc37ba59518915dbec7a4bda06c9287f747b4172214f96a9e",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        852,
+        728,
+        437,
+        275
+      ]
+    },
+    "05-separator-finbank.png": {
+      "bytes": 124525,
+      "sha256": "79bc4ae8dee5c385110f638f6d24a14d28e18f27d6455238da8947267cc92a47",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1339,
+        335,
+        387,
+        638
+      ]
+    },
+    "06-twin-crane-dispatch.png": {
+      "bytes": 85771,
+      "sha256": "4f407f158c216aebeb3c2e519c5aea0112c74a1422d9f26377145c61aeed69df",
+      "material_pixel_parity": true,
+      "png_crc_adler_and_dimensions": true,
+      "region": [
+        1698,
+        457,
+        330,
+        516
+      ]
+    }
+  },
+  "author_static_status": "PASS",
+  "independent_reviews": "PENDING",
+  "native_status": "NATIVE-UNTESTED"
+}
