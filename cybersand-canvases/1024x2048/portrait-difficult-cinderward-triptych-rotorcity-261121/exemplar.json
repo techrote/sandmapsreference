@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "portrait/difficult",
+  "map_role": "Triangular three-settlement civic foundry with grounded central eight-spoke rotor",
+  "anchor_donors": [
+    {
+      "source_pr": 174,
+      "head": "b28196503b51b88b129076f2808ec4920c2d7c40"
+    }
+  ],
+  "macro_topology": "multi_settlement",
+  "density_profile": "Alternating upper-left ore village, diagonal machinery, middle-right caster guild, open mid-level rotor, quench terrace and lower export town",
+  "route_grammar": {
+    "main": [
+      "Ore hilltown entry",
+      "Refractory furnace inspection",
+      "Travelling ladle watch",
+      "Caster toolroom",
+      "Eight-spoke rotor east",
+      "Quench control",
+      "Export goal"
+    ],
+    "alternative": [
+      "Upper exchange intercept",
+      "western or eastern open flanking route",
+      "Rotor upper intercept"
+    ],
+    "recovery": [
+      "Rotor underfoot west",
+      "Guild deep archive",
+      "Quench recovery bay",
+      "Lower freight control"
+    ]
+  },
+  "strong_motifs": [
+    "Three vertically displaced industrial civic districts",
+    "Single floor-rooted large eight-spoke rotor",
+    "Two genuine distinct flyable flank apertures",
+    "Tethered diagonal ladle, two unequal ram casters",
+    "Entirely enclosed lava furnace and water quench",
+    "Lower railway freight port"
+  ],
+  "interesting_relationships": [
+    "Source horizontal three-town avenue is reconfigured into triangular town hierarchy",
+    "Rotor shares an engineered bedrock-rooted pier with lower export city, with left and right recovery passage",
+    "Upper metallurgy hands to lower rail through a large open but navigable civic courtyard"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "Ore crane expansion",
+      "region_xywh": [
+        390,
+        210,
+        145,
+        110
+      ],
+      "use": "Open workshop expansion"
+    },
+    {
+      "name": "Caster-guild turnout",
+      "region_xywh": [
+        450,
+        874,
+        135,
+        105
+      ],
+      "use": "Route blockade setpiece"
+    },
+    {
+      "name": "West rotor bypass",
+      "region_xywh": [
+        248,
+        1174,
+        112,
+        171
+      ],
+      "use": "Edit-safe recovery and bridge-failure stage"
+    },
+    {
+      "name": "Freight undercroft",
+      "region_xywh": [
+        530,
+        1800,
+        128,
+        120
+      ],
+      "use": "NPC and loading-dock extension"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Ore-town holdout",
+      "anchor": "Ore hilltown entry"
+    },
+    {
+      "name": "Suspended ladle activation",
+      "anchor": "Travelling ladle watch"
+    },
+    {
+      "name": "Rotor seizure",
+      "anchor": "Rotor underfoot west"
+    },
+    {
+      "name": "Export departure",
+      "anchor": "Export goal"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Triangular vertical town adjacency without a generic wall-shaft envelope",
+    "Actual grounded radial rotor serviced by unlike civic districts",
+    "Two independent side routes preserve whole-hull recovery",
+    "Tight dense-open cadence with usable expansion bays"
+  ],
+  "similarity_avoidance": "Unlike the wide Cinderward horizontal three-town street, and unlike existing portrait wall-shaft trials, this map has eccentric staggered towns, one grounded open rotor courtyard, oblique service cables, and two flank returns.",
+  "diversity_axes": {
+    "macro_topology": "multi_settlement",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "rotor",
+    "support_form": "mixed",
+    "environment_relation": "thermal",
+    "incompleteness": "editable_gaps"
+  }
+}

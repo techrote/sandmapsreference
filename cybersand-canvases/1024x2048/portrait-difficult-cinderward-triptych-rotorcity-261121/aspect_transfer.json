@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "programme": "PORTRAIT-001",
+  "creator": "B",
+  "difficulty": "DIFFICULT",
+  "source": {
+    "repository": "techrote/sandmapsreference",
+    "pr": 174,
+    "head": "b28196503b51b88b129076f2808ec4920c2d7c40",
+    "path": "cybersand-canvases/2048x1024/original-industrial-foundry-wide-cinderward-three-village-rotorfoundry-261121/",
+    "dimensions": [
+      2048,
+      1024
+    ],
+    "material_plane_sha256": "d8cfc766ef16358e7e06b565a13b1f7eda610968443da72ecb7b56446aea880c"
+  },
+  "target": {
+    "dimensions": [
+      1024,
+      2048
+    ],
+    "path": "cybersand-canvases/1024x2048/portrait-difficult-cinderward-triptych-rotorcity-261121/",
+    "material_plane_sha256": "effa9981f5bdde53344ed6cc4effb14a9341df00de03b53db1de593c2d629bf2",
+    "seed": 202611211457
+  },
+  "base_repository_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "preserved": [
+    "Three unequal industrial worker settlements and individually recognizable purpose",
+    "Eight-spoke transfer rotor and supported physical engineering",
+    "Furnace→ladle→casters→rotor→sealed quench→rail export process",
+    "Open and underdeveloped authoring sockets plus recoverable flight"
+  ],
+  "transformed": [
+    "Horizontal west-centre-east three-town avenue into upper-left, central-right and lower-right triangular settlement chain",
+    "Wide rotor in low civic plain into tall grounded mid-world rotor courtyard with independent flanking routes",
+    "Horizontal ladle/caster conveyance into diagonally connected cliff-rooted grades",
+    "Source horizontal bypass into vertical side-switchback and two flanking rotor turnouts"
+  ],
+  "discarded": [
+    "Exact source cells/coordinates and original raster silhouette",
+    "Source original horizontal town distances and uniform town grade",
+    "Original west-east return and source navigation paths"
+  ],
+  "newly_introduced": [
+    "Staggered shore-like civic terraces around central vertical rotor",
+    "Full-hull western and eastern apron turnouts with real upper-route obstruction",
+    "Lower-left enclosed quench and lower-right civic dispatch precinct",
+    "Four event-ready un-scripted sites, including service and undercroft expansion"
+  ],
+  "preservation_scale": "Native 1:1 material-cell scale; no crop, rotation, stretch, pixel transplant or original cell reuse",
+  "navigation": {
+    "hulls": [
+      [
+        19,
+        15
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        31,
+        27
+      ]
+    ],
+    "named_sites": 19,
+    "obstruction_xywh": [
+      470,
+      913,
+      80,
+      40
+    ],
+    "direct_steps": 208,
+    "obstructed_steps": 304,
+    "return_available": true
+  },
+  "qualification": "SOURCE-STATIC-PASS; NATIVE-UNTESTED",
+  "acceptance": "OPEN DRAFT/HOLD; independent Art/Tech/Shepherd and native gates remain"
+}
