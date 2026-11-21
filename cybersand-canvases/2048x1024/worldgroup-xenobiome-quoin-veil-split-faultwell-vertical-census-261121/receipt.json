@@ -1,0 +1,314 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Quoin Veil Survey Network",
+  "sibling": 4,
+  "role": "Split Faultwell / Vertical Census Escarpment",
+  "seed": "quoin-veil-split-faultwell-261121-v1",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donors": [
+    "wide-sable-quoin-gravitic-core",
+    "wide-threnody-scar-foldwing-seedlift"
+  ],
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 12801,
+    "62": 38008,
+    "66": 6607,
+    "68": 11868,
+    "77": 4179,
+    "79": 1604,
+    "100": 618531,
+    "101": 75214,
+    "120": 7124,
+    "129": 477,
+    "131": 3966
+  },
+  "occupied_cells": 780379,
+  "grounded_cells": 780379,
+  "detached_cells": 0,
+  "solid_components": 1,
+  "structural_ties": {
+    "raw_components": 33,
+    "ties": 32,
+    "max_span": 88
+  },
+  "lossless_rectangles": 1695,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 780379,
+  "setup_bytes": 32952,
+  "plane_sha256": "de56ecc67744576902ff681768932747cf291608b89adc5078730fc2bfc3f9a3",
+  "setup_sha256": "583971e408094620c90c2899726ada496326bf28ba5b7a1b470104b8130bcbc3",
+  "literal_sites": {
+    "West rim approach": [
+      625,
+      269
+    ],
+    "West upper bore": [
+      625,
+      345
+    ],
+    "West inhabited isotope census": [
+      302,
+      434
+    ],
+    "West first bore": [
+      625,
+      434
+    ],
+    "High calibration interlock": [
+      990,
+      434
+    ],
+    "Upper resonance assay": [
+      1255,
+      434
+    ],
+    "East upper bore": [
+      1452,
+      269
+    ],
+    "East gravimetric head": [
+      1452,
+      434
+    ],
+    "East xenoseed custody": [
+      1772,
+      519
+    ],
+    "West sheltered cryo": [
+      376,
+      620
+    ],
+    "West side bypass": [
+      376,
+      686
+    ],
+    "West survey midwell": [
+      625,
+      590
+    ],
+    "West middle fault": [
+      625,
+      686
+    ],
+    "Middle cartographic receiver": [
+      841,
+      686
+    ],
+    "Midwall analysis": [
+      1054,
+      686
+    ],
+    "Eastern transverse recorder": [
+      1254,
+      686
+    ],
+    "East middle fault": [
+      1452,
+      686
+    ],
+    "East side rescue": [
+      1745,
+      686
+    ],
+    "East dry mineral gate": [
+      1750,
+      861
+    ],
+    "West deep bore": [
+      625,
+      781
+    ],
+    "West return plenum": [
+      625,
+      862
+    ],
+    "West rescue spur": [
+      376,
+      860
+    ],
+    "Deep strain array": [
+      921,
+      862
+    ],
+    "Deep return bypass": [
+      1105,
+      862
+    ],
+    "East lower bore": [
+      1452,
+      783
+    ],
+    "East rescue plenum": [
+      1452,
+      862
+    ],
+    "Midwestern crossdrop": [
+      840,
+      783
+    ],
+    "Central lower annex": [
+      990,
+      786
+    ],
+    "East independent descent": [
+      1182,
+      581
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable_centres": 1171742,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable_centres": 1137396,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1069763,
+      "passed": 29,
+      "total": 29,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      954,
+      396,
+      1025,
+      471
+    ],
+    "blocked_site": "High calibration interlock",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1056925,
+      "passed": 28,
+      "total": 29,
+      "bad": [
+        {
+          "name": "High calibration interlock",
+          "point": [
+            990,
+            434
+          ]
+        }
+      ]
+    }
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "origin": [
+        0,
+        0
+      ],
+      "extent": [
+        2048,
+        1024
+      ],
+      "bytes": 35469,
+      "sha256": "0b873404be26378198423afec8b817305fc37eccc6010e5aa376b9c9c36a9442",
+      "pixel_parity": "DIRECT_FROM_VERIFIED_FINAL_GRID"
+    },
+    {
+      "name": "01-west-isotope-observatory.png",
+      "origin": [
+        112,
+        255
+      ],
+      "extent": [
+        600,
+        315
+      ],
+      "bytes": 6033,
+      "sha256": "f49b6a3b0f0d0fe0bc1cc3c500f5221478e66ad99b295abb94b6edb40ad77c76",
+      "pixel_parity": "DIRECT_FROM_VERIFIED_FINAL_GRID"
+    },
+    {
+      "name": "02-west-intermediate-fault.png",
+      "origin": [
+        462,
+        339
+      ],
+      "extent": [
+        341,
+        563
+      ],
+      "bytes": 6213,
+      "sha256": "86dcf88108c2414559d8a6d76e31b0826400d4f2c34981acda1ccddf62f8b7a3",
+      "pixel_parity": "DIRECT_FROM_VERIFIED_FINAL_GRID"
+    },
+    {
+      "name": "03-three-transverse-research-links.png",
+      "origin": [
+        742,
+        350
+      ],
+      "extent": [
+        566,
+        601
+      ],
+      "bytes": 8895,
+      "sha256": "7bf2b6c44d731591666e0aa73ea8ac747f6d280db52853b041e1011759879973",
+      "pixel_parity": "DIRECT_FROM_VERIFIED_FINAL_GRID"
+    },
+    {
+      "name": "04-east-head-and-custody.png",
+      "origin": [
+        1294,
+        142
+      ],
+      "extent": [
+        632,
+        570
+      ],
+      "bytes": 9008,
+      "sha256": "4c7eb94615578e03d597c64321589d68b1f90e32341582d8b52f3cd771af3e30",
+      "pixel_parity": "DIRECT_FROM_VERIFIED_FINAL_GRID"
+    },
+    {
+      "name": "05-buried-rescue-routes.png",
+      "origin": [
+        360,
+        723
+      ],
+      "extent": [
+        1446,
+        251
+      ],
+      "bytes": 7678,
+      "sha256": "3f1dd00d1674f1208d1d18a3ab6512f9d220d3a18e725a1f3b8c6474fc6c2879",
+      "pixel_parity": "DIRECT_FROM_VERIFIED_FINAL_GRID"
+    }
+  ],
+  "qualification": "CREATOR-STATIC-PASS",
+  "independent_reviews": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "OPEN DRAFT/HOLD"
+}
