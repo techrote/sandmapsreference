@@ -1,0 +1,331 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_MERIDIAN_FRACTURED_HAIRPIN_CALIBRATION_GROUNDS",
+  "revision": "R1",
+  "seed": "0x261121c6",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donor": "Primary Tungsten Sawtooth @ 7fc24855cf521c90bf67f4afb08685e490473201; all five Meridian sibling heads used as structural contrasts only; new ground-dominant serpentine geometry",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 429985,
+  "discarded_unattached_candidate_cells": 21334,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 2564,
+  "setup_json_bytes": 50489,
+  "material_work_visits": 429985,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "cdebef1c851fc90080dee1d9232d0e8c3aa08732edcb888fbda4f77d3f73fb33",
+  "setup_sha256": "a3df889fb06730793526e6796eb118605ef99ed7077144403cdd7877db53ca5a",
+  "histogram": {
+    "0": 1667167,
+    "49": 16731,
+    "58": 10575,
+    "62": 14291,
+    "100": 372278,
+    "101": 9843,
+    "113": 444,
+    "117": 5041,
+    "122": 782
+  },
+  "sites": [
+    {
+      "name": "West staging",
+      "x": 105,
+      "y": 493
+    },
+    {
+      "name": "Pulse calibration rise",
+      "x": 292,
+      "y": 542
+    },
+    {
+      "name": "First crest",
+      "x": 470,
+      "y": 623
+    },
+    {
+      "name": "Western inner rejoin",
+      "x": 654,
+      "y": 593
+    },
+    {
+      "name": "Midline diagnostic",
+      "x": 871,
+      "y": 580
+    },
+    {
+      "name": "High hairpin apex",
+      "x": 1080,
+      "y": 473
+    },
+    {
+      "name": "Severable crest",
+      "x": 1056,
+      "y": 603
+    },
+    {
+      "name": "High apex return",
+      "x": 1237,
+      "y": 553
+    },
+    {
+      "name": "East brake marker",
+      "x": 1660,
+      "y": 608
+    },
+    {
+      "name": "East U turnaround",
+      "x": 1916,
+      "y": 660
+    },
+    {
+      "name": "East double-back",
+      "x": 1770,
+      "y": 755
+    },
+    {
+      "name": "East pit approach",
+      "x": 1601,
+      "y": 728
+    },
+    {
+      "name": "Second-grade instrument",
+      "x": 1382,
+      "y": 721
+    },
+    {
+      "name": "Middle B return",
+      "x": 981,
+      "y": 703
+    },
+    {
+      "name": "West cutback",
+      "x": 388,
+      "y": 706
+    },
+    {
+      "name": "West U turnaround",
+      "x": 248,
+      "y": 753
+    },
+    {
+      "name": "Deep lap entry",
+      "x": 422,
+      "y": 842
+    },
+    {
+      "name": "Deep camber check",
+      "x": 862,
+      "y": 834
+    },
+    {
+      "name": "Third recovery rejoin",
+      "x": 1070,
+      "y": 874
+    },
+    {
+      "name": "Eastern deep run",
+      "x": 1742,
+      "y": 829
+    },
+    {
+      "name": "Eastern release",
+      "x": 1940,
+      "y": 838
+    },
+    {
+      "name": "West pit workshop",
+      "x": 300,
+      "y": 944
+    },
+    {
+      "name": "West mechanics",
+      "x": 708,
+      "y": 947
+    },
+    {
+      "name": "Mid traction pit",
+      "x": 1226,
+      "y": 943
+    },
+    {
+      "name": "East rescue pit",
+      "x": 1720,
+      "y": 943
+    },
+    {
+      "name": "Damaged recovery spur",
+      "x": 1471,
+      "y": 969
+    },
+    {
+      "name": "Finish",
+      "x": 1982,
+      "y": 798
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 27,
+      "total": 27,
+      "missing": [],
+      "visited_centres": 1524769
+    },
+    "23x19": {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 27,
+      "total": 27,
+      "missing": [],
+      "visited_centres": 1488400
+    },
+    "31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 27,
+      "total": 27,
+      "missing": [],
+      "visited_centres": 1416007
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1012,
+      552,
+      89,
+      97
+    ],
+    "material": 58,
+    "after_31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 26,
+      "total": 27,
+      "missing": [
+        "Severable crest"
+      ],
+      "visited_centres": 1404995
+    },
+    "covered_site": "Severable crest",
+    "other_sites_reachable": 26
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 35360,
+      "pixels": 2097152,
+      "sha256": "c1e6823250c78db1bc8e4e664b0a217780d4cff63cff93e6563d3a9cf8cb76c3",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-west-launch-cutback.png": {
+      "x": 30,
+      "y": 325,
+      "w": 615,
+      "h": 562,
+      "bytes": 7843,
+      "pixels": 345630,
+      "sha256": "115204a2d8067016dcbec9e751e4234bff47d0e7d16e0df278324bbaa3eb938b",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-west-pits-and-first-turn.png": {
+      "x": 188,
+      "y": 589,
+      "w": 663,
+      "h": 435,
+      "bytes": 7059,
+      "pixels": 288405,
+      "sha256": "9ad1d850c3846eec659eb10ede986b57639ba7389d0874a6a11af8c18b982140",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-crest-calibration-loop.png": {
+      "x": 743,
+      "y": 359,
+      "w": 649,
+      "h": 525,
+      "bytes": 6308,
+      "pixels": 340725,
+      "sha256": "77f9613d3966ba9084cd35398b6461cdb75fe1dd20cf0e8b0f8fdedc0df14f8d",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-east-hairpin-and-pitline.png": {
+      "x": 1332,
+      "y": 400,
+      "w": 709,
+      "h": 612,
+      "bytes": 14148,
+      "pixels": 433908,
+      "sha256": "0ce22129e926254c5e6e341aecef85d07e632ffd2b5735e59465c05dd6f359aa",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-deep-return-pits.png": {
+      "x": 550,
+      "y": 731,
+      "w": 962,
+      "h": 291,
+      "bytes": 7386,
+      "pixels": 279942,
+      "sha256": "c2f46663119b9dea8d93700dec1379a1b646ad375ea0eaae2d835b35825c77d5",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-damaged-spur-and-rescue.png": {
+      "x": 1272,
+      "y": 706,
+      "w": 760,
+      "h": 318,
+      "bytes": 9928,
+      "pixels": 241680,
+      "sha256": "01c05039dd1042b497aea4d34801bbca74ec0d85c7f51a9f565ffe6d6c8e9a10",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: no installed CyberDemoBridge, Godot/Workbench, Rapier, actual input/collision/ticks or cold save/reopen executed",
+  "independent_review": "PENDING: Art, Technical, Shepherd at exact committed HEAD",
+  "ci": "NOT CLAIMED",
+  "corpus_role": "ground-dominant fractured hairpin calibration field; three unequal switchback galleries, high bypass, undertrack pitline, physically damaged return spur and editable flight/repair voids"
+}
