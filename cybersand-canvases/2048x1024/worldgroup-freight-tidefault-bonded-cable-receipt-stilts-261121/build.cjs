@@ -178,7 +178,26 @@ St(1010,735,54,12);C(1021,707,10,28);C(1054,702,13,36);
 St(1321,742,52,10);C(1333,704,12,35);C(1363,716,9,26);
 St(1604,741,66,11);C(1622,701,13,40);C(1650,717,9,24);
 St(1817,744,68,9);C(1830,704,12,39);
-/* Conservative exact-point clearance after all authored fixtures. */
+/* Unequal inhabited / operational shells. These source-cell rooms are
+   intentionally compact beside open high-stilt transfer voids. Their doors,
+   rail fixtures, and handling stations distinguish the custody transaction. */
+C(171,646,92,12);C(171,656,13,80);C(251,657,12,80);
+St(181,729,82,12);V(249,675,22,43);V(187,671,23,19);
+St(197,708,46,12);C(201,694,9,15);C(229,687,10,20);
+C(571,641,72,12);C(570,652,13,87);C(632,651,10,87);
+St(576,731,66,12);V(566,676,23,44);
+St(599,708,30,9);C(604,683,10,25);
+C(1007,647,100,13);C(1006,659,13,82);
+C(1095,659,13,82);St(1010,732,99,14);
+V(1002,676,25,41);
+St(1067,701,19,12);C(1071,678,10,24);
+C(1464,653,79,11);C(1463,663,13,79);C(1531,662,13,80);
+St(1466,732,77,12);V(1528,676,21,41);
+St(1491,712,27,11);C(1499,686,8,26);
+C(1794,656,77,10);C(1793,666,12,76);C(1859,667,12,75);
+St(1797,733,73,10);V(1791,683,24,37);
+St(1823,710,29,12);C(1827,693,10,17);
+/* Accessible named centres survive full 31x27 conservative hulls. */
 for(const [x,y] of Object.values(sites))V(x-34,y-30,69,61);
 
 
