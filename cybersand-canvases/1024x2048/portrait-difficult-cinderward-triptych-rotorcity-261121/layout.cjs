@@ -118,7 +118,7 @@ function layoutWorld(){
  // were pruned as detached; stitch their load paths before ground audit.
  b(169,372,18,7,68);        // ore household -> cliff-anchored terrace y375
  b(744,900,19,8,68);        // caster crew house -> right-bank shelf y906
- // Hull-sized entered roof hatches; no sealed picturesque façades.
+ // Roof apertures and flank-accessible chambers; no sealed scenic façades.
  b(170,292,42,13,0);b(306,311,43,12,0);
  b(726,823,43,12,0);b(842,798,42,12,0);
  b(175,1602,42,12,0);b(331,1626,43,12,0);
@@ -153,6 +153,21 @@ function layoutWorld(){
  b(676,1908,16,6,68);b(658,1841,13,11,79);
  b(686,1841,15,12,131);b(669,1817,38,12,0);
  b(648,1850,11,42,0);
+
+ // R5 entered ore-town staging loft: a west-bank anchored workfront with
+ // an exposed 42-cell east portal. Original tiny residence shells remain.
+ b(98,247,265,12,58);b(190,164,173,12,62);
+ l(98,168,190,168,12,117);
+ b(350,176,13,71,65);b(350,197,13,42,0);
+ b(208,180,15,16,69);b(225,181,14,11,79);
+ b(320,181,12,15,131);b(333,183,8,13,68);
+ // Protect full 31x27 access; a decorative hatch alone is not proof of
+ // an entered room. Remove interfering near-ceiling fixtures and beams.
+ b(150,304,28,21,0);b(199,304,28,21,0);
+ b(303,282,55,16,0);
+ b(840,1606,53,20,0);
+ b(832,1671,25,17,0);b(870,1688,25,15,0);
+ b(824,1672,13,11,79);b(904,1690,10,13,131);
  // Keep protected rotor and its two entire flank clearances untouched.
 
  // Exact literal checkpoint clearance in final source plane (not substituted
