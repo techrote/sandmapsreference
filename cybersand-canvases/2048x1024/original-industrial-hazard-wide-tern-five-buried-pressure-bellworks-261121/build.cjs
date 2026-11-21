@@ -109,6 +109,7 @@ function build(){
  for(let a of [[211,487,58,401],[614,482,65,406],[1008,480,54,408],[1425,491,60,396],[1833,480,62,409]])rect(...a,0);
  // A split headshaft portal gives the central winding-room lookout access from the public sky.
  rect(959,326,54,78,0);
+ rect(1101,322,47,85,0);
  // Preserve exact named conservative envelope at every literal checkpoint.
  for(let [,x,y] of SITES)rect(x-17,y-15,35,31,0);
  return qualify();
