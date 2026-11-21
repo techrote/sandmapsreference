@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "title": "Beaconfold Subgrade Loop",
+  "status": "SOURCE-STATIC-UNVERIFIED",
+  "engine_main_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "reference_main_sha_at_branch": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "seed": 3008106257,
+  "grid_dimensions": [
+    2048,
+    1024
+  ],
+  "source_grid_sha256": "27dcac692d9e327b6b54ab458e66f5562874e1a191bd7ec201412e987fe00f9a",
+  "setup_sha256": "6cb39024c62543d121b65ae99ec029f3fe0a019e3798c985e39fac37007da528",
+  "rectangle_count": 3068,
+  "rectangle_work": 439973,
+  "setup_bytes": 60320,
+  "material_histogram": {
+    "0": 1657179,
+    "58": 48738,
+    "62": 51982,
+    "72": 162,
+    "100": 135021,
+    "101": 18032,
+    "113": 21784,
+    "117": 161242,
+    "122": 3012
+  },
+  "sites": {
+    "Spawn launch apron": [
+      116,
+      231
+    ],
+    "West sky start": [
+      252,
+      182
+    ],
+    "Telemetry tower approach": [
+      447,
+      140
+    ],
+    "High suspension cue": [
+      671,
+      163
+    ],
+    "Beacon crown approach": [
+      918,
+      150
+    ],
+    "Civic relay sky link": [
+      1102,
+      184
+    ],
+    "Switchback antenna crest": [
+      1444,
+      189
+    ],
+    "East catch upper": [
+      1825,
+      180
+    ],
+    "East downshaft throat": [
+      1980,
+      666
+    ],
+    "East subgrade elbow": [
+      1973,
+      928
+    ],
+    "Express checkpoint D": [
+      1685,
+      932
+    ],
+    "Express checkpoint C": [
+      1336,
+      930
+    ],
+    "Express checkpoint B": [
+      902,
+      930
+    ],
+    "Express checkpoint A": [
+      506,
+      930
+    ],
+    "West subgrade elbow": [
+      67,
+      929
+    ],
+    "Return shaft launch": [
+      62,
+      710
+    ],
+    "Finish west approach": [
+      295,
+      379
+    ],
+    "West dispatcher cockpit": [
+      214,
+      483
+    ],
+    "Telemetry middle gallery": [
+      456,
+      471
+    ],
+    "Telemetry lower service threshold": [
+      575,
+      647
+    ],
+    "Central beacon operating chamber": [
+      884,
+      475
+    ],
+    "Central beacon cable inspection": [
+      1069,
+      529
+    ],
+    "Midline switching office": [
+      1345,
+      476
+    ],
+    "East latch operator": [
+      1824,
+      510
+    ],
+    "West buried rail junction": [
+      286,
+      933
+    ],
+    "Central buried relief shop": [
+      1123,
+      933
+    ],
+    "East buried braking room": [
+      1811,
+      932
+    ]
+  },
+  "blocked_site": "High suspension cue",
+  "obstruction_xywh": [
+    651,
+    147,
+    40,
+    38
+  ],
+  "primary_route": [
+    "Spawn launch apron",
+    "West sky start",
+    "Telemetry tower approach",
+    "High suspension cue",
+    "Beacon crown approach",
+    "Civic relay sky link",
+    "Switchback antenna crest",
+    "East catch upper",
+    "Switchback antenna crest",
+    "Civic relay sky link",
+    "Beacon crown approach",
+    "High suspension cue",
+    "Telemetry tower approach",
+    "West sky start",
+    "Return shaft launch",
+    "West subgrade elbow",
+    "Express checkpoint A",
+    "Express checkpoint B",
+    "Express checkpoint C",
+    "Express checkpoint D",
+    "East subgrade elbow",
+    "East downshaft throat",
+    "East subgrade elbow",
+    "Express checkpoint D",
+    "Express checkpoint C",
+    "Express checkpoint B",
+    "Express checkpoint A",
+    "West subgrade elbow",
+    "Return shaft launch",
+    "Finish west approach"
+  ],
+  "alternate_route": [
+    "Spawn launch apron",
+    "Return shaft launch",
+    "West subgrade elbow",
+    "Express checkpoint A",
+    "Express checkpoint B",
+    "Express checkpoint C",
+    "Express checkpoint D",
+    "East subgrade elbow",
+    "East downshaft throat",
+    "East subgrade elbow",
+    "Express checkpoint D",
+    "Express checkpoint C",
+    "Express checkpoint B",
+    "Express checkpoint A",
+    "West subgrade elbow",
+    "Return shaft launch",
+    "Finish west approach"
+  ],
+  "png_crops": {
+    "overview.png": [
+      0,
+      0,
+      2048,
+      1024
+    ],
+    "01-west-staging-and-shaft.png": [
+      14,
+      365,
+      400,
+      590
+    ],
+    "02-telemetry-needle.png": [
+      295,
+      170,
+      415,
+      705
+    ],
+    "03-beacon-crown.png": [
+      755,
+      135,
+      460,
+      695
+    ],
+    "04-high-low-transfer.png": [
+      1170,
+      280,
+      440,
+      680
+    ],
+    "05-east-turn-and-mast.png": [
+      1635,
+      285,
+      398,
+      710
+    ],
+    "06-subgrade-express-and-rooms.png": [
+      485,
+      775,
+      1070,
+      225
+    ]
+  },
+  "native": "NATIVE-UNTESTED"
+}

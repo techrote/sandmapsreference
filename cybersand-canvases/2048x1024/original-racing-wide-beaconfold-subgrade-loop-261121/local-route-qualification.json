@@ -1,0 +1,830 @@
+{
+  "schema_version": 1,
+  "source_grid_sha256": "27dcac692d9e327b6b54ab458e66f5562874e1a191bd7ec201412e987fe00f9a",
+  "hull_wh": [
+    31,
+    27
+  ],
+  "margin_per_leg": 300,
+  "physical_obstruction_xywh": [
+    651,
+    147,
+    40,
+    38
+  ],
+  "checked_elevator_and_finish_cardinal_centres": true,
+  "paths": {
+    "primary": {
+      "passed": 29,
+      "total": 29,
+      "legs": [
+        {
+          "from": "Spawn launch apron",
+          "to": "West sky start",
+          "window_xywh": [
+            0,
+            0,
+            553,
+            532
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "West sky start",
+          "to": "Telemetry tower approach",
+          "window_xywh": [
+            0,
+            0,
+            748,
+            483
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Telemetry tower approach",
+          "to": "High suspension cue",
+          "window_xywh": [
+            147,
+            0,
+            825,
+            464
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "High suspension cue",
+          "to": "Beacon crown approach",
+          "window_xywh": [
+            371,
+            0,
+            848,
+            464
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Beacon crown approach",
+          "to": "Civic relay sky link",
+          "window_xywh": [
+            618,
+            0,
+            785,
+            485
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Civic relay sky link",
+          "to": "Switchback antenna crest",
+          "window_xywh": [
+            802,
+            0,
+            943,
+            490
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Switchback antenna crest",
+          "to": "East catch upper",
+          "window_xywh": [
+            1144,
+            0,
+            904,
+            490
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East catch upper",
+          "to": "Switchback antenna crest",
+          "window_xywh": [
+            1144,
+            0,
+            904,
+            490
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Switchback antenna crest",
+          "to": "Civic relay sky link",
+          "window_xywh": [
+            802,
+            0,
+            943,
+            490
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Civic relay sky link",
+          "to": "Beacon crown approach",
+          "window_xywh": [
+            618,
+            0,
+            785,
+            485
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Beacon crown approach",
+          "to": "High suspension cue",
+          "window_xywh": [
+            371,
+            0,
+            848,
+            464
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "High suspension cue",
+          "to": "Telemetry tower approach",
+          "window_xywh": [
+            147,
+            0,
+            825,
+            464
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Telemetry tower approach",
+          "to": "West sky start",
+          "window_xywh": [
+            0,
+            0,
+            748,
+            483
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "West sky start",
+          "to": "Return shaft launch",
+          "window_xywh": [
+            0,
+            0,
+            553,
+            1011
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Return shaft launch",
+          "to": "West subgrade elbow",
+          "window_xywh": [
+            0,
+            410,
+            368,
+            614
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "West subgrade elbow",
+          "to": "Express checkpoint A",
+          "window_xywh": [
+            0,
+            629,
+            807,
+            395
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint A",
+          "to": "Express checkpoint B",
+          "window_xywh": [
+            206,
+            630,
+            997,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint B",
+          "to": "Express checkpoint C",
+          "window_xywh": [
+            602,
+            630,
+            1035,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint C",
+          "to": "Express checkpoint D",
+          "window_xywh": [
+            1036,
+            630,
+            950,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint D",
+          "to": "East subgrade elbow",
+          "window_xywh": [
+            1385,
+            628,
+            663,
+            396
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East subgrade elbow",
+          "to": "East downshaft throat",
+          "window_xywh": [
+            1673,
+            366,
+            375,
+            658
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East downshaft throat",
+          "to": "East subgrade elbow",
+          "window_xywh": [
+            1673,
+            366,
+            375,
+            658
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East subgrade elbow",
+          "to": "Express checkpoint D",
+          "window_xywh": [
+            1385,
+            628,
+            663,
+            396
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint D",
+          "to": "Express checkpoint C",
+          "window_xywh": [
+            1036,
+            630,
+            950,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint C",
+          "to": "Express checkpoint B",
+          "window_xywh": [
+            602,
+            630,
+            1035,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint B",
+          "to": "Express checkpoint A",
+          "window_xywh": [
+            206,
+            630,
+            997,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint A",
+          "to": "West subgrade elbow",
+          "window_xywh": [
+            0,
+            629,
+            807,
+            395
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "West subgrade elbow",
+          "to": "Return shaft launch",
+          "window_xywh": [
+            0,
+            410,
+            368,
+            614
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Return shaft launch",
+          "to": "Finish west approach",
+          "window_xywh": [
+            0,
+            79,
+            596,
+            932
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        }
+      ]
+    },
+    "alternate": {
+      "passed": 16,
+      "total": 16,
+      "legs": [
+        {
+          "from": "Spawn launch apron",
+          "to": "Return shaft launch",
+          "window_xywh": [
+            0,
+            0,
+            417,
+            1011
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Return shaft launch",
+          "to": "West subgrade elbow",
+          "window_xywh": [
+            0,
+            410,
+            368,
+            614
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "West subgrade elbow",
+          "to": "Express checkpoint A",
+          "window_xywh": [
+            0,
+            629,
+            807,
+            395
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint A",
+          "to": "Express checkpoint B",
+          "window_xywh": [
+            206,
+            630,
+            997,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint B",
+          "to": "Express checkpoint C",
+          "window_xywh": [
+            602,
+            630,
+            1035,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint C",
+          "to": "Express checkpoint D",
+          "window_xywh": [
+            1036,
+            630,
+            950,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint D",
+          "to": "East subgrade elbow",
+          "window_xywh": [
+            1385,
+            628,
+            663,
+            396
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East subgrade elbow",
+          "to": "East downshaft throat",
+          "window_xywh": [
+            1673,
+            366,
+            375,
+            658
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East downshaft throat",
+          "to": "East subgrade elbow",
+          "window_xywh": [
+            1673,
+            366,
+            375,
+            658
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East subgrade elbow",
+          "to": "Express checkpoint D",
+          "window_xywh": [
+            1385,
+            628,
+            663,
+            396
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint D",
+          "to": "Express checkpoint C",
+          "window_xywh": [
+            1036,
+            630,
+            950,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint C",
+          "to": "Express checkpoint B",
+          "window_xywh": [
+            602,
+            630,
+            1035,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint B",
+          "to": "Express checkpoint A",
+          "window_xywh": [
+            206,
+            630,
+            997,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint A",
+          "to": "West subgrade elbow",
+          "window_xywh": [
+            0,
+            629,
+            807,
+            395
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "West subgrade elbow",
+          "to": "Return shaft launch",
+          "window_xywh": [
+            0,
+            410,
+            368,
+            614
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Return shaft launch",
+          "to": "Finish west approach",
+          "window_xywh": [
+            0,
+            79,
+            596,
+            932
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        }
+      ]
+    },
+    "blocked_alternate": {
+      "passed": 16,
+      "total": 16,
+      "legs": [
+        {
+          "from": "Spawn launch apron",
+          "to": "Return shaft launch",
+          "window_xywh": [
+            0,
+            0,
+            417,
+            1011
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Return shaft launch",
+          "to": "West subgrade elbow",
+          "window_xywh": [
+            0,
+            410,
+            368,
+            614
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "West subgrade elbow",
+          "to": "Express checkpoint A",
+          "window_xywh": [
+            0,
+            629,
+            807,
+            395
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint A",
+          "to": "Express checkpoint B",
+          "window_xywh": [
+            206,
+            630,
+            997,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint B",
+          "to": "Express checkpoint C",
+          "window_xywh": [
+            602,
+            630,
+            1035,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint C",
+          "to": "Express checkpoint D",
+          "window_xywh": [
+            1036,
+            630,
+            950,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint D",
+          "to": "East subgrade elbow",
+          "window_xywh": [
+            1385,
+            628,
+            663,
+            396
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East subgrade elbow",
+          "to": "East downshaft throat",
+          "window_xywh": [
+            1673,
+            366,
+            375,
+            658
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East downshaft throat",
+          "to": "East subgrade elbow",
+          "window_xywh": [
+            1673,
+            366,
+            375,
+            658
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "East subgrade elbow",
+          "to": "Express checkpoint D",
+          "window_xywh": [
+            1385,
+            628,
+            663,
+            396
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint D",
+          "to": "Express checkpoint C",
+          "window_xywh": [
+            1036,
+            630,
+            950,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint C",
+          "to": "Express checkpoint B",
+          "window_xywh": [
+            602,
+            630,
+            1035,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint B",
+          "to": "Express checkpoint A",
+          "window_xywh": [
+            206,
+            630,
+            997,
+            394
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Express checkpoint A",
+          "to": "West subgrade elbow",
+          "window_xywh": [
+            0,
+            629,
+            807,
+            395
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "West subgrade elbow",
+          "to": "Return shaft launch",
+          "window_xywh": [
+            0,
+            410,
+            368,
+            614
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        },
+        {
+          "from": "Return shaft launch",
+          "to": "Finish west approach",
+          "window_xywh": [
+            0,
+            79,
+            596,
+            932
+          ],
+          "connected": true,
+          "start_clear": true,
+          "end_clear": true
+        }
+      ]
+    }
+  },
+  "native": "NATIVE-UNTESTED"
+}

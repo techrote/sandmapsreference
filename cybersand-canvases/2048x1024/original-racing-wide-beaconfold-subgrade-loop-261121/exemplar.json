@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "purpose": ["human_editable_canvas", "procedural_exemplar", "scripted_setpiece_source"],
+  "family": "original/racing-wide",
+  "map_role": "Racing-wide dry industrial dual-altitude signal district and subterranean express exemplar",
+  "anchor_donors": [],
+  "macro_topology": ["yard", "mixed"],
+  "density_profile": "Tower and workroom clusters separated by outdoor flight voids; one sparse excavated express band beneath continuous rooted earth",
+  "route_grammar": {
+    "primary": "West to east aerial beacon run, reverse back to west lift, east-west underground express excursion, rise to western finish",
+    "alternate": "Enter west lift immediately, run east in subgrade tube, reverse at east lift, return west to finish",
+    "blocked_case": "A real solid XYWH shutter covers the high suspension cue; the lower alternate remains 31x27 traversable"
+  },
+  "strong_motifs": ["four distinct ground-rooted signal masts", "paired true flight-grade elevation bands", "long basalt-cut express tunnel", "west and east open-air access shafts", "bright physical beacon crowns", "small entered operator rooms"],
+  "interesting_relationships": ["The upper traversable void overlays a separately traversable buried corridor", "Outer shafts provide return/recovery without requiring airborne resets", "Heavy masts root directly into the ground while equipment remains side-elevation", "Sky signal obstacle leaves the subgrade alternative operational"],
+  "authoring_affordances": ["Sparse buried rail bays with deliberate expansion sockets", "Exposed tower galleries capable of later encounter and control instrumentation", "Long empty ground-air transitions for manual race cue additions", "Unscripted east arrestor and reversal space", "Optional service rooms rather than mandatory course bottlenecks"],
+  "setpiece_candidates": [
+    {"name":"West shaft departure and recovery stage","xy":[62,710],"kind":"arrival_departure","unscripted":true},
+    {"name":"Telemetry crown reveal and signal activation","xy":[481,228],"kind":"machinery_activation","unscripted":true},
+    {"name":"Buried rail relief workshop expansion seam","xy":[1123,933],"kind":"editable_dead_end_expansion","unscripted":true},
+    {"name":"East shaft emergency brake and turnaround","xy":[1980,666],"kind":"chase_or_holdout","unscripted":true}
+  ],
+  "procedural_exemplar_value": "Extract independent patterns for ground-rooted signal towers, vast above-ground flight clearance, excavated below-grade bypass tubes, inversion/reversal route networks, physically accessed shaft-to-tube connectors and optional event sockets.",
+  "similarity_avoidance": "Unlike Aster Duplex Shipbreak's two exposed hulls, Rookfall's fractured bridge in a crater and Duskline's ceiling-hung diaphragm band, this layout contains independent grounded tower masts and a real traversable subterranean express corridor; its high/low inversion requires an explicit return rather than a shallow folded turn.",
+  "diversity_axes": {
+    "macro_topology": "mixed",
+    "altitude_grammar": "dual_level",
+    "density_cadence": "alternating",
+    "route_structure": "loop",
+    "landmark_family": "tower",
+    "support_form": "floor_rooted",
+    "environment_relation": "dry",
+    "incompleteness": "editable_gaps"
+  },
+  "native_qualification": "NATIVE-UNTESTED"
+}
