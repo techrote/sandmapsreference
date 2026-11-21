@@ -128,19 +128,119 @@ function build(){
 
  const reconciled=tie();
  const sites={
- "West arrival lumen":[72,188],"West root registrar":[194,274],"West cold dock":[275,387],
- "West flight spill":[398,540],"West low salvage":[277,735],"West dry undercroft":[301,913],
- "Inversion orchard west":[593,248],"First sieve access":[688,293],"Root-column transfer":[790,565],
- "Crown oversight bridge":[1027,202],"High customs threshold":[992,437],
- "Central flight lumen":[1086,692],"Centre lower return":[966,799],
- "Eastern sieve access":[1346,266],"Hanging inoculation bay":[1470,580],
- "East quarantine loft":[1581,312],"East cryo lantern":[1865,274],"East lantern underdeck":[1864,500],
- "East ravine arrival":[1994,687],"Eastern dry vault":[1810,916],
- "West dry way":[105,911],"Mid dry way":[802,957],"East dry way":[1527,958],
- "Outer orchard sightline":[1206,581],"Unfinished culture spur":[407,689],
- "Over-roof shaft mouth":[1177,213],"Lower assay spill":[1286,770],
- "Exchange customs chamber":[982,437]
- };
+ "West arrival lumen": [
+  72,
+  188
+ ],
+ "West root registrar approach": [
+  75,
+  320
+ ],
+ "West cold dock approach": [
+  75,
+  532
+ ],
+ "West flight spill": [
+  345,
+  667
+ ],
+ "West low salvage": [
+  255,
+  850
+ ],
+ "West dry undercroft": [
+  255,
+  946
+ ],
+ "Inverted orchard west": [
+  525,
+  594
+ ],
+ "First sieve recovery": [
+  615,
+  711
+ ],
+ "Root-column transfer": [
+  795,
+  662
+ ],
+ "Crown oversight bridge": [
+  1245,
+  196
+ ],
+ "High customs threshold": [
+  1245,
+  402
+ ],
+ "Central flight lumen": [
+  1086,
+  692
+ ],
+ "Centre lower return": [
+  975,
+  850
+ ],
+ "Eastern sieve access": [
+  1335,
+  632
+ ],
+ "Hanging inoculation bay": [
+  1515,
+  616
+ ],
+ "East quarantine loft": [
+  1605,
+  609
+ ],
+ "East cryo lantern approach": [
+  1965,
+  300
+ ],
+ "East lantern underdeck": [
+  1875,
+  500
+ ],
+ "East ravine arrival": [
+  1994,
+  687
+ ],
+ "Eastern dry vault": [
+  1810,
+  916
+ ],
+ "West dry way": [
+  165,
+  950
+ ],
+ "Mid dry way": [
+  802,
+  957
+ ],
+ "East dry way": [
+  1527,
+  958
+ ],
+ "Outer orchard sightline": [
+  1155,
+  780
+ ],
+ "Unfinished culture spur": [
+  407,
+  689
+ ],
+ "Upper rail wing": [
+  1245,
+  560
+ ],
+ "Lower assay spill": [
+  1335,
+  738
+ ],
+ "Exchange customs chamber": [
+  1155,
+  842
+ ]
+};
  const ties={joins:tieCount+reconciled.ties,max_span:reconciled.max_span};
  let rect=[],prev=new Map(),hist={},area=0,replay=new Uint8Array(N),overlap=0;
  for(let y=0;y<H;y++){let next=new Map(),o=y*W;for(let x=0;x<W;){let v=g[o+x],s=x;while(x<W&&g[o+x]===v)x++;if(!v)continue;let key=s+":"+(x-s)+":"+v,i=prev.get(key);if(i===undefined){i=rect.length;rect.push([s,y,x-s,1,v]);}else rect[i][3]++;next.set(key,i);}prev=next;}
@@ -155,7 +255,7 @@ function build(){
  let s=sites["West arrival lumen"],i=s[1]*W+s[0],hd=0,tl=0;if(!pass[i])throw Error("Spawn obstructed");queue[tl++]=i;vis[i]=1;
  while(hd<tl){let a=queue[hd++],x=a%W;for(let b of [a-W,a+W,x?a-1:-1,x<W-1?a+1:-1])if(b>=0&&b<N&&pass[b]&&!vis[b]){vis[b]=1;queue[tl++]=b;}}
  let bad=Object.entries(sites).filter(([n,p])=>!vis[p[1]*W+p[0]]).map(([name,p])=>({name,point:p}));return {envelope:[w,h],reachable_centres:tl,passed:Object.keys(sites).length-bad.length,total:Object.keys(sites).length,bad};}
- const routes=[[19,15],[23,19],[31,27]].map(p=>flood(...p)),box=[949,407,1012,477],obstruction=flood(31,27,box);
+ const routes=[[19,15],[23,19],[31,27]].map(p=>flood(...p)),box=[1124,815,1192,877],obstruction=flood(31,27,box);
  if(routes.some(r=>r.bad.length)||obstruction.bad.length!==1||obstruction.bad[0].name!=="Exchange customs chamber")throw Error("Full body or obstruction failure "+JSON.stringify({routes,obstruction}));
  const liquid_policy=[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0];
  const setup={version:2,extent:[W,H],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:sites["West arrival lumen"],options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:1.8}}],next_id:2,selected:1,edits:rect,response:"LA-SELECTIVE",liquid_policy,normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
@@ -163,19 +263,74 @@ function build(){
  return {g,json,rect,hist,area,grounded,components,ties,sites,routes,box,obstruction,crops:[["01-west-root-registrar",60,171,390,442],["02-inverted-orchard",465,160,513,574],["03-open-flight-lumen",855,180,424,671],["04-eastern-quarantine",1440,200,497,551],["05-dry-undercroft",1110,695,770,313]]};
 }
 
+
 function packageFiles(){
  const a=build(),images=[],records=[];
- for(let [name,x,y,w,h] of [["overview",0,0,2048,1024],...a.crops]){let bytes=png(a.g,x,y,w,h);images.push({name:name+".png",bytes});records.push({name:name+".png",origin:[x,y],extent:[w,h],bytes:bytes.length,sha256:sha256(bytes),pixel_parity:"DIRECT_FROM_FINAL_GRID"});}
- const receipt={project:"CYBERSAND WORLD-GROUP XENOBIOME",family:"Mireward Levee Communes",sibling:2,role:"Reedfall Staveworks / Downhill Biofilter Terraces",seed:"mireward-reedfall-staveworks-261121-v1",map_base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",engine_readonly_main:"f7e056c9b8791106e22f2d1c295043783d8a9701",donors:["wide-harrow-mere-spore-dam","wide-graftloom-slipway"],extent:[2048,1024],cell_count:2097152,material_histogram:a.hist,occupied_cells:a.area,grounded_cells:a.grounded,detached_cells:0,solid_components:a.components,physical_tethers:a.ties,lossless_rectangles:a.rect.length,source_rectangle_limit:32768,source_max_json_bytes:1048576,rectangle_work_cells:a.area,setup_bytes:a.json.length,plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),literal_sites:a.sites,midge_full_hull_clearances:a.routes,obstruction:{box:a.box,blocked_site:"High fungal spool site",result:a.obstruction},indexed_images:records,qualification:"CREATOR-STATIC-PASS",independent_reviews:"PENDING",native:"NATIVE-UNTESTED",pr_gate:"OPEN DRAFT/HOLD"};
- const exemplar={schema_version:1,purpose:["human_editable_canvas","procedural_exemplar","scripted_setpiece_source"],family:"Mireward Levee Communes",lane:"Xenobiome / Frontier Clusters",map_role:"Sibling 02 — Reedfall Staveworks / Downhill Biofilter Terraces",anchor_donors:["wide-harrow-mere-spore-dam","wide-graftloom-slipway"],macro_topology:["cascade"],density_profile:"Five cliff-rooted descending shelves with dense assay and quarantine hollows amid upper open flight and lower dry service voids",route_grammar:{primary:"Upstream seed ledger to reed assay, fungal transfer, sterile custody and downhill outfall",alternate:"Upper open flight and redundant entered cliff shafts and the continuous deep dry waste return",recovery:"Blocked upper spool point bypassed by open upper route and lower dry trunk"},strong_motifs:["asymmetric downhill filter terraces","continuous dry lower waste trunk","high cantilever fungal transfer loom","entered hollow biological workfaces","separate sterile and dispatch cells"],interesting_relationships:["Each altitude drop corresponds to a distinct biological process step","Cliff-edge apparatus is tied to a single rooted landform","Spool activation landmark is spatially independent of lower recovery"],authoring_affordances:[{site:"Upstream editing grade",point:[458,389],use:"Expandable reed intake"},{site:"Upper spool",point:[1108,320],use:"Destructible high transfer assembly"},{site:"Sterile shelf",point:[1442,875],use:"NPC quarantine threshold"},{site:"Outfall",point:[1889,920],use:"Dry discharge and departure stage"}],setpiece_candidates:[{name:"Spool snap",center:[1108,320],kind:"cantilever failure",exits:"Upper sky and deep return"},{name:"Reed assay startup",center:[588,614],kind:"machinery activation",exits:"Upper ramp and lower service"},{"name":"Sterile exchange",center:[1442,875],kind:"NPC isolation encounter",exits:"Vertical shaft and lower route"},{name:"Outfall pursuit",center:[1889,920],kind:"escape chase",exits:"Cliff rim and dry tunnel"}],procedural_exemplar_value:["Rooted descending biological production sequence","Side-entered service halls beneath unequal shelves","Cantilever load paths with separate recovery topology","Open cliff-edge sockets for SWARM/GENTEK addition"],similarity_avoidance:"Unlike Mireward Sibling 01's five separated island communes joined by short arches, this is a single downhill cliff process sequence with its own high lateral cantilever and connected lower waste route. Different from Underroot's catchment because this is a multi-district biological machinework rather than a seepage/fault basin.",diversity_axes:{macro_topology:["cascade"],altitude_grammar:["multi_strata","high_low_bypass"],density_cadence:["alternating"],route_structure:["layered","branch_rejoin"],landmark_family:["gantry","mixed"],support_form:["cliff_embedded","edge_rooted"],environment_relation:["biological","dry"],incompleteness:["editable_gaps","modular_append_zones"]},geometry_evidence:{literal_sites:a.sites,obstruction_box:a.box,material_grid_sha256:receipt.plane_sha256}};
- const readme="# Mireward Levee Communes — Reedfall Staveworks / Downhill Biofilter Terraces\n\n"+
- "**Original Sibling 02 · 2048×1024 genuine material-cell grid · CREATOR-STATIC-PASS · NATIVE-UNTESTED · OPEN Draft/HOLD.**\n\n"+
- "Five descending bedrock-rooted biofilter shelves: uphill cold-seed ledger, assay/filtration, fungal transfer cantilever, entered sterile quarantine, and downstream byproduct dispatch. Multiple separately entered side-halls, upper flight and a dry lower service trunk serve recovery and authoring. This structural cascade does not reuse Mireward Sibling 01's five island banks/short arches. Intentional editable voids are preserved.\n\n"+
- "**Read-only donors:** [Harrow Mere #64](https://github.com/techrote/sandmapsreference/pull/64), [Graftloom Slipway #22](https://github.com/techrote/sandmapsreference/pull/22). Only material palette and biological industrial culture are inherited, never geometry, pixels, edits, coordinates or district layouts.\n\n"+
- "## Reproducible checks\n\n- "+a.area+" occupied static cells, "+a.grounded+" grounded, zero detached; "+a.rect.length+" legal disjoint Setup-v2 rectangles; "+a.json.length+" JSON bytes. Exactly 2,097,152 cells.\n"+
- "- 19×15, 23×19, 31×27 Midge full-hull routes: "+a.routes.map(r=>r.passed+"/"+r.total).join(", ")+". Literal 31×27 blocked upper spool: "+a.obstruction.passed+"/"+a.obstruction.total+" accessible.\n"+
- "- Grid SHA256 "+receipt.plane_sha256+", Setup SHA256 "+receipt.setup_sha256+". Accepted CyberSand main "+receipt.engine_readonly_main+" read-only; native Workbench/Rapier gameplay, collision, ticks, save/reopen **NATIVE-UNTESTED**. Exact-HEAD independent Art/Technical/Shepherd PENDING.\n"+
- "- `node build.cjs` regenerate; `node build.cjs --verify` byte-compare; actual full image + five true 1:1 native material-index crops derive from same material grid.\n\n## True indexed-material images\n\n![Overview](./overview.png)\n\n"+records.slice(1).map(x=>"!["+x.name+"](./"+x.name+")").join("\n\n")+"\n";
+ for(let [name,x,y,w,h] of [["overview",0,0,2048,1024],...a.crops]){
+  const bytes=png(a.g,x,y,w,h);images.push({name:name+".png",bytes});
+  records.push({name:name+".png",origin:[x,y],extent:[w,h],bytes:bytes.length,sha256:sha256(bytes),pixel_parity:"DIRECT_FROM_EXACT_FINAL_GRID"});
+ }
+ const receipt={
+  project:"CYBERSAND WORLD-GROUP XENOBIOME",family:"Mireward Levee Communes",sibling:3,role:"Vesper Inverted Root Orchard / Hanging Culture Exchange",
+  seed:"mireward-vesper-inverted-root-orchard-261121-v1",
+  map_base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  engine_readonly_main:"f7e056c9b8791106e22f2d1c295043783d8a9701",
+  donors:[{slug:"wide-harrow-mere-spore-dam",pr:64,head:"1202aea8d696e2bfecd7e4f3353c9738a9435858"},{slug:"wide-threnody-scar-foldwing-seedlift",pr:73,head:"00cb6b6b86b875d8b81cc387c711aa56f172d9dd"}],
+  extent:[2048,1024],cell_count:2097152,material_histogram:a.hist,occupied_cells:a.area,grounded_cells:a.grounded,detached_cells:0,
+  solid_components:a.components,physical_tethers:a.ties,lossless_rectangles:a.rect.length,source_rectangle_limit:32768,
+  source_max_json_bytes:1048576,rectangle_work_cells:a.area,setup_bytes:a.json.length,
+  plane_sha256:sha256(a.g),setup_sha256:sha256(a.json),
+  literal_sites:a.sites,midge_full_hull_clearances:a.routes,
+  obstruction:{box:a.box,blocked_site:"Exchange customs chamber",result:a.obstruction},indexed_images:records,
+  qualification:"CREATOR-STATIC-PASS",independent_reviews:"PENDING",native:"NATIVE-UNTESTED",pr_gate:"OPEN DRAFT/HOLD",
+  caveat:"Accepted 32768 source rectangles distinct from unmeasured 4096 installed bridge fallback"
+ };
+ const exemplar={
+  schema_version:1,purpose:["human_editable_canvas","procedural_exemplar","scripted_setpiece_source"],
+  family:"Mireward Levee Communes",lane:"Xenobiome / Frontier Clusters",
+  map_role:"Sibling 03 — Vesper Inverted Root Orchard / Hanging Culture Exchange",
+  anchor_donors:["wide-harrow-mere-spore-dam","wide-threnody-scar-foldwing-seedlift"],
+  macro_topology:["suspended","mixed"],
+  density_profile:"Dense unequal hanging galleries at both ends, nonuniform canopy culture sleeves and a large central flight lumen over sparse dry salvage",
+  route_grammar:{primary:"West lantern, suspended orchard, central lumen, eastern quarantine and freight",
+    alternate:"Three separated upper cableway spans, midair cross-cavern recovery and bottom dry service",
+    recovery:"Opaque customs obstruction denies only its named chamber; independent upper and lower routes remain"},
+  strong_motifs:["inverted roof-rooted biological production","discontinuous twin cableways","unequal suspended lantern wharves","nonuniform hanging culture sleeves","dry lower recovery tunnels"],
+  interesting_relationships:["Geological ceiling supports production hardware independently of the bedrock floor","Suspended biological workfaces alternate with large unoccupied flyable gaps","Upper and lower traversal remain connected around one physically obstructed customs chamber"],
+  authoring_affordances:[
+   {site:"Crown append seam",center:[1245,402],use:"New bridge or hanging culture cassette"},
+   {site:"Central lumen",center:[1086,692],use:"Large editable transit/chase volume"},
+   {site:"Customs checkpoint",center:[1155,842],use:"Holdout threshold with recovery"},
+   {site:"East freight margin",center:[1994,687],use:"Further cargo connector"}
+  ],
+  setpiece_candidates:[
+   {name:"Rootfall release",center:[525,594],kind:"destructible suspended landmark",exits:"Midair bypass and lower service"},
+   {name:"Customs isolation",center:[1155,842],kind:"ambush/holdout",exits:"High and low alternate routes"},
+   {name:"Freight launch",center:[1994,687],kind:"departure stage",exits:"Upper eastern sky and basal salvage"},
+   {name:"Lumen chase",center:[1086,692],kind:"midair pursuit",exits:"Cross-cavern height changes"}
+  ],
+  procedural_exemplar_value:["Roof-rooted suspension versus floor-rooted industrial construction","Independent cable spans and traversable discontinuities","Upper hanging workfaces over authored empty middle and basal recovery","Variable-depth culture cassette motifs"],
+  similarity_avoidance:"Mireward 01 uses shallow polder islands; Mireward 02 is a descending continuous escarpment; this new suspended roof-rooted orchard is neither. Unlike Quoin's V-crater station, it has no central gravitic instrument or basin spanning rotor.",
+  diversity_axes:{macro_topology:["suspended"],altitude_grammar:["multi_strata","high_low_bypass"],density_cadence:["dense_open_dense"],route_structure:["parallel_lanes","branch_rejoin"],landmark_family:["cableway","gantry"],support_form:["roof_rooted"],environment_relation:["biological","dry"],incompleteness:["editable_gaps","modular_append_zones"]},
+  geometry_evidence:{literal_sites:a.sites,obstruction_box:a.box,material_grid_sha256:receipt.plane_sha256}
+ };
+ const readme=[
+ "# Mireward Levee Communes — Sibling 03: Vesper Inverted Root Orchard / Hanging Culture Exchange","",
+ "**NEW original 2048×1024 material-cell canvas · CREATOR-STATIC-PASS · NATIVE-UNTESTED · OPEN Draft/HOLD.**","",
+ "The Xenobiome world hangs from an inverted basalt ceiling: western lantern registry, roof-rooted culture orchard, wide open midair custody exchange, eastern quarantine lantern and separate dry basal salvage works. Continuous central voids and incomplete work sockets are intentional manual-authoring opportunities, not missing geometry.",
+ "",
+ "**Anchor vocabulary:** Harrow Mere #64 at 1202aea8d696e2bfecd7e4f3353c9738a9435858 and Threnody Scar #73 at 00cb6b6b86b875d8b81cc387c711aa56f172d9dd. Borrowed biological engineering and xenoseed logistics only; no donor pixels, rectangle streams, machinery stamps, routes, coordinates, district layout or names.",
+ "",
+ "## Source-static qualification","",
+ "- Final plane 2,097,152 cells, "+a.area+" occupied / "+a.grounded+" grounded, 0 unsupported. Ordered non-overlapping Setup-v2 rectangles "+a.rect.length+" / 32768; Setup JSON bytes "+a.json.length+" / 1048576.",
+ "- Exact named Midge destination reachability, 19x15 / 23x19 / 31x27: "+a.routes.map(r=>r.passed+"/"+r.total).join(" ; ")+". Real opaque obstruction "+JSON.stringify(a.box)+" denies only customs chamber, leaving "+a.obstruction.passed+"/"+a.obstruction.total+" sites accessible.",
+ "- Plane SHA256 "+receipt.plane_sha256+"; Setup SHA256 "+receipt.setup_sha256+". Fixed seed "+receipt.seed+". Deterministic regeneration: node build.cjs. Check committed bytes with node build.cjs --verify.",
+ "- Accepted CyberSand main "+receipt.engine_readonly_main+" was read-only. Source 32768 limit is not an installed-bridge admission claim; installed legacy fallback may have only 4096. Actual Godot/Workbench/CyberDemoBridge/Rapier actor flight, physical collisions/ticks, cold save/reopen are NATIVE-UNTESTED. Independent Art/Technical/Shepherd reviews PENDING. Never Ready/merge without owner.",
+ "",
+ "## Genuine indexed material-cell images","",
+ "![Complete material-cell world](./overview.png)","",
+ ...records.slice(1).map(r=>"!["+r.name+"](./"+r.name+")"),""
+ ].join("\n");
  return {a,images,receipt,exemplar,readme};
 }
 
