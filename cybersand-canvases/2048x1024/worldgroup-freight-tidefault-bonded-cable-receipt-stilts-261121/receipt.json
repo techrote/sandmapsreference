@@ -1,0 +1,326 @@
+{
+  "concept": "Tidefault Bonded Freight — Signal-Rack Cargo Stilts / Split Receipt Exchanges",
+  "original": true,
+  "seed": 139253529,
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West beacon ingress",
+      "Quayside tally",
+      "Suspended receipt stage",
+      "Transfer hook approach",
+      "West sealed ledger",
+      "Overhead cargo exchange",
+      "Interlocking customs",
+      "Quarantine handoff",
+      "Outer signal dispatch"
+    ],
+    "upper": [
+      "West signal lookout",
+      "West cable watch",
+      "Midspan wind monitor",
+      "East signal crossing",
+      "Departure lantern"
+    ],
+    "interior": [
+      "West berth inspection",
+      "Winch operator booth",
+      "Axle-and-trolley service",
+      "Transfer tally room",
+      "Bonded short-stay receiver",
+      "Inhabited tariff ward",
+      "Damaged launch relay"
+    ],
+    "lower": [
+      "West return sluice",
+      "Suspension hydraulics",
+      "Cargo retrieval cellar",
+      "Deep customs escape",
+      "Emergency pier recovery"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West beacon ingress": [
+      105,
+      530
+    ],
+    "Quayside tally": [
+      310,
+      530
+    ],
+    "Suspended receipt stage": [
+      515,
+      530
+    ],
+    "Transfer hook approach": [
+      710,
+      530
+    ],
+    "West sealed ledger": [
+      950,
+      530
+    ],
+    "Overhead cargo exchange": [
+      1160,
+      530
+    ],
+    "Interlocking customs": [
+      1370,
+      530
+    ],
+    "Quarantine handoff": [
+      1610,
+      530
+    ],
+    "Outer signal dispatch": [
+      1930,
+      530
+    ],
+    "West signal lookout": [
+      205,
+      292
+    ],
+    "West cable watch": [
+      645,
+      292
+    ],
+    "Midspan wind monitor": [
+      1045,
+      292
+    ],
+    "East signal crossing": [
+      1490,
+      292
+    ],
+    "Departure lantern": [
+      1880,
+      292
+    ],
+    "West berth inspection": [
+      303,
+      690
+    ],
+    "Winch operator booth": [
+      525,
+      690
+    ],
+    "Axle-and-trolley service": [
+      775,
+      690
+    ],
+    "Transfer tally room": [
+      1040,
+      690
+    ],
+    "Bonded short-stay receiver": [
+      1280,
+      690
+    ],
+    "Inhabited tariff ward": [
+      1550,
+      690
+    ],
+    "Damaged launch relay": [
+      1830,
+      690
+    ],
+    "West return sluice": [
+      205,
+      835
+    ],
+    "Suspension hydraulics": [
+      675,
+      835
+    ],
+    "Cargo retrieval cellar": [
+      1110,
+      835
+    ],
+    "Deep customs escape": [
+      1575,
+      835
+    ],
+    "Emergency pier recovery": [
+      1890,
+      835
+    ]
+  },
+  "material_histogram": {
+    "0": 1653175,
+    "58": 125755,
+    "62": 73443,
+    "100": 244779
+  },
+  "stable_occupied_cells": 443977,
+  "grounded": 443977,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 81028,
+  "invalid_writes": 0,
+  "rectangles": 1447,
+  "rectangle_work": 443977,
+  "setup_bytes": 27402,
+  "material_plane_sha256": "dc9652082fb7b9cbc5874117b5e82df275754969baba871b88cbc70b5eb059c1",
+  "setup_sha256": "0923a26729424b662737283c97768226a1b92402def439ff12886006b15327f0",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 26,
+      "total": 26,
+      "free_centres": 1465594,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 26,
+      "total": 26,
+      "free_centres": 1424411,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 26,
+      "total": 26,
+      "free_centres": 1344127,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      1080,
+      130,
+      150,
+      180
+    ],
+    "from": "West cable watch",
+    "to": "East signal crossing",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 26,
+    "unreachable": [],
+    "distance_before_after": [
+      1109,
+      1197
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "ac0a5c841ab96dc5d81920a1adb9bd6e55da767df3dc19b9036f7decb30a9e6f",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-berth",
+      "rect": [
+        85,
+        390,
+        451,
+        394
+      ],
+      "bytes": 45101,
+      "sha256": "88289f849b03dee4c45025227cfc3a1919dbc91f345fbd5283336cd8b8d9072e",
+      "pixel_parity": 177694
+    },
+    {
+      "name": "02-straddle-hoists",
+      "rect": [
+        438,
+        273,
+        472,
+        515
+      ],
+      "bytes": 61470,
+      "sha256": "b1d85eb2f20e7e2953f06c30c7a82ac17339eca692b55b9d822618f1b5b586bb",
+      "pixel_parity": 243080
+    },
+    {
+      "name": "03-mid-cargo-exchange",
+      "rect": [
+        865,
+        365,
+        530,
+        421
+      ],
+      "bytes": 56599,
+      "sha256": "d971de9f34c2a74833d72c7f2663e35b07081ed7ed3d1dd463ba2c5256dfd348",
+      "pixel_parity": 223130
+    },
+    {
+      "name": "04-east-tariff-ward",
+      "rect": [
+        1405,
+        411,
+        560,
+        378
+      ],
+      "bytes": 53483,
+      "sha256": "9c505893af08e27505900af17447d85460bed62291e66c7f3198bed495cd71b2",
+      "pixel_parity": 211680
+    },
+    {
+      "name": "05-lower-recovery",
+      "rect": [
+        86,
+        760,
+        1870,
+        185
+      ],
+      "bytes": 86955,
+      "sha256": "4b8963ea6919e269651cc391d31835036566e47f5ba0a79e346e46c00ec34ad5",
+      "pixel_parity": 345950
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Complete material plane, lossless disjoint Setup-v2 replay, exact conservative 19x15/23x19/31x27 routes, physical obstruction detour and indexed PNG integrity/parity; seven rooted asymmetric cargo piers, differentiated entered receipt/inspection rooms, broken signal pier, layered emergency returns"
+}
