@@ -27,17 +27,17 @@ Exact authored Midge spawn: `[115,520]`. The JSON receipt lists all 24 literal n
 |---|---|
 | Complete material-cell plane | 2048×1024 = 2,097,152 |
 | IDs | 0 Empty; 58 ReinforcedConcrete; 62 SteelPlate; 100 BasaltColumns (stable immovable solids) |
-| Final occupied grounded cells | 620,012 / 620,012 |
+| Final occupied grounded cells | 629,744 / 629,744 |
 | Detached final solid cells | 0 |
-| Discarded ungrounded intermediate cells | 166,848 |
-| Lossless disjoint Setup-v2 rectangles | 138 / 32,768 source limit |
-| Setup bytes | 3452 / 1,048,576 |
-| Rectangle work | 620012 / 32,000,000 |
+| Discarded ungrounded intermediate cells | 173,062 |
+| Lossless disjoint Setup-v2 rectangles | 171 / 32,768 source limit |
+| Setup bytes | 4083 / 1,048,576 |
+| Rectangle work | 629744 / 32,000,000 |
 | Invalid/overlapping writes | 0 |
 | Exact three-hull named destinations | 24/24 · 24/24 · 24/24 |
 | Temporary material obstruction detour | 586 → 706 cardinal centre steps |
 | Indexed authentic material PNGs | 6/6; full CRC / Adler / source-pixel parity |
-| Full material-plane SHA-256 | `41fe54c481d9dcf951e72c80851ab641c3383c82164ba4a9d8d51d0b88499d74` |
+| Full material-plane SHA-256 | `6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5` |
 | Source CyberSand accepted main | `f7e056c9b8791106e22f2d1c295043783d8a9701` (read-only) |
 | Source sandmapsreference main | `99a166e7fcae45eb22be1740e9f33f62faccbcc7` |
 | Native Workbench / Bridge / Rapier / Midge ticks / fresh-process save | **NATIVE-UNTESTED** |
