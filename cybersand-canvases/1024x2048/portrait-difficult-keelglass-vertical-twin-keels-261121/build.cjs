@@ -12,7 +12,7 @@ const W=1024,H=2048,g=new Uint8Array(W*H),seed=202611211133;
 const M={0:"air",3:"water",8:"lava",58:"reinforced",62:"plate",65:"rust",68:"steel-pipe",69:"copper-pipe",76:"hazard",79:"amber",100:"basalt",104:"firebrick",117:"iron",131:"shield"};
 const b=(x,y,w,h,m)=>{x=Math.round(x);y=Math.round(y);w=Math.round(w);h=Math.round(h);if(x<0||y<0||w<1||h<1||x+w>W||y+h>H)throw Error("bounds "+[x,y,w,h,m]);for(let j=y;j<y+h;j++)g.fill(m,j*W+x,j*W+x+w);};
 const l=(x,y,X,Y,t,m)=>{let n=Math.ceil(Math.hypot(X-x,Y-y)/Math.max(2,t/2));for(let i=0;i<=n;i++){let q=i/n;b(x+(X-x)*q-t/2,y+(Y-y)*q-t/2,t,t,m);}};
-const sites=[["West entry spawn",517,132],["Ore window",332,324],["Ore return gallery",280,380],["Upper kiln inspection",755,341],["Arc furnace face",727,537],["Ladle platform",570,696],["Dock A upper lip",322,887],["Keel A inspection",251,1005],["Caster watch",777,1019],["Bypass high mouth",330,1080],["Bypass low mouth",320,1321],["Dock B upper lip",725,1288],["Keel B inspection",800,1430],["Quench watch",333,1619],["Quench service",349,1740],["Freight inspection",775,1807],["East rim goal",786,1878],["Lower shaft return",532,1820]].map(([name,x,y])=>({name,x,y}));
+const sites=[["West entry spawn",517,132],["Ore window",370,325],["Ore return gallery",280,380],["Upper kiln inspection",755,341],["Arc furnace face",665,533],["Ladle platform",570,696],["Dock A upper lip",322,887],["Keel A inspection",251,1005],["Caster watch",777,1019],["Bypass high mouth",330,1080],["Bypass low mouth",320,1321],["Dock B upper lip",725,1288],["Keel B inspection",800,1430],["Quench watch",333,1619],["Quench service",349,1740],["Freight inspection",775,1807],["East rim goal",690,1865],["Lower shaft return",532,1820]].map(([name,x,y])=>({name,x,y}));
 b(0,0,W,H,100);
 // Excavated vertical spine, unequal lateral chambers and deliberate two-door west return.
 b(389,84,254,1854,0);
@@ -80,8 +80,25 @@ const solid=id=>id!==0&&id!==3&&id!==8,seen=new Uint8Array(g.length),q=new Int32
 const add=i=>{if(solid(g[i])&&!seen[i]){seen[i]=1;q[z++]=i;}};
 for(let x=0;x<W;x++){add(x);add((H-1)*W+x);}for(let y=0;y<H;y++){add(y*W);add(y*W+W-1);}
 while(a<z){let i=q[a++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i>=W?i-W:-1,i+W<g.length?i+W:-1])if(j>=0)add(j);}
+let braceCount=0,bracedCells=0;
+const original=new Uint8Array(g.length),extra=new Uint8Array(g.length);for(let i=0;i<g.length;i++)if(solid(g[i])&&!seen[i])original[i]=1;
+for(let i=0;i<g.length;i++)if(original[i]&&!extra[i]){
+ let comp=[i],at=0;extra[i]=1;while(at<comp.length){let k=comp[at++],x=k%W;for(const j of [x?k-1:-1,x<W-1?k+1:-1,k>=W?k-W:-1,k+W<g.length?k+W:-1])if(j>=0&&original[j]&&!extra[j]){extra[j]=1;comp.push(j);}}
+ let best=null;for(let k=0;k<comp.length;k+=Math.max(1,Math.floor(comp.length/80))){
+  let p=comp[k],x=p%W,y=p/W|0;
+  for(const [dx,dy] of [[-1,0],[1,0],[0,-1],[0,1]])for(let d=1;d<=220;d++){
+   let xx=x+dx*d,yy=y+dy*d;if(xx<3||yy<3||xx>=W-3||yy>=H-3)break;
+   let id=g[yy*W+xx];if(id===3||id===8)break;
+   if(sites.some(t=>Math.abs(t.x-xx)<29&&Math.abs(t.y-yy)<25))break;
+   if(seen[yy*W+xx]&&solid(id)){if(!best||d<best.d)best={x,y,xx,yy,d};break;}
+  }
+ }
+ if(best){let {x,y,xx,yy,d}=best;if(x===xx)b(x,Math.min(y,yy),2,Math.abs(yy-y)+1,68);else b(Math.min(x,xx),y,Math.abs(xx-x)+1,2,68);braceCount++;bracedCells+=d*2;}
+}
+seen.fill(0);a=0;z=0;for(let x=0;x<W;x++){add(x);add((H-1)*W+x);}for(let y=0;y<H;y++){add(y*W);add(y*W+W-1);}
+while(a<z){let i=q[a++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i>=W?i-W:-1,i+W<g.length?i+W:-1])if(j>=0)add(j);}
 let lost=0;for(let i=0;i<g.length;i++)if(solid(g[i])&&!seen[i]){g[i]=0;lost++;}
-return {W,H,g,M,seed,sites,spawn:[sites[0].x,sites[0].y],discarded_ungrounded:lost};
+return {W,H,g,M,seed,sites,spawn:[sites[0].x,sites[0].y],discarded_ungrounded:lost,braceCount,bracedCells};
 }
 function encode(g,W,H){let rects=[],active=new Map();for(let y=0;y<H;y++){let now=new Map();for(let x=0;x<W;){let mat=g[y*W+x],left=x++;while(x<W&&g[y*W+x]===mat)x++;if(!mat)continue;const k=left+":"+ (x-left)+":"+mat;let r=active.get(k);if(r)r[3]++;else{r=[left,y,x-left,1,mat];rects.push(r);}now.set(k,r);}active=now;}return rects;}
 
@@ -95,7 +112,7 @@ function audit(w,rects){
  const dx=ww>>1,dy=hh>>1,free=new Uint8Array(N);let all=0;for(let y=dy;y+hh-dy<=H;y++)for(let x=dx;x+ww-dx<=W;x++){const l=x-dx,t=y-dy,r=l+ww,b=t+hh;if(sum[b*s+r]-sum[t*s+r]-sum[b*s+l]+sum[t*s+l]===0){free[y*W+x]=1;all++;}}
  const reached=new Uint8Array(N),qq=new Int32Array(N);let first=0,last=0,sp=spawn[1]*W+spawn[0];if(free[sp]){reached[sp]=1;qq[last++]=sp;}while(first<last){let i=qq[first++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i-W,i+W])if(j>=0&&j<N&&free[j]&&!reached[j]){reached[j]=1;qq[last++]=j;}}
  const sr=sites.map(v=>({...v,clear:!!free[v.y*W+v.x],reached:!!reached[v.y*W+v.x]}));return {hull:[ww,hh],valid_centres:all,connected_centres:last,passed:sr.filter(v=>v.reached).length,sites:sr};}
- const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[392,1160,244,88],blocked=route(31,27,obstruction);
+ const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[453,956,132,157],blocked=route(31,27,obstruction);
  return {rectangles:rects.length,work,hist,rooted:b,total,detached:total-b,airfaces,direct,flight,obstruction,blocked};
 }
 
@@ -150,7 +167,7 @@ function verifyPNG(p,g,W,x,y,w,h){const v=new DataView(p.buffer,p.byteOffset,p.b
 
 
 function build(){
- const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),direct=shortest31(w,null),detour=shortest31(w,[392,1160,244,88]);
+ const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),direct=shortest31(w,null),detour=shortest31(w,[453,956,132,157]);
  if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||detour.steps<=direct.steps)
  throw Error("STATIC_GATE "+JSON.stringify({detached:a.detached,fluid:[a.airfaces,a.direct],passed:a.flight.map(f=>f.passed),bad:a.flight[2].sites.filter(s=>!s.reached),blocked:a.blocked.passed,steps:[direct.steps,detour.steps]}));
  const setup={version:2,extent:[1024,2048],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:w.spawn,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:2}}],next_id:2,selected:1,edits:rects,response:"LA-SELECTIVE",liquid_policy:[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
