@@ -10,15 +10,15 @@ function layoutWorld(){
  const ring=(cx,cy,r,t,m,segments=24)=>{let pts=[];for(let i=0;i<segments;i++){const a=2*Math.PI*i/segments;pts.push([cx+r*Math.cos(a),cy+r*Math.sin(a)]);}for(let i=0;i<segments;i++)l(...pts[i],...pts[(i+1)%segments],t,m);};
  const cabin=(x,y,w,h,mat)=>{b(x,y,w,11,62);b(x,y,10,h,65);b(x+w-10,y,10,h,65);b(x,y+h-11,w,11,58);b(x+14,y+13,22,12,79);b(x+w-37,y+15,20,12,131);b(x+24,y+h-32,8,21,68);};
  const sites=[
- ["Ore hilltown entry",235,220],["Upper ore workshop",335,335],["Ore crane watch",482,391],
+ ["Ore hilltown entry",235,220],["Upper ore workshop",452,310],["Ore crane watch",482,391],
  ["Refractory furnace inspection",345,524],["Upper flyway turn",526,601],
  ["Travelling ladle watch",565,717],["Ladle repair spur",725,740],
- ["Guild south gate",763,841],["Caster toolroom",705,970],
+ ["Guild south gate",763,841],["Caster toolroom",622,967],
  ["Upper exchange intercept",517,849],["Rotor upper intercept",515,1055],
- ["Eight-spoke rotor east",731,1179],["Rotor underfoot west",315,1280],
- ["Guild deep archive",808,1393],["Quench control",369,1527],
- ["Quench recovery bay",296,1682],["Export village porch",781,1736],
- ["Lower freight control",663,1872],["Export goal",789,1941]
+ ["Eight-spoke rotor east",731,1179],["Rotor underfoot west",350,1330],
+ ["Guild deep archive",685,1418],["Quench control",420,1490],
+ ["Quench recovery bay",480,1670],["Export village porch",585,1750],
+ ["Lower freight control",588,1847],["Export goal",586,1928]
  ].map(([name,x,y])=>({name,x,y}));
  // Narrow unequal left/right geological banks with vertical rest terraces.
  // Upper ore hilltown, right guild and lower export village form triangular,
@@ -45,6 +45,8 @@ function layoutWorld(){
  b(268,254,13,121,68);b(278,268,92,12,117);
  l(370,274,472,346,9,117);l(474,346,410,398,8,117);
  b(387,380,86,18,58);b(400,398,12,55,68);
+ // Anchor hot core to the exact west cliff.
+ b(98,479,44,16,58);
  // Furnaces are coherent enclosed thermal vessels, not exposed or falling lava.
  b(125,463,214,92,104);b(139,474,185,69,131);b(156,486,151,47,104);
  b(170,498,120,26,8);b(130,445,14,19,68);b(319,431,13,32,68);
@@ -82,6 +84,8 @@ function layoutWorld(){
  // Relieved expansion pockets, named but intentionally unfurnished.
  b(98,1450,183,14,58);b(121,1464,12,61,68);
  b(800,1451,132,16,58);b(831,1467,12,53,68);
+ // Quench vessel is physically seated on a west-rock crossbeam.
+ b(98,1550,90,18,58);
  // Quench process moved to the lower LEFT district; entirely solid sealed.
  b(169,1514,178,97,104);b(183,1526,150,74,131);
  b(201,1540,114,48,104);b(220,1552,77,26,3);
