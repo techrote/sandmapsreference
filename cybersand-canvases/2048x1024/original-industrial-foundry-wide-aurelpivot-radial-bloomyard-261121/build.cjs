@@ -88,6 +88,14 @@ function world(){
  ["Ore workshop",323,823],["Furnace workshop",553,783],["Rotor undercroft",983,817],
  ["Caster repair",1192,793],["Quench return",1740,796],["Freight roof",1854,597]].map(([name,x,y])=>({name,x,y}));
  for(let p of sites)b(p.x-19,p.y-17,39,35,0);
+ // Purposeful open-air maintenance entrances and flyable personnel apertures.
+ // The distinct big plant modules are still load-bearing and sealed; these portals
+ // cut only inert access plates or redundant support legs, never molten cores.
+ for(const [x,y,w,h] of [
+ [47,707,72,42], [213,695,40,114], [605,725,41,115],
+ [687,726,39,111], [828,737,68,117], [1414,541,44,75],
+ [1804,724,45,119], [1908,650,94,137]
+ ])b(x,y,w,h,0);
  // Ground every inert stationary piece via a real support, not just a decorative pixel.
  const solid=v=>v!==0&&v!==3&&v!==8;
  function orphan(){
