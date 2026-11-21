@@ -141,6 +141,17 @@ const build=function build(){
  for(const [x,y] of Object.values(sites))R(x-19,y-17,39,35,0);
  for(let x of [308,1686])R(x,620,76,365,0);
  R(1033,655,82,159,0);
+
+ // ART-P1 repair: single readable long-span tapered aft-to-fore survey keel,
+ // with 97-cell real cargo hatch and framed entered two-deck control hold.
+ // This is part of the actual final material plane, not a screenshot overlay.
+ L(618,700,772,758,19,M.titanium);L(772,758,1312,763,19,M.steel);
+ L(1312,763,1487,691,19,M.titanium);
+ L(1487,691,1522,651,15,M.steel);L(1522,651,1490,548,15,M.iron);
+ R(880,736,97,72,0);
+ R(1019,663,12,104,M.chrome);R(1140,663,12,104,M.iron);
+ R(1039,633,79,68,0);
+
  // Discard only provisional non-boundary-grounded material before publication.
  let seen=new Uint8Array(N),q=new Int32Array(N),removed=0,removedGroups=0;
  for(let k=0;k<N;k++)if(g[k]&&!seen[k]){let h=0,t=1,edge=false;seen[k]=1;q[0]=k;
@@ -212,7 +223,7 @@ const hash=function hash(b){if(typeof b==="string")b=Uint8Array.from(b,c=>c.char
 
 
 const receipt=b=>({concept:"Arid Helm - Tectonic Vessel Drydock",source:"original/scifi-frontier-wide",seed:b.seed,
- accepted_engine_main:"f7e056c9b8791106e22f2d1c295043783d8a9701",map_base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+ accepted_engine_main:"69209acaffb34ebe18c45e19290b5976b7fb2c82",map_base:"99a166e7fcae45eb22be1740e9f33f62faccbcc7",
  extent:[2048,1024],material_cells:b.g.length,grid_sha256:hash(b.g),setup_sha256:hash(b.json),histogram:b.hist,
  rectangle_count:b.rect.length,work_cells:b.area,setup_bytes:b.json.length,accepted_limits:{rectangles:32768,setup_bytes:1048576,construction_work:32000000},
  grounded_final_cells:b.area,detached_final_cells:0,liquid_mobile_falling_reactive:0,
@@ -243,7 +254,7 @@ const routeGraph=b=>({schema_version:1,kind:"literal exact-hull 4-neighbour BFS,
  paths:{main:["Rover clinic spawn","Medical assay","Keel aft entrance","Port ballast control","Midship laboratory","Keel drive control","Forward biocustody","Quarantine receiving","Eastern relief ward","Evacuation beacon"],
  sky:["West observation","Open sky bypass","Outer hull inspection","Evacuation beacon"],under:["West shaft mouth","West shaft bottom","West diagnostic basement","Drydock basin","Deep return","East shaft bottom","East shaft mouth"]},
  caveat:"Site membership and source-grid 4-connectedness checked, not individual pairwise directed flight dynamics"});
-const README="# Arid Helm - Tectonic Vessel Drydock\n\nA new original 2048x1024 truly orthographic material-ID CyberSand world: the grounded survey ship itself is a large multi-deck inhabited research and industrial area, with different medical and quarantine worktowns at each end, the excavation and three recoverable service bays below, and a broad upper overflight. Purposeful unused drydock voids are editable authoring space. No reference-art reuse.\n\nRun \`node build.cjs\` and \`node build.cjs --verify\` (stock Node.js, fixed seed). Source authority: CyberSand main f7e056c9b8791106e22f2d1c295043783d8a9701; map main 99a166e7fcae45eb22be1740e9f33f62faccbcc7. See receipt.json, route_graph.json and exemplar.json. All six PNGs are true source material-ID pixels. Creator static qualification only, not gameplay/native PASS. OPEN DRAFT/HOLD; Art/Tech/Shepherd and real owner Windows Workbench/Rapier/load/save pending.\n";
+const README="# Arid Helm - Tectonic Vessel Drydock\n\nA new original 2048x1024 truly orthographic material-ID CyberSand world: the grounded survey ship itself is a large multi-deck inhabited research and industrial area, with different medical and quarantine worktowns at each end, the excavation and three recoverable service bays below, and a broad upper overflight. Purposeful unused drydock voids are editable authoring space. No reference-art reuse.\n\nRun \`node build.cjs\` and \`node build.cjs --verify\` (stock Node.js, fixed seed). Source authority: CyberSand main 69209acaffb34ebe18c45e19290b5976b7fb2c82; map main 99a166e7fcae45eb22be1740e9f33f62faccbcc7. See receipt.json, route_graph.json and exemplar.json. All six PNGs are true source material-ID pixels. Creator static qualification only, not gameplay/native PASS. OPEN DRAFT/HOLD; Art/Tech/Shepherd and real owner Windows Workbench/Rapier/load/save pending.\n";
 const emitted=(b)=>[
  ["setup.json",b.json],["receipt.json",JSON.stringify(receipt(b),null,2)+"\n"],
  ["exemplar.json",JSON.stringify(exemplar(b),null,2)+"\n"],
