@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "programme": "PORTRAIT-001",
+  "difficulty": "MODERATE",
+  "source": {
+    "repository": "techrote/sandmapsreference",
+    "pr": 176,
+    "head": "debc4a61c067f5759860d7f2b16004eeb6e0a59e",
+    "path": "cybersand-canvases/2048x1024/original-industrial-transit-wide-axlewell-reverse-basin-261121/",
+    "dimensions": [
+      2048,
+      1024
+    ],
+    "material_plane_sha256": "b18b3f2f0bb6b16bae85f0a48bce62179cb244417089c048db5a8b06faa8e442"
+  },
+  "target": {
+    "dimensions": [
+      1024,
+      2048
+    ],
+    "seed": 202611211321,
+    "material_plane_sha256": "c62ed301ae39863512d7b85a90066781405ba3328b3547804088c288a58a8dc4"
+  },
+  "preserved": [
+    "Reversed logistics: EAST freighter dock arrival to a separate crane to central multi-level portal hoist to WEST graded classification/export",
+    "Recognisable freight hull and independent overhead crane, rather than an undifferentiated single transit machine",
+    "Three different-height west classification/rail grades, separate right-side counterweight/recovery, worker ledger and customs functions",
+    "Grounded fixed industrial supports, alternate maintenance return, open freight work voids"
+  ],
+  "transformed": [
+    "Source's long 2048-wide east-to-west cargo relay becomes a descending 2048-high flow, shifting eastern ship and crane into the upper reaches, transferring at several central hoist elevations, finishing at three vertically offset west rail/classification terraces",
+    "Source central multiple-deck portal hoist becomes a tall vertical multi-tier exchange with a physically cliff-rooted exposed rotor and partial lower twin piers",
+    "Source broad basin and underbasin maintenance return become an open vertical freight well with a separate east counterweight/recovery bank",
+    "Source two downhill horizontal rail transfer spans become staggered diagonal grade-entry ramps within left-side freight terraces",
+    "Source physical rail obstruction moves to a deliberately blockable middle hoist interval, with a new detour through accessible side space"
+  ],
+  "discarded": [
+    "Original 2048-wide horizon, original dry basin shoreline/underfloor-level adjacency and horizontal westward route coordinates",
+    "Literal source ship hull pixel geometry, source-specific mast, rail, hoist spans and primitive rectangles",
+    "Source camera framing, source named-site coordinates and exact topological adjacency"
+  ],
+  "newly_introduced": [
+    "An upper east ship arrival with independent cantilever crane above the main ascent/descent space",
+    "A high exposed hoist rotor tied to eastern cliff, staggered cargo platforms and a deep mechanical maintenance staging bay",
+    "Three unequal descending west classification floors and two fully enterable lower freight transfer portals",
+    "An actual 264x128 midspan obstruction requiring a full 31x27 Midge detour, Interlock upper to lower 222→458 steps, 20/20 sites retained",
+    "Two editable freight sockets, a deep extraction terminal and a workers' relief platform, all unscripted"
+  ],
+  "scale_note": "New orthographic 1024×2048 physical source-cell composition preserving accepted hull-to-machine proportions; not rotation/crop/stretch or coordinate transplant. Exact named sites use full 19×15, 23×19, 31×27 envelopes and whole-grid four-neighbour BFS. No native actor/physics testing."
+}

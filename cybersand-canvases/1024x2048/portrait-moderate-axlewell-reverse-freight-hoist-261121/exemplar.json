@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "portrait/moderate",
+  "map_role": "Moderate portrait-transfer experiment: reverse-flow freight port and upper vessel/cantilever crane translated into a descending cargo-well logistics exchange feeding three lower rail-classifier grades",
+  "anchor_donors": [
+    {
+      "pr": 176,
+      "head": "debc4a61c067f5759860d7f2b16004eeb6e0a59e",
+      "path": "cybersand-canvases/2048x1024/original-industrial-transit-wide-axlewell-reverse-basin-261121/"
+    }
+  ],
+  "macro_topology": "Top-right ship and separate crane, mid-height central hoist/atrium exchange, west freight tiers and separate east recovery bank linked by multiple entered portals",
+  "density_profile": "Dense upper freighter and crane; large open customs exchange; dense hoist crown; open blocked mid-freight stage; clustered stepped west classification and east counterweight, with deep service void",
+  "route_grammar": {
+    "main": [
+      "East ship entry",
+      "Upper ship cargo",
+      "Crane service watch",
+      "West customs terrace",
+      "Hoist crown",
+      "Hoist transfer",
+      "Interlock upper",
+      "Interlock lower",
+      "West classifier one",
+      "West classifier two",
+      "West classifier three",
+      "West export goal"
+    ],
+    "alternate": [
+      "East side return high",
+      "Interlock upper",
+      "East maintenance/counterweight return",
+      "Right mechanical return",
+      "Interlock lower"
+    ],
+    "recovery": [
+      "Dock trade ledger",
+      "Upper west rail",
+      "East counterweight pit",
+      "Lower hoist inspection",
+      "Worker relay",
+      "Deep rock service"
+    ]
+  },
+  "strong_motifs": [
+    "Grounded high freighter silhouette independent of cantilever crane",
+    "Long exposed hoist atrium and attached octagonal rotor",
+    "Unequal west rock-founded classification rail terraces",
+    "Counterweight/outboard return as non-scenic side workplaces",
+    "Three routes between high main and lower station via flyable portals"
+  ],
+  "interesting_relationships": [
+    "Directionally reversed cargo-chain becomes vertically ordered rather than mapped to the same left-to-right relationship",
+    "Port customs and high crane exchange sit at different altitudes and different sides of the freight well",
+    "Hoist mid-level blockage can be bypassed, without deleting or moving any named site or crossing its footprint",
+    "Future human edits can reuse the port's lower rail faces and vacant counterweight station independently"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "High ship terminal",
+      "region_xywh": [
+        670,
+        210,
+        180,
+        100
+      ],
+      "use": "Unscripted arrival encounter, NPC merchant or crane activation"
+    },
+    {
+      "name": "Central freight void",
+      "region_xywh": [
+        438,
+        1025,
+        226,
+        165
+      ],
+      "use": "Optional dynamic lifting machine or reroutable platform"
+    },
+    {
+      "name": "West classifier extension",
+      "region_xywh": [
+        127,
+        1670,
+        295,
+        95
+      ],
+      "use": "Modular cargo sorting receiver or settlement edits"
+    },
+    {
+      "name": "Deep rail seam",
+      "region_xywh": [
+        460,
+        1877,
+        205,
+        55
+      ],
+      "use": "Human-edit expansion and hoist pit"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Upper freight arrival",
+      "anchor": "East ship entry",
+      "kind": "arrival_departure",
+      "scripted": false
+    },
+    {
+      "name": "Hoist span failure",
+      "anchor": "Interlock upper",
+      "kind": "reroutable_bridge_failure",
+      "scripted": false
+    },
+    {
+      "name": "Three-grade freight chase",
+      "anchor": "West classifier two",
+      "kind": "chase_corridor",
+      "scripted": false
+    },
+    {
+      "name": "Counterweight bay activation",
+      "anchor": "East counterweight pit",
+      "kind": "machinery_activation",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Rectangular aspect transfer preserving directional source logistics while radically altering its vertical arrangement",
+    "Trainable graded multi-altitude industrial terrace grammar and independently anchored vessel/crane motifs",
+    "Route graph with a verified material obstruction and entered detour through different district interfaces",
+    "Deliberate large editing voids and modular receiver surfaces without invalidating Midge clearance"
+  ],
+  "similarity_avoidance": "Unlike the source Axlewell's broad east-to-west freight basin and floor-buried return, this concentrates the ship high east and west rail export low across 2048 vertical cells. Unlike Quoin's geological census walls, the silhouette is an open-air descending industrial port with separated crane, grounded rotor and graded cargo terraces, not a twin rock-well.",
+  "diversity_axes": {
+    "macro_topology": "mixed",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "vessel",
+    "support_form": "multi_leg",
+    "environment_relation": "dry",
+    "incompleteness": "editable_gaps"
+  },
+  "aspect_transfer": {
+    "schema_version": 1,
+    "programme": "PORTRAIT-001",
+    "difficulty": "MODERATE",
+    "source": {
+      "repository": "techrote/sandmapsreference",
+      "pr": 176,
+      "head": "debc4a61c067f5759860d7f2b16004eeb6e0a59e",
+      "path": "cybersand-canvases/2048x1024/original-industrial-transit-wide-axlewell-reverse-basin-261121/",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "material_plane_sha256": "b18b3f2f0bb6b16bae85f0a48bce62179cb244417089c048db5a8b06faa8e442"
+    },
+    "target": {
+      "dimensions": [
+        1024,
+        2048
+      ],
+      "seed": 202611211321,
+      "material_plane_sha256": "c62ed301ae39863512d7b85a90066781405ba3328b3547804088c288a58a8dc4"
+    },
+    "preserved": [
+      "Reversed logistics: EAST freighter dock arrival to a separate crane to central multi-level portal hoist to WEST graded classification/export",
+      "Recognisable freight hull and independent overhead crane, rather than an undifferentiated single transit machine",
+      "Three different-height west classification/rail grades, separate right-side counterweight/recovery, worker ledger and customs functions",
+      "Grounded fixed industrial supports, alternate maintenance return, open freight work voids"
+    ],
+    "transformed": [
+      "Source's long 2048-wide east-to-west cargo relay becomes a descending 2048-high flow, shifting eastern ship and crane into the upper reaches, transferring at several central hoist elevations, finishing at three vertically offset west rail/classification terraces",
+      "Source central multiple-deck portal hoist becomes a tall vertical multi-tier exchange with a physically cliff-rooted exposed rotor and partial lower twin piers",
+      "Source broad basin and underbasin maintenance return become an open vertical freight well with a separate east counterweight/recovery bank",
+      "Source two downhill horizontal rail transfer spans become staggered diagonal grade-entry ramps within left-side freight terraces",
+      "Source physical rail obstruction moves to a deliberately blockable middle hoist interval, with a new detour through accessible side space"
+    ],
+    "discarded": [
+      "Original 2048-wide horizon, original dry basin shoreline/underfloor-level adjacency and horizontal westward route coordinates",
+      "Literal source ship hull pixel geometry, source-specific mast, rail, hoist spans and primitive rectangles",
+      "Source camera framing, source named-site coordinates and exact topological adjacency"
+    ],
+    "newly_introduced": [
+      "An upper east ship arrival with independent cantilever crane above the main ascent/descent space",
+      "A high exposed hoist rotor tied to eastern cliff, staggered cargo platforms and a deep mechanical maintenance staging bay",
+      "Three unequal descending west classification floors and two fully enterable lower freight transfer portals",
+      "An actual 264x128 midspan obstruction requiring a full 31x27 Midge detour, Interlock upper to lower 222→458 steps, 20/20 sites retained",
+      "Two editable freight sockets, a deep extraction terminal and a workers' relief platform, all unscripted"
+    ],
+    "scale_note": "New orthographic 1024×2048 physical source-cell composition preserving accepted hull-to-machine proportions; not rotation/crop/stretch or coordinate transplant. Exact named sites use full 19×15, 23×19, 31×27 envelopes and whole-grid four-neighbour BFS. No native actor/physics testing."
+  }
+}
