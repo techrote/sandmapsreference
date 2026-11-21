@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "purpose": ["human_editable_canvas", "procedural_exemplar", "scripted_setpiece_source"],
+  "family": "original/racing-wide",
+  "map_role": "Dual stranded-vessel salvage drydock with a below-keel racing bypass and entered service holds",
+  "anchor_donors": [],
+  "macro_topology": ["drydock", "islands"],
+  "density_profile": "Separated high cutter and low salvage hull, widely open interstice, dense west customs and east catcher, intentionally underfurnished basal vaults",
+  "route_grammar": {
+    "eastbound": "West breaker launch, descending bow chute, lower run below both hanging vessels, east reversal",
+    "westbound": "Elevated and entered salvage holds from east to west, with local hatch descents and a lower-keel recovery choice",
+    "fallback": "When the upper cutter aft gallery is blocked, the beneath-keel lane returns west to finish without using the gallery"
+  },
+  "strong_motifs": [
+    "Two full-width-scale side-elevation cutter hull profiles at intentionally different elevations",
+    "Roof-rooted paired salvager winches and diagonal load ties",
+    "Abandoned open cargo bays and wide entered keel hatches",
+    "Plain heavy shipbreaker customs tiers at west and inverted V catcher at east"
+  ],
+  "interesting_relationships": [
+    "Lower second vessel is downstream of higher first vessel but remains accessible through a separate upper hatch and lower return lane",
+    "Independent roof hoist and bedrock footing networks support functional cutter rooms without floor-to-roof blockades",
+    "Forward/mid/aft salvage rooms offer optional flights while the under-keel corridor avoids deliberate obstructions",
+    "Three successive unused subterranean vaults remain directly entered from the main flight space"
+  ],
+  "authoring_affordances": [
+    {"site": "Western customs / crew compartments", "xy": [210, 940], "value": "Human-editable salvage workers' shelter and NPC settlement pocket"},
+    {"site": "Inter-vessel discharge span", "xy": [1090, 540], "value": "Unscripted payload transfer, crane activation or cargo interception stage"},
+    {"site": "Upper cutter broken aft hull", "xy": [885, 486], "value": "Editable collapse and alternate exit, with viable lower bypass"},
+    {"site": "Lower cargo-hold hatch", "xy": [1410, 612], "value": "Maintenance/ambush chamber with distinct escape down to the under-keel course"},
+    {"site": "East bedrock vault", "xy": [1890, 940], "value": "Unfurnished underground expansion seam, intentionally preserved"}
+  ],
+  "setpiece_candidates": [
+    {"kind": "machinery_activation", "site": "Interstice shear crane", "xy": [1090, 540], "unimplemented": true},
+    {"kind": "collapse_bridge_failure", "site": "Decommissioned cutter aft gallery", "xy": [885, 486], "unimplemented": true},
+    {"kind": "arrival_departure", "site": "Eastern inverted catcher", "xy": [1970, 720], "unimplemented": true},
+    {"kind": "npc_settlement_encounter", "site": "Western entered crew vault", "xy": [210, 940], "unimplemented": true}
+  ],
+  "procedural_exemplar_value": "Teaches example-derived grammars of paired, differently elevated segmented vehicle hulls, roof-supported load transfer, optional entered machinery interiors, berth-like lower bypasses, salvage setpieces and intentional incomplete chambers; distinguishes passable hulls from side-on scenery.",
+  "similarity_avoidance": "Avoids the preceding annulus/ring, ratchet/sawtooth five-tray, suspended diaphragm and broken crater-bridge layouts. This map's organizing grammar is two separately supported stranded vessel silhouettes with aligned optional entered holds and a shared keel return, not a renamed corridor stack.",
+  "diversity_axes": {
+    "macro_topology": "drydock",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "clustered",
+    "route_structure": "layered",
+    "landmark_family": "vessel",
+    "support_form": "roof_rooted",
+    "environment_relation": "dry",
+    "incompleteness": "editable_gaps"
+  }
+}
