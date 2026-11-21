@@ -96,10 +96,10 @@ function build(){
  // Post-industrial wreckage is sparse and edit-friendly, not ubiquitous decoration.
  for(let [x,y] of [[566,760],[989,751],[1044,739],[1446,762]]){L(x,y,x+28,y-18,7,M.slate);R(x+29,y-26,15,8,M.amber);}
  // Three service wells give a physically open alternative to high dock flight.
- for(let [x,w,top] of [[222,107,812],[971,123,807],[1753,119,808]])R(x,top,w,188,0);
+ for(let [x,w,top] of [[222,107,788],[971,123,785],[1753,119,705]])R(x,top,w,996-top,0);
  // Bottom inspection stations below full-hull-safe service roof.
  for(let [x,w] of [[112,95],[429,101],[738,119],[1154,92],[1467,99],[1855,82]]){
-   R(x,990,w,5,M.grate);R(x+13,971,19,18,M.glass);R(x+46,966,7,23,M.slate);R(x+w-17,975,9,13,M.cyan);
+   R(x,991,w,4,M.grate);R(x+13,986,19,4,M.glass);R(x+46,984,7,6,M.slate);R(x+w-17,985,9,5,M.cyan);
  }
  // Contrasting upper intake and quarantine pylons remain open to the sky.
  L(159,557,207,904,10,M.pipe);L(1905,551,1948,900,11,M.steel);
@@ -132,8 +132,8 @@ function build(){
  "Port vessel overlook":[793,419],
  "Port open berth":[855,744],
  "Mid dock upper void":[1021,300],
- "Broken keel reveal":[1013,567],
- "Drydock lower workface":[1019,713],
+ "Broken keel reveal":[1016,614],
+ "Drydock lower workface":[1019,691],
  "East hull overlook":[1182,398],
  "Starboard gantry head":[1402,174],
  "East crane inspection":[1594,404],
@@ -143,7 +143,7 @@ function build(){
  "Distant export sky":[2015,304],
  "West descent entrance":[275,851],
  "Central descent entrance":[1024,862],
- "East descent entrance":[1812,849],
+ "East descent entrance":[1812,772],
  "West deep recovery":[467,971],
  "Central deep recovery":[1091,972],
  "East deep recovery":[1552,974],
@@ -205,8 +205,8 @@ function packageFiles(){
    recovery:"Blocking one eastern purge station preserves all other named flight sites and independent lower passage"},
   strong_motifs:["sundered two-piece seed ark","unequal opposed cantilever gantries","dry excavated cradle","rooted reed assay and xenoseed custody","triple service wells"],
   interesting_relationships:["Ship carcass retained in separated structurally unequal halves","Asymmetric gantry anchors carry different loads into two unequal basalt buttresses","Open lower industrial floor contrasts with a high flying crane network","Deep return permits alternate traversal despite a sterile berth obstruction"],
-  authoring_affordances:[{site:"Keel fracture",center:[1013,567],use:"Bridge rebuild, reveal or destructible seam"},{site:"Central dry cradle",center:[1019,713],use:"Additional sample apparatus or NPC convoy"},{site:"Port overhead gantry",center:[704,338],use:"Reroutable suspended crossing"},{site:"Basal blank storage",center:[1091,972],use:"Expandable underground service room"}],
-  setpiece_candidates:[{name:"Broken ark reveal",center:[1013,567],kind:"reveal vista / collapsible reconstruction",exits:"Port and starboard sky"},{name:"Quarantine berth isolation",center:[1776,477],kind:"holdout / purge gate",exits:"Exterior sky and east shaft"},{name:"Crane failure",center:[704,338],kind:"bridge-failure point",exits:"Open dock below"},{name:"Lower freight recovery",center:[1091,972],kind:"chase and reroute",exits:"Three vertical wells"}],
+  authoring_affordances:[{site:"Keel fracture",center:[1016,614],use:"Bridge rebuild, reveal or destructible seam"},{site:"Central dry cradle",center:[1019,691],use:"Additional sample apparatus or NPC convoy"},{site:"Port overhead gantry",center:[704,338],use:"Reroutable suspended crossing"},{site:"Basal blank storage",center:[1091,972],use:"Expandable underground service room"}],
+  setpiece_candidates:[{name:"Broken ark reveal",center:[1016,614],kind:"reveal vista / collapsible reconstruction",exits:"Port and starboard sky"},{name:"Quarantine berth isolation",center:[1776,477],kind:"holdout / purge gate",exits:"Exterior sky and east shaft"},{name:"Crane failure",center:[704,338],kind:"bridge-failure point",exits:"Open dock below"},{name:"Lower freight recovery",center:[1091,972],kind:"chase and reroute",exits:"Three vertical wells"}],
   procedural_exemplar_value:["Vessel drydock wall-to-gantry spatial relationships","Separated damaged hull halves as incomplete modular-part grammar","Opposed rooted asymmetric lifting supports","Parallel basal service lane connected by three shafts"],
   similarity_avoidance:"Unlike Mireward polder islands, descending filtering escarpment, roof-hung culture, or broken stationary annular commons, this world places a two-part damaged vessel into a huge excavated terrestrial drydock with opposed crane families and triple-well undercroft; no geometry copied.",
   diversity_axes:{macro_topology:["drydock"],altitude_grammar:["high_low_bypass","multi_strata"],density_cadence:["edge_dense_center_open"],route_structure:["parallel_lanes","branch_rejoin"],landmark_family:["vessel","crane"],support_form:["twin_pier","edge_rooted"],environment_relation:["damaged","biological"],incompleteness:["damaged","modular_append_zones"]},
