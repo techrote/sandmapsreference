@@ -2,6 +2,10 @@
 
 **World-group Freight B · Sibling 02 · NEW original 2048×1024 CyberSand material-cell canvas · OPEN Draft/HOLD · creator SOURCE-STATIC PASS · NATIVE-UNTESTED.**
 
+## R2 — bounded Art-P1 functional repair (21 November 2026)
+
+An independent exact-R1 Art review found the classifier → quarantine custody → crew release not distinguishable in the material cells. R2 adds a rooted, asymmetrical **side-entered quarantine examination pocket**, an overhead custody track, two different inspection/release fixtures and short receiving/release transfer rails around x887–1338, y692–889. This is real source geometry, not prose-only. **R2 source-static metrics:** 385 legal disjoint rectangles; 394155 rooted cells; exact 25/25 Midge sites at 19×15, 23×19, 31×27; material-barrier detour 865→975; zero detached cells; full-grid SHA-256 `45f2912489ca2090d15acc829011607ebe8aefc2502608c0355f51b2795380c8`. Rebuilt Setup and all six real material PNGs. The upper void, low arches, damaged east spur and remaining editable gaps are retained. Independent R2 Art/Technical/Shepherd review still required; **NATIVE-UNTESTED**.
+
 ## Spatial and operational thesis
 
 Unlike [Tidefault Sibling 01](https://github.com/techrote/sandmapsreference/pull/116)'s serial towering custody gates, this is a **horizontal, floor-founded bonded return yard with sparse, unequal low industrial arches**. Its readable static freight sequence is **arrival stamping → classification hook/receiver → quarantine handling → crew/refitting exchange → damaged emergency return**. The overflight space and unbuilt bays are intentionally preserved for manual edits, modular-part grammar derivation and future scripted set-pieces. Most upper visual space is blank by design, *not* an assertion of a completed subterranean city. High and low Midge-safe return movements share a sparsely built grounded yard with recovery gaps.
@@ -27,14 +31,14 @@ All PNGs are 2-bit indexed lossless, genuine unscaled one-pixel-per-material-cel
 | Test | Result |
 |---|---:|
 | Exact cell plane | 2,097,152 (2048×1024) |
-| Legal disjoint Setup-v2 rectangles | 280 |
-| Setup JSON bytes | 5930 |
-| Root-connected occupied cells | 380410 |
+| Legal disjoint Setup-v2 rectangles | 385 |
+| Setup JSON bytes | 7905 |
+| Root-connected occupied cells | 394155 |
 | Invalid/overlapping writes | 0 |
 | Literal Midge sites at 19×15, 23×19, 31×27 | 25/25 at each |
 | Real physical obstacle with all sites retained | 865 → 975 steps |
 | Authentic indexed overview + 1:1 crops | 6 |
-| Plane SHA-256 | `0ea0bd719ea6658e56655267f05ca37bf6a9534fb9d450299be0a7f1d5bb6fc8` |
+| Plane SHA-256 | `45f2912489ca2090d15acc829011607ebe8aefc2502608c0355f51b2795380c8` |
 | Native Workbench/Rapier load, movement, ticks, save/reopen | NATIVE-UNTESTED |
 
 **Read-only accepted engine/main authority** `8d07e04459a2705a6f96c908c0b565a483cc5beb`; sandmapsreference current default main base `99a166e7fcae45eb22be1740e9f33f62faccbcc7`. Engine schema inspection found the intervening main change set concerned world-art tooling rather than Setup/Midge/material law files; this does not substitute for fresh native acceptance.

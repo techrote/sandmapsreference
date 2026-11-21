@@ -120,6 +120,20 @@ St(1318,819,43,11);
 /* Fallen emergency-transfer nose: arrested diagonal shear supported below. */
 C(1623,784,19,105);line(1632,788,1704,845,12,M.WALL);
 C(1695,845,25,44);St(1645,825,54,10);
+/* R2 Art-P1: physically entered asymmetrical quarantine pocket and short
+   receiver-to-custody handoff (real cells; preserves overhead authoring void). */
+C(968,692,235,17); // lower bounded quarantine lintel, tied to return arches
+C(982,709,17,101); C(1178,709,17,101);
+C(982,800,213,14);
+C(982,812,17,77); C(1178,812,17,77); // founded chamber on lower basalt
+V(978,734,24,45); // west receiving side-entry
+V(1175,738,24,46); // east screened release side-entry
+St(1006,782,58,10); St(1096,783,67,10);
+St(1120,710,10,24); St(1140,720,10,12);
+C(1131,753,13,28); // quarantine partition/support mast
+St(1010,717,109,7); // physical overhead custody track
+line(905,816,988,797,10,M.STEEL); St(887,805,47,12); // classifier to receipt apron
+line(1187,797,1327,784,10,M.STEEL); St(1302,774,36,13); // screened release to ward
 /* Preserve exact Midge site clearances, source cell geometry remains full. */
 for(const [x,y] of Object.values(sites)){V(x-26,426,53,y-426+25);V(x-25,y-22,51,45);}
 B(0,1000,W,24);
