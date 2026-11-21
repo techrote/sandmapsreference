@@ -36,7 +36,7 @@ function arc(cx,cy,rx,ry,a,b,t,m=M.STEEL){let x0=cx+rx*Math.cos(a),y0=cy+ry*Math
 /* Sibling 05: asymmetric downhill gravity-cascade of four true founded
    freight work terraces; distant cable bypass and dry below-grade recovery.
    Its topology and coordinates were freshly authored, not transcribed. */
-B(0,825,W,199);B(0,771,98,253);B(1953,768,95,256);
+B(0,916,W,108);B(0,771,98,253);B(1953,768,95,256);
 V(98,850,1854,55);
 for(const [x,w,y] of [[110,138,800],[331,115,809],[588,162,796],
 [909,143,808],[1210,166,792],[1483,164,805],[1780,125,806]])B(x,y,w,825-y);
@@ -56,7 +56,7 @@ St(322,752,163,15);St(446,704,89,12);C(461,716,23,109);
 // Four terraces at deliberately different elevations and spans.
 const cascade=[[491,506,219],[755,598,231],[1014,687,208],[1265,765,190]];
 for(const [x,y,w] of cascade){
- St(x,y,w,15);C(x+15,y+15,18,825-y-15);C(x+w-36,y+15,18,825-y-15);
+ St(x,y,w,15);C(x+15,y+15,18,916-y-15);C(x+w-36,y+15,18,916-y-15);
  St(x+35,y-33,74,10);C(x+45,y-23,13,25);
  St(x+w-100,y-49,64,11);C(x+w-94,y-38,13,36);
  line(x+34,y+15,x+82,y+73,9);St(x+w-72,y+33,72,13);
@@ -100,6 +100,14 @@ V(354,505,79,252);V(429,696,83,125);
 V(938,626,78,172);V(1160,703,85,112);
 V(1470,674,112,131);V(1677,636,107,151);
 V(1890,686,108,135);
+// Carefully located highline aperture prevents sealed 2D crane court.
+V(929,210,106,135);
+// Three salvage/maintenance shafts are true accessible full-Midge
+// alternatives to the main gravity freight circuit.
+V(258,413,70,425);V(899,539,82,296);
+// All major load paths continue below the former roofline to bedrock.
+for(const x of [130,442,461,515,1489,1524,1562,1650,1666,1697,1932,1976])
+ C(x,805,20,116);
 // Literal exact named-site 73x65 clearance envelopes.
 for(const [x,y] of Object.values(sites))V(x-36,y-32,73,65);
 
