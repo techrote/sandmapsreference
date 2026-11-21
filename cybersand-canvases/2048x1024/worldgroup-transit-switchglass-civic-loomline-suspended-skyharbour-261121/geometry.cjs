@@ -113,6 +113,15 @@ function buildWorld(){
  // Raised, unscripted attachment points / slalom signal on the low recovery lane.
  line(541,783,572,704,7,M.frame);rect(564,698,32,9,M.amber);
  line(1471,815,1519,723,9,M.frame);rect(1514,718,44,10,M.ivory);
+ // Three broad and deliberate air-traffic relief cuts connect all upper districts.
+ // Cables remain firmly rooted to both roof and beam, with a free manoeuvre
+ // window designed into the tensile joint above the tram diaphragm.
+ rect(0,421,W,68,0);
+ // Two actually entered ground shops are reached through openings in low decks.
+ rect(103,666,110,111,0);
+ rect(1806,664,110,114,0);
+ // Open west roof passenger canopy so it has a second physical ingress.
+ rect(173,275,86,215,0);
  // Preserve BOTH canopy passages: no structural ornament may obstruct their 160px apertures.
  rect(510,481,164,75,0);
  rect(1440,481,160,75,0);
@@ -123,9 +132,9 @@ function buildWorld(){
 
 
  const sites=[
-  ["West embarkation",110,301],["West ticket gantry",335,312],
-  ["West windward signal",445,377],["Suspended transfer west",790,215],
-  ["Suspended transfer centre",1040,155],["Top operator gallery",1168,145],
+  ["West embarkation",110,301],["West ticket gantry",330,266],
+  ["West windward signal",445,377],["Suspended transfer west",705,216],
+  ["Suspended transfer centre",1080,146],["Top operator gallery",1090,148],
   ["Eastern weather gauge",1735,260],["Remote dispatch",1960,285],
   ["Upper west hatch approach",583,422],["West sky hatch",584,519],
   ["West hatch recovery",585,614],["Upper east hatch approach",1507,421],
