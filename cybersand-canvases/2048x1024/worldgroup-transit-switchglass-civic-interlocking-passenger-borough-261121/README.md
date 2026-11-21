@@ -18,7 +18,7 @@ This is an inhabited, *urban* transport environment, not another braking wheel/r
 |---|---:|
 | Complete material cells | 2,097,152 |
 | Lossless Setup-v2 rectangles | 380 |
-| Setup JSON bytes | 7943 |
+| Setup JSON bytes | 8052 |
 | Boundary-grounded surviving solids | 357460 |
 | Discarded intermediate disconnected design cells | 37278 |
 | Remaining detached material | 0 |
@@ -33,3 +33,7 @@ This is an inhabited, *urban* transport environment, not another braking wheel/r
 **Corpus purposes:** editable civic-market precincts; procedural templates for station/hall/street/repair relations; script-source geometry for gate failure, aerial escape, market encounter or east depot arrival. `exemplar.json` describes eight controlled corpus diversity axes and four unscripted set-piece locations.
 
 **Review boundary:** Draft/HOLD. Source-static creator checks do **not** qualify native gameplay, do not replace independent Art/Technical/Shepherd assessment, and confer no owner acceptance or merge authority.
+
+## Loader-fatal Setup-v2 P0 correction
+
+The previous committed Setup used obsolete seven-key `world_policy`. This exact-HEAD repair restores the accepted strict 14-key Setup-v2 envelope, updates both verifier and generator and refreshes complete Setup receipt. Material-plane hash, collision routes and all indexed PNG images are unchanged. NATIVE-UNTESTED; independent exact-head review pending.
