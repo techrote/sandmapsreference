@@ -83,9 +83,10 @@ def validate(raw):
     if axes is not None:
         if not isinstance(axes,dict): err.append("diversity_axes must be an object")
         else:
-            for k,vals in axes.items():
+            for k,vals in list(axes.items()):
                 if k not in AXES: err.append("unknown diversity axis: "+k); continue
-                if not isinstance(vals,list) or not vals: err.append("diversity_axes."+k+" must be non-empty"); continue
+                if isinstance(vals,str): axes[k]=vals=[vals]
+                if not isinstance(vals,list) or not vals: err.append("diversity_axes."+k+" must be a value or non-empty array"); continue
                 populated += 1
                 bad=[x for x in vals if x not in AXES[k]]
                 if bad: err.append("unsupported "+k+" values: "+str(bad))
