@@ -197,6 +197,9 @@ St(1491,712,27,11);C(1499,686,8,26);
 C(1794,656,77,10);C(1793,666,12,76);C(1859,667,12,75);
 St(1797,733,73,10);V(1791,683,24,37);
 St(1823,710,29,12);C(1827,693,10,17);
+/* Separate wide return hatch beyond the west assay wall, keeping the
+   room entered rather than sealing its under-deck recovery component. */
+V(274,713,93,131);
 /* Accessible named centres survive full 31x27 conservative hulls. */
 for(const [x,y] of Object.values(sites))V(x-34,y-30,69,61);
 
