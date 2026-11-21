@@ -24,8 +24,8 @@ function buildWorld(){
    rect(xl+18,top+12,58,8,M.iron);
    rect(xl+25,top+22,10,18,M.amber);
  }
- // Cut-and-cover undergrade network: a stepped undertrack emergency line,
- // opened from actual rock mass, with overlapping vertical transfer shafts.
+ // Cut-and-cover undergrade network: stepped entered service cells in authentic
+ // rock, with structural ribs dividing some runs and sky-connected rescue shafts.
  for(const [x,y,w,h] of [
   [378,874,315,77],[636,786,342,78],[914,704,342,78],
   [1193,622,346,78],[1473,548,326,78],
