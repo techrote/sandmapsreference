@@ -121,6 +121,22 @@ const build=function build(){
  // A physically open second 75-cell access bypass to the central excavated hold
  // independent of the named keel-control obstruction and first cargo shaft.
  R(892,630,77,219,0);
+
+ // Enclosed side-on ship canopy with two huge honest sky hatches (not false doors).
+ R(762,398,624,13,M.titanium);R(740,400,34,76,M.iron);
+ R(1369,400,24,88,M.iron);R(801,409,14,41,M.chrome);
+ R(1126,409,15,31,M.chrome);R(1293,409,16,41,M.chrome);
+ R(984,355,15,52,M.iron);R(1162,357,15,50,M.iron);
+ R(864,386,103,89,0);R(1192,385,120,90,0);
+ // Explicit access hatches: there is no uninterrupted midship overhead seal.
+ R(864,345,100,90,0);R(1192,345,120,90,0);
+ // Human-scale working fixtures physically connected to their supporting decks.
+ R(185,629,14,13,M.steel);R(301,630,11,13,M.steel);R(379,628,12,15,M.steel);
+ R(1637,631,13,15,M.iron);R(1721,635,12,12,M.chrome);
+ R(1858,630,12,18,M.iron);
+ R(237,969,11,15,M.steel);R(333,967,11,17,M.steel);
+ R(930,971,12,15,M.steel);R(1058,970,12,15,M.steel);
+ R(1193,973,13,14,M.steel);R(1688,969,12,16,M.steel);R(1792,972,12,13,M.steel);
  // Literally fixed hull-protected centres; no substituted or shifted destinations.
  for(const [x,y] of Object.values(sites))R(x-19,y-17,39,35,0);
  for(let x of [308,1686])R(x,620,76,365,0);
