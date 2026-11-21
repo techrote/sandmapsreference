@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Keelbone Reclamation Vaults",
+  "lane": "worldgroup-freight",
+  "map_role": "New family's first buried salvage and component-cutting location: billet intake, entered coupling vaults, open dismantling machine, assay rooms, crew services and low repair returns",
+  "anchor_donors": [
+    {
+      "slug": "wide-graven-keel-ship-tipper",
+      "pr": 45,
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f"
+    },
+    {
+      "slug": "wide-peregrine-cleft-halcyon-drydock",
+      "pr": 33,
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5"
+    }
+  ],
+  "macro_topology": [
+    "Unequal geological shoulders enclosing spatially different entered service caverns",
+    "An open-centre, off-centre cutter atrium with multiple lateral and deep return entries"
+  ],
+  "density_profile": "Grounded dense west inspection/coupling workfaces, broad central hollow with substantial negative space, more compact east assay and crew levels, continuous low relief.",
+  "route_grammar": {
+    "main": "Eight named upper-middle west-to-east component handling and outbound sites",
+    "upper": "Five disconnected-looking but connected crest/sky sites reached via broad central open cut",
+    "interior": "Nine bounded handling, teardown, assay and inhabited destinations accessed through real roof passages",
+    "lower": "Five cellar return sites along one grounded long service airway with multiple ascents and a branch/rejoin from central cutter"
+  },
+  "strong_motifs": [
+    "asymmetric high basalt mine shoulders around centre cut",
+    "two unequal side-entered west part vaults",
+    "roofed steel/concrete custody shelving and founded pressing frames",
+    "static shear head over low staged receiver",
+    "separated east entered assay and compact crew workbay",
+    "founded under-service spine with large flight-height ports"
+  ],
+  "interesting_relationships": [
+    "West freight intake separates inspection and coupling-cellar storage before a founded transfer into off-centre dismantle",
+    "Machine-side upper workfaces and underfloor maintenance make distinct rejoining paths",
+    "East assay and compact crew shelter remain different entered room geometries rather than identical L-frame posts",
+    "Outer export is deliberately damaged and leaves a modular authoring seam"
+  ],
+  "authoring_affordances": [
+    "large open cutter approach for later SWARM/GENTEK structural-parts experiment",
+    "unfurnished west component bin margins",
+    "deliberately incomplete east cargo-expansion end",
+    "room-edge shelves and low galleries for manual NPC or repair editing"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "Central dismantling atrium",
+      "purpose": "unscripted activation or static machine release staging",
+      "scripted": false
+    },
+    {
+      "site": "West component cellars",
+      "purpose": "inspection-room lockdown or ambush with escape shaft",
+      "scripted": false
+    },
+    {
+      "site": "Under-service circuit",
+      "purpose": "temporary collapse requiring upper branch/rejoin",
+      "scripted": false
+    },
+    {
+      "site": "East damaged export cut",
+      "purpose": "arrival/departure or emergency escape set piece",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Tests excavated inner room grammar, unpaired vault sizes, positive founded industrial transactions and multi-elevation roof-to-underfloor relief rather than freestanding transit gantries; useful human-editing source and modular procedural excavation/coupling exemplar.",
+  "similarity_avoidance": "Deliberate change from five earlier Cleftline + five Tidefault freight maps, especially Tidefault 05's five roofed piers, 04's signal stilts and 03's sparse cliff archive. Reuses neither Graven Keel's ship-tip apparatus nor Peregrine's arkship/crossdock silhouette, names, path coordinates or source geometry.",
+  "diversity_axes": {
+    "macro_topology": [
+      "nested_cavities",
+      "mixed"
+    ],
+    "altitude_grammar": [
+      "multi_strata",
+      "high_low_bypass"
+    ],
+    "density_cadence": [
+      "dense_open_dense",
+      "clustered"
+    ],
+    "route_structure": [
+      "branch_rejoin",
+      "layered"
+    ],
+    "landmark_family": [
+      "central_machine",
+      "crater"
+    ],
+    "support_form": [
+      "cliff_embedded",
+      "floor_rooted"
+    ],
+    "environment_relation": [
+      "geological",
+      "dry"
+    ],
+    "incompleteness": [
+      "editable_gaps",
+      "modular_append_zones"
+    ]
+  }
+}
