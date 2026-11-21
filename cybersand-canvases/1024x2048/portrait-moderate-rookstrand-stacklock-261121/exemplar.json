@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "portrait-001-industrial-transit",
+  "map_role": "vertical four-pier freight relay recomposed from horizontal intermodal islands",
+  "anchor_donors": [
+    {
+      "source_pr": 165,
+      "source_head": "eb3535db571ac64cca8b1d71c804199bfca1b2a8",
+      "source_map_path": "cybersand-canvases/2048x1024/original-industrial-transit-wide-rookstrand-four-island-causeway-261121/"
+    }
+  ],
+  "macro_topology": [
+    "cascade",
+    "islands"
+  ],
+  "density_profile": "Unequal elevated ship, crane, utility, relay, sorter and low dispatch machines interspersed with longitudinal flight voids and unfurnished editing bays",
+  "route_grammar": {
+    "main": [
+      "Top approach",
+      "Freighter weather deck",
+      "Entered freighter hold",
+      "Cargo crane head",
+      "Handoff landing",
+      "Pier one control",
+      "Relay intake",
+      "Sorter crown",
+      "Twin-throat access",
+      "Dispatch arrival",
+      "Rail grade one",
+      "Rail grade two",
+      "Customs exit"
+    ],
+    "upper": [
+      "Top approach",
+      "Cargo crane head",
+      "Sky utility entrance",
+      "Sky girder return",
+      "Relay upper balcony"
+    ],
+    "recovery": [
+      "Lower relay return",
+      "Cross-valley recovery",
+      "Deep recovery",
+      "Rail grade two",
+      "Customs exit"
+    ],
+    "obstruction": "A real 55×70 cell barrier at [775,1120] lengthens Lower relay return to Twin-throat access 31×27 free-centre shortest path 511→649; every literal centre remains reachable"
+  },
+  "strong_motifs": [
+    "Entered upper-left freighter separated from independently placed crane",
+    "Four staggered grounded basalt freight teeth forming vertical stacklock",
+    "Long independent utility girder",
+    "Paired nonidentical sorter throats",
+    "Lower three-grade dispatch terminal"
+  ],
+  "interesting_relationships": [
+    "Original freighter-to-rail lateral throughput becomes a descending four-node transhipment chain",
+    "Unequal basalt foundations carry distinct load-bearing machinery instead of four identically spaced copies",
+    "Utility bridge and lower actor recovery do not rely on same cargo connection",
+    "Upper vessel cabin and hull stay distinct from drydock fittings"
+  ],
+  "authoring_affordances": [
+    "Open deep-service relief between founded structures",
+    "Unfurnished western middle inspection bay",
+    "Unassigned under-sorter connection seam",
+    "Open bottom return/future emergency-service interface"
+  ],
+  "setpiece_candidates": [
+    "Vessel arrival or hold inspection",
+    "Suspended upper girder interruption",
+    "Twin-throat sorter malfunction or inspection",
+    "Lower rail customs departure"
+  ],
+  "procedural_exemplar_value": "Demonstrates how a port process can be recomposed from horizontal intermodal islands into a staggered vertical relay, preserving separate rooted nodes, unlike grade connectors and reachable recovery in strictly orthographic 2D material cells.",
+  "similarity_avoidance": "Unlike horizontal Rookstrand this is a true vertical transit cascade with reversed adjacency and asymmetric transfer elevations; unlike Vesper's cable descent independently rooted geology and freight platforms dominate.",
+  "diversity_axes": {
+    "macro_topology": "cascade",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "layered",
+    "landmark_family": "vessel",
+    "support_form": "floor_rooted",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  },
+  "geometry_source": "layout.cjs",
+  "material_plane_sha256": "208167fa701d61328e0be8c3b67d2719690c4b702676b6fa91dfdbd0ac01f55c"
+}
