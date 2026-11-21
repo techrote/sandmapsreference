@@ -21,7 +21,7 @@ const sites={
 "Clamp servicing":[475,659],"Highline west":[650,382],"Highline east":[1320,382],
 "First gravity sorter":[609,453],"Second classifier":[862,548],
 "Third assay ledge":[1081,632],"Fourth consolidation":[1378,715],
-"Mid shaft overlook":[1039,334],"Upper counterweight":[1551,220],
+"Mid shaft overlook":[1140,329],"Upper counterweight":[1551,220],
 "Counterweight crane":[1640,479],"Reclaimer receiver":[1455,680],
 "East cargo registration":[1739,623],"Crew portal":[1663,593],
 "East export":[1998,617],"Damaged dock socket":[2010,748],
