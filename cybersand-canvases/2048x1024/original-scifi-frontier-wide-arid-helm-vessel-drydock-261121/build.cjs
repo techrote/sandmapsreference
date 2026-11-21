@@ -107,6 +107,20 @@ const build=function build(){
  "Deep return":[1100,932],"West survey":[48,755],
  "East survey":[2017,753],"Outer hull inspection":[1346,333],
  "Upper mast transfer":[594,307]};
+
+ // Grounded ribs physically join entire inhabited hull to two rock-rooted keel cradles.
+ R(735,449,18,296,M.iron);R(1368,470,19,261,M.iron);
+ L(741,733,774,747,18,M.titanium);L(1322,747,1377,708,18,M.titanium);
+ R(776,439,17,76,M.steel);R(750,503,57,17,M.steel);
+ R(750,645,42,19,M.titanium);R(1326,507,56,16,M.steel);
+ R(1319,646,67,15,M.titanium);
+ R(800,630,14,23,M.iron);R(986,633,13,20,M.chrome);
+ R(1116,630,16,23,M.iron);R(1264,628,15,29,M.chrome);
+ R(416,542,14,115,M.iron);R(1593,539,14,118,M.iron);
+ R(1919,542,15,120,M.iron);
+ // A physically open second 75-cell access bypass to the central excavated hold
+ // independent of the named keel-control obstruction and first cargo shaft.
+ R(892,630,77,219,0);
  // Literally fixed hull-protected centres; no substituted or shifted destinations.
  for(const [x,y] of Object.values(sites))R(x-19,y-17,39,35,0);
  for(let x of [308,1686])R(x,620,76,365,0);
@@ -163,7 +177,7 @@ const build=function build(){
   let p=[new Uint8Array([137,80,78,71,13,10,26,10]),chunk("IHDR",new Uint8Array([...be(w),...be(h),8,3,0,0,0])),chunk("PLTE",pal),chunk("IDAT",zip(raw)),chunk("IEND",new Uint8Array())];
   let b=new Uint8Array(p.reduce((s,x)=>s+x.length,0)),i=0;for(let x of p){b.set(x,i);i+=x.length;}return b;}
 
- let crops=[["01-clinic-and-west-airlock",50,430,630,430],["02-inbound-gate",385,290,545,550],["03-central-phase-actuator",875,190,560,625],["04-east-quarantine",1410,315,625,520],["05-subgrade-artery",170,735,1720,285]];
+ let crops=[["01-west-rover-medical",60,435,610,425],["02-survey-vessel-aft",560,285,650,550],["03-entered-keel-research",775,290,715,550],["04-quarantine-departure",1475,410,565,460],["05-deep-drydock-bays",150,760,1750,260]];
  let images=[["overview.png",png(0,0,W,H)],...crops.map(([name,x,y,w,h])=>[name+".png",png(x,y,w,h)])];
  return {g,json,rect,hist,area,removed,removedGroups,sites,clearances,blocked,obstacle,crops,images,seed,r2Features};
 };
