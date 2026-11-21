@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Keelbone Reclamation Vaults",
+  "lane": "worldgroup-freight",
+  "map_role": "Sibling 02: inhabited switchback recovery tenements, component rinsing, upper sorter, short vertical reclaim lift, repair assay and damaged exterior dispatch",
+  "anchor_donors": [
+    {
+      "slug": "wide-graven-keel-ship-tipper",
+      "pr": 45,
+      "head": "7ce39e6eb6d701b515bd4f6b1ccea551bf467a2f"
+    },
+    {
+      "slug": "wide-peregrine-cleft-halcyon-drydock",
+      "pr": 33,
+      "head": "0e872ce0987be7e6df047152beac470ba362c7c5"
+    }
+  ],
+  "macro_topology": [
+    "Braided internal transfers through multiple uneven roofed tenements",
+    "Upper switching corridor, middle transfer airway and lower return joined by four deep vertical access shafts"
+  ],
+  "density_profile": "Five compact, different enclosed industry/workers' clusters embedded in basalt, between broad but bounded flight arteries and sparse intentional external export sockets",
+  "route_grammar": {
+    "main": [
+      "West arrival booth",
+      "First component switch",
+      "Reclaim crossways",
+      "Machine transit",
+      "East dispatch",
+      "Outer firebreak"
+    ],
+    "upper": [
+      "Ledger mezzanine",
+      "Sorter overhead",
+      "West high bypass",
+      "Reclaim shaft head",
+      "Upper handoff",
+      "Repair bridge",
+      "West seam",
+      "Sky emergency",
+      "East seam"
+    ],
+    "interior": [
+      "Crew canteen",
+      "Rinsing room",
+      "Press service",
+      "Press receiver",
+      "Repair ward",
+      "East domestic booth"
+    ],
+    "lower": [
+      "West under-return",
+      "Central under-return",
+      "East under-return"
+    ]
+  },
+  "strong_motifs": [
+    "nonidentical staggered roof-bounded worker/industrial cells",
+    "founded material-cell billet stands and sorting ledges",
+    "asymmetric multi-level steel/stone supports",
+    "short central vertical reclaim mechanism, backed by repair tools",
+    "four independent vertical relays",
+    "intentionally unfinished eastern outboard retainer socket"
+  ],
+  "interesting_relationships": [
+    "Workers' ledger mezzanine joins salvage canteen through an actual opened framing threshold",
+    "Rinse/classification stock feeds short supported component lift and repair atelier",
+    "Main corridor, high bypass and deep return connect by different vertical shafts",
+    "Damaged outer dispatch can be edited without blocking either refuge route"
+  ],
+  "authoring_affordances": [
+    "Open outer socket at the east edge for a manual additional room",
+    "Dry module sockets between grounded frame fragments",
+    "Upper skylight shaft for custom NPC encounter or freight-lift",
+    "Unfurnished mezzanine bays for procedurally derived small industrial fixtures"
+  ],
+  "setpiece_candidates": [
+    {
+      "site": "Central reclaim shaft",
+      "purpose": "unscripted vertical crane activation or failed component drop with upper passage",
+      "scripted": false
+    },
+    {
+      "site": "West crew tenements",
+      "purpose": "NPC settlement encounter with roof passage and lower relief",
+      "scripted": false
+    },
+    {
+      "site": "Repair atelier",
+      "purpose": "equipment failure or holdout before a bypass rejoin",
+      "scripted": false
+    },
+    {
+      "site": "Damaged outer socket",
+      "purpose": "bridge failure or emergency departure into an unfinished expansion seam",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Contrasts two-sided crater/cutter composition with staggered enclosed worktown, several distinct support/loading forms and a 3-tier switchback/braided route grammar; supports deriving small-workcell, roof-threshold and vertical-relief modular parts",
+  "similarity_avoidance": "Unlike Keelbone 01's immense open central excavation and one cutter, this canvas is mostly roofed and distributes industry through five staggered chambers; avoids Cleftline's exposed freight quays and Tidefault's isolated stilts/serial customs cells, without importing donor geometry, graph, names or coordinates",
+  "diversity_axes": {
+    "macro_topology": [
+      "braided",
+      "nested_cavities"
+    ],
+    "altitude_grammar": [
+      "multi_strata",
+      "high_low_bypass"
+    ],
+    "density_cadence": [
+      "alternating",
+      "clustered"
+    ],
+    "route_structure": [
+      "branch_rejoin",
+      "layered"
+    ],
+    "landmark_family": [
+      "central_machine",
+      "mixed"
+    ],
+    "support_form": [
+      "cliff_embedded",
+      "floor_rooted"
+    ],
+    "environment_relation": [
+      "geological",
+      "damaged"
+    ],
+    "incompleteness": [
+      "editable_gaps",
+      "modular_append_zones"
+    ]
+  }
+}

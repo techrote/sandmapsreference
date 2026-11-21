@@ -1,0 +1,316 @@
+{
+  "concept": "Keelbone Reclamation Vaults — Switchback Recovery Tenements / Crossed Component Relay",
+  "original": true,
+  "seed": 40568354,
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West arrival booth",
+      "First component switch",
+      "Reclaim crossways",
+      "Machine transit",
+      "East dispatch",
+      "Outer firebreak"
+    ],
+    "upper": [
+      "Ledger mezzanine",
+      "Sorter overhead",
+      "West high bypass",
+      "Reclaim shaft head",
+      "Upper handoff",
+      "Repair bridge",
+      "West seam",
+      "Sky emergency",
+      "East seam"
+    ],
+    "interior": [
+      "Crew canteen",
+      "Rinsing room",
+      "Press service",
+      "Press receiver",
+      "Repair ward",
+      "East domestic booth"
+    ],
+    "lower": [
+      "West under-return",
+      "Central under-return",
+      "East under-return"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West arrival booth": [
+      115,
+      520
+    ],
+    "Ledger mezzanine": [
+      285,
+      398
+    ],
+    "Crew canteen": [
+      370,
+      682
+    ],
+    "First component switch": [
+      555,
+      520
+    ],
+    "Rinsing room": [
+      580,
+      682
+    ],
+    "Sorter overhead": [
+      610,
+      395
+    ],
+    "West high bypass": [
+      785,
+      385
+    ],
+    "Reclaim crossways": [
+      860,
+      523
+    ],
+    "Reclaim shaft head": [
+      1125,
+      400
+    ],
+    "Press service": [
+      1020,
+      698
+    ],
+    "Machine transit": [
+      1080,
+      525
+    ],
+    "Press receiver": [
+      1260,
+      684
+    ],
+    "Upper handoff": [
+      1280,
+      395
+    ],
+    "Repair ward": [
+      1420,
+      690
+    ],
+    "Repair bridge": [
+      1490,
+      382
+    ],
+    "East domestic booth": [
+      1710,
+      690
+    ],
+    "East dispatch": [
+      1800,
+      525
+    ],
+    "Outer firebreak": [
+      1930,
+      515
+    ],
+    "West under-return": [
+      160,
+      816
+    ],
+    "Central under-return": [
+      940,
+      819
+    ],
+    "East under-return": [
+      1840,
+      819
+    ],
+    "Sky emergency": [
+      1080,
+      160
+    ],
+    "West seam": [
+      410,
+      280
+    ],
+    "East seam": [
+      1760,
+      250
+    ]
+  },
+  "material_histogram": {
+    "0": 1467408,
+    "58": 31409,
+    "62": 54790,
+    "100": 543545
+  },
+  "stable_occupied_cells": 629744,
+  "grounded": 629744,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 173062,
+  "invalid_writes": 0,
+  "rectangles": 171,
+  "rectangle_work": 629744,
+  "setup_bytes": 4083,
+  "material_plane_sha256": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+  "setup_sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1305617,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1273693,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 24,
+      "total": 24,
+      "free_centres": 1208137,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      936,
+      450,
+      120,
+      150
+    ],
+    "from": "First component switch",
+    "to": "Machine transit",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 24,
+    "unreachable": [],
+    "distance_before_after": [
+      586,
+      706
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "d788341b3397eee023bc0f699457aea07ffa789e542da285f40de4fd6bebde0a",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-ledger-tenements",
+      "rect": [
+        110,
+        315,
+        420,
+        477
+      ],
+      "bytes": 50747,
+      "sha256": "18ac556f942efcae82eb4848b3d96e0503e600d821b290ca9f167679c5a65a50",
+      "pixel_parity": 200340
+    },
+    {
+      "name": "02-rinse-sorting",
+      "rect": [
+        465,
+        329,
+        365,
+        482
+      ],
+      "bytes": 45011,
+      "sha256": "7803df925731b499753cdb0fa5865708127933d3f64e7bd848b44889658e5a1a",
+      "pixel_parity": 175930
+    },
+    {
+      "name": "03-central-reclaim",
+      "rect": [
+        817,
+        240,
+        560,
+        620
+      ],
+      "bytes": 87610,
+      "sha256": "e6be9dee8dba1d2a258aaeb74bdc15dfc68a852abc49cde6581041217ab2d354",
+      "pixel_parity": 347200
+    },
+    {
+      "name": "04-repair-atelier",
+      "rect": [
+        1160,
+        310,
+        410,
+        506
+      ],
+      "bytes": 52809,
+      "sha256": "53b90956f78f6c24269b79f7115b6f81b8d2f147c3fa345ca8dbee7545e56274",
+      "pixel_parity": 207460
+    },
+    {
+      "name": "05-east-tenements",
+      "rect": [
+        1510,
+        312,
+        500,
+        519
+      ],
+      "bytes": 65579,
+      "sha256": "a68b62fac7c927f5faa570e190d23f879e659f2dae8b241eeee341b37cf38244",
+      "pixel_parity": 259500
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Exact replay, rooted material supports, three-hull routing, genuine block detour, 2-bit indexed material PNG parity"
+}
