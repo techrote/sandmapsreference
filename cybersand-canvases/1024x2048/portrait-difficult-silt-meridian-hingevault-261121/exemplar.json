@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "portrait-transfer-industrial-transit",
+  "map_role": "Difficult portrait re-entrant twin-bascule freight process transfer",
+  "anchor_donors": [
+    {
+      "source_pr": 37,
+      "source_head": "e2b53fb95ea93576afdc15c114e29b853c4b2c05"
+    }
+  ],
+  "macro_topology": [
+    "vertical_fault",
+    "mixed"
+  ],
+  "density_profile": "Three landmark-density islands separated by flight channel, with dense lower maintenance and deliberate open shaft",
+  "route_grammar": {
+    "main": [
+      "Western Approach",
+      "Mooring Customs Beacon",
+      "Entered Freight Hold",
+      "Quay Manifest",
+      "Cargo Cage",
+      "Channel Throat",
+      "Entered Rotor",
+      "Freight Frog",
+      "Customs Examination"
+    ],
+    "sky": [
+      "Ferry Bridge",
+      "Crane Sky Hook",
+      "West Leaf Reveal",
+      "East Leaf Reveal"
+    ],
+    "recovery": [
+      "West Lower Winch",
+      "West Mid Service",
+      "West Under-Invert",
+      "Central Recovery",
+      "Dispatch Repair"
+    ]
+  },
+  "strong_motifs": [
+    "opposing unequal bascule leaves and rooted hinge brakes",
+    "entered rail-ferry and independent hoist cage",
+    "ten-spoke wagon indexer facing a tall shaft",
+    "undercut machinery return"
+  ],
+  "interesting_relationships": [
+    "bridge identity survives through axial rather than lateral opposing leaves",
+    "freighter and indexed sorter are separated by two hinge elevations yet share custody sequence",
+    "upper hoist and lower customs form a vertical transaction spine",
+    "two access apertures connect separated hinge and under-invert rooms instead of treating machinery as silhouette-only scenery"
+  ],
+  "authoring_affordances": [
+    "unfinished right-channel brake interface",
+    "editable west maintenance annex",
+    "unused lower return and event landing",
+    "open sky/shaft bypass"
+  ],
+  "setpiece_candidates": [
+    "bridge-leaf holdout and optional failure at channel throat",
+    "hoist activation by entered cargo cage",
+    "rotary yard NPC handoff",
+    "lower customs departure"
+  ],
+  "procedural_exemplar_value": "Tests retention of long horizontal dual-bascule causal signature under severe portrait topology changes, with unequal hinge altitudes and a physically entered wagon-hub/service loop",
+  "similarity_avoidance": "Unlike Warden salvage-stack and Rookstrand four-pier relay, features a recognisable *opposed* paired movable-bridge silhouette and a single ten-spoke classifier, not stacked broken trestles or interchangeable bridges",
+  "diversity_axes": {
+    "macro_topology": "vertical_fault",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "bridge",
+    "support_form": "mixed",
+    "environment_relation": "dry",
+    "incompleteness": "editable_gaps"
+  },
+  "geometry_source": "design.json",
+  "material_plane_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a"
+}

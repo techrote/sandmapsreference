@@ -1,0 +1,215 @@
+{
+  "name": "Silt Meridian Hingevault — Opposed Bascule Freight Well",
+  "extent": [
+    1024,
+    2048
+  ],
+  "seed": 2111202657,
+  "source": {
+    "source_extent": [
+      2048,
+      1024
+    ],
+    "target_extent": [
+      1024,
+      2048
+    ],
+    "source_pr": 37,
+    "source_head": "e2b53fb95ea93576afdc15c114e29b853c4b2c05",
+    "source_map_path": "cybersand-canvases/2048x1024/original-industrial-transit-wide-silt-meridian-bascule-ferry-261120/",
+    "difficulty": "DIFFICULT",
+    "preserved": [
+      "authored entered ferry with distinct cabin/cargo hold and berth manifest",
+      "separate shore crane and hoist cage",
+      "two colossal opposing raised bascule leaves with separate rooted hinges and brake gear",
+      "rotary wagon indexer and entered classification and split-frog interchange",
+      "three-grade railway/customs custody plus deep service return"
+    ],
+    "transformed": [
+      "single horizontal dry cargo channel becomes a tall offset dual-bank channel with unequal hinge altitudes",
+      "west-to-east ferry→bridge→sorter journey re-sequenced into descending cargo custody process",
+      "wheelhouse placed deep on east bank instead of directly beyond adjacent bridge leaf",
+      "horizontal undercut service railway becomes a descending west under-invert gallery connected to central re-entrant recovery shaft"
+    ],
+    "discarded": [
+      "source pixels, 2048×1024 coordinates, horizontal shoreline shape and copied bascule angles",
+      "long straight west-to-east rail and uninterrupted bottom service tracks"
+    ],
+    "newly_introduced": [
+      "opposed multi-altitude bridge reveal along an extended playable shaft",
+      "physical entered upper lift cage and accessible rotor hub",
+      "distinct customs examination room and lower freighter return",
+      "deliberately unfinished high shaft seam, service expansion recesses and removable bridge-failure/event opportunities"
+    ]
+  },
+  "stages": [
+    "entered west rail-ferry",
+    "dockside freight crane",
+    "independent lift cage",
+    "opposed staggered bascule hinges",
+    "entered rotary wagon hub",
+    "lower rail customs and return"
+  ],
+  "engineering": "All final solids must be bottom-connected through coastal banks and root-linked steel; ungrounded provisional fragments are removed before replay.",
+  "visual_intent": "True side elevation: port-drylock silhouette above, two angular competing leaf spans around tall negative-space throat, southern right wheel, freight-grade lower railway and west re-entrant service passages. Three real clearance repairs: enter the west brake room through its roof hatch, the counterweight/hinge via an upper right 60-pixel transit portal, and the lower under-invert via a side entry; these are final committed material-cell voids, not shifted check endpoints.",
+  "sites": {
+    "Western Approach": [
+      132,
+      350
+    ],
+    "Ferry Bridge": [
+      215,
+      411
+    ],
+    "Entered Freight Hold": [
+      342,
+      540
+    ],
+    "Quay Manifest": [
+      378,
+      661
+    ],
+    "Crane Sky Hook": [
+      524,
+      282
+    ],
+    "Cargo Cage": [
+      733,
+      616
+    ],
+    "Lift Counterweight": [
+      879,
+      713
+    ],
+    "West Hinge Brake": [
+      384,
+      948
+    ],
+    "West Leaf Reveal": [
+      522,
+      736
+    ],
+    "Channel Throat": [
+      568,
+      938
+    ],
+    "East Leaf Reveal": [
+      626,
+      802
+    ],
+    "East Hinge Brake": [
+      836,
+      985
+    ],
+    "West Lower Winch": [
+      205,
+      1172
+    ],
+    "Upper Rope Well": [
+      543,
+      1119
+    ],
+    "Rotor Outer": [
+      680,
+      1210
+    ],
+    "Entered Rotor": [
+      773,
+      1274
+    ],
+    "West Mid Service": [
+      255,
+      1455
+    ],
+    "Upper Railway": [
+      710,
+      1477
+    ],
+    "Freight Frog": [
+      683,
+      1593
+    ],
+    "Departure Ledge": [
+      700,
+      1745
+    ],
+    "Customs Examination": [
+      735,
+      1845
+    ],
+    "Dispatch Repair": [
+      811,
+      1855
+    ],
+    "West Under-Invert": [
+      240,
+      1858
+    ],
+    "Central Recovery": [
+      544,
+      1901
+    ],
+    "Mooring Customs Beacon": [
+      324,
+      350
+    ]
+  },
+  "obstruction": {
+    "rect": [
+      170,
+      320,
+      104,
+      64
+    ],
+    "from": "Western Approach",
+    "to": "Mooring Customs Beacon"
+  },
+  "route_graph": {
+    "main": [
+      "Western Approach",
+      "Mooring Customs Beacon",
+      "Entered Freight Hold",
+      "Quay Manifest",
+      "Cargo Cage",
+      "Channel Throat",
+      "Entered Rotor",
+      "Freight Frog",
+      "Customs Examination"
+    ],
+    "sky": [
+      "Ferry Bridge",
+      "Crane Sky Hook",
+      "West Leaf Reveal",
+      "East Leaf Reveal"
+    ],
+    "recovery": [
+      "West Lower Winch",
+      "West Mid Service",
+      "West Under-Invert",
+      "Central Recovery",
+      "Dispatch Repair"
+    ],
+    "alternate": [
+      "Crane Sky Hook",
+      "West Leaf Reveal",
+      "Channel Throat",
+      "East Leaf Reveal",
+      "Rotor Outer",
+      "Departure Ledge"
+    ],
+    "cross_links": [
+      [
+        "Channel Throat",
+        "Upper Rope Well"
+      ],
+      [
+        "Upper Rope Well",
+        "Central Recovery"
+      ],
+      [
+        "Entered Rotor",
+        "Customs Examination"
+      ]
+    ]
+  }
+}
