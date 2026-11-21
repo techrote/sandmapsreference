@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-foundry-wide",
+  "map_role": "Three distinct settlements sharing a radial floor-rooted transfer machine and upper foundry",
+  "anchor_donors": [],
+  "macro_topology": "multi_settlement",
+  "density_profile": "Three asymmetric dense civic-industrial groups linked through a large editable transfer avenue; upper airworks concentrated between clusters",
+  "route_grammar": {
+    "main": [
+      "West arrival",
+      "Ore hamlet",
+      "Smelter face",
+      "Guild inlet",
+      "Ladle handoff",
+      "Rotor lookout",
+      "Guild outfeed",
+      "Quench laboratory",
+      "Freight terminal",
+      "East export goal"
+    ],
+    "upper": [
+      "Aerial west",
+      "Aerial caster",
+      "Aerial east"
+    ],
+    "recovery": [
+      "West junction",
+      "East maintenance",
+      "Quench controls"
+    ]
+  },
+  "strong_motifs": [
+    "Three unlike worker settlements",
+    "Giant radial eight-spoke grounded rotor",
+    "Elevated contained furnace and ladle",
+    "Four staggered caster rams",
+    "East sealed quench and rail freight"
+  ],
+  "interesting_relationships": [
+    "Settlements share one giant central transfer machine",
+    "Upper metallurgical line serves below-grade industrial communities",
+    "Aerial diversion remains accessible despite a blocked direct transfer avenue"
+  ],
+  "authoring_affordances": [
+    {
+      "name": "West machine-guild seam",
+      "region_xywh": [
+        531,
+        701,
+        103,
+        119
+      ],
+      "use": "Later human-added machinery"
+    },
+    {
+      "name": "Rotor failure site",
+      "region_xywh": [
+        974,
+        677,
+        165,
+        32
+      ],
+      "use": "Future unscripted activation"
+    },
+    {
+      "name": "East settlement socket",
+      "region_xywh": [
+        1370,
+        705,
+        102,
+        111
+      ],
+      "use": "Modular SWARM/GENTEK extension"
+    },
+    {
+      "name": "Upper flyway",
+      "region_xywh": [
+        515,
+        481,
+        1180,
+        65
+      ],
+      "use": "Future chase or bridge disruption"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Rotor seizure",
+      "anchor": "Rotor lookout",
+      "kind": "machinery_failure"
+    },
+    {
+      "name": "Quench-release",
+      "anchor": "Quench controls",
+      "kind": "fluid_release"
+    },
+    {
+      "name": "Export departure",
+      "anchor": "East export goal",
+      "kind": "escape"
+    },
+    {
+      "name": "Ore village defence",
+      "anchor": "West junction",
+      "kind": "holdout"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Three-town industrial settlement grammar",
+    "Floor-rooted radial transfer landmark linked to upper caster and ladle",
+    "Dense-open-dense civic landscape with large edit seams",
+    "Independent aerial return route"
+  ],
+  "similarity_avoidance": "Unlike the previous drydock shipyard, ceiling-hung foundry, buried nested factory and crater ring, this map explores a multi-community factory city with a giant rooted transfer rotor.",
+  "diversity_axes": {
+    "macro_topology": "multi_settlement",
+    "altitude_grammar": "tri_level",
+    "density_cadence": "clustered",
+    "route_structure": "hub_spoke",
+    "landmark_family": "rotor",
+    "support_form": "floor_rooted",
+    "environment_relation": "fluid_containment",
+    "incompleteness": "modular_append_zones"
+  }
+}
