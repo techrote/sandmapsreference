@@ -1,0 +1,695 @@
+{
+  "schema": 1,
+  "trial": "PORTRAIT-001",
+  "difficulty": "DIFFICULT",
+  "source": {
+    "pr": 160,
+    "head": "cf47967470e402693957ab04ebfb3fe6d787d943",
+    "path": "cybersand-canvases/2048x1024/original-industrial-foundry-wide-keelglass-twin-drydock-261121/"
+  },
+  "base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "seed": 202611211133,
+  "dimensions": [
+    1024,
+    2048
+  ],
+  "cells": 2097152,
+  "source_grid_sha256": "7d8775ba992138e8cfe3075a4d54a1607037e110da4a4a4bf6e53b7b1aa99345",
+  "setup_sha256": "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+  "setup_bytes": 15103,
+  "rectangles": 750,
+  "construction_work": 1096654,
+  "material_histogram": {
+    "0": 1000498,
+    "3": 12768,
+    "8": 7531,
+    "58": 125762,
+    "62": 47666,
+    "65": 10007,
+    "68": 21003,
+    "69": 2502,
+    "76": 2890,
+    "79": 580,
+    "100": 823332,
+    "104": 12608,
+    "117": 19045,
+    "131": 10960
+  },
+  "ground": {
+    "total": 1076355,
+    "rooted": 1076355,
+    "detached": 0,
+    "pruned_provisional": 1970
+  },
+  "fluid": {
+    "water": 12768,
+    "lava": 7531,
+    "exposed_faces": 0,
+    "water_lava_contacts": 0
+  },
+  "hulls": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "valid_centres": 784696,
+      "connected_centres": 746137,
+      "passed": 18,
+      "sites": [
+        {
+          "name": "West entry spawn",
+          "x": 517,
+          "y": 132,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore window",
+          "x": 370,
+          "y": 325,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore return gallery",
+          "x": 280,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper kiln inspection",
+          "x": 755,
+          "y": 341,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Arc furnace face",
+          "x": 665,
+          "y": 533,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle platform",
+          "x": 570,
+          "y": 696,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dock A upper lip",
+          "x": 322,
+          "y": 887,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Keel A inspection",
+          "x": 251,
+          "y": 1005,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster watch",
+          "x": 777,
+          "y": 1019,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bypass high mouth",
+          "x": 330,
+          "y": 1080,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bypass low mouth",
+          "x": 320,
+          "y": 1321,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dock B upper lip",
+          "x": 725,
+          "y": 1288,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Keel B inspection",
+          "x": 800,
+          "y": 1430,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench watch",
+          "x": 333,
+          "y": 1619,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench service",
+          "x": 349,
+          "y": 1740,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight inspection",
+          "x": 775,
+          "y": 1807,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 690,
+          "y": 1865,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Lower shaft return",
+          "x": 532,
+          "y": 1820,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "valid_centres": 740053,
+      "connected_centres": 708223,
+      "passed": 18,
+      "sites": [
+        {
+          "name": "West entry spawn",
+          "x": 517,
+          "y": 132,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore window",
+          "x": 370,
+          "y": 325,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore return gallery",
+          "x": 280,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper kiln inspection",
+          "x": 755,
+          "y": 341,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Arc furnace face",
+          "x": 665,
+          "y": 533,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle platform",
+          "x": 570,
+          "y": 696,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dock A upper lip",
+          "x": 322,
+          "y": 887,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Keel A inspection",
+          "x": 251,
+          "y": 1005,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster watch",
+          "x": 777,
+          "y": 1019,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bypass high mouth",
+          "x": 330,
+          "y": 1080,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bypass low mouth",
+          "x": 320,
+          "y": 1321,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dock B upper lip",
+          "x": 725,
+          "y": 1288,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Keel B inspection",
+          "x": 800,
+          "y": 1430,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench watch",
+          "x": 333,
+          "y": 1619,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench service",
+          "x": 349,
+          "y": 1740,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight inspection",
+          "x": 775,
+          "y": 1807,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 690,
+          "y": 1865,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Lower shaft return",
+          "x": 532,
+          "y": 1820,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "valid_centres": 668772,
+      "connected_centres": 653636,
+      "passed": 18,
+      "sites": [
+        {
+          "name": "West entry spawn",
+          "x": 517,
+          "y": 132,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore window",
+          "x": 370,
+          "y": 325,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ore return gallery",
+          "x": 280,
+          "y": 380,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Upper kiln inspection",
+          "x": 755,
+          "y": 341,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Arc furnace face",
+          "x": 665,
+          "y": 533,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Ladle platform",
+          "x": 570,
+          "y": 696,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dock A upper lip",
+          "x": 322,
+          "y": 887,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Keel A inspection",
+          "x": 251,
+          "y": 1005,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Caster watch",
+          "x": 777,
+          "y": 1019,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bypass high mouth",
+          "x": 330,
+          "y": 1080,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Bypass low mouth",
+          "x": 320,
+          "y": 1321,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Dock B upper lip",
+          "x": 725,
+          "y": 1288,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Keel B inspection",
+          "x": 800,
+          "y": 1430,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench watch",
+          "x": 333,
+          "y": 1619,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Quench service",
+          "x": 349,
+          "y": 1740,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Freight inspection",
+          "x": 775,
+          "y": 1807,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East rim goal",
+          "x": 690,
+          "y": 1865,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Lower shaft return",
+          "x": 532,
+          "y": 1820,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "physical_obstruction": [
+    391,
+    1160,
+    256,
+    87
+  ],
+  "obstructed": {
+    "hull": [
+      31,
+      27
+    ],
+    "valid_centres": 637641,
+    "connected_centres": 622505,
+    "passed": 18,
+    "sites": [
+      {
+        "name": "West entry spawn",
+        "x": 517,
+        "y": 132,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ore window",
+        "x": 370,
+        "y": 325,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ore return gallery",
+        "x": 280,
+        "y": 380,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Upper kiln inspection",
+        "x": 755,
+        "y": 341,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Arc furnace face",
+        "x": 665,
+        "y": 533,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Ladle platform",
+        "x": 570,
+        "y": 696,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Dock A upper lip",
+        "x": 322,
+        "y": 887,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Keel A inspection",
+        "x": 251,
+        "y": 1005,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Caster watch",
+        "x": 777,
+        "y": 1019,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Bypass high mouth",
+        "x": 330,
+        "y": 1080,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Bypass low mouth",
+        "x": 320,
+        "y": 1321,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Dock B upper lip",
+        "x": 725,
+        "y": 1288,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Keel B inspection",
+        "x": 800,
+        "y": 1430,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Quench watch",
+        "x": 333,
+        "y": 1619,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Quench service",
+        "x": 349,
+        "y": 1740,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Freight inspection",
+        "x": 775,
+        "y": 1807,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "East rim goal",
+        "x": 690,
+        "y": 1865,
+        "clear": true,
+        "reached": true
+      },
+      {
+        "name": "Lower shaft return",
+        "x": 532,
+        "y": 1820,
+        "clear": true,
+        "reached": true
+      }
+    ]
+  },
+  "goal_distance": {
+    "direct": 1906,
+    "obstructed": 1976
+  },
+  "pngs": {
+    "overview.png": {
+      "xywh": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "bytes": 2099836,
+      "sha256": "7199e4acaa65a99a786f9df8a3daafd64bf0d08c6df8eeec2dfb24dc2ac759d1"
+    },
+    "01-ore-hoist.png": {
+      "xywh": [
+        76,
+        159,
+        346,
+        320
+      ],
+      "bytes": 111521,
+      "sha256": "eb2508d0c55883ba0c77f18bbf79f6b8f1b98a3ff298f3b1ef9a40ec15383160"
+    },
+    "02-twin-furnaces.png": {
+      "xywh": [
+        624,
+        290,
+        344,
+        392
+      ],
+      "bytes": 135726,
+      "sha256": "f1588882a4e35bba429cdded21619696802b5d37bd68634bf8263e01b1ec9b2c"
+    },
+    "03-upper-drydock.png": {
+      "xywh": [
+        77,
+        801,
+        350,
+        381
+      ],
+      "bytes": 134217,
+      "sha256": "2c8c6109e8da36e9841746179b6213d36e6b79c14127de6e442859782d1ee1e1"
+    },
+    "04-casters-and-return.png": {
+      "xywh": [
+        611,
+        833,
+        360,
+        340
+      ],
+      "bytes": 123221,
+      "sha256": "afcc0bacf436b60cac77c5c19af2244e68535be0977769fe40569766801932a8"
+    },
+    "05-lower-drydock.png": {
+      "xywh": [
+        618,
+        1202,
+        350,
+        380
+      ],
+      "bytes": 133866,
+      "sha256": "ef9fdeb840af5c576d9d890cf5bf0f921df2351b221e1b3a4fabeab653c6c491"
+    },
+    "06-quench-maintenance.png": {
+      "xywh": [
+        76,
+        1446,
+        348,
+        377
+      ],
+      "bytes": 132059,
+      "sha256": "f1b790de1d2bc2548fc8672b5e64e0af4194548b7ee7d40501497f86b5f428ce"
+    },
+    "07-freight-exit.png": {
+      "xywh": [
+        610,
+        1655,
+        360,
+        379
+      ],
+      "bytes": 137305,
+      "sha256": "d091daf1781edc2c65273e5d7ff2d7903f2030c8bbe25b99211dba2b884d29d9"
+    }
+  },
+  "pixel_parity": 2999106,
+  "native": "NATIVE-UNTESTED"
+}
