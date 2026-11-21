@@ -1,0 +1,335 @@
+{
+  "concept": "Silt Meridian Hingevault — Opposed Bascule Freight Well",
+  "original": false,
+  "aspect_transfer": true,
+  "pruned_ungrounded": 18493,
+  "seed": 2111202657,
+  "extent": [
+    1024,
+    2048
+  ],
+  "source_contract": {
+    "cybersand_accepted_main": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+    "sandmapsreference_default_source": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "setup_version": 2,
+    "max_construction_rectangles": 32768
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "reinforced concrete inert immovable solid",
+    "62": "steel plate inert immovable solid",
+    "100": "basalt columns inert immovable solid"
+  },
+  "material_plane_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+  "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+  "setup_bytes": 65411,
+  "rectangles": 3528,
+  "rectangle_work": 588618,
+  "cells": 2097152,
+  "histogram": {
+    "0": 1508534,
+    "58": 104191,
+    "62": 193984,
+    "100": 290443
+  },
+  "grounded_stable_solids": 588618,
+  "detached_solids": 0,
+  "initial_fluid_cells": 0,
+  "reactive_or_falling_cells": 0,
+  "overlapping_records": 0,
+  "ordered_replay_equal": true,
+  "exact_sites": {
+    "Western Approach": [
+      132,
+      350
+    ],
+    "Ferry Bridge": [
+      215,
+      411
+    ],
+    "Entered Freight Hold": [
+      342,
+      540
+    ],
+    "Quay Manifest": [
+      378,
+      661
+    ],
+    "Crane Sky Hook": [
+      524,
+      282
+    ],
+    "Cargo Cage": [
+      733,
+      616
+    ],
+    "Lift Counterweight": [
+      879,
+      713
+    ],
+    "West Hinge Brake": [
+      384,
+      948
+    ],
+    "West Leaf Reveal": [
+      522,
+      736
+    ],
+    "Channel Throat": [
+      568,
+      938
+    ],
+    "East Leaf Reveal": [
+      626,
+      802
+    ],
+    "East Hinge Brake": [
+      836,
+      985
+    ],
+    "West Lower Winch": [
+      205,
+      1172
+    ],
+    "Upper Rope Well": [
+      543,
+      1119
+    ],
+    "Rotor Outer": [
+      680,
+      1210
+    ],
+    "Entered Rotor": [
+      773,
+      1274
+    ],
+    "West Mid Service": [
+      255,
+      1455
+    ],
+    "Upper Railway": [
+      710,
+      1477
+    ],
+    "Freight Frog": [
+      683,
+      1593
+    ],
+    "Departure Ledge": [
+      700,
+      1745
+    ],
+    "Customs Examination": [
+      735,
+      1845
+    ],
+    "Dispatch Repair": [
+      811,
+      1855
+    ],
+    "West Under-Invert": [
+      240,
+      1858
+    ],
+    "Central Recovery": [
+      544,
+      1901
+    ],
+    "Mooring Customs Beacon": [
+      324,
+      350
+    ]
+  },
+  "route_graph": {
+    "main": [
+      "Western Approach",
+      "Mooring Customs Beacon",
+      "Entered Freight Hold",
+      "Quay Manifest",
+      "Cargo Cage",
+      "Channel Throat",
+      "Entered Rotor",
+      "Freight Frog",
+      "Customs Examination"
+    ],
+    "sky": [
+      "Ferry Bridge",
+      "Crane Sky Hook",
+      "West Leaf Reveal",
+      "East Leaf Reveal"
+    ],
+    "recovery": [
+      "West Lower Winch",
+      "West Mid Service",
+      "West Under-Invert",
+      "Central Recovery",
+      "Dispatch Repair"
+    ],
+    "alternate": [
+      "Crane Sky Hook",
+      "West Leaf Reveal",
+      "Channel Throat",
+      "East Leaf Reveal",
+      "Rotor Outer",
+      "Departure Ledge"
+    ],
+    "cross_links": [
+      [
+        "Channel Throat",
+        "Upper Rope Well"
+      ],
+      [
+        "Upper Rope Well",
+        "Central Recovery"
+      ],
+      [
+        "Entered Rotor",
+        "Customs Examination"
+      ]
+    ]
+  },
+  "authored_midge_hull": [
+    4,
+    3
+  ],
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "free_centres": 1243389,
+      "sites_reached": 25,
+      "total_sites": 25,
+      "bad": []
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "free_centres": 1186731,
+      "sites_reached": 25,
+      "total_sites": 25,
+      "bad": []
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "free_centres": 1085404,
+      "sites_reached": 25,
+      "total_sites": 25,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "rect": [
+      170,
+      320,
+      104,
+      64
+    ],
+    "from": "Western Approach",
+    "to": "Mooring Customs Beacon",
+    "conservative_hull": [
+      31,
+      27
+    ],
+    "distance_before": 192,
+    "distance_after": 280,
+    "all_sites_still_reachable": true,
+    "return_route": true
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "rect": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "bytes": 71137,
+      "sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7",
+      "indexed_material_pixel_parity": 2097152
+    },
+    {
+      "name": "01-ferry-and-crane.png",
+      "rect": [
+        95,
+        270,
+        480,
+        420
+      ],
+      "bytes": 7380,
+      "sha256": "668edd71d3dff7f7da939802169b23b5a39ae25984993ce48d9868ee73b3bc28",
+      "indexed_material_pixel_parity": 201600
+    },
+    {
+      "name": "02-lift-cage.png",
+      "rect": [
+        640,
+        405,
+        295,
+        385
+      ],
+      "bytes": 8574,
+      "sha256": "fc07fcf5b0c76b37dd3f87349c426add74074f62410ade99a91eaa71324cae7f",
+      "indexed_material_pixel_parity": 113575
+    },
+    {
+      "name": "03-opposed-bascule-throat.png",
+      "rect": [
+        250,
+        700,
+        620,
+        440
+      ],
+      "bytes": 9952,
+      "sha256": "62a557fd0c6a082c5cb4b9db31a14d4878f17b17170b35f84a60fa38f8eebc5d",
+      "indexed_material_pixel_parity": 272800
+    },
+    {
+      "name": "04-rotary-indexer.png",
+      "rect": [
+        645,
+        1160,
+        284,
+        385
+      ],
+      "bytes": 9369,
+      "sha256": "f56576d56193302906ca44859cd1bfcbdce79b37c32d7219c1afdfc522a8c0b5",
+      "indexed_material_pixel_parity": 109340
+    },
+    {
+      "name": "05-customs-and-dispatch.png",
+      "rect": [
+        650,
+        1510,
+        284,
+        465
+      ],
+      "bytes": 8651,
+      "sha256": "6b11d9339e1b7d10ca30d028b500dcbcc46e01b1ea08cf6ed7c6096bcce469c8",
+      "indexed_material_pixel_parity": 132060
+    },
+    {
+      "name": "06-underinvert-return.png",
+      "rect": [
+        90,
+        1520,
+        555,
+        470
+      ],
+      "bytes": 9077,
+      "sha256": "2317798c43842fc528a027913f86317053e251b20b3c23865e892aac75f0b417",
+      "indexed_material_pixel_parity": 260850
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "PENDING",
+  "github_actions_exact_head": "NOT-CHECKED",
+  "proof": "Exhaustive source cells, 4-neighbour bottom-rooting, disjoint rectangle replay, three literal full-envelope 4-neighbour reachability and physical obstruction detour; source-indexed PNG parity."
+}
