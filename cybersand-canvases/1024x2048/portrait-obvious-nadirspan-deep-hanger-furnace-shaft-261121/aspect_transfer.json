@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "programme": "PORTRAIT-001",
+  "creator": "B",
+  "difficulty": "OBVIOUS",
+  "source": {
+    "repository": "techrote/sandmapsreference",
+    "pr": 146,
+    "head": "c6a83f6fa0545fc3a29058341d14d7cf2f412c29",
+    "path": "cybersand-canvases/2048x1024/original-industrial-foundry-wide-nadirspan-ceiling-anchored-extrusion-261121/",
+    "dimensions": [
+      2048,
+      1024
+    ],
+    "material_plane_sha256": "d8e82b74ce9d19bf3df0a86d30bb510e20c28f767b3001b5e49a5a304e562849"
+  },
+  "target": {
+    "dimensions": [
+      1024,
+      2048
+    ],
+    "path": "cybersand-canvases/1024x2048/portrait-obvious-nadirspan-deep-hanger-furnace-shaft-261121/",
+    "material_plane_sha256": "b19c8c358dd33e7a6aac284eedbea0503dbe54f62bae67953681684ad2c6bc1d",
+    "seed": 202611211336
+  },
+  "base_repository_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "69209acaffb34ebe18c45e19290b5976b7fb2c82",
+  "preserved": [
+    "Ceiling-/overhang-rooted loads supporting every major machine with actual structural material",
+    "Ore handling, a sealed hot furnace, suspended ladle, three unequal extrusion rotors, enclosed quench and freight davit",
+    "Maintenance/repair below heavy machinery, substantial deliberately vacant dry space",
+    "Two flight lanes with a blocking-obstruction detour and accessible recovery points"
+  ],
+  "transformed": [
+    "One nearly horizontal continuous overhead source roof becomes seven unequal and alternating cliff-anchored ceiling overhangs down a deep shaft",
+    "Source west-to-east furnace→ladle→caster→quench→freight causality becomes upper-to-lower cross-shaft process adjacency",
+    "Long low-altitude source return becomes a pair of alternately entered sidewall recovery galleries alongside the central descent",
+    "Exposed extrusion wheels are staged in an asymmetrical vertical cascade with individual engineering load paths"
+  ],
+  "discarded": [
+    "Source original 2048-wide continuous shallow roof silhouette",
+    "Original exact geometry, coordinates, material placement and source shortest-flight path",
+    "East rim extraction location and broad continuous undercroft"
+  ],
+  "newly_introduced": [
+    "Tall open central cargo shaft with unequal side-wall mechanical staging",
+    "Three different rotor arrangements separated across two elevations",
+    "Sealed mid-depth quench receiver and descending dispatch davit",
+    "Entered upper and lower interlocks suitable for a real material obstruction experiment"
+  ],
+  "preservation_scale": "Native 1:1 Midge material-cell scale, 1024×2048; no rotation, crop, stretch, coordinate reuse or image transplant",
+  "navigation": {
+    "hulls": [
+      [
+        19,
+        15
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        31,
+        27
+      ]
+    ],
+    "named_sites": 18,
+    "obstruction_xywh": [
+      450,
+      980,
+      200,
+      130
+    ],
+    "direct_steps": 319,
+    "obstructed_steps": 501,
+    "return_available": true
+  },
+  "qualification": "SOURCE-STATIC-PASS; NATIVE-UNTESTED",
+  "acceptance": "Draft/HOLD; independent Art/Technical/Shepherd and runtime gates open"
+}
