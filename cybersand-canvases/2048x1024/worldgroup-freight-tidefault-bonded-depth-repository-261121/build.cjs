@@ -97,6 +97,12 @@ V(93,506,1860,60);V(104,301,1840,56);V(88,811,1875,52);
 V(517,350,89,536);V(1327,355,93,532);
 for(const [x,y] of Object.values(sites))V(x-29,y-25,59,51);
 
+/* Two independent cliff-rooted service spines physically preserve
+   entered archive rooms and the workers' town. The long top inspection
+   canopy bridges, rather than closes, the future authoring void. */
+St(68,607,640,14);St(924,607,94,15);St(1182,618,49,15);
+St(1413,612,562,15);St(1651,624,315,15);
+St(68,270,1908,12);
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
 let seen=new Uint8Array(N),q=new Int32Array(N),front=0,back=0;
