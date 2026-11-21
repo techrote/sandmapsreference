@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "kind": "literal exact-hull 4-neighbour BFS, qualitative routes",
+  "extent": [
+    2048,
+    1024
+  ],
+  "spawn": "Rover clinic spawn",
+  "sites": {
+    "Rover clinic spawn": [
+      174,
+      584
+    ],
+    "Medical assay": [
+      352,
+      588
+    ],
+    "West observation": [
+      444,
+      466
+    ],
+    "Left winch apex": [
+      596,
+      238
+    ],
+    "Drydock loader": [
+      520,
+      733
+    ],
+    "Keel aft entrance": [
+      684,
+      587
+    ],
+    "Port ballast control": [
+      856,
+      588
+    ],
+    "Upper aft aisle": [
+      830,
+      488
+    ],
+    "Midship laboratory": [
+      1001,
+      584
+    ],
+    "Keel drive control": [
+      1066,
+      584
+    ],
+    "Midship control bridge": [
+      1076,
+      308
+    ],
+    "Ship upper research": [
+      1135,
+      478
+    ],
+    "Forward biocustody": [
+      1284,
+      579
+    ],
+    "Fore access": [
+      1448,
+      516
+    ],
+    "Bow loading": [
+      1531,
+      588
+    ],
+    "Quarantine receiving": [
+      1631,
+      581
+    ],
+    "Sterile exit": [
+      1754,
+      581
+    ],
+    "Eastern relief ward": [
+      1858,
+      583
+    ],
+    "Evacuation beacon": [
+      1995,
+      506
+    ],
+    "Open sky bypass": [
+      1001,
+      234
+    ],
+    "Drydock basin": [
+      977,
+      831
+    ],
+    "Port keel underpass": [
+      637,
+      813
+    ],
+    "Centre deep landing": [
+      1079,
+      909
+    ],
+    "West shaft mouth": [
+      344,
+      705
+    ],
+    "West shaft bottom": [
+      346,
+      885
+    ],
+    "West diagnostic basement": [
+      232,
+      914
+    ],
+    "East shaft mouth": [
+      1723,
+      700
+    ],
+    "East shaft bottom": [
+      1723,
+      891
+    ],
+    "Eastern archive": [
+      1847,
+      927
+    ],
+    "Deep return": [
+      1100,
+      932
+    ],
+    "West survey": [
+      48,
+      755
+    ],
+    "East survey": [
+      2017,
+      753
+    ],
+    "Outer hull inspection": [
+      1346,
+      333
+    ],
+    "Upper mast transfer": [
+      594,
+      307
+    ]
+  },
+  "envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "BFS": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1629706,
+      "passed": 34,
+      "total": 34,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1586684,
+      "passed": 34,
+      "total": 34,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1511134,
+      "passed": 34,
+      "total": 34,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "xyxy": [
+      1046,
+      567,
+      1088,
+      609
+    ],
+    "solid": 58,
+    "blocked_target": "Keel drive control",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1507262,
+      "passed": 33,
+      "total": 34,
+      "bad": [
+        {
+          "name": "Keel drive control",
+          "xy": [
+            1066,
+            584
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "paths": {
+    "main": [
+      "Rover clinic spawn",
+      "Medical assay",
+      "Keel aft entrance",
+      "Port ballast control",
+      "Midship laboratory",
+      "Keel drive control",
+      "Forward biocustody",
+      "Quarantine receiving",
+      "Eastern relief ward",
+      "Evacuation beacon"
+    ],
+    "sky": [
+      "West observation",
+      "Open sky bypass",
+      "Outer hull inspection",
+      "Evacuation beacon"
+    ],
+    "under": [
+      "West shaft mouth",
+      "West shaft bottom",
+      "West diagnostic basement",
+      "Drydock basin",
+      "Deep return",
+      "East shaft bottom",
+      "East shaft mouth"
+    ]
+  },
+  "caveat": "Site membership and source-grid 4-connectedness checked, not individual pairwise directed flight dynamics"
+}

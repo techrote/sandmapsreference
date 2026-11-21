@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-frontier-wide",
+  "map_role": "inhabited full side-elevation survey vessel on grounded unequal dock cradles between medical settlement and sterile freight worktown",
+  "anchor_donors": [],
+  "macro_topology": "landlocked excavated drydock holding multi-deck vessel and below-grade work bays",
+  "density_profile": "edge-dense medical and sterile stations surrounding broad editable drydock basin; compact hull chamber machinery",
+  "route_grammar": {
+    "primary": "west medical via aft vessel entered decks to east sterile freight/evacuation",
+    "alternatives": [
+      "open high overflight bypass of complete ship",
+      "two fully entered service shafts and open drydock basin"
+    ],
+    "obstruction": "Keel drive control",
+    "named_literal_sites": 34
+  },
+  "strong_motifs": [
+    "tapered survey vessel with usable upper and lower interiors",
+    "physically rooted twin unequal bearing cradles",
+    "distinct left heavy winch and right freight derrick",
+    "two entered underground recovery shafts",
+    "vast open central basin framed by dense edge settlements"
+  ],
+  "interesting_relationships": [
+    "ship itself is a functional people-scale research district, unlike a merely scenic landmark",
+    "left medical and right quarantine facilities differ in material rooms and logistics",
+    "load paths emerge from actual geological bottom instead of simulated flying boat",
+    "three independently usable altitude layers survive one blocked hull operation"
+  ],
+  "authoring_affordances": [
+    "unfurnished dock floor permits manual arrival or convoy encounters",
+    "unused ship foredeck suits Gentek modular hull grammar",
+    "deep hall pockets accept later NPC settlements",
+    "removable vessel support provides failure setpiece"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Keel drive control",
+      "region": [
+        1010,
+        555,
+        1130,
+        650
+      ],
+      "type": "machine activation / lockdown",
+      "scripted": false
+    },
+    {
+      "name": "Unequal dock cradle",
+      "region": [
+        725,
+        730,
+        855,
+        896
+      ],
+      "type": "support failure",
+      "scripted": false
+    },
+    {
+      "name": "East sterile arrival",
+      "region": [
+        1580,
+        540,
+        1940,
+        661
+      ],
+      "type": "quarantine holdout",
+      "scripted": false
+    },
+    {
+      "name": "Lower assay",
+      "region": [
+        875,
+        890,
+        1255,
+        988
+      ],
+      "type": "salvage recovery",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Grounded asymmetric full-hull vessel as nested inhabitable level, a twin-pier engineering grammar and 3-altitude navigable drydock for authored event and modular parts.",
+  "similarity_avoidance": "A full grounded drydock with entered vessel rather than Serrate's gate corridor, Orison's islands, Nivelle's suspended structures or Cairnstep's altitude staircase",
+  "diversity_axes": {
+    "macro_topology": "drydock",
+    "altitude_grammar": "tri_level",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "layered",
+    "landmark_family": "vessel",
+    "support_form": "twin_pier",
+    "environment_relation": "geological",
+    "incompleteness": "editable_gaps"
+  },
+  "source_grid_sha256": "ca510bbe3bb4878eebf4f3e777b86dd95178e8aef3d8895876d5a0e9f59932b7",
+  "native": "NATIVE-UNTESTED"
+}

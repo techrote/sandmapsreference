@@ -1,0 +1,324 @@
+{
+  "concept": "Arid Helm - Tectonic Vessel Drydock",
+  "source": "original/scifi-frontier-wide",
+  "seed": 7100977,
+  "accepted_engine_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "grid_sha256": "ca510bbe3bb4878eebf4f3e777b86dd95178e8aef3d8895876d5a0e9f59932b7",
+  "setup_sha256": "6cc700c0b8dfeb0337c4c7fe49aed39c8e4512261b92d4f9d77355e39fe3560c",
+  "histogram": {
+    "49": 68166,
+    "62": 48061,
+    "63": 1112,
+    "68": 30528,
+    "77": 561,
+    "79": 930,
+    "100": 83874,
+    "101": 33938,
+    "121": 5408,
+    "129": 10028,
+    "130": 3604,
+    "131": 8211
+  },
+  "rectangle_count": 1533,
+  "work_cells": 294421,
+  "setup_bytes": 29083,
+  "accepted_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "construction_work": 32000000
+  },
+  "grounded_final_cells": 294421,
+  "detached_final_cells": 0,
+  "liquid_mobile_falling_reactive": 0,
+  "provisional_removed": 53448,
+  "provisional_groups": 18,
+  "footprints": {
+    "clinic": 14829,
+    "winch": 23706,
+    "ship": 57509,
+    "quarantine": 11110,
+    "deep": 23050
+  },
+  "literal_sites": {
+    "Rover clinic spawn": [
+      174,
+      584
+    ],
+    "Medical assay": [
+      352,
+      588
+    ],
+    "West observation": [
+      444,
+      466
+    ],
+    "Left winch apex": [
+      596,
+      238
+    ],
+    "Drydock loader": [
+      520,
+      733
+    ],
+    "Keel aft entrance": [
+      684,
+      587
+    ],
+    "Port ballast control": [
+      856,
+      588
+    ],
+    "Upper aft aisle": [
+      830,
+      488
+    ],
+    "Midship laboratory": [
+      1001,
+      584
+    ],
+    "Keel drive control": [
+      1066,
+      584
+    ],
+    "Midship control bridge": [
+      1076,
+      308
+    ],
+    "Ship upper research": [
+      1135,
+      478
+    ],
+    "Forward biocustody": [
+      1284,
+      579
+    ],
+    "Fore access": [
+      1448,
+      516
+    ],
+    "Bow loading": [
+      1531,
+      588
+    ],
+    "Quarantine receiving": [
+      1631,
+      581
+    ],
+    "Sterile exit": [
+      1754,
+      581
+    ],
+    "Eastern relief ward": [
+      1858,
+      583
+    ],
+    "Evacuation beacon": [
+      1995,
+      506
+    ],
+    "Open sky bypass": [
+      1001,
+      234
+    ],
+    "Drydock basin": [
+      977,
+      831
+    ],
+    "Port keel underpass": [
+      637,
+      813
+    ],
+    "Centre deep landing": [
+      1079,
+      909
+    ],
+    "West shaft mouth": [
+      344,
+      705
+    ],
+    "West shaft bottom": [
+      346,
+      885
+    ],
+    "West diagnostic basement": [
+      232,
+      914
+    ],
+    "East shaft mouth": [
+      1723,
+      700
+    ],
+    "East shaft bottom": [
+      1723,
+      891
+    ],
+    "Eastern archive": [
+      1847,
+      927
+    ],
+    "Deep return": [
+      1100,
+      932
+    ],
+    "West survey": [
+      48,
+      755
+    ],
+    "East survey": [
+      2017,
+      753
+    ],
+    "Outer hull inspection": [
+      1346,
+      333
+    ],
+    "Upper mast transfer": [
+      594,
+      307
+    ]
+  },
+  "actor_spawn": [
+    174,
+    584
+  ],
+  "exact_hull_BFS": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1629706,
+      "passed": 34,
+      "total": 34,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1586684,
+      "passed": 34,
+      "total": 34,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1511134,
+      "passed": 34,
+      "total": 34,
+      "bad": []
+    }
+  ],
+  "real_obstruction": {
+    "xyxy": [
+      1046,
+      567,
+      1088,
+      609
+    ],
+    "material": 58,
+    "excluded": "Keel drive control",
+    "BFS": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1507262,
+      "passed": 33,
+      "total": 34,
+      "bad": [
+        {
+          "name": "Keel drive control",
+          "xy": [
+            1066,
+            584
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 47367,
+      "sha256": "b881b04cdb170f5380880dabd69f5f45ca881aa1b0201a45634a224f0dcdd16e"
+    },
+    {
+      "name": "01-west-rover-medical.png",
+      "bytes": 11866,
+      "sha256": "d9ee8fed34cd04ab36674f29975cbd7edeebfaeada7a8cab22b8a24ac656fec5"
+    },
+    {
+      "name": "02-survey-vessel-aft.png",
+      "bytes": 12068,
+      "sha256": "22548721917c1039ce10af3324f377a0f889dbaa4a306e04bc8777ea298b191b"
+    },
+    {
+      "name": "03-entered-keel-research.png",
+      "bytes": 10010,
+      "sha256": "fd83f8ad5887d1b7a8350d1569934598e9a34ade4c28cb6c3c0fc8d43820529a"
+    },
+    {
+      "name": "04-quarantine-departure.png",
+      "bytes": 6361,
+      "sha256": "f6badeba127fcf0121da97da6ee67bf9c7a017e122e410a3c933b13f3430fc63"
+    },
+    {
+      "name": "05-deep-drydock-bays.png",
+      "bytes": 14411,
+      "sha256": "ad04e1782ce2edf12c471279234f32a059f9a89396a6ca499eb01fe684ff1a34"
+    }
+  ],
+  "crops": [
+    [
+      "01-west-rover-medical",
+      60,
+      435,
+      610,
+      425
+    ],
+    [
+      "02-survey-vessel-aft",
+      560,
+      285,
+      650,
+      550
+    ],
+    [
+      "03-entered-keel-research",
+      775,
+      290,
+      715,
+      550
+    ],
+    [
+      "04-quarantine-departure",
+      1475,
+      410,
+      565,
+      460
+    ],
+    [
+      "05-deep-drydock-bays",
+      150,
+      760,
+      1750,
+      260
+    ]
+  ],
+  "materials": "Accepted immovable Solid/None construction only; no fluids, falling supports, fire or lava",
+  "native": "NATIVE-UNTESTED",
+  "static": "CREATOR-STATIC-PASS",
+  "independent_specialists": "Art/Tech/Shepherd pending"
+}
