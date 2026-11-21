@@ -78,8 +78,9 @@ function buildWorld(){
  line(1813,758,1840,569,9,M.frame);line(1840,569,1984,604,8,M.steel);
  rect(1849,551,21,13,M.amber);rect(1961,622,43,9,M.ivory);
  // Five broad recovery apertures and an explicit high/low passage (no gate closing).
- for(const [x,down]of [[154,850],[451,848],[1622,838],[1900,845]])
-  rect(x-56,691,112,down-678,0);
+ for(const [x,down]of [[154,850],[451,848]])rect(x-56,691,112,down-678,0);
+ for(const [x,down]of [[1622,838],[1900,845]])rect(x-56,609,112,down-596,0);
+ rect(1256,216,142,739,0); // full-height entered lower salvage recovery chimney
  // Deep work equipment is rooted at shop base and survives the last relief cut.
  for(const [x,y]of [[72,962],[352,962],[1534,962],[1828,966]]){
   rect(x,y,44,10,M.iron);rect(x+12,y-11,16,11,M.amber);
@@ -87,19 +88,19 @@ function buildWorld(){
 
  const sites=[
   ["West arrival",100,591],["West ticket ward",205,626],
-  ["West operator desk",415,550],["West upper signal",596,330],
-  ["West cliff office",685,516],["West engineering workshop",494,918],
+  ["West operator desk",415,550],["West upper signal",504,320],
+  ["West cliff office",712,514],["West engineering workshop",494,918],
   ["West entrant recovery",154,816],["West nearfield service",116,906],
-  ["West switchshaft",452,800],["West low yard",647,778],
-  ["West high vestibule",885,366],["Upper severable gate",1034,370],
-  ["East high vestibule",1206,367],["East signal relay",1430,339],
-  ["East cliff operations",1321,537],["East west customs",1554,617],
-  ["East customs signal",1701,630],["East departure ward",1964,638],
+  ["West switchshaft",452,800],["West low yard",808,775],
+  ["West high vestibule",922,352],["Upper severable gate",1034,370],
+  ["East high vestibule",1206,367],["East signal relay",1470,331],
+  ["East cliff operations",1256,538],["East west customs",1635,580],
+  ["East customs signal",1700,586],["East departure ward",1964,638],
   ["East works underfloor",1868,913],["East recovery shaft",1900,814],
   ["East shaft one",1622,815],["East first workshop",1568,913],
   ["West low gate approach",824,771],["Low escape gate",1026,775],
-  ["East low gate approach",1210,775],["West salvage",833,886],
-  ["East salvage",1257,889],["Outbound finish",2015,646]
+  ["East low gate approach",1210,775],["West salvage",872,886],
+  ["East salvage",1308,893],["Outbound finish",2015,646]
  ];
  const obs=[984,319,112,158];
  const crops=[["overview.png",0,0,W,H],
