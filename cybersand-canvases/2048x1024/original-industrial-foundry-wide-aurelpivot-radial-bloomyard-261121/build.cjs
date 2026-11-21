@@ -110,7 +110,7 @@ function world(){
  for(let pass=0;pass<5;pass++){
    let cs=orphan();if(cs.length===0)break;
    for(const part of cs){
-     let pick=part.find(k=>{let x=k%W;return !sites.some(p=>Math.abs(x-p.x)<40);});
+     let pick=part.find(k=>{let x=k%W;return !sites.some(p=>Math.abs(x-p.x)<21 && p.y>=((k/W)|0)-20);});
      if(pick===undefined)pick=part[0];
      let x=pick%W,y=pick/W|0;b(x,y,3,H-y,68);tethers++;
    }
