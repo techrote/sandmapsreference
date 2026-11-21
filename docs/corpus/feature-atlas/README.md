@@ -7,7 +7,7 @@ Authority: [Feature Atlas #200](https://github.com/techrote/sandmapsreference/is
 
 - `states.v1.jsonl`: one feature *state* per line; seven independently reviewed REWORK baselines and five independently PASS control portraits. The feature ID is stable; state ID is `feature_id@exact40characterPortraitHEAD`. Revisions append, **never replace** the baseline.
 - `manifest.v1.json`: exact paired portrait and donor revisions, setup hashes, counts and scope. Does not infer newer donor revisions.
-- `schema.v1.json`: versioned JSON-Schema shape, plus `validate.mjs` for offline identity, exact-HEAD, uniqueness, bounds, provenance, lineage and manifest consistency.
+- `schema.v1.json`: versioned JSON-Schema shape, plus `validate.mjs` for offline identity, exact-HEAD, uniqueness, bounds, provenance, lineage and manifest consistency. `baseline.lock.v1.json` additionally pins the original 38 JSONL lines by their Git blob SHA-1, preventing silent edits/deletions when subsequent repair states are appended.
 - `astra-handoff.v1.json`: advisory DO-PRESERVE / DO-REPAIR / DO-NOT-FILL / DO-NOT-ASSERT feature-state references with no unreviewed map changes.
 
 Run `node docs/corpus/feature-atlas/validate.mjs` from any directory with Node 18+; requires no packages. Validator checks **metadata integrity**, not source raster parity, Midge physics or independent reviewer authenticity. Reviewer comments and source Setup are the authority. No source-map material is copied into this branch.
@@ -21,7 +21,7 @@ Each record cites a full 40-SHA portrait HEAD and donor HEAD, exact map folder, 
 ## Repair-state protocol
 
 1. Before changing a portrait, retain its immutable `BASELINE` feature states and exact-HEAD reviewer URLs. Portrait artists own their own stacked child branches. This atlas manager edits **only** this sidecar.
-2. For any changed child HEAD, fetch the live child PR and parent donor, inspect exact committed Setup + crop pixel evidence and separate independent reviewer comments. Append a new `POST_REPAIR` state using **the same feature_id**, new `state_id`, `lineage.previous_state_id` and `lineage.before_state_id`. Never rewrite earlier lines, reassign old review URLs or infer a new independent PASS.
+2. For any changed child HEAD, fetch the live child PR and parent donor, inspect exact committed Setup + crop pixel evidence and separate independent reviewer comments. Append a new `POST_REPAIR` state using **the same feature_id**, new `state_id`, `provenance.material_pr` (stacked repair PR), `provenance.parent_portrait_head` (original parent revision), `lineage.previous_state_id` and `lineage.before_state_id`. Never rewrite earlier lines, reassign old review URLs or infer a new independent PASS.
 3. Record child-branch provenance in lineage.notes and update the manifest and advisory export; re-run the validator. If a claim has no exact feature bbox, leave it null. Conflicting or incomplete evidence is `PENDING`/`DISPUTED`.
 4. Request independent Art and Technical evidence rather than self-approving. State changes do not establish native Workbench/Godot/Rapier collision, dynamics or cold save/reopen. Owner alone decides acceptance.
 
