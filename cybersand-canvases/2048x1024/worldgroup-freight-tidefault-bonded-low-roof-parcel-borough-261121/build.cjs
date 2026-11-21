@@ -125,7 +125,12 @@ for(const [x,y,w,h] of [
  [331,802,90,91],[744,799,96,93],[1202,799,101,93],
  [1622,798,99,93],[54,809,84,94],[1950,807,65,97]
 ])V(x,y,w,h);
-V(54,822,1910,59); /* full deep recovery line */
+V(54,822,1910,59); /* continuous deep recovery airway, rerouted by grounded ribs */
+/* Five independent vertical load-path ribs bridge the emergency underworks.
+   They remain rooted after excavating the lower corridors; all hall roofs
+   must be genuinely founded, rather than cosmetically hovering. */
+for(const [x,y] of [[116,614],[493,572],[863,630],[1344,547],[1744,627]])
+ C(x,y,30,922-y);
 for(const [x,y] of Object.values(sites))V(x-37,y-34,75,69);
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
 // "solid" machinery unsupported by any connected load path.
