@@ -155,6 +155,28 @@ function layoutWorld(){
  b(652,1070,74,74,0); // lower truss east bearing gate
  // Full conservative site envelope clearing is *literal* and before support
  // component pruning. Never search for a shifted replacement site.
+
+ // R6 second pass: pulley-anchored opposed-bank overhead cable, with an
+ // engineered open flight exchange seam rather than a solid blocking wall.
+ b(100,647,60,21,58);b(141,636,16,106,68);b(140,634,40,12,62);
+ b(860,638,17,111,68);b(860,637,65,21,58);b(840,633,45,12,62);
+ for(const [cx,cy] of [[164,653],[861,651]]){
+  for(const [xa,ya,xb,yb] of [[-15,-6,-9,-14],[-9,-14,9,-14],[9,-14,15,-6],[15,-6,15,7],[15,7,8,15],[8,15,-9,15],[-9,15,-15,7],[-15,7,-15,-6]])
+   l(cx+xa,cy+ya,cx+xb,cy+yb,5,117);
+  b(cx-5,cy-5,10,10,79);
+ }
+ l(144,647,100,705,7,117);l(876,642,923,699,7,117);
+ for(const [xa,ya,xb,yb] of [[179,652,296,661],[296,661,425,670],[425,670,582,673],[582,673,728,670],[728,670,845,650]])l(xa,ya,xb,yb,6,117);
+ for(const [xa,ya,xb,yb] of [[180,664,296,672],[296,672,425,681],[425,681,582,685],[582,685,728,681],[728,681,845,662]])l(xa,ya,xb,yb,4,68);
+ l(280,668,280,744,6,68);l(403,681,403,755,6,68);
+ // Right receiver is attached through bank plate + pulley, not a full-height
+ // hanger that traps the genuine ladle-service flight pocket.
+ b(371,671,56,13,62);b(395,685,11,47,68);
+ b(812,664,36,14,62);
+ b(436,656,13,33,62);b(440,663,8,8,79);
+ b(560,655,13,33,62);b(559,664,9,9,79);
+ b(476,629,61,83,0); // conservative 31x27 overhead service break
+
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
  const solid=id=>id!==0&&id!==3&&id!==8,seen=new Uint8Array(g.length),q=new Int32Array(g.length);let a=0,z=0;
  const add=i=>{if(i>=0&&i<g.length&&solid(g[i])&&!seen[i]){seen[i]=1;q[z++]=i;}};

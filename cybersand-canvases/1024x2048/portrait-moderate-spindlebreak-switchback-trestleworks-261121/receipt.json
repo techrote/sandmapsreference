@@ -15,32 +15,32 @@
     2048
   ],
   "cells": 2097152,
-  "source_grid_sha256": "1d788c0193e8b9e6511ad6c81bb0a7c5533d539deed73747beb9b80716451ce9",
-  "setup_sha256": "4dc2ab471ce88794b94a16afc3398ef9976304f24456fc432203203d8e33f943",
-  "setup_bytes": 26135,
-  "rectangles": 1330,
-  "construction_work": 840248,
+  "source_grid_sha256": "ae2eaef173545b885003d1edd9bcf8d42d933803da3054ecbd79ef0d705d84f8",
+  "setup_sha256": "1689cf219efb87fcebc9c13d2050e37b5e9df79a0ab6d2a95ac74ceb18c04d72",
+  "setup_bytes": 35692,
+  "rectangles": 1854,
+  "construction_work": 858895,
   "material_histogram": {
-    "0": 1256904,
+    "0": 1238257,
     "3": 2542,
     "8": 2645,
-    "58": 132788,
-    "62": 33736,
+    "58": 132939,
+    "62": 35002,
     "65": 15509,
-    "68": 30426,
-    "69": 3870,
+    "68": 38714,
+    "69": 4388,
     "76": 672,
-    "79": 1013,
-    "100": 549386,
+    "79": 1470,
+    "100": 549280,
     "104": 26237,
-    "117": 23957,
+    "117": 32030,
     "131": 17467
   },
   "ground": {
-    "total": 835061,
-    "rooted": 835061,
+    "total": 853708,
+    "rooted": 853708,
     "detached": 0,
-    "pruned_provisional": 16088
+    "pruned_provisional": 8742
   },
   "fluid": {
     "water": 2542,
@@ -54,8 +54,8 @@
         19,
         15
       ],
-      "valid_centres": 1048548,
-      "connected_centres": 994952,
+      "valid_centres": 1006465,
+      "connected_centres": 942116,
       "passed": 21,
       "sites": [
         {
@@ -212,8 +212,8 @@
         23,
         19
       ],
-      "valid_centres": 1003334,
-      "connected_centres": 959504,
+      "valid_centres": 957661,
+      "connected_centres": 904819,
       "passed": 21,
       "sites": [
         {
@@ -370,8 +370,8 @@
         31,
         27
       ],
-      "valid_centres": 919258,
-      "connected_centres": 886637,
+      "valid_centres": 866801,
+      "connected_centres": 827994,
       "passed": 21,
       "sites": [
         {
@@ -535,8 +535,8 @@
       31,
       27
     ],
-    "valid_centres": 904843,
-    "connected_centres": 872222,
+    "valid_centres": 852386,
+    "connected_centres": 813579,
     "passed": 21,
     "sites": [
       {
@@ -740,7 +740,7 @@
         {
           "from": "cable west launch",
           "to": "upper cable service gap",
-          "steps": 144
+          "steps": 168
         },
         {
           "from": "upper cable service gap",
@@ -758,7 +758,7 @@
           "steps": 40
         }
       ],
-      "total_steps": 559,
+      "total_steps": 583,
       "clear_and_connected": true
     },
     "low": {
@@ -851,7 +851,7 @@
         2048
       ],
       "bytes": 2099836,
-      "sha256": "89d030dd011da58cedf5f766cfc4cb5d50192b6d8df7c65f5144c964aff805ce"
+      "sha256": "f3fdb7ff7707423b65b31d6e0efc94eaf2c21703ab81e3990c9249412839e81f"
     },
     "01-ore-intake.png": {
       "xywh": [
@@ -871,17 +871,17 @@
         370
       ],
       "bytes": 304266,
-      "sha256": "5e1aa836b1c803972619fcaeea5fa754dff97a04364ab35f36972b60f7e1573e"
+      "sha256": "0a644593cadbc5b65a6ffbb59c09c3fc61a3522e63c41582053f23dc8446ebbe"
     },
     "03-high-cableway.png": {
       "xywh": [
         100,
-        735,
+        610,
         825,
-        260
+        385
       ],
-      "bytes": 215251,
-      "sha256": "1b6360a9fea3838d1bd081c3184df2eaedb441f4067685044c4dacd24cb08c55"
+      "bytes": 318506,
+      "sha256": "ea8121f3d46552395edd9e315dcea8723e82d471417dbd36c313afd204d8552d"
     },
     "04-lower-trestle.png": {
       "xywh": [
@@ -914,6 +914,6 @@
       "sha256": "7aa7b54b99f58a66534754e2150f73b6f7d3f59486aaa965545682f3588b79f9"
     }
   },
-  "pixel_parity": 3518802,
+  "pixel_parity": 3621927,
   "native": "NATIVE-UNTESTED"
 }

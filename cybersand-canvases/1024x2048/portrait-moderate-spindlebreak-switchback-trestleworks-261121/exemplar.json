@@ -54,7 +54,8 @@
     "Separate lower triangular compression-truss bays, grounded pier load paths, unlike upper tension cables, and two entered Midge bearing gates",
     "Two unlike enclosed static thermal/fluid process vessels",
     "Three unequal casting rams and a departure cable crane",
-    "Different-sized entered ore, inspection and freight cabins"
+    "Different-sized entered ore, inspection and freight cabins",
+    "Pulley-anchored opposed-bank upper hauling strands and backstay plates linking upper suspended sender to opposite receiver, with a narrowly open flight-sized mechanical exchange seam"
   ],
   "interesting_relationships": [
     "Horizontal fault crossing recomposed into a four-way vertical folded interchange rather than a generic wall-shaft descent",
@@ -66,20 +67,20 @@
     {
       "name": "Upper cable break gate",
       "region_xywh": [
-        662,
-        838,
-        126,
-        114
+        476,
+        629,
+        61,
+        83
       ],
       "use": "Airworthy cable-failure or rescue set piece"
     },
     {
       "name": "Lower truss access portal",
       "region_xywh": [
-        454,
-        1063,
-        151,
-        175
+        451,
+        1110,
+        158,
+        124
       ],
       "use": "Re-routable brace or bridge overhaul"
     },
@@ -149,8 +150,11 @@
     "parent_pr": 192,
     "parent_baseline_head": "101203a124f0ee3ac5613d38956e72f0faae8685",
     "independent_parent_review": "https://github.com/techrote/sandmapsreference/pull/192#issuecomment-7064489973",
-    "repaired_child_art": "PENDING",
+    "repaired_child_art": "PENDING EXACT NEW HEAD",
     "repaired_child_technical": "PENDING",
-    "native": "NATIVE-UNTESTED"
+    "native": "NATIVE-UNTESTED",
+    "first_child_head": "077777751d8757b127e95e028404b1cb2067f2b0",
+    "first_child_art": "REWORK",
+    "first_child_art_url": "https://github.com/techrote/sandmapsreference/pull/207#issuecomment-7069842512"
   }
 }
