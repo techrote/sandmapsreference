@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-frontier-wide",
+  "map_role": "six asymmetrically stepped dry colonial machine districts on a descending geology-controlled cascade",
+  "anchor_donors": [],
+  "macro_topology": "six unequal topographic platforms descend through a dry geological staircase to a raised east relief apron, separated by broad open air gaps",
+  "density_profile": "alternating entered machinery halls, open transfer gaps and partly unfinished lower verandas; no obligatory filler in the expansion volumes",
+  "route_grammar": {
+    "spawn": "West airlock",
+    "primary": "west rover clinic to assay to central ore sorting to biofilter to east quarantine and relief departure",
+    "alternatives": [
+      "high clear-sky bypass above all stepped thresholds",
+      "open lower transfer spaces below piers and between adjacent districts"
+    ],
+    "tested_sites": 24,
+    "obstruction": {
+      "site": "High mixing switch",
+      "box": [
+        983,
+        325,
+        1021,
+        365
+      ],
+      "unaffected_reachable": 23
+    }
+  },
+  "strong_motifs": [
+    "geology-tied six unequal decks",
+    "unrepeated asymmetric diagonal step gates",
+    "local functional ore, assay and biological custody equipment",
+    "twin rooted metal pier support",
+    "separate elevated relief dock",
+    "unfinished but deliberate lower side verandas"
+  ],
+  "interesting_relationships": [
+    "west civilian/medical decks occupy higher land than quarantine and freight",
+    "workstation families alternate with broader open transition voids",
+    "natural terrain changes set deck height and pier length",
+    "unfurnished underdeck geometry leaves room for agent-authored modular inserts"
+  ],
+  "authoring_affordances": [
+    "empty gap beside west gate for collapse edit",
+    "unused lower assay veranda",
+    "central sorter rear mezzanine for later equipment",
+    "low quarantine service veranda for human-built alternate entry"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "West threshold failure",
+      "area": [
+        320,
+        450,
+        485,
+        625
+      ],
+      "event_type": "collapse/reroute",
+      "scripted": false
+    },
+    {
+      "name": "Central sorter start-up",
+      "area": [
+        845,
+        545,
+        1145,
+        680
+      ],
+      "event_type": "machinery activation",
+      "scripted": false
+    },
+    {
+      "name": "Eastern quarantine stand",
+      "area": [
+        1570,
+        633,
+        1800,
+        765
+      ],
+      "event_type": "NPC holdout",
+      "scripted": false
+    },
+    {
+      "name": "Relief evacuation",
+      "area": [
+        1840,
+        520,
+        2030,
+        690
+      ],
+      "event_type": "arrival/departure",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Supports rule derivation for variable-height geomorphic platforms, fixed material-pier grounding, asymmetric industrial machine families, and intentionally editable lower verandas.",
+  "similarity_avoidance": "Unlike Copperwake Fault's underground three-cavity settlements, Penumbral Sink's central ring, and Vela Rift's opposed wind-sails, this map is an unbalanced dry topographic cascade of small human-scale facilities, with terrain height controlling support lengths and transitions.",
+  "diversity_axes": {
+    "macro_topology": "cascade",
+    "altitude_grammar": "high_low_bypass",
+    "density_cadence": "alternating",
+    "route_structure": "branch_rejoin",
+    "landmark_family": "gate",
+    "support_form": "multi_leg",
+    "environment_relation": "geological",
+    "incompleteness": "editable_gaps"
+  },
+  "native_status": "NATIVE-UNTESTED",
+  "source_grid_sha256": "29520625c24ec49efac6a518085abe9c9098c7825c6b19d601349f3e3654797d"
+}
