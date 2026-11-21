@@ -98,14 +98,17 @@ function world(){
  while(a<z){let i=q[a++],x=i%W;for(const k of[x?i-1:-1,x<W-1?i+1:-1,i>=W?i-W:-1,i+W<g.length?i+W:-1])if(k>=0&&solid(g[k])&&!seen[k]){seen[k]=1;q[z++]=k;}}
  let comps=[];for(let i=0;i<g.length;i++)if(solid(g[i])&&!seen[i]){let arr=[i],j=0;seen[i]=1;while(j<arr.length){let k=arr[j++],x=k%W;for(const h of[x?k-1:-1,x<W-1?k+1:-1,k>=W?k-W:-1,k+W<g.length?k+W:-1])if(h>=0&&solid(g[h])&&!seen[h]){seen[h]=1;arr.push(h);}}comps.push(arr);}return comps;}
  for(let pass=0;pass<3;pass++){let cs=components();if(!cs.length)break;for(const c of cs){let at=c[0];for(let k=0;k<c.length;k+=Math.max(1,Math.floor(c.length/1000))){let p=c[k];if((p/W|0)>(at/W|0))at=p;}let x=at%W,y=(at/W)|0;b(x,y,3,H-y,68);}}
+ // Main engineered over-dock flyway; the ship hulls and industrial machines are kept out of its main envelope.
+ b(38,650,1972,88,0);
  // Distinct waypoint graph in freely traversable zones around actual modules.
  const sites=[["West arrival",95,690],["Ore hoist",201,691],["Arc furnace face",390,690],["Ladle stage",745,687],["Caster station",1012,688],["Upper gantry west",911,598],["Upper gantry east",1198,598],["Dry-dock A lip",647,741],["Keel A inspection",767,812],["Drydock B lip",1278,735],["Keel B inspection",1390,809],["Quench watch",1527,685],["Quench service",1627,689],["Freight winch",1798,689],["East rim goal",1950,692],["West repair annex",330,714],["Centre pylon",1080,695],["East shop",1725,696]].map(([name,x,y])=>({name,x,y}));
  // Clear only authentic destination envelopes, not arbitrary moved targets.
  for(const p of sites)b(p.x-17,p.y-15,35,31,0);
  // Re-root isolated fragments only when necessary, preserving destination cells.
  for(let pass=0;pass<2;pass++){let cs=components();if(!cs.length)break;for(const c of cs){let at=c[0];for(let k=0;k<c.length;k+=Math.max(1,Math.floor(c.length/500))){let p=c[k];if((p/W|0)>(at/W|0))at=p;}let x=at%W,y=(at/W)|0;b(x,y,2,H-y,68);}}
- // Keep actual site centres and immediate whole-body clear once any load-path linking has happened.
- for(const p of sites)b(p.x-16,p.y-14,33,29,0);
+ // Preserve exact actor endpoints, then reconnect only truly isolated remnants away from every endpoint.
+ for(const p of sites)b(p.x-17,p.y-15,35,31,0);
+ for(let pass=0;pass<3;pass++){let cs=components();if(!cs.length)break;for(const c of cs){let at=-1,best=-1;for(let k=0;k<c.length;k+=Math.max(1,Math.floor(c.length/1400))){let i=c[k],x=i%W,y=(i/W)|0;if(sites.some(p=>Math.abs(p.x-x)<55))continue;if(y>best){best=y;at=i;}}if(at<0)at=c[c.length-1];let x=at%W,y=(at/W)|0;b(x,y,2,H-y,68);}}
  return {W,H,g,M,seed,sites,spawn:[95,690]};
 }
 
@@ -121,7 +124,7 @@ function audit(w,rects){
  const dx=ww>>1,dy=hh>>1,free=new Uint8Array(N);let all=0;for(let y=dy;y+hh-dy<=H;y++)for(let x=dx;x+ww-dx<=W;x++){const l=x-dx,t=y-dy,r=l+ww,b=t+hh;if(sum[b*s+r]-sum[t*s+r]-sum[b*s+l]+sum[t*s+l]===0){free[y*W+x]=1;all++;}}
  const reached=new Uint8Array(N),qq=new Int32Array(N);let first=0,last=0,sp=spawn[1]*W+spawn[0];if(free[sp]){reached[sp]=1;qq[last++]=sp;}while(first<last){let i=qq[first++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i-W,i+W])if(j>=0&&j<N&&free[j]&&!reached[j]){reached[j]=1;qq[last++]=j;}}
  const sr=sites.map(v=>({...v,clear:!!free[v.y*W+v.x],reached:!!reached[v.y*W+v.x]}));return {hull:[ww,hh],valid_centres:all,connected_centres:last,passed:sr.filter(v=>v.reached).length,sites:sr};}
- const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[953,636,106,74],blocked=route(31,27,obstruction);
+ const flight=[[19,15],[23,19],[31,27]].map(p=>route(...p,null)),obstruction=[910,654,65,76],blocked=route(31,27,obstruction);
  return {rectangles:rects.length,work,hist,rooted:b,total,detached:total-b,airfaces,direct,flight,obstruction,blocked};
 }
 
@@ -175,7 +178,7 @@ function verifyPNG(p,g,W,x,y,w,h){const v=new DataView(p.buffer,p.byteOffset,p.b
 
 function build(){
  const w=world(),support={components:0,links:0,maxLink:0},rects=encode(w.g,w.W,w.H),a=audit(w,rects);
- const direct=shortest31(w,null),detour=shortest31(w,[953,636,106,74]);
+ const direct=shortest31(w,null),detour=shortest31(w,[910,654,65,76]);
  if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||direct.steps<0||detour.steps<=direct.steps)
  throw Error("STATIC_GATE "+JSON.stringify({ground:[a.rooted,a.total],fluid:[a.airfaces,a.direct],passes:a.flight.map(v=>v.passed),blocked:a.blocked.passed,total:w.sites.length,failed:a.flight[2].sites.filter(q=>!q.reached),badBlocked:a.blocked.sites.filter(q=>!q.reached),steps:[direct.steps,detour.steps]}));
  const setup={version:2,extent:[2048,1024],actors:[{id:1,model:"midge",hash:"c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",spawn:w.spawn,options:{budget:20,mass_multiplier:1,inertia_multiplier:1,thrust_multiplier:1,torque_multiplier:1,boost_multiplier:2}}],next_id:2,selected:1,edits:rects,response:"LA-SELECTIVE",liquid_policy:[1279479895,1,1,-2102023270,1854385793,1886533889,84225930,1522979054,582168604,-646713377,-939672877,868616440,1977866421,1930370363,-2119873090,-6981196,870342995,1443932351,-1569267145,11,3,1,0,8,2,0,12,2,0,16,2,0,20,2,0,21,2,0,24,2,0,30,2,0,32,2,0,33,2,0,36,2,0,0,0],normalize:false,rule_radius:2,source:[],material:58,brush:8,fire:false};
