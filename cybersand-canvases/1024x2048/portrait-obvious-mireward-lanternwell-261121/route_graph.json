@@ -1,0 +1,705 @@
+{
+  "spawn": "Upper fault spawn",
+  "goal": "Basal export airlock",
+  "sites": [
+    {
+      "name": "Canopy arrival",
+      "xy": [
+        505,
+        185
+      ]
+    },
+    {
+      "name": "West root registry",
+      "xy": [
+        213,
+        331
+      ]
+    },
+    {
+      "name": "West inoculation bench",
+      "xy": [
+        254,
+        554
+      ]
+    },
+    {
+      "name": "East lumen interpreter",
+      "xy": [
+        782,
+        384
+      ]
+    },
+    {
+      "name": "East nursery landing",
+      "xy": [
+        777,
+        682
+      ]
+    },
+    {
+      "name": "Suspension exchange",
+      "xy": [
+        504,
+        645
+      ]
+    },
+    {
+      "name": "Atrium middle watch",
+      "xy": [
+        505,
+        821
+      ]
+    },
+    {
+      "name": "Side loop upper entry",
+      "xy": [
+        772,
+        856
+      ]
+    },
+    {
+      "name": "Side sterile riser",
+      "xy": [
+        773,
+        1000
+      ]
+    },
+    {
+      "name": "Side loop lower exit",
+      "xy": [
+        772,
+        1237
+      ]
+    },
+    {
+      "name": "Central return junction",
+      "xy": [
+        501,
+        1265
+      ]
+    },
+    {
+      "name": "Left spore assay",
+      "xy": [
+        221,
+        955
+      ]
+    },
+    {
+      "name": "West basal salvage",
+      "xy": [
+        220,
+        1400
+      ]
+    },
+    {
+      "name": "West biodiagnostic room",
+      "xy": [
+        254,
+        1537
+      ]
+    },
+    {
+      "name": "East quarantine arrival",
+      "xy": [
+        777,
+        1452
+      ]
+    },
+    {
+      "name": "East isolation wicket",
+      "xy": [
+        784,
+        1590
+      ]
+    },
+    {
+      "name": "Open lower transit",
+      "xy": [
+        509,
+        1536
+      ]
+    },
+    {
+      "name": "Rootfall lookout",
+      "xy": [
+        507,
+        1693
+      ]
+    },
+    {
+      "name": "West dry repair dock",
+      "xy": [
+        238,
+        1821
+      ]
+    },
+    {
+      "name": "East export dock",
+      "xy": [
+        774,
+        1815
+      ]
+    },
+    {
+      "name": "Basal ledger room",
+      "xy": [
+        504,
+        1855
+      ]
+    },
+    {
+      "name": "Basal export airlock",
+      "xy": [
+        509,
+        1905
+      ]
+    }
+  ],
+  "primary": [
+    "Canopy arrival",
+    "Suspension exchange",
+    "Atrium middle watch",
+    "Central return junction",
+    "Open lower transit",
+    "Basal export airlock"
+  ],
+  "branches": [
+    [
+      "Canopy arrival",
+      "West root registry",
+      "West inoculation bench",
+      "Suspension exchange"
+    ],
+    [
+      "East lumen interpreter",
+      "East nursery landing",
+      "Atrium middle watch"
+    ],
+    [
+      "Side loop upper entry",
+      "Side sterile riser",
+      "Side loop lower exit",
+      "Central return junction"
+    ],
+    [
+      "Left spore assay",
+      "West basal salvage",
+      "West biodiagnostic room",
+      "Open lower transit"
+    ],
+    [
+      "East quarantine arrival",
+      "East isolation wicket",
+      "Basal ledger room"
+    ]
+  ],
+  "exact_hull_results": [
+    {
+      "hull": [
+        19,
+        15
+      ],
+      "sites": [
+        {
+          "name": "Canopy arrival",
+          "x": 505,
+          "y": 185,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West root registry",
+          "x": 213,
+          "y": 331,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West inoculation bench",
+          "x": 254,
+          "y": 554,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East lumen interpreter",
+          "x": 782,
+          "y": 384,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East nursery landing",
+          "x": 777,
+          "y": 682,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Suspension exchange",
+          "x": 504,
+          "y": 645,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Atrium middle watch",
+          "x": 505,
+          "y": 821,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Side loop upper entry",
+          "x": 772,
+          "y": 856,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Side sterile riser",
+          "x": 773,
+          "y": 1000,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Side loop lower exit",
+          "x": 772,
+          "y": 1237,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central return junction",
+          "x": 501,
+          "y": 1265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Left spore assay",
+          "x": 221,
+          "y": 955,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West basal salvage",
+          "x": 220,
+          "y": 1400,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West biodiagnostic room",
+          "x": 254,
+          "y": 1537,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East quarantine arrival",
+          "x": 777,
+          "y": 1452,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East isolation wicket",
+          "x": 784,
+          "y": 1590,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Open lower transit",
+          "x": 509,
+          "y": 1536,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rootfall lookout",
+          "x": 507,
+          "y": 1693,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West dry repair dock",
+          "x": 238,
+          "y": 1821,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East export dock",
+          "x": 774,
+          "y": 1815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Basal ledger room",
+          "x": 504,
+          "y": 1855,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Basal export airlock",
+          "x": 509,
+          "y": 1905,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        23,
+        19
+      ],
+      "sites": [
+        {
+          "name": "Canopy arrival",
+          "x": 505,
+          "y": 185,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West root registry",
+          "x": 213,
+          "y": 331,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West inoculation bench",
+          "x": 254,
+          "y": 554,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East lumen interpreter",
+          "x": 782,
+          "y": 384,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East nursery landing",
+          "x": 777,
+          "y": 682,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Suspension exchange",
+          "x": 504,
+          "y": 645,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Atrium middle watch",
+          "x": 505,
+          "y": 821,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Side loop upper entry",
+          "x": 772,
+          "y": 856,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Side sterile riser",
+          "x": 773,
+          "y": 1000,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Side loop lower exit",
+          "x": 772,
+          "y": 1237,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central return junction",
+          "x": 501,
+          "y": 1265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Left spore assay",
+          "x": 221,
+          "y": 955,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West basal salvage",
+          "x": 220,
+          "y": 1400,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West biodiagnostic room",
+          "x": 254,
+          "y": 1537,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East quarantine arrival",
+          "x": 777,
+          "y": 1452,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East isolation wicket",
+          "x": 784,
+          "y": 1590,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Open lower transit",
+          "x": 509,
+          "y": 1536,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rootfall lookout",
+          "x": 507,
+          "y": 1693,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West dry repair dock",
+          "x": 238,
+          "y": 1821,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East export dock",
+          "x": 774,
+          "y": 1815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Basal ledger room",
+          "x": 504,
+          "y": 1855,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Basal export airlock",
+          "x": 509,
+          "y": 1905,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    },
+    {
+      "hull": [
+        31,
+        27
+      ],
+      "sites": [
+        {
+          "name": "Canopy arrival",
+          "x": 505,
+          "y": 185,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West root registry",
+          "x": 213,
+          "y": 331,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West inoculation bench",
+          "x": 254,
+          "y": 554,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East lumen interpreter",
+          "x": 782,
+          "y": 384,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East nursery landing",
+          "x": 777,
+          "y": 682,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Suspension exchange",
+          "x": 504,
+          "y": 645,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Atrium middle watch",
+          "x": 505,
+          "y": 821,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Side loop upper entry",
+          "x": 772,
+          "y": 856,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Side sterile riser",
+          "x": 773,
+          "y": 1000,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Side loop lower exit",
+          "x": 772,
+          "y": 1237,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Central return junction",
+          "x": 501,
+          "y": 1265,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Left spore assay",
+          "x": 221,
+          "y": 955,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West basal salvage",
+          "x": 220,
+          "y": 1400,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West biodiagnostic room",
+          "x": 254,
+          "y": 1537,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East quarantine arrival",
+          "x": 777,
+          "y": 1452,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East isolation wicket",
+          "x": 784,
+          "y": 1590,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Open lower transit",
+          "x": 509,
+          "y": 1536,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Rootfall lookout",
+          "x": 507,
+          "y": 1693,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "West dry repair dock",
+          "x": 238,
+          "y": 1821,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "East export dock",
+          "x": 774,
+          "y": 1815,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Basal ledger room",
+          "x": 504,
+          "y": 1855,
+          "clear": true,
+          "reached": true
+        },
+        {
+          "name": "Basal export airlock",
+          "x": 509,
+          "y": 1905,
+          "clear": true,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "obstruction": {
+    "rect": [
+      330,
+      939,
+      375,
+      107
+    ],
+    "material": 58,
+    "goal_distance_direct": 1724,
+    "goal_distance_obstructed": 2146,
+    "forced_side_gallery_path_cells": 101,
+    "crossing_at_y1000": [
+      [
+        720,
+        1000
+      ]
+    ],
+    "all_named_sites_reachable_after": 22
+  }
+}
