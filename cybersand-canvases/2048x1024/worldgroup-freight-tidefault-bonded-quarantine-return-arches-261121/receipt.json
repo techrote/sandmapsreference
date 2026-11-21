@@ -1,0 +1,321 @@
+{
+  "concept": "Tidefault Bonded Freight — Quarantine Return Arches / Fallen Evacuation Spur",
+  "original": true,
+  "seed": 120197567,
+  "engine_sha": "8d07e04459a2705a6f96c908c0b565a483cc5beb",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West return intake",
+      "Returned cargo assay",
+      "Gate ledger station",
+      "West clearing arch",
+      "Sealed exchange vestibule",
+      "Freight reel house",
+      "Quarantine classifier",
+      "Sanitation slip",
+      "Collapsed evacuation throat",
+      "East bonded return"
+    ],
+    "upper": [
+      "West dike watch",
+      "Assay signal",
+      "Central vent head",
+      "East cantilever watch",
+      "Departure marker"
+    ],
+    "interior": [
+      "Lower ledger cabinet",
+      "Hanging cargo weigh cell",
+      "Fault sorting bridge",
+      "Sealed quarantine exchange",
+      "Inner assay",
+      "Worker recovery nook",
+      "Rubble survey station"
+    ],
+    "lower": [
+      "West sump bypass",
+      "Mid freight underpass",
+      "East emergency gallery"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West return intake": [
+      130,
+      644
+    ],
+    "Returned cargo assay": [
+      330,
+      644
+    ],
+    "Gate ledger station": [
+      530,
+      644
+    ],
+    "West clearing arch": [
+      735,
+      644
+    ],
+    "Sealed exchange vestibule": [
+      930,
+      644
+    ],
+    "Freight reel house": [
+      1130,
+      644
+    ],
+    "Quarantine classifier": [
+      1330,
+      644
+    ],
+    "Sanitation slip": [
+      1530,
+      644
+    ],
+    "Collapsed evacuation throat": [
+      1745,
+      644
+    ],
+    "East bonded return": [
+      1905,
+      644
+    ],
+    "West dike watch": [
+      170,
+      485
+    ],
+    "Assay signal": [
+      545,
+      480
+    ],
+    "Central vent head": [
+      1030,
+      480
+    ],
+    "East cantilever watch": [
+      1510,
+      485
+    ],
+    "Departure marker": [
+      1880,
+      480
+    ],
+    "Lower ledger cabinet": [
+      275,
+      741
+    ],
+    "Hanging cargo weigh cell": [
+      600,
+      739
+    ],
+    "Fault sorting bridge": [
+      830,
+      742
+    ],
+    "Sealed quarantine exchange": [
+      1070,
+      743
+    ],
+    "Inner assay": [
+      1240,
+      742
+    ],
+    "Worker recovery nook": [
+      1470,
+      742
+    ],
+    "Rubble survey station": [
+      1810,
+      741
+    ],
+    "West sump bypass": [
+      270,
+      819
+    ],
+    "Mid freight underpass": [
+      1050,
+      819
+    ],
+    "East emergency gallery": [
+      1750,
+      819
+    ]
+  },
+  "material_histogram": {
+    "0": 1702997,
+    "58": 88898,
+    "62": 23670,
+    "100": 281587
+  },
+  "stable_occupied_cells": 394155,
+  "grounded": 394155,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 61348,
+  "invalid_writes": 0,
+  "rectangles": 385,
+  "rectangle_work": 394155,
+  "setup_bytes": 7905,
+  "material_plane_sha256": "45f2912489ca2090d15acc829011607ebe8aefc2502608c0355f51b2795380c8",
+  "setup_sha256": "e8e6a2c7773d955e361b61f05b71f9bfc3ec9887ed4c523bfb1f40e532e203f9",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1545765,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1520533,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 25,
+      "total": 25,
+      "free_centres": 1472191,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      680,
+      439,
+      100,
+      92
+    ],
+    "from": "West dike watch",
+    "to": "Central vent head",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 25,
+    "unreachable": [],
+    "distance_before_after": [
+      865,
+      975
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "60909c57f7f27e3b8a271040a226a06d413c8d8aeb0fa61e8cab62d0ffa1422e",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-return-arch",
+      "rect": [
+        90,
+        523,
+        430,
+        330
+      ],
+      "bytes": 36155,
+      "sha256": "8b962f9c143cea5ed8312f6d71cf9c81582c5bd07b93e63d67745db570e329bc",
+      "pixel_parity": 141900
+    },
+    {
+      "name": "02-classifier-underworks",
+      "rect": [
+        460,
+        523,
+        455,
+        345
+      ],
+      "bytes": 39860,
+      "sha256": "9ce27a4974a3c5a553e1c05904e4746e51a6b5844cf3b6396507aa2b7444b345",
+      "pixel_parity": 156975
+    },
+    {
+      "name": "03-quarantine-exchange",
+      "rect": [
+        888,
+        535,
+        442,
+        342
+      ],
+      "bytes": 38489,
+      "sha256": "80014711a7615f3e357d25bd2cb83ebc111e6c600be45dca5d4d8a6547b67da9",
+      "pixel_parity": 151164
+    },
+    {
+      "name": "04-damaged-evacuation",
+      "rect": [
+        1553,
+        555,
+        475,
+        350
+      ],
+      "bytes": 42185,
+      "sha256": "78f126f4ad82455d14f4848f6a021a28b36be4b5db15d401e7459d4d52590493",
+      "pixel_parity": 166250
+    },
+    {
+      "name": "05-two-level-return",
+      "rect": [
+        80,
+        690,
+        1870,
+        235
+      ],
+      "bytes": 110405,
+      "sha256": "00604ab9afe1fe04156e8be23de00f8e7e4b8ab35c79c09c37105e4283aba2e0",
+      "pixel_parity": 439450
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Complete material plane, lossless disjoint Setup-v2 replay, exact conservative 19x15/23x19/31x27 routes, physical obstruction detour and indexed PNG integrity/parity"
+}
