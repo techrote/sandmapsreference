@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "industrial-transit-wide",
+  "map_role": "four-island intermodal connector-grammar exemplar",
+  "anchor_donors": [],
+  "macro_topology": [
+    "islands",
+    "yard"
+  ],
+  "density_profile": "Four clustered stepped basalt freight teeth and an entered west drydock create contrasting voids",
+  "route_grammar": {
+    "main": [
+      "West Spawn",
+      "Drylocked Freighter",
+      "Crane Crown",
+      "First Pier",
+      "High Relay House",
+      "Sorter Arrival",
+      "Eastern Security",
+      "Rail Interchange",
+      "Customs Outlook"
+    ],
+    "upper": [
+      "Captain Cabin",
+      "Crane Crown",
+      "High Relay House",
+      "Sky Utility",
+      "Roof Control",
+      "Two-Chute Exit",
+      "Pier Four Landing"
+    ],
+    "lower": [
+      "Captain Cabin",
+      "Pier One Return",
+      "Pier Two Recovery",
+      "Rail Interchange"
+    ],
+    "secondary": [
+      "First Pier",
+      "Relay Forecourt",
+      "Relay Platform",
+      "Sorter Arrival",
+      "Two-Chute Exit"
+    ]
+  },
+  "strong_motifs": [
+    "distinct rock-founded industrial islands",
+    "four nonparallel rising and falling cargo transitions",
+    "separate high utility girder",
+    "entered side-on drylocked freighter",
+    "three-grade railway"
+  ],
+  "interesting_relationships": [
+    "physically separate geological supports carry independently founded freight decks",
+    "roof service truss is not a freight-cable continuation",
+    "lower actor recovery routes remain outside the upper freight hardware"
+  ],
+  "authoring_affordances": [
+    "empty under-span cavities",
+    "open Pier A expansion bay",
+    "deep side-carved alcoves in basalt teeth",
+    "multiple docked connection sites for future SWARM negotiation"
+  ],
+  "setpiece_candidates": [
+    "ship hold arrival",
+    "first ramp collapse",
+    "third-island sorting encounter",
+    "east railway departure"
+  ],
+  "procedural_exemplar_value": "Distinct root components, variable-height freight deck adapters, multi-islet connectors, human-editable empty spans for future procedural modular grammar.",
+  "similarity_avoidance": "Uses independently founded island freight nodes and uneven span classes rather than Vesper's continuous cable cascade, Warden's broken trestle or Orison's ring indexer.",
+  "diversity_axes": {
+    "macro_topology": "islands",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "clustered",
+    "route_structure": "layered",
+    "landmark_family": "gantry",
+    "support_form": "multi_leg",
+    "environment_relation": "dry",
+    "incompleteness": "modular_append_zones"
+  },
+  "geometry_source": "design.json",
+  "material_plane_sha256": "89175378f3c5af1b3592e775be70742974b2c52cce8c56aeff041571a608151b"
+}
