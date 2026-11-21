@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "title": "Galen-2 Triple-Loop Catalytic Sorting Yard",
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/industrial-hazard-wide",
+  "map_role": "Entered concentric industrial classifier among five floor-rooted yard workfaces, with sky, transfer and low recovery routes",
+  "anchor_donors": [],
+  "macro_topology": "yard",
+  "density_profile": "Distinct dense processing bays beneath a broad sparse public sky, medium-density cross-connection lane and underfloor editing recesses",
+  "route_grammar": {
+    "main": "West ingress -> reagent canopy -> rotary crown -> quench airlock -> east dispatch",
+    "alternative": "Reagent workface -> exchanger undercroft -> rotor underside -> quench overlook -> scrubber gallery -> east platform",
+    "interior": "Sorter chamber entered from open mid-level service throat and connected to upper access",
+    "obstruction": "An actual sky obstruction forces four upper-path detours but retains all exact destinations"
+  },
+  "strong_motifs": [
+    "three concentric but physically interrupted stationary classifier hoops",
+    "dry double-helix heat-exchange bay",
+    "two separately contained water and lava reference vessels",
+    "asymmetric reagent gatehouse",
+    "split-height exhaust scrubber",
+    "floor-rooted load legs and entered maintenance band"
+  ],
+  "interesting_relationships": [
+    "A centered machine landmark is practically entered, not simulated as rotating",
+    "The upper/lower alternates reconnect at six nonidentical service shafts",
+    "Two inertly sealed liquid samples interrupt the lower bypass without leaking into public air",
+    "Distinct machinery workfaces share a yard grammar instead of serial walled-off pavilions"
+  ],
+  "authoring_affordances": [
+    "Central classifier chamber and severed upper ring for later editing",
+    "Western freight pockets and eastern apron reserved for modular inserts",
+    "Accessible lower gallery for NPC chase/setpiece layouts",
+    "Service landing connections accept future human/GENTEK changes"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Classifier startup",
+      "site": [
+        1040,
+        526
+      ],
+      "kind": "machinery_activation",
+      "scripted": false
+    },
+    {
+      "name": "Quench specimen breach",
+      "site": [
+        1300,
+        682
+      ],
+      "kind": "thermal_release",
+      "scripted": false
+    },
+    {
+      "name": "Parallel-lane pursuit",
+      "site": [
+        712,
+        826
+      ],
+      "kind": "chase_corridor",
+      "scripted": false
+    },
+    {
+      "name": "East freight arrival",
+      "site": [
+        1870,
+        681
+      ],
+      "kind": "arrival_departure",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Tests open multi-ring material silhouette, floor-rooted radial grammar, lower passage interruption and recoverable upper bypass while preserving intentionally incomplete bays",
+  "similarity_avoidance": "Rather than crater annulus (Cairn), cliff-separated fault (Ilex), severed cable stations (Yarrow), buried bell caverns (Tern), or overhead suspended drydock (Moraine), this is a floor-rooted classifier yard with entered concentric machine and layered transverse routes",
+  "diversity_axes": {
+    "macro_topology": "yard",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "layered",
+    "landmark_family": "rotor",
+    "support_form": "multi_leg",
+    "environment_relation": "fluid_containment",
+    "incompleteness": "modular_append_zones"
+  },
+  "technical_status": "SOURCE-STATIC PASS; NATIVE-UNTESTED",
+  "material_rules": "Actual accepted IDs 0 empty, 3 Water, 8 Lava and inert supports 58/100/101/117/120; initial static sealing is not dynamic solver proof."
+}

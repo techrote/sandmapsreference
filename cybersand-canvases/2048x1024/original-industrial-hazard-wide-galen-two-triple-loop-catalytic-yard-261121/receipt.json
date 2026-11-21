@@ -1,0 +1,253 @@
+{
+  "title": "Galen-2 Triple-Loop Catalytic Sorting Yard",
+  "seed": 2026112111,
+  "source_repo": "techrote/sandmapsreference",
+  "base_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "extent": [
+    2048,
+    1024
+  ],
+  "final_material_cells": 2097152,
+  "material_sha256": "cf3a9ae3b87bccaa56e28bf2d66bc75f1c06275048a67d662f5da201bc443372",
+  "setup_sha256": "e3d5c86f59bb510374152b41fb12950929f08adb276441ffa3aa10147c04dd7b",
+  "setup_bytes": 42059,
+  "rectangle_count": 2166,
+  "work_cells": 653575,
+  "histogram": {
+    "0": 1443577,
+    "3": 5684,
+    "8": 4770,
+    "58": 101338,
+    "100": 245304,
+    "101": 236653,
+    "117": 56621,
+    "120": 3205
+  },
+  "structural": {
+    "total": 643121,
+    "grounded": 643121,
+    "detached": 0
+  },
+  "initial_fluid_cells": 10454,
+  "initial_fluid_open_or_mixed_faces": 0,
+  "sites": [
+    [
+      "West ingress",
+      144,
+      220
+    ],
+    [
+      "Reagent canopy",
+      330,
+      230
+    ],
+    [
+      "Reagent workface",
+      330,
+      688
+    ],
+    [
+      "Reagent recovery",
+      334,
+      829
+    ],
+    [
+      "North exchanger",
+      678,
+      228
+    ],
+    [
+      "Exchanger undercroft",
+      712,
+      685
+    ],
+    [
+      "Exchanger return",
+      710,
+      826
+    ],
+    [
+      "Rotary crown",
+      1037,
+      231
+    ],
+    [
+      "Sorter chamber",
+      1040,
+      526
+    ],
+    [
+      "Rotor underside",
+      1036,
+      818
+    ],
+    [
+      "Quench airlock",
+      1300,
+      234
+    ],
+    [
+      "Quench overlook",
+      1300,
+      682
+    ],
+    [
+      "Quench recovery",
+      1300,
+      831
+    ],
+    [
+      "Scrubber hoist",
+      1620,
+      229
+    ],
+    [
+      "Scrubber gallery",
+      1623,
+      686
+    ],
+    [
+      "Scrubber recovery",
+      1623,
+      828
+    ],
+    [
+      "Eastern dispatch",
+      1905,
+      231
+    ],
+    [
+      "Eastern platform",
+      1870,
+      681
+    ]
+  ],
+  "clearance": {
+    "19x15": {
+      "reached": 18,
+      "centres": 1216552
+    },
+    "23x19": {
+      "reached": 18,
+      "centres": 1165159
+    },
+    "31x27": {
+      "reached": 18,
+      "centres": 1070930
+    }
+  },
+  "obstruction": {
+    "rectangle": [
+      924,
+      0,
+      70,
+      265
+    ],
+    "forced_detours": 4,
+    "added_steps_at_31x27": {
+      "West ingress": 0,
+      "Reagent canopy": 0,
+      "Reagent workface": 0,
+      "Reagent recovery": 0,
+      "North exchanger": 0,
+      "Exchanger undercroft": 0,
+      "Exchanger return": 0,
+      "Rotary crown": 94,
+      "Sorter chamber": 0,
+      "Rotor underside": 0,
+      "Quench airlock": 88,
+      "Quench overlook": 0,
+      "Quench recovery": 0,
+      "Scrubber hoist": 98,
+      "Scrubber gallery": 0,
+      "Scrubber recovery": 0,
+      "Eastern dispatch": 94,
+      "Eastern platform": 0
+    }
+  },
+  "routes": {
+    "main": "outer sky -> asymmetrical exchangers -> central three-loop classifier -> separate quench / scrubber -> dispatch",
+    "alternative": "upper air -> six separately entered service wells -> lower dry return -> east dispatch",
+    "interconnects": [
+      "reagent sluices",
+      "double heat-exchange helix",
+      "grounded triple-loop static classifier",
+      "two isolated quench specimens",
+      "scrubber dispatch gantry"
+    ]
+  },
+  "images": {
+    "overview.png": {
+      "bytes": 28275,
+      "sha256": "426c1be09cdf3e7a78dc617356fdf4d97874531ff39b75223fbeef0417c0d9d5",
+      "crop": [
+        0,
+        0,
+        2048,
+        1024
+      ]
+    },
+    "01-reagent-sluice.png": {
+      "bytes": 5224,
+      "sha256": "8b3669e10c56fa8afe2129214903a6c71306a5a7bdfe2eb90c6e445306faa047",
+      "crop": [
+        100,
+        344,
+        390,
+        520
+      ]
+    },
+    "02-heat-exchange.png": {
+      "bytes": 6339,
+      "sha256": "fc4f29f4d46f70acb4b1cff2bb6fca9cc1f0099110dbc0584a4e4aaed30d5897",
+      "crop": [
+        460,
+        320,
+        420,
+        540
+      ]
+    },
+    "03-triple-loop-sorter.png": {
+      "bytes": 9123,
+      "sha256": "0dd7f80ad2a81b977c080913d9be74c6f30731b5ea54ae77c40af4897b6c302d",
+      "crop": [
+        853,
+        335,
+        448,
+        498
+      ]
+    },
+    "04-quench-locks.png": {
+      "bytes": 4629,
+      "sha256": "24f25ecf50dc83bfd451da1cf7a28746f9a8a650228963b7f3c29d15abbe2434",
+      "crop": [
+        1240,
+        410,
+        335,
+        475
+      ]
+    },
+    "05-scrubber-dispatch.png": {
+      "bytes": 5108,
+      "sha256": "c607db2c3570a665dd67bad0ea3f2515ce86b0fb5175cf441b79d033babf10ce",
+      "crop": [
+        1590,
+        340,
+        425,
+        535
+      ]
+    },
+    "06-rotor-service-gap.png": {
+      "bytes": 4571,
+      "sha256": "1943bc057ae220ce137342c3573cbe851c060d102047aa40164b133a9aef107f",
+      "crop": [
+        870,
+        552,
+        407,
+        320
+      ]
+    }
+  },
+  "status": "SOURCE-STATIC PASS / NATIVE-UNTESTED"
+}
