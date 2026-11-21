@@ -111,6 +111,16 @@
             "null"
           ],
           "pattern": "^[0-9a-f]{64}$"
+        },
+        "material_pr": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Actual stacked child PR holding this version; omitted in original parent baseline."
+        },
+        "parent_portrait_head": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$",
+          "description": "Exact portrait parent HEAD from which a stacked repair was based; required for POST_REPAIR."
         }
       }
     },
