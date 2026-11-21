@@ -69,6 +69,10 @@ function buildWorld(){
    rect(x,759,w,25,M.frame);
    rect(x+10,752,w-20,7,M.plate);
  }
+ // Civic roof lattice is physically rooted by a western utility mast; all four precinct roofs share short supported bridge ties.
+ rect(33,505,14,279,M.frame);rect(46,519,50,14,M.plate);
+ // Gallery divides into four joined-by-surface recovery sectors. These bottom-grounded street piers carry the overburden.
+ for(const x of [482,907,1402])rect(x,784,17,240,M.frame);
  // Four distinct interior workface vocabularies: ticket/capstan, market, interlock, repair.
  for(let j=0;j<4;j++){
    const x=148+j*29;rect(x,759,19,25,M.iron);rect(x+5,745,9,14,j%2?M.amber:M.ivory);
@@ -121,7 +125,7 @@ function buildWorld(){
  ["West archive shaft",359,866],["West luggage archive",340,950],
  ["Market west portal",515,681],["Market traders hall",611,684],
  ["Market service hall",807,682],["Market goods underpass",761,865],["Market freight cellar",763,950],
- ["Municipal crossing",936,679],["Severable tram threshold",950,682],
+ ["Market east interchange",881,679],["Severable tram threshold",950,682],
  ["Dispatch reception",1047,680],["Interlocking desk",1250,684],
  ["Dispatch undercity",1175,865],["Cable relay room",1180,952],
  ["Eastern bridge landing",1404,682],["Depot line intake",1511,680],
