@@ -8,9 +8,9 @@
     1024
   ],
   "final_cell_count": 2097152,
-  "grid_sha256": "7f4a8c31f120f5a871ca79310e7ccba524bde4273e16c1193ef9b919aa412a6f",
-  "setup_sha256": "b56f669897b13ec1316df65d98e178a8653d076b308c826e3bb06f59ba2f2aea",
-  "setup_bytes": 29611,
+  "grid_sha256": "3c0efd6c8613668d56538b3790c933cd426ab400590dafc5bda952e387673b1b",
+  "setup_sha256": "056869c1a3df1c44bf6cc4adf8204e93de845f5993d432ed3f785d860fb9fd04",
+  "setup_bytes": 38532,
   "setup_root_keys": [
     "version",
     "extent",
@@ -27,26 +27,26 @@
     "brush",
     "fire"
   ],
-  "rectangle_count": 1522,
+  "rectangle_count": 2002,
   "rectangle_limit_source": 32768,
   "native_installation_status": "NATIVE-UNTESTED: source supports 32768; compatible Godot/bridge binary not executed",
-  "construction_writes": 424803,
+  "construction_writes": 462413,
   "write_limit": 32000000,
   "material_histogram": {
-    "0": 1672349,
+    "0": 1634739,
     "58": 28672,
-    "62": 88052,
-    "63": 4076,
-    "77": 967,
-    "79": 315,
-    "100": 37670,
-    "101": 236786,
-    "117": 27257,
-    "128": 1008
+    "62": 109996,
+    "63": 5986,
+    "77": 1639,
+    "79": 847,
+    "100": 43540,
+    "101": 237866,
+    "117": 30844,
+    "128": 3023
   },
-  "occupied": 424803,
-  "grounded": 424803,
-  "nominal_unsupported_removed": 63160,
+  "occupied": 462413,
+  "grounded": 462413,
+  "nominal_unsupported_removed": 36013,
   "detached_final": 0,
   "fluid_falling_reactive_final": 0,
   "rectangle_overlap_count": 0,
@@ -54,7 +54,7 @@
   "canonical_rectangle_reencode_identity": true,
   "sites": {
     "19x15": {
-      "visited_centres": 1310224,
+      "visited_centres": 1238836,
       "sites": {
         "spawn_quarantine": {
           "free": true,
@@ -140,7 +140,7 @@
       "failed": []
     },
     "23x19": {
-      "visited_centres": 1275007,
+      "visited_centres": 1196632,
       "sites": {
         "spawn_quarantine": {
           "free": true,
@@ -226,7 +226,7 @@
       "failed": []
     },
     "31x27": {
-      "visited_centres": 1214636,
+      "visited_centres": 1122365,
       "sites": {
         "spawn_quarantine": {
           "free": true,
@@ -399,7 +399,7 @@
   "pngs": {
     "overview.png": {
       "bytes": 1049790,
-      "sha256": "11ecf3034da39f6d81561574268dcd31e833d8465425b64ce5e4805170ce5cb5",
+      "sha256": "6d057f4e018aba3336700142894e3f7dc3144f6dfc017c1276a55b40b0a63dcd",
       "material_pixel_parity": true,
       "png_crc_adler_and_dimensions": true,
       "region": [
@@ -423,7 +423,7 @@
     },
     "02-west-switchback.png": {
       "bytes": 134164,
-      "sha256": "5b1d11d73704fee9a7a9a70155c051ef0b26fdb158ea8d6e9e31f3e07fa4e442",
+      "sha256": "6bd8c86b1856ce29df637fc7d9bc43901d081bf9db07ab6e19c3a823a452a523",
       "material_pixel_parity": true,
       "png_crc_adler_and_dimensions": true,
       "region": [
@@ -435,7 +435,7 @@
     },
     "03-suture-retina.png": {
       "bytes": 195608,
-      "sha256": "13a1bbfaada2189dfda0b02614fecfae7f20b9e006caf802e0a509db807c1619",
+      "sha256": "af20ac96303a66f394676f1d9ba3b5c5dfaadc213893b7ef5bf59b9b10d6da66",
       "material_pixel_parity": true,
       "png_crc_adler_and_dimensions": true,
       "region": [
@@ -447,7 +447,7 @@
     },
     "04-crater-cellar.png": {
       "bytes": 69690,
-      "sha256": "79fbed4907a7a6f920f5ec77127ce407072282c870d53671f00b6f7d0e1f40aa",
+      "sha256": "a0913b65f56a187ffd19c9de76170c5ddfac9eb4f22e07177f4211f317a62b09",
       "material_pixel_parity": true,
       "png_crc_adler_and_dimensions": true,
       "region": [

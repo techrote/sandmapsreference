@@ -93,6 +93,8 @@ function makeArtifacts(spec){
 
 ${spec.description}
 
+The material-cell R2 correction gives the roof-rooted annular crest an actual load path to the upper world boundary and restores an entered lower-crater inspection workface on two grounded rock piers. These are real geometry changes, not decorative PNG overlays; the lower flight tunnel and all named flight checks remain conservative and intact.
+
 ## Five independently readable production districts
 
 ${spec.districts.map((d,i)=>`${i+1}. ${d}`).join("\n")}
