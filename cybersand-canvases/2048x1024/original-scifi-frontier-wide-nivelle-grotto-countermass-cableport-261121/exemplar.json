@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-frontier-wide",
+  "map_role": "multi-strata inhabited cableport in a huge geological grotto with three roof-hung settlements, two unequal counterweights, and distinct floor-rooted research workfaces",
+  "anchor_donors": [],
+  "macro_topology": "roof-rooted hanging archipelago above a jagged bottom geological research floor; two great suspended counter-mass stations interrupt the negative space",
+  "density_profile": "inhabited upper clusters and two outfitted lower workfaces alternate with large navigable air volumes and intentionally unfinished lateral expansion gantries",
+  "route_grammar": {
+    "spawn": "West arrival pad",
+    "primary": "west clinic and air arrival → central seismographic relay → eastern quarantine/freight departure",
+    "alternatives": [
+      "deep floor-hugging flight beneath suspended counterweights",
+      "upper pockets around both counterweight structures",
+      "high-right and low-left site reconnections"
+    ],
+    "named_sites": 27,
+    "obstruction": {
+      "site": "Central cableway underside",
+      "box": [
+        1161,
+        519,
+        1200,
+        557
+      ],
+      "unaffected_reachable": 26
+    }
+  },
+  "strong_motifs": [
+    "long tensile roof piers supporting asymmetrical inhabited decks",
+    "two different hanging counter-mass block silhouettes",
+    "real crew, instrument and sterile-transfer workfaces",
+    "three open-roof rescue entrances admitting Midge hull",
+    "basalt roof and rolling excavation floor with separate load paths",
+    "two incomplete scaffold expansion segments"
+  ],
+  "interesting_relationships": [
+    "the upper districts inherit load bearing from ceiling while lower machinery takes load from floor",
+    "the cableport's service counterweights bound open bypass air instead of dividing the world into sealed rooms",
+    "the seismography works observe geology below but hang from it above",
+    "human-editable deep scaffold lines are not advertised as furnished chambers"
+  ],
+  "authoring_affordances": [
+    "unfinished counterweight A lower service interface",
+    "deep geothermal pump expansion gap",
+    "open east-side quay for rover/NPC encounter",
+    "south seismic archive stub for scripted recovery",
+    "large middle void usable for a falling-object event without sealing the overflight"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Roof suspension interruption",
+      "area": [
+        575,
+        170,
+        775,
+        525
+      ],
+      "event_type": "cable break/counterweight release",
+      "scripted": false
+    },
+    {
+      "name": "Inhabited refuge arrival",
+      "area": [
+        110,
+        320,
+        470,
+        510
+      ],
+      "event_type": "NPC settlement/rescue",
+      "scripted": false
+    },
+    {
+      "name": "Central ballast start-up",
+      "area": [
+        1250,
+        330,
+        1430,
+        620
+      ],
+      "event_type": "machinery activation/holdout",
+      "scripted": false
+    },
+    {
+      "name": "Lower seismic record escape",
+      "area": [
+        1100,
+        710,
+        1430,
+        865
+      ],
+      "event_type": "archive breach and low bypass",
+      "scripted": false
+    }
+  ],
+  "procedural_exemplar_value": "Teaches roof-rooted cable load paths, upper and lower settlement adjacency across open air, partial service-gate portals, weighted suspended modules, and two-level escape affordances to example-derived SWARM/GENTEK grammars.",
+  "similarity_avoidance": "Unlike Copperwake's nested excavated caves, Cairnstep's successive floor-rooted terraces, Penumbral's enormous reflector ring and Vela's opposed wind sails, uses ceiling-rooted habitation and asymmetric counterweights with a mostly empty continuous flight volume.",
+  "diversity_axes": {
+    "macro_topology": "suspended",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "edge_dense_center_open",
+    "route_structure": "layered",
+    "landmark_family": "cableway",
+    "support_form": "roof_rooted",
+    "environment_relation": "geological",
+    "incompleteness": "modular_append_zones"
+  },
+  "native_status": "NATIVE-UNTESTED",
+  "source_grid_sha256": "0d15f4dee8e6fcf5b6020031cf93e4ce1b41bb105a0b56cd990f1c23ad117860"
+}

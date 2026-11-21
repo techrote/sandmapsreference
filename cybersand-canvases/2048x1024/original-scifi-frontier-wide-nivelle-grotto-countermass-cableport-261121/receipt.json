@@ -1,0 +1,298 @@
+{
+  "concept": "Nivelle Grotto — Hanging Countermass Cableport",
+  "lane": "original/scifi-frontier-wide",
+  "original_no_source": true,
+  "seed": 13747618,
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cell_count": 2097152,
+  "engine_accepted_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "map_repo_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "loader_source_max_rectangles": 32768,
+  "loader_source_max_json_bytes": 1048576,
+  "source_work_budget": 32000000,
+  "material_rule_assumption": "Stationary source-authorized hard surfaces. Basalt, obsidian and glass have lava-only pair interactions; no lava or acid is placed. No mobile powder, water or reactive source pair.",
+  "material_histogram": {
+    "49": 44924,
+    "62": 32041,
+    "63": 1495,
+    "68": 21819,
+    "77": 1703,
+    "79": 2023,
+    "100": 404571,
+    "101": 102603,
+    "121": 4774,
+    "129": 18419,
+    "130": 7173,
+    "131": 21415
+  },
+  "filled_grounded_cells": 662960,
+  "detached_final_cells": 0,
+  "final_fluid_cells": 0,
+  "prototype_disconnected_cells_removed": 16950,
+  "prototype_components_removed": 6,
+  "rectangle_count": 3143,
+  "rectangle_work": 662960,
+  "setup_bytes": 60060,
+  "grid_sha256": "0d15f4dee8e6fcf5b6020031cf93e4ce1b41bb105a0b56cd990f1c23ad117860",
+  "setup_sha256": "9704a2aab58c6ea1eb550910615e2e889b250753834413e975f63ad975dbbf23",
+  "images": [
+    {
+      "name": "overview.png",
+      "bytes": 99254,
+      "sha256": "af257721c275914c2528ef383ac13dc76832981cf8624847836d47fca7c45f5c"
+    },
+    {
+      "name": "01-habitat-clinic.png",
+      "bytes": 10902,
+      "sha256": "29db9734bf643f5252391e2770619d0312e112539e5f08df6bd4769f7c3f2da3"
+    },
+    {
+      "name": "02-counterweight-bore.png",
+      "bytes": 12577,
+      "sha256": "2b80cda8874d280e0ea8b3dad7b397eced33c0f51a1cc8126f6fee16caaff8a5"
+    },
+    {
+      "name": "03-relay-vista.png",
+      "bytes": 13475,
+      "sha256": "ce604e392bc88086e8c761bab959deb1999f1d7b80b49e657656c0be9de06d51"
+    },
+    {
+      "name": "04-eastern-quarantine.png",
+      "bytes": 10875,
+      "sha256": "ac9be7fec804192b31a696802c6085326a92aa08423aade630f30cab69381b2f"
+    },
+    {
+      "name": "05-deep-archive.png",
+      "bytes": 15365,
+      "sha256": "005dd8da0f31aff37f99b3378d76a40d7098578a016fabc9b7591a7cc6469668"
+    }
+  ],
+  "clearance": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1093427,
+      "passed": 27,
+      "total": 27,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1057304,
+      "passed": 27,
+      "total": 27,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 986748,
+      "passed": 27,
+      "total": 27,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "xyxy_halfopen": [
+      1161,
+      519,
+      1200,
+      557
+    ],
+    "material_id": 58,
+    "purpose": "Solid trial obstruction at central cableway underside; alternate underflight and side routes remain",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 982332,
+      "passed": 26,
+      "total": 27,
+      "bad": [
+        {
+          "name": "Central cableway underside",
+          "xy": [
+            1181,
+            538
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "named_sites": {
+    "West arrival pad": [
+      387,
+      407
+    ],
+    "West clinic": [
+      280,
+      402
+    ],
+    "Crew shelter": [
+      204,
+      406
+    ],
+    "West aerial balcony": [
+      441,
+      311
+    ],
+    "West lower return": [
+      335,
+      705
+    ],
+    "Counterweight A left service": [
+      565,
+      559
+    ],
+    "Counterweight A right service": [
+      756,
+      567
+    ],
+    "Geothermal pump approach": [
+      490,
+      737
+    ],
+    "Bore sample console": [
+      695,
+      707
+    ],
+    "Lower crossing west": [
+      798,
+      643
+    ],
+    "Seismograph lab": [
+      886,
+      355
+    ],
+    "Heliograph relay": [
+      1040,
+      346
+    ],
+    "Central cableway underside": [
+      1181,
+      538
+    ],
+    "Central void vista": [
+      1165,
+      619
+    ],
+    "Counterweight B top": [
+      1233,
+      326
+    ],
+    "Counterweight B maintenance": [
+      1450,
+      558
+    ],
+    "East quarantine": [
+      1630,
+      410
+    ],
+    "East freight lift": [
+      1766,
+      409
+    ],
+    "East landing": [
+      1950,
+      359
+    ],
+    "East lower return": [
+      1906,
+      715
+    ],
+    "Seismic records": [
+      1214,
+      742
+    ],
+    "Archive pump floor": [
+      1326,
+      723
+    ],
+    "Underpass south": [
+      1070,
+      762
+    ],
+    "West ballast underflight": [
+      565,
+      710
+    ],
+    "East quay approach": [
+      1529,
+      596
+    ],
+    "West deep inspection": [
+      83,
+      722
+    ],
+    "East boundary survey": [
+      2014,
+      664
+    ]
+  },
+  "literal_actor_spawn": [
+    387,
+    407
+  ],
+  "crops": [
+    [
+      "01-habitat-clinic",
+      50,
+      250,
+      580,
+      345
+    ],
+    [
+      "02-counterweight-bore",
+      447,
+      285,
+      570,
+      590
+    ],
+    [
+      "03-relay-vista",
+      800,
+      190,
+      680,
+      455
+    ],
+    [
+      "04-eastern-quarantine",
+      1440,
+      275,
+      608,
+      520
+    ],
+    [
+      "05-deep-archive",
+      790,
+      570,
+      900,
+      450
+    ]
+  ],
+  "surviving_functional_footprints": {
+    "habitat": 16939,
+    "ballast_a": 17461,
+    "pumpyard": 11807,
+    "relay": 13041,
+    "ballast_b": 8960,
+    "east_station": 13476,
+    "archive": 13088
+  },
+  "static_status": "CREATOR-STATIC-PASS",
+  "native_status": "NATIVE-UNTESTED",
+  "independent_reviews": "Exact-HEAD independent Art/Technical/Shepherd pending",
+  "creator_revision": "New suspended, roof-rooted counter-mass family exemplar, 2026-11-21"
+}
