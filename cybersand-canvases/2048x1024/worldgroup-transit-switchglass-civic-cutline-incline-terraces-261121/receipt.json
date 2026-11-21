@@ -1,0 +1,326 @@
+{
+  "kind": "WORLDGROUP_TRANSIT_SWITCHGLASS_CUTLINE_INCLINE_TERRACED_HILLSIDE",
+  "revision": "R1",
+  "seed": "0x261121e2",
+  "base_map_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "accepted_engine_main_read_only": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donor": "Primary Tungsten Sawtooth @ 7fc24855cf521c90bf67f4afb08685e490473201 (signal/amber/cableway vocabulary only); Switchglass 01 and Meridian 01-06 inspected as negative design precedents; original seven-step hillside and cut-and-cover geometry",
+  "extent": [
+    2048,
+    1024
+  ],
+  "material_cells": 2097152,
+  "allowed_material_ids": [
+    0,
+    49,
+    58,
+    62,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "grounded_inert_solids": 714860,
+  "discarded_unattached_candidate_cells": 31587,
+  "remaining_detached": 0,
+  "fluid_granular_reactive": 0,
+  "rectangle_count": 1793,
+  "setup_json_bytes": 34092,
+  "material_work_visits": 714860,
+  "source_limits": {
+    "rectangles": 32768,
+    "setup_bytes": 1048576,
+    "material_work": 32000000
+  },
+  "grid_sha256": "291b8524f050c3049789b15337b817b7d551ddc2351120836d9249109fda253f",
+  "setup_sha256": "5311499342f2a2b60f7ef96de793b64179fb61d164f085a2d7f34d8573a24c4c",
+  "histogram": {
+    "0": 1382292,
+    "49": 86918,
+    "58": 9173,
+    "62": 29283,
+    "100": 521040,
+    "101": 37987,
+    "113": 5593,
+    "117": 22344,
+    "122": 2522
+  },
+  "sites": [
+    {
+      "name": "West arrival apron",
+      "x": 62,
+      "y": 755
+    },
+    {
+      "name": "Low passenger hall",
+      "x": 194,
+      "y": 746
+    },
+    {
+      "name": "West freight workface",
+      "x": 282,
+      "y": 707
+    },
+    {
+      "name": "West platform lip",
+      "x": 322,
+      "y": 705
+    },
+    {
+      "name": "First incline pass",
+      "x": 435,
+      "y": 685
+    },
+    {
+      "name": "Low recovery shaft",
+      "x": 528,
+      "y": 829
+    },
+    {
+      "name": "Freight return machinery",
+      "x": 482,
+      "y": 899
+    },
+    {
+      "name": "Mid transfer landing",
+      "x": 686,
+      "y": 560
+    },
+    {
+      "name": "Terraced passenger hall",
+      "x": 716,
+      "y": 566
+    },
+    {
+      "name": "Incline-hauler observation",
+      "x": 920,
+      "y": 455
+    },
+    {
+      "name": "Mid cutline shaft",
+      "x": 787,
+      "y": 752
+    },
+    {
+      "name": "Mid service switchbox",
+      "x": 800,
+      "y": 813
+    },
+    {
+      "name": "Central fare exchange",
+      "x": 1056,
+      "y": 480
+    },
+    {
+      "name": "Severable graded switch",
+      "x": 1189,
+      "y": 466
+    },
+    {
+      "name": "Third terrace transfer",
+      "x": 1350,
+      "y": 493
+    },
+    {
+      "name": "Central lower recovery",
+      "x": 1084,
+      "y": 739
+    },
+    {
+      "name": "Cable machinery room",
+      "x": 1085,
+      "y": 730
+    },
+    {
+      "name": "Upper incline approach",
+      "x": 1450,
+      "y": 357
+    },
+    {
+      "name": "Signal hill settlement",
+      "x": 1508,
+      "y": 345
+    },
+    {
+      "name": "High emergency shaft",
+      "x": 1373,
+      "y": 589
+    },
+    {
+      "name": "Switchgear service room",
+      "x": 1340,
+      "y": 656
+    },
+    {
+      "name": "Upper freight arrival",
+      "x": 1755,
+      "y": 315
+    },
+    {
+      "name": "Crest platform hall",
+      "x": 1872,
+      "y": 310
+    },
+    {
+      "name": "Outpost exit",
+      "x": 1983,
+      "y": 310
+    },
+    {
+      "name": "Crest recovery shaft",
+      "x": 1642,
+      "y": 520
+    },
+    {
+      "name": "Upper repair alcove",
+      "x": 1630,
+      "y": 581
+    }
+  ],
+  "midge_clearances": {
+    "19x15": {
+      "hull": [
+        19,
+        15
+      ],
+      "reachable": 26,
+      "total": 26,
+      "missing": [],
+      "visited_centres": 1226161
+    },
+    "23x19": {
+      "hull": [
+        23,
+        19
+      ],
+      "reachable": 26,
+      "total": 26,
+      "missing": [],
+      "visited_centres": 1193248
+    },
+    "31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 26,
+      "total": 26,
+      "missing": [],
+      "visited_centres": 1139017
+    }
+  },
+  "physical_obstruction": {
+    "xywh": [
+      1170,
+      461,
+      85,
+      94
+    ],
+    "material": 58,
+    "after_31x27": {
+      "hull": [
+        31,
+        27
+      ],
+      "reachable": 25,
+      "total": 26,
+      "missing": [
+        "Severable graded switch"
+      ],
+      "visited_centres": 1137630
+    },
+    "covered_site": "Severable graded switch",
+    "other_sites_reachable": 25
+  },
+  "pngs": {
+    "overview.png": {
+      "x": 0,
+      "y": 0,
+      "w": 2048,
+      "h": 1024,
+      "bytes": 49467,
+      "pixels": 2097152,
+      "sha256": "c4847d44feea522795b50820acec5b49f888ce0e59e07252488a804fc670570f",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "01-low-passenger-freight-arrival.png": {
+      "x": 40,
+      "y": 625,
+      "w": 535,
+      "h": 365,
+      "bytes": 7718,
+      "pixels": 195275,
+      "sha256": "91d2b79af6da66647a176cb1c22a79be29ad8fe5255449386423d3457d684135",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "02-incline-transfer-and-hauler.png": {
+      "x": 584,
+      "y": 436,
+      "w": 467,
+      "h": 417,
+      "bytes": 7595,
+      "pixels": 194739,
+      "sha256": "c06d86b3afb349587d4252c771b7066e31267e2f9ef3769097040f3929f4bdce",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "03-middle-passenger-cutline.png": {
+      "x": 961,
+      "y": 362,
+      "w": 446,
+      "h": 452,
+      "bytes": 6570,
+      "pixels": 201592,
+      "sha256": "84a6f107f7ae2ecf384bc7ae05dc44fbb1272cf75abfd9541432e4e68f8bf5a8",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "04-upper-signal-town-and-damaged-switch.png": {
+      "x": 1285,
+      "y": 259,
+      "w": 491,
+      "h": 477,
+      "bytes": 9331,
+      "pixels": 234207,
+      "sha256": "3912916ccdfbfa82f74828df3a555955269d589781f1813fd6914f22b76beb76",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "05-crest-freight-outpost.png": {
+      "x": 1699,
+      "y": 181,
+      "w": 349,
+      "h": 467,
+      "bytes": 3762,
+      "pixels": 162983,
+      "sha256": "a29a5b461ac6d05f42aa9d8146ff3efea9f80bc7bd039e2ec4847c3fb07212e4",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    },
+    "06-stepped-undertrack-recovery.png": {
+      "x": 422,
+      "y": 699,
+      "w": 1163,
+      "h": 325,
+      "bytes": 15052,
+      "pixels": 377975,
+      "sha256": "cee85288a9eebeec5b89e78ed2106de76379c1c6469f84327b516357a2f321f2",
+      "source_grid_parity": "encoder direct material-index pixels",
+      "crc32": true,
+      "zlib_fixed_deflate": true
+    }
+  },
+  "native": "NATIVE-UNTESTED: no installed CyberDemoBridge, Godot/Workbench, Rapier, actual input/collision/ticks or cold save/reopen executed",
+  "independent_review": "PENDING: Art, Technical, Shepherd at exact committed HEAD",
+  "ci": "NOT CLAIMED",
+  "corpus_role": "seven-step hillside, four graded tram incline segments, five differentiated station precincts, five segmented cut-and-cover service galleries with shaft-rejoin emergency access and editable damaged transfer"
+}
