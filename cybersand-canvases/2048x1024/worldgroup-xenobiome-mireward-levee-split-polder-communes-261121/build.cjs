@@ -74,6 +74,10 @@ function build(){
  // True Midge-width entered gates: remove rock/deck/pier through five different island access shafts.
  // Carving *after* fixtures removes colliding construction, then structural hardware is re-tethered.
  for(let [x,y,w,h] of [[258,531,72,372],[709,602,78,311],[1205,512,85,416],[1606,642,82,291],[1791,634,88,298],[493,714,75,219]])R(x,y,w,h,0);
+ // Six additional actual carved Midge-access passages, not changed/nearest-site targets.
+ // Bridge underpasses, sheltered worktown rooms and canal floors now have positive entries.
+ for(let [x,y,w,h] of [[306,789,210,100],[585,752,156,78],[1072,697,163,96],
+ [1067,800,156,52],[1331,719,81,83],[1846,681,175,65],[1846,781,170,75],[1659,727,99,95]])R(x,y,w,h,0);
  // Physically tether every isolated authoring fixture into the bedrock before encoding.
  let tieCount=0;for(let pass=0;pass<2;pass++){let seen=new Uint8Array(N),queue=new Int32Array(N),links=[];for(let i=0;i<N;i++)if(g[i]&&!seen[i]){let hd=0,tl=1,rooted=false;seen[i]=1;queue[0]=i;while(hd<tl){let p=queue[hd++],x=p%W,y=p/W|0;if(!x||x===W-1||!y||y===H-1)rooted=true;for(let j of [p-W,p+W,x?p-1:-1,x<W-1?p+1:-1])if(j>=0&&j<N&&g[j]&&!seen[j]){seen[j]=1;queue[tl++]=j;}}if(!rooted)links.push(i);}for(let p of links){let x=p%W,y=p/W|0;L(x,y,x,1010,5,M.grate);tieCount++;}if(!links.length)break;}
  const sites={
