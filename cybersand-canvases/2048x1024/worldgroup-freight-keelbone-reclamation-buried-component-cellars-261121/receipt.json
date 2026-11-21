@@ -1,0 +1,331 @@
+{
+  "concept": "Keelbone Reclamation Vaults — Buried Component Cellars / Dismantling Service Circuit",
+  "original": true,
+  "seed": 40568353,
+  "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West sump arrivals",
+      "Registry seal bridge",
+      "Parts intake vestibule",
+      "Dismantling atrium",
+      "Tool separation bay",
+      "Rig offload approach",
+      "East inspection crossing",
+      "Outer export cut"
+    ],
+    "interior": [
+      "West billet inspection",
+      "Small coupling vault",
+      "West component return",
+      "North rig balcony",
+      "Dismantling pit floor",
+      "Deep shear cell",
+      "East assay alcove",
+      "Repair crew cubby",
+      "Eastern dunnage store"
+    ],
+    "lower": [
+      "West cellar return",
+      "Component drain access",
+      "Central service return",
+      "East service spare",
+      "Far end safe room"
+    ],
+    "upper": [
+      "West roof marker",
+      "Ridge circuit bridge",
+      "Dismantle skylight",
+      "East roof beacons",
+      "Outer sky egress"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West sump arrivals": [
+      120,
+      507
+    ],
+    "Registry seal bridge": [
+      380,
+      511
+    ],
+    "Parts intake vestibule": [
+      605,
+      513
+    ],
+    "Dismantling atrium": [
+      827,
+      584
+    ],
+    "Tool separation bay": [
+      1043,
+      609
+    ],
+    "Rig offload approach": [
+      1340,
+      573
+    ],
+    "East inspection crossing": [
+      1558,
+      513
+    ],
+    "Outer export cut": [
+      1896,
+      515
+    ],
+    "West billet inspection": [
+      202,
+      672
+    ],
+    "Small coupling vault": [
+      470,
+      671
+    ],
+    "West component return": [
+      615,
+      738
+    ],
+    "North rig balcony": [
+      895,
+      523
+    ],
+    "Dismantling pit floor": [
+      1040,
+      768
+    ],
+    "Deep shear cell": [
+      1210,
+      750
+    ],
+    "East assay alcove": [
+      1525,
+      657
+    ],
+    "Repair crew cubby": [
+      1786,
+      660
+    ],
+    "Eastern dunnage store": [
+      1870,
+      710
+    ],
+    "West cellar return": [
+      190,
+      832
+    ],
+    "Component drain access": [
+      595,
+      832
+    ],
+    "Central service return": [
+      1005,
+      832
+    ],
+    "East service spare": [
+      1450,
+      832
+    ],
+    "Far end safe room": [
+      1830,
+      832
+    ],
+    "West roof marker": [
+      210,
+      210
+    ],
+    "Ridge circuit bridge": [
+      660,
+      220
+    ],
+    "Dismantle skylight": [
+      1010,
+      80
+    ],
+    "East roof beacons": [
+      1610,
+      215
+    ],
+    "Outer sky egress": [
+      1940,
+      220
+    ]
+  },
+  "material_histogram": {
+    "0": 1479323,
+    "58": 31427,
+    "62": 40142,
+    "100": 546260
+  },
+  "stable_occupied_cells": 617829,
+  "grounded": 617829,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 37426,
+  "invalid_writes": 0,
+  "rectangles": 167,
+  "rectangle_work": 617829,
+  "setup_bytes": 3949,
+  "material_plane_sha256": "3fe9e58ecd8ecdec897eace82a5d026412473f1dcbd13ee8753170c3b6e1f9b6",
+  "setup_sha256": "ba11823b84a9aa26c2cda08d353547325014ffc4505743b1dd456e73acd5aa06",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 27,
+      "total": 27,
+      "free_centres": 1351003,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 27,
+      "total": 27,
+      "free_centres": 1321031,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 27,
+      "total": 27,
+      "free_centres": 1261657,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      850,
+      116,
+      350,
+      244
+    ],
+    "from": "Ridge circuit bridge",
+    "to": "East roof beacons",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 27,
+    "unreachable": [],
+    "distance_before_after": [
+      955,
+      1181
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "605988b4487745c848adc826f4010bacd0d78ee18f77efab9fede8041597d105",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-west-arrivals",
+      "rect": [
+        60,
+        435,
+        415,
+        385
+      ],
+      "bytes": 40610,
+      "sha256": "8376cfb435e9a54ef9f7991e97bdfabf69d77fabb861219a58b900cfccc2c626",
+      "pixel_parity": 159775
+    },
+    {
+      "name": "02-coupling-cellars",
+      "rect": [
+        320,
+        485,
+        360,
+        357
+      ],
+      "bytes": 32672,
+      "sha256": "373e40fabb9821708c317eada0a09382159b753b618ad578c128902f0e0da09a",
+      "pixel_parity": 128520
+    },
+    {
+      "name": "03-dismantling-circuit",
+      "rect": [
+        690,
+        480,
+        760,
+        380
+      ],
+      "bytes": 72770,
+      "sha256": "09fd00d77405b63b2b11e8392be0528d9a8248d4f34393e9a92295e6afc5befa",
+      "pixel_parity": 288800
+    },
+    {
+      "name": "04-assay-vault",
+      "rect": [
+        1430,
+        447,
+        310,
+        397
+      ],
+      "bytes": 31548,
+      "sha256": "5a368e4844e8df54065902ab0ab4d8665b12e21a122bbf679b65cdbba88b5c99",
+      "pixel_parity": 123070
+    },
+    {
+      "name": "05-crew-export",
+      "rect": [
+        1700,
+        473,
+        327,
+        399
+      ],
+      "bytes": 33302,
+      "sha256": "6f3e23fdb6db8d1f0a5f13cd649318aa36ddf680e6e2e4e800b35576fa75cc33",
+      "pixel_parity": 130473
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "proof": "Exact replay, rooted material supports, three-hull routing, genuine block detour, 2-bit indexed material PNG parity"
+}
