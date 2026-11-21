@@ -71,8 +71,6 @@ function buildWorld(){
  }
  // Civic roof lattice is physically rooted by a western utility mast; all four precinct roofs share short supported bridge ties.
  rect(33,505,14,279,M.frame);rect(46,519,50,14,M.plate);
- // Gallery divides into four joined-by-surface recovery sectors. These bottom-grounded street piers carry the overburden.
- for(const x of [482,907,1402])rect(x,784,17,240,M.frame);
  // Four distinct interior workface vocabularies: ticket/capstan, market, interlock, repair.
  for(let j=0;j<4;j++){
    const x=148+j*29;rect(x,759,19,25,M.iron);rect(x+5,745,9,14,j%2?M.amber:M.ivory);
@@ -104,6 +102,8 @@ function buildWorld(){
     rect(x+w-70,y+h-46,38,27,M.iron);
     rect(x+w-53,y+h-54,12,8,M.amber);
  }
+ // Gallery divides into four joined-by-surface recovery sectors. These bottom-grounded street piers carry the overburden.
+ for(const x of [482,907,1402])rect(x,784,17,240,M.frame);
  // Functionally unequal undercity equipment, attached to chamber floors.
  rect(255,979,46,19,M.plate);rect(315,969,18,21,M.ivory);
  rect(688,982,59,14,M.iron);rect(800,963,13,22,M.steel);
