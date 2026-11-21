@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "original/scifi-biomech-wide",
+  "map_role": "abandoned multi-settlement biomechanical memory-custody archipelago with editable dry trade interfaces",
+  "anchor_donors": [],
+  "macro_topology": [
+    "multi_settlement",
+    "islands"
+  ],
+  "density_profile": "alternating dense customs, bare sky-well, roof-horn cluster, multi-port crossing, satellite test halls and outbound dock",
+  "route_grammar": {
+    "direct": "spawn_quarantine -> cross_west -> cross_east -> dispatch_east",
+    "upper": "above the central three-port roof-fork under a strict altitude band",
+    "lower": "beneath the cable fork via workface and unsealed open sky",
+    "recovery": "three accessed lower archive pockets and four-cardinal clearance at all 18 literal checkpoints"
+  },
+  "strong_motifs": [
+    "three different ground-rooted customhouses",
+    "ceiling-hung six-horn mycelial membrane choir",
+    "branched high registration cables and inspectable floor workface",
+    "satellite desiccator cubicles",
+    "unequal outward crane hooks",
+    "excavated archive access fissures"
+  ],
+  "interesting_relationships": [
+    "roof-supported membrane choir over ground-operated assay",
+    "upper/lower transit around three-port registration without forcing a closed central machine",
+    "three ground archives entered from surface settlement",
+    "two physically separate cargo launch stages on one dry apron"
+  ],
+  "authoring_affordances": [
+    {
+      "site": "west_archive_expansion",
+      "rect": [
+        225,
+        895,
+        218,
+        91
+      ],
+      "detail": "excavated lower customs room with editable test alcoves"
+    },
+    {
+      "site": "central_registration_relay",
+      "rect": [
+        850,
+        340,
+        390,
+        440
+      ],
+      "detail": "multiple unfinished staging fork interfaces over a grounded accessible workface"
+    },
+    {
+      "site": "satellite_desiccator_gap",
+      "rect": [
+        1492,
+        650,
+        105,
+        270
+      ],
+      "detail": "intentionally cleared vertical route between satellite equipment and third archive"
+    },
+    {
+      "site": "unbuilt_midspan_rail",
+      "rect": [
+        882,
+        680,
+        378,
+        48
+      ],
+      "detail": "two independent stub anchors suitable for later switchable bridge design"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "type": "bridge_failure",
+      "rect": [
+        882,
+        680,
+        378,
+        48
+      ],
+      "alternatives": "both conservative high/low aerial gate bypasses"
+    },
+    {
+      "type": "machinery_activation",
+      "rect": [
+        824,
+        145,
+        442,
+        205
+      ],
+      "staging": "roof-rooted triport horn relay above inspection"
+    },
+    {
+      "type": "arrival_departure",
+      "rect": [
+        1738,
+        350,
+        245,
+        490
+      ],
+      "staging": "two unequal dry dispatch cranes and lower landing"
+    },
+    {
+      "type": "vault_encounter",
+      "rect": [
+        225,
+        895,
+        218,
+        91
+      ],
+      "staging": "west excavated customs archive with separate surface access"
+    }
+  ],
+  "procedural_exemplar_value": "Shows branching ceiling/floor support grammars, multiple nonidentical inhabited work clusters, broad negative-space inheritance, independent vault entrance contracts and asymmetrical distributed custody rather than a single dominant module.",
+  "similarity_avoidance": "Unlike Ophion's basin/bridge and Mnemosyne's central floor-rooted monolith, Kordex distributes authority among three separated settlements and an overhead branched roof-fork, with stronger dense↔open alternation and multiple small entered archives.",
+  "diversity_axes": {
+    "macro_topology": "multi_settlement",
+    "altitude_grammar": "multi_strata",
+    "density_cadence": "alternating",
+    "route_structure": "parallel_lanes",
+    "landmark_family": "cableway",
+    "support_form": "mixed",
+    "environment_relation": "biological",
+    "incompleteness": "editable_gaps"
+  },
+  "native_qualification": "NATIVE-UNTESTED",
+  "evidence": {
+    "engine_sha": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+    "source_base_sha": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "grid_sha256": "ca0a64ce437e30bfe75e50f6848ef2c71851a57514dcc2cf1a7b4886cfde48f8",
+    "site_count": 18,
+    "rectangle_count": 1332
+  }
+}
