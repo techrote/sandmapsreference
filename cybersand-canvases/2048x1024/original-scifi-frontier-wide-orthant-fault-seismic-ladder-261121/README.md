@@ -1,0 +1,5 @@
+# Orthant Fault — Seismic Ladder Colonies
+
+Original 2048x1024 perpendicular 2D CyberSand material-cell world. A split vertical fault separates a western rover-medical/mining colony from a high seismic tower and an eastern quarantine-worktown. Staggered aerial, mid-shear and broken lower bridges join independent sky and excavated service routes. Four accessible undercroft areas and empty scaffold edges remain intentionally human-editable for SWARM/GENTEK and unscripted events.
+
+Run `node build.cjs` to reproduce complete outputs, or `node build.cjs --verify` for byte-for-byte verification. Setup-v2 created from deterministic 2,097,152 actual material-ID cells. Five authentic pixel-for-cell 1:1 crops, material histogram, lossless rectangle replay, all literal Midge sites at all three conservative envelopes and a physical obstruction test. Read-only CyberSand source baseline 69209acaffb34ebe18c45e19290b5976b7fb2c82; map baseline 99a166e7fcae45eb22be1740e9f33f62faccbcc7. Static evidence only; NATIVE-UNTESTED. Draft/HOLD; Art/Technical/Shepherd independent review pending.

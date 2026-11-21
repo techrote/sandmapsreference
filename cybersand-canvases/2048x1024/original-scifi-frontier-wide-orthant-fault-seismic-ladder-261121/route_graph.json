@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "extent": [
+    2048,
+    1024
+  ],
+  "spawn_name": "Rover clinic spawn",
+  "sites": {
+    "Rover clinic spawn": [
+      180,
+      417
+    ],
+    "Western clinic": [
+      425,
+      418
+    ],
+    "West lookout": [
+      370,
+      300
+    ],
+    "Cliff triage": [
+      182,
+      608
+    ],
+    "West assay cavern": [
+      179,
+      763
+    ],
+    "West buried archive": [
+      219,
+      862
+    ],
+    "West logistics shaft": [
+      456,
+      805
+    ],
+    "Ore triage": [
+      627,
+      674
+    ],
+    "Rover service": [
+      698,
+      612
+    ],
+    "West mining approach": [
+      769,
+      652
+    ],
+    "West fault crossing": [
+      864,
+      516
+    ],
+    "High cable landing": [
+      1010,
+      371
+    ],
+    "Upper rift flyover": [
+      1037,
+      207
+    ],
+    "Mid-shear bypass": [
+      1085,
+      539
+    ],
+    "East rift landing": [
+      1191,
+      553
+    ],
+    "East seismic gantry": [
+      1381,
+      348
+    ],
+    "Crown sensor": [
+      1571,
+      78
+    ],
+    "Easterly mast": [
+      1812,
+      310
+    ],
+    "East observation": [
+      1874,
+      430
+    ],
+    "East clinic": [
+      1399,
+      426
+    ],
+    "East survey deck": [
+      1647,
+      409
+    ],
+    "East custody": [
+      1465,
+      667
+    ],
+    "Quarantine recorder": [
+      1559,
+      662
+    ],
+    "East biosieve": [
+      1741,
+      657
+    ],
+    "East cliff diagnostics": [
+      1915,
+      652
+    ],
+    "East lower vault": [
+      1914,
+      795
+    ],
+    "East archival shaft": [
+      1651,
+      806
+    ],
+    "East sterile return": [
+      1496,
+      829
+    ],
+    "Deep fault landing": [
+      1067,
+      862
+    ],
+    "Fault lower assay": [
+      950,
+      896
+    ],
+    "Break bridge west": [
+      900,
+      736
+    ],
+    "Break bridge east": [
+      1192,
+      719
+    ],
+    "West outer survey": [
+      40,
+      800
+    ],
+    "East outer survey": [
+      2007,
+      741
+    ],
+    "Deep left ore store": [
+      690,
+      879
+    ],
+    "Deep right sample store": [
+      1347,
+      887
+    ],
+    "Fault rescue reserve": [
+      1137,
+      681
+    ],
+    "Upper western rover pad": [
+      536,
+      529
+    ]
+  },
+  "envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "whole_envelope_four_neighbour_BFS": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "centres": 1547138,
+      "passed": 38,
+      "total": 38,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "centres": 1502859,
+      "passed": 38,
+      "total": 38,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1416158,
+      "passed": 38,
+      "total": 38,
+      "bad": []
+    }
+  ],
+  "physical_obstruction": {
+    "rect_xyxy": [
+      1537,
+      642,
+      1580,
+      683
+    ],
+    "material_id": 58,
+    "intentionally_excluded": "Quarantine recorder",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "centres": 1414542,
+      "passed": 37,
+      "total": 38,
+      "bad": [
+        {
+          "name": "Quarantine recorder",
+          "xy": [
+            1559,
+            662
+          ],
+          "clear": false
+        }
+      ]
+    }
+  },
+  "qualitative_route_graph": {
+    "main": [
+      "Rover clinic spawn",
+      "Western clinic",
+      "Ore triage",
+      "West fault crossing",
+      "Mid-shear bypass",
+      "East rift landing",
+      "East clinic",
+      "East custody",
+      "Quarantine recorder"
+    ],
+    "alternatives": [
+      [
+        "West lookout",
+        "Upper rift flyover",
+        "East seismic gantry",
+        "East observation"
+      ],
+      [
+        "West logistics shaft",
+        "West mining approach",
+        "Deep fault landing",
+        "East archival shaft",
+        "East lower vault"
+      ]
+    ],
+    "obstruction": "Quarantine recorder",
+    "all_sites_count": 38
+  },
+  "caveat": "Connected open-cell centres are statically proven, not physical flight simulation or individual pairwise route timings."
+}
