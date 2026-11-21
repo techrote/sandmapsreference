@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Switchglass Civic Transit",
+  "sibling_number": 3,
+  "lane": "mechanical_transit",
+  "map_role": "Estuary Pier Intermodal Chain — remote passenger/cargo exchange, catenary freight transfer and separated signal-rescue outpost",
+  "anchor_donors": [
+    {
+      "name": "wide-tungsten-sawtooth-tramworks",
+      "head_sha": "7fc24855cf521c90bf67f4afb08685e490473201",
+      "relationship": "Only dry steel/amber signal semantics, energy switching and meaningful recovery-route philosophy; no copied baffle, rotor, routes, pixels, code or coordinates"
+    }
+  ],
+  "macro_topology": [
+    "Five genuinely separated boundary-grounded islet piers with unequal platform datum heights",
+    "Four inter-islet taut catenary spans and a deliberately severed low-level reconstruction spur",
+    "Direct sky-entry through four pier-deck relief apertures into excavated under-pier service rooms"
+  ],
+  "density_profile": "Widely separated civic, power, cargo, semaphore and rescue workfaces are bracketed by unoccupied open-air voids, cableway sightlines and large under-pier editing slots.",
+  "route_grammar": {
+    "primary": "West embarkation (119,535) to west strait (398,525), battery exchange (720,555), freight crane dispatch (1118,631), remote semaphore (1695,346), eastern rescue exit (1924,671)",
+    "alternative": "An actual 86-pixel opening in the west aerial span joins upper flight and lower intermodal space; full-envelope open-air approaches and four entered vertical maintenance shafts provide alternate recovery. No sea water is simulated.",
+    "obstruction": "A physical [1343,507,96,124] inert-solid closure covers only the Central severable cable span site; 23 other named literal centres remain connected at 31x27. Freight scale to Signal islet approach conservative path lengthens from 377 to 437 four-neighbour steps (+60)."
+  },
+  "strong_motifs": [
+    "Independent islet cargo piers and contrasting remotely operated terminal elevations",
+    "Opposed tension-legged catenary freight exchange with underhung stiffening links",
+    "Roof-free open dispatch gantry and split emergency semaphore arch",
+    "Rock-excavated under-pier workshops with full-hull descent shafts",
+    "Severed low passenger/freight bridge as editable reassembly socket"
+  ],
+  "interesting_relationships": [
+    "Traction power on one separated islet serves a physically remote cargo crane islet",
+    "Varying bridge grades are supported by root-connected pier foundations rather than sky-floating ornaments",
+    "Civic approach and emergency maintenance share physically entered shafts",
+    "The broken low footbridge can be reconstructed without filling the open aerial bypass"
+  ],
+  "authoring_affordances": [
+    "Open dry estuary gaps available for new modular piers or removable spans",
+    "Interrupted low footbridge offers two mechanically rooted ends for human reconstruction",
+    "Under-pier service bays retain equipment-free expansion space",
+    "Signal gantry and upper cable-way support later example-derived attachment rules"
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Aerial freight interlock failure",
+      "site": [
+        1390,
+        558
+      ],
+      "kind": "closure-and-reroute",
+      "unscripted": true
+    },
+    {
+      "name": "Mole service rescue",
+      "site": [
+        1093,
+        904
+      ],
+      "kind": "maintenance holdout/evacuation",
+      "unscripted": true
+    },
+    {
+      "name": "Broken low-span reveal",
+      "site": [
+        456,
+        839
+      ],
+      "kind": "rebuildable bridge and chase gap",
+      "unscripted": true
+    },
+    {
+      "name": "Remote semaphore arrival",
+      "site": [
+        1695,
+        346
+      ],
+      "kind": "signal switching / NPC meeting",
+      "unscripted": true
+    }
+  ],
+  "procedural_exemplar_value": "Teaches a five-islet macro-layout, distributed foundation-to-cable load paths, independently paced civil/industrial district adjacency, accessible pier-room excavation, open-sky emergency rejoin and reconstructable discontinuous span module. Deliberate empty air is part of the authoring primitive.",
+  "similarity_avoidance": "Contrasts Switchglass 01's flat shared civic boulevard and Switchglass 02's seven-step contiguous hillside, and Meridian 01–06's giant machine, braided tunnel and hairpin race topologies. No large central rotor, repeated baffles, four-canopy repetition or fake floating wheel.",
+  "diversity_axes": {
+    "macro_topology": [
+      "islands",
+      "bridge"
+    ],
+    "altitude_grammar": [
+      "mixed",
+      "high_low_bypass"
+    ],
+    "density_cadence": [
+      "alternating",
+      "edge_dense_center_open"
+    ],
+    "route_structure": [
+      "branch_rejoin",
+      "layered"
+    ],
+    "landmark_family": [
+      "cableway",
+      "tower"
+    ],
+    "support_form": [
+      "floor_rooted",
+      "mixed"
+    ],
+    "environment_relation": [
+      "dry"
+    ],
+    "incompleteness": [
+      "editable_gaps",
+      "modular_append_zones",
+      "damaged"
+    ]
+  },
+  "verification_scope": "SOURCE-STATIC CREATOR TESTS ONLY: full 2048x1024 material grid, disjoint lossless replay, conservative literal free-centre routing, physical obstruction. Independent external Art/Technical/Shepherd review and native gameplay/persistence remain PENDING/NATIVE-UNTESTED."
+}
