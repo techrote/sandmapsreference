@@ -99,6 +99,12 @@ for(const [x,y] of Object.values(sites))V(x-23,y-21,47,43);
    Distinctly spaced piers preserve open over-roof Midge alternatives. */
 for(const [x,y,w] of [[74,592,20],[533,592,20],[571,554,20],[1038,554,20],[1082,562,20],[1536,562,20],[1573,604,20],[1967,604,20]])B(x,y,w,1000-y);
 for(const [x,y,w] of [[150,329,16],[302,329,17],[466,356,17],[601,356,17],[798,300,16],[928,300,16],[866,370,16],[975,370,16],[1036,341,17],[1187,341,17],[1385,304,17],[1534,304,17],[1460,362,16],[1569,362,16],[1591,382,17],[1722,382,17]])C(x,y,w,1000-y);
+/* Lock thresholds have physically open side reveals, not sealed traps. */
+V(590,431,56,104);
+V(1355,418,100,122);
+V(1699,427,75,109);
+/* Side-enterable upper-to-lower maintenance ducts and editing receptors. */
+for(const [name,p] of Object.entries(sites)){if(p[1]>=600)V(p[0]-25,515,51,367);}
 B(0,1000,W,24);
 
 // Remove genuinely ungrounded decorator fragments, never retain false hanging
