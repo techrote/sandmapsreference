@@ -141,6 +141,17 @@ const build=function build(){
  R(983,939,25,46,M.iron);R(1015,940,38,45,M.black);R(1024,948,15,18,M.signal);
  R(1095,950,51,35,M.ceramic);R(1110,958,15,11,M.blue);
 
+
+ // Secondary real airlocks open all three flight levels without fictitious teleport sites.
+ R(1350,366,62,62,0);R(1495,585,116,84,0);
+ R(1311,675,70,102,0);R(1710,457,79,220,0);
+ R(1890,565,91,291,0);R(1960,552,88,242,0);
+ // Verified floor-to-bedrock rooted support for colony and antenna.
+ for(const [x,top,w] of [[80,468,17],[500,469,16],[370,727,19],[735,727,19],
+ [1276,488,19],[1588,488,19],[1863,488,19],[1385,728,19],[1830,728,19]])
+ R(x,top,w,H-top,M.iron);
+ R(1420,379,25,105,M.iron);R(1747,379,26,105,M.iron);
+
  // Discard only provisional non-boundary-grounded material before publication.
  let seen=new Uint8Array(N),q=new Int32Array(N),removed=0,removedGroups=0;
  for(let k=0;k<N;k++)if(g[k]&&!seen[k]){let h=0,t=1,edge=false;seen[k]=1;q[0]=k;
