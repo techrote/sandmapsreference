@@ -1,0 +1,314 @@
+{
+  "project": "CYBERSAND WORLD-GROUP XENOBIOME",
+  "family": "Cinderfold Seed Courier Districts",
+  "sibling": 2,
+  "role": "Braided Span Exchange / Two-Deck Suture Causeway",
+  "seed": "cinderfold-braided-span-exchange-261121-v1",
+  "map_base": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "engine_readonly_main": "f7e056c9b8791106e22f2d1c295043783d8a9701",
+  "donors": [
+    {
+      "slug": "wide-threnody-scar-foldwing-seedlift",
+      "pr": 73,
+      "head": "00cb6b6b86b875d8b81cc387c711aa56f172d9dd"
+    },
+    {
+      "slug": "wide-graftloom-slipway",
+      "pr": 22,
+      "head": "b0d1e5216aabb9b5e009e599ffbffcec6fd8a657"
+    }
+  ],
+  "extent": [
+    2048,
+    1024
+  ],
+  "cell_count": 2097152,
+  "material_histogram": {
+    "49": 326,
+    "62": 78933,
+    "66": 22927,
+    "68": 10181,
+    "77": 1717,
+    "79": 1443,
+    "100": 213425,
+    "101": 18486,
+    "120": 10076,
+    "129": 1838,
+    "131": 37446
+  },
+  "occupied_cells": 396798,
+  "grounded_cells": 396798,
+  "detached_cells": 0,
+  "solid_components": 1,
+  "physical_tethers": {
+    "raw_components": 46,
+    "ties": 45,
+    "max_span": 42
+  },
+  "lossless_rectangles": 3682,
+  "source_rectangle_limit": 32768,
+  "source_max_json_bytes": 1048576,
+  "rectangle_work_cells": 396798,
+  "setup_bytes": 68994,
+  "plane_sha256": "e2bbdb8967a6ae69c53973e32fdce770bff4bae5f3fbf1f35517ca38787b25b1",
+  "setup_sha256": "950c0fab52540eb1e6914cd76bacdc9f403f162db4738fbb6db57621de9334aa",
+  "literal_sites": {
+    "West courier embark": [
+      46,
+      604
+    ],
+    "Western registry mezzanine": [
+      252,
+      459
+    ],
+    "West weather crown": [
+      340,
+      407
+    ],
+    "West sky lane": [
+      479,
+      406
+    ],
+    "Receiver upper sail": [
+      631,
+      397
+    ],
+    "First receiver foot": [
+      717,
+      700
+    ],
+    "West pallet bypass": [
+      723,
+      840
+    ],
+    "High assay north": [
+      846,
+      289
+    ],
+    "High assay eastern signal": [
+      1097,
+      306
+    ],
+    "Split assay workbench": [
+      1014,
+      632
+    ],
+    "Culture handoff lock": [
+      1156,
+      382
+    ],
+    "Eastward sail lane": [
+      1302,
+      389
+    ],
+    "Eastern selector loft": [
+      1390,
+      435
+    ],
+    "Freight transfer platform": [
+      1536,
+      640
+    ],
+    "Quarantine crest": [
+      1743,
+      402
+    ],
+    "East sterile gallery": [
+      1896,
+      464
+    ],
+    "East courier public": [
+      2011,
+      631
+    ],
+    "Open eastern horizon": [
+      1955,
+      325
+    ],
+    "West lower descent": [
+      324,
+      973
+    ],
+    "Deep west relay": [
+      535,
+      974
+    ],
+    "Deep assay undercroft": [
+      866,
+      973
+    ],
+    "Deep central service": [
+      1152,
+      973
+    ],
+    "Deep east return": [
+      1442,
+      973
+    ],
+    "East lower ascent": [
+      1656,
+      974
+    ]
+  },
+  "midge_full_hull_clearances": [
+    {
+      "envelope": [
+        19,
+        15
+      ],
+      "reachable_centres": 1175886,
+      "passed": 24,
+      "total": 24,
+      "bad": []
+    },
+    {
+      "envelope": [
+        23,
+        19
+      ],
+      "reachable_centres": 1142652,
+      "passed": 24,
+      "total": 24,
+      "bad": []
+    },
+    {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1077233,
+      "passed": 24,
+      "total": 24,
+      "bad": []
+    }
+  ],
+  "obstruction": {
+    "box": [
+      1131,
+      358,
+      1183,
+      409
+    ],
+    "blocked_site": "Culture handoff lock",
+    "result": {
+      "envelope": [
+        31,
+        27
+      ],
+      "reachable_centres": 1070886,
+      "passed": 23,
+      "total": 24,
+      "bad": [
+        {
+          "name": "Culture handoff lock",
+          "point": [
+            1156,
+            382
+          ],
+          "occupied": 0
+        }
+      ]
+    }
+  },
+  "fully_restricted_underpass": {
+    "envelope": [
+      31,
+      27
+    ],
+    "reachable_centres": 43485,
+    "passed": 6,
+    "total": 6,
+    "bad": []
+  },
+  "indexed_images": [
+    {
+      "name": "overview.png",
+      "origin": [
+        0,
+        0
+      ],
+      "extent": [
+        2048,
+        1024
+      ],
+      "bytes": 56605,
+      "sha256": "a366dd4b42072930c4dcdecab2ff6a0ef092e53c44364bb2a0706eae0f00e138",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "01-west-registry.png",
+      "origin": [
+        40,
+        393
+      ],
+      "extent": [
+        402,
+        411
+      ],
+      "bytes": 6090,
+      "sha256": "aaa513798180827331a97c24a507e52882f9ddbee3d340214da51a20bd5da82a",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "02-west-receiver.png",
+      "origin": [
+        424,
+        420
+      ],
+      "extent": [
+        340,
+        455
+      ],
+      "bytes": 9399,
+      "sha256": "1d8b1689fbe29caf4149cad614d4edd46da800af51821fc17a6720e8936b7f47",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "03-bridge-assay.png",
+      "origin": [
+        761,
+        318
+      ],
+      "extent": [
+        381,
+        519
+      ],
+      "bytes": 10865,
+      "sha256": "88cc0294fd31b944e8a640572cf7e8120efb51524ca8eaf63f43b49d079776f4",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "04-selector-quarantine.png",
+      "origin": [
+        1166,
+        420
+      ],
+      "extent": [
+        479,
+        456
+      ],
+      "bytes": 12269,
+      "sha256": "92b5c700c7f1566b89d7e8504f6f21ca111a0c2dde639b70c60a7e3dc20d7803",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    },
+    {
+      "name": "05-deep-return.png",
+      "origin": [
+        270,
+        908
+      ],
+      "extent": [
+        1470,
+        116
+      ],
+      "bytes": 3650,
+      "sha256": "3ebbe845ae8ef0dcb546fb3f06c106a3c706a20498d3c086451847489e3e0b9c",
+      "pixel_parity": "DIRECT_FROM_FINAL_GRID"
+    }
+  ],
+  "qualification": "CREATOR-STATIC-PASS",
+  "independent_reviews": "PENDING",
+  "native": "NATIVE-UNTESTED",
+  "pr_gate": "OPEN DRAFT/HOLD",
+  "caveat": "Full-body static center connectivity does not prove native actor control, physics ticks or save/reopen."
+}
