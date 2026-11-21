@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "purpose": ["human_editable_canvas", "procedural_exemplar", "scripted_setpiece_source"],
+  "family": "original/racing-wide",
+  "map_role": "multi-canton escarpment with a long open-air upper lane, an independent lower return, and inhabited hollow service chambers",
+  "anchor_donors": [],
+  "macro_topology": ["multi_settlement", "basin"],
+  "density_profile": "Five discontinuous dense cantons and contrasting wide open flight volume; three partly excavated circular workshops and secondary spare seams below",
+  "route_grammar": {
+    "primary": "west-to-east uninterrupted high-sky racing line; east terminal vertical dive; westbound lower-air return",
+    "alternative": "early western descent; eastbound lower lane beneath the upper interruption; shared right-side turn and return",
+    "branch_rejoin": "two physically different eastbound lines share an unobstructed east turnaround; an upper-line solid closure retains lower-line return",
+    "recovery": "large free-flight clearance above the uneven settlement roofs; retrace locally after wrong district entry"
+  },
+  "strong_motifs": ["unequal roof-ridge cantons", "large sparse open sky", "rooted triangular dock arms", "unfurnished low saddles", "three round excavated workshop voids", "literal underground room access shafts"],
+  "interesting_relationships": ["Cranes rise from a single rooted rock shelf rather than hanging between floating islands", "An upper sky race overlooks clustered, independently enterable service districts", "Competing lanes rejoin at the eastern terminal without crossing unsupported bridge decks"],
+  "authoring_affordances": ["Large central sky for manual event staging", "Unfurnished east-middle saddles for a new factory or ground settlement", "Two buried excavation seams accessible from the open world", "Three round cavities suitable for room/interior furnishing", "Space above the return line for future modular hoops or event gates"],
+  "setpiece_candidates": [
+    {"name": "Canton muster departure", "region": [75,195,345,343], "kind": "arrival/departure", "note": "West start and early return clearances remain open; no event is scripted"},
+    {"name": "Central flight interruption", "region": [1000,160,120,130], "kind": "race diversion / destructible gate", "note": "A real-material obstruction test proves an independent low-lane return"},
+    {"name": "Three-vault encounter", "region": [685,674,1003,319], "kind": "NPC settlement / workshop activation", "note": "Grounded rock chambers can be finished without replacing the map-wide flight contract"},
+    {"name": "Right-arm catcher", "region": [1695,237,330,390], "kind": "chase / reversal", "note": "Preserves high-to-low descent clearance for a future scripted chase"}
+  ],
+  "procedural_exemplar_value": "Demonstrates a grounded multi-settlement floor profile with orthogonal free-flight lanes and selectively excavated rooms; useful for terrain-canton part placement, clustered rather than repeated infrastructure, and intentional unfilled sky/room-space control",
+  "similarity_avoidance": "Unlike Rookfall's crater and fractured bridge, Morrow's cable-suspended islands, Aster's dual vessels, and Beaconfold's through-going excavated express, this uses five unequal grounded cantons below two mostly aerial routes. No annular centrepiece or sawtooth/ratchet industrial strip is copied.",
+  "diversity_axes": {
+    "macro_topology": "multi_settlement",
+    "altitude_grammar": "dual_level",
+    "density_cadence": "clustered",
+    "route_structure": "parallel_lanes",
+    "landmark_family": "mixed",
+    "support_form": "floor_rooted",
+    "environment_relation": "geological",
+    "incompleteness": "modular_append_zones"
+  },
+  "native_status": "NATIVE-UNTESTED",
+  "qualification_note": "Classification and setpiece suggestions are informational corpus metadata; not Setup-v2, a scripted event, or a native playtest receipt"
+}
