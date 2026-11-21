@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "purpose": [
+    "human_editable_canvas",
+    "procedural_exemplar",
+    "scripted_setpiece_source"
+  ],
+  "family": "Cinderfold Seed Courier Districts",
+  "lane": "Xenobiome / Frontier Clusters",
+  "map_role": "Sibling 02 - Braided Span Exchange / Two-Deck Suture Causeway",
+  "anchor_donors": [
+    "wide-threnody-scar-foldwing-seedlift",
+    "wide-graftloom-slipway"
+  ],
+  "macro_topology": [
+    "braided",
+    "bridge"
+  ],
+  "density_profile": "Registry/receiver/assay/quarantine dense, alternating with aerial void and dry belowgrade return.",
+  "route_grammar": {
+    "primary": "West registry to receiver and high assay trestle, selector and east quarantine across split aerial spans",
+    "alternate": "Lower freight route plus three height crossovers between high and low nonparallel frames",
+    "recovery": "Physically separate dry underpass via west, assay and east mouths remains navigable around upper lock"
+  },
+  "strong_motifs": [
+    "braided dual-height courier spans",
+    "unequal founded folded-brace trestles",
+    "biological diagnostic and quarantine apparatus",
+    "asymmetric quarantine freight aerie",
+    "dry belowgrade recovery return",
+    "editable bridge sockets"
+  ],
+  "interesting_relationships": [
+    "Workfaces alternate closely with sparse air space instead of four roofed rooms",
+    "Three crossovers give high-low approach choice without duplicating the upper span",
+    "Continuous deep route joins widely separated rooted workfaces independently of sky routes"
+  ],
+  "authoring_affordances": [
+    {
+      "site": "Western register",
+      "center": [
+        252,
+        459
+      ],
+      "use": "NPC courier and new ledger machines"
+    },
+    {
+      "site": "High assay",
+      "center": [
+        846,
+        289
+      ],
+      "use": "Extend analytic inspection gear"
+    },
+    {
+      "site": "Lower freight staging",
+      "center": [
+        1536,
+        640
+      ],
+      "use": "Reroutable bridge or chase scene"
+    },
+    {
+      "site": "Open dry underpass",
+      "center": [
+        1152,
+        973
+      ],
+      "use": "Service tunnel event or manual excavation"
+    }
+  ],
+  "setpiece_candidates": [
+    {
+      "name": "Courier arrivals",
+      "center": [
+        46,
+        604
+      ],
+      "kind": "arrival and encounter",
+      "exits": "West exterior and elevated registry"
+    },
+    {
+      "name": "Assay activation",
+      "center": [
+        1014,
+        632
+      ],
+      "kind": "diagnostics machinery",
+      "exits": "Upper and lower assay workfaces"
+    },
+    {
+      "name": "Sterile interception",
+      "center": [
+        1896,
+        464
+      ],
+      "kind": "holdout",
+      "exits": "East aerial and dock corridors"
+    },
+    {
+      "name": "Failed gangway",
+      "center": [
+        1536,
+        640
+      ],
+      "kind": "bridge failure",
+      "exits": "Air overflight and lower freight route"
+    }
+  ],
+  "procedural_exemplar_value": [
+    "Braided upper and lower lanes with structurally distinct bracing",
+    "Four differently purposed elevated compact workfaces",
+    "Dry underground recovery independent of a blocked upper transfer",
+    "Retained vacant bays and damaged append seams"
+  ],
+  "similarity_avoidance": "Unlike Cinderfold Sibling 01's four ground-supported gabled roofs and short hallways, this model uses staggered two-deck braided transit over a wide dry suture, crossing vertically between asymmetric rooted process trestles.",
+  "diversity_axes": {
+    "macro_topology": [
+      "braided",
+      "bridge"
+    ],
+    "altitude_grammar": [
+      "high_low_bypass",
+      "multi_strata"
+    ],
+    "density_cadence": [
+      "alternating"
+    ],
+    "route_structure": [
+      "parallel_lanes",
+      "branch_rejoin"
+    ],
+    "landmark_family": [
+      "bridge",
+      "gantry"
+    ],
+    "support_form": [
+      "multi_leg",
+      "floor_rooted"
+    ],
+    "environment_relation": [
+      "geological",
+      "biological"
+    ],
+    "incompleteness": [
+      "editable_gaps",
+      "modular_append_zones"
+    ]
+  },
+  "geometry_evidence": {
+    "literal_sites": {
+      "West courier embark": [
+        46,
+        604
+      ],
+      "Western registry mezzanine": [
+        252,
+        459
+      ],
+      "West weather crown": [
+        340,
+        407
+      ],
+      "West sky lane": [
+        479,
+        406
+      ],
+      "Receiver upper sail": [
+        631,
+        397
+      ],
+      "First receiver foot": [
+        717,
+        700
+      ],
+      "West pallet bypass": [
+        723,
+        840
+      ],
+      "High assay north": [
+        846,
+        289
+      ],
+      "High assay eastern signal": [
+        1097,
+        306
+      ],
+      "Split assay workbench": [
+        1014,
+        632
+      ],
+      "Culture handoff lock": [
+        1156,
+        382
+      ],
+      "Eastward sail lane": [
+        1302,
+        389
+      ],
+      "Eastern selector loft": [
+        1390,
+        435
+      ],
+      "Freight transfer platform": [
+        1536,
+        640
+      ],
+      "Quarantine crest": [
+        1743,
+        402
+      ],
+      "East sterile gallery": [
+        1896,
+        464
+      ],
+      "East courier public": [
+        2011,
+        631
+      ],
+      "Open eastern horizon": [
+        1955,
+        325
+      ],
+      "West lower descent": [
+        324,
+        973
+      ],
+      "Deep west relay": [
+        535,
+        974
+      ],
+      "Deep assay undercroft": [
+        866,
+        973
+      ],
+      "Deep central service": [
+        1152,
+        973
+      ],
+      "Deep east return": [
+        1442,
+        973
+      ],
+      "East lower ascent": [
+        1656,
+        974
+      ]
+    },
+    "obstruction_box": [
+      1131,
+      358,
+      1183,
+      409
+    ],
+    "grid_sha256": "e2bbdb8967a6ae69c53973e32fdce770bff4bae5f3fbf1f35517ca38787b25b1"
+  }
+}
