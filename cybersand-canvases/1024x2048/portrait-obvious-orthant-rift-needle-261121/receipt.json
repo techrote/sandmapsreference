@@ -15,28 +15,31 @@
     2048
   ],
   "cells": 2097152,
-  "source_grid_sha256": "37abf246e829e1828502cd13e7ffb427b3e54479f3d560c9f364d9c6a14061d1",
-  "setup_sha256": "d3c9155d8b21ed1f65aeca357d46f9463485365a2dda881b319781e00cebd9d1",
-  "setup_bytes": 5226,
-  "rectangles": 240,
-  "construction_work": 781857,
+  "source_grid_sha256": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
+  "setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+  "setup_bytes": 7690,
+  "rectangles": 363,
+  "construction_work": 848031,
   "material_histogram": {
-    "0": 1315295,
-    "49": 18068,
-    "62": 28359,
-    "68": 15723,
-    "77": 433,
-    "79": 239,
+    "0": 1249121,
+    "49": 22419,
+    "62": 31961,
+    "63": 2587,
+    "68": 21295,
+    "77": 2007,
+    "79": 1475,
     "100": 424536,
     "101": 290525,
-    "121": 2490,
-    "131": 1484
+    "121": 4316,
+    "129": 23487,
+    "130": 21525,
+    "131": 1898
   },
   "ground": {
-    "total": 781857,
-    "rooted": 781857,
+    "total": 848031,
+    "rooted": 848031,
     "detached": 0,
-    "pruned_provisional": 113558
+    "pruned_provisional": 65868
   },
   "fluid": {
     "water": 0,
@@ -50,8 +53,8 @@
         19,
         15
       ],
-      "valid_centres": 1201688,
-      "connected_centres": 1177616,
+      "valid_centres": 1113322,
+      "connected_centres": 1097205,
       "passed": 22,
       "sites": [
         {
@@ -215,8 +218,8 @@
         23,
         19
       ],
-      "valid_centres": 1175000,
-      "connected_centres": 1153474,
+      "valid_centres": 1082556,
+      "connected_centres": 1070177,
       "passed": 22,
       "sites": [
         {
@@ -380,8 +383,8 @@
         31,
         27
       ],
-      "valid_centres": 1122293,
-      "connected_centres": 1098474,
+      "valid_centres": 1026455,
+      "connected_centres": 1019415,
       "passed": 22,
       "sites": [
         {
@@ -552,8 +555,8 @@
       31,
       27
     ],
-    "valid_centres": 1092683,
-    "connected_centres": 1068864,
+    "valid_centres": 998271,
+    "connected_centres": 991231,
     "passed": 22,
     "sites": [
       {
@@ -725,7 +728,7 @@
         2048
       ],
       "bytes": 2099836,
-      "sha256": "309dd7cf01475a623dc32ecb1e5fe9baa9d34041c7b29776c3cfe035ad581bce"
+      "sha256": "46f3f66d3121e76e85f377ee9796217e07d5c8df611ba3b478037db1a99b6dae"
     },
     "01-west-clinic.png": {
       "xywh": [
@@ -735,7 +738,7 @@
         402
       ],
       "bytes": 162492,
-      "sha256": "e1fad77a945609166170a59c5003e8afd35cf9f437eff07f91b52d8b65267805"
+      "sha256": "51e7d433e605523a93e6253f03013149b4682e4fc1a65569e821ff82f27b67d7"
     },
     "02-seismic-fork.png": {
       "xywh": [
@@ -745,7 +748,7 @@
         452
       ],
       "bytes": 170438,
-      "sha256": "8d70d8fc1d0324ace974337449a5a32e5614a1d2f3dfcea676adc9255b1d1f19"
+      "sha256": "47c315d5872a21f2d36244cb95abee518d548673b663b84a0ca9c2ab782771f4"
     },
     "03-ore-transfer.png": {
       "xywh": [
@@ -755,7 +758,7 @@
         447
       ],
       "bytes": 185991,
-      "sha256": "932722570fde73bc51f924d3705aafe1f744a5d137a9d1505a1769ea178c0751"
+      "sha256": "f7e3b7014e1621e0ea0a58403e7f79b84145ba82fc60bf1ab8d58f6b55410bab"
     },
     "04-east-drill-bypass.png": {
       "xywh": [
@@ -785,7 +788,7 @@
         333
       ],
       "bytes": 296533,
-      "sha256": "6311cfa30d55ff925e976faae06f304eb3368de33e77ca767e2f1c55323eb2c1"
+      "sha256": "e185964121b454aa37941b56613b4b1ab22cb3d3c15dfc493e77ff69b469473d"
     }
   },
   "pixel_parity": 3221244,
