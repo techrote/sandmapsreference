@@ -110,6 +110,26 @@ V(772,417,150,141);
 V(1509,415,110,135);
 /* Side-enterable upper-to-lower maintenance ducts and editing receptors. */
 for(const [name,p] of Object.entries(sites)){if(p[1]>=600)V(p[0]-25,515,51,367);}
+/* R2 corpus Art P1: physically bounded unequal custody chambers and
+   differentiated side-entry fixtures. This is deliberately bounded: preserve
+   the open skyline, existing 25 named-site corridors and derelict east seam. */
+/* West arrival and sampling: small enclosed low inspection booth with
+   two physically open side doors, positioned away from the sample duct. */
+C(292,622,85,13); C(292,635,13,101); C(364,635,13,101);
+V(291,665,18,51); V(361,665,19,51);
+St(312,717,41,10); St(318,680,32,10); C(325,691,17,23);
+/* Unequal bonded receiving rack: side-founded cross-section deliberately
+   offset from x850..900 maintenance shaft to avoid severing return route. */
+C(908,591,69,14); C(957,605,15,132);
+St(914,721,40,12);
+for(let k=0;k<2;k++){St(918+k*25,650,9,63);St(915+k*25,648,21,9);}
+St(906,708,46,8);
+/* East quarantine: enclosed isolation workface with opposed entry gates,
+   lower transfer tray and bounded central examination counter. */
+C(1360,614,125,16); C(1360,630,15,104); C(1470,630,15,104);
+V(1357,661,20,49); V(1467,661,22,49);
+St(1383,719,73,15); C(1402,679,34,32);
+V(1408,686,22,17); St(1391,669,60,8);
 B(0,1000,W,24);
 
 // Remove genuinely ungrounded decorator fragments, never retain false hanging

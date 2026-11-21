@@ -1,5 +1,7 @@
 # Tidefault Bonded Freight — Sealed Customs-Lock Grid / Abandoned Pressure Ward
 
+**R2 bounded independent-Art-P1 repair (21 November 2026; source-static requalification only).** Added three unlike, physically entered custody workfaces within existing founded stations: a double-side-entry sample inspection booth, an offset bonded-rack handling cell which preserves the central maintenance shaft, and a two-entry quarantined examination pocket with low transfer tray. These do not claim working doors or simulated pressure, and the main overflight, 25 Midge literal sites, lower emergency route and editable abandoned annex remain available. The previous Art verdict at R1 does not qualify R2; fresh exact-HEAD independent reviews remain required. R2 full plane SHA-256: `ff5509d3167f6576c5df469ddcc99f53e4afaa95013c1e6d13d2b9a149ea1cca`; 503 lossless rectangles; 25/25 reached for each of 19×15, 23×19 and 31×27; hard obstacle route 1022 → 1078 steps; NATIVE-UNTESTED.
+
 **World-group Freight B · new Tidefault Bonded Freight Districts family, sibling 01 · completely original map geometry · 2048×1024 material-ID side elevation. DRAFT/HOLD. Source-static qualified, NATIVE-UNTESTED.**
 
 ## Operational role and world-family design language
