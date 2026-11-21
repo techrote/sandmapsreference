@@ -79,21 +79,21 @@ function buildWorld(){
  // Route sites: exact conservative full hull centres, no nearest-point snapping.
 
  const sites=[
-  ["West arrival",111,515],["West ticket precinct",202,622],
+  ["West arrival",111,515],["West ticket precinct",198,620],
   ["West underworks",138,908],["Western ascent seam",320,520],
   ["Outer bow crest",988,284],["West ram control",575,548],
   ["Ram workshop",545,963],["Incline escape shaft",610,850],
   ["West inner grade",474,637],["Crescent low crossing",768,649],
-  ["Basin dispatch",884,800],["Basin lower repair",935,983],
+  ["Basin dispatch",1026,820],["Basin lower repair",1032,991],
   ["Basin shaft recovery",1012,913],["Central high switch",1055,510],
-  ["Physical severable midspan",1131,591],["Outer eastern crest",1362,359],
+  ["Physical severable midspan",1168,290],["Outer eastern crest",1362,359],
   ["Eastern signal master",1580,390],["East freight approach",1448,714],
-  ["East brake works",1392,964],["East shaft recovery",1472,874],
-  ["Return east grade",1744,580],["Eastern passenger freight",1920,619],
+  ["East brake works",1480,962],["East shaft recovery",1472,874],
+  ["Return east grade",1744,580],["Eastern passenger freight",1970,595],
   ["East undertrack works",1777,893],["Eastern return shaft",1842,778],
-  ["Outbound finish",1943,707]
+  ["Outbound finish",2022,555]
  ];
- const obs=[1084,535,98,112];
+ const obs=[1120,240,96,115];
  const crops=[
   ["overview.png",0,0,W,H],
   ["01-ticket-ram-west.png",0,456,520,568],
@@ -103,6 +103,9 @@ function buildWorld(){
   ["05-departure-return-east.png",1662,489,386,535],
   ["06-nested-repair-chambers.png",398,788,910,236]
  ];
+ // Authored 112px-wide relief passages: the five entered workshop shafts cross both
+ // bowed transport grades, giving Midge real routes rather than sealed ornamental bays.
+ for(const [x,y] of [[226,854],[610,923],[1013,959],[1472,920],[1842,841]])rect(x-56,310,112,y-310+13,0);
  // Erase only truly unattached preliminary decorative solids; retain all grounded engineering.
  const attached=new Uint8Array(N),q=new Int32Array(N);let tail=0,head=0;
  function push(z){if(g[z]&&!attached[z]){attached[z]=1;q[tail++]=z;}}
