@@ -135,6 +135,9 @@ function layoutWorld(){
  // an open 31x27-compatible passage, preserving separate cable and lower-truss
  // motifs instead of a closed wire across the sole descent.
  b(662,838,126,114,0);
+ // Additional grade-separated open truss portal (drawbars terminate at
+ // its two inspection abutments rather than becoming an impassable fence).
+ b(454,1063,151,175,0);
  // Full conservative site envelope clearing is *literal* and before support
  // component pruning. Never search for a shifted replacement site.
  for(const p of sites)b(p.x-19,p.y-17,39,35,0);
