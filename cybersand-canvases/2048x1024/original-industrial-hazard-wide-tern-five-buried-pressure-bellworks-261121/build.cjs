@@ -104,6 +104,11 @@ function build(){
  // Small low-damage connection seams: intentional human editing / setpiece sites.
  rect(427,736,19,33,101);rect(1263,742,18,39,101);
  rect(1680,713,13,29,101);
+ // Open uninterrupted real service shafts after machinery has been installed.
+ // These are deliberate maintenance voids, not substituted waypoint positions.
+ for(let a of [[211,487,58,401],[614,482,65,406],[1008,480,54,408],[1425,491,60,396],[1833,480,62,409]])rect(...a,0);
+ // A split headshaft portal gives the central winding-room lookout access from the public sky.
+ rect(959,326,54,78,0);
  // Preserve exact named conservative envelope at every literal checkpoint.
  for(let [,x,y] of SITES)rect(x-17,y-15,35,31,0);
  return qualify();
