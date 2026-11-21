@@ -11,36 +11,42 @@
   "actor_model": "midge",
   "actor_sha256": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
   "material_cells": 2097152,
-  "grid_sha256": "b0e18f57cbaac0dc065e2b35de9708754316a59b822e5a8c055af6e07c8ff2eb",
-  "setup_sha256": "78aef4aaa144a11edfbb19ba32ab14b1443ac719a454404d4d870bc1b340e187",
-  "ordered_rectangles": 452,
-  "setup_bytes": 9380,
-  "construction_work_cells": 263339,
+  "grid_sha256": "e935f484ab1915b2c0751ba7f7ecfb0f344a371d91190daf57b3e0af5c9dd4df",
+  "setup_sha256": "5b15563239d43437c11f1e60d135d705f02feebc7b8d5fd949b2f1bbce2e744a",
+  "ordered_rectangles": 847,
+  "setup_bytes": 16914,
+  "construction_work_cells": 346601,
   "source_limits": {
     "max_rectangles": 32768,
     "max_setup_bytes": 1048576,
     "max_work_cells": 32000000
   },
   "material_histogram": {
-    "49": 17627,
-    "62": 12664,
-    "68": 8097,
-    "100": 158034,
-    "101": 60673,
-    "131": 6244
+    "49": 98035,
+    "62": 19599,
+    "63": 1310,
+    "68": 14315,
+    "77": 541,
+    "79": 1122,
+    "100": 148017,
+    "101": 45398,
+    "121": 2764,
+    "129": 2723,
+    "130": 6942,
+    "131": 5835
   },
-  "occupied_final_cells": 263339,
-  "grounded_final_cells": 263339,
+  "occupied_final_cells": 346601,
+  "grounded_final_cells": 346601,
   "detached_final_cells": 0,
   "unstable_mobile_liquid_reactive_cells": 0,
-  "provisional_discarded": 87124,
-  "discarded_groups": 41,
+  "provisional_discarded": 60080,
+  "discarded_groups": 35,
   "district_footprints": {
-    "clinic": 5592,
-    "ore": 1197,
-    "fault": 20372,
-    "seismic": 5304,
-    "subgrade": 12276
+    "clinic": 18008,
+    "ore": 10510,
+    "fault": 25401,
+    "seismic": 30774,
+    "subgrade": 51244
   },
   "sites": {
     "Rover clinic spawn": [
@@ -206,7 +212,7 @@
         19,
         15
       ],
-      "centres": 1720851,
+      "centres": 1547138,
       "passed": 38,
       "total": 38,
       "bad": []
@@ -216,7 +222,7 @@
         23,
         19
       ],
-      "centres": 1692096,
+      "centres": 1502859,
       "passed": 38,
       "total": 38,
       "bad": []
@@ -226,7 +232,7 @@
         31,
         27
       ],
-      "centres": 1634801,
+      "centres": 1416158,
       "passed": 38,
       "total": 38,
       "bad": []
@@ -246,7 +252,7 @@
         31,
         27
       ],
-      "centres": 1629910,
+      "centres": 1414542,
       "passed": 37,
       "total": 38,
       "bad": [
@@ -264,33 +270,33 @@
   "images": [
     {
       "name": "overview.png",
-      "size": 36725,
-      "sha256": "4caa145988f90044229a0e76d43a01911ad45cbbc9a0737e5f541bf88ca49513"
+      "size": 55327,
+      "sha256": "e12beb18017c631810c03be8dcf2c2bf8be56993c7d05d6cce2a664603615d1f"
     },
     {
       "name": "01-rover-clinic.png",
-      "size": 5578,
-      "sha256": "74526c738f09a227dbb5cbb2f95304eef462d5456856d7dd4506fd607163c749"
+      "size": 8877,
+      "sha256": "2eb820794940dd73e6139b57b9ea5b64d7efeabc3e5c900e59c80c9509d1938c"
     },
     {
       "name": "02-ore-and-west-fault.png",
-      "size": 3211,
-      "sha256": "8e50bbab8395a4ccbeb49cdcfe215d77018824d16d19dfad542517f769793052"
+      "size": 9083,
+      "sha256": "74d09da7a776dec1f3eb45da3f33e05ef6a5bb0f88ed8370aeb1d6e7ce7e7a96"
     },
     {
       "name": "03-braided-bridges.png",
-      "size": 7728,
-      "sha256": "b2471f1f07e79c733f34bd0964422ef5601e9deb2db744795d9c4583d6ac1b5e"
+      "size": 6278,
+      "sha256": "ae8cd24f6157c1159ab25cef71633796317b30195dcc879b530206a86a0e1733"
     },
     {
       "name": "04-forked-seismic-tower.png",
-      "size": 6758,
-      "sha256": "c82745173d523f3a30513db4e3a7cc9bbc0cc5c1236f631bf559dc1bc94ec1e5"
+      "size": 12294,
+      "sha256": "34138fcf1379ea395283e0269cf25553d4c7b3740720354b87bbdf7b2aa1f01b"
     },
     {
       "name": "05-deep-fault-archives.png",
-      "size": 14626,
-      "sha256": "7542eac5ef45ecb1cda4740fde95ad0f0bcd19d4dfbc581d21081c5f26011c79"
+      "size": 25585,
+      "sha256": "8e7f6ad037e87c6b4fbb0b635173e7c8be1915ba3fcdaa55c4a829c4ff6ac04e"
     }
   ],
   "crop_windows": [
