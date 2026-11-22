@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "programme": "GOLD-ASTRA-001",
+  "role": "specialist-C-independent-reviewer",
+  "engine": {"repository":"techrote/cybersand","head":"662df51cd8409a52332fa7ef15d06d8ab8945aed","read_only":true,"live_head_verified_utc_date":"2026-11-22"},
+  "setup": {
+    "format":"Setup-v2","version":2,
+    "required_root_keys":["version","extent","actors","next_id","selected","edits","response","liquid_policy","normalize","rule_radius","source","material","brush","fire"],
+    "optional_root_keys":["equipment"],
+    "side_min":512,"side_max":2048,"side_multiple":64,
+    "trial_extents":[[2048,1024],[1024,2048]],
+    "max_stamps":32768,"max_coalesced_rectangles":32768,"max_json_bytes":1048576,
+    "native_rectangle_capacity":32768,"native_rectangle_area_budget_multiple":8,
+    "max_actors":8,"max_actor_parts":8,
+    "box":"[x,y,width,height,material], integer cells, positive dimensions, half-open extent",
+    "disc":"[x,y,radius,material], integer circle dx*dx+dy*dy<=radius*radius, clipped to extent, radius2..24",
+    "overwrite":"ordered last write wins; Empty0 erases",
+    "rectangles":"nonempty equal-material horizontal runs coalesced vertically only while start,width,material match",
+    "source_files":["godot/scripts/workbench_setup.gd","godot/native_extension/cyber_demo_bridge.hpp","godot/native_extension/cyber_prepared_liquid_world.hpp"]
+  },
+  "generated_start": {
+    "format":"cybersand-generated-start-v1","version":1,"max_json_bytes":1048576,
+    "root_keys":["format","version","generation","starting_setup"],
+    "nested_setup_version":2,
+    "generation_keys":["schema","recipe","origin","extent","sha256","recipe_sha256","generator_fingerprint","plane_revision","generator_revision","receipt_hashes"],
+    "max_generation_receipts":1024,"edit_work_limit":"min(64*width*height,32000000)",
+    "exact_identity":"material bytes SHA256, JSON-roundtripped recipe SHA256, generator fingerprint/revision and receipt identities; not arbitrary image bytes",
+    "source_files":["godot/scripts/workbench_generated_map.gd","godot/native_extension/cyber_prepared_liquid_world.hpp"]
+  },
+  "materials": {
+    "valid_range_inclusive":[0,131],"invalid_within_range":[10],"authoritative_catalogue":"material-catalogue.json",
+    "liquid_ids":[3,8,12,16,20,21,24,30,32,33,36],
+    "stone13":"movable Powder; can be temporarily supported; never count as permanent masonry",
+    "wall1":"immovable hard surface; generic acid kernel explicitly skips it",
+    "reinforced_concrete58":"immovable hard surface; generic acid can dissolve it",
+    "hard_surface_rule":"explicit capability table; broad Solid classification does not imply collision, e.g. Plant11/Fungus18 are not hard surfaces",
+    "static_rule":"immovable does not imply chemically permanent; inspect kernel, pair rules and exposed materials",
+    "contact_neighbourhood":"8-neighbour Moore adjacency, including diagonals",
+    "generic_acid_rule":"after attempted movement, lifecycle sample dissolves any neighbour except Empty0, Wall1 or Acid12; native/src/world.cpp4109..4130",
+    "thermal_rule":"hot Fire6/Lava8/Spark34/MoltenGlass36 can ignite combustible material; Ice9 melts near hot material; pair reactions add more transformations",
+    "rooting_limit":"fixed-cell solid structures do not structurally fall solely because visually disconnected; permanent-support/rooting is a conservative authored-composition criterion, not a simulated engineering-strength claim",
+    "source_files":["native/include/cybersand/material.hpp","native/include/cybersand/material_capabilities.hpp","native/include/cybersand/interaction_rules.hpp","native/src/material_rules.cpp","native/src/world.cpp"]
+  },
+  "midge": {
+    "model":"midge","authored_hull":"COM-centred rectangle","size":[4,3],"bounds":[-2,-1.5,4,3],"initial_angle":0,
+    "spawn":"exact saved x,y enters Setup.physical_definitions and rig body placement; no nearest-point substitution",
+    "admission_limit":"whole hull must be inside extent, but native development placement deliberately admits hard-terrain intersections; successful installation alone is not proof of an unobstructed spawn",
+    "collision":"actual RectangleShape2D size=part.size, RigidBody2D CCD_CAST_SHAPE, Rapier terrain from native hard-surface cells",
+    "sensitivity_envelopes":[[19,15],[23,19],[31,27]],
+    "envelope_policy":"retain all declared conservative envelope tests; report actual4x3 hull separately; no replacement or relaxation after seeing outputs",
+    "source_files":["godot/authoring/flyers/midge.json","godot/scripts/gcr_flyer_authoring.gd","godot/scripts/gcr_review_fleet.gd","godot/scripts/workbench_setup.gd","godot/scripts/physical_actor_rig.gd","godot/tests/test_workbench_hard_placement.gd"]
+  },
+  "native_availability": {
+    "pinned_godot":"4.7.stable.official.5b4e0cb0f","system_godot_not_used":"4.7.2.stable.official.ed1daf0bf",
+    "accepted_linux_library_sha256":"a15fc422313eb01e79bc904f44cc8879816484ae4fc98c63ac4b815afdb6a5e7",
+    "accepted_linux_library_size":5253776,"declared_native_source_inputs":105,"declared_inputs_match_accepted_head":true,
+    "download":"exact accepted Linux LFS object fetched successfully","status":"AVAILABLE_NOT_YET_QUALIFIED_ON_TRIAL_PACKETS",
+    "qualification_labels":["SOURCE-STATIC","ART","NATIVE-INSTALL","NATIVE-ACTOR-MOTION","NATIVE-COLLISION","NATIVE-PHYSICS","NATIVE-SAVE-FRESH-REOPEN","NATIVE-UNTESTED"],
+    "limits":"local Linux experiment only; no owner-machine, Windows or GPU-playfeel claim; incomplete native testing remains NATIVE-UNTESTED without stopping the experiment"
+  }
+}

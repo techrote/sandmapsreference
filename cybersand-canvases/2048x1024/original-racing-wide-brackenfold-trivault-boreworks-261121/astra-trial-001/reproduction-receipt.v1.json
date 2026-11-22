@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "arm": "B3",
+  "attempt": 3,
+  "status": "PASS",
+  "command": "python reproduce.py --out reproduced --verify-original-build",
+  "original_builder_setup_bytes": "MATCH_FROZEN_ORIGINAL",
+  "candidate_and_png_bytes": "MATCH",
+  "files": [
+    {
+      "path": "setup.json",
+      "expected_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+      "reproduced_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315"
+    },
+    {
+      "path": "build-result.json",
+      "expected_sha256": "1e70db3c88ce592a61a509299b76273f03ba0cc3afe1929c2f1980ba1aea9a1d",
+      "reproduced_sha256": "1e70db3c88ce592a61a509299b76273f03ba0cc3afe1929c2f1980ba1aea9a1d"
+    },
+    {
+      "path": "images/overview-before.png",
+      "expected_sha256": "dd2e57883e301cf485741b59dde810da9914ee0bcd696e1acd12bd9f86225fcc",
+      "reproduced_sha256": "dd2e57883e301cf485741b59dde810da9914ee0bcd696e1acd12bd9f86225fcc"
+    },
+    {
+      "path": "images/overview-after.png",
+      "expected_sha256": "6c3cad046ec04ea35b409e39403d6bc5673a09fdbbda0ba5831d69a94c8ebf93",
+      "reproduced_sha256": "6c3cad046ec04ea35b409e39403d6bc5673a09fdbbda0ba5831d69a94c8ebf93"
+    },
+    {
+      "path": "images/01-west-ignition-nest-before.png",
+      "expected_sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc",
+      "reproduced_sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc"
+    },
+    {
+      "path": "images/01-west-ignition-nest-after.png",
+      "expected_sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc",
+      "reproduced_sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc"
+    },
+    {
+      "path": "images/02-first-vault-hoists-before.png",
+      "expected_sha256": "a90ebb49e4339d6480650f9046d0628fca6cbafb13034d100abfe28b69976ed2",
+      "reproduced_sha256": "a90ebb49e4339d6480650f9046d0628fca6cbafb13034d100abfe28b69976ed2"
+    },
+    {
+      "path": "images/02-first-vault-hoists-after.png",
+      "expected_sha256": "6f0d6303c0693d98d12b1644fb5abe08ade391f35857c6106df6aa3032119b3e",
+      "reproduced_sha256": "6f0d6303c0693d98d12b1644fb5abe08ade391f35857c6106df6aa3032119b3e"
+    },
+    {
+      "path": "images/03-central-saltfold-hub-before.png",
+      "expected_sha256": "f0994503384102116949db8707459bf73f88237accbd5e7f2b6b134090acd5ff",
+      "reproduced_sha256": "f0994503384102116949db8707459bf73f88237accbd5e7f2b6b134090acd5ff"
+    },
+    {
+      "path": "images/03-central-saltfold-hub-after.png",
+      "expected_sha256": "79c62fbedc6e335e9399604723768ff49b705da34006453e800de26493bdf248",
+      "reproduced_sha256": "79c62fbedc6e335e9399604723768ff49b705da34006453e800de26493bdf248"
+    },
+    {
+      "path": "images/04-east-condenser-bore-before.png",
+      "expected_sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e",
+      "reproduced_sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e"
+    },
+    {
+      "path": "images/04-east-condenser-bore-after.png",
+      "expected_sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e",
+      "reproduced_sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e"
+    },
+    {
+      "path": "images/05-east-catcher-switch-before.png",
+      "expected_sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1",
+      "reproduced_sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1"
+    },
+    {
+      "path": "images/05-east-catcher-switch-after.png",
+      "expected_sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1",
+      "reproduced_sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1"
+    },
+    {
+      "path": "images/06-deep-service-pockets-before.png",
+      "expected_sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5",
+      "reproduced_sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5"
+    },
+    {
+      "path": "images/06-deep-service-pockets-after.png",
+      "expected_sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5",
+      "reproduced_sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5"
+    },
+    {
+      "path": "images/10-first-diaphragm-decision-before.png",
+      "expected_sha256": "c474218757b91d74cdad6cee619f54a21e6f3cc2b62e8056a8f9e43db3e34d35",
+      "reproduced_sha256": "c474218757b91d74cdad6cee619f54a21e6f3cc2b62e8056a8f9e43db3e34d35"
+    },
+    {
+      "path": "images/10-first-diaphragm-decision-after.png",
+      "expected_sha256": "25c24f28217fd972fbce627b7b097faf2f298332ada2d34315c55c9a4e9bad22",
+      "reproduced_sha256": "25c24f28217fd972fbce627b7b097faf2f298332ada2d34315c55c9a4e9bad22"
+    }
+  ]
+}

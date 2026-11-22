@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "format": "R x y width height material; L x y X Y thickness material; D x y integer_radius material",
+  "groups": [
+    {
+      "id": "north_throat_approach",
+      "reason": "Give the upper gate a raised, braced overhead jaw and a distinct thin sill tied into the original geological diaphragm.",
+      "operations": [
+        [
+          "L",
+          736,
+          261,
+          799,
+          266,
+          9,
+          62
+        ],
+        [
+          "L",
+          799,
+          266,
+          833,
+          288,
+          7,
+          62
+        ],
+        [
+          "L",
+          742,
+          373,
+          807,
+          381,
+          8,
+          62
+        ],
+        [
+          "L",
+          746,
+          386,
+          778,
+          375,
+          6,
+          58
+        ],
+        [
+          "R",
+          733,
+          250,
+          9,
+          19,
+          58
+        ],
+        [
+          "R",
+          795,
+          258,
+          12,
+          10,
+          58
+        ]
+      ]
+    },
+    {
+      "id": "south_bypass_approach",
+      "reason": "Keep the low receiving sill and its supported posts, omitting the raised terminal that intruded into the original downstream conservative throat.",
+      "operations": [
+        [
+          "L",
+          730,
+          578,
+          805,
+          584,
+          8,
+          62
+        ],
+        [
+          "R",
+          736,
+          563,
+          8,
+          18,
+          58
+        ],
+        [
+          "R",
+          774,
+          575,
+          8,
+          10,
+          58
+        ]
+      ]
+    }
+  ]
+}
