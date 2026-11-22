@@ -168,6 +168,124 @@
       "entered_return_waypoint_reachable_after_obstruction": true,
       "alternate_via": "Sterile return midpassage",
       "alternate_existence_proof": "both literal via and goal centres are in spawn's 31x27 free-centre connected component under the physical obstruction"
+    },
+    "r4_ordered_sterile_route": {
+      "hull": [
+        31,
+        27
+      ],
+      "obstruction": [
+        462,
+        1053,
+        220,
+        184
+      ],
+      "method": "exact 31x27 clearance via integral image; literal 4-neighbour BFS; ordered segment backtracking",
+      "four_vault_portals": [
+        {
+          "name": "registry high gate",
+          "site": "Registry chamber",
+          "point": [
+            500,
+            359
+          ],
+          "opening_cells": 70,
+          "route": {
+            "steps": 282,
+            "sterile_neck_centres": 0,
+            "upper_neck": false,
+            "lower_neck": false
+          }
+        },
+        {
+          "name": "diagnostic low gate",
+          "site": "West diagnostic",
+          "point": [
+            515,
+            780
+          ],
+          "opening_cells": 86,
+          "route": {
+            "steps": 412,
+            "sterile_neck_centres": 0,
+            "upper_neck": false,
+            "lower_neck": false
+          }
+        },
+        {
+          "name": "selector west gate",
+          "site": "East selector",
+          "point": [
+            626,
+            945
+          ],
+          "opening_cells": 74,
+          "route": {
+            "steps": 207,
+            "sterile_neck_centres": 0,
+            "upper_neck": false,
+            "lower_neck": false
+          }
+        },
+        {
+          "name": "quarantine west gate",
+          "site": "Right sterile lower mouth",
+          "point": [
+            627,
+            1344
+          ],
+          "opening_cells": 80,
+          "route": {
+            "steps": 170,
+            "sterile_neck_centres": 0,
+            "upper_neck": false,
+            "lower_neck": false
+          }
+        }
+      ],
+      "ordered_waypoints": [
+        "High suture arrival",
+        "Right sterile entry",
+        "Sterile return midpassage",
+        "Right sterile lower mouth",
+        "Lower dispatch hatch"
+      ],
+      "segments": [
+        {
+          "from": "High suture arrival",
+          "to": "Right sterile entry",
+          "steps": 1131,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        },
+        {
+          "from": "Right sterile entry",
+          "to": "Sterile return midpassage",
+          "steps": 116,
+          "sterile_neck_centres": 33,
+          "upper_neck": true,
+          "lower_neck": false
+        },
+        {
+          "from": "Sterile return midpassage",
+          "to": "Right sterile lower mouth",
+          "steps": 175,
+          "sterile_neck_centres": 40,
+          "upper_neck": false,
+          "lower_neck": true
+        },
+        {
+          "from": "Right sterile lower mouth",
+          "to": "Lower dispatch hatch",
+          "steps": 761,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        }
+      ],
+      "via_distance": 2183,
+      "forced_shortest": false
     }
   },
   "exact_hull_results": [
@@ -176,8 +294,8 @@
         19,
         15
       ],
-      "valid_centres": 1106806,
-      "connected_centres": 1105099,
+      "valid_centres": 1019206,
+      "connected_centres": 1015977,
       "passed": 18,
       "sites": [
         {
@@ -313,8 +431,8 @@
         23,
         19
       ],
-      "valid_centres": 1082349,
-      "connected_centres": 1081549,
+      "valid_centres": 990802,
+      "connected_centres": 986947,
       "passed": 18,
       "sites": [
         {
@@ -450,8 +568,8 @@
         31,
         27
       ],
-      "valid_centres": 1034626,
-      "connected_centres": 1034626,
+      "valid_centres": 938752,
+      "connected_centres": 936832,
       "passed": 18,
       "sites": [
         {
@@ -582,5 +700,78 @@
         }
       ]
     }
-  ]
+  ],
+  "r4_third_stage": {
+    "baseline_child_head": "16bfa32b8b45dea015b723d72919041773f50ea2",
+    "changed_region_xyxy": [
+      361,
+      575,
+      924,
+      1111
+    ],
+    "full_hull_gates": [
+      {
+        "name": "registry high gate",
+        "site": "Registry chamber",
+        "point": [
+          500,
+          359
+        ],
+        "opening_cells": 70,
+        "route": {
+          "steps": 282,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        }
+      },
+      {
+        "name": "diagnostic low gate",
+        "site": "West diagnostic",
+        "point": [
+          515,
+          780
+        ],
+        "opening_cells": 86,
+        "route": {
+          "steps": 412,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        }
+      },
+      {
+        "name": "selector west gate",
+        "site": "East selector",
+        "point": [
+          626,
+          945
+        ],
+        "opening_cells": 74,
+        "route": {
+          "steps": 207,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        }
+      },
+      {
+        "name": "quarantine west gate",
+        "site": "Right sterile lower mouth",
+        "point": [
+          627,
+          1344
+        ],
+        "opening_cells": 80,
+        "route": {
+          "steps": 170,
+          "sterile_neck_centres": 0,
+          "upper_neck": false,
+          "lower_neck": false
+        }
+      }
+    ],
+    "actual_ordered_sterile_return_steps": 2183,
+    "shortest_forced_sterile": false
+  }
 }

@@ -74,6 +74,50 @@ function world(){
  b(476,1851,26,19,79);b(614,1841,111,39,130);
  b(638,1851,27,14,63);
  b(577,802,87,173,0); // engineer a full 31x27 north-south clearance past partly braced high handoff
+
+ // PORTRAIT-REPAIR-001 R4: bounded vault thresholds; preserve the 18 authored centres.
+ // High west registry: 70-cell outer portal and 63-cell internal custody threshold.
+ b(92,251,450,14,101);b(493,262,18,62,101);b(493,394,18,100,101);
+ b(345,260,12,70,100);b(345,393,12,104,100);b(90,408,12,90,101);
+ // Lower west diagnostics: separate lower 86-cell doorway and rooted instrument landing.
+ b(505,548,17,172,101);b(505,806,17,26,101);b(148,668,127,10,62);
+ // Upper east selector: 74-cell side entry, strong overhanging roof, sterile floor hatch.
+ b(617,850,343,12,101);b(617,851,18,57,101);b(617,982,18,144,101);
+ b(617,1119,124,14,101);b(851,1119,108,14,101);
+ b(729,851,14,61,49);b(729,978,14,152,49);
+ // 81-cell rock-rooted sterile neck between selector and isolation cavities.
+ b(737,1133,30,93,101);b(848,1133,28,93,101);
+ // Lower east quarantine: offset roof, 80-cell west threshold, supported assay partition.
+ b(631,1212,115,16,101);b(868,1212,92,16,101);
+ b(618,1228,18,75,101);b(618,1383,18,151,101);b(618,1529,116,13,101);
+ b(884,1228,14,112,49);b(884,1404,14,132,49);
+ b(900,1489,45,48,130);b(900,1520,45,16,68);
+ // Genuine lower portal through old crossing shelf; no actor-centre shifting.
+ b(764,1320,92,17,0);
+  // R4 follow-up to independent Art REWORK: unlike entered diagnostic and east custody threshold.
+ b(151,549,338,18,101);b(348,567,26,80,101);b(348,731,26,79,101);
+ b(382,567,100,17,100);b(418,549,12,31,101);
+ b(425,656,14,82,0); // physical 82-cell opening in existing hanger; not a decorative entrance
+ b(160,688,126,12,62);b(161,674,12,26,49);b(390,686,42,14,68);
+ // Selector offset internal airlock gate, outside original west entry and sterile neck.
+ b(657,863,15,68,101);b(657,1002,15,116,101);
+ b(697,862,126,14,101);b(679,1030,62,12,62);
+ // Unequal lower quarantine vestibule, preserving literal Midge clearance.
+ b(636,1228,44,95,101);b(636,1393,44,143,101);
+ b(680,1228,66,16,101);b(696,1244,13,48,101);
+ // R4 THIRD narrow Art REWORK: distinct west entered geology, unequal east selector vault.
+ // Independent Art finding: https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680
+ // Rock-cut diagnostic recess: two physically open Midge-scale side thresholds and a
+ // bottom access slit around the literal low diagnostic gate, not a display hall fill.
+ b(363,575,180,239,101);b(391,612,145,149,0);
+ b(361,649,40,84,0);b(531,667,38,81,0);
+ b(495,744,44,77,0); // preserve the exact [515,780] 31x27 gate
+ b(406,732,70,28,130);b(429,737,22,14,63);
+ // Upper selector: compact upper rock-cut vault and lateral entry, unlike
+ // the long lower quarantine landing, with open sterile floor return.
+ b(682,868,237,244,101);b(705,900,190,185,0);
+ b(682,918,30,81,0);b(888,957,35,80,0);
+ b(743,1074,99,52,0);b(731,1082,39,10,68);
  // Site hulls are literal authored centres with 39x35 local clean safety, not shifted.
  for(const s of sites)b(s.x-19,s.y-17,39,35,0);
  // Make every inert cell boundary-grounded, discarding only provisional loose detail.
@@ -159,6 +203,30 @@ function verifyPNG(p,g,W,x,y,w,h){const v=new DataView(p.buffer,p.byteOffset,p.b
 
 
 
+
+function r4WaypointProof(w,obstruction){
+ const W=w.W,H=w.H,N=W*H,S=W+1,g=w.g.slice(),sat=new Int32Array(S*(H+1)),free=new Uint8Array(N);
+ const [bx,by,bw,bh]=obstruction;for(let y=by;y<by+bh;y++)g.fill(58,y*W+bx,y*W+bx+bw);
+ for(let y=1;y<=H;y++){let r=0;for(let x=1;x<=W;x++){r+=g[(y-1)*W+x-1]?1:0;sat[y*S+x]=sat[(y-1)*S+x]+r;}}
+ for(let y=13;y+14<=H;y++)for(let x=15;x+16<=W;x++){let l=x-15,t=y-13,rr=l+31,b=t+27;if(sat[b*S+rr]-sat[t*S+rr]-sat[b*S+l]+sat[t*S+l]===0)free[y*W+x]=1;}
+ const sites=Object.fromEntries(w.sites.map(q=>[q.name,[q.x,q.y]]));
+ const mark=new Int32Array(N),parents=new Int32Array(N),queue=new Int32Array(N);let stamp=0;
+ function bfs(p,q){
+  const a=p[1]*W+p[0],b=q[1]*W+q[0];if(!free[a]||!free[b])throw Error("R4 blocked literal site or gate "+JSON.stringify([p,q]));
+  let h=0,t=0;++stamp;mark[a]=stamp;parents[a]=-1;queue[t++]=a;
+  while(h<t&&mark[b]!==stamp){let i=queue[h++],x=i%W;for(const j of[x?i-1:-1,x<W-1?i+1:-1,i-W,i+W])if(j>=0&&j<N&&free[j]&&mark[j]!==stamp){mark[j]=stamp;parents[j]=i;queue[t++]=j;}}
+  if(mark[b]!==stamp)throw Error("R4 disconnected literal route "+JSON.stringify([p,q]));
+  let steps=0,neck=0,upper=false,lower=false;for(let i=b;i!==a;i=parents[i]){let x=i%W,y=(i/W)|0;steps++;if(x>=782&&x<=832&&y>=1146&&y<=1212){neck++;if(y<=1160)upper=true;if(y>=1200)lower=true;}}
+  return {steps,sterile_neck_centres:neck,upper_neck:upper,lower_neck:lower};
+ }
+ const doors=[["registry high gate","Registry chamber",[500,359],70],["diagnostic low gate","West diagnostic",[515,780],86],["selector west gate","East selector",[626,945],74],["quarantine west gate","Right sterile lower mouth",[627,1344],80]]
+  .map(([name,site,point,opening_cells])=>({name,site,point,opening_cells,route:bfs(sites[site],point)}));
+ const names=["High suture arrival","Right sterile entry","Sterile return midpassage","Right sterile lower mouth","Lower dispatch hatch"];
+ const segments=names.slice(1).map((v,i)=>({from:names[i],to:v,...bfs(sites[names[i]],sites[v])}));
+ if(!segments[1].upper_neck||!segments[2].lower_neck)throw Error("R4 ordered bypass missed both sterile neck portals");
+ return {hull:[31,27],obstruction,method:"exact 31x27 clearance via integral image; literal 4-neighbour BFS; ordered segment backtracking",four_vault_portals:doors,ordered_waypoints:names,segments,via_distance:segments.reduce((n,q)=>n+q.steps,0),forced_shortest:false};
+}
+
 function baseBuild(){
  const w=world(),rects=encode(w.g,w.W,w.H),a=audit(w,rects),direct=shortest31(w,null),detour=shortest31(w,[462,1053,220,184]);
  if(a.detached||a.airfaces||a.direct||a.flight.some(f=>f.passed!==w.sites.length)||a.blocked.passed!==w.sites.length||detour.steps<=direct.steps||false)
@@ -173,9 +241,13 @@ const aspect_transfer={},route_graph={},exemplar={},readme='';
 }
 function build(){
  const r=baseBuild(),S="5d97133f3b33bf5b29f92eb65ccf7c884d9e5804",P="cybersand-canvases/2048x1024/worldgroup-xenobiome-cinderfold-seed-courier-buried-assay-interchange-261121/";
+ r.receipt.r4_waypoint_proof=r4WaypointProof(world(),[462,1053,220,184]);
  const route=r.route_graph={spawn:"High suture arrival",goal:"Lower dispatch hatch",sites:r.receipt.hulls[2].sites.map(q=>({name:q.name,xy:[q.x,q.y]})),primary:["High suture arrival","Registry chamber","West diagnostic","Open upper crossing","East selector","Isolation counters","Lower dispatch hatch"],branches:[["East selector","Right sterile entry","Sterile return midpassage","Right sterile lower mouth","Central return rejoin"],["Left unfinished archive","Archive outer mouth","Low service connection","Buried dispatch repair"]],obstruction:{rect:[462,1053,220,184],site_count_post_obstruction:r.receipt.obstructed.passed,route:r.receipt.goal_distance},exact_hull_results:r.receipt.hulls};
  r.aspect_transfer={source_extent:[2048,1024],target_extent:[1024,2048],source_pr:175,source_head:S,source_map_path:P,difficulty:"MODERATE",preserved:["four physically entered but unequal geological xenoseed work districts","registry→diagnostic→selector→quarantine→repair custody logic","inert rock-rooted support and archive editing seams"],transformed:["horizontal inset rock chambers into staggered alternate-bank vertical procession","two local service return pockets into an engineered longer east-bank sterile shaft","large continuous roof into unequal staggered root-banks and open courier crossings"],discarded:["source grid, rectangle streams, coordinates and lateral room widths","old contiguous wide roof and parallel local bypass layout"],newly_introduced:["two unlike elevated crossings and partial low freight joint","independently entered multi-height sterile side route","lower dry workshop and archive enlargement"]};
  r.exemplar={schema_version:1,purpose:["human_editable_canvas","procedural_exemplar","scripted_setpiece_source"],family:"portrait/moderate/cinderfold-suture-lantern",map_role:"staggered actual entered xenoseed chambers with geologic two-bank transfer and sterile return",anchor_donors:[{source_pr:175,source_head:S}],macro_topology:"unequal entered alternating-bank vaults, independent right-side return and deep repair",density_profile:"entered high registry and west diagnostic, open transfer, right selector/sterile sequence, low archive",route_grammar:{main:route.primary,alternate:route.branches},strong_motifs:["rock-cut dissimilar process chambers","east-bank long sterile return","intentionally broken low cross-bank cargo interface","opened west archive and basal relief"],interesting_relationships:["horizontal source workface adjacency becomes staggered vertical two-bank custody","one long side sterile return permits recovery after a main-lane obstruction"],authoring_affordances:["west archive and lower repair left with procedural sockets","unfinished low bridge supports event failure or future repair","open sky over actual cliff sequence"],setpiece_candidates:[{name:"suture bridge failure",region:[420,785,700,1005],scripted:false},{name:"sterile return lockdown",region:[730,1010,875,1410],scripted:false},{name:"archive encounter",region:[99,1519,535,1806],scripted:false},{name:"basal freight departure",region:[264,1740,770,1897],scripted:false}],procedural_exemplar_value:"Asymmetric geology-based transformation of a five-step assay custody chain, emphasizing crossed bank ownership rather than vertical dual-wall shafts.",similarity_avoidance:"Distinct from original Cinderfold buried horizontal workrooms and sibling aerial-braided trestle; unlike recent roof-rooted portrait shafts this composition changes bank, root and chamber shape per stage.",diversity_axes:{macro_topology:"mixed",altitude_grammar:"multi_strata",density_cadence:"alternating",route_structure:"branch_rejoin",landmark_family:"gantry",support_form:"cliff_embedded",environment_relation:"geological",incompleteness:"excavation"},grid_sha256:r.receipt.source_grid_sha256,native:"NATIVE-UNTESTED"};
+ r.route_graph.obstruction.r4_ordered_sterile_route=r.receipt.r4_waypoint_proof;
+ r.aspect_transfer.repair_r4={parent:"089d2cdb6b06b40d53ce9c4c83ef34192567454d",touched_regions:[[89,248,613,519],[124,537,636,849],[587,847,1010,1414],[588,1212,960,1542]],intent:"Distinct entered geologic vaults with thresholds and narrow sterile return",preserve:["18 literal site centres","central air drop","unfinished west archive","two-bank staggered process custody"],native:"NATIVE-UNTESTED",independent_reviews:"PENDING"};
+ r.exemplar.repair_r4={source_parent:"089d2cdb6b06b40d53ce9c4c83ef34192567454d",verdict:"PENDING_INDEPENDENT_REVIEW",protected_voids:["central flight drop","west archive expansion seam"],new_relationships:["registry high split","diagnostic lower threshold","selector-side door","sterile 81-cell neck","quarantine-side door"]};
  Object.assign(r.receipt,{difficulty:"MODERATE",source:{pr:175,head:S,path:P}});
  const mid=r.receipt.obstructed.sites.find(q=>q.name==="Sterile return midpassage");
  const goal=r.receipt.obstructed.sites.find(q=>q.name==="Lower dispatch hatch");
@@ -185,6 +257,22 @@ function build(){
  r.route_graph.obstruction.route=r.receipt.goal_distance;
 
  r.readme="# Cinderfold Suture Lantern — Entered Vault Exchange\n\nPORTRAIT-001 Creator A · MODERATE #1 · 1024×2048 · Draft/HOLD · NATIVE-UNTESTED\n\nRead-only source original PR #175 @ "+S+" in "+P+"\nRead-only CyberSand main @ 69209acaffb34ebe18c45e19290b5976b7fb2c82. Corpus main @ 99a166e7fcae45eb22be1740e9f33f62faccbcc7.\n\nNo crop, rotation, stretch, source coordinate/geometry/pixel reuse or donor branch mutation. Actual 2D material cells. Distinct entering seed vaults, assays, selection and isolation, with separate sterile return.\n\n`node build.cjs` reproducibly generates exact Setup-v2 JSON, SHA and physical-law receipts, full-grid authentic indexed overview, six useful true 1:1 district crops, aspect transfer, route and exemplar. Native flight, collision and persistence NATIVE-UNTESTED. No merge or Ready.\n";
+ r.readme+="\\n## R4 bounded repair (separate child branch)\\n\\nBaseline exact portrait HEAD: 089d2cdb6b06b40d53ce9c4c83ef34192567454d. Four distinct 31x27-clear physical chamber thresholds and 81-cell sterile neck. Full obstruction-checked ordered waypoint proof in receipt.json and route_graph.json; not claimed to be the forced shortest route. No change to 18 original centres, central open shaft or unfinished west archive. The parent PNG gallery remains the immutable BEFORE reference; child PNGs are generated from real edited cells. Independent Art/Technical and live Godot/Rapier/persistence still pending.\\n";
+ r.receipt.r4_second_stage={"baseline_child_head":"6e670da369b6ac856b821dbebb929ab27a2a126a","independent_art_review":"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453","design":"distinct diagnostic vaulted pair with actual double-portal entry and offset east selector/quarantine thresholds","delta":{"changed":28613,"air_to_solid":23078,"solid_to_air":2556,"material_replacement":2979,"protected_archive_changes":0},"bbox_inclusive":[151,549,822,1528],"new_head_art":"PENDING","new_head_technical":"PENDING","native":"NATIVE-UNTESTED"};
+ r.aspect_transfer.repair_r4_second_stage={"baseline_child_head":"6e670da369b6ac856b821dbebb929ab27a2a126a","independent_art_review":"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453","preserved":["18 fixed site centres","east 81-cell sterile neck","central Midge flight shaft","entire y>=1546 lower archive"],"scope":"West diagnostic nested threshold and east selector/quarantine separate usable thresholds","new_head_independent_review":"PENDING"};
+ r.exemplar.repair_r4_second_stage={"baseline_child_head":"6e670da369b6ac856b821dbebb929ab27a2a126a","independent_art_review":"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453","preserved":["18 fixed site centres","east 81-cell sterile neck","central Midge flight shaft","entire y>=1546 lower archive"],"scope":"West diagnostic nested threshold and east selector/quarantine separate usable thresholds","new_head_independent_review":"PENDING"};
+ r.readme+="\n## Review-driven second bounded R4 repair\n\nAfter independent Art REWORK of first-child HEAD 6e670da369b6ac856b821dbebb929ab27a2a126a, the west diagnostics now has a stepped grounded roof and two traversable successive vault portals; east selector and quarantine have distinct offset internal thresholds. This stage modifies 28,613 real material cells, all within [151,549,822,1528], and leaves every cell at y>=1546 unchanged. Exact 31x27 named routes and ordered sterile return are regenerated. Re-review is required; NATIVE-UNTESTED.\n";
+ // Third-stage evidence is specific to the independent Art-only REWORK at the old head.
+ // Historical first/second child receipts remain traceable, not retroactively PASS.
+ r.receipt.r4_second_stage.new_head_art="REWORK on 16bfa32b8b45dea015b723d72919041773f50ea2";
+ r.aspect_transfer.repair_r4_second_stage.new_head_independent_review="Art REWORK at https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680; Technical unverified";
+ r.exemplar.repair_r4_second_stage.new_head_independent_review="Art REWORK at https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680; Technical unverified";
+ const third={baseline_child_head:"16bfa32b8b45dea015b723d72919041773f50ea2",review_url:"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680",scope:"West diagnostic fully rock-cut inner recess with two actual side thresholds; east upper selector unlike compact cavern with lateral side-entry and sterile floor return",changed_final_cells:29473,air_to_solid:19321,solid_to_air:3870,material_replacements:6282,bbox_inclusive:[361,575,924,1111],protected:"18 literal sites, all y>=1546, open central shaft, sterile neck and alternate return",source_static:"Pass exact rectangle and full-hull BFS; pending independent same-HEAD Art and Technical",native:"NATIVE-UNTESTED"};
+ r.receipt.r4_third_stage=third;
+ r.aspect_transfer.repair_r4_third_stage=third;
+ r.exemplar.repair_r4_third_stage={...third,independent_art:"PENDING at new HEAD",independent_technical:"PENDING"};
+ r.route_graph.r4_third_stage={baseline_child_head:third.baseline_child_head,changed_region_xyxy:third.bbox_inclusive,full_hull_gates:r.receipt.r4_waypoint_proof.four_vault_portals,actual_ordered_sterile_return_steps:r.receipt.r4_waypoint_proof.via_distance,shortest_forced_sterile:false};
+ r.readme+="\n## Third narrow R4 repair following exact-HEAD Art REWORK\n\nIndependent Art [REWORK](https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680) at 16bfa32b8b45dea015b723d72919041773f50ea2 found a residual unentered west diagnostic hall and indistinct east selector/quarantine thresholds. This child-only pass uses actual rock material to frame a second entered west diagnostic inner recess and a compact enclosed east selector with lateral door and distinct lower sterile egress. Its 29,473 changed cells are confined to [361,575,924,1111] versus that exact previous child; all y>=1546 remains identical, and all original 18 centres plus 31x27 gate/ordered return checks are rerun. The independent Art/Technical verdict for this new HEAD is PENDING, and native movement and persistence remain NATIVE-UNTESTED.\n";
  return r;
 }
 if(typeof require!=="undefined" && typeof module!=="undefined" && require.main===module){const fs=require("fs"),path=require("path"),d=process.argv[2]||__dirname;fs.mkdirSync(d,{recursive:true});const a=build();fs.writeFileSync(path.join(d,"setup.json"),a.setupText);fs.writeFileSync(path.join(d,"receipt.json"),JSON.stringify(a.receipt,null,2)+"\n");for(const[n,v]of Object.entries(a.pngs))fs.writeFileSync(path.join(d,n),v);for(const [n,v] of [["aspect_transfer.json",a.aspect_transfer],["route_graph.json",a.route_graph],["exemplar.json",a.exemplar]])fs.writeFileSync(path.join(d,n),JSON.stringify(v,null,2)+"\n");fs.writeFileSync(path.join(d,"README.md"),a.readme);console.log(a.receipt);}

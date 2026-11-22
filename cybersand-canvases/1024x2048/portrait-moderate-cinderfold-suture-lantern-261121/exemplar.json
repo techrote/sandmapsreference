@@ -110,6 +110,53 @@
     "environment_relation": "geological",
     "incompleteness": "excavation"
   },
-  "grid_sha256": "ea6ced6c47b2df2956ffa9281babe46d3dcbb8325dad8131a65555d02c7f6837",
-  "native": "NATIVE-UNTESTED"
+  "grid_sha256": "83e104c1b3ca6afa5ee0b2746aa83795ca2e543c66df04af54439edfcc589a2c",
+  "native": "NATIVE-UNTESTED",
+  "repair_r4": {
+    "source_parent": "089d2cdb6b06b40d53ce9c4c83ef34192567454d",
+    "verdict": "PENDING_INDEPENDENT_REVIEW",
+    "protected_voids": [
+      "central flight drop",
+      "west archive expansion seam"
+    ],
+    "new_relationships": [
+      "registry high split",
+      "diagnostic lower threshold",
+      "selector-side door",
+      "sterile 81-cell neck",
+      "quarantine-side door"
+    ]
+  },
+  "repair_r4_second_stage": {
+    "baseline_child_head": "6e670da369b6ac856b821dbebb929ab27a2a126a",
+    "independent_art_review": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453",
+    "preserved": [
+      "18 fixed site centres",
+      "east 81-cell sterile neck",
+      "central Midge flight shaft",
+      "entire y>=1546 lower archive"
+    ],
+    "scope": "West diagnostic nested threshold and east selector/quarantine separate usable thresholds",
+    "new_head_independent_review": "Art REWORK at https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680; Technical unverified"
+  },
+  "repair_r4_third_stage": {
+    "baseline_child_head": "16bfa32b8b45dea015b723d72919041773f50ea2",
+    "review_url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680",
+    "scope": "West diagnostic fully rock-cut inner recess with two actual side thresholds; east upper selector unlike compact cavern with lateral side-entry and sterile floor return",
+    "changed_final_cells": 29473,
+    "air_to_solid": 19321,
+    "solid_to_air": 3870,
+    "material_replacements": 6282,
+    "bbox_inclusive": [
+      361,
+      575,
+      924,
+      1111
+    ],
+    "protected": "18 literal sites, all y>=1546, open central shaft, sterile neck and alternate return",
+    "source_static": "Pass exact rectangle and full-hull BFS; pending independent same-HEAD Art and Technical",
+    "native": "NATIVE-UNTESTED",
+    "independent_art": "PENDING at new HEAD",
+    "independent_technical": "PENDING"
+  }
 }
