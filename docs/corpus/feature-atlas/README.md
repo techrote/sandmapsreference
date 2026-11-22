@@ -3,6 +3,14 @@
 **Draft/HOLD sidecar; no geometry writes, no Gold finalisation, no Astra execution.**
 Authority: [Feature Atlas #200](https://github.com/techrote/sandmapsreference/issues/200), [exclusive portrait repairs #199](https://github.com/techrote/sandmapsreference/issues/199), [corpus preparation #181](https://github.com/techrote/sandmapsreference/issues/181). Source lineage semantics are borrowed from [CORPUS-INDEX #99](https://github.com/techrote/sandmapsreference/issues/99) but that programme's Draft PR #102 is untouched.
 
+## Current spatial-authority safeguard (22 November 2026)
+
+At the latest verified repair-child HEADs, all **7/7** have paired independent Art PASS and Technical **SOURCE-STATIC PASS**; **0/7** have native gameplay or owner acceptance. The 76-state immutable evidence ledger remains a historical record, not a current-result tally; older dated sections below report the status at the time they were written and must **not** override the current exact-HEAD register.
+
+The 27-record `astra-current.v1.json` contains **20 DO-PRESERVE**, **5 DO-NOT-FILL** and **2 DO-NOT-ASSERT** primary treatments, but **27/27 records also contain explicit nonempty `do_not_fill[]` guidance**. Therefore the five primary DO-NOT-FILL treatments are **not** a count of distinct protected voids, nor do the other 22 records permit infill. Protected relationships must be read for **every** feature, regardless of its primary treatment.
+
+**0/27** current feature records possess a reviewer-confirmed tight `feature_bbox_xyxy`; `crop_rect_xywh` and `evidence_window_xyxy` identify authentic inspection windows, **not** exact feature masks, blanket edit-safe regions or automated paint permissions. Prose-preserved shafts, voids and work seams can overlap and lack independently grounded numeric bounds; do not invent disjoint polygons or treat crop size as a material edit scope. The top-level `spatial_safety_contract` in the advisory makes these limits machine-visible, and `validate-sidecars.mjs` checks its aggregate counts against the actual current entries. If later independent evidence establishes exact feature geometry, it requires a separately reviewed, versioned state before any tool may interpret that geometry. This is non-executable evidence for human curation; no Astra or Gold action is authorised.
+
 ## Read the evidence
 
 - `states.v1.jsonl`: one feature *state* per line; seven independently reviewed REWORK baselines and five independently PASS control portraits. The feature ID is stable; state ID is `feature_id@exact40characterPortraitHEAD`. Revisions append, **never replace** the baseline.
