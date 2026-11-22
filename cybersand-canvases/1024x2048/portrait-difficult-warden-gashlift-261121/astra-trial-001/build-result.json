@@ -1,0 +1,384 @@
+{
+  "arm": "D2",
+  "source_head": "64fd7061385fd96e5673484e1a12a70e11333386",
+  "frozen_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "cell_difference": {
+    "changed_cells": 7692,
+    "bounds_xywh": [
+      355,
+      581,
+      575,
+      862
+    ],
+    "before_material_plane_sha256_uint8": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81",
+    "after_material_plane_sha256_uint8": "f9fcc3c98c595c10a763a7319bf30edd0842de6f80033c46a55a97709deacd63",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 58,
+        "cells": 3122
+      },
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 3000
+      },
+      {
+        "from": 58,
+        "to": 0,
+        "cells": 380
+      },
+      {
+        "from": 62,
+        "to": 0,
+        "cells": 691
+      },
+      {
+        "from": 62,
+        "to": 58,
+        "cells": 499
+      }
+    ]
+  },
+  "final_pruned_provisional_cells": 0,
+  "operation_groups": [
+    {
+      "group": "magnet_head",
+      "cells_changed_at_operation_stage": 1238
+    },
+    {
+      "group": "press_workface",
+      "cells_changed_at_operation_stage": 4157
+    },
+    {
+      "group": "upper_west_fracture",
+      "cells_changed_at_operation_stage": 494
+    },
+    {
+      "group": "upper_east_fracture",
+      "cells_changed_at_operation_stage": 506
+    },
+    {
+      "group": "middle_west_fracture",
+      "cells_changed_at_operation_stage": 325
+    },
+    {
+      "group": "middle_east_fracture",
+      "cells_changed_at_operation_stage": 382
+    },
+    {
+      "group": "lower_west_fracture",
+      "cells_changed_at_operation_stage": 349
+    },
+    {
+      "group": "lower_east_fracture",
+      "cells_changed_at_operation_stage": 241
+    }
+  ],
+  "rectangle_count": 1294,
+  "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+  "images": [
+    {
+      "path": "images/overview-before.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "pixels": [
+        1024,
+        2048
+      ],
+      "scale": 1,
+      "sha256": "dfeda95b11c2a62dc4ca1f4f8f406fb27d60c267f45d321c6abfbc7c45766d44"
+    },
+    {
+      "path": "images/overview-after.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "pixels": [
+        1024,
+        2048
+      ],
+      "scale": 1,
+      "sha256": "f2d6cb79d0a63d65c146683aebddd31a55d9e1398ba1a20df03d6f5e2c4e5c1f"
+    },
+    {
+      "path": "images/01-entered-breached-ship-before.png",
+      "source_crop_xywh": [
+        82,
+        308,
+        395,
+        362
+      ],
+      "pixels": [
+        395,
+        362
+      ],
+      "scale": 1,
+      "sha256": "4ea1ee41c8bd0a19adf75ee388fcf4c79ae0189549d57a7c70865867a395447b"
+    },
+    {
+      "path": "images/01-entered-breached-ship-after.png",
+      "source_crop_xywh": [
+        82,
+        308,
+        395,
+        362
+      ],
+      "pixels": [
+        395,
+        362
+      ],
+      "scale": 1,
+      "sha256": "4ea1ee41c8bd0a19adf75ee388fcf4c79ae0189549d57a7c70865867a395447b"
+    },
+    {
+      "path": "images/02-crane-magnet-before.png",
+      "source_crop_xywh": [
+        528,
+        193,
+        418,
+        470
+      ],
+      "pixels": [
+        418,
+        470
+      ],
+      "scale": 1,
+      "sha256": "bb08fb4c0ad172fe7117f274f23aef4f88bf5e59cb8c9d5ff66f158e00a37c9a"
+    },
+    {
+      "path": "images/02-crane-magnet-after.png",
+      "source_crop_xywh": [
+        528,
+        193,
+        418,
+        470
+      ],
+      "pixels": [
+        418,
+        470
+      ],
+      "scale": 1,
+      "sha256": "65ff63646be4c2a9def7cda9c9d19709c6997fa9fb81003e85a64648e91f244f"
+    },
+    {
+      "path": "images/03-fractured-trestle-relay-before.png",
+      "source_crop_xywh": [
+        80,
+        668,
+        864,
+        440
+      ],
+      "pixels": [
+        864,
+        440
+      ],
+      "scale": 1,
+      "sha256": "c90e358cb1704632d0891a42761bdccdc4cc182a9c3f7abdfc566709d95ed686"
+    },
+    {
+      "path": "images/03-fractured-trestle-relay-after.png",
+      "source_crop_xywh": [
+        80,
+        668,
+        864,
+        440
+      ],
+      "pixels": [
+        864,
+        440
+      ],
+      "scale": 1,
+      "sha256": "0e24ecbbdd93d84f08aaf8d7e3013c69bd461238ad64aa8f6d7dd9e081d6e73b"
+    },
+    {
+      "path": "images/04-salvage-press-before.png",
+      "source_crop_xywh": [
+        600,
+        1033,
+        344,
+        322
+      ],
+      "pixels": [
+        344,
+        322
+      ],
+      "scale": 1,
+      "sha256": "c6e85ff6a23ad356381d26a30f860fd6d4e174bd299bc1406bb279c4074e7fd5"
+    },
+    {
+      "path": "images/04-salvage-press-after.png",
+      "source_crop_xywh": [
+        600,
+        1033,
+        344,
+        322
+      ],
+      "pixels": [
+        344,
+        322
+      ],
+      "scale": 1,
+      "sha256": "e3b9cf8c7d8a08a4459a47009c9a0e12cd0dd13602db5321c590cb4800290a3e"
+    },
+    {
+      "path": "images/05-customs-rail-grades-before.png",
+      "source_crop_xywh": [
+        629,
+        1420,
+        315,
+        520
+      ],
+      "pixels": [
+        315,
+        520
+      ],
+      "scale": 1,
+      "sha256": "7e17cf7a810dea942dd16740331101972097a748ed752aaa7aca1ee6cd7704bc"
+    },
+    {
+      "path": "images/05-customs-rail-grades-after.png",
+      "source_crop_xywh": [
+        629,
+        1420,
+        315,
+        520
+      ],
+      "pixels": [
+        315,
+        520
+      ],
+      "scale": 1,
+      "sha256": "0ba655a61ba0d5c8e0f8762b84a8cdccead528060c2d019d7deb3fe7673d22af"
+    },
+    {
+      "path": "images/06-west-lower-return-before.png",
+      "source_crop_xywh": [
+        82,
+        1665,
+        562,
+        310
+      ],
+      "pixels": [
+        562,
+        310
+      ],
+      "scale": 1,
+      "sha256": "9b6393a0fa6f03c3af72ff3b97af9f0331210525d1bdb87048a01777cd89e920"
+    },
+    {
+      "path": "images/06-west-lower-return-after.png",
+      "source_crop_xywh": [
+        82,
+        1665,
+        562,
+        310
+      ],
+      "pixels": [
+        562,
+        310
+      ],
+      "scale": 1,
+      "sha256": "9b6393a0fa6f03c3af72ff3b97af9f0331210525d1bdb87048a01777cd89e920"
+    },
+    {
+      "path": "images/10-magnet-head-before.png",
+      "source_crop_xywh": [
+        550,
+        530,
+        130,
+        125
+      ],
+      "pixels": [
+        130,
+        125
+      ],
+      "scale": 1,
+      "sha256": "76c2e0aa6de5a81e54dc9166540d1f9a54c49f64436c814611bdd10111855d27"
+    },
+    {
+      "path": "images/10-magnet-head-after.png",
+      "source_crop_xywh": [
+        550,
+        530,
+        130,
+        125
+      ],
+      "pixels": [
+        130,
+        125
+      ],
+      "scale": 1,
+      "sha256": "07eb3fbfbd59b0ae1b5f2040d6b50d2d57d2b417f7648254df90cc716cd15c9b"
+    },
+    {
+      "path": "images/11-compression-workface-before.png",
+      "source_crop_xywh": [
+        750,
+        1080,
+        205,
+        235
+      ],
+      "pixels": [
+        205,
+        235
+      ],
+      "scale": 1,
+      "sha256": "7f34e910b5a6483a7993f6f60a49e32807757ed8cb9d2d4bafad083ba2e9c817"
+    },
+    {
+      "path": "images/11-compression-workface-after.png",
+      "source_crop_xywh": [
+        750,
+        1080,
+        205,
+        235
+      ],
+      "pixels": [
+        205,
+        235
+      ],
+      "scale": 1,
+      "sha256": "6a0eb8808097c6f100e9d5153ae31ab6d5cae2197f19ba30b2d5acae16f9f953"
+    },
+    {
+      "path": "images/12-lower-fractures-before.png",
+      "source_crop_xywh": [
+        310,
+        1325,
+        410,
+        215
+      ],
+      "pixels": [
+        410,
+        215
+      ],
+      "scale": 1,
+      "sha256": "0e30406a72978398210c4361c3f505f31b03e54e3b17e12a6a9e2071654f398c"
+    },
+    {
+      "path": "images/12-lower-fractures-after.png",
+      "source_crop_xywh": [
+        310,
+        1325,
+        410,
+        215
+      ],
+      "pixels": [
+        410,
+        215
+      ],
+      "scale": 1,
+      "sha256": "294aa24b9c9b7d8b398ccc494c630f928c5c942f0761ca848a03bb1ee7d704a3"
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "source_static_only": true
+}
