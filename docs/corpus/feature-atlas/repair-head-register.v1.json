@@ -5,7 +5,7 @@
   "immutable_baseline_count": 38,
   "art_reviewed_feature_after_states": 38,
   "original_creator_candidates": 25,
-  "gate": "7/7 independent current-HEAD Art PASS; 5/7 paired same-HEAD Art + Technical SOURCE-STATIC PASS (#202,#203,#204,#207,#208); R4 #205 and R5 #206 Technical PENDING. All OPEN Draft/HOLD, NATIVE-UNTESTED, owner-only acceptance.",
+  "gate": "7/7 independent current-HEAD Art PASS; 6/7 paired Art + Technical SOURCE-STATIC PASS (#202,#203,#204,#205,#207,#208); only R5 Cinderward #206 awaits independent Technical. All 7 OPEN Draft/HOLD and NATIVE-UNTESTED. Owner-only acceptance.",
   "children": [
     {
       "repair_pr": 202,
@@ -71,7 +71,7 @@
       "parent_portrait_pr": 190,
       "exact_current_head": "6b58eec39cabcc2b65f868c46265c454615d9ab7",
       "art_current_head": "PASS",
-      "technical_current_head": "PENDING",
+      "technical_current_head": "SOURCE_STATIC_PASS",
       "art_review_url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071803344",
       "canonical_art_reviewed_states": 4,
       "prior_reviewed_heads": [
@@ -91,7 +91,7 @@
         }
       ],
       "native": "NATIVE-UNTESTED",
-      "technical_review_url": null
+      "technical_review_url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071953428"
     },
     {
       "repair_pr": 206,
@@ -144,6 +144,6 @@
       "technical_review_url": "https://github.com/techrote/sandmapsreference/pull/208#issuecomment-7070609209"
     }
   ],
-  "current_technical_source_static_pass_prs": 5,
-  "paired_art_technical_static_pass_prs": 5
+  "current_technical_source_static_pass_prs": 6,
+  "paired_art_technical_static_pass_prs": 6
 }

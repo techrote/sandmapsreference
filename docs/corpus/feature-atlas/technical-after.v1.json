@@ -126,6 +126,27 @@
         "P192-CENTRAL-FAULT-GAP@e30fc44f5be60ab208b1fe0ed69c7139da0bfd79"
       ],
       "limits": "Source-static only; full binary overview parity, standalone builder re-execution, exact-HEAD CI, real Godot/bridge/Rapier collision/dynamics and cold save/reopen not established here."
+    },
+    {
+      "pr": 205,
+      "head": "6b58eec39cabcc2b65f868c46265c454615d9ab7",
+      "url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071953428",
+      "rectangles": 271,
+      "rooted_solids": 955146,
+      "sites": 18,
+      "liquid": "No initial Water or Lava",
+      "route": "18/18 exact original sites at 19x15, 23x19 and 31x27, including real obstruction; ordered optional entered sterile return 2183 steps, unrestricted obstructed shortest 1983 does not traverse it; four literal vault gate paths 282/412/207/170",
+      "png": "6 committed true 1:1 indexed crops, 1,277,241 compared pixels, zero Setup mismatches, SHA/CRC/zlib checks; full hosted overview binary unavailable",
+      "note": "Independent full Setup-v2 grid replay, exact SHA-256 and material rectangle validity, all inert solids rooted, literal hull-centre 4-neighbour BFS and source-matched crop parity. Separate same-HEAD Art PASS.",
+      "technical_verdict": "SOURCE_STATIC_PASS",
+      "native_status": "NATIVE-UNTESTED",
+      "reviewed_feature_states": [
+        "P190-EAST-ENTERED-VAULT@6b58eec39cabcc2b65f868c46265c454615d9ab7",
+        "P190-WEST-DIAGNOSTIC-THRESHOLD@6b58eec39cabcc2b65f868c46265c454615d9ab7",
+        "P190-BURIED-ARCHIVE-RESERVE@6b58eec39cabcc2b65f868c46265c454615d9ab7",
+        "P190-FORCED-STERILE-CLAIM@6b58eec39cabcc2b65f868c46265c454615d9ab7"
+      ],
+      "limits": "Source-static only; full overview remote binary pixel parity, standalone Node builder rerun, exact-HEAD CI, Godot/bridge/Rapier dynamics and cold save/reopen UNTESTED."
     }
   ]
 }

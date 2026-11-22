@@ -5,7 +5,7 @@
   "purpose": "Advisory current exact-child-HEAD treatment only. Earlier reviewed states are deliberately retained in immutable historical log and after-state history; no Gold selection or Astra execution.",
   "current_child_count": 7,
   "feature_state_count": 27,
-  "gate": "7/7 independent current-HEAD Art PASS; 5/7 paired same-HEAD Art + Technical SOURCE-STATIC PASS (#202,#203,#204,#207,#208); R4 #205 and R5 #206 Technical PENDING. All OPEN Draft/HOLD, NATIVE-UNTESTED, owner-only acceptance.",
+  "gate": "7/7 independent Art PASS, 6/7 paired independent SOURCE-STATIC Technical PASS; Cinderward R5 #206 Technical pending. All NATIVE-UNTESTED, Draft/HOLD, no Astra/Gold/owner acceptance.",
   "records": [
     {
       "state_id": "P185-CROSSBANK-ASSAY@d139f2a2868daa4b09d5e39c71d3638190dda705",
@@ -727,8 +727,8 @@
         "Eastern sterile service descent and archive overlap window"
       ],
       "bounded_action": "No broad fill or closure; preserve entered selector, separate lower isolation and optional service mouths.",
-      "technical_current_head": "PENDING",
-      "technical_review_url": null,
+      "technical_current_head": "SOURCE_STATIC_PASS",
+      "technical_review_url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071953428",
       "native": "NATIVE-UNTESTED"
     },
     {
@@ -760,8 +760,8 @@
         "Side entrances and unfinished lower archive reserve"
       ],
       "bounded_action": "Preserve the distinct rock-cut entered diagnostic chamber; no further mandatory Art repair.",
-      "technical_current_head": "PENDING",
-      "technical_review_url": null,
+      "technical_current_head": "SOURCE_STATIC_PASS",
+      "technical_review_url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071953428",
       "native": "NATIVE-UNTESTED"
     },
     {
@@ -791,8 +791,8 @@
         "Open central shaft and its service access"
       ],
       "bounded_action": "Do not add generic shelves, props or new solid walls to the reserved archive as part of the R4 chamber fix.",
-      "technical_current_head": "PENDING",
-      "technical_review_url": null,
+      "technical_current_head": "SOURCE_STATIC_PASS",
+      "technical_review_url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071953428",
       "native": "NATIVE-UNTESTED"
     },
     {
@@ -824,8 +824,8 @@
         "Central dry flight shaft"
       ],
       "bounded_action": "Say OPTIONAL ordered sterile itinerary unless independent route tests prove a stronger claim; never call it forced or native.",
-      "technical_current_head": "PENDING",
-      "technical_review_url": null,
+      "technical_current_head": "SOURCE_STATIC_PASS",
+      "technical_review_url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071953428",
       "native": "NATIVE-UNTESTED"
     }
   ]
