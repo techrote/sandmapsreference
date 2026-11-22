@@ -105,6 +105,19 @@ function world(){
  // Unequal lower quarantine vestibule, preserving literal Midge clearance.
  b(636,1228,44,95,101);b(636,1393,44,143,101);
  b(680,1228,66,16,101);b(696,1244,13,48,101);
+ // R4 THIRD narrow Art REWORK: distinct west entered geology, unequal east selector vault.
+ // Independent Art finding: https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680
+ // Rock-cut diagnostic recess: two physically open Midge-scale side thresholds and a
+ // bottom access slit around the literal low diagnostic gate, not a display hall fill.
+ b(363,575,180,239,101);b(391,612,145,149,0);
+ b(361,649,40,84,0);b(531,667,38,81,0);
+ b(495,744,44,77,0); // preserve the exact [515,780] 31x27 gate
+ b(406,732,70,28,130);b(429,737,22,14,63);
+ // Upper selector: compact upper rock-cut vault and lateral entry, unlike
+ // the long lower quarantine landing, with open sterile floor return.
+ b(682,868,237,244,101);b(705,900,190,185,0);
+ b(682,918,30,81,0);b(888,957,35,80,0);
+ b(743,1074,99,52,0);b(731,1082,39,10,68);
  // Site hulls are literal authored centres with 39x35 local clean safety, not shifted.
  for(const s of sites)b(s.x-19,s.y-17,39,35,0);
  // Make every inert cell boundary-grounded, discarding only provisional loose detail.
@@ -249,6 +262,17 @@ function build(){
  r.aspect_transfer.repair_r4_second_stage={"baseline_child_head":"6e670da369b6ac856b821dbebb929ab27a2a126a","independent_art_review":"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453","preserved":["18 fixed site centres","east 81-cell sterile neck","central Midge flight shaft","entire y>=1546 lower archive"],"scope":"West diagnostic nested threshold and east selector/quarantine separate usable thresholds","new_head_independent_review":"PENDING"};
  r.exemplar.repair_r4_second_stage={"baseline_child_head":"6e670da369b6ac856b821dbebb929ab27a2a126a","independent_art_review":"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7069838453","preserved":["18 fixed site centres","east 81-cell sterile neck","central Midge flight shaft","entire y>=1546 lower archive"],"scope":"West diagnostic nested threshold and east selector/quarantine separate usable thresholds","new_head_independent_review":"PENDING"};
  r.readme+="\n## Review-driven second bounded R4 repair\n\nAfter independent Art REWORK of first-child HEAD 6e670da369b6ac856b821dbebb929ab27a2a126a, the west diagnostics now has a stepped grounded roof and two traversable successive vault portals; east selector and quarantine have distinct offset internal thresholds. This stage modifies 28,613 real material cells, all within [151,549,822,1528], and leaves every cell at y>=1546 unchanged. Exact 31x27 named routes and ordered sterile return are regenerated. Re-review is required; NATIVE-UNTESTED.\n";
+ // Third-stage evidence is specific to the independent Art-only REWORK at the old head.
+ // Historical first/second child receipts remain traceable, not retroactively PASS.
+ r.receipt.r4_second_stage.new_head_art="REWORK on 16bfa32b8b45dea015b723d72919041773f50ea2";
+ r.aspect_transfer.repair_r4_second_stage.new_head_independent_review="Art REWORK at https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680; Technical unverified";
+ r.exemplar.repair_r4_second_stage.new_head_independent_review="Art REWORK at https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680; Technical unverified";
+ const third={baseline_child_head:"16bfa32b8b45dea015b723d72919041773f50ea2",review_url:"https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680",scope:"West diagnostic fully rock-cut inner recess with two actual side thresholds; east upper selector unlike compact cavern with lateral side-entry and sterile floor return",changed_final_cells:29473,air_to_solid:19321,solid_to_air:3870,material_replacements:6282,bbox_inclusive:[361,575,924,1111],protected:"18 literal sites, all y>=1546, open central shaft, sterile neck and alternate return",source_static:"Pass exact rectangle and full-hull BFS; pending independent same-HEAD Art and Technical",native:"NATIVE-UNTESTED"};
+ r.receipt.r4_third_stage=third;
+ r.aspect_transfer.repair_r4_third_stage=third;
+ r.exemplar.repair_r4_third_stage={...third,independent_art:"PENDING at new HEAD",independent_technical:"PENDING"};
+ r.route_graph.r4_third_stage={baseline_child_head:third.baseline_child_head,changed_region_xyxy:third.bbox_inclusive,full_hull_gates:r.receipt.r4_waypoint_proof.four_vault_portals,actual_ordered_sterile_return_steps:r.receipt.r4_waypoint_proof.via_distance,shortest_forced_sterile:false};
+ r.readme+="\n## Third narrow R4 repair following exact-HEAD Art REWORK\n\nIndependent Art [REWORK](https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680) at 16bfa32b8b45dea015b723d72919041773f50ea2 found a residual unentered west diagnostic hall and indistinct east selector/quarantine thresholds. This child-only pass uses actual rock material to frame a second entered west diagnostic inner recess and a compact enclosed east selector with lateral door and distinct lower sterile egress. Its 29,473 changed cells are confined to [361,575,924,1111] versus that exact previous child; all y>=1546 remains identical, and all original 18 centres plus 31x27 gate/ordered return checks are rerun. The independent Art/Technical verdict for this new HEAD is PENDING, and native movement and persistence remain NATIVE-UNTESTED.\n";
  return r;
 }
 if(typeof require!=="undefined" && typeof module!=="undefined" && require.main===module){const fs=require("fs"),path=require("path"),d=process.argv[2]||__dirname;fs.mkdirSync(d,{recursive:true});const a=build();fs.writeFileSync(path.join(d,"setup.json"),a.setupText);fs.writeFileSync(path.join(d,"receipt.json"),JSON.stringify(a.receipt,null,2)+"\n");for(const[n,v]of Object.entries(a.pngs))fs.writeFileSync(path.join(d,n),v);for(const [n,v] of [["aspect_transfer.json",a.aspect_transfer],["route_graph.json",a.route_graph],["exemplar.json",a.exemplar]])fs.writeFileSync(path.join(d,n),JSON.stringify(v,null,2)+"\n");fs.writeFileSync(path.join(d,"README.md"),a.readme);console.log(a.receipt);}

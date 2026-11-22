@@ -12,3 +12,7 @@ No crop, rotation, stretch, source coordinate/geometry/pixel reuse or donor bran
 ## Review-driven second bounded R4 repair
 
 After independent Art REWORK of first-child HEAD 6e670da369b6ac856b821dbebb929ab27a2a126a, the west diagnostics now has a stepped grounded roof and two traversable successive vault portals; east selector and quarantine have distinct offset internal thresholds. This stage modifies 28,613 real material cells, all within [151,549,822,1528], and leaves every cell at y>=1546 unchanged. Exact 31x27 named routes and ordered sterile return are regenerated. Re-review is required; NATIVE-UNTESTED.
+
+## Third narrow R4 repair following exact-HEAD Art REWORK
+
+Independent Art [REWORK](https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680) at 16bfa32b8b45dea015b723d72919041773f50ea2 found a residual unentered west diagnostic hall and indistinct east selector/quarantine thresholds. This child-only pass uses actual rock material to frame a second entered west diagnostic inner recess and a compact enclosed east selector with lateral door and distinct lower sterile egress. Its 29,473 changed cells are confined to [361,575,924,1111] versus that exact previous child; all y>=1546 remains identical, and all original 18 centres plus 31x27 gate/ordered return checks are rerun. The independent Art/Technical verdict for this new HEAD is PENDING, and native movement and persistence remain NATIVE-UNTESTED.

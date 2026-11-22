@@ -110,7 +110,7 @@
     "environment_relation": "geological",
     "incompleteness": "excavation"
   },
-  "grid_sha256": "95ac2164246d39967f3aaab2dffc470f102ab3d09dc9d96f305e650943b91ed8",
+  "grid_sha256": "83e104c1b3ca6afa5ee0b2746aa83795ca2e543c66df04af54439edfcc589a2c",
   "native": "NATIVE-UNTESTED",
   "repair_r4": {
     "source_parent": "089d2cdb6b06b40d53ce9c4c83ef34192567454d",
@@ -137,6 +137,26 @@
       "entire y>=1546 lower archive"
     ],
     "scope": "West diagnostic nested threshold and east selector/quarantine separate usable thresholds",
-    "new_head_independent_review": "PENDING"
+    "new_head_independent_review": "Art REWORK at https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680; Technical unverified"
+  },
+  "repair_r4_third_stage": {
+    "baseline_child_head": "16bfa32b8b45dea015b723d72919041773f50ea2",
+    "review_url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680",
+    "scope": "West diagnostic fully rock-cut inner recess with two actual side thresholds; east upper selector unlike compact cavern with lateral side-entry and sterile floor return",
+    "changed_final_cells": 29473,
+    "air_to_solid": 19321,
+    "solid_to_air": 3870,
+    "material_replacements": 6282,
+    "bbox_inclusive": [
+      361,
+      575,
+      924,
+      1111
+    ],
+    "protected": "18 literal sites, all y>=1546, open central shaft, sterile neck and alternate return",
+    "source_static": "Pass exact rectangle and full-hull BFS; pending independent same-HEAD Art and Technical",
+    "native": "NATIVE-UNTESTED",
+    "independent_art": "PENDING at new HEAD",
+    "independent_technical": "PENDING"
   }
 }

@@ -15,29 +15,29 @@
     2048
   ],
   "cells": 2097152,
-  "source_grid_sha256": "95ac2164246d39967f3aaab2dffc470f102ab3d09dc9d96f305e650943b91ed8",
-  "setup_sha256": "f2bf474c724412562aa525dada014f52b7bb040606e19d653af825af0a9f1aa6",
-  "setup_bytes": 5962,
-  "rectangles": 268,
-  "construction_work": 939695,
+  "source_grid_sha256": "83e104c1b3ca6afa5ee0b2746aa83795ca2e543c66df04af54439edfcc589a2c",
+  "setup_sha256": "529949b9151bb5044eebd2800d4e319609436ebac7c67fa383cfe03948a1dacf",
+  "setup_bytes": 6011,
+  "rectangles": 271,
+  "construction_work": 955146,
   "material_histogram": {
-    "0": 1157457,
-    "49": 11927,
-    "62": 15297,
-    "63": 1572,
-    "68": 11360,
-    "77": 427,
+    "0": 1142006,
+    "49": 10440,
+    "62": 14572,
+    "63": 1220,
+    "68": 11040,
+    "77": 273,
     "79": 1674,
-    "100": 349195,
-    "101": 521675,
-    "129": 11523,
-    "130": 15045
+    "100": 348355,
+    "101": 544944,
+    "129": 9661,
+    "130": 12967
   },
   "ground": {
-    "total": 939695,
-    "rooted": 939695,
+    "total": 955146,
+    "rooted": 955146,
     "detached": 0,
-    "pruned_provisional": 64515
+    "pruned_provisional": 62094
   },
   "fluid": {
     "water": 0,
@@ -51,8 +51,8 @@
         19,
         15
       ],
-      "valid_centres": 1035206,
-      "connected_centres": 1032285,
+      "valid_centres": 1019206,
+      "connected_centres": 1015977,
       "passed": 18,
       "sites": [
         {
@@ -188,8 +188,8 @@
         23,
         19
       ],
-      "valid_centres": 1006926,
-      "connected_centres": 1003071,
+      "valid_centres": 990802,
+      "connected_centres": 986947,
       "passed": 18,
       "sites": [
         {
@@ -325,8 +325,8 @@
         31,
         27
       ],
-      "valid_centres": 954627,
-      "connected_centres": 952707,
+      "valid_centres": 938752,
+      "connected_centres": 936832,
       "passed": 18,
       "sites": [
         {
@@ -469,8 +469,8 @@
       31,
       27
     ],
-    "valid_centres": 909477,
-    "connected_centres": 907557,
+    "valid_centres": 893602,
+    "connected_centres": 891682,
     "passed": 18,
     "sites": [
       {
@@ -618,7 +618,7 @@
         2048
       ],
       "bytes": 2099836,
-      "sha256": "64830331a03766c9a3985081faf279f5f4c578a6777f5735816b9a7aa36651e5"
+      "sha256": "3a7031140b0cef85fe73ba67d3b94a720d00deb9c81a86c84e895c4ac55cb4f7"
     },
     "01-upper-seed-registry.png": {
       "xywh": [
@@ -638,7 +638,7 @@
         312
       ],
       "bytes": 160542,
-      "sha256": "261e82dbf1a58666bf520cd550b465c85160ba45f14a4230eccc82deeb02d1f2"
+      "sha256": "6117dcf195e1840ee51f12cb502b94c753d6199785c353ef765552cea0136b49"
     },
     "03-bridge-assay.png": {
       "xywh": [
@@ -648,7 +648,7 @@
         239
       ],
       "bytes": 71942,
-      "sha256": "e06a72598c5f1486b5b04ecfc9b3b12f3d3afa5fd80decd4841122f6adf059e8"
+      "sha256": "21aa0cdb4a1958e65af916f37b232f7e7696bb1fdd9a11ec0054ca5f7fb28022"
     },
     "04-east-sterile-service.png": {
       "xywh": [
@@ -658,7 +658,7 @@
         567
       ],
       "bytes": 240899,
-      "sha256": "d8cd3845632755738ec5264bd07f073aea2e9356a921061917a57a057edd2f93"
+      "sha256": "fe0c404b9df7b568528d764fc34d7bcff4741e82f9d420e83434725d9c032944"
     },
     "05-lower-quarantine-archive.png": {
       "xywh": [
@@ -818,8 +818,26 @@
       822,
       1528
     ],
-    "new_head_art": "PENDING",
+    "new_head_art": "REWORK on 16bfa32b8b45dea015b723d72919041773f50ea2",
     "new_head_technical": "PENDING",
+    "native": "NATIVE-UNTESTED"
+  },
+  "r4_third_stage": {
+    "baseline_child_head": "16bfa32b8b45dea015b723d72919041773f50ea2",
+    "review_url": "https://github.com/techrote/sandmapsreference/pull/205#issuecomment-7071145680",
+    "scope": "West diagnostic fully rock-cut inner recess with two actual side thresholds; east upper selector unlike compact cavern with lateral side-entry and sterile floor return",
+    "changed_final_cells": 29473,
+    "air_to_solid": 19321,
+    "solid_to_air": 3870,
+    "material_replacements": 6282,
+    "bbox_inclusive": [
+      361,
+      575,
+      924,
+      1111
+    ],
+    "protected": "18 literal sites, all y>=1546, open central shaft, sterile neck and alternate return",
+    "source_static": "Pass exact rectangle and full-hull BFS; pending independent same-HEAD Art and Technical",
     "native": "NATIVE-UNTESTED"
   }
 }
