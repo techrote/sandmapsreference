@@ -63,6 +63,13 @@ def extract_record(text, prefix):
     return records[-1]
 
 
+def powershell51_environment(environ):
+    # Microsoft documents this exact pwsh -> Python -> powershell.exe pitfall.
+    # Removing only the child variable lets Windows PowerShell reconstruct its
+    # own normal module paths. No machine/user setting or helper code is changed.
+    return {k: v for k, v in environ.items() if k.upper() != "PSMODULEPATH"}
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--package-root", type=Path, required=True)
@@ -97,12 +104,17 @@ def main():
     powershell = Path(os.environ["WINDIR"]) / "System32/WindowsPowerShell/v1.0/powershell.exe"
     if not powershell.is_file():
         raise ValueError("Actual Windows PowerShell5.1 is unavailable")
+    if not ex["helper_tests"].with_name("owner-bundle-manifest.template.v1.json").is_file():
+        raise ValueError("Pinned synthetic-test template dependency is missing from owner package")
+    ps51_env = powershell51_environment(os.environ)
     helper_phase, _ = run_child([
         powershell, "-NoProfile", "-NonInteractive", "-File",
         Path(__file__).with_name("Invoke-HelperTests.ps1"), "-HelperPath", ex["helper"],
         "-TestsPath", ex["helper_tests"], "-OutputPath", out/"helper-tests.json"],
-        out/"helper-tests.log", deadline, maximum=120)
+        out/"helper-tests.log", deadline, env=ps51_env, maximum=120)
     helper_result = json.loads((out/"helper-tests.json").read_text(encoding="utf-8-sig")) if (out/"helper-tests.json").exists() else None
+    if helper_phase["exit_code"] or not helper_result or not helper_result["pass"]:
+        raise RuntimeError("Windows PowerShell parser/21-case gate failed; no native import or map process started")
 
     # Owner package source stays unchanged. Only this independent copy gets a
     # new project.godot and two added test scripts; accepted source stays exact.
@@ -141,7 +153,7 @@ def main():
             powershell, "-NoProfile", "-NonInteractive", "-File", ex["helper"],
             "-ManifestPath", ex["owner_manifest"], "-Arm", arm, "-Variant", "candidate",
             "-WorkbenchDir", workbench, "-Label", label, "-EngineRoot", ex["project"],
-            "-GodotExe", ex["godot"]], out/(arm+".install.log"), deadline, maximum=45)
+            "-GodotExe", ex["godot"]], out/(arm+".install.log"), deadline, env=ps51_env, maximum=45)
         staged = workbench/("setup-"+label+".json")
         if install["exit_code"] or not staged.is_file() or sha(staged) != PINS[arm]:
             raise RuntimeError("Real helper failed selected-map exact staging: " + arm)

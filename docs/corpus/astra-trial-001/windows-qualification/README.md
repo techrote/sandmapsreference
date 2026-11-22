@@ -9,14 +9,14 @@ remote mutations.
 
 Place `gold-astra-001-windows.yml` at
 `.github/workflows/gold-astra-001-windows.yml`. Place the other scripts and the
-exact `owner-package-files.v1.json` under
+exact `owner-package-files.v2.json` under
 `docs/corpus/astra-trial-001/windows-qualification/` on the mission PR.
 
 The input manifest SHA256 is:
 
-`a0bce08c63121c5dc84971813b241c835f5b586773f6192fcc45af4855276270`
+`d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0`
 
-It pins 585 files, accepted engine
+It pins 586 files, accepted engine
 `662df51cd8409a52332fa7ef15d06d8ab8945aed`, and all-eight output lock
 `0bdbf3fc524e85c30c7095b7e1dad53159fd7d9c`.
 
@@ -46,11 +46,11 @@ bytes fail before native execution.
 The input manifest is copied verbatim into the reconstructed package as
 `package-files.v1.json`; it is intentionally excluded from its own file list.
 The script builds a new ZIP, extracts it into a separate directory, then
-verifies all 585 files plus the exact manifest bytes and rejects extra files.
+verifies all 586 files plus the exact manifest bytes and rejects extra files.
 This establishes **package file identity**, not identical compressed ZIP bytes.
 
 The reviewer's local verification of the already assembled owner package
-passed all 585 file checks and manifest-byte equality. The acquisition Python
+passed all 586 file checks and manifest-byte equality. The acquisition Python
 script and runner compile, and workflow trigger/runner/permission/timeout
 constraints passed local parsing. These are not Windows execution results.
 
@@ -58,8 +58,13 @@ constraints passed local parsing. These are not Windows execution results.
 
 `run_windows_package.py` refuses to run on Linux. It uses actual Windows
 PowerShell5.1 to parse the unchanged installer and test script and execute the
-21 synthetic helper tests. A skipped symlink case is reported as unexecuted
-and prevents claiming all21 cases passed.
+21 synthetic helper tests. Its exact original template dependency is included
+in packagev2. The child process environment removes only `PSMODULEPATH`,
+case-insensitively, so Windows PowerShell reconstructs its own normal module
+paths instead of inheriting incompatible PowerShell7 module paths through
+Python. This follows Microsoft's [documented process-chain guidance](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-5.1).
+A skipped symlink case is reported as unexecuted and prevents claiming all21
+cases passed. The suite must pass before any native import or map process starts.
 
 The accepted owner project stays unchanged. A separate runtime copy omits the
 accepted generated `.godot` cache, has a new minimal project configuration with

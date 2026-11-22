@@ -23,7 +23,7 @@ jobs:
       run:
         shell: pwsh
     env:
-      GOLD_PACKAGE_MANIFEST_SHA256: a0bce08c63121c5dc84971813b241c835f5b586773f6192fcc45af4855276270
+      GOLD_PACKAGE_MANIFEST_SHA256: d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0
       GOLD_TOOLS: docs/corpus/astra-trial-001/windows-qualification
     steps:
       - name: Check out only the mission qualification files
@@ -40,7 +40,7 @@ jobs:
       - name: Reconstruct pinned files, ZIP, extract, and verify exact inventory
         run: |
           python "$env:GOLD_TOOLS/acquire_package.py" `
-            --manifest "$env:GOLD_TOOLS/owner-package-files.v1.json" `
+            --manifest "$env:GOLD_TOOLS/owner-package-files.v2.json" `
             --manifest-sha256 "$env:GOLD_PACKAGE_MANIFEST_SHA256" `
             --workspace "$env:RUNNER_TEMP/gold-astra-001-package"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
@@ -48,7 +48,7 @@ jobs:
         run: |
           python "$env:GOLD_TOOLS/run_windows_package.py" `
             --package-root "$env:RUNNER_TEMP/gold-astra-001-package/extracted" `
-            --manifest "$env:GOLD_TOOLS/owner-package-files.v1.json" `
+            --manifest "$env:GOLD_TOOLS/owner-package-files.v2.json" `
             --manifest-sha256 "$env:GOLD_PACKAGE_MANIFEST_SHA256" `
             --out "$env:RUNNER_TEMP/gold-astra-001-native"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

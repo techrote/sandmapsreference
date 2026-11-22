@@ -61,7 +61,7 @@ def checked_manifest(path, expected):
         url = urllib.parse.urlsplit(f["origin"]["url"])
         if url.scheme != "https" or url.hostname not in HOSTS or url.username or url.password:
             raise ValueError("Unexpected acquisition URL")
-    if len(m["files"]) != 585 or sum(f["bytes"] for f in m["files"]) > 512 * 1024 * 1024:
+    if len(m["files"]) != 586 or sum(f["bytes"] for f in m["files"]) > 512 * 1024 * 1024:
         raise ValueError("Unexpected package inventory scope")
     return m
 
