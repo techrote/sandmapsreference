@@ -1,0 +1,2820 @@
+{
+  "schema_version": "goldmaps-windows-evidence.v1",
+  "origin": "https://github.com/techrote/sandmapsreference/actions/runs/44990714746",
+  "run_id": 44990714746,
+  "job_id": 137110945562,
+  "head": "5982fa553bc6356742cfea0911c848c372dcdb97",
+  "package": {
+    "manifest_sha256": "d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0",
+    "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+    "lock_commit": "0bdbf3fc524e85c30c7095b7e1dad53159fd7d9c",
+    "reconstructed": {
+      "files_checked": 586,
+      "file_mismatches": [],
+      "manifest_bytes_equal": true,
+      "unexpected_files": [],
+      "pass": true
+    },
+    "extracted": {
+      "files_checked": 586,
+      "file_mismatches": [],
+      "manifest_bytes_equal": true,
+      "unexpected_files": [],
+      "pass": true
+    },
+    "generated_zip_sha256": "01413cbd5c57a16ee69bf07f65dcc823a4047cb2766d010c31f792536a72e27b",
+    "generated_zip_bytes": 98078242,
+    "identity_claim": "Exact inventory files and manifest bytes; not identical compressed ZIP bytes",
+    "extracted_package": "D:\\a\\_temp\\gold-astra-001-package\\extracted"
+  },
+  "helper_test_results": {
+    "platform": "Windows_NT",
+    "powershell_version": "5.1.20348.5773",
+    "effective_module_path": "C:\\Users\\runneradmin\\Documents\\WindowsPowerShell\\Modules;C:\\\\Modules\\az_15.6.1;C:\\Users\\packer\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\PowerShell\\Modules\\",
+    "get_file_hash_source": "Microsoft.PowerShell.Utility",
+    "parser": [
+      {
+        "path": "D:\\a\\_temp\\gold-astra-001-package\\extracted\\Install-GoldAstraSetup.ps1",
+        "parse_error_count": 0
+      },
+      {
+        "path": "D:\\a\\_temp\\gold-astra-001-package\\extracted\\Test-InstallGoldAstraSetup.ps1",
+        "parse_error_count": 0
+      }
+    ],
+    "suite": {
+      "fixture_root": "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\gold-astra-helper-tests-c71a17c0658b45208aa83451433aef14",
+      "tests": [
+        {
+          "test": "valid",
+          "result": "PASS_EXACT_NEW_FILE_ONLY"
+        },
+        {
+          "test": "validate_only",
+          "result": "PASS_NO_WRITE"
+        },
+        {
+          "test": "hash_mismatch",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Setup SHA-256 mismatch; nothing was installed."
+        },
+        {
+          "test": "existing_label",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Refusing an existing label or destination: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\gold-astra-helper-tests-c71a17c0658b45208aa83451433aef14\\existing_label\\workbench\\setup-gold-astra-001-test-existing_label.json"
+        },
+        {
+          "test": "traversal",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Unsafe bundle path component in: ../outside.json"
+        },
+        {
+          "test": "absolute_path",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Bundle paths must be ordinary relative paths without drive, stream or wildcard syntax."
+        },
+        {
+          "test": "alternate_stream",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Selected Setup path must end in .json."
+        },
+        {
+          "test": "invalid_label",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Label must begin gold-astra-001-, contain only ASCII letters/digits/_/-, and be at most 48 characters."
+        },
+        {
+          "test": "long_label",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Label must begin gold-astra-001-, contain only ASCII letters/digits/_/-, and be at most 48 characters."
+        },
+        {
+          "test": "duplicate_map",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Expected exactly one matching arm/variant entry; missing or duplicate entries are refused."
+        },
+        {
+          "test": "pending_template",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "The manifest is a template or otherwise not ready. The coordinator must complete it after output lock."
+        },
+        {
+          "test": "unlocked",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "The manifest does not record the all-eight output lock."
+        },
+        {
+          "test": "nonbool_lock",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "The manifest does not record the all-eight output lock."
+        },
+        {
+          "test": "wrong_engine",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "This helper is pinned to accepted engine 662df51; use a separately reviewed helper for a different engine."
+        },
+        {
+          "test": "invalid_setup",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Invalid object passed in, ':' or '}' expected. (10): {invalid json}"
+        },
+        {
+          "test": "old_setup",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "The selected file is not Setup-v2. Full engine/schema qualification remains a separate gate."
+        },
+        {
+          "test": "string_version",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "The selected file is not Setup-v2. Full engine/schema qualification remains a separate gate."
+        },
+        {
+          "test": "oversize",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Setup must contain 1 byte through 1 MiB, matching the accepted Setup file budget."
+        },
+        {
+          "test": "fake_dll",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Runtime size mismatch: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\gold-astra-helper-tests-c71a17c0658b45208aa83451433aef14\\fake_dll\\dummy-engine\\addons\\cybersand_native\\bin\\cybersand_native.windows.x86_64.dll"
+        },
+        {
+          "test": "fake_godot",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Godot executable SHA-256 does not match either pinned Windows 4.7 executable."
+        },
+        {
+          "test": "symlink_source",
+          "result": "PASS_REFUSAL_NO_WRITE",
+          "message": "Symlink/junction/reparse paths are refused: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\gold-astra-helper-tests-c71a17c0658b45208aa83451433aef14\\symlink_source\\linked"
+        }
+      ],
+      "windows_execution": true
+    },
+    "case_count": 21,
+    "passing_cases": 21,
+    "unexecuted_or_failed": [],
+    "pass": true
+  },
+  "map_receipts": [
+    {
+      "arm": "C1",
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "install": {
+        "exit_code": 0,
+        "wrapper_pid": 5424,
+        "timeout": false,
+        "wall_seconds": 0.656,
+        "log_sha256": "36d3887ab86cd478e7e8c01bf26c9cc3fad14d1ecd0aea5bcf8288e65a280a9a"
+      },
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "wrapper_pid": 6640,
+          "timeout": false,
+          "wall_seconds": 16.344,
+          "log_sha256": "3581998580200f81746ec71ae60c1ccb85b81073491f789e74078b2025d244ef",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-c1-9e10a442",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_tick": 292,
+              "max_contacts": 2,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    -1,
+                    0
+                  ],
+                  "point": [
+                    118,
+                    668
+                  ],
+                  "tick": 292
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29287719726563,
+            "drive_end": [
+              115,
+              484.845062255859
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              115,
+              489.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              115,
+              489
+            ],
+            "label": "gold-astra-001-win-c1-9e10a442",
+            "load": true,
+            "midge_displacement_cells": 4.16152954101563,
+            "midge_drive": true,
+            "midge_end": [
+              115,
+              484.845062255859
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 2344,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 1974,
+            "save_readback": true,
+            "saved_label": "gold-astra-001-win-c1-9e10a442-saved",
+            "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "wrapper_pid": 1180,
+          "timeout": false,
+          "wall_seconds": 7.828,
+          "log_sha256": "05268f1740e00b39134662d034ce33059bf453fa329af283684c20568af28115",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-c1-9e10a442-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              115,
+              489
+            ],
+            "label": "gold-astra-001-win-c1-9e10a442",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 6924,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 1974,
+            "saved_label": "gold-astra-001-win-c1-9e10a442-saved",
+            "setup_sha256": "983e405c690bbce43f4eefaa54c492d5127aaed11116a13f6b27fd4a2405173e",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "source_unchanged": true,
+      "staged_source_unchanged": true,
+      "saved_setup_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "983e405c690bbce43f4eefaa54c492d5127aaed11116a13f6b27fd4a2405173e",
+      "separate_processes": true,
+      "collision_observed": true,
+      "basic_native_pass": true
+    },
+    {
+      "arm": "C2",
+      "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "install": {
+        "exit_code": 0,
+        "wrapper_pid": 6316,
+        "timeout": false,
+        "wall_seconds": 0.625,
+        "log_sha256": "80b2b9d7f399a8203dc81bf9a32900d007b6b95e738ce6eb24dac2b026c9c488"
+      },
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "wrapper_pid": 5700,
+          "timeout": false,
+          "wall_seconds": 17.937,
+          "log_sha256": "668905dd7d6a4080906135fed218ce7c9700484da8f4c81108d0fe32bbce3248",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-c2-9e10a442",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_tick": 386,
+              "max_contacts": 6,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    0,
+                    -1
+                  ],
+                  "point": [
+                    77,
+                    713
+                  ],
+                  "tick": 386
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29287719726563,
+            "drive_end": [
+              75,
+              360.845062255859
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              75,
+              365.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              75,
+              365
+            ],
+            "label": "gold-astra-001-win-c2-9e10a442",
+            "load": true,
+            "midge_displacement_cells": 4.16152954101563,
+            "midge_drive": true,
+            "midge_end": [
+              75,
+              360.845062255859
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 6052,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 3881,
+            "save_readback": true,
+            "saved_label": "gold-astra-001-win-c2-9e10a442-saved",
+            "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "wrapper_pid": 1424,
+          "timeout": false,
+          "wall_seconds": 7.172,
+          "log_sha256": "d5cd6e4ab300156722e1e7f87c34bacba742748278a1217f2edbe406312d819c",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-c2-9e10a442-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              75,
+              365
+            ],
+            "label": "gold-astra-001-win-c2-9e10a442",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 7852,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 3881,
+            "saved_label": "gold-astra-001-win-c2-9e10a442-saved",
+            "setup_sha256": "fd4c8d4acd8ac87c666bcbd2e29de6b6547e88ee6d5b4b4bca59225a357a3130",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "source_unchanged": true,
+      "staged_source_unchanged": true,
+      "saved_setup_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "fd4c8d4acd8ac87c666bcbd2e29de6b6547e88ee6d5b4b4bca59225a357a3130",
+      "separate_processes": true,
+      "collision_observed": true,
+      "basic_native_pass": true
+    },
+    {
+      "arm": "C3",
+      "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "install": {
+        "exit_code": 0,
+        "wrapper_pid": 7224,
+        "timeout": false,
+        "wall_seconds": 0.578,
+        "log_sha256": "d0e216e46733d43ae519d2155b40d903616bcbb9b81a14a9d9e41bb30fd868b3"
+      },
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "wrapper_pid": 7316,
+          "timeout": false,
+          "wall_seconds": 16.344,
+          "log_sha256": "ba7ef96ef6a95c1a158ee7aa6ef39c0565ed7e8365c39d57fbf1960c7788e288",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-c3-9e10a442",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_tick": 265,
+              "max_contacts": 2,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    -2.38418579101563e-7,
+                    -1
+                  ],
+                  "point": [
+                    134,
+                    490
+                  ],
+                  "tick": 265
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29287719726563,
+            "drive_end": [
+              132,
+              345.845062255859
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              132,
+              350.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              1024,
+              2048
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              132,
+              350
+            ],
+            "label": "gold-astra-001-win-c3-9e10a442",
+            "load": true,
+            "midge_displacement_cells": 4.16152954101563,
+            "midge_drive": true,
+            "midge_end": [
+              132,
+              345.845062255859
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 4596,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 3528,
+            "save_readback": true,
+            "saved_label": "gold-astra-001-win-c3-9e10a442-saved",
+            "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "wrapper_pid": 4536,
+          "timeout": false,
+          "wall_seconds": 7.359,
+          "log_sha256": "f0ed12b819f08bc40cf8e8dc132fa759d20f6fb5b9d8b1377b21c0422b415bc9",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-c3-9e10a442-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              1024,
+              2048
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              132,
+              350
+            ],
+            "label": "gold-astra-001-win-c3-9e10a442",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 4020,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 3528,
+            "saved_label": "gold-astra-001-win-c3-9e10a442-saved",
+            "setup_sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "source_unchanged": true,
+      "staged_source_unchanged": true,
+      "saved_setup_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0",
+      "separate_processes": true,
+      "collision_observed": true,
+      "basic_native_pass": true
+    },
+    {
+      "arm": "B1",
+      "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+      "install": {
+        "exit_code": 0,
+        "wrapper_pid": 1340,
+        "timeout": false,
+        "wall_seconds": 0.562,
+        "log_sha256": "82b4e6432933c4a2e60ed0bfe25f8baa11a4d1c9a4c107e3a546857965f58f14"
+      },
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "wrapper_pid": 3784,
+          "timeout": false,
+          "wall_seconds": 14.578,
+          "log_sha256": "c8734e854fd83ede97b776a909f559bc3ce07f42ecaea1f156bf99e1edbf3fea",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-b1-9e10a442",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_tick": 204,
+              "max_contacts": 2,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    0,
+                    -1
+                  ],
+                  "point": [
+                    117,
+                    582
+                  ],
+                  "tick": 204
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29278564453125,
+            "drive_end": [
+              115,
+              515.845153808594
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              115,
+              520.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              115,
+              520
+            ],
+            "label": "gold-astra-001-win-b1-9e10a442",
+            "load": true,
+            "midge_displacement_cells": 4.16143798828125,
+            "midge_drive": true,
+            "midge_end": [
+              115,
+              515.845153808594
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 5992,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 410,
+            "save_readback": true,
+            "saved_label": "gold-astra-001-win-b1-9e10a442-saved",
+            "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "wrapper_pid": 7036,
+          "timeout": false,
+          "wall_seconds": 6.985,
+          "log_sha256": "c15e3d527be5ae63ce488647057df26444520fb53a21a0ba1db6946620b9e40c",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-b1-9e10a442-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              115,
+              520
+            ],
+            "label": "gold-astra-001-win-b1-9e10a442",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 1300,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 410,
+            "saved_label": "gold-astra-001-win-b1-9e10a442-saved",
+            "setup_sha256": "961f7f1e727b2f58b27d4491928d8c930d0e1c0ff6d1d5b71c60d017565cc4c7",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "source_unchanged": true,
+      "staged_source_unchanged": true,
+      "saved_setup_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "961f7f1e727b2f58b27d4491928d8c930d0e1c0ff6d1d5b71c60d017565cc4c7",
+      "separate_processes": true,
+      "collision_observed": true,
+      "basic_native_pass": true
+    },
+    {
+      "arm": "B2",
+      "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+      "install": {
+        "exit_code": 0,
+        "wrapper_pid": 3580,
+        "timeout": false,
+        "wall_seconds": 0.578,
+        "log_sha256": "17d77f79ff2c670a1e476367c21de7af9bfbcd28f883d4698b0ca4a483204fb8"
+      },
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "wrapper_pid": 936,
+          "timeout": false,
+          "wall_seconds": 15.657,
+          "log_sha256": "6b50d4457f10ca47db80b32dcd82bbfef902ade48d85deb6ce1924101efad38b",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-b2-9e10a442",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_tick": 263,
+              "max_contacts": 8,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    -1,
+                    0
+                  ],
+                  "point": [
+                    81,
+                    830
+                  ],
+                  "tick": 263
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29278564453125,
+            "drive_end": [
+              78,
+              690.845153808594
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              78,
+              695.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              78,
+              695
+            ],
+            "label": "gold-astra-001-win-b2-9e10a442",
+            "load": true,
+            "midge_displacement_cells": 4.16143798828125,
+            "midge_drive": true,
+            "midge_end": [
+              78,
+              690.845153808594
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 5580,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 2038,
+            "save_readback": true,
+            "saved_label": "gold-astra-001-win-b2-9e10a442-saved",
+            "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "wrapper_pid": 7176,
+          "timeout": false,
+          "wall_seconds": 6.984,
+          "log_sha256": "286b8ff687ad2edb5995888e8190616a1b41d847a67ca07f657fd9783807bbff",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-b2-9e10a442-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              78,
+              695
+            ],
+            "label": "gold-astra-001-win-b2-9e10a442",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 1088,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 2038,
+            "saved_label": "gold-astra-001-win-b2-9e10a442-saved",
+            "setup_sha256": "11dd02077eee607c91047d9e6673b4d80c889ea66583297ddec945f2dd0460d8",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "source_unchanged": true,
+      "staged_source_unchanged": true,
+      "saved_setup_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "11dd02077eee607c91047d9e6673b4d80c889ea66583297ddec945f2dd0460d8",
+      "separate_processes": true,
+      "collision_observed": true,
+      "basic_native_pass": true
+    },
+    {
+      "arm": "B3",
+      "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+      "install": {
+        "exit_code": 0,
+        "wrapper_pid": 1752,
+        "timeout": false,
+        "wall_seconds": 0.578,
+        "log_sha256": "5892c17bd65df2f133a1b3e8777e7a1f43cb76e28fc461ac1afe7e082e8eeb3e"
+      },
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "wrapper_pid": 1632,
+          "timeout": false,
+          "wall_seconds": 17.531,
+          "log_sha256": "628b720596761a1b03ae13dc2f769f38d190e6378880a3a475985b68ada09188",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-b3-9e10a442",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_tick": 317,
+              "max_contacts": 8,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    0,
+                    -1
+                  ],
+                  "point": [
+                    125,
+                    533
+                  ],
+                  "tick": 317
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29287719726563,
+            "drive_end": [
+              125,
+              307.845062255859
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              125,
+              312.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              125,
+              312
+            ],
+            "label": "gold-astra-001-win-b3-9e10a442",
+            "load": true,
+            "midge_displacement_cells": 4.16152954101563,
+            "midge_drive": true,
+            "midge_end": [
+              125,
+              307.845062255859
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 7976,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 4164,
+            "save_readback": true,
+            "saved_label": "gold-astra-001-win-b3-9e10a442-saved",
+            "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "wrapper_pid": 4696,
+          "timeout": false,
+          "wall_seconds": 7.984,
+          "log_sha256": "0a2d9864de88314d8796d3ffe3ff7a379ca0128b3ba415f28bbd7da63051f3a5",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-b3-9e10a442-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              125,
+              312
+            ],
+            "label": "gold-astra-001-win-b3-9e10a442",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 1388,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 4164,
+            "saved_label": "gold-astra-001-win-b3-9e10a442-saved",
+            "setup_sha256": "c185c13c3d123fd7ee6d0f4175ad5ebf77d2aa4c27cd601e0480a3c9de09234a",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "source_unchanged": true,
+      "staged_source_unchanged": true,
+      "saved_setup_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "c185c13c3d123fd7ee6d0f4175ad5ebf77d2aa4c27cd601e0480a3c9de09234a",
+      "separate_processes": true,
+      "collision_observed": true,
+      "basic_native_pass": true
+    },
+    {
+      "arm": "D1",
+      "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+      "install": {
+        "exit_code": 0,
+        "wrapper_pid": 4572,
+        "timeout": false,
+        "wall_seconds": 0.593,
+        "log_sha256": "1d4a031df7588db65316870ccd79d088b80e05fd87fc022e5ec0947b0cd28d53"
+      },
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "wrapper_pid": 1584,
+          "timeout": false,
+          "wall_seconds": 19.953,
+          "log_sha256": "c023fb8cb5ec657eac71f0c086ae25b87fec0bbb5d6288d409c9bf728ed755e9",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-d1-9e10a442",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_tick": 488,
+              "max_contacts": 4,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    0,
+                    -1
+                  ],
+                  "point": [
+                    511,
+                    685
+                  ],
+                  "tick": 488
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29286193847656,
+            "drive_end": [
+              509,
+              132.845062255859
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              509,
+              137.137924194336
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              1024,
+              2048
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              509,
+              137
+            ],
+            "label": "gold-astra-001-win-d1-9e10a442",
+            "load": true,
+            "midge_displacement_cells": 4.16152954101563,
+            "midge_drive": true,
+            "midge_end": [
+              509,
+              132.845062255859
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 6136,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 923,
+            "save_readback": true,
+            "saved_label": "gold-astra-001-win-d1-9e10a442-saved",
+            "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "wrapper_pid": 7744,
+          "timeout": false,
+          "wall_seconds": 7.36,
+          "log_sha256": "4a3bfa87c7f1c340db1a8c267eec9908a3ecc1312a986ee82e2534a390f21a92",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-d1-9e10a442-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              1024,
+              2048
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              509,
+              137
+            ],
+            "label": "gold-astra-001-win-d1-9e10a442",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 2272,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 923,
+            "saved_label": "gold-astra-001-win-d1-9e10a442-saved",
+            "setup_sha256": "297d4af4baaf261ee94ca02f7228beaf2690b9536373de0bc96ac5f095ad4005",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "source_unchanged": true,
+      "staged_source_unchanged": true,
+      "saved_setup_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "297d4af4baaf261ee94ca02f7228beaf2690b9536373de0bc96ac5f095ad4005",
+      "separate_processes": true,
+      "collision_observed": true,
+      "basic_native_pass": true
+    },
+    {
+      "arm": "D2",
+      "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+      "install": {
+        "exit_code": 0,
+        "wrapper_pid": 6044,
+        "timeout": false,
+        "wall_seconds": 0.579,
+        "log_sha256": "7cc47baa6b930110acd5bd0054461bfb0611752d5d0c1a289a1f1892618fd70d"
+      },
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "wrapper_pid": 7172,
+          "timeout": false,
+          "wall_seconds": 15.734,
+          "log_sha256": "048df477273cc07f5599e5308ce05bb59bef9440841d6ea2f202dd3dcce0afd7",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-d2-9e10a442",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_tick": 245,
+              "max_contacts": 2,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    0,
+                    -1
+                  ],
+                  "point": [
+                    227,
+                    384
+                  ],
+                  "tick": 245
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29287719726563,
+            "drive_end": [
+              225,
+              268.845062255859
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              225,
+              273.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              1024,
+              2048
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              225,
+              273
+            ],
+            "label": "gold-astra-001-win-d2-9e10a442",
+            "load": true,
+            "midge_displacement_cells": 4.16152954101563,
+            "midge_drive": true,
+            "midge_end": [
+              225,
+              268.845062255859
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 1644,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 1294,
+            "save_readback": true,
+            "saved_label": "gold-astra-001-win-d2-9e10a442-saved",
+            "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "wrapper_pid": 2660,
+          "timeout": false,
+          "wall_seconds": 6.984,
+          "log_sha256": "e1357feb69833fa34170201d2b59967ee71a3908f78ba2147d8da7cd5643df7f",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gold-astra-001-win-d2-9e10a442-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              1024,
+              2048
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              225,
+              273
+            ],
+            "label": "gold-astra-001-win-d2-9e10a442",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 7272,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 1294,
+            "saved_label": "gold-astra-001-win-d2-9e10a442-saved",
+            "setup_sha256": "4ba53bd60c1769d60594248df12fb2cb928c52f9fa84e38b3948982092b608e1",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "source_unchanged": true,
+      "staged_source_unchanged": true,
+      "saved_setup_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "4ba53bd60c1769d60594248df12fb2cb928c52f9fa84e38b3948982092b608e1",
+      "separate_processes": true,
+      "collision_observed": true,
+      "basic_native_pass": true
+    }
+  ],
+  "summary": {
+    "schema_version": 1,
+    "created_utc": "2026-11-22T05:48:45.399325+00:00",
+    "platform": "Windows",
+    "runner_image_os": "win22",
+    "runner_image_version": "20261116.370.1",
+    "github_run_id": "44990714746",
+    "github_sha": "5982fa553bc6356742cfea0911c848c372dcdb97",
+    "manifest_sha256": "d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0",
+    "harness_sha256": "a9a904a4a76c28b8615713c0914381b2916fefcd0f60da9489e9aa18ebf6774a",
+    "helper_sha256": "4a5e4a2325ac5ec3cf032d7558e9cd684a923bcb8958a92e48d6aa82a0b6ee10",
+    "project_config_sha256": "8f494c0a979027dfede893c29c93b568719647d49bc7f47b4e3efa6b2ba416dd",
+    "helper_suite": {
+      "platform": "Windows_NT",
+      "powershell_version": "5.1.20348.5773",
+      "effective_module_path": "C:\\Users\\runneradmin\\Documents\\WindowsPowerShell\\Modules;C:\\\\Modules\\az_15.6.1;C:\\Users\\packer\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\PowerShell\\Modules\\",
+      "get_file_hash_source": "Microsoft.PowerShell.Utility",
+      "parser": [
+        {
+          "path": "D:\\a\\_temp\\gold-astra-001-package\\extracted\\Install-GoldAstraSetup.ps1",
+          "parse_error_count": 0
+        },
+        {
+          "path": "D:\\a\\_temp\\gold-astra-001-package\\extracted\\Test-InstallGoldAstraSetup.ps1",
+          "parse_error_count": 0
+        }
+      ],
+      "suite": {
+        "fixture_root": "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\gold-astra-helper-tests-c71a17c0658b45208aa83451433aef14",
+        "tests": [
+          {
+            "test": "valid",
+            "result": "PASS_EXACT_NEW_FILE_ONLY"
+          },
+          {
+            "test": "validate_only",
+            "result": "PASS_NO_WRITE"
+          },
+          {
+            "test": "hash_mismatch",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Setup SHA-256 mismatch; nothing was installed."
+          },
+          {
+            "test": "existing_label",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Refusing an existing label or destination: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\gold-astra-helper-tests-c71a17c0658b45208aa83451433aef14\\existing_label\\workbench\\setup-gold-astra-001-test-existing_label.json"
+          },
+          {
+            "test": "traversal",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Unsafe bundle path component in: ../outside.json"
+          },
+          {
+            "test": "absolute_path",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Bundle paths must be ordinary relative paths without drive, stream or wildcard syntax."
+          },
+          {
+            "test": "alternate_stream",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Selected Setup path must end in .json."
+          },
+          {
+            "test": "invalid_label",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Label must begin gold-astra-001-, contain only ASCII letters/digits/_/-, and be at most 48 characters."
+          },
+          {
+            "test": "long_label",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Label must begin gold-astra-001-, contain only ASCII letters/digits/_/-, and be at most 48 characters."
+          },
+          {
+            "test": "duplicate_map",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Expected exactly one matching arm/variant entry; missing or duplicate entries are refused."
+          },
+          {
+            "test": "pending_template",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "The manifest is a template or otherwise not ready. The coordinator must complete it after output lock."
+          },
+          {
+            "test": "unlocked",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "The manifest does not record the all-eight output lock."
+          },
+          {
+            "test": "nonbool_lock",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "The manifest does not record the all-eight output lock."
+          },
+          {
+            "test": "wrong_engine",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "This helper is pinned to accepted engine 662df51; use a separately reviewed helper for a different engine."
+          },
+          {
+            "test": "invalid_setup",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Invalid object passed in, ':' or '}' expected. (10): {invalid json}"
+          },
+          {
+            "test": "old_setup",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "The selected file is not Setup-v2. Full engine/schema qualification remains a separate gate."
+          },
+          {
+            "test": "string_version",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "The selected file is not Setup-v2. Full engine/schema qualification remains a separate gate."
+          },
+          {
+            "test": "oversize",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Setup must contain 1 byte through 1 MiB, matching the accepted Setup file budget."
+          },
+          {
+            "test": "fake_dll",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Runtime size mismatch: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\gold-astra-helper-tests-c71a17c0658b45208aa83451433aef14\\fake_dll\\dummy-engine\\addons\\cybersand_native\\bin\\cybersand_native.windows.x86_64.dll"
+          },
+          {
+            "test": "fake_godot",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Godot executable SHA-256 does not match either pinned Windows 4.7 executable."
+          },
+          {
+            "test": "symlink_source",
+            "result": "PASS_REFUSAL_NO_WRITE",
+            "message": "Symlink/junction/reparse paths are refused: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\gold-astra-helper-tests-c71a17c0658b45208aa83451433aef14\\symlink_source\\linked"
+          }
+        ],
+        "windows_execution": true
+      },
+      "case_count": 21,
+      "passing_cases": 21,
+      "unexecuted_or_failed": [],
+      "pass": true
+    },
+    "resource_import": {
+      "exit_code": 0,
+      "wrapper_pid": 4412,
+      "timeout": false,
+      "wall_seconds": 7.906,
+      "log_sha256": "daba6ca1d4c04867df14884da65d32725c6e9d2472fb5edabe7d3ac2ec8c8b64"
+    },
+    "preflight": {
+      "engine_source": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+      "godot_version": {
+        "build": "official",
+        "hash": "5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+        "hex": 263936,
+        "major": 4,
+        "minor": 7,
+        "patch": 0,
+        "status": "stable",
+        "string": "4.7-stable (official)",
+        "timestamp": 0
+      },
+      "native_bridge_class_registered": true,
+      "programme": "GOLD-ASTRA-001",
+      "scope": "Path discovery and class registration only; no map load, gameplay or owner acceptance.",
+      "user_data_dir": "C:/Users/runneradmin/AppData/Roaming/Godot/app_userdata/GOLD-ASTRA-001 Windows qualification 9e10a442",
+      "workbench_dir": "C:/Users/runneradmin/AppData/Roaming/Godot/app_userdata/GOLD-ASTRA-001 Windows qualification 9e10a442/workbench",
+      "workbench_directory_error": 0
+    },
+    "package_before": {
+      "files_checked": 586,
+      "file_mismatches": [],
+      "manifest_bytes_equal": true,
+      "unexpected_files": [],
+      "pass": true
+    },
+    "package_after": {
+      "files_checked": 586,
+      "file_mismatches": [],
+      "manifest_bytes_equal": true,
+      "unexpected_files": [],
+      "pass": true
+    },
+    "runtime_source_files_checked": 366,
+    "runtime_source_changes": [],
+    "runtime_generated_cache_file_count": 18,
+    "cache_scope": "Accepted package .godot files remain byte-identical and are omitted from the runtime copy; --import regenerates runtime-only caches, separate from accepted source.",
+    "results": [
+      {
+        "arm": "C1",
+        "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+        "install": {
+          "exit_code": 0,
+          "wrapper_pid": 5424,
+          "timeout": false,
+          "wall_seconds": 0.656,
+          "log_sha256": "36d3887ab86cd478e7e8c01bf26c9cc3fad14d1ecd0aea5bcf8288e65a280a9a"
+        },
+        "phases": {
+          "load": {
+            "exit_code": 0,
+            "wrapper_pid": 6640,
+            "timeout": false,
+            "wall_seconds": 16.344,
+            "log_sha256": "3581998580200f81746ec71ae60c1ccb85b81073491f789e74078b2025d244ef",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-c1-9e10a442",
+              "actor_adopted": true,
+              "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+              "collision_observed": true,
+              "collision_probe": {
+                "end_tick": 292,
+                "max_contacts": 2,
+                "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+                "start_tick": 25,
+                "witnesses": [
+                  {
+                    "collider_rid_valid": true,
+                    "normal": [
+                      -1,
+                      0
+                    ],
+                    "point": [
+                      118,
+                      668
+                    ],
+                    "tick": 292
+                  }
+                ],
+                "worker_failed": false
+              },
+              "directed_up_displacement_cells": 4.29287719726563,
+              "drive_end": [
+                115,
+                484.845062255859
+              ],
+              "drive_key": "W",
+              "drive_start": [
+                115,
+                489.137939453125
+              ],
+              "drive_ticks_elapsed": 20,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": false,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                115,
+                489
+              ],
+              "label": "gold-astra-001-win-c1-9e10a442",
+              "load": true,
+              "midge_displacement_cells": 4.16152954101563,
+              "midge_drive": true,
+              "midge_end": [
+                115,
+                484.845062255859
+              ],
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "load",
+              "physics_tick": true,
+              "process_id": 2344,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 1974,
+              "save_readback": true,
+              "saved_label": "gold-astra-001-win-c1-9e10a442-saved",
+              "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          },
+          "reopen": {
+            "exit_code": 0,
+            "wrapper_pid": 1180,
+            "timeout": false,
+            "wall_seconds": 7.828,
+            "log_sha256": "05268f1740e00b39134662d034ce33059bf453fa329af283684c20568af28115",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-c1-9e10a442-saved",
+              "actor_adopted": true,
+              "collision_observed": false,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": true,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                115,
+                489
+              ],
+              "label": "gold-astra-001-win-c1-9e10a442",
+              "load": true,
+              "midge_drive": false,
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "reopen",
+              "physics_tick": false,
+              "process_id": 6924,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 1974,
+              "saved_label": "gold-astra-001-win-c1-9e10a442-saved",
+              "setup_sha256": "983e405c690bbce43f4eefaa54c492d5127aaed11116a13f6b27fd4a2405173e",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          }
+        },
+        "source_unchanged": true,
+        "staged_source_unchanged": true,
+        "saved_setup_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "983e405c690bbce43f4eefaa54c492d5127aaed11116a13f6b27fd4a2405173e",
+        "separate_processes": true,
+        "collision_observed": true,
+        "basic_native_pass": true
+      },
+      {
+        "arm": "C2",
+        "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "install": {
+          "exit_code": 0,
+          "wrapper_pid": 6316,
+          "timeout": false,
+          "wall_seconds": 0.625,
+          "log_sha256": "80b2b9d7f399a8203dc81bf9a32900d007b6b95e738ce6eb24dac2b026c9c488"
+        },
+        "phases": {
+          "load": {
+            "exit_code": 0,
+            "wrapper_pid": 5700,
+            "timeout": false,
+            "wall_seconds": 17.937,
+            "log_sha256": "668905dd7d6a4080906135fed218ce7c9700484da8f4c81108d0fe32bbce3248",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-c2-9e10a442",
+              "actor_adopted": true,
+              "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+              "collision_observed": true,
+              "collision_probe": {
+                "end_tick": 386,
+                "max_contacts": 6,
+                "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+                "start_tick": 25,
+                "witnesses": [
+                  {
+                    "collider_rid_valid": true,
+                    "normal": [
+                      0,
+                      -1
+                    ],
+                    "point": [
+                      77,
+                      713
+                    ],
+                    "tick": 386
+                  }
+                ],
+                "worker_failed": false
+              },
+              "directed_up_displacement_cells": 4.29287719726563,
+              "drive_end": [
+                75,
+                360.845062255859
+              ],
+              "drive_key": "W",
+              "drive_start": [
+                75,
+                365.137939453125
+              ],
+              "drive_ticks_elapsed": 20,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": false,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                75,
+                365
+              ],
+              "label": "gold-astra-001-win-c2-9e10a442",
+              "load": true,
+              "midge_displacement_cells": 4.16152954101563,
+              "midge_drive": true,
+              "midge_end": [
+                75,
+                360.845062255859
+              ],
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "load",
+              "physics_tick": true,
+              "process_id": 6052,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 3881,
+              "save_readback": true,
+              "saved_label": "gold-astra-001-win-c2-9e10a442-saved",
+              "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          },
+          "reopen": {
+            "exit_code": 0,
+            "wrapper_pid": 1424,
+            "timeout": false,
+            "wall_seconds": 7.172,
+            "log_sha256": "d5cd6e4ab300156722e1e7f87c34bacba742748278a1217f2edbe406312d819c",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-c2-9e10a442-saved",
+              "actor_adopted": true,
+              "collision_observed": false,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": true,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                75,
+                365
+              ],
+              "label": "gold-astra-001-win-c2-9e10a442",
+              "load": true,
+              "midge_drive": false,
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "reopen",
+              "physics_tick": false,
+              "process_id": 7852,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 3881,
+              "saved_label": "gold-astra-001-win-c2-9e10a442-saved",
+              "setup_sha256": "fd4c8d4acd8ac87c666bcbd2e29de6b6547e88ee6d5b4b4bca59225a357a3130",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          }
+        },
+        "source_unchanged": true,
+        "staged_source_unchanged": true,
+        "saved_setup_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "fd4c8d4acd8ac87c666bcbd2e29de6b6547e88ee6d5b4b4bca59225a357a3130",
+        "separate_processes": true,
+        "collision_observed": true,
+        "basic_native_pass": true
+      },
+      {
+        "arm": "C3",
+        "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "install": {
+          "exit_code": 0,
+          "wrapper_pid": 7224,
+          "timeout": false,
+          "wall_seconds": 0.578,
+          "log_sha256": "d0e216e46733d43ae519d2155b40d903616bcbb9b81a14a9d9e41bb30fd868b3"
+        },
+        "phases": {
+          "load": {
+            "exit_code": 0,
+            "wrapper_pid": 7316,
+            "timeout": false,
+            "wall_seconds": 16.344,
+            "log_sha256": "ba7ef96ef6a95c1a158ee7aa6ef39c0565ed7e8365c39d57fbf1960c7788e288",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-c3-9e10a442",
+              "actor_adopted": true,
+              "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+              "collision_observed": true,
+              "collision_probe": {
+                "end_tick": 265,
+                "max_contacts": 2,
+                "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+                "start_tick": 25,
+                "witnesses": [
+                  {
+                    "collider_rid_valid": true,
+                    "normal": [
+                      -2.38418579101563e-7,
+                      -1
+                    ],
+                    "point": [
+                      134,
+                      490
+                    ],
+                    "tick": 265
+                  }
+                ],
+                "worker_failed": false
+              },
+              "directed_up_displacement_cells": 4.29287719726563,
+              "drive_end": [
+                132,
+                345.845062255859
+              ],
+              "drive_key": "W",
+              "drive_start": [
+                132,
+                350.137939453125
+              ],
+              "drive_ticks_elapsed": 20,
+              "errors": [],
+              "extent": [
+                1024,
+                2048
+              ],
+              "fresh_reopen": false,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                132,
+                350
+              ],
+              "label": "gold-astra-001-win-c3-9e10a442",
+              "load": true,
+              "midge_displacement_cells": 4.16152954101563,
+              "midge_drive": true,
+              "midge_end": [
+                132,
+                345.845062255859
+              ],
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "load",
+              "physics_tick": true,
+              "process_id": 4596,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 3528,
+              "save_readback": true,
+              "saved_label": "gold-astra-001-win-c3-9e10a442-saved",
+              "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          },
+          "reopen": {
+            "exit_code": 0,
+            "wrapper_pid": 4536,
+            "timeout": false,
+            "wall_seconds": 7.359,
+            "log_sha256": "f0ed12b819f08bc40cf8e8dc132fa759d20f6fb5b9d8b1377b21c0422b415bc9",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-c3-9e10a442-saved",
+              "actor_adopted": true,
+              "collision_observed": false,
+              "errors": [],
+              "extent": [
+                1024,
+                2048
+              ],
+              "fresh_reopen": true,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                132,
+                350
+              ],
+              "label": "gold-astra-001-win-c3-9e10a442",
+              "load": true,
+              "midge_drive": false,
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "reopen",
+              "physics_tick": false,
+              "process_id": 4020,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 3528,
+              "saved_label": "gold-astra-001-win-c3-9e10a442-saved",
+              "setup_sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          }
+        },
+        "source_unchanged": true,
+        "staged_source_unchanged": true,
+        "saved_setup_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0",
+        "separate_processes": true,
+        "collision_observed": true,
+        "basic_native_pass": true
+      },
+      {
+        "arm": "B1",
+        "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+        "install": {
+          "exit_code": 0,
+          "wrapper_pid": 1340,
+          "timeout": false,
+          "wall_seconds": 0.562,
+          "log_sha256": "82b4e6432933c4a2e60ed0bfe25f8baa11a4d1c9a4c107e3a546857965f58f14"
+        },
+        "phases": {
+          "load": {
+            "exit_code": 0,
+            "wrapper_pid": 3784,
+            "timeout": false,
+            "wall_seconds": 14.578,
+            "log_sha256": "c8734e854fd83ede97b776a909f559bc3ce07f42ecaea1f156bf99e1edbf3fea",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-b1-9e10a442",
+              "actor_adopted": true,
+              "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+              "collision_observed": true,
+              "collision_probe": {
+                "end_tick": 204,
+                "max_contacts": 2,
+                "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+                "start_tick": 25,
+                "witnesses": [
+                  {
+                    "collider_rid_valid": true,
+                    "normal": [
+                      0,
+                      -1
+                    ],
+                    "point": [
+                      117,
+                      582
+                    ],
+                    "tick": 204
+                  }
+                ],
+                "worker_failed": false
+              },
+              "directed_up_displacement_cells": 4.29278564453125,
+              "drive_end": [
+                115,
+                515.845153808594
+              ],
+              "drive_key": "W",
+              "drive_start": [
+                115,
+                520.137939453125
+              ],
+              "drive_ticks_elapsed": 20,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": false,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                115,
+                520
+              ],
+              "label": "gold-astra-001-win-b1-9e10a442",
+              "load": true,
+              "midge_displacement_cells": 4.16143798828125,
+              "midge_drive": true,
+              "midge_end": [
+                115,
+                515.845153808594
+              ],
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "load",
+              "physics_tick": true,
+              "process_id": 5992,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 410,
+              "save_readback": true,
+              "saved_label": "gold-astra-001-win-b1-9e10a442-saved",
+              "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          },
+          "reopen": {
+            "exit_code": 0,
+            "wrapper_pid": 7036,
+            "timeout": false,
+            "wall_seconds": 6.985,
+            "log_sha256": "c15e3d527be5ae63ce488647057df26444520fb53a21a0ba1db6946620b9e40c",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-b1-9e10a442-saved",
+              "actor_adopted": true,
+              "collision_observed": false,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": true,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                115,
+                520
+              ],
+              "label": "gold-astra-001-win-b1-9e10a442",
+              "load": true,
+              "midge_drive": false,
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "reopen",
+              "physics_tick": false,
+              "process_id": 1300,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 410,
+              "saved_label": "gold-astra-001-win-b1-9e10a442-saved",
+              "setup_sha256": "961f7f1e727b2f58b27d4491928d8c930d0e1c0ff6d1d5b71c60d017565cc4c7",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          }
+        },
+        "source_unchanged": true,
+        "staged_source_unchanged": true,
+        "saved_setup_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "961f7f1e727b2f58b27d4491928d8c930d0e1c0ff6d1d5b71c60d017565cc4c7",
+        "separate_processes": true,
+        "collision_observed": true,
+        "basic_native_pass": true
+      },
+      {
+        "arm": "B2",
+        "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+        "install": {
+          "exit_code": 0,
+          "wrapper_pid": 3580,
+          "timeout": false,
+          "wall_seconds": 0.578,
+          "log_sha256": "17d77f79ff2c670a1e476367c21de7af9bfbcd28f883d4698b0ca4a483204fb8"
+        },
+        "phases": {
+          "load": {
+            "exit_code": 0,
+            "wrapper_pid": 936,
+            "timeout": false,
+            "wall_seconds": 15.657,
+            "log_sha256": "6b50d4457f10ca47db80b32dcd82bbfef902ade48d85deb6ce1924101efad38b",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-b2-9e10a442",
+              "actor_adopted": true,
+              "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+              "collision_observed": true,
+              "collision_probe": {
+                "end_tick": 263,
+                "max_contacts": 8,
+                "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+                "start_tick": 25,
+                "witnesses": [
+                  {
+                    "collider_rid_valid": true,
+                    "normal": [
+                      -1,
+                      0
+                    ],
+                    "point": [
+                      81,
+                      830
+                    ],
+                    "tick": 263
+                  }
+                ],
+                "worker_failed": false
+              },
+              "directed_up_displacement_cells": 4.29278564453125,
+              "drive_end": [
+                78,
+                690.845153808594
+              ],
+              "drive_key": "W",
+              "drive_start": [
+                78,
+                695.137939453125
+              ],
+              "drive_ticks_elapsed": 20,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": false,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                78,
+                695
+              ],
+              "label": "gold-astra-001-win-b2-9e10a442",
+              "load": true,
+              "midge_displacement_cells": 4.16143798828125,
+              "midge_drive": true,
+              "midge_end": [
+                78,
+                690.845153808594
+              ],
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "load",
+              "physics_tick": true,
+              "process_id": 5580,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 2038,
+              "save_readback": true,
+              "saved_label": "gold-astra-001-win-b2-9e10a442-saved",
+              "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          },
+          "reopen": {
+            "exit_code": 0,
+            "wrapper_pid": 7176,
+            "timeout": false,
+            "wall_seconds": 6.984,
+            "log_sha256": "286b8ff687ad2edb5995888e8190616a1b41d847a67ca07f657fd9783807bbff",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-b2-9e10a442-saved",
+              "actor_adopted": true,
+              "collision_observed": false,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": true,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                78,
+                695
+              ],
+              "label": "gold-astra-001-win-b2-9e10a442",
+              "load": true,
+              "midge_drive": false,
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "reopen",
+              "physics_tick": false,
+              "process_id": 1088,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 2038,
+              "saved_label": "gold-astra-001-win-b2-9e10a442-saved",
+              "setup_sha256": "11dd02077eee607c91047d9e6673b4d80c889ea66583297ddec945f2dd0460d8",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          }
+        },
+        "source_unchanged": true,
+        "staged_source_unchanged": true,
+        "saved_setup_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "11dd02077eee607c91047d9e6673b4d80c889ea66583297ddec945f2dd0460d8",
+        "separate_processes": true,
+        "collision_observed": true,
+        "basic_native_pass": true
+      },
+      {
+        "arm": "B3",
+        "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+        "install": {
+          "exit_code": 0,
+          "wrapper_pid": 1752,
+          "timeout": false,
+          "wall_seconds": 0.578,
+          "log_sha256": "5892c17bd65df2f133a1b3e8777e7a1f43cb76e28fc461ac1afe7e082e8eeb3e"
+        },
+        "phases": {
+          "load": {
+            "exit_code": 0,
+            "wrapper_pid": 1632,
+            "timeout": false,
+            "wall_seconds": 17.531,
+            "log_sha256": "628b720596761a1b03ae13dc2f769f38d190e6378880a3a475985b68ada09188",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-b3-9e10a442",
+              "actor_adopted": true,
+              "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+              "collision_observed": true,
+              "collision_probe": {
+                "end_tick": 317,
+                "max_contacts": 8,
+                "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+                "start_tick": 25,
+                "witnesses": [
+                  {
+                    "collider_rid_valid": true,
+                    "normal": [
+                      0,
+                      -1
+                    ],
+                    "point": [
+                      125,
+                      533
+                    ],
+                    "tick": 317
+                  }
+                ],
+                "worker_failed": false
+              },
+              "directed_up_displacement_cells": 4.29287719726563,
+              "drive_end": [
+                125,
+                307.845062255859
+              ],
+              "drive_key": "W",
+              "drive_start": [
+                125,
+                312.137939453125
+              ],
+              "drive_ticks_elapsed": 20,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": false,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                125,
+                312
+              ],
+              "label": "gold-astra-001-win-b3-9e10a442",
+              "load": true,
+              "midge_displacement_cells": 4.16152954101563,
+              "midge_drive": true,
+              "midge_end": [
+                125,
+                307.845062255859
+              ],
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "load",
+              "physics_tick": true,
+              "process_id": 7976,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 4164,
+              "save_readback": true,
+              "saved_label": "gold-astra-001-win-b3-9e10a442-saved",
+              "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          },
+          "reopen": {
+            "exit_code": 0,
+            "wrapper_pid": 4696,
+            "timeout": false,
+            "wall_seconds": 7.984,
+            "log_sha256": "0a2d9864de88314d8796d3ffe3ff7a379ca0128b3ba415f28bbd7da63051f3a5",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-b3-9e10a442-saved",
+              "actor_adopted": true,
+              "collision_observed": false,
+              "errors": [],
+              "extent": [
+                2048,
+                1024
+              ],
+              "fresh_reopen": true,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                125,
+                312
+              ],
+              "label": "gold-astra-001-win-b3-9e10a442",
+              "load": true,
+              "midge_drive": false,
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "reopen",
+              "physics_tick": false,
+              "process_id": 1388,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 4164,
+              "saved_label": "gold-astra-001-win-b3-9e10a442-saved",
+              "setup_sha256": "c185c13c3d123fd7ee6d0f4175ad5ebf77d2aa4c27cd601e0480a3c9de09234a",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          }
+        },
+        "source_unchanged": true,
+        "staged_source_unchanged": true,
+        "saved_setup_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "c185c13c3d123fd7ee6d0f4175ad5ebf77d2aa4c27cd601e0480a3c9de09234a",
+        "separate_processes": true,
+        "collision_observed": true,
+        "basic_native_pass": true
+      },
+      {
+        "arm": "D1",
+        "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+        "install": {
+          "exit_code": 0,
+          "wrapper_pid": 4572,
+          "timeout": false,
+          "wall_seconds": 0.593,
+          "log_sha256": "1d4a031df7588db65316870ccd79d088b80e05fd87fc022e5ec0947b0cd28d53"
+        },
+        "phases": {
+          "load": {
+            "exit_code": 0,
+            "wrapper_pid": 1584,
+            "timeout": false,
+            "wall_seconds": 19.953,
+            "log_sha256": "c023fb8cb5ec657eac71f0c086ae25b87fec0bbb5d6288d409c9bf728ed755e9",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-d1-9e10a442",
+              "actor_adopted": true,
+              "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+              "collision_observed": true,
+              "collision_probe": {
+                "end_tick": 488,
+                "max_contacts": 4,
+                "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+                "start_tick": 25,
+                "witnesses": [
+                  {
+                    "collider_rid_valid": true,
+                    "normal": [
+                      0,
+                      -1
+                    ],
+                    "point": [
+                      511,
+                      685
+                    ],
+                    "tick": 488
+                  }
+                ],
+                "worker_failed": false
+              },
+              "directed_up_displacement_cells": 4.29286193847656,
+              "drive_end": [
+                509,
+                132.845062255859
+              ],
+              "drive_key": "W",
+              "drive_start": [
+                509,
+                137.137924194336
+              ],
+              "drive_ticks_elapsed": 20,
+              "errors": [],
+              "extent": [
+                1024,
+                2048
+              ],
+              "fresh_reopen": false,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                509,
+                137
+              ],
+              "label": "gold-astra-001-win-d1-9e10a442",
+              "load": true,
+              "midge_displacement_cells": 4.16152954101563,
+              "midge_drive": true,
+              "midge_end": [
+                509,
+                132.845062255859
+              ],
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "load",
+              "physics_tick": true,
+              "process_id": 6136,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 923,
+              "save_readback": true,
+              "saved_label": "gold-astra-001-win-d1-9e10a442-saved",
+              "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          },
+          "reopen": {
+            "exit_code": 0,
+            "wrapper_pid": 7744,
+            "timeout": false,
+            "wall_seconds": 7.36,
+            "log_sha256": "4a3bfa87c7f1c340db1a8c267eec9908a3ecc1312a986ee82e2534a390f21a92",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-d1-9e10a442-saved",
+              "actor_adopted": true,
+              "collision_observed": false,
+              "errors": [],
+              "extent": [
+                1024,
+                2048
+              ],
+              "fresh_reopen": true,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                509,
+                137
+              ],
+              "label": "gold-astra-001-win-d1-9e10a442",
+              "load": true,
+              "midge_drive": false,
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "reopen",
+              "physics_tick": false,
+              "process_id": 2272,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 923,
+              "saved_label": "gold-astra-001-win-d1-9e10a442-saved",
+              "setup_sha256": "297d4af4baaf261ee94ca02f7228beaf2690b9536373de0bc96ac5f095ad4005",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          }
+        },
+        "source_unchanged": true,
+        "staged_source_unchanged": true,
+        "saved_setup_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "297d4af4baaf261ee94ca02f7228beaf2690b9536373de0bc96ac5f095ad4005",
+        "separate_processes": true,
+        "collision_observed": true,
+        "basic_native_pass": true
+      },
+      {
+        "arm": "D2",
+        "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+        "install": {
+          "exit_code": 0,
+          "wrapper_pid": 6044,
+          "timeout": false,
+          "wall_seconds": 0.579,
+          "log_sha256": "7cc47baa6b930110acd5bd0054461bfb0611752d5d0c1a289a1f1892618fd70d"
+        },
+        "phases": {
+          "load": {
+            "exit_code": 0,
+            "wrapper_pid": 7172,
+            "timeout": false,
+            "wall_seconds": 15.734,
+            "log_sha256": "048df477273cc07f5599e5308ce05bb59bef9440841d6ea2f202dd3dcce0afd7",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-d2-9e10a442",
+              "actor_adopted": true,
+              "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+              "collision_observed": true,
+              "collision_probe": {
+                "end_tick": 245,
+                "max_contacts": 2,
+                "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+                "start_tick": 25,
+                "witnesses": [
+                  {
+                    "collider_rid_valid": true,
+                    "normal": [
+                      0,
+                      -1
+                    ],
+                    "point": [
+                      227,
+                      384
+                    ],
+                    "tick": 245
+                  }
+                ],
+                "worker_failed": false
+              },
+              "directed_up_displacement_cells": 4.29287719726563,
+              "drive_end": [
+                225,
+                268.845062255859
+              ],
+              "drive_key": "W",
+              "drive_start": [
+                225,
+                273.137939453125
+              ],
+              "drive_ticks_elapsed": 20,
+              "errors": [],
+              "extent": [
+                1024,
+                2048
+              ],
+              "fresh_reopen": false,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                225,
+                273
+              ],
+              "label": "gold-astra-001-win-d2-9e10a442",
+              "load": true,
+              "midge_displacement_cells": 4.16152954101563,
+              "midge_drive": true,
+              "midge_end": [
+                225,
+                268.845062255859
+              ],
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "load",
+              "physics_tick": true,
+              "process_id": 1644,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 1294,
+              "save_readback": true,
+              "saved_label": "gold-astra-001-win-d2-9e10a442-saved",
+              "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          },
+          "reopen": {
+            "exit_code": 0,
+            "wrapper_pid": 2660,
+            "timeout": false,
+            "wall_seconds": 6.984,
+            "log_sha256": "e1357feb69833fa34170201d2b59967ee71a3908f78ba2147d8da7cd5643df7f",
+            "evidence": {
+              "acknowledged_epoch": 1,
+              "active_label": "gold-astra-001-win-d2-9e10a442-saved",
+              "actor_adopted": true,
+              "collision_observed": false,
+              "errors": [],
+              "extent": [
+                1024,
+                2048
+              ],
+              "fresh_reopen": true,
+              "full_grid": true,
+              "grid_check": {
+                "first_mismatch": [],
+                "format": 3,
+                "mismatches": 0,
+                "ok": true,
+                "pixels": 2097152
+              },
+              "initial_actor_position": [
+                225,
+                273
+              ],
+              "label": "gold-astra-001-win-d2-9e10a442",
+              "load": true,
+              "midge_drive": false,
+              "midge_id": 1,
+              "native_bridge": true,
+              "phase": "reopen",
+              "physics_tick": false,
+              "process_id": 7272,
+              "published_image": true,
+              "rapier_space_valid": true,
+              "rectangles": 1294,
+              "saved_label": "gold-astra-001-win-d2-9e10a442-saved",
+              "setup_sha256": "4ba53bd60c1769d60594248df12fb2cb928c52f9fa84e38b3948982092b608e1",
+              "source_parse": true,
+              "version": "4.7-stable (official)",
+              "worker_failed": false
+            }
+          }
+        },
+        "source_unchanged": true,
+        "staged_source_unchanged": true,
+        "saved_setup_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "4ba53bd60c1769d60594248df12fb2cb928c52f9fa84e38b3948982092b608e1",
+        "separate_processes": true,
+        "collision_observed": true,
+        "basic_native_pass": true
+      }
+    ],
+    "scope": "Hosted Windows headless exact-package source copy; no owner-machine, GUI, complete route or machinery-operation acceptance.",
+    "pass": true
+  },
+  "limitations": [
+    "Hosted Windows headless evaluation, not owner machine or graphical proof",
+    "No GitHub Actions artifact was uploaded; full published job log is also archived in this recovery proposal"
+  ]
+}
