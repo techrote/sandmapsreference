@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "arm": "B1",
+  "attempt": 3,
+  "status": "PASS",
+  "command": "python reproduce.py --out reproduced --verify-original-build",
+  "original_builder_setup_bytes": "MATCH_FROZEN_ORIGINAL",
+  "candidate_and_png_bytes": "MATCH",
+  "files": [
+    {
+      "path": "setup.json",
+      "expected_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+      "reproduced_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c"
+    },
+    {
+      "path": "build-result.json",
+      "expected_sha256": "1a200ae2d81be61717656d92c390cc25a2008d8562fa0358c66a2f750fafc9b4",
+      "reproduced_sha256": "1a200ae2d81be61717656d92c390cc25a2008d8562fa0358c66a2f750fafc9b4"
+    },
+    {
+      "path": "images/overview-before.png",
+      "expected_sha256": "a7693f985d569878544614ee100b199cb7fe30a4abe38ab6fd5bc922eccb80de",
+      "reproduced_sha256": "a7693f985d569878544614ee100b199cb7fe30a4abe38ab6fd5bc922eccb80de"
+    },
+    {
+      "path": "images/overview-after.png",
+      "expected_sha256": "9089a22878a9e93c862752a5d7348d192b14158b6b8f79acc4ed08ecc9ebbdd3",
+      "reproduced_sha256": "9089a22878a9e93c862752a5d7348d192b14158b6b8f79acc4ed08ecc9ebbdd3"
+    },
+    {
+      "path": "images/01-ledger-tenements-before.png",
+      "expected_sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909",
+      "reproduced_sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909"
+    },
+    {
+      "path": "images/01-ledger-tenements-after.png",
+      "expected_sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909",
+      "reproduced_sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909"
+    },
+    {
+      "path": "images/02-rinse-sorting-before.png",
+      "expected_sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2",
+      "reproduced_sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2"
+    },
+    {
+      "path": "images/02-rinse-sorting-after.png",
+      "expected_sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2",
+      "reproduced_sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2"
+    },
+    {
+      "path": "images/03-central-reclaim-before.png",
+      "expected_sha256": "763113debd067bdfca8658c3e8c72039a05233b1f8378552f00ba1505bee19e7",
+      "reproduced_sha256": "763113debd067bdfca8658c3e8c72039a05233b1f8378552f00ba1505bee19e7"
+    },
+    {
+      "path": "images/03-central-reclaim-after.png",
+      "expected_sha256": "026a973f24f0636b6219fdeacfee66da485ab4dd61c0edf3d9473264ed8dd6e4",
+      "reproduced_sha256": "026a973f24f0636b6219fdeacfee66da485ab4dd61c0edf3d9473264ed8dd6e4"
+    },
+    {
+      "path": "images/04-repair-atelier-before.png",
+      "expected_sha256": "06eaceac752b6a360ff9c00cdca61c76024b4d69bcf6e3a4c3577eb27adfa2c9",
+      "reproduced_sha256": "06eaceac752b6a360ff9c00cdca61c76024b4d69bcf6e3a4c3577eb27adfa2c9"
+    },
+    {
+      "path": "images/04-repair-atelier-after.png",
+      "expected_sha256": "1d33adaf65302477b7e120beef0a87e5d4b2df886e69d1c52cee1982909cd474",
+      "reproduced_sha256": "1d33adaf65302477b7e120beef0a87e5d4b2df886e69d1c52cee1982909cd474"
+    },
+    {
+      "path": "images/05-east-tenements-before.png",
+      "expected_sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7",
+      "reproduced_sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7"
+    },
+    {
+      "path": "images/05-east-tenements-after.png",
+      "expected_sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7",
+      "reproduced_sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7"
+    },
+    {
+      "path": "images/10-hoist-receiving-detail-before.png",
+      "expected_sha256": "d5971297f29f5b3ea380282e64dc26fde843b9992b67b5e38897097eb7432633",
+      "reproduced_sha256": "d5971297f29f5b3ea380282e64dc26fde843b9992b67b5e38897097eb7432633"
+    },
+    {
+      "path": "images/10-hoist-receiving-detail-after.png",
+      "expected_sha256": "07f717a637477c5cfbd8df4db9b86befe054ce744c361c07746222596395f2c6",
+      "reproduced_sha256": "07f717a637477c5cfbd8df4db9b86befe054ce744c361c07746222596395f2c6"
+    }
+  ]
+}
