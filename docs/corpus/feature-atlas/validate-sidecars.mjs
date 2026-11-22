@@ -85,6 +85,12 @@ const promotedCount=queue.records.filter(q=>states.has(q.provisional_state_id)).
  const register=read('repair-head-register.v1.json');
  const latest=read('astra-current.v1.json');
  ok(latest.schema_version===1&&latest.not_authorized_for_execution===true&&latest.current_child_count===7,'current-only nonexecuting authority');
+ const contract=latest.spatial_safety_contract;
+ ok(contract&&contract.version===1&&contract.authorized_geometry_edits===false&&contract.evidence_windows_are_edit_masks===false&&contract.primary_treatment_labels_are_exhaustive_protection===false&&contract.protected_voids_are_counted_as_distinct_regions===false,'current advisory spatial authority overclaim');
+ const protectedRecordCount=latest.records.filter(x=>Array.isArray(x.do_not_fill)&&x.do_not_fill.length>0).length;
+ const verifiedTightCount=latest.records.filter(x=>x.feature_bbox_xyxy!==null).length;
+ ok(contract.records_with_nonempty_do_not_fill===protectedRecordCount&&contract.records_with_tight_verified_feature_bbox===verifiedTightCount,'current spatial-safety aggregate count drift');
+ ok(latest.records.every(x=>Array.isArray(x.do_not_fill)&&Array.isArray(x.must_preserve)&&Array.isArray(x.safe_to_change)),'current feature missing protected-relations arrays');
  const childByPr=new Map(register.children.map(c=>[c.repair_pr,c]));
  ok(childByPr.size===7,'duplicate child register');
  const expected=rows.filter(s=>s.stage==='POST_REPAIR'&&childByPr.get(s.provenance.material_pr)?.exact_current_head===s.provenance.portrait_head);
