@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "programme": "GOLD-ASTRA-001",
+  "arm": "B1",
+  "retained_attempt": 3,
+  "decision": "BOUNDED_MATERIAL_CELL_REPAIR",
+  "source_head": "eb00a9a55864dfb6d3e076e60ba4684b397228fc",
+  "original_map_directory": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-switchback-recovery-tenements-261121",
+  "original_setup_filename": "setup.json",
+  "frozen_registration_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "baseline_setup_sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+  "candidate_setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+  "cell_difference": {
+    "changed_cells": 3283,
+    "bounds_xywh": [
+      1020,
+      628,
+      210,
+      115
+    ],
+    "before_material_plane_sha256_uint8": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+    "after_material_plane_sha256_uint8": "b19ebd0f044e1a2ddc96e4e4b735b31811573c8832e0c37034c636e27da6923c",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 58,
+        "cells": 329
+      },
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 2680
+      },
+      {
+        "from": 58,
+        "to": 62,
+        "cells": 274
+      }
+    ]
+  },
+  "rectangle_count": 410,
+  "extent": [
+    2048,
+    1024
+  ],
+  "outside_approved_regions_changed_cells": 0,
+  "protected_named_31x27_footprint_changes": [],
+  "settings_preserved": true,
+  "final_pruned_provisional_cells": 0,
+  "newly_restored_original_source_ids": [],
+  "source_static_author_status": "PASS",
+  "reproduction_author_status": "PASS",
+  "independent_source_static_art_reproduction_status": "PASS: independent frozen source-static preservation, exact image/bundle/original-input custody, original-builder/output reproduction and ART focus review; native pending",
+  "independent_status_source": "Reviewer/root messages in the blinded experiment session; separately published reviewer receipts are authoritative.",
+  "native_status_at_author_freeze": "NATIVE-UNTESTED_BY_AUTHOR",
+  "native_status_scope": "Independent native results are separate; no flight or owner acceptance is asserted here.",
+  "overview_and_crops": [
+    {
+      "path": "images/overview-before.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "a7693f985d569878544614ee100b199cb7fe30a4abe38ab6fd5bc922eccb80de"
+    },
+    {
+      "path": "images/overview-after.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "9089a22878a9e93c862752a5d7348d192b14158b6b8f79acc4ed08ecc9ebbdd3"
+    },
+    {
+      "path": "images/01-ledger-tenements-before.png",
+      "source_crop_xywh": [
+        110,
+        315,
+        420,
+        477
+      ],
+      "pixels": [
+        420,
+        477
+      ],
+      "scale": 1,
+      "sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909"
+    },
+    {
+      "path": "images/01-ledger-tenements-after.png",
+      "source_crop_xywh": [
+        110,
+        315,
+        420,
+        477
+      ],
+      "pixels": [
+        420,
+        477
+      ],
+      "scale": 1,
+      "sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909"
+    },
+    {
+      "path": "images/02-rinse-sorting-before.png",
+      "source_crop_xywh": [
+        465,
+        329,
+        365,
+        482
+      ],
+      "pixels": [
+        365,
+        482
+      ],
+      "scale": 1,
+      "sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2"
+    },
+    {
+      "path": "images/02-rinse-sorting-after.png",
+      "source_crop_xywh": [
+        465,
+        329,
+        365,
+        482
+      ],
+      "pixels": [
+        365,
+        482
+      ],
+      "scale": 1,
+      "sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2"
+    },
+    {
+      "path": "images/03-central-reclaim-before.png",
+      "source_crop_xywh": [
+        817,
+        240,
+        560,
+        620
+      ],
+      "pixels": [
+        560,
+        620
+      ],
+      "scale": 1,
+      "sha256": "763113debd067bdfca8658c3e8c72039a05233b1f8378552f00ba1505bee19e7"
+    },
+    {
+      "path": "images/03-central-reclaim-after.png",
+      "source_crop_xywh": [
+        817,
+        240,
+        560,
+        620
+      ],
+      "pixels": [
+        560,
+        620
+      ],
+      "scale": 1,
+      "sha256": "026a973f24f0636b6219fdeacfee66da485ab4dd61c0edf3d9473264ed8dd6e4"
+    },
+    {
+      "path": "images/04-repair-atelier-before.png",
+      "source_crop_xywh": [
+        1160,
+        310,
+        410,
+        506
+      ],
+      "pixels": [
+        410,
+        506
+      ],
+      "scale": 1,
+      "sha256": "06eaceac752b6a360ff9c00cdca61c76024b4d69bcf6e3a4c3577eb27adfa2c9"
+    },
+    {
+      "path": "images/04-repair-atelier-after.png",
+      "source_crop_xywh": [
+        1160,
+        310,
+        410,
+        506
+      ],
+      "pixels": [
+        410,
+        506
+      ],
+      "scale": 1,
+      "sha256": "1d33adaf65302477b7e120beef0a87e5d4b2df886e69d1c52cee1982909cd474"
+    },
+    {
+      "path": "images/05-east-tenements-before.png",
+      "source_crop_xywh": [
+        1510,
+        312,
+        500,
+        519
+      ],
+      "pixels": [
+        500,
+        519
+      ],
+      "scale": 1,
+      "sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7"
+    },
+    {
+      "path": "images/05-east-tenements-after.png",
+      "source_crop_xywh": [
+        1510,
+        312,
+        500,
+        519
+      ],
+      "pixels": [
+        500,
+        519
+      ],
+      "scale": 1,
+      "sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7"
+    },
+    {
+      "path": "images/10-hoist-receiving-detail-before.png",
+      "source_crop_xywh": [
+        990,
+        430,
+        300,
+        340
+      ],
+      "pixels": [
+        300,
+        340
+      ],
+      "scale": 1,
+      "sha256": "d5971297f29f5b3ea380282e64dc26fde843b9992b67b5e38897097eb7432633"
+    },
+    {
+      "path": "images/10-hoist-receiving-detail-after.png",
+      "source_crop_xywh": [
+        990,
+        430,
+        300,
+        340
+      ],
+      "pixels": [
+        300,
+        340
+      ],
+      "scale": 1,
+      "sha256": "07f717a637477c5cfbd8df4db9b86befe054ce744c361c07746222596395f2c6"
+    }
+  ],
+  "rationale": "rationale.md",
+  "fixture": "fixture.json",
+  "validation": "validation.json",
+  "reproduction_receipt": "reproduction-receipt.v1.json",
+  "history_policy": "All failed attempts and original inputs remain retained by the programme ledger; this folder contains the retained candidate only.",
+  "independent_review_limits": [
+    "All20 original route-graph legs witnessed at31\u00d727; all original obstruction survivors preserved."
+  ]
+}

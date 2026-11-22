@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "kind": "app-local-microsoft-visual-c-runtime",
+  "architecture": "x86_64",
+  "runtime": {
+    "file": "vcruntime140.dll",
+    "size": 124544,
+    "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066",
+    "file_version": "14.44.35211.0",
+    "product_version": "14.44.35211.0",
+    "company_name": "Microsoft Corporation",
+    "pe_machine": "AMD64 (0x8664)",
+    "source_relative_redist_path": "VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/vcruntime140.dll"
+  },
+  "visual_studio": {
+    "instance_id": "7806f881",
+    "product_id": "Microsoft.VisualStudio.Product.Enterprise",
+    "installation_name": "VisualStudio/17.14.45+37906.3",
+    "installation_version": "17.14.37906.3",
+    "product_display_version": "17.14.45",
+    "is_prerelease": false,
+    "vswhere_sha256": "c54f3b7c9164ea9a0db8641e81ecdda80c2664ef5a47c4191406f848cc07c662"
+  },
+  "authenticode": {
+    "status": "Valid",
+    "signature_type": "Authenticode",
+    "signer_subject": "CN=Microsoft Windows Software Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+    "signer_issuer": "CN=Microsoft Windows Third Party Component CA 2013, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+    "signer_thumbprint": "EC5F0D7EE2327688384B4FDF5D7633553A0D055F",
+    "signer_not_before_utc": "2025-05-15T18:26:07.0000000Z",
+    "signer_not_after_utc": "2026-05-15T18:26:07.0000000Z",
+    "timestamp_subject": "CN=Microsoft Time-Stamp Service, OU=nShield TSS ESN:6F1A-05E0-D947, OU=Microsoft Ireland Operations Limited, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+    "timestamp_thumbprint": "4E412925739AA88DB07EA06CC3834B570A98AAAA"
+  },
+  "runner": {
+    "image_os": "win22",
+    "image_version": "20261116.370.1",
+    "runner_os": "Windows",
+    "runner_arch": "X64",
+    "workflow_run": "44953582341",
+    "workflow_attempt": "1",
+    "source_commit": "96b8d3fb9d5a2e9f580d4b33293b1ab725269d4f"
+  },
+  "licensing": {
+    "runtime_end_user_license": "Microsoft-Visual-C-Runtime-LICENSE.docx",
+    "runtime_license_url": "https://visualstudio.microsoft.com/wp-content/uploads/2021/09/Visual-C-Runtime-2015-2022-License-1.docx",
+    "developer_license": "Microsoft-Visual-Studio-2022-LICENSE.docx",
+    "developer_license_url": "https://visualstudio.microsoft.com/wp-content/uploads/2021/11/Visual-Studio-2022-Enterprise-Professional-License-EN.docx",
+    "redistribution_basis": "Visual Studio 2022 Professional/Enterprise licence, section 5, and the referenced distributable-code list; the runtime end-user licence is not the redistribution grant.",
+    "redistribution_list_url": "https://aka.ms/vs/17/redistribution",
+    "deployment_guidance_url": "https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files"
+  },
+  "files_sha256": {
+    "vcruntime140.dll": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066",
+    "Microsoft-Visual-C-Runtime-LICENSE.docx": "f1e3d56ceb2ad68aae0711b910375009e651ac5530fa0760f0dea6e81e54fae1",
+    "Microsoft-Visual-Studio-2022-LICENSE.docx": "9c0cd52b20db9d081854c75bd1b50c75514b8f8cb09c8cad15e89d90b97b5bf3"
+  }
+}

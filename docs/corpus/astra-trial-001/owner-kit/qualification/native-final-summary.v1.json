@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "status": "ALL_EIGHT_SELECTED_LOCAL_NATIVE_PASS",
+  "accepted_engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "new_final_changed_outputs": 5,
+  "byte_identical_controls_with_reused_evidence": 3,
+  "unchanged_harness_sha256": "a9a904a4a76c28b8615713c0914381b2916fefcd0f60da9489e9aa18ebf6774a",
+  "results": [
+    {
+      "arm": "C1",
+      "attempt": "001",
+      "receipt_path": "native-results/baseline-v2/C1.receipt.json",
+      "receipt_sha256": "7c175ec4ff1d9720339ca88733dccdaa426c437e3997f65f89da17b3c3a05303",
+      "evidence_reused_for_byte_identical_control": true,
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "extent": [
+        2048,
+        1024
+      ],
+      "exact_spawn": [
+        115.0,
+        489.0
+      ],
+      "full_grid_pixels_checked_load": 2097152,
+      "full_grid_mismatches_load": 0,
+      "controlled_drive_ticks": 20,
+      "upward_displacement_cells": 4.29287719726562,
+      "collision": {
+        "end_tick": 292,
+        "max_contacts": 2,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "witnesses": [
+          {
+            "collider_rid_valid": true,
+            "normal": [
+              -1.0,
+              0.0
+            ],
+            "point": [
+              118.0,
+              668.0
+            ],
+            "tick": 292
+          }
+        ],
+        "worker_failed": false
+      },
+      "ordinary_save_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "983e405c690bbce43f4eefaa54c492d5127aaed11116a13f6b27fd4a2405173e",
+      "fresh_process_reopen": true,
+      "saved_bytes_hash_matches_reopen": true,
+      "full_grid_pixels_checked_reopen": 2097152,
+      "full_grid_mismatches_reopen": 0,
+      "separate_processes": true,
+      "status": "LOCAL_NATIVE_PASS"
+    },
+    {
+      "arm": "C2",
+      "attempt": "001",
+      "receipt_path": "native-results/baseline-v2/C2.receipt.json",
+      "receipt_sha256": "4df1b7ae2951a3e085c0ebb3aaba5d4a5c9214f8d44d3ca081d48a7ee8f631a0",
+      "evidence_reused_for_byte_identical_control": true,
+      "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "extent": [
+        2048,
+        1024
+      ],
+      "exact_spawn": [
+        75.0,
+        365.0
+      ],
+      "full_grid_pixels_checked_load": 2097152,
+      "full_grid_mismatches_load": 0,
+      "controlled_drive_ticks": 20,
+      "upward_displacement_cells": 4.29287719726562,
+      "collision": {
+        "end_tick": 386,
+        "max_contacts": 6,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "witnesses": [
+          {
+            "collider_rid_valid": true,
+            "normal": [
+              0.0,
+              -1.0
+            ],
+            "point": [
+              77.0,
+              713.0
+            ],
+            "tick": 386
+          }
+        ],
+        "worker_failed": false
+      },
+      "ordinary_save_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "fd4c8d4acd8ac87c666bcbd2e29de6b6547e88ee6d5b4b4bca59225a357a3130",
+      "fresh_process_reopen": true,
+      "saved_bytes_hash_matches_reopen": true,
+      "full_grid_pixels_checked_reopen": 2097152,
+      "full_grid_mismatches_reopen": 0,
+      "separate_processes": true,
+      "status": "LOCAL_NATIVE_PASS"
+    },
+    {
+      "arm": "C3",
+      "attempt": "001",
+      "receipt_path": "native-results/baseline-v2/C3.receipt.json",
+      "receipt_sha256": "4b91045a76a578def53c57aa6ecce83bdea51f6a7fe9e99be6b895c1f7498a45",
+      "evidence_reused_for_byte_identical_control": true,
+      "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "extent": [
+        1024,
+        2048
+      ],
+      "exact_spawn": [
+        132.0,
+        350.0
+      ],
+      "full_grid_pixels_checked_load": 2097152,
+      "full_grid_mismatches_load": 0,
+      "controlled_drive_ticks": 20,
+      "upward_displacement_cells": 4.29287719726562,
+      "collision": {
+        "end_tick": 265,
+        "max_contacts": 2,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "witnesses": [
+          {
+            "collider_rid_valid": true,
+            "normal": [
+              -2.38418579101562e-07,
+              -1.0
+            ],
+            "point": [
+              134.0,
+              490.0
+            ],
+            "tick": 265
+          }
+        ],
+        "worker_failed": false
+      },
+      "ordinary_save_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0",
+      "fresh_process_reopen": true,
+      "saved_bytes_hash_matches_reopen": true,
+      "full_grid_pixels_checked_reopen": 2097152,
+      "full_grid_mismatches_reopen": 0,
+      "separate_processes": true,
+      "status": "LOCAL_NATIVE_PASS"
+    },
+    {
+      "arm": "B1",
+      "attempt": "003",
+      "receipt_path": "native-results/final-b1-b3-d1-v1/B1.receipt.json",
+      "receipt_sha256": "cb89294b68f4284427128f4bb7df5795a1b7b159bd6026f57217eb75d7793164",
+      "evidence_reused_for_byte_identical_control": false,
+      "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+      "extent": [
+        2048,
+        1024
+      ],
+      "exact_spawn": [
+        115.0,
+        520.0
+      ],
+      "full_grid_pixels_checked_load": 2097152,
+      "full_grid_mismatches_load": 0,
+      "controlled_drive_ticks": 20,
+      "upward_displacement_cells": 4.29278564453125,
+      "collision": {
+        "end_tick": 204,
+        "max_contacts": 2,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "witnesses": [
+          {
+            "collider_rid_valid": true,
+            "normal": [
+              0.0,
+              -1.0
+            ],
+            "point": [
+              117.0,
+              582.0
+            ],
+            "tick": 204
+          }
+        ],
+        "worker_failed": false
+      },
+      "ordinary_save_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "961f7f1e727b2f58b27d4491928d8c930d0e1c0ff6d1d5b71c60d017565cc4c7",
+      "fresh_process_reopen": true,
+      "saved_bytes_hash_matches_reopen": true,
+      "full_grid_pixels_checked_reopen": 2097152,
+      "full_grid_mismatches_reopen": 0,
+      "separate_processes": true,
+      "status": "LOCAL_NATIVE_PASS"
+    },
+    {
+      "arm": "B2",
+      "attempt": "001",
+      "receipt_path": "native-results/final-b2-d2-v1/B2.receipt.json",
+      "receipt_sha256": "a6239e68cf1bbc2aab67383104aad9895d5f82352d76a79a021d5b4f3a1dd614",
+      "evidence_reused_for_byte_identical_control": false,
+      "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+      "extent": [
+        2048,
+        1024
+      ],
+      "exact_spawn": [
+        78.0,
+        695.0
+      ],
+      "full_grid_pixels_checked_load": 2097152,
+      "full_grid_mismatches_load": 0,
+      "controlled_drive_ticks": 20,
+      "upward_displacement_cells": 4.29278564453125,
+      "collision": {
+        "end_tick": 263,
+        "max_contacts": 8,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "witnesses": [
+          {
+            "collider_rid_valid": true,
+            "normal": [
+              -1.0,
+              0.0
+            ],
+            "point": [
+              81.0,
+              830.0
+            ],
+            "tick": 263
+          }
+        ],
+        "worker_failed": false
+      },
+      "ordinary_save_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "11dd02077eee607c91047d9e6673b4d80c889ea66583297ddec945f2dd0460d8",
+      "fresh_process_reopen": true,
+      "saved_bytes_hash_matches_reopen": true,
+      "full_grid_pixels_checked_reopen": 2097152,
+      "full_grid_mismatches_reopen": 0,
+      "separate_processes": true,
+      "status": "LOCAL_NATIVE_PASS"
+    },
+    {
+      "arm": "B3",
+      "attempt": "003",
+      "receipt_path": "native-results/final-b1-b3-d1-v1/B3.receipt.json",
+      "receipt_sha256": "4705c58eaac442483de822bbf8e4a0476b4960d4dff119d93693cb132fb16fff",
+      "evidence_reused_for_byte_identical_control": false,
+      "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+      "extent": [
+        2048,
+        1024
+      ],
+      "exact_spawn": [
+        125.0,
+        312.0
+      ],
+      "full_grid_pixels_checked_load": 2097152,
+      "full_grid_mismatches_load": 0,
+      "controlled_drive_ticks": 20,
+      "upward_displacement_cells": 4.29287719726562,
+      "collision": {
+        "end_tick": 317,
+        "max_contacts": 8,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "witnesses": [
+          {
+            "collider_rid_valid": true,
+            "normal": [
+              0.0,
+              -1.0
+            ],
+            "point": [
+              125.0,
+              533.0
+            ],
+            "tick": 317
+          }
+        ],
+        "worker_failed": false
+      },
+      "ordinary_save_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "c185c13c3d123fd7ee6d0f4175ad5ebf77d2aa4c27cd601e0480a3c9de09234a",
+      "fresh_process_reopen": true,
+      "saved_bytes_hash_matches_reopen": true,
+      "full_grid_pixels_checked_reopen": 2097152,
+      "full_grid_mismatches_reopen": 0,
+      "separate_processes": true,
+      "status": "LOCAL_NATIVE_PASS"
+    },
+    {
+      "arm": "D1",
+      "attempt": "002",
+      "receipt_path": "native-results/final-b1-b3-d1-v1/D1.receipt.json",
+      "receipt_sha256": "b1ae04143038bbb9367580200a71b5d5b59ad4c09002120b0264f922a35981fc",
+      "evidence_reused_for_byte_identical_control": false,
+      "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+      "extent": [
+        1024,
+        2048
+      ],
+      "exact_spawn": [
+        509.0,
+        137.0
+      ],
+      "full_grid_pixels_checked_load": 2097152,
+      "full_grid_mismatches_load": 0,
+      "controlled_drive_ticks": 20,
+      "upward_displacement_cells": 4.29286193847656,
+      "collision": {
+        "end_tick": 488,
+        "max_contacts": 4,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "witnesses": [
+          {
+            "collider_rid_valid": true,
+            "normal": [
+              0.0,
+              -1.0
+            ],
+            "point": [
+              511.0,
+              685.0
+            ],
+            "tick": 488
+          }
+        ],
+        "worker_failed": false
+      },
+      "ordinary_save_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "297d4af4baaf261ee94ca02f7228beaf2690b9536373de0bc96ac5f095ad4005",
+      "fresh_process_reopen": true,
+      "saved_bytes_hash_matches_reopen": true,
+      "full_grid_pixels_checked_reopen": 2097152,
+      "full_grid_mismatches_reopen": 0,
+      "separate_processes": true,
+      "status": "LOCAL_NATIVE_PASS"
+    },
+    {
+      "arm": "D2",
+      "attempt": "001",
+      "receipt_path": "native-results/final-b2-d2-v1/D2.receipt.json",
+      "receipt_sha256": "c0a3c1805344c9c332e207d7ad16a5acad201faaf493ab90ee0c3ee29948ac05",
+      "evidence_reused_for_byte_identical_control": false,
+      "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+      "extent": [
+        1024,
+        2048
+      ],
+      "exact_spawn": [
+        225.0,
+        273.0
+      ],
+      "full_grid_pixels_checked_load": 2097152,
+      "full_grid_mismatches_load": 0,
+      "controlled_drive_ticks": 20,
+      "upward_displacement_cells": 4.29287719726562,
+      "collision": {
+        "end_tick": 245,
+        "max_contacts": 2,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "witnesses": [
+          {
+            "collider_rid_valid": true,
+            "normal": [
+              0.0,
+              -1.0
+            ],
+            "point": [
+              227.0,
+              384.0
+            ],
+            "tick": 245
+          }
+        ],
+        "worker_failed": false
+      },
+      "ordinary_save_semantic_equal": true,
+      "saved_actors_equal": true,
+      "saved_setup_sha256": "4ba53bd60c1769d60594248df12fb2cb928c52f9fa84e38b3948982092b608e1",
+      "fresh_process_reopen": true,
+      "saved_bytes_hash_matches_reopen": true,
+      "full_grid_pixels_checked_reopen": 2097152,
+      "full_grid_mismatches_reopen": 0,
+      "separate_processes": true,
+      "status": "LOCAL_NATIVE_PASS"
+    }
+  ],
+  "scope": [
+    "Local Linux headless native load, exact cell/spawn parity, ticks, actual W movement, real terrain contact, ordinary save, and fresh-process reopen passed.",
+    "Windows execution, owner-machine installation, GUI rendering/playtest, complete route flight, material-transport machinery operation, and long-duration dynamics are untested."
+  ]
+}
