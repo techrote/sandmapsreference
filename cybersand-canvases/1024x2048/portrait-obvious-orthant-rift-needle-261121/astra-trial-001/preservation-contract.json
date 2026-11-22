@@ -1,0 +1,99 @@
+{
+  "disposition": "PORTRAIT_REPAIR_PROPOSAL",
+  "regions": [
+    {
+      "id": "high_crossing_fragment",
+      "xywh": [
+        353,
+        630,
+        316,
+        68
+      ],
+      "purpose": "Articulate an elevated tensile/anchored crossing fragment using existing source technology and grounded members; keep its interruption and the exact landing clearance.",
+      "original_occupied_cells": 4359,
+      "original_empty_cells": 17129,
+      "original_region_sha256_uint8": "6f2e1f5e4534fe81f3921f6543a9cb9025985b8036a3e8918a0c4c1c8ada0029"
+    },
+    {
+      "id": "ore_stage_crossing",
+      "xywh": [
+        361,
+        1090,
+        307,
+        97
+      ],
+      "purpose": "Give the ore-stage handoff a visibly load-bearing receiving/roller/tray relationship distinct from the high fragment.",
+      "original_occupied_cells": 4348,
+      "original_empty_cells": 25431,
+      "original_region_sha256_uint8": "991ebef647f266ec8798423d8aa8aae8467ba573f1f85b625a678a0fe04576d1"
+    },
+    {
+      "id": "broken_low_joint",
+      "xywh": [
+        353,
+        1638,
+        338,
+        112
+      ],
+      "purpose": "Articulate an asymmetric broken low cantilever from the actual west-bank lip and thin east geological seam; retain the open central break. All additions must reach original boundary-rooted cells; no invented or floating anchor.",
+      "original_occupied_cells": 573,
+      "original_empty_cells": 37283,
+      "original_region_sha256_uint8": "1633d66a5a6bf4a778981f0d1d9c197c1312664ff32dfbd088653612452dfa64",
+      "actual_original_anchor_evidence": [
+        {
+          "xywh": [
+            353,
+            1638,
+            29,
+            18
+          ],
+          "material": 100,
+          "cells": 522,
+          "description": "Existing solid west-bank upper lip; continues into original west geology at top and left."
+        },
+        {
+          "xywh": [
+            640,
+            1668,
+            51,
+            1
+          ],
+          "material": 101,
+          "cells": 51,
+          "description": "Existing east geological seam; continues eastward beyond the proposed ROI into the original bank. No engineering-strength claim."
+        }
+      ],
+      "original_exterior_4_neighbour_contacts": {
+        "top": 29,
+        "bottom": 0,
+        "left": 18,
+        "right": 1
+      },
+      "source_visual": "author/baselines/D1/replay/low-anchor-context.png exact original-cell crop [330,1600,400,180]; no candidate pixels."
+    },
+    {
+      "id": "entered_drill_workface",
+      "xywh": [
+        676,
+        995,
+        271,
+        322
+      ],
+      "purpose": "A rooted entered rescue/drill bay inside the existing right-bank gallery; machinery must have actual grounded support and be inspectable at 1:1.",
+      "original_occupied_cells": 4284,
+      "original_empty_cells": 82978,
+      "original_region_sha256_uint8": "093fd653137f2322a570748f5426009142cbbd0a9fae7be8a88748010ca23263"
+    }
+  ],
+  "maximum_changed_cells": 16000,
+  "preserved_relations": [
+    "Two unequal banks and fault silhouette",
+    "Original fork and clinic/mining/quarantine/archive districts",
+    "Broad central fault void outside the three existing crossing windows",
+    "All original literal centres and original obstruction",
+    "Noncontinuous high/mid/broken-low links; no complete new crossing",
+    "Original shortest-path result remains honestly tested; no forced named-gallery claim without explicit path membership"
+  ],
+  "cell_diagnosis": "The final east bypass crop is predominantly empty because provisional source apparatus is removed by boundary pruning. High and ore-stage source fragments are weakly differentiated; the proposed original low-joint window actually contains no final solids. The revised low window reaches documented actual west-bank and east-seam anchors without changing the broad fault.",
+  "baseline_material_plane_sha256_uint8": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df"
+}
