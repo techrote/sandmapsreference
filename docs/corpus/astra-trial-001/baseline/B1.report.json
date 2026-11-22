@@ -1,0 +1,2780 @@
+{
+  "actors": [
+    {
+      "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+      "id": 1,
+      "model": "midge",
+      "options": {
+        "boost_multiplier": 1.8,
+        "budget": 20,
+        "inertia_multiplier": 1,
+        "mass_multiplier": 1,
+        "thrust_multiplier": 1,
+        "torque_multiplier": 1
+      },
+      "spawn": [
+        115,
+        520
+      ]
+    }
+  ],
+  "compact": {
+    "mismatch_cells": 0,
+    "overlap_cells": 0,
+    "painted_area": 629744,
+    "rectangles": 171,
+    "within_capacity": true
+  },
+  "contacts": {
+    "different_liquid_contacts": {},
+    "generic_acid_dissolvable_contacts": {},
+    "hot_combustible_or_ice_contacts": {},
+    "neighbourhood": "Moore8, unordered geometric contacts counted once",
+    "pair_reactive_contacts": {}
+  },
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "extent": [
+    2048,
+    1024
+  ],
+  "fixture_id": "B1",
+  "full_cell_replay_equal": true,
+  "hashes": {
+    "cells_sha256": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+    "independent_replay_sha256": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+    "setup_sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4"
+  },
+  "image_parity": {
+    "image_sha256": "d788341b3397eee023bc0f699457aea07ffa789e542da285f40de4fd6bebde0a",
+    "index_to_material": {
+      "0": 0,
+      "1": 100,
+      "2": 58,
+      "3": 62
+    },
+    "method": "documented original palette-index-to-material map",
+    "mismatch_cells": 0,
+    "status": "PASS"
+  },
+  "json_bytes": 4083,
+  "label": "SOURCE-STATIC",
+  "liquids": [],
+  "material_histogram": {
+    "0": 1467408,
+    "100": 543545,
+    "58": 31409,
+    "62": 54790
+  },
+  "materials_used": [
+    {
+      "granular_support": false,
+      "hard_surface": false,
+      "has_pair_reactions": false,
+      "id": 0,
+      "kernel": "none",
+      "movable": false,
+      "name": "empty",
+      "rgba": [
+        8,
+        11,
+        18,
+        255
+      ],
+      "state": "empty",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 58,
+      "kernel": "none",
+      "movable": false,
+      "name": "reinforced-concrete",
+      "rgba": [
+        119,
+        123,
+        128,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 62,
+      "kernel": "none",
+      "movable": false,
+      "name": "steel-plate",
+      "rgba": [
+        126,
+        141,
+        153,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": true,
+      "id": 100,
+      "kernel": "none",
+      "movable": false,
+      "name": "basalt-columns",
+      "rgba": [
+        54,
+        56,
+        61,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    }
+  ],
+  "native": {
+    "note": "This validator does not execute engine cells, actor motion or saved-session reopen.",
+    "status": "NATIVE-UNTESTED"
+  },
+  "original_spawn_preserved": true,
+  "replay": {
+    "clipped_discs": [],
+    "errors": [],
+    "generated_work_limit": 32000000,
+    "raw_conflicting_overwrite_visits": 0,
+    "raw_overlapped_cells": 0,
+    "replay_work": 629744,
+    "stamps": 171
+  },
+  "routes": {
+    "declared_routes": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-unblocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "Central under-return": 299,
+              "Crew canteen": 347,
+              "East dispatch": 720,
+              "East domestic booth": 777,
+              "East seam": 955,
+              "East under-return": 1036,
+              "First component switch": 0,
+              "Ledger mezzanine": 392,
+              "Machine transit": 0,
+              "Outer firebreak": 860,
+              "Press receiver": 321,
+              "Press service": 161,
+              "Reclaim crossways": 3,
+              "Reclaim shaft head": 170,
+              "Repair bridge": 553,
+              "Repair ward": 487,
+              "Rinsing room": 162,
+              "Sky emergency": 365,
+              "Sorter overhead": 125,
+              "Upper handoff": 330,
+              "West arrival booth": 440,
+              "West high bypass": 135,
+              "West seam": 385,
+              "West under-return": 691
+            },
+            "goal": [
+              1080,
+              525
+            ],
+            "length": 586,
+            "path_bounds": [
+              555,
+              520,
+              1080,
+              553
+            ],
+            "path_sha256": "13f59d1a80ae01365e8f43861bf8294ed1cda920f8aff20a4a284885afb7a3ef",
+            "reachable": true,
+            "start": [
+              555,
+              520
+            ]
+          }
+        ],
+        "obstructions": [],
+        "via": [
+          "First component switch",
+          "Machine transit"
+        ]
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-blocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "Central under-return": 206,
+              "Crew canteen": 347,
+              "East dispatch": 720,
+              "East domestic booth": 716,
+              "East seam": 955,
+              "East under-return": 975,
+              "First component switch": 0,
+              "Ledger mezzanine": 392,
+              "Machine transit": 0,
+              "Outer firebreak": 860,
+              "Press receiver": 260,
+              "Press service": 85,
+              "Reclaim crossways": 3,
+              "Reclaim shaft head": 170,
+              "Repair bridge": 553,
+              "Repair ward": 426,
+              "Rinsing room": 162,
+              "Sky emergency": 365,
+              "Sorter overhead": 125,
+              "Upper handoff": 330,
+              "West arrival booth": 440,
+              "West high bypass": 135,
+              "West seam": 385,
+              "West under-return": 691
+            },
+            "goal": [
+              1080,
+              525
+            ],
+            "length": 706,
+            "path_bounds": [
+              555,
+              520,
+              1080,
+              613
+            ],
+            "path_sha256": "6aa28372f82a20194eff97728de151a0be034ae4a60ec47fbecdeee66c79fc96",
+            "reachable": true,
+            "start": [
+              555,
+              520
+            ]
+          }
+        ],
+        "obstructions": [
+          [
+            936,
+            450,
+            120,
+            150
+          ]
+        ],
+        "via": [
+          "First component switch",
+          "Machine transit"
+        ]
+      }
+    ],
+    "envelopes": {
+      "native-hard-only": {
+        "19x15": {
+          "free_centres": 1322714,
+          "free_components": 7,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West arrival booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger mezzanine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                285,
+                398
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew canteen",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                370,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "First component switch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                555,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rinsing room",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                580,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter overhead",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                610,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West high bypass",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                785,
+                385
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim crossways",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                860,
+                523
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim shaft head",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1125,
+                400
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1020,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Machine transit",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press receiver",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1260,
+                684
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper handoff",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1280,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair ward",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1420,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1490,
+                382
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East domestic booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1710,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East dispatch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1800,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Outer firebreak",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1930,
+                515
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                160,
+                816
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                940,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1840,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky emergency",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                160
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                410,
+                280
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1760,
+                250
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1288602,
+          "free_components": 6,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West arrival booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger mezzanine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                285,
+                398
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew canteen",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                370,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "First component switch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                555,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rinsing room",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                580,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter overhead",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                610,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West high bypass",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                785,
+                385
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim crossways",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                860,
+                523
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim shaft head",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1125,
+                400
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1020,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Machine transit",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press receiver",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1260,
+                684
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper handoff",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1280,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair ward",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1420,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1490,
+                382
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East domestic booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1710,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East dispatch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1800,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Outer firebreak",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1930,
+                515
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                160,
+                816
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                940,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1840,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky emergency",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                160
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                410,
+                280
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1760,
+                250
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 1222572,
+          "free_components": 5,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West arrival booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger mezzanine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                285,
+                398
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew canteen",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                370,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "First component switch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                555,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rinsing room",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                580,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter overhead",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                610,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West high bypass",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                785,
+                385
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim crossways",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                860,
+                523
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim shaft head",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1125,
+                400
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1020,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Machine transit",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press receiver",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1260,
+                684
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper handoff",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1280,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair ward",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1420,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1490,
+                382
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East domestic booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1710,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East dispatch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1800,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Outer firebreak",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1930,
+                515
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                160,
+                816
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                940,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1840,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky emergency",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                160
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                410,
+                280
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1760,
+                250
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      },
+      "nonempty": {
+        "19x15": {
+          "free_centres": 1322714,
+          "free_components": 7,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West arrival booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger mezzanine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                285,
+                398
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew canteen",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                370,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "First component switch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                555,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rinsing room",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                580,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter overhead",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                610,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West high bypass",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                785,
+                385
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim crossways",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                860,
+                523
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim shaft head",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1125,
+                400
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1020,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Machine transit",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press receiver",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1260,
+                684
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper handoff",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1280,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair ward",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1420,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1490,
+                382
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East domestic booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1710,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East dispatch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1800,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Outer firebreak",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1930,
+                515
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                160,
+                816
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                940,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1840,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky emergency",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                160
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                410,
+                280
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1760,
+                250
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1288602,
+          "free_components": 6,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West arrival booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger mezzanine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                285,
+                398
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew canteen",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                370,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "First component switch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                555,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rinsing room",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                580,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter overhead",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                610,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West high bypass",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                785,
+                385
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim crossways",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                860,
+                523
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim shaft head",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1125,
+                400
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1020,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Machine transit",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press receiver",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1260,
+                684
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper handoff",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1280,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair ward",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1420,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1490,
+                382
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East domestic booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1710,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East dispatch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1800,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Outer firebreak",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1930,
+                515
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                160,
+                816
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                940,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1840,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky emergency",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                160
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                410,
+                280
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1760,
+                250
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 1222572,
+          "free_components": 5,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West arrival booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger mezzanine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                285,
+                398
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew canteen",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                370,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "First component switch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                555,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rinsing room",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                580,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter overhead",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                610,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West high bypass",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                785,
+                385
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim crossways",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                860,
+                523
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Reclaim shaft head",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1125,
+                400
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1020,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Machine transit",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press receiver",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1260,
+                684
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper handoff",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1280,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair ward",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1420,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1490,
+                382
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East domestic booth",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1710,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East dispatch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1800,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Outer firebreak",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1930,
+                515
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                160,
+                816
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                940,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East under-return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1840,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky emergency",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1080,
+                160
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                410,
+                280
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1760,
+                250
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      }
+    },
+    "obstruction_reachability": {
+      "original-solid-block": {
+        "19x15": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West arrival booth",
+              "reachable": true,
+              "xy": [
+                115,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger mezzanine",
+              "reachable": true,
+              "xy": [
+                285,
+                398
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Crew canteen",
+              "reachable": true,
+              "xy": [
+                370,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "First component switch",
+              "reachable": true,
+              "xy": [
+                555,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rinsing room",
+              "reachable": true,
+              "xy": [
+                580,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorter overhead",
+              "reachable": true,
+              "xy": [
+                610,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West high bypass",
+              "reachable": true,
+              "xy": [
+                785,
+                385
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Reclaim crossways",
+              "reachable": true,
+              "xy": [
+                860,
+                523
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Reclaim shaft head",
+              "reachable": true,
+              "xy": [
+                1125,
+                400
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press service",
+              "reachable": true,
+              "xy": [
+                1020,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Machine transit",
+              "reachable": true,
+              "xy": [
+                1080,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press receiver",
+              "reachable": true,
+              "xy": [
+                1260,
+                684
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper handoff",
+              "reachable": true,
+              "xy": [
+                1280,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Repair ward",
+              "reachable": true,
+              "xy": [
+                1420,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Repair bridge",
+              "reachable": true,
+              "xy": [
+                1490,
+                382
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East domestic booth",
+              "reachable": true,
+              "xy": [
+                1710,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East dispatch",
+              "reachable": true,
+              "xy": [
+                1800,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Outer firebreak",
+              "reachable": true,
+              "xy": [
+                1930,
+                515
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West under-return",
+              "reachable": true,
+              "xy": [
+                160,
+                816
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Central under-return",
+              "reachable": true,
+              "xy": [
+                940,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East under-return",
+              "reachable": true,
+              "xy": [
+                1840,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sky emergency",
+              "reachable": true,
+              "xy": [
+                1080,
+                160
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West seam",
+              "reachable": true,
+              "xy": [
+                410,
+                280
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East seam",
+              "reachable": true,
+              "xy": [
+                1760,
+                250
+              ]
+            }
+          ],
+          "reachable": 24
+        },
+        "23x19": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West arrival booth",
+              "reachable": true,
+              "xy": [
+                115,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger mezzanine",
+              "reachable": true,
+              "xy": [
+                285,
+                398
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Crew canteen",
+              "reachable": true,
+              "xy": [
+                370,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "First component switch",
+              "reachable": true,
+              "xy": [
+                555,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rinsing room",
+              "reachable": true,
+              "xy": [
+                580,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorter overhead",
+              "reachable": true,
+              "xy": [
+                610,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West high bypass",
+              "reachable": true,
+              "xy": [
+                785,
+                385
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Reclaim crossways",
+              "reachable": true,
+              "xy": [
+                860,
+                523
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Reclaim shaft head",
+              "reachable": true,
+              "xy": [
+                1125,
+                400
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press service",
+              "reachable": true,
+              "xy": [
+                1020,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Machine transit",
+              "reachable": true,
+              "xy": [
+                1080,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press receiver",
+              "reachable": true,
+              "xy": [
+                1260,
+                684
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper handoff",
+              "reachable": true,
+              "xy": [
+                1280,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Repair ward",
+              "reachable": true,
+              "xy": [
+                1420,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Repair bridge",
+              "reachable": true,
+              "xy": [
+                1490,
+                382
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East domestic booth",
+              "reachable": true,
+              "xy": [
+                1710,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East dispatch",
+              "reachable": true,
+              "xy": [
+                1800,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Outer firebreak",
+              "reachable": true,
+              "xy": [
+                1930,
+                515
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West under-return",
+              "reachable": true,
+              "xy": [
+                160,
+                816
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Central under-return",
+              "reachable": true,
+              "xy": [
+                940,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East under-return",
+              "reachable": true,
+              "xy": [
+                1840,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sky emergency",
+              "reachable": true,
+              "xy": [
+                1080,
+                160
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West seam",
+              "reachable": true,
+              "xy": [
+                410,
+                280
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East seam",
+              "reachable": true,
+              "xy": [
+                1760,
+                250
+              ]
+            }
+          ],
+          "reachable": 24
+        },
+        "31x27": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West arrival booth",
+              "reachable": true,
+              "xy": [
+                115,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger mezzanine",
+              "reachable": true,
+              "xy": [
+                285,
+                398
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Crew canteen",
+              "reachable": true,
+              "xy": [
+                370,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "First component switch",
+              "reachable": true,
+              "xy": [
+                555,
+                520
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rinsing room",
+              "reachable": true,
+              "xy": [
+                580,
+                682
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorter overhead",
+              "reachable": true,
+              "xy": [
+                610,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West high bypass",
+              "reachable": true,
+              "xy": [
+                785,
+                385
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Reclaim crossways",
+              "reachable": true,
+              "xy": [
+                860,
+                523
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Reclaim shaft head",
+              "reachable": true,
+              "xy": [
+                1125,
+                400
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press service",
+              "reachable": true,
+              "xy": [
+                1020,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Machine transit",
+              "reachable": true,
+              "xy": [
+                1080,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press receiver",
+              "reachable": true,
+              "xy": [
+                1260,
+                684
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper handoff",
+              "reachable": true,
+              "xy": [
+                1280,
+                395
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Repair ward",
+              "reachable": true,
+              "xy": [
+                1420,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Repair bridge",
+              "reachable": true,
+              "xy": [
+                1490,
+                382
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East domestic booth",
+              "reachable": true,
+              "xy": [
+                1710,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East dispatch",
+              "reachable": true,
+              "xy": [
+                1800,
+                525
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Outer firebreak",
+              "reachable": true,
+              "xy": [
+                1930,
+                515
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West under-return",
+              "reachable": true,
+              "xy": [
+                160,
+                816
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Central under-return",
+              "reachable": true,
+              "xy": [
+                940,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East under-return",
+              "reachable": true,
+              "xy": [
+                1840,
+                819
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sky emergency",
+              "reachable": true,
+              "xy": [
+                1080,
+                160
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West seam",
+              "reachable": true,
+              "xy": [
+                410,
+                280
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East seam",
+              "reachable": true,
+              "xy": [
+                1760,
+                250
+              ]
+            }
+          ],
+          "reachable": 24
+        }
+      }
+    },
+    "original_declared_graphs": [
+      {
+        "id": "interior",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Crew canteen",
+            "Rinsing room",
+            "Press service",
+            "Press receiver",
+            "Repair ward",
+            "East domestic booth"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "lower",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "West under-return",
+            "Central under-return",
+            "East under-return"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "main",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "West arrival booth",
+            "First component switch",
+            "Reclaim crossways",
+            "Machine transit",
+            "East dispatch",
+            "Outer firebreak"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "upper",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Ledger mezzanine",
+            "Sorter overhead",
+            "West high bypass",
+            "Reclaim shaft head",
+            "Upper handoff",
+            "Repair bridge",
+            "West seam",
+            "Sky emergency",
+            "East seam"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      }
+    ],
+    "point_count": 24,
+    "spawn": [
+      115,
+      520
+    ]
+  },
+  "schema_errors": [],
+  "schema_version": 1,
+  "support": {
+    "bottom_only_fixed_kernel_none": {
+      "cells": 629744,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 629744,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    },
+    "fixed_kernel_none": {
+      "cells": 629744,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 629744,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    },
+    "limitation": "Kernel-none support may still be chemically consumed; geometry rooted to bottom and any declared anchors, not a strength simulation.",
+    "native_hard": {
+      "cells": 629744,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 629744,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "anchor_boxes": [],
+  "anchor_policy": "Bottom-boundary four-neighbour component; no inferred anchors.",
+  "extent": [
+    2048,
+    1024
+  ],
+  "id": "C2",
+  "obstruction_cases": [
+    {
+      "expected_covered_sites": [
+        "East purge interlock"
+      ],
+      "id": "original-solid-block",
+      "rect": [
+        1710,
+        635,
+        60,
+        60
+      ]
+    }
+  ],
+  "original_inputs": {
+    "originals/C2/receipt.json": "6f7e11557bffdd65b4a5472ee90b61ee2e1e12979e64107850d4e814423e6709",
+    "originals/C2/setup.json": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4"
+  },
+  "original_route_graphs": {},
+  "points": [
+    {
+      "id": "West arrival basin",
+      "xy": [
+        75,
+        365
+      ]
+    },
+    {
+      "id": "West registry porch",
+      "xy": [
+        150,
+        438
+      ]
+    },
+    {
+      "id": "West propagator",
+      "xy": [
+        383,
+        463
+      ]
+    },
+    {
+      "id": "West foundry lookdown",
+      "xy": [
+        410,
+        414
+      ]
+    },
+    {
+      "id": "West high bypass",
+      "xy": [
+        510,
+        249
+      ]
+    },
+    {
+      "id": "Outer rim west",
+      "xy": [
+        585,
+        492
+      ]
+    },
+    {
+      "id": "North west loop",
+      "xy": [
+        782,
+        245
+      ]
+    },
+    {
+      "id": "North culture crown",
+      "xy": [
+        1015,
+        211
+      ]
+    },
+    {
+      "id": "North east loop",
+      "xy": [
+        1279,
+        240
+      ]
+    },
+    {
+      "id": "East outer rim",
+      "xy": [
+        1490,
+        400
+      ]
+    },
+    {
+      "id": "East upper bypass",
+      "xy": [
+        1530,
+        233
+      ]
+    },
+    {
+      "id": "East quarantine approach",
+      "xy": [
+        1685,
+        402
+      ]
+    },
+    {
+      "id": "East clean vault",
+      "xy": [
+        1851,
+        518
+      ]
+    },
+    {
+      "id": "East skyline exit",
+      "xy": [
+        1970,
+        310
+      ]
+    },
+    {
+      "id": "Eastern dispatch",
+      "xy": [
+        1995,
+        668
+      ]
+    },
+    {
+      "id": "Eastern low shelf",
+      "xy": [
+        1655,
+        673
+      ]
+    },
+    {
+      "id": "South west rim",
+      "xy": [
+        696,
+        773
+      ]
+    },
+    {
+      "id": "South east rim",
+      "xy": [
+        1315,
+        730
+      ]
+    },
+    {
+      "id": "Biosieve inner west",
+      "xy": [
+        910,
+        535
+      ]
+    },
+    {
+      "id": "Living core",
+      "xy": [
+        1050,
+        541
+      ]
+    },
+    {
+      "id": "Biosieve inner east",
+      "xy": [
+        1180,
+        550
+      ]
+    },
+    {
+      "id": "Censer lower cusp",
+      "xy": [
+        1046,
+        711
+      ]
+    },
+    {
+      "id": "West descent mouth",
+      "xy": [
+        248,
+        835
+      ]
+    },
+    {
+      "id": "Middle descent mouth",
+      "xy": [
+        1037,
+        803
+      ]
+    },
+    {
+      "id": "East descent mouth",
+      "xy": [
+        1801,
+        813
+      ]
+    },
+    {
+      "id": "West dry transit",
+      "xy": [
+        421,
+        923
+      ]
+    },
+    {
+      "id": "Centre dry transit",
+      "xy": [
+        1065,
+        923
+      ]
+    },
+    {
+      "id": "East dry transit",
+      "xy": [
+        1536,
+        923
+      ]
+    },
+    {
+      "id": "East purge interlock",
+      "xy": [
+        1740,
+        663
+      ]
+    }
+  ],
+  "regression_policy": "Original baseline determines inherited failures. Preserve every passing exact-centre test, no moved destinations; resolve declared intervention P1 independently.",
+  "routes": [],
+  "schema_version": 1,
+  "source_head": "c797722c9788263cb157d48d30eefd613a832efd",
+  "source_pr": 150,
+  "spawn": [
+    75,
+    365
+  ]
+}

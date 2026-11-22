@@ -1,0 +1,2492 @@
+{
+  "actors": [
+    {
+      "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+      "id": 1,
+      "model": "midge",
+      "options": {
+        "boost_multiplier": 1.8,
+        "budget": 20,
+        "inertia_multiplier": 1,
+        "mass_multiplier": 1,
+        "thrust_multiplier": 1,
+        "torque_multiplier": 1
+      },
+      "spawn": [
+        78,
+        695
+      ]
+    }
+  ],
+  "compact": {
+    "mismatch_cells": 0,
+    "overlap_cells": 0,
+    "painted_area": 260196,
+    "rectangles": 1917,
+    "within_capacity": true
+  },
+  "contacts": {
+    "different_liquid_contacts": {},
+    "generic_acid_dissolvable_contacts": {},
+    "hot_combustible_or_ice_contacts": {},
+    "neighbourhood": "Moore8, unordered geometric contacts counted once",
+    "pair_reactive_contacts": {}
+  },
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "extent": [
+    2048,
+    1024
+  ],
+  "fixture_id": "B2",
+  "full_cell_replay_equal": true,
+  "hashes": {
+    "cells_sha256": "1c159bf70e15309ec0a1d3ed578bad328fe6be414e2fac30bcc685dbbb7532fd",
+    "independent_replay_sha256": "1c159bf70e15309ec0a1d3ed578bad328fe6be414e2fac30bcc685dbbb7532fd",
+    "setup_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450"
+  },
+  "image_parity": {
+    "image_sha256": "4944a061953485c79b417c1eb80ef216ee9e6df821665700f401e451059e9519",
+    "index_to_material": {
+      "0": 0,
+      "1": 58,
+      "10": 128,
+      "2": 62,
+      "3": 63,
+      "4": 72,
+      "5": 77,
+      "6": 79,
+      "7": 100,
+      "8": 101,
+      "9": 117
+    },
+    "method": "documented original palette-index-to-material map",
+    "mismatch_cells": 0,
+    "status": "PASS"
+  },
+  "json_bytes": 36794,
+  "label": "SOURCE-STATIC",
+  "liquids": [],
+  "material_histogram": {
+    "0": 1836956,
+    "100": 56440,
+    "101": 96341,
+    "117": 24884,
+    "128": 1997,
+    "58": 57060,
+    "62": 12042,
+    "77": 11177,
+    "79": 255
+  },
+  "materials_used": [
+    {
+      "granular_support": false,
+      "hard_surface": false,
+      "has_pair_reactions": false,
+      "id": 0,
+      "kernel": "none",
+      "movable": false,
+      "name": "empty",
+      "rgba": [
+        8,
+        11,
+        18,
+        255
+      ],
+      "state": "empty",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 58,
+      "kernel": "none",
+      "movable": false,
+      "name": "reinforced-concrete",
+      "rgba": [
+        119,
+        123,
+        128,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 62,
+      "kernel": "none",
+      "movable": false,
+      "name": "steel-plate",
+      "rgba": [
+        126,
+        141,
+        153,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 77,
+      "kernel": "none",
+      "movable": false,
+      "name": "neon-cyan",
+      "rgba": [
+        55,
+        243,
+        228,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 79,
+      "kernel": "none",
+      "movable": false,
+      "name": "neon-amber",
+      "rgba": [
+        255,
+        181,
+        46,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": true,
+      "id": 100,
+      "kernel": "none",
+      "movable": false,
+      "name": "basalt-columns",
+      "rgba": [
+        54,
+        56,
+        61,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": true,
+      "id": 101,
+      "kernel": "none",
+      "movable": false,
+      "name": "obsidian",
+      "rgba": [
+        24,
+        19,
+        32,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": true,
+      "id": 117,
+      "kernel": "none",
+      "movable": false,
+      "name": "bare-iron",
+      "rgba": [
+        90,
+        94,
+        100,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": true,
+      "id": 128,
+      "kernel": "none",
+      "movable": false,
+      "name": "polymer-panel",
+      "rgba": [
+        62,
+        122,
+        180,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    }
+  ],
+  "native": {
+    "note": "This validator does not execute engine cells, actor motion or saved-session reopen.",
+    "status": "NATIVE-UNTESTED"
+  },
+  "original_spawn_preserved": true,
+  "replay": {
+    "clipped_discs": [],
+    "errors": [],
+    "generated_work_limit": 32000000,
+    "raw_conflicting_overwrite_visits": 0,
+    "raw_overlapped_cells": 0,
+    "replay_work": 260196,
+    "stamps": 1917
+  },
+  "routes": {
+    "declared_routes": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-unblocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "broken_landing": 512,
+              "central_inspection": 154,
+              "departure": 719,
+              "east_fractionator": 151,
+              "exchanger_upper": 374,
+              "first_archive": 561,
+              "freight_service": 639,
+              "quarantine_gate": 635,
+              "rotor_approach": 60,
+              "rotor_east_gate": 0,
+              "rotor_twin_gap": 54,
+              "rotor_west_gate": 0,
+              "second_archive": 565,
+              "spawn_quarantine": 709,
+              "specimen_desk": 516,
+              "stamping_high": 275,
+              "stamping_low": 268,
+              "upper_rotor_gallery": 102,
+              "west_tower": 396
+            },
+            "goal": [
+              1256,
+              696
+            ],
+            "length": 472,
+            "path_bounds": [
+              786,
+              694,
+              1256,
+              696
+            ],
+            "path_sha256": "88a5fb3c9c662119b822d5afde819d645d64974fdd79606c145bc3c7293eb65e",
+            "reachable": true,
+            "start": [
+              786,
+              694
+            ]
+          }
+        ],
+        "obstructions": [],
+        "via": [
+          [
+            786,
+            694
+          ],
+          [
+            1256,
+            696
+          ]
+        ]
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-blocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "broken_landing": 512,
+              "central_inspection": 167,
+              "departure": 719,
+              "east_fractionator": 151,
+              "exchanger_upper": 361,
+              "first_archive": 561,
+              "freight_service": 639,
+              "quarantine_gate": 635,
+              "rotor_approach": 47,
+              "rotor_east_gate": 0,
+              "rotor_twin_gap": 41,
+              "rotor_west_gate": 0,
+              "second_archive": 565,
+              "spawn_quarantine": 709,
+              "specimen_desk": 516,
+              "stamping_high": 262,
+              "stamping_low": 264,
+              "upper_rotor_gallery": 89,
+              "west_tower": 396
+            },
+            "goal": [
+              1256,
+              696
+            ],
+            "length": 498,
+            "path_bounds": [
+              786,
+              681,
+              1256,
+              696
+            ],
+            "path_sha256": "691db1ef12b5745c1af6681c7e4e2a61fb54136707cbe8f7951db5e7ae23dbc0",
+            "reachable": true,
+            "start": [
+              786,
+              694
+            ]
+          }
+        ],
+        "obstructions": [
+          [
+            985,
+            695,
+            124,
+            104
+          ]
+        ],
+        "via": [
+          [
+            786,
+            694
+          ],
+          [
+            1256,
+            696
+          ]
+        ]
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [
+          [
+            981,
+            636,
+            132,
+            388
+          ]
+        ],
+        "id": "original-blocked-upper",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "broken_landing": 512,
+              "central_inspection": 213,
+              "departure": 719,
+              "east_fractionator": 151,
+              "exchanger_upper": 315,
+              "first_archive": 561,
+              "freight_service": 639,
+              "quarantine_gate": 635,
+              "rotor_approach": 1,
+              "rotor_east_gate": 0,
+              "rotor_twin_gap": 5,
+              "rotor_west_gate": 0,
+              "second_archive": 565,
+              "spawn_quarantine": 709,
+              "specimen_desk": 516,
+              "stamping_high": 216,
+              "stamping_low": 264,
+              "upper_rotor_gallery": 43,
+              "west_tower": 396
+            },
+            "goal": [
+              1256,
+              696
+            ],
+            "length": 590,
+            "path_bounds": [
+              786,
+              635,
+              1256,
+              696
+            ],
+            "path_sha256": "c08f7ced1fa0e8a8850091665d837e4d23d6046f48e6421f6aa3241c35e6686f",
+            "reachable": true,
+            "start": [
+              786,
+              694
+            ]
+          }
+        ],
+        "obstructions": [
+          [
+            985,
+            695,
+            124,
+            104
+          ]
+        ],
+        "via": [
+          [
+            786,
+            694
+          ],
+          [
+            1256,
+            696
+          ]
+        ]
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [
+          [
+            981,
+            0,
+            132,
+            830
+          ]
+        ],
+        "id": "original-blocked-lower",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "broken_landing": 512,
+              "central_inspection": 18,
+              "departure": 721,
+              "east_fractionator": 151,
+              "exchanger_upper": 376,
+              "first_archive": 561,
+              "freight_service": 639,
+              "quarantine_gate": 635,
+              "rotor_approach": 60,
+              "rotor_east_gate": 0,
+              "rotor_twin_gap": 125,
+              "rotor_west_gate": 0,
+              "second_archive": 565,
+              "spawn_quarantine": 709,
+              "specimen_desk": 516,
+              "stamping_high": 275,
+              "stamping_low": 268,
+              "upper_rotor_gallery": 118,
+              "west_tower": 396
+            },
+            "goal": [
+              1256,
+              696
+            ],
+            "length": 740,
+            "path_bounds": [
+              786,
+              694,
+              1256,
+              830
+            ],
+            "path_sha256": "01462299f8cab31972e3c31cfd12888faa90f43049b647da629305e6fdbb775a",
+            "reachable": true,
+            "start": [
+              786,
+              694
+            ]
+          }
+        ],
+        "obstructions": [
+          [
+            985,
+            695,
+            124,
+            104
+          ]
+        ],
+        "via": [
+          [
+            786,
+            694
+          ],
+          [
+            1256,
+            696
+          ]
+        ]
+      }
+    ],
+    "envelopes": {
+      "native-hard-only": {
+        "19x15": {
+          "free_centres": 1672664,
+          "free_components": 18,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "spawn_quarantine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                78,
+                695
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "quarantine_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                155,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "specimen_desk",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                273,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "west_tower",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                392,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_low",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_high",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                621,
+                584
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "first_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_west_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                786,
+                694
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                900,
+                634
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_twin_gap",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1040,
+                640
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "upper_rotor_gallery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1110,
+                592
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "central_inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1071,
+                848
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_east_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1256,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "east_fractionator",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1405,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "exchanger_upper",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1530,
+                594
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "second_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "broken_landing",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1767,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "freight_service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1894,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1975,
+                694
+              ]
+            }
+          ],
+          "reachable": 19,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1634535,
+          "free_components": 17,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "spawn_quarantine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                78,
+                695
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "quarantine_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                155,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "specimen_desk",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                273,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "west_tower",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                392,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_low",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_high",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                621,
+                584
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "first_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_west_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                786,
+                694
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                900,
+                634
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_twin_gap",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1040,
+                640
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "upper_rotor_gallery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1110,
+                592
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "central_inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1071,
+                848
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_east_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1256,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "east_fractionator",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1405,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "exchanger_upper",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1530,
+                594
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "second_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "broken_landing",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1767,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "freight_service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1894,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1975,
+                694
+              ]
+            }
+          ],
+          "reachable": 19,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 1561003,
+          "free_components": 18,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "spawn_quarantine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                78,
+                695
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "quarantine_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                155,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "specimen_desk",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                273,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "west_tower",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                392,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_low",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_high",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                621,
+                584
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "first_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_west_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                786,
+                694
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                900,
+                634
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_twin_gap",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1040,
+                640
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "upper_rotor_gallery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1110,
+                592
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "central_inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1071,
+                848
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_east_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1256,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "east_fractionator",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1405,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "exchanger_upper",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1530,
+                594
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "second_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "broken_landing",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1767,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "freight_service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1894,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1975,
+                694
+              ]
+            }
+          ],
+          "reachable": 19,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      },
+      "nonempty": {
+        "19x15": {
+          "free_centres": 1672664,
+          "free_components": 18,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "spawn_quarantine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                78,
+                695
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "quarantine_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                155,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "specimen_desk",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                273,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "west_tower",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                392,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_low",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_high",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                621,
+                584
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "first_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_west_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                786,
+                694
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                900,
+                634
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_twin_gap",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1040,
+                640
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "upper_rotor_gallery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1110,
+                592
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "central_inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1071,
+                848
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_east_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1256,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "east_fractionator",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1405,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "exchanger_upper",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1530,
+                594
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "second_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "broken_landing",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1767,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "freight_service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1894,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1975,
+                694
+              ]
+            }
+          ],
+          "reachable": 19,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1634535,
+          "free_components": 17,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "spawn_quarantine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                78,
+                695
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "quarantine_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                155,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "specimen_desk",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                273,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "west_tower",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                392,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_low",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_high",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                621,
+                584
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "first_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_west_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                786,
+                694
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                900,
+                634
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_twin_gap",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1040,
+                640
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "upper_rotor_gallery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1110,
+                592
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "central_inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1071,
+                848
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_east_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1256,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "east_fractionator",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1405,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "exchanger_upper",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1530,
+                594
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "second_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "broken_landing",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1767,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "freight_service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1894,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1975,
+                694
+              ]
+            }
+          ],
+          "reachable": 19,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 1561003,
+          "free_components": 18,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "spawn_quarantine",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                78,
+                695
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "quarantine_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                155,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "specimen_desk",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                273,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "west_tower",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                392,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_low",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "stamping_high",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                621,
+                584
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "first_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_west_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                786,
+                694
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                900,
+                634
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_twin_gap",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1040,
+                640
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "upper_rotor_gallery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1110,
+                592
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "central_inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1071,
+                848
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "rotor_east_gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1256,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "east_fractionator",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1405,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "exchanger_upper",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1530,
+                594
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "second_archive",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "broken_landing",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1767,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "freight_service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1894,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1975,
+                694
+              ]
+            }
+          ],
+          "reachable": 19,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      }
+    },
+    "obstruction_reachability": {
+      "original-solid-block": {
+        "19x15": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "spawn_quarantine",
+              "reachable": true,
+              "xy": [
+                78,
+                695
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "quarantine_gate",
+              "reachable": true,
+              "xy": [
+                155,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "specimen_desk",
+              "reachable": true,
+              "xy": [
+                273,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "west_tower",
+              "reachable": true,
+              "xy": [
+                392,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "stamping_low",
+              "reachable": true,
+              "xy": [
+                522,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "stamping_high",
+              "reachable": true,
+              "xy": [
+                621,
+                584
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "first_archive",
+              "reachable": true,
+              "xy": [
+                524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_west_gate",
+              "reachable": true,
+              "xy": [
+                786,
+                694
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_approach",
+              "reachable": true,
+              "xy": [
+                900,
+                634
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_twin_gap",
+              "reachable": true,
+              "xy": [
+                1040,
+                640
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "upper_rotor_gallery",
+              "reachable": true,
+              "xy": [
+                1110,
+                592
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "central_inspection",
+              "reachable": true,
+              "xy": [
+                1071,
+                848
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_east_gate",
+              "reachable": true,
+              "xy": [
+                1256,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "east_fractionator",
+              "reachable": true,
+              "xy": [
+                1405,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "exchanger_upper",
+              "reachable": true,
+              "xy": [
+                1530,
+                594
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "second_archive",
+              "reachable": true,
+              "xy": [
+                1524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "broken_landing",
+              "reachable": true,
+              "xy": [
+                1767,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "freight_service",
+              "reachable": true,
+              "xy": [
+                1894,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "departure",
+              "reachable": true,
+              "xy": [
+                1975,
+                694
+              ]
+            }
+          ],
+          "reachable": 19
+        },
+        "23x19": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "spawn_quarantine",
+              "reachable": true,
+              "xy": [
+                78,
+                695
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "quarantine_gate",
+              "reachable": true,
+              "xy": [
+                155,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "specimen_desk",
+              "reachable": true,
+              "xy": [
+                273,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "west_tower",
+              "reachable": true,
+              "xy": [
+                392,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "stamping_low",
+              "reachable": true,
+              "xy": [
+                522,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "stamping_high",
+              "reachable": true,
+              "xy": [
+                621,
+                584
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "first_archive",
+              "reachable": true,
+              "xy": [
+                524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_west_gate",
+              "reachable": true,
+              "xy": [
+                786,
+                694
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_approach",
+              "reachable": true,
+              "xy": [
+                900,
+                634
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_twin_gap",
+              "reachable": true,
+              "xy": [
+                1040,
+                640
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "upper_rotor_gallery",
+              "reachable": true,
+              "xy": [
+                1110,
+                592
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "central_inspection",
+              "reachable": true,
+              "xy": [
+                1071,
+                848
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_east_gate",
+              "reachable": true,
+              "xy": [
+                1256,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "east_fractionator",
+              "reachable": true,
+              "xy": [
+                1405,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "exchanger_upper",
+              "reachable": true,
+              "xy": [
+                1530,
+                594
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "second_archive",
+              "reachable": true,
+              "xy": [
+                1524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "broken_landing",
+              "reachable": true,
+              "xy": [
+                1767,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "freight_service",
+              "reachable": true,
+              "xy": [
+                1894,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "departure",
+              "reachable": true,
+              "xy": [
+                1975,
+                694
+              ]
+            }
+          ],
+          "reachable": 19
+        },
+        "31x27": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "spawn_quarantine",
+              "reachable": true,
+              "xy": [
+                78,
+                695
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "quarantine_gate",
+              "reachable": true,
+              "xy": [
+                155,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "specimen_desk",
+              "reachable": true,
+              "xy": [
+                273,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "west_tower",
+              "reachable": true,
+              "xy": [
+                392,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "stamping_low",
+              "reachable": true,
+              "xy": [
+                522,
+                690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "stamping_high",
+              "reachable": true,
+              "xy": [
+                621,
+                584
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "first_archive",
+              "reachable": true,
+              "xy": [
+                524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_west_gate",
+              "reachable": true,
+              "xy": [
+                786,
+                694
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_approach",
+              "reachable": true,
+              "xy": [
+                900,
+                634
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_twin_gap",
+              "reachable": true,
+              "xy": [
+                1040,
+                640
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "upper_rotor_gallery",
+              "reachable": true,
+              "xy": [
+                1110,
+                592
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "central_inspection",
+              "reachable": true,
+              "xy": [
+                1071,
+                848
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "rotor_east_gate",
+              "reachable": true,
+              "xy": [
+                1256,
+                696
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "east_fractionator",
+              "reachable": true,
+              "xy": [
+                1405,
+                698
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "exchanger_upper",
+              "reachable": true,
+              "xy": [
+                1530,
+                594
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "second_archive",
+              "reachable": true,
+              "xy": [
+                1524,
+                993
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "broken_landing",
+              "reachable": true,
+              "xy": [
+                1767,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "freight_service",
+              "reachable": true,
+              "xy": [
+                1894,
+                697
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "departure",
+              "reachable": true,
+              "xy": [
+                1975,
+                694
+              ]
+            }
+          ],
+          "reachable": 19
+        }
+      }
+    },
+    "original_declared_graphs": [],
+    "point_count": 19,
+    "spawn": [
+      78,
+      695
+    ]
+  },
+  "schema_errors": [],
+  "schema_version": 1,
+  "support": {
+    "bottom_only_fixed_kernel_none": {
+      "cells": 260196,
+      "components": 4,
+      "largest_unrooted_components": [
+        43356,
+        6800,
+        6189
+      ],
+      "rooted_cells": 203851,
+      "unrooted_cells": 56345,
+      "unrooted_component_count": 3
+    },
+    "fixed_kernel_none": {
+      "cells": 260196,
+      "components": 4,
+      "largest_unrooted_components": [],
+      "rooted_cells": 260196,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    },
+    "limitation": "Kernel-none support may still be chemically consumed; geometry rooted to bottom and any declared anchors, not a strength simulation.",
+    "native_hard": {
+      "cells": 260196,
+      "components": 4,
+      "largest_unrooted_components": [],
+      "rooted_cells": 260196,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    }
+  }
+}

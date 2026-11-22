@@ -1,0 +1,296 @@
+{
+  "anchor_boxes": [
+    [
+      0,
+      0,
+      2048,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1024
+    ],
+    [
+      2047,
+      0,
+      1,
+      1024
+    ]
+  ],
+  "anchor_policy": "Original build.js ground() seeds all four boundaries; bottom-only remains diagnostic.",
+  "extent": [
+    2048,
+    1024
+  ],
+  "id": "B2",
+  "image_index_to_material": {
+    "0": 0,
+    "1": 58,
+    "10": 128,
+    "2": 62,
+    "3": 63,
+    "4": 72,
+    "5": 77,
+    "6": 79,
+    "7": 100,
+    "8": 101,
+    "9": 117
+  },
+  "obstruction_cases": [
+    {
+      "expected_covered_sites": [],
+      "id": "original-solid-block",
+      "rect": [
+        985,
+        695,
+        124,
+        104
+      ]
+    }
+  ],
+  "original_inputs": {
+    "originals/B2/design.json": "f1d721c903330abe046c00c29871e901c12a2c4695d9d5742b982d823b8d6cc3",
+    "originals/B2/qualification.json": "3519495cd1cf86af7e6e1fba0932119db82a2fbbec761044f68494e88adde2f1",
+    "originals/B2/setup-umbra-rotor-islet-works.json": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450"
+  },
+  "original_route_graphs": {},
+  "points": [
+    {
+      "id": "spawn_quarantine",
+      "xy": [
+        78,
+        695
+      ]
+    },
+    {
+      "id": "quarantine_gate",
+      "xy": [
+        155,
+        698
+      ]
+    },
+    {
+      "id": "specimen_desk",
+      "xy": [
+        273,
+        697
+      ]
+    },
+    {
+      "id": "west_tower",
+      "xy": [
+        392,
+        696
+      ]
+    },
+    {
+      "id": "stamping_low",
+      "xy": [
+        522,
+        690
+      ]
+    },
+    {
+      "id": "stamping_high",
+      "xy": [
+        621,
+        584
+      ]
+    },
+    {
+      "id": "first_archive",
+      "xy": [
+        524,
+        993
+      ]
+    },
+    {
+      "id": "rotor_west_gate",
+      "xy": [
+        786,
+        694
+      ]
+    },
+    {
+      "id": "rotor_approach",
+      "xy": [
+        900,
+        634
+      ]
+    },
+    {
+      "id": "rotor_twin_gap",
+      "xy": [
+        1040,
+        640
+      ]
+    },
+    {
+      "id": "upper_rotor_gallery",
+      "xy": [
+        1110,
+        592
+      ]
+    },
+    {
+      "id": "central_inspection",
+      "xy": [
+        1071,
+        848
+      ]
+    },
+    {
+      "id": "rotor_east_gate",
+      "xy": [
+        1256,
+        696
+      ]
+    },
+    {
+      "id": "east_fractionator",
+      "xy": [
+        1405,
+        698
+      ]
+    },
+    {
+      "id": "exchanger_upper",
+      "xy": [
+        1530,
+        594
+      ]
+    },
+    {
+      "id": "second_archive",
+      "xy": [
+        1524,
+        993
+      ]
+    },
+    {
+      "id": "broken_landing",
+      "xy": [
+        1767,
+        697
+      ]
+    },
+    {
+      "id": "freight_service",
+      "xy": [
+        1894,
+        697
+      ]
+    },
+    {
+      "id": "departure",
+      "xy": [
+        1975,
+        694
+      ]
+    }
+  ],
+  "regression_policy": "Original baseline determines inherited failures. Preserve every passing exact-centre test, no moved destinations; resolve declared intervention P1 independently.",
+  "routes": [
+    {
+      "id": "original-unblocked-shortest",
+      "via": [
+        [
+          786,
+          694
+        ],
+        [
+          1256,
+          696
+        ]
+      ]
+    },
+    {
+      "id": "original-blocked-shortest",
+      "obstructions": [
+        [
+          985,
+          695,
+          124,
+          104
+        ]
+      ],
+      "via": [
+        [
+          786,
+          694
+        ],
+        [
+          1256,
+          696
+        ]
+      ]
+    },
+    {
+      "forbidden_centres": [
+        [
+          981,
+          636,
+          132,
+          388
+        ]
+      ],
+      "id": "original-blocked-upper",
+      "obstructions": [
+        [
+          985,
+          695,
+          124,
+          104
+        ]
+      ],
+      "via": [
+        [
+          786,
+          694
+        ],
+        [
+          1256,
+          696
+        ]
+      ]
+    },
+    {
+      "forbidden_centres": [
+        [
+          981,
+          0,
+          132,
+          830
+        ]
+      ],
+      "id": "original-blocked-lower",
+      "obstructions": [
+        [
+          985,
+          695,
+          124,
+          104
+        ]
+      ],
+      "via": [
+        [
+          786,
+          694
+        ],
+        [
+          1256,
+          696
+        ]
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_head": "49cdac502d861a8c70e95a1773f5053c321a04c2",
+  "source_pr": 167,
+  "spawn": [
+    78,
+    695
+  ]
+}

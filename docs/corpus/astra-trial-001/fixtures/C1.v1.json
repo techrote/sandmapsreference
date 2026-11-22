@@ -1,0 +1,293 @@
+{
+  "anchor_boxes": [],
+  "anchor_policy": "Bottom-boundary four-neighbour component; no inferred anchors.",
+  "extent": [
+    2048,
+    1024
+  ],
+  "id": "C1",
+  "image_index_to_material": {
+    "0": 0,
+    "1": 100,
+    "2": 58,
+    "3": 62
+  },
+  "obstruction_cases": [
+    {
+      "expected_covered_sites": [],
+      "id": "original-solid-block",
+      "rect": [
+        778,
+        460,
+        75,
+        83
+      ]
+    }
+  ],
+  "original_inputs": {
+    "originals/C1/receipt.json": "93ee39481af6405dd0d8f176e7d4489e88a964e6dcec6fefcd82551205f18980",
+    "originals/C1/setup.json": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789"
+  },
+  "original_route_graphs": {
+    "lower": [
+      "West relief gate",
+      "Sorter relief gate",
+      "Torque relief gate",
+      "Torque parcel overlook",
+      "Ledger relief gate",
+      "East relief gate"
+    ],
+    "main": [
+      "Western intake",
+      "Sorting rail",
+      "Torque drive control",
+      "Ledger registry",
+      "Eastern export",
+      "Abandoned annex entry"
+    ],
+    "sky": [
+      "Roof signal platform",
+      "Exhaust rooftop",
+      "Worker emergency chimney"
+    ],
+    "upper": [
+      "Western roof watch",
+      "Sorting roof watch",
+      "Torque inspection",
+      "Upper branch",
+      "Ledger loft",
+      "Eastern upper walkway",
+      "Crew roof maintenance"
+    ],
+    "workcells": [
+      "Wet-strip vestibule",
+      "Catch-tray control",
+      "Magnet sorter",
+      "Repair service niche",
+      "Workers refuge"
+    ]
+  },
+  "points": [
+    {
+      "id": "Western intake",
+      "xy": [
+        115,
+        489
+      ]
+    },
+    {
+      "id": "Wet-strip vestibule",
+      "xy": [
+        311,
+        614
+      ]
+    },
+    {
+      "id": "Catch-tray control",
+      "xy": [
+        418,
+        580
+      ]
+    },
+    {
+      "id": "Magnet sorter",
+      "xy": [
+        665,
+        625
+      ]
+    },
+    {
+      "id": "Sorting rail",
+      "xy": [
+        710,
+        489
+      ]
+    },
+    {
+      "id": "Torque drive control",
+      "xy": [
+        1090,
+        512
+      ]
+    },
+    {
+      "id": "Torque inspection",
+      "xy": [
+        965,
+        377
+      ]
+    },
+    {
+      "id": "Ledger registry",
+      "xy": [
+        1370,
+        625
+      ]
+    },
+    {
+      "id": "Ledger loft",
+      "xy": [
+        1398,
+        377
+      ]
+    },
+    {
+      "id": "Workers refuge",
+      "xy": [
+        1746,
+        620
+      ]
+    },
+    {
+      "id": "Crew roof maintenance",
+      "xy": [
+        1750,
+        374
+      ]
+    },
+    {
+      "id": "Eastern export",
+      "xy": [
+        1950,
+        488
+      ]
+    },
+    {
+      "id": "Western roof watch",
+      "xy": [
+        322,
+        374
+      ]
+    },
+    {
+      "id": "Sorting roof watch",
+      "xy": [
+        590,
+        370
+      ]
+    },
+    {
+      "id": "Upper branch",
+      "xy": [
+        1165,
+        378
+      ]
+    },
+    {
+      "id": "Eastern upper walkway",
+      "xy": [
+        1590,
+        370
+      ]
+    },
+    {
+      "id": "West relief gate",
+      "xy": [
+        145,
+        499
+      ]
+    },
+    {
+      "id": "Sorter relief gate",
+      "xy": [
+        605,
+        502
+      ]
+    },
+    {
+      "id": "Torque relief gate",
+      "xy": [
+        1081,
+        499
+      ]
+    },
+    {
+      "id": "Ledger relief gate",
+      "xy": [
+        1410,
+        502
+      ]
+    },
+    {
+      "id": "East relief gate",
+      "xy": [
+        1850,
+        502
+      ]
+    },
+    {
+      "id": "Roof signal platform",
+      "xy": [
+        720,
+        144
+      ]
+    },
+    {
+      "id": "Exhaust rooftop",
+      "xy": [
+        1135,
+        125
+      ]
+    },
+    {
+      "id": "Emergency sky lookout",
+      "xy": [
+        1895,
+        155
+      ]
+    },
+    {
+      "id": "Abandoned annex entry",
+      "xy": [
+        1980,
+        665
+      ]
+    },
+    {
+      "id": "Torque parcel overlook",
+      "xy": [
+        1100,
+        532
+      ]
+    },
+    {
+      "id": "Repair service niche",
+      "xy": [
+        1604,
+        705
+      ]
+    }
+  ],
+  "regression_policy": "Original baseline determines inherited failures. Preserve every passing exact-centre test, no moved destinations; resolve declared intervention P1 independently.",
+  "routes": [
+    {
+      "id": "original-unblocked-shortest",
+      "via": [
+        "Sorting rail",
+        "Eastern export"
+      ]
+    },
+    {
+      "id": "original-blocked-shortest",
+      "obstructions": [
+        [
+          778,
+          460,
+          75,
+          83
+        ]
+      ],
+      "via": [
+        "Sorting rail",
+        "Eastern export"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+  "source_pr": 159,
+  "spawn": [
+    115,
+    489
+  ]
+}

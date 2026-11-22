@@ -22,4 +22,4 @@ Per-arm outcomes may be Provisional Platinum Candidate, Pyrite Candidate, No-cha
 
 ## Current stage
 
-Original source recovery and pre-registration. No experimental geometry has been authorized yet. See the machine-readable manifests and subsequent exact-commit reviews for the completed record.
+Pre-registration frozen:25 provisional Gold candidates, all eight original planes and original PNGs independently reproduced, all eight original builders byte-reproduced, and bounded intervention allowances independently approved. The author may begin after this freeze commit is published. Later outcome commits retain this immutable input and prediction record.

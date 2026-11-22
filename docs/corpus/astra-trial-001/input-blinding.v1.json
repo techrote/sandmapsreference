@@ -1,10 +1,11 @@
 {
   "schema_version": 1,
-  "status": "AUTHORING_NOT_STARTED",
+  "status": "INPUTS_FROZEN_BEFORE_AUTHOR_GEOMETRY",
   "author_allowed": [
     "Eight exact original map packets and original review excerpts",
     "Accepted read-only engine contract",
-    "Original donor context only if explicitly exported and pinned by coordinator"
+    "Original donor context only if explicitly exported and pinned by coordinator",
+    "Originalwide donors #37@e2b53fb95ea93576afdc15c114e29b853c4b2c05, #177@ed15c1b7d8be98548d087b247ed54b4a70498b01 and #124@99616a8c8d2475ad4145a8489c0cc8850b1bd783; exact36 files in original-donors.v1.json"
   ],
   "author_quarantined": [
     "All prior repaired child map geometry, PNGs and implementation diffs",
@@ -18,5 +19,12 @@
     "coordinator": "integration and publication; no geometry authoring"
   },
   "unlock_rule": "All eight dispositions, complete output hashes and experimental commit IDs frozen before any prior repaired reference is given to reviewer.",
-  "scope_limit": "Prior reworker output is not verified human authorship."
+  "scope_limit": "Prior reworker output is not verified human authorship.",
+  "input_packet_counts": {
+    "original_map_files": 110,
+    "original_donor_files": 36
+  },
+  "ledger_visibility": "The common ledger contains curator selection references; it is not an allowed author input. Author reads only explicitly supplied original packets and method/contract files.",
+  "early_reference_retrieval_review": "Automatic approval review rejected an early root retrieval/poll of quarantined reference images. Remaining reference retrieval deferred until eight-output lock; no reference geometry supplied to author or technical reviewer.",
+  "frozen_at_utc": "2026-11-22T04:42:45.332794+00:00"
 }

@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "status": "AUTHOR_PROPOSED_ALLOWANCES_ONLY_NOT_GEOMETRY_AUTHORIZATION",
+  "coordinate_convention": "integer source cells, half-open xywh",
+  "common": {
+    "outside_allowed_regions": "All original final material cells must remain exactly identical.",
+    "maximum_change_caps": "Upper bounds only, not targets. Tightening by independent reviewer is expected.",
+    "materials": "Use existing per-arm permanent material vocabulary only, subject to current engine catalogue.",
+    "preservation": "All original actor and Setup settings, extent, literal site centres, obstructions, named route relations, final deterministic pruning and mandatory sensitivity envelopes remain.",
+    "midge_actual": "Continuous COM-centred 4x3 bounds [-2,-1.5,4,3] reported separately. No invented integer-centred native collision mask.",
+    "static_routes": "Four-neighbour exact-centre 19x15,23x19,31x27 conservative tests. Deliberately covered obstruction sites remain covered, never relocated.",
+    "protected_void_rule": "No bulk fill. Local additions must express the named functional relation and retain generous entered/through clearances.",
+    "native": "NATIVE-UNTESTED pending independently scoped native evidence."
+  },
+  "arms": {
+    "C1": {
+      "disposition": "NO-CHANGE",
+      "regions": [],
+      "maximum_changed_cells": 0,
+      "rationale": "Source-native cells contain accepted continuous covered reclamation spine; repeated roof rhythm is compositional rather than a defect.",
+      "baseline_material_plane_sha256_uint8": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c"
+    },
+    "C2": {
+      "disposition": "NO-CHANGE",
+      "regions": [],
+      "maximum_changed_cells": 0,
+      "rationale": "Interrupted annulus, flanking workyards, central culture void and three descent mouths form a distinct complete source grammar; civic classification does not justify redesign.",
+      "baseline_material_plane_sha256_uint8": "0d958f92a1f578702056d72363622e2de204c6267f204485585b59096574cff4"
+    },
+    "C3": {
+      "disposition": "NO-CHANGE",
+      "regions": [],
+      "maximum_changed_cells": 0,
+      "rationale": "Opposing bascule leaves, independent ferry/crane, hinge housings, rotor and deep freight apparatus already retain the source relationships.",
+      "baseline_material_plane_sha256_uint8": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a"
+    },
+    "B1": {
+      "disposition": "BOUNDED_REPAIR_PROPOSAL",
+      "regions": [
+        {
+          "id": "hoist_receiving_handoff",
+          "xywh": [
+            1010,
+            540,
+            224,
+            218
+          ],
+          "purpose": "Positive cradle under the existing hanging drop, with a thin grounded transfer/support relation to the existing repair receiver; preserve named routes and most open shaft area.",
+          "original_occupied_cells": 2988,
+          "original_empty_cells": 45844,
+          "original_region_sha256_uint8": "10c5254aaf2b26e6711ea5267b30ff40482b6ec7064bb63788e362af41998749"
+        }
+      ],
+      "maximum_changed_cells": 5000,
+      "preserved_relations": [
+        "High crossbeam and original drop above y540",
+        "Upper/high switchback",
+        "Low recovery route and named press-service/receiver centres",
+        "Whole occupied-cell plane outside allowance",
+        "Existing worker rooms and opposite basalt shoulders"
+      ],
+      "cell_diagnosis": "Final drop at x1052..1064 ends y539; the nearest substantial surviving repair frame is x1190..1207 y608..752. Original centre-crop pixels show no receiving cradle under the drop.",
+      "baseline_material_plane_sha256_uint8": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5"
+    },
+    "B2": {
+      "disposition": "BOUNDED_REPAIR_PROPOSAL",
+      "regions": [
+        {
+          "id": "existing_diagnostic_station",
+          "xywh": [
+            940,
+            866,
+            246,
+            90
+          ],
+          "purpose": "Connect the original grounded uprights to the original intended table and testing/receiving apparatus so it survives the retained final boundary-prune.",
+          "original_occupied_cells": 3022,
+          "original_empty_cells": 19118,
+          "original_region_sha256_uint8": "de214494f117d5fd9a17d346d04fcff315e41c8558af1bc68c89041deefbb04c"
+        }
+      ],
+      "maximum_changed_cells": 7500,
+      "preserved_relations": [
+        "All rotors and their original roof anchors",
+        "Upper and lower flyway",
+        "All editing pockets and freight breaks",
+        "Original floor at and below y956",
+        "Exact central_inspection centre [1071,848] and all original site envelopes"
+      ],
+      "cell_diagnosis": "Original intended slab [944,900,238,13] ends at y912; uprights [964,914,15,42] and [1145,914,16,42] begin y914. Empty row913 separates the table from its supports, so deterministic boundary pruning leaves only the two uprights in the actual final workface. Preserve pruning and repair connectivity.",
+      "baseline_material_plane_sha256_uint8": "1c159bf70e15309ec0a1d3ed578bad328fe6be414e2fac30bcc685dbbb7532fd"
+    },
+    "B3": {
+      "disposition": "BOUNDED_REPAIR_PROPOSAL",
+      "regions": [
+        {
+          "id": "north_throat_approach",
+          "xywh": [
+            714,
+            246,
+            151,
+            146
+          ],
+          "purpose": "A grounded overhead/jamb structural treatment for the upper throat, with an unmistakable approach silhouette while retaining the throat core.",
+          "original_occupied_cells": 3759,
+          "original_empty_cells": 18287,
+          "original_region_sha256_uint8": "932f8f47329a6d9421bc17205dbebd4e5b632fac8bdda18a0f43cb9080a2757d"
+        },
+        {
+          "id": "south_bypass_approach",
+          "xywh": [
+            707,
+            464,
+            157,
+            133
+          ],
+          "purpose": "A differently proportioned low/cantilever aperture treatment for the middle bypass; preserve excavation/load path and full conservative hull passage.",
+          "original_occupied_cells": 2774,
+          "original_empty_cells": 18107,
+          "original_region_sha256_uint8": "c738a0b906195f64165a90e96dec6d3b6869b256e3f8d1768fe55677449927fb"
+        }
+      ],
+      "maximum_changed_cells": 5000,
+      "preserved_relations": [
+        "Three unequal vaults and two geological diaphragms",
+        "All geology and apparatus outside allowances",
+        "Exact North throat [809,317] and South bypass [791,532] clear at all declared hulls",
+        "Original blocker [758,267,86,105] intentionally denies only North throat",
+        "Continuous low westbound return and unfilled basal pockets"
+      ],
+      "cell_diagnosis": "The first source diaphragm is rooted rock with upper and middle air cuts about 107 and102 cells wide; current visible material treatment around the two opening approaches does not establish two distinct racing choices.",
+      "baseline_material_plane_sha256_uint8": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9"
+    },
+    "D1": {
+      "disposition": "PORTRAIT_REPAIR_PROPOSAL",
+      "regions": [
+        {
+          "id": "high_crossing_fragment",
+          "xywh": [
+            353,
+            630,
+            316,
+            68
+          ],
+          "purpose": "Articulate an elevated tensile/anchored crossing fragment using existing source technology and grounded members; keep its interruption and the exact landing clearance.",
+          "original_occupied_cells": 4359,
+          "original_empty_cells": 17129,
+          "original_region_sha256_uint8": "6f2e1f5e4534fe81f3921f6543a9cb9025985b8036a3e8918a0c4c1c8ada0029"
+        },
+        {
+          "id": "ore_stage_crossing",
+          "xywh": [
+            361,
+            1090,
+            307,
+            97
+          ],
+          "purpose": "Give the ore-stage handoff a visibly load-bearing receiving/roller/tray relationship distinct from the high fragment.",
+          "original_occupied_cells": 4348,
+          "original_empty_cells": 25431,
+          "original_region_sha256_uint8": "991ebef647f266ec8798423d8aa8aae8467ba573f1f85b625a678a0fe04576d1"
+        },
+        {
+          "id": "broken_low_joint",
+          "xywh": [
+            369,
+            1680,
+            322,
+            70
+          ],
+          "purpose": "Articulate asymmetric fractured end sections while keeping the large low central break open.",
+          "original_occupied_cells": 0,
+          "original_empty_cells": 22540,
+          "original_region_sha256_uint8": "8655a62f8c2e0aaa28b91cb7b956a345e7f139101576b3b23d87c8ea7e1fbbb9"
+        },
+        {
+          "id": "entered_drill_workface",
+          "xywh": [
+            676,
+            995,
+            271,
+            322
+          ],
+          "purpose": "A rooted entered rescue/drill bay inside the existing right-bank gallery; machinery must have actual grounded support and be inspectable at 1:1.",
+          "original_occupied_cells": 4284,
+          "original_empty_cells": 82978,
+          "original_region_sha256_uint8": "093fd653137f2322a570748f5426009142cbbd0a9fae7be8a88748010ca23263"
+        }
+      ],
+      "maximum_changed_cells": 16000,
+      "preserved_relations": [
+        "Two unequal banks and fault silhouette",
+        "Original fork and clinic/mining/quarantine/archive districts",
+        "Broad central fault void outside the three existing crossing windows",
+        "All original literal centres and original obstruction",
+        "Noncontinuous high/mid/broken-low links; no complete new crossing",
+        "Original shortest-path result remains honestly tested; no forced named-gallery claim without explicit path membership"
+      ],
+      "cell_diagnosis": "Actual east bypass crop is empty between the bank wall and floor; multiple original provisional gallery apparatus groups were removed by final boundary pruning. The three surviving crossing fragments are thin shelves at y682/1132/1700 with weakly differentiated joints.",
+      "baseline_material_plane_sha256_uint8": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df"
+    },
+    "D2": {
+      "disposition": "PORTRAIT_REPAIR_PROPOSAL",
+      "regions": [
+        {
+          "id": "magnet_head",
+          "xywh": [
+            570,
+            540,
+            88,
+            91
+          ],
+          "purpose": "Articulate opposed collecting poles/underside of the existing suspended head without changing the crane arm or the literal magnet approach.",
+          "original_occupied_cells": 2106,
+          "original_empty_cells": 5902,
+          "original_region_sha256_uint8": "756059ced9f44a4f3a958cc7c27c47446cd1adb4c22ae4a2730d2678f2f960e1"
+        },
+        {
+          "id": "press_workface",
+          "xywh": [
+            765,
+            1095,
+            180,
+            208
+          ],
+          "purpose": "Grounded opposed compression head and receiving bed inside the existing right frame, preserving Press Chamber and process access.",
+          "original_occupied_cells": 8000,
+          "original_empty_cells": 29440,
+          "original_region_sha256_uint8": "5e2fd81f3efe3e24178092bd021178aa3ad28e08ebf5e0afd731395445d6bc18"
+        },
+        {
+          "id": "upper_west_fracture",
+          "xywh": [
+            327,
+            731,
+            77,
+            115
+          ],
+          "purpose": "A broken upper trestle end retaining left-bank support and open central gap.",
+          "original_occupied_cells": 2228,
+          "original_empty_cells": 6627,
+          "original_region_sha256_uint8": "a8496f0101f8041615a95929f832d574a70799fdad928e4b271c853cb2031184"
+        },
+        {
+          "id": "upper_east_fracture",
+          "xywh": [
+            620,
+            691,
+            88,
+            124
+          ],
+          "purpose": "A differently fractured opposite upper trestle end; no cross-shaft bridge.",
+          "original_occupied_cells": 2619,
+          "original_empty_cells": 8293,
+          "original_region_sha256_uint8": "384effd81755fb8e1daecc6641a9f8db6491156abdd53a2df07657e139cb2680"
+        },
+        {
+          "id": "middle_west_fracture",
+          "xywh": [
+            330,
+            997,
+            76,
+            120
+          ],
+          "purpose": "A distinct stepped/torn middle handoff end.",
+          "original_occupied_cells": 2176,
+          "original_empty_cells": 6944,
+          "original_region_sha256_uint8": "33ab53cf6899fdacf472d79eddeb5ceb1e19f596843e208c074c08273c18dc64"
+        },
+        {
+          "id": "middle_east_fracture",
+          "xywh": [
+            604,
+            981,
+            88,
+            121
+          ],
+          "purpose": "An unlike receiving/fragmented middle handoff end.",
+          "original_occupied_cells": 1953,
+          "original_empty_cells": 8695,
+          "original_region_sha256_uint8": "4bdeb48d397d06972e4a75f0dfd2d9548f7881256f7c3df5ca4d570ac5a2d8f2"
+        },
+        {
+          "id": "lower_west_fracture",
+          "xywh": [
+            330,
+            1340,
+            66,
+            116
+          ],
+          "purpose": "Preserve unequal lower altitude and articulate its existing fractured end.",
+          "original_occupied_cells": 2051,
+          "original_empty_cells": 5605,
+          "original_region_sha256_uint8": "08755d51a580fb65940f08fe34f0f3cd3bc1fe6c02f05ca406a3baeb596e5864"
+        },
+        {
+          "id": "lower_east_fracture",
+          "xywh": [
+            624,
+            1408,
+            82,
+            116
+          ],
+          "purpose": "Retain staggered lower counterpart and distinguish it from upper plain shelves.",
+          "original_occupied_cells": 1822,
+          "original_empty_cells": 7690,
+          "original_region_sha256_uint8": "a6a91c1781cf86be6860a2fa859aa64cf24b595195eced9e96dbe4e71d849621"
+        }
+      ],
+      "maximum_changed_cells": 14500,
+      "preserved_relations": [
+        "Breached freighter/cabin and original opposing crane outside head allowance",
+        "Broad shaft and all original route centres",
+        "Three unequal salvage elevations",
+        "East rail/customs and west recovery",
+        "Every broken link remains discontinuous; no cross-gap completion",
+        "Exact press threshold/compression-yard/chamber centres"
+      ],
+      "cell_diagnosis": "Source pixels show the magnet as a shallow pad and press as open frame because much provisional internal apparatus is absent after clearance and pruning. Several trestle ends repeat plain horizontal terminations at y751/1017/1360 west and709/1001/1427 east.",
+      "baseline_material_plane_sha256_uint8": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81"
+    }
+  }
+}

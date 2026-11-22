@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "programme": "GOLD-ASTRA-001",
-  "status": "PREAUTHORING_DRAFT_UNTIL_FREEZE",
+  "status": "FROZEN_BEFORE_AUTHOR_GEOMETRY",
   "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
   "corpus_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
   "arms": [
@@ -106,7 +106,18 @@
             "boost_multiplier": 1.8
           }
         }
-      ]
+      ],
+      "source_grid_sha256_row_major_uint8": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c",
+      "independent_baseline": {
+        "full_cell_equal": true,
+        "overview_mismatch_cells": 0,
+        "sites": {
+          "19x15": 27,
+          "23x19": 27,
+          "31x27": 27
+        },
+        "rectangles": 1974
+      }
     },
     {
       "arm": "C2",
@@ -204,7 +215,18 @@
             "boost_multiplier": 1.8
           }
         }
-      ]
+      ],
+      "source_grid_sha256_row_major_uint8": "0d958f92a1f578702056d72363622e2de204c6267f204485585b59096574cff4",
+      "independent_baseline": {
+        "full_cell_equal": true,
+        "overview_mismatch_cells": 0,
+        "sites": {
+          "19x15": 29,
+          "23x19": 29,
+          "31x27": 29
+        },
+        "rectangles": 3881
+      }
     },
     {
       "arm": "C3",
@@ -325,7 +347,18 @@
             "boost_multiplier": 1.8
           }
         }
-      ]
+      ],
+      "source_grid_sha256_row_major_uint8": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+      "independent_baseline": {
+        "full_cell_equal": true,
+        "overview_mismatch_cells": 0,
+        "sites": {
+          "19x15": 25,
+          "23x19": 25,
+          "31x27": 25
+        },
+        "rectangles": 3528
+      }
     },
     {
       "arm": "B1",
@@ -428,7 +461,18 @@
             "boost_multiplier": 1.8
           }
         }
-      ]
+      ],
+      "source_grid_sha256_row_major_uint8": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+      "independent_baseline": {
+        "full_cell_equal": true,
+        "overview_mismatch_cells": 0,
+        "sites": {
+          "19x15": 24,
+          "23x19": 24,
+          "31x27": 24
+        },
+        "rectangles": 171
+      }
     },
     {
       "arm": "B2",
@@ -541,7 +585,18 @@
             "boost_multiplier": 1.8
           }
         }
-      ]
+      ],
+      "source_grid_sha256_row_major_uint8": "1c159bf70e15309ec0a1d3ed578bad328fe6be414e2fac30bcc685dbbb7532fd",
+      "independent_baseline": {
+        "full_cell_equal": true,
+        "overview_mismatch_cells": 0,
+        "sites": {
+          "19x15": 19,
+          "23x19": 19,
+          "31x27": 19
+        },
+        "rectangles": 1917
+      }
     },
     {
       "arm": "B3",
@@ -669,7 +724,18 @@
             "boost_multiplier": 2
           }
         }
-      ]
+      ],
+      "source_grid_sha256_row_major_uint8": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+      "independent_baseline": {
+        "full_cell_equal": true,
+        "overview_mismatch_cells": 0,
+        "sites": {
+          "19x15": 34,
+          "23x19": 34,
+          "31x27": 34
+        },
+        "rectangles": 4072
+      }
     },
     {
       "arm": "D1",
@@ -786,7 +852,18 @@
             "boost_multiplier": 2
           }
         }
-      ]
+      ],
+      "source_grid_sha256_row_major_uint8": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
+      "independent_baseline": {
+        "full_cell_equal": true,
+        "overview_mismatch_cells": 0,
+        "sites": {
+          "19x15": 22,
+          "23x19": 22,
+          "31x27": 22
+        },
+        "rectangles": 363
+      }
     },
     {
       "arm": "D2",
@@ -907,7 +984,18 @@
             "boost_multiplier": 1.8
           }
         }
-      ]
+      ],
+      "source_grid_sha256_row_major_uint8": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81",
+      "independent_baseline": {
+        "full_cell_equal": true,
+        "overview_mismatch_cells": 0,
+        "sites": {
+          "19x15": 24,
+          "23x19": 24,
+          "31x27": 24
+        },
+        "rectangles": 981
+      }
     }
   ],
   "predictions": {
@@ -953,5 +1041,15 @@
     "controls": "No geometry required.",
     "expansion": "Any extra iteration requires a recorded concrete failure and must remain blinded; original attempt retained."
   },
-  "blinding_limit": "Procedural file and source allowlist, not an operating-system security boundary. Reviewer knows original identities; label-blind comparison does not imply source-naive review."
+  "blinding_limit": "Procedural file and source allowlist, not an operating-system security boundary. Reviewer knows original identities; label-blind comparison does not imply source-naive review.",
+  "additional_blind_art_review": {
+    "timing": "After all8output identities lock; before label-key disclosure",
+    "design": "Fresh nonimplementing reviewer, if available, receives anonymized original/candidate pairs and two portrait original/candidate/prior-reference triplets. Coordinator records randomized label key separately. Ratings and reasons lock before key disclosure.",
+    "limitations": "Existing original-aware technical reviewer is not source-naive. Prior reworker comparisons remain unavailable to author. Fresh review does not establish native gameplay."
+  },
+  "frozen_at_utc": "2026-11-22T04:42:45.332794+00:00",
+  "gold_snapshot_sha256": "ed767c269917617bed075e8e4e6bc6501a5fc0d2d77440cecf99c5864ba6496c",
+  "preservation_contract_sha256": "fbf38ff18ff4c6181e0a207e1317d2bcd6d5dbca17cc6d4436d4c880e665f70e",
+  "independent_precommit_sha256": "5130f1a86f513808b0cd68615382b6af39a036680b7e999a8f2420ddef1880c4",
+  "approval_receipt_sha256": "40d3e9193a07aa840a9df257a7f0616894bdfee236f06d923d683e050c1aa433"
 }

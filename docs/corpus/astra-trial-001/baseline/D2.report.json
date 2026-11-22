@@ -1,0 +1,2779 @@
+{
+  "actors": [
+    {
+      "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+      "id": 1,
+      "model": "midge",
+      "options": {
+        "boost_multiplier": 1.8,
+        "budget": 20,
+        "inertia_multiplier": 1,
+        "mass_multiplier": 1,
+        "thrust_multiplier": 1,
+        "torque_multiplier": 1
+      },
+      "spawn": [
+        225,
+        273
+      ]
+    }
+  ],
+  "compact": {
+    "mismatch_cells": 0,
+    "overlap_cells": 0,
+    "painted_area": 536734,
+    "rectangles": 981,
+    "within_capacity": true
+  },
+  "contacts": {
+    "different_liquid_contacts": {},
+    "generic_acid_dissolvable_contacts": {},
+    "hot_combustible_or_ice_contacts": {},
+    "neighbourhood": "Moore8, unordered geometric contacts counted once",
+    "pair_reactive_contacts": {}
+  },
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "extent": [
+    1024,
+    2048
+  ],
+  "fixture_id": "D2",
+  "full_cell_replay_equal": true,
+  "hashes": {
+    "cells_sha256": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81",
+    "independent_replay_sha256": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81",
+    "setup_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76"
+  },
+  "image_parity": {
+    "image_sha256": "a4b978c693e6e71b556028715e32ebc79b41dc022d9a7c99bd4c8ec9c24334ea",
+    "index_to_material": {
+      "0": 0,
+      "1": 58,
+      "2": 62,
+      "3": 100
+    },
+    "method": "documented original palette-index-to-material map",
+    "mismatch_cells": 0,
+    "status": "PASS"
+  },
+  "json_bytes": 18694,
+  "label": "SOURCE-STATIC",
+  "liquids": [],
+  "material_histogram": {
+    "0": 1560418,
+    "100": 383156,
+    "58": 12484,
+    "62": 141094
+  },
+  "materials_used": [
+    {
+      "granular_support": false,
+      "hard_surface": false,
+      "has_pair_reactions": false,
+      "id": 0,
+      "kernel": "none",
+      "movable": false,
+      "name": "empty",
+      "rgba": [
+        8,
+        11,
+        18,
+        255
+      ],
+      "state": "empty",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 58,
+      "kernel": "none",
+      "movable": false,
+      "name": "reinforced-concrete",
+      "rgba": [
+        119,
+        123,
+        128,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 62,
+      "kernel": "none",
+      "movable": false,
+      "name": "steel-plate",
+      "rgba": [
+        126,
+        141,
+        153,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": true,
+      "id": 100,
+      "kernel": "none",
+      "movable": false,
+      "name": "basalt-columns",
+      "rgba": [
+        54,
+        56,
+        61,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    }
+  ],
+  "native": {
+    "note": "This validator does not execute engine cells, actor motion or saved-session reopen.",
+    "status": "NATIVE-UNTESTED"
+  },
+  "original_spawn_preserved": true,
+  "replay": {
+    "clipped_discs": [],
+    "errors": [],
+    "generated_work_limit": 32000000,
+    "raw_conflicting_overwrite_visits": 0,
+    "raw_overlapped_cells": 0,
+    "replay_work": 536734,
+    "stamps": 981
+  },
+  "routes": {
+    "declared_routes": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-unblocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "Arrival Mooring": 845,
+              "Central Recovery": 602,
+              "Compression Yard": 331,
+              "Customs Lookout": 582,
+              "Deep Repair Bay": 907,
+              "Drylock Threshold": 656,
+              "East Broken Trestle": 460,
+              "Entered Salvage Hold": 663,
+              "Fractured Crane Crown": 867,
+              "Lift Seam": 0,
+              "Lower East Service": 1001,
+              "Press Chamber": 356,
+              "Press Threshold": 213,
+              "Rail Grade One": 756,
+              "Rail Grade Two": 857,
+              "Right Freight Relay": 432,
+              "Salvage Control": 242,
+              "Salvage Magnet": 293,
+              "Ship Bridge": 738,
+              "Sky Freight Departure": 634,
+              "Upper Return": 0,
+              "West Broken Trestle": 354,
+              "West Maintenance": 782,
+              "West Relay": 362
+            },
+            "goal": [
+              500,
+              1201
+            ],
+            "length": 358,
+            "path_bounds": [
+              500,
+              843,
+              500,
+              1201
+            ],
+            "path_sha256": "fb2d7e29747f314760172d8cbcb27b8b5bb6fd892c1847f8ee439a9197080142",
+            "reachable": true,
+            "start": [
+              500,
+              843
+            ]
+          }
+        ],
+        "obstructions": [],
+        "via": [
+          "Lift Seam",
+          "Upper Return"
+        ]
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-blocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "Arrival Mooring": 845,
+              "Central Recovery": 602,
+              "Compression Yard": 260,
+              "Customs Lookout": 511,
+              "Deep Repair Bay": 907,
+              "Drylock Threshold": 656,
+              "East Broken Trestle": 389,
+              "Entered Salvage Hold": 663,
+              "Fractured Crane Crown": 796,
+              "Lift Seam": 0,
+              "Lower East Service": 930,
+              "Press Chamber": 285,
+              "Press Threshold": 142,
+              "Rail Grade One": 685,
+              "Rail Grade Two": 786,
+              "Right Freight Relay": 361,
+              "Salvage Control": 313,
+              "Salvage Magnet": 236,
+              "Ship Bridge": 738,
+              "Sky Freight Departure": 563,
+              "Upper Return": 0,
+              "West Broken Trestle": 354,
+              "West Maintenance": 782,
+              "West Relay": 362
+            },
+            "goal": [
+              500,
+              1201
+            ],
+            "length": 500,
+            "path_bounds": [
+              500,
+              843,
+              571,
+              1201
+            ],
+            "path_sha256": "bced57df3e63eff127b27cc7dc2fcdc6f6068099586c743ad801e3b7245d4e2e",
+            "reachable": true,
+            "start": [
+              500,
+              843
+            ]
+          }
+        ],
+        "obstructions": [
+          [
+            440,
+            947,
+            116,
+            85
+          ]
+        ],
+        "via": [
+          "Lift Seam",
+          "Upper Return"
+        ]
+      }
+    ],
+    "envelopes": {
+      "native-hard-only": {
+        "19x15": {
+          "free_centres": 1371138,
+          "free_components": 15,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Arrival Mooring",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                225,
+                273
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ship Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                248,
+                357
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Salvage Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                262,
+                418
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Drylock Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                153,
+                534
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Fractured Crane Crown",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                744,
+                220
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Magnet",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                557,
+                607
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                270,
+                719
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                774,
+                657
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                843
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                258,
+                952
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                713,
+                1050
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Compression Yard",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                831,
+                1060
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Chamber",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                856,
+                1190
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                1201
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1318
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Right Freight Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                750,
+                1383
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                793,
+                1490
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky Freight Departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                745,
+                1590
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade One",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                767,
+                1690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade Two",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                768,
+                1790
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lower East Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                782,
+                1920
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                235,
+                1718
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Deep Repair Bay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                218,
+                1826
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                497,
+                1800
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1327144,
+          "free_components": 9,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Arrival Mooring",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                225,
+                273
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ship Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                248,
+                357
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Salvage Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                262,
+                418
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Drylock Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                153,
+                534
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Fractured Crane Crown",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                744,
+                220
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Magnet",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                557,
+                607
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                270,
+                719
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                774,
+                657
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                843
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                258,
+                952
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                713,
+                1050
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Compression Yard",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                831,
+                1060
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Chamber",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                856,
+                1190
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                1201
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1318
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Right Freight Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                750,
+                1383
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                793,
+                1490
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky Freight Departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                745,
+                1590
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade One",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                767,
+                1690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade Two",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                768,
+                1790
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lower East Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                782,
+                1920
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                235,
+                1718
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Deep Repair Bay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                218,
+                1826
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                497,
+                1800
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 1243581,
+          "free_components": 8,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Arrival Mooring",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                225,
+                273
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ship Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                248,
+                357
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Salvage Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                262,
+                418
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Drylock Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                153,
+                534
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Fractured Crane Crown",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                744,
+                220
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Magnet",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                557,
+                607
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                270,
+                719
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                774,
+                657
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                843
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                258,
+                952
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                713,
+                1050
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Compression Yard",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                831,
+                1060
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Chamber",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                856,
+                1190
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                1201
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1318
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Right Freight Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                750,
+                1383
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                793,
+                1490
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky Freight Departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                745,
+                1590
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade One",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                767,
+                1690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade Two",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                768,
+                1790
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lower East Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                782,
+                1920
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                235,
+                1718
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Deep Repair Bay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                218,
+                1826
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                497,
+                1800
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      },
+      "nonempty": {
+        "19x15": {
+          "free_centres": 1371138,
+          "free_components": 15,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Arrival Mooring",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                225,
+                273
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ship Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                248,
+                357
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Salvage Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                262,
+                418
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Drylock Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                153,
+                534
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Fractured Crane Crown",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                744,
+                220
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Magnet",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                557,
+                607
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                270,
+                719
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                774,
+                657
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                843
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                258,
+                952
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                713,
+                1050
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Compression Yard",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                831,
+                1060
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Chamber",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                856,
+                1190
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                1201
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1318
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Right Freight Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                750,
+                1383
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                793,
+                1490
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky Freight Departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                745,
+                1590
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade One",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                767,
+                1690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade Two",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                768,
+                1790
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lower East Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                782,
+                1920
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                235,
+                1718
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Deep Repair Bay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                218,
+                1826
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                497,
+                1800
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1327144,
+          "free_components": 9,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Arrival Mooring",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                225,
+                273
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ship Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                248,
+                357
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Salvage Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                262,
+                418
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Drylock Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                153,
+                534
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Fractured Crane Crown",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                744,
+                220
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Magnet",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                557,
+                607
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                270,
+                719
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                774,
+                657
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                843
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                258,
+                952
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                713,
+                1050
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Compression Yard",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                831,
+                1060
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Chamber",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                856,
+                1190
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                1201
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1318
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Right Freight Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                750,
+                1383
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                793,
+                1490
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky Freight Departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                745,
+                1590
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade One",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                767,
+                1690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade Two",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                768,
+                1790
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lower East Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                782,
+                1920
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                235,
+                1718
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Deep Repair Bay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                218,
+                1826
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                497,
+                1800
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 1243581,
+          "free_components": 8,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Arrival Mooring",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                225,
+                273
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ship Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                248,
+                357
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Salvage Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                262,
+                418
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Drylock Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                153,
+                534
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Fractured Crane Crown",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                744,
+                220
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Magnet",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                557,
+                607
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                270,
+                719
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Broken Trestle",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                774,
+                657
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Seam",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                843
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Salvage Control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                258,
+                952
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Threshold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                713,
+                1050
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Compression Yard",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                831,
+                1060
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Press Chamber",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                856,
+                1190
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Return",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                500,
+                1201
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1318
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Right Freight Relay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                750,
+                1383
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                793,
+                1490
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sky Freight Departure",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                745,
+                1590
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade One",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                767,
+                1690
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rail Grade Two",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                768,
+                1790
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lower East Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                782,
+                1920
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                235,
+                1718
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Deep Repair Bay",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                218,
+                1826
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                497,
+                1800
+              ]
+            }
+          ],
+          "reachable": 24,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      }
+    },
+    "obstruction_reachability": {
+      "original-solid-block": {
+        "19x15": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Arrival Mooring",
+              "reachable": true,
+              "xy": [
+                225,
+                273
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ship Bridge",
+              "reachable": true,
+              "xy": [
+                248,
+                357
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Entered Salvage Hold",
+              "reachable": true,
+              "xy": [
+                262,
+                418
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Drylock Threshold",
+              "reachable": true,
+              "xy": [
+                153,
+                534
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Fractured Crane Crown",
+              "reachable": true,
+              "xy": [
+                744,
+                220
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Salvage Magnet",
+              "reachable": true,
+              "xy": [
+                557,
+                607
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Broken Trestle",
+              "reachable": true,
+              "xy": [
+                270,
+                719
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East Broken Trestle",
+              "reachable": true,
+              "xy": [
+                774,
+                657
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Lift Seam",
+              "reachable": true,
+              "xy": [
+                500,
+                843
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Salvage Control",
+              "reachable": true,
+              "xy": [
+                258,
+                952
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press Threshold",
+              "reachable": true,
+              "xy": [
+                713,
+                1050
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Compression Yard",
+              "reachable": true,
+              "xy": [
+                831,
+                1060
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press Chamber",
+              "reachable": true,
+              "xy": [
+                856,
+                1190
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper Return",
+              "reachable": true,
+              "xy": [
+                500,
+                1201
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Relay",
+              "reachable": true,
+              "xy": [
+                255,
+                1318
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Right Freight Relay",
+              "reachable": true,
+              "xy": [
+                750,
+                1383
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Customs Lookout",
+              "reachable": true,
+              "xy": [
+                793,
+                1490
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sky Freight Departure",
+              "reachable": true,
+              "xy": [
+                745,
+                1590
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rail Grade One",
+              "reachable": true,
+              "xy": [
+                767,
+                1690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rail Grade Two",
+              "reachable": true,
+              "xy": [
+                768,
+                1790
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Lower East Service",
+              "reachable": true,
+              "xy": [
+                782,
+                1920
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Maintenance",
+              "reachable": true,
+              "xy": [
+                235,
+                1718
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Deep Repair Bay",
+              "reachable": true,
+              "xy": [
+                218,
+                1826
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Central Recovery",
+              "reachable": true,
+              "xy": [
+                497,
+                1800
+              ]
+            }
+          ],
+          "reachable": 24
+        },
+        "23x19": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Arrival Mooring",
+              "reachable": true,
+              "xy": [
+                225,
+                273
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ship Bridge",
+              "reachable": true,
+              "xy": [
+                248,
+                357
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Entered Salvage Hold",
+              "reachable": true,
+              "xy": [
+                262,
+                418
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Drylock Threshold",
+              "reachable": true,
+              "xy": [
+                153,
+                534
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Fractured Crane Crown",
+              "reachable": true,
+              "xy": [
+                744,
+                220
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Salvage Magnet",
+              "reachable": true,
+              "xy": [
+                557,
+                607
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Broken Trestle",
+              "reachable": true,
+              "xy": [
+                270,
+                719
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East Broken Trestle",
+              "reachable": true,
+              "xy": [
+                774,
+                657
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Lift Seam",
+              "reachable": true,
+              "xy": [
+                500,
+                843
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Salvage Control",
+              "reachable": true,
+              "xy": [
+                258,
+                952
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press Threshold",
+              "reachable": true,
+              "xy": [
+                713,
+                1050
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Compression Yard",
+              "reachable": true,
+              "xy": [
+                831,
+                1060
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press Chamber",
+              "reachable": true,
+              "xy": [
+                856,
+                1190
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper Return",
+              "reachable": true,
+              "xy": [
+                500,
+                1201
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Relay",
+              "reachable": true,
+              "xy": [
+                255,
+                1318
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Right Freight Relay",
+              "reachable": true,
+              "xy": [
+                750,
+                1383
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Customs Lookout",
+              "reachable": true,
+              "xy": [
+                793,
+                1490
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sky Freight Departure",
+              "reachable": true,
+              "xy": [
+                745,
+                1590
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rail Grade One",
+              "reachable": true,
+              "xy": [
+                767,
+                1690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rail Grade Two",
+              "reachable": true,
+              "xy": [
+                768,
+                1790
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Lower East Service",
+              "reachable": true,
+              "xy": [
+                782,
+                1920
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Maintenance",
+              "reachable": true,
+              "xy": [
+                235,
+                1718
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Deep Repair Bay",
+              "reachable": true,
+              "xy": [
+                218,
+                1826
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Central Recovery",
+              "reachable": true,
+              "xy": [
+                497,
+                1800
+              ]
+            }
+          ],
+          "reachable": 24
+        },
+        "31x27": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Arrival Mooring",
+              "reachable": true,
+              "xy": [
+                225,
+                273
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ship Bridge",
+              "reachable": true,
+              "xy": [
+                248,
+                357
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Entered Salvage Hold",
+              "reachable": true,
+              "xy": [
+                262,
+                418
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Drylock Threshold",
+              "reachable": true,
+              "xy": [
+                153,
+                534
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Fractured Crane Crown",
+              "reachable": true,
+              "xy": [
+                744,
+                220
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Salvage Magnet",
+              "reachable": true,
+              "xy": [
+                557,
+                607
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Broken Trestle",
+              "reachable": true,
+              "xy": [
+                270,
+                719
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East Broken Trestle",
+              "reachable": true,
+              "xy": [
+                774,
+                657
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Lift Seam",
+              "reachable": true,
+              "xy": [
+                500,
+                843
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Salvage Control",
+              "reachable": true,
+              "xy": [
+                258,
+                952
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press Threshold",
+              "reachable": true,
+              "xy": [
+                713,
+                1050
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Compression Yard",
+              "reachable": true,
+              "xy": [
+                831,
+                1060
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Press Chamber",
+              "reachable": true,
+              "xy": [
+                856,
+                1190
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper Return",
+              "reachable": true,
+              "xy": [
+                500,
+                1201
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Relay",
+              "reachable": true,
+              "xy": [
+                255,
+                1318
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Right Freight Relay",
+              "reachable": true,
+              "xy": [
+                750,
+                1383
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Customs Lookout",
+              "reachable": true,
+              "xy": [
+                793,
+                1490
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sky Freight Departure",
+              "reachable": true,
+              "xy": [
+                745,
+                1590
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rail Grade One",
+              "reachable": true,
+              "xy": [
+                767,
+                1690
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rail Grade Two",
+              "reachable": true,
+              "xy": [
+                768,
+                1790
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Lower East Service",
+              "reachable": true,
+              "xy": [
+                782,
+                1920
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Maintenance",
+              "reachable": true,
+              "xy": [
+                235,
+                1718
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Deep Repair Bay",
+              "reachable": true,
+              "xy": [
+                218,
+                1826
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Central Recovery",
+              "reachable": true,
+              "xy": [
+                497,
+                1800
+              ]
+            }
+          ],
+          "reachable": 24
+        }
+      }
+    },
+    "original_declared_graphs": [
+      {
+        "id": "east",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Compression Yard",
+            "Upper Return",
+            "Customs Lookout",
+            "Rail Grade Two",
+            "Lower East Service"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "main",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Arrival Mooring",
+            "Entered Salvage Hold",
+            "Lift Seam",
+            "Press Threshold",
+            "Press Chamber",
+            "Right Freight Relay",
+            "Rail Grade One"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "return",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "West Broken Trestle",
+            "Salvage Control",
+            "West Relay",
+            "West Maintenance",
+            "Deep Repair Bay",
+            "Central Recovery"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "upper",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Ship Bridge",
+            "Drylock Threshold",
+            "Fractured Crane Crown",
+            "Salvage Magnet",
+            "East Broken Trestle"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      }
+    ],
+    "point_count": 24,
+    "spawn": [
+      225,
+      273
+    ]
+  },
+  "schema_errors": [],
+  "schema_version": 1,
+  "support": {
+    "bottom_only_fixed_kernel_none": {
+      "cells": 536734,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 536734,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    },
+    "fixed_kernel_none": {
+      "cells": 536734,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 536734,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    },
+    "limitation": "Kernel-none support may still be chemically consumed; geometry rooted to bottom and any declared anchors, not a strength simulation.",
+    "native_hard": {
+      "cells": 536734,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 536734,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    }
+  }
+}

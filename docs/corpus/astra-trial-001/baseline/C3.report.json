@@ -1,0 +1,2897 @@
+{
+  "actors": [
+    {
+      "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+      "id": 1,
+      "model": "midge",
+      "options": {
+        "boost_multiplier": 1.8,
+        "budget": 20,
+        "inertia_multiplier": 1,
+        "mass_multiplier": 1,
+        "thrust_multiplier": 1,
+        "torque_multiplier": 1
+      },
+      "spawn": [
+        132,
+        350
+      ]
+    }
+  ],
+  "compact": {
+    "mismatch_cells": 0,
+    "overlap_cells": 0,
+    "painted_area": 588618,
+    "rectangles": 3528,
+    "within_capacity": true
+  },
+  "contacts": {
+    "different_liquid_contacts": {},
+    "generic_acid_dissolvable_contacts": {},
+    "hot_combustible_or_ice_contacts": {},
+    "neighbourhood": "Moore8, unordered geometric contacts counted once",
+    "pair_reactive_contacts": {}
+  },
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "extent": [
+    1024,
+    2048
+  ],
+  "fixture_id": "C3",
+  "full_cell_replay_equal": true,
+  "hashes": {
+    "cells_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+    "independent_replay_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+    "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e"
+  },
+  "image_parity": {
+    "image_sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7",
+    "index_to_material": {
+      "0": 0,
+      "1": 58,
+      "2": 62,
+      "3": 100
+    },
+    "method": "documented original palette-index-to-material map",
+    "mismatch_cells": 0,
+    "status": "PASS"
+  },
+  "json_bytes": 65411,
+  "label": "SOURCE-STATIC",
+  "liquids": [],
+  "material_histogram": {
+    "0": 1508534,
+    "100": 290443,
+    "58": 104191,
+    "62": 193984
+  },
+  "materials_used": [
+    {
+      "granular_support": false,
+      "hard_surface": false,
+      "has_pair_reactions": false,
+      "id": 0,
+      "kernel": "none",
+      "movable": false,
+      "name": "empty",
+      "rgba": [
+        8,
+        11,
+        18,
+        255
+      ],
+      "state": "empty",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 58,
+      "kernel": "none",
+      "movable": false,
+      "name": "reinforced-concrete",
+      "rgba": [
+        119,
+        123,
+        128,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 62,
+      "kernel": "none",
+      "movable": false,
+      "name": "steel-plate",
+      "rgba": [
+        126,
+        141,
+        153,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": true,
+      "id": 100,
+      "kernel": "none",
+      "movable": false,
+      "name": "basalt-columns",
+      "rgba": [
+        54,
+        56,
+        61,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    }
+  ],
+  "native": {
+    "note": "This validator does not execute engine cells, actor motion or saved-session reopen.",
+    "status": "NATIVE-UNTESTED"
+  },
+  "original_spawn_preserved": true,
+  "replay": {
+    "clipped_discs": [],
+    "errors": [],
+    "generated_work_limit": 32000000,
+    "raw_conflicting_overwrite_visits": 0,
+    "raw_overlapped_cells": 0,
+    "replay_work": 588618,
+    "stamps": 3528
+  },
+  "routes": {
+    "declared_routes": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-unblocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "Cargo Cage": 675,
+              "Central Recovery": 1771,
+              "Channel Throat": 832,
+              "Crane Sky Hook": 268,
+              "Customs Examination": 1906,
+              "Departure Ledge": 1771,
+              "Dispatch Repair": 1992,
+              "East Hinge Brake": 1147,
+              "East Leaf Reveal": 754,
+              "Entered Freight Hold": 208,
+              "Entered Rotor": 1373,
+              "Ferry Bridge": 61,
+              "Freight Frog": 1602,
+              "Lift Counterweight": 918,
+              "Mooring Customs Beacon": 0,
+              "Quay Manifest": 365,
+              "Rotor Outer": 1216,
+              "Upper Railway": 1513,
+              "Upper Rope Well": 988,
+              "West Hinge Brake": 658,
+              "West Leaf Reveal": 584,
+              "West Lower Winch": 822,
+              "West Mid Service": 1105,
+              "West Under-Invert": 1508,
+              "Western Approach": 0
+            },
+            "goal": [
+              324,
+              350
+            ],
+            "length": 192,
+            "path_bounds": [
+              132,
+              350,
+              324,
+              350
+            ],
+            "path_sha256": "a7cd1c00f8d6b737d3069b223971e566fca8a99ade11687c0bffd916ad6e0b54",
+            "reachable": true,
+            "start": [
+              132,
+              350
+            ]
+          }
+        ],
+        "obstructions": [],
+        "via": [
+          "Western Approach",
+          "Mooring Customs Beacon"
+        ]
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-blocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "Cargo Cage": 675,
+              "Central Recovery": 1771,
+              "Channel Throat": 832,
+              "Crane Sky Hook": 224,
+              "Customs Examination": 1906,
+              "Departure Ledge": 1771,
+              "Dispatch Repair": 1992,
+              "East Hinge Brake": 1147,
+              "East Leaf Reveal": 754,
+              "Entered Freight Hold": 208,
+              "Entered Rotor": 1373,
+              "Ferry Bridge": 105,
+              "Freight Frog": 1602,
+              "Lift Counterweight": 918,
+              "Mooring Customs Beacon": 0,
+              "Quay Manifest": 365,
+              "Rotor Outer": 1216,
+              "Upper Railway": 1513,
+              "Upper Rope Well": 988,
+              "West Hinge Brake": 658,
+              "West Leaf Reveal": 584,
+              "West Lower Winch": 866,
+              "West Mid Service": 1149,
+              "West Under-Invert": 1552,
+              "Western Approach": 0
+            },
+            "goal": [
+              324,
+              350
+            ],
+            "length": 280,
+            "path_bounds": [
+              132,
+              306,
+              324,
+              350
+            ],
+            "path_sha256": "7781470f43d66bc65809bc5b9d897eb7adee1d3c25d7c22ecff53deeb8435467",
+            "reachable": true,
+            "start": [
+              132,
+              350
+            ]
+          }
+        ],
+        "obstructions": [
+          [
+            170,
+            320,
+            104,
+            64
+          ]
+        ],
+        "via": [
+          "Western Approach",
+          "Mooring Customs Beacon"
+        ]
+      }
+    ],
+    "envelopes": {
+      "native-hard-only": {
+        "19x15": {
+          "free_centres": 1243389,
+          "free_components": 33,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western Approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                132,
+                350
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ferry Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                215,
+                411
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Freight Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                342,
+                540
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Quay Manifest",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                378,
+                661
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crane Sky Hook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                282
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Cargo Cage",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                733,
+                616
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Counterweight",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                879,
+                713
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                384,
+                948
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                736
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Channel Throat",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                568,
+                938
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                626,
+                802
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                836,
+                985
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Lower Winch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                205,
+                1172
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Rope Well",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                543,
+                1119
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rotor Outer",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                680,
+                1210
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Rotor",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                773,
+                1274
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Mid Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1455
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Railway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                1477
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Freight Frog",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                683,
+                1593
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Departure Ledge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                700,
+                1745
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Examination",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                735,
+                1845
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Dispatch Repair",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                811,
+                1855
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Under-Invert",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                240,
+                1858
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                544,
+                1901
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Mooring Customs Beacon",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                324,
+                350
+              ]
+            }
+          ],
+          "reachable": 25,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1186731,
+          "free_components": 41,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western Approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                132,
+                350
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ferry Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                215,
+                411
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Freight Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                342,
+                540
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Quay Manifest",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                378,
+                661
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crane Sky Hook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                282
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Cargo Cage",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                733,
+                616
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Counterweight",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                879,
+                713
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                384,
+                948
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                736
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Channel Throat",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                568,
+                938
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                626,
+                802
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                836,
+                985
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Lower Winch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                205,
+                1172
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Rope Well",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                543,
+                1119
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rotor Outer",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                680,
+                1210
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Rotor",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                773,
+                1274
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Mid Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1455
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Railway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                1477
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Freight Frog",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                683,
+                1593
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Departure Ledge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                700,
+                1745
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Examination",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                735,
+                1845
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Dispatch Repair",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                811,
+                1855
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Under-Invert",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                240,
+                1858
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                544,
+                1901
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Mooring Customs Beacon",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                324,
+                350
+              ]
+            }
+          ],
+          "reachable": 25,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 1085404,
+          "free_components": 23,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western Approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                132,
+                350
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ferry Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                215,
+                411
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Freight Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                342,
+                540
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Quay Manifest",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                378,
+                661
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crane Sky Hook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                282
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Cargo Cage",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                733,
+                616
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Counterweight",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                879,
+                713
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                384,
+                948
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                736
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Channel Throat",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                568,
+                938
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                626,
+                802
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                836,
+                985
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Lower Winch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                205,
+                1172
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Rope Well",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                543,
+                1119
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rotor Outer",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                680,
+                1210
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Rotor",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                773,
+                1274
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Mid Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1455
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Railway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                1477
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Freight Frog",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                683,
+                1593
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Departure Ledge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                700,
+                1745
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Examination",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                735,
+                1845
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Dispatch Repair",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                811,
+                1855
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Under-Invert",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                240,
+                1858
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                544,
+                1901
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Mooring Customs Beacon",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                324,
+                350
+              ]
+            }
+          ],
+          "reachable": 25,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      },
+      "nonempty": {
+        "19x15": {
+          "free_centres": 1243389,
+          "free_components": 33,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western Approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                132,
+                350
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ferry Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                215,
+                411
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Freight Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                342,
+                540
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Quay Manifest",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                378,
+                661
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crane Sky Hook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                282
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Cargo Cage",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                733,
+                616
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Counterweight",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                879,
+                713
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                384,
+                948
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                736
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Channel Throat",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                568,
+                938
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                626,
+                802
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                836,
+                985
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Lower Winch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                205,
+                1172
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Rope Well",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                543,
+                1119
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rotor Outer",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                680,
+                1210
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Rotor",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                773,
+                1274
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Mid Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1455
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Railway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                1477
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Freight Frog",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                683,
+                1593
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Departure Ledge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                700,
+                1745
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Examination",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                735,
+                1845
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Dispatch Repair",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                811,
+                1855
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Under-Invert",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                240,
+                1858
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                544,
+                1901
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Mooring Customs Beacon",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                324,
+                350
+              ]
+            }
+          ],
+          "reachable": 25,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1186731,
+          "free_components": 41,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western Approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                132,
+                350
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ferry Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                215,
+                411
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Freight Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                342,
+                540
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Quay Manifest",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                378,
+                661
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crane Sky Hook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                282
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Cargo Cage",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                733,
+                616
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Counterweight",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                879,
+                713
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                384,
+                948
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                736
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Channel Throat",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                568,
+                938
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                626,
+                802
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                836,
+                985
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Lower Winch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                205,
+                1172
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Rope Well",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                543,
+                1119
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rotor Outer",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                680,
+                1210
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Rotor",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                773,
+                1274
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Mid Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1455
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Railway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                1477
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Freight Frog",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                683,
+                1593
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Departure Ledge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                700,
+                1745
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Examination",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                735,
+                1845
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Dispatch Repair",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                811,
+                1855
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Under-Invert",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                240,
+                1858
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                544,
+                1901
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Mooring Customs Beacon",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                324,
+                350
+              ]
+            }
+          ],
+          "reachable": 25,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 1085404,
+          "free_components": 23,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western Approach",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                132,
+                350
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ferry Bridge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                215,
+                411
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Freight Hold",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                342,
+                540
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Quay Manifest",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                378,
+                661
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crane Sky Hook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                524,
+                282
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Cargo Cage",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                733,
+                616
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Lift Counterweight",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                879,
+                713
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                384,
+                948
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                522,
+                736
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Channel Throat",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                568,
+                938
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Leaf Reveal",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                626,
+                802
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East Hinge Brake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                836,
+                985
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Lower Winch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                205,
+                1172
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Rope Well",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                543,
+                1119
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Rotor Outer",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                680,
+                1210
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Entered Rotor",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                773,
+                1274
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Mid Service",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                255,
+                1455
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper Railway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                1477
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Freight Frog",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                683,
+                1593
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Departure Ledge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                700,
+                1745
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Customs Examination",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                735,
+                1845
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Dispatch Repair",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                811,
+                1855
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West Under-Invert",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                240,
+                1858
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Central Recovery",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                544,
+                1901
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Mooring Customs Beacon",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                324,
+                350
+              ]
+            }
+          ],
+          "reachable": 25,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      }
+    },
+    "obstruction_reachability": {
+      "original-solid-block": {
+        "19x15": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Western Approach",
+              "reachable": true,
+              "xy": [
+                132,
+                350
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ferry Bridge",
+              "reachable": true,
+              "xy": [
+                215,
+                411
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Entered Freight Hold",
+              "reachable": true,
+              "xy": [
+                342,
+                540
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Quay Manifest",
+              "reachable": true,
+              "xy": [
+                378,
+                661
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Crane Sky Hook",
+              "reachable": true,
+              "xy": [
+                524,
+                282
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Cargo Cage",
+              "reachable": true,
+              "xy": [
+                733,
+                616
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Lift Counterweight",
+              "reachable": true,
+              "xy": [
+                879,
+                713
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Hinge Brake",
+              "reachable": true,
+              "xy": [
+                384,
+                948
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Leaf Reveal",
+              "reachable": true,
+              "xy": [
+                522,
+                736
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Channel Throat",
+              "reachable": true,
+              "xy": [
+                568,
+                938
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East Leaf Reveal",
+              "reachable": true,
+              "xy": [
+                626,
+                802
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East Hinge Brake",
+              "reachable": true,
+              "xy": [
+                836,
+                985
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Lower Winch",
+              "reachable": true,
+              "xy": [
+                205,
+                1172
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper Rope Well",
+              "reachable": true,
+              "xy": [
+                543,
+                1119
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rotor Outer",
+              "reachable": true,
+              "xy": [
+                680,
+                1210
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Entered Rotor",
+              "reachable": true,
+              "xy": [
+                773,
+                1274
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Mid Service",
+              "reachable": true,
+              "xy": [
+                255,
+                1455
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper Railway",
+              "reachable": true,
+              "xy": [
+                710,
+                1477
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Freight Frog",
+              "reachable": true,
+              "xy": [
+                683,
+                1593
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Departure Ledge",
+              "reachable": true,
+              "xy": [
+                700,
+                1745
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Customs Examination",
+              "reachable": true,
+              "xy": [
+                735,
+                1845
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Dispatch Repair",
+              "reachable": true,
+              "xy": [
+                811,
+                1855
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Under-Invert",
+              "reachable": true,
+              "xy": [
+                240,
+                1858
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Central Recovery",
+              "reachable": true,
+              "xy": [
+                544,
+                1901
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Mooring Customs Beacon",
+              "reachable": true,
+              "xy": [
+                324,
+                350
+              ]
+            }
+          ],
+          "reachable": 25
+        },
+        "23x19": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Western Approach",
+              "reachable": true,
+              "xy": [
+                132,
+                350
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ferry Bridge",
+              "reachable": true,
+              "xy": [
+                215,
+                411
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Entered Freight Hold",
+              "reachable": true,
+              "xy": [
+                342,
+                540
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Quay Manifest",
+              "reachable": true,
+              "xy": [
+                378,
+                661
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Crane Sky Hook",
+              "reachable": true,
+              "xy": [
+                524,
+                282
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Cargo Cage",
+              "reachable": true,
+              "xy": [
+                733,
+                616
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Lift Counterweight",
+              "reachable": true,
+              "xy": [
+                879,
+                713
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Hinge Brake",
+              "reachable": true,
+              "xy": [
+                384,
+                948
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Leaf Reveal",
+              "reachable": true,
+              "xy": [
+                522,
+                736
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Channel Throat",
+              "reachable": true,
+              "xy": [
+                568,
+                938
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East Leaf Reveal",
+              "reachable": true,
+              "xy": [
+                626,
+                802
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East Hinge Brake",
+              "reachable": true,
+              "xy": [
+                836,
+                985
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Lower Winch",
+              "reachable": true,
+              "xy": [
+                205,
+                1172
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper Rope Well",
+              "reachable": true,
+              "xy": [
+                543,
+                1119
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rotor Outer",
+              "reachable": true,
+              "xy": [
+                680,
+                1210
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Entered Rotor",
+              "reachable": true,
+              "xy": [
+                773,
+                1274
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Mid Service",
+              "reachable": true,
+              "xy": [
+                255,
+                1455
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper Railway",
+              "reachable": true,
+              "xy": [
+                710,
+                1477
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Freight Frog",
+              "reachable": true,
+              "xy": [
+                683,
+                1593
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Departure Ledge",
+              "reachable": true,
+              "xy": [
+                700,
+                1745
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Customs Examination",
+              "reachable": true,
+              "xy": [
+                735,
+                1845
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Dispatch Repair",
+              "reachable": true,
+              "xy": [
+                811,
+                1855
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Under-Invert",
+              "reachable": true,
+              "xy": [
+                240,
+                1858
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Central Recovery",
+              "reachable": true,
+              "xy": [
+                544,
+                1901
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Mooring Customs Beacon",
+              "reachable": true,
+              "xy": [
+                324,
+                350
+              ]
+            }
+          ],
+          "reachable": 25
+        },
+        "31x27": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Western Approach",
+              "reachable": true,
+              "xy": [
+                132,
+                350
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ferry Bridge",
+              "reachable": true,
+              "xy": [
+                215,
+                411
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Entered Freight Hold",
+              "reachable": true,
+              "xy": [
+                342,
+                540
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Quay Manifest",
+              "reachable": true,
+              "xy": [
+                378,
+                661
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Crane Sky Hook",
+              "reachable": true,
+              "xy": [
+                524,
+                282
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Cargo Cage",
+              "reachable": true,
+              "xy": [
+                733,
+                616
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Lift Counterweight",
+              "reachable": true,
+              "xy": [
+                879,
+                713
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Hinge Brake",
+              "reachable": true,
+              "xy": [
+                384,
+                948
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Leaf Reveal",
+              "reachable": true,
+              "xy": [
+                522,
+                736
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Channel Throat",
+              "reachable": true,
+              "xy": [
+                568,
+                938
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East Leaf Reveal",
+              "reachable": true,
+              "xy": [
+                626,
+                802
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East Hinge Brake",
+              "reachable": true,
+              "xy": [
+                836,
+                985
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Lower Winch",
+              "reachable": true,
+              "xy": [
+                205,
+                1172
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper Rope Well",
+              "reachable": true,
+              "xy": [
+                543,
+                1119
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Rotor Outer",
+              "reachable": true,
+              "xy": [
+                680,
+                1210
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Entered Rotor",
+              "reachable": true,
+              "xy": [
+                773,
+                1274
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Mid Service",
+              "reachable": true,
+              "xy": [
+                255,
+                1455
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper Railway",
+              "reachable": true,
+              "xy": [
+                710,
+                1477
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Freight Frog",
+              "reachable": true,
+              "xy": [
+                683,
+                1593
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Departure Ledge",
+              "reachable": true,
+              "xy": [
+                700,
+                1745
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Customs Examination",
+              "reachable": true,
+              "xy": [
+                735,
+                1845
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Dispatch Repair",
+              "reachable": true,
+              "xy": [
+                811,
+                1855
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West Under-Invert",
+              "reachable": true,
+              "xy": [
+                240,
+                1858
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Central Recovery",
+              "reachable": true,
+              "xy": [
+                544,
+                1901
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Mooring Customs Beacon",
+              "reachable": true,
+              "xy": [
+                324,
+                350
+              ]
+            }
+          ],
+          "reachable": 25
+        }
+      }
+    },
+    "original_declared_graphs": [
+      {
+        "id": "alternate",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Crane Sky Hook",
+            "West Leaf Reveal",
+            "Channel Throat",
+            "East Leaf Reveal",
+            "Rotor Outer",
+            "Departure Ledge"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "cross_links",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Channel Throat",
+            "Upper Rope Well"
+          ],
+          [
+            "Upper Rope Well",
+            "Central Recovery"
+          ],
+          [
+            "Entered Rotor",
+            "Customs Examination"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "main",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Western Approach",
+            "Mooring Customs Beacon",
+            "Entered Freight Hold",
+            "Quay Manifest",
+            "Cargo Cage",
+            "Channel Throat",
+            "Entered Rotor",
+            "Freight Frog",
+            "Customs Examination"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "recovery",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "West Lower Winch",
+            "West Mid Service",
+            "West Under-Invert",
+            "Central Recovery",
+            "Dispatch Repair"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "sky",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Ferry Bridge",
+            "Crane Sky Hook",
+            "West Leaf Reveal",
+            "East Leaf Reveal"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      }
+    ],
+    "point_count": 25,
+    "spawn": [
+      132,
+      350
+    ]
+  },
+  "schema_errors": [],
+  "schema_version": 1,
+  "support": {
+    "bottom_only_fixed_kernel_none": {
+      "cells": 588618,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 588618,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    },
+    "fixed_kernel_none": {
+      "cells": 588618,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 588618,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    },
+    "limitation": "Kernel-none support may still be chemically consumed; geometry rooted to bottom and any declared anchors, not a strength simulation.",
+    "native_hard": {
+      "cells": 588618,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 588618,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    }
+  }
+}

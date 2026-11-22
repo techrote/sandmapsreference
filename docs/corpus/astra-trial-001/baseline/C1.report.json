@@ -1,0 +1,3088 @@
+{
+  "actors": [
+    {
+      "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+      "id": 1,
+      "model": "midge",
+      "options": {
+        "boost_multiplier": 1.8,
+        "budget": 20,
+        "inertia_multiplier": 1,
+        "mass_multiplier": 1,
+        "thrust_multiplier": 1,
+        "torque_multiplier": 1
+      },
+      "spawn": [
+        115,
+        489
+      ]
+    }
+  ],
+  "compact": {
+    "mismatch_cells": 0,
+    "overlap_cells": 0,
+    "painted_area": 700419,
+    "rectangles": 1974,
+    "within_capacity": true
+  },
+  "contacts": {
+    "different_liquid_contacts": {},
+    "generic_acid_dissolvable_contacts": {},
+    "hot_combustible_or_ice_contacts": {},
+    "neighbourhood": "Moore8, unordered geometric contacts counted once",
+    "pair_reactive_contacts": {}
+  },
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "extent": [
+    2048,
+    1024
+  ],
+  "fixture_id": "C1",
+  "full_cell_replay_equal": true,
+  "hashes": {
+    "cells_sha256": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c",
+    "independent_replay_sha256": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c",
+    "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789"
+  },
+  "image_parity": {
+    "image_sha256": "4dc78b7e7dd3246469488027e09587b13e8175c3be39a0413982c67f85880a74",
+    "index_to_material": {
+      "0": 0,
+      "1": 100,
+      "2": 58,
+      "3": 62
+    },
+    "method": "documented original palette-index-to-material map",
+    "mismatch_cells": 0,
+    "status": "PASS"
+  },
+  "json_bytes": 37016,
+  "label": "SOURCE-STATIC",
+  "liquids": [],
+  "material_histogram": {
+    "0": 1396733,
+    "100": 453827,
+    "58": 130229,
+    "62": 116363
+  },
+  "materials_used": [
+    {
+      "granular_support": false,
+      "hard_surface": false,
+      "has_pair_reactions": false,
+      "id": 0,
+      "kernel": "none",
+      "movable": false,
+      "name": "empty",
+      "rgba": [
+        8,
+        11,
+        18,
+        255
+      ],
+      "state": "empty",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 58,
+      "kernel": "none",
+      "movable": false,
+      "name": "reinforced-concrete",
+      "rgba": [
+        119,
+        123,
+        128,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": false,
+      "id": 62,
+      "kernel": "none",
+      "movable": false,
+      "name": "steel-plate",
+      "rgba": [
+        126,
+        141,
+        153,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    },
+    {
+      "granular_support": false,
+      "hard_surface": true,
+      "has_pair_reactions": true,
+      "id": 100,
+      "kernel": "none",
+      "movable": false,
+      "name": "basalt-columns",
+      "rgba": [
+        54,
+        56,
+        61,
+        255
+      ],
+      "state": "solid",
+      "valid": true
+    }
+  ],
+  "native": {
+    "note": "This validator does not execute engine cells, actor motion or saved-session reopen.",
+    "status": "NATIVE-UNTESTED"
+  },
+  "original_spawn_preserved": true,
+  "replay": {
+    "clipped_discs": [],
+    "errors": [],
+    "generated_work_limit": 32000000,
+    "raw_conflicting_overwrite_visits": 0,
+    "raw_overlapped_cells": 0,
+    "replay_work": 700419,
+    "stamps": 1974
+  },
+  "routes": {
+    "declared_routes": [
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-unblocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "Abandoned annex entry": 207,
+              "Catch-tray control": 383,
+              "Crew roof maintenance": 114,
+              "East relief gate": 14,
+              "Eastern export": 0,
+              "Eastern upper walkway": 118,
+              "Emergency sky lookout": 333,
+              "Exhaust rooftop": 363,
+              "Ledger loft": 111,
+              "Ledger registry": 137,
+              "Ledger relief gate": 14,
+              "Magnet sorter": 181,
+              "Repair service niche": 217,
+              "Roof signal platform": 344,
+              "Sorter relief gate": 118,
+              "Sorting rail": 0,
+              "Sorting roof watch": 238,
+              "Torque drive control": 24,
+              "Torque inspection": 111,
+              "Torque parcel overlook": 44,
+              "Torque relief gate": 11,
+              "Upper branch": 110,
+              "West relief gate": 575,
+              "Western intake": 595,
+              "Western roof watch": 502,
+              "Wet-strip vestibule": 524,
+              "Workers refuge": 132
+            },
+            "goal": [
+              1950,
+              488
+            ],
+            "length": 1241,
+            "path_bounds": [
+              710,
+              488,
+              1950,
+              489
+            ],
+            "path_sha256": "416d22cf67d8cf2cca368e2d085b3e3d47427a7b4ecf782b72efe9cc44ff0076",
+            "reachable": true,
+            "start": [
+              710,
+              489
+            ]
+          }
+        ],
+        "obstructions": [],
+        "via": [
+          "Sorting rail",
+          "Eastern export"
+        ]
+      },
+      {
+        "envelope": [
+          31,
+          27
+        ],
+        "forbidden_centres": [],
+        "id": "original-blocked-shortest",
+        "legs": [
+          {
+            "closest_manhattan_to_original_sites": {
+              "Abandoned annex entry": 207,
+              "Catch-tray control": 368,
+              "Crew roof maintenance": 114,
+              "East relief gate": 14,
+              "Eastern export": 0,
+              "Eastern upper walkway": 118,
+              "Emergency sky lookout": 333,
+              "Exhaust rooftop": 363,
+              "Ledger loft": 111,
+              "Ledger registry": 137,
+              "Ledger relief gate": 14,
+              "Magnet sorter": 166,
+              "Repair service niche": 217,
+              "Roof signal platform": 345,
+              "Sorter relief gate": 118,
+              "Sorting rail": 0,
+              "Sorting roof watch": 239,
+              "Torque drive control": 24,
+              "Torque inspection": 111,
+              "Torque parcel overlook": 44,
+              "Torque relief gate": 11,
+              "Upper branch": 110,
+              "West relief gate": 575,
+              "Western intake": 595,
+              "Western roof watch": 503,
+              "Wet-strip vestibule": 509,
+              "Workers refuge": 132
+            },
+            "goal": [
+              1950,
+              488
+            ],
+            "length": 1375,
+            "path_bounds": [
+              710,
+              488,
+              1950,
+              556
+            ],
+            "path_sha256": "9a9686d6046c1d16d7e0cc8904e5bd08f5c867d56933a54d2274dc73cc9799a2",
+            "reachable": true,
+            "start": [
+              710,
+              489
+            ]
+          }
+        ],
+        "obstructions": [
+          [
+            778,
+            460,
+            75,
+            83
+          ]
+        ],
+        "via": [
+          "Sorting rail",
+          "Eastern export"
+        ]
+      }
+    ],
+    "envelopes": {
+      "native-hard-only": {
+        "19x15": {
+          "free_centres": 1112125,
+          "free_components": 51,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western intake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Wet-strip vestibule",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                311,
+                614
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Catch-tray control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                418,
+                580
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Magnet sorter",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                665,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting rail",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque drive control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1090,
+                512
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                965,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger registry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1370,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger loft",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1398,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Workers refuge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1746,
+                620
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew roof maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1750,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern export",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1950,
+                488
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                322,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper branch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1165,
+                378
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern upper walkway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                145,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                605,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1081,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1410,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1850,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Roof signal platform",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                720,
+                144
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Exhaust rooftop",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1135,
+                125
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Emergency sky lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1895,
+                155
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Abandoned annex entry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1980,
+                665
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque parcel overlook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1100,
+                532
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair service niche",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1604,
+                705
+              ]
+            }
+          ],
+          "reachable": 27,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1049875,
+          "free_components": 48,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western intake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Wet-strip vestibule",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                311,
+                614
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Catch-tray control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                418,
+                580
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Magnet sorter",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                665,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting rail",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque drive control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1090,
+                512
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                965,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger registry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1370,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger loft",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1398,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Workers refuge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1746,
+                620
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew roof maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1750,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern export",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1950,
+                488
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                322,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper branch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1165,
+                378
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern upper walkway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                145,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                605,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1081,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1410,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1850,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Roof signal platform",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                720,
+                144
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Exhaust rooftop",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1135,
+                125
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Emergency sky lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1895,
+                155
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Abandoned annex entry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1980,
+                665
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque parcel overlook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1100,
+                532
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair service niche",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1604,
+                705
+              ]
+            }
+          ],
+          "reachable": 27,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 940836,
+          "free_components": 43,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western intake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Wet-strip vestibule",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                311,
+                614
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Catch-tray control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                418,
+                580
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Magnet sorter",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                665,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting rail",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque drive control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1090,
+                512
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                965,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger registry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1370,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger loft",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1398,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Workers refuge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1746,
+                620
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew roof maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1750,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern export",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1950,
+                488
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                322,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper branch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1165,
+                378
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern upper walkway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                145,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                605,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1081,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1410,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1850,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Roof signal platform",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                720,
+                144
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Exhaust rooftop",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1135,
+                125
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Emergency sky lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1895,
+                155
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Abandoned annex entry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1980,
+                665
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque parcel overlook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1100,
+                532
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair service niche",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1604,
+                705
+              ]
+            }
+          ],
+          "reachable": 27,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      },
+      "nonempty": {
+        "19x15": {
+          "free_centres": 1112125,
+          "free_components": 51,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western intake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Wet-strip vestibule",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                311,
+                614
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Catch-tray control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                418,
+                580
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Magnet sorter",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                665,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting rail",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque drive control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1090,
+                512
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                965,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger registry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1370,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger loft",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1398,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Workers refuge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1746,
+                620
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew roof maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1750,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern export",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1950,
+                488
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                322,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper branch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1165,
+                378
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern upper walkway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                145,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                605,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1081,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1410,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1850,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Roof signal platform",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                720,
+                144
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Exhaust rooftop",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1135,
+                125
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Emergency sky lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1895,
+                155
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Abandoned annex entry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1980,
+                665
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque parcel overlook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1100,
+                532
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair service niche",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1604,
+                705
+              ]
+            }
+          ],
+          "reachable": 27,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "23x19": {
+          "free_centres": 1049875,
+          "free_components": 48,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western intake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Wet-strip vestibule",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                311,
+                614
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Catch-tray control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                418,
+                580
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Magnet sorter",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                665,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting rail",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque drive control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1090,
+                512
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                965,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger registry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1370,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger loft",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1398,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Workers refuge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1746,
+                620
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew roof maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1750,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern export",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1950,
+                488
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                322,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper branch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1165,
+                378
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern upper walkway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                145,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                605,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1081,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1410,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1850,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Roof signal platform",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                720,
+                144
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Exhaust rooftop",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1135,
+                125
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Emergency sky lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1895,
+                155
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Abandoned annex entry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1980,
+                665
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque parcel overlook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1100,
+                532
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair service niche",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1604,
+                705
+              ]
+            }
+          ],
+          "reachable": 27,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        },
+        "31x27": {
+          "free_centres": 940836,
+          "free_components": 43,
+          "points": [
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western intake",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                115,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Wet-strip vestibule",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                311,
+                614
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Catch-tray control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                418,
+                580
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Magnet sorter",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                665,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting rail",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                710,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque drive control",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1090,
+                512
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque inspection",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                965,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger registry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1370,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger loft",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1398,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Workers refuge",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1746,
+                620
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Crew roof maintenance",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1750,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern export",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1950,
+                488
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Western roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                322,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorting roof watch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Upper branch",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1165,
+                378
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Eastern upper walkway",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "West relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                145,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Sorter relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                605,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1081,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Ledger relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1410,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "East relief gate",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1850,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Roof signal platform",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                720,
+                144
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Exhaust rooftop",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1135,
+                125
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Emergency sky lookout",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1895,
+                155
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Abandoned annex entry",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1980,
+                665
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Torque parcel overlook",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1100,
+                532
+              ]
+            },
+            {
+              "clear": true,
+              "component": 1,
+              "id": "Repair service niche",
+              "reachable": true,
+              "reason": "clear",
+              "xy": [
+                1604,
+                705
+              ]
+            }
+          ],
+          "reachable": 27,
+          "spawn": {
+            "clear": true,
+            "component": 1,
+            "reason": "clear"
+          }
+        }
+      }
+    },
+    "obstruction_reachability": {
+      "original-solid-block": {
+        "19x15": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Western intake",
+              "reachable": true,
+              "xy": [
+                115,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Wet-strip vestibule",
+              "reachable": true,
+              "xy": [
+                311,
+                614
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Catch-tray control",
+              "reachable": true,
+              "xy": [
+                418,
+                580
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Magnet sorter",
+              "reachable": true,
+              "xy": [
+                665,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorting rail",
+              "reachable": true,
+              "xy": [
+                710,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque drive control",
+              "reachable": true,
+              "xy": [
+                1090,
+                512
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque inspection",
+              "reachable": true,
+              "xy": [
+                965,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger registry",
+              "reachable": true,
+              "xy": [
+                1370,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger loft",
+              "reachable": true,
+              "xy": [
+                1398,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Workers refuge",
+              "reachable": true,
+              "xy": [
+                1746,
+                620
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Crew roof maintenance",
+              "reachable": true,
+              "xy": [
+                1750,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Eastern export",
+              "reachable": true,
+              "xy": [
+                1950,
+                488
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Western roof watch",
+              "reachable": true,
+              "xy": [
+                322,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorting roof watch",
+              "reachable": true,
+              "xy": [
+                590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper branch",
+              "reachable": true,
+              "xy": [
+                1165,
+                378
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Eastern upper walkway",
+              "reachable": true,
+              "xy": [
+                1590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West relief gate",
+              "reachable": true,
+              "xy": [
+                145,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorter relief gate",
+              "reachable": true,
+              "xy": [
+                605,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque relief gate",
+              "reachable": true,
+              "xy": [
+                1081,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger relief gate",
+              "reachable": true,
+              "xy": [
+                1410,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East relief gate",
+              "reachable": true,
+              "xy": [
+                1850,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Roof signal platform",
+              "reachable": true,
+              "xy": [
+                720,
+                144
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Exhaust rooftop",
+              "reachable": true,
+              "xy": [
+                1135,
+                125
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Emergency sky lookout",
+              "reachable": true,
+              "xy": [
+                1895,
+                155
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Abandoned annex entry",
+              "reachable": true,
+              "xy": [
+                1980,
+                665
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque parcel overlook",
+              "reachable": true,
+              "xy": [
+                1100,
+                532
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Repair service niche",
+              "reachable": true,
+              "xy": [
+                1604,
+                705
+              ]
+            }
+          ],
+          "reachable": 27
+        },
+        "23x19": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Western intake",
+              "reachable": true,
+              "xy": [
+                115,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Wet-strip vestibule",
+              "reachable": true,
+              "xy": [
+                311,
+                614
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Catch-tray control",
+              "reachable": true,
+              "xy": [
+                418,
+                580
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Magnet sorter",
+              "reachable": true,
+              "xy": [
+                665,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorting rail",
+              "reachable": true,
+              "xy": [
+                710,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque drive control",
+              "reachable": true,
+              "xy": [
+                1090,
+                512
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque inspection",
+              "reachable": true,
+              "xy": [
+                965,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger registry",
+              "reachable": true,
+              "xy": [
+                1370,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger loft",
+              "reachable": true,
+              "xy": [
+                1398,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Workers refuge",
+              "reachable": true,
+              "xy": [
+                1746,
+                620
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Crew roof maintenance",
+              "reachable": true,
+              "xy": [
+                1750,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Eastern export",
+              "reachable": true,
+              "xy": [
+                1950,
+                488
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Western roof watch",
+              "reachable": true,
+              "xy": [
+                322,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorting roof watch",
+              "reachable": true,
+              "xy": [
+                590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper branch",
+              "reachable": true,
+              "xy": [
+                1165,
+                378
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Eastern upper walkway",
+              "reachable": true,
+              "xy": [
+                1590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West relief gate",
+              "reachable": true,
+              "xy": [
+                145,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorter relief gate",
+              "reachable": true,
+              "xy": [
+                605,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque relief gate",
+              "reachable": true,
+              "xy": [
+                1081,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger relief gate",
+              "reachable": true,
+              "xy": [
+                1410,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East relief gate",
+              "reachable": true,
+              "xy": [
+                1850,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Roof signal platform",
+              "reachable": true,
+              "xy": [
+                720,
+                144
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Exhaust rooftop",
+              "reachable": true,
+              "xy": [
+                1135,
+                125
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Emergency sky lookout",
+              "reachable": true,
+              "xy": [
+                1895,
+                155
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Abandoned annex entry",
+              "reachable": true,
+              "xy": [
+                1980,
+                665
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque parcel overlook",
+              "reachable": true,
+              "xy": [
+                1100,
+                532
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Repair service niche",
+              "reachable": true,
+              "xy": [
+                1604,
+                705
+              ]
+            }
+          ],
+          "reachable": 27
+        },
+        "31x27": {
+          "points": [
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Western intake",
+              "reachable": true,
+              "xy": [
+                115,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Wet-strip vestibule",
+              "reachable": true,
+              "xy": [
+                311,
+                614
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Catch-tray control",
+              "reachable": true,
+              "xy": [
+                418,
+                580
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Magnet sorter",
+              "reachable": true,
+              "xy": [
+                665,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorting rail",
+              "reachable": true,
+              "xy": [
+                710,
+                489
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque drive control",
+              "reachable": true,
+              "xy": [
+                1090,
+                512
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque inspection",
+              "reachable": true,
+              "xy": [
+                965,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger registry",
+              "reachable": true,
+              "xy": [
+                1370,
+                625
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger loft",
+              "reachable": true,
+              "xy": [
+                1398,
+                377
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Workers refuge",
+              "reachable": true,
+              "xy": [
+                1746,
+                620
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Crew roof maintenance",
+              "reachable": true,
+              "xy": [
+                1750,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Eastern export",
+              "reachable": true,
+              "xy": [
+                1950,
+                488
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Western roof watch",
+              "reachable": true,
+              "xy": [
+                322,
+                374
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorting roof watch",
+              "reachable": true,
+              "xy": [
+                590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Upper branch",
+              "reachable": true,
+              "xy": [
+                1165,
+                378
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Eastern upper walkway",
+              "reachable": true,
+              "xy": [
+                1590,
+                370
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "West relief gate",
+              "reachable": true,
+              "xy": [
+                145,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Sorter relief gate",
+              "reachable": true,
+              "xy": [
+                605,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque relief gate",
+              "reachable": true,
+              "xy": [
+                1081,
+                499
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Ledger relief gate",
+              "reachable": true,
+              "xy": [
+                1410,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "East relief gate",
+              "reachable": true,
+              "xy": [
+                1850,
+                502
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Roof signal platform",
+              "reachable": true,
+              "xy": [
+                720,
+                144
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Exhaust rooftop",
+              "reachable": true,
+              "xy": [
+                1135,
+                125
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Emergency sky lookout",
+              "reachable": true,
+              "xy": [
+                1895,
+                155
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Abandoned annex entry",
+              "reachable": true,
+              "xy": [
+                1980,
+                665
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Torque parcel overlook",
+              "reachable": true,
+              "xy": [
+                1100,
+                532
+              ]
+            },
+            {
+              "clear": true,
+              "expected_covered": false,
+              "id": "Repair service niche",
+              "reachable": true,
+              "xy": [
+                1604,
+                705
+              ]
+            }
+          ],
+          "reachable": 27
+        }
+      }
+    },
+    "original_declared_graphs": [
+      {
+        "id": "lower",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "West relief gate",
+            "Sorter relief gate",
+            "Torque relief gate",
+            "Torque parcel overlook",
+            "Ledger relief gate",
+            "East relief gate"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "main",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Western intake",
+            "Sorting rail",
+            "Torque drive control",
+            "Ledger registry",
+            "Eastern export",
+            "Abandoned annex entry"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "sky",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Roof signal platform",
+            "Exhaust rooftop",
+            "Worker emergency chimney"
+          ]
+        ],
+        "unresolved_original_site_names": [
+          "Worker emergency chimney"
+        ]
+      },
+      {
+        "id": "upper",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Western roof watch",
+            "Sorting roof watch",
+            "Torque inspection",
+            "Upper branch",
+            "Ledger loft",
+            "Eastern upper walkway",
+            "Crew roof maintenance"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      },
+      {
+        "id": "workcells",
+        "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+        "sequences": [
+          [
+            "Wet-strip vestibule",
+            "Catch-tray control",
+            "Magnet sorter",
+            "Repair service niche",
+            "Workers refuge"
+          ]
+        ],
+        "unresolved_original_site_names": []
+      }
+    ],
+    "point_count": 27,
+    "spawn": [
+      115,
+      489
+    ]
+  },
+  "schema_errors": [],
+  "schema_version": 1,
+  "support": {
+    "bottom_only_fixed_kernel_none": {
+      "cells": 700419,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 700419,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    },
+    "fixed_kernel_none": {
+      "cells": 700419,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 700419,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    },
+    "limitation": "Kernel-none support may still be chemically consumed; geometry rooted to bottom and any declared anchors, not a strength simulation.",
+    "native_hard": {
+      "cells": 700419,
+      "components": 1,
+      "largest_unrooted_components": [],
+      "rooted_cells": 700419,
+      "unrooted_cells": 0,
+      "unrooted_component_count": 0
+    }
+  }
+}
