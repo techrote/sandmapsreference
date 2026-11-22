@@ -1,0 +1,45 @@
+# One-time, source-pinned recovery export. Intentionally no schedule, PR or dispatch trigger.
+name: GOLDMAPS-RECOVERY-001 pinned owner evaluator export
+on:
+  push:
+    branches:
+      - recovery/goldmaps-001-20261122
+    paths:
+      - .github/workflows/goldmaps-recovery-export.yml
+permissions:
+  contents: read
+concurrency:
+  group: goldmaps-recovery-001-export
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout independent recovery evidence only
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            docs/corpus/goldmaps-recovery-001/
+          ref: ${{ github.sha }}
+      - name: Reconstruct and verify all frozen owner package files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 docs/corpus/goldmaps-recovery-001/snapshot/acquire_package.py \
+            --manifest docs/corpus/goldmaps-recovery-001/snapshot/owner-package-files.v2.json \
+            --manifest-sha256 d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0 \
+            --workspace "${RUNNER_TEMP}/goldmaps-recovered"
+          test -s "${RUNNER_TEMP}/goldmaps-recovered/gold-astra-001-owner-evaluation.zip"
+          test -s "${RUNNER_TEMP}/goldmaps-recovered/acquisition-receipt.json"
+      - name: Publish hash-verified evaluation archive and receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: GOLDMAPS-RECOVERY-001-owner-evaluator-586-files
+          path: |
+            ${{ runner.temp }}/goldmaps-recovered/gold-astra-001-owner-evaluation.zip
+            ${{ runner.temp }}/goldmaps-recovered/acquisition-receipt.json
+          compression-level: 0
+          retention-days: 90
+          if-no-files-found: error
