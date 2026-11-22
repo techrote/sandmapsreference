@@ -1,0 +1,14 @@
+{
+  "schema_version":1,"status":"BEFORE_ANY_AUTHOR_GEOMETRY","purpose":"Original-only harness interpretation corrections discovered on baseline replay; no output-informed criteria change.",
+  "image_encoding":{
+    "C1":{"map":{"0":0,"1":100,"2":58,"3":62},"source":"Original build.cjs png() and embedded MaterialIDs PNG tEXt"},
+    "B1":{"map":{"0":0,"1":100,"2":58,"3":62},"source":"Original build.cjs png() and embedded MaterialIDs PNG tEXt"},
+    "C3":{"map":{"0":0,"1":58,"2":62,"3":100},"source":"Original build.cjs lookup assignments"},
+    "D2":{"map":{"0":0,"1":58,"2":62,"3":100},"source":"Original build.cjs lookup assignments"},
+    "B2":{"source":"Original build.js pngIndexed sorts numeric keys of design.json.palette into packed4-bit indices"},
+    "other_arms":"Original PNG indices are literal material IDs and already matched every cell.",
+    "rule":"Never assume a palette index is a material ID; use the original documented encoding. No best-fit remapping or colour fitting. New outputs must declare their own encoding if changed."
+  },
+  "B2_rooting":{"original_source":"Original build.js ground() lines22..27 explicitly seeds top,bottom,left,right boundaries; README describes roof-anchored counter-rotary wheels.","fixed_rule":"Use original four-boundary anchoring for no-regression gate. Also preserve bottom-only diagnostic showing56,345cells in3roof/edge-rooted components; do not call those freely floating or require intrusive ground piers."},
+  "unchanged":"All original coordinates, rectangles, obstruction cases, exact-centre tests, materials, no-regression rule and artistic criteria remain unchanged."
+}

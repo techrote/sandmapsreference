@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "programme": "GOLD-ASTRA-001",
+  "reviewer": "specialist-C",
+  "status": "FROZEN_BEFORE_AUTHOR_GEOMETRY",
+  "author_outputs_seen": false,
+  "prior_reworker_references_seen": false,
+  "allowed_input_root": "../coordinator/author-safe",
+  "technical_checks": [
+    {
+      "id": "T01",
+      "test": "Strict Setup-v2/generated-start schema, current extents, material validity,1MiB budget,32768 stamps/rectangles and applicable native replay-work bounds."
+    },
+    {
+      "id": "T02",
+      "test": "Full native-size row-major uint8 replay by two independent implementations; exact-cell SHA256 and canonical rectangle round-trip; no resize, nearest-point substitution, cell sampling or image-only inference."
+    },
+    {
+      "id": "T03",
+      "test": "No out-of-bounds box/disc claims, invalid IDs or malformed rectangles. Report raw stamp overlaps separately from compact exported rectangle overlap. Final compact rectangles must partition exactly the nonempty cells."
+    },
+    {
+      "id": "T04",
+      "test": "Permanent support uses immovable hard cells with kernel/reactivity disclosed. Four-neighbour rooted components measured against original-declared anchor strips; bottom-boundary rooting also reported as a diagnostic. New unrooted architectural components are a regression unless an explicit intentional suspended fixture is predeclared."
+    },
+    {
+      "id": "T05",
+      "test": "Every liquid's connected footprint, gravity/lateral escape and boundary exposure tested against permanent barriers, with reactive containment limitations. All8 neighbour contact pairs audited; Acid exemptions exactly0,1,12; no new opposing/reactive contacts unless declared purpose requires them."
+    },
+    {
+      "id": "T06",
+      "test": "Image/grid parity uses unannotated1:1 preview plus documented palette/compositing. Crops/local claims must identify exact source rectangles. Beauty image alone never proves grid parity."
+    },
+    {
+      "id": "T07",
+      "test": "Extract every approved-original spawn and named destination coordinate before authoring, preserve exact coordinates, and separately test source declaration, output declaration, occupied centre and each complete actor envelope."
+    },
+    {
+      "id": "T08",
+      "test": "Four-neighbour exact-centre connectivity for19x15,23x19,31x27 rectangular envelopes against nonempty cells, plus native hard-surface-only sensitivity. Out-of-bounds footprint is blocked. A blocked exact centre remains blocked; never snap it to free space."
+    },
+    {
+      "id": "T09",
+      "test": "Consecutive ordered waypoint reachability and explicit path witness are required for a claimed route. Report shortest path lengths, envelope failures and optional safety margins. Plain connectivity is not proof of prescribed traversal."
+    },
+    {
+      "id": "T10",
+      "test": "Every obstruction claim identifies unchanged exact start/goal and blocked region. Compare before/blocked distances and path topology. A forced gallery claim requires that removing the gallery from traversable space disconnects the same endpoints, not just a longer route or a reachable gallery waypoint."
+    },
+    {
+      "id": "T11",
+      "test": "An alternative route claim requires distinct witnessed passages in the final exact cells and preserved endpoint connectivity; all named waypoints checked directly. A single open chamber with arbitrary different path drawings does not establish distinct authored routes."
+    },
+    {
+      "id": "T12",
+      "test": "Native install/actor motion/contact/physics/save/fresh-process reopen reported separately, tied to source/runtime/input hashes. Static pass remains explicitly static where these are absent."
+    }
+  ],
+  "regression_policy": "Characterize every original first. Hard requirement is no introduced regression relative to that original under the same fixed tests. Inherited failures remain prominently reported; passing an intervention does not waive them or turn them into positive claims. A newly claimed repaired property must independently pass its own direct check.",
+  "artistic_criteria": [
+    {
+      "id": "A01",
+      "name": "identity",
+      "criterion": "Preserve the original's specific silhouette, landmark hierarchy, material relationships and named site identity. Distinguish functional morphology from signs, recolouring or captions."
+    },
+    {
+      "id": "A02",
+      "name": "function",
+      "criterion": "At1:1 cells and movement-relevant context, receiving/testing/dispatch/workface relationships must be readable through material-cell geometry and entered space. No requirement for machinery to animate unless claimed."
+    },
+    {
+      "id": "A03",
+      "name": "negative_space",
+      "criterion": "Retain intentional voids, flyways, editing pockets and recovery air. Added detail must support the bounded repair without filling the source's useful emptiness."
+    },
+    {
+      "id": "A04",
+      "name": "topology",
+      "criterion": "Preserve source route logic, unequal levels, separate chambers/crossings and recovery branches. Advertised choices must be distinguishable at the approach and remain exact-cell accessible."
+    },
+    {
+      "id": "A05",
+      "name": "diversity",
+      "criterion": "Across the eight, preserve different spatial/material grammars and intervention scale. Do not flatten all maps into repeated frames, platforms, generic pads, signage or a shared repair motif."
+    }
+  ],
+  "art_rating_scale": {
+    "0": "Fails the stated identity/function or introduces a material regression",
+    "1": "Claim largely depends on explanation; weak cell evidence",
+    "2": "Partly legible or mixed, with a material caveat",
+    "3": "Clearly supported at native cell scale and contextual view",
+    "4": "Exceptionally clear and integrated while preserving source strengths"
+  },
+  "art_decision": "Mandatory original P1 is resolved only with direct before/after evidence in the designated focus; average score cannot hide a remaining P1 or introduced regression. Controls must independently justify abstention. D1 original transfer label OBVIOUS is retained alongside experiment difficult-failure class.",
+  "blinding": "First original/output visual comparison should conceal author labels and repair-reference identity where feasible. Disclose recognizable originals/familiarity; precommit files retain arm identity for provenance. Prior references remain sealed until all output hashes lock.",
+  "reference_authorship": "Call later unsealed controls prior reworker references; distinct human authorship is unverified.",
+  "prohibitions": [
+    "No authoring experimental geometry",
+    "No repair-reference inspection before all-output lock",
+    "No hidden solutions transmitted to author",
+    "No engine edits, paid CI, remote mutations, Ready, merge, closures or automations"
+  ],
+  "fixture_index_sha256": "ac9a08a23e9244939bdace3df174283a6ae155912af0b01f96a7b768f87ca3c9",
+  "validator_sha256": "d4ea246c011973b100c5509e31971835a41611a309d63714af64f29683d3bf87",
+  "fixture_counts": {
+    "C1": 27,
+    "C2": 29,
+    "C3": 25,
+    "B1": 24,
+    "B2": 19,
+    "B3": 34,
+    "D1": 22,
+    "D2": 24
+  },
+  "amendments": [
+    "precommit-amendment-original-encoding.v1.json"
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "anchor_boxes": [],
+  "anchor_policy": "Bottom-boundary four-neighbour component; no inferred anchors.",
+  "extent": [
+    1024,
+    2048
+  ],
+  "id": "D2",
+  "image_index_to_material": {
+    "0": 0,
+    "1": 58,
+    "2": 62,
+    "3": 100
+  },
+  "obstruction_cases": [
+    {
+      "expected_covered_sites": [],
+      "id": "original-solid-block",
+      "rect": [
+        440,
+        947,
+        116,
+        85
+      ]
+    }
+  ],
+  "original_inputs": {
+    "originals/D2/receipt.json": "d1b83b955b29d344790fdb0c5e6db8233ff497be0cb84942b577d68eef42a8ca",
+    "originals/D2/setup.json": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76"
+  },
+  "original_route_graphs": {
+    "east": [
+      "Compression Yard",
+      "Upper Return",
+      "Customs Lookout",
+      "Rail Grade Two",
+      "Lower East Service"
+    ],
+    "main": [
+      "Arrival Mooring",
+      "Entered Salvage Hold",
+      "Lift Seam",
+      "Press Threshold",
+      "Press Chamber",
+      "Right Freight Relay",
+      "Rail Grade One"
+    ],
+    "return": [
+      "West Broken Trestle",
+      "Salvage Control",
+      "West Relay",
+      "West Maintenance",
+      "Deep Repair Bay",
+      "Central Recovery"
+    ],
+    "upper": [
+      "Ship Bridge",
+      "Drylock Threshold",
+      "Fractured Crane Crown",
+      "Salvage Magnet",
+      "East Broken Trestle"
+    ]
+  },
+  "points": [
+    {
+      "id": "Arrival Mooring",
+      "xy": [
+        225,
+        273
+      ]
+    },
+    {
+      "id": "Ship Bridge",
+      "xy": [
+        248,
+        357
+      ]
+    },
+    {
+      "id": "Entered Salvage Hold",
+      "xy": [
+        262,
+        418
+      ]
+    },
+    {
+      "id": "Drylock Threshold",
+      "xy": [
+        153,
+        534
+      ]
+    },
+    {
+      "id": "Fractured Crane Crown",
+      "xy": [
+        744,
+        220
+      ]
+    },
+    {
+      "id": "Salvage Magnet",
+      "xy": [
+        557,
+        607
+      ]
+    },
+    {
+      "id": "West Broken Trestle",
+      "xy": [
+        270,
+        719
+      ]
+    },
+    {
+      "id": "East Broken Trestle",
+      "xy": [
+        774,
+        657
+      ]
+    },
+    {
+      "id": "Lift Seam",
+      "xy": [
+        500,
+        843
+      ]
+    },
+    {
+      "id": "Salvage Control",
+      "xy": [
+        258,
+        952
+      ]
+    },
+    {
+      "id": "Press Threshold",
+      "xy": [
+        713,
+        1050
+      ]
+    },
+    {
+      "id": "Compression Yard",
+      "xy": [
+        831,
+        1060
+      ]
+    },
+    {
+      "id": "Press Chamber",
+      "xy": [
+        856,
+        1190
+      ]
+    },
+    {
+      "id": "Upper Return",
+      "xy": [
+        500,
+        1201
+      ]
+    },
+    {
+      "id": "West Relay",
+      "xy": [
+        255,
+        1318
+      ]
+    },
+    {
+      "id": "Right Freight Relay",
+      "xy": [
+        750,
+        1383
+      ]
+    },
+    {
+      "id": "Customs Lookout",
+      "xy": [
+        793,
+        1490
+      ]
+    },
+    {
+      "id": "Sky Freight Departure",
+      "xy": [
+        745,
+        1590
+      ]
+    },
+    {
+      "id": "Rail Grade One",
+      "xy": [
+        767,
+        1690
+      ]
+    },
+    {
+      "id": "Rail Grade Two",
+      "xy": [
+        768,
+        1790
+      ]
+    },
+    {
+      "id": "Lower East Service",
+      "xy": [
+        782,
+        1920
+      ]
+    },
+    {
+      "id": "West Maintenance",
+      "xy": [
+        235,
+        1718
+      ]
+    },
+    {
+      "id": "Deep Repair Bay",
+      "xy": [
+        218,
+        1826
+      ]
+    },
+    {
+      "id": "Central Recovery",
+      "xy": [
+        497,
+        1800
+      ]
+    }
+  ],
+  "regression_policy": "Original baseline determines inherited failures. Preserve every passing exact-centre test, no moved destinations; resolve declared intervention P1 independently.",
+  "routes": [
+    {
+      "id": "original-unblocked-shortest",
+      "via": [
+        "Lift Seam",
+        "Upper Return"
+      ]
+    },
+    {
+      "id": "original-blocked-shortest",
+      "obstructions": [
+        [
+          440,
+          947,
+          116,
+          85
+        ]
+      ],
+      "via": [
+        "Lift Seam",
+        "Upper Return"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_head": "64fd7061385fd96e5673484e1a12a70e11333386",
+  "source_pr": 196,
+  "spawn": [
+    225,
+    273
+  ]
+}

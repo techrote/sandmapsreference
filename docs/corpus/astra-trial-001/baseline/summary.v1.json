@@ -1,0 +1,628 @@
+{
+  "schema_version": 1,
+  "status": "INDEPENDENT_ORIGINAL_BASELINE_COMPLETE",
+  "results": [
+    {
+      "id": "C1",
+      "cells_sha256": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c",
+      "full_cell_equal": true,
+      "image_parity": {
+        "image_sha256": "4dc78b7e7dd3246469488027e09587b13e8175c3be39a0413982c67f85880a74",
+        "index_to_material": {
+          "0": 0,
+          "1": 100,
+          "2": 58,
+          "3": 62
+        },
+        "method": "documented original palette-index-to-material map",
+        "mismatch_cells": 0,
+        "status": "PASS"
+      },
+      "rectangles": 1974,
+      "raw_overlap": 0,
+      "compact_mismatch": 0,
+      "inert_rooting": {
+        "cells": 700419,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 700419,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "bottom_only_inert_rooting": {
+        "cells": 700419,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 700419,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "sites": {
+        "19x15": 27,
+        "23x19": 27,
+        "31x27": 27
+      },
+      "obstructed_sites": {
+        "original-solid-block": {
+          "19x15": 27,
+          "23x19": 27,
+          "31x27": 27
+        }
+      },
+      "routes": [
+        {
+          "id": "original-unblocked-shortest",
+          "lengths": [
+            1241
+          ],
+          "forced": null
+        },
+        {
+          "id": "original-blocked-shortest",
+          "lengths": [
+            1375
+          ],
+          "forced": null
+        }
+      ],
+      "liquids": [],
+      "contacts": {
+        "different_liquid_contacts": {},
+        "generic_acid_dissolvable_contacts": {},
+        "hot_combustible_or_ice_contacts": {},
+        "neighbourhood": "Moore8, unordered geometric contacts counted once",
+        "pair_reactive_contacts": {}
+      },
+      "unresolved_names": [
+        {
+          "id": "sky",
+          "note": "No aliases or replacement destinations inferred. Existing sequence legs are connected exactly when both frozen centres share the reported free component.",
+          "sequences": [
+            [
+              "Roof signal platform",
+              "Exhaust rooftop",
+              "Worker emergency chimney"
+            ]
+          ],
+          "unresolved_original_site_names": [
+            "Worker emergency chimney"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "cells_sha256": "0d958f92a1f578702056d72363622e2de204c6267f204485585b59096574cff4",
+      "full_cell_equal": true,
+      "image_parity": {
+        "image_sha256": "f16b2326744563242e9f8635a975c531292b5ec3f15d54d025c56d2d780336c2",
+        "index_to_material": null,
+        "method": "palette indices declared as exact material IDs",
+        "mismatch_cells": 0,
+        "status": "PASS"
+      },
+      "rectangles": 3881,
+      "raw_overlap": 0,
+      "compact_mismatch": 0,
+      "inert_rooting": {
+        "cells": 409348,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 409348,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "bottom_only_inert_rooting": {
+        "cells": 409348,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 409348,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "sites": {
+        "19x15": 29,
+        "23x19": 29,
+        "31x27": 29
+      },
+      "obstructed_sites": {
+        "original-solid-block": {
+          "19x15": 28,
+          "23x19": 28,
+          "31x27": 28
+        }
+      },
+      "routes": [],
+      "liquids": [],
+      "contacts": {
+        "different_liquid_contacts": {},
+        "generic_acid_dissolvable_contacts": {},
+        "hot_combustible_or_ice_contacts": {},
+        "neighbourhood": "Moore8, unordered geometric contacts counted once",
+        "pair_reactive_contacts": {}
+      },
+      "unresolved_names": []
+    },
+    {
+      "id": "C3",
+      "cells_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+      "full_cell_equal": true,
+      "image_parity": {
+        "image_sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7",
+        "index_to_material": {
+          "0": 0,
+          "1": 58,
+          "2": 62,
+          "3": 100
+        },
+        "method": "documented original palette-index-to-material map",
+        "mismatch_cells": 0,
+        "status": "PASS"
+      },
+      "rectangles": 3528,
+      "raw_overlap": 0,
+      "compact_mismatch": 0,
+      "inert_rooting": {
+        "cells": 588618,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 588618,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "bottom_only_inert_rooting": {
+        "cells": 588618,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 588618,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "sites": {
+        "19x15": 25,
+        "23x19": 25,
+        "31x27": 25
+      },
+      "obstructed_sites": {
+        "original-solid-block": {
+          "19x15": 25,
+          "23x19": 25,
+          "31x27": 25
+        }
+      },
+      "routes": [
+        {
+          "id": "original-unblocked-shortest",
+          "lengths": [
+            192
+          ],
+          "forced": null
+        },
+        {
+          "id": "original-blocked-shortest",
+          "lengths": [
+            280
+          ],
+          "forced": null
+        }
+      ],
+      "liquids": [],
+      "contacts": {
+        "different_liquid_contacts": {},
+        "generic_acid_dissolvable_contacts": {},
+        "hot_combustible_or_ice_contacts": {},
+        "neighbourhood": "Moore8, unordered geometric contacts counted once",
+        "pair_reactive_contacts": {}
+      },
+      "unresolved_names": []
+    },
+    {
+      "id": "B1",
+      "cells_sha256": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+      "full_cell_equal": true,
+      "image_parity": {
+        "image_sha256": "d788341b3397eee023bc0f699457aea07ffa789e542da285f40de4fd6bebde0a",
+        "index_to_material": {
+          "0": 0,
+          "1": 100,
+          "2": 58,
+          "3": 62
+        },
+        "method": "documented original palette-index-to-material map",
+        "mismatch_cells": 0,
+        "status": "PASS"
+      },
+      "rectangles": 171,
+      "raw_overlap": 0,
+      "compact_mismatch": 0,
+      "inert_rooting": {
+        "cells": 629744,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 629744,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "bottom_only_inert_rooting": {
+        "cells": 629744,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 629744,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "sites": {
+        "19x15": 24,
+        "23x19": 24,
+        "31x27": 24
+      },
+      "obstructed_sites": {
+        "original-solid-block": {
+          "19x15": 24,
+          "23x19": 24,
+          "31x27": 24
+        }
+      },
+      "routes": [
+        {
+          "id": "original-unblocked-shortest",
+          "lengths": [
+            586
+          ],
+          "forced": null
+        },
+        {
+          "id": "original-blocked-shortest",
+          "lengths": [
+            706
+          ],
+          "forced": null
+        }
+      ],
+      "liquids": [],
+      "contacts": {
+        "different_liquid_contacts": {},
+        "generic_acid_dissolvable_contacts": {},
+        "hot_combustible_or_ice_contacts": {},
+        "neighbourhood": "Moore8, unordered geometric contacts counted once",
+        "pair_reactive_contacts": {}
+      },
+      "unresolved_names": []
+    },
+    {
+      "id": "B2",
+      "cells_sha256": "1c159bf70e15309ec0a1d3ed578bad328fe6be414e2fac30bcc685dbbb7532fd",
+      "full_cell_equal": true,
+      "image_parity": {
+        "image_sha256": "4944a061953485c79b417c1eb80ef216ee9e6df821665700f401e451059e9519",
+        "index_to_material": {
+          "0": 0,
+          "1": 58,
+          "10": 128,
+          "2": 62,
+          "3": 63,
+          "4": 72,
+          "5": 77,
+          "6": 79,
+          "7": 100,
+          "8": 101,
+          "9": 117
+        },
+        "method": "documented original palette-index-to-material map",
+        "mismatch_cells": 0,
+        "status": "PASS"
+      },
+      "rectangles": 1917,
+      "raw_overlap": 0,
+      "compact_mismatch": 0,
+      "inert_rooting": {
+        "cells": 260196,
+        "components": 4,
+        "largest_unrooted_components": [],
+        "rooted_cells": 260196,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "bottom_only_inert_rooting": {
+        "cells": 260196,
+        "components": 4,
+        "largest_unrooted_components": [
+          43356,
+          6800,
+          6189
+        ],
+        "rooted_cells": 203851,
+        "unrooted_cells": 56345,
+        "unrooted_component_count": 3
+      },
+      "sites": {
+        "19x15": 19,
+        "23x19": 19,
+        "31x27": 19
+      },
+      "obstructed_sites": {
+        "original-solid-block": {
+          "19x15": 19,
+          "23x19": 19,
+          "31x27": 19
+        }
+      },
+      "routes": [
+        {
+          "id": "original-unblocked-shortest",
+          "lengths": [
+            472
+          ],
+          "forced": null
+        },
+        {
+          "id": "original-blocked-shortest",
+          "lengths": [
+            498
+          ],
+          "forced": null
+        },
+        {
+          "id": "original-blocked-upper",
+          "lengths": [
+            590
+          ],
+          "forced": null
+        },
+        {
+          "id": "original-blocked-lower",
+          "lengths": [
+            740
+          ],
+          "forced": null
+        }
+      ],
+      "liquids": [],
+      "contacts": {
+        "different_liquid_contacts": {},
+        "generic_acid_dissolvable_contacts": {},
+        "hot_combustible_or_ice_contacts": {},
+        "neighbourhood": "Moore8, unordered geometric contacts counted once",
+        "pair_reactive_contacts": {}
+      },
+      "unresolved_names": []
+    },
+    {
+      "id": "B3",
+      "cells_sha256": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+      "full_cell_equal": true,
+      "image_parity": {
+        "image_sha256": "94068c3d4c2c6b77dc8629674337574c350effab0f9ba90290b76847b44aac2e",
+        "index_to_material": null,
+        "method": "palette indices declared as exact material IDs",
+        "mismatch_cells": 0,
+        "status": "PASS"
+      },
+      "rectangles": 4072,
+      "raw_overlap": 0,
+      "compact_mismatch": 0,
+      "inert_rooting": {
+        "cells": 988948,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 988948,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "bottom_only_inert_rooting": {
+        "cells": 988948,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 988948,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "sites": {
+        "19x15": 34,
+        "23x19": 34,
+        "31x27": 34
+      },
+      "obstructed_sites": {
+        "original-solid-block": {
+          "19x15": 33,
+          "23x19": 33,
+          "31x27": 33
+        }
+      },
+      "routes": [
+        {
+          "id": "original-start-finish-shortest",
+          "lengths": [
+            452
+          ],
+          "forced": null
+        },
+        {
+          "id": "original-blocked-alternate-sequence",
+          "lengths": [
+            137,
+            163,
+            663,
+            138,
+            323,
+            232,
+            199,
+            252,
+            400,
+            178,
+            257,
+            231,
+            196,
+            1408,
+            226,
+            760,
+            563,
+            1028,
+            90,
+            177,
+            319
+          ],
+          "forced": null
+        }
+      ],
+      "liquids": [],
+      "contacts": {
+        "different_liquid_contacts": {},
+        "generic_acid_dissolvable_contacts": {},
+        "hot_combustible_or_ice_contacts": {},
+        "neighbourhood": "Moore8, unordered geometric contacts counted once",
+        "pair_reactive_contacts": {}
+      },
+      "unresolved_names": []
+    },
+    {
+      "id": "D1",
+      "cells_sha256": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
+      "full_cell_equal": true,
+      "image_parity": {
+        "image_sha256": "46f3f66d3121e76e85f377ee9796217e07d5c8df611ba3b478037db1a99b6dae",
+        "index_to_material": null,
+        "method": "palette indices declared as exact material IDs",
+        "mismatch_cells": 0,
+        "status": "PASS"
+      },
+      "rectangles": 363,
+      "raw_overlap": 0,
+      "compact_mismatch": 0,
+      "inert_rooting": {
+        "cells": 848031,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 848031,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "bottom_only_inert_rooting": {
+        "cells": 848031,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 848031,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "sites": {
+        "19x15": 22,
+        "23x19": 22,
+        "31x27": 22
+      },
+      "obstructed_sites": {
+        "original-solid-block": {
+          "19x15": 22,
+          "23x19": 22,
+          "31x27": 22
+        }
+      },
+      "routes": [
+        {
+          "id": "original-unblocked-shortest",
+          "lengths": [
+            1916
+          ],
+          "forced": null
+        },
+        {
+          "id": "original-blocked-shortest",
+          "lengths": [
+            2072
+          ],
+          "forced": {
+            "region": [
+              700,
+              850,
+              200,
+              450
+            ],
+            "same_endpoints_still_connected_without_region": true
+          }
+        }
+      ],
+      "liquids": [],
+      "contacts": {
+        "different_liquid_contacts": {},
+        "generic_acid_dissolvable_contacts": {},
+        "hot_combustible_or_ice_contacts": {},
+        "neighbourhood": "Moore8, unordered geometric contacts counted once",
+        "pair_reactive_contacts": {}
+      },
+      "unresolved_names": []
+    },
+    {
+      "id": "D2",
+      "cells_sha256": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81",
+      "full_cell_equal": true,
+      "image_parity": {
+        "image_sha256": "a4b978c693e6e71b556028715e32ebc79b41dc022d9a7c99bd4c8ec9c24334ea",
+        "index_to_material": {
+          "0": 0,
+          "1": 58,
+          "2": 62,
+          "3": 100
+        },
+        "method": "documented original palette-index-to-material map",
+        "mismatch_cells": 0,
+        "status": "PASS"
+      },
+      "rectangles": 981,
+      "raw_overlap": 0,
+      "compact_mismatch": 0,
+      "inert_rooting": {
+        "cells": 536734,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 536734,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "bottom_only_inert_rooting": {
+        "cells": 536734,
+        "components": 1,
+        "largest_unrooted_components": [],
+        "rooted_cells": 536734,
+        "unrooted_cells": 0,
+        "unrooted_component_count": 0
+      },
+      "sites": {
+        "19x15": 24,
+        "23x19": 24,
+        "31x27": 24
+      },
+      "obstructed_sites": {
+        "original-solid-block": {
+          "19x15": 24,
+          "23x19": 24,
+          "31x27": 24
+        }
+      },
+      "routes": [
+        {
+          "id": "original-unblocked-shortest",
+          "lengths": [
+            358
+          ],
+          "forced": null
+        },
+        {
+          "id": "original-blocked-shortest",
+          "lengths": [
+            500
+          ],
+          "forced": null
+        }
+      ],
+      "liquids": [],
+      "contacts": {
+        "different_liquid_contacts": {},
+        "generic_acid_dissolvable_contacts": {},
+        "hot_combustible_or_ice_contacts": {},
+        "neighbourhood": "Moore8, unordered geometric contacts counted once",
+        "pair_reactive_contacts": {}
+      },
+      "unresolved_names": []
+    }
+  ]
+}

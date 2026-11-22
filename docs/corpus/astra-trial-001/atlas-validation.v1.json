@@ -1,0 +1,19 @@
+{
+  "head": "41721453f784373e0cd7bde48287e3f8d11a3315",
+  "checks": [
+    {
+      "script": "validate.mjs",
+      "exit_code": 0,
+      "seconds": 0.176,
+      "script_sha256": "b49440e0e1600f110629f33a74be559aa11705a92d8fe909bd1f3844474c2a2a",
+      "output": "FEATURE-ATLAS v1 PASS: 76 immutable states, 76 unique IDs, 12 portraits; {\"WEAK\":18,\"GOOD\":34,\"INTENTIONAL\":18,\"PENDING\":6}\n"
+    },
+    {
+      "script": "validate-sidecars.mjs",
+      "exit_code": 0,
+      "seconds": 0.087,
+      "script_sha256": "91e5be86917c945a16980b9f5b3a560df134b29ba523a31bbad78932167dbd33",
+      "output": "FEATURE-ATLAS CURRENT-HEAD ADVISORY PASS: 27 exact-child review states\nFEATURE-ATLAS SIDECARS PASS: 7 locality addenda, 25 historical candidate IDs (11 now Art-reviewed exact-HEAD canonical states), 7 repair lanes; immutable baseline 38 unchanged\n"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "recorded_utc": "2026-11-22T05:43:26.003043+00:00",
+  "supersedes_without_deleting": "staging-review.v1.json",
+  "acquisition_manifest": "owner-package-files.v2.json",
+  "acquisition_manifest_sha256": "d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0",
+  "files_in_package": 586,
+  "local_package_verification": "All586 path/size/SHA checks plus verbatim manifest PASS; no extra files",
+  "changes_since_initial": [
+    "Scoped * -text preserves exact checkout bytes",
+    "Exact original test template included by coordinator in revised package",
+    "Case-insensitive removal of inherited PSMODULEPATH for both WindowsPowerShell5.1 child call sites",
+    "Actual effective module path and Get-FileHash module source recorded",
+    "Fail before any Godot process on missing dependency or unsuccessful21-case gate"
+  ],
+  "helper_and_harness_unchanged": true,
+  "geometry_and_native_runtime_unchanged": true,
+  "Windows_run_status": "PENDING_BOUNDED_RERUN; previous failures retained",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "acquire_package.py",
+      "bytes": 7940,
+      "sha256": "32fe407f982c199d8e2192b0b842d7a55c25acebae1b6c4f6315e654a90f496e"
+    },
+    {
+      "path": "run_windows_package.py",
+      "bytes": 14213,
+      "sha256": "f101d1f66e9d11d809116144229b4f0b447409372d8d82f81820640a9253c78d"
+    },
+    {
+      "path": "Invoke-HelperTests.ps1",
+      "bytes": 1631,
+      "sha256": "cd0334e15e6c188c809ce7372b1ed113223d88a58526369bf2493ae54b988814"
+    },
+    {
+      "path": "gold-astra-001-windows.yml",
+      "bytes": 2206,
+      "sha256": "df4e9c713b630645a4ec159c779be1fb8e0561d6a318c84c38c1a1add288883f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6195,
+      "sha256": "632f3d4a0001ca434d03e5800bc3a6635f4c5b74c97b568b6a62ff02bbdb560c"
+    }
+  ]
+}

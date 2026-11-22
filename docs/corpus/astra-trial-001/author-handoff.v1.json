@@ -1,0 +1,1483 @@
+{
+  "schema_version": 1,
+  "programme": "GOLD-ASTRA-001",
+  "time_utc": "2026-11-22T05:10:24.109058+00:00",
+  "status": "ALL_EIGHT_AUTHOR_OUTPUTS_FROZEN_AND_HANDED_TO_ROOT",
+  "preregistration_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "final_all_eight_remote_lock_owner": "root",
+  "authoring_remaining": "NONE",
+  "native_qualification_owner": "independent reviewer",
+  "publication_owner": "root",
+  "publication_instruction": "For each retained bundle, copy exactly the inventory-listed files plus bundle-files.v1.json into original-map-directory/astra-trial-001/. Preserve original parent-map files. Controls may be ledger-only as directed by root. Exclude Python caches.",
+  "custody": {
+    "input_access_log": "input-access.jsonl",
+    "input_access_log_sha256": "6401ad632bab02e57a4a7d0ef498e793784f8c4b369906784553efe49a7c65c9",
+    "attempt_history": "attempt-history.jsonl",
+    "attempt_history_sha256": "9fdf9c12b2021cff434a8a08f6d6aae7bc6fa2ca91a6eb083baee22b341636f3",
+    "baseline_builder_replay": "baselines/original-builder-replay.v1.json",
+    "baseline_builder_replay_sha256": "6e0385c9d6e270cbcdfc512a467506d39ee7e25684e8a1a3a6ca243ac393d2f3",
+    "frozen_allowances": "proposals/cell-derived-allowances.v2.json",
+    "frozen_allowances_sha256": "4548a9db5af5b8fe379967fc74961d78d60b24e5973b4e1bc416c260157ab888",
+    "original_sources_modified": false,
+    "hidden_repaired_reference_access": "NONE"
+  },
+  "retained": [
+    {
+      "schema_version": 1,
+      "arm": "C1",
+      "attempt": 1,
+      "time_utc": "2026-11-22T05:06:52.560804+00:00",
+      "event": "INDIVIDUAL_AUTHOR_OUTPUT_FROZEN",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/C1/001/astra-trial-001",
+      "inventory_sha256": "ec4694063966a865dac4f752b61c2d673a2d2648213eaaf33bffc70d49bc8d18",
+      "candidate_setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "material_plane_sha256_uint8": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c",
+      "changed_cells": 0,
+      "file_count_without_inventory": 35,
+      "geometry_authoring_frozen": true,
+      "native_testing_may_proceed_separately": true,
+      "bounds_xywh": null,
+      "relative_bundle": "attempts/C1/001/astra-trial-001",
+      "inventory": "bundle-files.v1.json",
+      "freeze_record_sha256": "095960198ee8c131e0c913d0055b75de3a3c1c8f331e46d077a37524f60fda3b",
+      "author_source_static": "PASS",
+      "author_reproduction": "PASS",
+      "independent_source_static_art_reproduction": "NO-CHANGE exact-cell/source-static PASS; native baseline reuse authorized",
+      "native_status": "INDEPENDENT_REVIEWER_OWNS_NATIVE_RESULT"
+    },
+    {
+      "schema_version": 1,
+      "arm": "C2",
+      "attempt": 1,
+      "time_utc": "2026-11-22T05:06:52.572675+00:00",
+      "event": "INDIVIDUAL_AUTHOR_OUTPUT_FROZEN",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/C2/001/astra-trial-001",
+      "inventory_sha256": "306379f51f346a8f894eac40afe297f285602e1a7de4778a3ad493f9df66ce79",
+      "candidate_setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "material_plane_sha256_uint8": "0d958f92a1f578702056d72363622e2de204c6267f204485585b59096574cff4",
+      "changed_cells": 0,
+      "file_count_without_inventory": 35,
+      "geometry_authoring_frozen": true,
+      "native_testing_may_proceed_separately": true,
+      "bounds_xywh": null,
+      "relative_bundle": "attempts/C2/001/astra-trial-001",
+      "inventory": "bundle-files.v1.json",
+      "freeze_record_sha256": "bb782f586a85acb92fcf8fd827d0489caceda688442a8f87c0339a3bd356267a",
+      "author_source_static": "PASS",
+      "author_reproduction": "PASS",
+      "independent_source_static_art_reproduction": "NO-CHANGE exact-cell/source-static PASS; native baseline reuse authorized",
+      "native_status": "INDEPENDENT_REVIEWER_OWNS_NATIVE_RESULT"
+    },
+    {
+      "schema_version": 1,
+      "arm": "C3",
+      "attempt": 1,
+      "time_utc": "2026-11-22T05:06:52.588455+00:00",
+      "event": "INDIVIDUAL_AUTHOR_OUTPUT_FROZEN",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/C3/001/astra-trial-001",
+      "inventory_sha256": "ca283d21eec14f4cef646840ae7e50b4cb40ef8bdfd9ca50909d89bf203e50aa",
+      "candidate_setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "material_plane_sha256_uint8": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+      "changed_cells": 0,
+      "file_count_without_inventory": 38,
+      "geometry_authoring_frozen": true,
+      "native_testing_may_proceed_separately": true,
+      "bounds_xywh": null,
+      "relative_bundle": "attempts/C3/001/astra-trial-001",
+      "inventory": "bundle-files.v1.json",
+      "freeze_record_sha256": "41a06ac2198605064273b76d46a8fec2919f01601e56e11a40aa6b7699a19d22",
+      "author_source_static": "PASS",
+      "author_reproduction": "PASS",
+      "independent_source_static_art_reproduction": "NO-CHANGE exact-cell/source-static PASS; native baseline reuse authorized",
+      "native_status": "INDEPENDENT_REVIEWER_OWNS_NATIVE_RESULT"
+    },
+    {
+      "schema_version": 1,
+      "arm": "B1",
+      "attempt": 3,
+      "time_utc": "2026-11-22T05:09:29.101129+00:00",
+      "event": "INDIVIDUAL_AUTHOR_OUTPUT_FROZEN",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/B1/003/astra-trial-001",
+      "inventory_sha256": "8b8ccaa45c8a762b2449147fb8010be4f906d517049af1368ab9356ae20933d0",
+      "candidate_setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+      "material_plane_sha256_uint8": "b19ebd0f044e1a2ddc96e4e4b735b31811573c8832e0c37034c636e27da6923c",
+      "changed_cells": 3283,
+      "file_count_without_inventory": 36,
+      "geometry_authoring_frozen": true,
+      "native_testing_may_proceed_separately": true,
+      "bounds_xywh": [
+        1020,
+        628,
+        210,
+        115
+      ],
+      "relative_bundle": "attempts/B1/003/astra-trial-001",
+      "inventory": "bundle-files.v1.json",
+      "freeze_record_sha256": "1bc052917581e59f347e59182a6b9102761a71e6c1647ac2af12d7a68de443ad",
+      "author_source_static": "PASS",
+      "author_reproduction": "PASS",
+      "independent_source_static_art_reproduction": "PASS",
+      "native_status": "INDEPENDENT_REVIEWER_OWNS_NATIVE_RESULT"
+    },
+    {
+      "schema_version": 1,
+      "arm": "B2",
+      "attempt": 1,
+      "time_utc": "2026-11-22T05:05:59.980904+00:00",
+      "event": "INDIVIDUAL_AUTHOR_OUTPUT_FROZEN",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/B2/001/astra-trial-001",
+      "inventory_sha256": "ed4c0a80588b1c274988d009088f84d8a47ceefcdaef0cae20796b6d7469b05b",
+      "candidate_setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+      "material_plane_sha256_uint8": "3095f91035621491318bf49a6249ade49756a3e389453906e3eec5f6a4456cd5",
+      "changed_cells": 5195,
+      "file_count_without_inventory": 41,
+      "geometry_authoring_frozen": true,
+      "native_testing_may_proceed_separately": true,
+      "bounds_xywh": [
+        944,
+        868,
+        238,
+        46
+      ],
+      "relative_bundle": "attempts/B2/001/astra-trial-001",
+      "inventory": "bundle-files.v1.json",
+      "freeze_record_sha256": "d84779a93a8ae6378f5a008472b0a612c96fc3113d197b8862b3d6f4ff7976ba",
+      "author_source_static": "PASS",
+      "author_reproduction": "PASS",
+      "independent_source_static_art_reproduction": "PASS",
+      "native_status": "INDEPENDENT_REVIEWER_OWNS_NATIVE_RESULT"
+    },
+    {
+      "schema_version": 1,
+      "arm": "B3",
+      "attempt": 3,
+      "time_utc": "2026-11-22T05:09:29.112579+00:00",
+      "event": "INDIVIDUAL_AUTHOR_OUTPUT_FROZEN",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/B3/003/astra-trial-001",
+      "inventory_sha256": "f82d41fd7eb45c4f7f6de2e0feaaf5559c9463f41fc0c6b5aba9bda4375dbc57",
+      "candidate_setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+      "material_plane_sha256_uint8": "3a4c5ead526338cd548fd499c7f22aeca307a9a3c06324eaef46df4694c0f856",
+      "changed_cells": 2376,
+      "file_count_without_inventory": 38,
+      "geometry_authoring_frozen": true,
+      "native_testing_may_proceed_separately": true,
+      "bounds_xywh": [
+        726,
+        250,
+        111,
+        339
+      ],
+      "relative_bundle": "attempts/B3/003/astra-trial-001",
+      "inventory": "bundle-files.v1.json",
+      "freeze_record_sha256": "6caee10a8a3262634a97495c5ec880f3f2175c5d2818a784e9facc4b832f5ab6",
+      "author_source_static": "PASS",
+      "author_reproduction": "PASS",
+      "independent_source_static_art_reproduction": "PASS",
+      "native_status": "INDEPENDENT_REVIEWER_OWNS_NATIVE_RESULT"
+    },
+    {
+      "schema_version": 1,
+      "arm": "D1",
+      "attempt": 2,
+      "time_utc": "2026-11-22T05:09:29.127507+00:00",
+      "event": "INDIVIDUAL_AUTHOR_OUTPUT_FROZEN",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/D1/002/astra-trial-001",
+      "inventory_sha256": "3a4aad0caaf2ac45081bfb10377b56f372d34800379cc084290375960a9a4db8",
+      "candidate_setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+      "material_plane_sha256_uint8": "ed459770f09de635d095bee5b4d3c41f9cef9005449efdbb6bef5126217a7ac3",
+      "changed_cells": 15807,
+      "file_count_without_inventory": 44,
+      "geometry_authoring_frozen": true,
+      "native_testing_may_proceed_separately": true,
+      "bounds_xywh": [
+        362,
+        634,
+        576,
+        1107
+      ],
+      "relative_bundle": "attempts/D1/002/astra-trial-001",
+      "inventory": "bundle-files.v1.json",
+      "freeze_record_sha256": "3fb75cd3ee7333097478750c6c228c5162ad7148dc6d8130bbd6584b62fe8fa0",
+      "author_source_static": "PASS",
+      "author_reproduction": "PASS",
+      "independent_source_static_art_reproduction": "PASS",
+      "native_status": "INDEPENDENT_REVIEWER_OWNS_NATIVE_RESULT"
+    },
+    {
+      "schema_version": 1,
+      "arm": "D2",
+      "attempt": 1,
+      "time_utc": "2026-11-22T05:06:00.003337+00:00",
+      "event": "INDIVIDUAL_AUTHOR_OUTPUT_FROZEN",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/D2/001/astra-trial-001",
+      "inventory_sha256": "2fab72b40afe46013ca7685e2e4567192d4a314f8fa90a9f658e5332745ee977",
+      "candidate_setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+      "material_plane_sha256_uint8": "f9fcc3c98c595c10a763a7319bf30edd0842de6f80033c46a55a97709deacd63",
+      "changed_cells": 7692,
+      "file_count_without_inventory": 43,
+      "geometry_authoring_frozen": true,
+      "native_testing_may_proceed_separately": true,
+      "bounds_xywh": [
+        355,
+        581,
+        575,
+        862
+      ],
+      "relative_bundle": "attempts/D2/001/astra-trial-001",
+      "inventory": "bundle-files.v1.json",
+      "freeze_record_sha256": "af89ecc3f8ce032d6e77854d613b11751aa2d609b4ddd3af805ad30c87aa5352",
+      "author_source_static": "PASS",
+      "author_reproduction": "PASS",
+      "independent_source_static_art_reproduction": "PASS",
+      "native_status": "INDEPENDENT_REVIEWER_OWNS_NATIVE_RESULT"
+    }
+  ],
+  "failed_attempts_retained": [
+    {
+      "arm": "B1",
+      "attempt": 1,
+      "relative_bundle": "attempts/B1/001/astra-trial-001",
+      "status": "FAIL",
+      "issues": [
+        "19x15 normal sites unreachable.",
+        "19x15 obstruction exception set changed: ['Machine transit', 'Press receiver', 'Repair ward']",
+        "19x15 frozen route unreachable: original-unblocked-shortest",
+        "19x15 frozen route unreachable: original-blocked-shortest",
+        "23x19 normal sites unreachable.",
+        "23x19 obstruction exception set changed: ['Machine transit', 'Press receiver', 'Repair ward']",
+        "23x19 frozen route unreachable: original-unblocked-shortest",
+        "23x19 frozen route unreachable: original-blocked-shortest",
+        "31x27 normal sites unreachable.",
+        "31x27 obstruction exception set changed: ['Machine transit', 'Press receiver', 'Repair ward']",
+        "31x27 frozen route unreachable: original-unblocked-shortest",
+        "31x27 frozen route unreachable: original-blocked-shortest"
+      ],
+      "cell_difference": {
+        "changed_cells": 4388,
+        "bounds_xywh": [
+          1020,
+          540,
+          210,
+          203
+        ],
+        "before_material_plane_sha256_uint8": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+        "after_material_plane_sha256_uint8": "11932666097ab31c6355667a578275d6f081d57a2543048dc661f2ff60e18bbd",
+        "material_transitions": [
+          {
+            "from": 0,
+            "to": 58,
+            "cells": 479
+          },
+          {
+            "from": 0,
+            "to": 62,
+            "cells": 3577
+          },
+          {
+            "from": 58,
+            "to": 62,
+            "cells": 332
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f5a98ad0a6c37c64f2b08809e1af719936ec0359ccf4bb045c849b1ea31da0e6",
+          "bytes": 1727
+        },
+        {
+          "path": "baseline/build.cjs",
+          "sha256": "1adf314d9f75d0f14b224ba5713370a9eceb0aefe77696948ea63b564c608c50",
+          "bytes": 19163
+        },
+        {
+          "path": "baseline/setup.json",
+          "sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+          "bytes": 4083
+        },
+        {
+          "path": "basic-checks.json",
+          "sha256": "30b904736e30cfee2390aa9ad7c48f4b05a87f82cdb4aec7a02ce1a06d9a0393",
+          "bytes": 968
+        },
+        {
+          "path": "build-config.json",
+          "sha256": "a85ff8904231eec78845c596bb56235dac1aac9a3d04e09e3a28ae8e5a953c27",
+          "bytes": 1710
+        },
+        {
+          "path": "build-result.json",
+          "sha256": "f10b80bf636f4c7ce865b99477cf45bb1a6bd354d26bdb21680b840a7d063611",
+          "bytes": 5414
+        },
+        {
+          "path": "cell-diff.json",
+          "sha256": "3503fc2aa24a12c4a5313d84dddd4daebe470c448401db39f872ee9b41f13911",
+          "bytes": 532
+        },
+        {
+          "path": "engine-contract.json",
+          "sha256": "f171f8eec38c49339586ef06f0f45f1d6c654d8db53bba78d92eadee47e1057f",
+          "bytes": 5590
+        },
+        {
+          "path": "fixture.json",
+          "sha256": "f8f936b5f3ce5d96c917206c4d2014c9d14da9cd6113a9d697ffdc3bbf2301a1",
+          "bytes": 4326
+        },
+        {
+          "path": "geometry_core.py",
+          "sha256": "1a1318939e01c46d6e4cfe46e15f5cf6d53e17fc2ef963418ec90020557ad59a",
+          "bytes": 9091
+        },
+        {
+          "path": "images/01-ledger-tenements-after.png",
+          "sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909",
+          "bytes": 2257
+        },
+        {
+          "path": "images/01-ledger-tenements-before.png",
+          "sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909",
+          "bytes": 2257
+        },
+        {
+          "path": "images/02-rinse-sorting-after.png",
+          "sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2",
+          "bytes": 1705
+        },
+        {
+          "path": "images/02-rinse-sorting-before.png",
+          "sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2",
+          "bytes": 1705
+        },
+        {
+          "path": "images/03-central-reclaim-after.png",
+          "sha256": "58af0733c9be47af78b1b59ddb73651b0a94c7f25985ad00d146207554b2592c",
+          "bytes": 3735
+        },
+        {
+          "path": "images/03-central-reclaim-before.png",
+          "sha256": "763113debd067bdfca8658c3e8c72039a05233b1f8378552f00ba1505bee19e7",
+          "bytes": 2765
+        },
+        {
+          "path": "images/04-repair-atelier-after.png",
+          "sha256": "c2a5584923f2fa56c9b7133272bddc8d852d04d2c813a2ed6e3f06ae457c0337",
+          "bytes": 2685
+        },
+        {
+          "path": "images/04-repair-atelier-before.png",
+          "sha256": "06eaceac752b6a360ff9c00cdca61c76024b4d69bcf6e3a4c3577eb27adfa2c9",
+          "bytes": 2255
+        },
+        {
+          "path": "images/05-east-tenements-after.png",
+          "sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7",
+          "bytes": 2534
+        },
+        {
+          "path": "images/05-east-tenements-before.png",
+          "sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7",
+          "bytes": 2534
+        },
+        {
+          "path": "images/10-hoist-receiving-detail-after.png",
+          "sha256": "f8f1f109dc930e3ec79b15976c8e0980054164ec104b1d7a78fa4cde2a8f7383",
+          "bytes": 2243
+        },
+        {
+          "path": "images/10-hoist-receiving-detail-before.png",
+          "sha256": "d5971297f29f5b3ea380282e64dc26fde843b9992b67b5e38897097eb7432633",
+          "bytes": 1307
+        },
+        {
+          "path": "images/overview-after.png",
+          "sha256": "06c54ecb2c5b953f977a962c6cfab4c02d10ee47cd7759e0cb4aea2f7b016098",
+          "bytes": 11357
+        },
+        {
+          "path": "images/overview-before.png",
+          "sha256": "a7693f985d569878544614ee100b199cb7fe30a4abe38ab6fd5bc922eccb80de",
+          "bytes": 10144
+        },
+        {
+          "path": "material-catalogue.json",
+          "sha256": "7d20cdae935e6948d0f4bbf147e9de209621decbbda211c14e4758625860fc94",
+          "bytes": 38815
+        },
+        {
+          "path": "operations.json",
+          "sha256": "c211b02b0b23b80124b6704f17b306736faaa1afaa1a4a05cc394e196d59bebe",
+          "bytes": 1550
+        },
+        {
+          "path": "palette.json",
+          "sha256": "b1ab3609396c5fdc065d36e6d342de42af52843322a16f26c5d97aa3749a3a4d",
+          "bytes": 160
+        },
+        {
+          "path": "preservation-contract.json",
+          "sha256": "d6b54ed0a4e6887713ae52c66fbb0475917fe54099a1abe3c059abfc126bae58",
+          "bytes": 1206
+        },
+        {
+          "path": "rationale.md",
+          "sha256": "14198511ed5538ff4830224a2b5ebc6bbef89fb355f27399082b44e17385d09b",
+          "bytes": 599
+        },
+        {
+          "path": "registration.json",
+          "sha256": "fe14c6a357e8066587ce0fbeafc6f5a37c1803d37b36d47bdf6f6815710abc7a",
+          "bytes": 699
+        },
+        {
+          "path": "reproduce.py",
+          "sha256": "a7dc288101339d4215b78e92d608b4112c0c6b9528f37b5d21ef05472dc14af7",
+          "bytes": 6118
+        },
+        {
+          "path": "setup.json",
+          "sha256": "314e3ab4b430398ba6734e6c520d0db84cd8361b161c5ffbee1095fd3c29711f",
+          "bytes": 10467
+        },
+        {
+          "path": "validate.py",
+          "sha256": "9465a31a4226fe2c6cc233007165f10a0bb9b476db481e753542bfdb4ce0dd93",
+          "bytes": 7520
+        },
+        {
+          "path": "validation.json",
+          "sha256": "ebee3ccb15aa994244e2c6763b031126b665ae68e9bd25817889bb6c3e4251a4",
+          "bytes": 40281
+        }
+      ]
+    },
+    {
+      "arm": "B1",
+      "attempt": 2,
+      "relative_bundle": "attempts/B1/002/astra-trial-001",
+      "status": "FAIL",
+      "issues": [
+        "19x15 obstruction exception set changed: ['Machine transit', 'Press receiver', 'Repair ward']",
+        "19x15 frozen route unreachable: original-blocked-shortest",
+        "23x19 obstruction exception set changed: ['Machine transit', 'Press receiver', 'Repair ward']",
+        "23x19 frozen route unreachable: original-blocked-shortest",
+        "31x27 obstruction exception set changed: ['Machine transit', 'Press receiver', 'Repair ward']",
+        "31x27 frozen route unreachable: original-blocked-shortest"
+      ],
+      "cell_difference": {
+        "changed_cells": 3766,
+        "bounds_xywh": [
+          1020,
+          577,
+          210,
+          166
+        ],
+        "before_material_plane_sha256_uint8": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+        "after_material_plane_sha256_uint8": "75607b3f1f048ecf153bdcc7085ac3b77a6ff980cf50d82156ba3e951f3fe54f",
+        "material_transitions": [
+          {
+            "from": 0,
+            "to": 58,
+            "cells": 329
+          },
+          {
+            "from": 0,
+            "to": 62,
+            "cells": 3105
+          },
+          {
+            "from": 58,
+            "to": 62,
+            "cells": 332
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f5a98ad0a6c37c64f2b08809e1af719936ec0359ccf4bb045c849b1ea31da0e6",
+          "bytes": 1727
+        },
+        {
+          "path": "baseline/build.cjs",
+          "sha256": "1adf314d9f75d0f14b224ba5713370a9eceb0aefe77696948ea63b564c608c50",
+          "bytes": 19163
+        },
+        {
+          "path": "baseline/setup.json",
+          "sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+          "bytes": 4083
+        },
+        {
+          "path": "build-config.json",
+          "sha256": "2dc3183d44bcab0384fa9ae9d7f80fc68971eb0659f13e68c70a07f7fbd660b7",
+          "bytes": 1710
+        },
+        {
+          "path": "build-result.json",
+          "sha256": "e702c7d12d18c29293bcd26d48f1df215eaeaff7759abd42e30918cd57180b5f",
+          "bytes": 5414
+        },
+        {
+          "path": "cell-diff.json",
+          "sha256": "c6317c86d51f67cba143bb9a10f79daf8010e7ec0c215becf9e8bb9ebf28d28f",
+          "bytes": 532
+        },
+        {
+          "path": "engine-contract.json",
+          "sha256": "f171f8eec38c49339586ef06f0f45f1d6c654d8db53bba78d92eadee47e1057f",
+          "bytes": 5590
+        },
+        {
+          "path": "fix-evidence.json",
+          "sha256": "315058c75bc9f26c5bb0f4b01a1a3fab97d407a918b721fa176df0f1d5044e05",
+          "bytes": 272
+        },
+        {
+          "path": "fixture.json",
+          "sha256": "f8f936b5f3ce5d96c917206c4d2014c9d14da9cd6113a9d697ffdc3bbf2301a1",
+          "bytes": 4326
+        },
+        {
+          "path": "geometry_core.py",
+          "sha256": "1a1318939e01c46d6e4cfe46e15f5cf6d53e17fc2ef963418ec90020557ad59a",
+          "bytes": 9091
+        },
+        {
+          "path": "images/01-ledger-tenements-after.png",
+          "sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909",
+          "bytes": 2257
+        },
+        {
+          "path": "images/01-ledger-tenements-before.png",
+          "sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909",
+          "bytes": 2257
+        },
+        {
+          "path": "images/02-rinse-sorting-after.png",
+          "sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2",
+          "bytes": 1705
+        },
+        {
+          "path": "images/02-rinse-sorting-before.png",
+          "sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2",
+          "bytes": 1705
+        },
+        {
+          "path": "images/03-central-reclaim-after.png",
+          "sha256": "000bd1a5108aa94e09a25bbb9b566b987734e5258d6205fd48168d219b5635bc",
+          "bytes": 3656
+        },
+        {
+          "path": "images/03-central-reclaim-before.png",
+          "sha256": "763113debd067bdfca8658c3e8c72039a05233b1f8378552f00ba1505bee19e7",
+          "bytes": 2765
+        },
+        {
+          "path": "images/04-repair-atelier-after.png",
+          "sha256": "c2a5584923f2fa56c9b7133272bddc8d852d04d2c813a2ed6e3f06ae457c0337",
+          "bytes": 2685
+        },
+        {
+          "path": "images/04-repair-atelier-before.png",
+          "sha256": "06eaceac752b6a360ff9c00cdca61c76024b4d69bcf6e3a4c3577eb27adfa2c9",
+          "bytes": 2255
+        },
+        {
+          "path": "images/05-east-tenements-after.png",
+          "sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7",
+          "bytes": 2534
+        },
+        {
+          "path": "images/05-east-tenements-before.png",
+          "sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7",
+          "bytes": 2534
+        },
+        {
+          "path": "images/10-hoist-receiving-detail-after.png",
+          "sha256": "87b598965c7b8ce362a2863700d2c47bc9fb72aa57b090e6df23cfd0ba067159",
+          "bytes": 2164
+        },
+        {
+          "path": "images/10-hoist-receiving-detail-before.png",
+          "sha256": "d5971297f29f5b3ea380282e64dc26fde843b9992b67b5e38897097eb7432633",
+          "bytes": 1307
+        },
+        {
+          "path": "images/overview-after.png",
+          "sha256": "b958017060ff1d99964a24d39e1e59e431ec43ecb8c524327b1e98d2d39c758e",
+          "bytes": 11277
+        },
+        {
+          "path": "images/overview-before.png",
+          "sha256": "a7693f985d569878544614ee100b199cb7fe30a4abe38ab6fd5bc922eccb80de",
+          "bytes": 10144
+        },
+        {
+          "path": "material-catalogue.json",
+          "sha256": "7d20cdae935e6948d0f4bbf147e9de209621decbbda211c14e4758625860fc94",
+          "bytes": 38815
+        },
+        {
+          "path": "operations.json",
+          "sha256": "92f1b0a4d633a11591976f4482651a5c6a10df6018603e13218361f840faa39c",
+          "bytes": 1370
+        },
+        {
+          "path": "palette.json",
+          "sha256": "b1ab3609396c5fdc065d36e6d342de42af52843322a16f26c5d97aa3749a3a4d",
+          "bytes": 160
+        },
+        {
+          "path": "preservation-contract.json",
+          "sha256": "d6b54ed0a4e6887713ae52c66fbb0475917fe54099a1abe3c059abfc126bae58",
+          "bytes": 1206
+        },
+        {
+          "path": "rationale.md",
+          "sha256": "6099ac650b2ebe87634e14b21ee59b68b91f5aca8b63154732cd2bb026f52778",
+          "bytes": 914
+        },
+        {
+          "path": "registration.json",
+          "sha256": "fe14c6a357e8066587ce0fbeafc6f5a37c1803d37b36d47bdf6f6815710abc7a",
+          "bytes": 699
+        },
+        {
+          "path": "reproduce.py",
+          "sha256": "a7dc288101339d4215b78e92d608b4112c0c6b9528f37b5d21ef05472dc14af7",
+          "bytes": 6118
+        },
+        {
+          "path": "setup.json",
+          "sha256": "f0b661daca12170a10fab8b1bc0dcbfc365b8dc711233403e19761d4940b36b6",
+          "bytes": 10160
+        },
+        {
+          "path": "validate.py",
+          "sha256": "9465a31a4226fe2c6cc233007165f10a0bb9b476db481e753542bfdb4ce0dd93",
+          "bytes": 7520
+        },
+        {
+          "path": "validation.json",
+          "sha256": "f758faf67af6aa899d0d465994d0190b8b700afba594bb852730442824a20c9c",
+          "bytes": 40100
+        }
+      ]
+    },
+    {
+      "arm": "B3",
+      "attempt": 1,
+      "relative_bundle": "attempts/B3/001/astra-trial-001",
+      "status": "FAIL",
+      "issues": [
+        "31x27 normal sites unreachable.",
+        "31x27 obstruction exception set changed: ['Central basal workshop', 'Central bypass wicket', 'Central low relay', 'Central roof control', 'Central saltfold beacon', 'Central sub-bore', 'East basal workshop', 'East bypass wicket', 'East ceiling laboratory', 'East collector', 'East condenser arm', 'East foundry return', 'East low catch', 'East lower approach', 'East return elbow', 'East upper throat', 'Mid seam low', 'North tri-vault throat', 'South tri-vault bypass', 'Third vault low', 'Third vault overflight', 'Triple vault skylane']",
+        "31x27 frozen route unreachable: original-blocked-alternate-sequence"
+      ],
+      "cell_difference": {
+        "changed_cells": 3120,
+        "bounds_xywh": [
+          723,
+          250,
+          125,
+          339
+        ],
+        "before_material_plane_sha256_uint8": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+        "after_material_plane_sha256_uint8": "0ca7ce0fcea20ce27fc944ba56b0c12175580eba8076e976535cd7ffc38f7d5c",
+        "material_transitions": [
+          {
+            "from": 0,
+            "to": 58,
+            "cells": 595
+          },
+          {
+            "from": 0,
+            "to": 62,
+            "cells": 1219
+          },
+          {
+            "from": 62,
+            "to": 58,
+            "cells": 77
+          },
+          {
+            "from": 100,
+            "to": 58,
+            "cells": 373
+          },
+          {
+            "from": 100,
+            "to": 62,
+            "cells": 656
+          },
+          {
+            "from": 117,
+            "to": 58,
+            "cells": 96
+          },
+          {
+            "from": 117,
+            "to": 62,
+            "cells": 77
+          },
+          {
+            "from": 122,
+            "to": 58,
+            "cells": 27
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "19b4acfbfc31977a5ba319a0278ac25c1748bef218ae7a78ebab3deb07759f4c",
+          "bytes": 1727
+        },
+        {
+          "path": "baseline/build.py",
+          "sha256": "48cb4e7488b92b106e2fd52b173f57be6c8fb0ea90028b6010986f572bf9b95d",
+          "bytes": 16025
+        },
+        {
+          "path": "baseline/setup-brackenfold-trivault-boreworks.json",
+          "sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+          "bytes": 78808
+        },
+        {
+          "path": "basic-checks.json",
+          "sha256": "57e7d89b6526bc87d0cba9fcfedc8586e97571ddca82c546a5f5dedd85b450ef",
+          "bytes": 1348
+        },
+        {
+          "path": "build-config.json",
+          "sha256": "68ddf0b030c365bb2ca5544ed80a43dff261814de0bee3b5ba4c9a0ae3f2b71c",
+          "bytes": 1932
+        },
+        {
+          "path": "build-result.json",
+          "sha256": "fcffba0fabadfbeb98b326dee716d2f206ab3949750e2ca716d7754c34b65670",
+          "bytes": 6564
+        },
+        {
+          "path": "cell-diff.json",
+          "sha256": "1e6df4775420b281b5492d158aba774725c566cd6f355b7f79b269eb56dc5356",
+          "bytes": 862
+        },
+        {
+          "path": "engine-contract.json",
+          "sha256": "f171f8eec38c49339586ef06f0f45f1d6c654d8db53bba78d92eadee47e1057f",
+          "bytes": 5590
+        },
+        {
+          "path": "fixture.json",
+          "sha256": "17fecc15d1f200d37d85972d773dd9613597b0eb16980ffadd7fad7e0a5128b4",
+          "bytes": 7114
+        },
+        {
+          "path": "geometry_core.py",
+          "sha256": "1a1318939e01c46d6e4cfe46e15f5cf6d53e17fc2ef963418ec90020557ad59a",
+          "bytes": 9091
+        },
+        {
+          "path": "images/01-west-ignition-nest-after.png",
+          "sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc",
+          "bytes": 3621
+        },
+        {
+          "path": "images/01-west-ignition-nest-before.png",
+          "sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc",
+          "bytes": 3621
+        },
+        {
+          "path": "images/02-first-vault-hoists-after.png",
+          "sha256": "32863248aaab8b8d52ecf482a4ca3e92efac7c81807438833189e6e86fca2eaf",
+          "bytes": 7091
+        },
+        {
+          "path": "images/02-first-vault-hoists-before.png",
+          "sha256": "a90ebb49e4339d6480650f9046d0628fca6cbafb13034d100abfe28b69976ed2",
+          "bytes": 6486
+        },
+        {
+          "path": "images/03-central-saltfold-hub-after.png",
+          "sha256": "c1eb84c4081fd6064e6e4193833fd28c27256e0f0af6beb11b7f78a147a11df2",
+          "bytes": 8474
+        },
+        {
+          "path": "images/03-central-saltfold-hub-before.png",
+          "sha256": "f0994503384102116949db8707459bf73f88237accbd5e7f2b6b134090acd5ff",
+          "bytes": 8037
+        },
+        {
+          "path": "images/04-east-condenser-bore-after.png",
+          "sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e",
+          "bytes": 5505
+        },
+        {
+          "path": "images/04-east-condenser-bore-before.png",
+          "sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e",
+          "bytes": 5505
+        },
+        {
+          "path": "images/05-east-catcher-switch-after.png",
+          "sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1",
+          "bytes": 4508
+        },
+        {
+          "path": "images/05-east-catcher-switch-before.png",
+          "sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1",
+          "bytes": 4508
+        },
+        {
+          "path": "images/06-deep-service-pockets-after.png",
+          "sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5",
+          "bytes": 4557
+        },
+        {
+          "path": "images/06-deep-service-pockets-before.png",
+          "sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5",
+          "bytes": 4557
+        },
+        {
+          "path": "images/10-first-diaphragm-decision-after.png",
+          "sha256": "e62716a3f00af2580a879c1ae051e30bb56d76efdf5c771b3cc6610a445299c7",
+          "bytes": 3561
+        },
+        {
+          "path": "images/10-first-diaphragm-decision-before.png",
+          "sha256": "c474218757b91d74cdad6cee619f54a21e6f3cc2b62e8056a8f9e43db3e34d35",
+          "bytes": 2874
+        },
+        {
+          "path": "images/overview-after.png",
+          "sha256": "4be7f56bbe28ab521ac2c55cd15bec22e970eb5f483707b355e1c7ffa13c83a2",
+          "bytes": 25880
+        },
+        {
+          "path": "images/overview-before.png",
+          "sha256": "dd2e57883e301cf485741b59dde810da9914ee0bcd696e1acd12bd9f86225fcc",
+          "bytes": 25116
+        },
+        {
+          "path": "material-catalogue.json",
+          "sha256": "7d20cdae935e6948d0f4bbf147e9de209621decbbda211c14e4758625860fc94",
+          "bytes": 38815
+        },
+        {
+          "path": "operations.json",
+          "sha256": "94357da34fc8be6727f43d5d1f0b1f620327a02fe782937342a51094b1eb7dd6",
+          "bytes": 1994
+        },
+        {
+          "path": "palette.json",
+          "sha256": "202435ff89bb20ad54a43c1b9b0fae129ad7cc9ab44de62a5e51634c6bb6394a",
+          "bytes": 365
+        },
+        {
+          "path": "preservation-contract.json",
+          "sha256": "fd559a0cd50c3f2bc9b1de0a705795c8b5b151bea0929f202fcc3f621e8ad41f",
+          "bytes": 1775
+        },
+        {
+          "path": "rationale.md",
+          "sha256": "653f4d3cfdfa37e3639733101538f1c131bd6fd7c342ec426c1f44c94022f203",
+          "bytes": 700
+        },
+        {
+          "path": "registration.json",
+          "sha256": "fe14c6a357e8066587ce0fbeafc6f5a37c1803d37b36d47bdf6f6815710abc7a",
+          "bytes": 699
+        },
+        {
+          "path": "reproduce.py",
+          "sha256": "a7dc288101339d4215b78e92d608b4112c0c6b9528f37b5d21ef05472dc14af7",
+          "bytes": 6118
+        },
+        {
+          "path": "setup.json",
+          "sha256": "6fcfea866da76ae1b4c075ea7742889df6ad66a92cf7a4d776ef339022e94345",
+          "bytes": 81153
+        },
+        {
+          "path": "validate.py",
+          "sha256": "9465a31a4226fe2c6cc233007165f10a0bb9b476db481e753542bfdb4ce0dd93",
+          "bytes": 7520
+        },
+        {
+          "path": "validation.json",
+          "sha256": "4838fa854d42cbf2d2ebf90f1a0d719e2184fcf0e60fd5e50fdcea9fdb7138f1",
+          "bytes": 59420
+        }
+      ]
+    },
+    {
+      "arm": "B3",
+      "attempt": 2,
+      "relative_bundle": "attempts/B3/002/astra-trial-001",
+      "status": "FAIL",
+      "issues": [
+        "31x27 normal sites unreachable.",
+        "31x27 obstruction exception set changed: ['Central basal workshop', 'Central bypass wicket', 'Central low relay', 'Central roof control', 'Central saltfold beacon', 'Central sub-bore', 'East basal workshop', 'East bypass wicket', 'East ceiling laboratory', 'East collector', 'East condenser arm', 'East foundry return', 'East low catch', 'East lower approach', 'East return elbow', 'East upper throat', 'Mid seam low', 'North tri-vault throat', 'Third vault low', 'Third vault overflight', 'Triple vault skylane']",
+        "31x27 frozen route unreachable: original-blocked-alternate-sequence"
+      ],
+      "cell_difference": {
+        "changed_cells": 2699,
+        "bounds_xywh": [
+          726,
+          250,
+          122,
+          339
+        ],
+        "before_material_plane_sha256_uint8": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+        "after_material_plane_sha256_uint8": "185ea8af2053aafcb7ea3460dee1329bbed667cff5cda7923ab8c35fb9ada372",
+        "material_transitions": [
+          {
+            "from": 0,
+            "to": 58,
+            "cells": 247
+          },
+          {
+            "from": 0,
+            "to": 62,
+            "cells": 1219
+          },
+          {
+            "from": 62,
+            "to": 58,
+            "cells": 77
+          },
+          {
+            "from": 100,
+            "to": 58,
+            "cells": 300
+          },
+          {
+            "from": 100,
+            "to": 62,
+            "cells": 656
+          },
+          {
+            "from": 117,
+            "to": 58,
+            "cells": 96
+          },
+          {
+            "from": 117,
+            "to": 62,
+            "cells": 77
+          },
+          {
+            "from": 122,
+            "to": 58,
+            "cells": 27
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "19b4acfbfc31977a5ba319a0278ac25c1748bef218ae7a78ebab3deb07759f4c",
+          "bytes": 1727
+        },
+        {
+          "path": "baseline/build.py",
+          "sha256": "48cb4e7488b92b106e2fd52b173f57be6c8fb0ea90028b6010986f572bf9b95d",
+          "bytes": 16025
+        },
+        {
+          "path": "baseline/setup-brackenfold-trivault-boreworks.json",
+          "sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+          "bytes": 78808
+        },
+        {
+          "path": "build-config.json",
+          "sha256": "5a2d6cfb0dbaf938522f494bab3129c72640cc4d7a34a42d463c0fc652eede6d",
+          "bytes": 1932
+        },
+        {
+          "path": "build-result.json",
+          "sha256": "03661913edc5c52ee1ec9ae116a3826bc09365b10a5a0fbdba7ab59e74094b7e",
+          "bytes": 6564
+        },
+        {
+          "path": "cell-diff.json",
+          "sha256": "2473ce506f7e37961b40339dcb54740ba9225d375871dd808ac23ce4efbebc4a",
+          "bytes": 862
+        },
+        {
+          "path": "engine-contract.json",
+          "sha256": "f171f8eec38c49339586ef06f0f45f1d6c654d8db53bba78d92eadee47e1057f",
+          "bytes": 5590
+        },
+        {
+          "path": "fix-evidence.json",
+          "sha256": "c964a55efe6c782b81e62bd4595277ebd5ea4776d728cb98895784c0d8618514",
+          "bytes": 290
+        },
+        {
+          "path": "fixture.json",
+          "sha256": "17fecc15d1f200d37d85972d773dd9613597b0eb16980ffadd7fad7e0a5128b4",
+          "bytes": 7114
+        },
+        {
+          "path": "geometry_core.py",
+          "sha256": "1a1318939e01c46d6e4cfe46e15f5cf6d53e17fc2ef963418ec90020557ad59a",
+          "bytes": 9091
+        },
+        {
+          "path": "images/01-west-ignition-nest-after.png",
+          "sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc",
+          "bytes": 3621
+        },
+        {
+          "path": "images/01-west-ignition-nest-before.png",
+          "sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc",
+          "bytes": 3621
+        },
+        {
+          "path": "images/02-first-vault-hoists-after.png",
+          "sha256": "7541eaf84c638c828a5a7fce0ee8ed42b24e6b7771a3f69322b34fd033b110df",
+          "bytes": 6948
+        },
+        {
+          "path": "images/02-first-vault-hoists-before.png",
+          "sha256": "a90ebb49e4339d6480650f9046d0628fca6cbafb13034d100abfe28b69976ed2",
+          "bytes": 6486
+        },
+        {
+          "path": "images/03-central-saltfold-hub-after.png",
+          "sha256": "65e4008f7688016a904b1707862435f2ba8be74305bf5e93a829bcf23b4cef89",
+          "bytes": 8459
+        },
+        {
+          "path": "images/03-central-saltfold-hub-before.png",
+          "sha256": "f0994503384102116949db8707459bf73f88237accbd5e7f2b6b134090acd5ff",
+          "bytes": 8037
+        },
+        {
+          "path": "images/04-east-condenser-bore-after.png",
+          "sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e",
+          "bytes": 5505
+        },
+        {
+          "path": "images/04-east-condenser-bore-before.png",
+          "sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e",
+          "bytes": 5505
+        },
+        {
+          "path": "images/05-east-catcher-switch-after.png",
+          "sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1",
+          "bytes": 4508
+        },
+        {
+          "path": "images/05-east-catcher-switch-before.png",
+          "sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1",
+          "bytes": 4508
+        },
+        {
+          "path": "images/06-deep-service-pockets-after.png",
+          "sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5",
+          "bytes": 4557
+        },
+        {
+          "path": "images/06-deep-service-pockets-before.png",
+          "sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5",
+          "bytes": 4557
+        },
+        {
+          "path": "images/10-first-diaphragm-decision-after.png",
+          "sha256": "28bb663e98c8f30d5776116c01c2a23e8fb11a6241ba7d363ac2427fb9d7bde3",
+          "bytes": 3425
+        },
+        {
+          "path": "images/10-first-diaphragm-decision-before.png",
+          "sha256": "c474218757b91d74cdad6cee619f54a21e6f3cc2b62e8056a8f9e43db3e34d35",
+          "bytes": 2874
+        },
+        {
+          "path": "images/overview-after.png",
+          "sha256": "320318cc122acb22edd93f5895b92626623fddd03af1d2b8b5f865613598a1df",
+          "bytes": 25740
+        },
+        {
+          "path": "images/overview-before.png",
+          "sha256": "dd2e57883e301cf485741b59dde810da9914ee0bcd696e1acd12bd9f86225fcc",
+          "bytes": 25116
+        },
+        {
+          "path": "material-catalogue.json",
+          "sha256": "7d20cdae935e6948d0f4bbf147e9de209621decbbda211c14e4758625860fc94",
+          "bytes": 38815
+        },
+        {
+          "path": "operations.json",
+          "sha256": "c61fab1f89446b204e49a20fe9b29c3bebca0ec19886bdccf48a9e32e08e6fd6",
+          "bytes": 1760
+        },
+        {
+          "path": "palette.json",
+          "sha256": "202435ff89bb20ad54a43c1b9b0fae129ad7cc9ab44de62a5e51634c6bb6394a",
+          "bytes": 365
+        },
+        {
+          "path": "preservation-contract.json",
+          "sha256": "fd559a0cd50c3f2bc9b1de0a705795c8b5b151bea0929f202fcc3f621e8ad41f",
+          "bytes": 1775
+        },
+        {
+          "path": "rationale.md",
+          "sha256": "6d00833ba6e26609bb54476bb58d237c41b27b7c21d1e74c4fb1bde8c88ac3be",
+          "bytes": 840
+        },
+        {
+          "path": "registration.json",
+          "sha256": "fe14c6a357e8066587ce0fbeafc6f5a37c1803d37b36d47bdf6f6815710abc7a",
+          "bytes": 699
+        },
+        {
+          "path": "reproduce.py",
+          "sha256": "a7dc288101339d4215b78e92d608b4112c0c6b9528f37b5d21ef05472dc14af7",
+          "bytes": 6118
+        },
+        {
+          "path": "setup.json",
+          "sha256": "fdd318d6befb7ad4caea9d8e7410edb89bbdc8fe65c95ddd193d554b77ce34ed",
+          "bytes": 80786
+        },
+        {
+          "path": "validate.py",
+          "sha256": "9465a31a4226fe2c6cc233007165f10a0bb9b476db481e753542bfdb4ce0dd93",
+          "bytes": 7520
+        },
+        {
+          "path": "validation.json",
+          "sha256": "1e1c11620257bde6cc414940fed8a2a388c9759c7e7568a33362bf6f0aba8cdf",
+          "bytes": 59354
+        }
+      ]
+    },
+    {
+      "arm": "D1",
+      "attempt": 1,
+      "relative_bundle": "attempts/D1/001/astra-trial-001",
+      "status": "FAIL",
+      "issues": [
+        "Changed-cell cap exceeded."
+      ],
+      "cell_difference": {
+        "changed_cells": 17472,
+        "bounds_xywh": [
+          362,
+          634,
+          576,
+          1107
+        ],
+        "before_material_plane_sha256_uint8": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
+        "after_material_plane_sha256_uint8": "9379d532f273ae4d2f6a72f46f02a683d841fd824fad12054b880e564fcf0c45",
+        "material_transitions": [
+          {
+            "from": 0,
+            "to": 49,
+            "cells": 4897
+          },
+          {
+            "from": 0,
+            "to": 62,
+            "cells": 6264
+          },
+          {
+            "from": 0,
+            "to": 63,
+            "cells": 144
+          },
+          {
+            "from": 0,
+            "to": 68,
+            "cells": 3280
+          },
+          {
+            "from": 0,
+            "to": 77,
+            "cells": 126
+          },
+          {
+            "from": 0,
+            "to": 129,
+            "cells": 546
+          },
+          {
+            "from": 0,
+            "to": 130,
+            "cells": 505
+          },
+          {
+            "from": 0,
+            "to": 131,
+            "cells": 685
+          },
+          {
+            "from": 68,
+            "to": 49,
+            "cells": 11
+          },
+          {
+            "from": 68,
+            "to": 62,
+            "cells": 96
+          },
+          {
+            "from": 100,
+            "to": 49,
+            "cells": 559
+          },
+          {
+            "from": 100,
+            "to": 62,
+            "cells": 77
+          },
+          {
+            "from": 100,
+            "to": 68,
+            "cells": 116
+          },
+          {
+            "from": 101,
+            "to": 62,
+            "cells": 165
+          },
+          {
+            "from": 101,
+            "to": 131,
+            "cells": 1
+          }
+        ]
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "f104a1844b4b6d9b123e9ee0f5997fb35337b7a99facb94564ffe87416d96e06",
+          "bytes": 1727
+        },
+        {
+          "path": "baseline/build.cjs",
+          "sha256": "e56cd652af32beb557d3d040e585258179f3dd661639dbb276ca5d3b7e909467",
+          "bytes": 25626
+        },
+        {
+          "path": "baseline/setup.json",
+          "sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+          "bytes": 7690
+        },
+        {
+          "path": "basic-checks.json",
+          "sha256": "60c4541b95609ac9d45be10ecab2dad037a11c3779167582d1585a44cd08b751",
+          "bytes": 1882
+        },
+        {
+          "path": "build-config.json",
+          "sha256": "b2ce18973ff40d21a2afb2ab3fb4a615748844a52771c7010691d614544c3896",
+          "bytes": 2168
+        },
+        {
+          "path": "build-result.json",
+          "sha256": "33c60abbdd4d4c64df38769f482265411e37fd55e4eb6a8affa4d3c016099ff2",
+          "bytes": 9044
+        },
+        {
+          "path": "cell-diff.json",
+          "sha256": "d3c0d41207e84c92f2eade0e93a61d463cad4295d4c1fc7f50afd1f4ecdfa12e",
+          "bytes": 1325
+        },
+        {
+          "path": "engine-contract.json",
+          "sha256": "f171f8eec38c49339586ef06f0f45f1d6c654d8db53bba78d92eadee47e1057f",
+          "bytes": 5590
+        },
+        {
+          "path": "fixture.json",
+          "sha256": "2b67ace67494f5f948c14f3348986484fa6d4df4f61021eb171f4a75563dda21",
+          "bytes": 4079
+        },
+        {
+          "path": "geometry_core.py",
+          "sha256": "1a1318939e01c46d6e4cfe46e15f5cf6d53e17fc2ef963418ec90020557ad59a",
+          "bytes": 9091
+        },
+        {
+          "path": "images/01-west-clinic-after.png",
+          "sha256": "b79226be449fce126aa0c19f49b91f2e3f61568144f27d5f447daac7b2802f53",
+          "bytes": 1949
+        },
+        {
+          "path": "images/01-west-clinic-before.png",
+          "sha256": "b79226be449fce126aa0c19f49b91f2e3f61568144f27d5f447daac7b2802f53",
+          "bytes": 1949
+        },
+        {
+          "path": "images/02-seismic-fork-after.png",
+          "sha256": "ceb96c876608af7d334ddec7d2284e259f9a86a223ea98a381b497bcf51dc099",
+          "bytes": 2622
+        },
+        {
+          "path": "images/02-seismic-fork-before.png",
+          "sha256": "d1fffb52a2536eda5a211a8f52813dbaa8a3b6f60a8ea0218ab2ef0173ca3689",
+          "bytes": 2497
+        },
+        {
+          "path": "images/03-ore-transfer-after.png",
+          "sha256": "b5b022f23ef4591f78d71e87dd09b541df919779a593609a3845252ac2e430b7",
+          "bytes": 2389
+        },
+        {
+          "path": "images/03-ore-transfer-before.png",
+          "sha256": "c30a1570c720ae7f2152f3ea8653b8ad3e5f12611fe8c4fea5b3c4a6d8d96cd4",
+          "bytes": 2198
+        },
+        {
+          "path": "images/04-east-drill-bypass-after.png",
+          "sha256": "a1e0fe618a1688d90a283242fb7d2edf72c618f79976afbab97f3365057fdb93",
+          "bytes": 2299
+        },
+        {
+          "path": "images/04-east-drill-bypass-before.png",
+          "sha256": "98b7c1f662d08cfd908285a2d9256c9ddfd604cd4d9df5979329f57e2ee78b4a",
+          "bytes": 1599
+        },
+        {
+          "path": "images/05-quarantine-after.png",
+          "sha256": "6c5398fdfc1b1fe68ecc41475098cc0d6e79807be80809be936956b8d18777c8",
+          "bytes": 1393
+        },
+        {
+          "path": "images/05-quarantine-before.png",
+          "sha256": "280d9d54b2d84fc017000613445364d4a4a25c117c14498af02d7ace0465e5be",
+          "bytes": 1282
+        },
+        {
+          "path": "images/06-buried-archives-after.png",
+          "sha256": "757244239524e83a9361f67327757b167518a1e2084bfc8cc213c191734bb874",
+          "bytes": 3369
+        },
+        {
+          "path": "images/06-buried-archives-before.png",
+          "sha256": "698725331b948b2eba09b7b6ac91ebfdc38a01efacfc25669d5987522b3076a5",
+          "bytes": 2219
+        },
+        {
+          "path": "images/10-high-crossing-after.png",
+          "sha256": "bf6a17e4fc2961853148bd64ae8f2274f7d2c488a9f2c84aa7eae994c3abf21b",
+          "bytes": 1102
+        },
+        {
+          "path": "images/10-high-crossing-before.png",
+          "sha256": "93075adada1cf5c75dc5481beed452193e9df61c52a3b999063b04f28d24ef3d",
+          "bytes": 584
+        },
+        {
+          "path": "images/11-ore-stage-after.png",
+          "sha256": "3820b9eb4d2067f1a225c1665ffb92904885f8864ead6021a010f1a0ad122635",
+          "bytes": 952
+        },
+        {
+          "path": "images/11-ore-stage-before.png",
+          "sha256": "b6ec5bc95f1be991b8da51e507c183c73adc051ff4682944f433decc399357b2",
+          "bytes": 730
+        },
+        {
+          "path": "images/12-low-broken-joint-after.png",
+          "sha256": "923e22e8099bae0a9c01608435b826c40cddb4d0cd5609d259f052e82dd2da47",
+          "bytes": 1827
+        },
+        {
+          "path": "images/12-low-broken-joint-before.png",
+          "sha256": "594752145ffe1059a1acd3d43f573253a7526e0f2719cd91a948f5bc3af9f676",
+          "bytes": 711
+        },
+        {
+          "path": "images/13-entered-drill-workface-after.png",
+          "sha256": "c2a0013111fe5f06e2e7ed1850a5f71310ce5ab6650efcadafacbe0c770378bc",
+          "bytes": 1935
+        },
+        {
+          "path": "images/13-entered-drill-workface-before.png",
+          "sha256": "95f95b1c4a8209a322e4b5e866dc4c786c1c31dd4b88d51e4cf513f3cc2f28cd",
+          "bytes": 1248
+        },
+        {
+          "path": "images/overview-after.png",
+          "sha256": "8f15c27130b1f93aab6a4142f249ccfa3b5b867dc32ce95272334cd952b48e9f",
+          "bytes": 16368
+        },
+        {
+          "path": "images/overview-before.png",
+          "sha256": "388770056469d694313b510c4b4bb32998c0e5a195994e7ac36a3125127fd30f",
+          "bytes": 13696
+        },
+        {
+          "path": "material-catalogue.json",
+          "sha256": "7d20cdae935e6948d0f4bbf147e9de209621decbbda211c14e4758625860fc94",
+          "bytes": 38815
+        },
+        {
+          "path": "operations.json",
+          "sha256": "5ec7358d43d8115bfb036f84f606da3f9d152407c3c0ac70a8f05823f174f760",
+          "bytes": 5446
+        },
+        {
+          "path": "palette.json",
+          "sha256": "96b4bf74a23bd7e60c0bcc0122f10618606b0167145e37431f59ca2573462882",
+          "bytes": 524
+        },
+        {
+          "path": "preservation-contract.json",
+          "sha256": "eaf5f22da7080ffc7c63a8a4b92dd9f86c3d468b82061501b064ecd76b5806e0",
+          "bytes": 3989
+        },
+        {
+          "path": "rationale.md",
+          "sha256": "9c4db18a8abe418179a28a9b15ce7af1f9a360b155f48de657b35b4ab50c727b",
+          "bytes": 1042
+        },
+        {
+          "path": "registration.json",
+          "sha256": "fe14c6a357e8066587ce0fbeafc6f5a37c1803d37b36d47bdf6f6815710abc7a",
+          "bytes": 699
+        },
+        {
+          "path": "reproduce.py",
+          "sha256": "a7dc288101339d4215b78e92d608b4112c0c6b9528f37b5d21ef05472dc14af7",
+          "bytes": 6118
+        },
+        {
+          "path": "setup.json",
+          "sha256": "fb0d7b8e7d269c64dae83ff7133bc986549e17d7d0baf2cd130309f14d381857",
+          "bytes": 18124
+        },
+        {
+          "path": "validate.py",
+          "sha256": "9465a31a4226fe2c6cc233007165f10a0bb9b476db481e753542bfdb4ce0dd93",
+          "bytes": 7520
+        },
+        {
+          "path": "validation.json",
+          "sha256": "01b914ac85b8b1a3d0fed2094d1519107c446c6d52929c8d6fe41d8a8ba7470d",
+          "bytes": 40339
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Source-static exact-cell checks do not establish native flight.",
+    "Actual Midge continuous bounds remain[-2,-1.5,4,3]; no invented raster actual-hull mask.",
+    "C1 inherited Worker emergency chimney metadata alias unresolved;27 literal sites are fixture authority.",
+    "C2 fixed obstruction intentionally covers East purge interlock.",
+    "C3 original detour establishes reaccess, not compulsory under-invert traversal.",
+    "B3 distinction readable at native approach scale but modest in full overview.",
+    "D1 gallery remains optional under the original obstruction and endpoint test.",
+    "D1 thin eastern low seam proves four-neighbour rooting only, not structural strength.",
+    "All five failed attempts remain in the audit record."
+  ]
+}

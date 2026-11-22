@@ -1,0 +1,255 @@
+{
+  "schema_version": "gold-astra.owner-bundle.v1",
+  "programme": "GOLD-ASTRA-001",
+  "status": "READY_FOR_OWNER_EVALUATION",
+  "output_lock": {
+    "all_eight_locked": true,
+    "timestamp_utc": "2026-11-22T05:17:36.837871+00:00",
+    "record_path": "all-eight-output-lock.v1.json",
+    "record_sha256": "8e83032bb374e680dc63537aa8b3bd2cb05acfdecaadfccd09c30a4b48ac9dc6",
+    "ledger_commit": "0bdbf3fc524e85c30c7095b7e1dad53159fd7d9c"
+  },
+  "preregistration": {
+    "repository": "techrote/sandmapsreference",
+    "pull_request": 209,
+    "commit": "241029a2de59b412e1475ef7f46094d71033ad6e"
+  },
+  "engine": {
+    "accepted_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+    "windows_binaries": [
+      {
+        "path": "godot/addons/cybersand_native/bin/cybersand_native.windows.x86_64.dll",
+        "sha256": "668f2dd094fca611a97c2b6aa38c4cd072179fe9cf591e53578ef57c7db1625e",
+        "bytes": 5820416
+      },
+      {
+        "path": "godot/addons/godot-rapier2d/bin/libgodot_rapier.windows.x86_64-pc-windows-msvc.dll",
+        "sha256": "b54e54bd1a03ae9094b788bf869212b5405b4a04793792d5a7cd81632cb10dd7",
+        "bytes": 9987072
+      }
+    ],
+    "godot_windows": {
+      "version": "4.7 stable",
+      "executables": [
+        {
+          "file_name": "Godot_v4.7-stable_win64.exe",
+          "sha256": "b2ca888d5115a6cedee564764a2ee494a625f2ec2edbabd010fe33c9a88a6bf8"
+        },
+        {
+          "file_name": "Godot_v4.7-stable_win64_console.exe",
+          "sha256": "d8055fb8c7e7f5010d7439ec69be051554055dae55a265f8647bd7301c34161c"
+        }
+      ],
+      "official_release_zip_sha256": "02a5312236f4e0209c78bcb2f52135b1963e6b8888c873c9cee81459e60bcd71",
+      "verification_actor": "Coordinator: recovered qualified evaluator binaries match recorded manifest; official live release ZIP digest checked through API. Curator has not run Windows."
+    }
+  },
+  "maps": [
+    {
+      "arm": "C1",
+      "variant": "original",
+      "setup_path": "maps/C1/original/setup.json",
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "original_pr": 159,
+      "original_head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "output_head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "source_repository_path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json",
+      "disposition": "ORIGINAL_REFERENCE"
+    },
+    {
+      "arm": "C1",
+      "variant": "candidate",
+      "setup_path": "maps/C1/candidate/setup.json",
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "original_pr": 159,
+      "original_head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "output_head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "source_repository_path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json",
+      "disposition": "NO_CHANGE"
+    },
+    {
+      "arm": "C2",
+      "variant": "original",
+      "setup_path": "maps/C2/original/setup.json",
+      "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "original_pr": 150,
+      "original_head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "output_head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "source_repository_path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json",
+      "disposition": "ORIGINAL_REFERENCE"
+    },
+    {
+      "arm": "C2",
+      "variant": "candidate",
+      "setup_path": "maps/C2/candidate/setup.json",
+      "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "original_pr": 150,
+      "original_head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "output_head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "source_repository_path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json",
+      "disposition": "NO_CHANGE"
+    },
+    {
+      "arm": "C3",
+      "variant": "original",
+      "setup_path": "maps/C3/original/setup.json",
+      "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "original_pr": 197,
+      "original_head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "output_head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "source_repository_path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+      "disposition": "ORIGINAL_REFERENCE"
+    },
+    {
+      "arm": "C3",
+      "variant": "candidate",
+      "setup_path": "maps/C3/candidate/setup.json",
+      "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "original_pr": 197,
+      "original_head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "output_head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "source_repository_path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+      "disposition": "NO_CHANGE"
+    },
+    {
+      "arm": "B1",
+      "variant": "original",
+      "setup_path": "maps/B1/original/setup.json",
+      "setup_sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+      "original_pr": 152,
+      "original_head": "eb00a9a55864dfb6d3e076e60ba4684b397228fc",
+      "output_head": "eb00a9a55864dfb6d3e076e60ba4684b397228fc",
+      "source_repository_path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-switchback-recovery-tenements-261121/setup.json",
+      "disposition": "ORIGINAL_REFERENCE"
+    },
+    {
+      "arm": "B1",
+      "variant": "candidate",
+      "setup_path": "maps/B1/candidate/setup.json",
+      "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+      "original_pr": 152,
+      "original_head": "eb00a9a55864dfb6d3e076e60ba4684b397228fc",
+      "output_head": "c242f3c267c6bd8d3a0d9d23642409ac0584a484",
+      "source_repository_path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-switchback-recovery-tenements-261121/astra-trial-001/setup.json",
+      "disposition": "MATERIAL_CHANGE"
+    },
+    {
+      "arm": "B2",
+      "variant": "original",
+      "setup_path": "maps/B2/original/setup.json",
+      "setup_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+      "original_pr": 167,
+      "original_head": "49cdac502d861a8c70e95a1773f5053c321a04c2",
+      "output_head": "49cdac502d861a8c70e95a1773f5053c321a04c2",
+      "source_repository_path": "cybersand-canvases/2048x1024/original-scifi-biomech-wide-umbra-rotor-islet-works-261121-0902/setup-umbra-rotor-islet-works.json",
+      "disposition": "ORIGINAL_REFERENCE"
+    },
+    {
+      "arm": "B2",
+      "variant": "candidate",
+      "setup_path": "maps/B2/candidate/setup.json",
+      "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+      "original_pr": 167,
+      "original_head": "49cdac502d861a8c70e95a1773f5053c321a04c2",
+      "output_head": "65d461c9b1d7444813ca8362d7e3425314e8f277",
+      "source_repository_path": "cybersand-canvases/2048x1024/original-scifi-biomech-wide-umbra-rotor-islet-works-261121-0902/astra-trial-001/setup.json",
+      "disposition": "MATERIAL_CHANGE"
+    },
+    {
+      "arm": "B3",
+      "variant": "original",
+      "setup_path": "maps/B3/original/setup.json",
+      "setup_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+      "original_pr": 170,
+      "original_head": "3a2057dd56804f87d2fec701007ecc277601894f",
+      "output_head": "3a2057dd56804f87d2fec701007ecc277601894f",
+      "source_repository_path": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/setup-brackenfold-trivault-boreworks.json",
+      "disposition": "ORIGINAL_REFERENCE"
+    },
+    {
+      "arm": "B3",
+      "variant": "candidate",
+      "setup_path": "maps/B3/candidate/setup.json",
+      "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+      "original_pr": 170,
+      "original_head": "3a2057dd56804f87d2fec701007ecc277601894f",
+      "output_head": "7c13fbde3664047311b483463ece0e36f3d42e17",
+      "source_repository_path": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/astra-trial-001/setup.json",
+      "disposition": "MATERIAL_CHANGE"
+    },
+    {
+      "arm": "D1",
+      "variant": "original",
+      "setup_path": "maps/D1/original/setup.json",
+      "setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+      "original_pr": 186,
+      "original_head": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+      "output_head": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+      "source_repository_path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json",
+      "disposition": "ORIGINAL_REFERENCE"
+    },
+    {
+      "arm": "D1",
+      "variant": "candidate",
+      "setup_path": "maps/D1/candidate/setup.json",
+      "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+      "original_pr": 186,
+      "original_head": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+      "output_head": "693574b7afce437a4cb008bd2fa200f6256dcc87",
+      "source_repository_path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/astra-trial-001/setup.json",
+      "disposition": "MATERIAL_CHANGE"
+    },
+    {
+      "arm": "D1",
+      "variant": "reference",
+      "setup_path": "maps/D1/reference/setup.json",
+      "setup_sha256": "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+      "original_pr": 186,
+      "original_head": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+      "output_head": "922a27926ea7338e9a1ce09fc64222b1094a9737",
+      "source_repository_path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json",
+      "reference_pr": 203,
+      "disposition": "PRIOR_REWORKER_REFERENCE_MANUAL_HUMAN_AUTHORSHIP_UNVERIFIED"
+    },
+    {
+      "arm": "D2",
+      "variant": "original",
+      "setup_path": "maps/D2/original/setup.json",
+      "setup_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+      "original_pr": 196,
+      "original_head": "64fd7061385fd96e5673484e1a12a70e11333386",
+      "output_head": "64fd7061385fd96e5673484e1a12a70e11333386",
+      "source_repository_path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json",
+      "disposition": "ORIGINAL_REFERENCE"
+    },
+    {
+      "arm": "D2",
+      "variant": "candidate",
+      "setup_path": "maps/D2/candidate/setup.json",
+      "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+      "original_pr": 196,
+      "original_head": "64fd7061385fd96e5673484e1a12a70e11333386",
+      "output_head": "cd1e0192a709e54dc63681e00b0802716398ec1f",
+      "source_repository_path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/astra-trial-001/setup.json",
+      "disposition": "MATERIAL_CHANGE"
+    },
+    {
+      "arm": "D2",
+      "variant": "reference",
+      "setup_path": "maps/D2/reference/setup.json",
+      "setup_sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+      "original_pr": 196,
+      "original_head": "64fd7061385fd96e5673484e1a12a70e11333386",
+      "output_head": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+      "source_repository_path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json",
+      "reference_pr": 208,
+      "disposition": "PRIOR_REWORKER_REFERENCE_MANUAL_HUMAN_AUTHORSHIP_UNVERIFIED"
+    }
+  ],
+  "assembly_notes": [
+    "All map inputs are frozen. Owner acceptance remains pending.",
+    "Candidate controls retain exactly their original Setup bytes.",
+    "Reference rows are prior repair-worker outputs; individual manual-human authorship is unverified.",
+    "This manifest and successful byte staging are not native or owner acceptance."
+  ]
+}

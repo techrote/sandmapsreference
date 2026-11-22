@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-11-22T05:42:09.824591+00:00",
+  "workflow_run_id": 44990272976,
+  "job_id": 137109583046,
+  "published_commit": "a8b09d853c506d54382bc950b2a5e515d849dec6",
+  "input_manifest_sha256": "a0bce08c63121c5dc84971813b241c835f5b586773f6192fcc45af4855276270",
+  "observed_package_result": {
+    "files": 585,
+    "reconstruction": true,
+    "ZIP_extraction_identity": true,
+    "manifest_bytes_equal": true
+  },
+  "observed_native_preflight": {
+    "import": true,
+    "Godot_version": "4.7-stable official 5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+    "Rapier": "0.35.2",
+    "native_bridge_registered": true,
+    "actual_workbench_directory_resolved": true
+  },
+  "helper21_completed": false,
+  "native_map_cases_executed": 0,
+  "failures": [
+    {
+      "kind": "PACKAGE_DEPENDENCY_OMISSION",
+      "observed": "Test script Get-Content could not find owner-bundle-manifest.template.v1.json",
+      "confirmed": true,
+      "repair": "Add exact original synthetic-test template to owner package; new586-file manifest identity is required."
+    },
+    {
+      "kind": "WINDOWS_POWERSHELL_MODULE_DISCOVERY",
+      "observed": "Real helper C1 staging raised CommandNotFoundException for Get-FileHash",
+      "diagnosis": "pwsh -> Python -> Windows PowerShell inherits PowerShell7 PSModulePath, a failure mode explicitly documented by Microsoft. Failed run did not print effective module path; next run records it and command source.",
+      "repair": "Remove only PSMODULEPATH, case-insensitively, from child process environment; Windows PowerShell rebuilds its normal module locations.",
+      "primary_source": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-5.1"
+    }
+  ],
+  "additional_gate": "Fail immediately on missing template or failed21-case suite, before any Godot import/native map process.",
+  "unchanged": "Geometry, exact map pins, installer, synthetic test script, GDScript harness, engine source and binary identities. No hash gate normalization.",
+  "local_verification": [
+    "Python files compile",
+    "Case-insensitive environment filter preserves every unrelated environment entry"
+  ]
+}

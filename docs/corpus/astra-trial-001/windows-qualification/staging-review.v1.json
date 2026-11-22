@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-11-22T05:35:43.695015+00:00",
+  "acquisition_manifest_sha256": "a0bce08c63121c5dc84971813b241c835f5b586773f6192fcc45af4855276270",
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "helper_sha256": "4a5e4a2325ac5ec3cf032d7558e9cd684a923bcb8958a92e48d6aa82a0b6ee10",
+  "native_harness_sha256": "a9a904a4a76c28b8615713c0914381b2916fefcd0f60da9489e9aa18ebf6774a",
+  "repository_public_verified": true,
+  "main_github_workflows_directory": "HTTP404; no main workflow conflict found",
+  "local_verification": {
+    "python_compile": true,
+    "workflow_structure": true,
+    "package_files_verified": 585,
+    "package_mismatch_count": 0,
+    "manifest_bytes_equal": true,
+    "unexpected_files": [],
+    "Owner_Preflight_absolute_script_execution": "Passed under pinned LinuxGodot4.7, separate fresh data directory; NOT a Windows result"
+  },
+  "Windows_execution_status": "UNTESTED_PENDING_ROOT_PUBLICATION",
+  "files": [
+    {
+      "path": "acquire_package.py",
+      "bytes": 7940,
+      "sha256": "35fef513c65dd266f05de75ffcb7c54f29d47926efb95cd2d07ffd61b3829880"
+    },
+    {
+      "path": "run_windows_package.py",
+      "bytes": 13381,
+      "sha256": "99d114d2f15a7fbde86eeb30a3e6ed4f03c09d3a1f0a2ee30558fc01ae3d4378"
+    },
+    {
+      "path": "Invoke-HelperTests.ps1",
+      "bytes": 1510,
+      "sha256": "12563bb6edd57057a2da63a9520e949bbb4a94cb12b3db2edf2a415e9b24cfbb"
+    },
+    {
+      "path": "gold-astra-001-windows.yml",
+      "bytes": 2206,
+      "sha256": "05560df9f9f0678e201af25526444bd8eb4c275b0bb1c9f08bb27902d79ee3e7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5658,
+      "sha256": "b0560948c537f3323fe5ad02a3a4920cf876535613e5b25d36a74738a923d7e8"
+    }
+  ],
+  "updated_utc": "2026-11-22T05:35:59.108343+00:00",
+  "trigger_review": "Push-only exact ledger branch/path; avoids whole-PR-diff reruns on later document commits"
+}

@@ -1,0 +1,267 @@
+{
+  "anchor_boxes": [],
+  "anchor_policy": "Bottom-boundary four-neighbour component; no inferred anchors.",
+  "extent": [
+    2048,
+    1024
+  ],
+  "id": "B1",
+  "image_index_to_material": {
+    "0": 0,
+    "1": 100,
+    "2": 58,
+    "3": 62
+  },
+  "obstruction_cases": [
+    {
+      "expected_covered_sites": [],
+      "id": "original-solid-block",
+      "rect": [
+        936,
+        450,
+        120,
+        150
+      ]
+    }
+  ],
+  "original_inputs": {
+    "originals/B1/receipt.json": "9e6191d83696c128a41f957e0aab085756aa2e31c90ceb2c25995c316a60eae0",
+    "originals/B1/setup.json": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4"
+  },
+  "original_route_graphs": {
+    "interior": [
+      "Crew canteen",
+      "Rinsing room",
+      "Press service",
+      "Press receiver",
+      "Repair ward",
+      "East domestic booth"
+    ],
+    "lower": [
+      "West under-return",
+      "Central under-return",
+      "East under-return"
+    ],
+    "main": [
+      "West arrival booth",
+      "First component switch",
+      "Reclaim crossways",
+      "Machine transit",
+      "East dispatch",
+      "Outer firebreak"
+    ],
+    "upper": [
+      "Ledger mezzanine",
+      "Sorter overhead",
+      "West high bypass",
+      "Reclaim shaft head",
+      "Upper handoff",
+      "Repair bridge",
+      "West seam",
+      "Sky emergency",
+      "East seam"
+    ]
+  },
+  "points": [
+    {
+      "id": "West arrival booth",
+      "xy": [
+        115,
+        520
+      ]
+    },
+    {
+      "id": "Ledger mezzanine",
+      "xy": [
+        285,
+        398
+      ]
+    },
+    {
+      "id": "Crew canteen",
+      "xy": [
+        370,
+        682
+      ]
+    },
+    {
+      "id": "First component switch",
+      "xy": [
+        555,
+        520
+      ]
+    },
+    {
+      "id": "Rinsing room",
+      "xy": [
+        580,
+        682
+      ]
+    },
+    {
+      "id": "Sorter overhead",
+      "xy": [
+        610,
+        395
+      ]
+    },
+    {
+      "id": "West high bypass",
+      "xy": [
+        785,
+        385
+      ]
+    },
+    {
+      "id": "Reclaim crossways",
+      "xy": [
+        860,
+        523
+      ]
+    },
+    {
+      "id": "Reclaim shaft head",
+      "xy": [
+        1125,
+        400
+      ]
+    },
+    {
+      "id": "Press service",
+      "xy": [
+        1020,
+        698
+      ]
+    },
+    {
+      "id": "Machine transit",
+      "xy": [
+        1080,
+        525
+      ]
+    },
+    {
+      "id": "Press receiver",
+      "xy": [
+        1260,
+        684
+      ]
+    },
+    {
+      "id": "Upper handoff",
+      "xy": [
+        1280,
+        395
+      ]
+    },
+    {
+      "id": "Repair ward",
+      "xy": [
+        1420,
+        690
+      ]
+    },
+    {
+      "id": "Repair bridge",
+      "xy": [
+        1490,
+        382
+      ]
+    },
+    {
+      "id": "East domestic booth",
+      "xy": [
+        1710,
+        690
+      ]
+    },
+    {
+      "id": "East dispatch",
+      "xy": [
+        1800,
+        525
+      ]
+    },
+    {
+      "id": "Outer firebreak",
+      "xy": [
+        1930,
+        515
+      ]
+    },
+    {
+      "id": "West under-return",
+      "xy": [
+        160,
+        816
+      ]
+    },
+    {
+      "id": "Central under-return",
+      "xy": [
+        940,
+        819
+      ]
+    },
+    {
+      "id": "East under-return",
+      "xy": [
+        1840,
+        819
+      ]
+    },
+    {
+      "id": "Sky emergency",
+      "xy": [
+        1080,
+        160
+      ]
+    },
+    {
+      "id": "West seam",
+      "xy": [
+        410,
+        280
+      ]
+    },
+    {
+      "id": "East seam",
+      "xy": [
+        1760,
+        250
+      ]
+    }
+  ],
+  "regression_policy": "Original baseline determines inherited failures. Preserve every passing exact-centre test, no moved destinations; resolve declared intervention P1 independently.",
+  "routes": [
+    {
+      "id": "original-unblocked-shortest",
+      "via": [
+        "First component switch",
+        "Machine transit"
+      ]
+    },
+    {
+      "id": "original-blocked-shortest",
+      "obstructions": [
+        [
+          936,
+          450,
+          120,
+          150
+        ]
+      ],
+      "via": [
+        "First component switch",
+        "Machine transit"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_head": "eb00a9a55864dfb6d3e076e60ba4684b397228fc",
+  "source_pr": 152,
+  "spawn": [
+    115,
+    520
+  ]
+}

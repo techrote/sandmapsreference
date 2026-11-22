@@ -1,0 +1,601 @@
+{
+  "proposal_sha256": "13f1d1fa7be97ce545ce3d41144c662376147841c05cc66296cbd096daf4433b",
+  "results": [
+    {
+      "arm": "C1",
+      "max_change": 0,
+      "regions": []
+    },
+    {
+      "arm": "C2",
+      "max_change": 0,
+      "regions": []
+    },
+    {
+      "arm": "C3",
+      "max_change": 0,
+      "regions": []
+    },
+    {
+      "arm": "B1",
+      "max_change": 5000,
+      "regions": [
+        {
+          "id": "hoist_receiving_handoff",
+          "xywh": [
+            1010,
+            540,
+            224,
+            218
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              3
+            ],
+            [
+              "bottom",
+              0
+            ],
+            [
+              "left",
+              0
+            ],
+            [
+              "right",
+              74
+            ]
+          ],
+          "protected_centres": [
+            {
+              "id": "Press service",
+              "xy": [
+                1020,
+                698
+              ],
+              "footprint_intersection": 702
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "arm": "B2",
+      "max_change": 7500,
+      "regions": [
+        {
+          "id": "existing_diagnostic_station",
+          "xywh": [
+            940,
+            866,
+            246,
+            90
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              0
+            ],
+            [
+              "bottom",
+              246
+            ],
+            [
+              "left",
+              8
+            ],
+            [
+              "right",
+              8
+            ]
+          ],
+          "protected_centres": []
+        }
+      ]
+    },
+    {
+      "arm": "B3",
+      "max_change": 5000,
+      "regions": [
+        {
+          "id": "north_throat_approach",
+          "xywh": [
+            714,
+            246,
+            151,
+            146
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              79
+            ],
+            [
+              "bottom",
+              83
+            ],
+            [
+              "left",
+              0
+            ],
+            [
+              "right",
+              0
+            ]
+          ],
+          "protected_centres": [
+            {
+              "id": "North tri-vault throat",
+              "xy": [
+                809,
+                317
+              ],
+              "footprint_intersection": 837
+            }
+          ]
+        },
+        {
+          "id": "south_bypass_approach",
+          "xywh": [
+            707,
+            464,
+            157,
+            133
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              54
+            ],
+            [
+              "bottom",
+              70
+            ],
+            [
+              "left",
+              11
+            ],
+            [
+              "right",
+              7
+            ]
+          ],
+          "protected_centres": [
+            {
+              "id": "South tri-vault bypass",
+              "xy": [
+                791,
+                532
+              ],
+              "footprint_intersection": 837
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "arm": "D1",
+      "max_change": 16000,
+      "regions": [
+        {
+          "id": "high_crossing_fragment",
+          "xywh": [
+            353,
+            630,
+            316,
+            68
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              58
+            ],
+            [
+              "bottom",
+              29
+            ],
+            [
+              "left",
+              68
+            ],
+            [
+              "right",
+              22
+            ]
+          ],
+          "protected_centres": [
+            {
+              "id": "Upper bridge landing",
+              "xy": [
+                521,
+                710
+              ],
+              "footprint_intersection": 31
+            }
+          ]
+        },
+        {
+          "id": "ore_stage_crossing",
+          "xywh": [
+            361,
+            1090,
+            307,
+            97
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              21
+            ],
+            [
+              "bottom",
+              21
+            ],
+            [
+              "left",
+              97
+            ],
+            [
+              "right",
+              0
+            ]
+          ],
+          "protected_centres": []
+        },
+        {
+          "id": "broken_low_joint",
+          "xywh": [
+            369,
+            1680,
+            322,
+            70
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              0
+            ],
+            [
+              "bottom",
+              0
+            ],
+            [
+              "left",
+              0
+            ],
+            [
+              "right",
+              0
+            ]
+          ],
+          "protected_centres": []
+        },
+        {
+          "id": "entered_drill_workface",
+          "xywh": [
+            676,
+            995,
+            271,
+            322
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              0
+            ],
+            [
+              "bottom",
+              238
+            ],
+            [
+              "left",
+              0
+            ],
+            [
+              "right",
+              322
+            ]
+          ],
+          "protected_centres": [
+            {
+              "id": "East drill bypass middle",
+              "xy": [
+                780,
+                1072
+              ],
+              "footprint_intersection": 837
+            },
+            {
+              "id": "East drill bypass lower",
+              "xy": [
+                757,
+                1218
+              ],
+              "footprint_intersection": 837
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "arm": "D2",
+      "max_change": 14500,
+      "regions": [
+        {
+          "id": "magnet_head",
+          "xywh": [
+            570,
+            540,
+            88,
+            91
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              17
+            ],
+            [
+              "bottom",
+              0
+            ],
+            [
+              "left",
+              0
+            ],
+            [
+              "right",
+              0
+            ]
+          ],
+          "protected_centres": [
+            {
+              "id": "Salvage Magnet",
+              "xy": [
+                557,
+                607
+              ],
+              "footprint_intersection": 81
+            }
+          ]
+        },
+        {
+          "id": "press_workface",
+          "xywh": [
+            765,
+            1095,
+            180,
+            208
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              18
+            ],
+            [
+              "bottom",
+              1
+            ],
+            [
+              "left",
+              17
+            ],
+            [
+              "right",
+              208
+            ]
+          ],
+          "protected_centres": [
+            {
+              "id": "Press Chamber",
+              "xy": [
+                856,
+                1190
+              ],
+              "footprint_intersection": 837
+            }
+          ]
+        },
+        {
+          "id": "upper_west_fracture",
+          "xywh": [
+            327,
+            731,
+            77,
+            115
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              0
+            ],
+            [
+              "bottom",
+              0
+            ],
+            [
+              "left",
+              24
+            ],
+            [
+              "right",
+              0
+            ]
+          ],
+          "protected_centres": []
+        },
+        {
+          "id": "upper_east_fracture",
+          "xywh": [
+            620,
+            691,
+            88,
+            124
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              0
+            ],
+            [
+              "bottom",
+              0
+            ],
+            [
+              "left",
+              0
+            ],
+            [
+              "right",
+              26
+            ]
+          ],
+          "protected_centres": []
+        },
+        {
+          "id": "middle_west_fracture",
+          "xywh": [
+            330,
+            997,
+            76,
+            120
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              0
+            ],
+            [
+              "bottom",
+              0
+            ],
+            [
+              "left",
+              16
+            ],
+            [
+              "right",
+              0
+            ]
+          ],
+          "protected_centres": []
+        },
+        {
+          "id": "middle_east_fracture",
+          "xywh": [
+            604,
+            981,
+            88,
+            121
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              0
+            ],
+            [
+              "bottom",
+              13
+            ],
+            [
+              "left",
+              0
+            ],
+            [
+              "right",
+              16
+            ]
+          ],
+          "protected_centres": []
+        },
+        {
+          "id": "lower_west_fracture",
+          "xywh": [
+            330,
+            1340,
+            66,
+            116
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              0
+            ],
+            [
+              "bottom",
+              13
+            ],
+            [
+              "left",
+              15
+            ],
+            [
+              "right",
+              0
+            ]
+          ],
+          "protected_centres": []
+        },
+        {
+          "id": "lower_east_fracture",
+          "xywh": [
+            624,
+            1408,
+            82,
+            116
+          ],
+          "count_match": true,
+          "hash_match": true,
+          "adjacent_original_nonempty": [
+            [
+              "top",
+              0
+            ],
+            [
+              "bottom",
+              0
+            ],
+            [
+              "left",
+              0
+            ],
+            [
+              "right",
+              16
+            ]
+          ],
+          "protected_centres": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "status": "GO",
+  "scope": "Feasibility approval for the five interventions under v2 preservation contract, before any candidate geometry. Final results still require independent qualification.",
+  "proposal_sha256": "4548a9db5af5b8fe379967fc74961d78d60b24e5973b4e1bc416c260157ab888",
+  "unchanged_arm_allowances_from_previously_reviewed_v1": [
+    "C1",
+    "C2",
+    "C3",
+    "B1",
+    "B2",
+    "B3",
+    "D2"
+  ],
+  "D1_other_three_regions_unchanged": true,
+  "D1_low": {
+    "xywh": [
+      353,
+      1638,
+      338,
+      112
+    ],
+    "occupied_cells": 573,
+    "plane_region_sha256_uint8": "1633d66a5a6bf4a778981f0d1d9c197c1312664ff32dfbd088653612452dfa64",
+    "exterior_original_four_neighbour_contacts": {
+      "top": 29,
+      "bottom": 0,
+      "left": 18,
+      "right": 1
+    },
+    "anchors": [
+      {
+        "xywh": [
+          353,
+          1638,
+          29,
+          18
+        ],
+        "material": 100,
+        "cells": 522,
+        "uniform_material_match": true,
+        "all_components_bottom_rooted": true
+      },
+      {
+        "xywh": [
+          640,
+          1668,
+          51,
+          1
+        ],
+        "material": 101,
+        "cells": 51,
+        "uniform_material_match": true,
+        "all_components_bottom_rooted": true
+      }
+    ],
+    "protected_exact_centre": [
+      516,
+      1648
+    ],
+    "protected_centre_name": "Fault archive overlook",
+    "must_preserve_all_three_envelopes": true
+  },
+  "conditions": [
+    "Outside approved ROI union all final cells remain exactly original. Control geometry remains unchanged. Per-arm changed-cell maxima remain as v2.",
+    "All original Setup settings, actor exact spawn/options, literal site centres, original obstruction cases and 19x15/23x19/31x27 four-neighbour sensitivity fixtures remain frozen.",
+    "Every new permanent component must connect to original boundary-rooted material under original anchor policy. One-cell east seam proves grid connectivity, not engineering strength.",
+    "Preserve full clearance and routing at Fault archive overlook [516,1648], now intersected by enlarged low ROI. No nearest-point substitution.",
+    "Keep every broken crossing discontinuous and no bulk filling. No forced-gallery claim unless exact endpoint obstruction necessity is proved.",
+    "No introduced regression. Characterize inherited limits separately and independently verify intended functional/art improvement."
+  ],
+  "quarantine": "No prior reworker references accessed; no candidate geometry authored or inspected."
+}

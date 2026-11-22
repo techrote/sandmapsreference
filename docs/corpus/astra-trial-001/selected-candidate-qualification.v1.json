@@ -1,0 +1,1272 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-22T05:12:49.505642+00:00",
+  "accepted_engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "cohort": "GOLD-ASTRA-001",
+  "status": "EIGHT_SELECTED_OUTPUTS_QUALIFIED_BEFORE_REFERENCE_RELEASE",
+  "selected_attempts": {
+    "C1": "001",
+    "C2": "001",
+    "C3": "001",
+    "B1": "003",
+    "B2": "001",
+    "B3": "003",
+    "D1": "002",
+    "D2": "001"
+  },
+  "results": [
+    {
+      "arm": "C1",
+      "attempt": "001",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/C1/001/astra-trial-001",
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "material_plane_sha256_uint8": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c",
+      "changed_cells": 0,
+      "change_cap": 0,
+      "changed_cells_outside_roi": 0,
+      "changed_Setup_fields_other_than_edits": [],
+      "compact_rectangles": 1974,
+      "json_bytes": 37016,
+      "unrooted_cells": 0,
+      "named_original_sites": 27,
+      "route_regressions": [],
+      "ordinary_route_lengths": {
+        "original-unblocked-shortest": [
+          1241
+        ],
+        "original-blocked-shortest": [
+          1375
+        ]
+      },
+      "all_paired_crop_images_checked": 12,
+      "paired_crop_pixels_checked": 6437898,
+      "independent_reproduction": null,
+      "art_status": "NO_CHANGE_SUPPORTED",
+      "art_scores": {
+        "A01_identity": 3,
+        "A02_function": 3,
+        "A03_negative_space": 4,
+        "A04_topology": 3,
+        "A05_diversity": 3
+      },
+      "art_receipt": "candidates/C1/001/art-review.json",
+      "frozen_inventory_sha256": "ec4694063966a865dac4f752b61c2d673a2d2648213eaaf33bffc70d49bc8d18",
+      "frozen_files_verified": 35,
+      "freeze_receipt_sha256": "095960198ee8c131e0c913d0055b75de3a3c1c8f331e46d077a37524f60fda3b",
+      "native": {
+        "arm": "C1",
+        "attempt": "001",
+        "receipt_path": "native-results/baseline-v2/C1.receipt.json",
+        "receipt_sha256": "7c175ec4ff1d9720339ca88733dccdaa426c437e3997f65f89da17b3c3a05303",
+        "evidence_reused_for_byte_identical_control": true,
+        "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+        "extent": [
+          2048,
+          1024
+        ],
+        "exact_spawn": [
+          115.0,
+          489.0
+        ],
+        "full_grid_pixels_checked_load": 2097152,
+        "full_grid_mismatches_load": 0,
+        "controlled_drive_ticks": 20,
+        "upward_displacement_cells": 4.29287719726562,
+        "collision": {
+          "end_tick": 292,
+          "max_contacts": 2,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                -1.0,
+                0.0
+              ],
+              "point": [
+                118.0,
+                668.0
+              ],
+              "tick": 292
+            }
+          ],
+          "worker_failed": false
+        },
+        "ordinary_save_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "983e405c690bbce43f4eefaa54c492d5127aaed11116a13f6b27fd4a2405173e",
+        "fresh_process_reopen": true,
+        "saved_bytes_hash_matches_reopen": true,
+        "full_grid_pixels_checked_reopen": 2097152,
+        "full_grid_mismatches_reopen": 0,
+        "separate_processes": true,
+        "status": "LOCAL_NATIVE_PASS"
+      },
+      "evidence_files": {
+        "comparison.json": "beb4fb79d577b0dd7bf896b61e793b54338fe795d0d5d1c4a88c4fbc66daa6db",
+        "candidate.report.json": "408a55472bc644bbbf6f14980fdebf3743d08f669be5d3f551e6b4b6982b8315",
+        "bundle-audit.json": "d17bac55b369846c335db671054a66fe56bf28791222aab11e2d1bcf83912cf3",
+        "art-review.json": "81ecbd52504fb543741f9374eeaaf03e7a462f373faeb32cb1346a3092800f72"
+      },
+      "status": "QUALIFIED_WITH_DECLARED_SCOPE_AND_INHERITED_LIMITS"
+    },
+    {
+      "arm": "C2",
+      "attempt": "001",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/C2/001/astra-trial-001",
+      "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "material_plane_sha256_uint8": "0d958f92a1f578702056d72363622e2de204c6267f204485585b59096574cff4",
+      "changed_cells": 0,
+      "change_cap": 0,
+      "changed_cells_outside_roi": 0,
+      "changed_Setup_fields_other_than_edits": [],
+      "compact_rectangles": 3881,
+      "json_bytes": 72574,
+      "unrooted_cells": 0,
+      "named_original_sites": 29,
+      "route_regressions": [],
+      "ordinary_route_lengths": {},
+      "all_paired_crop_images_checked": 12,
+      "paired_crop_pixels_checked": 7052644,
+      "independent_reproduction": null,
+      "art_status": "NO_CHANGE_SUPPORTED",
+      "art_scores": {
+        "A01_identity": 4,
+        "A02_function": 3,
+        "A03_negative_space": 4,
+        "A04_topology": 4,
+        "A05_diversity": 4
+      },
+      "art_receipt": "candidates/C2/001/art-review.json",
+      "frozen_inventory_sha256": "306379f51f346a8f894eac40afe297f285602e1a7de4778a3ad493f9df66ce79",
+      "frozen_files_verified": 35,
+      "freeze_receipt_sha256": "bb782f586a85acb92fcf8fd827d0489caceda688442a8f87c0339a3bd356267a",
+      "native": {
+        "arm": "C2",
+        "attempt": "001",
+        "receipt_path": "native-results/baseline-v2/C2.receipt.json",
+        "receipt_sha256": "4df1b7ae2951a3e085c0ebb3aaba5d4a5c9214f8d44d3ca081d48a7ee8f631a0",
+        "evidence_reused_for_byte_identical_control": true,
+        "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "extent": [
+          2048,
+          1024
+        ],
+        "exact_spawn": [
+          75.0,
+          365.0
+        ],
+        "full_grid_pixels_checked_load": 2097152,
+        "full_grid_mismatches_load": 0,
+        "controlled_drive_ticks": 20,
+        "upward_displacement_cells": 4.29287719726562,
+        "collision": {
+          "end_tick": 386,
+          "max_contacts": 6,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                0.0,
+                -1.0
+              ],
+              "point": [
+                77.0,
+                713.0
+              ],
+              "tick": 386
+            }
+          ],
+          "worker_failed": false
+        },
+        "ordinary_save_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "fd4c8d4acd8ac87c666bcbd2e29de6b6547e88ee6d5b4b4bca59225a357a3130",
+        "fresh_process_reopen": true,
+        "saved_bytes_hash_matches_reopen": true,
+        "full_grid_pixels_checked_reopen": 2097152,
+        "full_grid_mismatches_reopen": 0,
+        "separate_processes": true,
+        "status": "LOCAL_NATIVE_PASS"
+      },
+      "evidence_files": {
+        "comparison.json": "bfa4f9fa8ffdcc243d22efaba3b1844e11acf6eba63bb1f4ca0a885f57c9c90c",
+        "candidate.report.json": "040c905ad4037f93c1be7adabfed8b27a53fa8c272d6e6c0fc06cf97fa0f2e05",
+        "bundle-audit.json": "6bd48b1ec3f73384cce74e452bc8051ca80220a0337a4bcb2a18b0a6dbf9ba91",
+        "art-review.json": "75f833632d2dd29a9ab7b08d0b0e92b389643020563f6c030e82d439981edd9f"
+      },
+      "status": "QUALIFIED_WITH_DECLARED_SCOPE_AND_INHERITED_LIMITS"
+    },
+    {
+      "arm": "C3",
+      "attempt": "001",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/C3/001/astra-trial-001",
+      "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "material_plane_sha256_uint8": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+      "changed_cells": 0,
+      "change_cap": 0,
+      "changed_cells_outside_roi": 0,
+      "changed_Setup_fields_other_than_edits": [],
+      "compact_rectangles": 3528,
+      "json_bytes": 65411,
+      "unrooted_cells": 0,
+      "named_original_sites": 25,
+      "route_regressions": [],
+      "ordinary_route_lengths": {
+        "original-unblocked-shortest": [
+          192
+        ],
+        "original-blocked-shortest": [
+          280
+        ]
+      },
+      "all_paired_crop_images_checked": 14,
+      "paired_crop_pixels_checked": 6374754,
+      "independent_reproduction": null,
+      "art_status": "NO_CHANGE_SUPPORTED",
+      "art_scores": {
+        "A01_identity": 4,
+        "A02_function": 4,
+        "A03_negative_space": 4,
+        "A04_topology": 4,
+        "A05_diversity": 4
+      },
+      "art_receipt": "candidates/C3/001/art-review.json",
+      "frozen_inventory_sha256": "ca283d21eec14f4cef646840ae7e50b4cb40ef8bdfd9ca50909d89bf203e50aa",
+      "frozen_files_verified": 38,
+      "freeze_receipt_sha256": "41a06ac2198605064273b76d46a8fec2919f01601e56e11a40aa6b7699a19d22",
+      "native": {
+        "arm": "C3",
+        "attempt": "001",
+        "receipt_path": "native-results/baseline-v2/C3.receipt.json",
+        "receipt_sha256": "4b91045a76a578def53c57aa6ecce83bdea51f6a7fe9e99be6b895c1f7498a45",
+        "evidence_reused_for_byte_identical_control": true,
+        "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "extent": [
+          1024,
+          2048
+        ],
+        "exact_spawn": [
+          132.0,
+          350.0
+        ],
+        "full_grid_pixels_checked_load": 2097152,
+        "full_grid_mismatches_load": 0,
+        "controlled_drive_ticks": 20,
+        "upward_displacement_cells": 4.29287719726562,
+        "collision": {
+          "end_tick": 265,
+          "max_contacts": 2,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                -2.38418579101562e-07,
+                -1.0
+              ],
+              "point": [
+                134.0,
+                490.0
+              ],
+              "tick": 265
+            }
+          ],
+          "worker_failed": false
+        },
+        "ordinary_save_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0",
+        "fresh_process_reopen": true,
+        "saved_bytes_hash_matches_reopen": true,
+        "full_grid_pixels_checked_reopen": 2097152,
+        "full_grid_mismatches_reopen": 0,
+        "separate_processes": true,
+        "status": "LOCAL_NATIVE_PASS"
+      },
+      "evidence_files": {
+        "comparison.json": "6a48f47d8dc22055bb6ab12eaee7e64afaf20edf30d4f795c9086faadeef17a0",
+        "candidate.report.json": "235d378bb4f87a053d4e531251fe27d404e8312395a2c66b03871943cf6e8152",
+        "bundle-audit.json": "88438b6b77f9d7d6c7fb583cda37577db8e341b1a1c1c5e0f045dff2668ff408",
+        "art-review.json": "6fff1fd8d58883fa385df408d9f5b0decf2772444a781981510850cc55484572"
+      },
+      "status": "QUALIFIED_WITH_DECLARED_SCOPE_AND_INHERITED_LIMITS"
+    },
+    {
+      "arm": "B1",
+      "attempt": "003",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/B1/003/astra-trial-001",
+      "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+      "material_plane_sha256_uint8": "b19ebd0f044e1a2ddc96e4e4b735b31811573c8832e0c37034c636e27da6923c",
+      "changed_cells": 3283,
+      "change_cap": 5000,
+      "changed_cells_outside_roi": 0,
+      "changed_Setup_fields_other_than_edits": [],
+      "compact_rectangles": 410,
+      "json_bytes": 8536,
+      "unrooted_cells": 0,
+      "named_original_sites": 24,
+      "route_regressions": [],
+      "ordinary_route_lengths": {
+        "original-unblocked-shortest": [
+          586
+        ],
+        "original-blocked-shortest": [
+          706
+        ]
+      },
+      "all_paired_crop_images_checked": 14,
+      "paired_crop_pixels_checked": 6779164,
+      "independent_reproduction": {
+        "exit_code": 0,
+        "stderr": "",
+        "output_tail": "",
+        "files": [
+          {
+            "file": "setup.json",
+            "byte_identical": true
+          },
+          {
+            "file": "build-result.json",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-ledger-tenements-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-ledger-tenements-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-rinse-sorting-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-rinse-sorting-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-central-reclaim-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-central-reclaim-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-repair-atelier-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-repair-atelier-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-east-tenements-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-east-tenements-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-hoist-receiving-detail-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-hoist-receiving-detail-after.png",
+            "byte_identical": true
+          }
+        ],
+        "all_reproduced_bytes_equal": true
+      },
+      "art_status": "ORIGINAL_P1_RESOLVED_SOURCE_STATIC_ART",
+      "art_scores": {
+        "A01_identity": 3,
+        "A02_function": 3,
+        "A03_negative_space": 4,
+        "A04_topology": 3,
+        "A05_diversity": 3
+      },
+      "art_receipt": "candidates/B1/003/art-review.json",
+      "frozen_inventory_sha256": "8b8ccaa45c8a762b2449147fb8010be4f906d517049af1368ab9356ae20933d0",
+      "frozen_files_verified": 36,
+      "freeze_receipt_sha256": "1bc052917581e59f347e59182a6b9102761a71e6c1647ac2af12d7a68de443ad",
+      "native": {
+        "arm": "B1",
+        "attempt": "003",
+        "receipt_path": "native-results/final-b1-b3-d1-v1/B1.receipt.json",
+        "receipt_sha256": "cb89294b68f4284427128f4bb7df5795a1b7b159bd6026f57217eb75d7793164",
+        "evidence_reused_for_byte_identical_control": false,
+        "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+        "extent": [
+          2048,
+          1024
+        ],
+        "exact_spawn": [
+          115.0,
+          520.0
+        ],
+        "full_grid_pixels_checked_load": 2097152,
+        "full_grid_mismatches_load": 0,
+        "controlled_drive_ticks": 20,
+        "upward_displacement_cells": 4.29278564453125,
+        "collision": {
+          "end_tick": 204,
+          "max_contacts": 2,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                0.0,
+                -1.0
+              ],
+              "point": [
+                117.0,
+                582.0
+              ],
+              "tick": 204
+            }
+          ],
+          "worker_failed": false
+        },
+        "ordinary_save_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "961f7f1e727b2f58b27d4491928d8c930d0e1c0ff6d1d5b71c60d017565cc4c7",
+        "fresh_process_reopen": true,
+        "saved_bytes_hash_matches_reopen": true,
+        "full_grid_pixels_checked_reopen": 2097152,
+        "full_grid_mismatches_reopen": 0,
+        "separate_processes": true,
+        "status": "LOCAL_NATIVE_PASS"
+      },
+      "evidence_files": {
+        "comparison.json": "3e46e6112291c35dce700a82878f3f835f64509055b37ead9088e33651f1ebe7",
+        "candidate.report.json": "b9232196e83e092d2415771a68f50d558472a560779781c9a12600e184904288",
+        "bundle-audit.json": "1d038c4920a47c1203ec48489ad5336dc20ab51bb6ee93b4acb213d6aa51f410",
+        "art-review.json": "3f8e02461b18f327e558315d2ceaa82d443d82b18aad79862bdd82091c57db2e"
+      },
+      "status": "QUALIFIED_WITH_DECLARED_SCOPE_AND_INHERITED_LIMITS"
+    },
+    {
+      "arm": "B2",
+      "attempt": "001",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/B2/001/astra-trial-001",
+      "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+      "material_plane_sha256_uint8": "3095f91035621491318bf49a6249ade49756a3e389453906e3eec5f6a4456cd5",
+      "changed_cells": 5195,
+      "change_cap": 7500,
+      "changed_cells_outside_roi": 0,
+      "changed_Setup_fields_other_than_edits": [],
+      "compact_rectangles": 2038,
+      "json_bytes": 39123,
+      "unrooted_cells": 0,
+      "named_original_sites": 19,
+      "route_regressions": [],
+      "ordinary_route_lengths": {
+        "original-unblocked-shortest": [
+          472
+        ],
+        "original-blocked-shortest": [
+          498
+        ],
+        "original-blocked-upper": [
+          590
+        ],
+        "original-blocked-lower": [
+          740
+        ]
+      },
+      "all_paired_crop_images_checked": 18,
+      "paired_crop_pixels_checked": 7100412,
+      "independent_reproduction": {
+        "exit_code": 0,
+        "stderr": "",
+        "output_tail": "",
+        "files": [
+          {
+            "file": "setup.json",
+            "byte_identical": true
+          },
+          {
+            "file": "build-result.json",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-quarantine-jetty-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-quarantine-jetty-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-stamping-islets-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-stamping-islets-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-twin-salvage-rotors-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-twin-salvage-rotors-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-central-examination-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-central-examination-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-arterial-comb-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-arterial-comb-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/06-broken-freight-gantry-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/06-broken-freight-gantry-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/07-buried-archive-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/07-buried-archive-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-diagnostic-detail-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-diagnostic-detail-after.png",
+            "byte_identical": true
+          }
+        ],
+        "all_reproduced_bytes_equal": true
+      },
+      "art_status": "ORIGINAL_P1_RESOLVED_SOURCE_STATIC_ART",
+      "art_scores": {
+        "A01_identity": 4,
+        "A02_function": 3,
+        "A03_negative_space": 4,
+        "A04_topology": 3,
+        "A05_diversity": 4
+      },
+      "art_receipt": "candidates/B2/001/art-review.json",
+      "frozen_inventory_sha256": "ed4c0a80588b1c274988d009088f84d8a47ceefcdaef0cae20796b6d7469b05b",
+      "frozen_files_verified": 41,
+      "freeze_receipt_sha256": "d84779a93a8ae6378f5a008472b0a612c96fc3113d197b8862b3d6f4ff7976ba",
+      "native": {
+        "arm": "B2",
+        "attempt": "001",
+        "receipt_path": "native-results/final-b2-d2-v1/B2.receipt.json",
+        "receipt_sha256": "a6239e68cf1bbc2aab67383104aad9895d5f82352d76a79a021d5b4f3a1dd614",
+        "evidence_reused_for_byte_identical_control": false,
+        "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+        "extent": [
+          2048,
+          1024
+        ],
+        "exact_spawn": [
+          78.0,
+          695.0
+        ],
+        "full_grid_pixels_checked_load": 2097152,
+        "full_grid_mismatches_load": 0,
+        "controlled_drive_ticks": 20,
+        "upward_displacement_cells": 4.29278564453125,
+        "collision": {
+          "end_tick": 263,
+          "max_contacts": 8,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                -1.0,
+                0.0
+              ],
+              "point": [
+                81.0,
+                830.0
+              ],
+              "tick": 263
+            }
+          ],
+          "worker_failed": false
+        },
+        "ordinary_save_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "11dd02077eee607c91047d9e6673b4d80c889ea66583297ddec945f2dd0460d8",
+        "fresh_process_reopen": true,
+        "saved_bytes_hash_matches_reopen": true,
+        "full_grid_pixels_checked_reopen": 2097152,
+        "full_grid_mismatches_reopen": 0,
+        "separate_processes": true,
+        "status": "LOCAL_NATIVE_PASS"
+      },
+      "evidence_files": {
+        "comparison.json": "ebc94b9006686aa0489282f637f2aaeef860008e4d41ff70bb7fbfbb1fd67d30",
+        "candidate.report.json": "7c102a00f11ff5caa5a7e6fa6bcd595b41bfb06e0e299b2eb0f9a61ce23273ec",
+        "bundle-audit.json": "a484a63ce16773eaa73218271aac770de7e2ff900416d3c1c8a3e8769756f9bf",
+        "art-review.json": "61f9921b838e8c81b01c09d4d9e6bc0a2e822d4fceac6bb91440387d160aeda2"
+      },
+      "status": "QUALIFIED_WITH_DECLARED_SCOPE_AND_INHERITED_LIMITS"
+    },
+    {
+      "arm": "B3",
+      "attempt": "003",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/B3/003/astra-trial-001",
+      "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+      "material_plane_sha256_uint8": "3a4c5ead526338cd548fd499c7f22aeca307a9a3c06324eaef46df4694c0f856",
+      "changed_cells": 2376,
+      "change_cap": 5000,
+      "changed_cells_outside_roi": 0,
+      "changed_Setup_fields_other_than_edits": [],
+      "compact_rectangles": 4164,
+      "json_bytes": 80429,
+      "unrooted_cells": 0,
+      "named_original_sites": 34,
+      "route_regressions": [],
+      "ordinary_route_lengths": {
+        "original-start-finish-shortest": [
+          452
+        ],
+        "original-blocked-alternate-sequence": [
+          137,
+          163,
+          663,
+          138,
+          323,
+          232,
+          199,
+          252,
+          400,
+          178,
+          257,
+          231,
+          196,
+          1408,
+          226,
+          760,
+          563,
+          1028,
+          90,
+          177,
+          319
+        ]
+      },
+      "all_paired_crop_images_checked": 16,
+      "paired_crop_pixels_checked": 8172874,
+      "independent_reproduction": {
+        "exit_code": 0,
+        "stderr": "",
+        "output_tail": "",
+        "files": [
+          {
+            "file": "setup.json",
+            "byte_identical": true
+          },
+          {
+            "file": "build-result.json",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-west-ignition-nest-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-west-ignition-nest-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-first-vault-hoists-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-first-vault-hoists-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-central-saltfold-hub-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-central-saltfold-hub-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-east-condenser-bore-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-east-condenser-bore-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-east-catcher-switch-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-east-catcher-switch-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/06-deep-service-pockets-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/06-deep-service-pockets-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-first-diaphragm-decision-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-first-diaphragm-decision-after.png",
+            "byte_identical": true
+          }
+        ],
+        "all_reproduced_bytes_equal": true
+      },
+      "art_status": "ORIGINAL_P1_RESOLVED_SOURCE_STATIC_ART",
+      "art_scores": {
+        "A01_identity": 4,
+        "A02_function": 3,
+        "A03_negative_space": 4,
+        "A04_topology": 3,
+        "A05_diversity": 4
+      },
+      "art_receipt": "candidates/B3/003/art-review.json",
+      "frozen_inventory_sha256": "f82d41fd7eb45c4f7f6de2e0feaaf5559c9463f41fc0c6b5aba9bda4375dbc57",
+      "frozen_files_verified": 38,
+      "freeze_receipt_sha256": "6caee10a8a3262634a97495c5ec880f3f2175c5d2818a784e9facc4b832f5ab6",
+      "native": {
+        "arm": "B3",
+        "attempt": "003",
+        "receipt_path": "native-results/final-b1-b3-d1-v1/B3.receipt.json",
+        "receipt_sha256": "4705c58eaac442483de822bbf8e4a0476b4960d4dff119d93693cb132fb16fff",
+        "evidence_reused_for_byte_identical_control": false,
+        "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+        "extent": [
+          2048,
+          1024
+        ],
+        "exact_spawn": [
+          125.0,
+          312.0
+        ],
+        "full_grid_pixels_checked_load": 2097152,
+        "full_grid_mismatches_load": 0,
+        "controlled_drive_ticks": 20,
+        "upward_displacement_cells": 4.29287719726562,
+        "collision": {
+          "end_tick": 317,
+          "max_contacts": 8,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                0.0,
+                -1.0
+              ],
+              "point": [
+                125.0,
+                533.0
+              ],
+              "tick": 317
+            }
+          ],
+          "worker_failed": false
+        },
+        "ordinary_save_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "c185c13c3d123fd7ee6d0f4175ad5ebf77d2aa4c27cd601e0480a3c9de09234a",
+        "fresh_process_reopen": true,
+        "saved_bytes_hash_matches_reopen": true,
+        "full_grid_pixels_checked_reopen": 2097152,
+        "full_grid_mismatches_reopen": 0,
+        "separate_processes": true,
+        "status": "LOCAL_NATIVE_PASS"
+      },
+      "evidence_files": {
+        "comparison.json": "60304adeeda2a72fe37abe9b73c3d9e42b26d40bac63e7128f18bab17383d59a",
+        "candidate.report.json": "d307ad6d85a7867a5e86072b47680b94f97c3e78c3eda5d2ae196008af1dd145",
+        "bundle-audit.json": "1ba53aebf50d1b968c6ab3dfb09445375bab60e287fcf3ca7cbf6c890358bbac",
+        "art-review.json": "2e82aebfb2fb731019c4b96abb57203def97bc131b9500ee01fe84ba3a4f30a2"
+      },
+      "status": "QUALIFIED_WITH_DECLARED_SCOPE_AND_INHERITED_LIMITS"
+    },
+    {
+      "arm": "D1",
+      "attempt": "002",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/D1/002/astra-trial-001",
+      "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+      "material_plane_sha256_uint8": "ed459770f09de635d095bee5b4d3c41f9cef9005449efdbb6bef5126217a7ac3",
+      "changed_cells": 15807,
+      "change_cap": 16000,
+      "changed_cells_outside_roi": 0,
+      "changed_Setup_fields_other_than_edits": [],
+      "compact_rectangles": 923,
+      "json_bytes": 18123,
+      "unrooted_cells": 0,
+      "named_original_sites": 22,
+      "route_regressions": [],
+      "ordinary_route_lengths": {
+        "original-unblocked-shortest": [
+          1916
+        ],
+        "original-blocked-shortest": [
+          2072
+        ]
+      },
+      "all_paired_crop_images_checked": 22,
+      "paired_crop_pixels_checked": 7022088,
+      "independent_reproduction": {
+        "exit_code": 0,
+        "stderr": "",
+        "output_tail": "",
+        "files": [
+          {
+            "file": "setup.json",
+            "byte_identical": true
+          },
+          {
+            "file": "build-result.json",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-west-clinic-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-west-clinic-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-seismic-fork-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-seismic-fork-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-ore-transfer-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-ore-transfer-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-east-drill-bypass-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-east-drill-bypass-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-quarantine-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-quarantine-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/06-buried-archives-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/06-buried-archives-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-high-crossing-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-high-crossing-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/11-ore-stage-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/11-ore-stage-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/12-low-broken-joint-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/12-low-broken-joint-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/13-entered-drill-workface-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/13-entered-drill-workface-after.png",
+            "byte_identical": true
+          }
+        ],
+        "all_reproduced_bytes_equal": true
+      },
+      "art_status": "ORIGINAL_P1_RESOLVED_SOURCE_STATIC_ART",
+      "art_scores": {
+        "A01_identity": 3,
+        "A02_function": 3,
+        "A03_negative_space": 4,
+        "A04_topology": 3,
+        "A05_diversity": 3
+      },
+      "art_receipt": "candidates/D1/002/art-review.json",
+      "frozen_inventory_sha256": "3a4aad0caaf2ac45081bfb10377b56f372d34800379cc084290375960a9a4db8",
+      "frozen_files_verified": 44,
+      "freeze_receipt_sha256": "3fb75cd3ee7333097478750c6c228c5162ad7148dc6d8130bbd6584b62fe8fa0",
+      "native": {
+        "arm": "D1",
+        "attempt": "002",
+        "receipt_path": "native-results/final-b1-b3-d1-v1/D1.receipt.json",
+        "receipt_sha256": "b1ae04143038bbb9367580200a71b5d5b59ad4c09002120b0264f922a35981fc",
+        "evidence_reused_for_byte_identical_control": false,
+        "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+        "extent": [
+          1024,
+          2048
+        ],
+        "exact_spawn": [
+          509.0,
+          137.0
+        ],
+        "full_grid_pixels_checked_load": 2097152,
+        "full_grid_mismatches_load": 0,
+        "controlled_drive_ticks": 20,
+        "upward_displacement_cells": 4.29286193847656,
+        "collision": {
+          "end_tick": 488,
+          "max_contacts": 4,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                0.0,
+                -1.0
+              ],
+              "point": [
+                511.0,
+                685.0
+              ],
+              "tick": 488
+            }
+          ],
+          "worker_failed": false
+        },
+        "ordinary_save_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "297d4af4baaf261ee94ca02f7228beaf2690b9536373de0bc96ac5f095ad4005",
+        "fresh_process_reopen": true,
+        "saved_bytes_hash_matches_reopen": true,
+        "full_grid_pixels_checked_reopen": 2097152,
+        "full_grid_mismatches_reopen": 0,
+        "separate_processes": true,
+        "status": "LOCAL_NATIVE_PASS"
+      },
+      "evidence_files": {
+        "comparison.json": "608b131d3ef7b1ebc56769b0009a4f4cf3869e715184b91c196286fa0b36fef5",
+        "candidate.report.json": "e0720fcd480ab86b909ed41d3bdf8aade810d0919a0c21f94ff8db5570f988c5",
+        "bundle-audit.json": "0584ef352d6dead5b37fe31ccb5b571ac8f039ef06e8bdeb9acb89e7acd36ffa",
+        "art-review.json": "fa6726d67b661d64e896c793514ee9bc2dcd2a23fa372530b8b12fdfac2ce839"
+      },
+      "status": "QUALIFIED_WITH_DECLARED_SCOPE_AND_INHERITED_LIMITS"
+    },
+    {
+      "arm": "D2",
+      "attempt": "001",
+      "bundle": "/workspace/scratch/038267c40e11/gold-astra-001/author/attempts/D2/001/astra-trial-001",
+      "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+      "material_plane_sha256_uint8": "f9fcc3c98c595c10a763a7319bf30edd0842de6f80033c46a55a97709deacd63",
+      "changed_cells": 7692,
+      "change_cap": 14500,
+      "changed_cells_outside_roi": 0,
+      "changed_Setup_fields_other_than_edits": [],
+      "compact_rectangles": 1294,
+      "json_bytes": 24261,
+      "unrooted_cells": 0,
+      "named_original_sites": 24,
+      "route_regressions": [],
+      "ordinary_route_lengths": {
+        "original-unblocked-shortest": [
+          358
+        ],
+        "original-blocked-shortest": [
+          500
+        ]
+      },
+      "all_paired_crop_images_checked": 20,
+      "paired_crop_pixels_checked": 6836250,
+      "independent_reproduction": {
+        "exit_code": 0,
+        "stderr": "",
+        "output_tail": "",
+        "files": [
+          {
+            "file": "setup.json",
+            "byte_identical": true
+          },
+          {
+            "file": "build-result.json",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/overview-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-entered-breached-ship-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/01-entered-breached-ship-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-crane-magnet-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/02-crane-magnet-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-fractured-trestle-relay-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/03-fractured-trestle-relay-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-salvage-press-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/04-salvage-press-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-customs-rail-grades-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/05-customs-rail-grades-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/06-west-lower-return-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/06-west-lower-return-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-magnet-head-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/10-magnet-head-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/11-compression-workface-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/11-compression-workface-after.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/12-lower-fractures-before.png",
+            "byte_identical": true
+          },
+          {
+            "file": "images/12-lower-fractures-after.png",
+            "byte_identical": true
+          }
+        ],
+        "all_reproduced_bytes_equal": true
+      },
+      "art_status": "ORIGINAL_P1_RESOLVED_SOURCE_STATIC_ART",
+      "art_scores": {
+        "A01_identity": 3,
+        "A02_function": 3,
+        "A03_negative_space": 4,
+        "A04_topology": 3,
+        "A05_diversity": 3
+      },
+      "art_receipt": "candidates/D2/001/art-review.json",
+      "frozen_inventory_sha256": "2fab72b40afe46013ca7685e2e4567192d4a314f8fa90a9f658e5332745ee977",
+      "frozen_files_verified": 43,
+      "freeze_receipt_sha256": "af89ecc3f8ce032d6e77854d613b11751aa2d609b4ddd3af805ad30c87aa5352",
+      "native": {
+        "arm": "D2",
+        "attempt": "001",
+        "receipt_path": "native-results/final-b2-d2-v1/D2.receipt.json",
+        "receipt_sha256": "c0a3c1805344c9c332e207d7ad16a5acad201faaf493ab90ee0c3ee29948ac05",
+        "evidence_reused_for_byte_identical_control": false,
+        "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+        "extent": [
+          1024,
+          2048
+        ],
+        "exact_spawn": [
+          225.0,
+          273.0
+        ],
+        "full_grid_pixels_checked_load": 2097152,
+        "full_grid_mismatches_load": 0,
+        "controlled_drive_ticks": 20,
+        "upward_displacement_cells": 4.29287719726562,
+        "collision": {
+          "end_tick": 245,
+          "max_contacts": 2,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                0.0,
+                -1.0
+              ],
+              "point": [
+                227.0,
+                384.0
+              ],
+              "tick": 245
+            }
+          ],
+          "worker_failed": false
+        },
+        "ordinary_save_semantic_equal": true,
+        "saved_actors_equal": true,
+        "saved_setup_sha256": "4ba53bd60c1769d60594248df12fb2cb928c52f9fa84e38b3948982092b608e1",
+        "fresh_process_reopen": true,
+        "saved_bytes_hash_matches_reopen": true,
+        "full_grid_pixels_checked_reopen": 2097152,
+        "full_grid_mismatches_reopen": 0,
+        "separate_processes": true,
+        "status": "LOCAL_NATIVE_PASS"
+      },
+      "evidence_files": {
+        "comparison.json": "46049341e289c693e971998da70671247e30228eea9e5b3a528eff4a98a2715d",
+        "candidate.report.json": "f2f58cd429c443ce5c3fc48060a8e482861ca768eae0bba48259c316b4f412ca",
+        "bundle-audit.json": "745d79f0364bf5870323b584de3e9ca3257b8406a4e2e0b1c98a06b853bc55f9",
+        "art-review.json": "d4b9c16601dd5e848d2897b323a83f8aa9c669e332a140d073b5fc51c6486620"
+      },
+      "status": "QUALIFIED_WITH_DECLARED_SCOPE_AND_INHERITED_LIMITS"
+    }
+  ],
+  "total_named_original_sites": 204,
+  "total_candidate_paired_images_checked": 128,
+  "total_paired_image_pixels_checked": 55776084,
+  "native_new_changed_outputs": 5,
+  "native_reused_byte_identical_controls": 3,
+  "native_source_custody": "native-results/final-b1-b3-d1-v1/full-source-custody.json",
+  "failed_attempts_receipt": "candidates/failed-attempts.v2.json",
+  "retained_rejected_attempt_count": 5,
+  "precommit_sha256": "5130f1a86f513808b0cd68615382b6af39a036680b7e999a8f2420ddef1880c4",
+  "preservation_contract_sha256": "4548a9db5af5b8fe379967fc74961d78d60b24e5973b4e1bc416c260157ab888",
+  "named_footprint_preservation": "candidates/named-footprint-preservation.v1.json",
+  "bias_and_quarantine": {
+    "prior_reworker_references_accessed": false,
+    "originals_and_attempt_labels_known": true,
+    "fully_blinded_review": false,
+    "root_may_conduct_fresh_blinded_review_after_lock": true
+  },
+  "inherited_limits": [
+    "C1 original sky graph names Worker emergency chimney, which is not an exact declared site. It remains unresolved; no nearest-name or nearest-coordinate substitution.",
+    "C2 original obstruction intentionally covers East purge interlock;28/29 sites remain under that obstruction.",
+    "B3 original obstruction intentionally covers North tri-vault throat;33/34 sites remain under that obstruction.",
+    "D1 original forced-gallery assertion is false: removing the gallery region still leaves original endpoints connected. The selected output does not claim a mandatory gallery.",
+    "B2 rooting uses all four declared original boundaries; upper connected fixed structures are not falsely classified as floating."
+  ],
+  "claim_limits": [
+    "SOURCE-STATIC/ART and exact-cell route masks do not prove full actor flight or playfeel.",
+    "Local Linux headless native load, exact cell/spawn parity, ticks, actual W movement, real terrain contact, ordinary save, and fresh-process reopen passed.",
+    "Windows execution, owner-machine installation, GUI rendering/playtest, complete route flight, material-transport machinery operation, and long-duration dynamics are untested.",
+    "Static validator files deliberately retain their own NATIVE-UNTESTED marker; actual native results are separately attached and aggregated here.",
+    "No prior-reworker-relative or verified human-authorship claim has been made before reference release."
+  ]
+}
