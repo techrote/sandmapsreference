@@ -49,11 +49,11 @@ for(const a of add.entries){
 }
 const technical=read('technical-after.v1.json');
 ok(technical.schema_version===1&&technical.records.length>=0,'technical receipt version');
-const technicalPRs=new Set();
+const technicalKeys=new Set();
 for(const t of technical.records){
  ok(t.technical_verdict==='SOURCE_STATIC_PASS'&&t.native_status==='NATIVE-UNTESTED','bad independent technical classification');
  ok(sha40.test(t.head)&&Number.isInteger(t.pr)&&t.pr>0&&t.url.startsWith('https://github.com/techrote/sandmapsreference/pull/'+t.pr+'#issuecomment-'),'bad technical source identity');
- ok(!technicalPRs.has(t.pr),'duplicate technical PR receipt');technicalPRs.add(t.pr);
+ const key=t.pr+'@'+t.head;ok(!technicalKeys.has(key),'duplicate technical PR/HEAD receipt');technicalKeys.add(key);
  ok(Array.isArray(t.reviewed_feature_states)&&t.reviewed_feature_states.length>0,'missing linked feature observations');
  for(const id of t.reviewed_feature_states){const s=states.get(id);ok(s&&s.stage==='POST_REPAIR'&&s.provenance.material_pr===t.pr&&s.provenance.portrait_head===t.head,'wrong technical source SHA/feature link');}
 }

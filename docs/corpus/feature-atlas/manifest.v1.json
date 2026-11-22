@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "project": "FEATURE-ATLAS-001",
-  "as_of_utc": "2026-11-21",
+  "as_of_utc": "2026-11-22",
   "immutable_baseline": true,
   "scope": "Source-static feature observations, not native acceptance or source-map edits",
-  "state_count": 57,
+  "state_count": 72,
   "portraits": [
     {
       "pr": 185,
@@ -24,7 +24,7 @@
       "donor_head": "ed15c1b7d8be98548d087b247ed54b4a70498b01",
       "review_url": "https://github.com/techrote/sandmapsreference/pull/186#issuecomment-7062924203",
       "review_status": "REWORK",
-      "records": 4,
+      "records": 8,
       "folder": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/",
       "setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30"
     },
@@ -35,7 +35,7 @@
       "donor_head": "cfbeddaccdc81a8e1dcfa924b4c089dbbe65cf41",
       "review_url": "https://github.com/techrote/sandmapsreference/pull/188#issuecomment-7064471710",
       "review_status": "REWORK",
-      "records": 6,
+      "records": 9,
       "folder": "cybersand-canvases/1024x2048/portrait-obvious-mireward-lanternwell-261121/",
       "setup_sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420"
     },
@@ -46,7 +46,7 @@
       "donor_head": "5d97133f3b33bf5b29f92eb65ccf7c884d9e5804",
       "review_url": "https://github.com/techrote/sandmapsreference/pull/190#issuecomment-7064472415",
       "review_status": "REWORK",
-      "records": 4,
+      "records": 8,
       "folder": "cybersand-canvases/1024x2048/portrait-moderate-cinderfold-suture-lantern-261121/",
       "setup_sha256": "35cb217fbad8ea53198c52e02a9bb2a41dda242c478e44626a0ece27ec3c39b3"
     },
@@ -68,7 +68,7 @@
       "donor_head": "a3f9962a0107d07bca1116940fde1c825ac76a4f",
       "review_url": "https://github.com/techrote/sandmapsreference/pull/192#issuecomment-7064489973",
       "review_status": "REWORK",
-      "records": 8,
+      "records": 12,
       "folder": "cybersand-canvases/1024x2048/portrait-moderate-spindlebreak-switchback-trestleworks-261121/",
       "setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08"
     },
@@ -140,10 +140,10 @@
     }
   ],
   "class_counts": {
-    "WEAK": 16,
-    "GOOD": 24,
-    "INTENTIONAL": 14,
-    "PENDING": 3
+    "WEAK": 18,
+    "GOOD": 32,
+    "INTENTIONAL": 17,
+    "PENDING": 5
   },
   "native_status": "NATIVE-UNTESTED"
 }
