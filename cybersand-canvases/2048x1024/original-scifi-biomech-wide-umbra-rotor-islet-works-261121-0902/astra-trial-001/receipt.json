@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "programme": "GOLD-ASTRA-001",
+  "arm": "B2",
+  "retained_attempt": 1,
+  "decision": "BOUNDED_MATERIAL_CELL_REPAIR",
+  "source_head": "49cdac502d861a8c70e95a1773f5053c321a04c2",
+  "original_map_directory": "cybersand-canvases/2048x1024/original-scifi-biomech-wide-umbra-rotor-islet-works-261121-0902",
+  "original_setup_filename": "setup-umbra-rotor-islet-works.json",
+  "frozen_registration_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "baseline_setup_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+  "candidate_setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+  "cell_difference": {
+    "changed_cells": 5195,
+    "bounds_xywh": [
+      944,
+      868,
+      238,
+      46
+    ],
+    "before_material_plane_sha256_uint8": "1c159bf70e15309ec0a1d3ed578bad328fe6be414e2fac30bcc685dbbb7532fd",
+    "after_material_plane_sha256_uint8": "3095f91035621491318bf49a6249ade49756a3e389453906e3eec5f6a4456cd5",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 976
+      },
+      {
+        "from": 0,
+        "to": 100,
+        "cells": 232
+      },
+      {
+        "from": 0,
+        "to": 117,
+        "cells": 3691
+      },
+      {
+        "from": 0,
+        "to": 128,
+        "cells": 296
+      }
+    ]
+  },
+  "rectangle_count": 2038,
+  "extent": [
+    2048,
+    1024
+  ],
+  "outside_approved_regions_changed_cells": 0,
+  "protected_named_31x27_footprint_changes": [],
+  "settings_preserved": true,
+  "final_pruned_provisional_cells": 0,
+  "newly_restored_original_source_ids": [],
+  "source_static_author_status": "PASS",
+  "reproduction_author_status": "PASS",
+  "independent_source_static_art_reproduction_status": "PASS: independent source-static, ART, reproducer and PNG checks; native pending",
+  "independent_status_source": "Reviewer/root messages in the blinded experiment session; separately published reviewer receipts are authoritative.",
+  "native_status_at_author_freeze": "NATIVE-UNTESTED_BY_AUTHOR",
+  "native_status_scope": "Independent native results are separate; no flight or owner acceptance is asserted here.",
+  "overview_and_crops": [
+    {
+      "path": "images/overview-before.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "4157820b879b14a67dc64e300b46f93344a00331c073ff763ac76babb9bc6779"
+    },
+    {
+      "path": "images/overview-after.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "0533c6e04fff9a9688f28197df6a072d88885a59c6a74b87a9409ddff8f494de"
+    },
+    {
+      "path": "images/01-quarantine-jetty-before.png",
+      "source_crop_xywh": [
+        25,
+        453,
+        396,
+        520
+      ],
+      "pixels": [
+        396,
+        520
+      ],
+      "scale": 1,
+      "sha256": "e5ac2415557006252e83585cdd8e6576c60093ea7c75588ff05027f404460758"
+    },
+    {
+      "path": "images/01-quarantine-jetty-after.png",
+      "source_crop_xywh": [
+        25,
+        453,
+        396,
+        520
+      ],
+      "pixels": [
+        396,
+        520
+      ],
+      "scale": 1,
+      "sha256": "e5ac2415557006252e83585cdd8e6576c60093ea7c75588ff05027f404460758"
+    },
+    {
+      "path": "images/02-stamping-islets-before.png",
+      "source_crop_xywh": [
+        395,
+        418,
+        363,
+        555
+      ],
+      "pixels": [
+        363,
+        555
+      ],
+      "scale": 1,
+      "sha256": "313a9fcaad24bdd8ff8f19771730fc2d46a70e2ccb56a2d044495ea52acc8ae6"
+    },
+    {
+      "path": "images/02-stamping-islets-after.png",
+      "source_crop_xywh": [
+        395,
+        418,
+        363,
+        555
+      ],
+      "pixels": [
+        363,
+        555
+      ],
+      "scale": 1,
+      "sha256": "313a9fcaad24bdd8ff8f19771730fc2d46a70e2ccb56a2d044495ea52acc8ae6"
+    },
+    {
+      "path": "images/03-twin-salvage-rotors-before.png",
+      "source_crop_xywh": [
+        740,
+        95,
+        612,
+        650
+      ],
+      "pixels": [
+        612,
+        650
+      ],
+      "scale": 1,
+      "sha256": "6733a670e1b5ac7bdba8aeb06de914c1cf3d0f390fdd8f33069abbfc80c930cf"
+    },
+    {
+      "path": "images/03-twin-salvage-rotors-after.png",
+      "source_crop_xywh": [
+        740,
+        95,
+        612,
+        650
+      ],
+      "pixels": [
+        612,
+        650
+      ],
+      "scale": 1,
+      "sha256": "6733a670e1b5ac7bdba8aeb06de914c1cf3d0f390fdd8f33069abbfc80c930cf"
+    },
+    {
+      "path": "images/04-central-examination-before.png",
+      "source_crop_xywh": [
+        850,
+        725,
+        453,
+        288
+      ],
+      "pixels": [
+        453,
+        288
+      ],
+      "scale": 1,
+      "sha256": "fb0c6627aff5dd00f3b4480b7edc954e2f4b66eb6ef3027b8f54c26f18d68534"
+    },
+    {
+      "path": "images/04-central-examination-after.png",
+      "source_crop_xywh": [
+        850,
+        725,
+        453,
+        288
+      ],
+      "pixels": [
+        453,
+        288
+      ],
+      "scale": 1,
+      "sha256": "8fff80a28c8ef9f7865bf88a97fa27f8664dff91d3d4f8220bdddbec772fd7b3"
+    },
+    {
+      "path": "images/05-arterial-comb-before.png",
+      "source_crop_xywh": [
+        1312,
+        376,
+        412,
+        597
+      ],
+      "pixels": [
+        412,
+        597
+      ],
+      "scale": 1,
+      "sha256": "94c5ddc2857125890e1271a415687cfa78c99792c599e22f7b6652a379e9ff35"
+    },
+    {
+      "path": "images/05-arterial-comb-after.png",
+      "source_crop_xywh": [
+        1312,
+        376,
+        412,
+        597
+      ],
+      "pixels": [
+        412,
+        597
+      ],
+      "scale": 1,
+      "sha256": "94c5ddc2857125890e1271a415687cfa78c99792c599e22f7b6652a379e9ff35"
+    },
+    {
+      "path": "images/06-broken-freight-gantry-before.png",
+      "source_crop_xywh": [
+        1671,
+        396,
+        356,
+        577
+      ],
+      "pixels": [
+        356,
+        577
+      ],
+      "scale": 1,
+      "sha256": "d7d8c0486ad9a50bb7fa337af728a8d00ba79be045bd5470ef818f94d092ef43"
+    },
+    {
+      "path": "images/06-broken-freight-gantry-after.png",
+      "source_crop_xywh": [
+        1671,
+        396,
+        356,
+        577
+      ],
+      "pixels": [
+        356,
+        577
+      ],
+      "scale": 1,
+      "sha256": "d7d8c0486ad9a50bb7fa337af728a8d00ba79be045bd5470ef818f94d092ef43"
+    },
+    {
+      "path": "images/07-buried-archive-before.png",
+      "source_crop_xywh": [
+        422,
+        887,
+        263,
+        133
+      ],
+      "pixels": [
+        263,
+        133
+      ],
+      "scale": 1,
+      "sha256": "a20969632f12c5ed229c7cb51f040fafeede133584286b24fa73e1ff6ff64d9a"
+    },
+    {
+      "path": "images/07-buried-archive-after.png",
+      "source_crop_xywh": [
+        422,
+        887,
+        263,
+        133
+      ],
+      "pixels": [
+        263,
+        133
+      ],
+      "scale": 1,
+      "sha256": "a20969632f12c5ed229c7cb51f040fafeede133584286b24fa73e1ff6ff64d9a"
+    },
+    {
+      "path": "images/10-diagnostic-detail-before.png",
+      "source_crop_xywh": [
+        930,
+        850,
+        270,
+        115
+      ],
+      "pixels": [
+        270,
+        115
+      ],
+      "scale": 1,
+      "sha256": "32271880cccd27134aec11ae765e9ec15fa82189ac8b45e07f8abb5fe8c88408"
+    },
+    {
+      "path": "images/10-diagnostic-detail-after.png",
+      "source_crop_xywh": [
+        930,
+        850,
+        270,
+        115
+      ],
+      "pixels": [
+        270,
+        115
+      ],
+      "scale": 1,
+      "sha256": "50e91f3868cfa7b22517580f724d5ede7dc4279ca66844cf6a3ca0cef0114179"
+    }
+  ],
+  "rationale": "rationale.md",
+  "fixture": "fixture.json",
+  "validation": "validation.json",
+  "reproduction_receipt": "reproduction-receipt.v1.json",
+  "history_policy": "All failed attempts and original inputs remain retained by the programme ledger; this folder contains the retained candidate only."
+}

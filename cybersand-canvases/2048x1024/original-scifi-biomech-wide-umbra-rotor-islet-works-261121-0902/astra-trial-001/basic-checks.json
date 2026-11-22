@@ -1,0 +1,49 @@
+{
+  "arm": "B2",
+  "outside_roi_changed": 0,
+  "protected_site_changes": [],
+  "cap_ok": true,
+  "settings_identical": true,
+  "grounding": {
+    "solid_cells": 265391,
+    "bottom_grounded_cells": 209046,
+    "not_bottom_rooted_cells": 56345,
+    "boundary_rooted_cells": 265391,
+    "not_boundary_rooted_cells": 0,
+    "solid_components": 4
+  },
+  "difference": {
+    "changed_cells": 5195,
+    "bounds_xywh": [
+      944,
+      868,
+      238,
+      46
+    ],
+    "before_material_plane_sha256_uint8": "1c159bf70e15309ec0a1d3ed578bad328fe6be414e2fac30bcc685dbbb7532fd",
+    "after_material_plane_sha256_uint8": "3095f91035621491318bf49a6249ade49756a3e389453906e3eec5f6a4456cd5",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 976
+      },
+      {
+        "from": 0,
+        "to": 100,
+        "cells": 232
+      },
+      {
+        "from": 0,
+        "to": 117,
+        "cells": 3691
+      },
+      {
+        "from": 0,
+        "to": 128,
+        "cells": 296
+      }
+    ]
+  },
+  "status": "PASS"
+}

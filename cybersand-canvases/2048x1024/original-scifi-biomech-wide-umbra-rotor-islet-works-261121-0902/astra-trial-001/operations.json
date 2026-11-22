@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "format": "R x y width height material; L x y X Y thickness material; D x y integer_radius material",
+  "groups": [
+    {
+      "id": "source-diagnostic-table-support",
+      "reason": "Restore the originally authored table, caliper and sample apparatus within the approved workface; bridge the empty row between the slab ending y912 and upright supports beginning y914. Preserve final anchoring/pruning and all rotors/flyways.",
+      "operations": [
+        [
+          "R",
+          944,
+          900,
+          238,
+          13,
+          117
+        ],
+        [
+          "R",
+          964,
+          912,
+          15,
+          44,
+          100
+        ],
+        [
+          "R",
+          1145,
+          912,
+          16,
+          44,
+          100
+        ],
+        [
+          "R",
+          1004,
+          879,
+          108,
+          11,
+          62
+        ],
+        [
+          "R",
+          1039,
+          871,
+          37,
+          8,
+          128
+        ],
+        [
+          "R",
+          996,
+          885,
+          13,
+          15,
+          100
+        ],
+        [
+          "R",
+          1111,
+          885,
+          13,
+          15,
+          100
+        ],
+        [
+          "L",
+          993,
+          899,
+          1022,
+          873,
+          7,
+          117
+        ],
+        [
+          "L",
+          1124,
+          899,
+          1089,
+          871,
+          7,
+          117
+        ]
+      ]
+    }
+  ]
+}

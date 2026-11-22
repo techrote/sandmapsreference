@@ -1,0 +1,28 @@
+{
+  "disposition": "BOUNDED_REPAIR_PROPOSAL",
+  "regions": [
+    {
+      "id": "existing_diagnostic_station",
+      "xywh": [
+        940,
+        866,
+        246,
+        90
+      ],
+      "purpose": "Connect the original grounded uprights to the original intended table and testing/receiving apparatus so it survives the retained final boundary-prune.",
+      "original_occupied_cells": 3022,
+      "original_empty_cells": 19118,
+      "original_region_sha256_uint8": "de214494f117d5fd9a17d346d04fcff315e41c8558af1bc68c89041deefbb04c"
+    }
+  ],
+  "maximum_changed_cells": 7500,
+  "preserved_relations": [
+    "All rotors and their original roof anchors",
+    "Upper and lower flyway",
+    "All editing pockets and freight breaks",
+    "Original floor at and below y956",
+    "Exact central_inspection centre [1071,848] and all original site envelopes"
+  ],
+  "cell_diagnosis": "Original intended slab [944,900,238,13] ends at y912; uprights [964,914,15,42] and [1145,914,16,42] begin y914. Empty row913 separates the table from its supports, so deterministic boundary pruning leaves only the two uprights in the actual final workface. Preserve pruning and repair connectivity.",
+  "baseline_material_plane_sha256_uint8": "1c159bf70e15309ec0a1d3ed578bad328fe6be414e2fac30bcc685dbbb7532fd"
+}
