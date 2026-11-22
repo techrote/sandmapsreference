@@ -6,6 +6,16 @@
   "current_child_count": 7,
   "feature_state_count": 27,
   "gate": "7/7 independent Art PASS and 7/7 paired exact-child-HEAD SOURCE-STATIC Technical PASS; all NATIVE-UNTESTED, OPEN Draft/HOLD; no Gold, Astra or owner acceptance.",
+  "spatial_safety_contract": {
+    "version": 1,
+    "authorized_geometry_edits": false,
+    "evidence_windows_are_edit_masks": false,
+    "primary_treatment_labels_are_exhaustive_protection": false,
+    "records_with_nonempty_do_not_fill": 27,
+    "records_with_tight_verified_feature_bbox": 0,
+    "protected_voids_are_counted_as_distinct_regions": false,
+    "interpretation": "Every record's do_not_fill and must_preserve arrays apply regardless of its primary treatment. Evidence crop windows are not safe-to-edit masks or exact feature regions; missing feature_bbox_xyxy is explicitly unknown. No automatic paint, fill, geometry update, Astra execution or Gold acceptance is authorised."
+  },
   "records": [
     {
       "state_id": "P185-CROSSBANK-ASSAY@d139f2a2868daa4b09d5e39c71d3638190dda705",
