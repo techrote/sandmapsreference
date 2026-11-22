@@ -99,6 +99,10 @@ const promotedCount=queue.records.filter(q=>states.has(q.provisional_state_id)).
   ok(JSON.stringify(item.crop_rect_xywh)===JSON.stringify(s.evidence.crop_rect_xywh)&&JSON.stringify(item.feature_bbox_xyxy)===JSON.stringify(s.location.feature_bbox_xyxy),'current coordinate drift');
   ok(JSON.stringify(item.must_preserve)===JSON.stringify(s.constraints.must_preserve_relations)&&JSON.stringify(item.safe_to_change)===JSON.stringify(s.constraints.safe_to_change)&&JSON.stringify(item.do_not_fill)===JSON.stringify(s.constraints.do_not_fill),'current protected-zone drift');
   ok(item.technical_current_head===c.technical_current_head&&item.technical_review_url===(c.technical_review_url||null),'current technical gate drift');
+  // PENDING may describe an unsupported FUNCTIONAL claim; it must not falsely say that
+  // independent exact-HEAD Technical tests are outstanding after a Technical PASS.
+  if(item.technical_current_head==='SOURCE_STATIC_PASS')
+   ok(!/\b(?:independent\s+)?Technical[^.]{0,140}\b(?:pending|unreviewed|awaiting)\b/i.test(item.observed||''),'current observation has stale Technical-pending narrative: '+item.state_id);
   ok(item.native==='NATIVE-UNTESTED','unjustified native status');
   ok(!seenCurrent.has(item.state_id),'duplicate current state');seenCurrent.add(item.state_id);
  }
