@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "format": "R x y width height material; L x y X Y thickness material; D x y integer_radius material",
+  "groups": [
+    {
+      "id": "hoist_receiving_handoff",
+      "reason": "Lower the complete receiving cradle below the original obstruction detour, retaining the open drop above and two rooted rails into the unchanged repair frame.",
+      "operations": [
+        [
+          "L",
+          1023,
+          631,
+          1035,
+          647,
+          7,
+          62
+        ],
+        [
+          "L",
+          1099,
+          631,
+          1087,
+          647,
+          7,
+          62
+        ],
+        [
+          "R",
+          1031,
+          647,
+          61,
+          9,
+          62
+        ],
+        [
+          "R",
+          1038,
+          656,
+          47,
+          7,
+          58
+        ],
+        [
+          "R",
+          1087,
+          643,
+          18,
+          7,
+          62
+        ],
+        [
+          "L",
+          1089,
+          654,
+          1195,
+          739,
+          7,
+          62
+        ],
+        [
+          "L",
+          1099,
+          644,
+          1207,
+          731,
+          6,
+          62
+        ],
+        [
+          "R",
+          1191,
+          724,
+          39,
+          8,
+          62
+        ]
+      ]
+    }
+  ]
+}
