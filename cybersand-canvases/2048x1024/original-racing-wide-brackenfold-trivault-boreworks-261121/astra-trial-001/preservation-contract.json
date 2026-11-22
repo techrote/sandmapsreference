@@ -1,0 +1,41 @@
+{
+  "disposition": "BOUNDED_REPAIR_PROPOSAL",
+  "regions": [
+    {
+      "id": "north_throat_approach",
+      "xywh": [
+        714,
+        246,
+        151,
+        146
+      ],
+      "purpose": "A grounded overhead/jamb structural treatment for the upper throat, with an unmistakable approach silhouette while retaining the throat core.",
+      "original_occupied_cells": 3759,
+      "original_empty_cells": 18287,
+      "original_region_sha256_uint8": "932f8f47329a6d9421bc17205dbebd4e5b632fac8bdda18a0f43cb9080a2757d"
+    },
+    {
+      "id": "south_bypass_approach",
+      "xywh": [
+        707,
+        464,
+        157,
+        133
+      ],
+      "purpose": "A differently proportioned low/cantilever aperture treatment for the middle bypass; preserve excavation/load path and full conservative hull passage.",
+      "original_occupied_cells": 2774,
+      "original_empty_cells": 18107,
+      "original_region_sha256_uint8": "c738a0b906195f64165a90e96dec6d3b6869b256e3f8d1768fe55677449927fb"
+    }
+  ],
+  "maximum_changed_cells": 5000,
+  "preserved_relations": [
+    "Three unequal vaults and two geological diaphragms",
+    "All geology and apparatus outside allowances",
+    "Exact North throat [809,317] and South bypass [791,532] clear at all declared hulls",
+    "Original blocker [758,267,86,105] intentionally denies only North throat",
+    "Continuous low westbound return and unfilled basal pockets"
+  ],
+  "cell_diagnosis": "The first source diaphragm is rooted rock with upper and middle air cuts about 107 and102 cells wide; current visible material treatment around the two opening approaches does not establish two distinct racing choices.",
+  "baseline_material_plane_sha256_uint8": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9"
+}

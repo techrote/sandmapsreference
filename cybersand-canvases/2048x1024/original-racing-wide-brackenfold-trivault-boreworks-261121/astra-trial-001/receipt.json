@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "programme": "GOLD-ASTRA-001",
+  "arm": "B3",
+  "retained_attempt": 3,
+  "decision": "BOUNDED_MATERIAL_CELL_REPAIR",
+  "source_head": "3a2057dd56804f87d2fec701007ecc277601894f",
+  "original_map_directory": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121",
+  "original_setup_filename": "setup-brackenfold-trivault-boreworks.json",
+  "frozen_registration_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "baseline_setup_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+  "candidate_setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+  "cell_difference": {
+    "changed_cells": 2376,
+    "bounds_xywh": [
+      726,
+      250,
+      111,
+      339
+    ],
+    "before_material_plane_sha256_uint8": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+    "after_material_plane_sha256_uint8": "3a4c5ead526338cd548fd499c7f22aeca307a9a3c06324eaef46df4694c0f856",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 58,
+        "cells": 247
+      },
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 896
+      },
+      {
+        "from": 62,
+        "to": 58,
+        "cells": 77
+      },
+      {
+        "from": 100,
+        "to": 58,
+        "cells": 300
+      },
+      {
+        "from": 100,
+        "to": 62,
+        "cells": 656
+      },
+      {
+        "from": 117,
+        "to": 58,
+        "cells": 96
+      },
+      {
+        "from": 117,
+        "to": 62,
+        "cells": 77
+      },
+      {
+        "from": 122,
+        "to": 58,
+        "cells": 27
+      }
+    ]
+  },
+  "rectangle_count": 4164,
+  "extent": [
+    2048,
+    1024
+  ],
+  "outside_approved_regions_changed_cells": 0,
+  "protected_named_31x27_footprint_changes": [],
+  "settings_preserved": true,
+  "final_pruned_provisional_cells": 0,
+  "newly_restored_original_source_ids": [],
+  "source_static_author_status": "PASS",
+  "reproduction_author_status": "PASS",
+  "independent_source_static_art_reproduction_status": "PASS: independent frozen source-static preservation, exact image/bundle/original-input custody, original-builder/output reproduction and ART focus review; native pending",
+  "independent_status_source": "Reviewer/root messages in the blinded experiment session; separately published reviewer receipts are authoritative.",
+  "native_status_at_author_freeze": "NATIVE-UNTESTED_BY_AUTHOR",
+  "native_status_scope": "Independent native results are separate; no flight or owner acceptance is asserted here.",
+  "overview_and_crops": [
+    {
+      "path": "images/overview-before.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "dd2e57883e301cf485741b59dde810da9914ee0bcd696e1acd12bd9f86225fcc"
+    },
+    {
+      "path": "images/overview-after.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "6c3cad046ec04ea35b409e39403d6bc5673a09fdbbda0ba5831d69a94c8ebf93"
+    },
+    {
+      "path": "images/01-west-ignition-nest-before.png",
+      "source_crop_xywh": [
+        50,
+        150,
+        390,
+        635
+      ],
+      "pixels": [
+        390,
+        635
+      ],
+      "scale": 1,
+      "sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc"
+    },
+    {
+      "path": "images/01-west-ignition-nest-after.png",
+      "source_crop_xywh": [
+        50,
+        150,
+        390,
+        635
+      ],
+      "pixels": [
+        390,
+        635
+      ],
+      "scale": 1,
+      "sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc"
+    },
+    {
+      "path": "images/02-first-vault-hoists-before.png",
+      "source_crop_xywh": [
+        316,
+        115,
+        500,
+        680
+      ],
+      "pixels": [
+        500,
+        680
+      ],
+      "scale": 1,
+      "sha256": "a90ebb49e4339d6480650f9046d0628fca6cbafb13034d100abfe28b69976ed2"
+    },
+    {
+      "path": "images/02-first-vault-hoists-after.png",
+      "source_crop_xywh": [
+        316,
+        115,
+        500,
+        680
+      ],
+      "pixels": [
+        500,
+        680
+      ],
+      "scale": 1,
+      "sha256": "6f0d6303c0693d98d12b1644fb5abe08ade391f35857c6106df6aa3032119b3e"
+    },
+    {
+      "path": "images/03-central-saltfold-hub-before.png",
+      "source_crop_xywh": [
+        757,
+        115,
+        515,
+        760
+      ],
+      "pixels": [
+        515,
+        760
+      ],
+      "scale": 1,
+      "sha256": "f0994503384102116949db8707459bf73f88237accbd5e7f2b6b134090acd5ff"
+    },
+    {
+      "path": "images/03-central-saltfold-hub-after.png",
+      "source_crop_xywh": [
+        757,
+        115,
+        515,
+        760
+      ],
+      "pixels": [
+        515,
+        760
+      ],
+      "scale": 1,
+      "sha256": "79c62fbedc6e335e9399604723768ff49b705da34006453e800de26493bdf248"
+    },
+    {
+      "path": "images/04-east-condenser-bore-before.png",
+      "source_crop_xywh": [
+        1240,
+        145,
+        510,
+        680
+      ],
+      "pixels": [
+        510,
+        680
+      ],
+      "scale": 1,
+      "sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e"
+    },
+    {
+      "path": "images/04-east-condenser-bore-after.png",
+      "source_crop_xywh": [
+        1240,
+        145,
+        510,
+        680
+      ],
+      "pixels": [
+        510,
+        680
+      ],
+      "scale": 1,
+      "sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e"
+    },
+    {
+      "path": "images/05-east-catcher-switch-before.png",
+      "source_crop_xywh": [
+        1630,
+        230,
+        413,
+        620
+      ],
+      "pixels": [
+        413,
+        620
+      ],
+      "scale": 1,
+      "sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1"
+    },
+    {
+      "path": "images/05-east-catcher-switch-after.png",
+      "source_crop_xywh": [
+        1630,
+        230,
+        413,
+        620
+      ],
+      "pixels": [
+        413,
+        620
+      ],
+      "scale": 1,
+      "sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1"
+    },
+    {
+      "path": "images/06-deep-service-pockets-before.png",
+      "source_crop_xywh": [
+        590,
+        650,
+        875,
+        365
+      ],
+      "pixels": [
+        875,
+        365
+      ],
+      "scale": 1,
+      "sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5"
+    },
+    {
+      "path": "images/06-deep-service-pockets-after.png",
+      "source_crop_xywh": [
+        590,
+        650,
+        875,
+        365
+      ],
+      "pixels": [
+        875,
+        365
+      ],
+      "scale": 1,
+      "sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5"
+    },
+    {
+      "path": "images/10-first-diaphragm-decision-before.png",
+      "source_crop_xywh": [
+        680,
+        225,
+        220,
+        400
+      ],
+      "pixels": [
+        220,
+        400
+      ],
+      "scale": 1,
+      "sha256": "c474218757b91d74cdad6cee619f54a21e6f3cc2b62e8056a8f9e43db3e34d35"
+    },
+    {
+      "path": "images/10-first-diaphragm-decision-after.png",
+      "source_crop_xywh": [
+        680,
+        225,
+        220,
+        400
+      ],
+      "pixels": [
+        220,
+        400
+      ],
+      "scale": 1,
+      "sha256": "25c24f28217fd972fbce627b7b097faf2f298332ada2d34315c55c9a4e9bad22"
+    }
+  ],
+  "rationale": "rationale.md",
+  "fixture": "fixture.json",
+  "validation": "validation.json",
+  "reproduction_receipt": "reproduction-receipt.v1.json",
+  "history_policy": "All failed attempts and original inputs remain retained by the programme ledger; this folder contains the retained candidate only.",
+  "independent_review_limits": [
+    "All63 original route-graph legs witnessed at31\u00d727.",
+    "Entrance distinction is readable at native approach scale but modest in the full overview.",
+    "The fixed obstruction still intentionally covers only North tri-vault throat; no exception or site was changed."
+  ]
+}
