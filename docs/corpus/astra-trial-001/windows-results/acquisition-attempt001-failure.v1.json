@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-11-22T05:38:00.251173+00:00",
+  "workflow_run_id": 44990138494,
+  "job_id": 137109172760,
+  "published_commit": "3610449960d0f584c79dda90576e9ed3eaa83585",
+  "observed_failure": "Manifest byte hash check before acquisition/native",
+  "native_cases_executed": 0,
+  "helper_cases_executed": 0,
+  "expected_manifest_sha256": "a0bce08c63121c5dc84971813b241c835f5b586773f6192fcc45af4855276270",
+  "LF_to_CRLF_sha256": "f3d164878d708c59959d2f7952b600c16e61b9314952f323021002fa1b1aa9b9",
+  "diagnosis": "Windows Git checkout line-ending conversion is supported by controlled core.autocrlf=true checkout reproduction. Actual failed-run file hash was not printed; root verifies remote blob bytes.",
+  "local_controlled_git_results": [
+    {
+      "scoped_minus_text": false,
+      "checkout_sha256": "f3d164878d708c59959d2f7952b600c16e61b9314952f323021002fa1b1aa9b9",
+      "exact_pinned_bytes": false,
+      "equals_LF_to_CRLF": true
+    },
+    {
+      "scoped_minus_text": true,
+      "checkout_sha256": "a0bce08c63121c5dc84971813b241c835f5b586773f6192fcc45af4855276270",
+      "exact_pinned_bytes": true,
+      "equals_LF_to_CRLF": false
+    }
+  ],
+  "repair": "Add only scoped windows-qualification/.gitattributes with * -text; no hash normalization or changed expected digest.",
+  "scope": "Mission tooling checkout only; accepted source, package hashes, geometry and native harness unchanged."
+}
