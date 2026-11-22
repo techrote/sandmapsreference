@@ -1,0 +1,54 @@
+name: GOLD-ASTRA-001 bounded Windows qualification
+
+on:
+  push:
+    branches: [astra-trial-001/ledger]
+    paths:
+      - '.github/workflows/gold-astra-001-windows.yml'
+      - 'docs/corpus/astra-trial-001/windows-qualification/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gold-astra-001-windows-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  extracted-package:
+    if: github.repository == 'techrote/sandmapsreference' && github.event.repository.private == false && github.ref == 'refs/heads/astra-trial-001/ledger'
+    runs-on: windows-2022
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      GOLD_PACKAGE_MANIFEST_SHA256: a0bce08c63121c5dc84971813b241c835f5b586773f6192fcc45af4855276270
+      GOLD_TOOLS: docs/corpus/astra-trial-001/windows-qualification
+    steps:
+      - name: Check out only the mission qualification files
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6, immutable official tag target
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout: /docs/corpus/astra-trial-001/windows-qualification/
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+          lfs: false
+          submodules: false
+      - name: Reconstruct pinned files, ZIP, extract, and verify exact inventory
+        run: |
+          python "$env:GOLD_TOOLS/acquire_package.py" `
+            --manifest "$env:GOLD_TOOLS/owner-package-files.v1.json" `
+            --manifest-sha256 "$env:GOLD_PACKAGE_MANIFEST_SHA256" `
+            --workspace "$env:RUNNER_TEMP/gold-astra-001-package"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Run Windows PowerShell21 cases and eight native save/reopen checks
+        run: |
+          python "$env:GOLD_TOOLS/run_windows_package.py" `
+            --package-root "$env:RUNNER_TEMP/gold-astra-001-package/extracted" `
+            --manifest "$env:GOLD_TOOLS/owner-package-files.v1.json" `
+            --manifest-sha256 "$env:GOLD_PACKAGE_MANIFEST_SHA256" `
+            --out "$env:RUNNER_TEMP/gold-astra-001-native"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
