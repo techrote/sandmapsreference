@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "arm": "D1",
+  "attempt": 2,
+  "status": "PASS",
+  "command": "python reproduce.py --out reproduced --verify-original-build",
+  "original_builder_setup_bytes": "MATCH_FROZEN_ORIGINAL",
+  "candidate_and_png_bytes": "MATCH",
+  "files": [
+    {
+      "path": "setup.json",
+      "expected_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+      "reproduced_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab"
+    },
+    {
+      "path": "build-result.json",
+      "expected_sha256": "b2c1fa865eefef30348b116f11b7042774f703bc801c8eae4b9827395ed3fed1",
+      "reproduced_sha256": "b2c1fa865eefef30348b116f11b7042774f703bc801c8eae4b9827395ed3fed1"
+    },
+    {
+      "path": "images/overview-before.png",
+      "expected_sha256": "388770056469d694313b510c4b4bb32998c0e5a195994e7ac36a3125127fd30f",
+      "reproduced_sha256": "388770056469d694313b510c4b4bb32998c0e5a195994e7ac36a3125127fd30f"
+    },
+    {
+      "path": "images/overview-after.png",
+      "expected_sha256": "0045f9e7b0e31436561394b4c9144009c0028fcab24f5c59109d89e5ab02b10d",
+      "reproduced_sha256": "0045f9e7b0e31436561394b4c9144009c0028fcab24f5c59109d89e5ab02b10d"
+    },
+    {
+      "path": "images/01-west-clinic-before.png",
+      "expected_sha256": "b79226be449fce126aa0c19f49b91f2e3f61568144f27d5f447daac7b2802f53",
+      "reproduced_sha256": "b79226be449fce126aa0c19f49b91f2e3f61568144f27d5f447daac7b2802f53"
+    },
+    {
+      "path": "images/01-west-clinic-after.png",
+      "expected_sha256": "b79226be449fce126aa0c19f49b91f2e3f61568144f27d5f447daac7b2802f53",
+      "reproduced_sha256": "b79226be449fce126aa0c19f49b91f2e3f61568144f27d5f447daac7b2802f53"
+    },
+    {
+      "path": "images/02-seismic-fork-before.png",
+      "expected_sha256": "d1fffb52a2536eda5a211a8f52813dbaa8a3b6f60a8ea0218ab2ef0173ca3689",
+      "reproduced_sha256": "d1fffb52a2536eda5a211a8f52813dbaa8a3b6f60a8ea0218ab2ef0173ca3689"
+    },
+    {
+      "path": "images/02-seismic-fork-after.png",
+      "expected_sha256": "ceb96c876608af7d334ddec7d2284e259f9a86a223ea98a381b497bcf51dc099",
+      "reproduced_sha256": "ceb96c876608af7d334ddec7d2284e259f9a86a223ea98a381b497bcf51dc099"
+    },
+    {
+      "path": "images/03-ore-transfer-before.png",
+      "expected_sha256": "c30a1570c720ae7f2152f3ea8653b8ad3e5f12611fe8c4fea5b3c4a6d8d96cd4",
+      "reproduced_sha256": "c30a1570c720ae7f2152f3ea8653b8ad3e5f12611fe8c4fea5b3c4a6d8d96cd4"
+    },
+    {
+      "path": "images/03-ore-transfer-after.png",
+      "expected_sha256": "b5b022f23ef4591f78d71e87dd09b541df919779a593609a3845252ac2e430b7",
+      "reproduced_sha256": "b5b022f23ef4591f78d71e87dd09b541df919779a593609a3845252ac2e430b7"
+    },
+    {
+      "path": "images/04-east-drill-bypass-before.png",
+      "expected_sha256": "98b7c1f662d08cfd908285a2d9256c9ddfd604cd4d9df5979329f57e2ee78b4a",
+      "reproduced_sha256": "98b7c1f662d08cfd908285a2d9256c9ddfd604cd4d9df5979329f57e2ee78b4a"
+    },
+    {
+      "path": "images/04-east-drill-bypass-after.png",
+      "expected_sha256": "23ca895237116aa27c9aff83b780e3ffcd43f3cd3ede9d1c6a4730bcdbd1cb79",
+      "reproduced_sha256": "23ca895237116aa27c9aff83b780e3ffcd43f3cd3ede9d1c6a4730bcdbd1cb79"
+    },
+    {
+      "path": "images/05-quarantine-before.png",
+      "expected_sha256": "280d9d54b2d84fc017000613445364d4a4a25c117c14498af02d7ace0465e5be",
+      "reproduced_sha256": "280d9d54b2d84fc017000613445364d4a4a25c117c14498af02d7ace0465e5be"
+    },
+    {
+      "path": "images/05-quarantine-after.png",
+      "expected_sha256": "6c5398fdfc1b1fe68ecc41475098cc0d6e79807be80809be936956b8d18777c8",
+      "reproduced_sha256": "6c5398fdfc1b1fe68ecc41475098cc0d6e79807be80809be936956b8d18777c8"
+    },
+    {
+      "path": "images/06-buried-archives-before.png",
+      "expected_sha256": "698725331b948b2eba09b7b6ac91ebfdc38a01efacfc25669d5987522b3076a5",
+      "reproduced_sha256": "698725331b948b2eba09b7b6ac91ebfdc38a01efacfc25669d5987522b3076a5"
+    },
+    {
+      "path": "images/06-buried-archives-after.png",
+      "expected_sha256": "757244239524e83a9361f67327757b167518a1e2084bfc8cc213c191734bb874",
+      "reproduced_sha256": "757244239524e83a9361f67327757b167518a1e2084bfc8cc213c191734bb874"
+    },
+    {
+      "path": "images/10-high-crossing-before.png",
+      "expected_sha256": "93075adada1cf5c75dc5481beed452193e9df61c52a3b999063b04f28d24ef3d",
+      "reproduced_sha256": "93075adada1cf5c75dc5481beed452193e9df61c52a3b999063b04f28d24ef3d"
+    },
+    {
+      "path": "images/10-high-crossing-after.png",
+      "expected_sha256": "bf6a17e4fc2961853148bd64ae8f2274f7d2c488a9f2c84aa7eae994c3abf21b",
+      "reproduced_sha256": "bf6a17e4fc2961853148bd64ae8f2274f7d2c488a9f2c84aa7eae994c3abf21b"
+    },
+    {
+      "path": "images/11-ore-stage-before.png",
+      "expected_sha256": "b6ec5bc95f1be991b8da51e507c183c73adc051ff4682944f433decc399357b2",
+      "reproduced_sha256": "b6ec5bc95f1be991b8da51e507c183c73adc051ff4682944f433decc399357b2"
+    },
+    {
+      "path": "images/11-ore-stage-after.png",
+      "expected_sha256": "3820b9eb4d2067f1a225c1665ffb92904885f8864ead6021a010f1a0ad122635",
+      "reproduced_sha256": "3820b9eb4d2067f1a225c1665ffb92904885f8864ead6021a010f1a0ad122635"
+    },
+    {
+      "path": "images/12-low-broken-joint-before.png",
+      "expected_sha256": "594752145ffe1059a1acd3d43f573253a7526e0f2719cd91a948f5bc3af9f676",
+      "reproduced_sha256": "594752145ffe1059a1acd3d43f573253a7526e0f2719cd91a948f5bc3af9f676"
+    },
+    {
+      "path": "images/12-low-broken-joint-after.png",
+      "expected_sha256": "923e22e8099bae0a9c01608435b826c40cddb4d0cd5609d259f052e82dd2da47",
+      "reproduced_sha256": "923e22e8099bae0a9c01608435b826c40cddb4d0cd5609d259f052e82dd2da47"
+    },
+    {
+      "path": "images/13-entered-drill-workface-before.png",
+      "expected_sha256": "95f95b1c4a8209a322e4b5e866dc4c786c1c31dd4b88d51e4cf513f3cc2f28cd",
+      "reproduced_sha256": "95f95b1c4a8209a322e4b5e866dc4c786c1c31dd4b88d51e4cf513f3cc2f28cd"
+    },
+    {
+      "path": "images/13-entered-drill-workface-after.png",
+      "expected_sha256": "ce61047f11fadecd95360b637088a0881439d9bd80674ec7e2a108fbee19dbc7",
+      "reproduced_sha256": "ce61047f11fadecd95360b637088a0881439d9bd80674ec7e2a108fbee19dbc7"
+    }
+  ]
+}

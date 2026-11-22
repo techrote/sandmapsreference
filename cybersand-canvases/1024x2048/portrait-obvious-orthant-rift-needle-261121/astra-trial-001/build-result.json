@@ -1,0 +1,448 @@
+{
+  "arm": "D1",
+  "source_head": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+  "frozen_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "cell_difference": {
+    "changed_cells": 15807,
+    "bounds_xywh": [
+      362,
+      634,
+      576,
+      1107
+    ],
+    "before_material_plane_sha256_uint8": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
+    "after_material_plane_sha256_uint8": "ed459770f09de635d095bee5b4d3c41f9cef9005449efdbb6bef5126217a7ac3",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 49,
+        "cells": 4417
+      },
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 5079
+      },
+      {
+        "from": 0,
+        "to": 63,
+        "cells": 144
+      },
+      {
+        "from": 0,
+        "to": 68,
+        "cells": 3280
+      },
+      {
+        "from": 0,
+        "to": 77,
+        "cells": 126
+      },
+      {
+        "from": 0,
+        "to": 129,
+        "cells": 546
+      },
+      {
+        "from": 0,
+        "to": 130,
+        "cells": 505
+      },
+      {
+        "from": 0,
+        "to": 131,
+        "cells": 685
+      },
+      {
+        "from": 68,
+        "to": 49,
+        "cells": 11
+      },
+      {
+        "from": 68,
+        "to": 62,
+        "cells": 96
+      },
+      {
+        "from": 100,
+        "to": 49,
+        "cells": 559
+      },
+      {
+        "from": 100,
+        "to": 62,
+        "cells": 77
+      },
+      {
+        "from": 100,
+        "to": 68,
+        "cells": 116
+      },
+      {
+        "from": 101,
+        "to": 62,
+        "cells": 165
+      },
+      {
+        "from": 101,
+        "to": 131,
+        "cells": 1
+      }
+    ]
+  },
+  "final_pruned_provisional_cells": 0,
+  "operation_groups": [
+    {
+      "group": "high_crossing_fragment",
+      "cells_changed_at_operation_stage": 1996
+    },
+    {
+      "group": "ore_stage_crossing",
+      "cells_changed_at_operation_stage": 1388
+    },
+    {
+      "group": "broken_low_joint",
+      "cells_changed_at_operation_stage": 3341
+    },
+    {
+      "group": "entered_drill_workface",
+      "cells_changed_at_operation_stage": 9082
+    }
+  ],
+  "rectangle_count": 923,
+  "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+  "images": [
+    {
+      "path": "images/overview-before.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "pixels": [
+        1024,
+        2048
+      ],
+      "scale": 1,
+      "sha256": "388770056469d694313b510c4b4bb32998c0e5a195994e7ac36a3125127fd30f"
+    },
+    {
+      "path": "images/overview-after.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        1024,
+        2048
+      ],
+      "pixels": [
+        1024,
+        2048
+      ],
+      "scale": 1,
+      "sha256": "0045f9e7b0e31436561394b4c9144009c0028fcab24f5c59109d89e5ab02b10d"
+    },
+    {
+      "path": "images/01-west-clinic-before.png",
+      "source_crop_xywh": [
+        58,
+        161,
+        402,
+        402
+      ],
+      "pixels": [
+        402,
+        402
+      ],
+      "scale": 1,
+      "sha256": "b79226be449fce126aa0c19f49b91f2e3f61568144f27d5f447daac7b2802f53"
+    },
+    {
+      "path": "images/01-west-clinic-after.png",
+      "source_crop_xywh": [
+        58,
+        161,
+        402,
+        402
+      ],
+      "pixels": [
+        402,
+        402
+      ],
+      "scale": 1,
+      "sha256": "b79226be449fce126aa0c19f49b91f2e3f61568144f27d5f447daac7b2802f53"
+    },
+    {
+      "path": "images/02-seismic-fork-before.png",
+      "source_crop_xywh": [
+        578,
+        218,
+        375,
+        452
+      ],
+      "pixels": [
+        375,
+        452
+      ],
+      "scale": 1,
+      "sha256": "d1fffb52a2536eda5a211a8f52813dbaa8a3b6f60a8ea0218ab2ef0173ca3689"
+    },
+    {
+      "path": "images/02-seismic-fork-after.png",
+      "source_crop_xywh": [
+        578,
+        218,
+        375,
+        452
+      ],
+      "pixels": [
+        375,
+        452
+      ],
+      "scale": 1,
+      "sha256": "ceb96c876608af7d334ddec7d2284e259f9a86a223ea98a381b497bcf51dc099"
+    },
+    {
+      "path": "images/03-ore-transfer-before.png",
+      "source_crop_xywh": [
+        72,
+        752,
+        414,
+        447
+      ],
+      "pixels": [
+        414,
+        447
+      ],
+      "scale": 1,
+      "sha256": "c30a1570c720ae7f2152f3ea8653b8ad3e5f12611fe8c4fea5b3c4a6d8d96cd4"
+    },
+    {
+      "path": "images/03-ore-transfer-after.png",
+      "source_crop_xywh": [
+        72,
+        752,
+        414,
+        447
+      ],
+      "pixels": [
+        414,
+        447
+      ],
+      "scale": 1,
+      "sha256": "b5b022f23ef4591f78d71e87dd09b541df919779a593609a3845252ac2e430b7"
+    },
+    {
+      "path": "images/04-east-drill-bypass-before.png",
+      "source_crop_xywh": [
+        574,
+        893,
+        377,
+        468
+      ],
+      "pixels": [
+        377,
+        468
+      ],
+      "scale": 1,
+      "sha256": "98b7c1f662d08cfd908285a2d9256c9ddfd604cd4d9df5979329f57e2ee78b4a"
+    },
+    {
+      "path": "images/04-east-drill-bypass-after.png",
+      "source_crop_xywh": [
+        574,
+        893,
+        377,
+        468
+      ],
+      "pixels": [
+        377,
+        468
+      ],
+      "scale": 1,
+      "sha256": "23ca895237116aa27c9aff83b780e3ffcd43f3cd3ede9d1c6a4730bcdbd1cb79"
+    },
+    {
+      "path": "images/05-quarantine-before.png",
+      "source_crop_xywh": [
+        582,
+        1312,
+        370,
+        367
+      ],
+      "pixels": [
+        370,
+        367
+      ],
+      "scale": 1,
+      "sha256": "280d9d54b2d84fc017000613445364d4a4a25c117c14498af02d7ace0465e5be"
+    },
+    {
+      "path": "images/05-quarantine-after.png",
+      "source_crop_xywh": [
+        582,
+        1312,
+        370,
+        367
+      ],
+      "pixels": [
+        370,
+        367
+      ],
+      "scale": 1,
+      "sha256": "6c5398fdfc1b1fe68ecc41475098cc0d6e79807be80809be936956b8d18777c8"
+    },
+    {
+      "path": "images/06-buried-archives-before.png",
+      "source_crop_xywh": [
+        60,
+        1639,
+        888,
+        333
+      ],
+      "pixels": [
+        888,
+        333
+      ],
+      "scale": 1,
+      "sha256": "698725331b948b2eba09b7b6ac91ebfdc38a01efacfc25669d5987522b3076a5"
+    },
+    {
+      "path": "images/06-buried-archives-after.png",
+      "source_crop_xywh": [
+        60,
+        1639,
+        888,
+        333
+      ],
+      "pixels": [
+        888,
+        333
+      ],
+      "scale": 1,
+      "sha256": "757244239524e83a9361f67327757b167518a1e2084bfc8cc213c191734bb874"
+    },
+    {
+      "path": "images/10-high-crossing-before.png",
+      "source_crop_xywh": [
+        330,
+        610,
+        370,
+        120
+      ],
+      "pixels": [
+        370,
+        120
+      ],
+      "scale": 1,
+      "sha256": "93075adada1cf5c75dc5481beed452193e9df61c52a3b999063b04f28d24ef3d"
+    },
+    {
+      "path": "images/10-high-crossing-after.png",
+      "source_crop_xywh": [
+        330,
+        610,
+        370,
+        120
+      ],
+      "pixels": [
+        370,
+        120
+      ],
+      "scale": 1,
+      "sha256": "bf6a17e4fc2961853148bd64ae8f2274f7d2c488a9f2c84aa7eae994c3abf21b"
+    },
+    {
+      "path": "images/11-ore-stage-before.png",
+      "source_crop_xywh": [
+        340,
+        1080,
+        350,
+        150
+      ],
+      "pixels": [
+        350,
+        150
+      ],
+      "scale": 1,
+      "sha256": "b6ec5bc95f1be991b8da51e507c183c73adc051ff4682944f433decc399357b2"
+    },
+    {
+      "path": "images/11-ore-stage-after.png",
+      "source_crop_xywh": [
+        340,
+        1080,
+        350,
+        150
+      ],
+      "pixels": [
+        350,
+        150
+      ],
+      "scale": 1,
+      "sha256": "3820b9eb4d2067f1a225c1665ffb92904885f8864ead6021a010f1a0ad122635"
+    },
+    {
+      "path": "images/12-low-broken-joint-before.png",
+      "source_crop_xywh": [
+        330,
+        1600,
+        400,
+        180
+      ],
+      "pixels": [
+        400,
+        180
+      ],
+      "scale": 1,
+      "sha256": "594752145ffe1059a1acd3d43f573253a7526e0f2719cd91a948f5bc3af9f676"
+    },
+    {
+      "path": "images/12-low-broken-joint-after.png",
+      "source_crop_xywh": [
+        330,
+        1600,
+        400,
+        180
+      ],
+      "pixels": [
+        400,
+        180
+      ],
+      "scale": 1,
+      "sha256": "923e22e8099bae0a9c01608435b826c40cddb4d0cd5609d259f052e82dd2da47"
+    },
+    {
+      "path": "images/13-entered-drill-workface-before.png",
+      "source_crop_xywh": [
+        650,
+        950,
+        310,
+        390
+      ],
+      "pixels": [
+        310,
+        390
+      ],
+      "scale": 1,
+      "sha256": "95f95b1c4a8209a322e4b5e866dc4c786c1c31dd4b88d51e4cf513f3cc2f28cd"
+    },
+    {
+      "path": "images/13-entered-drill-workface-after.png",
+      "source_crop_xywh": [
+        650,
+        950,
+        310,
+        390
+      ],
+      "pixels": [
+        310,
+        390
+      ],
+      "scale": 1,
+      "sha256": "ce61047f11fadecd95360b637088a0881439d9bd80674ec7e2a108fbee19dbc7"
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "source_static_only": true
+}
