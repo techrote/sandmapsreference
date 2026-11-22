@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "project": "FEATURE-ATLAS-001",
+  "snapshot_utc": "2026-11-21",
+  "purpose": "Append-only evidence-locality notes; immutable 38 baseline records and their independent classifications remain untouched",
+  "entries": [
+    {
+      "addendum_id": "LOC-184-DUAL-KEEL-SECOND-SITE-001",
+      "state_id": "P184-DUAL-ALTITUDE-KEEL-CRADLES@e45f9794f318761db02fbe82ad623c2b1da96196",
+      "portrait_pr": 184,
+      "portrait_head": "e45f9794f318761db02fbe82ad623c2b1da96196",
+      "kind": "MULTI_WINDOW_RELATIONSHIP",
+      "baseline_window_role": "First upper/left cradle only, not a single bbox enclosing both cradles",
+      "supplementary_crops": [
+        {
+          "file": "05-lower-drydock.png",
+          "xywh": [
+            618,
+            1202,
+            350,
+            380
+          ],
+          "sha256": "ef9fdeb840af5c576d9d890cf5bf0f921df2351b221e1b3a4fabeab653c6c491",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/e45f9794f318761db02fbe82ad623c2b1da96196/cybersand-canvases/1024x2048/portrait-difficult-keelglass-vertical-twin-keels-261121/05-lower-drydock.png",
+          "role": "Second (right/lower) cradle"
+        }
+      ],
+      "site_points": [],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/184#issuecomment-7062923366",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7069740824",
+      "scope": "GOOD/HIGH unchanged. Independent transfer reviewer examined the full map. Two disjoint material crop windows support the two-site relationship; neither crop alone encloses the whole feature.",
+      "limits": "Coordinates and SHA-256 from committed receipt; no new manager-run remote image byte parity, dynamic machinery, or native test."
+    },
+    {
+      "addendum_id": "LOC-184-WEST-BYPASS-SITE-002",
+      "state_id": "P184-FORCED-SIDE-WORKSHOP-CLAIM@e45f9794f318761db02fbe82ad623c2b1da96196",
+      "portrait_pr": 184,
+      "portrait_head": "e45f9794f318761db02fbe82ad623c2b1da96196",
+      "kind": "WAYPOINT_CLAIM_CAVEAT",
+      "baseline_window_role": "East-caster context only; does not contain either west-side bypass mouth",
+      "supplementary_crops": [],
+      "site_points": [
+        {
+          "name": "Bypass high mouth",
+          "xy": [
+            330,
+            1080
+          ]
+        },
+        {
+          "name": "Bypass low mouth",
+          "xy": [
+            320,
+            1321
+          ]
+        }
+      ],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/184#issuecomment-7062923366",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7069740824",
+      "scope": "PENDING/DO-NOT-ASSERT unchanged. Obstructed-route distance 1906→1976 supports a detour, not compulsory visitation of west-side named mouths. No exact entered-workshop route witness established.",
+      "limits": "Points are literal centres from committed receipt, not feature bbox. Route locality remains unverified; avoid interpreting east-caster PNG as bypass proof."
+    },
+    {
+      "addendum_id": "LOC-187-REVERSE-FREIGHT-CHAIN-003",
+      "state_id": "P187-REVERSE-FREIGHT-HOIST@fdda5cc98885bbe1ef101a7fa7ef42466962a141",
+      "portrait_pr": 187,
+      "portrait_head": "fdda5cc98885bbe1ef101a7fa7ef42466962a141",
+      "kind": "MULTI_WINDOW_RELATIONSHIP",
+      "baseline_window_role": "Original centre-hoist crop shows only one local transfer stage of a spatial chain",
+      "supplementary_crops": [
+        {
+          "file": "01-east-arrival-ship.png",
+          "xywh": [
+            570,
+            80,
+            432,
+            407
+          ],
+          "sha256": "37a569a377f223f76b47c612d9d2e6cc4d918da949bcc6520abe435e9ee642f4",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/fdda5cc98885bbe1ef101a7fa7ef42466962a141/cybersand-canvases/1024x2048/portrait-moderate-axlewell-reverse-freight-hoist-261121/01-east-arrival-ship.png",
+          "role": "High-right freighter"
+        },
+        {
+          "file": "02-crane-customs.png",
+          "xywh": [
+            108,
+            330,
+            798,
+            380
+          ],
+          "sha256": "e00a1963261b1dc2a4a1d3b52d299e6ea38e18a9f069b7c97b6c06cd3a742d3d",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/fdda5cc98885bbe1ef101a7fa7ef42466962a141/cybersand-canvases/1024x2048/portrait-moderate-axlewell-reverse-freight-hoist-261121/02-crane-customs.png",
+          "role": "Opposed customs and crane handoff"
+        },
+        {
+          "file": "05-west-classifier.png",
+          "xywh": [
+            108,
+            1210,
+            399,
+            581
+          ],
+          "sha256": "2c567ebd2c1c9bb4b30ed6be312c2bdc2b364864c6d78eccb49d6760febd9a38",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/fdda5cc98885bbe1ef101a7fa7ef42466962a141/cybersand-canvases/1024x2048/portrait-moderate-axlewell-reverse-freight-hoist-261121/05-west-classifier.png",
+          "role": "Three descending classifier stages"
+        },
+        {
+          "file": "06-lower-rail-dispatch.png",
+          "xywh": [
+            106,
+            1645,
+            799,
+            395
+          ],
+          "sha256": "2f974d57cd3a6130086784d8fa52278c6a338d42572ef46f4eb951ca806ea71f",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/fdda5cc98885bbe1ef101a7fa7ef42466962a141/cybersand-canvases/1024x2048/portrait-moderate-axlewell-reverse-freight-hoist-261121/06-lower-rail-dispatch.png",
+          "role": "Lower dispatch"
+        }
+      ],
+      "site_points": [],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/187#issuecomment-7062924614",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7069781482",
+      "scope": "GOOD/HIGH unchanged. The complete chain is spatially distributed across five true 1:1 windows including original 03-central-hoist.png; this is relational exemplar evidence, not a single tight feature bbox or native cargo actuation proof.",
+      "limits": "Original reviewer independently assessed source-static full map and crops; manager confirmed immutable receipt hashes/coordinates, not new PNG binary parity or native cargo simulation."
+    },
+    {
+      "addendum_id": "LOC-193-ROOKSTRAND-CHAIN-004",
+      "state_id": "P193-TWIN-SORTER-THROATS@54e2e2b4e9d6bd7113396cf6a2bc61409367cd44",
+      "portrait_pr": 193,
+      "portrait_head": "54e2e2b4e9d6bd7113396cf6a2bc61409367cd44",
+      "kind": "MULTI_WINDOW_RELATIONSHIP",
+      "baseline_window_role": "04-twin-sorter.png establishes paired local throats only, not other chain endpoints",
+      "supplementary_crops": [
+        {
+          "file": "01-upper-ship-crane.png",
+          "xywh": [
+            85,
+            250,
+            520,
+            390
+          ],
+          "sha256": "301202ffc7eb9c611cddfbb45a759857ff77e838a60a93f8573956cd1837821f",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/54e2e2b4e9d6bd7113396cf6a2bc61409367cd44/cybersand-canvases/1024x2048/portrait-moderate-rookstrand-stacklock-261121/01-upper-ship-crane.png",
+          "role": "Upper vessel/crane"
+        },
+        {
+          "file": "03-relay-handoff.png",
+          "xywh": [
+            290,
+            830,
+            430,
+            330
+          ],
+          "sha256": "35b88daa274b0e489189d466a3c65244bfb33e503f8a794b295a17ae2c8562d0",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/54e2e2b4e9d6bd7113396cf6a2bc61409367cd44/cybersand-canvases/1024x2048/portrait-moderate-rookstrand-stacklock-261121/03-relay-handoff.png",
+          "role": "Relay intermediary"
+        },
+        {
+          "file": "06-lower-rail-customs.png",
+          "xywh": [
+            665,
+            1620,
+            355,
+            400
+          ],
+          "sha256": "490e6ba5d8a12cfe64d97a61333f1efa81f482f2e09cbec868445942c359e89c",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/54e2e2b4e9d6bd7113396cf6a2bc61409367cd44/cybersand-canvases/1024x2048/portrait-moderate-rookstrand-stacklock-261121/06-lower-rail-customs.png",
+          "role": "Lower customs/dispatch"
+        }
+      ],
+      "site_points": [],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/193#issuecomment-7066007172",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7070451084",
+      "scope": "GOOD/HIGH unchanged. One twin-sorter 1:1 window genuinely contains both throats; it cannot alone substantiate the upper ship/crane -> relay -> dual classifier -> customs whole-map relationship. Join actual committed windows.",
+      "limits": "Independent transfer PASS assesses spatial chain, not simulated freight or fresh PNG byte parity; supplementary source 1:1 coordinates and SHA-256 are from exact immutable portrait receipt."
+    },
+    {
+      "addendum_id": "LOC-197-SILT-PROCESS-CHAIN-005",
+      "state_id": "P197-OPPOSED-BASCULE-LEAVES@3b0253d387578bda3af00a6edc97833219df64a9",
+      "portrait_pr": 197,
+      "portrait_head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "kind": "MULTI_WINDOW_RELATIONSHIP",
+      "baseline_window_role": "03-opposed-bascule-throat.png is sufficient for two static hinge leaves, not whole process-chain",
+      "supplementary_crops": [
+        {
+          "file": "01-ferry-and-crane.png",
+          "xywh": [
+            95,
+            270,
+            480,
+            420
+          ],
+          "sha256": "668edd71d3dff7f7da939802169b23b5a39ae25984993ce48d9868ee73b3bc28",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/01-ferry-and-crane.png",
+          "role": "Upstream ferry/crane"
+        },
+        {
+          "file": "04-rotary-indexer.png",
+          "xywh": [
+            645,
+            1160,
+            284,
+            385
+          ],
+          "sha256": "f56576d56193302906ca44859cd1bfcbdce79b37c32d7219c1afdfc522a8c0b5",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/04-rotary-indexer.png",
+          "role": "Downstream indexer"
+        },
+        {
+          "file": "05-customs-and-dispatch.png",
+          "xywh": [
+            650,
+            1510,
+            284,
+            465
+          ],
+          "sha256": "6b11d9339e1b7d10ca30d028b500dcbcc46e01b1ea08cf6ed7c6096bcce469c8",
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/05-customs-and-dispatch.png",
+          "role": "Rail/customs dispatch"
+        }
+      ],
+      "site_points": [],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/197#issuecomment-7067659564",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7070451084",
+      "scope": "GOOD/HIGH unchanged. The existing authentic throat window shows BOTH opposed bascule leaves locally; separate committed windows establish source-static ferry/crane -> hinge leaves -> rotary indexer -> rail relationship. Do not imply actuation.",
+      "limits": "Supplemental windows from exact portrait receipt; no independently executed bridge animation, cargo transfer, native Midge collision or new binary parity certification."
+    },
+    {
+      "addendum_id": "LOC-192-TRUSS-FAULT-BOUNDARY-006",
+      "state_id": "P192-LOWER-TRUSS-CROSSING@101203a124f0ee3ac5613d38956e72f0faae8685",
+      "portrait_pr": 192,
+      "portrait_head": "101203a124f0ee3ac5613d38956e72f0faae8685",
+      "kind": "OVERLAPPING_EVIDENCE_EDIT_BOUNDARY",
+      "baseline_window_role": "One evidence window encompasses or intersects another feature's deliberately protected empty space, NOT a true feature geometry bbox.",
+      "supplementary_crops": [],
+      "site_points": [],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/192#issuecomment-7064489973",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7070511645",
+      "scope": "The 100% shared 04-lower-trestle evidence window contains BOTH a repairable peripheral truss and a protected central fault/flight opening. It does not mean either feature occupies all 231,000 pixels.",
+      "limits": "Limit edits to supported truss/portals; retain central air and service clearance, including high 61-cell seam. No source-real feature segmentation was proven.",
+      "protected_state_id": "P192-CENTRAL-FAULT-GAP@101203a124f0ee3ac5613d38956e72f0faae8685",
+      "overlap_evidence_xyxy": [
+        100,
+        1000,
+        925,
+        1280
+      ],
+      "safe_edit_interpretation": "Require exact supported geometry and independent review; NEVER automatically select entire WEAK crop as DO-REPAIR or override INTENTIONAL/DO-NOT-FILL."
+    },
+    {
+      "addendum_id": "LOC-190-EAST-ARCHIVE-BOUNDARY-007",
+      "state_id": "P190-EAST-ENTERED-VAULT@089d2cdb6b06b40d53ce9c4c83ef34192567454d",
+      "portrait_pr": 190,
+      "portrait_head": "089d2cdb6b06b40d53ce9c4c83ef34192567454d",
+      "kind": "OVERLAPPING_EVIDENCE_EDIT_BOUNDARY",
+      "baseline_window_role": "One evidence window encompasses or intersects another feature's deliberately protected empty space, NOT a true feature geometry bbox.",
+      "supplementary_crops": [],
+      "site_points": [],
+      "independent_review_url": "https://github.com/techrote/sandmapsreference/pull/190#issuecomment-7064472415",
+      "locality_review_url": "https://github.com/techrote/sandmapsreference/issues/200#issuecomment-7070511645",
+      "scope": "The east vault crop and lower reserve archive crop overlap at evidence-window level. Their distinct feature targets must NOT be conflated into an unrestricted repair mask.",
+      "limits": "Change entered vault thresholds/partitions only with current source geometry and site clearance checks; keep lower archive reserve unfilled. Evidence-crop overlap is not a measured feature overlap.",
+      "protected_state_id": "P190-BURIED-ARCHIVE-RESERVE@089d2cdb6b06b40d53ce9c4c83ef34192567454d",
+      "overlap_evidence_xyxy": [
+        587,
+        1220,
+        1001,
+        1414
+      ],
+      "safe_edit_interpretation": "Require exact supported geometry and independent review; NEVER automatically select entire WEAK crop as DO-REPAIR or override INTENTIONAL/DO-NOT-FILL."
+    }
+  ]
+}

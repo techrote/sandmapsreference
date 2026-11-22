@@ -1,0 +1,353 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/techrote/sandmapsreference/blob/corpus/feature-atlas-001/docs/corpus/feature-atlas/schema.v1.json",
+  "title": "FEATURE-ATLAS-001 immutable feature-state v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "feature_id",
+    "state_id",
+    "stage",
+    "classification",
+    "confidence",
+    "review_status",
+    "provenance",
+    "location",
+    "evidence",
+    "analysis",
+    "constraints",
+    "recommendation",
+    "lineage",
+    "native_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "feature_id": {
+      "type": "string",
+      "pattern": "^P[0-9]+-[A-Z0-9-]+$"
+    },
+    "state_id": {
+      "type": "string",
+      "pattern": "^P[0-9]+-[A-Z0-9-]+@[0-9a-f]{40}$"
+    },
+    "stage": {
+      "enum": [
+        "BASELINE",
+        "CONTROL",
+        "POST_REPAIR"
+      ]
+    },
+    "classification": {
+      "enum": [
+        "GOOD",
+        "WEAK",
+        "INTENTIONAL",
+        "PENDING"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "INDEPENDENT_TRANSFER_PASS",
+        "INDEPENDENT_TRANSFER_REWORK",
+        "AWAITING_INDEPENDENT_REVIEW",
+        "DISPUTED"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "repository",
+        "portrait_pr",
+        "portrait_head",
+        "donor_pr",
+        "donor_head",
+        "map_folder",
+        "dimensions",
+        "setup_sha256"
+      ],
+      "properties": {
+        "repository": {
+          "const": "techrote/sandmapsreference"
+        },
+        "portrait_pr": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "portrait_head": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "donor_pr": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "donor_head": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "map_folder": {
+          "type": "string",
+          "pattern": "^cybersand-canvases/1024x2048/[^.]+/$"
+        },
+        "dimensions": {
+          "const": [
+            1024,
+            2048
+          ]
+        },
+        "setup_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "material_pr": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Actual stacked child PR holding this version; omitted in original parent baseline."
+        },
+        "parent_portrait_head": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$",
+          "description": "Exact portrait parent HEAD from which a stacked repair was based; required for POST_REPAIR."
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "required": [
+        "feature_bbox_xyxy",
+        "precision",
+        "evidence_window_xyxy",
+        "explanation"
+      ],
+      "properties": {
+        "feature_bbox_xyxy": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "precision": {
+          "enum": [
+            "EXACT_FEATURE",
+            "EVIDENCE_WINDOW_ONLY",
+            "UNVERIFIED"
+          ]
+        },
+        "evidence_window_xyxy": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 8
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "overview_url",
+        "crop_url",
+        "crop_name",
+        "crop_rect_xywh",
+        "crop_sha256",
+        "reviewer_url",
+        "reviewed_head",
+        "review_kind",
+        "method_limits"
+      ],
+      "properties": {
+        "overview_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "crop_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "crop_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crop_rect_xywh": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "crop_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "reviewer_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "reviewed_head": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "review_kind": {
+          "const": "INDEPENDENT_PORTRAIT_TRANSFER"
+        },
+        "method_limits": {
+          "type": "string",
+          "minLength": 12
+        }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "required": [
+        "intended_function_author_claim",
+        "observed_source_static",
+        "why_it_matters",
+        "caveats"
+      ],
+      "properties": {
+        "intended_function_author_claim": {
+          "type": "string",
+          "minLength": 12
+        },
+        "observed_source_static": {
+          "type": "string",
+          "minLength": 12
+        },
+        "why_it_matters": {
+          "type": "string",
+          "minLength": 12
+        },
+        "caveats": {
+          "type": "string",
+          "minLength": 12
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "required": [
+        "must_preserve_relations",
+        "safe_to_change",
+        "do_not_fill"
+      ],
+      "properties": {
+        "must_preserve_relations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "safe_to_change": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "do_not_fill": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "recommendation": {
+      "type": "object",
+      "required": [
+        "bounded_fix",
+        "astra_treatment"
+      ],
+      "properties": {
+        "bounded_fix": {
+          "type": "string",
+          "minLength": 8
+        },
+        "astra_treatment": {
+          "enum": [
+            "DO-PRESERVE",
+            "DO-REPAIR",
+            "DO-NOT-FILL",
+            "DO-NOT-ASSERT"
+          ]
+        }
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "required": [
+        "previous_state_id",
+        "before_state_id",
+        "after_state_id",
+        "notes"
+      ],
+      "properties": {
+        "previous_state_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "before_state_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "after_state_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "native_status": {
+      "const": "NATIVE-UNTESTED"
+    }
+  }
+}
