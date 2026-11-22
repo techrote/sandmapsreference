@@ -5,7 +5,7 @@
   "immutable_baseline_count": 38,
   "art_reviewed_feature_after_states": 38,
   "original_creator_candidates": 25,
-  "gate": "7/7 independent current-HEAD Art PASS; 6/7 paired Art + Technical SOURCE-STATIC PASS (#202,#203,#204,#205,#207,#208); only R5 Cinderward #206 awaits independent Technical. All 7 OPEN Draft/HOLD and NATIVE-UNTESTED. Owner-only acceptance.",
+  "gate": "7/7 independent current-HEAD Art PASS AND 7/7 paired exact-HEAD Technical SOURCE-STATIC PASS (#202–#208). All OPEN Draft/HOLD; 0 native gameplay/owner-qualified. No Astra or Gold execution.",
   "children": [
     {
       "repair_pr": 202,
@@ -98,11 +98,12 @@
       "parent_portrait_pr": 191,
       "exact_current_head": "88e6364bd50d1cb1ee017d2c74b5b1e3eef9a8b5",
       "art_current_head": "PASS",
-      "technical_current_head": "PENDING",
+      "technical_current_head": "SOURCE_STATIC_PASS",
       "art_review_url": "https://github.com/techrote/sandmapsreference/pull/206#issuecomment-7070530096",
       "canonical_art_reviewed_states": 4,
       "prior_reviewed_heads": [],
-      "native": "NATIVE-UNTESTED"
+      "native": "NATIVE-UNTESTED",
+      "technical_review_url": "https://github.com/techrote/sandmapsreference/pull/206#issuecomment-7071953934"
     },
     {
       "repair_pr": 207,
@@ -144,6 +145,6 @@
       "technical_review_url": "https://github.com/techrote/sandmapsreference/pull/208#issuecomment-7070609209"
     }
   ],
-  "current_technical_source_static_pass_prs": 6,
-  "paired_art_technical_static_pass_prs": 6
+  "current_technical_source_static_pass_prs": 7,
+  "paired_art_technical_static_pass_prs": 7
 }

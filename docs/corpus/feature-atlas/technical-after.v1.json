@@ -147,6 +147,27 @@
         "P190-FORCED-STERILE-CLAIM@6b58eec39cabcc2b65f868c46265c454615d9ab7"
       ],
       "limits": "Source-static only; full overview remote binary pixel parity, standalone Node builder rerun, exact-HEAD CI, Godot/bridge/Rapier dynamics and cold save/reopen UNTESTED."
+    },
+    {
+      "pr": 206,
+      "head": "88e6364bd50d1cb1ee017d2c74b5b1e3eef9a8b5",
+      "url": "https://github.com/techrote/sandmapsreference/pull/206#issuecomment-7071953934",
+      "rectangles": 1320,
+      "rooted_solids": 737080,
+      "sites": 19,
+      "liquid": "2,002 Water and 3,120 Lava cells; no air-exposed fluid faces or Water/Lava direct contacts",
+      "route": "19/19 literal sites at all three conservative hulls including real obstruction, 12/12 additional entered workfront waypoints, optional ore/caster/freight ordered route lengths 106/79/125; 31x27 upper exchange to rotor detour 208→304. Ordered routes are not forced shortest.",
+      "png": "Six genuine committed indexed 1:1 crops independently decoded, 843,248 source material pixels, zero discrepancies; full binary overview not independently retrieved.",
+      "note": "Independent current-HEAD source-static full material and Setup SHA-256, 1,320 nonoverlapping legal rectangles, rooted structure/fluid containment, conservative Midge free-centre BFS, six authentic crops with CRC/Adler and receipt parity, plus separate independent Art PASS.",
+      "technical_verdict": "SOURCE_STATIC_PASS",
+      "native_status": "NATIVE-UNTESTED",
+      "reviewed_feature_states": [
+        "P191-UPPER-WORKER-HILLTOWN@88e6364bd50d1cb1ee017d2c74b5b1e3eef9a8b5",
+        "P191-MID-GUILD-SETTLEMENT@88e6364bd50d1cb1ee017d2c74b5b1e3eef9a8b5",
+        "P191-LOWER-EXPORT-VILLAGE@88e6364bd50d1cb1ee017d2c74b5b1e3eef9a8b5",
+        "P191-EIGHT-SPOKE-ROTOR@88e6364bd50d1cb1ee017d2c74b5b1e3eef9a8b5"
+      ],
+      "limits": "Independent source-static only. Full overview PNG byte/pixel parity, standalone Node builders, exact-source CI, Godot/bridge/Rapier simulation, collision and cold save/reopen remain UNTESTED."
     }
   ]
 }
