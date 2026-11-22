@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "AUTHORING_NOT_STARTED",
+  "author_allowed": [
+    "Eight exact original map packets and original review excerpts",
+    "Accepted read-only engine contract",
+    "Original donor context only if explicitly exported and pinned by coordinator"
+  ],
+  "author_quarantined": [
+    "All prior repaired child map geometry, PNGs and implementation diffs",
+    "Post-repair Feature Atlas states and astra-current.v1.json",
+    "Curator restricted directory and full issue199/200 discussions"
+  ],
+  "roles": {
+    "curator": "selection and hidden reference custody; no geometry",
+    "author": "sole experimental geometry implementer; original-only",
+    "reviewer": "independent tests and evaluation; no geometry; reference-blind until output lock",
+    "coordinator": "integration and publication; no geometry authoring"
+  },
+  "unlock_rule": "All eight dispositions, complete output hashes and experimental commit IDs frozen before any prior repaired reference is given to reviewer.",
+  "scope_limit": "Prior reworker output is not verified human authorship."
+}

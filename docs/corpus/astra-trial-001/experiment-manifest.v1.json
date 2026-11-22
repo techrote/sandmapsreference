@@ -1,0 +1,957 @@
+{
+  "schema_version": 1,
+  "programme": "GOLD-ASTRA-001",
+  "status": "PREAUTHORING_DRAFT_UNTIL_FREEZE",
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "corpus_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "arms": [
+    {
+      "arm": "C1",
+      "pr": 159,
+      "name": "Keelbone Covered Spine",
+      "head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "expected_disposition": "ABSTAIN",
+      "review_url": "https://github.com/techrote/sandmapsreference/pull/159#issuecomment-7067963494",
+      "review_verdict": "PASS",
+      "original_evidence": "Current exact-HEAD independent Art review reports no remaining mandatory artistic P0/P1. Historical prepass REWORK label is superseded for this source.",
+      "pr_url": "https://github.com/techrote/sandmapsreference/pull/159",
+      "live_state": "OPEN_DRAFT_HOLD",
+      "native_status": "NATIVE_UNTESTED",
+      "review_authorship_limit": "Independent role asserted by review text; shared GitHub account alone does not prove a distinct human reviewer.",
+      "map_directory": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121",
+      "head_ref": "worldgroup/freight/keelbone-reclamation/continuous-press-spine-261121-0730",
+      "setup_filename": "setup.json",
+      "files": [
+        {
+          "path": "01-wet-strip.png",
+          "sha256": "6e677b9e51959a5da211ba2e550d028a5a9faef83f3896f9dbc78fc205667f29",
+          "bytes": 51171
+        },
+        {
+          "path": "02-magnet-sort.png",
+          "sha256": "5c5224e55c1708e1ee208b789e60b68585f0d79c53f66aa21f00a6ca5e95c2a2",
+          "bytes": 44546
+        },
+        {
+          "path": "03-torque-spine.png",
+          "sha256": "e0a048ca1a0a0d1cfda09bdb300d425ee7c4f5149d8d9a99136e79364491a2ef",
+          "bytes": 61657
+        },
+        {
+          "path": "04-ledger-custody.png",
+          "sha256": "0e126f815cf2cd84e02a1461e0e626870c1ce93c775ac496b9b6e4159d90d84c",
+          "bytes": 50005
+        },
+        {
+          "path": "05-crew-emergency.png",
+          "sha256": "0292d3f81b834755c351ffb7d2185384777f6949df6d49037d270121de3601e0",
+          "bytes": 77406
+        },
+        {
+          "path": "README.md",
+          "sha256": "f1132fdaa45baf4f8e0ec0e128fefc68e862e7336d5bbb020eedaeaf7097fe86",
+          "bytes": 6374
+        },
+        {
+          "path": "build.cjs",
+          "sha256": "09e52d29e830ebd4de65a2e504ce3e8d9aae29fe4479ab83bef0cf34193844f1",
+          "bytes": 21168
+        },
+        {
+          "path": "exemplar.json",
+          "sha256": "db1014c38fb2b3eb21deb2815ab9784e15b1ad0f3b1da9df72743d47a747591f",
+          "bytes": 4914
+        },
+        {
+          "path": "overview.png",
+          "sha256": "4dc78b7e7dd3246469488027e09587b13e8175c3be39a0413982c67f85880a74",
+          "bytes": 525537
+        },
+        {
+          "path": "receipt.json",
+          "sha256": "93ee39481af6405dd0d8f176e7d4489e88a964e6dcec6fefcd82551205f18980",
+          "bytes": 6185
+        },
+        {
+          "path": "setup.json",
+          "sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+          "bytes": 37016
+        },
+        {
+          "path": "verify.cjs",
+          "sha256": "f94c13d3475b2b1c64c2b9ceb9d71e5587fb38eb479210d0ac867a6bbe5d6a34",
+          "bytes": 3600
+        }
+      ],
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "extent": [
+        2048,
+        1024
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+          "spawn": [
+            115,
+            489
+          ],
+          "options": {
+            "budget": 20,
+            "mass_multiplier": 1,
+            "inertia_multiplier": 1,
+            "thrust_multiplier": 1,
+            "torque_multiplier": 1,
+            "boost_multiplier": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "arm": "C2",
+      "pr": 150,
+      "name": "Mireward Censer Loop",
+      "head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "expected_disposition": "ABSTAIN",
+      "review_url": "https://github.com/techrote/sandmapsreference/pull/150#issuecomment-7066354026",
+      "review_verdict": "PASS",
+      "original_evidence": "Current exact-HEAD Art review accepts the interrupted annulus and three-shaft recovery grammar. Civic-role caveat is a classification limit, not a mandatory repair.",
+      "pr_url": "https://github.com/techrote/sandmapsreference/pull/150",
+      "live_state": "OPEN_DRAFT_HOLD",
+      "native_status": "NATIVE_UNTESTED",
+      "review_authorship_limit": "Independent role asserted by review text; shared GitHub account alone does not prove a distinct human reviewer.",
+      "map_directory": "cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121",
+      "head_ref": "worldgroup/xenobiome/mireward-levee/censer-loop-radial-biofilter-261121",
+      "setup_filename": "setup.json",
+      "files": [
+        {
+          "path": "01-west-registry.png",
+          "sha256": "c1909c21ec30f7e1f3ea76f3c8420c5f54927e13b32ca4b438c2c42693afa8b8",
+          "bytes": 8961
+        },
+        {
+          "path": "02-annular-north.png",
+          "sha256": "9d1fe2fc4c0fe70c4357e5f335c330431b2ff5b62a57ed64c5f8a6f646da0e09",
+          "bytes": 12046
+        },
+        {
+          "path": "03-censer-culture.png",
+          "sha256": "6998f575bf72ecfd5d50c1971b144110cc213b75f2645d18bfebedbd254f8d46",
+          "bytes": 13462
+        },
+        {
+          "path": "04-east-purge.png",
+          "sha256": "243af52a997bd59556713be3e557870b03d7f15d66a4baa0ef14cf944ef05fa7",
+          "bytes": 9697
+        },
+        {
+          "path": "05-dry-return.png",
+          "sha256": "b336c210f41f130984f99a7cd7056c3bc36aa2ea6010a7735862979a94b5fb6e",
+          "bytes": 5462
+        },
+        {
+          "path": "README.md",
+          "sha256": "b2d88ad01d869d7b3e40d6e367133c3cc9c5ee28ac897330b2e561d8e494a482",
+          "bytes": 2306
+        },
+        {
+          "path": "build.cjs",
+          "sha256": "a030e9d641e1e48d0c60633fa1051976f22409814d3903163ccc3414e6b743ad",
+          "bytes": 29066
+        },
+        {
+          "path": "exemplar.json",
+          "sha256": "539d7044f5ad915b7833ab5f7fdce1b482a2afdbd6b926ee135812738a2628ed",
+          "bytes": 5827
+        },
+        {
+          "path": "overview.png",
+          "sha256": "f16b2326744563242e9f8635a975c531292b5ec3f15d54d025c56d2d780336c2",
+          "bytes": 52306
+        },
+        {
+          "path": "receipt.json",
+          "sha256": "6f7e11557bffdd65b4a5472ee90b61ee2e1e12979e64107850d4e814423e6709",
+          "bytes": 6119
+        },
+        {
+          "path": "setup.json",
+          "sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+          "bytes": 72574
+        }
+      ],
+      "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "extent": [
+        2048,
+        1024
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+          "spawn": [
+            75,
+            365
+          ],
+          "options": {
+            "budget": 20,
+            "mass_multiplier": 1,
+            "inertia_multiplier": 1,
+            "thrust_multiplier": 1,
+            "torque_multiplier": 1,
+            "boost_multiplier": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "arm": "C3",
+      "pr": 197,
+      "name": "Silt Meridian Hingevault",
+      "head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "donor_pr": 37,
+      "donor_head": "e2b53fb95ea93576afdc15c114e29b853c4b2c05",
+      "original_transfer_difficulty": "DIFFICULT",
+      "expected_disposition": "ABSTAIN",
+      "review_url": "https://github.com/techrote/sandmapsreference/pull/197#issuecomment-7067659564",
+      "review_verdict": "PASS",
+      "original_evidence": "Independent source-static portrait transfer PASS. Original review credits distinct bascule/freight mechanism relationships and preserved entered workfaces.",
+      "pr_url": "https://github.com/techrote/sandmapsreference/pull/197",
+      "live_state": "OPEN_DRAFT_HOLD",
+      "native_status": "NATIVE_UNTESTED",
+      "review_authorship_limit": "Independent role asserted by review text; shared GitHub account alone does not prove a distinct human reviewer.",
+      "map_directory": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121",
+      "head_ref": "portrait/difficult/silt-meridian-hingevault-1024x2048",
+      "setup_filename": "setup.json",
+      "files": [
+        {
+          "path": "01-ferry-and-crane.png",
+          "sha256": "668edd71d3dff7f7da939802169b23b5a39ae25984993ce48d9868ee73b3bc28",
+          "bytes": 7380
+        },
+        {
+          "path": "02-lift-cage.png",
+          "sha256": "fc07fcf5b0c76b37dd3f87349c426add74074f62410ade99a91eaa71324cae7f",
+          "bytes": 8574
+        },
+        {
+          "path": "03-opposed-bascule-throat.png",
+          "sha256": "62a557fd0c6a082c5cb4b9db31a14d4878f17b17170b35f84a60fa38f8eebc5d",
+          "bytes": 9952
+        },
+        {
+          "path": "04-rotary-indexer.png",
+          "sha256": "f56576d56193302906ca44859cd1bfcbdce79b37c32d7219c1afdfc522a8c0b5",
+          "bytes": 9369
+        },
+        {
+          "path": "05-customs-and-dispatch.png",
+          "sha256": "6b11d9339e1b7d10ca30d028b500dcbcc46e01b1ea08cf6ed7c6096bcce469c8",
+          "bytes": 8651
+        },
+        {
+          "path": "06-underinvert-return.png",
+          "sha256": "2317798c43842fc528a027913f86317053e251b20b3c23865e892aac75f0b417",
+          "bytes": 9077
+        },
+        {
+          "path": "README.md",
+          "sha256": "fb2b5e57ce2e21257eeb85e3136510f30f78b45479b4844e7e3279b23d51a597",
+          "bytes": 3041
+        },
+        {
+          "path": "aspect_transfer.json",
+          "sha256": "e86f09b079da293c303800a58e0f7c6e54be3784593b57e3622828828507654c",
+          "bytes": 1847
+        },
+        {
+          "path": "build.cjs",
+          "sha256": "aab2f0420e7afb6773f453656de368910b9f337df978a83b9affbc7338412ea7",
+          "bytes": 12188
+        },
+        {
+          "path": "design.json",
+          "sha256": "092d1841fe67db9c4e7c280ac771474d6852c4592348197b3df99766a65d1eb1",
+          "bytes": 48479
+        },
+        {
+          "path": "exemplar.json",
+          "sha256": "7d0c6eeedc60ef689524e678d4ec3152244d54dbc41e3502ce7dcfc8a6f27f08",
+          "bytes": 3100
+        },
+        {
+          "path": "overview.png",
+          "sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7",
+          "bytes": 71137
+        },
+        {
+          "path": "plan.json",
+          "sha256": "302b68d8f0210c7078d9a6c05a43e23d3b7122edfbe0cbd73a1f45634a77e9a3",
+          "bytes": 5308
+        },
+        {
+          "path": "receipt.json",
+          "sha256": "80d14a1037e58c2fc606ddcf6c927b708e9b837b297db1060801892674f12d81",
+          "bytes": 6709
+        },
+        {
+          "path": "setup.json",
+          "sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+          "bytes": 65411
+        }
+      ],
+      "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "extent": [
+        1024,
+        2048
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+          "spawn": [
+            132,
+            350
+          ],
+          "options": {
+            "budget": 20,
+            "mass_multiplier": 1,
+            "inertia_multiplier": 1,
+            "thrust_multiplier": 1,
+            "torque_multiplier": 1,
+            "boost_multiplier": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "arm": "B1",
+      "pr": 152,
+      "name": "Keelbone Switchback Recovery Tenements",
+      "head": "eb00a9a55864dfb6d3e076e60ba4684b397228fc",
+      "expected_disposition": "BOUNDED_INTERVENTION",
+      "review_url": "https://github.com/techrote/sandmapsreference/pull/152#issuecomment-7065542898",
+      "review_verdict": "ART_REWORK_P1",
+      "original_evidence": "At the original crane/drop interface, the independent reviewer could not read a positive receiving relation in actual material cells. Preserve the high/low switchback, whole-hull access, recovery routes and central intentional void.",
+      "pr_url": "https://github.com/techrote/sandmapsreference/pull/152",
+      "live_state": "OPEN_DRAFT_HOLD",
+      "native_status": "NATIVE_UNTESTED",
+      "review_authorship_limit": "Independent role asserted by review text; shared GitHub account alone does not prove a distinct human reviewer.",
+      "map_directory": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-switchback-recovery-tenements-261121",
+      "head_ref": "worldgroup/freight/keelbone-reclamation/switchback-recovery-tenements-261121-0631",
+      "setup_filename": "setup.json",
+      "files": [
+        {
+          "path": "01-ledger-tenements.png",
+          "sha256": "18ac556f942efcae82eb4848b3d96e0503e600d821b290ca9f167679c5a65a50",
+          "bytes": 50747
+        },
+        {
+          "path": "02-rinse-sorting.png",
+          "sha256": "7803df925731b499753cdb0fa5865708127933d3f64e7bd848b44889658e5a1a",
+          "bytes": 45011
+        },
+        {
+          "path": "03-central-reclaim.png",
+          "sha256": "e6be9dee8dba1d2a258aaeb74bdc15dfc68a852abc49cde6581041217ab2d354",
+          "bytes": 87610
+        },
+        {
+          "path": "04-repair-atelier.png",
+          "sha256": "53b90956f78f6c24269b79f7115b6f81b8d2f147c3fa345ca8dbee7545e56274",
+          "bytes": 52809
+        },
+        {
+          "path": "05-east-tenements.png",
+          "sha256": "a68b62fac7c927f5faa570e190d23f879e659f2dae8b241eeee341b37cf38244",
+          "bytes": 65579
+        },
+        {
+          "path": "README.md",
+          "sha256": "5041ff561228ada5aa83083b25c441c0ae98be89ab8b10d6ebd1cc7829ac0022",
+          "bytes": 6068
+        },
+        {
+          "path": "build.cjs",
+          "sha256": "1adf314d9f75d0f14b224ba5713370a9eceb0aefe77696948ea63b564c608c50",
+          "bytes": 19163
+        },
+        {
+          "path": "exemplar.json",
+          "sha256": "cd9567c510e0dbd7345d628979ac51734ee348454752824f42cd803fc4fd09e8",
+          "bytes": 4805
+        },
+        {
+          "path": "overview.png",
+          "sha256": "d788341b3397eee023bc0f699457aea07ffa789e542da285f40de4fd6bebde0a",
+          "bytes": 525537
+        },
+        {
+          "path": "receipt.json",
+          "sha256": "9e6191d83696c128a41f957e0aab085756aa2e31c90ceb2c25995c316a60eae0",
+          "bytes": 5810
+        },
+        {
+          "path": "setup.json",
+          "sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+          "bytes": 4083
+        },
+        {
+          "path": "verify.cjs",
+          "sha256": "719d5a07df6072ea0f3d7ad9b699f1953e24b27e7142deb779230c44618120bb",
+          "bytes": 3437
+        }
+      ],
+      "setup_sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+      "extent": [
+        2048,
+        1024
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+          "spawn": [
+            115,
+            520
+          ],
+          "options": {
+            "budget": 20,
+            "mass_multiplier": 1,
+            "inertia_multiplier": 1,
+            "thrust_multiplier": 1,
+            "torque_multiplier": 1,
+            "boost_multiplier": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "arm": "B2",
+      "pr": 167,
+      "name": "Umbra Rotor Islet Works",
+      "head": "49cdac502d861a8c70e95a1773f5053c321a04c2",
+      "expected_disposition": "BOUNDED_INTERVENTION",
+      "review_url": "https://github.com/techrote/sandmapsreference/pull/167#issuecomment-7060444420",
+      "review_verdict": "ART_REWORK_P1",
+      "original_evidence": "Original two-sided diagnostic workface reads as a floor with isolated uprights; testing/receiving relationship is not legible at 1:1. The unlike off-axis rotors, roof supports, flyway and editing pockets are positive source evidence.",
+      "pr_url": "https://github.com/techrote/sandmapsreference/pull/167",
+      "live_state": "OPEN_DRAFT_HOLD",
+      "native_status": "NATIVE_UNTESTED",
+      "review_authorship_limit": "Independent role asserted by review text; shared GitHub account alone does not prove a distinct human reviewer.",
+      "map_directory": "cybersand-canvases/2048x1024/original-scifi-biomech-wide-umbra-rotor-islet-works-261121-0902",
+      "head_ref": "original/scifi-biomech-wide/umbra-rotor-islet-works-261121-0902",
+      "setup_filename": "setup-umbra-rotor-islet-works.json",
+      "files": [
+        {
+          "path": "01-quarantine-jetty.png",
+          "sha256": "8e6715362e54661b0f1c63be463cae7d0e7b1c80995f93bfa52a8a4f284e6af8",
+          "bytes": 103598
+        },
+        {
+          "path": "02-stamping-islets.png",
+          "sha256": "49b318c23de053193d23520c9aeed86f990fc533e1700d9a2aa56409a3ff375e",
+          "bytes": 101683
+        },
+        {
+          "path": "03-twin-salvage-rotors.png",
+          "sha256": "c8fb660867023768f7766f656d88ea52d18c75ea632a59b11b474ba179c2d7b3",
+          "bytes": 199678
+        },
+        {
+          "path": "04-central-examination.png",
+          "sha256": "177f19b61856b7202ac0ea136418cc1c942b4c2ae9765616771b095c9e4735f6",
+          "bytes": 65782
+        },
+        {
+          "path": "05-arterial-comb.png",
+          "sha256": "888feba2abd162940c26658c53d58379ebc0a93cc0d9ab493e52bce9cde42ff3",
+          "bytes": 123697
+        },
+        {
+          "path": "06-broken-freight-gantry.png",
+          "sha256": "42713f61ffb7030917627251f278904848544003edc912fbf2f2158773ee0ab4",
+          "bytes": 103401
+        },
+        {
+          "path": "07-buried-archive.png",
+          "sha256": "6f035baf3eab560fd4d218629e4305fb2b8db1e7433f537a8fe07da39e1d0cad",
+          "bytes": 17802
+        },
+        {
+          "path": "README.md",
+          "sha256": "5952a8dcbf68a3809519c02d88ff1dc3b591d2002f78bd61207a8a1fbbe533d6",
+          "bytes": 2841
+        },
+        {
+          "path": "build.js",
+          "sha256": "519aa9bad3c46764ab373d8e0fa5ff4e33fe9b60a7207f2692ba3631be64a32d",
+          "bytes": 16061
+        },
+        {
+          "path": "design.json",
+          "sha256": "f1d721c903330abe046c00c29871e901c12a2c4695d9d5742b982d823b8d6cc3",
+          "bytes": 19729
+        },
+        {
+          "path": "exemplar.json",
+          "sha256": "f3e54eea0f2f06d40f32a2d632533ee5df5bf182381796218b30ff9dd9d89998",
+          "bytes": 5990
+        },
+        {
+          "path": "overview.png",
+          "sha256": "4944a061953485c79b417c1eb80ef216ee9e6df821665700f401e451059e9519",
+          "bytes": 1049793
+        },
+        {
+          "path": "qualification.json",
+          "sha256": "3519495cd1cf86af7e6e1fba0932119db82a2fbbec761044f68494e88adde2f1",
+          "bytes": 13762
+        },
+        {
+          "path": "setup-umbra-rotor-islet-works.json",
+          "sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+          "bytes": 36794
+        }
+      ],
+      "setup_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+      "extent": [
+        2048,
+        1024
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+          "spawn": [
+            78,
+            695
+          ],
+          "options": {
+            "budget": 20,
+            "mass_multiplier": 1,
+            "inertia_multiplier": 1,
+            "thrust_multiplier": 1,
+            "torque_multiplier": 1,
+            "boost_multiplier": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "arm": "B3",
+      "pr": 170,
+      "name": "Brackenfold Tri-Vault Boreworks",
+      "head": "3a2057dd56804f87d2fec701007ecc277601894f",
+      "expected_disposition": "BOUNDED_INTERVENTION",
+      "review_url": "https://github.com/techrote/sandmapsreference/pull/170#issuecomment-7063215180",
+      "review_verdict": "ART_REWORK_P1",
+      "original_evidence": "Original North throat (809,317) and South bypass (791,532) are physically separate but insufficiently distinct as movement-scale racing choices. Static site accessibility does not establish visual decision readability. Unequal geological chambers and low return remain valuable.",
+      "pr_url": "https://github.com/techrote/sandmapsreference/pull/170",
+      "live_state": "OPEN_DRAFT_HOLD",
+      "native_status": "NATIVE_UNTESTED",
+      "review_authorship_limit": "Independent role asserted by review text; shared GitHub account alone does not prove a distinct human reviewer.",
+      "map_directory": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121",
+      "head_ref": "original/racing-wide/brackenfold-trivault-boreworks-261121",
+      "setup_filename": "setup-brackenfold-trivault-boreworks.json",
+      "files": [
+        {
+          "path": "01-west-ignition-nest.png",
+          "sha256": "41b8830e713794705b86555b762f99ed51c7385f4bab52ac9033bdfa5abe23b4",
+          "bytes": 2514
+        },
+        {
+          "path": "02-first-vault-hoists.png",
+          "sha256": "a9a6ca38de542bcd45eea285e6947588fc9d1b8d635fb4d5aae393ec89ecbdb2",
+          "bytes": 4249
+        },
+        {
+          "path": "03-central-saltfold-hub.png",
+          "sha256": "a1b9a0cfc6aed7e56b2f79bbee5a9198febe4903133a644f8bfda33bfbe718c7",
+          "bytes": 5174
+        },
+        {
+          "path": "04-east-condenser-bore.png",
+          "sha256": "e28d209390f5c5ac470ab779330fc7def3bcd4e3348131ab2e1ced86ff347ee8",
+          "bytes": 3412
+        },
+        {
+          "path": "05-east-catcher-switch.png",
+          "sha256": "31736e21b2e4922b874d938ad5b34c949a011f613338360cb9020b8533bfdb2c",
+          "bytes": 3096
+        },
+        {
+          "path": "06-deep-service-pockets.png",
+          "sha256": "51b1aa940ec202d84c8de046eec117c3970140e4eeeea3704768360920f8e271",
+          "bytes": 3435
+        },
+        {
+          "path": "README.md",
+          "sha256": "d5476618fcd7213aa358b5da96548029abc417874b41d009b0e8cd4a6a1975a3",
+          "bytes": 4918
+        },
+        {
+          "path": "build.py",
+          "sha256": "48cb4e7488b92b106e2fd52b173f57be6c8fb0ea90028b6010986f572bf9b95d",
+          "bytes": 16025
+        },
+        {
+          "path": "exemplar.json",
+          "sha256": "04ae4cd04e96cca249b064e325bccad745a6a6155e1b39e1c65a17c52d0029b2",
+          "bytes": 4582
+        },
+        {
+          "path": "independent-verification.json",
+          "sha256": "f592f834531baaf8d4fcbc3d24faabaed807feb44f00bcc09d1ec1ba11415e18",
+          "bytes": 595
+        },
+        {
+          "path": "local-route-qualification.json",
+          "sha256": "9517a0481dfbb7b0ca7f83ef8fc892c47eab009ea2ad8d11a4aa69255b435bb5",
+          "bytes": 1436
+        },
+        {
+          "path": "overview.png",
+          "sha256": "94068c3d4c2c6b77dc8629674337574c350effab0f9ba90290b76847b44aac2e",
+          "bytes": 17753
+        },
+        {
+          "path": "physical-laws.json",
+          "sha256": "0b91a7a1daad14067879608614c8d8d7e8df3542ee287da5855dc858c62308d8",
+          "bytes": 1294
+        },
+        {
+          "path": "qualification.json",
+          "sha256": "36215c1dfbcec066b429cdf7ecd7f1fd718bc0e551ee04ff7749c2a07d599eb4",
+          "bytes": 5540
+        },
+        {
+          "path": "route_audit.py",
+          "sha256": "3baae0bb7c0e2f4b7c3ab6d58b322c9b73cca0c2fb1d65c76d67836a76337beb",
+          "bytes": 3295
+        },
+        {
+          "path": "setup-brackenfold-trivault-boreworks.json",
+          "sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+          "bytes": 78808
+        },
+        {
+          "path": "verify.py",
+          "sha256": "43cb4efd335fadd3bc35eeeee436fae823aa701aed651c422f2568adaafbe246",
+          "bytes": 3049
+        }
+      ],
+      "setup_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+      "extent": [
+        2048,
+        1024
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+          "spawn": [
+            125,
+            312
+          ],
+          "options": {
+            "budget": 20,
+            "mass_multiplier": 1,
+            "inertia_multiplier": 1,
+            "thrust_multiplier": 1,
+            "torque_multiplier": 1,
+            "boost_multiplier": 2
+          }
+        }
+      ]
+    },
+    {
+      "arm": "D1",
+      "pr": 186,
+      "name": "Orthant Rift Needle",
+      "head": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+      "donor_pr": 177,
+      "donor_head": "ed15c1b7d8be98548d087b247ed54b4a70498b01",
+      "original_transfer_difficulty": "OBVIOUS",
+      "trial_challenge_class": "DIFFICULT_FAILURE_CASE",
+      "expected_disposition": "PORTRAIT_IDENTITY_INTERVENTION",
+      "review_url": "https://github.com/techrote/sandmapsreference/pull/186#issuecomment-7062924203",
+      "review_verdict": "TRANSFER_REWORK",
+      "original_evidence": "Original high/middle/broken-low crossings lose distinct material grammar. Claimed entered drill bypass reads mainly as empty channel/wall. Original blocked shortest path remains in the shaft; reaching named sites plus a detour does not establish forced gallery traversal. Preserve two banks, fault void, clinic/mining and quarantine/archive identity.",
+      "pr_url": "https://github.com/techrote/sandmapsreference/pull/186",
+      "live_state": "OPEN_DRAFT_HOLD",
+      "native_status": "NATIVE_UNTESTED",
+      "review_authorship_limit": "Independent role asserted by review text; shared GitHub account alone does not prove a distinct human reviewer.",
+      "map_directory": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121",
+      "head_ref": "portrait/obvious/orthant-rift-needle-1024x2048",
+      "setup_filename": "setup.json",
+      "files": [
+        {
+          "path": "01-west-clinic.png",
+          "sha256": "51e7d433e605523a93e6253f03013149b4682e4fc1a65569e821ff82f27b67d7",
+          "bytes": 162492
+        },
+        {
+          "path": "02-seismic-fork.png",
+          "sha256": "47c315d5872a21f2d36244cb95abee518d548673b663b84a0ca9c2ab782771f4",
+          "bytes": 170438
+        },
+        {
+          "path": "03-ore-transfer.png",
+          "sha256": "f7e3b7014e1621e0ea0a58403e7f79b84145ba82fc60bf1ab8d58f6b55410bab",
+          "bytes": 185991
+        },
+        {
+          "path": "04-east-drill-bypass.png",
+          "sha256": "a83d8a30ea10d52043830789dbe8107dd5d5d492a79f5774aafbf332990eff11",
+          "bytes": 177390
+        },
+        {
+          "path": "05-quarantine.png",
+          "sha256": "2d442088c7813391a72a01eeda8b8f468b1781b4fe57669b4a0f759344336851",
+          "bytes": 136643
+        },
+        {
+          "path": "06-buried-archives.png",
+          "sha256": "e185964121b454aa37941b56613b4b1ab22cb3d3c15dfc493e77ff69b469473d",
+          "bytes": 296533
+        },
+        {
+          "path": "README.md",
+          "sha256": "24aa9a77f42b0c842d3fe06a51256559d31eecd32bb2023e563fd852f44b3d66",
+          "bytes": 1281
+        },
+        {
+          "path": "aspect_transfer.json",
+          "sha256": "f6902759371f9ecc85da2f51eececc2f72a8b900b25e8dc691d98c3e564ee8ed",
+          "bytes": 1604
+        },
+        {
+          "path": "build.cjs",
+          "sha256": "e56cd652af32beb557d3d040e585258179f3dd661639dbb276ca5d3b7e909467",
+          "bytes": 25626
+        },
+        {
+          "path": "exemplar.json",
+          "sha256": "057407a69d64286004f4d2541df6d51011c906307f0edafb323c9052dd12a3c6",
+          "bytes": 3790
+        },
+        {
+          "path": "overview.png",
+          "sha256": "46f3f66d3121e76e85f377ee9796217e07d5c8df611ba3b478037db1a99b6dae",
+          "bytes": 2099836
+        },
+        {
+          "path": "receipt.json",
+          "sha256": "ec28aefaacf959b32caaed280c6fb7161b5208821de54a5d7e3f557323ada8f0",
+          "bytes": 16805
+        },
+        {
+          "path": "route_graph.json",
+          "sha256": "a1ed6cf97dcc2709222714fb0a1e59b6a36c1f1825cb0a7ec78141b574277b38",
+          "bytes": 13464
+        },
+        {
+          "path": "setup.json",
+          "sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+          "bytes": 7690
+        }
+      ],
+      "setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+      "extent": [
+        1024,
+        2048
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+          "spawn": [
+            509,
+            137
+          ],
+          "options": {
+            "budget": 20,
+            "mass_multiplier": 1,
+            "inertia_multiplier": 1,
+            "thrust_multiplier": 1,
+            "torque_multiplier": 1,
+            "boost_multiplier": 2
+          }
+        }
+      ]
+    },
+    {
+      "arm": "D2",
+      "pr": 196,
+      "name": "Warden Gashlift",
+      "head": "64fd7061385fd96e5673484e1a12a70e11333386",
+      "donor_pr": 124,
+      "donor_head": "99616a8c8d2475ad4145a8489c0cc8850b1bd783",
+      "original_transfer_difficulty": "DIFFICULT",
+      "expected_disposition": "PORTRAIT_IDENTITY_INTERVENTION",
+      "review_url": "https://github.com/techrote/sandmapsreference/pull/196#issuecomment-7067659159",
+      "review_verdict": "TRANSFER_REWORK",
+      "original_evidence": "Original press reads as an open ledge/frame, magnet as a plain pad and fractured freight joints as similar shelves. Breached ship/cabin, opposing crane, uneven salvage levels, rail dispatch, west recovery and broad open shaft remain useful identity evidence.",
+      "pr_url": "https://github.com/techrote/sandmapsreference/pull/196",
+      "live_state": "OPEN_DRAFT_HOLD",
+      "native_status": "NATIVE_UNTESTED",
+      "review_authorship_limit": "Independent role asserted by review text; shared GitHub account alone does not prove a distinct human reviewer.",
+      "map_directory": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121",
+      "head_ref": "portrait/difficult/warden-gashlift-1024x2048",
+      "setup_filename": "setup.json",
+      "files": [
+        {
+          "path": "01-entered-breached-ship.png",
+          "sha256": "27592221f6cadef9aba1982727f79bc7887b3d751a474aa53491bf40946dba5b",
+          "bytes": 3143
+        },
+        {
+          "path": "02-crane-magnet.png",
+          "sha256": "4ba76cda52ca869ca58f609955f960769c3222815fc930eb1592832aa7808e91",
+          "bytes": 7328
+        },
+        {
+          "path": "03-fractured-trestle-relay.png",
+          "sha256": "c514a00df2f68680672924b3910d212af8b350682a7be1b0fdaf66237d613b9a",
+          "bytes": 8394
+        },
+        {
+          "path": "04-salvage-press.png",
+          "sha256": "0f5ede80189a6f2cde81e96a9e0aaca5785ccfe3b8c0b458370e7d2c5e3b326b",
+          "bytes": 2956
+        },
+        {
+          "path": "05-customs-rail-grades.png",
+          "sha256": "b45a2291a0f496beb9a4e20184d950839a21654955594c2bcdb7e1599e4cab08",
+          "bytes": 7113
+        },
+        {
+          "path": "06-west-lower-return.png",
+          "sha256": "c47a2c55877dd31ce395d61186a176fec5598de4cfca98ce358e7bba224100b1",
+          "bytes": 3151
+        },
+        {
+          "path": "README.md",
+          "sha256": "f9fe850106b12bd304728ede4d39db7e0d3a2545c253bb6fb0a99832a8e79e71",
+          "bytes": 1004
+        },
+        {
+          "path": "aspect_transfer.json",
+          "sha256": "335084eea5b6ef7f4f1f4bd1b681e088e99654f4e989494437081f19ce940526",
+          "bytes": 1495
+        },
+        {
+          "path": "build.cjs",
+          "sha256": "473dcea9f9914018c43c11156e889ea6b433960636581b23d1eb65afbfca9b14",
+          "bytes": 12064
+        },
+        {
+          "path": "design.json",
+          "sha256": "1bff8f682c8a37db037bdab8869ce585718727f292ef1d4f5b88c93688a59de9",
+          "bytes": 26518
+        },
+        {
+          "path": "exemplar.json",
+          "sha256": "9bd709c6a6874c445db7db4fcd70e99b1d954c7e73eaa535277ebb3ffe212373",
+          "bytes": 3464
+        },
+        {
+          "path": "overview.png",
+          "sha256": "a4b978c693e6e71b556028715e32ebc79b41dc022d9a7c99bd4c8ec9c24334ea",
+          "bytes": 44247
+        },
+        {
+          "path": "plan.json",
+          "sha256": "8564d6afc57e078e36b02a023d48818e568d4f0f7fc40d5018d959a2786ce43b",
+          "bytes": 4645
+        },
+        {
+          "path": "receipt.json",
+          "sha256": "d1b83b955b29d344790fdb0c5e6db8233ff497be0cb84942b577d68eef42a8ca",
+          "bytes": 6376
+        },
+        {
+          "path": "setup.json",
+          "sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+          "bytes": 18694
+        }
+      ],
+      "setup_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+      "extent": [
+        1024,
+        2048
+      ],
+      "actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+          "spawn": [
+            225,
+            273
+          ],
+          "options": {
+            "budget": 20,
+            "mass_multiplier": 1,
+            "inertia_multiplier": 1,
+            "thrust_multiplier": 1,
+            "torque_multiplier": 1,
+            "boost_multiplier": 1.8
+          }
+        }
+      ]
+    }
+  ],
+  "predictions": {
+    "C1": "No-change: retain already convincing grounded covered process spine.",
+    "C2": "No-change: retain interrupted bioindustrial annulus and dry recovery shafts.",
+    "C3": "No-change: retain successful opposing-bascule portrait.",
+    "B1": "Improve positive crane-to-receiver and entered repair relationship with bounded cells.",
+    "B2": "Improve two-sided diagnostic examination and material receiver without rotor redesign.",
+    "B3": "Make existing north/south racing decisions visually distinguishable without forced reroute.",
+    "D1": "Differentiate three crossing technologies and articulate an optional entered drill route while preserving fault void.",
+    "D2": "Differentiate magnet, press and two intentionally broken freight interfaces while preserving breach and open shaft."
+  },
+  "evaluation_dimensions": [
+    "technical_validity",
+    "source_static_playability",
+    "structural_credibility",
+    "functional_relationship",
+    "visual_identity",
+    "protected_space",
+    "corpus_value",
+    "similarity_risk",
+    "native_evidence",
+    "comparative_outcome"
+  ],
+  "hard_regression_rules": [
+    "No changed spawn or silently relocated named endpoints.",
+    "No lost previously reachable literal named centre at any predeclared clearance envelope.",
+    "No repair of intentionally broken bridge/freight gaps into continuous service.",
+    "No new detached permanent structures or unsupported foundation material.",
+    "No introduced fluid leak or opposing-fluid contact.",
+    "No loss of protected negative-space relationships or source identity.",
+    "No illegal material/Setup writes or unauthentic evidence PNG."
+  ],
+  "interpretation": [
+    "Accessibility is not proof of compulsory traversal.",
+    "Static apparatus is not a simulated moving mechanism.",
+    "Quantity diagnostics are not quality scores.",
+    "Inherited original limitations must be reported separately from introduced regressions.",
+    "Post-lock changes informed by prior repaired references are unblinded follow-up, not part of the primary experiment."
+  ],
+  "iteration_budget": {
+    "per_changed_arm": "One bounded initial intervention and up to two targeted corrective iterations for demonstrated failures before cohort lock; no broad redesign.",
+    "controls": "No geometry required.",
+    "expansion": "Any extra iteration requires a recorded concrete failure and must remain blinded; original attempt retained."
+  },
+  "blinding_limit": "Procedural file and source allowlist, not an operating-system security boundary. Reviewer knows original identities; label-blind comparison does not imply source-naive review."
+}
