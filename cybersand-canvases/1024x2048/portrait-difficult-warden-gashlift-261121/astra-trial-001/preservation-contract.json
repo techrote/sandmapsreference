@@ -1,0 +1,120 @@
+{
+  "disposition": "PORTRAIT_REPAIR_PROPOSAL",
+  "regions": [
+    {
+      "id": "magnet_head",
+      "xywh": [
+        570,
+        540,
+        88,
+        91
+      ],
+      "purpose": "Articulate opposed collecting poles/underside of the existing suspended head without changing the crane arm or the literal magnet approach.",
+      "original_occupied_cells": 2106,
+      "original_empty_cells": 5902,
+      "original_region_sha256_uint8": "756059ced9f44a4f3a958cc7c27c47446cd1adb4c22ae4a2730d2678f2f960e1"
+    },
+    {
+      "id": "press_workface",
+      "xywh": [
+        765,
+        1095,
+        180,
+        208
+      ],
+      "purpose": "Grounded opposed compression head and receiving bed inside the existing right frame, preserving Press Chamber and process access.",
+      "original_occupied_cells": 8000,
+      "original_empty_cells": 29440,
+      "original_region_sha256_uint8": "5e2fd81f3efe3e24178092bd021178aa3ad28e08ebf5e0afd731395445d6bc18"
+    },
+    {
+      "id": "upper_west_fracture",
+      "xywh": [
+        327,
+        731,
+        77,
+        115
+      ],
+      "purpose": "A broken upper trestle end retaining left-bank support and open central gap.",
+      "original_occupied_cells": 2228,
+      "original_empty_cells": 6627,
+      "original_region_sha256_uint8": "a8496f0101f8041615a95929f832d574a70799fdad928e4b271c853cb2031184"
+    },
+    {
+      "id": "upper_east_fracture",
+      "xywh": [
+        620,
+        691,
+        88,
+        124
+      ],
+      "purpose": "A differently fractured opposite upper trestle end; no cross-shaft bridge.",
+      "original_occupied_cells": 2619,
+      "original_empty_cells": 8293,
+      "original_region_sha256_uint8": "384effd81755fb8e1daecc6641a9f8db6491156abdd53a2df07657e139cb2680"
+    },
+    {
+      "id": "middle_west_fracture",
+      "xywh": [
+        330,
+        997,
+        76,
+        120
+      ],
+      "purpose": "A distinct stepped/torn middle handoff end.",
+      "original_occupied_cells": 2176,
+      "original_empty_cells": 6944,
+      "original_region_sha256_uint8": "33ab53cf6899fdacf472d79eddeb5ceb1e19f596843e208c074c08273c18dc64"
+    },
+    {
+      "id": "middle_east_fracture",
+      "xywh": [
+        604,
+        981,
+        88,
+        121
+      ],
+      "purpose": "An unlike receiving/fragmented middle handoff end.",
+      "original_occupied_cells": 1953,
+      "original_empty_cells": 8695,
+      "original_region_sha256_uint8": "4bdeb48d397d06972e4a75f0dfd2d9548f7881256f7c3df5ca4d570ac5a2d8f2"
+    },
+    {
+      "id": "lower_west_fracture",
+      "xywh": [
+        330,
+        1340,
+        66,
+        116
+      ],
+      "purpose": "Preserve unequal lower altitude and articulate its existing fractured end.",
+      "original_occupied_cells": 2051,
+      "original_empty_cells": 5605,
+      "original_region_sha256_uint8": "08755d51a580fb65940f08fe34f0f3cd3bc1fe6c02f05ca406a3baeb596e5864"
+    },
+    {
+      "id": "lower_east_fracture",
+      "xywh": [
+        624,
+        1408,
+        82,
+        116
+      ],
+      "purpose": "Retain staggered lower counterpart and distinguish it from upper plain shelves.",
+      "original_occupied_cells": 1822,
+      "original_empty_cells": 7690,
+      "original_region_sha256_uint8": "a6a91c1781cf86be6860a2fa859aa64cf24b595195eced9e96dbe4e71d849621"
+    }
+  ],
+  "maximum_changed_cells": 14500,
+  "preserved_relations": [
+    "Breached freighter/cabin and original opposing crane outside head allowance",
+    "Broad shaft and all original route centres",
+    "Three unequal salvage elevations",
+    "East rail/customs and west recovery",
+    "Every broken link remains discontinuous; no cross-gap completion",
+    "Exact press threshold/compression-yard/chamber centres"
+  ],
+  "cell_diagnosis": "Source pixels show the magnet as a shallow pad and press as open frame because much provisional internal apparatus is absent after clearance and pruning. Several trestle ends repeat plain horizontal terminations at y751/1017/1360 west and709/1001/1427 east.",
+  "baseline_material_plane_sha256_uint8": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81"
+}
