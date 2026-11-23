@@ -1,0 +1,19 @@
+{
+  "schema_version": "goldmaps-ci-attempts.v1",
+  "attempts": [
+    {
+      "run_id": 45211474354,
+      "job_id": 137821266237,
+      "url": "https://github.com/techrote/sandmapsreference/actions/runs/45211474354",
+      "head": "50fd8a9c37336999ee89b31d55ac837c1b8388eb",
+      "status": "FAILURE_REFUSAL_BEFORE_NATIVE_EXECUTION",
+      "observation": "Acquisition refused the checkout manifest because its bytes did not match the frozen SHA-256.",
+      "cause": "Windows Git checkout line-ending conversion; the committed LF blob still matches the original frozen hash.",
+      "expected_lf_sha256": "d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0",
+      "locally_reproduced_crlf_sha256": "c2bd1687464a1f0b106b1fa27926f980735e51697b947e5277332c35530a17a1",
+      "correction": "Set core.autocrlf=false on the ephemeral hosted runner before checkout; retain all hash assertions.",
+      "log": "ci-45211474354.log",
+      "native_test_executed": false
+    }
+  ]
+}
