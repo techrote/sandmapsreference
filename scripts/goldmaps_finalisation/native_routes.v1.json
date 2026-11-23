@@ -1,0 +1,1220 @@
+{
+  "schema": "goldmaps.native-routes.v1",
+  "planner": "A* four-cell grid, six-cell all-nonzero margin, line-of-sight simplification",
+  "routes": [
+    {
+      "id": "b1-receiver-original",
+      "setup_id": "trial-B1-original",
+      "setup_sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+      "planner_source_sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+      "route_fixture_sha256": "f8f936b5f3ce5d96c917206c4d2014c9d14da9cd6113a9d697ffdc3bbf2301a1",
+      "named_sites": [
+        "West arrival booth",
+        "First component switch",
+        "Reclaim crossways",
+        "Machine transit",
+        "Press receiver"
+      ],
+      "waypoints": [
+        [
+          115,
+          520
+        ],
+        [
+          272,
+          520
+        ],
+        [
+          432,
+          520
+        ],
+        [
+          555,
+          520
+        ],
+        [
+          712,
+          520
+        ],
+        [
+          860,
+          523
+        ],
+        [
+          1016,
+          524
+        ],
+        [
+          1048,
+          548
+        ],
+        [
+          1060,
+          548
+        ],
+        [
+          1080,
+          525
+        ],
+        [
+          1212,
+          600
+        ],
+        [
+          1240,
+          636
+        ],
+        [
+          1260,
+          684
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "b1-receiver-candidate",
+      "setup_id": "trial-B1-candidate",
+      "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+      "planner_source_sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+      "route_fixture_sha256": "f8f936b5f3ce5d96c917206c4d2014c9d14da9cd6113a9d697ffdc3bbf2301a1",
+      "named_sites": [
+        "West arrival booth",
+        "First component switch",
+        "Reclaim crossways",
+        "Machine transit",
+        "Press receiver"
+      ],
+      "waypoints": [
+        [
+          115,
+          520
+        ],
+        [
+          272,
+          520
+        ],
+        [
+          432,
+          520
+        ],
+        [
+          555,
+          520
+        ],
+        [
+          712,
+          520
+        ],
+        [
+          860,
+          523
+        ],
+        [
+          1016,
+          524
+        ],
+        [
+          1048,
+          548
+        ],
+        [
+          1060,
+          548
+        ],
+        [
+          1080,
+          525
+        ],
+        [
+          1212,
+          600
+        ],
+        [
+          1240,
+          636
+        ],
+        [
+          1260,
+          684
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "b2-apparatus-original",
+      "setup_id": "trial-B2-original",
+      "setup_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+      "planner_source_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+      "route_fixture_sha256": "9264c034f24247c44b937b99fdf5c21ecf0a8d4599de0bd5b33012ddbad6be2d",
+      "named_sites": [
+        "spawn_quarantine",
+        "quarantine_gate",
+        "specimen_desk",
+        "west_tower",
+        "rotor_west_gate",
+        "central_inspection"
+      ],
+      "waypoints": [
+        [
+          78,
+          695
+        ],
+        [
+          155,
+          698
+        ],
+        [
+          273,
+          697
+        ],
+        [
+          392,
+          696
+        ],
+        [
+          436,
+          640
+        ],
+        [
+          596,
+          640
+        ],
+        [
+          748,
+          680
+        ],
+        [
+          786,
+          694
+        ],
+        [
+          936,
+          740
+        ],
+        [
+          1056,
+          840
+        ],
+        [
+          1071,
+          848
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "b2-apparatus-candidate",
+      "setup_id": "trial-B2-candidate",
+      "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+      "planner_source_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+      "route_fixture_sha256": "9264c034f24247c44b937b99fdf5c21ecf0a8d4599de0bd5b33012ddbad6be2d",
+      "named_sites": [
+        "spawn_quarantine",
+        "quarantine_gate",
+        "specimen_desk",
+        "west_tower",
+        "rotor_west_gate",
+        "central_inspection"
+      ],
+      "waypoints": [
+        [
+          78,
+          695
+        ],
+        [
+          155,
+          698
+        ],
+        [
+          273,
+          697
+        ],
+        [
+          392,
+          696
+        ],
+        [
+          436,
+          640
+        ],
+        [
+          596,
+          640
+        ],
+        [
+          748,
+          680
+        ],
+        [
+          786,
+          694
+        ],
+        [
+          936,
+          740
+        ],
+        [
+          1056,
+          840
+        ],
+        [
+          1071,
+          848
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "b3-north-original",
+      "setup_id": "trial-B3-original",
+      "setup_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+      "planner_source_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+      "route_fixture_sha256": "17fecc15d1f200d37d85972d773dd9613597b0eb16980ffadd7fad7e0a5128b4",
+      "named_sites": [
+        "West ignition nest",
+        "West pressure latch",
+        "West bearing",
+        "Vault one crown",
+        "Vault one switch",
+        "North tri-vault throat",
+        "Triple vault skylane"
+      ],
+      "waypoints": [
+        [
+          125,
+          312
+        ],
+        [
+          257,
+          317
+        ],
+        [
+          406,
+          303
+        ],
+        [
+          344,
+          440
+        ],
+        [
+          344,
+          452
+        ],
+        [
+          348,
+          472
+        ],
+        [
+          456,
+          476
+        ],
+        [
+          516,
+          412
+        ],
+        [
+          567,
+          295
+        ],
+        [
+          679,
+          321
+        ],
+        [
+          732,
+          468
+        ],
+        [
+          732,
+          472
+        ],
+        [
+          740,
+          480
+        ],
+        [
+          792,
+          492
+        ],
+        [
+          868,
+          552
+        ],
+        [
+          888,
+          552
+        ],
+        [
+          908,
+          496
+        ],
+        [
+          908,
+          480
+        ],
+        [
+          880,
+          444
+        ],
+        [
+          809,
+          317
+        ],
+        [
+          964,
+          292
+        ],
+        [
+          988,
+          281
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 55.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "b3-north-candidate",
+      "setup_id": "trial-B3-candidate",
+      "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+      "planner_source_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+      "route_fixture_sha256": "17fecc15d1f200d37d85972d773dd9613597b0eb16980ffadd7fad7e0a5128b4",
+      "named_sites": [
+        "West ignition nest",
+        "West pressure latch",
+        "West bearing",
+        "Vault one crown",
+        "Vault one switch",
+        "North tri-vault throat",
+        "Triple vault skylane"
+      ],
+      "waypoints": [
+        [
+          125,
+          312
+        ],
+        [
+          257,
+          317
+        ],
+        [
+          406,
+          303
+        ],
+        [
+          344,
+          440
+        ],
+        [
+          344,
+          452
+        ],
+        [
+          348,
+          472
+        ],
+        [
+          456,
+          476
+        ],
+        [
+          516,
+          412
+        ],
+        [
+          567,
+          295
+        ],
+        [
+          679,
+          321
+        ],
+        [
+          732,
+          468
+        ],
+        [
+          732,
+          472
+        ],
+        [
+          740,
+          480
+        ],
+        [
+          792,
+          492
+        ],
+        [
+          868,
+          552
+        ],
+        [
+          888,
+          552
+        ],
+        [
+          908,
+          496
+        ],
+        [
+          908,
+          480
+        ],
+        [
+          880,
+          444
+        ],
+        [
+          809,
+          317
+        ],
+        [
+          964,
+          292
+        ],
+        [
+          988,
+          281
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 55.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "b3-south-original",
+      "setup_id": "trial-B3-original",
+      "setup_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+      "planner_source_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+      "route_fixture_sha256": "17fecc15d1f200d37d85972d773dd9613597b0eb16980ffadd7fad7e0a5128b4",
+      "named_sites": [
+        "West ignition nest",
+        "West pressure latch",
+        "West bearing",
+        "Vault one crown",
+        "Vault one switch",
+        "South tri-vault bypass",
+        "Central bypass wicket"
+      ],
+      "waypoints": [
+        [
+          125,
+          312
+        ],
+        [
+          257,
+          317
+        ],
+        [
+          406,
+          303
+        ],
+        [
+          344,
+          440
+        ],
+        [
+          344,
+          452
+        ],
+        [
+          348,
+          472
+        ],
+        [
+          456,
+          476
+        ],
+        [
+          516,
+          412
+        ],
+        [
+          567,
+          295
+        ],
+        [
+          679,
+          321
+        ],
+        [
+          732,
+          468
+        ],
+        [
+          732,
+          472
+        ],
+        [
+          791,
+          532
+        ],
+        [
+          872,
+          552
+        ],
+        [
+          952,
+          552
+        ],
+        [
+          976,
+          539
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 55.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "b3-south-candidate",
+      "setup_id": "trial-B3-candidate",
+      "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+      "planner_source_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+      "route_fixture_sha256": "17fecc15d1f200d37d85972d773dd9613597b0eb16980ffadd7fad7e0a5128b4",
+      "named_sites": [
+        "West ignition nest",
+        "West pressure latch",
+        "West bearing",
+        "Vault one crown",
+        "Vault one switch",
+        "South tri-vault bypass",
+        "Central bypass wicket"
+      ],
+      "waypoints": [
+        [
+          125,
+          312
+        ],
+        [
+          257,
+          317
+        ],
+        [
+          406,
+          303
+        ],
+        [
+          344,
+          440
+        ],
+        [
+          344,
+          452
+        ],
+        [
+          348,
+          472
+        ],
+        [
+          456,
+          476
+        ],
+        [
+          516,
+          412
+        ],
+        [
+          567,
+          295
+        ],
+        [
+          679,
+          321
+        ],
+        [
+          732,
+          468
+        ],
+        [
+          732,
+          472
+        ],
+        [
+          791,
+          532
+        ],
+        [
+          872,
+          552
+        ],
+        [
+          952,
+          552
+        ],
+        [
+          976,
+          539
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 55.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "d1-gallery-original",
+      "setup_id": "trial-D1-original",
+      "setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+      "planner_source_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+      "route_fixture_sha256": "2b67ace67494f5f948c14f3348986484fa6d4df4f61021eb171f4a75563dda21",
+      "named_sites": [
+        "Upper fault spawn",
+        "Upper bridge landing",
+        "Mid fault exchange",
+        "East drill bypass upper",
+        "East drill bypass middle",
+        "East drill bypass lower"
+      ],
+      "waypoints": [
+        [
+          509,
+          137
+        ],
+        [
+          508,
+          296
+        ],
+        [
+          508,
+          456
+        ],
+        [
+          556,
+          608
+        ],
+        [
+          572,
+          696
+        ],
+        [
+          568,
+          700
+        ],
+        [
+          521,
+          710
+        ],
+        [
+          520,
+          868
+        ],
+        [
+          503,
+          915
+        ],
+        [
+          660,
+          916
+        ],
+        [
+          756,
+          902
+        ],
+        [
+          776,
+          1060
+        ],
+        [
+          780,
+          1072
+        ],
+        [
+          757,
+          1218
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "d1-gallery-candidate",
+      "setup_id": "trial-D1-candidate",
+      "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+      "planner_source_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+      "route_fixture_sha256": "2b67ace67494f5f948c14f3348986484fa6d4df4f61021eb171f4a75563dda21",
+      "named_sites": [
+        "Upper fault spawn",
+        "Upper bridge landing",
+        "Mid fault exchange",
+        "East drill bypass upper",
+        "East drill bypass middle",
+        "East drill bypass lower"
+      ],
+      "waypoints": [
+        [
+          509,
+          137
+        ],
+        [
+          508,
+          296
+        ],
+        [
+          508,
+          456
+        ],
+        [
+          556,
+          608
+        ],
+        [
+          572,
+          696
+        ],
+        [
+          568,
+          700
+        ],
+        [
+          521,
+          710
+        ],
+        [
+          520,
+          868
+        ],
+        [
+          503,
+          915
+        ],
+        [
+          660,
+          916
+        ],
+        [
+          756,
+          902
+        ],
+        [
+          776,
+          1060
+        ],
+        [
+          780,
+          1072
+        ],
+        [
+          757,
+          1218
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "d1-gallery-reference",
+      "setup_id": "trial-D1-reference",
+      "setup_sha256": "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+      "planner_source_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+      "route_fixture_sha256": "2b67ace67494f5f948c14f3348986484fa6d4df4f61021eb171f4a75563dda21",
+      "named_sites": [
+        "Upper fault spawn",
+        "Upper bridge landing",
+        "Mid fault exchange",
+        "East drill bypass upper",
+        "East drill bypass middle",
+        "East drill bypass lower"
+      ],
+      "waypoints": [
+        [
+          509,
+          137
+        ],
+        [
+          508,
+          296
+        ],
+        [
+          508,
+          456
+        ],
+        [
+          556,
+          608
+        ],
+        [
+          572,
+          696
+        ],
+        [
+          568,
+          700
+        ],
+        [
+          521,
+          710
+        ],
+        [
+          520,
+          868
+        ],
+        [
+          503,
+          915
+        ],
+        [
+          660,
+          916
+        ],
+        [
+          756,
+          902
+        ],
+        [
+          776,
+          1060
+        ],
+        [
+          780,
+          1072
+        ],
+        [
+          757,
+          1218
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "d2-press-original",
+      "setup_id": "trial-D2-original",
+      "setup_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+      "planner_source_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+      "route_fixture_sha256": "7c3e54aa25abee128619007f3283b819982fcc05097e0e663bf8d9eb1c52dbcc",
+      "named_sites": [
+        "Arrival Mooring",
+        "Entered Salvage Hold",
+        "Lift Seam",
+        "Press Threshold",
+        "Press Chamber"
+      ],
+      "waypoints": [
+        [
+          225,
+          273
+        ],
+        [
+          262,
+          418
+        ],
+        [
+          288,
+          376
+        ],
+        [
+          312,
+          376
+        ],
+        [
+          424,
+          440
+        ],
+        [
+          428,
+          596
+        ],
+        [
+          496,
+          740
+        ],
+        [
+          500,
+          843
+        ],
+        [
+          572,
+          980
+        ],
+        [
+          612,
+          1024
+        ],
+        [
+          640,
+          1032
+        ],
+        [
+          713,
+          1050
+        ],
+        [
+          640,
+          1064
+        ],
+        [
+          636,
+          1072
+        ],
+        [
+          612,
+          1136
+        ],
+        [
+          616,
+          1156
+        ],
+        [
+          628,
+          1160
+        ],
+        [
+          788,
+          1160
+        ],
+        [
+          856,
+          1190
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "d2-press-candidate",
+      "setup_id": "trial-D2-candidate",
+      "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+      "planner_source_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+      "route_fixture_sha256": "7c3e54aa25abee128619007f3283b819982fcc05097e0e663bf8d9eb1c52dbcc",
+      "named_sites": [
+        "Arrival Mooring",
+        "Entered Salvage Hold",
+        "Lift Seam",
+        "Press Threshold",
+        "Press Chamber"
+      ],
+      "waypoints": [
+        [
+          225,
+          273
+        ],
+        [
+          262,
+          418
+        ],
+        [
+          288,
+          376
+        ],
+        [
+          312,
+          376
+        ],
+        [
+          424,
+          440
+        ],
+        [
+          428,
+          596
+        ],
+        [
+          496,
+          740
+        ],
+        [
+          500,
+          843
+        ],
+        [
+          572,
+          980
+        ],
+        [
+          612,
+          1024
+        ],
+        [
+          640,
+          1032
+        ],
+        [
+          713,
+          1050
+        ],
+        [
+          640,
+          1064
+        ],
+        [
+          636,
+          1072
+        ],
+        [
+          612,
+          1136
+        ],
+        [
+          616,
+          1156
+        ],
+        [
+          628,
+          1160
+        ],
+        [
+          788,
+          1160
+        ],
+        [
+          856,
+          1190
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    },
+    {
+      "id": "d2-press-reference",
+      "setup_id": "trial-D2-reference",
+      "setup_sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+      "planner_source_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+      "route_fixture_sha256": "7c3e54aa25abee128619007f3283b819982fcc05097e0e663bf8d9eb1c52dbcc",
+      "named_sites": [
+        "Arrival Mooring",
+        "Entered Salvage Hold",
+        "Lift Seam",
+        "Press Threshold",
+        "Press Chamber"
+      ],
+      "waypoints": [
+        [
+          225,
+          273
+        ],
+        [
+          262,
+          418
+        ],
+        [
+          288,
+          376
+        ],
+        [
+          312,
+          376
+        ],
+        [
+          424,
+          440
+        ],
+        [
+          428,
+          596
+        ],
+        [
+          496,
+          740
+        ],
+        [
+          500,
+          843
+        ],
+        [
+          572,
+          980
+        ],
+        [
+          612,
+          1024
+        ],
+        [
+          640,
+          1032
+        ],
+        [
+          713,
+          1050
+        ],
+        [
+          640,
+          1064
+        ],
+        [
+          636,
+          1072
+        ],
+        [
+          612,
+          1136
+        ],
+        [
+          616,
+          1156
+        ],
+        [
+          628,
+          1160
+        ],
+        [
+          788,
+          1160
+        ],
+        [
+          856,
+          1190
+        ]
+      ],
+      "waypoint_radius": 7.0,
+      "speed_limit": 40.0,
+      "max_ticks": 9000,
+      "max_wall_ms": 240000,
+      "stuck_ticks": 900,
+      "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+    }
+  ],
+  "planner_refusals": []
+}

@@ -253,6 +253,10 @@ def main():
             env = os.environ.copy()
             env.update(CYBERSAND_ADMISSION_LABEL=label, CYBERSAND_ADMISSION_SAVED_LABEL=saved,
                        CYBERSAND_ADMISSION_PHASE=phase)
+            tick_limit = int(aliases[0].get("contact_probe_tick_limit",900))
+            if tick_limit not in (900,1800):
+                raise ValueError("Unreviewed contact fixture tick limit")
+            env["GOLDMAPS_CONTACT_TICK_LIMIT"] = str(tick_limit)
             rec, text = run([godot, "--headless", "--path", project, "--script", "res://goldmaps-native-probe.gd"],
                             out/(case_id+"."+phase+".log"), env=env, timeout=240)
             rec["evidence"] = record(text, "CANVAS_NATIVE_EVIDENCE ")

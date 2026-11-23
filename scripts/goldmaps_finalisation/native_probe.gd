@@ -233,6 +233,10 @@ func _run() -> void:
 	# Ground proximity alone is not accepted as a collision witness.
 	if bool(report.actor_adopted) and phase == "load":
 		var contact_start_tick: int = int(host.physical_actor_session.tick)
+		var contact_tick_limit := 900
+		if OS.get_environment("GOLDMAPS_CONTACT_TICK_LIMIT") == "1800":
+			contact_tick_limit = 1800
+		var initial_900_tick_observation: Dictionary = {}
 		# Expanded Gold corpus includes active liquid maps whose native ticks are
 		# slower than the frozen eight-map suite. Increase wall allowance only;
 		# retain the original 900-tick maximum and actual contact witness gate.
@@ -240,9 +244,13 @@ func _run() -> void:
 		var contact_witnesses: Array = []
 		var max_contacts := 0
 		if host.paused: ui.toggle_pause()
-		while int(host.physical_actor_session.tick) < contact_start_tick + 900 and Time.get_ticks_msec() < contact_deadline:
+		while int(host.physical_actor_session.tick) < contact_start_tick + contact_tick_limit and Time.get_ticks_msec() < contact_deadline:
 			await process_frame
 			if host.simulation_worker.has_failed(): break
+			if contact_tick_limit > 900 and initial_900_tick_observation.is_empty() and int(host.physical_actor_session.tick) >= contact_start_tick+900:
+				var first_state: Dictionary = host.physical_actor_session.workbench_actor_state(midge_id)
+				var first_position: Vector2 = first_state.position
+				initial_900_tick_observation = {"tick":int(host.physical_actor_session.tick),"collision_observed":not contact_witnesses.is_empty(),"position":[first_position.x,first_position.y]}
 			for body: RigidBody2D in host.physical_actor_session.bodies():
 				var direct: PhysicsDirectBodyState2D = PhysicsServer2D.body_get_direct_state(body.get_rid())
 				if direct == null: continue
@@ -255,7 +263,9 @@ func _run() -> void:
 			if not contact_witnesses.is_empty(): break
 		if not host.paused: ui.toggle_pause()
 		report["collision_observed"] = not contact_witnesses.is_empty()
-		report["collision_probe"] = {"method":"gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts", "wall_budget_ms":90000,"tick_budget":900,"start_tick":contact_start_tick,"end_tick":int(host.physical_actor_session.tick),"max_contacts":max_contacts,"witnesses":contact_witnesses,"worker_failed":host.simulation_worker.has_failed()}
+		var contact_end_state: Dictionary = host.physical_actor_session.workbench_actor_state(midge_id)
+		var contact_end_position: Vector2 = contact_end_state.position
+		report["collision_probe"] = {"method":"gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts", "wall_budget_ms":90000,"tick_budget":contact_tick_limit,"initial_900_tick_observation":initial_900_tick_observation,"end_position":[contact_end_position.x,contact_end_position.y],"start_tick":contact_start_tick,"end_tick":int(host.physical_actor_session.tick),"max_contacts":max_contacts,"witnesses":contact_witnesses,"worker_failed":host.simulation_worker.has_failed()}
 		report["collision_claim_limit"] = "Observed contact on this local fixture; not route completion or playfeel qualification."
 	# Write only to a distinct new label; NEVER overwrite the source-pinned fixture.
 	ui._name.text = saved

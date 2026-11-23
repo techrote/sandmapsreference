@@ -278,7 +278,9 @@
         1024,
         2048
       ],
-      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/e45f9794f318761db02fbe82ad623c2b1da96196/cybersand-canvases/1024x2048/portrait-difficult-keelglass-vertical-twin-keels-261121/setup.json"
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/e45f9794f318761db02fbe82ad623c2b1da96196/cybersand-canvases/1024x2048/portrait-difficult-keelglass-vertical-twin-keels-261121/setup.json",
+      "contact_probe_tick_limit": 1800,
+      "contact_probe_reason": "Original 900-tick probe completes without contact in the intentional clear shaft: authored spawn (517,132), first solid below at y1938. Preserve initial900-tick negative and require actual contact during a separate bounded continuation to1800ticks. No geometry/spawn/actor change."
     },
     {
       "id": "gold-163",
@@ -454,7 +456,9 @@
         1024,
         2048
       ],
-      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/d5c37d371e004e84d5c8cd77b2ae29b25a3cc0c9/cybersand-canvases/1024x2048/portrait-obvious-mireward-lanternwell-261121/setup.json"
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/d5c37d371e004e84d5c8cd77b2ae29b25a3cc0c9/cybersand-canvases/1024x2048/portrait-obvious-mireward-lanternwell-261121/setup.json",
+      "contact_probe_tick_limit": 1800,
+      "contact_probe_reason": "Original 900-tick contact trial ended at (505,1590.01989746094) without contact. Exact repaired portrait spawn (505,185), first occupied floor below at y1923. Retain initial900-tick negative and require actual contact during a separate bounded continuation to1800ticks. No geometry/spawn/actor change."
     },
     {
       "id": "repair-205",
