@@ -1,0 +1,28 @@
+name: GOLDMAPS finalisation corpus contracts
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/goldmaps-finalisation-static.yml'
+      - 'scripts/goldmaps_finalisation/core.py'
+      - 'scripts/goldmaps_finalisation/audit.py'
+      - 'scripts/goldmaps_finalisation/corpus.py'
+      - 'scripts/goldmaps_finalisation/test_finalisation.py'
+      - 'docs/corpus/goldmaps-finalisation-001/**'
+permissions:
+  contents: read
+jobs:
+  corpus-contracts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/goldmaps_finalisation/
+            docs/corpus/goldmaps-finalisation-001/
+      - name: Install bounded static-analysis dependencies
+        run: python3 -m pip install numpy==2.3.5 scipy==1.17.0 pillow==13.0.0
+      - name: Execute contract, tamper and preservation tests
+        run: python3 -m unittest discover -s scripts/goldmaps_finalisation -p test_finalisation.py -v
