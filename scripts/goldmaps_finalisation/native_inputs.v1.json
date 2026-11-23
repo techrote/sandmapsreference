@@ -113,7 +113,12 @@
         2048,
         1024
       ],
-      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/7ff90c11a3839e42371f0fef5ac3c783ab2a8d05/cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json"
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/7ff90c11a3839e42371f0fef5ac3c783ab2a8d05/cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json",
+      "expected_native_refusal": {
+        "code": "malformed_policy",
+        "detail": "bad magic"
+      },
+      "native_advisory": "Historical original is refused by pinned engine. See separate post-experiment policy-repair descendant."
     },
     {
       "id": "gold-106",
@@ -838,6 +843,28 @@
       "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/94eccd23024254fbbfb02cd6cdfef8753dd89c3c/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json",
       "source_head": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
       "role_parent_pr": 196
+    },
+    {
+      "id": "derived-155-policy",
+      "roles": [
+        "post-experiment-descendant",
+        "gold-conditional"
+      ],
+      "pr": 155,
+      "head": "7ff90c11a3839e42371f0fef5ac3c783ab2a8d05",
+      "path": "cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json",
+      "setup_sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+      "setup_bytes": 60064,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/7ff90c11a3839e42371f0fef5ac3c783ab2a8d05/cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json",
+      "native_advisory": "Separate metadata-only descendant; exact geometry and actors preserved; native qualification required.",
+      "input_kind": "integration_descendant",
+      "local_path": "docs/corpus/goldmaps-finalisation-001/native/descendants/pr155-policy-repair/setup.json",
+      "derivation_path": "docs/corpus/goldmaps-finalisation-001/native/descendants/pr155-policy-repair/derivation.v1.json",
+      "source_identity_kind": "original_parent_of_derived_input"
     }
   ],
   "scope": "Pinned Gold25, seven portrait repairs, and frozen trial original/candidate/reference Setups. Aliases with identical bytes share executed evidence only when SHA-256 matches. No Gold acceptance."

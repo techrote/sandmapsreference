@@ -139,6 +139,12 @@ func _run() -> void:
 	report["extent"] = recipe.extent
 	report["source_parse"] = Setup.validate(recipe).is_empty()
 	if not _need(bool(report.source_parse),"source parser in actual Godot"): _finish(); return
+	var policy_bridge: Object = ClassDB.instantiate(&"CyberDemoBridge")
+	var policy_result: Dictionary = policy_bridge.validate_liquid_policy(PackedInt32Array(recipe.liquid_policy))
+	policy_bridge = null
+	report["native_policy"] = policy_result
+	if not _need(bool(policy_result.get("accepted",false)),"native liquid policy refused: "+str(policy_result.get("refusal",{}))):
+		_finish(); return
 	var before: int = host._physical_epoch
 	ui._name.text = active
 	if not _need(ui.load_setup(),"real Load start request / " + ui.message): _finish(); return
@@ -227,7 +233,10 @@ func _run() -> void:
 	# Ground proximity alone is not accepted as a collision witness.
 	if bool(report.actor_adopted) and phase == "load":
 		var contact_start_tick: int = int(host.physical_actor_session.tick)
-		var contact_deadline: int = Time.get_ticks_msec() + 30000
+		# Expanded Gold corpus includes active liquid maps whose native ticks are
+		# slower than the frozen eight-map suite. Increase wall allowance only;
+		# retain the original 900-tick maximum and actual contact witness gate.
+		var contact_deadline: int = Time.get_ticks_msec() + 90000
 		var contact_witnesses: Array = []
 		var max_contacts := 0
 		if host.paused: ui.toggle_pause()
@@ -246,7 +255,7 @@ func _run() -> void:
 			if not contact_witnesses.is_empty(): break
 		if not host.paused: ui.toggle_pause()
 		report["collision_observed"] = not contact_witnesses.is_empty()
-		report["collision_probe"] = {"method":"gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts", "start_tick":contact_start_tick,"end_tick":int(host.physical_actor_session.tick),"max_contacts":max_contacts,"witnesses":contact_witnesses,"worker_failed":host.simulation_worker.has_failed()}
+		report["collision_probe"] = {"method":"gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts", "wall_budget_ms":90000,"tick_budget":900,"start_tick":contact_start_tick,"end_tick":int(host.physical_actor_session.tick),"max_contacts":max_contacts,"witnesses":contact_witnesses,"worker_failed":host.simulation_worker.has_failed()}
 		report["collision_claim_limit"] = "Observed contact on this local fixture; not route completion or playfeel qualification."
 	# Write only to a distinct new label; NEVER overwrite the source-pinned fixture.
 	ui._name.text = saved

@@ -1,0 +1,315 @@
+{
+  "arm": "B3",
+  "source_head": "3a2057dd56804f87d2fec701007ecc277601894f",
+  "frozen_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "cell_difference": {
+    "changed_cells": 2699,
+    "bounds_xywh": [
+      726,
+      250,
+      122,
+      339
+    ],
+    "before_material_plane_sha256_uint8": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+    "after_material_plane_sha256_uint8": "185ea8af2053aafcb7ea3460dee1329bbed667cff5cda7923ab8c35fb9ada372",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 58,
+        "cells": 247
+      },
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 1219
+      },
+      {
+        "from": 62,
+        "to": 58,
+        "cells": 77
+      },
+      {
+        "from": 100,
+        "to": 58,
+        "cells": 300
+      },
+      {
+        "from": 100,
+        "to": 62,
+        "cells": 656
+      },
+      {
+        "from": 117,
+        "to": 58,
+        "cells": 96
+      },
+      {
+        "from": 117,
+        "to": 62,
+        "cells": 77
+      },
+      {
+        "from": 122,
+        "to": 58,
+        "cells": 27
+      }
+    ]
+  },
+  "final_pruned_provisional_cells": 0,
+  "operation_groups": [
+    {
+      "group": "north_throat_approach",
+      "cells_changed_at_operation_stage": 1602
+    },
+    {
+      "group": "south_bypass_approach",
+      "cells_changed_at_operation_stage": 1097
+    }
+  ],
+  "rectangle_count": 4184,
+  "setup_sha256": "fdd318d6befb7ad4caea9d8e7410edb89bbdc8fe65c95ddd193d554b77ce34ed",
+  "images": [
+    {
+      "path": "images/overview-before.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "dd2e57883e301cf485741b59dde810da9914ee0bcd696e1acd12bd9f86225fcc"
+    },
+    {
+      "path": "images/overview-after.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "320318cc122acb22edd93f5895b92626623fddd03af1d2b8b5f865613598a1df"
+    },
+    {
+      "path": "images/01-west-ignition-nest-before.png",
+      "source_crop_xywh": [
+        50,
+        150,
+        390,
+        635
+      ],
+      "pixels": [
+        390,
+        635
+      ],
+      "scale": 1,
+      "sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc"
+    },
+    {
+      "path": "images/01-west-ignition-nest-after.png",
+      "source_crop_xywh": [
+        50,
+        150,
+        390,
+        635
+      ],
+      "pixels": [
+        390,
+        635
+      ],
+      "scale": 1,
+      "sha256": "2b74982de97de6fd06949677adea67e22ceb2b48ce3f6092adbd802d8fe282cc"
+    },
+    {
+      "path": "images/02-first-vault-hoists-before.png",
+      "source_crop_xywh": [
+        316,
+        115,
+        500,
+        680
+      ],
+      "pixels": [
+        500,
+        680
+      ],
+      "scale": 1,
+      "sha256": "a90ebb49e4339d6480650f9046d0628fca6cbafb13034d100abfe28b69976ed2"
+    },
+    {
+      "path": "images/02-first-vault-hoists-after.png",
+      "source_crop_xywh": [
+        316,
+        115,
+        500,
+        680
+      ],
+      "pixels": [
+        500,
+        680
+      ],
+      "scale": 1,
+      "sha256": "7541eaf84c638c828a5a7fce0ee8ed42b24e6b7771a3f69322b34fd033b110df"
+    },
+    {
+      "path": "images/03-central-saltfold-hub-before.png",
+      "source_crop_xywh": [
+        757,
+        115,
+        515,
+        760
+      ],
+      "pixels": [
+        515,
+        760
+      ],
+      "scale": 1,
+      "sha256": "f0994503384102116949db8707459bf73f88237accbd5e7f2b6b134090acd5ff"
+    },
+    {
+      "path": "images/03-central-saltfold-hub-after.png",
+      "source_crop_xywh": [
+        757,
+        115,
+        515,
+        760
+      ],
+      "pixels": [
+        515,
+        760
+      ],
+      "scale": 1,
+      "sha256": "65e4008f7688016a904b1707862435f2ba8be74305bf5e93a829bcf23b4cef89"
+    },
+    {
+      "path": "images/04-east-condenser-bore-before.png",
+      "source_crop_xywh": [
+        1240,
+        145,
+        510,
+        680
+      ],
+      "pixels": [
+        510,
+        680
+      ],
+      "scale": 1,
+      "sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e"
+    },
+    {
+      "path": "images/04-east-condenser-bore-after.png",
+      "source_crop_xywh": [
+        1240,
+        145,
+        510,
+        680
+      ],
+      "pixels": [
+        510,
+        680
+      ],
+      "scale": 1,
+      "sha256": "554ff0ecd2575c8a8ba0d0fcc286513f519c78096b0537e20473b293b1050c8e"
+    },
+    {
+      "path": "images/05-east-catcher-switch-before.png",
+      "source_crop_xywh": [
+        1630,
+        230,
+        413,
+        620
+      ],
+      "pixels": [
+        413,
+        620
+      ],
+      "scale": 1,
+      "sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1"
+    },
+    {
+      "path": "images/05-east-catcher-switch-after.png",
+      "source_crop_xywh": [
+        1630,
+        230,
+        413,
+        620
+      ],
+      "pixels": [
+        413,
+        620
+      ],
+      "scale": 1,
+      "sha256": "1e204b4cf5a2d729f4e61f70e4a3c71f7aa7bf83b2c4f6e05304606a59193ac1"
+    },
+    {
+      "path": "images/06-deep-service-pockets-before.png",
+      "source_crop_xywh": [
+        590,
+        650,
+        875,
+        365
+      ],
+      "pixels": [
+        875,
+        365
+      ],
+      "scale": 1,
+      "sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5"
+    },
+    {
+      "path": "images/06-deep-service-pockets-after.png",
+      "source_crop_xywh": [
+        590,
+        650,
+        875,
+        365
+      ],
+      "pixels": [
+        875,
+        365
+      ],
+      "scale": 1,
+      "sha256": "43563eab88babe43d2f81cf0987d2181bb5ac811002c9051f9c79c2f38e615d5"
+    },
+    {
+      "path": "images/10-first-diaphragm-decision-before.png",
+      "source_crop_xywh": [
+        680,
+        225,
+        220,
+        400
+      ],
+      "pixels": [
+        220,
+        400
+      ],
+      "scale": 1,
+      "sha256": "c474218757b91d74cdad6cee619f54a21e6f3cc2b62e8056a8f9e43db3e34d35"
+    },
+    {
+      "path": "images/10-first-diaphragm-decision-after.png",
+      "source_crop_xywh": [
+        680,
+        225,
+        220,
+        400
+      ],
+      "pixels": [
+        220,
+        400
+      ],
+      "scale": 1,
+      "sha256": "28bb663e98c8f30d5776116c01c2a23e8fb11a6241ba7d363ac2427fb9d7bde3"
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "source_static_only": true
+}

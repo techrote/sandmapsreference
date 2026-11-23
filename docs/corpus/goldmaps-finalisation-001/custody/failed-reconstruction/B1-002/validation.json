@@ -1,0 +1,1648 @@
+{
+  "schema_version": 1,
+  "arm": "B1",
+  "status": "FAIL",
+  "qualification_scope": "SOURCE-STATIC AUTHOR CHECK; independent ART and native qualification separate",
+  "issues": [
+    "19x15 obstruction exception set changed: ['Machine transit', 'Press receiver', 'Repair ward']",
+    "19x15 frozen route unreachable: original-blocked-shortest",
+    "23x19 obstruction exception set changed: ['Machine transit', 'Press receiver', 'Repair ward']",
+    "23x19 frozen route unreachable: original-blocked-shortest",
+    "31x27 obstruction exception set changed: ['Machine transit', 'Press receiver', 'Repair ward']",
+    "31x27 frozen route unreachable: original-blocked-shortest"
+  ],
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "frozen_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "difference": {
+    "changed_cells": 3766,
+    "bounds_xywh": [
+      1020,
+      577,
+      210,
+      166
+    ],
+    "before_material_plane_sha256_uint8": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+    "after_material_plane_sha256_uint8": "75607b3f1f048ecf153bdcc7085ac3b77a6ff980cf50d82156ba3e951f3fe54f",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 58,
+        "cells": 329
+      },
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 3105
+      },
+      {
+        "from": 58,
+        "to": 62,
+        "cells": 332
+      }
+    ]
+  },
+  "changed_cell_cap": 5000,
+  "outside_approved_regions_changed_cells": 0,
+  "protected_named_31x27_footprint_changes": [],
+  "regions": [
+    {
+      "id": "hoist_receiving_handoff",
+      "xywh": [
+        1010,
+        540,
+        224,
+        218
+      ],
+      "changed_cells": 3766,
+      "before_material_plane_sha256_uint8": "10c5254aaf2b26e6711ea5267b30ff40482b6ec7064bb63788e362af41998749",
+      "after_material_plane_sha256_uint8": "97a3e9c8a337c308bed19bc6802479d610dda552f9ecb21384e53c6f68422467"
+    }
+  ],
+  "structure": {
+    "width": 2048,
+    "height": 1024,
+    "rectangle_count": 507,
+    "rectangle_capacity": 32768,
+    "overlap_count": 0,
+    "out_of_bounds_count": 0,
+    "histogram": {
+      "0": 1463974,
+      "58": 31406,
+      "62": 58227,
+      "100": 543545
+    },
+    "material_plane_sha256_uint8": "75607b3f1f048ecf153bdcc7085ac3b77a6ff980cf50d82156ba3e951f3fe54f",
+    "diagnostic_dimension_prefixed_uint16_sha256": "bb0e8c910c7f77a27c5bc793e55915e830e6d9fa4c05fe0881d0c14980f9945f"
+  },
+  "setup_bytes": 10160,
+  "original_settings_preserved": true,
+  "used_material_ids": [
+    58,
+    62,
+    100
+  ],
+  "newly_restored_original_source_ids": [],
+  "invalid_permanent_material_ids": [],
+  "present_pair_reaction_rules": [],
+  "material_scope": "Hard, immovable, kernel-none cells; no active fluid/hot/acid drivers present. This is initial static permanence, not immunity under future authored hazards.",
+  "rooting": {
+    "solid_cells": 633178,
+    "bottom_grounded_cells": 633178,
+    "not_bottom_rooted_cells": 0,
+    "boundary_rooted_cells": 633178,
+    "not_boundary_rooted_cells": 0,
+    "solid_components": 1
+  },
+  "rooting_policy": "Bottom-boundary four-neighbour component; no inferred anchors.",
+  "sites": {
+    "19x15": {
+      "normal": {
+        "spawn": [
+          115,
+          520
+        ],
+        "spawn_clear": true,
+        "components": 7,
+        "sites_total": 24,
+        "sites_reached": 24,
+        "sites": [
+          {
+            "name": "West arrival booth",
+            "centre": [
+              115,
+              520
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Ledger mezzanine",
+            "centre": [
+              285,
+              398
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Crew canteen",
+            "centre": [
+              370,
+              682
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "First component switch",
+            "centre": [
+              555,
+              520
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Rinsing room",
+            "centre": [
+              580,
+              682
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Sorter overhead",
+            "centre": [
+              610,
+              395
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West high bypass",
+            "centre": [
+              785,
+              385
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Reclaim crossways",
+            "centre": [
+              860,
+              523
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Reclaim shaft head",
+            "centre": [
+              1125,
+              400
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Press service",
+            "centre": [
+              1020,
+              698
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Machine transit",
+            "centre": [
+              1080,
+              525
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Press receiver",
+            "centre": [
+              1260,
+              684
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Upper handoff",
+            "centre": [
+              1280,
+              395
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Repair ward",
+            "centre": [
+              1420,
+              690
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Repair bridge",
+            "centre": [
+              1490,
+              382
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East domestic booth",
+            "centre": [
+              1710,
+              690
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East dispatch",
+            "centre": [
+              1800,
+              525
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Outer firebreak",
+            "centre": [
+              1930,
+              515
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West under-return",
+            "centre": [
+              160,
+              816
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central under-return",
+            "centre": [
+              940,
+              819
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East under-return",
+            "centre": [
+              1840,
+              819
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Sky emergency",
+            "centre": [
+              1080,
+              160
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West seam",
+            "centre": [
+              410,
+              280
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East seam",
+            "centre": [
+              1760,
+              250
+            ],
+            "centre_clear": true,
+            "reachable": true
+          }
+        ]
+      },
+      "obstructed": [
+        {
+          "case": "original-solid-block",
+          "expected_covered_sites": [],
+          "observed_unreachable_sites": [
+            "Machine transit",
+            "Press receiver",
+            "Repair ward"
+          ],
+          "result": {
+            "spawn": [
+              115,
+              520
+            ],
+            "spawn_clear": true,
+            "components": 8,
+            "sites_total": 24,
+            "sites_reached": 21,
+            "sites": [
+              {
+                "name": "West arrival booth",
+                "centre": [
+                  115,
+                  520
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Ledger mezzanine",
+                "centre": [
+                  285,
+                  398
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Crew canteen",
+                "centre": [
+                  370,
+                  682
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "First component switch",
+                "centre": [
+                  555,
+                  520
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Rinsing room",
+                "centre": [
+                  580,
+                  682
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Sorter overhead",
+                "centre": [
+                  610,
+                  395
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West high bypass",
+                "centre": [
+                  785,
+                  385
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Reclaim crossways",
+                "centre": [
+                  860,
+                  523
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Reclaim shaft head",
+                "centre": [
+                  1125,
+                  400
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Press service",
+                "centre": [
+                  1020,
+                  698
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Machine transit",
+                "centre": [
+                  1080,
+                  525
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Press receiver",
+                "centre": [
+                  1260,
+                  684
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Upper handoff",
+                "centre": [
+                  1280,
+                  395
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Repair ward",
+                "centre": [
+                  1420,
+                  690
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Repair bridge",
+                "centre": [
+                  1490,
+                  382
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East domestic booth",
+                "centre": [
+                  1710,
+                  690
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East dispatch",
+                "centre": [
+                  1800,
+                  525
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Outer firebreak",
+                "centre": [
+                  1930,
+                  515
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West under-return",
+                "centre": [
+                  160,
+                  816
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central under-return",
+                "centre": [
+                  940,
+                  819
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East under-return",
+                "centre": [
+                  1840,
+                  819
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Sky emergency",
+                "centre": [
+                  1080,
+                  160
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West seam",
+                "centre": [
+                  410,
+                  280
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East seam",
+                "centre": [
+                  1760,
+                  250
+                ],
+                "centre_clear": true,
+                "reachable": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "23x19": {
+      "normal": {
+        "spawn": [
+          115,
+          520
+        ],
+        "spawn_clear": true,
+        "components": 6,
+        "sites_total": 24,
+        "sites_reached": 24,
+        "sites": [
+          {
+            "name": "West arrival booth",
+            "centre": [
+              115,
+              520
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Ledger mezzanine",
+            "centre": [
+              285,
+              398
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Crew canteen",
+            "centre": [
+              370,
+              682
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "First component switch",
+            "centre": [
+              555,
+              520
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Rinsing room",
+            "centre": [
+              580,
+              682
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Sorter overhead",
+            "centre": [
+              610,
+              395
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West high bypass",
+            "centre": [
+              785,
+              385
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Reclaim crossways",
+            "centre": [
+              860,
+              523
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Reclaim shaft head",
+            "centre": [
+              1125,
+              400
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Press service",
+            "centre": [
+              1020,
+              698
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Machine transit",
+            "centre": [
+              1080,
+              525
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Press receiver",
+            "centre": [
+              1260,
+              684
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Upper handoff",
+            "centre": [
+              1280,
+              395
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Repair ward",
+            "centre": [
+              1420,
+              690
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Repair bridge",
+            "centre": [
+              1490,
+              382
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East domestic booth",
+            "centre": [
+              1710,
+              690
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East dispatch",
+            "centre": [
+              1800,
+              525
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Outer firebreak",
+            "centre": [
+              1930,
+              515
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West under-return",
+            "centre": [
+              160,
+              816
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central under-return",
+            "centre": [
+              940,
+              819
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East under-return",
+            "centre": [
+              1840,
+              819
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Sky emergency",
+            "centre": [
+              1080,
+              160
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West seam",
+            "centre": [
+              410,
+              280
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East seam",
+            "centre": [
+              1760,
+              250
+            ],
+            "centre_clear": true,
+            "reachable": true
+          }
+        ]
+      },
+      "obstructed": [
+        {
+          "case": "original-solid-block",
+          "expected_covered_sites": [],
+          "observed_unreachable_sites": [
+            "Machine transit",
+            "Press receiver",
+            "Repair ward"
+          ],
+          "result": {
+            "spawn": [
+              115,
+              520
+            ],
+            "spawn_clear": true,
+            "components": 7,
+            "sites_total": 24,
+            "sites_reached": 21,
+            "sites": [
+              {
+                "name": "West arrival booth",
+                "centre": [
+                  115,
+                  520
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Ledger mezzanine",
+                "centre": [
+                  285,
+                  398
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Crew canteen",
+                "centre": [
+                  370,
+                  682
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "First component switch",
+                "centre": [
+                  555,
+                  520
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Rinsing room",
+                "centre": [
+                  580,
+                  682
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Sorter overhead",
+                "centre": [
+                  610,
+                  395
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West high bypass",
+                "centre": [
+                  785,
+                  385
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Reclaim crossways",
+                "centre": [
+                  860,
+                  523
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Reclaim shaft head",
+                "centre": [
+                  1125,
+                  400
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Press service",
+                "centre": [
+                  1020,
+                  698
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Machine transit",
+                "centre": [
+                  1080,
+                  525
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Press receiver",
+                "centre": [
+                  1260,
+                  684
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Upper handoff",
+                "centre": [
+                  1280,
+                  395
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Repair ward",
+                "centre": [
+                  1420,
+                  690
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Repair bridge",
+                "centre": [
+                  1490,
+                  382
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East domestic booth",
+                "centre": [
+                  1710,
+                  690
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East dispatch",
+                "centre": [
+                  1800,
+                  525
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Outer firebreak",
+                "centre": [
+                  1930,
+                  515
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West under-return",
+                "centre": [
+                  160,
+                  816
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central under-return",
+                "centre": [
+                  940,
+                  819
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East under-return",
+                "centre": [
+                  1840,
+                  819
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Sky emergency",
+                "centre": [
+                  1080,
+                  160
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West seam",
+                "centre": [
+                  410,
+                  280
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East seam",
+                "centre": [
+                  1760,
+                  250
+                ],
+                "centre_clear": true,
+                "reachable": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "31x27": {
+      "normal": {
+        "spawn": [
+          115,
+          520
+        ],
+        "spawn_clear": true,
+        "components": 5,
+        "sites_total": 24,
+        "sites_reached": 24,
+        "sites": [
+          {
+            "name": "West arrival booth",
+            "centre": [
+              115,
+              520
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Ledger mezzanine",
+            "centre": [
+              285,
+              398
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Crew canteen",
+            "centre": [
+              370,
+              682
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "First component switch",
+            "centre": [
+              555,
+              520
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Rinsing room",
+            "centre": [
+              580,
+              682
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Sorter overhead",
+            "centre": [
+              610,
+              395
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West high bypass",
+            "centre": [
+              785,
+              385
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Reclaim crossways",
+            "centre": [
+              860,
+              523
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Reclaim shaft head",
+            "centre": [
+              1125,
+              400
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Press service",
+            "centre": [
+              1020,
+              698
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Machine transit",
+            "centre": [
+              1080,
+              525
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Press receiver",
+            "centre": [
+              1260,
+              684
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Upper handoff",
+            "centre": [
+              1280,
+              395
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Repair ward",
+            "centre": [
+              1420,
+              690
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Repair bridge",
+            "centre": [
+              1490,
+              382
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East domestic booth",
+            "centre": [
+              1710,
+              690
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East dispatch",
+            "centre": [
+              1800,
+              525
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Outer firebreak",
+            "centre": [
+              1930,
+              515
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West under-return",
+            "centre": [
+              160,
+              816
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central under-return",
+            "centre": [
+              940,
+              819
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East under-return",
+            "centre": [
+              1840,
+              819
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Sky emergency",
+            "centre": [
+              1080,
+              160
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West seam",
+            "centre": [
+              410,
+              280
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East seam",
+            "centre": [
+              1760,
+              250
+            ],
+            "centre_clear": true,
+            "reachable": true
+          }
+        ]
+      },
+      "obstructed": [
+        {
+          "case": "original-solid-block",
+          "expected_covered_sites": [],
+          "observed_unreachable_sites": [
+            "Machine transit",
+            "Press receiver",
+            "Repair ward"
+          ],
+          "result": {
+            "spawn": [
+              115,
+              520
+            ],
+            "spawn_clear": true,
+            "components": 6,
+            "sites_total": 24,
+            "sites_reached": 21,
+            "sites": [
+              {
+                "name": "West arrival booth",
+                "centre": [
+                  115,
+                  520
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Ledger mezzanine",
+                "centre": [
+                  285,
+                  398
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Crew canteen",
+                "centre": [
+                  370,
+                  682
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "First component switch",
+                "centre": [
+                  555,
+                  520
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Rinsing room",
+                "centre": [
+                  580,
+                  682
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Sorter overhead",
+                "centre": [
+                  610,
+                  395
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West high bypass",
+                "centre": [
+                  785,
+                  385
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Reclaim crossways",
+                "centre": [
+                  860,
+                  523
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Reclaim shaft head",
+                "centre": [
+                  1125,
+                  400
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Press service",
+                "centre": [
+                  1020,
+                  698
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Machine transit",
+                "centre": [
+                  1080,
+                  525
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Press receiver",
+                "centre": [
+                  1260,
+                  684
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Upper handoff",
+                "centre": [
+                  1280,
+                  395
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Repair ward",
+                "centre": [
+                  1420,
+                  690
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Repair bridge",
+                "centre": [
+                  1490,
+                  382
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East domestic booth",
+                "centre": [
+                  1710,
+                  690
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East dispatch",
+                "centre": [
+                  1800,
+                  525
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Outer firebreak",
+                "centre": [
+                  1930,
+                  515
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West under-return",
+                "centre": [
+                  160,
+                  816
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central under-return",
+                "centre": [
+                  940,
+                  819
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East under-return",
+                "centre": [
+                  1840,
+                  819
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Sky emergency",
+                "centre": [
+                  1080,
+                  160
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West seam",
+                "centre": [
+                  410,
+                  280
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East seam",
+                "centre": [
+                  1760,
+                  250
+                ],
+                "centre_clear": true,
+                "reachable": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "routes": {
+    "19x15": [
+      {
+        "id": "original-unblocked-shortest",
+        "via": [
+          [
+            555,
+            520
+          ],
+          [
+            1080,
+            525
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [],
+        "forbidden_centres": []
+      },
+      {
+        "id": "original-blocked-shortest",
+        "via": [
+          [
+            555,
+            520
+          ],
+          [
+            1080,
+            525
+          ]
+        ],
+        "reachable": false,
+        "obstructions": [
+          [
+            936,
+            450,
+            120,
+            150
+          ]
+        ],
+        "forbidden_centres": []
+      }
+    ],
+    "23x19": [
+      {
+        "id": "original-unblocked-shortest",
+        "via": [
+          [
+            555,
+            520
+          ],
+          [
+            1080,
+            525
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [],
+        "forbidden_centres": []
+      },
+      {
+        "id": "original-blocked-shortest",
+        "via": [
+          [
+            555,
+            520
+          ],
+          [
+            1080,
+            525
+          ]
+        ],
+        "reachable": false,
+        "obstructions": [
+          [
+            936,
+            450,
+            120,
+            150
+          ]
+        ],
+        "forbidden_centres": []
+      }
+    ],
+    "31x27": [
+      {
+        "id": "original-unblocked-shortest",
+        "via": [
+          [
+            555,
+            520
+          ],
+          [
+            1080,
+            525
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [],
+        "forbidden_centres": [],
+        "length_steps": 586,
+        "path_sha256": "83a0dff167d84c6cff2ff3d1e705031065c1a741373139f7e815698ff1fbf79b",
+        "region_visits": {}
+      },
+      {
+        "id": "original-blocked-shortest",
+        "via": [
+          [
+            555,
+            520
+          ],
+          [
+            1080,
+            525
+          ]
+        ],
+        "reachable": false,
+        "obstructions": [
+          [
+            936,
+            450,
+            120,
+            150
+          ]
+        ],
+        "forbidden_centres": []
+      }
+    ]
+  },
+  "actual_midge": {
+    "size": [
+      4,
+      3
+    ],
+    "continuous_COM_bounds": [
+      -2,
+      -1.5,
+      4,
+      3
+    ],
+    "native_collision_test": "NOT_PERFORMED_BY_AUTHOR"
+  },
+  "native_status": "NATIVE-UNTESTED"
+}

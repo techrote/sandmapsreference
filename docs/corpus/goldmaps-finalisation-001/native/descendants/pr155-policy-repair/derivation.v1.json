@@ -1,0 +1,23 @@
+{
+  "schema": "goldmaps.post-experiment-derivation.v1",
+  "parent_pr": 155,
+  "parent_head": "7ff90c11a3839e42371f0fef5ac3c783ab2a8d05",
+  "parent_setup_path": "cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json",
+  "parent_setup_sha256": "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+  "derived_setup_sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+  "operation": "Replace only invalid 55-word all-zero liquid_policy with pinned engine native default envelope",
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "native_original_refusal": {
+    "code": "malformed_policy",
+    "detail": "bad magic"
+  },
+  "policy_source": "Actual native CyberDemoBridge.validate_liquid_policy accepted default envelope in policy-probe-final.log",
+  "policy_sha256": "41ffc00465b2f7136d30e3bb1bf8369c4d87fe07be97d4ede03e247b791f5979",
+  "all_other_fields_equal": true,
+  "edits_equal": true,
+  "actors_equal": true,
+  "material_plane_sha256": "e76f280ee631d604c037f307bfafedbd2dad23d198133f4a7084c9848a2ee803",
+  "material_cells": 2097152,
+  "owner_acceptance": "PENDING",
+  "historical_original_preserved": true
+}

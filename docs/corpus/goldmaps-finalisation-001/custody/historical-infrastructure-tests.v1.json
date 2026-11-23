@@ -1,0 +1,43 @@
+{
+  "schema_version": "goldmaps-historical-infrastructure-tests.v1",
+  "environment": {
+    "python": "3.12.14",
+    "node": "v24.22.3"
+  },
+  "scope": "Unmodified exact archived source; tests validate metadata/interface, not map physics",
+  "runs": [
+    {
+      "pr": 102,
+      "source_commit": "3bfd70978de680ba459da2d32744a78dee64493a",
+      "command": [
+        "python",
+        "tools/test_corpus_index.py"
+      ],
+      "exit_code": 0,
+      "log": "pr102-test_corpus_index.log",
+      "log_sha256": "d9d734ee1c2de67b748aeef1c4126433aa438ad8375ca953916f12b1df11414d"
+    },
+    {
+      "pr": 201,
+      "source_commit": "41721453f784373e0cd7bde48287e3f8d11a3315",
+      "command": [
+        "node",
+        "docs/corpus/feature-atlas/validate.mjs"
+      ],
+      "exit_code": 0,
+      "log": "pr201-validate.log",
+      "log_sha256": "8f7e448fa7a2c4628ec9057096509018c99afc88105038c26d2e3883c72810cf"
+    },
+    {
+      "pr": 201,
+      "source_commit": "41721453f784373e0cd7bde48287e3f8d11a3315",
+      "command": [
+        "node",
+        "docs/corpus/feature-atlas/validate-sidecars.mjs"
+      ],
+      "exit_code": 0,
+      "log": "pr201-validate-sidecars.log",
+      "log_sha256": "ef33023fb7a90321c7a816bf58ea3dfabb1a0d49e8aff6835f62c3ad875e54af"
+    }
+  ]
+}

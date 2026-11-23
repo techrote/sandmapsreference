@@ -84,6 +84,29 @@ def record(text, prefix):
     return rows[-1] if rows else None
 
 
+def executed_source_identity():
+    repo = HERE.parent.parent
+    paths = [HERE/"native_matrix.py", HERE/"native_probe.gd", HERE/"native_inputs.v1.json", HERE/"native_helper_tests.ps1"]
+    identity = {"event_github_sha":os.environ.get("GITHUB_SHA"),
+                "requested_checkout_head":os.environ.get("GOLDMAPS_TEST_SOURCE_HEAD"),
+                "executed_checkout_head":None,"files_match_commit":False,
+                "files":{p.relative_to(repo).as_posix():sha(p) for p in paths}}
+    try:
+        identity["executed_checkout_head"] = subprocess.check_output(["git","-C",str(repo),"rev-parse","HEAD"],text=True).strip()
+        matched = []
+        for p in paths:
+            relative = p.relative_to(repo).as_posix()
+            blob = subprocess.check_output(["git","-C",str(repo),"show",identity["executed_checkout_head"]+":"+relative])
+            matched.append(hashlib.sha256(blob).hexdigest()==sha(p))
+        identity["files_match_commit"] = all(matched)
+    except (OSError,subprocess.CalledProcessError):
+        pass
+    expected = identity["requested_checkout_head"]
+    if expected and (expected != identity["executed_checkout_head"] or not identity["files_match_commit"]):
+        raise ValueError("CI executed checkout/native files differ from requested source HEAD")
+    return identity
+
+
 def acquire_inputs(records, package, source_archive, out):
     target = out / "inputs"
     target.mkdir()
@@ -96,7 +119,12 @@ def acquire_inputs(records, package, source_archive, out):
             continue
         dest = target/(digest+".json")
         source = local.get(digest)
-        if source is None and source_archive:
+        if row.get("input_kind") == "integration_descendant":
+            name = Path(row["local_path"])
+            if name.is_absolute() or ".." in name.parts:
+                raise ValueError("Unsafe descendant input path")
+            source = HERE.parent.parent/name
+        elif source is None and source_archive:
             candidate = source_archive/f"PR-{row['pr']:04d}-{row['head'][:12]}"/row["path"]
             if candidate.is_file():
                 source = candidate
@@ -129,6 +157,7 @@ def main():
     ap.add_argument("--jobs", type=int, default=1, choices=(1, 2, 3, 4))
     ap.add_argument("--routes", type=Path, help="Execute separately labelled bounded route probes")
     args = ap.parse_args()
+    source_identity = executed_source_identity()
     package, godot, out = args.package.resolve(), args.godot.resolve(), args.out.resolve()
     if out.exists():
         raise ValueError("Refuse to overwrite qualification evidence")
@@ -245,6 +274,15 @@ def main():
             and result["saved_setup_sha256"] == ree.get("setup_sha256"))
         result["collision_observed"] = bool(le.get("collision_observed"))
         result["pass"] = result["basic_native_pass"] and result["collision_observed"]
+        expected = aliases[0].get("expected_native_refusal")
+        refusal = (le.get("native_policy") or {}).get("refusal") or {}
+        result["expected_native_refusal"] = expected
+        result["negative_fixture_pass"] = bool(expected and lo.get("exit_code") == 1 and not lo.get("timeout")
+            and le.get("source_parse") and (le.get("native_policy") or {}).get("accepted") is False
+            and all(refusal.get(k) == v for k,v in expected.items())
+            and not le.get("native_bridge") and not le.get("load")
+            and result["source_unchanged"] and saveddata is None)
+        result["qualification_status"] = "REFUSED_INVALID_SOURCE" if result["negative_fixture_pass"] else "QUALIFIED_HEADLESS" if result["pass"] else "FAILED_OR_INCONCLUSIVE"
         write_json(out/(case_id+".receipt.json"), result)
         print("GOLDMAPS_NATIVE_CASE "+json.dumps(result), flush=True)
         return result
@@ -278,6 +316,7 @@ def main():
                "godot_version": preflight["godot_version"], "probe_sha256": sha(HERE/"native_probe.gd"),
                "runner_sha256": sha(Path(__file__)), "inputs_sha256": sha(args.inputs),
                "github_run_id": os.environ.get("GITHUB_RUN_ID"), "github_sha": os.environ.get("GITHUB_SHA"),
+               "executed_source": source_identity,
                "runner_image": os.environ.get("ImageVersion"), "linux_identity": linux_receipt,
                "package_before": before, "package_after": after, "import": imp, "preflight": preflight,
                "runtime_source_files": len(runtime_before), "runtime_source_changes": changes,
@@ -285,9 +324,14 @@ def main():
                "aliases_checked": len(records), "unique_setups_checked": len(results), "route_results": route_results,
                "scope": "Actual hosted headless Workbench/GDExtension/Rapier load, complete material plane, Midge adoption, controlled upward movement, contact, authored-start save and separate-process reopen. Route results are separately bounded; no human/GPU/visual acceptance."}
     summary["pass"] = bool(results and all(r["pass"] for r in results) and after["pass"] and not changes)
+    summary["negative_fixtures_verified"] = sum(r["negative_fixture_pass"] for r in results)
+    summary["validation_pass"] = bool(results and all(r["pass"] or r["negative_fixture_pass"] for r in results) and after["pass"] and not changes)
+    summary["qualification_status"] = "QUALIFIED_WITH_EXPLICIT_REFUSED_ORIGINAL" if summary["validation_pass"] and summary["negative_fixtures_verified"] else "QUALIFIED_HEADLESS" if summary["pass"] else "FAILED_OR_INCONCLUSIVE"
     write_json(out/"summary.json", summary)
     print("GOLDMAPS_NATIVE_SUMMARY "+json.dumps({k:v for k,v in summary.items() if k not in ("results","route_results","linux_identity")}), flush=True)
-    return 0 if summary["pass"] else 1
+    # A green test gate can prove an expected refusal, but never turns that
+    # historical source into a native-qualified map: its pass remains false.
+    return 0 if summary["validation_pass"] else 1
 
 
 if __name__ == "__main__":

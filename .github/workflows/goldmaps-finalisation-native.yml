@@ -7,6 +7,7 @@ on:
       - 'scripts/goldmaps_finalisation/native_probe.gd'
       - 'scripts/goldmaps_finalisation/native_inputs.v1.json'
       - 'scripts/goldmaps_finalisation/native_helper_tests.ps1'
+      - 'docs/corpus/goldmaps-finalisation-001/native/descendants/**'
 permissions:
   contents: read
 concurrency:
@@ -43,7 +44,8 @@ jobs:
                 comparison = json.load(response)
               files = comparison.get('files')
               if isinstance(files, list) and len(files) < 300 and comparison.get('status') in ('ahead','identical'):
-                run = any(f['filename'] in watched or f.get('previous_filename') in watched for f in files)
+                prefix = 'docs/corpus/goldmaps-finalisation-001/native/descendants/'
+                run = any(f['filename'] in watched or f.get('previous_filename') in watched or f['filename'].startswith(prefix) or f.get('previous_filename','').startswith(prefix) for f in files)
             except Exception as error:
               print('Comparison unavailable; execute qualification:', type(error).__name__)
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
@@ -67,6 +69,7 @@ jobs:
           sparse-checkout: |
             scripts/goldmaps_finalisation/
             docs/corpus/goldmaps-recovery-001/snapshot/
+            docs/corpus/goldmaps-finalisation-001/native/descendants/
       - name: Reconstruct and verify all 586 frozen evaluator files
         shell: pwsh
         run: |

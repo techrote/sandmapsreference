@@ -1,0 +1,256 @@
+{
+  "arm": "B1",
+  "source_head": "eb00a9a55864dfb6d3e076e60ba4684b397228fc",
+  "frozen_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "cell_difference": {
+    "changed_cells": 3766,
+    "bounds_xywh": [
+      1020,
+      577,
+      210,
+      166
+    ],
+    "before_material_plane_sha256_uint8": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5",
+    "after_material_plane_sha256_uint8": "75607b3f1f048ecf153bdcc7085ac3b77a6ff980cf50d82156ba3e951f3fe54f",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 58,
+        "cells": 329
+      },
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 3105
+      },
+      {
+        "from": 58,
+        "to": 62,
+        "cells": 332
+      }
+    ]
+  },
+  "final_pruned_provisional_cells": 0,
+  "operation_groups": [
+    {
+      "group": "hoist_receiving_handoff",
+      "cells_changed_at_operation_stage": 3766
+    }
+  ],
+  "rectangle_count": 507,
+  "setup_sha256": "f0b661daca12170a10fab8b1bc0dcbfc365b8dc711233403e19761d4940b36b6",
+  "images": [
+    {
+      "path": "images/overview-before.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "a7693f985d569878544614ee100b199cb7fe30a4abe38ab6fd5bc922eccb80de"
+    },
+    {
+      "path": "images/overview-after.png",
+      "source_crop_xywh": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "pixels": [
+        2048,
+        1024
+      ],
+      "scale": 1,
+      "sha256": "b958017060ff1d99964a24d39e1e59e431ec43ecb8c524327b1e98d2d39c758e"
+    },
+    {
+      "path": "images/01-ledger-tenements-before.png",
+      "source_crop_xywh": [
+        110,
+        315,
+        420,
+        477
+      ],
+      "pixels": [
+        420,
+        477
+      ],
+      "scale": 1,
+      "sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909"
+    },
+    {
+      "path": "images/01-ledger-tenements-after.png",
+      "source_crop_xywh": [
+        110,
+        315,
+        420,
+        477
+      ],
+      "pixels": [
+        420,
+        477
+      ],
+      "scale": 1,
+      "sha256": "1c71f2d8bac3c47bd8fa513f4ec2c3561e32c479379f49e6e3b6f5df6b967909"
+    },
+    {
+      "path": "images/02-rinse-sorting-before.png",
+      "source_crop_xywh": [
+        465,
+        329,
+        365,
+        482
+      ],
+      "pixels": [
+        365,
+        482
+      ],
+      "scale": 1,
+      "sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2"
+    },
+    {
+      "path": "images/02-rinse-sorting-after.png",
+      "source_crop_xywh": [
+        465,
+        329,
+        365,
+        482
+      ],
+      "pixels": [
+        365,
+        482
+      ],
+      "scale": 1,
+      "sha256": "70eede0a7e80933c2d569aac7d7fdb02a4cc32b7f36759764bbd6a26620a6ac2"
+    },
+    {
+      "path": "images/03-central-reclaim-before.png",
+      "source_crop_xywh": [
+        817,
+        240,
+        560,
+        620
+      ],
+      "pixels": [
+        560,
+        620
+      ],
+      "scale": 1,
+      "sha256": "763113debd067bdfca8658c3e8c72039a05233b1f8378552f00ba1505bee19e7"
+    },
+    {
+      "path": "images/03-central-reclaim-after.png",
+      "source_crop_xywh": [
+        817,
+        240,
+        560,
+        620
+      ],
+      "pixels": [
+        560,
+        620
+      ],
+      "scale": 1,
+      "sha256": "000bd1a5108aa94e09a25bbb9b566b987734e5258d6205fd48168d219b5635bc"
+    },
+    {
+      "path": "images/04-repair-atelier-before.png",
+      "source_crop_xywh": [
+        1160,
+        310,
+        410,
+        506
+      ],
+      "pixels": [
+        410,
+        506
+      ],
+      "scale": 1,
+      "sha256": "06eaceac752b6a360ff9c00cdca61c76024b4d69bcf6e3a4c3577eb27adfa2c9"
+    },
+    {
+      "path": "images/04-repair-atelier-after.png",
+      "source_crop_xywh": [
+        1160,
+        310,
+        410,
+        506
+      ],
+      "pixels": [
+        410,
+        506
+      ],
+      "scale": 1,
+      "sha256": "c2a5584923f2fa56c9b7133272bddc8d852d04d2c813a2ed6e3f06ae457c0337"
+    },
+    {
+      "path": "images/05-east-tenements-before.png",
+      "source_crop_xywh": [
+        1510,
+        312,
+        500,
+        519
+      ],
+      "pixels": [
+        500,
+        519
+      ],
+      "scale": 1,
+      "sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7"
+    },
+    {
+      "path": "images/05-east-tenements-after.png",
+      "source_crop_xywh": [
+        1510,
+        312,
+        500,
+        519
+      ],
+      "pixels": [
+        500,
+        519
+      ],
+      "scale": 1,
+      "sha256": "1aafd2108fcdcc84067cffba67cbdb5a6e7c3dcaf846882106802ba92dd7e3b7"
+    },
+    {
+      "path": "images/10-hoist-receiving-detail-before.png",
+      "source_crop_xywh": [
+        990,
+        430,
+        300,
+        340
+      ],
+      "pixels": [
+        300,
+        340
+      ],
+      "scale": 1,
+      "sha256": "d5971297f29f5b3ea380282e64dc26fde843b9992b67b5e38897097eb7432633"
+    },
+    {
+      "path": "images/10-hoist-receiving-detail-after.png",
+      "source_crop_xywh": [
+        990,
+        430,
+        300,
+        340
+      ],
+      "pixels": [
+        300,
+        340
+      ],
+      "scale": 1,
+      "sha256": "87b598965c7b8ce362a2863700d2c47bc9fb72aa57b090e6df23cfd0ba067159"
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "source_static_only": true
+}

@@ -32,9 +32,12 @@ GLOBAL_LIMITS = [
 ]
 
 
-def source_identity(path, root, head, pr):
+def source_identity(path, root, head, pr, authority):
     raw = path.read_bytes()
     rel = path.relative_to(root).as_posix()
+    expected=authority.get((pr,head,rel))
+    if expected is None or digest(raw)!=expected['sha256'] or git_blob(raw)!=expected['git_blob']:
+        raise ValueError(f'Unverified or altered input under immutable source label: PR{pr} {rel}')
     return {"repository":REPOSITORY,"pr":pr,"head":head,"path":rel,
             "url":f"https://github.com/{REPOSITORY}/blob/{head}/{rel}",
             "raw_url":f"https://raw.githubusercontent.com/{REPOSITORY}/{head}/{rel}",
@@ -66,9 +69,43 @@ def historical_roles(pr, inventory):
     return result
 
 
-def build(sources, recovery, science_dir=None, native_dir=None):
+def corpus_lock(path, data):
+    write_json(path.with_suffix('.lock.json'),{
+        'schema_version':'goldmaps-corpus-lock.v1','sha256':digest(path.read_bytes()),
+        'recovery_head':RECOVERY,'ledger_head':LEDGER,'counts':data['counts'],
+        'authority':'Published integration Git tree pins this lock; a local data edit must not silently reuse it.'})
+
+
+def verified_authority(sources, custody, supplementary_sources):
+    master=json_load(custody/'master-artifacts.v1.json')
+    if master.get('recovery_head')!=RECOVERY or len(master['artifacts'])!=1343:
+        raise ValueError('Wrong master custody authority')
+    collections=[(sources,master['artifacts'])]
+    supplemental=custody/'supplementary-donors.v1.json'
+    if supplemental.exists():
+        collections.append((supplementary_sources,json_load(supplemental)['artifacts']))
+    authority={}
+    for root,artifacts in collections:
+        for artifact in artifacts:
+            path=root/safe_relative(artifact['recovery_location'])
+            if not path.resolve().is_relative_to(root.resolve()):
+                raise ValueError('Source archive path escaped its verified root')
+            raw=path.read_bytes()
+            if len(raw)!=artifact['size_bytes'] or digest(raw)!=artifact['sha256'] or git_blob(raw)!=artifact['git_blob']:
+                raise ValueError(f"Source custody mismatch: {artifact['recovery_location']}")
+            key=(artifact['source_pr'],artifact['commit'],artifact['path'])
+            if key in authority and authority[key]!=artifact:
+                raise ValueError('Conflicting custody identity')
+            authority[key]=artifact
+    return authority
+
+
+def build(sources, recovery, science_dir=None, native_dir=None, supplementary_sources=None):
     inventory=json_load(recovery/'inventory.v1.json')
     pins={};pins_from(inventory,pins)
+    supplementary_sources=supplementary_sources or sources.parent/'supplementary-sources'
+    custody=HERE/'docs/corpus/goldmaps-finalisation-001/custody'
+    authority=verified_authority(sources,custody,supplementary_sources)
     ledger=source_dir(sources,209,LEDGER)/'docs/corpus/astra-trial-001'
     gold={r['pr']:r for r in json_load(ledger/'gold-candidates.v1.json')['records']}
     locks={r['output_pr']:r for r in json_load(ledger/'all-eight-output-lock.v1.json')['arms'] if r['output_pr']}
@@ -77,9 +114,17 @@ def build(sources, recovery, science_dir=None, native_dir=None):
     atlasroot=source_dir(sources,201,pins[201])/'docs/corpus/feature-atlas'
     atlas=json_load(atlasroot/'astra-current.v1.json')
     history=[json.loads(line) for line in (atlasroot/'states.v1.jsonl').read_text().splitlines() if line]
+    supplementary_manifest=HERE/'docs/corpus/goldmaps-finalisation-001/custody/supplementary-donors.v1.json'
+    source_roots={pr:sources for pr in pins}
+    supplementary=[]
+    if supplementary_manifest.exists():
+        supplementary=json_load(supplementary_manifest)['sources']
+        supplementary_sources=supplementary_sources or sources.parent/'supplementary-sources'
+        for item in supplementary:
+            pins[item['pr']]=item['commit'];source_roots[item['pr']]=supplementary_sources
     records=[]
     for pr,head in sorted(pins.items()):
-        directory=source_dir(sources,pr,head)
+        directory=source_dir(source_roots[pr],pr,head)
         if pr in locks:
             setup=directory/locks[pr]['setup_path']
         else:
@@ -98,26 +143,36 @@ def build(sources, recovery, science_dir=None, native_dir=None):
         images=[]
         image_dir=setup.parent/'images' if pr in locks else parentdir
         for path in sorted(image_dir.glob('*.png')):
-            image=source_identity(path,directory,head,pr)
+            image=source_identity(path,directory,head,pr,authority)
             with Image.open(path) as im:
                 image['dimensions']=list(im.size)
             image['role']='material_cell_overview' if 'overview' in path.name or 'preview' in path.name else 'source_evidence_image'
             images.append(image)
         record={
             "id":f"PR{pr}@{head}","pr":pr,"head":head,"name":title,
-            "source":source_identity(setup,directory,head,pr),"material_plane":replay,
+            "source":source_identity(setup,directory,head,pr,authority),"material_plane":replay,
             "aspect_ratio":"portrait" if grid.shape[0]>grid.shape[1] else "landscape" if grid.shape[1]>grid.shape[0] else "square",
             "roles":historical_roles(pr,inventory),"trial_arm":locks[pr]['arm'] if pr in locks else arms.get(pr),
             "owner_acceptance":"PENDING","native_qualification":None,
-            "source_static_qualification":{"status":"PASS","scope":"Independent full Setup replay, schema bounds, material legality and complete plane identity; not full native acceptance."},
+            "source_static_qualification":{"status":"PASS","scope":"Independent material replay, structural field bounds and complete plane identity. Signed liquid-policy admission, full native schema and runtime remain separate gates.",
+                "warnings":["All-zero liquid-policy words require explicit native admission diagnosis; do not infer a valid envelope."] if replay['liquid_policy_all_zeroes'] else []},
             "historical_gold_nomination":None if not nom else {"status":nom['status'],"rank":nom['rank'],"rank_meaning":nom['rank_meaning'],"review_evidence":nom['review_evidence'],"criteria":nom['criteria']},
             "current_recommendation":None,
             "metadata":exemplar,"metadata_authority":"source-authored annotation, not independently demonstrated machinery or flight" if exemplar else "UNKNOWN",
-            "metadata_source":source_identity(exemplar_path,directory,head,pr) if exemplar else None,
+            "metadata_source":source_identity(exemplar_path,directory,head,pr,authority) if exemplar else None,
             "images":images,
             "atlas_feature_ids":[r['feature_id'] for r in atlas['records'] if r['child_pr']==pr and r['child_head']==head],
             "limitations":GLOBAL_LIMITS,
         }
+        if replay['setup_sha256']!=record['source']['sha256']:
+            raise ValueError('Source changed during replay')
+        if pr in locks and (replay['setup_sha256']!=locks[pr]['setup_sha256'] or replay['plane_sha256']!=locks[pr]['grid_sha256_row_major_uint8']):
+            raise ValueError(f'Frozen trial candidate identity mismatch: PR{pr}')
+        if any(item['pr']==pr for item in supplementary):
+            record['roles'].append('supplementary_portrait_donor')
+            record['source']['archive_collection']='supplementary-sources'
+        else:
+            record['source']['archive_collection']='sources'
         if nom and (replay['setup_sha256']!=nom['source']['setup_sha256'] or replay['plane_sha256']!=nom['source']['plane_sha256']):
             raise ValueError(f"Frozen Gold source mismatch PR{pr}")
         records.append(record)
@@ -133,7 +188,7 @@ def build(sources, recovery, science_dir=None, native_dir=None):
             raise ValueError('Feature crop is not exact-source pinned')
         rel=safe_relative(raw.path[len(prefix):])
         path=source_dir(sources,pr,head)/rel
-        feature['image']=source_identity(path,source_dir(sources,pr,head),head,pr)
+        feature['image']=source_identity(path,source_dir(sources,pr,head),head,pr,authority)
         with Image.open(path) as image:
             feature['image']['dimensions']=list(image.size)
         feature['evidence_crop_is_edit_mask']=False
@@ -141,25 +196,61 @@ def build(sources, recovery, science_dir=None, native_dir=None):
         feature['simulation_function']='NOT_DEMONSTRATED'
         feature['owner_acceptance']='PENDING'
         features.append(feature)
-    science=[]
+    science=[];relations=[]
     if science_dir:
-        for name in ('corpus-advisory.v1.json','adjudication.v1.json'):
+        for name in ('corpus-advisory.v1.json','adjudication.v1.json','gold-recommendation.v1.json','relations.v1.json'):
             path=science_dir/name
             if path.exists():
-                science.append({'path':str(path.relative_to(HERE)) if path.is_relative_to(HERE) else name,'sha256':digest(path.read_bytes()),'data':json_load(path)})
+                value=json_load(path)
+                science.append({'path':str(path.relative_to(HERE)) if path.is_relative_to(HERE) else name,'sha256':digest(path.read_bytes()),'data':value})
+                if name=='relations.v1.json':relations=value['relations']
+                if name=='corpus-advisory.v1.json':
+                    advice={(r['pr'],r['head']):r for r in value['records']}
+                    for record in records:
+                        a=advice.get((record['pr'],record['head']))
+                        if a:record['current_recommendation']=a['current_advisory']
+    handoff=json_load(ledger/'author-handoff.v1.json')
+    failure_custody_path=HERE/'docs/corpus/goldmaps-finalisation-001/custody/failed-reconstruction/failed-attempt-custody.v1.json'
+    failure_custody=json_load(failure_custody_path) if failure_custody_path.exists() else None
+    negative_examples=[]
+    for failure in handoff['failed_attempts_retained']:
+        source=next(r for r in manifest['arms'] if r['arm']==failure['arm'])
+        recovered=next((r for r in (failure_custody or {}).get('attempts',[]) if r['arm']==failure['arm'] and r['attempt']==failure['attempt']),None)
+        negative_examples.append({'id':f"{failure['arm']}-attempt-{failure['attempt']:03d}",
+            'arm':failure['arm'],'attempt':failure['attempt'],'source_pr':source['pr'],'source_head':source['head'],
+            'status':'FAILED_INTERVENTION','accepted_positive_example':False,'owner_acceptance':'PENDING',
+            'failure_reasons':failure['issues'],'cell_difference':failure['cell_difference'],
+            'historical_record_url':f'https://github.com/{REPOSITORY}/blob/{LEDGER}/docs/corpus/astra-trial-001/author-handoff.v1.json',
+            'recovery':None if recovered is None else {k:recovered.get(k) for k in ('reconstruction_method','reexecution')},
+            'files':failure['files'],
+            'interpretation':'A failed bounded intervention is not a verdict that its parent map is worthless. Unrecovered bytes are not invented.'})
+    families=[]
+    atlas_manifest=json_load(atlasroot/'manifest.v1.json')
+    for portrait in atlas_manifest['portraits']:
+        repair=next((r for r in inventory['repair_children'] if r['parent']==portrait['pr']),None)
+        families.append({'donor_pr':portrait['donor_pr'],'donor_head':portrait['donor_head'],
+            'portrait_pr':portrait['pr'],'portrait_head':portrait['head'],
+            'repair_pr':None if repair is None else repair['pr'],'repair_head':None if repair is None else repair['sha'],
+            'interpretation':'Ancestry does not imply redundant teaching value; preserve aspect-transfer distinctions.'})
     return {'schema_version':'goldmaps-corpus.v1','repository':REPOSITORY,'recovery_head':RECOVERY,'ledger_head':LEDGER,
             'read_only':True,'owner_accepted':False,'maps':records,'features':features,
             'feature_history':history,'feature_atlas_head':pins[201],
             'feature_atlas_source_sha256':digest((atlasroot/'astra-current.v1.json').read_bytes()),
             'feature_history_sha256':digest((atlasroot/'states.v1.jsonl').read_bytes()),
-            'scientific_advisories':science,'safeguards':GLOBAL_LIMITS,
+            'scientific_advisories':science,'relationships':relations,'negative_examples':negative_examples,'comparative_families':families,'safeguards':GLOBAL_LIMITS,
             'selection_policy':'Frozen nominations are preserved. New advisory conclusions are separate, and absent evidence remains null.',
-            'counts':{'maps':len(records),'frozen_gold_nominees':len(gold),'current_features':len(features),'immutable_feature_states':len(history),'owner_accepted':0}}
+            'counts':{'maps':len(records),'frozen_gold_nominees':len(gold),'current_features':len(features),'immutable_feature_states':len(history),'negative_interventions':len(negative_examples),'comparative_families':len(families),'owner_accepted':0}}
 
 
 class Corpus:
     def __init__(self,path=DEFAULT):
-        self.path=Path(path);self.data=json_load(self.path)
+        self.path=Path(path)
+        lock=json_load(self.path.with_suffix('.lock.json'))
+        if lock.get('schema_version')!='goldmaps-corpus-lock.v1' or digest(self.path.read_bytes())!=lock.get('sha256'):
+            raise ValueError('Corpus data differs from its published integrity lock')
+        self.data=json_load(self.path)
+        if lock.get('counts')!=self.data.get('counts') or self.data.get('recovery_head')!=RECOVERY or self.data.get('ledger_head')!=LEDGER:
+            raise ValueError('Corpus authority or count lock differs')
         if self.data.get('schema_version')!='goldmaps-corpus.v1' or not self.data.get('read_only'):
             raise ValueError('Unsupported or unsafe corpus schema')
         if self.data.get('owner_accepted'):
@@ -228,6 +319,16 @@ class Corpus:
                 'interpretation':'Annotation similarity; not a duplicate verdict or art score. Missing axes remain unknown.','owner_acceptance':r['owner_acceptance']})
         return sorted(rows,key=lambda r:(r['similarity'] is None,-(r['similarity'] or 0),r['pr']))[:limit]
 
+    def related(self,pr,limit=5):
+        source=self.get(pr)
+        return {'source_id':source['id'],'neighbours':self.neighbours(pr,limit),
+            'negative_interventions':copy.deepcopy([r for r in self.data['negative_examples'] if r['arm']==source['trial_arm'] or r['source_pr']==pr]),
+            'comparative_families':copy.deepcopy([r for r in self.data['comparative_families'] if pr in (r['donor_pr'],r['portrait_pr'],r['repair_pr'])]),
+            'limits':GLOBAL_LIMITS}
+
+    def relationships(self,query=''):
+        return copy.deepcopy([r for r in self.data['relationships'] if all(w in json.dumps(r,ensure_ascii=False).casefold() for w in query.casefold().split())])
+
     def retrieve_crop(self,feature_id,sources,output):
         feature=self.feature(feature_id);identity=feature['image']
         path=Path(sources)/safe_relative(identity['archive_path'])
@@ -260,15 +361,18 @@ def main():
     p=subs.add_parser('build');p.add_argument('--sources',type=Path,required=True)
     p.add_argument('--recovery',type=Path,default=HERE/'docs/corpus/goldmaps-recovery-001')
     p.add_argument('--science',type=Path,default=HERE/'docs/corpus/goldmaps-finalisation-001/science')
+    p.add_argument('--supplementary-sources',type=Path)
     p=subs.add_parser('search');p.add_argument('query',nargs='?',default='');p.add_argument('--role');p.add_argument('--qualified',action='store_true')
     p=subs.add_parser('get');p.add_argument('pr',type=int);p.add_argument('--head')
     p=subs.add_parser('feature');p.add_argument('feature_id')
     p=subs.add_parser('recommend');p.add_argument('feature_id')
     p=subs.add_parser('neighbours');p.add_argument('pr',type=int);p.add_argument('--limit',type=int,default=5)
+    p=subs.add_parser('related');p.add_argument('pr',type=int);p.add_argument('--limit',type=int,default=5)
+    p=subs.add_parser('relationships');p.add_argument('query',nargs='?',default='')
     p=subs.add_parser('crop');p.add_argument('feature_id');p.add_argument('--sources',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
     args=parser.parse_args()
     if args.command=='build':
-        data=build(args.sources,args.recovery,args.science);write_json(args.corpus,data);print(json.dumps(data['counts']));return
+        data=build(args.sources,args.recovery,args.science,supplementary_sources=args.supplementary_sources);write_json(args.corpus,data);corpus_lock(args.corpus,data);print(json.dumps(data['counts']));return
     corpus=Corpus(args.corpus)
     if args.command=='search':
         data=corpus.search(args.query,args.role,args.qualified)
@@ -276,6 +380,8 @@ def main():
     elif args.command=='feature':data=corpus.feature(args.feature_id)
     elif args.command=='recommend':data=corpus.recommend(args.feature_id)
     elif args.command=='neighbours':data=corpus.neighbours(args.pr,args.limit)
+    elif args.command=='related':data=corpus.related(args.pr,args.limit)
+    elif args.command=='relationships':data=corpus.relationships(args.query)
     else:data=corpus.retrieve_crop(args.feature_id,args.sources,args.output)
     print(json.dumps(data,ensure_ascii=False,indent=2))
 

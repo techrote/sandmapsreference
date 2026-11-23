@@ -11,8 +11,8 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from core import clear_centres, decode_setup, digest, image_parity, safe_relative, write_json
-from corpus import Corpus, DEFAULT
+from core import clear_centres, decode_setup, digest, git_blob, image_parity, safe_relative, write_json
+from corpus import Corpus, DEFAULT, corpus_lock, source_identity
 
 
 def setup(edits):
@@ -84,6 +84,20 @@ class ReplayContracts(unittest.TestCase):
         for path in ('../setup.json','/tmp/setup.json','C:/setup.json','a\\..\\setup.json'):
             with self.subTest(path=path),self.assertRaises(ValueError):safe_relative(path)
 
+    def test_mutated_input_cannot_reuse_immutable_source_label(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);path=root/'setup.json';write_json(path,setup([]))
+            raw=path.read_bytes();head='1'*40
+            authority={(210,head,'setup.json'):{'sha256':digest(raw),'git_blob':git_blob(raw)}}
+            self.assertEqual(source_identity(path,root,head,210,authority)['sha256'],digest(raw))
+            value=setup([[0,0,1,1,58]]);write_json(path,value)
+            with self.assertRaises(ValueError):source_identity(path,root,head,210,authority)
+
+    def test_unregistered_file_cannot_claim_source_identity(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);path=root/'setup.json';write_json(path,setup([]))
+            with self.assertRaises(ValueError):source_identity(path,root,'1'*40,210,{})
+
 
 class ConsumerContracts(unittest.TestCase):
     @classmethod
@@ -134,7 +148,31 @@ class ConsumerContracts(unittest.TestCase):
             else:data['maps'][0]['owner_acceptance']='ACCEPTED'
             with tempfile.TemporaryDirectory() as directory:
                 path=Path(directory)/'corpus.json';write_json(path,data)
+                corpus_lock(path,data)
                 with self.assertRaises(ValueError):Corpus(path)
+
+    def test_dataset_byte_tampering_refused(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'corpus.json';write_json(path,self.corpus.data);corpus_lock(path,self.corpus.data)
+            path.write_bytes(path.read_bytes()+b' ')
+            with self.assertRaises(ValueError):Corpus(path)
+
+    def test_failed_interventions_are_negative_and_nearby(self):
+        related=self.corpus.related(152)
+        self.assertEqual(len(related['negative_interventions']),2)
+        self.assertTrue(all(r['status']=='FAILED_INTERVENTION' and not r['accepted_positive_example'] for r in related['negative_interventions']))
+        self.assertEqual(len(self.corpus.data['negative_examples']),5)
+
+    def test_portrait_ancestry_is_explicit_not_a_duplicate_verdict(self):
+        family=self.corpus.related(197)['comparative_families'][0]
+        self.assertEqual(family['donor_pr'],37)
+        self.assertIn('does not imply redundant',family['interpretation'])
+
+    def test_all_zero_policy_remains_a_visible_native_warning(self):
+        for pr in (155,183):
+            row=self.corpus.get(pr)
+            self.assertTrue(row['material_plane']['liquid_policy_all_zeroes'])
+            self.assertTrue(row['source_static_qualification']['warnings'])
 
     def test_native_evidence_never_inferred_from_static_pass(self):
         for row in self.corpus.maps:

@@ -95,10 +95,19 @@ def run(sources: Path):
         references = []
         if arm in ("D1","D2"):
             reference_pr = {"D1":203,"D2":208}[arm]
-            reference_dir = source_dir(sources,reference_pr)
+            reference_head = {"D1":"922a27926ea7338e9a1ce09fc64222b1094a9737","D2":"94eccd23024254fbbfb02cd6cdfef8753dd89c3c"}[arm]
+            reference_dir = source_dir(sources,reference_pr,reference_head)
             reference_path = reference_dir/original["map_directory"]/'setup.json'
             rs,rg,ri = decode_setup(reference_path,legal)
-            references.append({"pr":reference_pr,"head_prefix":reference_dir.name.split('-')[-1],"identity":ri,
+            # The durable custody manifest independently binds reference bytes
+            # to a complete immutable Git identity, rather than a folder prefix.
+            custody_path=Path(__file__).resolve().parents[2]/'docs/corpus/goldmaps-finalisation-001/custody/master-artifacts.v1.json'
+            master=json_load(custody_path)
+            ref_relative=reference_path.relative_to(reference_dir).as_posix()
+            expected=next(r for r in master['artifacts'] if r['source_pr']==reference_pr and r['commit']==reference_head and r['path']==ref_relative)
+            if ri['setup_sha256']!=expected['sha256'] or ri['git_blob_sha1']!=expected['git_blob']:
+                failures.append('Prior reworker reference source identity mismatch')
+            references.append({"pr":reference_pr,"head":reference_head,"identity":ri,
                 "changed_cells_from_original":int(np.count_nonzero(rg!=before)),
                 "nongeometry_changed_fields":[k for k in original_setup if k!="edits" and rs.get(k)!=original_setup[k]],
                 "role":"Prior reworker comparison, never an input to the frozen author experiment"})

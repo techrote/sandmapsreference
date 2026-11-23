@@ -161,6 +161,8 @@ def decode_setup(path: Path, legal_ids=None):
         "full_plane_cells": width*height, "plane_sha256": digest(bytes(plane)),
         "stamp_count": len(edits), "stamp_area": stamp_area,
         "coalesced_rectangles": rectangle_count,
+        "liquid_policy_all_zeroes": not any(policy),
+        "liquid_policy_validation": "STRUCTURAL_WORD_BOUNDS_ONLY; signed native envelope validation is separate",
         "overlapped_cells": int(np.count_nonzero(visits > 1)),
         "maximum_write_visits": int(visits.max()),
         "unwritten_empty_cells": int(np.count_nonzero(visits == 0)),
