@@ -1,0 +1,167 @@
+{
+  "id": "gold-130",
+  "aliases": [
+    "gold-130"
+  ],
+  "source_records": [
+    {
+      "id": "gold-130",
+      "roles": [
+        "gold-core"
+      ],
+      "pr": 130,
+      "head": "29f58a4ecd2405305094638b8647164f51092866",
+      "path": "cybersand-canvases/2048x1024/original-megastructure-wide-sundered-escarpment-fault-bore-261121/setup.json",
+      "setup_sha256": "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+      "setup_bytes": 94178,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/29f58a4ecd2405305094638b8647164f51092866/cybersand-canvases/2048x1024/original-megastructure-wide-sundered-escarpment-fault-bore-261121/setup.json"
+    }
+  ],
+  "setup_sha256": "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+  "phases": {
+    "load": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 673,
+      "seconds": 49.072,
+      "log_sha256": "a92e95cfa5bb6b4ee76722954b6195a637489d03674e7d9dbf146310496f9f67",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-1006eebf",
+        "actor_adopted": true,
+        "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+        "collision_observed": true,
+        "collision_probe": {
+          "end_tick": 271,
+          "max_contacts": 4,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                1.66223401265597e-06,
+                -1.0
+              ],
+              "point": [
+                142.0,
+                625.0
+              ],
+              "tick": 271
+            }
+          ],
+          "worker_failed": false
+        },
+        "directed_up_displacement_cells": 4.29287719726562,
+        "drive_end": [
+          144.0,
+          472.845062255859
+        ],
+        "drive_key": "W",
+        "drive_start": [
+          144.0,
+          477.137939453125
+        ],
+        "drive_ticks_elapsed": 20,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": false,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          144.0,
+          477.0
+        ],
+        "label": "gm-24cbdd2ae1-1006eebf",
+        "load": true,
+        "midge_displacement_cells": 4.16152954101562,
+        "midge_drive": true,
+        "midge_end": [
+          144.0,
+          472.845062255859
+        ],
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "load",
+        "physics_tick": true,
+        "process_id": 673,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 4905,
+        "save_readback": true,
+        "saved_label": "gm-24cbdd2ae1-1006eebf-saved",
+        "setup_sha256": "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    },
+    "reopen": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 828,
+      "seconds": 13.652,
+      "log_sha256": "7aaf649e48553e44b622a32fddb6a926383d5fd7b49ce96b23271183c98f426d",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-1006eebf-saved",
+        "actor_adopted": true,
+        "collision_observed": false,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": true,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          144.0,
+          477.0
+        ],
+        "label": "gm-24cbdd2ae1-1006eebf",
+        "load": true,
+        "midge_drive": false,
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "reopen",
+        "physics_tick": false,
+        "process_id": 828,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 4905,
+        "saved_label": "gm-24cbdd2ae1-1006eebf-saved",
+        "setup_sha256": "76b8c85b112907c46ab559cc5f81133cbc2a4aafa57ad2fdfe7d4aba393e46ce",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    }
+  },
+  "saved_setup_semantic_equal": true,
+  "saved_setup_sha256": "76b8c85b112907c46ab559cc5f81133cbc2a4aafa57ad2fdfe7d4aba393e46ce",
+  "source_unchanged": true,
+  "separate_processes": true,
+  "basic_native_pass": true,
+  "collision_observed": true,
+  "pass": true
+}

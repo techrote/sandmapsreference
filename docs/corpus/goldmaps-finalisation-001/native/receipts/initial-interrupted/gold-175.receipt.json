@@ -1,0 +1,167 @@
+{
+  "id": "gold-175",
+  "aliases": [
+    "gold-175"
+  ],
+  "source_records": [
+    {
+      "id": "gold-175",
+      "roles": [
+        "gold-core"
+      ],
+      "pr": 175,
+      "head": "5d97133f3b33bf5b29f92eb65ccf7c884d9e5804",
+      "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-cinderfold-seed-courier-buried-assay-interchange-261121/setup.json",
+      "setup_sha256": "60d561e6619b0bcc781c755d5726eb56e496bdccd62ffa2d0affc4b5cc23f62a",
+      "setup_bytes": 48216,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/5d97133f3b33bf5b29f92eb65ccf7c884d9e5804/cybersand-canvases/2048x1024/worldgroup-xenobiome-cinderfold-seed-courier-buried-assay-interchange-261121/setup.json"
+    }
+  ],
+  "setup_sha256": "60d561e6619b0bcc781c755d5726eb56e496bdccd62ffa2d0affc4b5cc23f62a",
+  "phases": {
+    "load": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 1717,
+      "seconds": 23.537,
+      "log_sha256": "f6cdad04add4841c21332076f2bd8098074e5c754d9c281b9ff08949ac01f15e",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-60d561e6",
+        "actor_adopted": true,
+        "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+        "collision_observed": true,
+        "collision_probe": {
+          "end_tick": 207,
+          "max_contacts": 4,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                0.0,
+                -1.0
+              ],
+              "point": [
+                55.0,
+                672.0
+              ],
+              "tick": 207
+            }
+          ],
+          "worker_failed": false
+        },
+        "directed_up_displacement_cells": 4.29278564453125,
+        "drive_end": [
+          53.0,
+          602.845153808594
+        ],
+        "drive_key": "W",
+        "drive_start": [
+          53.0,
+          607.137939453125
+        ],
+        "drive_ticks_elapsed": 20,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": false,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          53.0,
+          607.0
+        ],
+        "label": "gm-24cbdd2ae1-60d561e6",
+        "load": true,
+        "midge_displacement_cells": 4.16143798828125,
+        "midge_drive": true,
+        "midge_end": [
+          53.0,
+          602.845153808594
+        ],
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "load",
+        "physics_tick": true,
+        "process_id": 1717,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 2493,
+        "save_readback": true,
+        "saved_label": "gm-24cbdd2ae1-60d561e6-saved",
+        "setup_sha256": "60d561e6619b0bcc781c755d5726eb56e496bdccd62ffa2d0affc4b5cc23f62a",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    },
+    "reopen": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 1815,
+      "seconds": 10.504,
+      "log_sha256": "0c7cbed72d2de3d7913e525af96aa6283ef65eb237b008f6af3573e325fff8ba",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-60d561e6-saved",
+        "actor_adopted": true,
+        "collision_observed": false,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": true,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          53.0,
+          607.0
+        ],
+        "label": "gm-24cbdd2ae1-60d561e6",
+        "load": true,
+        "midge_drive": false,
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "reopen",
+        "physics_tick": false,
+        "process_id": 1815,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 2493,
+        "saved_label": "gm-24cbdd2ae1-60d561e6-saved",
+        "setup_sha256": "6c9de660d13432220219ae52d8c5166ad3e31790006f1bbeb71f2566713dac18",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    }
+  },
+  "saved_setup_semantic_equal": true,
+  "saved_setup_sha256": "6c9de660d13432220219ae52d8c5166ad3e31790006f1bbeb71f2566713dac18",
+  "source_unchanged": true,
+  "separate_processes": true,
+  "basic_native_pass": true,
+  "collision_observed": true,
+  "pass": true
+}

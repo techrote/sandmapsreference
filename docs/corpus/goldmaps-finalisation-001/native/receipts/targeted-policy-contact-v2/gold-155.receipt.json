@@ -1,0 +1,87 @@
+{
+  "id": "gold-155",
+  "aliases": [
+    "gold-155"
+  ],
+  "source_records": [
+    {
+      "id": "gold-155",
+      "roles": [
+        "gold-core"
+      ],
+      "pr": 155,
+      "head": "7ff90c11a3839e42371f0fef5ac3c783ab2a8d05",
+      "path": "cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json",
+      "setup_sha256": "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+      "setup_bytes": 59904,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/7ff90c11a3839e42371f0fef5ac3c783ab2a8d05/cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json",
+      "expected_native_refusal": {
+        "code": "malformed_policy",
+        "detail": "bad magic"
+      },
+      "native_advisory": "Historical original is refused by pinned engine. See separate post-experiment policy-repair descendant."
+    }
+  ],
+  "setup_sha256": "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+  "phases": {
+    "load": {
+      "exit_code": 1,
+      "timeout": false,
+      "process_id": 467,
+      "seconds": 5.337,
+      "log_sha256": "95bf89b323bd39ebd48ca3a7cb91aeb525c93b897718756076d7f0567b879140",
+      "evidence": {
+        "active_label": "gm-99b6c6888e-e374e462",
+        "actor_adopted": false,
+        "collision_observed": false,
+        "errors": [
+          "native liquid policy refused: { \"code\": \"malformed_policy\", \"material\": <null>, \"detail\": \"bad magic\" }"
+        ],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": false,
+        "full_grid": false,
+        "label": "gm-99b6c6888e-e374e462",
+        "load": false,
+        "midge_drive": false,
+        "native_bridge": false,
+        "native_policy": {
+          "accepted": false,
+          "receipt": null,
+          "refusal": {
+            "code": "malformed_policy",
+            "detail": "bad magic",
+            "material": null
+          }
+        },
+        "phase": "load",
+        "physics_tick": false,
+        "process_id": 467,
+        "rectangles": 3229,
+        "saved_label": "gm-99b6c6888e-e374e462-saved",
+        "setup_sha256": "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+        "source_parse": true,
+        "version": "4.7-stable (official)"
+      }
+    }
+  },
+  "saved_setup_semantic_equal": false,
+  "saved_setup_sha256": null,
+  "source_unchanged": true,
+  "separate_processes": false,
+  "basic_native_pass": false,
+  "collision_observed": false,
+  "pass": false,
+  "expected_native_refusal": {
+    "code": "malformed_policy",
+    "detail": "bad magic"
+  },
+  "negative_fixture_pass": true,
+  "qualification_status": "REFUSED_INVALID_SOURCE"
+}
