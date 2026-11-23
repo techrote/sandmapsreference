@@ -1,0 +1,67 @@
+{
+  "id": "b2-apparatus-original",
+  "setup_id": "trial-B2-original",
+  "setup_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+  "planner_source_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+  "route_fixture_sha256": "9264c034f24247c44b937b99fdf5c21ecf0a8d4599de0bd5b33012ddbad6be2d",
+  "named_sites": [
+    "spawn_quarantine",
+    "quarantine_gate",
+    "specimen_desk",
+    "west_tower",
+    "rotor_west_gate",
+    "central_inspection"
+  ],
+  "waypoints": [
+    [
+      78,
+      695
+    ],
+    [
+      155,
+      698
+    ],
+    [
+      273,
+      697
+    ],
+    [
+      392,
+      696
+    ],
+    [
+      436,
+      640
+    ],
+    [
+      596,
+      640
+    ],
+    [
+      748,
+      680
+    ],
+    [
+      786,
+      694
+    ],
+    [
+      936,
+      740
+    ],
+    [
+      1056,
+      840
+    ],
+    [
+      1071,
+      848
+    ]
+  ],
+  "waypoint_radius": 7.0,
+  "speed_limit": 40.0,
+  "max_ticks": 9000,
+  "max_wall_ms": 240000,
+  "stuck_ticks": 900,
+  "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+}

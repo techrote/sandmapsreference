@@ -1,0 +1,1486 @@
+{
+  "schema": "goldmaps.current-engine-compatibility.v1",
+  "frozen_authority": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "current_accepted_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "current_tree": "06b62d73138028d1f7615b83edc9810491bf6287",
+  "godot_sha256": "f85bbc6b15e22416c7d797cd60b63286dd67b9cb13498847056c18520ae55a75",
+  "native_probe_sha256": "1e548392a725c4e8db08e682856b47d53b5a3eb2f3c7b8e3737667c42446a05c",
+  "contract_source_comparisons": [
+    {
+      "path": "godot/scripts/workbench_setup.gd",
+      "frozen_blob": "760268107874198c2323dd590d8c0921692c5ba4",
+      "current_blob": "760268107874198c2323dd590d8c0921692c5ba4",
+      "unchanged": true
+    },
+    {
+      "path": "godot/scripts/workbench_actor_catalog.gd",
+      "frozen_blob": "78e146cf8f9e724d5587bd10db85abb460f3b0fd",
+      "current_blob": "78e146cf8f9e724d5587bd10db85abb460f3b0fd",
+      "unchanged": true
+    },
+    {
+      "path": "godot/scripts/physical_actor_session.gd",
+      "frozen_blob": "56df9dde65f3d2a8650bc7575e886fe19a24380e",
+      "current_blob": "56df9dde65f3d2a8650bc7575e886fe19a24380e",
+      "unchanged": true
+    },
+    {
+      "path": "godot/scripts/main.gd",
+      "frozen_blob": "56b8e685f4f4c9eb4219c6ba02c2eca69e9c7bf1",
+      "current_blob": "56b8e685f4f4c9eb4219c6ba02c2eca69e9c7bf1",
+      "unchanged": true
+    },
+    {
+      "path": "godot/authoring/flyers/midge.json",
+      "frozen_blob": "228399e38a0e0ab215b9f48698edce67a7a35799",
+      "current_blob": "228399e38a0e0ab215b9f48698edce67a7a35799",
+      "unchanged": true
+    },
+    {
+      "path": "native/include/cybersand/material.hpp",
+      "frozen_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+      "current_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+      "unchanged": true
+    },
+    {
+      "path": "godot/addons/cybersand_native/cybersand_native.gdextension",
+      "frozen_blob": "7c1fe4a2fe94d0e6ef4b23df4c67ecdf2e6e3a71",
+      "current_blob": "7c1fe4a2fe94d0e6ef4b23df4c67ecdf2e6e3a71",
+      "unchanged": true
+    },
+    {
+      "path": "godot/addons/cybersand_native/runtime-provenance.linux.json",
+      "frozen_blob": "4b2dde51df7dd188ca6660c82c063874a69b51cb",
+      "current_blob": "4b2dde51df7dd188ca6660c82c063874a69b51cb",
+      "unchanged": true
+    },
+    {
+      "path": "godot/addons/cybersand_native/runtime-provenance.json",
+      "frozen_blob": "9cb0cb3a7234569e3a37566def825ca6fab87a3c",
+      "current_blob": "9cb0cb3a7234569e3a37566def825ca6fab87a3c",
+      "unchanged": true
+    },
+    {
+      "path": "godot/addons/godot-rapier2d/runtime-provenance.linux.json",
+      "frozen_blob": "a84e3aa920bac79d5999db802992fd92c128d4e8",
+      "current_blob": "a84e3aa920bac79d5999db802992fd92c128d4e8",
+      "unchanged": true
+    },
+    {
+      "path": "godot/scripts/shared_workbench.gd",
+      "frozen_blob": "4bf80e83c1bb9261f66383da6e82ede23acbfc03",
+      "current_blob": "2c24ed7bac47203e7a53cefe07632336da03d71b",
+      "unchanged": false
+    }
+  ],
+  "native_binary_sha256": "a15fc422313eb01e79bc904f44cc8879816484ae4fc98c63ac4b815afdb6a5e7",
+  "rapier_sha256": "566e68ae53bfb2eb7018c8e7d0dd3727121bf696462039b780a33d6b8369c66a",
+  "source_export": "git archive CURRENT_HEAD godot; new isolated runtime/project configuration",
+  "source_files_git_blob_verified": 776,
+  "runtime_source_changes": [],
+  "cases": [
+    {
+      "id": "trial-C1-candidate",
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "timeout": false,
+          "process_id": 292,
+          "seconds": 24.676,
+          "log_sha256": "b5a9e164ca7c34725cc1905986ac06aaf0e45597807e2ef764ce092d091e8427",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "compat-trial-c1-candidate",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_position": [
+                115.0,
+                668.441467285156
+              ],
+              "end_tick": 292,
+              "initial_900_tick_observation": {},
+              "max_contacts": 2,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "tick_budget": 900,
+              "wall_budget_ms": 90000,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    -1.0,
+                    0.0
+                  ],
+                  "point": [
+                    118.0,
+                    668.0
+                  ],
+                  "tick": 292
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29287719726562,
+            "drive_end": [
+              115.0,
+              484.845062255859
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              115.0,
+              489.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              115.0,
+              489.0
+            ],
+            "label": "compat-trial-c1-candidate",
+            "load": true,
+            "midge_displacement_cells": 4.16152954101562,
+            "midge_drive": true,
+            "midge_end": [
+              115.0,
+              484.845062255859
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "native_policy": {
+              "accepted": true,
+              "receipt": {
+                "admission": "current_defaults_only",
+                "assignments": [
+                  {
+                    "applied_family": "freemass_v1",
+                    "applied_variant": "reference",
+                    "material": 3,
+                    "name": "water",
+                    "requested_family": "freemass_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 8,
+                    "name": "lava",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 12,
+                    "name": "acid",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 16,
+                    "name": "oil",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 20,
+                    "name": "paste",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 21,
+                    "name": "slush",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 24,
+                    "name": "brine",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 30,
+                    "name": "cement",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 32,
+                    "name": "toxic-sludge",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 33,
+                    "name": "mercury",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 36,
+                    "name": "molten-glass",
+                    "requested_family": "cellular_yield_v1"
+                  }
+                ],
+                "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+                "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+                "envelope": [
+                  1279479895,
+                  1,
+                  1,
+                  -2102023270,
+                  1854385793,
+                  1886533889,
+                  84225930,
+                  1522979054,
+                  582168604,
+                  -646713377,
+                  -939672877,
+                  868616440,
+                  1977866421,
+                  1930370363,
+                  -2119873090,
+                  -6981196,
+                  870342995,
+                  1443932351,
+                  -1569267145,
+                  11,
+                  3,
+                  1,
+                  0,
+                  8,
+                  2,
+                  0,
+                  12,
+                  2,
+                  0,
+                  16,
+                  2,
+                  0,
+                  20,
+                  2,
+                  0,
+                  21,
+                  2,
+                  0,
+                  24,
+                  2,
+                  0,
+                  30,
+                  2,
+                  0,
+                  32,
+                  2,
+                  0,
+                  33,
+                  2,
+                  0,
+                  36,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "family_blocks": [],
+                "family_parameters": {},
+                "material_blocks": [],
+                "maximum_rule_radius": null,
+                "minimum_rule_radius": 2,
+                "normalization": null,
+                "physical_state_format_version": 2,
+                "physical_state_hash_version": 2,
+                "platform": "linux",
+                "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+                "refusal": null,
+                "session_generation": -1,
+                "version": 1,
+                "wire_version": 1
+              },
+              "refusal": null
+            },
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 292,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 1974,
+            "save_readback": true,
+            "saved_label": "compat-trial-c1-candidate-saved",
+            "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "timeout": false,
+          "process_id": 390,
+          "seconds": 10.313,
+          "log_sha256": "315263c3543af8834f00cb289ae85a7903bf8b7a27f11199f889e58c9c42c5d3",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "compat-trial-c1-candidate-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              115.0,
+              489.0
+            ],
+            "label": "compat-trial-c1-candidate",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "native_policy": {
+              "accepted": true,
+              "receipt": {
+                "admission": "current_defaults_only",
+                "assignments": [
+                  {
+                    "applied_family": "freemass_v1",
+                    "applied_variant": "reference",
+                    "material": 3,
+                    "name": "water",
+                    "requested_family": "freemass_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 8,
+                    "name": "lava",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 12,
+                    "name": "acid",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 16,
+                    "name": "oil",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 20,
+                    "name": "paste",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 21,
+                    "name": "slush",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 24,
+                    "name": "brine",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 30,
+                    "name": "cement",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 32,
+                    "name": "toxic-sludge",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 33,
+                    "name": "mercury",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 36,
+                    "name": "molten-glass",
+                    "requested_family": "cellular_yield_v1"
+                  }
+                ],
+                "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+                "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+                "envelope": [
+                  1279479895,
+                  1,
+                  1,
+                  -2102023270,
+                  1854385793,
+                  1886533889,
+                  84225930,
+                  1522979054,
+                  582168604,
+                  -646713377,
+                  -939672877,
+                  868616440,
+                  1977866421,
+                  1930370363,
+                  -2119873090,
+                  -6981196,
+                  870342995,
+                  1443932351,
+                  -1569267145,
+                  11,
+                  3,
+                  1,
+                  0,
+                  8,
+                  2,
+                  0,
+                  12,
+                  2,
+                  0,
+                  16,
+                  2,
+                  0,
+                  20,
+                  2,
+                  0,
+                  21,
+                  2,
+                  0,
+                  24,
+                  2,
+                  0,
+                  30,
+                  2,
+                  0,
+                  32,
+                  2,
+                  0,
+                  33,
+                  2,
+                  0,
+                  36,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "family_blocks": [],
+                "family_parameters": {},
+                "material_blocks": [],
+                "maximum_rule_radius": null,
+                "minimum_rule_radius": 2,
+                "normalization": null,
+                "physical_state_format_version": 2,
+                "physical_state_hash_version": 2,
+                "platform": "linux",
+                "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+                "refusal": null,
+                "session_generation": -1,
+                "version": 1,
+                "wire_version": 1
+              },
+              "refusal": null
+            },
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 390,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 1974,
+            "saved_label": "compat-trial-c1-candidate-saved",
+            "setup_sha256": "983e405c690bbce43f4eefaa54c492d5127aaed11116a13f6b27fd4a2405173e",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "authored_save_equal": true,
+      "source_unchanged": true,
+      "pass": true
+    },
+    {
+      "id": "trial-B3-candidate",
+      "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "timeout": false,
+          "process_id": 488,
+          "seconds": 25.131,
+          "log_sha256": "9800ce076d7e38aeb3842c4ffaf942eba50f79d1427c9c37a44670295c39a6b2",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "compat-trial-b3-candidate",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_position": [
+                125.0,
+                531.467834472656
+              ],
+              "end_tick": 317,
+              "initial_900_tick_observation": {},
+              "max_contacts": 8,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "tick_budget": 900,
+              "wall_budget_ms": 90000,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    0.0,
+                    -1.0
+                  ],
+                  "point": [
+                    125.0,
+                    533.0
+                  ],
+                  "tick": 317
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29287719726562,
+            "drive_end": [
+              125.0,
+              307.845062255859
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              125.0,
+              312.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              125.0,
+              312.0
+            ],
+            "label": "compat-trial-b3-candidate",
+            "load": true,
+            "midge_displacement_cells": 4.16152954101562,
+            "midge_drive": true,
+            "midge_end": [
+              125.0,
+              307.845062255859
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "native_policy": {
+              "accepted": true,
+              "receipt": {
+                "admission": "current_defaults_only",
+                "assignments": [
+                  {
+                    "applied_family": "freemass_v1",
+                    "applied_variant": "reference",
+                    "material": 3,
+                    "name": "water",
+                    "requested_family": "freemass_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 8,
+                    "name": "lava",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 12,
+                    "name": "acid",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 16,
+                    "name": "oil",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 20,
+                    "name": "paste",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 21,
+                    "name": "slush",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 24,
+                    "name": "brine",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 30,
+                    "name": "cement",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 32,
+                    "name": "toxic-sludge",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 33,
+                    "name": "mercury",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 36,
+                    "name": "molten-glass",
+                    "requested_family": "cellular_yield_v1"
+                  }
+                ],
+                "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+                "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+                "envelope": [
+                  1279479895,
+                  1,
+                  1,
+                  -2102023270,
+                  1854385793,
+                  1886533889,
+                  84225930,
+                  1522979054,
+                  582168604,
+                  -646713377,
+                  -939672877,
+                  868616440,
+                  1977866421,
+                  1930370363,
+                  -2119873090,
+                  -6981196,
+                  870342995,
+                  1443932351,
+                  -1569267145,
+                  11,
+                  3,
+                  1,
+                  0,
+                  8,
+                  2,
+                  0,
+                  12,
+                  2,
+                  0,
+                  16,
+                  2,
+                  0,
+                  20,
+                  2,
+                  0,
+                  21,
+                  2,
+                  0,
+                  24,
+                  2,
+                  0,
+                  30,
+                  2,
+                  0,
+                  32,
+                  2,
+                  0,
+                  33,
+                  2,
+                  0,
+                  36,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "family_blocks": [],
+                "family_parameters": {},
+                "material_blocks": [],
+                "maximum_rule_radius": null,
+                "minimum_rule_radius": 2,
+                "normalization": null,
+                "physical_state_format_version": 2,
+                "physical_state_hash_version": 2,
+                "platform": "linux",
+                "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+                "refusal": null,
+                "session_generation": -1,
+                "version": 1,
+                "wire_version": 1
+              },
+              "refusal": null
+            },
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 488,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 4164,
+            "save_readback": true,
+            "saved_label": "compat-trial-b3-candidate-saved",
+            "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "timeout": false,
+          "process_id": 586,
+          "seconds": 9.883,
+          "log_sha256": "f6ac08d40006e598556b98be021a395c1fe956ab518fcb68d2cc6a0d2ff831b0",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "compat-trial-b3-candidate-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              125.0,
+              312.0
+            ],
+            "label": "compat-trial-b3-candidate",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "native_policy": {
+              "accepted": true,
+              "receipt": {
+                "admission": "current_defaults_only",
+                "assignments": [
+                  {
+                    "applied_family": "freemass_v1",
+                    "applied_variant": "reference",
+                    "material": 3,
+                    "name": "water",
+                    "requested_family": "freemass_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 8,
+                    "name": "lava",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 12,
+                    "name": "acid",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 16,
+                    "name": "oil",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 20,
+                    "name": "paste",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 21,
+                    "name": "slush",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 24,
+                    "name": "brine",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 30,
+                    "name": "cement",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 32,
+                    "name": "toxic-sludge",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 33,
+                    "name": "mercury",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 36,
+                    "name": "molten-glass",
+                    "requested_family": "cellular_yield_v1"
+                  }
+                ],
+                "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+                "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+                "envelope": [
+                  1279479895,
+                  1,
+                  1,
+                  -2102023270,
+                  1854385793,
+                  1886533889,
+                  84225930,
+                  1522979054,
+                  582168604,
+                  -646713377,
+                  -939672877,
+                  868616440,
+                  1977866421,
+                  1930370363,
+                  -2119873090,
+                  -6981196,
+                  870342995,
+                  1443932351,
+                  -1569267145,
+                  11,
+                  3,
+                  1,
+                  0,
+                  8,
+                  2,
+                  0,
+                  12,
+                  2,
+                  0,
+                  16,
+                  2,
+                  0,
+                  20,
+                  2,
+                  0,
+                  21,
+                  2,
+                  0,
+                  24,
+                  2,
+                  0,
+                  30,
+                  2,
+                  0,
+                  32,
+                  2,
+                  0,
+                  33,
+                  2,
+                  0,
+                  36,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "family_blocks": [],
+                "family_parameters": {},
+                "material_blocks": [],
+                "maximum_rule_radius": null,
+                "minimum_rule_radius": 2,
+                "normalization": null,
+                "physical_state_format_version": 2,
+                "physical_state_hash_version": 2,
+                "platform": "linux",
+                "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+                "refusal": null,
+                "session_generation": -1,
+                "version": 1,
+                "wire_version": 1
+              },
+              "refusal": null
+            },
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 586,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 4164,
+            "saved_label": "compat-trial-b3-candidate-saved",
+            "setup_sha256": "c185c13c3d123fd7ee6d0f4175ad5ebf77d2aa4c27cd601e0480a3c9de09234a",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "authored_save_equal": true,
+      "source_unchanged": true,
+      "pass": true
+    },
+    {
+      "id": "derived-155-policy",
+      "setup_sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "timeout": false,
+          "process_id": 684,
+          "seconds": 22.518,
+          "log_sha256": "c54c56cfae5e88ed82efa2fd90443faeaa780e0c4ee49afff1b6fe2dfe5f6de0",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "compat-derived-155-policy",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_position": [
+                70.0,
+                854.496337890625
+              ],
+              "end_tick": 347,
+              "initial_900_tick_observation": {},
+              "max_contacts": 8,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "tick_budget": 900,
+              "wall_budget_ms": 90000,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    0.0,
+                    -1.0
+                  ],
+                  "point": [
+                    72.0,
+                    856.0
+                  ],
+                  "tick": 347
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29278564453125,
+            "drive_end": [
+              70.0,
+              578.845153808594
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              70.0,
+              583.137939453125
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              70.0,
+              583.0
+            ],
+            "label": "compat-derived-155-policy",
+            "load": true,
+            "midge_displacement_cells": 4.16143798828125,
+            "midge_drive": true,
+            "midge_end": [
+              70.0,
+              578.845153808594
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "native_policy": {
+              "accepted": true,
+              "receipt": {
+                "admission": "current_defaults_only",
+                "assignments": [
+                  {
+                    "applied_family": "freemass_v1",
+                    "applied_variant": "reference",
+                    "material": 3,
+                    "name": "water",
+                    "requested_family": "freemass_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 8,
+                    "name": "lava",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 12,
+                    "name": "acid",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 16,
+                    "name": "oil",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 20,
+                    "name": "paste",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 21,
+                    "name": "slush",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 24,
+                    "name": "brine",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 30,
+                    "name": "cement",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 32,
+                    "name": "toxic-sludge",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 33,
+                    "name": "mercury",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 36,
+                    "name": "molten-glass",
+                    "requested_family": "cellular_yield_v1"
+                  }
+                ],
+                "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+                "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+                "envelope": [
+                  1279479895,
+                  1,
+                  1,
+                  -2102023270,
+                  1854385793,
+                  1886533889,
+                  84225930,
+                  1522979054,
+                  582168604,
+                  -646713377,
+                  -939672877,
+                  868616440,
+                  1977866421,
+                  1930370363,
+                  -2119873090,
+                  -6981196,
+                  870342995,
+                  1443932351,
+                  -1569267145,
+                  11,
+                  3,
+                  1,
+                  0,
+                  8,
+                  2,
+                  0,
+                  12,
+                  2,
+                  0,
+                  16,
+                  2,
+                  0,
+                  20,
+                  2,
+                  0,
+                  21,
+                  2,
+                  0,
+                  24,
+                  2,
+                  0,
+                  30,
+                  2,
+                  0,
+                  32,
+                  2,
+                  0,
+                  33,
+                  2,
+                  0,
+                  36,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "family_blocks": [],
+                "family_parameters": {},
+                "material_blocks": [],
+                "maximum_rule_radius": null,
+                "minimum_rule_radius": 2,
+                "normalization": null,
+                "physical_state_format_version": 2,
+                "physical_state_hash_version": 2,
+                "platform": "linux",
+                "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+                "refusal": null,
+                "session_generation": -1,
+                "version": 1,
+                "wire_version": 1
+              },
+              "refusal": null
+            },
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 684,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 3229,
+            "save_readback": true,
+            "saved_label": "compat-derived-155-policy-saved",
+            "setup_sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "timeout": false,
+          "process_id": 782,
+          "seconds": 10.507,
+          "log_sha256": "4baa4a5f215862aea362921be975cc0211f4d796df86286d5d002c686be7f8db",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "compat-derived-155-policy-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              2048,
+              1024
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              70.0,
+              583.0
+            ],
+            "label": "compat-derived-155-policy",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "native_policy": {
+              "accepted": true,
+              "receipt": {
+                "admission": "current_defaults_only",
+                "assignments": [
+                  {
+                    "applied_family": "freemass_v1",
+                    "applied_variant": "reference",
+                    "material": 3,
+                    "name": "water",
+                    "requested_family": "freemass_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 8,
+                    "name": "lava",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 12,
+                    "name": "acid",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 16,
+                    "name": "oil",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 20,
+                    "name": "paste",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 21,
+                    "name": "slush",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 24,
+                    "name": "brine",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 30,
+                    "name": "cement",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 32,
+                    "name": "toxic-sludge",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 33,
+                    "name": "mercury",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 36,
+                    "name": "molten-glass",
+                    "requested_family": "cellular_yield_v1"
+                  }
+                ],
+                "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+                "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+                "envelope": [
+                  1279479895,
+                  1,
+                  1,
+                  -2102023270,
+                  1854385793,
+                  1886533889,
+                  84225930,
+                  1522979054,
+                  582168604,
+                  -646713377,
+                  -939672877,
+                  868616440,
+                  1977866421,
+                  1930370363,
+                  -2119873090,
+                  -6981196,
+                  870342995,
+                  1443932351,
+                  -1569267145,
+                  11,
+                  3,
+                  1,
+                  0,
+                  8,
+                  2,
+                  0,
+                  12,
+                  2,
+                  0,
+                  16,
+                  2,
+                  0,
+                  20,
+                  2,
+                  0,
+                  21,
+                  2,
+                  0,
+                  24,
+                  2,
+                  0,
+                  30,
+                  2,
+                  0,
+                  32,
+                  2,
+                  0,
+                  33,
+                  2,
+                  0,
+                  36,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "family_blocks": [],
+                "family_parameters": {},
+                "material_blocks": [],
+                "maximum_rule_radius": null,
+                "minimum_rule_radius": 2,
+                "normalization": null,
+                "physical_state_format_version": 2,
+                "physical_state_hash_version": 2,
+                "platform": "linux",
+                "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+                "refusal": null,
+                "session_generation": -1,
+                "version": 1,
+                "wire_version": 1
+              },
+              "refusal": null
+            },
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 782,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 3229,
+            "saved_label": "compat-derived-155-policy-saved",
+            "setup_sha256": "a05ff74a77f44175a3bfd221ada8b0eeec8cd78fcae15bfc2e0a0fcd8823cb8e",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "authored_save_equal": true,
+      "source_unchanged": true,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "scope": "Three representative native load/full-grid/Midge movement/contact/authored save/fresh reopen cases on separately pinned current main. Schema/material/actor/ABI source identity audited; not exhaustive current-engine corpus qualification. Frozen experiment remains at original engine."
+}

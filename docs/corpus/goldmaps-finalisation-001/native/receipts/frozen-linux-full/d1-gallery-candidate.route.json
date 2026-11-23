@@ -1,0 +1,79 @@
+{
+  "id": "d1-gallery-candidate",
+  "setup_id": "trial-D1-candidate",
+  "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+  "planner_source_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+  "route_fixture_sha256": "2b67ace67494f5f948c14f3348986484fa6d4df4f61021eb171f4a75563dda21",
+  "named_sites": [
+    "Upper fault spawn",
+    "Upper bridge landing",
+    "Mid fault exchange",
+    "East drill bypass upper",
+    "East drill bypass middle",
+    "East drill bypass lower"
+  ],
+  "waypoints": [
+    [
+      509,
+      137
+    ],
+    [
+      508,
+      296
+    ],
+    [
+      508,
+      456
+    ],
+    [
+      556,
+      608
+    ],
+    [
+      572,
+      696
+    ],
+    [
+      568,
+      700
+    ],
+    [
+      521,
+      710
+    ],
+    [
+      520,
+      868
+    ],
+    [
+      503,
+      915
+    ],
+    [
+      660,
+      916
+    ],
+    [
+      756,
+      902
+    ],
+    [
+      776,
+      1060
+    ],
+    [
+      780,
+      1072
+    ],
+    [
+      757,
+      1218
+    ]
+  ],
+  "waypoint_radius": 7.0,
+  "speed_limit": 40.0,
+  "max_ticks": 9000,
+  "max_wall_ms": 240000,
+  "stuck_ticks": 900,
+  "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+}
