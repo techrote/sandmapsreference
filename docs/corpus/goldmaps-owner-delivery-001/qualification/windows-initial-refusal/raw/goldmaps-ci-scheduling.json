@@ -1,0 +1,205 @@
+{
+  "errors": [],
+  "interpretation": "Counts precede job conditions; dynamic expressions and reusable descendants require their actual plans. Per-matrix slot bounds are not an account-wide cap.",
+  "schema": "cybersand-workflow-inventory-v1",
+  "status": "passed",
+  "workflow_count": 5,
+  "workflows": [
+    {
+      "concurrency": {
+        "cancel-in-progress": "false",
+        "group": "goldmaps-native-${{ github.event.pull_request.number }}"
+      },
+      "file": ".github/workflows/goldmaps-finalisation-native.yml",
+      "jobs": [
+        {
+          "concurrency": null,
+          "id": "source-change",
+          "if": null,
+          "literal_matrix_jobs": 1,
+          "matrix_job_count_known": true,
+          "name": "source-change",
+          "needs": [],
+          "reusable_workflow": null,
+          "runner_slots_upper_bound": 1,
+          "runs_on": "ubuntu-24.04",
+          "strategy": {},
+          "timeout_minutes": "3"
+        },
+        {
+          "concurrency": null,
+          "id": "windows-native",
+          "if": "needs.source-change.outputs.run_native == 'true'",
+          "literal_matrix_jobs": 1,
+          "matrix_job_count_known": true,
+          "name": "windows-native",
+          "needs": "source-change",
+          "reusable_workflow": null,
+          "runner_slots_upper_bound": 1,
+          "runs_on": "windows-latest",
+          "strategy": {},
+          "timeout_minutes": "45"
+        }
+      ],
+      "known_job_instances_before_conditions": 2,
+      "name": "GOLDMAPS finalisation source-pinned Windows qualification",
+      "triggers": {
+        "pull_request": {
+          "paths": [
+            ".github/workflows/goldmaps-finalisation-native.yml",
+            "scripts/goldmaps_finalisation/native_matrix.py",
+            "scripts/goldmaps_finalisation/native_probe.gd",
+            "scripts/goldmaps_finalisation/native_inputs.v1.json",
+            "scripts/goldmaps_finalisation/native_helper_tests.ps1",
+            "docs/corpus/goldmaps-finalisation-001/native/descendants/**"
+          ]
+        }
+      },
+      "unresolved_matrix_jobs": []
+    },
+    {
+      "concurrency": null,
+      "file": ".github/workflows/goldmaps-finalisation-static.yml",
+      "jobs": [
+        {
+          "concurrency": null,
+          "id": "corpus-contracts",
+          "if": null,
+          "literal_matrix_jobs": 1,
+          "matrix_job_count_known": true,
+          "name": "corpus-contracts",
+          "needs": [],
+          "reusable_workflow": null,
+          "runner_slots_upper_bound": 1,
+          "runs_on": "ubuntu-24.04",
+          "strategy": {},
+          "timeout_minutes": "8"
+        }
+      ],
+      "known_job_instances_before_conditions": 1,
+      "name": "GOLDMAPS finalisation corpus contracts",
+      "triggers": {
+        "pull_request": {
+          "paths": [
+            ".github/workflows/goldmaps-finalisation-static.yml",
+            "scripts/goldmaps_finalisation/core.py",
+            "scripts/goldmaps_finalisation/audit.py",
+            "scripts/goldmaps_finalisation/corpus.py",
+            "scripts/goldmaps_finalisation/test_finalisation.py",
+            "docs/corpus/goldmaps-finalisation-001/**"
+          ]
+        }
+      },
+      "unresolved_matrix_jobs": []
+    },
+    {
+      "concurrency": {
+        "cancel-in-progress": "false",
+        "group": "goldmaps-owner-delivery-001"
+      },
+      "file": ".github/workflows/goldmaps-owner-delivery.yml",
+      "jobs": [
+        {
+          "concurrency": null,
+          "id": "windows-owner-kit",
+          "if": null,
+          "literal_matrix_jobs": 1,
+          "matrix_job_count_known": true,
+          "name": "windows-owner-kit",
+          "needs": [],
+          "reusable_workflow": null,
+          "runner_slots_upper_bound": 1,
+          "runs_on": "windows-latest",
+          "strategy": {},
+          "timeout_minutes": "150"
+        }
+      ],
+      "known_job_instances_before_conditions": 1,
+      "name": "GOLDMAPS owner playable Windows delivery",
+      "triggers": {
+        "push": {
+          "branches": [
+            "delivery/goldmaps-owner-001-20261124"
+          ],
+          "paths": [
+            ".github/workflows/goldmaps-owner-delivery.yml",
+            "tools/goldmaps_owner/integration/qualification-request.v1.json"
+          ]
+        }
+      },
+      "unresolved_matrix_jobs": []
+    },
+    {
+      "concurrency": {
+        "cancel-in-progress": "false",
+        "group": "goldmaps-recovery-001-export"
+      },
+      "file": ".github/workflows/goldmaps-recovery-export.yml",
+      "jobs": [
+        {
+          "concurrency": null,
+          "id": "archive",
+          "if": null,
+          "literal_matrix_jobs": 1,
+          "matrix_job_count_known": true,
+          "name": "archive",
+          "needs": [],
+          "reusable_workflow": null,
+          "runner_slots_upper_bound": 1,
+          "runs_on": "ubuntu-24.04",
+          "strategy": {},
+          "timeout_minutes": "25"
+        }
+      ],
+      "known_job_instances_before_conditions": 1,
+      "name": "GOLDMAPS-RECOVERY-001 pinned owner evaluator export",
+      "triggers": {
+        "push": {
+          "branches": [
+            "recovery/goldmaps-001-20261122"
+          ],
+          "paths": [
+            ".github/workflows/goldmaps-recovery-export.yml"
+          ]
+        }
+      },
+      "unresolved_matrix_jobs": []
+    },
+    {
+      "concurrency": {
+        "cancel-in-progress": "false",
+        "group": "goldmaps-recovery-001-all-sources"
+      },
+      "file": ".github/workflows/goldmaps-source-export.yml",
+      "jobs": [
+        {
+          "concurrency": null,
+          "id": "archive",
+          "if": null,
+          "literal_matrix_jobs": 1,
+          "matrix_job_count_known": true,
+          "name": "archive",
+          "needs": [],
+          "reusable_workflow": null,
+          "runner_slots_upper_bound": 1,
+          "runs_on": "ubuntu-24.04",
+          "strategy": {},
+          "timeout_minutes": "35"
+        }
+      ],
+      "known_job_instances_before_conditions": 1,
+      "name": "GOLDMAPS-RECOVERY-001 all source PRs and images",
+      "triggers": {
+        "push": {
+          "branches": [
+            "recovery/goldmaps-001-20261122"
+          ],
+          "paths": [
+            ".github/workflows/goldmaps-source-export.yml"
+          ]
+        }
+      },
+      "unresolved_matrix_jobs": []
+    }
+  ]
+}

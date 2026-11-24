@@ -44,6 +44,11 @@ conversion may alter the pinned native inputs. `audit_collection.py` and the
 product paint comparison require NumPy and Pillow; the acquisition tool and its
 hostile fixtures use only the Python standard library.
 
+On hosted Windows, set both `core.autocrlf=false` and `core.eol=lf` before both
+source checkouts. The latter is necessary because an engine `text=auto`
+attribute can otherwise choose Windows-native CRLF even with automatic
+conversion disabled. Keep the exact committed-byte guard enabled.
+
 ```sh
 python tools/goldmaps_owner/qualification/verify_payload.py <kit-or-zip> --out <new-custody-receipt.json>
 
