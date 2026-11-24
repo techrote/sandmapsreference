@@ -40,8 +40,11 @@ def main():
         relative = raw_path.decode()
         if kind != "blob" or mode not in ("100644", "100755"):
             raise ValueError("Unsupported engine source entry: " + relative)
-        if relative.startswith("godot/.godot/"):
-            continue  # Imported caches are created in the isolated package at first run.
+        portable_bootstrap = relative in {
+            "godot/.godot/.gdignore", "godot/.godot/extension_list.cfg",
+            "godot/.godot/global_script_class_cache.cfg"}
+        if relative.startswith("godot/.godot/") and not portable_bootstrap:
+            continue
         committed = git("cat-file", "blob", blob)
         is_lfs = committed.startswith(b"version https://git-lfs.github.com/spec/v1\n")
         if is_lfs and relative not in native:
@@ -56,7 +59,8 @@ def main():
             if not source.is_file() or source.read_bytes() != committed:
                 raise ValueError("Engine file differs from committed source: " + relative)
             origin = {"kind": "url", "url": "https://raw.githubusercontent.com/techrote/cybersand/" + ENGINE + "/" + relative}
-        destination = out / "runtime/project" / relative.removeprefix("godot/")
+        destination = (out / "runtime/bootstrap" / relative.removeprefix("godot/.godot/")
+                       if portable_bootstrap else out / "runtime/project" / relative.removeprefix("godot/"))
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source, destination)
         rows.append({"path": destination.relative_to(out).as_posix(), "source_path": relative,
@@ -84,8 +88,9 @@ def main():
         rows.append({"path": record["path"], "bytes": record["bytes"], "sha256": record["sha256"], "origin": record["origin"]})
     receipt = {"schema": "goldmaps.owner-engine-source.v1", "engine_head": ENGINE,
                "scientific_engine_head": SCIENTIFIC_ENGINE, "godot_version": GODOT_VERSION,
-               "files": rows, "runtime_identity": identity,
+               "files": rows, "runtime_identity": identity, "staged_platforms": sorted(platforms),
                "modifications": "No engine source edits. An additive opt-in owner browser/session layer is installed separately.",
+               "bootstrap": "Three exact accepted portable bootstrap files are copied into mutable .godot before ordinary runtime; no owner editor import or generated UID sidecars are required.",
                "excluded": "Other-platform LFS payloads and Godot generated caches; all first-run cache writes are isolated."}
     (out / "runtime/source-provenance.v1.json").write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"status": "STAGED_SOURCE_EXACT", "engine_head": ENGINE, "files": len(rows), "out": str(out)}))

@@ -1,0 +1,107 @@
+{
+  "schema": "goldmaps.owner-query-crop.v1",
+  "query": {
+    "authority": "reference_knowledge_only",
+    "query": "fault",
+    "results": [
+      {
+        "id": "corpus-185",
+        "title": "Quoin Braided Census Faultwell",
+        "source": {
+          "commit": "9e3e80d5f6dbe1e307e0d4afc1460402328e9cd3",
+          "git_blob_sha1": "bec178d92f59e7343033492bb6e697a87b2f946b",
+          "path": "cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/setup.json",
+          "pr": 185,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "92a2396e2c8e8f116b7c5508a6f1264479ec48971ccb8cebdc30eeb74fffaa14",
+          "url": "https://github.com/techrote/sandmapsreference/blob/9e3e80d5f6dbe1e307e0d4afc1460402328e9cd3/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/setup.json"
+        },
+        "family": "portrait/obvious",
+        "visual_family_groups": [
+          "portrait-donor-125"
+        ],
+        "match_occurrences": 19,
+        "native": "NOT_IN_REQUIRED_PLAYABLE_MATRIX",
+        "owner_accepted": false
+      },
+      {
+        "id": "repair-202",
+        "title": "Quoin Braided Census Faultwell \u2014 repaired portrait",
+        "source": {
+          "commit": "d139f2a2868daa4b09d5e39c71d3638190dda705",
+          "git_blob_sha1": "70ba97517e8db8a4953501ae777f746898add33e",
+          "path": "cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/setup.json",
+          "pr": 202,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "dc36e2e20d9a16cce4adb1ab09d1dcd1048ac9b01ad8b6f8403e8f88a126decd",
+          "url": "https://github.com/techrote/sandmapsreference/blob/d139f2a2868daa4b09d5e39c71d3638190dda705/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/setup.json"
+        },
+        "family": "portrait/obvious",
+        "visual_family_groups": [
+          "portrait-donor-125"
+        ],
+        "match_occurrences": 19,
+        "native": "PENDING_DELIVERY_QUALIFICATION",
+        "owner_accepted": false
+      },
+      {
+        "id": "repair-203",
+        "title": "Orthant Rift Needle \u2014 prior repair",
+        "source": {
+          "commit": "922a27926ea7338e9a1ce09fc64222b1094a9737",
+          "git_blob_sha1": "0b3fc7168b0163b1320559e8dcee75ba6f3c711d",
+          "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json",
+          "pr": 203,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+          "url": "https://github.com/techrote/sandmapsreference/blob/922a27926ea7338e9a1ce09fc64222b1094a9737/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json"
+        },
+        "family": "portrait/obvious/orthant-rift-needle",
+        "visual_family_groups": [
+          "portrait-donor-177"
+        ],
+        "match_occurrences": 18,
+        "native": "PENDING_DELIVERY_QUALIFICATION",
+        "owner_accepted": false
+      }
+    ],
+    "total_matches": 32,
+    "scope": "Literal metadata search; match counts are neither artistic scores nor retrieval-quality evidence"
+  },
+  "crop": {
+    "feature_id": "P185-CROSSBANK-ASSAY",
+    "source_state_id": "P185-CROSSBANK-ASSAY@d139f2a2868daa4b09d5e39c71d3638190dda705",
+    "source_image": {
+      "archive_path": "PR-0202-d139f2a2868d/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+      "bytes": 252035,
+      "dimensions": [
+        563,
+        446
+      ],
+      "git_blob_sha1": "5010daf68018f9eaf2ee613a98a5e9baf6c1b52c",
+      "head": "d139f2a2868daa4b09d5e39c71d3638190dda705",
+      "path": "cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+      "pr": 202,
+      "raw_url": "https://raw.githubusercontent.com/techrote/sandmapsreference/d139f2a2868daa4b09d5e39c71d3638190dda705/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+      "repository": "techrote/sandmapsreference",
+      "sha256": "cb9fad4fe4171f5bebc7940f11f7d9b3c1b8676d915da9b380248a149c26a569",
+      "url": "https://github.com/techrote/sandmapsreference/blob/d139f2a2868daa4b09d5e39c71d3638190dda705/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png"
+    },
+    "coordinate_window_xywh": [
+      240,
+      739,
+      563,
+      446
+    ],
+    "verified_feature_bbox_xyxy": null,
+    "evidence_crop_is_edit_mask": false,
+    "geometry_edits_authorized": false,
+    "byte_identity_preserved": true,
+    "must_preserve": [
+      "Opposing banks and mid-height assay link"
+    ],
+    "do_not_fill": [
+      "Main open flight atrium and thin editable sockets"
+    ]
+  }
+}
