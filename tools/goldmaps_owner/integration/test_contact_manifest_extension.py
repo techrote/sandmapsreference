@@ -64,8 +64,13 @@ def main():
     original_fragment["files"] = original_fragment["files"][:prior["files"]]
     original_fragment["counts"] = prior
     canonical_prior = (json.dumps(original_fragment, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
-    demand(hashlib.sha256(canonical_prior).hexdigest() == extensions[0]["prior_manifest_sha256"],
-           "Original canonical fragment records or provenance changed")
+    # core.write_json emits generated metadata through write_text: Windows
+    # uses CRLF, Linux uses LF. Match the actual prior digest exactly; never
+    # normalize copied Setups, source files, runtime inputs or evidence.
+    prior_forms = {"LF": canonical_prior, "CRLF": canonical_prior.replace(b"\n", b"\r\n")}
+    matched_forms = [name for name, raw in prior_forms.items()
+                     if hashlib.sha256(raw).hexdigest() == extensions[0]["prior_manifest_sha256"]]
+    demand(len(matched_forms) == 1, "Original canonical fragment records or provenance changed")
     before = Collection(kit).validate()
     snapshots = {relative: sha(kit / relative) for relative in (MANIFEST, INPUT, AUDIT)}
     checks = [{"name": "actual prepared fragment validates all 269 declared members", "pass": True}]
@@ -122,7 +127,7 @@ def main():
     report = {"schema": "goldmaps.owner-contact-fragment-boundary.v1", "pass": True,
               "source_head": head, "source_files": source_files,
               "github_run_id": os.environ.get("GITHUB_RUN_ID"),
-              "prepared_fragment": before, "checks": checks,
+              "prepared_fragment": before, "prior_fragment_newlines": matched_forms[0], "checks": checks,
               "scope": "Actual strict offline corpus validation and isolated hostile fixtures. No native execution or owner acceptance."}
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

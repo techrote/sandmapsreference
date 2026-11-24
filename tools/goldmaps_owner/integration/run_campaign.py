@@ -247,6 +247,8 @@ def main():
     execute("acquisition-contracts", [python, commands / "qualification/test_acquisition_contract.py"], evidence, env, 180)
     execute("rendered-receipt-contracts", [python, commands / "qualification/test_rendered_receipt_contract.py"], evidence, env, 180)
     execute("contact-followup-contracts", [python, commands / "qualification/test_contact_followup_contract.py"], evidence, env, 180)
+    execute("evidence-transfer-contracts", [python, "-m", "unittest", "discover", "-s", HERE,
+                                            "-p", "test_emit_review_artifacts.py", "-v"], evidence, env, 180)
     execute("runtime-package-boundary", [python, commands / "qualification/run_package_boundary_qa.py", "--package", kit,
                                          "--godot", godot, "--out", evidence / "boundary"], evidence, env, 180)
     io_env = profile_environment(kit / "userdata/io-contract")
@@ -305,7 +307,7 @@ def main():
         shutil.copyfile(evidence / name, kit / "qualification" / name)
     if contact_request:
         shutil.copyfile(evidence / "contact-fragment-boundary.json", kit / "qualification/contact-fragment-boundary.json")
-    for name in ("rendered-receipt-contracts.log", "contact-followup-contracts.log"):
+    for name in ("rendered-receipt-contracts.log", "contact-followup-contracts.log", "evidence-transfer-contracts.log"):
         shutil.copyfile(evidence / name, kit / "qualification" / name)
     seal(kit, head)
     execute("product-and-launcher", [python, commands / "qualification/run_product_qa.py", "--package", kit, "--godot", godot,
