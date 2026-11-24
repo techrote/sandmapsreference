@@ -1,0 +1,238 @@
+{
+  "schema": "goldmaps.owner-delivery-final-handoff-evidence.v1",
+  "reviewer": {
+    "role": "Specialist A \u2014 corpus and source custody",
+    "scope": "Exact immutable archival evidence and existing read-only consumer contract; no new frozen engine execution or new artistic assessment"
+  },
+  "frozen_183": {
+    "scientific_evidence_head": "40f196f792e4d9e19bbd57fdafd6a90420fadf32",
+    "archive_head": "b9535405853a5cd16e4bba968ec7167222861c42",
+    "receipt": {
+      "path": "docs/corpus/goldmaps-finalisation-001/native/receipts/policy-schema-all67/summary.json",
+      "sha256": "f322d2a347a1aff3638b0120542d99a1f6818d9452ce3b5411a000fec2944750",
+      "recorded_executed_checkout_head": "06ee711f103502abcac2bdb83c1bebc691b7f2b5",
+      "hosted_run_id": null,
+      "runtime": {
+        "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+        "godot_sha256": "f85bbc6b15e22416c7d797cd60b63286dd67b9cb13498847056c18520ae55a75",
+        "native_bridge_sha256": "a15fc422313eb01e79bc904f44cc8879816484ae4fc98c63ac4b815afdb6a5e7",
+        "rapier_sha256": "566e68ae53bfb2eb7018c8e7d0dd3727121bf696462039b780a33d6b8369c66a"
+      },
+      "execution": {
+        "exit_code": 0,
+        "timeout": false,
+        "process_id": 5,
+        "seconds": 1.569,
+        "log_sha256": "ab044ffc808a22ef1058c8291db3b446963665bc858ad42e72c1e153d3e441ad"
+      },
+      "scope": "Actual pinned native policy-envelope validation and source-matched Workbench Setup.validate (including actor definition/options/control). No full map load, movement, save, visual or owner acceptance."
+    },
+    "source_record": {
+      "head": "c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b",
+      "id": "PR183@c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b",
+      "policy_words": 48,
+      "pr": 183.0,
+      "setup_sha256": "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+      "source_unchanged": true,
+      "validation": {
+        "accepted": false,
+        "receipt": null,
+        "refusal": {
+          "code": "malformed_policy",
+          "detail": "bad magic",
+          "material": null
+        }
+      },
+      "workbench_schema_accepted": true,
+      "workbench_setup_error": ""
+    },
+    "native_api": "CyberDemoBridge.validate_liquid_policy(PackedInt32Array(setup.liquid_policy))",
+    "schema_api": "Workbench Setup.validate(setup)",
+    "full_world_loaded": false,
+    "movement_or_save_or_reopen_executed": false,
+    "graphical_acceptance": false,
+    "fresh_delivery_engine_execution": false,
+    "verified_archival_files": [
+      {
+        "path": "docs/corpus/goldmaps-finalisation-001/native/receipts/policy-schema-all67/summary.json",
+        "bytes": 370398,
+        "sha256": "f322d2a347a1aff3638b0120542d99a1f6818d9452ce3b5411a000fec2944750",
+        "identical_at_heads": [
+          "40f196f792e4d9e19bbd57fdafd6a90420fadf32",
+          "b9535405853a5cd16e4bba968ec7167222861c42"
+        ]
+      },
+      {
+        "path": "docs/corpus/goldmaps-finalisation-001/native/receipts/policy-schema-all67/native-policy.log",
+        "bytes": 179711,
+        "sha256": "ab044ffc808a22ef1058c8291db3b446963665bc858ad42e72c1e153d3e441ad",
+        "identical_at_heads": [
+          "40f196f792e4d9e19bbd57fdafd6a90420fadf32",
+          "b9535405853a5cd16e4bba968ec7167222861c42"
+        ]
+      },
+      {
+        "path": "scripts/goldmaps_finalisation/native_policy_scan.py",
+        "bytes": 4724,
+        "sha256": "bc60f2ba9b44ad495e48441eeddaab19d42aebf954b78f037cbf5b2d72c963f0",
+        "identical_at_heads": [
+          "40f196f792e4d9e19bbd57fdafd6a90420fadf32",
+          "b9535405853a5cd16e4bba968ec7167222861c42"
+        ]
+      },
+      {
+        "path": "scripts/goldmaps_finalisation/native_policy_probe.gd",
+        "bytes": 1547,
+        "sha256": "66323d5b82c5609f4cb8b69470f79f9b3873b17913893ef69ffb4ca14fae1ba3",
+        "identical_at_heads": [
+          "40f196f792e4d9e19bbd57fdafd6a90420fadf32",
+          "b9535405853a5cd16e4bba968ec7167222861c42"
+        ]
+      }
+    ],
+    "source_verification_limit": "Archived runner/probe bytes match the execution receipt hashes at both frozen scientific and archival heads. The executed checkout head is preserved as recorded provenance; this review does not claim a separately reconstructed full tree for that historical process.",
+    "historical_windows_scope": "Run 45217389899 covered original #155, not #183. Do not assign this #183 policy-only receipt to that Windows campaign.",
+    "descendant_scope": "New #183 policy-only candidate is outside Gold25. Current delivery native qualification is separately recorded; no fresh frozen-engine qualification of that candidate is claimed."
+  },
+  "batch_lab": {
+    "repository": "techrote/cybersand",
+    "observed_utc": "2026-11-24T20:30:31.339055+00:00",
+    "foundation": {
+      "pr": 720,
+      "head": "76fcf209e0cda5820aa64e104bfae732075ae7c3",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-24T18:47:33Z"
+    },
+    "successor": {
+      "pr": 770,
+      "tested_application_source": "fe2395c7060dae736dc2e5dc8d1e4e050b2d2e52",
+      "archival_head": "f5f6e9f35727d81868bcced4da8b913b470ea635",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "updated_at": "2026-11-24T20:15:09Z",
+      "reported_campaign": "45454711939",
+      "campaign_scope": "Downstream programme provenance; not rerun or adopted by GOLDMAPS owner delivery"
+    },
+    "cards": {
+      "path": "godot/data/batch_lab/architectural_design_cards.v1.json",
+      "package_path": "corpus-export/batch-lab/architectural_design_cards.v1.json",
+      "sha256": "9153480ea622d5dc6a78543269840af64b3adbef43074af8cf78cfe685d0b057",
+      "bytes": 180282,
+      "count": 25,
+      "transformation": "Exact unchanged bytes"
+    },
+    "adapter": {
+      "path": "godot/scripts/batch_lab/architectural_retrieval.gd",
+      "sha256": "a9c130afc9cdf3b53f45bab00c950eb573168021074ed004c926e55e83f8c1f2",
+      "bytes": 19325,
+      "entrypoints": [
+        "ArchitecturalRetrieval.validate_corpus(cards)",
+        "ArchitecturalRetrieval.retrieve(query, [], cards)"
+      ],
+      "transformation": "Exact unchanged source executed in isolated temporary Godot project"
+    },
+    "contract": {
+      "schema": "cybersand.architectural-design-cards.v1",
+      "max_cards": 200,
+      "max_serialized_characters": 2097152,
+      "default_file_max_bytes": 2097152,
+      "max_query_characters": 16384,
+      "max_context_characters": 12000,
+      "max_results": 5,
+      "authority_kind": "reference_knowledge_only",
+      "execution_authority": false,
+      "direct_module_import": "NOT_ADMITTED_BY_RETRIEVAL",
+      "consumer_default_file_modified": false,
+      "consumer_branch_modified": false,
+      "used_as_evaluator_engine": false
+    },
+    "executed_compatibility": {
+      "receipt_path": "docs/corpus/goldmaps-owner-delivery-001/corpus/consumer-adapter-replay.v1.json",
+      "receipt_sha256": "9283011c090a0691cf062c07b2169253c336db6a47783b9142e9387648f51df4",
+      "pass": true,
+      "schema_admission": {
+        "errors": [],
+        "ok": true
+      },
+      "godot_sha256": "f85bbc6b15e22416c7d797cd60b63286dd67b9cb13498847056c18520ae55a75",
+      "godot_version": "4.7-stable (official)",
+      "probe_sha256": "534a04633ca74dc15ecb91d8474da6e31425524dfaba6fb7cfc3f899ffa4eb6b",
+      "runner_sha256": "89cedaf9724b3c1c64c027f3916e32263a061d165bce7960d092ea5d253a8b7c",
+      "queries": [
+        {
+          "query": {
+            "excluded_families": [
+              "bioindustrial",
+              "civic",
+              "vessel_dock"
+            ],
+            "limit": 3,
+            "required_parts": [
+              "beam_truss",
+              "service_gallery"
+            ],
+            "text": "suspended roof supports and a clear lower service route"
+          },
+          "returned_card_ids": [
+            "goldmaps-pr176",
+            "goldmaps-pr106",
+            "goldmaps-pr146"
+          ],
+          "pass": true
+        },
+        {
+          "query": {
+            "excluded_families": [
+              "bioindustrial",
+              "civic",
+              "vessel_dock"
+            ],
+            "limit": 3,
+            "text": "opposed banks and a protected open fault",
+            "topologies": [
+              "opposed_banks"
+            ]
+          },
+          "returned_card_ids": [
+            "goldmaps-pr182",
+            "goldmaps-pr197",
+            "goldmaps-pr109"
+          ],
+          "pass": true
+        }
+      ],
+      "negative_guards": {
+        "execution_permission_refused": true,
+        "map_as_module_refused": true,
+        "no_native_module_authority_inferred": true
+      },
+      "scope": "Existing read-only consumer script validation and retrieval; no native module harvest, scene mutation or model inference"
+    },
+    "expanded_export": {
+      "package_path": "corpus-export/knowledge.v1.json",
+      "maps": 70,
+      "protected_features": 27,
+      "immutable_feature_states": 76,
+      "comparative_families": 12,
+      "negative_interventions": 5,
+      "semantic_module_hints": 27,
+      "hint_authority": "Inferred semantic candidates; no native module geometry or fabricated attachment/clearance proof",
+      "astra_relationships": 8,
+      "holdouts": "Preserve prior visual-family groups and conservative donor/portrait/repair/Astra ancestry closure. Exclude a record when any group intersects a sealed holdout. Existing 25-card compatibility file is unchanged.",
+      "failed_bundle_file_occurrences": 182,
+      "recovered_occurrences": 154,
+      "hash_only_occurrences": 28,
+      "owner_accepted_maps": 0
+    },
+    "not_established": [
+      "Native module harvesting/import from these source maps",
+      "Current-session native geometry authority for retrieved cards",
+      "Model evaluation, training or retrieval-causality benefit",
+      "Owner-approved reusable parts",
+      "Production adoption of either downstream branch"
+    ]
+  }
+}

@@ -27,7 +27,9 @@ jobs:
     steps:
       - name: Preserve exact committed map and source bytes
         shell: pwsh
-        run: git config --global core.autocrlf false
+        run: |
+          git config --global core.autocrlf false
+          git config --global core.eol lf
 
       - name: Check out the exact additive delivery source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
