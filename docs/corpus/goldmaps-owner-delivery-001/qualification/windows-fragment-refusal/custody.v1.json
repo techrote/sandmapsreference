@@ -1,0 +1,28 @@
+{
+  "schema": "goldmaps.owner-static-refusal-custody.v1",
+  "source_head": "2d984a981da99348bbf9b44612b058cd048f3474",
+  "run_id": "45494755605",
+  "job_id": "138802159313",
+  "run_url": "https://github.com/techrote/sandmapsreference/actions/runs/45494755605",
+  "artifact": {
+    "id": 14966154756,
+    "bytes": 36779,
+    "sha256": "9533a17139dc4753c969ceed5cd9bbaf430db6a3adc8daa36ee68a565d45a7dd",
+    "expires_at": "2027-02-22T21:48:19Z"
+  },
+  "preserved_log": {
+    "path": "job.log",
+    "git_blob_sha1": "11eecd386fe2ecd9434c42ff21e382aaa20e5229",
+    "scope": "Complete decoded job log fetched through authenticated GitHub connector; original static refusal and subsequent skipped publication retained."
+  },
+  "observed_failure": "Strict architectural-manifest validation refused collection/native-contact-followup-inputs.v1.json and collection/contact-followup-source-static-audit.v1.json because neither was in collection-files.v1.json.",
+  "not_executed": [
+    "native evidence reuse",
+    "three-map native contact follow-up",
+    "corrected product/launcher",
+    "graphical capture",
+    "final archive publication"
+  ],
+  "owner_accepted": false,
+  "environment_limit": "The original evidence ZIP was downloaded and SHA/CRC checked locally before executor loss; its local copy became unavailable. Complete decoded job log and exact remote artifact identity are preserved here. No claim that unavailable local bytes were recovered."
+}

@@ -59,6 +59,13 @@ def main():
            "Declared sidecars replace or duplicate a prior member")
     demand(sum(row["bytes"] for row in manifest["files"][:prior["files"]]) == prior["bytes"],
            "Prior fragment byte count changed")
+    original_fragment = json.loads(original_manifest)
+    original_fragment.pop("delivery_extensions")
+    original_fragment["files"] = original_fragment["files"][:prior["files"]]
+    original_fragment["counts"] = prior
+    canonical_prior = (json.dumps(original_fragment, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
+    demand(hashlib.sha256(canonical_prior).hexdigest() == extensions[0]["prior_manifest_sha256"],
+           "Original canonical fragment records or provenance changed")
     before = Collection(kit).validate()
     snapshots = {relative: sha(kit / relative) for relative in (MANIFEST, INPUT, AUDIT)}
     checks = [{"name": "actual prepared fragment validates all 269 declared members", "pass": True}]
@@ -81,17 +88,18 @@ def main():
             else:
                 raise AssertionError("Strict corpus validator admitted " + name)
 
-        missing = fixture / AUDIT
-        missing.unlink()
-        refuse("missing source-static contact audit is refused", FileNotFoundError)
-        shutil.copyfile(kit / AUDIT, missing)
+        for sidecar in (INPUT, AUDIT):
+            missing = fixture / sidecar
+            missing.unlink()
+            refuse("missing " + sidecar + " is refused", FileNotFoundError)
+            shutil.copyfile(kit / sidecar, missing)
 
-        corrupt = fixture / INPUT
-        corrupt.unlink()  # Never write through a link into the real kit.
-        corrupt.write_bytes((kit / INPUT).read_bytes() + b" ")
-        refuse("corrupted contact input bytes are refused", ValueError)
-        corrupt.unlink()
-        shutil.copyfile(kit / INPUT, corrupt)
+            corrupt = fixture / sidecar
+            corrupt.unlink()  # Never write through a link into the real kit.
+            corrupt.write_bytes((kit / sidecar).read_bytes() + b" ")
+            refuse("corrupted " + sidecar + " bytes are refused", ValueError)
+            corrupt.unlink()
+            shutil.copyfile(kit / sidecar, corrupt)
 
         extra = fixture / "collection/unlisted-contact-extra.json"
         extra.write_text("{}\n", encoding="utf-8")
