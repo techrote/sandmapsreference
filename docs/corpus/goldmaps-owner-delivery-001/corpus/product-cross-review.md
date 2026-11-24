@@ -23,3 +23,25 @@ The exact source material visualizations for #125, #155 and #207 were opened at 
 ## Practical limits
 
 The source implements current-engine qualification gating, pending owner choices, original/derived labels, isolated local records and sequential independent Workbench sessions. Actual hosted Windows rendering, keyboard/interaction behaviour at normal desktop size, final ZIP custody and native execution remain separate gates. The local display-backed attempt was unavailable in the product lane; no rendered-layout pass is inferred from source review. Physical NVIDIA quality, high-speed flight readability and adoption remain owner decisions.
+
+## Subsequent session identity review
+
+Source `8f5d6f8774601180fc520e68191fff59a6d40415` was independently checked
+against accepted engine `00cdb02f103265b6dc5224c68283e9a0c8cb449f` after three
+additional lifecycle findings. Their source corrections pass review; fresh
+actual-map product execution remains required.
+
+| Finding | Resolution checked in source |
+| --- | --- |
+| A-UI-06 — Ordinary map replacement controls could bypass the collection warning and leave a stale source identity. Specialist C identified the initial New/Load gap. | Seven exact accepted-engine replacement captions now enter Save/return/Cancel, including lazy Mixed Actor Workshop. The lazy panel is beneath the scoped Workbench node; direct initial `ui.load_setup()` remains available. |
+| A-UI-07 — Typing a different source's existing saved label, without Save, could make filename polling or close-time registration claim those bytes as a copy of the current map. | Both blind registration paths are removed. Ordinary Save/Ctrl+S/evaluation-copy receipts follow a successful `ui.save_setup()` call and require a new name. The accepted field commit and Paint Editor shortcut eligibility remain in place. |
+| A-UI-08 — Flatten/Bake History could produce a binary MaterialBaseline file that this collection's JSON saved-copy path could not reopen. | A visible limitation now prevents the unsupported bake before mutation. Ordinary painting, Undo, Play, Restore start and new named JSON saves remain available. Binary saved-copy support is not claimed. |
+
+The three committed product/test hashes independently match the implementer's
+23/23 synthetic callback receipt. That fixture used no native World; this review
+does not recast it as actual-map or graphical qualification. The new real-product
+gate must execute every replacement control, foreign-name no-attribution,
+protected Save and Ctrl+S, the non-mutating Flatten notice, Save/return and a
+separate-process reopen. Final product and graphical execution must identify the
+later product source independently of retained native-map evidence, as explained
+in [the source authority review](source-authority-review.md).

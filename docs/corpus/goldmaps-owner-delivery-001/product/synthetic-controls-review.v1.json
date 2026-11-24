@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "name": "lazy Actor Composition replacement is guarded",
+      "pass": true
+    },
+    {
+      "name": "Load start warns before replacement",
+      "pass": true
+    },
+    {
+      "name": "Load start Cancel retains the synthetic owner",
+      "pass": true
+    },
+    {
+      "name": "New blank warns before replacement",
+      "pass": true
+    },
+    {
+      "name": "New blank Cancel retains the synthetic owner",
+      "pass": true
+    },
+    {
+      "name": "New from generator… warns before replacement",
+      "pass": true
+    },
+    {
+      "name": "New from generator… Cancel retains the synthetic owner",
+      "pass": true
+    },
+    {
+      "name": "Load / reset scene warns before replacement",
+      "pass": true
+    },
+    {
+      "name": "Load / reset scene Cancel retains the synthetic owner",
+      "pass": true
+    },
+    {
+      "name": "Load liquid-lab warns before replacement",
+      "pass": true
+    },
+    {
+      "name": "Load liquid-lab Cancel retains the synthetic owner",
+      "pass": true
+    },
+    {
+      "name": "Load reservoir-lab warns before replacement",
+      "pass": true
+    },
+    {
+      "name": "Load reservoir-lab Cancel retains the synthetic owner",
+      "pass": true
+    },
+    {
+      "name": "Mixed Actor Workshop warns before replacement",
+      "pass": true
+    },
+    {
+      "name": "Mixed Actor Workshop Cancel retains the synthetic owner",
+      "pass": true
+    },
+    {
+      "name": "Flatten is a visible non-mutating limitation",
+      "pass": true
+    },
+    {
+      "name": "typing an existing foreign label creates no receipt",
+      "pass": true
+    },
+    {
+      "name": "ordinary Save protects a pre-existing name",
+      "pass": true
+    },
+    {
+      "name": "ordinary Save invokes the save implementation once",
+      "pass": true
+    },
+    {
+      "name": "Ctrl+S invokes protected save once",
+      "pass": true
+    },
+    {
+      "name": "Ctrl+S retains Paint Editor eligibility",
+      "pass": true
+    },
+    {
+      "name": "unsuccessful ordinary save creates no receipt",
+      "pass": true
+    },
+    {
+      "name": "closing with a foreign label creates no receipt",
+      "pass": true
+    }
+  ],
+  "passed": 23,
+  "schema": "goldmaps.synthetic-control-review.v1",
+  "scope": "Actual additive callbacks with synthetic Workbench; no native World, map admission or graphical claim",
+  "total": 23,
+  "validation": true,
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "godot_version": "4.7.stable.official.5b4e0cb0f",
+  "executed_at_utc": "2026-11-24T21:05:51.690868+00:00",
+  "source_files": {
+    "tools/goldmaps_owner/product/session/session.gd": "7bee9de8aa89097dc24444da689c833ca458941fb4f0859f5cb9022a5f9d4ae4",
+    "tools/goldmaps_owner/product/session/session_controls.gd": "a766a37d1df2f483392043c95e422991250cfe2f7d48f341eb3e0479ae035ad9",
+    "tools/goldmaps_owner/product/test_session_controls.gd": "6a60a1af5d6957c07d3654271df0d9b6fdfd1e0ca13d877d29b2a923ed15adf4"
+  },
+  "execution_note": "The fixture overrides only startup and substitutes a synthetic Workbench. The session parser used absolute preload paths to these exact product files in the read-only accepted engine project. Native extensions initialized but no native World was constructed; native map/lifecycle qualification is a separate required gate.",
+  "log_sha256": "027681489691a72ee1ba9f0aa0e59759132e41433f155b9b1803dce4b61d6fc4"
+}

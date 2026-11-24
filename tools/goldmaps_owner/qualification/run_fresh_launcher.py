@@ -16,9 +16,12 @@ from pathlib import Path
 import shutil
 
 from run_native_collection import record, run, write_json
+from product_source_identity import product_source_identity
 from verify_payload import MANIFEST, file_sha256 as sha, strict_json, verify_directory
 
 CASES = ("gold-125", "derived-183-policy")
+REPLACEMENT_ACTIONS = {"Load start", "New blank", "New from generator…", "Load / reset scene",
+                       "Load liquid-lab", "Load reservoir-lab", "Mixed Actor Workshop"}
 
 
 def main():
@@ -26,6 +29,7 @@ def main():
     parser.add_argument("--package", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
+    executed_source = product_source_identity(("run_fresh_launcher.py", "run_native_collection.py", "verify_payload.py"))
     if os.name != "nt":
         raise ValueError("A native Windows process is required; this gate cannot be simulated on Linux")
     root, out = args.package.resolve(), args.out.resolve()
@@ -45,6 +49,7 @@ def main():
         if overlay["setups"].get(maps[map_id]["setup"]["sha256"], {}).get("status") != "QUALIFIED_HEADLESS":
             raise ValueError("Required pristine-launch example is not native-qualified: " + map_id)
     out.mkdir(parents=True)
+    write_json(out / "executed-source.json", executed_source)
     checks, phases = [], []
 
     def check(name, condition, detail=None):
@@ -107,12 +112,33 @@ def main():
         check(map_id + ": close cancellation and save protection", lifecycle.get("close_warning_visible")
               and lifecycle.get("cancel_preserved_same_world") and lifecycle.get("existing_name_refused")
               and lifecycle.get("saved_copy_sha256_unchanged"))
+        replacements = lifecycle.get("ordinary_replacement_controls", [])
+        check(map_id + ": all ordinary replacement controls warn before changing World",
+              len(replacements) == len(REPLACEMENT_ACTIONS) and {row.get("action") for row in replacements} == REPLACEMENT_ACTIONS
+              and lifecycle.get("actor_composition_opened") is True
+              and all(row.get("warning_before_replacement") is True and row.get("cancel_preserved_same_world") is True for row in replacements))
+        check(map_id + ": Flatten preserves World and authored history", all(lifecycle.get("flatten_guard", {}).get(key) is True for key in
+              ("warning_visible", "same_world_epoch", "authored_setup_unchanged", "material_baseline_unchanged", "no_flatten_pending")))
+        attribution = lifecycle.get("ordinary_save_attribution", {})
+        check(map_id + ": ordinary Save and Ctrl+S protect names and attribution", all(attribution.get(key) is True for key in
+              ("typing_existing_name_did_not_register", "typing_existing_name_left_banner", "existing_name_button_refused", "foreign_file_sha256_unchanged", "ordinary_button_new_label_saved", "keyboard_new_label_saved")))
         check(map_id + ": saved and safely returned", session.get("status") == "QA_SAVED"
               and session.get("returned_via_close_confirmation") and bool(session.get("saved_copies")))
         original = root / row["setup"]["path"]
         check(map_id + ": immutable original protected", sha(original) == row["setup"]["sha256"]
               == session.get("source_sha256_on_close"))
         original_recipe = strict_json(original.read_bytes())
+        foreign = maps.get(attribution.get("foreign_source_map_id"), {})
+        foreign_label = attribution.get("foreign_label", "")
+        foreign_path = observed_profile / "workbench" / ("setup-" + foreign_label + ".json")
+        check(map_id + ": unrelated named file never attributed to this source", foreign.get("setup", {}).get("sha256") == attribution.get("foreign_setup_sha256")
+              and attribution.get("foreign_setup_sha256") != row["setup"]["sha256"] and foreign_path.is_file()
+              and sha(foreign_path) == attribution.get("foreign_setup_sha256")
+              and foreign_label not in {saved["label"] for saved in session.get("saved_copies", [])})
+        saved_labels = {saved["label"] for saved in session.get("saved_copies", [])}
+        check(map_id + ": both actual ordinary save paths recorded", bool(attribution.get("ordinary_button_label"))
+              and bool(attribution.get("keyboard_label")) and attribution["ordinary_button_label"] != attribution["keyboard_label"]
+              and {attribution["ordinary_button_label"], attribution["keyboard_label"]} <= saved_labels)
         for saved in session.get("saved_copies", []):
             path = Path(saved["path"])
             valid = path.is_absolute() and path.resolve().is_relative_to((root / "userdata").resolve()) and path.is_file()
@@ -128,6 +154,7 @@ def main():
     check("all representative first-run cases executed", len(phases) == len(CASES))
     after = verify_directory(root, before["manifest_sha256"], post_execution=True)
     summary = {"schema": "goldmaps.fresh-windows-launcher.v1", "pass": all(row["pass"] for row in checks),
+               "executed_source": executed_source,
                "package_before": before, "package_after": after, "launcher_sha256": sha(launcher),
                "godot_gui_sha256": sha(root / "Godot_v4.7-stable_win64.exe"),
                "engine_head": manifest["engine_head"], "checks": checks, "phases": phases,

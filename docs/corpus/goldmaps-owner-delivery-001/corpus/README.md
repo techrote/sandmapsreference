@@ -171,3 +171,19 @@ repair identity. Product lane compatibility fixes are separately owned. Final
 archive custody and native/UI qualification remain with the independent assurance
 lane and root integration review; this implementation report does not certify
 its own owner acceptance.
+
+## Final source and handoff records
+
+| Record | What it establishes |
+| --- | --- |
+| [Final source-fragment validation](final-source-fragment-validation.v1.json) | Exact final metadata fragment validation, with current delivery qualification resolved separately by Setup digest. This is not the final Windows archive manifest. |
+| [Live source PR freshness](live-source-pr-freshness.md) / [JSON](live-source-pr-freshness.v1.json) | All 71 original custody PR heads, states and Draft flags remain unchanged; the three supplementary donors also retain their exact heads. |
+| [Frozen policy and current consumer evidence](final-handoff-evidence.md) / [JSON](final-handoff-evidence.v1.json) | #183's actual frozen native-policy/schema refusal has no full-World claim; the existing #720→#770 read-only consumer contract and actual adapter replay are source-pinned. |
+| [Independent product identity review](product-cross-review.md) / [JSON](product-cross-review.v1.json) | Source and data review of identity labels, policy custody, archived comparison legends and the resolved product findings. Rendered output has a separate review. |
+| [Optional Linux interruption addendum](optional-native-interruption-002.v1.json) / [archive custody](optional-native-interruption-002-custody.v1.json) | Five serial loads received external SIGKILL without native receipts; a sixth was interrupted before a case receipt. No map defect or native-policy refusal is inferred. |
+
+The small [interruption evidence archive](optional-native-interruption-002.zip)
+contains all 13 observed logs, partial receipts and context records from that
+second attempt. It is diagnostic evidence, not an evaluator package. Current
+Windows qualification and final archive acceptance are recorded by the principal
+owner-delivery packet, independently of these source-only and interrupted scopes.

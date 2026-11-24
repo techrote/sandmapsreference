@@ -22,10 +22,42 @@ import subprocess
 import uuid
 
 from audit_collection import plane
+from product_source_identity import product_source_identity
 from run_native_collection import profile_environment, record, run, write_json
 from verify_payload import MANIFEST, file_sha256 as sha, strict_json, verify_directory
 
 HERE = Path(__file__).resolve().parent
+REPLACEMENT_ACTIONS = {"Load start", "New blank", "New from generator…", "Load / reset scene",
+                       "Load liquid-lab", "Load reservoir-lab", "Mixed Actor Workshop"}
+FLATTEN_GATES = ("warning_visible", "same_world_epoch", "authored_setup_unchanged", "material_baseline_unchanged", "no_flatten_pending")
+SAVE_ATTRIBUTION_GATES = ("typing_existing_name_did_not_register", "typing_existing_name_left_banner", "existing_name_button_refused",
+                         "foreign_file_sha256_unchanged", "ordinary_button_new_label_saved", "keyboard_new_label_saved")
+
+
+def replacement_controls_pass(session):
+    rows = session.get("qa_lifecycle", {}).get("ordinary_replacement_controls", [])
+    return (len(rows) == len(REPLACEMENT_ACTIONS) and {row.get("action") for row in rows} == REPLACEMENT_ACTIONS
+            and session.get("qa_lifecycle", {}).get("actor_composition_opened") is True
+            and all(row.get("warning_before_replacement") is True and row.get("cancel_preserved_same_world") is True for row in rows))
+
+
+def save_attribution_pass(session, roster):
+    """Check actual named-file bytes, not only the session's asserted booleans."""
+    receipt = session.get("qa_lifecycle", {}).get("ordinary_save_attribution", {})
+    if not all(receipt.get(key) is True for key in SAVE_ATTRIBUTION_GATES):
+        return False
+    maps = {row["id"]: row for row in roster["maps"]}
+    foreign = maps.get(receipt.get("foreign_source_map_id"), {})
+    if foreign.get("setup", {}).get("sha256") != receipt.get("foreign_setup_sha256") or receipt.get("foreign_setup_sha256") == session["original_setup_sha256"]:
+        return False
+    foreign_path = Path(session["user_data_dir"]) / "workbench" / ("setup-" + receipt["foreign_label"] + ".json")
+    if not foreign_path.is_file() or sha(foreign_path) != receipt["foreign_setup_sha256"]:
+        return False
+    saved = {row["label"]: row for row in session["saved_copies"]}
+    labels = {receipt["ordinary_button_label"], receipt["keyboard_label"]}
+    if len(labels) != 2 or receipt["foreign_label"] in saved or not labels <= saved.keys():
+        return False
+    return all(Path(saved[label]["path"]).is_file() and sha(Path(saved[label]["path"])) == saved[label]["sha256"] for label in labels)
 
 
 def main():
@@ -38,6 +70,8 @@ def main():
     parser.add_argument("--graphical", action="store_true")
     parser.add_argument("--map-id", default="derived-155-policy")
     args = parser.parse_args()
+    executed_source = product_source_identity(("run_product_qa.py", "product_browser_probe.gd", "audit_collection.py",
+                                               "run_native_collection.py", "verify_payload.py"))
     root, godot, out = args.package.resolve(), args.godot.resolve(), args.out.resolve()
     if out.exists():
         raise ValueError("refuse to overwrite product QA receipts")
@@ -47,6 +81,7 @@ def main():
         raise ValueError("actual .cmd execution requires Windows")
     before = verify_directory(root, post_execution=True)
     out.mkdir(parents=True)
+    write_json(out / "executed-source.json", executed_source)
     env = profile_environment(root / "userdata")
     env.update(GOLDMAPS_PACKAGE_ROOT=str(root), GOLDMAPS_QA_OUTPUT=str(out))
     for key in ("GOLDMAPS_QA_MAP", "GOLDMAPS_QA_SMOKE", "GOLDMAPS_QA_EDIT"):
@@ -115,6 +150,9 @@ def main():
     check("ordinary Workbench native load", session["status"] == "QA_SAVED" and session["native_load"]["ordinary_workbench"] and session["native_load"]["full_grid_match"])
     lifecycle = session.get("qa_lifecycle", {})
     check("actual close warning and cancel preserve same World", lifecycle.get("close_warning_visible") and lifecycle.get("cancel_preserved_same_world"))
+    check("all ordinary replacement controls warn and preserve edited World on cancel", replacement_controls_pass(session))
+    check("Flatten remains guarded without changing World or authored history", all(lifecycle.get("flatten_guard", {}).get(key) is True for key in FLATTEN_GATES))
+    check("ordinary Save button and Ctrl+S create protected correctly attributed copies", save_attribution_pass(session, roster))
     check("existing evaluation save name refused without overwriting", lifecycle.get("existing_name_refused") and lifecycle.get("saved_copy_sha256_unchanged"))
     check("actual save-and-return dialog completed", lifecycle.get("save_and_return_dialog_visible") and session.get("returned_via_close_confirmation"))
     check("browser observed safe native return", (receipt.get("returned") or {}).get("data", {}).get("status") == "QA_SAVED")
@@ -148,10 +186,14 @@ def main():
     check("fresh native World observes deliberately painted cell", reopened.get("qa_edit_reopen", {}).get("native_material") == edit["after"])
     check("native reopen is a distinct process", reopened["process_id"] != session["process_id"])
     check("reopened copy close and cancel preserve same World", reopened.get("qa_lifecycle", {}).get("cancel_preserved_same_world") and reopened.get("returned_via_close_confirmation"))
+    check("all ordinary replacement controls protect the reopened World", replacement_controls_pass(reopened))
+    check("reopened copy Flatten guard preserves authored history", all(reopened.get("qa_lifecycle", {}).get("flatten_guard", {}).get(key) is True for key in FLATTEN_GATES))
+    check("reopened ordinary Save attribution and existing-name protection", save_attribution_pass(reopened, roster))
     check("saved input protected during reopen", sha(saved_path) == saved["sha256"])
     check("original remains immutable after both sessions", sha(original_path) == original_digest)
     after = verify_directory(root, before["manifest_sha256"], post_execution=True)
     summary = {"schema": "goldmaps.owner-product-qa.v1", "platform": platform.platform(), "graphical_requested": args.graphical,
+               "executed_source": executed_source,
                "actual_windows_launcher": args.actual_windows_launcher, "engine_head": before["engine_head"],
                "package_before": before, "package_after": after, "godot_sha256": sha(godot),
                "checks": checks, "phases": phases, "pass": all(row["pass"] for row in checks),

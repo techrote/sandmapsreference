@@ -27,6 +27,15 @@ copied from immutable `runtime/bootstrap/` into mutable `.godot/`. The kit never
 runs a first-use editor import, which would generate source-adjacent UID sidecars.
 No accepted engine script is edited. The session-only Menu/F2 adapter displays
 the same explicit save/discard/cancel return dialog as closing the game window.
+The ordinary **Load start**, **New blank**, **New from generator…**, Water Lab
+**Load / reset scene**, **Load liquid-lab**, **Load reservoir-lab**, and Actor
+Composition **Mixed Actor Workshop** buttons also route through that warning.
+They do not replace the active evaluation World. Choose another source in the
+collection browser, or reopen **My saved copies**, so every new World starts
+with an explicit logical source identity. The normal paint, play, actor editing,
+Restore start and direct initial `ui.load_setup()` admission paths remain
+available. The lazily constructed Actor Composition window is guarded when its
+ordinary buttons enter the scene tree.
 
 ## Isolated owner data and lifecycle
 
@@ -40,16 +49,26 @@ Map inputs are copied byte-exact into the isolated Workbench input directory and
 read through the ordinary named Setup boundary. After acknowledgment, that
 temporary input copy is removed and the ordinary save name becomes a distinct
 `eval-…` label. The immutable collection copy is never the save destination.
-`Save evaluation copy` refuses an existing name. Ordinary Workbench Save remains
-available when the owner deliberately updates their own named file. Saves are
-authored starting layouts; they do not serialize current simulation state.
+`Save evaluation copy`, ordinary **Save start**, and **Ctrl+S** all require a new
+name in this evaluator, protecting previously saved copies. They use the ordinary
+Workbench `save_setup()` implementation. A receipt is added only after that call
+returns success; typing an existing filename alone never registers another map's
+file as a copy of the current source. Saves are authored starting layouts; they
+do not serialize current simulation state.
+
+**Flatten / Bake History…** displays a limitation notice and preserves the
+current World and history. Its engine binary save format is outside this kit's
+qualified JSON saved-copy boundary. Ordinary painting, Undo, Play, Restore start
+and saving a new named authored copy remain available.
 
 The gallery cannot replace or terminate an active World. It waits for that
 process to exit before allowing another map, and closing the game requires a
 visible save/discard/cancel decision. Saved-copy receipts include the label,
 SHA-256, exact source/runtime and time; `My saved copies` reopens that exact local
-copy in a fresh Workbench process. A changed saved file is refused by the shortcut
-until deliberately loaded through the ordinary Workbench interface.
+copy in a fresh Workbench process. Historical receipt versions are retained;
+the list displays current recorded bytes once per name. An unrecorded external
+change is refused by the shortcut instead of being presented under an old
+native/source identity.
 
 ## Browse, compare and decide
 
@@ -99,3 +118,15 @@ save and separate-process reopen. These are explicit developer fixtures;
 normal owner launch never sets them. Native campaign evidence and product
 fixtures are complementary, and neither establishes physical NVIDIA playfeel
 or final Gold/Platinum/Pyrite adoption.
+
+The lifecycle fixture presses each of the seven guarded ordinary replacement
+buttons, observes the warning before any replacement, presses Cancel, and
+requires the same live World epoch. It opens the actual lazy Actor Composition
+panel first. A separate check presses Flatten and requires an unchanged authored
+Setup/material baseline and no pending flatten transaction. A foreign-source
+saved-file fixture proves that typing an existing name cannot create a receipt;
+actual Save-button and Ctrl+S dispatch prove protected new-name saving. These
+supplement close/cancel, duplicate save protection and Save-and-return checks.
+Button-handler and dispatched-key execution are labelled as such; they are not
+claims of physical desktop input or owner acceptance. The bounded source audit is
+recorded in [REPLACEMENT-SAVE-AUDIT.md](REPLACEMENT-SAVE-AUDIT.md).

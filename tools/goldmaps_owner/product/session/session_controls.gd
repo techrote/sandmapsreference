@@ -1,6 +1,8 @@
 extends Node
 
 # Session-only UI: preserves the engine's ordinary play/edit/save code paths.
+const CLOSE_MESSAGE := "Save a named evaluation copy before leaving if you want to keep your authored changes.\n\nReturning closes this World and discards unsaved edits and current simulation progress. Existing saved copies and your local review record stay available."
+const REPLACEMENT_ACTIONS := ["Load start", "New blank", "New from generator…", "Load / reset scene", "Load liquid-lab", "Load reservoir-lab", "Mixed Actor Workshop"]
 var owner_tree
 var host: Control
 var ui: Control
@@ -11,6 +13,10 @@ var save_dialog := ConfirmationDialog.new()
 var save_field := LineEdit.new()
 var save_return_button: Button
 var return_after_save := false
+var replacement_buttons: Dictionary = {}
+var ordinary_save_button: Button
+var actor_composition_button: Button
+var flatten_button: Button
 
 func mount(controller, controller_host: Control, workbench: Control) -> void:
 	owner_tree = controller
@@ -55,7 +61,7 @@ func mount(controller, controller_host: Control, workbench: Control) -> void:
 		dialog.transient = true
 		dialog.close_requested.connect(dialog.hide)
 	close_dialog.title = "Return to GOLDMAPS collection"
-	close_dialog.dialog_text = "Save a named evaluation copy before leaving if you want to keep your authored changes.\n\nReturning closes this World and discards unsaved edits and current simulation progress. Existing saved copies and your local review record stay available."
+	close_dialog.dialog_text = CLOSE_MESSAGE
 	close_dialog.ok_button_text = "Return without saving"
 	close_dialog.cancel_button_text = "Keep playing"
 	save_return_button = close_dialog.add_button("Save a copy and return…", false, "save")
@@ -79,6 +85,10 @@ func mount(controller, controller_host: Control, workbench: Control) -> void:
 	# The ordinary Menu button normally replaces the active World. In this
 	# opt-in evaluator it routes through the same explicit close warning as F2.
 	_replace_menu(ui)
+	_guard_map_replacement(ui)
+	# Actor Composition is constructed lazily. Its ordinary button factory
+	# sets captions and callbacks before adding each button to this tree.
+	get_tree().node_added.connect(_guard_added_node)
 
 func _button(parent: Node, text: String, callback: Callable) -> void:
 	var button := Button.new()
@@ -96,6 +106,35 @@ func _replace_menu(parent: Node) -> void:
 		else:
 			_replace_menu(child)
 
+func _guard_map_replacement(parent: Node) -> void:
+	for child: Node in parent.get_children():
+		if child is Button: _guard_button(child)
+		_guard_map_replacement(child)
+
+func _guard_added_node(node: Node) -> void:
+	if node is Button and ui.is_ancestor_of(node): _guard_button(node)
+
+func _guard_button(button: Button) -> void:
+	if button.text == "Actor Composition…": actor_composition_button = button
+	if button.text == "Save start [Ctrl+S]":
+		ordinary_save_button = button
+		for connection: Dictionary in button.pressed.get_connections(): button.pressed.disconnect(connection.callable)
+		button.tooltip_text = "Save the ordinary authored start under a new evaluation name. Existing saved copies are protected."
+		button.pressed.connect(func() -> void:
+			ui._commit_field(button.get_viewport())
+			owner_tree.save_copy(str(ui._name.text)))
+	elif button.text == "Flatten / Bake History…":
+		flatten_button = button
+		for connection: Dictionary in button.pressed.get_connections(): button.pressed.disconnect(connection.callable)
+		button.tooltip_text = "This evaluator keeps authored JSON copies so they can reopen with their source identity. Painting, Undo, Play and Save remain available."
+		button.pressed.connect(func() -> void: notice("Flatten / Bake History has not changed this World.\n\nThis evaluator supports authored JSON evaluation copies. The engine's flattened binary save format is not qualified for reopening through this collection.\n\nKeep using ordinary painting, Undo, Play and Save under a new name; your current authored history stays intact."))
+	elif button.text in REPLACEMENT_ACTIONS:
+		var action := str(button.text)
+		for connection: Dictionary in button.pressed.get_connections(): button.pressed.disconnect(connection.callable)
+		replacement_buttons[action] = button
+		button.tooltip_text = "Choose another map or reopen My saved copies from the collection browser. This evaluator asks before closing the current World."
+		button.pressed.connect(func() -> void: confirm_replacement(action))
+
 func loaded_map() -> void:
 	banner.text = "GOLDMAPS · %s · %s · engine %s · owner review pending%s" % [str(owner_tree.row.get("title", owner_tree.map_id)), owner_tree.map_id, str(owner_tree.manifest.engine_head).left(12), " · YOUR SAVED COPY" if not owner_tree.saved_label.is_empty() else ""]
 
@@ -107,7 +146,12 @@ func notice(message: String) -> void:
 	notice_dialog.popup_centered_clamped(Vector2i(720, 250), 0.9)
 
 func confirm_close() -> void:
+	close_dialog.dialog_text = CLOSE_MESSAGE
 	close_dialog.popup_centered_clamped(Vector2i(760, 300), 0.95)
+
+func confirm_replacement(action: String) -> void:
+	close_dialog.dialog_text = action + " has not changed this World.\n\nIn GOLDMAPS, choose maps and reopen My saved copies from the collection browser so the source identity stays clear.\n\n" + CLOSE_MESSAGE
+	close_dialog.popup_centered_clamped(Vector2i(760, 380), 0.95)
 
 func ask_save(and_return: bool) -> void:
 	if not owner_tree.loaded: notice("Wait for native map admission before saving a copy."); return
@@ -122,10 +166,14 @@ func _save() -> void:
 		if return_after_save: owner_tree.finish_close()
 		else: notice("Saved " + save_field.text + " to this kit's isolated Workbench folder. It is available from My saved copies in the collection browser.")
 
-func _process(_delta: float) -> void:
-	if owner_tree != null: owner_tree.check_ordinary_save()
-
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F2:
 		get_viewport().set_input_as_handled()
 		owner_tree.request_close()
+	elif event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_S and (event.ctrl_pressed or event.meta_pressed):
+		# Match the ordinary Paint Editor shortcut's eligibility and pending
+		# field commit, then retain the evaluator's new-name protection.
+		if ui.paint_editor != null and ui.paint_editor.paint_mode_active():
+			get_viewport().set_input_as_handled()
+			ui._commit_field()
+			owner_tree.save_copy(str(ui._name.text))

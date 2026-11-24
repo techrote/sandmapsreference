@@ -69,6 +69,12 @@ python tools/goldmaps_owner/qualification/run_product_qa.py \
 
 python tools/goldmaps_owner/qualification/test_payload_contract.py
 python tools/goldmaps_owner/qualification/test_acquisition_contract.py
+
+# Read the actual downloaded Windows artifact after unwrapping GitHub's outer ZIP.
+# This performs no new native execution and needs no second runtime extraction.
+python tools/goldmaps_owner/qualification/review_final_artifact.py \
+  --artifact-dir <unwrapped-artifact-directory> --source-head <exact-campaign-head> \
+  --run-id <actual-Windows-run-id> --out <new-independent-final-review.json>
 ```
 
 For a displayed product run, append `--graphical`; a real displayed receipt and
@@ -149,3 +155,31 @@ separate gates.
 
 The final independent review must report the actual completed checks and remaining
 gates. This checklist itself is not a pass receipt.
+
+## Product-only continuation and retained native authority
+
+A later browser/session correction may reuse the completed native population
+only after comparing the actual predecessor playable ZIP with the new kit.
+`qualification/native-evidence-reuse.v1.json` records the separately pinned
+native source/run/archive and the later product source/run. Every ordinary
+engine file, bootstrap, dependency, Setup, native-input JSON, route contract and
+executed native harness file must retain exact bytes. Native summaries and logs
+remain verbatim. The complete roster may change only the explicitly recorded
+commit/URL fields of an otherwise byte-identical collection generator.
+
+The independent reviewer requires both actual archives and checks those facts
+again through their inventories and committed source. It does not treat a later
+source commit, a copied PASS label or an asserted reuse boolean as proof.
+
+```sh
+python tools/goldmaps_owner/qualification/review_final_artifact.py \
+  --artifact-dir <current-unwrapped-artifact> --source-head <current-product-head> \
+  --run-id <current-product-run> --native-artifact-dir <original-unwrapped-artifact> \
+  --native-source-head <executed-native-head> --native-run-id <executed-native-run> \
+  --native-archive-sha256 <externally-pinned-original-inner-zip-sha256> \
+  --source-repo <checkout-with-both-exact-commits> --out <new-review.json>
+```
+
+The changed product still requires fresh actual launcher, lifecycle, save/reopen,
+graphical and final-extraction checks. A retained native result is never described
+as fresh all-map execution, owner adoption or a rewritten scientific verdict.

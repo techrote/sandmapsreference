@@ -22,7 +22,6 @@ var original_path := ""
 var original_sha := ""
 var saved_label := ""
 var saved_sha := ""
-var last_save_check := 0
 
 func _initialize() -> void:
 	_start.call_deferred()
@@ -107,7 +106,7 @@ func _start() -> void:
 	else:
 		if Setup._path(saved_label).is_empty() or saved_label.begins_with("gm-source-") or saved_sha.length() != 64:
 			_refuse("Invalid saved-copy identity."); return
-		if FileAccess.get_sha256(Setup._path(saved_label)) != saved_sha: _refuse("Named evaluation copy changed or is unavailable. Reopen its current copy through ordinary Workbench Load if that change was intentional."); return
+		if FileAccess.get_sha256(Setup._path(saved_label)) != saved_sha: _refuse("Named evaluation copy changed or is unavailable. Return to the collection and reopen My saved copies; only the current recorded bytes can reopen under this source identity."); return
 		source_label = saved_label
 		report["evaluation_copy"] = {"label":saved_label, "sha256":saved_sha, "identity":"owner-authored copy; original geometry equality is not asserted"}
 	var source := Setup.read_named(source_label)
@@ -193,6 +192,37 @@ func _start() -> void:
 		var saved_bytes_preserved := FileAccess.get_sha256(Setup._path(save_name)) == preserved_hash
 		controls.notice_dialog.get_ok_button().pressed.emit()
 		report["qa_lifecycle"] = {"scope":"Programmatic execution of actual UI button handlers; no physical input or graphical acceptance inferred", "close_warning_visible":close_visible, "cancel_preserved_same_world":cancel_keeps_world, "existing_name_refused":overwrite_refused, "saved_copy_sha256_unchanged":saved_bytes_preserved}
+		if controls.actor_composition_button == null: _refuse("QA ordinary Actor Composition entry was not found."); return
+		controls.actor_composition_button.pressed.emit()
+		await process_frame
+		report.qa_lifecycle["actor_composition_opened"] = is_instance_valid(ui._actor_panel) and ui._actor_panel.visible
+		if not report.qa_lifecycle.actor_composition_opened: _refuse("QA ordinary Actor Composition did not open."); return
+		var replacement_checks: Array[Dictionary] = []
+		for action: String in Controls.REPLACEMENT_ACTIONS:
+			if not controls.replacement_buttons.has(action): _refuse("QA ordinary replacement control was not guarded: " + action); return
+			controls.replacement_buttons[action].pressed.emit()
+			await process_frame
+			var warned: bool = controls.close_dialog.visible and host._physical_epoch == epoch and not closing
+			controls.close_dialog.get_cancel_button().pressed.emit()
+			await process_frame
+			var retained: bool = not controls.close_dialog.visible and host._physical_epoch == epoch and loaded and not closing
+			replacement_checks.append({"action":action, "warning_before_replacement":warned, "cancel_preserved_same_world":retained})
+			if not warned or not retained: _refuse("QA ordinary replacement guard failed: " + action); return
+		report.qa_lifecycle["ordinary_replacement_controls"] = replacement_checks
+		ui._actor_panel.hide()
+		if controls.flatten_button == null: _refuse("QA ordinary Flatten control was not guarded."); return
+		var authored_before := _sha_bytes(JSON.stringify(ui.applied).to_utf8_buffer())
+		var baseline_before := _sha_bytes(JSON.stringify(ui._material_baseline).to_utf8_buffer())
+		controls.flatten_button.pressed.emit()
+		await process_frame
+		var flatten_check := {"warning_visible":controls.notice_dialog.visible, "same_world_epoch":host._physical_epoch == epoch, "authored_setup_unchanged":_sha_bytes(JSON.stringify(ui.applied).to_utf8_buffer()) == authored_before, "material_baseline_unchanged":_sha_bytes(JSON.stringify(ui._material_baseline).to_utf8_buffer()) == baseline_before, "no_flatten_pending":not ui.is_flatten_pending()}
+		report.qa_lifecycle["flatten_guard"] = flatten_check
+		controls.notice_dialog.get_ok_button().pressed.emit()
+		for accepted: bool in flatten_check.values():
+			if not accepted: _refuse("QA unsupported Flatten guard changed the authored World or format."); return
+		var save_attribution: Dictionary = await _qa_ordinary_save_attribution(roster.data)
+		report.qa_lifecycle["ordinary_save_attribution"] = save_attribution
+		if save_attribution.has("error"): _refuse(str(save_attribution.error)); return
 		if not close_visible or not cancel_keeps_world or not overwrite_refused or not saved_bytes_preserved:
 			_refuse("QA close/cancel/saved-copy protection failed."); return
 		controls.confirm_close()
@@ -206,6 +236,68 @@ func _start() -> void:
 		_write_report()
 		controls.save_dialog.get_ok_button().pressed.emit()
 		if not closing: _refuse("QA Save a copy and return did not complete through the ordinary save boundary.")
+
+func _qa_ordinary_save_attribution(roster: Dictionary) -> Dictionary:
+	if controls.ordinary_save_button == null: return {"error":"QA ordinary Save button was not found."}
+	var foreign: Dictionary = {}
+	for candidate: Dictionary in roster.maps:
+		if str(candidate.setup.sha256) != original_sha:
+			foreign = candidate
+			break
+	if foreign.is_empty(): return {"error":"QA requires an independently identified existing-name fixture."}
+	var foreign_label := "qa-foreign-" + Crypto.new().generate_random_bytes(8).hex_encode()
+	var foreign_path: String = Setup._path(foreign_label)
+	var fixture := FileAccess.open(foreign_path, FileAccess.WRITE)
+	if fixture == null: return {"error":"QA could not create the isolated existing-name fixture."}
+	fixture.store_buffer(FileAccess.get_file_as_bytes(package_root.path_join(str(foreign.setup.path))))
+	fixture.close()
+	var foreign_sha := FileAccess.get_sha256(foreign_path)
+	if foreign_sha != str(foreign.setup.sha256): return {"error":"QA existing-name fixture differs from its exact foreign source."}
+	var count_before: int = report.saved_copies.size()
+	var banner_before: String = controls.banner.text
+	ui._name.text = foreign_label
+	# This exceeds the removed filename poll interval and exercises ordinary
+	# frames with a different source's existing label but no Save action.
+	await create_timer(1.2).timeout
+	var typing_safe: bool = report.saved_copies.size() == count_before and not _has_saved_receipt(foreign_label)
+	var banner_safe: bool = controls.banner.text == banner_before
+	controls.ordinary_save_button.pressed.emit()
+	await process_frame
+	var protected: bool = controls.notice_dialog.visible and str(controls.notice_dialog.dialog_text).contains("already exists") and not _has_saved_receipt(foreign_label)
+	var bytes_safe: bool = FileAccess.get_sha256(foreign_path) == foreign_sha
+	controls.notice_dialog.get_ok_button().pressed.emit()
+	var button_label := "qa-button-" + Crypto.new().generate_random_bytes(8).hex_encode()
+	ui._name.text = button_label
+	controls.ordinary_save_button.pressed.emit()
+	await process_frame
+	var button_saved := _has_saved_receipt(button_label)
+	var keyboard_label := "qa-keyboard-" + Crypto.new().generate_random_bytes(8).hex_encode()
+	ui._name.text = keyboard_label
+	var previous_tool: int = ui._tool.selected
+	ui._tool.select(0)
+	var key := InputEventKey.new()
+	key.keycode = KEY_S
+	key.ctrl_pressed = true
+	key.pressed = true
+	Input.parse_input_event(key)
+	await process_frame
+	key.pressed = false
+	Input.parse_input_event(key)
+	await process_frame
+	ui._tool.select(previous_tool)
+	var keyboard_saved := _has_saved_receipt(keyboard_label)
+	var receipt := {"scope":"Exact foreign-source bytes in an isolated developer fixture; actual ordinary Save button and dispatched Ctrl+S event; no physical keyboard claim", "foreign_source_map_id":foreign.id, "foreign_label":foreign_label, "foreign_setup_sha256":foreign_sha, "receipt_count_before_typing":count_before, "typing_existing_name_did_not_register":typing_safe, "typing_existing_name_left_banner":banner_safe, "existing_name_button_refused":protected, "foreign_file_sha256_unchanged":bytes_safe, "ordinary_button_new_label_saved":button_saved, "ordinary_button_label":button_label, "keyboard_new_label_saved":keyboard_saved, "keyboard_label":keyboard_label}
+	if not typing_safe or not banner_safe or not protected or not bytes_safe or not button_saved or not keyboard_saved:
+		receipt["error"] = "QA ordinary Save attribution or existing-name protection failed."
+	return receipt
+
+func _has_saved_receipt(label: String) -> bool:
+	var path: String = Setup._path(label)
+	if path.is_empty() or not FileAccess.file_exists(path): return false
+	var digest := FileAccess.get_sha256(path)
+	for previous: Dictionary in report.get("saved_copies", []):
+		if previous.label == label and previous.sha256 == digest: return true
+	return false
 
 func _native_cell(x: int, y: int) -> int:
 	if host.image == null: return -1
@@ -260,7 +352,7 @@ func save_copy(label: String) -> bool:
 		controls.notice("Choose 1–48 letters, digits, underscores or hyphens; source labels are reserved.")
 		return false
 	if FileAccess.file_exists(Setup._path(label)):
-		controls.notice("That named copy already exists. Choose a new name to preserve it; ordinary Workbench Save remains available when you intentionally update your own copy.")
+		controls.notice("That named copy already exists. Choose a new name to preserve the existing authored copy.")
 		return false
 	ui._name.text = label
 	if not ui.save_setup(): controls.notice(str(ui.message)); return false
@@ -276,11 +368,6 @@ func _record_saved(label: String) -> void:
 	report.saved_copies.append({"label":label, "sha256":digest, "path":ProjectSettings.globalize_path(path), "saved_at":Time.get_datetime_string_from_system(true) + "Z", "semantics":"authored starting layout; current dynamic state is not serialized"})
 	_write_report()
 	if controls != null: controls.saved_copy(label)
-
-func check_ordinary_save() -> void:
-	if loaded and not closing and Time.get_ticks_msec() - last_save_check > 1000:
-		last_save_check = Time.get_ticks_msec()
-		_record_saved(str(ui._name.text))
 
 func capture_screenshot() -> void:
 	if not loaded: return
@@ -303,7 +390,6 @@ func request_close() -> void:
 
 func finish_close() -> void:
 	if closing: return
-	if loaded and ui != null: _record_saved(str(ui._name.text))
 	closing = true
 	report["status"] = "QA_SAVED" if report.get("qa_completed",false) else ("RETURNED" if loaded else "CANCELLED_BEFORE_LOAD")
 	if report.get("qa_completed",false): report["returned_via_close_confirmation"] = true

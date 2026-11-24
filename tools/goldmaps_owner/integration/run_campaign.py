@@ -25,6 +25,7 @@ from verify_payload import file_sha256 as sha, verify_directory, verify_zip
 from prepare_runtime import ENGINE
 from seal_payload import seal
 from run_native_collection import profile_environment
+from reuse_native_evidence import reuse
 
 
 def write_json(path, value):
@@ -66,7 +67,7 @@ def copy_receipts(source, target):
 def merge_qualification(required, optional, kit):
     merged = {"schema": "goldmaps.owner-qualification.v1", "engine_head": ENGINE,
               "platform": "native Windows", "owner_accepted": False, "setups": {}, "campaigns": [],
-              "scope": "Fresh delivery native evidence; preserved historical judgments and physical owner acceptance remain separate."}
+              "scope": "Actual delivery native evidence with explicit executed source/run per campaign. Product-only continuations retain original native receipt identities. Frozen judgments and physical owner acceptance remain separate."}
     for name, directory in (("windows-required", required), ("windows-optional", optional)):
         overlay = json.loads((directory / "delivery-qualification.v1.json").read_text(encoding="utf-8"))
         summary = json.loads((directory / "summary.json").read_text(encoding="utf-8"))
@@ -80,6 +81,7 @@ def merge_qualification(required, optional, kit):
                                      "summary_sha256": sha(directory / "summary.json"),
                                      "input_manifest_sha256": overlay["input_manifest_sha256"],
                                      "github_run_id": overlay.get("github_run_id"),
+                                     "native_execution_source_head": summary["executed_source"]["checkout_head"],
                                      "unique_setups": summary["unique_setups_checked"],
                                      "qualified_unique_setups": summary["qualified_unique_setups"],
                                      "verified_refused_unique_setups": summary["verified_refused_unique_setups"],
@@ -89,6 +91,9 @@ def merge_qualification(required, optional, kit):
                 raise ValueError("Required and optional campaigns overlap")
             record = dict(record)
             record["receipt"] = "qualification/" + name + "/" + record["receipt"]
+            record["native_execution_source_head"] = summary["executed_source"]["checkout_head"]
+            record["native_execution_run_id"] = summary.get("github_run_id")
+            record["native_execution_summary_sha256"] = sha(directory / "summary.json")
             merged["setups"][digest] = record
         copy_receipts(directory, kit / "qualification" / name)
     merged["counts"] = {"unique_setups": len(merged["setups"]),
@@ -135,6 +140,9 @@ def write_variant_matrix(kit, qualification, source_head, graphical):
             "setup": setup, "engine_head": qualification["engine_head"],
             "godot_sha256": qualification["godot_sha256"], "native_status": executed["status"],
             "native_receipt": executed["receipt"], "native_receipt_sha256": executed["receipt_sha256"],
+            "native_execution_source_head": executed["native_execution_source_head"],
+            "native_execution_run_id": executed["native_execution_run_id"],
+            "native_execution_summary_sha256": executed["native_execution_summary_sha256"],
             "executed_aliases": executed["aliases"],
             "gate_interpretation": "NOT_EXECUTED_AFTER_EXPECTED_POLICY_REFUSAL" if receipt["negative_fixture_pass"] else "Read each executed positive gate separately",
             "native_gates": {"policy": load.get("native_policy"), "ordinary_load": load.get("load"),
@@ -161,6 +169,7 @@ def write_variant_matrix(kit, qualification, source_head, graphical):
               "unqualified_logical_entries": sum(row["native_status"] == "UNQUALIFIED" for row in rows),
               "owner_accepted": 0}
     matrix = {"schema": "goldmaps.owner-per-variant-matrix.v1", "delivery_source_head": source_head,
+              "native_evidence_authority": qualification.get("native_evidence_authority"),
               "engine_head": qualification["engine_head"], "counts": counts, "records": rows,
               "scope": "Authoritative per-logical-variant join of actual delivery native receipts. Byte aliases reuse evidence, never owner decisions. False or absent gates on refused originals are expected and do not become native passes."}
     write_json(kit / "qualification/per-variant-matrix.v1.json", matrix)
@@ -179,12 +188,20 @@ def main():
     parser.add_argument("--engine", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--source-head", required=True)
+    parser.add_argument("--reuse-native-artifact", type=Path,
+                        help="Unwrapped actual predecessor playable artifact; exact pins come from qualification-request.v1.json")
     args = parser.parse_args()
     if os.name != "nt":
         raise ValueError("This authoritative launcher/publication campaign requires native Windows")
     head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     if head != args.source_head:
         raise ValueError("Requested source is not the actual checkout")
+    request = json.loads((HERE / "qualification-request.v1.json").read_text(encoding="utf-8"))
+    if request["engine_head"] != ENGINE:
+        raise ValueError("Qualification request differs from the accepted engine")
+    reuse_request = request.get("native_reuse")
+    if bool(reuse_request) != bool(args.reuse_native_artifact):
+        raise ValueError("Native reuse requires both the explicit request pins and the actual predecessor artifact")
     out = args.out.resolve()
     if out.exists():
         raise ValueError("Refuse to overwrite campaign output")
@@ -228,17 +245,30 @@ def main():
             evidence, io_env, 180)
     execute("architectural-manifest", [python, commands / "corpus/query.py", "--package", kit, "validate"], evidence, env, 180)
     required, optional = evidence / "windows-required", evidence / "windows-optional"
-    execute("native-required", [python, commands / "qualification/run_native_collection.py", "--package", kit, "--godot", godot,
-                                "--engine-head", ENGINE, "--manifest-sha256", initial["payload_manifest_sha256"], "--out", required,
-                                "--jobs", "1", "--routes", ROOT / "scripts/goldmaps_finalisation/native_routes.v1.json"], evidence, env, 6500)
-    optional_result = execute("native-optional", [python, commands / "qualification/run_native_collection.py", "--package", kit, "--godot", godot,
-                                "--engine-head", ENGINE, "--manifest-sha256", initial["payload_manifest_sha256"], "--out", optional,
-                                "--inputs", "collection/native-inputs-optional.v1.json", "--jobs", "1"], evidence, env, 3300, required=False)
+    reuse_receipt = None
+    if reuse_request:
+        reuse_receipt, reuse_path = reuse(args.reuse_native_artifact.resolve(), reuse_request, kit, evidence, head)
+        write_json(evidence / "native-evidence-reuse.v1.json", reuse_receipt)
+        predecessor = json.loads((args.reuse_native_artifact / "campaign.json").read_text(encoding="utf-8"))
+        optional_result = {"mode": "REUSED_VERIFIED_EXISTING_EXECUTION", "original_process": predecessor["optional_process"],
+                           "original_source_head": reuse_request["source_head"], "original_run_id": reuse_request["github_run_id"]}
+        print("GOLDMAPS_NATIVE_EVIDENCE_REUSED " + json.dumps(reuse_receipt["native_evidence_authority"]), flush=True)
+    else:
+        execute("native-required", [python, commands / "qualification/run_native_collection.py", "--package", kit, "--godot", godot,
+                                    "--engine-head", ENGINE, "--manifest-sha256", initial["payload_manifest_sha256"], "--out", required,
+                                    "--jobs", "1", "--routes", ROOT / "scripts/goldmaps_finalisation/native_routes.v1.json"], evidence, env, 6500)
+        optional_result = execute("native-optional", [python, commands / "qualification/run_native_collection.py", "--package", kit, "--godot", godot,
+                                    "--engine-head", ENGINE, "--manifest-sha256", initial["payload_manifest_sha256"], "--out", optional,
+                                    "--inputs", "collection/native-inputs-optional.v1.json", "--jobs", "1"], evidence, env, 3300, required=False)
     # An absent/incomplete optional summary is a campaign infrastructure problem;
     # individual fully recorded optional refusals/failures remain reference-only.
     if not (optional / "summary.json").is_file():
         raise RuntimeError("Optional campaign incomplete; no fabricated eligibility or partial summary")
     qualification = merge_qualification(required, optional, kit)
+    qualification["native_evidence_authority"] = ({**reuse_receipt["native_evidence_authority"],
+        "reuse_receipt": "qualification/native-evidence-reuse.v1.json", "reuse_receipt_sha256": sha(reuse_path)}
+        if reuse_receipt else {"source_head": head, "github_run_id": os.environ.get("GITHUB_RUN_ID"), "mode": "EXECUTED_CURRENT_CAMPAIGN"})
+    write_json(kit / "collection/delivery-qualification.v1.json", qualification)
     route_summary = []
     for record in json.loads((required / "summary.json").read_text(encoding="utf-8"))["route_results"]:
         route = (record.get("evidence") or {}).get("route") or {}
@@ -246,6 +276,7 @@ def main():
                               "completed": route.get("completed", False), "failure": route.get("failure", "no_route_receipt"),
                               "waypoints_reached": route.get("waypoints_reached"), "waypoints_total": route.get("waypoints_total")})
     write_json(kit / "qualification/bounded-route-summary.json", {"scope": "Bounded existing scripted routes; no subjective flight-speed or full-map acceptance",
+                                                                  "native_evidence_authority": qualification["native_evidence_authority"],
                                                                   "routes": route_summary})
     copy_receipts(evidence / "boundary", kit / "qualification/package-boundary")
     for name in ("independent-corpus-audit.json", "independent-corpus-audit.log", "payload-contracts.log", "acquisition-contracts.log",
@@ -277,6 +308,8 @@ def main():
     logical_counts = write_variant_matrix(kit, qualification, head, graphical_summary)
     # Record actual scope before finalizing. This is not an all-route pass claim.
     completion = {"schema": "goldmaps.owner-campaign.v1", "source_head": head, "engine_head": ENGINE,
+                  "native_evidence_authority": qualification["native_evidence_authority"],
+                  "native_population_mode": "REUSED_EXACT_INPUT_EVIDENCE" if reuse_receipt else "EXECUTED_CURRENT_CAMPAIGN",
                   "github_run_id": os.environ.get("GITHUB_RUN_ID"), "created_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
                   "qualification": qualification["counts"], "optional_process": optional_result, "routes": route_summary,
                   "logical_counts": logical_counts,

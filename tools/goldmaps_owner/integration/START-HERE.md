@@ -57,12 +57,14 @@ material plane before making the session available.
 | --- | --- |
 | **Play / Pause**, or **P** | Start or pause native simulation |
 | **Pilot** selector | Select an authored actor to control, where present |
-| **W / A / D** with a Midge selected | Thrust and steer through the ordinary actor controls |
+| **W** or **Space**, with a Midge selected | Thrust; **A / D** steer |
+| **Shift** while thrusting; **Ctrl** | Authored boost; brake (braking suppresses boost) |
 | Mouse wheel over the canvas | Zoom |
 | Middle mouse drag | Pan |
 | **Overview** | Fit the map for inspection |
 | **Focus pilot** | Return the camera to the selected actor |
 | Ordinary paint/tool controls | Paint, erase and edit the active evaluation World |
+| **Save start**, or **Ctrl+S** in Paint mode | Save the authored layout under a new evaluation name |
 | **Screenshot** in the identity strip | Save a local session-linked image |
 | **Return to collection**, or **F2** | Choose whether to save, leave, or keep playing |
 
@@ -73,13 +75,24 @@ machinery may look functional without being simulated machinery.
 The browser waits for the current Workbench to close before opening another
 map. Returning warns that unsaved edits and evolving simulation state will be
 discarded. Your saved copies and explicit review records remain available.
+Ordinary New/Load and lab scene replacement buttons use that same warning and
+return path. Choose the next map or **My saved copies** from the collection so
+the loaded source identity stays accurate.
+
+The optional **Flatten / Bake History** action is unavailable in this evaluator:
+it creates a binary save format that this kit does not qualify for reopening.
+Evaluation copies use the ordinary authored Setup JSON path. Painting, undo,
+redo, actor editing and normal authored Save remain available.
 
 ## Save an evaluation copy
 
 Use **Save evaluation copy…** and give it a new name. Names use letters, digits,
 hyphens or underscores and must fit within 48 characters. Existing names are
-protected by the evaluation save action. The ordinary Workbench **Save start**
-also remains available; keep a new evaluation name in its name field.
+protected by the evaluation save action, ordinary **Save start** and **Ctrl+S**
+in Paint mode.
+Keep a new evaluation name in the ordinary name field. A copy is associated
+with the current map only after a successful save; merely typing an existing
+name does not import or relabel that file.
 
 **Save start stores the authored starting layout, actors and settings. It does
 not serialize the current evolving physical World.** This distinction matters

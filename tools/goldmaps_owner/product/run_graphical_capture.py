@@ -24,6 +24,7 @@ import time
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "qualification"))
 from verify_payload import file_sha256 as sha, strict_json, verify_directory
+from product_source_identity import product_source_identity
 
 CASES = (
     ("gallery", None, "Default Gold25 collection, with the normal launch fitted to the usable desktop"),
@@ -277,6 +278,9 @@ def main() -> int:
                "owner_accepted": False, "physical_windows_nvidia": "OWNER_PENDING", "cases": [],
                "scope": "Actual shipped Windows launcher and hosted rendered gallery/ordinary Workbench; programmatic navigation/save; subjective gameplay and owner acceptance remain pending"}
     try:
+        executed_source = product_source_identity(("../product/run_graphical_capture.py", "verify_payload.py"))
+        summary["executed_source"] = executed_source
+        write_json(out / "executed-source.json", executed_source)
         if os.name != "nt":
             summary.update(status="UNAVAILABLE_PLATFORM", environmental_display_limitation=True,
                            limitation="This campaign requires native Windows and did not execute on this platform")

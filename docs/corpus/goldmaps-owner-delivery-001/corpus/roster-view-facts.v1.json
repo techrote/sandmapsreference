@@ -1,0 +1,861 @@
+{
+  "schema": "goldmaps.owner-roster-view-facts.v1",
+  "reviewer": "Specialist A \u2014 independently computed collection metadata counts",
+  "source": {
+    "collection_path": "collection/collection.v1.json",
+    "collection_sha256": "0a1adc2d304a169016db95eec7d7dfbb4f33fe97fa2be770ba0cf86b7c880cd0",
+    "local_sealed_payload_manifest_sha256": "4044f86bdc43fe4a2032e5d7ee6382fb5a0edd45da9f672ed8d4a092f1eeb78a",
+    "scope": "Source-assembly metadata count projection. The final Windows archive may bind a later generator source identity without changing these roster identities."
+  },
+  "qualification_scope": "No fresh playable count is computed here. Resolve actual native availability from the exact-source Windows qualification matrix/overlay. Original155 and183 remain known-invalid references; owner acceptance remains zero.",
+  "definitions": {
+    "logical_entry": "One stable collection ID, including intentional aliases for comparison and views",
+    "unique_setup_hash": "One distinct SHA-256 of complete bundled Setup bytes",
+    "frozen_source": "A payload from the70-map frozen corpus, including its seven historical repairs and five changed Astra candidate maps; not a claim that every map is an authored original",
+    "policy_descendant": "One of the separately identified155/183 policy-only integration payloads outside the70-source index",
+    "canonical_source_index": "The one-per-source corpus collection membership; repaired or comparison aliases may reference the same payload elsewhere",
+    "orientation": "Authored dimensions, never rotated or rescaled"
+  },
+  "views": [
+    {
+      "view": "Gold25",
+      "collection_tag": "gold25",
+      "logical_entries": 25,
+      "unique_setup_hashes": 25,
+      "frozen_source_logical_entries": 25,
+      "frozen_source_unique_setup_hashes": 25,
+      "policy_descendant_logical_entries": 0,
+      "policy_descendant_unique_setup_hashes": 0,
+      "canonical_source_index_logical_entries": 25,
+      "logical_orientation_counts": {
+        "landscape": 21,
+        "portrait": 4
+      },
+      "unique_setup_orientation_counts": {
+        "landscape": 21,
+        "portrait": 4
+      },
+      "logical_dimension_counts": {
+        "1024x2048": 4,
+        "2048x1024": 21
+      },
+      "unique_setup_dimension_counts": {
+        "1024x2048": 4,
+        "2048x1024": 21
+      },
+      "width_range": [
+        1024,
+        2048
+      ],
+      "height_range": [
+        1024,
+        2048
+      ],
+      "variant_role_logical_counts": {
+        "original": 24,
+        "repaired portrait": 1
+      },
+      "known_invalid_original_ids": [
+        "gold-155"
+      ],
+      "logical_ids": [
+        "gold-106",
+        "gold-109",
+        "gold-125",
+        "gold-130",
+        "gold-131",
+        "gold-136",
+        "gold-143",
+        "gold-146",
+        "gold-147",
+        "gold-148",
+        "gold-150",
+        "gold-153",
+        "gold-155",
+        "gold-159",
+        "gold-163",
+        "gold-168",
+        "gold-174",
+        "gold-175",
+        "gold-176",
+        "gold-179",
+        "gold-182",
+        "gold-184",
+        "gold-193",
+        "gold-197",
+        "gold-207"
+      ],
+      "setup_sha256s": [
+        "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+        "144774127919808eb028d8cf8b81ce7387c612ce5d02457757fe583ca140f05f",
+        "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+        "3ce3551da2b27d8551cbeec70178ba32f4a551cef7740490407c46e1dd912a6d",
+        "40393e8d36cad166cebf11987ef6d06b1c2a7f567588a60534491fbae5195e7f",
+        "4a43f7e5bd8c1c70fef65661f6b312181d5b68524ee59f945e47919be8188499",
+        "53640683c247e6fa560e94e2ee4854872d6110ea566cd8217700c11f4dffbbe4",
+        "5938892f744c91a32e0152e51a877a96379105c143a1d172768db20bff11670d",
+        "60d561e6619b0bcc781c755d5726eb56e496bdccd62ffa2d0affc4b5cc23f62a",
+        "6a7d5851a297d3e1036ad70ac62f0e3fc00728c118b5190202cd37f0beb6e950",
+        "6ba97d5ab0efad111e9f7e63d7f6162e7eca6513bd0091ca358ff093d4a94d0f",
+        "7287a270ceb52c1017ac1a0452859f7cddfadba1d610dc09d62bccdac8a9669c",
+        "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "977919a1bba6b16ab4c0908010baeca8f7b167c3f4078ec1619d2c18179582f2",
+        "99dc9608bdd4c271050b2b8f5126a52f82e1b6e36ca3d3af0e62301cccc397a9",
+        "a6b1659809dc25f432aad39326a948852d740f0be7dc7d0734358528b17b2166",
+        "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+        "c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf",
+        "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+        "e3d5c86f59bb510374152b41fb12950929f08adb276441ffa3aa10147c04dd7b",
+        "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+        "f6cebcd073147f315f17e1266f03aa53c133c1d4e500ffca063653133b5a2853",
+        "f82e4715d60851d0aff0c3b76b951f7f308a0a71c95337da7675bcb1262ec307",
+        "fecf590815dd7495cf4e624a1ef5ad70e3109b3403bc99f9333171fd21d0fe3a"
+      ]
+    },
+    {
+      "view": "Repaired portraits",
+      "collection_tag": "portraits",
+      "logical_entries": 7,
+      "unique_setup_hashes": 7,
+      "frozen_source_logical_entries": 7,
+      "frozen_source_unique_setup_hashes": 7,
+      "policy_descendant_logical_entries": 0,
+      "policy_descendant_unique_setup_hashes": 0,
+      "canonical_source_index_logical_entries": 6,
+      "logical_orientation_counts": {
+        "portrait": 7
+      },
+      "unique_setup_orientation_counts": {
+        "portrait": 7
+      },
+      "logical_dimension_counts": {
+        "1024x2048": 7
+      },
+      "unique_setup_dimension_counts": {
+        "1024x2048": 7
+      },
+      "width_range": [
+        1024,
+        1024
+      ],
+      "height_range": [
+        2048,
+        2048
+      ],
+      "variant_role_logical_counts": {
+        "repaired portrait": 7
+      },
+      "known_invalid_original_ids": [],
+      "logical_ids": [
+        "repair-202",
+        "repair-203",
+        "repair-204",
+        "repair-205",
+        "repair-206",
+        "repair-207",
+        "repair-208"
+      ],
+      "setup_sha256s": [
+        "2af2c569df0ece15b594b74ad48b0ed6abe7692230364495afeeabb8a8699c7c",
+        "40393e8d36cad166cebf11987ef6d06b1c2a7f567588a60534491fbae5195e7f",
+        "529949b9151bb5044eebd2800d4e319609436ebac7c67fa383cfe03948a1dacf",
+        "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+        "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+        "a6e6db8d5a85b9a449d40bfb1fc9c218e72cff39a9c1426fa356ae99a19d4720",
+        "dc36e2e20d9a16cce4adb1ab09d1dcd1048ac9b01ad8b6f8403e8f88a126decd"
+      ]
+    },
+    {
+      "view": "Astra comparisons",
+      "collection_tag": "astra",
+      "logical_entries": 18,
+      "unique_setup_hashes": 15,
+      "frozen_source_logical_entries": 18,
+      "frozen_source_unique_setup_hashes": 15,
+      "policy_descendant_logical_entries": 0,
+      "policy_descendant_unique_setup_hashes": 0,
+      "canonical_source_index_logical_entries": 10,
+      "logical_orientation_counts": {
+        "landscape": 10,
+        "portrait": 8
+      },
+      "unique_setup_orientation_counts": {
+        "landscape": 8,
+        "portrait": 7
+      },
+      "logical_dimension_counts": {
+        "1024x2048": 8,
+        "2048x1024": 10
+      },
+      "unique_setup_dimension_counts": {
+        "1024x2048": 7,
+        "2048x1024": 8
+      },
+      "width_range": [
+        1024,
+        2048
+      ],
+      "height_range": [
+        1024,
+        2048
+      ],
+      "variant_role_logical_counts": {
+        "Astra candidate": 8,
+        "original": 8,
+        "prior reworker reference": 2
+      },
+      "known_invalid_original_ids": [],
+      "logical_ids": [
+        "trial-B1-candidate",
+        "trial-B1-original",
+        "trial-B2-candidate",
+        "trial-B2-original",
+        "trial-B3-candidate",
+        "trial-B3-original",
+        "trial-C1-candidate",
+        "trial-C1-original",
+        "trial-C2-candidate",
+        "trial-C2-original",
+        "trial-C3-candidate",
+        "trial-C3-original",
+        "trial-D1-candidate",
+        "trial-D1-original",
+        "trial-D1-reference",
+        "trial-D2-candidate",
+        "trial-D2-original",
+        "trial-D2-reference"
+      ],
+      "setup_sha256s": [
+        "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+        "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+        "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+        "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+        "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+        "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+        "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+        "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+        "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+        "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+        "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+        "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+        "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c"
+      ]
+    },
+    {
+      "view": "Policy descendants",
+      "collection_tag": "policy",
+      "logical_entries": 2,
+      "unique_setup_hashes": 2,
+      "frozen_source_logical_entries": 0,
+      "frozen_source_unique_setup_hashes": 0,
+      "policy_descendant_logical_entries": 2,
+      "policy_descendant_unique_setup_hashes": 2,
+      "canonical_source_index_logical_entries": 0,
+      "logical_orientation_counts": {
+        "landscape": 2
+      },
+      "unique_setup_orientation_counts": {
+        "landscape": 2
+      },
+      "logical_dimension_counts": {
+        "2048x1024": 2
+      },
+      "unique_setup_dimension_counts": {
+        "2048x1024": 2
+      },
+      "width_range": [
+        2048,
+        2048
+      ],
+      "height_range": [
+        1024,
+        1024
+      ],
+      "variant_role_logical_counts": {
+        "policy-only descendant": 2
+      },
+      "known_invalid_original_ids": [],
+      "logical_ids": [
+        "derived-155-policy",
+        "derived-183-policy"
+      ],
+      "setup_sha256s": [
+        "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+        "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e"
+      ]
+    },
+    {
+      "view": "All 70 source index",
+      "collection_tag": "corpus",
+      "logical_entries": 70,
+      "unique_setup_hashes": 70,
+      "frozen_source_logical_entries": 70,
+      "frozen_source_unique_setup_hashes": 70,
+      "policy_descendant_logical_entries": 0,
+      "policy_descendant_unique_setup_hashes": 0,
+      "canonical_source_index_logical_entries": 70,
+      "logical_orientation_counts": {
+        "landscape": 49,
+        "portrait": 21
+      },
+      "unique_setup_orientation_counts": {
+        "landscape": 49,
+        "portrait": 21
+      },
+      "logical_dimension_counts": {
+        "1024x2048": 21,
+        "2048x1024": 49
+      },
+      "unique_setup_dimension_counts": {
+        "1024x2048": 21,
+        "2048x1024": 49
+      },
+      "width_range": [
+        1024,
+        2048
+      ],
+      "height_range": [
+        1024,
+        2048
+      ],
+      "variant_role_logical_counts": {
+        "Astra candidate": 5,
+        "original": 58,
+        "repaired portrait": 7
+      },
+      "known_invalid_original_ids": [
+        "corpus-183",
+        "gold-155"
+      ],
+      "logical_ids": [
+        "corpus-105",
+        "corpus-108",
+        "corpus-115",
+        "corpus-116",
+        "corpus-120",
+        "corpus-123",
+        "corpus-124",
+        "corpus-126",
+        "corpus-135",
+        "corpus-138",
+        "corpus-140",
+        "corpus-144",
+        "corpus-160",
+        "corpus-161",
+        "corpus-165",
+        "corpus-169",
+        "corpus-171",
+        "corpus-172",
+        "corpus-177",
+        "corpus-180",
+        "corpus-183",
+        "corpus-185",
+        "corpus-187",
+        "corpus-188",
+        "corpus-189",
+        "corpus-190",
+        "corpus-191",
+        "corpus-192",
+        "corpus-37",
+        "gold-106",
+        "gold-109",
+        "gold-125",
+        "gold-130",
+        "gold-131",
+        "gold-136",
+        "gold-143",
+        "gold-146",
+        "gold-147",
+        "gold-148",
+        "gold-150",
+        "gold-153",
+        "gold-155",
+        "gold-159",
+        "gold-163",
+        "gold-168",
+        "gold-174",
+        "gold-175",
+        "gold-176",
+        "gold-179",
+        "gold-182",
+        "gold-184",
+        "gold-193",
+        "gold-197",
+        "gold-207",
+        "repair-202",
+        "repair-203",
+        "repair-204",
+        "repair-205",
+        "repair-206",
+        "repair-208",
+        "trial-B1-candidate",
+        "trial-B1-original",
+        "trial-B2-candidate",
+        "trial-B2-original",
+        "trial-B3-candidate",
+        "trial-B3-original",
+        "trial-D1-candidate",
+        "trial-D1-original",
+        "trial-D2-candidate",
+        "trial-D2-original"
+      ],
+      "setup_sha256s": [
+        "03fe485c3b44c350da03855f83d397937f170408213863f1b69dc98a2d09a672",
+        "0c78bdd6296c55399d113341848a3fa60bf534f128c01f6c5148b187433cd75c",
+        "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+        "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+        "11944e7542af554fcd81c28a4818e2e84c73d1aedb9054874d7150ae337e2c63",
+        "144774127919808eb028d8cf8b81ce7387c612ce5d02457757fe583ca140f05f",
+        "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+        "1914243942a72c2aab2e43683974973999b578c23d4130fdd174a0699f6ad73c",
+        "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+        "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+        "2af2c569df0ece15b594b74ad48b0ed6abe7692230364495afeeabb8a8699c7c",
+        "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+        "2c45f8a039addbd387c43dd0ebf2511baa6db9213b10d76b5b217e3a67b78779",
+        "2d3cea1e31caf4733b3d716c8cd3daab498d201a98b0b19c8dc221bac7c37400",
+        "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+        "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+        "35cb217fbad8ea53198c52e02a9bb2a41dda242c478e44626a0ece27ec3c39b3",
+        "3a6aa7e6282ebaa78f374d33bcb0683d468d596437338da284bb95877e7d6224",
+        "3ce3551da2b27d8551cbeec70178ba32f4a551cef7740490407c46e1dd912a6d",
+        "40393e8d36cad166cebf11987ef6d06b1c2a7f567588a60534491fbae5195e7f",
+        "417c35256f87e6e58c2c875db33afe88df6622f7e160c31194f7a39c8caf0229",
+        "4a43f7e5bd8c1c70fef65661f6b312181d5b68524ee59f945e47919be8188499",
+        "4be9d710bac772769a4eb86bb4eebfe33500042a6dfd5212dd46c2650227d8fa",
+        "4c4c0b2665c4fca23999ae89290feeeb2b1fa004cdc60bba50139f8b1a8d610e",
+        "529949b9151bb5044eebd2800d4e319609436ebac7c67fa383cfe03948a1dacf",
+        "53640683c247e6fa560e94e2ee4854872d6110ea566cd8217700c11f4dffbbe4",
+        "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+        "5938892f744c91a32e0152e51a877a96379105c143a1d172768db20bff11670d",
+        "5b15563239d43437c11f1e60d135d705f02feebc7b8d5fd949b2f1bbce2e744a",
+        "60d561e6619b0bcc781c755d5726eb56e496bdccd62ffa2d0affc4b5cc23f62a",
+        "6a7d5851a297d3e1036ad70ac62f0e3fc00728c118b5190202cd37f0beb6e950",
+        "6ba97d5ab0efad111e9f7e63d7f6162e7eca6513bd0091ca358ff093d4a94d0f",
+        "71a860ff7f2c17c1f4e23bafd56425926e426282860dcb71120ba58fe984791f",
+        "7287a270ceb52c1017ac1a0452859f7cddfadba1d610dc09d62bccdac8a9669c",
+        "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+        "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+        "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+        "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+        "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+        "8129ba54cb336759d498b64a207b3db03e72fceb21d842504bce8a1d5a9a295d",
+        "81630b82106d42ae9966530f2c7927c2e96f67a68e5824d98229387e57ad15a5",
+        "920cc181645fe2069fc12dc94bba431afd7b71da6a11a2ccd983b7ecbef5894f",
+        "92a2396e2c8e8f116b7c5508a6f1264479ec48971ccb8cebdc30eeb74fffaa14",
+        "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "9704a2aab58c6ea1eb550910615e2e889b250753834413e975f63ad975dbbf23",
+        "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+        "977919a1bba6b16ab4c0908010baeca8f7b167c3f4078ec1619d2c18179582f2",
+        "98c5b49c0006e0a89d30271e9b53ef8071a740b83403fc97b7293e15a76800cc",
+        "99dc9608bdd4c271050b2b8f5126a52f82e1b6e36ca3d3af0e62301cccc397a9",
+        "9bc54ca2e4c6437642af77e7e67653feec33d7aa3d8899e631014dc26ad041f8",
+        "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+        "9f1ac2833afaeb7093d1ab6ae4bcb0b390d2beb7be480f575cf6c37c6a178d91",
+        "a6b1659809dc25f432aad39326a948852d740f0be7dc7d0734358528b17b2166",
+        "a6e6db8d5a85b9a449d40bfb1fc9c218e72cff39a9c1426fa356ae99a19d4720",
+        "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+        "b1c07849fe6cefbe08a3049155764ef76bcf4882677c20f7410b46c493b5413b",
+        "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+        "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+        "c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf",
+        "d6316aa4c8788103dca5fe84453068c73174d3c5bafb418f54d71d973b0cd80b",
+        "dc36e2e20d9a16cce4adb1ab09d1dcd1048ac9b01ad8b6f8403e8f88a126decd",
+        "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+        "e3d5c86f59bb510374152b41fb12950929f08adb276441ffa3aa10147c04dd7b",
+        "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+        "e8e6a2c7773d955e361b61f05b71f9bfc3ec9887ed4c523bfb1f40e532e203f9",
+        "eb8af8768b85b6f28b34f598622582c5cc0fcc39a7a26ec3a93e883fa3d860f3",
+        "f6cebcd073147f315f17e1266f03aa53c133c1d4e500ffca063653133b5a2853",
+        "f82e4715d60851d0aff0c3b76b951f7f308a0a71c95337da7675bcb1262ec307",
+        "fecf590815dd7495cf4e624a1ef5ad70e3109b3403bc99f9333171fd21d0fe3a"
+      ]
+    },
+    {
+      "view": "All variants",
+      "collection_tag": null,
+      "logical_entries": 81,
+      "unique_setup_hashes": 72,
+      "frozen_source_logical_entries": 79,
+      "frozen_source_unique_setup_hashes": 70,
+      "policy_descendant_logical_entries": 2,
+      "policy_descendant_unique_setup_hashes": 2,
+      "canonical_source_index_logical_entries": 70,
+      "logical_orientation_counts": {
+        "landscape": 55,
+        "portrait": 26
+      },
+      "unique_setup_orientation_counts": {
+        "landscape": 51,
+        "portrait": 21
+      },
+      "logical_dimension_counts": {
+        "1024x2048": 26,
+        "2048x1024": 55
+      },
+      "unique_setup_dimension_counts": {
+        "1024x2048": 21,
+        "2048x1024": 51
+      },
+      "width_range": [
+        1024,
+        2048
+      ],
+      "height_range": [
+        1024,
+        2048
+      ],
+      "variant_role_logical_counts": {
+        "Astra candidate": 8,
+        "original": 61,
+        "policy-only descendant": 2,
+        "prior reworker reference": 2,
+        "repaired portrait": 8
+      },
+      "known_invalid_original_ids": [
+        "corpus-183",
+        "gold-155"
+      ],
+      "logical_ids": [
+        "corpus-105",
+        "corpus-108",
+        "corpus-115",
+        "corpus-116",
+        "corpus-120",
+        "corpus-123",
+        "corpus-124",
+        "corpus-126",
+        "corpus-135",
+        "corpus-138",
+        "corpus-140",
+        "corpus-144",
+        "corpus-160",
+        "corpus-161",
+        "corpus-165",
+        "corpus-169",
+        "corpus-171",
+        "corpus-172",
+        "corpus-177",
+        "corpus-180",
+        "corpus-183",
+        "corpus-185",
+        "corpus-187",
+        "corpus-188",
+        "corpus-189",
+        "corpus-190",
+        "corpus-191",
+        "corpus-192",
+        "corpus-37",
+        "derived-155-policy",
+        "derived-183-policy",
+        "gold-106",
+        "gold-109",
+        "gold-125",
+        "gold-130",
+        "gold-131",
+        "gold-136",
+        "gold-143",
+        "gold-146",
+        "gold-147",
+        "gold-148",
+        "gold-150",
+        "gold-153",
+        "gold-155",
+        "gold-159",
+        "gold-163",
+        "gold-168",
+        "gold-174",
+        "gold-175",
+        "gold-176",
+        "gold-179",
+        "gold-182",
+        "gold-184",
+        "gold-193",
+        "gold-197",
+        "gold-207",
+        "repair-202",
+        "repair-203",
+        "repair-204",
+        "repair-205",
+        "repair-206",
+        "repair-207",
+        "repair-208",
+        "trial-B1-candidate",
+        "trial-B1-original",
+        "trial-B2-candidate",
+        "trial-B2-original",
+        "trial-B3-candidate",
+        "trial-B3-original",
+        "trial-C1-candidate",
+        "trial-C1-original",
+        "trial-C2-candidate",
+        "trial-C2-original",
+        "trial-C3-candidate",
+        "trial-C3-original",
+        "trial-D1-candidate",
+        "trial-D1-original",
+        "trial-D1-reference",
+        "trial-D2-candidate",
+        "trial-D2-original",
+        "trial-D2-reference"
+      ],
+      "setup_sha256s": [
+        "03fe485c3b44c350da03855f83d397937f170408213863f1b69dc98a2d09a672",
+        "0c78bdd6296c55399d113341848a3fa60bf534f128c01f6c5148b187433cd75c",
+        "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+        "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+        "11944e7542af554fcd81c28a4818e2e84c73d1aedb9054874d7150ae337e2c63",
+        "144774127919808eb028d8cf8b81ce7387c612ce5d02457757fe583ca140f05f",
+        "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+        "1914243942a72c2aab2e43683974973999b578c23d4130fdd174a0699f6ad73c",
+        "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+        "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+        "2af2c569df0ece15b594b74ad48b0ed6abe7692230364495afeeabb8a8699c7c",
+        "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+        "2c45f8a039addbd387c43dd0ebf2511baa6db9213b10d76b5b217e3a67b78779",
+        "2d3cea1e31caf4733b3d716c8cd3daab498d201a98b0b19c8dc221bac7c37400",
+        "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+        "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+        "35cb217fbad8ea53198c52e02a9bb2a41dda242c478e44626a0ece27ec3c39b3",
+        "3a6aa7e6282ebaa78f374d33bcb0683d468d596437338da284bb95877e7d6224",
+        "3ce3551da2b27d8551cbeec70178ba32f4a551cef7740490407c46e1dd912a6d",
+        "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+        "40393e8d36cad166cebf11987ef6d06b1c2a7f567588a60534491fbae5195e7f",
+        "417c35256f87e6e58c2c875db33afe88df6622f7e160c31194f7a39c8caf0229",
+        "4a43f7e5bd8c1c70fef65661f6b312181d5b68524ee59f945e47919be8188499",
+        "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e",
+        "4be9d710bac772769a4eb86bb4eebfe33500042a6dfd5212dd46c2650227d8fa",
+        "4c4c0b2665c4fca23999ae89290feeeb2b1fa004cdc60bba50139f8b1a8d610e",
+        "529949b9151bb5044eebd2800d4e319609436ebac7c67fa383cfe03948a1dacf",
+        "53640683c247e6fa560e94e2ee4854872d6110ea566cd8217700c11f4dffbbe4",
+        "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+        "5938892f744c91a32e0152e51a877a96379105c143a1d172768db20bff11670d",
+        "5b15563239d43437c11f1e60d135d705f02feebc7b8d5fd949b2f1bbce2e744a",
+        "60d561e6619b0bcc781c755d5726eb56e496bdccd62ffa2d0affc4b5cc23f62a",
+        "6a7d5851a297d3e1036ad70ac62f0e3fc00728c118b5190202cd37f0beb6e950",
+        "6ba97d5ab0efad111e9f7e63d7f6162e7eca6513bd0091ca358ff093d4a94d0f",
+        "71a860ff7f2c17c1f4e23bafd56425926e426282860dcb71120ba58fe984791f",
+        "7287a270ceb52c1017ac1a0452859f7cddfadba1d610dc09d62bccdac8a9669c",
+        "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+        "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+        "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+        "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+        "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+        "8129ba54cb336759d498b64a207b3db03e72fceb21d842504bce8a1d5a9a295d",
+        "81630b82106d42ae9966530f2c7927c2e96f67a68e5824d98229387e57ad15a5",
+        "920cc181645fe2069fc12dc94bba431afd7b71da6a11a2ccd983b7ecbef5894f",
+        "92a2396e2c8e8f116b7c5508a6f1264479ec48971ccb8cebdc30eeb74fffaa14",
+        "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "9704a2aab58c6ea1eb550910615e2e889b250753834413e975f63ad975dbbf23",
+        "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+        "977919a1bba6b16ab4c0908010baeca8f7b167c3f4078ec1619d2c18179582f2",
+        "98c5b49c0006e0a89d30271e9b53ef8071a740b83403fc97b7293e15a76800cc",
+        "99dc9608bdd4c271050b2b8f5126a52f82e1b6e36ca3d3af0e62301cccc397a9",
+        "9bc54ca2e4c6437642af77e7e67653feec33d7aa3d8899e631014dc26ad041f8",
+        "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+        "9f1ac2833afaeb7093d1ab6ae4bcb0b390d2beb7be480f575cf6c37c6a178d91",
+        "a6b1659809dc25f432aad39326a948852d740f0be7dc7d0734358528b17b2166",
+        "a6e6db8d5a85b9a449d40bfb1fc9c218e72cff39a9c1426fa356ae99a19d4720",
+        "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+        "b1c07849fe6cefbe08a3049155764ef76bcf4882677c20f7410b46c493b5413b",
+        "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+        "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+        "c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf",
+        "d6316aa4c8788103dca5fe84453068c73174d3c5bafb418f54d71d973b0cd80b",
+        "dc36e2e20d9a16cce4adb1ab09d1dcd1048ac9b01ad8b6f8403e8f88a126decd",
+        "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+        "e3d5c86f59bb510374152b41fb12950929f08adb276441ffa3aa10147c04dd7b",
+        "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+        "e8e6a2c7773d955e361b61f05b71f9bfc3ec9887ed4c523bfb1f40e532e203f9",
+        "eb8af8768b85b6f28b34f598622582c5cc0fcc39a7a26ec3a93e883fa3d860f3",
+        "f6cebcd073147f315f17e1266f03aa53c133c1d4e500ffca063653133b5a2853",
+        "f82e4715d60851d0aff0c3b76b951f7f308a0a71c95337da7675bcb1262ec307",
+        "fecf590815dd7495cf4e624a1ef5ad70e3109b3403bc99f9333171fd21d0fe3a"
+      ]
+    }
+  ],
+  "pairwise_overlap": [
+    {
+      "view_a": "gold25",
+      "view_b": "portraits",
+      "shared_logical_ids": [],
+      "shared_setup_hashes": [
+        "40393e8d36cad166cebf11987ef6d06b1c2a7f567588a60534491fbae5195e7f"
+      ]
+    },
+    {
+      "view_a": "gold25",
+      "view_b": "astra",
+      "shared_logical_ids": [],
+      "shared_setup_hashes": [
+        "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789"
+      ]
+    },
+    {
+      "view_a": "gold25",
+      "view_b": "policy",
+      "shared_logical_ids": [],
+      "shared_setup_hashes": []
+    },
+    {
+      "view_a": "gold25",
+      "view_b": "corpus",
+      "shared_logical_ids": [
+        "gold-106",
+        "gold-109",
+        "gold-125",
+        "gold-130",
+        "gold-131",
+        "gold-136",
+        "gold-143",
+        "gold-146",
+        "gold-147",
+        "gold-148",
+        "gold-150",
+        "gold-153",
+        "gold-155",
+        "gold-159",
+        "gold-163",
+        "gold-168",
+        "gold-174",
+        "gold-175",
+        "gold-176",
+        "gold-179",
+        "gold-182",
+        "gold-184",
+        "gold-193",
+        "gold-197",
+        "gold-207"
+      ],
+      "shared_setup_hashes": [
+        "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+        "144774127919808eb028d8cf8b81ce7387c612ce5d02457757fe583ca140f05f",
+        "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+        "3ce3551da2b27d8551cbeec70178ba32f4a551cef7740490407c46e1dd912a6d",
+        "40393e8d36cad166cebf11987ef6d06b1c2a7f567588a60534491fbae5195e7f",
+        "4a43f7e5bd8c1c70fef65661f6b312181d5b68524ee59f945e47919be8188499",
+        "53640683c247e6fa560e94e2ee4854872d6110ea566cd8217700c11f4dffbbe4",
+        "5938892f744c91a32e0152e51a877a96379105c143a1d172768db20bff11670d",
+        "60d561e6619b0bcc781c755d5726eb56e496bdccd62ffa2d0affc4b5cc23f62a",
+        "6a7d5851a297d3e1036ad70ac62f0e3fc00728c118b5190202cd37f0beb6e950",
+        "6ba97d5ab0efad111e9f7e63d7f6162e7eca6513bd0091ca358ff093d4a94d0f",
+        "7287a270ceb52c1017ac1a0452859f7cddfadba1d610dc09d62bccdac8a9669c",
+        "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "977919a1bba6b16ab4c0908010baeca8f7b167c3f4078ec1619d2c18179582f2",
+        "99dc9608bdd4c271050b2b8f5126a52f82e1b6e36ca3d3af0e62301cccc397a9",
+        "a6b1659809dc25f432aad39326a948852d740f0be7dc7d0734358528b17b2166",
+        "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+        "c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf",
+        "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+        "e3d5c86f59bb510374152b41fb12950929f08adb276441ffa3aa10147c04dd7b",
+        "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+        "f6cebcd073147f315f17e1266f03aa53c133c1d4e500ffca063653133b5a2853",
+        "f82e4715d60851d0aff0c3b76b951f7f308a0a71c95337da7675bcb1262ec307",
+        "fecf590815dd7495cf4e624a1ef5ad70e3109b3403bc99f9333171fd21d0fe3a"
+      ]
+    },
+    {
+      "view_a": "portraits",
+      "view_b": "astra",
+      "shared_logical_ids": [],
+      "shared_setup_hashes": [
+        "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+        "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013"
+      ]
+    },
+    {
+      "view_a": "portraits",
+      "view_b": "policy",
+      "shared_logical_ids": [],
+      "shared_setup_hashes": []
+    },
+    {
+      "view_a": "portraits",
+      "view_b": "corpus",
+      "shared_logical_ids": [
+        "repair-202",
+        "repair-203",
+        "repair-204",
+        "repair-205",
+        "repair-206",
+        "repair-208"
+      ],
+      "shared_setup_hashes": [
+        "2af2c569df0ece15b594b74ad48b0ed6abe7692230364495afeeabb8a8699c7c",
+        "40393e8d36cad166cebf11987ef6d06b1c2a7f567588a60534491fbae5195e7f",
+        "529949b9151bb5044eebd2800d4e319609436ebac7c67fa383cfe03948a1dacf",
+        "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+        "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+        "a6e6db8d5a85b9a449d40bfb1fc9c218e72cff39a9c1426fa356ae99a19d4720",
+        "dc36e2e20d9a16cce4adb1ab09d1dcd1048ac9b01ad8b6f8403e8f88a126decd"
+      ]
+    },
+    {
+      "view_a": "astra",
+      "view_b": "policy",
+      "shared_logical_ids": [],
+      "shared_setup_hashes": []
+    },
+    {
+      "view_a": "astra",
+      "view_b": "corpus",
+      "shared_logical_ids": [
+        "trial-B1-candidate",
+        "trial-B1-original",
+        "trial-B2-candidate",
+        "trial-B2-original",
+        "trial-B3-candidate",
+        "trial-B3-original",
+        "trial-D1-candidate",
+        "trial-D1-original",
+        "trial-D2-candidate",
+        "trial-D2-original"
+      ],
+      "shared_setup_hashes": [
+        "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+        "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+        "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+        "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+        "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+        "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+        "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+        "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+        "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+        "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+        "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+        "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+        "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c"
+      ]
+    },
+    {
+      "view_a": "policy",
+      "view_b": "corpus",
+      "shared_logical_ids": [],
+      "shared_setup_hashes": []
+    }
+  ],
+  "all_source_index_role_counts": {
+    "Astra candidate": 5,
+    "original": 58,
+    "repaired portrait": 7
+  },
+  "notes": [
+    "View rows overlap and must not be summed. Gold #207 and repair #207 are aliases for the same repaired-portrait Setup.",
+    "Astra contains 18 logical entries but 15 unique Setups: each of C1/C2/C3 original and candidate aliases shares exact Setup bytes.",
+    "Gold controls #159/#150/#197 also appear in Astra; repairs #203/#208 also appear as prior-reference aliases.",
+    "All variants contain 79 frozen-source aliases using 70 source payloads, plus two policy descendants, totaling 81 logical entries and 72 unique Setups.",
+    "The 70-source index includes 58 rows labelled original, seven repaired portraits and five changed Astra candidates; it is not 70 authored-original maps.",
+    "Landscape payloads are 2048x1024; portrait payloads 1024x2048. All 72 unique Setups use schema 2 and have 2,097,152 cells.",
+    "Native bytes and owner acceptance are different facts. This document asserts neither current all-map playability nor owner adoption."
+  ]
+}

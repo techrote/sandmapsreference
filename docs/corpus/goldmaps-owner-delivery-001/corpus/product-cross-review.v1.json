@@ -43,6 +43,27 @@
       "finding": "Decision guide called Gold an original-only exemplar even though nominated #207 is a repaired portrait baseline.",
       "resolution": "Guide now describes baseline exemplar nomination and explicitly permits an earlier repair as baseline; #207 keeps repaired portrait role and original parent.",
       "status": "RESOLVED_BY_SOURCE_REVIEW"
+    },
+    {
+      "id": "A-UI-06",
+      "finding": "Ordinary Workbench replacement buttons could replace the active evaluation World without the collection lifecycle warning or a new source identity. Specialist C identified the initial New/Load gap.",
+      "resolution": "Seven exact accepted-engine replacement captions now route to Save/return/Cancel, including lazy Mixed Actor Workshop. Source inspection confirms direct initial ui.load_setup remains unchanged and the lazy panel is beneath the scoped Workbench node.",
+      "status": "RESOLVED_BY_SOURCE_REVIEW_FRESH_PRODUCT_EXECUTION_PENDING",
+      "resolution_source": "8f5d6f8774601180fc520e68191fff59a6d40415"
+    },
+    {
+      "id": "A-UI-07",
+      "finding": "Filename polling and close-time registration could attribute a different source saved file to the current map merely because its label was typed without Save.",
+      "resolution": "Both blind registration paths are removed. Receipts follow true ui.save_setup success through protected new-name saving; ordinary Save button and Ctrl+S retain the accepted field-commit and Paint Editor eligibility behavior.",
+      "status": "RESOLVED_BY_SOURCE_REVIEW_FRESH_PRODUCT_EXECUTION_PENDING",
+      "resolution_source": "8f5d6f8774601180fc520e68191fff59a6d40415"
+    },
+    {
+      "id": "A-UI-08",
+      "finding": "Flatten/Bake History could create an engine binary MaterialBaseline save that the collection JSON saved-copy reader could not reopen.",
+      "resolution": "The unsupported transition now displays an explicit non-mutating limitation before any bake. Ordinary painting, Undo, Play, Restore start and new named JSON saves remain supported. Binary saved-copy support is not claimed.",
+      "status": "RESOLVED_BY_SOURCE_REVIEW_FRESH_PRODUCT_EXECUTION_PENDING",
+      "resolution_source": "8f5d6f8774601180fc520e68191fff59a6d40415"
     }
   ],
   "preview_visual_inspection": {
@@ -67,8 +88,28 @@
     "Compare play opens another ordinary native World, with unsaved-work protection and no synchronized-world claim."
   ],
   "remaining_gates": [
+    "Fresh actual-map product execution must cover all seven guarded replacement controls, foreign-label no-attribution, protected ordinary Save/Ctrl+S, unsupported Flatten notice, Save/return and independent-process reopen at the final product source.",
     "Actual hosted Windows browser render at normal desktop size/DPI and interaction remain to be inspected after the final source build.",
     "Actual final ZIP/runtime custody and native qualification belong to Specialist C and lead; this source review does not replace their evidence.",
     "Physical Windows/NVIDIA playfeel, full-route judgement and classification remain owner dependent."
-  ]
+  ],
+  "latest_session_review": {
+    "source": "8f5d6f8774601180fc520e68191fff59a6d40415",
+    "reviewed_files": {
+      "tools/goldmaps_owner/product/session/session.gd": "7bee9de8aa89097dc24444da689c833ca458941fb4f0859f5cb9022a5f9d4ae4",
+      "tools/goldmaps_owner/product/session/session_controls.gd": "a766a37d1df2f483392043c95e422991250cfe2f7d48f341eb3e0479ae035ad9",
+      "tools/goldmaps_owner/product/test_session_controls.gd": "6a60a1af5d6957c07d3654271df0d9b6fdfd1e0ca13d877d29b2a923ed15adf4"
+    },
+    "independent_source_result": "PASS_SOURCE_ONLY",
+    "implementer_synthetic_receipt": {
+      "path": "docs/corpus/goldmaps-owner-delivery-001/product/synthetic-controls-review.v1.json",
+      "source": "8f5d6f8774601180fc520e68191fff59a6d40415",
+      "reported_checks": 23,
+      "reported_passes": 23,
+      "source_hashes_independently_matched": true,
+      "scope": "Actual additive callbacks with synthetic Workbench; no native World, map admission or graphical claim",
+      "independently_rerun_by_this_reviewer": false
+    },
+    "source_authority_note": "New product execution must name its own source separately from retained native map campaign evidence. Actual old/new ZIP comparison and fresh lifecycle/graphical execution remain required."
+  }
 }
