@@ -26,7 +26,7 @@ def main():
         raise ValueError("Unexpected delivery engine revision")
     if (out / "runtime/project").exists():
         raise ValueError("Refuse to overwrite staged engine project")
-    identity = json.loads((deps / "runtime-identity.v1.json").read_text())
+    identity = json.loads((deps / "runtime-identity.v1.json").read_text(encoding="utf-8"))
     if identity["engine_head"] != ENGINE or identity["godot_version"] != GODOT_VERSION:
         raise ValueError("Dependency receipt differs from source pin")
     platforms = {"windows", "linux"} if args.platform == "both" else {args.platform}

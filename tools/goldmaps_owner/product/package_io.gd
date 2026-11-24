@@ -7,6 +7,7 @@ const QUALIFICATION := "collection/delivery-qualification.v1.json"
 const MUTABLE_ROOTS := ["userdata/", "browser/.godot/", "runtime/project/.godot/"]
 const METADATA := [MANIFEST, "payload-manifest.sha256"]
 const MAX_JSON := 32 * 1024 * 1024
+const GOLD_PRS := [106,109,125,130,131,136,143,146,147,148,150,153,155,159,163,168,174,175,176,179,182,184,193,197,207]
 
 static func safe_relative(value: Variant) -> bool:
 	if not value is String or value.is_empty() or value.length() > 500:
@@ -77,7 +78,7 @@ static func manifest_rows(root: String) -> Dictionary:
 	var document: Dictionary = parsed.data
 	if document.get("schema", "") != "goldmaps.owner-payload.v1" or not document.get("files") is Array:
 		return {"error":"Unsupported payload manifest schema."}
-	if str(document.get("engine_head", "")).length() != 40:
+	if str(document.get("engine_head", "")).length() != 40 or not str(document.get("engine_head", "")).is_valid_hex_number(false):
 		return {"error":"Payload manifest lacks the exact engine source identity."}
 	var expected: Dictionary = {}
 	var folded: Dictionary = {}
@@ -163,6 +164,73 @@ static func find_map(collection: Dictionary, id: String) -> Dictionary:
 	for row: Variant in collection.get("maps", []):
 		if row is Dictionary and row.get("id", "") == id: return row
 	return {}
+
+static func collection_error(document: Dictionary) -> String:
+	if document.get("schema", "") != "goldmaps.owner-collection.v1" or not document.get("maps") is Array:
+		return "Unsupported collection schema."
+	if document.maps.size() < 70 or document.maps.size() > 256:
+		return "Collection logical roster is outside its bounded population."
+	var ids: Dictionary = {}
+	var gold: Array[int] = []
+	var corpus: Dictionary = {}
+	for row: Variant in document.maps:
+		if not row is Dictionary or not row.get("id") is String or row.id.is_empty() or row.id.length() > 80:
+			return "Malformed logical map identity."
+		for character: String in row.id:
+			if character not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_": return "Unsafe logical map identity."
+		if ids.has(str(row.id).to_lower()): return "Duplicate/case-colliding logical map identity: " + str(row.id)
+		ids[str(row.id).to_lower()] = true
+		if not row.get("title") is String or not row.get("variant_role") is String or not row.get("tags") is Array or not row.get("collections") is Array:
+			return "Malformed display metadata: " + str(row.id)
+		if row.title.length() > 1000 or row.tags.size() > 256: return "Unbounded display metadata: " + str(row.id)
+		for tag: Variant in row.tags:
+			if not tag is String or tag.length() > 2000: return "Malformed architecture tag: " + str(row.id)
+		for name: Variant in row.collections:
+			if name not in ["gold25", "portraits", "astra", "corpus", "policy"]: return "Unknown collection view."
+		for key: String in ["source", "setup", "preview", "art", "native", "owner"]:
+			if not row.get(key) is Dictionary: return "Malformed " + key + " metadata: " + str(row.id)
+		for key: String in ["comparison", "source_static_qualification", "derived_source"]:
+			if row.get(key) != null and not row.get(key) is Dictionary: return "Malformed optional " + key + " metadata."
+		if not row.get("owner_accepted") is bool or not row.owner.get("accepted") is bool or row.owner_accepted != false or row.owner.accepted != false or row.owner.get("status") != "pending" or row.owner.get("classification") != null:
+			return "Bundled maps must remain unaccepted. Owner choices belong only in the local review file."
+		var source: Dictionary = row.source
+		if source.get("repo") != "techrote/sandmapsreference" or not source.get("commit") is String or str(source.commit).length() != 40 or not str(source.commit).is_valid_hex_number(false) or not safe_relative(source.get("path")):
+			return "Source identity is not exact and repository-pinned: " + str(row.id)
+		if not source.get("pr") is float and not source.get("pr") is int: return "Invalid source PR identity."
+		if float(source.pr) != floorf(float(source.pr)) or float(source.pr) < 1: return "Invalid source PR number."
+		var setup: Dictionary = row.setup
+		if setup.get("schema") != 2 or not safe_relative(setup.get("path")) or not str(setup.path).begins_with("collection/setups/"):
+			return "Unsupported bundled Setup: " + str(row.id)
+		for key: String in ["sha256", "material_plane_sha256"]:
+			if not setup.get(key) is String or str(setup[key]).length() != 64 or not str(setup[key]).is_valid_hex_number(false): return "Invalid Setup digest: " + str(row.id)
+		if not setup.get("dimensions") is Array or setup.dimensions.size() != 2: return "Invalid map dimensions."
+		for dimension: Variant in setup.dimensions:
+			if not dimension is float and not dimension is int: return "Invalid map dimension type."
+			if not is_finite(float(dimension)) or float(dimension) != floorf(float(dimension)) or int(dimension) < 512 or int(dimension) > 2048 or int(dimension) % 64 != 0: return "Unbounded map dimensions."
+		if not safe_relative(row.preview.get("path")): return "Invalid source-preview path."
+		if "gold25" in row.collections: gold.append(int(source.pr))
+		if "corpus" in row.collections:
+			if not row.get("source_corpus_id") is String: return "Invalid corpus source identity type."
+			var corpus_id := str(row.get("source_corpus_id", ""))
+			if corpus_id.is_empty() or corpus.has(corpus_id): return "Duplicate/missing corpus source identity."
+			corpus[corpus_id] = true
+	gold.sort()
+	if gold != GOLD_PRS or corpus.size() != 70: return "The frozen Gold25 or 70-source roster is incomplete or changed."
+	return ""
+
+static func review_error(document: Dictionary) -> String:
+	if document.get("schema", "") != "goldmaps.owner-reviews.v1" or not document.get("decisions") is Dictionary or document.decisions.size() > 256:
+		return "Unsupported or unbounded local review store."
+	for key: Variant in document.decisions:
+		var value: Variant = document.decisions[key]
+		if not key is String or not value is Dictionary or value.get("map_id", "") != key: return "Malformed local review identity."
+		if value.get("status", "") not in ["Pending / not reviewed", "Gold nominee confirmed", "Gold nominee declined", "Needs review", "Reviewed / classification recorded"]:
+			return "Unknown local review status."
+		if value.get("classification", "") not in ["Unclassified", "Gold", "Platinum", "Pyrite", "No-change", "Other"]:
+			return "Unknown local classification."
+		for field: String in ["preferred_variant", "playability_notes", "presentation_notes", "setup_sha256", "engine_head", "recorded_at"]:
+			if not value.get(field) is String or str(value[field]).length() > 20000: return "Malformed local review field."
+	return ""
 
 static func playable_reason(row: Dictionary, qualification: Dictionary, engine_head: String) -> String:
 	var setup: Dictionary = row.get("setup", {})

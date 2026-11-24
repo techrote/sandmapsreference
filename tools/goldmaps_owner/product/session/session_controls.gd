@@ -9,6 +9,7 @@ var notice_dialog := AcceptDialog.new()
 var close_dialog := ConfirmationDialog.new()
 var save_dialog := ConfirmationDialog.new()
 var save_field := LineEdit.new()
+var save_return_button: Button
 var return_after_save := false
 
 func mount(controller, controller_host: Control, workbench: Control) -> void:
@@ -57,7 +58,7 @@ func mount(controller, controller_host: Control, workbench: Control) -> void:
 	close_dialog.dialog_text = "Save a named evaluation copy before leaving if you want to keep your authored changes.\n\nReturning closes this World and discards unsaved edits and current simulation progress. Existing saved copies and your local review record stay available."
 	close_dialog.ok_button_text = "Return without saving"
 	close_dialog.cancel_button_text = "Keep playing"
-	close_dialog.add_button("Save a copy and return…", false, "save")
+	save_return_button = close_dialog.add_button("Save a copy and return…", false, "save")
 	close_dialog.confirmed.connect(owner_tree.finish_close)
 	close_dialog.custom_action.connect(func(action: StringName) -> void:
 		if action == &"save":

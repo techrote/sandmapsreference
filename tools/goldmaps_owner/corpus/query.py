@@ -130,11 +130,41 @@ class Collection:
             checked_bytes(self.root,m["setup"]);checked_bytes(self.root,m["preview"])
             if m["source"]["pr"] in (155,183) and not m["id"].startswith("derived-") and m["native"]["eligibility"]!="refused":
                 raise ValueError("Original malformed-policy refusal lost")
+            delivery=m["native"].get("delivery_evidence")
+            if not isinstance(delivery,dict) or delivery.get("path")!="collection/delivery-qualification.v1.json" or delivery.get("schema")!="goldmaps.owner-qualification.v1" or delivery.get("key_path")!=["setups",m["setup"]["sha256"]] or delivery.get("engine_head")!=self.collection["authority"]["delivery_engine"]:
+                raise ValueError("Map delivery qualification reference is missing or mismatched")
+        if "fresh_qualified_playable_setups" in self.collection["counts"]:
+            raise ValueError("Immutable assembly metadata must not publish a stale fresh-qualified count")
         if self.knowledge["counts"]!={"maps":70,"current_protected_features":27,"immutable_feature_states":76,"comparative_families":12,"negative_interventions":5,"owner_accepted":0}:
             raise ValueError("Knowledge population changed")
         for f in self.knowledge["protected_features"]:
             if f.get("evidence_crop_is_edit_mask") is not False or f.get("geometry_edits_authorized") is not False:
                 raise ValueError("Protected-feature evidence boundary lost")
+        lineage=[r for r in self.knowledge.get("relationships",[]) if r.get("kind")=="frozen_experiment_lineage"]
+        if {r.get("arm") for r in lineage}!={"B1","B2","B3","C1","C2","C3","D1","D2"} or len(lineage)!=8:
+            raise ValueError("Frozen experiment lineage is incomplete")
+        knowledge_maps={m["source"]["pr"]:m for m in self.knowledge["maps"]}
+        for relationship in lineage:
+            group=relationship["shared_holdout_group"]
+            related=[]
+            for variant in relationship["variants"]:
+                entry=self.get(variant["collection_id"])
+                if entry["source"]!=variant["source"] or entry["setup"]["material_plane_sha256"]!=variant["material_plane_sha256"]:
+                    raise ValueError("Lineage variant source differs from the bundled identity")
+                groups=set(knowledge_maps[entry["source"]["pr"]]["visual_family_groups"])
+                if group not in groups:raise ValueError("Variant lost its experiment holdout group")
+                related.append(groups)
+            if any(groups!=related[0] for groups in related):
+                raise ValueError("Comparison variants do not share closed source ancestry")
+        failed_meta=self.knowledge["failed_attempt_custody"]
+        failed_raw=checked_bytes(self.root,{"path":failed_meta["detailed_record_path"],"sha256":failed_meta["detailed_record_sha256"]})
+        failed=json.loads(failed_raw)
+        failed_files=[f for attempt in failed["attempts"] for f in attempt["files"]]
+        missing=[f for f in failed_files if f["status"]=="UNRECOVERED_HASH_RECORD_ONLY"]
+        if len(failed_files)!=182 or len(missing)!=28 or failed.get("recovered_file_occurrences")!=154:
+            raise ValueError("Historical failed-bundle recovery gaps were changed")
+        if len(self.knowledge["negative_interventions"])!=5 or any(n.get("accepted_positive_example") is not False for n in self.knowledge["negative_interventions"]):
+            raise ValueError("Negative interventions cannot become accepted positive examples")
         return {"status":"PASS","scope":"Exact collection fragment custody/roster; does not qualify executable runtime",
             "files":len(paths),"bytes":total,"logical_aliases":len(ids),"source_maps":len(corpus),
             "unique_setup_payloads":len({m['setup']['sha256'] for m in self.maps}),"owner_accepted":0,

@@ -49,7 +49,7 @@ def source_indexes(root):
         path = root / name
         if not path.is_file():
             raise ValueError("Source inventory missing: " + name)
-        data = json.loads(path.read_text())
+        data = json.loads(path.read_text(encoding="utf-8"))
         if name.startswith("runtime/") and data["engine_head"] != ENGINE:
             raise ValueError("Staged engine differs from selected accepted source")
         for row in data["files"]:

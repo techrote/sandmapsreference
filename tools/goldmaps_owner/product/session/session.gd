@@ -48,6 +48,16 @@ func _safe_id(id: String, maximum: int = 100) -> bool:
 
 func _start() -> void:
 	auto_accept_quit = false
+	# The accepted engine requests a 1920x1080 window. This opt-in session
+	# fits only its own native window; ordinary canvas stretch, camera and
+	# Workbench controls retain the accepted project settings and semantics.
+	if DisplayServer.get_name() != "headless":
+		var usable := DisplayServer.screen_get_usable_rect(root.current_screen)
+		if usable.size.x > 0 and usable.size.y > 0:
+			var fitting := Vector2i(mini(root.size.x, maxi(960, usable.size.x-32)), mini(root.size.y, maxi(600, usable.size.y-64)))
+			root.min_size = Vector2i(mini(root.min_size.x, fitting.x), mini(root.min_size.y, fitting.y))
+			root.size = fitting
+			root.position = usable.position + (usable.size-fitting)/2
 	package_root = OS.get_environment("GOLDMAPS_PACKAGE_ROOT").simplify_path()
 	var args := _arguments()
 	if args.has("error"): _refuse(args.error); return
@@ -70,6 +80,8 @@ func _start() -> void:
 	var roster := IO.bounded_json(package_root.path_join(IO.COLLECTION))
 	var qualification := IO.bounded_json(package_root.path_join(IO.QUALIFICATION))
 	if roster.has("error") or qualification.has("error"): _refuse("Collection or native qualification is missing."); return
+	var collection_problem := IO.collection_error(roster.data)
+	if not collection_problem.is_empty(): _refuse(collection_problem); return
 	row = IO.find_map(roster.data, map_id)
 	if row.is_empty(): _refuse("Logical map identity was not found."); return
 	var reason := IO.playable_reason(row, qualification.data, str(manifest.engine_head))
@@ -169,9 +181,31 @@ func _start() -> void:
 		var tick: int = int(host.latest_snapshot.tick_index)
 		if not ui.step_once() or not await _wait(func() -> bool: return int(host.latest_snapshot.tick_index) > tick, 30000): _refuse("QA smoke native progression failed."); return
 		if not save_copy(save_name): _refuse("QA smoke ordinary authored save failed."); return
-		report["status"] = "QA_SAVED"
+		var epoch: int = host._physical_epoch
+		controls.confirm_close()
+		await process_frame
+		var close_visible: bool = controls.close_dialog.visible
+		controls.close_dialog.get_cancel_button().pressed.emit()
+		await process_frame
+		var cancel_keeps_world: bool = not controls.close_dialog.visible and not closing and loaded and host._physical_epoch == epoch
+		var preserved_hash := FileAccess.get_sha256(Setup._path(save_name))
+		var overwrite_refused := not save_copy(save_name)
+		var saved_bytes_preserved := FileAccess.get_sha256(Setup._path(save_name)) == preserved_hash
+		controls.notice_dialog.get_ok_button().pressed.emit()
+		report["qa_lifecycle"] = {"scope":"Programmatic execution of actual UI button handlers; no physical input or graphical acceptance inferred", "close_warning_visible":close_visible, "cancel_preserved_same_world":cancel_keeps_world, "existing_name_refused":overwrite_refused, "saved_copy_sha256_unchanged":saved_bytes_preserved}
+		if not close_visible or not cancel_keeps_world or not overwrite_refused or not saved_bytes_preserved:
+			_refuse("QA close/cancel/saved-copy protection failed."); return
+		controls.confirm_close()
+		controls.save_return_button.pressed.emit()
+		await process_frame
+		report.qa_lifecycle["save_and_return_dialog_visible"] = controls.save_dialog.visible
+		if not controls.save_dialog.visible: _refuse("QA Save a copy and return did not open its name dialog."); return
+		controls.save_field.text = "qa-return-" + Crypto.new().generate_random_bytes(8).hex_encode()
+		report.qa_lifecycle["return_copy_label"] = controls.save_field.text
+		report["qa_completed"] = true
 		_write_report()
-		quit(0)
+		controls.save_dialog.get_ok_button().pressed.emit()
+		if not closing: _refuse("QA Save a copy and return did not complete through the ordinary save boundary.")
 
 func _native_cell(x: int, y: int) -> int:
 	if host.image == null: return -1
@@ -256,7 +290,7 @@ func capture_screenshot() -> void:
 	await RenderingServer.frame_post_draw
 	var image := root.get_texture().get_image()
 	if image.save_png(destination) != OK: controls.notice("Could not save the screenshot."); return
-	report.screenshots.append({"path":destination, "sha256":FileAccess.get_sha256(destination), "kind":"actual rendered Workbench viewport", "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "physical_owner_acceptance":"not_inferred", "captured_at":Time.get_datetime_string_from_system(true) + "Z"})
+	report.screenshots.append({"path":destination, "sha256":FileAccess.get_sha256(destination), "kind":"actual rendered Workbench viewport", "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "window_size":[root.size.x,root.size.y], "window_position":[root.position.x,root.position.y], "viewport_size":[int(root.get_visible_rect().size.x),int(root.get_visible_rect().size.y)], "capture_size":[image.get_width(),image.get_height()], "physical_owner_acceptance":"not_inferred", "captured_at":Time.get_datetime_string_from_system(true) + "Z"})
 	_write_report()
 	if OS.get_environment("GOLDMAPS_QA_CAPTURE") != "1": controls.notice("Screenshot saved to userdata/reviews/screenshots/ and linked to this exact session.")
 
@@ -269,8 +303,10 @@ func request_close() -> void:
 
 func finish_close() -> void:
 	if closing: return
+	if loaded and ui != null: _record_saved(str(ui._name.text))
 	closing = true
-	report["status"] = "RETURNED" if loaded else "CANCELLED_BEFORE_LOAD"
+	report["status"] = "QA_SAVED" if report.get("qa_completed",false) else ("RETURNED" if loaded else "CANCELLED_BEFORE_LOAD")
+	if report.get("qa_completed",false): report["returned_via_close_confirmation"] = true
 	report["closed_at"] = Time.get_datetime_string_from_system(true) + "Z"
 	if not original_path.is_empty(): report["source_sha256_on_close"] = FileAccess.get_sha256(original_path)
 	_write_report()

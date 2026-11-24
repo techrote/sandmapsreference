@@ -1,0 +1,36 @@
+{
+  "schema": "goldmaps.owner-final-source-fragment-validation.v1",
+  "status": "PASS_SOURCE_STATIC",
+  "source_commit": "8267b082ead4f583d0a50fa65c7945c8acde18bb",
+  "scope": "Final source-fragment assembly, exact source planes, lineage/negative-evidence/qualification-authority references. No native or graphical execution claim. Final CI uses its own published generator commit and consequently different metadata manifest bytes.",
+  "manifest_sha256": "f51f8bdb47f1588a490a86677300bba56ec66f66cf804eaa385580455f29d9f1",
+  "validation": {
+    "status": "PASS",
+    "scope": "Exact collection fragment custody/roster; does not qualify executable runtime",
+    "files": 267,
+    "bytes": 64102781,
+    "logical_aliases": 81,
+    "source_maps": 70,
+    "unique_setup_payloads": 72,
+    "owner_accepted": 0,
+    "external_overlay_present": false
+  },
+  "all72_setup_payloads_unchanged_from_sealed_campaign_input": true,
+  "required_and_optional_native_inputs_unchanged": true,
+  "stale_fresh_count_absent": true,
+  "all81_map_overlay_references_match_setup_hash": true,
+  "collection_and_export_qualification_authority_equal": true,
+  "exact_generator_source_verified": {
+    "commit": "8267b082ead4f583d0a50fa65c7945c8acde18bb",
+    "commit_bytes_verified": true,
+    "function": "make_183",
+    "kind": "deterministic_generator_source",
+    "path": "tools/goldmaps_owner/corpus/build_collection.py",
+    "repo": "techrote/sandmapsreference",
+    "sha256": "35dbbc213f653560ead085f929d01de515a777130212f8a10f5bdda03108b6e1"
+  },
+  "frozen_failed_custody_sha256": "aac1376d3efe8ba18868da29f5457e21c0cb3e5e8317e40f0411185be8aa8075",
+  "negative_interventions": 5,
+  "astra_lineage_cases": 8,
+  "source_commit_kind": "Local specialist worktree validation commit; not a published artifact/download authority. Final CI records the integrated published source."
+}

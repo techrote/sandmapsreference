@@ -31,6 +31,13 @@ views retain their aliases: for example, #207 is both a Gold nominee and a repai
 portrait; the three no-change controls retain separate original/candidate roles
 while sharing exact bytes.
 
+`comparison-custody-review.v1.json` verifies all eight arms, 18 logical trial
+aliases, 56 archived site images and exact source/coordinate identities against
+the final decision packet. Independent full-plane replay reproduces the frozen
+34,353 changed-cell total and the three exact unchanged controls. This is a
+delivery custody check, not another artistic assessment. The shipped
+`collection/COMPARISON-GUIDE.md` keeps the B3, D1 and D2 owner questions prominent.
+
 ## Build and validate
 
 From this delivery repository checkout:
@@ -43,6 +50,12 @@ python tools/goldmaps_owner/corpus/query.py --package NEW_FRAGMENT_DIRECTORY val
 The builder verifies the frozen corpus lock, retrieves immutable SHA-pinned
 source bytes, checks both SHA-256 and recorded Git blob identities, and independently
 replays every full material plane. It rejects a populated output directory.
+Final publication supplies `--delivery-source-head EXACT_DELIVERY_SOURCE_COMMIT`.
+The builder checks that commit's generator file against its own bytes before
+recording the generated #183 descendant's source. The record distinguishes the
+tracked generator path/function from the generated Setup's artifact path and
+SHA-256; it does not pretend the generated map was an original tracked source.
+
 Exact Setup payloads are deduplicated by SHA-256. Source overviews remain full
 resolution; cropped evidence is copied unchanged. The build tool is not launched
 by the owner-facing browser. After extraction all reference use is offline.
@@ -51,6 +64,14 @@ by the owner-facing browser. After extraction all reference use is offline.
 hashes, sizes and origins. It excludes its own bytes. The final kit's broader
 manifest must cover the runtime, browser, fragment manifest and fresh qualification
 overlay. Fragment validation never asserts executable-runtime integrity.
+
+The assembly manifest does not carry a fresh-qualified count that could become
+stale after execution. `authoritative_delivery_qualification` and every map's
+`native.delivery_evidence` point to the external current-engine overlay keyed by
+exact Setup SHA-256. The original `native.eligibility` is explicitly limited to
+assembly scheduling and known historical refusals; consumers must resolve the
+overlay before deciding actual delivered availability. The architectural export
+preserves the same lookup boundary.
 
 `source-static-validation.v1.json` records successful independent stdlib replay
 of all 72 unique Setup planes against the locked material digests. This is
@@ -86,6 +107,13 @@ native-default integration candidate, outside Gold25, with adoption pending even
 if its own runtime qualification succeeds. Independent assurance must examine the
 field diff and actual admission. The original stays unavailable.
 
+The shipped `collection/POLICY-DESCENDANTS.md` and
+`collection/policy-field-audit.v1.json` explain every replacement wire field,
+all eleven material/family/variant assignments and the unchanged authored fields.
+The audit independently confirms that the decoder, generated catalogue and
+wire-contract document have identical bytes at both engine authorities. This
+static explanation never substitutes for the descendants' own native receipts.
+
 ## Architectural consumer handoff
 
 `corpus-export/knowledge.v1.json` retains all 70 source identities, metadata,
@@ -94,6 +122,19 @@ semantic module hints remain explicitly inferred and lack invented native
 geometry, attachment sockets or edit permissions. Evidence crop bounds are not
 feature masks. The frozen 154/182 recovered and 28 hash-only failed-bundle
 occurrences remain separate.
+
+The complete frozen `failed-attempt-custody.v1.json` is also included unchanged
+in the export, so every hash-only gap is individually identifiable offline.
+It describes historical recovery and does not claim that all 154 recovered file
+occurrences are bundled in the owner kit. Its missing geometry remains missing.
+
+An independent product-lane review identified a future holdout gap in the first
+export: Astra-derived sources were not connected to their original/reference
+ancestry. The additive export now records all eight exact-source experiment
+relationships and conservatively closes group membership across donors,
+portraits, repairs and Astra variants. It preserves all previous group labels
+and the unchanged frozen corpus, and propagates the same exclusions to module
+hints. This is source-lineage evidence, not a new scientific preference.
 
 Live read-only consumer inspection found that #720 now points to completed
 M3–M5 successor #770. Its tested application source

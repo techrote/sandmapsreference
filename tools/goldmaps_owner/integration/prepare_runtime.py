@@ -124,7 +124,7 @@ def main() -> int:
     with ThreadPoolExecutor(max_workers=4) as pool:
         list(pool.map(lambda item: fetch(*item), jobs))
 
-    historical = json.loads((ROOT / "docs/corpus/goldmaps-recovery-001/snapshot/owner-package-files.v2.json").read_text())
+    historical = json.loads((ROOT / "docs/corpus/goldmaps-recovery-001/snapshot/owner-package-files.v2.json").read_text(encoding="utf-8"))
     wanted = {"Godot_v4.7-stable_win64.exe", "Godot_v4.7-stable_win64_console.exe", "vcruntime140.dll",
               "Godot-COPYRIGHT.txt", "Godot-LICENSE.txt", "Microsoft-Visual-C-Runtime-LICENSE.docx", "Microsoft-Visual-Studio-2022-LICENSE.docx"}
     if "windows" in selected:

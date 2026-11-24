@@ -15,6 +15,7 @@ import hashlib
 import json
 import re
 import shutil
+import subprocess
 import sys
 import urllib.parse
 import urllib.request
@@ -150,7 +151,38 @@ def historical_receipts() -> dict:
     return result
 
 
-def make_183(parent: dict, original: bytes, policy_source: bytes) -> tuple[bytes, dict]:
+def delivery_qualification_reference(engine_head: str, setup_sha256: str | None = None) -> dict:
+    reference={"path":"collection/delivery-qualification.v1.json","schema":"goldmaps.owner-qualification.v1",
+        "engine_head":engine_head,"keyed_by":"setups.<exact Setup SHA-256>",
+        "authority":"Fresh delivery execution only; authoritative after qualification, independent of assembly scheduling and frozen scientific evidence",
+        "resolution":"Require matching engine_head and exact Setup SHA-256. Read the keyed status and receipt; absent or mismatched evidence leaves the Setup unavailable. QUALIFIED_HEADLESS does not imply graphical or owner acceptance."}
+    if setup_sha256 is not None:
+        reference["setup_sha256"]=setup_sha256
+        reference["key_path"]=["setups",setup_sha256]
+    return reference
+
+
+def verified_generator_source(head: str | None) -> dict:
+    """Pin the generator, not a fictitious tracked file for generated Setup bytes."""
+    path = Path(__file__).resolve().relative_to(ROOT).as_posix()
+    raw = Path(__file__).read_bytes()
+    source = {"repo": REPOSITORY, "commit": head, "path": path, "sha256": digest(raw),
+              "function": "make_183", "kind": "deterministic_generator_source",
+              "commit_bytes_verified": False}
+    if head is not None:
+        if not re.fullmatch(r"[a-f0-9]{40}", head):
+            raise ValueError("Exact delivery generator commit required")
+        pinned = subprocess.check_output(["git", "-C", str(ROOT), "show", f"{head}:{path}"])
+        if pinned != raw:
+            raise ValueError("Delivery generator source does not match the requested commit")
+        source["commit_bytes_verified"] = True
+        source["url"] = f"https://github.com/{REPOSITORY}/blob/{head}/{path}"
+    else:
+        source["scope"] = "Unpinned local preparation only; final publication must supply --delivery-source-head"
+    return source
+
+
+def make_183(parent: dict, original: bytes, policy_source: bytes, generator_source: dict | None = None) -> tuple[bytes, dict]:
     value = json.loads(original)
     policy = json.loads(policy_source)["liquid_policy"]
     if value["liquid_policy"] != [0]*48:
@@ -179,11 +211,13 @@ def make_183(parent: dict, original: bytes, policy_source: bytes) -> tuple[bytes
         "semantic_equivalence_to_invalid_source": "UNPROVABLE: the refused zero envelope encodes no accepted policy",
         "classification": "Separate opt-in native-default integration candidate; outside Gold25",
         "owner_acceptance": "PENDING", "adoption_eligibility": "OWNER_DECISION_REQUIRED",
-        "native_qualification": "PENDING_NEW_DELIVERY_QUALIFICATION", "historical_original_preserved": True}
+        "native_qualification": "PENDING_NEW_DELIVERY_QUALIFICATION", "historical_original_preserved": True,
+        "generator_source": generator_source}
     return raw, record
 
 
-def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -> dict:
+def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False, delivery_source_head: str | None = None) -> dict:
+    generator_source = verified_generator_source(delivery_source_head)
     if out.exists() and any(out.iterdir()):
         raise ValueError("Refuse to overwrite a populated collection fragment")
     out.mkdir(parents=True, exist_ok=True)
@@ -225,7 +259,7 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
     derivation155 = json_load(descendant155_path.with_name("derivation.v1.json"))
     if digest(descendant155) != derivation155["derived_setup_sha256"]:
         raise ValueError("Recovered #155 descendant identity changed")
-    raw183, derivation183 = make_183(sources[183], acquired[sources[183]["source"]["sha256"]], descendant155)
+    raw183, derivation183 = make_183(sources[183], acquired[sources[183]["source"]["sha256"]], descendant155, generator_source)
     descendants = {155: (descendant155, derivation155), 183: (raw183, derivation183)}
     derived_paths = {}
     for pr, (raw, derivation) in descendants.items():
@@ -233,6 +267,8 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
             "parent": source_descriptor(sources[pr]["source"]), "derivation": f"collection/derivations/pr{pr}.json"}
         if pr==155:
             origin.update({"repo": REPOSITORY, "commit": ARCHIVE, "path": descendant155_path.relative_to(ROOT).as_posix(), "git_blob_sha1": git_blob(raw)})
+        else:
+            origin["generator_source"] = generator_source
         name = copied_file(out, f"collection/setups/{digest(raw)}.json", raw, origin, files)
         setup, grid, report = decode_setup(out/name)
         parent = setups[pr]
@@ -314,7 +350,9 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
             "native":{"eligibility":"refused" if refusal else "pending" if required or qualify_all else "reference_only",
                 "status":"REFUSED_INVALID_SOURCE" if refusal else "PENDING_DELIVERY_QUALIFICATION" if required or qualify_all else "NOT_IN_REQUIRED_PLAYABLE_MATRIX",
                 "expected_policy":"refuse" if refusal else "admit", "refusal_reason":"malformed_policy / bad magic" if refusal else None,
-                "historical":historical.get(plane["setup_sha256"]),"delivery_evidence":None,
+                "eligibility_scope":"Source-assembly scheduling and known historical refusal only; actual current availability is resolved from delivery_evidence",
+                "historical":historical.get(plane["setup_sha256"]),
+                "delivery_evidence":delivery_qualification_reference(engine_head,plane["setup_sha256"]),
                 "scope":"Historical native evidence and fresh delivery qualification are independent fields."},
             "graphical":{"status":"OWNER_PHYSICAL_PENDING","preview_is_gpu_capture":False},
             "owner":{"status":"pending","classification":None,"accepted":False},"owner_accepted":False,
@@ -329,6 +367,10 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
             entry["derived_source"] = {"repo":REPOSITORY,"commit":ARCHIVE if pr==155 else None,
                 "path":descendant155_path.relative_to(ROOT).as_posix() if pr==155 else "tools/goldmaps_owner/corpus/build_collection.py:make_183",
                 "sha256":plane["setup_sha256"],"kind":"recovered_original_descendant" if pr==155 else "deterministic_policy_only_derivation"}
+            if pr==183:
+                entry["derived_source"].update({"commit":delivery_source_head,"path":generator_source["path"],
+                    "function":"make_183","generator_source":generator_source,
+                    "artifact_path":setup_path,"path_role":"generator source; generated Setup is identified separately by artifact path and SHA-256"})
             entry["native"]["adoption_eligibility"] = "OWNER_DECISION_REQUIRED; invalid original policy equivalence is not asserted"
         if pr in repair_parents and not derived:
             p = repair_parents[pr]
@@ -355,6 +397,7 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
     collection = {"schema":"goldmaps.owner-collection.v1","title":"GOLDMAPS — Owner Collection",
         "authority":{"repository":REPOSITORY,"archival_commit":ARCHIVE,"scientific_evidence_commit":EVIDENCE,
             "frozen_scientific_engine":FROZEN_ENGINE,"delivery_engine":engine_head,"owner_accepted":0,
+            "delivery_generator_source":generator_source,
             "disposition":"Draft/HOLD","classification_authority":"Explicit owner-local choices only"},
         "collections":[{"id":"gold25","title":"Gold25 nominees"},{"id":"portraits","title":"Repaired portraits"},
             {"id":"astra","title":"Astra comparisons"},{"id":"corpus","title":"All 70 source maps"},{"id":"policy","title":"Policy-only variants"}],
@@ -363,9 +406,10 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
             "unique_bundled_setups":len({r['setup']['sha256'] for r in records}),
             "qualification_target_aliases":len(targets),"qualification_target_unique_setups":len({r['setup_sha256'] for r in targets}),
             "optional_target_aliases":len(optional_targets),"optional_target_unique_setups":28,
-            "fresh_qualified_playable_setups":0,"owner_accepted":0},
+            "owner_accepted":0},
         "decision_guide":"collection/DECISION-GUIDE.md",
         "qualification_overlay":"collection/delivery-qualification.v1.json",
+        "authoritative_delivery_qualification":delivery_qualification_reference(engine_head),
         "comparison_cards":"collection/comparisons.v1.json",
         "notes":["Logical aliases share payload only by exact Setup SHA-256, never by visual resemblance.",
             "All source files are immutable inputs. Saves and decisions belong in the isolated evaluation workspace.",
@@ -396,6 +440,9 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
     write_json(out/"collection/comparisons.v1.json",{"schema":"goldmaps.owner-comparisons.v1","scientific_evidence_commit":EVIDENCE,"cards":comparisons})
     knowledge=build_export(corpus,records,canonical,previews,acquired,out,files,card_identity)
     shutil.copyfile(Path(__file__).with_name("DECISION-GUIDE.md"),out/"collection/DECISION-GUIDE.md")
+    for name in ("POLICY-DESCENDANTS.md","policy-field-audit.v1.json"):
+        shutil.copyfile(Path(__file__).with_name(name),out/"collection"/name)
+    shutil.copyfile(Path(__file__).with_name("COMPARISON-GUIDE.md"),out/"collection/COMPARISON-GUIDE.md")
     shutil.copyfile(Path(__file__).with_name("BATCH-LAB-HANDOFF.md"),out/"corpus-export/BATCH-LAB-HANDOFF.md")
     (out/"corpus-export/tools").mkdir(parents=True,exist_ok=True)
     shutil.copyfile(Path(__file__).with_name("query.py"),out/"corpus-export/tools/query.py")
@@ -412,13 +459,59 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
     return collection
 
 
-def build_export(corpus, records, canonical, previews, acquired, out, files, card_identity):
-    maps_by_pr={r["source"]["pr"]:r for r in records if "corpus" in r["collections"]}
-    family_groups={}
+def source_lineage(corpus: dict) -> tuple[dict, list]:
+    """Conservative ancestry closure for future holdouts, not a new verdict."""
+    maps_by_pr={m["pr"]:m for m in corpus["maps"]}
+    parent={pr:pr for pr in maps_by_pr}
+    groups={pr:set() for pr in maps_by_pr}
+    def find(pr):
+        while parent[pr]!=pr:
+            parent[pr]=parent[parent[pr]]; pr=parent[pr]
+        return pr
+    def join(members):
+        members=list(members)
+        for pr in members[1:]: parent[find(pr)]=find(members[0])
     for f in corpus["comparative_families"]:
         group=f"portrait-donor-{f['donor_pr']}"
+        members=[]
         for key in ("donor_pr","portrait_pr","repair_pr"):
-            if f[key]:family_groups.setdefault(f[key],[]).append(group)
+            if f[key]: groups[f[key]].add(group); members.append(f[key])
+        join(members)
+    for pr in groups:
+        if not groups[pr]: groups[pr].add(f"source-pr-{pr}")
+    key_path=FROZEN/"science/comparisons/answer-key.v1.json"
+    key=json_load(key_path)
+    evidence={"repo":REPOSITORY,"commit":ARCHIVE,"path":key_path.relative_to(ROOT).as_posix(),
+        "sha256":digest(key_path.read_bytes()),"scientific_evidence_commit":EVIDENCE}
+    relationships=[]
+    for case in key["cases"]:
+        members=[]; variants=[]; group="astra-case-"+case["arm"].lower()
+        for variant in case["variants"]:
+            pr=variant["pr"]; source=maps_by_pr[pr]
+            if source["head"]!=variant["head"]: raise ValueError("Astra lineage source differs from frozen corpus")
+            members.append(pr); groups[pr].add(group)
+            variants.append({"role":variant["role"],"collection_id":f"trial-{case['arm']}-{variant['role']}",
+                "source":source_descriptor(source["source"]),"material_plane_sha256":source["material_plane"]["plane_sha256"]})
+        join(members)
+        relationships.append({"id":"astra-lineage-"+case["arm"].lower(),"kind":"frozen_experiment_lineage",
+            "arm":case["arm"],"shared_holdout_group":group,"variants":variants,"evidence":evidence,
+            "frozen_result":VERDICTS[case["arm"]][0],"owner_accepted":False,
+            "interpretation":"Comparison roles and source ancestry only; no new artistic assessment, acceptance or native equivalence is inferred."})
+    component_groups={}
+    for pr,values in groups.items(): component_groups.setdefault(find(pr),set()).update(values)
+    family_groups={pr:sorted(component_groups[find(pr)]) for pr in groups}
+    return family_groups,relationships
+
+
+def build_export(corpus, records, canonical, previews, acquired, out, files, card_identity):
+    maps_by_pr={r["source"]["pr"]:r for r in records if "corpus" in r["collections"]}
+    family_groups,astra_relationships=source_lineage(corpus)
+    failed_path=FROZEN/"custody/failed-reconstruction/failed-attempt-custody.v1.json"
+    failed=json_load(failed_path)
+    failed_occurrences=[f for attempt in failed["attempts"] for f in attempt["files"]]
+    failed_missing=[f for f in failed_occurrences if f["status"]=="UNRECOVERED_HASH_RECORD_ONLY"]
+    if len(failed_occurrences)!=182 or len(failed_missing)!=28 or failed["recovered_file_occurrences"]!=154:
+        raise ValueError("Frozen failed-attempt recovery population changed")
     features=[]
     for f in corpus["features"]:
         item=copy.deepcopy(f); image=f["image"]
@@ -432,12 +525,14 @@ def build_export(corpus, records, canonical, previews, acquired, out, files, car
         maps.append({"id":m["id"],"collection_id":canonical[m["pr"]],"source":r["source"],"title":r["title"],
             "setup":r["setup"],"material_plane":m["material_plane"],"orientation":m["aspect_ratio"],
             "architectural_family":r["family"],"topology":r["topology"],"tags":r["tags"],
-            "visual_family_groups":family_groups.get(m["pr"],[f"source-pr-{m['pr']}"]),
+            "visual_family_groups":family_groups[m["pr"]],
+            "experiment_lineage_ids":[v["id"] for v in astra_relationships if any(s["source"]["pr"]==m["pr"] for s in v["variants"])],
             "source_authored_metadata":m.get("metadata"),"annotation_authority":"source-authored; not proven native function or inferred sockets",
             "protected_feature_ids":m["atlas_feature_ids"],"native":r["native"],"owner_accepted":False,
             "source_static_qualification":m["source_static_qualification"],"rights":r["rights"],"preview":previews[m["pr"]]})
     modules=[{"id":"hint-"+f["feature_id"],"source_feature_id":f["feature_id"],"source_state_id":f["state_id"],
         "source_pr":f["child_pr"],"source_commit":f["child_head"],"kind":"inferred_semantic_module_candidate",
+        "visual_family_groups":family_groups[f["child_pr"]],
         "observed":f["observed"],"evidence_window_xywh":f["crop_rect_xywh"],"verified_feature_bbox_xyxy":f["feature_bbox_xyxy"],
         "attachments":[],"attachment_status":"UNKNOWN; requires actual native geometry and authored connector contract",
         "clearance_hints":f["do_not_fill"],"must_preserve":f["must_preserve"],"geometry_included":False,
@@ -452,17 +547,29 @@ def build_export(corpus, records, canonical, previews, acquired, out, files, car
             "material_plane":"complete row-major uint8 source-static identity; consumer native modules use little-endian uint16",
             "evidence_windows_are_edit_masks":False,"unknown_feature_bbox":None},
         "maps":maps,"protected_features":features,"immutable_feature_states":corpus["feature_history"],
-        "comparative_families":corpus["comparative_families"],"relationships":corpus["relationships"],
+        "comparative_families":corpus["comparative_families"],"relationships":copy.deepcopy(corpus["relationships"])+astra_relationships,
+        "lineage_scope":{"frozen_relationships_preserved":True,"additive_experiment_cases":8,
+            "method":"Conservative connected ancestry closure over frozen donor/portrait/repair and Astra original/candidate/reference relationships; all previous group labels retained",
+            "claim":"Holdout grouping is evidence of relationship, not a quality label, adoption decision or license"},
         "negative_interventions":corpus["negative_examples"],"module_candidates":modules,
         "failed_attempt_custody":{"recovered_file_occurrences":154,"recorded_file_occurrences":182,"hash_only_missing_occurrences":28,
-            "meaning":"Missing bytes remain missing; no reconstructed success is invented"},
+            "meaning":"Missing bytes remain missing; no reconstructed success is invented",
+            "detailed_record_path":"corpus-export/frozen/failed-attempt-custody.v1.json",
+            "detailed_record_sha256":digest(failed_path.read_bytes()),
+            "source":{"repo":REPOSITORY,"commit":ARCHIVE,"path":failed_path.relative_to(ROOT).as_posix()},
+            "failed_setups_recovered":failed["failed_setup_bytes_recovered"],
+            "failed_setups_unavailable":failed["failed_setup_bytes_unavailable"],
+            "limits":failed["limits"],
+            "payload_scope":"This export bundles the unchanged detailed custody record, not all 154 recovered historical file occurrences. Recovery locations describe historical evidence sources; hash-only records are never bundled replacements."},
         "qualification_overlay":"collection/delivery-qualification.v1.json",
+        "authoritative_delivery_qualification":delivery_qualification_reference(records[0]["native"]["delivery_evidence"]["engine_head"]),
         "consumer_compatibility":{"consumer_repo":"techrote/cybersand","source_commit":CONSUMER,"pr":770,
             "cards_path":"corpus-export/batch-lab/architectural_design_cards.v1.json","cards_sha256":CARDS_SHA,
             "native_setup_import":"Ordinary Workbench admission; subsequent native-region harvest is a separate action",
             "native_module_import":"NOT_ADMITTED: whole maps, images and semantic candidates are not module programs"},
         "holdout_policy":{"preserve_visual_family_groups":True,"default_use":"reference browsing only",
             "consumer_sealed_families":["bioindustrial","civic","vessel_dock"],
+            "ancestry_exclusion":"Exclude a source if any visual_family_groups label intersects the held-out groups. Preserve closure across donors, portraits, repairs, and Astra derivatives/references.",
             "restriction":"Do not add this expanded corpus or negatives to a sealed evaluation population; consumer must explicitly preserve its exclusions before retrieval"},
         "counts":{"maps":70,"current_protected_features":27,"immutable_feature_states":76,"comparative_families":12,"negative_interventions":5,"owner_accepted":0},
         "safeguards":corpus["safeguards"]}
@@ -473,6 +580,7 @@ def build_export(corpus, records, canonical, previews, acquired, out, files, car
     local_frozen(out,"corpus-export/frozen/corpus.v1.lock.json",FROZEN/"corpus.v1.lock.json",files,"frozen_corpus_lock")
     local_frozen(out,"corpus-export/frozen/FINAL-DECISION-PACKET.md",FROZEN/"FINAL-DECISION-PACKET.md",files,"frozen_scientific_decision")
     local_frozen(out,"corpus-export/frozen/FINAL-DECISION-PACKET.json",FROZEN/"FINAL-DECISION-PACKET.json",files,"frozen_scientific_decision")
+    local_frozen(out,"corpus-export/frozen/failed-attempt-custody.v1.json",failed_path,files,"frozen_failed_attempt_custody_with_explicit_gaps")
     return knowledge
 
 
@@ -481,10 +589,11 @@ def main():
     parser.add_argument("--out",type=Path,required=True)
     parser.add_argument("--cache",type=Path,required=True)
     parser.add_argument("--engine-head",default=FROZEN_ENGINE)
+    parser.add_argument("--delivery-source-head",help="Exact committed generator source for final publication; its Git bytes must equal this script")
     parser.add_argument("--qualify-all",action="store_true",help="Explicitly target all corpus Setups; does not mark them qualified")
     args=parser.parse_args()
     if not re.fullmatch(r"[a-f0-9]{40}",args.engine_head):raise ValueError("Exact engine source commit required")
-    build(args.out,args.cache,args.engine_head,args.qualify_all)
+    build(args.out,args.cache,args.engine_head,args.qualify_all,args.delivery_source_head)
 
 
 if __name__=="__main__":main()

@@ -1,0 +1,74 @@
+{
+  "schema": "goldmaps.owner-product-cross-review.v1",
+  "reviewer": {
+    "role": "Specialist A corpus/identity lead reviewing Specialist B product implementation",
+    "identity": "AI specialist role within the same mission; not a separate human assessor",
+    "scope": "Independent product source review and actual archived preview inspection; not self-certification of the corpus implementation"
+  },
+  "status": "PASS_SOURCE_REVIEW_RENDERED_LAYOUT_PENDING",
+  "reviewed_product_checkout": "a8cf4a11a13c0d2190354aa69f9da0dc49f1de29",
+  "reviewed_files": {
+    "tools/goldmaps_owner/product/browser/browser.gd": "2df95debe2424e765c14d4d28cbbf12657295268afaabd6e038e000f76f9249c",
+    "tools/goldmaps_owner/product/package_io.gd": "5e2fa8ad2f6cab45c48d9018a2e5351ec2fb3438647fb0398fcdd663978d4ea9",
+    "tools/goldmaps_owner/product/session/session.gd": "83a32b2f672d993afa1032e07afb413bdf6f619d21ea99ef4f9034d9c8a38438",
+    "tools/goldmaps_owner/product/session/session_controls.gd": "7bc0c70dd5356f60b66a73246ec531d510cafe6ef4022726ef6547fffe2b0eab"
+  },
+  "findings": [
+    {
+      "id": "A-UI-01",
+      "finding": "Structured Art and source-static history, including final #125 specialist-supported nomination, were hidden by the initial detail renderer.",
+      "resolution": "Renderer now shows frozen Art recommendation, historical portrait Art/source-static review, material replay and historical native separately; #125 finalisation note remains explicit.",
+      "status": "RESOLVED_BY_SOURCE_REVIEW"
+    },
+    {
+      "id": "A-UI-02",
+      "finding": "Policy descendants displayed the original parent source without a parent qualifier or policy-intent limitation.",
+      "resolution": "Detail now labels original parent and separate descendant custody, preserves Setup digest, states invalid original intent is not proved equivalent, and identifies #183 outside Gold25.",
+      "status": "RESOLVED_BY_SOURCE_REVIEW"
+    },
+    {
+      "id": "A-UI-03",
+      "finding": "Frozen comparison sites and coordinate windows were bundled but inaccessible from comparison UI.",
+      "resolution": "Comparison view exposes named source site buttons, coordinates and full-resolution archived material images; gameplay remains explicitly independent sequential Worlds.",
+      "status": "RESOLVED_BY_SOURCE_REVIEW"
+    },
+    {
+      "id": "A-UI-04",
+      "finding": "Archived A/B/C crops could be misattributed because their randomized neutral labels were not translated for owner review.",
+      "resolution": "Exact card.variants mapping now appears above site links and inside the detailed image window; D1/D2 retain different randomized orders.",
+      "status": "RESOLVED_BY_SOURCE_REVIEW"
+    },
+    {
+      "id": "A-UI-05",
+      "finding": "Decision guide called Gold an original-only exemplar even though nominated #207 is a repaired portrait baseline.",
+      "resolution": "Guide now describes baseline exemplar nomination and explicitly permits an earlier repair as baseline; #207 keeps repaired portrait role and original parent.",
+      "status": "RESOLVED_BY_SOURCE_REVIEW"
+    }
+  ],
+  "preview_visual_inspection": {
+    "kind": "source-authored material-plane visualization; not GPU capture",
+    "observed_ids": {
+      "gold-125": "0b873404be26378198423afec8b817305fc37eccc6010e5aa376b9c9c36a9442",
+      "gold-155": "7aa890632197067d33058ee98ad70917ab9b03d4e65cd176457cc57c0467e03c",
+      "gold-207": "6442b1def63123aa187bd3952297bed03df57f4c8c665e51fa17da522a361d21"
+    },
+    "observations": [
+      "#125 and #155 retain full landscape side elevation and unequal void/support geometry.",
+      "#207 retains its tall 1024x2048 repaired portrait composition; no flattening or automatic rotation observed.",
+      "Fine narrow joints and open voids need the full-resolution view or named site crops; thumbnail alone cannot qualify artistic or route readability."
+    ],
+    "new_artistic_verdict": false
+  },
+  "positive_source_observations": [
+    "Current native availability is keyed to fresh Setup SHA and engine; historical PASS alone cannot enable a map.",
+    "Original #155/#183 refusal and separate descendant identity are retained.",
+    "All-corpus view has 70 canonical sources while logical scientific aliases remain distinct.",
+    "Review recording requires an explicit local choice and exports source/Setup/engine/date; no GitHub mutation.",
+    "Compare play opens another ordinary native World, with unsaved-work protection and no synchronized-world claim."
+  ],
+  "remaining_gates": [
+    "Actual hosted Windows browser render at normal desktop size/DPI and interaction remain to be inspected after the final source build.",
+    "Actual final ZIP/runtime custody and native qualification belong to Specialist C and lead; this source review does not replace their evidence.",
+    "Physical Windows/NVIDIA playfeel, full-route judgement and classification remain owner dependent."
+  ]
+}

@@ -13,7 +13,6 @@
   "counts": {
     "astra_comparison_aliases": 18,
     "corpus_maps": 70,
-    "fresh_qualified_playable_setups": 0,
     "gold_nominee_aliases": 25,
     "logical_entries": 81,
     "optional_target_aliases": 28,
@@ -2981,5 +2980,14 @@
       "variant_relationship": null,
       "required_delivery_roster": true
     }
-  ]
+  ],
+  "scope": "Source-assembly roster only; historical fragment inventory below is not a claim about final executed qualification.",
+  "authoritative_delivery_qualification": {
+    "path": "collection/delivery-qualification.v1.json",
+    "schema": "goldmaps.owner-qualification.v1",
+    "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "keyed_by": "setups.<exact Setup SHA-256>",
+    "authority": "Fresh delivery execution only; authoritative after qualification, independent of assembly scheduling and frozen scientific evidence",
+    "resolution": "Require matching engine_head and exact Setup SHA-256. Read the keyed status and receipt; absent or mismatched evidence leaves the Setup unavailable. QUALIFIED_HEADLESS does not imply graphical or owner acceptance."
+  }
 }

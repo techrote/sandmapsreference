@@ -33,8 +33,10 @@ the consolidated hosted campaign.
 
 ## Decisions and live gates
 
-- Preserve 51 historical logical aliases and their 42 unique Setups; extend the
-  read-only index to all 70 corpus identities without treating all as qualified.
+- Preserve the historical evaluator's 51 aliases/42 unique Setups as historical
+  scope. The new collection has 81 logical entries and 72 unique bundled Setups:
+  53 required aliases/44 unique inputs, plus 28 disjoint optional corpus inputs.
+  All 70 source identities are indexed. Bundling does not infer qualification.
 - Recover #155's exact existing policy descendant. Do not regenerate it.
 - Investigate #183 as a separate native-default-policy integration descendant.
   Invalid zero policy has no provable original semantics; do not assert policy
@@ -59,7 +61,21 @@ qualification evidence.
 
 ## Remaining gates
 
-Source-bound runtime acquisition; complete collection assembly; live ordinary
-Workbench admission and save/reopen; browser/refusal/isolation tests; hosted
-Windows launch and native campaign; final archive inspection; actual playable
-artifact publication; independent review; final owner decision packet.
+The accepted contemporary engine was refreshed again at 19:59 UTC and remained
+`00cdb02f103265b6dc5224c68283e9a0c8cb449f`. Source-bound Godot 4.7 and both native
+dependencies are acquired and verified; source inputs match the accepted engine.
+The corpus, comparison cards, policy audits and architectural export are built.
+Independent source replay verifies all 72 distinct material planes. The two
+original invalid policy sources remain explicit negative fixtures.
+
+The first concurrent local native attempt was interrupted by resource limits
+before receipts completed. Its logs are retained. A serial continuation is in
+progress; no interrupted case is promoted to a pass. Independent browser testing
+found and fixed an empty-search startup defect before Windows source freeze.
+
+Remaining gates are the complete serial Linux receipts, actual updated browser
+and lifecycle execution, consolidated hosted Windows campaign and displayed
+captures, final archive inspection, actual playable artifact publication and
+the final independent owner decision packet. The new workflow runs only for
+an explicit qualification request or its own workflow change; evidence-only
+updates do not silently claim another native campaign.

@@ -104,10 +104,14 @@ one another. Actual gameplay is sequential: close one World and open the next
 variant. Independently simulated Worlds are not presented as a synchronized
 state. Use the archived sites and authored spawns as reference points.
 
-Choose **Record decision** to save a status, optional classification, preferred
+Choose **Record my decision** to save a status, optional classification, preferred
 variant and playability/presentation notes. **Ctrl+S** opens the review action.
 Each entry starts pending and unclassified. Nothing becomes accepted because
 it has a Gold nomination or a native PASS.
+
+Use **Reviewed / classification recorded** for a completed review of any
+variant, including a Platinum, Pyrite, No-change or Other choice. Gold nominees
+also have explicit confirmed/declined statuses. Your selection remains local.
 
 | Frozen arm | Existing conclusion and your remaining question |
 | --- | --- |
@@ -154,6 +158,9 @@ the frozen research.
 - `payload-manifest.v1.json` and `payload-manifest.sha256`: exact immutable kit inventory.
 - `runtime/source-provenance.v1.json`: accepted engine source, runtime hashes and origins.
 - `collection/delivery-qualification.v1.json`: actual current per-Setup native eligibility.
+- `qualification/PER-VARIANT-MATRIX.md` and `per-variant-matrix.v1.json`: each logical map joined to its exact executed receipt.
+- `collection/COMPARISON-GUIDE.md`: the eight frozen comparison cards, site coordinates and remaining owner questions.
+- `collection/POLICY-DESCENDANTS.md`: the exact policy changes and preserved original refusals.
 - `qualification/`: shipped execution evidence, platform scope and remaining gates.
 - `corpus-export/`: read-only architectural knowledge, protected states, negative evidence and Batch Lab handoff.
 - `corpus-export/frozen/FINAL-DECISION-PACKET.md`: preserved scientific conclusions.

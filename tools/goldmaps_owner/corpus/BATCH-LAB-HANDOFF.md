@@ -13,6 +13,7 @@ that 70-map population and do not replace original negative evidence.
 | --- | --- |
 | `corpus-export/knowledge.v1.json` | Normalized source identities, exact Setup paths, material digests, authored spatial metadata, feature states, negatives and explicit limits. |
 | `corpus-export/frozen/corpus.v1.json` and lock | Unchanged archival corpus with its original integrity lock. |
+| `corpus-export/frozen/failed-attempt-custody.v1.json` | Unchanged per-file recovery states for all 182 failed-attempt occurrences, identifying the 28 hash-only gaps. |
 | `collection/setups/<sha256>.json` | Exact native Setup bytes deduplicated by byte identity. A bundled file alone is not native qualification. |
 | `corpus-export/crops/<sha256>.png` | Exact archived evidence crops with source and coordinate metadata. |
 | `corpus-export/batch-lab/architectural_design_cards.v1.json` | Unchanged 25-card consumer-compatible file from the M3–M5 successor; exact hash below. |
@@ -23,6 +24,17 @@ that 70-map population and do not replace original negative evidence.
 Frozen Goldmaps archival authority:
 `b9535405853a5cd16e4bba968ec7167222861c42`; scientific/native evidence authority:
 `40f196f792e4d9e19bbd57fdafd6a90420fadf32`.
+
+The immutable assembly manifest deliberately supplies no fresh playable count.
+Each map's `native.eligibility` describes assembly scheduling and known historical
+refusal, with that limited scope stated beside it. Resolve actual delivered
+availability through `native.delivery_evidence`: load the referenced
+`collection/delivery-qualification.v1.json`, require its exact engine identity,
+and look up `setups[setup.sha256]`. The top-level
+`authoritative_delivery_qualification` records the same contract. Missing or
+mismatched evidence means unavailable; `QUALIFIED_HEADLESS` still conveys no
+graphical or owner acceptance. Frozen scientific fields are never patched to
+represent this new delivery execution.
 
 The current read-only consumer contract was inspected at CyberSand
 `fe2395c7060dae736dc2e5dc8d1e4e050b2d2e52`, successor
@@ -88,7 +100,15 @@ preserve authority, limit context and maintain visual-family exclusions. It must
 not silently introduce the expanded source population into a sealed experiment.
 The existing consumer excludes `bioindustrial`, `civic` and `vessel_dock` in its
 registered family-transfer evaluation. Preserve both those exclusions and the
-corpus's donor/portrait/repair ancestry groups.
+corpus's donor/portrait/repair ancestry groups. The export also records all eight
+source-pinned Astra original/candidate/reference relationships. Its
+`visual_family_groups` use conservative connected ancestry closure: a candidate
+such as #214 shares the #177 donor/#186 portrait/#203 repair holdout ancestry,
+and #211 shares the #124 donor/#196 portrait/#208 repair ancestry. Existing
+group names remain present. A source must be excluded when **any** of its group
+labels intersects the held-out group set. Module hints inherit the same groups.
+These additive relationship annotations do not alter the frozen corpus file,
+its artistic verdicts or the existing consumer's 25-card compatibility file.
 
 ## Native module harvesting boundary
 
@@ -112,6 +132,15 @@ Original #155 and #183 refusals remain explicit. Policy-only candidates retain
 parents, field changes and runtime scope. Failed interventions retain their
 reasons and file identities: 154 of 182 failed-bundle occurrences are recovered;
 28 are hash-only. Missing bytes are not reconstructed success.
+
+The exact failed-attempt custody record is bundled offline. Its per-file
+`status` distinguishes recovered shared bytes, exact frozen-byte reconstruction
+and unrecovered hash-only records. Three failed Setup byte sequences had been
+recovered; the unique failed geometry of B1 attempt 1 and B3 attempt 1 remained
+unavailable. These are historical recovery locations, not a claim that all 154
+recovered occurrences are payload files in this owner kit. The five negative
+intervention records retain their failure reasons and remain explicitly
+`accepted_positive_example=false`.
 
 No map-specific license or individual human authorship is inferred from a shared
 publishing account. Exact repository/PR/commit attribution is included. This

@@ -2,7 +2,7 @@ extends Control
 
 const IO = preload("res://package_io.gd")
 const COLLECTION_NAMES := {"gold25":"Gold25 nominees", "portraits":"Repaired portraits", "astra":"Astra comparisons", "corpus":"All 70 sources", "policy":"Policy descendants", "all":"All variants"}
-const DECISIONS := ["Pending / not reviewed", "Gold nominee confirmed", "Gold nominee declined", "Needs review"]
+const DECISIONS := ["Pending / not reviewed", "Gold nominee confirmed", "Gold nominee declined", "Needs review", "Reviewed / classification recorded"]
 const CLASSES := ["Unclassified", "Gold", "Platinum", "Pyrite", "No-change", "Other"]
 const BG := Color("10151f")
 const SURFACE := Color("192230")
@@ -57,6 +57,19 @@ var review_notice: Label
 func _ready() -> void:
 	package_root = OS.get_environment("GOLDMAPS_PACKAGE_ROOT").simplify_path()
 	get_window().min_size = Vector2i(1000, 680)
+	var qa_viewport := OS.get_environment("GOLDMAPS_QA_VIEWPORT")
+	if OS.get_environment("GOLDMAPS_QA_CAPTURE") == "1" and qa_viewport in ["1280x720", "1380x880"]:
+		var dimensions := qa_viewport.split("x")
+		get_window().content_scale_size = Vector2i(int(dimensions[0]), int(dimensions[1]))
+		get_window().size = get_window().content_scale_size
+	elif DisplayServer.get_name() != "headless":
+		var usable := DisplayServer.screen_get_usable_rect(get_window().current_screen)
+		if usable.size.x > 0 and usable.size.y > 0:
+			var fitting := Vector2i(mini(1280, maxi(960, usable.size.x-32)), mini(720, maxi(600, usable.size.y-64)))
+			get_window().min_size = Vector2i(mini(1000, fitting.x), mini(680, fitting.y))
+			get_window().content_scale_size = fitting
+			get_window().size = fitting
+			get_window().position = usable.position + (usable.size-fitting)/2
 	get_tree().auto_accept_quit = false
 	get_window().close_requested.connect(_request_browser_close)
 	_build_ui()
@@ -225,6 +238,7 @@ func _build_ui() -> void:
 	guide_dialog.title = "Owner decision guide"
 	guide_dialog.dialog_text = "All classifications begin pending. Frozen research recommendations are evidence, not your acceptance.\n\nGold: a baseline architectural exemplar you choose to adopt; a nominated baseline may itself be an earlier repair.\nPlatinum: a derived intervention you judge demonstrably improves its baseline while preserving identity and topology.\nPyrite: a derived result you judge regressed or remains substandard; retain its baseline and record why.\nNo-change: a useful outcome when a strong source should remain untouched.\n\nB1/B2: positive uplift in the frozen assessment. B3: racing benefit inconclusive. C1–C3: exact unchanged controls. D1: assessor disagreement. D2: prior reference preferred overall.\n\nLocal choices never update GitHub. Hosted native PASS is separate from your Windows/NVIDIA graphical and flight-speed judgement."
 	decision_dialog.exclusive = true
+	guide_dialog.dialog_text += "\n\nFor a completed review of any variant, choose Reviewed / classification recorded and your explicit classification. Gold nominee confirmed/declined remains available for nomination decisions."
 	decision_dialog.close_requested.connect(_close_decision)
 	discard_review_dialog.title = "Keep or discard this review draft"
 	discard_review_dialog.dialog_text = "Your changes to this review have not been saved. Discard this draft? The previously saved decision stays unchanged."
@@ -254,7 +268,8 @@ func _start() -> void:
 	var loaded := IO.bounded_json(package_root.path_join(IO.COLLECTION))
 	if loaded.has("error"): _fail(loaded.error); return
 	collection = loaded.data
-	if not collection.get("maps") is Array: _fail("Collection has no map roster."); return
+	var collection_problem := IO.collection_error(collection)
+	if not collection_problem.is_empty(): _fail(collection_problem); return
 	var ids: Dictionary = {}
 	for row: Variant in collection.maps:
 		if not row is Dictionary or not _safe_id(str(row.get("id", ""))) or ids.has(str(row.id)):
@@ -266,7 +281,7 @@ func _start() -> void:
 	var review_path := package_root.path_join("userdata/reviews/decisions.json")
 	if FileAccess.file_exists(review_path):
 		loaded = IO.bounded_json(review_path)
-		if loaded.has("error") or loaded.get("data", {}).get("schema", "") != "goldmaps.owner-reviews.v1" or not loaded.get("data", {}).get("decisions") is Dictionary:
+		if loaded.has("error") or not IO.review_error(loaded.get("data", {})).is_empty():
 			_fail("The local review file is invalid. Preserve userdata/reviews/decisions.json and recover it before continuing; it was not overwritten."); return
 		reviews = loaded.data
 	var families: Array[String] = []
@@ -285,7 +300,7 @@ func _start() -> void:
 		var capture_path := package_root.path_join("userdata/qa/browser.png")
 		DirAccess.make_dir_recursive_absolute(capture_path.get_base_dir())
 		get_viewport().get_texture().get_image().save_png(capture_path)
-		var capture := {"schema":"goldmaps.browser-graphical.v1", "path":capture_path, "sha256":FileAccess.get_sha256(capture_path), "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "viewport":str(get_viewport_rect().size), "scope":"actual hosted rendered UI; physical owner GPU acceptance not inferred"}
+		var capture := {"schema":"goldmaps.browser-graphical.v1", "path":capture_path, "sha256":FileAccess.get_sha256(capture_path), "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "viewport":str(get_viewport_rect().size), "active_collection":active_collection, "visible_maps":filtered.size(), "selected_id":selected.get("id", ""), "engine_head":manifest.engine_head, "scope":"actual hosted rendered UI; physical owner GPU acceptance not inferred"}
 		IO.atomic_json(package_root.path_join("userdata/qa/browser-graphical.json"), capture)
 		print("GOLDMAPS_BROWSER_GRAPHICAL " + JSON.stringify(capture))
 		if OS.get_environment("GOLDMAPS_QA_MAP").is_empty():
@@ -327,7 +342,8 @@ func _refresh_list() -> void:
 	for row: Dictionary in collection.maps:
 		if active_collection != "all" and active_collection not in row.get("collections", []): continue
 		var searchable := (str(row.get("title", "")) + " " + str(row.id) + " " + _family(row) + " " + str(row.get("tags", [])) + " " + str(row.get("variant_role", "")) + " " + str(row.get("source", {}).get("pr", ""))).to_lower()
-		if not search.text.strip_edges().to_lower() in searchable: continue
+		var query := search.text.strip_edges().to_lower()
+		if not query.is_empty() and not query in searchable: continue
 		if orientation.selected > 0 and str(row.get("orientation", "")).to_lower() != orientation.get_item_text(orientation.selected).to_lower(): continue
 		var playable := IO.playable_reason(row, qualification, str(manifest.engine_head)).is_empty()
 		if eligibility.selected == 1 and not playable or eligibility.selected == 2 and playable: continue
@@ -369,6 +385,14 @@ func _texture(row: Dictionary, small: bool = false) -> Texture2D:
 	if small:
 		var scale_value := minf(210.0 / img.get_width(), 126.0 / img.get_height())
 		img.resize(maxi(1, int(img.get_width() * scale_value)), maxi(1, int(img.get_height() * scale_value)), Image.INTERPOLATE_NEAREST)
+		# ItemList's fixed icon rectangle may stretch a nonmatching texture.
+		# Pad the already aspect-preserved image; only this derived UI thumbnail
+		# gets a frame, while full previews and native geometry remain exact.
+		img.convert(Image.FORMAT_RGBA8)
+		var framed := Image.create(210, 126, false, Image.FORMAT_RGBA8)
+		framed.fill(BG)
+		framed.blit_rect(img, Rect2i(Vector2i.ZERO, img.get_size()), Vector2i((210-img.get_width())/2, (126-img.get_height())/2))
+		img = framed
 	var texture := ImageTexture.create_from_image(img)
 	if small: texture_cache[key] = texture
 	return texture
@@ -693,9 +717,18 @@ func _show_copies() -> void:
 			if parsed.has("error") or parsed.data.get("map_id", "") != selected.id: continue
 			for item: Variant in parsed.data.get("saved_copies", []):
 				if item is Dictionary: saved.append(item)
-	if saved.is_empty(): _label(col, "No evaluation copies have been recorded for this identity. Use Save evaluation copy in its Workbench window.")
+	var current: Dictionary = {}
+	var profile_prefix := package_root.path_join("userdata/").simplify_path().trim_suffix("/") + "/"
 	for copy: Dictionary in saved:
-		_button(col, "Open " + str(copy.get("label", "")), func() -> void:
+		var path := str(copy.get("path", "")).replace("\\", "/").simplify_path()
+		var label := str(copy.get("label", ""))
+		if not _safe_id(label) or not path.begins_with(profile_prefix) or not FileAccess.file_exists(path): continue
+		if FileAccess.get_sha256(path) != str(copy.get("sha256", "")): continue
+		current[label] = copy
+	if current.is_empty(): _label(col, "No current exact evaluation copies have been recorded for this identity. Use Save evaluation copy in its Workbench window. Historical receipt versions are retained, but only versions matching the current named file can reopen here.")
+	for label: String in current:
+		var copy: Dictionary = current[label]
+		_button(col, "Open " + label + " · " + str(copy.get("saved_at", "")), func() -> void:
 			copies_dialog.hide()
 			_open_selected(copy))
 	copies_dialog.popup_centered_clamped(Vector2i(660, 360), 0.9)
