@@ -237,7 +237,7 @@ def main():
     execute("assemble-product", [python, commands / "product/assemble_product.py", "--output", kit,
                                  "--engine-head", ENGINE, "--source-head", head], evidence, env, 180)
     if contact_request:
-        prepare_contact_followup(kit, contact_request, ROOT)
+        prepare_contact_followup(kit, contact_request, ROOT, head)
     initial = seal(kit, head)
     write_json(evidence / "initial-payload.json", verify_directory(kit, initial["payload_manifest_sha256"]))
     godot = kit / "Godot_v4.7-stable_win64_console.exe"
@@ -245,6 +245,8 @@ def main():
                                         "--frozen-repo", ROOT, "--out", evidence / "independent-corpus-audit.json"], evidence, env, 600)
     execute("payload-contracts", [python, commands / "qualification/test_payload_contract.py"], evidence, env, 180)
     execute("acquisition-contracts", [python, commands / "qualification/test_acquisition_contract.py"], evidence, env, 180)
+    execute("rendered-receipt-contracts", [python, commands / "qualification/test_rendered_receipt_contract.py"], evidence, env, 180)
+    execute("contact-followup-contracts", [python, commands / "qualification/test_contact_followup_contract.py"], evidence, env, 180)
     execute("runtime-package-boundary", [python, commands / "qualification/run_package_boundary_qa.py", "--package", kit,
                                          "--godot", godot, "--out", evidence / "boundary"], evidence, env, 180)
     io_env = profile_environment(kit / "userdata/io-contract")
@@ -252,6 +254,9 @@ def main():
                                             commands / "product/test_package_io.gd", "--", kit / "collection/collection.v1.json"],
             evidence, io_env, 180)
     execute("architectural-manifest", [python, commands / "corpus/query.py", "--package", kit, "validate"], evidence, env, 180)
+    if contact_request:
+        execute("contact-fragment-boundary", [python, HERE / "test_contact_manifest_extension.py", "--package", kit,
+                                            "--out", evidence / "contact-fragment-boundary.json"], evidence, env, 180)
     required, optional = evidence / "windows-required", evidence / "windows-optional"
     reuse_receipt = None
     if reuse_request:
@@ -297,6 +302,10 @@ def main():
     copy_receipts(evidence / "boundary", kit / "qualification/package-boundary")
     for name in ("independent-corpus-audit.json", "independent-corpus-audit.log", "payload-contracts.log", "acquisition-contracts.log",
                  "runtime-collection-boundary.log", "architectural-manifest.log"):
+        shutil.copyfile(evidence / name, kit / "qualification" / name)
+    if contact_request:
+        shutil.copyfile(evidence / "contact-fragment-boundary.json", kit / "qualification/contact-fragment-boundary.json")
+    for name in ("rendered-receipt-contracts.log", "contact-followup-contracts.log"):
         shutil.copyfile(evidence / name, kit / "qualification" / name)
     seal(kit, head)
     execute("product-and-launcher", [python, commands / "qualification/run_product_qa.py", "--package", kit, "--godot", godot,
@@ -364,6 +373,13 @@ def main():
     write_json(artifacts / "campaign.json", {**completion, "archive": final["archive"], "acquisition_manifest_sha256": sha(acquisition),
                                            "actual_final_extracted_launcher": "PASS", "evidence_directory": "separate workflow evidence artifact"})
     (artifacts / "DOWNLOAD-THIS-KIT.md").write_text("# GOLDMAPS owner evaluator\n\nExtract the named `CyberSand-GOLDMAPS-Owner-Evaluator-*.zip` inside this artifact, then double-click `Open GOLDMAPS.cmd`.\n\nThe JSON/log files beside it are receipts and reconstruction inputs, not the game. The inner ZIP is the actual playable Windows kit.\n", encoding="utf-8")
+    audit_arguments = [python, commands / "qualification/review_final_artifact.py", "--artifact-dir", artifacts,
+                       "--source-head", head, "--run-id", os.environ["GITHUB_RUN_ID"], "--source-repo", ROOT,
+                       "--out", artifacts / "independent-final-archive-review.v1.json"]
+    if reuse_request:
+        audit_arguments += ["--native-artifact-dir", args.reuse_native_artifact, "--native-source-head", reuse_request["source_head"],
+                            "--native-run-id", str(reuse_request["github_run_id"]), "--native-archive-sha256", reuse_request["archive_sha256"]]
+    execute("independent-final-archive-audit", audit_arguments, evidence, env, 600)
     print("GOLDMAPS_OWNER_DELIVERY_COMPLETE " + json.dumps({"archive": str(archive), **final["archive"]}), flush=True)
     return 0
 

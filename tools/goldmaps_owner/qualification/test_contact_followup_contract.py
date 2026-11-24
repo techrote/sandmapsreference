@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 
 from review_final_artifact import (CONTACT_INPUT, CONTACT_KIND, CONTACT_TARGETS, ENGINE, SCIENTIFIC,
-                                   digest, inspect_contact_followup)
+                                   digest, inspect_collection_fragment, inspect_contact_followup)
 
 
 def encoded(value):
@@ -135,6 +135,49 @@ class ContactFollowupContract(unittest.TestCase):
         self.refresh_summary()
         with self.assertRaisesRegex(ValueError, "actual native contact witness"):
             self.inspect()
+
+
+class CollectionFragmentContract(unittest.TestCase):
+    def setUp(self):
+        paths = ["collection/collection.v1.json", CONTACT_INPUT,
+                 "collection/contact-followup-source-static-audit.v1.json", "corpus-export/knowledge.v1.json"]
+        self.inventory = {path: {"path": path, "bytes": index + 1, "sha256": digest(path.encode())}
+                          for index, path in enumerate(paths)}
+        self.inventory["collection/collection-files.v1.json"] = {"bytes": 100, "sha256": "0" * 64}
+        self.inventory["collection/delivery-qualification.v1.json"] = {"bytes": 100, "sha256": "1" * 64}
+        self.fragment = {"schema": "goldmaps.owner-collection-files.v1",
+                         "files": [copy.deepcopy(self.inventory[path]) for path in paths],
+                         "counts": {"files": len(paths), "bytes": sum(range(1, len(paths) + 1))}}
+
+    def test_complete_extended_inventory_is_accepted(self):
+        self.assertEqual(inspect_collection_fragment(self.fragment, self.inventory),
+                         {"files": 4, "bytes": 10, "exact_inventory": True})
+
+    def test_unlisted_contact_supplement_is_refused(self):
+        self.fragment["files"].pop(1)
+        with self.assertRaisesRegex(ValueError, "inventory differs"):
+            inspect_collection_fragment(self.fragment, self.inventory)
+
+    def test_substituted_fragment_digest_is_refused(self):
+        self.fragment["files"][0]["sha256"] = "0" * 64
+        with self.assertRaisesRegex(ValueError, "member differs"):
+            inspect_collection_fragment(self.fragment, self.inventory)
+
+    def test_duplicate_or_case_colliding_member_is_refused(self):
+        for uppercase in (False, True):
+            with self.subTest(uppercase=uppercase):
+                fragment = copy.deepcopy(self.fragment)
+                row = copy.deepcopy(fragment["files"][0])
+                if uppercase:
+                    row["path"] = "collection/COLLECTION.v1.json"
+                fragment["files"].append(row)
+                with self.assertRaisesRegex(ValueError, "case-colliding"):
+                    inspect_collection_fragment(fragment, self.inventory)
+
+    def test_inaccurate_fragment_counts_are_refused(self):
+        self.fragment["counts"]["bytes"] += 1
+        with self.assertRaisesRegex(ValueError, "counts differ"):
+            inspect_collection_fragment(self.fragment, self.inventory)
 
 
 if __name__ == "__main__":

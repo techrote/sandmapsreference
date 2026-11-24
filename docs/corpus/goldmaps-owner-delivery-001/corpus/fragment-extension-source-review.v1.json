@@ -1,0 +1,67 @@
+{
+  "schema": "goldmaps.fragment-extension-source-review.v1",
+  "reviewer": {
+    "role": "Specialist A corpus implementation; independent source review by Specialist C",
+    "identity": "AI specialist roles in the same mission, not independent human assessors"
+  },
+  "parent_source": "2d984a981da99348bbf9b44612b058cd048f3474",
+  "fix_source": "910bbddd2c5d02228500dcf56bc7ea0255eb8f3c",
+  "fix_tree": "c6a50f1ff60111ff91f6aa585310f2cc06d1bb2a",
+  "file": "tools/goldmaps_owner/integration/contact_followup.py",
+  "git_blob": "d4bebc56293b3e5c63d62ffc1221defe6251ad2b",
+  "status": "SOURCE_REVIEW_PASS_EXECUTION_PENDING",
+  "pre_fix_reproduction": {
+    "executed": true,
+    "fragment_before": {
+      "status": "PASS",
+      "files": 267,
+      "bytes": 64102781,
+      "logical_aliases": 81,
+      "source_maps": 70,
+      "unique_setup_payloads": 72,
+      "owner_accepted": 0
+    },
+    "after_prepare": {
+      "status": "REFUSED",
+      "reason": "Unlisted collection payloads: collection/contact-followup-source-static-audit.v1.json, collection/native-contact-followup-inputs.v1.json"
+    },
+    "sealed_kit_manifest_unchanged": true,
+    "native_worlds_opened": 0
+  },
+  "environment_interruption": {
+    "observed": "exec-server transport disconnected; recovery timed out after 45 seconds; execution environment reported unavailable",
+    "impact": "The fix was prepared from the exact published F source using Git Data only. No branch or PR state changed. Post-fix Python execution could not run locally.",
+    "cause": "Not established; no OOM or map-defect inference"
+  },
+  "changes": {
+    "explicit_source_head_required": true,
+    "committed_generator_and_audit_bytes_verified": true,
+    "original_fragment_records_preserved": true,
+    "added_paths": [
+      "collection/native-contact-followup-inputs.v1.json",
+      "collection/contact-followup-source-static-audit.v1.json"
+    ],
+    "prior_manifest_hash_and_counts_retained": true,
+    "strict_query_validator_unchanged": true,
+    "native_apply_function_unchanged": true,
+    "setup_runtime_and_original_input_bytes_unchanged": true
+  },
+  "independent_source_review": {
+    "reviewer": "Specialist C qualification assurance",
+    "result": "PASS",
+    "scope": "Fetched exact committed blob; verified two-row append, prior record/order/provenance retention, totals/source pins, repeat refusal and unchanged apply() through EOF. No execution inferred."
+  },
+  "required_caller": "prepare_contact_followup(kit, contact_request, ROOT, head)",
+  "remaining_hosted_gates": [
+    "Execute actual prepare() with the current committed source identity and a fresh generated collection.",
+    "Run the unchanged packaged query validator and require exact 269-file fragment inventory.",
+    "Assert all previous 267 records remain equal, both original native-input files remain byte-identical, and the extension's prior-manifest SHA matches the captured original bytes.",
+    "Remove each newly declared sidecar in isolation and require refusal.",
+    "Corrupt each new sidecar in isolation and require refusal.",
+    "Add one undeclared collection file and require refusal.",
+    "Independently audit the actual final ZIP with C's strict fragment-inventory join."
+  ],
+  "post_fix_local_execution": false,
+  "post_fix_hosted_execution": false,
+  "owner_accepted": false
+}

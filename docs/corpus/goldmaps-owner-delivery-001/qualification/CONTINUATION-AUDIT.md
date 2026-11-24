@@ -29,3 +29,11 @@ Eighteen synthetic displayed-receipt fixtures pass, including refusal of the obs
 After adding both continuation contracts, the checker was run again against the actual downloaded first Windows ZIP. Its result remains **81 logical identities, 72 unique Setups, 67 qualified, two original policy refusals and three unqualified contact cases**, with all 14 bounded scripted routes and the original 15 captured graphical cases preserved. The separate recorded gallery usability failure remains unresolved by that historical audit.
 
 The final continuation requires actual native contact receipts, freshly extracted Windows launcher/product evidence, new displayed PNGs and independent inspection of the final downloadable ZIP. Physical owner GPU presentation, subjective routes, B3 speed judgement, D1/D2 preference, classification and adoption remain pending.
+
+## Exact collection fragment inventory
+
+The final inspector independently joins every declared collection-fragment path, length and SHA-256 to the verified actual ZIP. Its complete path set must equal every packaged file beneath `collection/` and `corpus-export/`, with only the two existing documented exclusions: the fragment manifest itself and the separately qualified delivery overlay. Duplicate or case-colliding paths, substituted bytes, missing supplemental inputs and inaccurate counts are refused. The corpus query validator remains unchanged.
+
+Windows attempt `45494755605` at source `2d984a981da99348bbf9b44612b058cd048f3474` stopped at the static architectural-manifest check: the two new contact input/audit files had been copied but not added to the fragment inventory. This is a preserved static refusal before native reuse, fresh contact, product or graphical execution, and produced no final playable package. The correction must extend the manifest with those exact two records and adjusted totals, rather than exempting them from verification.
+
+Five additional synthetic fragment fixtures cover an exact extended inventory, the observed missing supplemental entry, a substituted digest, duplicate/case-colliding entries and incorrect counts. These are checker fixtures only. The GitHub-only recovery of this source change does not claim a new local test execution; the next hosted Windows run must execute them and inspect its actual final ZIP before publication.

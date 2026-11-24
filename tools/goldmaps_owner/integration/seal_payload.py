@@ -109,6 +109,18 @@ def seal(root, source_head, receipt_path=None, archive=None):
         "Open GOLDMAPS.cmd": "tools/goldmaps_owner/product/assemble_product.py",
         "Open GOLDMAPS.sh": "tools/goldmaps_owner/product/assemble_product.py",
     }
+    contact_extension = None
+    fragment = json.loads((root / "collection/collection-files.v1.json").read_text(encoding="utf-8"))
+    if fragment.get("delivery_extensions"):
+        if len(fragment["delivery_extensions"]) != 1:
+            raise ValueError("Unexpected corpus fragment extension count")
+        contact_extension = fragment["delivery_extensions"][0]
+        if (contact_extension["kind"] != "bounded_native_contact_followup"
+                or contact_extension["generator_source"]["commit"] != source_head
+                or contact_extension["added_paths"] != ["collection/native-contact-followup-inputs.v1.json",
+                                                        "collection/contact-followup-source-static-audit.v1.json"]):
+            raise ValueError("Unexpected corpus fragment extension authority")
+        generated["collection/collection-files.v1.json"] = "tools/goldmaps_owner/integration/contact_followup.py"
     docs = {"START-HERE.md": "tools/goldmaps_owner/integration/START-HERE.md",
             "LICENSE-AND-SOURCE.md": "tools/goldmaps_owner/integration/LICENSE-AND-SOURCE.md",
             "collection/contact-followup-source-static-audit.v1.json":
@@ -144,6 +156,11 @@ def seal(root, source_head, receipt_path=None, archive=None):
             generator = generated[rel]
             origin = {"kind": "delivery_generated", "source_commit": source_head, "generator": generator,
                       "generator_sha256": hashlib.sha256(committed_source(generator)).hexdigest()}
+            if rel == "collection/collection-files.v1.json" and contact_extension:
+                upstream = "tools/goldmaps_owner/corpus/build_collection.py"
+                origin["upstream_generator"] = {"path": upstream, "source_commit": source_head,
+                    "sha256": hashlib.sha256(committed_source(upstream)).hexdigest()}
+                origin["prior_fragment_sha256"] = contact_extension["prior_manifest_sha256"]
         elif rel.startswith("qualification/") and path.suffix in (".json", ".log", ".png", ".md"):
             origin = {"kind": "actual_delivery_evidence", "source_commit": source_head,
                       "scope": "Read individual receipt platform/source/limitations; no owner acceptance"}

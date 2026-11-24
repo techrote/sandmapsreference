@@ -10,10 +10,12 @@ This module changes no Setup, runtime, native probe or original input roster.
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
 import os
 from pathlib import Path
 import shutil
+import subprocess
 
 from prepare_runtime import ENGINE
 from verify_payload import file_sha256 as sha, strict_json
@@ -50,12 +52,43 @@ def write(path, value):
     path.write_text(json.dumps(value, indent=2) + "\n", encoding="utf-8")
 
 
-def prepare(kit: Path, request: dict, repo: Path):
-    """Seal a new input, preserving both original declared populations exactly."""
+def prepare(kit: Path, request: dict, repo: Path, source_head: str):
+    """Seal the bounded input and extend its exact fragment inventory."""
     demand(request.get("ids") == list(TARGETS) and request.get("tick_budget") == 1800,
            "only the three reviewed optional portraits and 1800 ticks are allowed")
-    audit_path = repo / request["source_static_audit"]["path"]
+    demand(isinstance(source_head, str) and len(source_head) == 40
+           and all(char in "0123456789abcdef" for char in source_head),
+           "an exact delivery source commit is required")
+    generator_path = "tools/goldmaps_owner/integration/contact_followup.py"
+    committed_generator = subprocess.check_output(
+        ["git", "-C", str(repo), "show", source_head + ":" + generator_path], timeout=30)
+    demand(committed_generator == Path(__file__).read_bytes(), "contact generator differs from the supplied source")
+    generator_source = {"repo": "techrote/sandmapsreference", "commit": source_head,
+                        "path": generator_path, "sha256": sha(Path(__file__)),
+                        "url": "https://github.com/techrote/sandmapsreference/blob/" + source_head + "/" + generator_path,
+                        "commit_bytes_verified": True}
+    audit_relative = request["source_static_audit"]["path"]
+    demand(audit_relative == "docs/corpus/goldmaps-owner-delivery-001/corpus/optional-contact-static-assessment.v1.json",
+           "unexpected source-static audit path")
+    audit_path = repo / audit_relative
     demand(sha(audit_path) == request["source_static_audit"]["sha256"], "source-static audit changed")
+    demand(subprocess.check_output(["git", "-C", str(repo), "show", source_head + ":" + audit_relative], timeout=30)
+           == audit_path.read_bytes(), "source-static audit differs from the supplied source")
+    fragment_path = kit / "collection/collection-files.v1.json"
+    fragment_raw = fragment_path.read_bytes()
+    fragment = strict_json(fragment_raw)
+    prior_counts = copy.deepcopy(fragment["counts"])
+    paths = [record["path"] for record in fragment["files"]]
+    audit_output = "collection/contact-followup-source-static-audit.v1.json"
+    added_paths = [INPUT, audit_output]
+    demand(fragment["schema"] == "goldmaps.owner-collection-files.v1"
+           and fragment.get("manifest_self_excluded") is True
+           and prior_counts == {"files": len(paths), "bytes": sum(record["bytes"] for record in fragment["files"])}
+           and len(paths) == len({path.casefold() for path in paths})
+           and not fragment.get("delivery_extensions"),
+           "original fragment manifest is malformed or already extended")
+    demand(all(path not in paths and not (kit / path).exists() for path in added_paths),
+           "contact sidecar already exists or is already declared")
     original = strict_json((kit / "collection/native-inputs-optional.v1.json").read_bytes())
     records = {row["id"]: row for row in original["records"]}
     selected = []
@@ -78,7 +111,30 @@ def prepare(kit: Path, request: dict, repo: Path):
                              "sha256": sha(kit / "collection/native-inputs-optional.v1.json")},
              "scope": "Separate full load/movement/contact/save/reopen observation for exactly three unchanged portraits. Only the supported gravity contact budget changes from 900 to 1800 ticks. Original no-contact receipts remain immutable; geometry, actors, policy, probes and acceptance gates do not change."}
     write(kit / INPUT, value)
-    shutil.copyfile(audit_path, kit / "collection/contact-followup-source-static-audit.v1.json")
+    shutil.copyfile(audit_path, kit / audit_output)
+    origins = {
+        INPUT: {"kind": "deterministic_delivery_contact_metadata",
+                "generator_source": generator_source, "prior_input": copy.deepcopy(value["prior_input"]),
+                "transformation": "Exactly three original source records; only contact_probe_tick_limit=1800 added."},
+        audit_output: {"kind": "exact_delivery_source_evidence", "repo": "techrote/sandmapsreference",
+                       "commit": source_head, "path": audit_relative,
+                       "sha256": request["source_static_audit"]["sha256"],
+                       "url": "https://github.com/techrote/sandmapsreference/blob/" + source_head + "/" + audit_relative},
+    }
+    added = [{"path": path, "bytes": (kit / path).stat().st_size, "sha256": sha(kit / path),
+              "origin": origins[path]} for path in added_paths]
+    # Preserve every previous record, including its order and provenance.
+    # The fragment validator can now keep rejecting every undeclared extra.
+    fragment["files"].extend(added)
+    fragment["counts"] = {"files": prior_counts["files"] + len(added),
+                          "bytes": prior_counts["bytes"] + sum(record["bytes"] for record in added)}
+    fragment["delivery_extensions"] = [{
+        "kind": "bounded_native_contact_followup",
+        "prior_manifest_sha256": hashlib.sha256(fragment_raw).hexdigest(),
+        "prior_counts": prior_counts, "generator_source": generator_source,
+        "added_paths": added_paths,
+    }]
+    write(fragment_path, fragment)
     return value
 
 

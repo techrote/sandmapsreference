@@ -54,6 +54,31 @@ def demand(condition, message):
         raise ValueError(message)
 
 
+def inspect_collection_fragment(fragment, inventory):
+    """Join the complete offline corpus inventory to the verified actual ZIP."""
+    demand(fragment["schema"] == "goldmaps.owner-collection-files.v1",
+           "Unsupported collection fragment manifest")
+    excluded = {"collection/collection-files.v1.json", "collection/delivery-qualification.v1.json"}
+    observed = {path for path in inventory if path.startswith(("collection/", "corpus-export/"))} - excluded
+    declared, folded, total = set(), set(), 0
+    for row in fragment["files"]:
+        path = row["path"]
+        safe_path(path)
+        demand(path.startswith(("collection/", "corpus-export/")) and path not in excluded
+               and path not in declared and path.casefold() not in folded,
+               "Duplicate, case-colliding or out-of-scope collection fragment member: " + path)
+        demand(type(row["bytes"]) is int and row["bytes"] >= 0 and path in inventory
+               and (row["bytes"], row["sha256"]) == (inventory[path]["bytes"], inventory[path]["sha256"]),
+               "Collection fragment member differs from the actual ZIP: " + path)
+        declared.add(path)
+        folded.add(path.casefold())
+        total += row["bytes"]
+    demand(declared == observed, "Collection fragment inventory differs from the actual ZIP")
+    demand(fragment["counts"] == {"files": len(declared), "bytes": total},
+           "Collection fragment counts differ from its exact files")
+    return {"files": len(declared), "bytes": total, "exact_inventory": True}
+
+
 def committed_digest(repo, head, path):
     safe_path(path)
     return digest(subprocess.check_output(["git", "-C", str(repo), "show", head + ":" + path], stderr=subprocess.DEVNULL))
@@ -451,6 +476,8 @@ def inspect(directory: Path, source_head: str, run_id: str, native=None, source_
                and manifest["scientific_engine_head"] == SCIENTIFIC
                and manifest["owner_accepted"] is False, "Mixed source/scientific/owner authority")
         inventory = {row["path"]: row for row in manifest["files"]}
+        fragment_review = inspect_collection_fragment(data("collection/collection-files.v1.json"), inventory)
+        fragment_review["manifest_sha256"] = digest(raw("collection/collection-files.v1.json"))
         demand(not any(path.startswith(("userdata/", "browser/.godot/", "runtime/project/.godot/"))
                        for path in inventory), "Mutable owner data or runtime caches were shipped")
         for name in ("Open GOLDMAPS.cmd", "START-HERE.md", "LICENSE-AND-SOURCE.md",
@@ -835,6 +862,7 @@ def inspect(directory: Path, source_head: str, run_id: str, native=None, source_
                 "native_campaigns": native_campaigns, "native_dependency_sha256": native_pins,
                 "native_evidence_reuse_review": reuse_review,
                 "native_contact_followup_review": followup_review,
+                "collection_fragment_integrity": fragment_review,
                 "bounded_routes": {"executed": len(route_projection), "completed": sum(row["completed"] for row in route_projection),
                                    "results": route_projection, "scope": "Actual bounded scripted outcomes retained; no subjective/full-route acceptance inferred"},
                 "gold_nominees": len(gold), "portrait_repair_aliases": len(portraits), "astra_aliases": len(trials),
