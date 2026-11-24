@@ -1,0 +1,38 @@
+{
+  "schema": "goldmaps.owner-post-preflight-refusal-custody.v1",
+  "source_head": "3975deeb8b1c2664cdb988dd4e393bc7f7630c7d",
+  "run_id": "45498633502",
+  "job_id": "138815683969",
+  "run_url": "https://github.com/techrote/sandmapsreference/actions/runs/45498633502",
+  "artifact": {
+    "id": 14970786081,
+    "bytes": 41746,
+    "sha256": "d1b92aaa6694374966f80f5a80b4be0aa0e47e950770e7ba6cda057c71544e13",
+    "identity_source": "GitHub artifact metadata; local executor unavailable"
+  },
+  "preserved_log": {
+    "path": "job.log",
+    "bytes": 60092,
+    "sha256": "7b71561fdb4bd5b02d9e8a4f9156a62420a068f4a7e199c94517e2962c280888",
+    "git_blob_sha1": "bbf4019758ef503d19881a83d14c9944fb53a6c0",
+    "scope": "Complete exact UTF-8 decoded authenticated GitHub job log"
+  },
+  "passed_before_refusal": [
+    "18 rendered receipt fixtures",
+    "13 contact/fragment contract fixtures",
+    "19 evidence transport fixtures",
+    "runtime package and collection boundaries",
+    "architectural manifest validation",
+    "actual isolated missing/corrupt/extra/count contact sidecar fixtures"
+  ],
+  "observed_failure": "Native evidence reuse called pristine verify_directory after boundary probes. It refused exactly three generated QA files under existing declared userdata roots.",
+  "not_executed": [
+    "native evidence reuse completion",
+    "new three-map native contact observations",
+    "corrected Windows product/launcher",
+    "new graphical captures",
+    "final archive publication"
+  ],
+  "correction": "Use existing post_execution=True at the post-probe reuse boundary and retain that integrity receipt; final archive checks remain pristine.",
+  "owner_accepted": false
+}

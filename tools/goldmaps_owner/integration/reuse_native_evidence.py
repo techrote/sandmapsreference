@@ -88,7 +88,10 @@ def reuse(artifact_dir: Path, request: dict, kit: Path, evidence: Path, source_h
            "predecessor source/run differs")
     demand(outer["actual_final_extracted_launcher"] == "PASS", "predecessor campaign was incomplete")
     current = strict_json((kit / MANIFEST).read_bytes())
-    verify_directory(kit)
+    # Boundary probes have already executed in their declared isolated QA
+    # profiles. Preserve the existing post-execution mutable-root allowance;
+    # every immutable payload byte and every out-of-root extra stays strict.
+    post_preflight_integrity = verify_directory(kit, post_execution=True)
     demand(current["engine_head"] == ENGINE and current["delivery_source_head"] == source_head,
            "new staging authority differs")
     current_index = {row["path"]: row for row in current["files"]}
@@ -223,6 +226,7 @@ def reuse(artifact_dir: Path, request: dict, kit: Path, evidence: Path, source_h
                        {"name": "complete disjoint 44 plus 28 native population retained verbatim", "pass": True}])
     result = {
         "schema": "goldmaps.owner-native-evidence-reuse.v1", "pass": True,
+        "post_preflight_integrity": post_preflight_integrity,
         "native_evidence_authority": {"source_head": native_head, "github_run_id": native_run,
                                       "archive_sha256": request["archive_sha256"],
                                       "payload_manifest_sha256": request["payload_manifest_sha256"]},

@@ -75,6 +75,7 @@ INNER_HANDOFF = (
     "qualification/campaign.json", "qualification/graphical/summary.json",
 )
 OPTIONAL_INNER_HANDOFF = (
+    "qualification/contact-fragment-boundary.json",
     "qualification/native-evidence-reuse.v1.json",
     "qualification/windows-contact-followup/summary.json",
 )

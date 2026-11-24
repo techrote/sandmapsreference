@@ -1,0 +1,513 @@
+{
+  "schema": "goldmaps.owner-delivery-decision.v1",
+  "status": "DRAFT_HOLD",
+  "owner_accepted": false,
+  "packet_scope": "Source-pinned delivery draft; final artifact and displayed review remain pending",
+  "reviewed_product_source_head": "2d984a981da99348bbf9b44612b058cd048f3474",
+  "latest_attempt": {
+    "run_id": 45498633502,
+    "source_head": "3975deeb8b1c2664cdb988dd4e393bc7f7630c7d",
+    "url": "https://github.com/techrote/sandmapsreference/actions/runs/45498633502",
+    "conclusion": "REFUSED_BEFORE_NATIVE_REUSE_PRODUCT_GRAPHICS",
+    "gate": "Strict pristine payload validation after hostile-boundary and I/O probes",
+    "reason": "Three files created by the earlier probes were under the declared userdata mutable root. The reuse entry incorrectly requested a pristine validation after these probes.",
+    "immutable_guard_relaxed": false,
+    "emitter_fixture_tests": {
+      "passed": 19,
+      "failed": 0,
+      "log_sha256": "03b319082c46da9a3314a4dca7356c73a0cb6df35d4400794779ef0dd6558d93"
+    },
+    "new_native_population_executed": false,
+    "new_product_executed": false,
+    "new_graphical_executed": false
+  },
+  "previous_attempt": {
+    "run_id": 45494755605,
+    "source_head": "2d984a981da99348bbf9b44612b058cd048f3474",
+    "conclusion": "REFUSED_BEFORE_NATIVE_REUSE_PRODUCT_GRAPHICS",
+    "gate": "Strict architectural manifest validation",
+    "reason": "Two contact-follow-up evidence files were not declared in the corpus fragment inventory.",
+    "correction_scope": "Declare the existing evidence files; no engine, map or product change"
+  },
+  "final_delivery": {
+    "status": "PENDING_COMPLETED_CAMPAIGN_AND_INDEPENDENT_REVIEW",
+    "source_head": null,
+    "run_id": null,
+    "artifact_id": null,
+    "artifact_url": null,
+    "archive_filename": null,
+    "archive_sha256": null,
+    "archive_bytes": null,
+    "total_files": null,
+    "payload_files": null,
+    "payload_manifest_sha256": null,
+    "actual_retention_days": null,
+    "expires_at": null,
+    "independent_audit_sha256": null,
+    "displayed_review": "PENDING",
+    "acquisition_manifest_path": null,
+    "acquisition_manifest_sha256": null,
+    "owner_accepted": false
+  },
+  "source_lineage": {
+    "repository": "https://github.com/techrote/sandmapsreference",
+    "delivery_pr": 217,
+    "disposition": "Draft/HOLD",
+    "sandmapsreference_accepted_main_at_refresh": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+    "recovery_pr215": "6c4edd3d05476848cbebb800090080ae824ad208",
+    "finalisation_pr216": "b9535405853a5cd16e4bba968ec7167222861c42",
+    "frozen_scientific_native": "40f196f792e4d9e19bbd57fdafd6a90420fadf32",
+    "ledger_pr209": "5982fa553bc6356742cfea0911c848c372dcdb97",
+    "preregistration": "241029a2de59b412e1475ef7f46094d71033ad6e",
+    "all_eight_output_lock": "0bdbf3fc524e85c30c7095b7e1dad53159fd7d9c",
+    "frozen_engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+    "playable_engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "native_population_source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+    "predecessors_merged": false,
+    "predecessor_metadata_discrepancy": "Live draft:false flags on #215/#216 conflict with written Draft/HOLD; no metadata or source changes were made.",
+    "engine_branch_modified": false,
+    "original_maps_or_locks_modified": false
+  },
+  "collection": {
+    "manifest_path": "collection/collection.v1.json",
+    "qualification_matrix_path": "qualification/per-variant-matrix.v1.json",
+    "overlay_path": "collection/delivery-qualification.v1.json",
+    "logical_entries": 81,
+    "unique_setups": 72,
+    "original_corpus_sources": 70,
+    "primary_sources": 67,
+    "supplementary_donors": 3,
+    "views": [
+      {
+        "id": "gold25",
+        "logical_entries": 25,
+        "unique_setups": 25,
+        "owner_accepted": 0
+      },
+      {
+        "id": "portraits",
+        "logical_entries": 7,
+        "unique_setups": 7,
+        "owner_accepted": 0
+      },
+      {
+        "id": "astra",
+        "logical_entries": 18,
+        "unique_setups": 15,
+        "owner_accepted": 0
+      },
+      {
+        "id": "policy",
+        "logical_entries": 2,
+        "unique_setups": 2,
+        "owner_accepted": 0
+      },
+      {
+        "id": "corpus",
+        "logical_entries": 70,
+        "unique_setups": 70,
+        "owner_accepted": 0
+      }
+    ],
+    "views_overlap": true,
+    "gold25_prs": [
+      106,
+      109,
+      125,
+      130,
+      131,
+      136,
+      143,
+      146,
+      147,
+      148,
+      150,
+      153,
+      155,
+      159,
+      163,
+      168,
+      174,
+      175,
+      176,
+      179,
+      182,
+      184,
+      193,
+      197,
+      207
+    ],
+    "portrait_repair_prs": [
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208
+    ],
+    "setup_schema_version": 2,
+    "dimensions": [
+      {
+        "width": 2048,
+        "height": 1024,
+        "orientation": "landscape"
+      },
+      {
+        "width": 1024,
+        "height": 2048,
+        "orientation": "portrait"
+      }
+    ],
+    "original_plane_and_actor_identity_preserved": true,
+    "original_pr155_refused": true,
+    "original_pr183_refused": true,
+    "pr125_note": "Retain the finalisation nomination and earlier conditional history.",
+    "pr207_note": "Gold25 includes an already repaired baseline; repaired status is explicit.",
+    "pr183_gold_member": false
+  },
+  "native_population_authority": {
+    "run_id": 45481683557,
+    "source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+    "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "archive_sha256": "d132711302440a50780d7fb04a2a40c11d1986ae48c624b995745e8b13c47a30",
+    "archive_bytes": 101218031,
+    "total_files": 1607,
+    "manifest_sha256": "c56d0074721bae63a924d01661aade1cb022329704268b53d713f3f9f2c4d48b",
+    "required": {
+      "aliases": 53,
+      "unique_setups": 44,
+      "qualified": 42,
+      "expected_refused": 2
+    },
+    "optional": {
+      "unique_setups": 28,
+      "qualified": 25,
+      "unqualified_contact_window": 3
+    },
+    "total_unique": {
+      "count": 72,
+      "qualified": 67,
+      "refused": 2,
+      "unqualified": 3
+    },
+    "total_logical": {
+      "count": 81,
+      "qualified": 76,
+      "refused": 2,
+      "unqualified": 3
+    },
+    "bounded_routes": {
+      "planned": 14,
+      "completed": 14
+    },
+    "graphical": {
+      "planned": 15,
+      "captured": 15,
+      "independent_visual_result": "DELIVERY_DEFECTS_FOUND",
+      "physical_gpu_acceptance": false
+    },
+    "recommended_final_download": false,
+    "expected_refusals": [
+      {
+        "id": "gold-155",
+        "source_pr": 155,
+        "reason": "malformed_policy / bad magic"
+      },
+      {
+        "id": "corpus-183",
+        "source_pr": 183,
+        "reason": "malformed_policy / bad magic"
+      }
+    ],
+    "reused_only_if_exact": [
+      "accepted engine tracked source",
+      "Godot binaries",
+      "CyberSand native binaries",
+      "Rapier binaries",
+      "source bootstrap files",
+      "Setup payloads",
+      "original native inputs",
+      "all four native harness files"
+    ],
+    "per_qualified_setup_executed": [
+      "ordinary Workbench admission",
+      "full native material readback",
+      "authored actor adoption",
+      "acknowledged native progression",
+      "applicable Midge movement",
+      "actual contact",
+      "authored-start save",
+      "distinct-process reopen",
+      "unchanged source",
+      "isolated userdata routing"
+    ],
+    "no_frozen_science_rerun_claim": true
+  },
+  "contact_followup": {
+    "status": "PENDING_NEW_EXECUTION",
+    "source_prs": [
+      188,
+      189,
+      192
+    ],
+    "original_budget_ticks": 900,
+    "new_budget_ticks": 1800,
+    "unique_population_remains": 72,
+    "changes": "Existing supported observation budget only; geometry, policy, actors, spawn and acceptance gates unchanged.",
+    "requires_preserved_native_history": true,
+    "required_new_receipts": [
+      "full load",
+      "actors",
+      "material readback",
+      "movement",
+      "contact",
+      "save",
+      "fresh-process reopen"
+    ],
+    "effective_counts": null,
+    "failed_complete_observation_status": "UNQUALIFIED",
+    "missing_observation": "Blocks a completed-campaign claim"
+  },
+  "policy_descendants": [
+    {
+      "id": "derived-155-policy",
+      "source_pr": 155,
+      "original_nomination": "Gold25",
+      "owner_accepted": false,
+      "original_policy": "55 zero words; malformed_policy / bad magic",
+      "correction": "Recovered source-exact supported 55-word default-policy descendant",
+      "setup_sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+      "material_plane_sha256": "e76f280ee631d604c037f307bfafedbd2dad23d198133f4a7084c9848a2ee803",
+      "original_behavioral_equivalence_proved": false,
+      "n_windows_native_status": "QUALIFIED_HEADLESS",
+      "unchanged_fields": "Every non-policy field, material plane, dimensions and actors/spawns"
+    },
+    {
+      "id": "derived-183-policy",
+      "source_pr": 183,
+      "original_nomination": null,
+      "owner_accepted": false,
+      "original_policy": "48 zero words; malformed_policy / bad magic",
+      "correction": "Separately identified supported default-policy descendant",
+      "setup_sha256": "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e",
+      "material_plane_sha256": "e33499bc4b8e6779e28aa04b2fe30f0670cefc8fe3d7574d80740dcaf2a17b2d",
+      "original_behavioral_equivalence_proved": false,
+      "n_windows_native_status": "QUALIFIED_HEADLESS",
+      "frozen_engine_scope": "Policy/schema admission only",
+      "unchanged_fields": "Every non-policy field, material plane, dimensions and actors/spawns"
+    }
+  ],
+  "product_scope": {
+    "ordinary_workbench": true,
+    "engine_core_modified": false,
+    "offline_after_extraction": true,
+    "installed_profile_used": false,
+    "userdata_root": "userdata/",
+    "owner_data_transmitted": false,
+    "active_session_guard": "Per browser instance; no global cross-process mutex claim",
+    "saved_format": "Authored Setup JSON; not current evolving simulation",
+    "saved_copy_policy": "New names only; reserved gm-source- namespace case-insensitively protected",
+    "saved_attribution": "Only after successful ordinary save; filename typing/existence is not a receipt",
+    "replacement_controls_guarded": 7,
+    "flatten_bake_history": "Explicitly unavailable because binary MaterialBaseline reopen is outside qualified evaluator scope",
+    "decision_exports": [
+      "JSON",
+      "Markdown",
+      "CSV"
+    ],
+    "screenshot_export_scope": "Separate files linked in session records; decision exports do not embed screenshot bytes",
+    "classifiers_start": "Pending / unclassified",
+    "actual_owner_classification_required": true
+  },
+  "frozen_comparisons": [
+    {
+      "arm": "B1",
+      "original_pr": 152,
+      "candidate_pr": 212,
+      "result": "Positive uplift"
+    },
+    {
+      "arm": "B2",
+      "original_pr": 167,
+      "candidate_pr": 210,
+      "result": "Positive uplift"
+    },
+    {
+      "arm": "B3",
+      "original_pr": 170,
+      "candidate_pr": 213,
+      "result": "Intended racing/gameplay benefit inconclusive"
+    },
+    {
+      "arm": "C1",
+      "original_pr": 159,
+      "candidate_pr": 159,
+      "result": "Correct abstention; exact unchanged material plane"
+    },
+    {
+      "arm": "C2",
+      "original_pr": 150,
+      "candidate_pr": 150,
+      "result": "Correct abstention; exact unchanged material plane"
+    },
+    {
+      "arm": "C3",
+      "original_pr": 197,
+      "candidate_pr": 197,
+      "result": "Correct abstention; exact unchanged material plane"
+    },
+    {
+      "arm": "D1",
+      "original_pr": 186,
+      "candidate_pr": 214,
+      "reference_pr": 203,
+      "result": "Assessor disagreement; randomized assessment preferred Astra, reference-aware assessment preferred prior reference"
+    },
+    {
+      "arm": "D2",
+      "original_pr": 196,
+      "candidate_pr": 211,
+      "reference_pr": 208,
+      "result": "Prior reworker reference preferred overall"
+    }
+  ],
+  "scientific_limits": {
+    "changed_cells_five_arms": 34353,
+    "unchanged_material_plane_controls": [
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "changed_cell_count_is_improvement_metric": false,
+    "frozen_adjudication_rewritten": false,
+    "synchronized_world_claim": false,
+    "physical_b3_speed_judgment_pending": true,
+    "individual_reference_authorship_unverified": true
+  },
+  "batch_lab_handoff": {
+    "knowledge_path": "corpus-export/knowledge.v1.json",
+    "design_cards_path": "corpus-export/batch-lab/architectural_design_cards.v1.json",
+    "query_tool": "tools/goldmaps_owner/corpus/query.py",
+    "map_identities": 70,
+    "protected_features": 27,
+    "immutable_states": 76,
+    "comparative_families": 12,
+    "retained_negative_interventions": 5,
+    "inferred_structural_hints": 27,
+    "hints_contain_native_module_geometry": false,
+    "owner_approved_modules": 0,
+    "approved_training_labels": false,
+    "coordinates": "x right, y down; bounds convention stated per record",
+    "holdout_lineage_groups_preserved": true,
+    "read_only_consumer_head": "fe2395c7060dae736dc2e5dc8d1e4e050b2d2e52",
+    "design_cards_replayed": 25,
+    "queries_replayed": 2,
+    "negative_authority_guards": 3,
+    "replay_scope": "Existing design-card interface; not module harvesting, construction or owner adoption",
+    "consumer_branch_modified": false,
+    "licensing": "Map-specific rights and individual human authorship remain unknown where unverified; no general redistribution/training grant inferred",
+    "failed_bundle": {
+      "recorded_occurrences": 182,
+      "recovered_occurrences": 154,
+      "hash_only_missing_occurrences": 28,
+      "all_recovered_occurrences_bundled": false
+    }
+  },
+  "runtime": {
+    "godot_version": "4.7.stable.official.5b4e0cb0f",
+    "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "godot_windows_gui_sha256": "b2ca888d5115a6cedee564764a2ee494a625f2ec2edbabd010fe33c9a88a6bf8",
+    "godot_windows_console_sha256": "d8055fb8c7e7f5010d7439ec69be051554055dae55a265f8647bd7301c34161c",
+    "native_windows_dll_sha256": "668f2dd094fca611a97c2b6aa38c4cd072179fe9cf591e53578ef57c7db1625e",
+    "rapier_windows_dll_sha256": "b54e54bd1a03ae9094b788bf869212b5405b4a04793792d5a7cd81632cb10dd7",
+    "native_build_source": "c53fd6f9d3d0f2b3f39396c7e605654f65c17299",
+    "rapier_build_source": "96dcb2ab6e35c9104726b2a541d1c2fbb298eecb",
+    "accepted_source_inputs_verified": true
+  },
+  "independent_reviews": [
+    {
+      "role": "Specialist A / corpus",
+      "scope": "Source/plane/variant/policy/export custody and rendered identity",
+      "source_review": "PASS",
+      "final_artifact_review": "PENDING"
+    },
+    {
+      "role": "Specialist B / product",
+      "scope": "Corpus/consumer interface, product evidence, integration/sealing and displayed usability",
+      "source_review": "PASS",
+      "final_artifact_review": "PENDING"
+    },
+    {
+      "role": "Specialist C / assurance",
+      "scope": "Native receipts, hostile inputs, final ZIP and source-separated product/graphical audit",
+      "native_n_custody": "PASS",
+      "final_artifact_review": "PENDING"
+    },
+    {
+      "role": "Lead / integration",
+      "scope": "Source/runtime custody, actual artifact publication, acquisition and final joins",
+      "final_artifact_review": "PENDING"
+    }
+  ],
+  "reviewers_are_independent_humans": false,
+  "review_role_note": "Distinct AI specialist roles; no implementer exclusively certifies its own lane",
+  "owner_gates": [
+    {
+      "question": "Physical Windows/NVIDIA presentation, performance and DPI",
+      "status": "PENDING",
+      "accepted": false
+    },
+    {
+      "question": "Physical input and complete subjective routes",
+      "status": "PENDING",
+      "accepted": false
+    },
+    {
+      "question": "B3 high-speed readability",
+      "status": "PENDING",
+      "accepted": false
+    },
+    {
+      "question": "D1 and D2 preference",
+      "status": "PENDING",
+      "accepted": false
+    },
+    {
+      "question": "Final Gold/Platinum/Pyrite/Other classifications",
+      "status": "PENDING",
+      "accepted": false
+    },
+    {
+      "question": "Policy descendant adoption",
+      "status": "PENDING",
+      "accepted": false
+    },
+    {
+      "question": "Reusable module approval and rights",
+      "status": "PENDING",
+      "accepted": false
+    },
+    {
+      "question": "Production adoption and merges",
+      "status": "PENDING",
+      "accepted": false
+    }
+  ],
+  "integration_order": [
+    215,
+    216,
+    217
+  ],
+  "merges_performed": false,
+  "ready_promotion_performed": false,
+  "automatic_adoption": false,
+  "historical_package": {
+    "manifest": "docs/corpus/goldmaps-recovery-001/snapshot/owner-package-files.v2.json",
+    "files": 586,
+    "uncompressed_bytes": 200610152,
+    "retracted_file_count": 1532,
+    "retracted_claim_revived": false,
+    "artifact_14837494421": "Qualification evidence only; not the playable collection"
+  }
+}

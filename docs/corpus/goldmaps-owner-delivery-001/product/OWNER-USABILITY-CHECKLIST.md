@@ -48,8 +48,8 @@ record their exact evidence links and hashes in the canonical owner packet.
   A capture count alone is insufficient. The gallery needs visible map cards,
   compact navigation and no startup popup; Workbench text must be readable.
 - In D1, require complete visible original/candidate/reference identity labels
-  and the full archived A/B/C legend. Keep all four logical cards; the two
-  reference aliases denote three unique Setups overall. Check the portrait
+  and the full archived A/B/C legend. Keep all four logical cards; the four logical cards represent three unique Setups; the two
+  reference cards share exact bytes. Check the portrait
   overview's aspect and the review dialog's pending/unclassified defaults.
 
 ## Owner checks on the intended Windows computer
