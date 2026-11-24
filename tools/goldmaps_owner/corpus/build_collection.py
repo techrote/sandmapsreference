@@ -260,7 +260,7 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
         "head":sources[183]["head"], "path":sources[183]["source"]["path"],
         "setup_sha256":digest(raw183), "setup_bytes":len(raw183), "extent":sources[183]["material_plane"]["extent"],
         "input_kind":"integration_descendant"})
-    records = []; targets = []; canonical = {}
+    records = []; targets = []; all_targets = []; required_digests = set(); canonical = {}
     for item in logical:
         pr = item["pr"]; m = sources[pr]; mid = item["id"]
         derived = mid.startswith("derived-")
@@ -335,16 +335,23 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
             entry["variant_relationship"] = {"kind":"portrait-repair","parent_pr":p["portrait_pr"],"parent_commit":p["portrait_head"],
                 "donor_pr":p["donor_pr"],"donor_commit":p["donor_head"]}
         records.append(entry)
+        target=copy.deepcopy(item)
+        target["package_path"]=setup_path; target["material_plane_sha256"]=plane["plane_sha256"]
+        if refusal:target["expected_native_refusal"]={"code":"malformed_policy","detail":"bad magic"}
+        all_targets.append(target)
+        if required: required_digests.add(target["setup_sha256"])
         if required or qualify_all:
-            target=copy.deepcopy(item)
-            target["package_path"]=setup_path; target["material_plane_sha256"]=plane["plane_sha256"]
-            if refusal:target["expected_native_refusal"]={"code":"malformed_policy","detail":"bad magic"}
             targets.append(target)
     if len(canonical)!=70: raise ValueError("All-corpus canonical view is incomplete")
     id_by_pr = canonical
     for record in records:
         if record.get("variant_relationship"):
             record["parent_id"] = id_by_pr[record["variant_relationship"]["parent_pr"]]
+    # Optional runtime work never repeats one of the minimum campaign's exact
+    # Setup bytes, even if the minimum and optional views have logical aliases.
+    optional_targets = [r for r in all_targets if r["setup_sha256"] not in required_digests]
+    if len(required_digests) != 44 or len({r["setup_sha256"] for r in optional_targets}) != 28:
+        raise ValueError("Required/optional native partition differs from the frozen delivery population")
     collection = {"schema":"goldmaps.owner-collection.v1","title":"GOLDMAPS — Owner Collection",
         "authority":{"repository":REPOSITORY,"archival_commit":ARCHIVE,"scientific_evidence_commit":EVIDENCE,
             "frozen_scientific_engine":FROZEN_ENGINE,"delivery_engine":engine_head,"owner_accepted":0,
@@ -355,6 +362,7 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
             "portrait_repair_aliases":7,"astra_comparison_aliases":18,"policy_descendants":2,
             "unique_bundled_setups":len({r['setup']['sha256'] for r in records}),
             "qualification_target_aliases":len(targets),"qualification_target_unique_setups":len({r['setup_sha256'] for r in targets}),
+            "optional_target_aliases":len(optional_targets),"optional_target_unique_setups":28,
             "fresh_qualified_playable_setups":0,"owner_accepted":0},
         "decision_guide":"collection/DECISION-GUIDE.md",
         "qualification_overlay":"collection/delivery-qualification.v1.json",
@@ -365,6 +373,10 @@ def build(out: Path, cache: Path, engine_head: str, qualify_all: bool = False) -
     write_json(out/"collection/collection.v1.json",collection)
     write_json(out/"collection/native-inputs.v1.json",{"schema":"goldmaps.owner-native-inputs.v1","engine_head":engine_head,
         "scientific_engine_head":FROZEN_ENGINE,"records":targets,"scope":"New delivery targets; each actual execution/refusal must be recorded separately"})
+    write_json(out/"collection/native-inputs-optional.v1.json",{"schema":"goldmaps.owner-native-inputs.v1","engine_head":engine_head,
+        "scientific_engine_head":FROZEN_ENGINE,"records":optional_targets,
+        "counts":{"logical_aliases":len(optional_targets),"unique_setups":28,"required_unique_setups_excluded":44},
+        "scope":"Optional extra source-exact corpus targets only; no required Setup digest repeated. Bundled references stay unavailable until actual fresh qualification succeeds; omissions or failures do not change the minimum roster."})
     comparisons=[]
     key=json_load(FROZEN/"science/comparisons/answer-key.v1.json")
     for case in key["cases"]:

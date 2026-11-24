@@ -31,13 +31,13 @@ var review_filter := OptionButton.new()
 var family := OptionButton.new()
 var map_list := ItemList.new()
 var status := Label.new()
-var title_label := Label.new()
+var title_label: Label
 var source_label := RichTextLabel.new()
 var preview := TextureRect.new()
-var preview_caption := Label.new()
+var preview_caption: Label
 var detail := RichTextLabel.new()
-var open_button := Button.new()
-var copies_button := Button.new()
+var open_button: Button
+var copies_button: Button
 var count_label := Label.new()
 var error_dialog := AcceptDialog.new()
 var zoom_dialog := Window.new()
@@ -52,7 +52,7 @@ var decision_class := OptionButton.new()
 var preferred := LineEdit.new()
 var play_notes := TextEdit.new()
 var presentation_notes := TextEdit.new()
-var review_notice := Label.new()
+var review_notice: Label
 
 func _ready() -> void:
 	package_root = OS.get_environment("GOLDMAPS_PACKAGE_ROOT").simplify_path()
@@ -141,6 +141,8 @@ func _build_ui() -> void:
 	for text: String in ["Any native status", "Playable in this kit", "Reference / refused"]: eligibility.add_item(text)
 	for text: String in ["Any review status", "Not reviewed", "Reviewed locally"]: review_filter.add_item(text)
 	family.add_item("Any family")
+	family.fit_to_longest_item = false
+	family.custom_minimum_size.x = 190
 	for picker: OptionButton in [orientation, eligibility, review_filter, family]:
 		picker.custom_minimum_size.y = 38
 		picker.item_selected.connect(func(_index: int) -> void: _refresh_list())
@@ -221,7 +223,7 @@ func _build_ui() -> void:
 	error_dialog.title = "GOLDMAPS"
 	error_dialog.min_size = Vector2i(480, 180)
 	guide_dialog.title = "Owner decision guide"
-	guide_dialog.dialog_text = "All classifications begin pending. Frozen research recommendations are evidence, not your acceptance.\n\nGold: an original architectural exemplar you choose to adopt.\nPlatinum: a derived intervention you judge demonstrably improves the original while preserving its identity and topology.\nPyrite: a derived result you judge regressed or remains substandard; retain the original and record why.\nNo-change: a useful outcome when a strong source should remain untouched.\n\nB1/B2: positive uplift in the frozen assessment. B3: racing benefit inconclusive. C1–C3: exact unchanged controls. D1: assessor disagreement. D2: prior reference preferred overall.\n\nLocal choices never update GitHub. Hosted native PASS is separate from your Windows/NVIDIA graphical and flight-speed judgement."
+	guide_dialog.dialog_text = "All classifications begin pending. Frozen research recommendations are evidence, not your acceptance.\n\nGold: a baseline architectural exemplar you choose to adopt; a nominated baseline may itself be an earlier repair.\nPlatinum: a derived intervention you judge demonstrably improves its baseline while preserving identity and topology.\nPyrite: a derived result you judge regressed or remains substandard; retain its baseline and record why.\nNo-change: a useful outcome when a strong source should remain untouched.\n\nB1/B2: positive uplift in the frozen assessment. B3: racing benefit inconclusive. C1–C3: exact unchanged controls. D1: assessor disagreement. D2: prior reference preferred overall.\n\nLocal choices never update GitHub. Hosted native PASS is separate from your Windows/NVIDIA graphical and flight-speed judgement."
 	decision_dialog.exclusive = true
 	decision_dialog.close_requested.connect(_close_decision)
 	discard_review_dialog.title = "Keep or discard this review draft"
@@ -229,6 +231,7 @@ func _build_ui() -> void:
 	discard_review_dialog.ok_button_text = "Discard draft"
 	discard_review_dialog.cancel_button_text = "Keep editing"
 	discard_review_dialog.confirmed.connect(func() -> void: decision_dialog.hide())
+	discard_review_dialog.reparent(decision_dialog)
 	source_label.meta_clicked.connect(_open_source_link)
 	_build_decision_form()
 
@@ -276,6 +279,18 @@ func _start() -> void:
 	_refresh_list()
 	status.text = "Verified %d payload files · engine %s · reviews and saves stay inside userdata/ · owner acceptance pending" % [rows.size(), str(manifest.engine_head).left(12)]
 	print("GOLDMAPS_BROWSER_READY " + JSON.stringify({"engine_head":manifest.engine_head, "logical_maps":collection.maps.size(), "verified_files":rows.size(), "user_data_dir":OS.get_user_data_dir(), "package_root":package_root}))
+	if OS.get_environment("GOLDMAPS_QA_CAPTURE") == "1" and DisplayServer.get_name() != "headless":
+		await get_tree().process_frame
+		await RenderingServer.frame_post_draw
+		var capture_path := package_root.path_join("userdata/qa/browser.png")
+		DirAccess.make_dir_recursive_absolute(capture_path.get_base_dir())
+		get_viewport().get_texture().get_image().save_png(capture_path)
+		var capture := {"schema":"goldmaps.browser-graphical.v1", "path":capture_path, "sha256":FileAccess.get_sha256(capture_path), "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "viewport":str(get_viewport_rect().size), "scope":"actual hosted rendered UI; physical owner GPU acceptance not inferred"}
+		IO.atomic_json(package_root.path_join("userdata/qa/browser-graphical.json"), capture)
+		print("GOLDMAPS_BROWSER_GRAPHICAL " + JSON.stringify(capture))
+		if OS.get_environment("GOLDMAPS_QA_MAP").is_empty():
+			get_tree().quit(0)
+			return
 	if "--self-test" in OS.get_cmdline_user_args():
 		print("GOLDMAPS_BROWSER_SELF_TEST " + JSON.stringify({"gold25":_count_collection("gold25"), "corpus":_count_collection("corpus"), "owner_accepted":0, "profile_isolated":true}))
 		get_tree().quit(0)
@@ -376,6 +391,21 @@ func _select_index(index: int) -> void:
 	open_button.tooltip_text = reason if not reason.is_empty() else "Open this exact native Setup in the ordinary Workbench."
 	var local: Dictionary = reviews.decisions.get(str(selected.id), {})
 	var text := "[b]%s[/b]\n" % ("Natively qualified for this kit · physical owner review pending" if reason.is_empty() else _escape(reason))
+	var art: Dictionary = _dict(selected.get("art"))
+	var portrait_art: Dictionary = _dict(art.get("portrait_art_review"))
+	var source_static: Dictionary = _dict(selected.get("source_static_qualification"))
+	var technical: Dictionary = _dict(source_static.get("portrait_technical_review"))
+	var nomination: Dictionary = _dict(art.get("historical_gold_nomination"))
+	var review_evidence: Dictionary = _dict(nomination.get("review_evidence"))
+	text += "\n[b]Frozen Art recommendation[/b]  %s\n" % _escape(str(art.get("frozen_finalisation_recommendation")) if art.get("frozen_finalisation_recommendation") != null else "No Gold classification inferred")
+	if not portrait_art.is_empty(): text += "[b]Historical portrait Art[/b]  %s at %s\n" % [_escape(str(portrait_art.get("verdict", ""))), str(portrait_art.get("reviewed_head", "")).left(12)]
+	elif not review_evidence.is_empty(): text += "[b]Earlier Art record[/b]  %s\n" % _escape(str(review_evidence.get("qualification", "")))
+	if not technical.is_empty(): text += "[b]Historical source-static review[/b]  %s\n" % _escape(str(technical.get("verdict", "")))
+	var replay: Dictionary = _dict(source_static.get("corpus_replay"))
+	if not replay.is_empty(): text += "[b]Material replay[/b]  %s · native execution is a separate gate\n" % _escape(str(replay.get("status", "")))
+	var historical_native: Dictionary = _dict(_dict(selected.get("native")).get("historical"))
+	if not historical_native.is_empty(): text += "[b]Historical native[/b]  %s · engine %s\n" % [_escape(str(historical_native.get("status", ""))), str(historical_native.get("engine_head", "")).left(12)]
+	if not str(art.get("note", "")).is_empty(): text += "\n" + _escape(str(art.get("note", ""))) + "\n"
 	text += "\n[b]Architecture[/b]  %s\n[b]Dimensions[/b]  %s · %s\n" % [_escape(_family(selected)), _escape(str(dims)), _escape(str(selected.get("orientation", "")))]
 	text += "[b]Tags[/b]  %s\n" % _escape(", ".join(PackedStringArray(selected.get("tags", []))))
 	text += "\n[b]Owner-local decision[/b]  %s\n" % _escape(str(local.get("status", "Pending / not reviewed")))
@@ -383,9 +413,16 @@ func _select_index(index: int) -> void:
 	var comparison: Dictionary = _dict(selected.get("comparison"))
 	if not comparison.is_empty():
 		text += "\n[b]Frozen comparison %s[/b]\n%s\n" % [_escape(str(comparison.get("arm", ""))), _escape(str(comparison.get("frozen_result", comparison.get("verdict", ""))))]
+		text += _escape(str(comparison.get("owner_prompt", ""))) + "\n"
 	var notes: Variant = selected.get("review_notes", selected.get("notes", ""))
 	if not str(notes).is_empty(): text += "\n" + _escape(str(notes)) + "\n"
-	text += "\n[b]Source[/b]  %s\n[b]Setup SHA-256[/b]\n%s\n[b]Engine[/b]  %s\n" % [_escape(str(source.get("path", ""))), str(setup.get("sha256", "not bundled")), str(manifest.engine_head)]
+	var derived: Dictionary = _dict(selected.get("derived_source"))
+	text += "\n[b]%s[/b]  %s\n" % ["Original parent source" if not derived.is_empty() else "Source", _escape(str(source.get("path", "")))]
+	if not derived.is_empty():
+		text += "[b]Separate descendant custody[/b]  %s\n%s\n" % [_escape(str(derived.get("commit")) if derived.get("commit") != null else "Deterministic delivery-source derivation; see product provenance"), _escape(str(derived.get("path", "")))]
+		text += "[b]Policy correction limit[/b]  The invalid original envelope does not establish equivalent intent. This is a separately qualified native-default integration candidate with unchanged material geometry and actors.\n"
+		if str(selected.id) == "derived-183-policy": text += "#183 is outside the Gold25 nomination.\n"
+	text += "[b]Setup SHA-256[/b]\n%s\n[b]Engine[/b]  %s\n" % [str(setup.get("sha256", "not bundled")), str(manifest.engine_head)]
 	detail.text = text
 
 func _escape(value: String) -> String:
@@ -400,20 +437,21 @@ func _step(direction: int) -> void:
 	map_list.ensure_current_is_visible()
 	_select_index(index)
 
-func _open_selected(saved: Dictionary = {}) -> void:
-	if not verified or selected.is_empty(): return
+func _open_selected(saved: Dictionary = {}, map_override: Dictionary = {}) -> void:
+	var opening := map_override if not map_override.is_empty() else selected
+	if not verified or opening.is_empty(): return
 	if active_pid > 0 and OS.is_process_running(active_pid):
 		_notice("The current Workbench is still open. Save your named copy and use Return to collection in that window before opening another map.")
 		return
-	var reason := IO.playable_reason(selected, qualification, str(manifest.engine_head))
+	var reason := IO.playable_reason(opening, qualification, str(manifest.engine_head))
 	if not reason.is_empty(): _notice(reason); return
-	var setup: Dictionary = selected.get("setup", {})
+	var setup: Dictionary = opening.get("setup", {})
 	if FileAccess.get_sha256(package_root.path_join(str(setup.path))) != str(setup.sha256):
 		_fail("The selected original Setup changed after package verification. Open refused."); return
 	IO.configure_child_environment(package_root)
 	var bootstrap_error := IO.prepare_bootstrap(package_root)
 	if not bootstrap_error.is_empty(): _fail(bootstrap_error); return
-	active_id = str(selected.id)
+	active_id = str(opening.id)
 	active_session = active_id + "-" + IO.timestamp() + "-" + Crypto.new().generate_random_bytes(3).hex_encode()
 	var args := PackedStringArray(["--path", package_root.path_join("runtime/project"), "--script", "res://goldmaps/session.gd", "--log-file", package_root.path_join("userdata/sessions/" + active_session + ".log")])
 	if DisplayServer.get_name() == "headless": args.append("--headless")
@@ -484,6 +522,27 @@ func _show_compare() -> void:
 	compare_dialog.add_child(margin)
 	var col := _box(margin)
 	_label(col, "Reference images side by side. Each Open starts its own ordinary native World; the simulations are not synchronized.", 16, MUTED)
+	var comparison: Dictionary = _dict(selected.get("comparison"))
+	var cards_path := str(collection.get("comparison_cards", "collection/comparisons.v1.json"))
+	if IO.safe_relative(cards_path) and not comparison.is_empty():
+		var cards := IO.bounded_json(package_root.path_join(cards_path))
+		if not cards.has("error"):
+			for card: Dictionary in cards.data.get("cards", []):
+				if card.get("arm", "") != comparison.get("arm", ""): continue
+				var legend_parts := PackedStringArray()
+				for variant: Dictionary in card.get("variants", []):
+					legend_parts.append("%s = %s (PR #%s)" % [str(variant.get("neutral_label", "")), str(variant.get("id", "")), str(variant.get("source_pr", ""))])
+				var legend := "Archived crop legend · " + " · ".join(legend_parts)
+				_label(col, legend, 14, GOLD)
+				_label(col, "Frozen sites · x right, y down · bounds are [x, y, width, height]", 13, MUTED)
+				var sites := HFlowContainer.new()
+				sites.add_theme_constant_override("h_separation", 6)
+				col.add_child(sites)
+				for site: Dictionary in card.get("site_views", []):
+					var image_path := str(site.get("image", ""))
+					var caption := str(site.get("source_evidence_name", "Site detail"))
+					var site_title := caption + " · " + str(site.get("world_xywh", []))
+					_button(sites, caption, func() -> void: _show_archived_image(image_path, site_title, legend))
 	var scroll := ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	col.add_child(scroll)
@@ -503,11 +562,28 @@ func _show_compare() -> void:
 		_label(card, str(row.get("preview", {}).get("kind", "Preview unavailable")), 13, MUTED)
 		_label(card, str(_dict(row.get("comparison")).get("frozen_result", "")) + "\n" + str(_dict(row.get("comparison")).get("owner_prompt", "")), 15)
 		var button := _button(card, "Open " + str(row.get("variant_role", "variant")), func() -> void:
-			selected = row
-			_open_selected())
+			_open_selected({}, row))
 		button.disabled = not IO.playable_reason(row, qualification, str(manifest.engine_head)).is_empty()
 		_label(card, "SHA-256 " + str(row.get("setup", {}).get("sha256", "not bundled")), 12, MUTED)
 	compare_dialog.popup_centered_clamped(Vector2i(1180, 680), 0.95)
+
+func _show_archived_image(path: String, caption: String, legend: String = "") -> void:
+	if not IO.safe_relative(path): return
+	for child: Node in zoom_dialog.get_children(): child.queue_free()
+	zoom_dialog.title = caption + " — archived material comparison"
+	var column := VBoxContainer.new()
+	column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	zoom_dialog.add_child(column)
+	_label(column, legend, 15, GOLD)
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	column.add_child(scroll)
+	var image := TextureRect.new()
+	image.texture = _texture({"preview":{"path":path}})
+	image.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	image.stretch_mode = TextureRect.STRETCH_KEEP
+	scroll.add_child(image)
+	zoom_dialog.popup_centered_clamped(Vector2i(1150, 760), 0.95)
 
 func _build_decision_form() -> void:
 	decision_dialog.title = "Your local review — explicit human choice"
@@ -557,16 +633,16 @@ func _save_decision() -> void:
 	var id := str(decision_dialog.get_meta("map_id", ""))
 	var row := IO.find_map(collection, id)
 	if row.is_empty(): return
-	if play_notes.text.length() > 20000 or presentation_notes.text.length() > 20000: _notice("Please keep each note below 20,000 characters."); return
+	if play_notes.text.length() > 20000 or presentation_notes.text.length() > 20000: _review_error("Please keep each note below 20,000 characters."); return
 	if not preferred.text.is_empty() and IO.find_map(collection, preferred.text.strip_edges()).is_empty():
-		_notice("Preferred variant must be an exact logical ID from this collection, or left blank."); return
+		_review_error("Preferred variant must be an exact logical ID from this collection, or left blank."); return
 	if decision_class.selected > 0 and decision_status.selected == 0:
-		_notice("Choose a review status before recording a classification, or leave the classification Unclassified."); return
+		_review_error("Choose a review status before recording a classification, or leave the classification Unclassified."); return
 	var record := {"map_id":id, "status":DECISIONS[decision_status.selected], "classification":CLASSES[decision_class.selected], "preferred_variant":preferred.text.strip_edges(), "playability_notes":play_notes.text, "presentation_notes":presentation_notes.text, "source":row.get("source", {}), "setup_sha256":row.get("setup", {}).get("sha256", ""), "engine_head":manifest.engine_head, "recorded_at":Time.get_datetime_string_from_system(true) + "Z", "decision_origin":"explicit_owner_local_choice", "physical_graphical_acceptance":"not_inferred"}
 	var updated := reviews.duplicate(true)
 	updated.decisions[id] = record
 	var reason := IO.atomic_json(package_root.path_join("userdata/reviews/decisions.json"), updated)
-	if not reason.is_empty(): _notice(reason); return
+	if not reason.is_empty(): _review_error(reason); return
 	reviews = updated
 	decision_dialog.hide()
 	_refresh_list()
@@ -668,6 +744,9 @@ func _close_decision() -> void:
 		discard_review_dialog.popup_centered_clamped(Vector2i(640, 240), 0.9)
 	else:
 		decision_dialog.hide()
+
+func _review_error(message: String) -> void:
+	review_notice.text = str(decision_dialog.get_meta("map_id", "")) + "\n" + message
 
 func _open_source_link(value: Variant) -> void:
 	var url := str(value)

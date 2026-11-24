@@ -17,6 +17,7 @@ It changes neither an original map nor the frozen scientific adjudication.
 | Complete browser roster | 81 logical entries. Alias deduplication never removes scientific roles. |
 | Bundled Setup payloads | 72 unique byte identities: 70 source maps and two policy-only variants. |
 | Required fresh native targets | 53 aliases / 44 unique Setups, including two expected original refusals. Bundling the other references does not qualify them. |
+| Optional extra native targets | 28 aliases / 28 unique Setups, disjoint from every required digest. These remain references unless their own fresh qualification succeeds. |
 | Owner accepted | Zero. |
 
 `roster-summary.v1.json` records every logical source, parent, exact commit/path,
@@ -56,6 +57,14 @@ of all 72 unique Setup planes against the locked material digests. This is
 source-static evidence. `query-crop-example.v1.json` records a bounded query and
 byte-identical protected-feature crop retrieval with its source coordinate window.
 Native gameplay qualification belongs to the separate assurance lane.
+
+`collection/native-inputs-optional.v1.json` contains only the 28 extra immutable
+Setup identities outside the required 44. It enables a separate, bounded
+continuation after the required campaign starts without repeating its work.
+The default `native-inputs.v1.json` is unchanged. A positive optional receipt may
+enable its exact source in the current-engine overlay; an unavailable or failed
+optional source stays visible as a reference. Optional execution never changes
+frozen scientific verdicts, minimum-delivery requirements or owner acceptance.
 
 ## Policy corrections
 

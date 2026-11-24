@@ -79,6 +79,8 @@ func _start() -> void:
 	if FileAccess.get_sha256(original_path) != original_sha: _refuse("Selected Setup bytes no longer match the collection."); return
 	report["engine_head"] = manifest.engine_head
 	report["source"] = row.get("source", {})
+	report["derived_source"] = row.get("derived_source")
+	report["derivation_path"] = row.get("derivation_path")
 	report["original_setup_sha256"] = original_sha
 	report["variant_role"] = row.get("variant_role", "source")
 	var source_label := "gm-source-" + original_sha.left(20)
@@ -149,6 +151,8 @@ func _start() -> void:
 	controls.loaded_map()
 	_write_report()
 	print("GOLDMAPS_SESSION_LOADED " + JSON.stringify(report))
+	if OS.get_environment("GOLDMAPS_QA_CAPTURE") == "1" and DisplayServer.get_name() != "headless":
+		await capture_screenshot()
 	if OS.get_environment("GOLDMAPS_QA_SMOKE") == "1":
 		if OS.get_environment("GOLDMAPS_QA_EDIT") == "1":
 			var before_cell := _native_cell(32, 32)
@@ -252,9 +256,9 @@ func capture_screenshot() -> void:
 	await RenderingServer.frame_post_draw
 	var image := root.get_texture().get_image()
 	if image.save_png(destination) != OK: controls.notice("Could not save the screenshot."); return
-	report.screenshots.append({"path":destination, "sha256":FileAccess.get_sha256(destination), "kind":"actual owner-rendered Workbench viewport", "captured_at":Time.get_datetime_string_from_system(true) + "Z"})
+	report.screenshots.append({"path":destination, "sha256":FileAccess.get_sha256(destination), "kind":"actual rendered Workbench viewport", "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "physical_owner_acceptance":"not_inferred", "captured_at":Time.get_datetime_string_from_system(true) + "Z"})
 	_write_report()
-	controls.notice("Screenshot saved to userdata/reviews/screenshots/ and linked to this exact session.")
+	if OS.get_environment("GOLDMAPS_QA_CAPTURE") != "1": controls.notice("Screenshot saved to userdata/reviews/screenshots/ and linked to this exact session.")
 
 func request_close() -> void:
 	if closing: return

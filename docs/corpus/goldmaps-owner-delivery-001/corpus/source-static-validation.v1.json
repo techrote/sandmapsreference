@@ -2,12 +2,12 @@
   "schema": "goldmaps.owner-corpus-validation.v1",
   "status": "PASS",
   "scope": "source-static custody/replay; not native execution",
-  "fragment_manifest_sha256": "9de5b7d46feb031ee7fb4bf7147e60fa4596858a3a4e9d6866f32676764c9e94",
+  "fragment_manifest_sha256": "6b1ee6ba8c51f123bb75c7b822752adbe79bfb9e1e5667db7137d20ab08cc71e",
   "manifest": {
     "status": "PASS",
     "scope": "Exact collection fragment custody/roster; does not qualify executable runtime",
-    "files": 262,
-    "bytes": 63776289,
+    "files": 263,
+    "bytes": 63802215,
     "logical_aliases": 81,
     "source_maps": 70,
     "unique_setup_payloads": 72,
@@ -879,5 +879,14 @@
       "cells": 2097152,
       "scope": "Independent source-static ordered replay; no native or gameplay claim"
     }
-  ]
+  ],
+  "optional_target_partition": {
+    "status": "PASS",
+    "required_unique_setups": 44,
+    "optional_unique_setups": 28,
+    "overlap": 0,
+    "total_unique_setups": 72,
+    "required_inputs_identical_to_previous_fragment": true,
+    "optional_inputs_sha256": "e0a241b94d725708fb96a008fe7a8d3cdae49eee317d5bb44df9d0a022857002"
+  }
 }
