@@ -73,6 +73,10 @@
       "pass": true
     },
     {
+      "name": "uppercase reserved source name cannot save",
+      "pass": true
+    },
+    {
       "name": "ordinary Save invokes the save implementation once",
       "pass": true
     },
@@ -93,19 +97,19 @@
       "pass": true
     }
   ],
-  "passed": 23,
+  "passed": 24,
   "schema": "goldmaps.synthetic-control-review.v1",
   "scope": "Actual additive callbacks with synthetic Workbench; no native World, map admission or graphical claim",
-  "total": 23,
+  "total": 24,
   "validation": true,
   "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
   "godot_version": "4.7.stable.official.5b4e0cb0f",
-  "executed_at_utc": "2026-11-24T21:05:51.690868+00:00",
+  "executed_at_utc": "2026-11-24T21:16:54.662613+00:00",
   "source_files": {
-    "tools/goldmaps_owner/product/session/session.gd": "7bee9de8aa89097dc24444da689c833ca458941fb4f0859f5cb9022a5f9d4ae4",
+    "tools/goldmaps_owner/product/session/session.gd": "f0b9e55fa2c6e4a23d764e7f06fc45a98c2a7eaf8f23f283ec24f230bba3e56c",
     "tools/goldmaps_owner/product/session/session_controls.gd": "a766a37d1df2f483392043c95e422991250cfe2f7d48f341eb3e0479ae035ad9",
-    "tools/goldmaps_owner/product/test_session_controls.gd": "6a60a1af5d6957c07d3654271df0d9b6fdfd1e0ca13d877d29b2a923ed15adf4"
+    "tools/goldmaps_owner/product/test_session_controls.gd": "fecc25c564ac59deb5b6e4bd3e60c2240ae97c7d694c06e8d1fb260f298520f0"
   },
-  "execution_note": "The fixture overrides only startup and substitutes a synthetic Workbench. The session parser used absolute preload paths to these exact product files in the read-only accepted engine project. Native extensions initialized but no native World was constructed; native map/lifecycle qualification is a separate required gate.",
-  "log_sha256": "027681489691a72ee1ba9f0aa0e59759132e41433f155b9b1803dce4b61d6fc4"
+  "execution_note": "Actual additive callbacks and receipt methods with synthetic Workbench only; three preload/extends paths redirected to exact current source. No native World constructed. The additional uppercase reserved-prefix check applies Windows-safe namespace semantics independently of the host filesystem.",
+  "log_sha256": "eccc38ddf31bc59659b11c61d7f023cded2a613dad52cb48a47414a86a3fef6b"
 }

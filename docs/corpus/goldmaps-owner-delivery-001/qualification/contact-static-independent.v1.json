@@ -1,0 +1,109 @@
+{
+  "schema": "goldmaps.independent-contact-static-review.v1",
+  "pass": true,
+  "scope": "Independent NumPy replay of actual shipped Setup bytes and bounded empty corridor; no new native contact or qualification inferred",
+  "records": [
+    {
+      "id": "corpus-188",
+      "source_setup_sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+      "material_plane_sha256": "d839766373ef4e7a964ede02298118ff4c0de2b4a0d96fcde4c0ec8e73d3b6fd",
+      "spawn": [
+        505,
+        185
+      ],
+      "clear_corridor_x_inclusive": [
+        493,
+        517
+      ],
+      "clear_corridor_y_half_open": [
+        185,
+        1923
+      ],
+      "first_centerline_material": 68,
+      "first_hard_surface_y": 1923,
+      "actual_native_execution": false
+    },
+    {
+      "id": "corpus-189",
+      "source_setup_sha256": "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+      "material_plane_sha256": "b19c8c358dd33e7a6aac284eedbea0503dbe54f62bae67953681684ad2c6bc1d",
+      "spawn": [
+        528,
+        146
+      ],
+      "clear_corridor_x_inclusive": [
+        516,
+        540
+      ],
+      "clear_corridor_y_half_open": [
+        146,
+        1958
+      ],
+      "first_centerline_material": 100,
+      "first_hard_surface_y": 1958,
+      "actual_native_execution": false
+    },
+    {
+      "id": "corpus-192",
+      "source_setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+      "material_plane_sha256": "30c6668a34341b172d231e4d257175a76b35b314e15dfb468a218d4970c56397",
+      "spawn": [
+        495,
+        148
+      ],
+      "clear_corridor_x_inclusive": [
+        483,
+        507
+      ],
+      "clear_corridor_y_half_open": [
+        148,
+        1980
+      ],
+      "first_centerline_material": 100,
+      "first_hard_surface_y": 1980,
+      "actual_native_execution": false
+    }
+  ],
+  "catalogue": {
+    "source_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "path": "materials/catalogue/catalogue.json",
+    "sha256": "3a5250a07912dc9530172cb2fccecd526606e242209d666cb2da202e1cfc9f14",
+    "exact_git_bytes": true,
+    "hard_surface_records": [
+      {
+        "path": "/native/capabilities/68",
+        "record": {
+          "id": 68,
+          "valid": true,
+          "current_rule": true,
+          "hard_surface": true,
+          "granular_support": false,
+          "free_leveling_liquid": false,
+          "pair_participant": false
+        }
+      },
+      {
+        "path": "/native/capabilities/100",
+        "record": {
+          "id": 100,
+          "valid": true,
+          "current_rule": true,
+          "hard_surface": true,
+          "granular_support": false,
+          "free_leveling_liquid": false,
+          "pair_participant": true
+        }
+      }
+    ]
+  },
+  "source_artifact": {
+    "source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+    "run_id": "45481683557",
+    "archive_sha256": "d132711302440a50780d7fb04a2a40c11d1986ae48c624b995745e8b13c47a30"
+  },
+  "independent_replay_tool": {
+    "path": "tools/goldmaps_owner/qualification/audit_collection.py",
+    "sha256": "1868b2ef8e550a97984c4e71e4e6d6691b48d119384e843a0b489edc563ce103",
+    "source_head": "0315c6ad99189dbe5da7ed75db6b1f3eb693885a"
+  }
+}

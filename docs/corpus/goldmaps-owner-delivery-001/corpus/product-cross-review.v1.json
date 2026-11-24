@@ -64,6 +64,13 @@
       "resolution": "The unsupported transition now displays an explicit non-mutating limitation before any bake. Ordinary painting, Undo, Play, Restore start and new named JSON saves remain supported. Binary saved-copy support is not claimed.",
       "status": "RESOLVED_BY_SOURCE_REVIEW_FRESH_PRODUCT_EXECUTION_PENDING",
       "resolution_source": "8f5d6f8774601180fc520e68191fff59a6d40415"
+    },
+    {
+      "id": "A-UI-09",
+      "finding": "Case-sensitive reserved save-name checks allowed an uppercase GM-SOURCE label to alias a later source staging filename on Windows.",
+      "resolution": "All saved-copy admission, Save, receipt registration and browser-copy boundaries case-fold the reserved prefix. The actual session fixture checks uppercase refusal, absent receipt and unchanged bytes.",
+      "status": "RESOLVED_BY_SOURCE_REVIEW_FRESH_PRODUCT_EXECUTION_PENDING",
+      "resolution_source": "b3cce5d4c07bde4321d35e553c513b193d6acd58"
     }
   ],
   "preview_visual_inspection": {
@@ -111,5 +118,17 @@
       "independently_rerun_by_this_reviewer": false
     },
     "source_authority_note": "New product execution must name its own source separately from retained native map campaign evidence. Actual old/new ZIP comparison and fresh lifecycle/graphical execution remain required."
+  },
+  "windows_reserved_name_review": {
+    "source": "b3cce5d4c07bde4321d35e553c513b193d6acd58",
+    "independent_source_result": "PASS_SOURCE_ONLY",
+    "files": {
+      "tools/goldmaps_owner/product/session/session.gd": "f0b9e55fa2c6e4a23d764e7f06fc45a98c2a7eaf8f23f283ec24f230bba3e56c",
+      "tools/goldmaps_owner/product/browser/browser.gd": "c38fd4d5aae6af7df7a7718c89f633a55fb1fc07cbbbe811e7a0b6ad8f3b8c4d",
+      "tools/goldmaps_owner/product/test_session_controls.gd": "fecc25c564ac59deb5b6e4bd3e60c2240ae97c7d694c06e8d1fb260f298520f0"
+    },
+    "implementer_reported_synthetic_checks": 24,
+    "independently_rerun_by_this_reviewer": false,
+    "remaining_executed_gate": "Final actual session must record uppercase_reserved_name_refused true and before/after bytes unchanged."
   }
 }

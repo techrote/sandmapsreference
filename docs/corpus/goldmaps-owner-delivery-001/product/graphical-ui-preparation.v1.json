@@ -1,0 +1,139 @@
+{
+  "schema": "goldmaps.graphical-ui-preparation.v1",
+  "pass": true,
+  "scope": "Actual ordinary popup handlers and mounted source identities only; the local headless DisplayServer reports a 1x1 desktop. No rendered screenshot, viewport-layout acceptance, native World or owner classification is inferred.",
+  "godot_version": "4.7.stable.official.5b4e0cb0f",
+  "executed_at_utc": "2026-11-24T21:29:53.247394+00:00",
+  "cases": [
+    {
+      "action": "comparison-popup",
+      "evidence": {
+        "depicted_variant_ids": [],
+        "headless_mounted_label_text": [
+          "Reference images side by side. Each Open starts its own ordinary native World; the simulations are not synchronized.",
+          "Archived crop legend \u00b7 A = trial-D1-reference (PR #203) \u00b7 B = trial-D1-candidate (PR #214) \u00b7 C = trial-D1-original (PR #186)",
+          "Frozen sites \u00b7 x right, y down \u00b7 bounds are [x, y, width, height]",
+          "Orthant Rift Needle \u2014 prior repair",
+          "repair-203 \u00b7 repaired portrait",
+          "material_plane_visualization",
+          "\n",
+          "SHA-256 9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+          "Orthant Rift Needle",
+          "trial-D1-original \u00b7 original",
+          "material_plane_visualization",
+          "Assessor disagreement retained\nFresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+          "SHA-256 195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+          "Orthant Rift Needle \u2014 Astra candidate",
+          "trial-D1-candidate \u00b7 Astra candidate",
+          "material_plane_visualization",
+          "Assessor disagreement retained\nFresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+          "SHA-256 7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+          "Orthant Rift Needle \u2014 prior repair",
+          "trial-D1-reference \u00b7 prior reworker reference",
+          "material_plane_visualization",
+          "Assessor disagreement retained\nFresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+          "SHA-256 9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013"
+        ],
+        "identity_visibility_scope": "Depicted IDs have card labels intersecting the captured popup viewport; mounted IDs also include horizontally scrollable aliases. Bounds show partial intersections.",
+        "mounted_variant_ids": [
+          "repair-203",
+          "trial-D1-original",
+          "trial-D1-candidate",
+          "trial-D1-reference"
+        ],
+        "native_world_opened": false,
+        "neutral_label_legend": "",
+        "owner_decision_written": false,
+        "popup": {
+          "title": "Compare source identities \u2014 independent play sessions",
+          "visible": true,
+          "window_size": [
+            1,
+            1
+          ]
+        },
+        "review_file_sha256_after": "431b555e8d1c783250a54a5c0677870741cad05c6d2b49c0c23ff92568f91a12",
+        "review_file_sha256_before": "431b555e8d1c783250a54a5c0677870741cad05c6d2b49c0c23ff92568f91a12",
+        "review_file_unchanged": true,
+        "selected_id": "trial-D1-original",
+        "selected_setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+        "view_kind": "comparison-popup",
+        "visible_label_records": []
+      },
+      "pass": true
+    },
+    {
+      "action": "decision-dialog",
+      "evidence": {
+        "decision_classification": "Unclassified",
+        "decision_map_id": "gold-125",
+        "decision_status": "Pending / not reviewed",
+        "depicted_variant_ids": [],
+        "mounted_variant_ids": [],
+        "native_world_opened": false,
+        "neutral_label_legend": "",
+        "owner_decision_written": false,
+        "popup": {
+          "title": "Your local review \u2014 explicit human choice",
+          "visible": true,
+          "window_size": [
+            1,
+            1
+          ]
+        },
+        "review_file_sha256_after": "431b555e8d1c783250a54a5c0677870741cad05c6d2b49c0c23ff92568f91a12",
+        "review_file_sha256_before": "431b555e8d1c783250a54a5c0677870741cad05c6d2b49c0c23ff92568f91a12",
+        "review_file_unchanged": true,
+        "selected_id": "gold-125",
+        "selected_setup_sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+        "view_kind": "decision-dialog"
+      },
+      "pass": true
+    },
+    {
+      "action": "overview-zoom",
+      "evidence": {
+        "depicted_variant_ids": [],
+        "image_scope": "Full-resolution archived material-plane visualization inside actual rendered UI; not a native World screenshot",
+        "mounted_variant_ids": [],
+        "native_world_opened": false,
+        "neutral_label_legend": "",
+        "owner_decision_written": false,
+        "popup": {
+          "title": "Silt Meridian Hingevault \u2014 full-resolution source preview",
+          "visible": true,
+          "window_size": [
+            1,
+            1
+          ]
+        },
+        "preview_kind": "material_plane_visualization",
+        "preview_path": "collection/previews/2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7.png",
+        "preview_sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7",
+        "review_file_sha256_after": "431b555e8d1c783250a54a5c0677870741cad05c6d2b49c0c23ff92568f91a12",
+        "review_file_sha256_before": "431b555e8d1c783250a54a5c0677870741cad05c6d2b49c0c23ff92568f91a12",
+        "review_file_unchanged": true,
+        "selected_id": "gold-197",
+        "selected_setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "view_kind": "overview-zoom"
+      },
+      "pass": true
+    }
+  ],
+  "source_files": {
+    "tools/goldmaps_owner/product/browser/browser.gd": "b4d2bb4b61d65c4394e793ad654d3583a28e6a911021aea9f014d4731226a705",
+    "tools/goldmaps_owner/product/run_graphical_capture.py": "aaf554846bd4213c29d1e35e66b6659e6b7936aa6f6a70ba57cb498c03402499",
+    "tools/goldmaps_owner/product/test_graphical_ui.gd": "4f1e8a0a685187c8b5dc15378d407c72f604b835c2212d6abf40f560b2e43d2f"
+  },
+  "input_payload_manifest_sha256": "4044f86bdc43fe4a2032e5d7ee6382fb5a0edd45da9f672ed8d4a092f1eeb78a",
+  "log_sha256": "1a836b527a8b746baddfed6ae59e64c36487de8c80854093df7d5ba74927314c",
+  "preparation_limit": "Initial visible-label assertions correctly found no viewport intersections on the 1x1 headless desktop. The preparation fixture checks mounted controls only; the unchanged Windows graphical gate requires actual viewport-intersecting identities and PNGs.",
+  "popup_fit_followup": {
+    "pass": true,
+    "cases": 3,
+    "scope": "Actual headless popup handlers and mounted identities after adaptive width and clip-aware metadata; no native World or rendered viewport acceptance",
+    "raw_log_sha256": "75c3edb074d838c0b2f17cbd5282f1a663bb5d2c8a3d99968a78d62379da4271",
+    "browser_sha256": "87af2ad91e70499f31f5402bcd70afa5d436ad7c6fb86b57ce417a75c8cb0d33",
+    "driver_sha256": "6d1f6d1004e6266caca6acabd2b827ccb90e6236881d7e15f7a12b618ea7a26d"
+  }
+}

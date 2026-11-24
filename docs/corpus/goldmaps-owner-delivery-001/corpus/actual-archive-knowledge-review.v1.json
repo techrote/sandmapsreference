@@ -1,0 +1,111 @@
+{
+  "schema": "goldmaps.owner-archive-knowledge-review.v1",
+  "status": "PASS_CORPUS_SCHEMA_AND_REUSE_LIMITS_ONLY",
+  "reviewer": {
+    "role": "Specialist A corpus lead inspecting actual predecessor archive; independently reviewed by B/C elsewhere",
+    "identity": "Same AI mission; this is not sole certification of own implementation"
+  },
+  "artifact": {
+    "file": "CyberSand-GOLDMAPS-Owner-Evaluator-b4ed0fc462a5.zip",
+    "sha256": "d132711302440a50780d7fb04a2a40c11d1986ae48c624b995745e8b13c47a30",
+    "bytes": 101218031,
+    "executed_source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+    "run_id": "45481683557"
+  },
+  "checks": {
+    "fragment_files_checked": 267,
+    "fragment_bytes_checked": 64167363,
+    "fragment_missing_extra_or_hash_failures": 0,
+    "logical_roster": 81,
+    "canonical_source_index": 70,
+    "knowledge_maps": 70,
+    "logical_rights_records_exact": 81,
+    "knowledge_rights_records_exact": 70,
+    "owner_accepted": 0,
+    "module_hints": 27,
+    "native_import_eligible_module_hints": 0,
+    "included_module_geometries": 0,
+    "invented_attachment_sockets": 0,
+    "relationships": 8,
+    "d1_d2_ancestry_groups_closed": true,
+    "negative_interventions_retained_unaccepted": 5,
+    "frozen_failed_custody_exact": true,
+    "consumer_cards_exact_unchanged": true,
+    "userdata_members": 0
+  },
+  "rights_label": {
+    "attribution": "Exact source repository/PR/commit retained; individual human authorship unverified",
+    "license": "UNKNOWN / no map-specific license established by frozen corpus",
+    "reuse": "Owner evaluation and reference corpus only; no general training or redistribution permission inferred"
+  },
+  "qualified_native_status_is_separate": {
+    "authority": {
+      "authority": "Fresh delivery execution only; authoritative after qualification, independent of assembly scheduling and frozen scientific evidence",
+      "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+      "keyed_by": "setups.<exact Setup SHA-256>",
+      "path": "collection/delivery-qualification.v1.json",
+      "resolution": "Require matching engine_head and exact Setup SHA-256. Read the keyed status and receipt; absent or mismatched evidence leaves the Setup unavailable. QUALIFIED_HEADLESS does not imply graphical or owner acceptance.",
+      "schema": "goldmaps.owner-qualification.v1"
+    },
+    "predecessor_logical_status_counts": {
+      "QUALIFIED_HEADLESS": 76,
+      "REFUSED_INVALID_SOURCE": 2,
+      "UNQUALIFIED": 3
+    },
+    "predecessor_all70_source_status_counts": {
+      "QUALIFIED_HEADLESS": 65,
+      "REFUSED_INVALID_SOURCE": 2,
+      "UNQUALIFIED": 3
+    },
+    "scope": "Actual N overlay only; no change to static scientific fields and no prediction of a later supplemental result."
+  },
+  "metadata_records": [
+    {
+      "path": "collection/collection.v1.json",
+      "sha256": "f3204678c3ee2131515eb50bbdc3b112a141bda7fe554ea4bfbfff1e097516ed",
+      "bytes": 1071102
+    },
+    {
+      "path": "collection/collection-files.v1.json",
+      "sha256": "cb1e4517a17fb43c5ed9193edd4aa83b08db80c136844550de1ba8d3c7a95376",
+      "bytes": 211288
+    },
+    {
+      "path": "corpus-export/knowledge.v1.json",
+      "sha256": "711e501597f0c9fa90a2553a643aabdbcbe5552693efc2dd578e626ca6c56557",
+      "bytes": 1640704
+    },
+    {
+      "path": "corpus-export/BATCH-LAB-HANDOFF.md",
+      "sha256": "fa748547b575865c7f134bba8a0a7f7cabf5a4becfe3b8154f83bbf6aac7308c",
+      "bytes": 9097
+    },
+    {
+      "path": "corpus-export/batch-lab/architectural_design_cards.v1.json",
+      "sha256": "9153480ea622d5dc6a78543269840af64b3adbef43074af8cf78cfe685d0b057",
+      "bytes": 180282
+    },
+    {
+      "path": "corpus-export/frozen/failed-attempt-custody.v1.json",
+      "sha256": "aac1376d3efe8ba18868da29f5457e21c0cb3e5e8317e40f0411185be8aa8075",
+      "bytes": 83355
+    },
+    {
+      "path": "LICENSE-AND-SOURCE.md",
+      "sha256": "4ab2b0809c6c8cc28541b17880f48640ed2cd427b1ae6bfd25891ba62c311d8e",
+      "bytes": 2110
+    },
+    {
+      "path": "runtime/source-notices/LICENSE_STATUS.md",
+      "sha256": "3bfb7c5ddd1418ab38621d1e5b841c9e9c4845e9166a196143c8a71f3cd46b70",
+      "bytes": 780
+    }
+  ],
+  "limits": [
+    "This verifies the actual archived corpus fragment, schema consistency and explicit reuse labels; it is not legal licensing advice or a public release approval.",
+    "The original CyberSand no-public-license notice remains distinct from component-specific Godot/Rapier/Microsoft notices.",
+    "The unchanged25-card usage statement excluding full Setups/images describes that card file; the larger owner kit separately bundles source-pinned Setups and previews.",
+    "All70 index does not mean70 qualified original source maps. Current status must be resolved by exact Setup SHA and engine.",
+    "This review does not supersede the predecessor gallery usability failure or the separate final archive auditor."
+  ]
+}

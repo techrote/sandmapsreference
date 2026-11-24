@@ -30,6 +30,7 @@ var eligibility := OptionButton.new()
 var review_filter := OptionButton.new()
 var family := OptionButton.new()
 var map_list := ItemList.new()
+var map_navigation: BoxContainer
 var status := Label.new()
 var title_label: Label
 var source_label := RichTextLabel.new()
@@ -172,6 +173,7 @@ func _build_ui() -> void:
 	catalogue.add_child(count_label)
 	map_list.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	map_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	map_list.custom_minimum_size.y = 180
 	map_list.max_columns = 2
 	map_list.fixed_column_width = 225
 	map_list.fixed_icon_size = Vector2i(210, 126)
@@ -183,10 +185,17 @@ func _build_ui() -> void:
 		_select_index(index)
 		_open_selected())
 	catalogue.add_child(map_list)
-	var navigation := _box(catalogue, false)
-	_button(navigation, "← Previous", func() -> void: _step(-1))
-	_button(navigation, "Next →", func() -> void: _step(1))
-	_label(navigation, "Arrow keys · Enter opens", 13, MUTED)
+	map_navigation = _box(catalogue, false)
+	_button(map_navigation, "← Previous", func() -> void: _step(-1))
+	_button(map_navigation, "Next →", func() -> void: _step(1))
+	var navigation_hint := _label(map_navigation, "Arrow keys · Enter opens", 13, MUTED)
+	# An autowrapped label in a shrinking HBox can request one line per
+	# character and consume the entire map grid. Keep this optional hint
+	# single-line; the map list and navigation buttons take priority.
+	navigation_hint.autowrap_mode = TextServer.AUTOWRAP_OFF
+	navigation_hint.clip_text = true
+	navigation_hint.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	navigation_hint.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	var details_scroll := ScrollContainer.new()
 	details_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	details_scroll.custom_minimum_size.x = 520
@@ -229,6 +238,9 @@ func _build_ui() -> void:
 	status.add_theme_color_override("font_color", MUTED)
 	column.add_child(status)
 	for dialog: Window in [error_dialog, zoom_dialog, compare_dialog, decision_dialog, guide_dialog, copies_dialog, discard_review_dialog]:
+		# Plain Window nodes are visible by default. Only an explicit owner
+		# action may show a decision, comparison or preview window.
+		dialog.hide()
 		dialog.initial_position = Window.WINDOW_INITIAL_POSITION_CENTER_MAIN_WINDOW_SCREEN
 		dialog.transient = true
 		if dialog != decision_dialog: dialog.close_requested.connect(dialog.hide)
@@ -295,12 +307,22 @@ func _start() -> void:
 	status.text = "Verified %d payload files · engine %s · reviews and saves stay inside userdata/ · owner acceptance pending" % [rows.size(), str(manifest.engine_head).left(12)]
 	print("GOLDMAPS_BROWSER_READY " + JSON.stringify({"engine_head":manifest.engine_head, "logical_maps":collection.maps.size(), "verified_files":rows.size(), "user_data_dir":OS.get_user_data_dir(), "package_root":package_root}))
 	if OS.get_environment("GOLDMAPS_QA_CAPTURE") == "1" and DisplayServer.get_name() != "headless":
+		var view := await _qa_prepare_view(OS.get_environment("GOLDMAPS_QA_UI_ACTION"), OS.get_environment("GOLDMAPS_QA_UI_MAP"))
+		if view.has("error"):
+			print("GOLDMAPS_BROWSER_GRAPHICAL_REFUSED " + JSON.stringify(view))
+			get_tree().quit(2); return
 		await get_tree().process_frame
 		await RenderingServer.frame_post_draw
 		var capture_path := package_root.path_join("userdata/qa/browser.png")
 		DirAccess.make_dir_recursive_absolute(capture_path.get_base_dir())
-		get_viewport().get_texture().get_image().save_png(capture_path)
-		var capture := {"schema":"goldmaps.browser-graphical.v1", "path":capture_path, "sha256":FileAccess.get_sha256(capture_path), "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "viewport":str(get_viewport_rect().size), "active_collection":active_collection, "visible_maps":filtered.size(), "selected_id":selected.get("id", ""), "engine_head":manifest.engine_head, "scope":"actual hosted rendered UI; physical owner GPU acceptance not inferred"}
+		var target: Window = view.window
+		var capture_image := target.get_texture().get_image()
+		if capture_image.save_png(capture_path) != OK:
+			print("GOLDMAPS_BROWSER_GRAPHICAL_REFUSED Could not save the actual displayed viewport.")
+			get_tree().quit(2); return
+		view.erase("window")
+		var capture := {"schema":"goldmaps.browser-graphical.v1", "path":capture_path, "sha256":FileAccess.get_sha256(capture_path), "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "viewport":str(target.get_visible_rect().size), "active_collection":active_collection, "visible_maps":filtered.size(), "selected_id":selected.get("id", ""), "selected_setup_sha256":selected.get("setup", {}).get("sha256", ""), "engine_head":manifest.engine_head, "scope":"actual hosted rendered UI; physical owner GPU acceptance not inferred"}
+		capture.merge(view)
 		IO.atomic_json(package_root.path_join("userdata/qa/browser-graphical.json"), capture)
 		print("GOLDMAPS_BROWSER_GRAPHICAL " + JSON.stringify(capture))
 		if OS.get_environment("GOLDMAPS_QA_MAP").is_empty():
@@ -314,6 +336,103 @@ func _start() -> void:
 		selected = IO.find_map(collection, qa_map)
 		if selected.is_empty(): _fail("QA map identity unavailable."); return
 		_open_selected()
+
+func _qa_prepare_view(action: String, map_id: String) -> Dictionary:
+	# Display-only developer fixture. It calls existing collection controls,
+	# never opens a World and never chooses or saves an owner classification.
+	await get_tree().process_frame
+	var initial_layout := _qa_gallery_layout()
+	if action.is_empty(): return {"view_kind":"gallery", "window":get_window(), "initial_gallery_layout":initial_layout}
+	if action not in ["comparison-popup", "decision-dialog", "overview-zoom"] or not _safe_id(map_id):
+		return {"error":"Unknown graphical UI fixture."}
+	var reviews_path := package_root.path_join("userdata/reviews/decisions.json")
+	var before := FileAccess.get_sha256(reviews_path) if FileAccess.file_exists(reviews_path) else ""
+	for tab: Button in tabs.get_children():
+		if tab.get_meta("collection", "") == "all": tab.pressed.emit(); break
+	var found := false
+	for index: int in filtered.size():
+		if str(filtered[index].id) == map_id:
+			map_list.select(index)
+			map_list.item_selected.emit(index)
+			found = true
+			break
+	if not found or str(selected.get("id", "")) != map_id: return {"error":"Graphical UI fixture could not select its exact map."}
+	var target: Window
+	if action == "comparison-popup":
+		if not _qa_press_button(self, "Compare variants"): return {"error":"Comparison control not found."}
+		target = compare_dialog
+	elif action == "decision-dialog":
+		if not _qa_press_button(self, "Record my decision"): return {"error":"Decision control not found."}
+		target = decision_dialog
+	else:
+		var event := InputEventMouseButton.new()
+		event.pressed = true
+		event.button_index = MOUSE_BUTTON_LEFT
+		preview.gui_input.emit(event)
+		target = zoom_dialog
+	for frame: int in 3: await get_tree().process_frame
+	if target == null or not target.visible: return {"error":"Requested ordinary UI popup is not visible."}
+	var after := FileAccess.get_sha256(reviews_path) if FileAccess.file_exists(reviews_path) else ""
+	var result := {"view_kind":action, "window":target, "popup":{"visible":target.visible, "title":target.title, "window_size":[target.size.x,target.size.y]}, "review_file_sha256_before":before, "review_file_sha256_after":after, "review_file_unchanged":before == after, "native_world_opened":active_pid > 0, "owner_decision_written":false, "depicted_variant_ids":[], "mounted_variant_ids":[], "neutral_label_legend":"", "initial_gallery_layout":initial_layout}
+	if action == "comparison-popup":
+		var labels: Array[Dictionary] = []
+		_qa_visible_labels(target, target, labels)
+		result["visible_label_records"] = labels
+		result["identity_visibility_scope"] = "Depicted IDs have card labels intersecting the popup and clipping ancestors; visible_bounds and fully_visible distinguish clipping. Mounted IDs also include horizontally scrollable aliases."
+		var mounted: Array[Dictionary] = []
+		_qa_visible_labels(target, target, mounted, false)
+		for label: Dictionary in mounted:
+			var candidate := str(label.text).get_slice(" · ", 0)
+			if not IO.find_map(collection, candidate).is_empty() and candidate not in result.mounted_variant_ids:
+				result.mounted_variant_ids.append(candidate)
+		for label: Dictionary in labels:
+			var text_value := str(label.text)
+			if text_value.begins_with("Archived crop legend"): result.neutral_label_legend = text_value
+			var candidate := text_value.get_slice(" · ", 0)
+			if not IO.find_map(collection, candidate).is_empty() and candidate not in result.depicted_variant_ids:
+				result.depicted_variant_ids.append(candidate)
+	elif action == "decision-dialog":
+		result["decision_map_id"] = str(decision_dialog.get_meta("map_id", ""))
+		result["decision_status"] = decision_status.get_item_text(decision_status.selected)
+		result["decision_classification"] = decision_class.get_item_text(decision_class.selected)
+	else:
+		result["preview_path"] = str(selected.get("preview", {}).get("path", ""))
+		result["preview_sha256"] = FileAccess.get_sha256(package_root.path_join(result.preview_path))
+		result["preview_kind"] = str(selected.get("preview", {}).get("kind", ""))
+		result["image_scope"] = "Full-resolution archived material-plane visualization inside actual rendered UI; not a native World screenshot"
+	return result
+
+func _qa_gallery_layout() -> Dictionary:
+	var list_bounds := map_list.get_global_rect()
+	var navigation_bounds := map_navigation.get_global_rect()
+	var first_item := map_list.get_item_rect(0) if map_list.item_count > 0 else Rect2()
+	var popups: Array[String] = []
+	for dialog: Window in [error_dialog, zoom_dialog, compare_dialog, decision_dialog, guide_dialog, copies_dialog, discard_review_dialog]:
+		if dialog.visible: popups.append(dialog.title)
+	return {"viewport_size":[get_viewport_rect().size.x,get_viewport_rect().size.y], "map_count":map_list.item_count, "map_list_visible":map_list.is_visible_in_tree(), "map_list_bounds":[list_bounds.position.x,list_bounds.position.y,list_bounds.size.x,list_bounds.size.y], "first_item_bounds_local":[first_item.position.x,first_item.position.y,first_item.size.x,first_item.size.y], "navigation_bounds":[navigation_bounds.position.x,navigation_bounds.position.y,navigation_bounds.size.x,navigation_bounds.size.y], "visible_popup_titles":popups}
+
+func _qa_press_button(parent: Node, caption: String) -> bool:
+	for child: Node in parent.get_children():
+		if child is Button and child.text == caption:
+			child.pressed.emit()
+			return true
+		if _qa_press_button(child, caption): return true
+	return false
+
+func _qa_visible_labels(parent: Node, target: Window, labels: Array[Dictionary], intersect_viewport: bool = true) -> void:
+	var bounds := Rect2(Vector2.ZERO, Vector2(target.size))
+	for child: Node in parent.get_children():
+		if child is Label and child.is_visible_in_tree():
+			var rectangle: Rect2 = child.get_global_rect()
+			var visible := bounds.intersection(rectangle)
+			var ancestor: Node = child.get_parent()
+			while ancestor != null and ancestor != target:
+				if ancestor is Control and ancestor.clip_contents:
+					visible = visible.intersection(ancestor.get_global_rect())
+				ancestor = ancestor.get_parent()
+			if not intersect_viewport or visible.has_area():
+				labels.append({"text":child.text, "bounds":[rectangle.position.x,rectangle.position.y,rectangle.size.x,rectangle.size.y], "visible_bounds":[visible.position.x,visible.position.y,visible.size.x,visible.size.y], "fully_visible":visible.encloses(rectangle)})
+		_qa_visible_labels(child,target,labels,intersect_viewport)
 
 func _safe_id(id: String) -> bool:
 	if id.is_empty() or id.length() > 80: return false
@@ -403,8 +522,9 @@ func _select_index(index: int) -> void:
 	title_label.text = str(selected.get("title", selected.id))
 	var source: Dictionary = selected.get("source", {})
 	var commit := str(source.get("commit", source.get("head", "")))
-	var source_url := "https://github.com/techrote/sandmapsreference/pull/" + str(source.get("pr", ""))
-	source_label.text = "[color=#a4b3c7]%s · [url=%s]PR #%s[/url] · %s\n%s[/color]" % [_escape(str(selected.id)), source_url, _escape(str(source.get("pr", "—"))), commit.left(12), _escape(str(selected.get("variant_role", "source")).replace("_", " "))]
+	var source_pr := str(int(source.pr)) if source.get("pr") is float or source.get("pr") is int else "—"
+	var source_url := "https://github.com/techrote/sandmapsreference/pull/" + source_pr
+	source_label.text = "[color=#a4b3c7]%s · [url=%s]PR #%s[/url] · %s\n%s[/color]" % [_escape(str(selected.id)), source_url, source_pr, commit.left(12), _escape(str(selected.get("variant_role", "source")).replace("_", " "))]
 	preview.texture = _texture(selected)
 	var preview_info: Dictionary = selected.get("preview", {})
 	preview_caption.text = str(preview_info.get("kind", "Preview unavailable")).replace("_", " ") + " · click to inspect full resolution"
@@ -555,7 +675,7 @@ func _show_compare() -> void:
 				if card.get("arm", "") != comparison.get("arm", ""): continue
 				var legend_parts := PackedStringArray()
 				for variant: Dictionary in card.get("variants", []):
-					legend_parts.append("%s = %s (PR #%s)" % [str(variant.get("neutral_label", "")), str(variant.get("id", "")), str(variant.get("source_pr", ""))])
+					legend_parts.append("%s = %s (PR #%d)" % [str(variant.get("neutral_label", "")), str(variant.get("id", "")), int(variant.get("source_pr", 0))])
 				var legend := "Archived crop legend · " + " · ".join(legend_parts)
 				_label(col, legend, 14, GOLD)
 				_label(col, "Frozen sites · x right, y down · bounds are [x, y, width, height]", 13, MUTED)
@@ -571,9 +691,12 @@ func _show_compare() -> void:
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	col.add_child(scroll)
 	var row_box := _box(scroll, false)
+	var mounted_cards: Array[Control] = []
+	var mounted_images: Array[TextureRect] = []
 	for row: Dictionary in _variants():
 		var card := _box(row_box)
 		card.custom_minimum_size.x = 340
+		mounted_cards.append(card)
 		_label(card, str(row.get("title", row.id)), 20, GOLD)
 		_label(card, str(row.id) + " · " + str(row.get("variant_role", "source")), 14, MUTED)
 		var image := TextureRect.new()
@@ -583,6 +706,7 @@ func _show_compare() -> void:
 		image.custom_minimum_size = Vector2(340, 320)
 		image.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		card.add_child(image)
+		mounted_images.append(image)
 		_label(card, str(row.get("preview", {}).get("kind", "Preview unavailable")), 13, MUTED)
 		_label(card, str(_dict(row.get("comparison")).get("frozen_result", "")) + "\n" + str(_dict(row.get("comparison")).get("owner_prompt", "")), 15)
 		var button := _button(card, "Open " + str(row.get("variant_role", "variant")), func() -> void:
@@ -590,6 +714,14 @@ func _show_compare() -> void:
 		button.disabled = not IO.playable_reason(row, qualification, str(manifest.engine_head)).is_empty()
 		_label(card, "SHA-256 " + str(row.get("setup", {}).get("sha256", "not bundled")), 12, MUTED)
 	compare_dialog.popup_centered_clamped(Vector2i(1180, 680), 0.95)
+	# Fit the first three independent source roles to the actual popup
+	# client. Extra logical aliases remain in the same horizontal scroller.
+	# Reserve margins, inter-card gaps and scrollbar width before dividing.
+	var columns := mini(3, maxi(1, mounted_cards.size()))
+	var card_width := clampf(floorf((compare_dialog.size.x - 72.0) / columns), 220.0, 340.0)
+	for index: int in mounted_cards.size():
+		mounted_cards[index].custom_minimum_size.x = card_width
+		mounted_images[index].custom_minimum_size.x = card_width
 
 func _show_archived_image(path: String, caption: String, legend: String = "") -> void:
 	if not IO.safe_relative(path): return
@@ -722,7 +854,7 @@ func _show_copies() -> void:
 	for copy: Dictionary in saved:
 		var path := str(copy.get("path", "")).replace("\\", "/").simplify_path()
 		var label := str(copy.get("label", ""))
-		if not _safe_id(label) or not path.begins_with(profile_prefix) or not FileAccess.file_exists(path): continue
+		if not _safe_id(label) or label.to_lower().begins_with("gm-source-") or not path.begins_with(profile_prefix) or not FileAccess.file_exists(path): continue
 		if FileAccess.get_sha256(path) != str(copy.get("sha256", "")): continue
 		current[label] = copy
 	if current.is_empty(): _label(col, "No current exact evaluation copies have been recorded for this identity. Use Save evaluation copy in its Workbench window. Historical receipt versions are retained, but only versions matching the current named file can reopen here.")

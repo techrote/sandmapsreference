@@ -47,14 +47,16 @@ func _safe_id(id: String, maximum: int = 100) -> bool:
 
 func _start() -> void:
 	auto_accept_quit = false
-	# The accepted engine requests a 1920x1080 window. This opt-in session
-	# fits only its own native window; ordinary canvas stretch, camera and
-	# Workbench controls retain the accepted project settings and semantics.
+	# The accepted engine requests a 1920x1080 window and logical canvas.
+	# Fit this opt-in process to the desktop and use the fitted client size
+	# as its logical canvas. Ordinary responsive Workbench controls keep
+	# their accepted font sizes instead of shrinking to unreadable text.
 	if DisplayServer.get_name() != "headless":
 		var usable := DisplayServer.screen_get_usable_rect(root.current_screen)
 		if usable.size.x > 0 and usable.size.y > 0:
 			var fitting := Vector2i(mini(root.size.x, maxi(960, usable.size.x-32)), mini(root.size.y, maxi(600, usable.size.y-64)))
 			root.min_size = Vector2i(mini(root.min_size.x, fitting.x), mini(root.min_size.y, fitting.y))
+			root.content_scale_size = fitting
 			root.size = fitting
 			root.position = usable.position + (usable.size-fitting)/2
 	package_root = OS.get_environment("GOLDMAPS_PACKAGE_ROOT").simplify_path()
@@ -104,7 +106,7 @@ func _start() -> void:
 		file.close()
 		if FileAccess.get_sha256(Setup._path(source_label)) != original_sha: _refuse("Isolated Setup copy differs from its source."); return
 	else:
-		if Setup._path(saved_label).is_empty() or saved_label.begins_with("gm-source-") or saved_sha.length() != 64:
+		if Setup._path(saved_label).is_empty() or saved_label.to_lower().begins_with("gm-source-") or saved_sha.length() != 64:
 			_refuse("Invalid saved-copy identity."); return
 		if FileAccess.get_sha256(Setup._path(saved_label)) != saved_sha: _refuse("Named evaluation copy changed or is unavailable. Return to the collection and reopen My saved copies; only the current recorded bytes can reopen under this source identity."); return
 		source_label = saved_label
@@ -266,6 +268,15 @@ func _qa_ordinary_save_attribution(roster: Dictionary) -> Dictionary:
 	var protected: bool = controls.notice_dialog.visible and str(controls.notice_dialog.dialog_text).contains("already exists") and not _has_saved_receipt(foreign_label)
 	var bytes_safe: bool = FileAccess.get_sha256(foreign_path) == foreign_sha
 	controls.notice_dialog.get_ok_button().pressed.emit()
+	var reserved_label := "GM-SOURCE-" + original_sha.left(20)
+	var reserved_path: String = Setup._path(reserved_label)
+	var reserved_before := FileAccess.get_sha256(reserved_path) if FileAccess.file_exists(reserved_path) else ""
+	ui._name.text = reserved_label
+	controls.ordinary_save_button.pressed.emit()
+	await process_frame
+	var reserved_after := FileAccess.get_sha256(reserved_path) if FileAccess.file_exists(reserved_path) else ""
+	var reserved_refused: bool = controls.notice_dialog.visible and str(controls.notice_dialog.dialog_text).contains("source labels are reserved") and not _has_saved_receipt(reserved_label) and reserved_before == reserved_after
+	controls.notice_dialog.get_ok_button().pressed.emit()
 	var button_label := "qa-button-" + Crypto.new().generate_random_bytes(8).hex_encode()
 	ui._name.text = button_label
 	controls.ordinary_save_button.pressed.emit()
@@ -286,8 +297,8 @@ func _qa_ordinary_save_attribution(roster: Dictionary) -> Dictionary:
 	await process_frame
 	ui._tool.select(previous_tool)
 	var keyboard_saved := _has_saved_receipt(keyboard_label)
-	var receipt := {"scope":"Exact foreign-source bytes in an isolated developer fixture; actual ordinary Save button and dispatched Ctrl+S event; no physical keyboard claim", "foreign_source_map_id":foreign.id, "foreign_label":foreign_label, "foreign_setup_sha256":foreign_sha, "receipt_count_before_typing":count_before, "typing_existing_name_did_not_register":typing_safe, "typing_existing_name_left_banner":banner_safe, "existing_name_button_refused":protected, "foreign_file_sha256_unchanged":bytes_safe, "ordinary_button_new_label_saved":button_saved, "ordinary_button_label":button_label, "keyboard_new_label_saved":keyboard_saved, "keyboard_label":keyboard_label}
-	if not typing_safe or not banner_safe or not protected or not bytes_safe or not button_saved or not keyboard_saved:
+	var receipt := {"scope":"Exact foreign-source bytes in an isolated developer fixture; actual ordinary Save button and dispatched Ctrl+S event; no physical keyboard claim", "foreign_source_map_id":foreign.id, "foreign_label":foreign_label, "foreign_setup_sha256":foreign_sha, "receipt_count_before_typing":count_before, "typing_existing_name_did_not_register":typing_safe, "typing_existing_name_left_banner":banner_safe, "existing_name_button_refused":protected, "foreign_file_sha256_unchanged":bytes_safe, "uppercase_reserved_name_refused":reserved_refused, "reserved_label":reserved_label, "reserved_before_sha256":reserved_before, "reserved_after_sha256":reserved_after, "ordinary_button_new_label_saved":button_saved, "ordinary_button_label":button_label, "keyboard_new_label_saved":keyboard_saved, "keyboard_label":keyboard_label}
+	if not typing_safe or not banner_safe or not protected or not bytes_safe or not reserved_refused or not button_saved or not keyboard_saved:
 		receipt["error"] = "QA ordinary Save attribution or existing-name protection failed."
 	return receipt
 
@@ -348,7 +359,7 @@ func _wait(predicate: Callable, timeout: int) -> bool:
 
 func save_copy(label: String) -> bool:
 	if not loaded or closing: return false
-	if Setup._path(label).is_empty() or label.begins_with("gm-source-"):
+	if Setup._path(label).is_empty() or label.to_lower().begins_with("gm-source-"):
 		controls.notice("Choose 1–48 letters, digits, underscores or hyphens; source labels are reserved.")
 		return false
 	if FileAccess.file_exists(Setup._path(label)):
@@ -361,7 +372,7 @@ func save_copy(label: String) -> bool:
 
 func _record_saved(label: String) -> void:
 	var path: String = Setup._path(label)
-	if path.is_empty() or label.begins_with("gm-source-") or not FileAccess.file_exists(path): return
+	if path.is_empty() or label.to_lower().begins_with("gm-source-") or not FileAccess.file_exists(path): return
 	var digest := FileAccess.get_sha256(path)
 	for previous: Dictionary in report.get("saved_copies", []):
 		if previous.label == label and previous.sha256 == digest: return
@@ -377,7 +388,7 @@ func capture_screenshot() -> void:
 	await RenderingServer.frame_post_draw
 	var image := root.get_texture().get_image()
 	if image.save_png(destination) != OK: controls.notice("Could not save the screenshot."); return
-	report.screenshots.append({"path":destination, "sha256":FileAccess.get_sha256(destination), "kind":"actual rendered Workbench viewport", "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "window_size":[root.size.x,root.size.y], "window_position":[root.position.x,root.position.y], "viewport_size":[int(root.get_visible_rect().size.x),int(root.get_visible_rect().size.y)], "capture_size":[image.get_width(),image.get_height()], "physical_owner_acceptance":"not_inferred", "captured_at":Time.get_datetime_string_from_system(true) + "Z"})
+	report.screenshots.append({"path":destination, "sha256":FileAccess.get_sha256(destination), "kind":"actual rendered Workbench viewport", "renderer":RenderingServer.get_video_adapter_name(), "display_driver":DisplayServer.get_name(), "window_size":[root.size.x,root.size.y], "window_position":[root.position.x,root.position.y], "content_scale_size":[root.content_scale_size.x,root.content_scale_size.y], "viewport_size":[int(root.get_visible_rect().size.x),int(root.get_visible_rect().size.y)], "capture_size":[image.get_width(),image.get_height()], "physical_owner_acceptance":"not_inferred", "captured_at":Time.get_datetime_string_from_system(true) + "Z"})
 	_write_report()
 	if OS.get_environment("GOLDMAPS_QA_CAPTURE") != "1": controls.notice("Screenshot saved to userdata/reviews/screenshots/ and linked to this exact session.")
 

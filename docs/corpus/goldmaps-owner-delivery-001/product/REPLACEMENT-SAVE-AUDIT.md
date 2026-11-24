@@ -85,6 +85,11 @@ The adapter consumes the dispatched shortcut to prevent a second unprotected
 ordinary Save. Merely naming a file, closing the window or opening a laboratory
 does not create a saved-copy receipt.
 
+The temporary `gm-source-` namespace is reserved case-insensitively at save,
+receipt, saved-copy admission and browser-list boundaries. This prevents an
+uppercase owner label from aliasing a later lowercase staged source file on
+the normal Windows filesystem.
+
 Flatten/Bake History would produce the engine's MaterialBaseline binary format,
 whereas this product's source-bound saved-copy replay is qualified for authored
 Setup JSON. Its control now shows an explicit limitation before any bake. The
@@ -110,9 +115,9 @@ source separately. All owner classifications remain pending.
 
 The focused `test_session_controls.gd` regression fixture executed the actual
 additive callbacks against a synthetic Workbench under exact Godot 4.7 stable:
-**23/23 checks passed**. It includes the lazy seventh control, all cancellation
+**24/24 checks passed**. It includes the lazy seventh control, all cancellation
 paths, foreign-name typing/closing, protected ordinary Save, successful and
-ineligible Ctrl+S, and failed-save receipt suppression. The exact product/test
+ineligible Ctrl+S, uppercase reserved-name refusal, and failed-save receipt suppression. The exact product/test
 file hashes and scope are recorded in
 [`synthetic-controls-review.v1.json`](synthetic-controls-review.v1.json).
 It constructed no native World; fresh actual-map product execution remains a

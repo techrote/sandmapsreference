@@ -35,6 +35,9 @@ references; map browsing, play, saves and review export do not need a network.
 | Policy descendants | The recovered #155 descendant and the separate #183 default-policy variant |
 | All variants | Every logical collection entry, including comparison aliases |
 
+There are **81 logical entries and 72 unique Setup payloads**. Collection views
+overlap; byte-identical variants keep their separate source roles and decisions.
+
 Search by title, architecture, source PR or variant. Filter by family,
 orientation, native eligibility and your local review status. **Ctrl+F** focuses
 search; **Page Up / Page Down** move through the filtered list. Click an overview
@@ -118,7 +121,7 @@ variant. Independently simulated Worlds are not presented as a synchronized
 state. Use the archived sites and authored spawns as reference points.
 
 Choose **Record my decision** to save a status, optional classification, preferred
-variant and playability/presentation notes. **Ctrl+S** opens the review action.
+variant and playability/presentation notes. In the gallery, **Ctrl+S** opens the review action.
 Each entry starts pending and unclassified. Nothing becomes accepted because
 it has a Gold nomination or a native PASS.
 

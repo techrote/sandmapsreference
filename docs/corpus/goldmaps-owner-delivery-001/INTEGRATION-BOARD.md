@@ -13,7 +13,7 @@ frozen artistic experiment.
 | Finalisation #216 | `b9535405853a5cd16e4bba968ec7167222861c42` | Open; written Draft/HOLD, actual `draft=false` |
 | Scientific/native evidence | `40f196f792e4d9e19bbd57fdafd6a90420fadf32` | Frozen; not replaced by delivery evidence |
 | Scientific engine | `662df51cd8409a52332fa7ef15d06d8ab8945aed` | Frozen research authority |
-| Contemporary accepted engine | `00cdb02f103265b6dc5224c68283e9a0c8cb449f` | Proposed delivery engine, pending new complete qualification |
+| Contemporary accepted engine | `00cdb02f103265b6dc5224c68283e9a0c8cb449f` | Executed delivery engine; owner acceptance pending |
 
 The metadata discrepancy on #215/#216 grants no merge or metadata-change
 authority. Both predecessors and all original map branches remain untouched.
@@ -81,24 +81,40 @@ results are never promoted to passes.
 The initial hosted Windows run `45481057262` correctly refused converted
 bootstrap source bytes before native execution. Its original artifact and
 logs are preserved. Explicit `core.eol=lf` plus `core.autocrlf=false` fixes
-checkout bytes without changing the integrity guard. The consolidated serial
-Windows campaign `45481683557`, source
-`b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041`, is in progress. It targets the
-required44, disjoint optional28, 14 bounded routes, actual launcher/product,
-displayed cases, reconstruction and a freshly extracted final ZIP.
+checkout bytes without changing the integrity guard. The consolidated serial Windows campaign `45481683557`, source
+`b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041`, completed. Its actual ZIP was
+downloaded and independently audited: 81 logical entries / 72 unique Setups;
+67 qualified, two expected invalid-source refusals, and three optional
+portraits unqualified only for an unobserved contact within 900 ticks. All
+14 bounded scripted routes completed. The 15 planned displayed cases were
+captured, but independent visual review found a collapsed gallery and an
+unrequested startup popup. The native map images match source identities;
+capture success does not by itself establish usable UI. The actual original
+ZIP, native summaries and all negative results remain the N authority.
 
 Independent source review then found ordinary New/Load and Water Lab scene
 replacement paths that could bypass the evaluator identity/close warning,
-plus a save-receipt attribution edge. Specialist B is repairing the additive
-session layer; A and C review it independently. Current shipped engine,
+plus a save-receipt attribution edge. Specialist B repaired the additive session layer; A and C reviewed it
+independently. A genuine 32-check Linux product preflight at source
+`d30566d7cb0ca4cadda62c0fce3b989e71589672` passed, with actual painted
+save/reopen and all seven replacement controls. Subsequent Windows filename
+casing and displayed gallery/readability corrections still require the final
+Windows product campaign. Current shipped engine,
 native harness, scientific sources and map bytes remain unchanged. A later
 product-only continuation may reuse actual native receipts only after exact
 old/new ZIP comparisons prove all native inputs unchanged; original native
 source/run IDs will remain explicit. Changed product, guarded lifecycle,
 graphical capture and final extraction require fresh execution.
 
-Remaining gates are completed hosted Windows receipts, reviewed product
-corrections, the qualified final actual ZIP and independent archive/visual
-inspection, durable reconstruction pins and the canonical owner decision
-packet. The workflow runs only for an explicit qualification request or its
+The final request retains the exact 72-Setup N evidence and adds a separate
+full native observation for the three optional portraits using the existing
+1800-tick contact window. A and C independently verified the exact hard
+floors below the original observation. Original results remain unchanged;
+only complete fresh receipts may change those three effective statuses.
+See `CONTACT-FOLLOWUP.md`.
+
+Remaining gates are corrected displayed gallery/Workbench ergonomics, the
+fresh hosted Windows product and three-map contact receipts, the final actual
+ZIP and independent archive/visual inspection, durable reconstruction pins and
+the canonical owner decision packet. The workflow runs only for an explicit qualification request or its
 own workflow change; evidence-only updates do not claim new native execution.

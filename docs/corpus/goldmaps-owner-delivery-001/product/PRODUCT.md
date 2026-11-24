@@ -130,3 +130,47 @@ supplement close/cancel, duplicate save protection and Save-and-return checks.
 Button-handler and dispatched-key execution are labelled as such; they are not
 claims of physical desktop input or owner acceptance. The bounded source audit is
 recorded in [REPLACEMENT-SAVE-AUDIT.md](REPLACEMENT-SAVE-AUDIT.md).
+
+The graphical driver plans 18 displayed cases: the existing 15 gallery/native
+cases plus actual comparison, pending decision and full-resolution overview
+popups. These three extra cases invoke ordinary browser controls without
+opening a native World or saving a decision. Popup receipts distinguish the
+actual selected Setup, mounted aliases, viewport-intersecting card labels,
+archived neutral legend, and unchanged local review-file bytes. The overview
+remains a material-plane visualization inside a rendered interface.
+
+`test_graphical_ui.gd` checks the three popup handlers and their mounted source
+identities in headless mode. The local headless DisplayServer reports a 1×1
+desktop, so this preparation check cannot certify viewport layout or screenshots.
+Those remain explicit gates of the displayed Windows campaign.
+
+The predecessor Windows screenshots exposed an actual gallery layout failure:
+an autowrapped keyboard hint enlarged the navigation row until it displaced the
+map list, and plain popup Windows were visible before an owner action. The
+additive correction keeps that hint on one clipped line, reserves a useful map
+grid, and explicitly hides every popup before attaching it. The normal source
+PR label also formats JSON numbers as integer PR identities.
+
+`test_gallery_layout.gd` checks the real browser containers at 992×656,
+1280×720 and 1380×880. All three have a visible map grid, a 39-pixel navigation
+row, and no unrequested popup. These headless bounds are regression evidence;
+the final displayed campaign must also capture and independently inspect them.
+Every new graphical receipt records the grid, first item and navigation bounds
+plus initial popup visibility. The driver refuses a collapsed or offscreen grid
+even when the underlying collection count is correct.
+
+The predecessor native captures also showed ordinary 13-pixel Workbench text
+shrinking to about 6.7 pixels when a 1920×1080 logical canvas was fitted into a
+992-pixel-wide window. The opt-in evaluator now sets its own logical canvas to
+the fitted client dimensions. Accepted Workbench flow containers and font sizes
+remain unchanged; no engine file or global project setting is edited. Native
+capture receipts expose client, logical canvas, viewport and image dimensions
+so the final Windows review can judge actual readability.
+
+The comparison popup fits its first three source-role cards to the actual
+clamped client width. A fourth source-identical logical alias remains available
+through horizontal scrolling. Captured label evidence includes the original
+rectangle, its intersection with the popup and all clipping ancestors, and an
+explicit fully-visible flag. The final displayed D1 gate requires fully visible
+original/candidate/reference identity labels and the complete archived neutral
+legend; a partially intersecting label alone cannot satisfy that gate.

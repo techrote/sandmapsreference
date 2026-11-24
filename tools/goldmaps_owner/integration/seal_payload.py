@@ -104,12 +104,15 @@ def seal(root, source_head, receipt_path=None, archive=None):
         "runtime/source-provenance.v1.json": "tools/goldmaps_owner/integration/stage_engine.py",
         "product-provenance.v1.json": "tools/goldmaps_owner/product/assemble_product.py",
         "collection/collection-files.v1.json": "tools/goldmaps_owner/corpus/build_collection.py",
-        "collection/delivery-qualification.v1.json": "tools/goldmaps_owner/qualification/run_native_collection.py",
+        "collection/delivery-qualification.v1.json": "tools/goldmaps_owner/integration/run_campaign.py",
+        "collection/native-contact-followup-inputs.v1.json": "tools/goldmaps_owner/integration/contact_followup.py",
         "Open GOLDMAPS.cmd": "tools/goldmaps_owner/product/assemble_product.py",
         "Open GOLDMAPS.sh": "tools/goldmaps_owner/product/assemble_product.py",
     }
     docs = {"START-HERE.md": "tools/goldmaps_owner/integration/START-HERE.md",
-            "LICENSE-AND-SOURCE.md": "tools/goldmaps_owner/integration/LICENSE-AND-SOURCE.md"}
+            "LICENSE-AND-SOURCE.md": "tools/goldmaps_owner/integration/LICENSE-AND-SOURCE.md",
+            "collection/contact-followup-source-static-audit.v1.json":
+                "docs/corpus/goldmaps-owner-delivery-001/corpus/optional-contact-static-assessment.v1.json"}
     rows = []
     for path in sorted(root.rglob("*")):
         rel = safe_path(path.relative_to(root).as_posix())

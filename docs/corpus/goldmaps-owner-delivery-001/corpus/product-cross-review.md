@@ -45,3 +45,7 @@ protected Save and Ctrl+S, the non-mutating Flatten notice, Save/return and a
 separate-process reopen. Final product and graphical execution must identify the
 later product source independently of retained native-map evidence, as explained
 in [the source authority review](source-authority-review.md).
+
+## Windows reserved-name correction
+
+A-UI-09 identified a case-sensitive prefix check that allowed an uppercase `GM-SOURCE` saved label to alias a later source-staging path on Windows. Commit `b3cce5d4c07bde4321d35e553c513b193d6acd58` now case-folds the reserved prefix at saved-copy admission, Save, receipt registration and browser-copy filtering. Independent source review passed. The implementer reports 24/24 synthetic callback checks; final actual-session execution must retain `uppercase_reserved_name_refused: true`, no receipt and unchanged before/after bytes. This source review adds no native or graphical pass.

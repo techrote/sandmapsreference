@@ -112,6 +112,9 @@ func _run_fixture() -> void:
 	controls.ordinary_save_button.pressed.emit()
 	_check("ordinary Save protects a pre-existing name",synthetic.save_calls == 0 and report.saved_copies.is_empty() and FileAccess.get_sha256(Setup._path(foreign_label)) == foreign_hash)
 	controls.notice_dialog.get_ok_button().pressed.emit()
+	var reserved_label := "GM-SOURCE-" + original_sha.left(20)
+	_check("uppercase reserved source name cannot save",not save_copy(reserved_label) and not FileAccess.file_exists(Setup._path(reserved_label)) and report.saved_copies.is_empty())
+	controls.notice_dialog.get_ok_button().pressed.emit()
 	var button_label := "synthetic-button-" + Crypto.new().generate_random_bytes(6).hex_encode()
 	synthetic._name.text = button_label
 	controls.ordinary_save_button.pressed.emit()

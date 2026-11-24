@@ -42,7 +42,12 @@ CASES = (
     ("D2-reference", "trial-D2-reference", "D2 prior repair reference; independent native session"),
     ("policy-155", "derived-155-policy", "Separate native-default descendant; original invalid policy remains refused"),
     ("policy-183", "derived-183-policy", "Separate native-default descendant outside Gold25"),
+    ("comparison-popup", None, "Actual D1 comparison popup with its displayed variant identities and archived neutral legend"),
+    ("decision-dialog", None, "Actual pending/unclassified Gold125 review dialog; no owner decision is saved"),
+    ("overview-zoom", None, "Actual full-resolution Gold197 portrait preview popup; archived material visualization, not a native World"),
 )
+
+UI_CASES = {"comparison-popup": "trial-D1-original", "decision-dialog": "gold-125", "overview-zoom": "gold-197"}
 
 # These are concrete platform/renderer initialization failures. A timeout, a
 # missing screenshot, a GDScript error or a refused map is never silently put
@@ -110,6 +115,25 @@ def recorded_capture_exists(record: dict, userdata: Path) -> bool:
         return False
 
 
+def validate_gallery_layout(record: dict) -> None:
+    layout = record.get("initial_gallery_layout", {})
+    viewport = layout.get("viewport_size", [])
+    grid = layout.get("map_list_bounds", [])
+    navigation = layout.get("navigation_bounds", [])
+    item = layout.get("first_item_bounds_local", [])
+    if (len(viewport) != 2 or len(grid) != 4 or len(navigation) != 4 or len(item) != 4
+            or layout.get("map_count") != 25 or layout.get("map_list_visible") is not True
+            or layout.get("visible_popup_titles") != []
+            or grid[2] < 225 or grid[3] < 180 or navigation[3] > 50
+            or grid[0] < 0 or grid[1] < 0 or grid[0] + grid[2] > viewport[0]
+            or grid[1] + grid[3] > viewport[1]
+            or navigation[0] < 0 or navigation[1] < 0
+            or navigation[0] + navigation[2] > viewport[0]
+            or navigation[1] + navigation[3] > viewport[1]
+            or item[2] < 210 or item[3] < 126):
+        raise ValueError("Displayed gallery has a collapsed/offscreen map grid, oversized navigation or unrequested popup")
+
+
 def desktop_observation() -> dict:
     if os.name != "nt":
         return {"platform": platform.platform(), "native_windows": False}
@@ -129,19 +153,24 @@ def run_case(package: Path, out: Path, name: str, map_id: str | None, purpose: s
     sessions.mkdir(parents=True, exist_ok=True)
     previous = set(sessions.glob("*.json"))
     previous_logs = set(sessions.glob("*.log"))
+    review_path = userdata / "reviews/decisions.json"
+    reviews_before = sha(review_path) if review_path.is_file() else ""
+    ui_map_id = UI_CASES.get(name)
     # Only stale developer capture outputs are removed. Owner review records and
     # saved copies are left intact; no immutable input is ever edited here.
     for old in (userdata / "qa/browser.png", userdata / "qa/browser-graphical.json"):
         old.unlink(missing_ok=True)
     env = os.environ.copy()
     for key in ("GOLDMAPS_QA_HEADLESS", "GOLDMAPS_QA_MAP", "GOLDMAPS_QA_SMOKE", "GOLDMAPS_QA_VIEWPORT",
-                "GOLDMAPS_QA_EDIT", "GOLDMAPS_BROWSER_QA_PHASE"):
+                "GOLDMAPS_QA_EDIT", "GOLDMAPS_BROWSER_QA_PHASE", "GOLDMAPS_QA_UI_ACTION", "GOLDMAPS_QA_UI_MAP"):
         env.pop(key, None)
     env["GOLDMAPS_QA_CAPTURE"] = "1"
     if name == "gallery-1280x720":
         env["GOLDMAPS_QA_VIEWPORT"] = "1280x720"
     elif name == "gallery-1380x880":
         env["GOLDMAPS_QA_VIEWPORT"] = "1380x880"
+    if ui_map_id:
+        env.update(GOLDMAPS_QA_UI_ACTION=name, GOLDMAPS_QA_UI_MAP=ui_map_id, GOLDMAPS_QA_VIEWPORT="1280x720")
     if map_id is not None:
         env.update(GOLDMAPS_QA_MAP=map_id, GOLDMAPS_QA_SMOKE="1")
     executable = os.environ.get("COMSPEC", r"C:\Windows\System32\cmd.exe")
@@ -153,6 +182,7 @@ def run_case(package: Path, out: Path, name: str, map_id: str | None, purpose: s
     command = f'"{executable}" /d /s /c ""{launcher}""'
     process_log = out / (name + "-process.log")
     result = {"name": name, "map_id": map_id, "purpose": purpose,
+              "requested_ui_action": name if ui_map_id else None, "requested_ui_map_id": ui_map_id,
               "engine_head": manifest["engine_head"],
               "delivery_source_head": manifest.get("delivery_source_head"),
               "source": (row or {}).get("source"), "derived_source": (row or {}).get("derived_source"),
@@ -195,7 +225,8 @@ def run_case(package: Path, out: Path, name: str, map_id: str | None, purpose: s
         native_logs += "\n" + source_log.read_text(encoding="utf-8-sig", errors="replace")
     logs += native_logs
     lower = logs.lower()
-    hard_error = any(token in lower for token in ("script error:", "parse error:", "goldmaps_session_refused"))
+    hard_error = any(token in lower for token in ("script error:", "parse error:", "goldmaps_session_refused",
+                                                 "goldmaps_browser_refused", "goldmaps_browser_graphical_refused"))
     gallery_receipt_path = userdata / "qa/browser-graphical.json"
     gallery_record = read_json(gallery_receipt_path) if gallery_receipt_path.is_file() else {}
     gallery_exists = recorded_capture_exists(gallery_record, userdata)
@@ -221,10 +252,43 @@ def run_case(package: Path, out: Path, name: str, map_id: str | None, purpose: s
         gallery = gallery_record
         if gallery.get("schema") != "goldmaps.browser-graphical.v1":
             raise ValueError("Missing actual gallery capture receipt")
-        if (gallery.get("active_collection") != "gold25" or gallery.get("visible_maps") != 25
-                or not gallery.get("selected_id") or gallery.get("engine_head") != manifest["engine_head"]):
+        if gallery.get("engine_head") != manifest["engine_head"]:
+            raise ValueError("Displayed browser belongs to a different engine source")
+        validate_gallery_layout(gallery)
+        if ui_map_id:
+            reviews_after = sha(review_path) if review_path.is_file() else ""
+            if (gallery.get("view_kind") != name or gallery.get("selected_id") != ui_map_id
+                    or gallery.get("selected_setup_sha256") != row["setup"]["sha256"]
+                    or not gallery.get("popup", {}).get("visible") or not gallery.get("popup", {}).get("title")
+                    or gallery.get("active_collection") != "all" or gallery.get("native_world_opened")
+                    or gallery.get("owner_decision_written") is not False or gallery.get("review_file_unchanged") is not True
+                    or gallery.get("review_file_sha256_before") != reviews_before
+                    or gallery.get("review_file_sha256_after") != reviews_after or reviews_before != reviews_after):
+                raise ValueError("Displayed popup identity, visibility or read-only decision boundary failed")
+            if name == "comparison-popup":
+                expected_ids = {"repair-203", "trial-D1-original", "trial-D1-candidate", "trial-D1-reference"}
+                depicted = set(gallery.get("depicted_variant_ids", []))
+                legend = gallery.get("neutral_label_legend", "")
+                fully_shown = {label.get("text", "").split(" · ", 1)[0]
+                               for label in gallery.get("visible_label_records", []) if label.get("fully_visible") is True}
+                full_legend = any(label.get("text") == legend and label.get("fully_visible") is True
+                                  for label in gallery.get("visible_label_records", []))
+                if (set(gallery.get("mounted_variant_ids", [])) != expected_ids or not depicted <= expected_ids
+                        or not {"trial-D1-original", "trial-D1-candidate"} <= fully_shown
+                        or not {"repair-203", "trial-D1-reference"} & fully_shown or not full_legend or not all(text in legend for text in
+                        ("A = trial-D1-reference (PR #203)", "B = trial-D1-candidate (PR #214)", "C = trial-D1-original (PR #186)"))):
+                    raise ValueError("Displayed D1 source-role labels or frozen neutral legend are incomplete or clipped")
+            elif name == "decision-dialog":
+                if (gallery.get("decision_map_id") != ui_map_id or gallery.get("decision_status") != "Pending / not reviewed"
+                        or gallery.get("decision_classification") != "Unclassified"):
+                    raise ValueError("Decision popup did not remain pending and unclassified")
+            elif (gallery.get("preview_path") != row["preview"]["path"]
+                  or gallery.get("preview_sha256") != sha(package / row["preview"]["path"])):
+                raise ValueError("Zoomed overview differs from the exact archived portrait preview")
+        elif (gallery.get("view_kind") != "gallery" or gallery.get("active_collection") != "gold25"
+              or gallery.get("visible_maps") != 25 or not gallery.get("selected_id")):
             raise ValueError("Initial gallery did not visibly select the source-matched Gold25 collection")
-        result["captures"].append(capture_copy(gallery, userdata, out / (name + "-gallery.png")))
+        result["captures"].append(capture_copy(gallery, userdata, out / (name + ("-popup.png" if ui_map_id else "-gallery.png"))))
         if map_id is None:
             if receipts:
                 raise ValueError("Gallery-only execution unexpectedly opened a native World")
@@ -249,6 +313,10 @@ def run_case(package: Path, out: Path, name: str, map_id: str | None, purpose: s
             screenshots = session.get("screenshots", [])
             if not screenshots:
                 raise ValueError("Native Workbench did not produce an actual rendered screenshot")
+            canvas = screenshots[0].get("content_scale_size", [])
+            if (len(canvas) != 2 or canvas != screenshots[0].get("window_size")
+                    or canvas != screenshots[0].get("viewport_size")):
+                raise ValueError("Displayed Workbench did not retain readable client-sized logical UI")
             result["captures"].append(capture_copy(screenshots[0], userdata, out / (name + "-workbench.png")))
             result["native_session"] = {"session_id": session["session_id"], "process_id": session["process_id"],
                                         "native_load": native, "qa_lifecycle": session.get("qa_lifecycle"),
@@ -297,8 +365,8 @@ def main() -> int:
                        godot_gui_sha256=sha(package / "Godot_v4.7-stable_win64.exe"),
                        launcher_sha256=sha(package / "Open GOLDMAPS.cmd"))
         for name, map_id, purpose in CASES:
-            row = maps[map_id] if map_id else None
-            if row and overlay["setups"].get(row["setup"]["sha256"], {}).get("status") != "QUALIFIED_HEADLESS":
+            row = maps[map_id] if map_id else (maps[UI_CASES[name]] if name in UI_CASES else None)
+            if map_id and overlay["setups"].get(row["setup"]["sha256"], {}).get("status") != "QUALIFIED_HEADLESS":
                 raise ValueError("Required graphical target is not native-qualified: " + map_id)
             result = run_case(package, out, name, map_id, purpose, row, manifest, args.timeout)
             summary["cases"].append(result)

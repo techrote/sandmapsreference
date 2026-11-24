@@ -26,6 +26,7 @@ from prepare_runtime import ENGINE
 from seal_payload import seal
 from run_native_collection import profile_environment
 from reuse_native_evidence import reuse
+from contact_followup import prepare as prepare_contact_followup, apply as apply_contact_followup, INPUT as CONTACT_INPUT
 
 
 def write_json(path, value):
@@ -143,6 +144,7 @@ def write_variant_matrix(kit, qualification, source_head, graphical):
             "native_execution_source_head": executed["native_execution_source_head"],
             "native_execution_run_id": executed["native_execution_run_id"],
             "native_execution_summary_sha256": executed["native_execution_summary_sha256"],
+            "native_history": executed.get("native_history", []),
             "executed_aliases": executed["aliases"],
             "gate_interpretation": "NOT_EXECUTED_AFTER_EXPECTED_POLICY_REFUSAL" if receipt["negative_fixture_pass"] else "Read each executed positive gate separately",
             "native_gates": {"policy": load.get("native_policy"), "ordinary_load": load.get("load"),
@@ -170,6 +172,7 @@ def write_variant_matrix(kit, qualification, source_head, graphical):
               "owner_accepted": 0}
     matrix = {"schema": "goldmaps.owner-per-variant-matrix.v1", "delivery_source_head": source_head,
               "native_evidence_authority": qualification.get("native_evidence_authority"),
+              "native_followup_authority": qualification.get("native_followup_authority"),
               "engine_head": qualification["engine_head"], "counts": counts, "records": rows,
               "scope": "Authoritative per-logical-variant join of actual delivery native receipts. Byte aliases reuse evidence, never owner decisions. False or absent gates on refused originals are expected and do not become native passes."}
     write_json(kit / "qualification/per-variant-matrix.v1.json", matrix)
@@ -200,8 +203,11 @@ def main():
     if request["engine_head"] != ENGINE:
         raise ValueError("Qualification request differs from the accepted engine")
     reuse_request = request.get("native_reuse")
+    contact_request = request.get("native_contact_followup")
     if bool(reuse_request) != bool(args.reuse_native_artifact):
         raise ValueError("Native reuse requires both the explicit request pins and the actual predecessor artifact")
+    if contact_request and not reuse_request:
+        raise ValueError("Contact follow-up requires its exact prior native evidence authority")
     out = args.out.resolve()
     if out.exists():
         raise ValueError("Refuse to overwrite campaign output")
@@ -230,6 +236,8 @@ def main():
                "engine_head": ENGINE, "owner_accepted": False, "setups": {}, "scope": "Pending actual campaign; nothing is enabled by this initial record."})
     execute("assemble-product", [python, commands / "product/assemble_product.py", "--output", kit,
                                  "--engine-head", ENGINE, "--source-head", head], evidence, env, 180)
+    if contact_request:
+        prepare_contact_followup(kit, contact_request, ROOT)
     initial = seal(kit, head)
     write_json(evidence / "initial-payload.json", verify_directory(kit, initial["payload_manifest_sha256"]))
     godot = kit / "Godot_v4.7-stable_win64_console.exe"
@@ -265,6 +273,14 @@ def main():
     if not (optional / "summary.json").is_file():
         raise RuntimeError("Optional campaign incomplete; no fabricated eligibility or partial summary")
     qualification = merge_qualification(required, optional, kit)
+    contact_result = None
+    if contact_request:
+        followup_seal = seal(kit, head)
+        contact_result = execute("native-contact-followup", [python, commands / "qualification/run_native_collection.py",
+            "--package", kit, "--godot", godot, "--engine-head", ENGINE,
+            "--manifest-sha256", followup_seal["payload_manifest_sha256"], "--out", evidence / "windows-contact-followup",
+            "--inputs", CONTACT_INPUT, "--jobs", "1"], evidence, env, 1000, required=False)
+        apply_contact_followup(kit, evidence / "windows-contact-followup", qualification, head)
     qualification["native_evidence_authority"] = ({**reuse_receipt["native_evidence_authority"],
         "reuse_receipt": "qualification/native-evidence-reuse.v1.json", "reuse_receipt_sha256": sha(reuse_path)}
         if reuse_receipt else {"source_head": head, "github_run_id": os.environ.get("GITHUB_RUN_ID"), "mode": "EXECUTED_CURRENT_CAMPAIGN"})
@@ -309,9 +325,11 @@ def main():
     # Record actual scope before finalizing. This is not an all-route pass claim.
     completion = {"schema": "goldmaps.owner-campaign.v1", "source_head": head, "engine_head": ENGINE,
                   "native_evidence_authority": qualification["native_evidence_authority"],
-                  "native_population_mode": "REUSED_EXACT_INPUT_EVIDENCE" if reuse_receipt else "EXECUTED_CURRENT_CAMPAIGN",
+                  "native_followup_authority": qualification.get("native_followup_authority"),
+                  "native_population_mode": "REUSED_EXACT_INPUT_EVIDENCE_WITH_SEPARATE_THREE_MAP_CONTACT_FOLLOWUP" if contact_request else "REUSED_EXACT_INPUT_EVIDENCE" if reuse_receipt else "EXECUTED_CURRENT_CAMPAIGN",
                   "github_run_id": os.environ.get("GITHUB_RUN_ID"), "created_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
                   "qualification": qualification["counts"], "optional_process": optional_result, "routes": route_summary,
+                  "contact_followup_process": contact_result,
                   "logical_counts": logical_counts,
                   "graphical_process": graphical_process, "graphical_summary": graphical_summary,
                   "owner_accepted": False, "physical_windows_nvidia": "OWNER_PENDING", "merge_disposition": "Draft/HOLD"}

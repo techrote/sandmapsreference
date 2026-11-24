@@ -1,0 +1,618 @@
+{
+  "schema": "goldmaps.owner-contact-continuation-assessment.v1",
+  "status": "STATIC_JUSTIFICATION_ONLY_NO_NEW_NATIVE_RESULT",
+  "authority": {
+    "github_run_id": "45481683557",
+    "prior_native_source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+    "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "catalogue_path": "materials/catalogue/catalogue.json",
+    "catalogue_sha256": "3a5250a07912dc9530172cb2fccecd526606e242209d666cb2da202e1cfc9f14"
+  },
+  "native_material_records": [
+    {
+      "id": 68,
+      "name": "steel-pipe",
+      "state": 1,
+      "density": 7850,
+      "rgba": [
+        102,
+        119,
+        129,
+        255
+      ],
+      "movable": false,
+      "valid": true,
+      "current_rule_available": true,
+      "kernel": 0,
+      "initial_state_a": 0,
+      "initial_state_b": 0,
+      "maximum_write_radius": 0,
+      "density_motion": 0,
+      "accepts_density_exchange": false,
+      "lateral_flow": 0,
+      "viscosity_index": 0
+    },
+    {
+      "id": 100,
+      "name": "basalt-columns",
+      "state": 1,
+      "density": 3000,
+      "rgba": [
+        54,
+        56,
+        61,
+        255
+      ],
+      "movable": false,
+      "valid": true,
+      "current_rule_available": true,
+      "kernel": 0,
+      "initial_state_a": 0,
+      "initial_state_b": 0,
+      "maximum_write_radius": 0,
+      "density_motion": 0,
+      "accepts_density_exchange": false,
+      "lateral_flow": 0,
+      "viscosity_index": 0
+    },
+    {
+      "id": 68,
+      "valid": true,
+      "current_rule": true,
+      "hard_surface": true,
+      "granular_support": false,
+      "free_leveling_liquid": false,
+      "pair_participant": false
+    },
+    {
+      "id": 100,
+      "valid": true,
+      "current_rule": true,
+      "hard_surface": true,
+      "granular_support": false,
+      "free_leveling_liquid": false,
+      "pair_participant": true
+    }
+  ],
+  "maps": [
+    {
+      "map_id": "corpus-188",
+      "source": {
+        "commit": "e0742d30dec30cf48d002abdbc1973928dcc9388",
+        "git_blob_sha1": "8025ebb6099f03bc55286063d9fea1289afef880",
+        "path": "cybersand-canvases/1024x2048/portrait-obvious-mireward-lanternwell-261121/setup.json",
+        "pr": 188,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+        "url": "https://github.com/techrote/sandmapsreference/blob/e0742d30dec30cf48d002abdbc1973928dcc9388/cybersand-canvases/1024x2048/portrait-obvious-mireward-lanternwell-261121/setup.json"
+      },
+      "setup_sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+      "material_plane_sha256": "d839766373ef4e7a964ede02298118ff4c0de2b4a0d96fcde4c0ec8e73d3b6fd",
+      "authored_actor": {
+        "id": 1,
+        "model": "midge",
+        "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+        "spawn": [
+          505,
+          185
+        ],
+        "options": {
+          "budget": 20,
+          "mass_multiplier": 1,
+          "inertia_multiplier": 1,
+          "thrust_multiplier": 1,
+          "torque_multiplier": 1,
+          "boost_multiplier": 2
+        }
+      },
+      "original_receipt_path": "qualification/windows-optional/corpus-188.receipt.json",
+      "original_receipt_sha256": "60a200586ec77781d8b8eb8123dc1bf60c188fd67231758be38d286a45dd3fc6",
+      "load_log_sha256": "7888bab8fe1ff449af6c225549da8a74bd295f9649cefdafec8cf189ecd8e968",
+      "observed_contact_probe": {
+        "end_position": [
+          505.0,
+          1590.01989746094
+        ],
+        "end_tick": 925,
+        "initial_900_tick_observation": {},
+        "max_contacts": 0,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "tick_budget": 900,
+        "wall_budget_ms": 90000,
+        "witnesses": [],
+        "worker_failed": false
+      },
+      "prior_executed_status": "UNQUALIFIED",
+      "prior_successes": {
+        "movement_pass": true,
+        "saved_setup_semantic_equal": true,
+        "separate_processes": true,
+        "plane_matches_corpus": true,
+        "profile_isolated": true
+      },
+      "source_plane_replay_matches_native_digest": true,
+      "vertical_corridor_scans": [
+        {
+          "half_width_cells": 0,
+          "inspected_x_range_inclusive": [
+            505,
+            505
+          ],
+          "empty_y_interval_half_open": [
+            185,
+            1923
+          ],
+          "first_nonempty_cell": [
+            505,
+            1923
+          ],
+          "first_material_id": 68,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 4,
+          "inspected_x_range_inclusive": [
+            501,
+            509
+          ],
+          "empty_y_interval_half_open": [
+            185,
+            1923
+          ],
+          "first_nonempty_cell": [
+            501,
+            1923
+          ],
+          "first_material_id": 68,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 8,
+          "inspected_x_range_inclusive": [
+            497,
+            513
+          ],
+          "empty_y_interval_half_open": [
+            185,
+            1923
+          ],
+          "first_nonempty_cell": [
+            497,
+            1923
+          ],
+          "first_material_id": 68,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 12,
+          "inspected_x_range_inclusive": [
+            493,
+            517
+          ],
+          "empty_y_interval_half_open": [
+            185,
+            1923
+          ],
+          "first_nonempty_cell": [
+            493,
+            1923
+          ],
+          "first_material_id": 68,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 16,
+          "inspected_x_range_inclusive": [
+            489,
+            521
+          ],
+          "empty_y_interval_half_open": [
+            185,
+            1922
+          ],
+          "first_nonempty_cell": [
+            489,
+            1922
+          ],
+          "first_material_id": 68,
+          "hard_surface": true
+        }
+      ],
+      "first_centerline_hard_surface_y": 1923,
+      "remaining_centerline_distance_from_observed_end": 332.98010253906,
+      "source_supporting_rectangles": [
+        {
+          "edit_index_zero_based": 297,
+          "stamp": [
+            176,
+            1923,
+            674,
+            11,
+            68
+          ]
+        },
+        {
+          "edit_index_zero_based": 300,
+          "stamp": [
+            0,
+            1934,
+            890,
+            3,
+            100
+          ]
+        },
+        {
+          "edit_index_zero_based": 302,
+          "stamp": [
+            133,
+            1937,
+            757,
+            3,
+            100
+          ]
+        },
+        {
+          "edit_index_zero_based": 304,
+          "stamp": [
+            0,
+            1940,
+            1024,
+            108,
+            100
+          ]
+        }
+      ],
+      "assessment": "The unchanged vertical path reaches a source-authored hard surface below the 900-tick observed endpoint. A bounded continuation is justified, but this static expectation is not a collision witness."
+    },
+    {
+      "map_id": "corpus-189",
+      "source": {
+        "commit": "54be92a43375f1089508dd610bbfdce0f6af74d2",
+        "git_blob_sha1": "41185da31c8a9f40f86f2f0b8c158ae7dae864c7",
+        "path": "cybersand-canvases/1024x2048/portrait-obvious-nadirspan-deep-hanger-furnace-shaft-261121/setup.json",
+        "pr": 189,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+        "url": "https://github.com/techrote/sandmapsreference/blob/54be92a43375f1089508dd610bbfdce0f6af74d2/cybersand-canvases/1024x2048/portrait-obvious-nadirspan-deep-hanger-furnace-shaft-261121/setup.json"
+      },
+      "setup_sha256": "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+      "material_plane_sha256": "b19c8c358dd33e7a6aac284eedbea0503dbe54f62bae67953681684ad2c6bc1d",
+      "authored_actor": {
+        "id": 1,
+        "model": "midge",
+        "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+        "spawn": [
+          528,
+          146
+        ],
+        "options": {
+          "budget": 20,
+          "mass_multiplier": 1,
+          "inertia_multiplier": 1,
+          "thrust_multiplier": 1,
+          "torque_multiplier": 1,
+          "boost_multiplier": 2
+        }
+      },
+      "original_receipt_path": "qualification/windows-optional/corpus-189.receipt.json",
+      "original_receipt_sha256": "9c943dac7451439d04308c2ab781e45e4f5d5fa322ce31d893402ae73b3652ce",
+      "load_log_sha256": "69511cbfb8fce16cde59fddb8052b48b0351eab3fd46aa154b8b1fd984463a83",
+      "observed_contact_probe": {
+        "end_position": [
+          528.0,
+          1551.01879882813
+        ],
+        "end_tick": 925,
+        "initial_900_tick_observation": {},
+        "max_contacts": 0,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "tick_budget": 900,
+        "wall_budget_ms": 90000,
+        "witnesses": [],
+        "worker_failed": false
+      },
+      "prior_executed_status": "UNQUALIFIED",
+      "prior_successes": {
+        "movement_pass": true,
+        "saved_setup_semantic_equal": true,
+        "separate_processes": true,
+        "plane_matches_corpus": true,
+        "profile_isolated": true
+      },
+      "source_plane_replay_matches_native_digest": true,
+      "vertical_corridor_scans": [
+        {
+          "half_width_cells": 0,
+          "inspected_x_range_inclusive": [
+            528,
+            528
+          ],
+          "empty_y_interval_half_open": [
+            146,
+            1958
+          ],
+          "first_nonempty_cell": [
+            528,
+            1958
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 4,
+          "inspected_x_range_inclusive": [
+            524,
+            532
+          ],
+          "empty_y_interval_half_open": [
+            146,
+            1958
+          ],
+          "first_nonempty_cell": [
+            524,
+            1958
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 8,
+          "inspected_x_range_inclusive": [
+            520,
+            536
+          ],
+          "empty_y_interval_half_open": [
+            146,
+            1958
+          ],
+          "first_nonempty_cell": [
+            520,
+            1958
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 12,
+          "inspected_x_range_inclusive": [
+            516,
+            540
+          ],
+          "empty_y_interval_half_open": [
+            146,
+            1958
+          ],
+          "first_nonempty_cell": [
+            516,
+            1958
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 16,
+          "inspected_x_range_inclusive": [
+            512,
+            544
+          ],
+          "empty_y_interval_half_open": [
+            146,
+            1958
+          ],
+          "first_nonempty_cell": [
+            512,
+            1958
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        }
+      ],
+      "first_centerline_hard_surface_y": 1958,
+      "remaining_centerline_distance_from_observed_end": 406.98120117187,
+      "source_supporting_rectangles": [
+        {
+          "edit_index_zero_based": 1031,
+          "stamp": [
+            0,
+            1958,
+            888,
+            1,
+            100
+          ]
+        },
+        {
+          "edit_index_zero_based": 1033,
+          "stamp": [
+            0,
+            1959,
+            1024,
+            89,
+            100
+          ]
+        }
+      ],
+      "assessment": "The unchanged vertical path reaches a source-authored hard surface below the 900-tick observed endpoint. A bounded continuation is justified, but this static expectation is not a collision witness."
+    },
+    {
+      "map_id": "corpus-192",
+      "source": {
+        "commit": "101203a124f0ee3ac5613d38956e72f0faae8685",
+        "git_blob_sha1": "786fe4be3af93a2c6f57f0cdecc926c36dad4f1b",
+        "path": "cybersand-canvases/1024x2048/portrait-moderate-spindlebreak-switchback-trestleworks-261121/setup.json",
+        "pr": 192,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+        "url": "https://github.com/techrote/sandmapsreference/blob/101203a124f0ee3ac5613d38956e72f0faae8685/cybersand-canvases/1024x2048/portrait-moderate-spindlebreak-switchback-trestleworks-261121/setup.json"
+      },
+      "setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+      "material_plane_sha256": "30c6668a34341b172d231e4d257175a76b35b314e15dfb468a218d4970c56397",
+      "authored_actor": {
+        "id": 1,
+        "model": "midge",
+        "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+        "spawn": [
+          495,
+          148
+        ],
+        "options": {
+          "budget": 20,
+          "mass_multiplier": 1,
+          "inertia_multiplier": 1,
+          "thrust_multiplier": 1,
+          "torque_multiplier": 1,
+          "boost_multiplier": 2
+        }
+      },
+      "original_receipt_path": "qualification/windows-optional/corpus-192.receipt.json",
+      "original_receipt_sha256": "599bbbd42cc1969d4f2feb25ba2d406a05de8bac550784dbf84e8dd1b4445ba7",
+      "load_log_sha256": "f36a331d75e8b269da93c9920c66b4652c579425af9c24dc4320fb02f208e9a3",
+      "observed_contact_probe": {
+        "end_position": [
+          495.0,
+          1553.01892089844
+        ],
+        "end_tick": 925,
+        "initial_900_tick_observation": {},
+        "max_contacts": 0,
+        "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+        "start_tick": 25,
+        "tick_budget": 900,
+        "wall_budget_ms": 90000,
+        "witnesses": [],
+        "worker_failed": false
+      },
+      "prior_executed_status": "UNQUALIFIED",
+      "prior_successes": {
+        "movement_pass": true,
+        "saved_setup_semantic_equal": true,
+        "separate_processes": true,
+        "plane_matches_corpus": true,
+        "profile_isolated": true
+      },
+      "source_plane_replay_matches_native_digest": true,
+      "vertical_corridor_scans": [
+        {
+          "half_width_cells": 0,
+          "inspected_x_range_inclusive": [
+            495,
+            495
+          ],
+          "empty_y_interval_half_open": [
+            148,
+            1980
+          ],
+          "first_nonempty_cell": [
+            495,
+            1980
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 4,
+          "inspected_x_range_inclusive": [
+            491,
+            499
+          ],
+          "empty_y_interval_half_open": [
+            148,
+            1980
+          ],
+          "first_nonempty_cell": [
+            491,
+            1980
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 8,
+          "inspected_x_range_inclusive": [
+            487,
+            503
+          ],
+          "empty_y_interval_half_open": [
+            148,
+            1980
+          ],
+          "first_nonempty_cell": [
+            487,
+            1980
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 12,
+          "inspected_x_range_inclusive": [
+            483,
+            507
+          ],
+          "empty_y_interval_half_open": [
+            148,
+            1980
+          ],
+          "first_nonempty_cell": [
+            483,
+            1980
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        },
+        {
+          "half_width_cells": 16,
+          "inspected_x_range_inclusive": [
+            479,
+            511
+          ],
+          "empty_y_interval_half_open": [
+            148,
+            1980
+          ],
+          "first_nonempty_cell": [
+            479,
+            1980
+          ],
+          "first_material_id": 100,
+          "hard_surface": true
+        }
+      ],
+      "first_centerline_hard_surface_y": 1980,
+      "remaining_centerline_distance_from_observed_end": 426.98107910156,
+      "source_supporting_rectangles": [
+        {
+          "edit_index_zero_based": 1069,
+          "stamp": [
+            0,
+            1980,
+            1024,
+            68,
+            100
+          ]
+        }
+      ],
+      "assessment": "The unchanged vertical path reaches a source-authored hard surface below the 900-tick observed endpoint. A bounded continuation is justified, but this static expectation is not a collision witness."
+    }
+  ],
+  "recommended_bounded_procedure": {
+    "maximum_contact_ticks": 1800,
+    "wall_budget_ms": 90000,
+    "source_and_spawn_changes": false,
+    "native_probe_changes": false,
+    "required_evidence": [
+      "Preserve the original 900-tick UNQUALIFIED receipt.",
+      "Use the existing native probe 1800-tick option and record the initial 900-tick observation.",
+      "Require actual PhysicsDirectBodyState2D contact witnesses; static proximity or terrain collider presence is insufficient.",
+      "Retain per-map unchanged source/plane/actor, movement, save and separate-process reopen checks.",
+      "If the extended bound produces no contact, keep that case unavailable; do not repair geometry or force a pass."
+    ]
+  },
+  "scope_limits": [
+    "The corridor half-widths are read-only geometry inspection windows, not a claim about the exact Midge collision shape.",
+    "No exact future tick or dynamic contact location is predicted. Native dynamics and collision registration must be observed.",
+    "No new native process was executed by this assessment.",
+    "Optional map availability remains UNQUALIFIED until separately executed positive evidence is admitted."
+  ]
+}

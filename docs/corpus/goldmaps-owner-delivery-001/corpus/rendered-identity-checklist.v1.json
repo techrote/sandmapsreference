@@ -1,0 +1,1545 @@
+{
+  "schema": "goldmaps.owner-rendered-identity-checklist.v1",
+  "status": "PREPARED_LOOKUP_NOT_RENDERED_QUALIFICATION",
+  "reviewer": {
+    "role": "Specialist A corpus/identity reviewer",
+    "identity": "AI specialist role within the same mission; not a separate human assessor"
+  },
+  "source_lookup": {
+    "collection_sha256": "0a1adc2d304a169016db95eec7d7dfbb4f33fe97fa2be770ba0cf86b7c880cd0",
+    "comparisons_sha256": "b4bb3fbf5964308bf79b5ffece10d5e8f8b4409cc894460a639c045349b36831",
+    "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "planned_predecessor_native_source": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+    "planned_predecessor_run_id": "45481683557",
+    "graphical_driver_path": "tools/goldmaps_owner/product/run_graphical_capture.py",
+    "graphical_driver_sha256_at_predecessor": "dddd658c7ff5f4d996112c5be5a842f9213869498a6eda7e8f44aff2d0ba6b94",
+    "scope": "Exact bytes verified against the sealed local kit. A later delivery may update generator custody commit metadata only; final received source and Setup identities must be checked again."
+  },
+  "checklist": [
+    "Match actual session map_id, Setup SHA-256, plane SHA-256, engine_head and source/derived_source to this lookup and the delivered roster; filenames alone are insufficient.",
+    "Require a recorded non-headless renderer/display and verify each received PNG SHA-256 before visual inspection. Record actual executed product source separately from native qualification authority.",
+    "Inspect the visible native map against the full-resolution source reference: landscape versus portrait, side elevation, frame extent, major voids/supports and no rotation/mirroring. A thumbnail or screenshot alone cannot prove every cell; the exact native material readback does that separately.",
+    "The graphical session requests the accepted Workbench overview camera: set_camera(2) selects world origin (0,0) and the full authored Setup extent. Record clipping or stretching observed in the actual render; do not infer a visual PASS from this source behavior.",
+    "Preserve original, Astra candidate, prior reference and policy-only descendant identity. Both policy descendants share their parent material plane and actor coordinates but have separate Setup bytes; original refusals remain visible and #183 remains outside Gold25.",
+    "For archived comparison crops, translate the preserved randomized A/B/C labels with the exact card mapping below. Coordinates use x right/y down; xywh far edges are exclusive; named windows are observation bounds, not authorized edit masks.",
+    "Initial *-gallery.png captures in the predecessor occur before QA_MAP selection and show the initial Gold25 selection recorded in the gallery receipt. Do not infer visible B3/D1/D2/descendant selection from a filename prefix.",
+    "A normal screenshot does not establish physical NVIDIA rendering, route playfeel, synchronized Worlds, a new Art verdict or owner adoption. Preserve B3 inconclusive flight-speed judgement, D1 disagreement and D2 historical prior-reference preference."
+  ],
+  "native_views": [
+    {
+      "capture_case": "landscape",
+      "expected_workbench_png": "landscape-workbench.png",
+      "logical_id": "gold-125",
+      "title": "Quoin Veil Split Faultwell / Vertical Census Escarpment",
+      "variant_role": "original",
+      "parent_id": null,
+      "source": {
+        "commit": "e17996dd8a2e1044550a60e75f45780cb6ae868d",
+        "git_blob_sha1": "0d073a5713d8550efd4345979b21740e8b28890e",
+        "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-quoin-veil-split-faultwell-vertical-census-261121/setup.json",
+        "pr": 125,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+        "url": "https://github.com/techrote/sandmapsreference/blob/e17996dd8a2e1044550a60e75f45780cb6ae868d/cybersand-canvases/2048x1024/worldgroup-xenobiome-quoin-veil-split-faultwell-vertical-census-261121/setup.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 32953,
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "de56ecc67744576902ff681768932747cf291608b89adc5078730fc2bfc3f9a3",
+        "path": "collection/setups/e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e.json",
+        "schema": 2,
+        "sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e"
+      },
+      "orientation": "landscape",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            625,
+            434
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/0b873404be26378198423afec8b817305fc37eccc6010e5aa376b9c9c36a9442.png",
+        "provenance": {
+          "commit": "e17996dd8a2e1044550a60e75f45780cb6ae868d",
+          "git_blob_sha1": "332ea815832a1ab2d60ee059abdac6cca4ee8b4e",
+          "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-quoin-veil-split-faultwell-vertical-census-261121/overview.png",
+          "pr": 125,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "0b873404be26378198423afec8b817305fc37eccc6010e5aa376b9c9c36a9442",
+          "url": "https://github.com/techrote/sandmapsreference/blob/e17996dd8a2e1044550a60e75f45780cb6ae868d/cybersand-canvases/2048x1024/worldgroup-xenobiome-quoin-veil-split-faultwell-vertical-census-261121/overview.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "0b873404be26378198423afec8b817305fc37eccc6010e5aa376b9c9c36a9442"
+      },
+      "comparison": null,
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "portrait",
+      "expected_workbench_png": "portrait-workbench.png",
+      "logical_id": "gold-197",
+      "title": "Silt Meridian Hingevault",
+      "variant_role": "original",
+      "parent_id": null,
+      "source": {
+        "commit": "3b0253d387578bda3af00a6edc97833219df64a9",
+        "git_blob_sha1": "280b63cf36c58df9f2c22e2c25142204cc48f004",
+        "path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+        "pr": 197,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "url": "https://github.com/techrote/sandmapsreference/blob/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 65411,
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+        "path": "collection/setups/7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e.json",
+        "schema": 2,
+        "sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e"
+      },
+      "orientation": "portrait",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            132,
+            350
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7.png",
+        "provenance": {
+          "commit": "3b0253d387578bda3af00a6edc97833219df64a9",
+          "git_blob_sha1": "79774d8044def236e4a383e5db54b10dfd72504e",
+          "path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/overview.png",
+          "pr": 197,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7",
+          "url": "https://github.com/techrote/sandmapsreference/blob/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/overview.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7"
+      },
+      "comparison": null,
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "B3-original",
+      "expected_workbench_png": "B3-original-workbench.png",
+      "logical_id": "trial-B3-original",
+      "title": "Brackenfold Tri-Vault Boreworks",
+      "variant_role": "original",
+      "parent_id": null,
+      "source": {
+        "commit": "3a2057dd56804f87d2fec701007ecc277601894f",
+        "git_blob_sha1": "f231a8b72c0408b407deef9d5da1de6a5d341acc",
+        "path": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/setup-brackenfold-trivault-boreworks.json",
+        "pr": 170,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+        "url": "https://github.com/techrote/sandmapsreference/blob/3a2057dd56804f87d2fec701007ecc277601894f/cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/setup-brackenfold-trivault-boreworks.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 78808,
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+        "path": "collection/setups/9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9.json",
+        "schema": 2,
+        "sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9"
+      },
+      "orientation": "landscape",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            125,
+            312
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/94068c3d4c2c6b77dc8629674337574c350effab0f9ba90290b76847b44aac2e.png",
+        "provenance": {
+          "commit": "3a2057dd56804f87d2fec701007ecc277601894f",
+          "git_blob_sha1": "e7c5080bbe7f23d0b17c120d5bafce9db95ea4b0",
+          "path": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/overview.png",
+          "pr": 170,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "94068c3d4c2c6b77dc8629674337574c350effab0f9ba90290b76847b44aac2e",
+          "url": "https://github.com/techrote/sandmapsreference/blob/3a2057dd56804f87d2fec701007ecc277601894f/cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/overview.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "94068c3d4c2c6b77dc8629674337574c350effab0f9ba90290b76847b44aac2e"
+      },
+      "comparison": {
+        "arm": "B3",
+        "family_id": "astra-B3",
+        "frozen_result": "Intended racing/gameplay benefit inconclusive",
+        "owner_prompt": "Compare at actual flight speed. Headless route probes cannot decide readability or playfeel.",
+        "role": "original"
+      },
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "B3-candidate",
+      "expected_workbench_png": "B3-candidate-workbench.png",
+      "logical_id": "trial-B3-candidate",
+      "title": "Brackenfold Tri-Vault Boreworks — Astra candidate",
+      "variant_role": "Astra candidate",
+      "parent_id": null,
+      "source": {
+        "commit": "7c13fbde3664047311b483463ece0e36f3d42e17",
+        "git_blob_sha1": "4443b54d18e0c36bbcd27f96c35a1c251d84cc8d",
+        "path": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/astra-trial-001/setup.json",
+        "pr": 213,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+        "url": "https://github.com/techrote/sandmapsreference/blob/7c13fbde3664047311b483463ece0e36f3d42e17/cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/astra-trial-001/setup.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 80429,
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "3a4c5ead526338cd548fd499c7f22aeca307a9a3c06324eaef46df4694c0f856",
+        "path": "collection/setups/ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315.json",
+        "schema": 2,
+        "sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315"
+      },
+      "orientation": "landscape",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            125,
+            312
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/6c3cad046ec04ea35b409e39403d6bc5673a09fdbbda0ba5831d69a94c8ebf93.png",
+        "provenance": {
+          "commit": "7c13fbde3664047311b483463ece0e36f3d42e17",
+          "git_blob_sha1": "77031d9c161d28f3649e9816f9ab8216beb3ea77",
+          "path": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/astra-trial-001/images/overview-after.png",
+          "pr": 213,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "6c3cad046ec04ea35b409e39403d6bc5673a09fdbbda0ba5831d69a94c8ebf93",
+          "url": "https://github.com/techrote/sandmapsreference/blob/7c13fbde3664047311b483463ece0e36f3d42e17/cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/astra-trial-001/images/overview-after.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "6c3cad046ec04ea35b409e39403d6bc5673a09fdbbda0ba5831d69a94c8ebf93"
+      },
+      "comparison": {
+        "arm": "B3",
+        "family_id": "astra-B3",
+        "frozen_result": "Intended racing/gameplay benefit inconclusive",
+        "owner_prompt": "Compare at actual flight speed. Headless route probes cannot decide readability or playfeel.",
+        "role": "candidate"
+      },
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "D1-original",
+      "expected_workbench_png": "D1-original-workbench.png",
+      "logical_id": "trial-D1-original",
+      "title": "Orthant Rift Needle",
+      "variant_role": "original",
+      "parent_id": null,
+      "source": {
+        "commit": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+        "git_blob_sha1": "32cc2ec5a4ed9fd3c423afb6332edfeadcc70310",
+        "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json",
+        "pr": 186,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+        "url": "https://github.com/techrote/sandmapsreference/blob/598e8792b32a4922008b6d3dcb9208d21f03e477/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 7690,
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
+        "path": "collection/setups/195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30.json",
+        "schema": 2,
+        "sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30"
+      },
+      "orientation": "portrait",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            509,
+            137
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/46f3f66d3121e76e85f377ee9796217e07d5c8df611ba3b478037db1a99b6dae.png",
+        "provenance": {
+          "commit": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+          "git_blob_sha1": "114cdeee7b3fdbcfadd75bfa6379d80ff86ca213",
+          "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/overview.png",
+          "pr": 186,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "46f3f66d3121e76e85f377ee9796217e07d5c8df611ba3b478037db1a99b6dae",
+          "url": "https://github.com/techrote/sandmapsreference/blob/598e8792b32a4922008b6d3dcb9208d21f03e477/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/overview.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "46f3f66d3121e76e85f377ee9796217e07d5c8df611ba3b478037db1a99b6dae"
+      },
+      "comparison": {
+        "arm": "D1",
+        "family_id": "astra-D1",
+        "frozen_result": "Assessor disagreement retained",
+        "owner_prompt": "Fresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+        "role": "original"
+      },
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "D1-candidate",
+      "expected_workbench_png": "D1-candidate-workbench.png",
+      "logical_id": "trial-D1-candidate",
+      "title": "Orthant Rift Needle — Astra candidate",
+      "variant_role": "Astra candidate",
+      "parent_id": null,
+      "source": {
+        "commit": "693574b7afce437a4cb008bd2fa200f6256dcc87",
+        "git_blob_sha1": "b51a8b4138f8cd347804ac2e83fa22c17d753de4",
+        "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/astra-trial-001/setup.json",
+        "pr": 214,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+        "url": "https://github.com/techrote/sandmapsreference/blob/693574b7afce437a4cb008bd2fa200f6256dcc87/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/astra-trial-001/setup.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 18123,
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "ed459770f09de635d095bee5b4d3c41f9cef9005449efdbb6bef5126217a7ac3",
+        "path": "collection/setups/7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab.json",
+        "schema": 2,
+        "sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab"
+      },
+      "orientation": "portrait",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            509,
+            137
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/0045f9e7b0e31436561394b4c9144009c0028fcab24f5c59109d89e5ab02b10d.png",
+        "provenance": {
+          "commit": "693574b7afce437a4cb008bd2fa200f6256dcc87",
+          "git_blob_sha1": "0315ef49f35fd52c5fa5e49abd0331a64f36368c",
+          "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/astra-trial-001/images/overview-after.png",
+          "pr": 214,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "0045f9e7b0e31436561394b4c9144009c0028fcab24f5c59109d89e5ab02b10d",
+          "url": "https://github.com/techrote/sandmapsreference/blob/693574b7afce437a4cb008bd2fa200f6256dcc87/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/astra-trial-001/images/overview-after.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "0045f9e7b0e31436561394b4c9144009c0028fcab24f5c59109d89e5ab02b10d"
+      },
+      "comparison": {
+        "arm": "D1",
+        "family_id": "astra-D1",
+        "frozen_result": "Assessor disagreement retained",
+        "owner_prompt": "Fresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+        "role": "candidate"
+      },
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "D1-reference",
+      "expected_workbench_png": "D1-reference-workbench.png",
+      "logical_id": "trial-D1-reference",
+      "title": "Orthant Rift Needle — prior repair",
+      "variant_role": "prior reworker reference",
+      "parent_id": "trial-D1-original",
+      "source": {
+        "commit": "922a27926ea7338e9a1ce09fc64222b1094a9737",
+        "git_blob_sha1": "0b3fc7168b0163b1320559e8dcee75ba6f3c711d",
+        "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json",
+        "pr": 203,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+        "url": "https://github.com/techrote/sandmapsreference/blob/922a27926ea7338e9a1ce09fc64222b1094a9737/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 15099,
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "b86a0dfbe75f87b887642f8e90c8a5d9d43dadafcec24379076d2c000bb6a3da",
+        "path": "collection/setups/9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013.json",
+        "schema": 2,
+        "sha256": "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013"
+      },
+      "orientation": "portrait",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            509,
+            137
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/76f1257cdf70ee4d6b09675b7237a29847d425c82c9e6c8a833ab92e279046c4.png",
+        "provenance": {
+          "commit": "922a27926ea7338e9a1ce09fc64222b1094a9737",
+          "git_blob_sha1": "3bea1f0fd67e4c80cbd1d97cc00309bb31f31d60",
+          "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/overview.png",
+          "pr": 203,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "76f1257cdf70ee4d6b09675b7237a29847d425c82c9e6c8a833ab92e279046c4",
+          "url": "https://github.com/techrote/sandmapsreference/blob/922a27926ea7338e9a1ce09fc64222b1094a9737/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/overview.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "76f1257cdf70ee4d6b09675b7237a29847d425c82c9e6c8a833ab92e279046c4"
+      },
+      "comparison": {
+        "arm": "D1",
+        "family_id": "astra-D1",
+        "frozen_result": "Assessor disagreement retained",
+        "owner_prompt": "Fresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+        "role": "reference"
+      },
+      "protected_feature_ids": [
+        "P186-EAST-DRILL-PORTAL",
+        "P186-CROSSING-TECH-GRAMMAR",
+        "P186-UPPER-SEISMIC-FORK",
+        "P186-FORCED-BYPASS-CLAIM"
+      ],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "D2-original",
+      "expected_workbench_png": "D2-original-workbench.png",
+      "logical_id": "trial-D2-original",
+      "title": "Warden Gashlift",
+      "variant_role": "original",
+      "parent_id": null,
+      "source": {
+        "commit": "64fd7061385fd96e5673484e1a12a70e11333386",
+        "git_blob_sha1": "451b27d95e5f94620468628f81f1e9af58b51845",
+        "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json",
+        "pr": 196,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+        "url": "https://github.com/techrote/sandmapsreference/blob/64fd7061385fd96e5673484e1a12a70e11333386/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 18694,
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81",
+        "path": "collection/setups/80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76.json",
+        "schema": 2,
+        "sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76"
+      },
+      "orientation": "portrait",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            225,
+            273
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/a4b978c693e6e71b556028715e32ebc79b41dc022d9a7c99bd4c8ec9c24334ea.png",
+        "provenance": {
+          "commit": "64fd7061385fd96e5673484e1a12a70e11333386",
+          "git_blob_sha1": "eb76a1e508504b4d88383f4b95415dc70e7e3693",
+          "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/overview.png",
+          "pr": 196,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "a4b978c693e6e71b556028715e32ebc79b41dc022d9a7c99bd4c8ec9c24334ea",
+          "url": "https://github.com/techrote/sandmapsreference/blob/64fd7061385fd96e5673484e1a12a70e11333386/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/overview.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "a4b978c693e6e71b556028715e32ebc79b41dc022d9a7c99bd4c8ec9c24334ea"
+      },
+      "comparison": {
+        "arm": "D2",
+        "family_id": "astra-D2",
+        "frozen_result": "Prior reworker reference preferred overall",
+        "owner_prompt": "Prior reference preference is a research result, not owner adoption. Compare all three native variants.",
+        "role": "original"
+      },
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "D2-candidate",
+      "expected_workbench_png": "D2-candidate-workbench.png",
+      "logical_id": "trial-D2-candidate",
+      "title": "Warden Gashlift — Astra candidate",
+      "variant_role": "Astra candidate",
+      "parent_id": null,
+      "source": {
+        "commit": "cd1e0192a709e54dc63681e00b0802716398ec1f",
+        "git_blob_sha1": "4bf7bfe69af74c6c945ee0f42fa0bce9072e34f9",
+        "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/astra-trial-001/setup.json",
+        "pr": 211,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+        "url": "https://github.com/techrote/sandmapsreference/blob/cd1e0192a709e54dc63681e00b0802716398ec1f/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/astra-trial-001/setup.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 24261,
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "f9fcc3c98c595c10a763a7319bf30edd0842de6f80033c46a55a97709deacd63",
+        "path": "collection/setups/0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc.json",
+        "schema": 2,
+        "sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc"
+      },
+      "orientation": "portrait",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            225,
+            273
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/f2d6cb79d0a63d65c146683aebddd31a55d9e1398ba1a20df03d6f5e2c4e5c1f.png",
+        "provenance": {
+          "commit": "cd1e0192a709e54dc63681e00b0802716398ec1f",
+          "git_blob_sha1": "3206620b2a22da9cd52fd77d286535a99bb83797",
+          "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/astra-trial-001/images/overview-after.png",
+          "pr": 211,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "f2d6cb79d0a63d65c146683aebddd31a55d9e1398ba1a20df03d6f5e2c4e5c1f",
+          "url": "https://github.com/techrote/sandmapsreference/blob/cd1e0192a709e54dc63681e00b0802716398ec1f/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/astra-trial-001/images/overview-after.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "f2d6cb79d0a63d65c146683aebddd31a55d9e1398ba1a20df03d6f5e2c4e5c1f"
+      },
+      "comparison": {
+        "arm": "D2",
+        "family_id": "astra-D2",
+        "frozen_result": "Prior reworker reference preferred overall",
+        "owner_prompt": "Prior reference preference is a research result, not owner adoption. Compare all three native variants.",
+        "role": "candidate"
+      },
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "D2-reference",
+      "expected_workbench_png": "D2-reference-workbench.png",
+      "logical_id": "trial-D2-reference",
+      "title": "Warden Gashlift — prior repair",
+      "variant_role": "prior reworker reference",
+      "parent_id": "trial-D2-original",
+      "source": {
+        "commit": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+        "git_blob_sha1": "e35d3a1e1bbdb29f96ef12c54d6e3475766a77a0",
+        "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json",
+        "pr": 208,
+        "repo": "techrote/sandmapsreference",
+        "sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+        "url": "https://github.com/techrote/sandmapsreference/blob/94eccd23024254fbbfb02cd6cdfef8753dd89c3c/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json"
+      },
+      "derived_source": null,
+      "setup": {
+        "bundled": true,
+        "bytes": 23743,
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "f9c64051454650b49bd43f0164491a1c350938ea8cf83c6fd6fde3a1d88d5ca4",
+        "path": "collection/setups/7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9.json",
+        "schema": 2,
+        "sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9"
+      },
+      "orientation": "portrait",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            225,
+            273
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          1024,
+          2048
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/f08dcdde01dd8f0a436efb51fefd63bc2fbbd12f4e29c8c3a6e8508909b07085.png",
+        "provenance": {
+          "commit": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+          "git_blob_sha1": "7bea3c570470fa4a2e9a4b243e727d4bd4d2080f",
+          "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/overview.png",
+          "pr": 208,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "f08dcdde01dd8f0a436efb51fefd63bc2fbbd12f4e29c8c3a6e8508909b07085",
+          "url": "https://github.com/techrote/sandmapsreference/blob/94eccd23024254fbbfb02cd6cdfef8753dd89c3c/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/overview.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "f08dcdde01dd8f0a436efb51fefd63bc2fbbd12f4e29c8c3a6e8508909b07085"
+      },
+      "comparison": {
+        "arm": "D2",
+        "family_id": "astra-D2",
+        "frozen_result": "Prior reworker reference preferred overall",
+        "owner_prompt": "Prior reference preference is a research result, not owner adoption. Compare all three native variants.",
+        "role": "reference"
+      },
+      "protected_feature_ids": [
+        "P196-SALVAGE-MAGNET-HANDOFF",
+        "P196-PRESS-COMPRESSION-CELL",
+        "P196-BROKEN-TRESTLE-PAIRS",
+        "P196-BREACHED-ENTERED-FREIGHTER",
+        "P196-LOWER-WEST-RESERVE"
+      ],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "policy-155",
+      "expected_workbench_png": "policy-155-workbench.png",
+      "logical_id": "derived-155-policy",
+      "title": "Cobalt Ventricle Valve City — native-default policy variant",
+      "variant_role": "policy-only descendant",
+      "parent_id": "gold-155",
+      "source": {
+        "commit": "7ff90c11a3839e42371f0fef5ac3c783ab2a8d05",
+        "git_blob_sha1": "4d982dcf76875787624a34b8aba6467f305aba1f",
+        "path": "cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json",
+        "pr": 155,
+        "repo": "techrote/sandmapsreference",
+        "role": "original_parent; descendant custody is separately identified",
+        "sha256": "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+        "url": "https://github.com/techrote/sandmapsreference/blob/7ff90c11a3839e42371f0fef5ac3c783ab2a8d05/cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json"
+      },
+      "derived_source": {
+        "commit": "b9535405853a5cd16e4bba968ec7167222861c42",
+        "kind": "recovered_original_descendant",
+        "path": "docs/corpus/goldmaps-finalisation-001/native/descendants/pr155-policy-repair/setup.json",
+        "repo": "techrote/sandmapsreference",
+        "sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0"
+      },
+      "setup": {
+        "bundled": true,
+        "bytes": 60064,
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "e76f280ee631d604c037f307bfafedbd2dad23d198133f4a7084c9848a2ee803",
+        "path": "collection/setups/3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0.json",
+        "schema": 2,
+        "sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0"
+      },
+      "orientation": "landscape",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            70,
+            583
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/7aa890632197067d33058ee98ad70917ab9b03d4e65cd176457cc57c0467e03c.png",
+        "provenance": {
+          "commit": "7ff90c11a3839e42371f0fef5ac3c783ab2a8d05",
+          "git_blob_sha1": "70976e03761fa2d0420c7ca6736fc2039adbecc4",
+          "path": "cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/overview.png",
+          "pr": 155,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "7aa890632197067d33058ee98ad70917ab9b03d4e65cd176457cc57c0467e03c",
+          "url": "https://github.com/techrote/sandmapsreference/blob/7ff90c11a3839e42371f0fef5ac3c783ab2a8d05/cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/overview.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "7aa890632197067d33058ee98ad70917ab9b03d4e65cd176457cc57c0467e03c"
+      },
+      "comparison": null,
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    },
+    {
+      "capture_case": "policy-183",
+      "expected_workbench_png": "policy-183-workbench.png",
+      "logical_id": "derived-183-policy",
+      "title": "Keel Ossuary — Broken-Back Ark Drydock — native-default policy variant",
+      "variant_role": "policy-only descendant",
+      "parent_id": "corpus-183",
+      "source": {
+        "commit": "c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b",
+        "git_blob_sha1": "6b3632d9ebbc84889affca869758f9e6a2d9528b",
+        "path": "cybersand-canvases/2048x1024/original-megastructure-wide-keel-ossuary-brokenback-261121/setup.json",
+        "pr": 183,
+        "repo": "techrote/sandmapsreference",
+        "role": "original_parent; descendant custody is separately identified",
+        "sha256": "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+        "url": "https://github.com/techrote/sandmapsreference/blob/c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b/cybersand-canvases/2048x1024/original-megastructure-wide-keel-ossuary-brokenback-261121/setup.json"
+      },
+      "derived_source": {
+        "artifact_path": "collection/setups/4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e.json",
+        "commit": "adbe0f0bd3633de4f9ab45de58c1838d019aa056",
+        "function": "make_183",
+        "generator_source": {
+          "commit": "adbe0f0bd3633de4f9ab45de58c1838d019aa056",
+          "commit_bytes_verified": true,
+          "function": "make_183",
+          "kind": "deterministic_generator_source",
+          "path": "tools/goldmaps_owner/corpus/build_collection.py",
+          "repo": "techrote/sandmapsreference",
+          "sha256": "35dbbc213f653560ead085f929d01de515a777130212f8a10f5bdda03108b6e1",
+          "url": "https://github.com/techrote/sandmapsreference/blob/adbe0f0bd3633de4f9ab45de58c1838d019aa056/tools/goldmaps_owner/corpus/build_collection.py"
+        },
+        "kind": "deterministic_policy_only_derivation",
+        "path": "tools/goldmaps_owner/corpus/build_collection.py",
+        "path_role": "generator source; generated Setup is identified separately by artifact path and SHA-256",
+        "repo": "techrote/sandmapsreference",
+        "sha256": "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e"
+      },
+      "setup": {
+        "bundled": true,
+        "bytes": 70040,
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "immutable_source": true,
+        "material_plane_encoding": "row-major uint8; full extent; Empty=0; x right, y down",
+        "material_plane_sha256": "e33499bc4b8e6779e28aa04b2fe30f0670cefc8fe3d7574d80740dcaf2a17b2d",
+        "path": "collection/setups/4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e.json",
+        "schema": 2,
+        "sha256": "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e"
+      },
+      "orientation": "landscape",
+      "authored_actors": [
+        {
+          "id": 1,
+          "model": "midge",
+          "spawn": [
+            78,
+            780
+          ]
+        }
+      ],
+      "reference_preview": {
+        "dimensions": [
+          2048,
+          1024
+        ],
+        "kind": "material_plane_visualization",
+        "path": "collection/previews/b39f1f64d69e938589300de400b99736ed3be7de54fcc625eabced6a7ea47e69.png",
+        "provenance": {
+          "commit": "c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b",
+          "git_blob_sha1": "d1086b77bc4621118e406ffce2f096050655d45c",
+          "path": "cybersand-canvases/2048x1024/original-megastructure-wide-keel-ossuary-brokenback-261121/overview.png",
+          "pr": 183,
+          "repo": "techrote/sandmapsreference",
+          "sha256": "b39f1f64d69e938589300de400b99736ed3be7de54fcc625eabced6a7ea47e69",
+          "url": "https://github.com/techrote/sandmapsreference/blob/c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b/cybersand-canvases/2048x1024/original-megastructure-wide-keel-ossuary-brokenback-261121/overview.png"
+        },
+        "scope": "Exact source-authored one-pixel-per-cell material visualization; not a new graphical GPU capture",
+        "sha256": "b39f1f64d69e938589300de400b99736ed3be7de54fcc625eabced6a7ea47e69"
+      },
+      "comparison": null,
+      "protected_feature_ids": [],
+      "review_status": "AWAITING_ACTUAL_RENDERED_IMAGE"
+    }
+  ],
+  "frozen_comparison_cards": [
+    {
+      "archived_images": [
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/A-overview-native.png",
+          "sha256": "f2d6cb79d0a63d65c146683aebddd31a55d9e1398ba1a20df03d6f5e2c4e5c1f"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/B-overview-native.png",
+          "sha256": "dfeda95b11c2a62dc4ca1f4f8f406fb27d60c267f45d321c6abfbc7c45766d44"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/C-overview-native.png",
+          "sha256": "3e08c5047c99ac69b2b24edd02d5198233d4a5cc82e131931d0f001604ef6a0a"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/detail-01.png",
+          "sha256": "408cb2fc7182e9277fa3376ef85bb340ed294ac229d37494e24c6913df002492"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/detail-02.png",
+          "sha256": "5ad158b5920a7a0522bff417df0243723ee0df1f4c734c456b0d13119efb3445"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/detail-03.png",
+          "sha256": "c7f5415d5c604263131b90f70bfe374d98848a4423156e5da9425b7f6d4cd42a"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/detail-04.png",
+          "sha256": "4f653ea46d6c81e57709ce997116700af074170626ec58df2aa4056b7331aa7f"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/detail-05.png",
+          "sha256": "57d7df910cbabb33aed35da01b5f709cf8c6bce652038cee64b8f03b637ecf34"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/detail-06.png",
+          "sha256": "fb37ffbcae64aac602e5459aa9e3fe80f034473ac6f5b4531136390f0ccb83e5"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/detail-07.png",
+          "sha256": "94a799efc48e98de0db0f02b8fbc17c696b9c71e92526fae920acd4c16fc5ca1"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/detail-08.png",
+          "sha256": "a5653c16fc066dd469f6da7a8fd596c6f9fba2d8156f55533cfe2b4a5610a1fb"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/detail-09.png",
+          "sha256": "f5e733a118bfccd728866dc7dc239a08aa2f49c506b00ebeb86698e18a6d2539"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-02/overview.png",
+          "sha256": "ed9f8239af9c0c7c38d19343ca05cb399c4332c411fe51ccb9da20723e8c9c29"
+        }
+      ],
+      "arm": "D2",
+      "frozen_result": "Prior reworker reference preferred overall",
+      "owner_question": "Prior reference preference is a research result, not owner adoption. Compare all three native variants.",
+      "scope": "Sequential gameplay comparisons are independent Worlds. Images preserve the frozen scientific review; no new preference is asserted.",
+      "site_views": [
+        {
+          "archived_source_image_path": "neutral/case-02/detail-01.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-02/detail-01.png",
+          "source_evidence_name": "01-entered-breached-ship",
+          "world_xywh": [
+            82,
+            308,
+            395,
+            362
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-02/detail-02.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-02/detail-02.png",
+          "source_evidence_name": "02-crane-magnet",
+          "world_xywh": [
+            528,
+            193,
+            418,
+            470
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-02/detail-03.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-02/detail-03.png",
+          "source_evidence_name": "03-fractured-trestle-relay",
+          "world_xywh": [
+            80,
+            668,
+            864,
+            440
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-02/detail-04.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-02/detail-04.png",
+          "source_evidence_name": "04-salvage-press",
+          "world_xywh": [
+            600,
+            1033,
+            344,
+            322
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-02/detail-05.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-02/detail-05.png",
+          "source_evidence_name": "05-customs-rail-grades",
+          "world_xywh": [
+            629,
+            1420,
+            315,
+            520
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-02/detail-06.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-02/detail-06.png",
+          "source_evidence_name": "06-west-lower-return",
+          "world_xywh": [
+            82,
+            1665,
+            562,
+            310
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-02/detail-07.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-02/detail-07.png",
+          "source_evidence_name": "10-magnet-head",
+          "world_xywh": [
+            550,
+            530,
+            130,
+            125
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-02/detail-08.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-02/detail-08.png",
+          "source_evidence_name": "11-compression-workface",
+          "world_xywh": [
+            750,
+            1080,
+            205,
+            235
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-02/detail-09.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-02/detail-09.png",
+          "source_evidence_name": "12-lower-fractures",
+          "world_xywh": [
+            310,
+            1325,
+            410,
+            215
+          ]
+        }
+      ],
+      "title": "Warden Gashlift",
+      "variants": [
+        {
+          "id": "trial-D2-candidate",
+          "neutral_label": "A",
+          "source_commit": "cd1e0192a709e54dc63681e00b0802716398ec1f",
+          "source_pr": 211
+        },
+        {
+          "id": "trial-D2-original",
+          "neutral_label": "B",
+          "source_commit": "64fd7061385fd96e5673484e1a12a70e11333386",
+          "source_pr": 196
+        },
+        {
+          "id": "trial-D2-reference",
+          "neutral_label": "C",
+          "source_commit": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+          "source_pr": 208
+        }
+      ]
+    },
+    {
+      "archived_images": [
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/A-overview-native.png",
+          "sha256": "dd2e57883e301cf485741b59dde810da9914ee0bcd696e1acd12bd9f86225fcc"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/B-overview-native.png",
+          "sha256": "6c3cad046ec04ea35b409e39403d6bc5673a09fdbbda0ba5831d69a94c8ebf93"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/detail-01.png",
+          "sha256": "2df22c19dc648a18f1d147e712c1f36a8edd63b4b93779cfe3f035b8e46c26ed"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/detail-02.png",
+          "sha256": "ada8b84f849bb04958d365c35a90f7f1232bb1001c0eb82f08db1b9d4b03a924"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/detail-03.png",
+          "sha256": "f65595bcbf2a595e8e17631b3dd6e03e172cc65341e9ac5cdb9a2761f92d51e4"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/detail-04.png",
+          "sha256": "8c0ab0d6f3ef0137925fe8c430a8433aa893f2f1aa5159cfcbb345674771de0d"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/detail-05.png",
+          "sha256": "bd137b093101f52af7d9cf01a5c75684ce4a636a754bbc30ac0d7668a2ca8ba9"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/detail-06.png",
+          "sha256": "5a405d11d00ad0a44f4fb335ad3d7acbd167c218b023aa2f867fbdfb0c041984"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/detail-07.png",
+          "sha256": "384f471255851bc5e2cbd98ad2705137761084e644d6f1b4fdf6baf621aa2f7a"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-05/overview.png",
+          "sha256": "3134b52e843e7ef8ff6dcbccaf4daec9119aba7919fa1d294d3add8612163f5f"
+        }
+      ],
+      "arm": "B3",
+      "frozen_result": "Intended racing/gameplay benefit inconclusive",
+      "owner_question": "Compare at actual flight speed. Headless route probes cannot decide readability or playfeel.",
+      "scope": "Sequential gameplay comparisons are independent Worlds. Images preserve the frozen scientific review; no new preference is asserted.",
+      "site_views": [
+        {
+          "archived_source_image_path": "neutral/case-05/detail-01.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-05/detail-01.png",
+          "source_evidence_name": "01-west-ignition-nest",
+          "world_xywh": [
+            50,
+            150,
+            390,
+            635
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-05/detail-02.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-05/detail-02.png",
+          "source_evidence_name": "02-first-vault-hoists",
+          "world_xywh": [
+            316,
+            115,
+            500,
+            680
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-05/detail-03.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-05/detail-03.png",
+          "source_evidence_name": "03-central-saltfold-hub",
+          "world_xywh": [
+            757,
+            115,
+            515,
+            760
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-05/detail-04.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-05/detail-04.png",
+          "source_evidence_name": "04-east-condenser-bore",
+          "world_xywh": [
+            1240,
+            145,
+            510,
+            680
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-05/detail-05.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-05/detail-05.png",
+          "source_evidence_name": "05-east-catcher-switch",
+          "world_xywh": [
+            1630,
+            230,
+            413,
+            620
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-05/detail-06.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-05/detail-06.png",
+          "source_evidence_name": "06-deep-service-pockets",
+          "world_xywh": [
+            590,
+            650,
+            875,
+            365
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-05/detail-07.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-05/detail-07.png",
+          "source_evidence_name": "10-first-diaphragm-decision",
+          "world_xywh": [
+            680,
+            225,
+            220,
+            400
+          ]
+        }
+      ],
+      "title": "Brackenfold Tri-Vault Boreworks",
+      "variants": [
+        {
+          "id": "trial-B3-original",
+          "neutral_label": "A",
+          "source_commit": "3a2057dd56804f87d2fec701007ecc277601894f",
+          "source_pr": 170
+        },
+        {
+          "id": "trial-B3-candidate",
+          "neutral_label": "B",
+          "source_commit": "7c13fbde3664047311b483463ece0e36f3d42e17",
+          "source_pr": 213
+        }
+      ]
+    },
+    {
+      "archived_images": [
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/A-overview-native.png",
+          "sha256": "0f614bd1c28ea3f99a1e82afe9b09bd1c0b019f27c131fc35cc920faadab47b6"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/B-overview-native.png",
+          "sha256": "0045f9e7b0e31436561394b4c9144009c0028fcab24f5c59109d89e5ab02b10d"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/C-overview-native.png",
+          "sha256": "388770056469d694313b510c4b4bb32998c0e5a195994e7ac36a3125127fd30f"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-01.png",
+          "sha256": "3fd4cba891766453e22f82f58536b62a7ef37e960eb8347b7b67790891aba10f"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-02.png",
+          "sha256": "b687e1750e972b73057d32a4433c354f09b7d804940726f8e9ba62092991819e"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-03.png",
+          "sha256": "c95cc18b7853b7e68fad9569d5668083f41f1328b7bb1745b13704e36c03f711"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-04.png",
+          "sha256": "9105ee776519229539e5bac67d0472d2f20d0b81c3db40d8b8444f9b31af455d"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-05.png",
+          "sha256": "96e287c992345d9397932c34e9b3b4b041c97cf3f133c9289fb6854824bb794c"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-06.png",
+          "sha256": "deaddfeb524c84e928ac15439d3089333d802bb1323b0fa4f8fb98e446ce72d0"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-07.png",
+          "sha256": "e12e2c7f4f93cfe0145d048c24864d73d60134b262b8c2f2f65bb287c5870cba"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-08.png",
+          "sha256": "1049faa98b502171dde1a05ecf95fcfaa41f2fb76b82e0d37cea94a14ee9b273"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-09.png",
+          "sha256": "b8fbacbe3dc2431e076688348bfe1ee08190fcfb5e24ffbf22cd8832e1ff5f4a"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/detail-10.png",
+          "sha256": "6755a4e79e55be75a341b895f1d2bb9bee19615932212b25930904750324dbab"
+        },
+        {
+          "kind": "archived_neutral_material_comparison",
+          "path": "collection/comparisons/case-07/overview.png",
+          "sha256": "f1c00e27b7c1709278237fdf420d84af1a860c7d811fe28b9a4659847d602711"
+        }
+      ],
+      "arm": "D1",
+      "frozen_result": "Assessor disagreement retained",
+      "owner_question": "Fresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+      "scope": "Sequential gameplay comparisons are independent Worlds. Images preserve the frozen scientific review; no new preference is asserted.",
+      "site_views": [
+        {
+          "archived_source_image_path": "neutral/case-07/detail-01.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-01.png",
+          "source_evidence_name": "01-west-clinic",
+          "world_xywh": [
+            58,
+            161,
+            402,
+            402
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-07/detail-02.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-02.png",
+          "source_evidence_name": "02-seismic-fork",
+          "world_xywh": [
+            578,
+            218,
+            375,
+            452
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-07/detail-03.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-03.png",
+          "source_evidence_name": "03-ore-transfer",
+          "world_xywh": [
+            72,
+            752,
+            414,
+            447
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-07/detail-04.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-04.png",
+          "source_evidence_name": "04-east-drill-bypass",
+          "world_xywh": [
+            574,
+            893,
+            377,
+            468
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-07/detail-05.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-05.png",
+          "source_evidence_name": "05-quarantine",
+          "world_xywh": [
+            582,
+            1312,
+            370,
+            367
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-07/detail-06.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-06.png",
+          "source_evidence_name": "06-buried-archives",
+          "world_xywh": [
+            60,
+            1639,
+            888,
+            333
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-07/detail-07.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-07.png",
+          "source_evidence_name": "10-high-crossing",
+          "world_xywh": [
+            330,
+            610,
+            370,
+            120
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-07/detail-08.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-08.png",
+          "source_evidence_name": "11-ore-stage",
+          "world_xywh": [
+            340,
+            1080,
+            350,
+            150
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-07/detail-09.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-09.png",
+          "source_evidence_name": "12-low-broken-joint",
+          "world_xywh": [
+            330,
+            1600,
+            400,
+            180
+          ]
+        },
+        {
+          "archived_source_image_path": "neutral/case-07/detail-10.png",
+          "geometry_mask": false,
+          "image": "collection/comparisons/case-07/detail-10.png",
+          "source_evidence_name": "13-entered-drill-workface",
+          "world_xywh": [
+            650,
+            950,
+            310,
+            390
+          ]
+        }
+      ],
+      "title": "Orthant Rift Needle",
+      "variants": [
+        {
+          "id": "trial-D1-reference",
+          "neutral_label": "A",
+          "source_commit": "922a27926ea7338e9a1ce09fc64222b1094a9737",
+          "source_pr": 203
+        },
+        {
+          "id": "trial-D1-candidate",
+          "neutral_label": "B",
+          "source_commit": "693574b7afce437a4cb008bd2fa200f6256dcc87",
+          "source_pr": 214
+        },
+        {
+          "id": "trial-D1-original",
+          "neutral_label": "C",
+          "source_commit": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+          "source_pr": 186
+        }
+      ]
+    }
+  ],
+  "planned_popup_views": [
+    {
+      "kind": "comparison-popup",
+      "selected_id": "trial-D1-original",
+      "expected_variant_ids": [
+        "trial-D1-reference",
+        "trial-D1-candidate",
+        "trial-D1-original"
+      ],
+      "expected_archived_legend": [
+        {
+          "id": "trial-D1-reference",
+          "neutral_label": "A",
+          "source_commit": "922a27926ea7338e9a1ce09fc64222b1094a9737",
+          "source_pr": 203
+        },
+        {
+          "id": "trial-D1-candidate",
+          "neutral_label": "B",
+          "source_commit": "693574b7afce437a4cb008bd2fa200f6256dcc87",
+          "source_pr": 214
+        },
+        {
+          "id": "trial-D1-original",
+          "neutral_label": "C",
+          "source_commit": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+          "source_pr": 186
+        }
+      ],
+      "expected_status": "Assessor disagreement retained",
+      "scope": "UI image/metadata comparison; no new native World or preference",
+      "expected_mounted_logical_ids": [
+        "repair-203",
+        "trial-D1-original",
+        "trial-D1-candidate",
+        "trial-D1-reference"
+      ],
+      "unique_setup_count": 3,
+      "alias_note": "repair-203 and trial-D1-reference are distinct logical identities with the same Setup SHA-256; four mounted cards do not imply four native variants.",
+      "review_requirement": "Read depicted_variant_ids and visible_label_records; viewport intersection alone does not establish fully legible text."
+    },
+    {
+      "kind": "decision-dialog",
+      "selected_id": "gold-125",
+      "expected_owner_status": "pending",
+      "expected_owner_accepted": false,
+      "expected_classification": null,
+      "scope": "No decision writes during capture; nomination/support is separate from owner choice"
+    },
+    {
+      "kind": "overview-zoom",
+      "selected_id": "gold-197",
+      "dimensions": [
+        1024,
+        2048
+      ],
+      "preview_sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7",
+      "kind_of_depicted_image": "source material-plane visualization",
+      "scope": "Preserve portrait aspect and explicit image provenance; not a newly rendered native World"
+    }
+  ],
+  "new_artistic_verdict": false,
+  "new_owner_acceptance": false
+}

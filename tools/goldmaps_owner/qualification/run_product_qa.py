@@ -31,7 +31,7 @@ REPLACEMENT_ACTIONS = {"Load start", "New blank", "New from generator…", "Load
                        "Load liquid-lab", "Load reservoir-lab", "Mixed Actor Workshop"}
 FLATTEN_GATES = ("warning_visible", "same_world_epoch", "authored_setup_unchanged", "material_baseline_unchanged", "no_flatten_pending")
 SAVE_ATTRIBUTION_GATES = ("typing_existing_name_did_not_register", "typing_existing_name_left_banner", "existing_name_button_refused",
-                         "foreign_file_sha256_unchanged", "ordinary_button_new_label_saved", "keyboard_new_label_saved")
+                         "foreign_file_sha256_unchanged", "uppercase_reserved_name_refused", "ordinary_button_new_label_saved", "keyboard_new_label_saved")
 
 
 def replacement_controls_pass(session):
@@ -46,6 +46,10 @@ def save_attribution_pass(session, roster):
     receipt = session.get("qa_lifecycle", {}).get("ordinary_save_attribution", {})
     if not all(receipt.get(key) is True for key in SAVE_ATTRIBUTION_GATES):
         return False
+    if (receipt.get("reserved_label") != "GM-SOURCE-" + session["original_setup_sha256"][:20]
+            or receipt.get("reserved_before_sha256") != receipt.get("reserved_after_sha256")
+            or receipt.get("reserved_after_sha256") not in ("", session["original_setup_sha256"])):
+        return False
     maps = {row["id"]: row for row in roster["maps"]}
     foreign = maps.get(receipt.get("foreign_source_map_id"), {})
     if foreign.get("setup", {}).get("sha256") != receipt.get("foreign_setup_sha256") or receipt.get("foreign_setup_sha256") == session["original_setup_sha256"]:
@@ -56,6 +60,8 @@ def save_attribution_pass(session, roster):
     saved = {row["label"]: row for row in session["saved_copies"]}
     labels = {receipt["ordinary_button_label"], receipt["keyboard_label"]}
     if len(labels) != 2 or receipt["foreign_label"] in saved or not labels <= saved.keys():
+        return False
+    if any(label.lower().startswith("gm-source-") for label in saved):
         return False
     return all(Path(saved[label]["path"]).is_file() and sha(Path(saved[label]["path"])) == saved[label]["sha256"] for label in labels)
 

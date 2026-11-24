@@ -121,7 +121,10 @@ def main():
               ("warning_visible", "same_world_epoch", "authored_setup_unchanged", "material_baseline_unchanged", "no_flatten_pending")))
         attribution = lifecycle.get("ordinary_save_attribution", {})
         check(map_id + ": ordinary Save and Ctrl+S protect names and attribution", all(attribution.get(key) is True for key in
-              ("typing_existing_name_did_not_register", "typing_existing_name_left_banner", "existing_name_button_refused", "foreign_file_sha256_unchanged", "ordinary_button_new_label_saved", "keyboard_new_label_saved")))
+              ("typing_existing_name_did_not_register", "typing_existing_name_left_banner", "existing_name_button_refused", "foreign_file_sha256_unchanged", "uppercase_reserved_name_refused", "ordinary_button_new_label_saved", "keyboard_new_label_saved"))
+              and attribution.get("reserved_label") == "GM-SOURCE-" + row["setup"]["sha256"][:20]
+              and attribution.get("reserved_before_sha256") == attribution.get("reserved_after_sha256")
+              and attribution.get("reserved_after_sha256") in ("", row["setup"]["sha256"]))
         check(map_id + ": saved and safely returned", session.get("status") == "QA_SAVED"
               and session.get("returned_via_close_confirmation") and bool(session.get("saved_copies")))
         original = root / row["setup"]["path"]
@@ -136,6 +139,7 @@ def main():
               and sha(foreign_path) == attribution.get("foreign_setup_sha256")
               and foreign_label not in {saved["label"] for saved in session.get("saved_copies", [])})
         saved_labels = {saved["label"] for saved in session.get("saved_copies", [])}
+        check(map_id + ": reserved source namespace never recorded as an evaluation copy", not any(label.lower().startswith("gm-source-") for label in saved_labels))
         check(map_id + ": both actual ordinary save paths recorded", bool(attribution.get("ordinary_button_label"))
               and bool(attribution.get("keyboard_label")) and attribution["ordinary_button_label"] != attribution["keyboard_label"]
               and {attribution["ordinary_button_label"], attribution["keyboard_label"]} <= saved_labels)
