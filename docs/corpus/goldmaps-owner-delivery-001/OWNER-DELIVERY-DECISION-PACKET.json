@@ -10,16 +10,24 @@
     "url": "https://github.com/techrote/sandmapsreference/actions/runs/45498633502",
     "conclusion": "REFUSED_BEFORE_NATIVE_REUSE_PRODUCT_GRAPHICS",
     "gate": "Strict pristine payload validation after hostile-boundary and I/O probes",
-    "reason": "Three files created by the earlier probes were under the declared userdata mutable root. The reuse entry incorrectly requested a pristine validation after these probes.",
+    "reason": "Three files created by the earlier actual Godot boundary and I/O probes were under the declared userdata mutable root. The reuse entry incorrectly requested a pristine validation after these probes; refusal preceded new map/contact/product/display execution.",
     "immutable_guard_relaxed": false,
     "emitter_fixture_tests": {
-      "passed": 19,
-      "failed": 0,
+      "source_defined_tests": 19,
+      "command_exit_code": 0,
+      "timeout": false,
+      "raw_per_test_log_independently_read": false,
       "log_sha256": "03b319082c46da9a3314a4dca7356c73a0cb6df35d4400794779ef0dd6558d93"
     },
     "new_native_population_executed": false,
     "new_product_executed": false,
-    "new_graphical_executed": false
+    "new_graphical_executed": false,
+    "executed_preflight_scope": [
+      "runtime and fragment static gates",
+      "hostile runtime boundary probes",
+      "I/O contract probes",
+      "source-defined 19-test evidence transfer command"
+    ]
   },
   "previous_attempt": {
     "run_id": 45494755605,
@@ -162,7 +170,7 @@
     "original_plane_and_actor_identity_preserved": true,
     "original_pr155_refused": true,
     "original_pr183_refused": true,
-    "pr125_note": "Retain the finalisation nomination and earlier conditional history.",
+    "pr125_note": "Exact-source specialist support completed the final Gold25 recommendation; retain the earlier conditional history separately.",
     "pr207_note": "Gold25 includes an already repaired baseline; repaired status is explicit.",
     "pr183_gold_member": false
   },
@@ -236,7 +244,7 @@
       "authored actor adoption",
       "acknowledged native progression",
       "applicable Midge movement",
-      "actual contact",
+      "applicable actual contact",
       "authored-start save",
       "distinct-process reopen",
       "unchanged source",
@@ -294,7 +302,12 @@
       "material_plane_sha256": "e33499bc4b8e6779e28aa04b2fe30f0670cefc8fe3d7574d80740dcaf2a17b2d",
       "original_behavioral_equivalence_proved": false,
       "n_windows_native_status": "QUALIFIED_HEADLESS",
-      "frozen_engine_scope": "Policy/schema admission only",
+      "frozen_engine_scope": {
+        "subject": "original #183",
+        "schema": "ADMITTED",
+        "native_policy": "REFUSED: malformed_policy / bad magic",
+        "new_descendant_frozen_engine_execution_claim": false
+      },
       "unchanged_fields": "Every non-policy field, material plane, dimensions and actors/spawns"
     }
   ],
@@ -388,7 +401,7 @@
   "batch_lab_handoff": {
     "knowledge_path": "corpus-export/knowledge.v1.json",
     "design_cards_path": "corpus-export/batch-lab/architectural_design_cards.v1.json",
-    "query_tool": "tools/goldmaps_owner/corpus/query.py",
+    "query_tool": "corpus-export/tools/query.py",
     "map_identities": 70,
     "protected_features": 27,
     "immutable_states": 76,
@@ -412,6 +425,16 @@
       "recovered_occurrences": 154,
       "hash_only_missing_occurrences": 28,
       "all_recovered_occurrences_bundled": false
+    },
+    "repository_query_tool": "tools/goldmaps_owner/corpus/query.py",
+    "knowledge_schema_version": "goldmaps.architectural-knowledge.v1",
+    "design_cards_schema_version": "cybersand.architectural-design-cards.v1",
+    "shipped_adapter_notes": "corpus-export/BATCH-LAB-HANDOFF.md",
+    "repository_usage_notes": "docs/corpus/goldmaps-owner-delivery-001/corpus/CONSUMER-USAGE.md",
+    "consumer_references": {
+      "original_pr720": "https://github.com/techrote/cybersand/pull/720",
+      "successor_pr770": "https://github.com/techrote/cybersand/pull/770",
+      "issue579": "https://github.com/techrote/cybersand/issues/579"
     }
   },
   "runtime": {

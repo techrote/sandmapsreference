@@ -9,8 +9,9 @@ Workbench experience. It preserves the completed scientific adjudication.
 
 **Final artifact status at this draft: pending a completed corrected campaign
 and independent review.** The latest attempted [run 45498633502](https://github.com/techrote/sandmapsreference/actions/runs/45498633502),
-at source `3975deeb8b1c2664cdb988dd4e393bc7f7630c7d`, passed the 19 evidence
-emitter fixtures and the runtime, fragment and static preflights, then
+at source `3975deeb8b1c2664cdb988dd4e393bc7f7630c7d`, completed the source-defined 19-test evidence
+emitter command successfully and passed the runtime, fragment and static
+preflights, then
 stopped at the strict pristine-payload check. Earlier hostile-input and I/O
 probes had created three files under the declared mutable `userdata/` root;
 the later reuse entry requested a pristine check after those probes. The
@@ -72,7 +73,7 @@ installed CyberSand profile is not used.
 | Playable delivery engine | `00cdb02f103265b6dc5224c68283e9a0c8cb449f` | Accepted contemporary main, refreshed before the product freeze |
 | N native population source | `b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041` | Actual 72-Setup Windows campaign and 14 bounded routes |
 | Corrected product review snapshot | `2d984a981da99348bbf9b44612b058cd048f3474` | Gallery/lifecycle corrections; attempted campaign refused before new execution |
-| Latest attempted qualification source | `3975deeb8b1c2664cdb988dd4e393bc7f7630c7d` | Runtime/fragment/static preflights and 19 emitter fixtures passed; later pristine-profile boundary refused before execution |
+| Latest attempted qualification source | `3975deeb8b1c2664cdb988dd4e393bc7f7630c7d` | Runtime/fragment/static preflights and the 19-test emitter command succeeded; later pristine-profile boundary refused before new map/contact/product/display execution |
 | Final qualified delivery source | Pending | Must bind the actual final artifact and fresh product/displayed execution |
 
 Both accepted main heads and #215/#216 were refreshed read-only before the
@@ -111,7 +112,8 @@ Gold25 remains exactly:
 
 The seven portrait repairs are source PRs #202–#208. #207 is itself a frozen
 Gold nominee; a nominated baseline can already be an earlier repair. #125
-retains its finalisation nomination and earlier conditional history. #155
+retains the exact-source specialist support that completed its final Gold25
+recommendation, alongside its earlier conditional history. #155
 retains its artistic nomination separately from native policy refusal.
 #183 is outside Gold25.
 
@@ -145,8 +147,8 @@ the downloaded actual inner ZIP:
 
 For each qualified unique Setup, ordinary Workbench execution proved native
 policy admission, complete material readback, all authored actors,
-acknowledged progression, applicable controlled Midge movement and real
-contact, authored-start save, distinct-process reopen, unchanged source and
+acknowledged progression, applicable controlled Midge movement and applicable
+real contact, authored-start save, distinct-process reopen, unchanged source and
 isolated profile routing. These are per-Setup results; a representative
 sample was not promoted to universal coverage.
 
@@ -199,9 +201,10 @@ semantics. Invalid all-zero representations have no proved original
 behavioral equivalence; the supported default is a separate variant, not
 retroactive qualification of the original or owner adoption.
 
-#183 frozen-engine evidence is specifically policy/schema scope, not a full
-original Windows World campaign. Delivery qualification has its own distinct
-native authority.
+#183 frozen-engine evidence applies to the original: its schema was admitted
+and its native policy was refused with bad magic. The new #183 descendant has
+no fresh frozen-engine execution claim. Its accepted-current-engine delivery
+qualification has its own distinct native authority.
 
 ## Owner experience and protected saves
 
@@ -274,8 +277,8 @@ is bundled. Final classifications require explicit owner choice.
 
 ## Architectural knowledge / Batch Lab handoff
 
-The read-only versioned export is `corpus-export/knowledge.v1.json`, with
-exact native Setups in the collection, frozen custody records and adapter
+The read-only versioned export is `corpus-export/knowledge.v1.json`
+(`schema_version: goldmaps.architectural-knowledge.v1`), with exact native Setups in the collection, frozen custody records and adapter
 notes under `corpus-export/`. It includes 70 map identities, 27 protected
 features, 76 immutable states, 12 comparative families, five negative
 interventions, coordinates and lineage groups for future holdouts.
@@ -288,16 +291,22 @@ Native eligibility resolves by Setup digest against the current delivery
 overlay. Unaccepted maps are not approved training labels.
 
 The unchanged 25 design cards at
-`corpus-export/batch-lab/architectural_design_cards.v1.json` were replayed
+`corpus-export/batch-lab/architectural_design_cards.v1.json`
+(`schema_version: cybersand.architectural-design-cards.v1`) were replayed
 against the read-only Batch Lab consumer schema at
 `fe2395c7060dae736dc2e5dc8d1e4e050b2d2e52`: schema validation, two queries
 and three negative-authority guards passed in exact Godot 4.7. This proves
 that card interface, not native module harvesting, construction or owner
-adoption. PR #720, successor work and issue #579 were not modified.
+adoption. PR [#720](https://github.com/techrote/cybersand/pull/720), successor
+[#770](https://github.com/techrote/cybersand/pull/770), and issue
+[#579](https://github.com/techrote/cybersand/issues/579) were not modified.
+The shipped adapter notes are `corpus-export/BATCH-LAB-HANDOFF.md`; repository
+examples are in [CONSUMER-USAGE.md](corpus/CONSUMER-USAGE.md).
 
 Representative validate/search/get/replay/feature/crop operations are
-reproducible with `tools/goldmaps_owner/corpus/query.py` against the extracted
-kit. Receipts pin source Setups, planes, coordinates and output images.
+reproducible with the shipped `corpus-export/tools/query.py` against the
+extracted kit. Its repository source is
+`tools/goldmaps_owner/corpus/query.py`. Receipts pin source Setups, planes, coordinates and output images.
 Attachment/clearance hints are inferred unless specifically established.
 Map-specific licensing and individual human authorship remain unknown where
 unverified. General redistribution or training rights are not inferred.
@@ -345,9 +354,13 @@ reclassifying missing execution as success. The local executor later became
 unavailable; source recovery and final artifact audit moved to source-pinned
 GitHub and hosted workflows. The bounded evidence emitter transfers original
 audited PNG and handoff bytes only; it makes no rendering or visual-quality
-claim. Its 19 bounded transport/custody fixtures passed on hosted Windows in
-run `45498633502`; actual emitted-byte reconstruction and final image review
-remain separate gates.
+claim. Its source-defined 19-test bounded transport/custody command completed on
+hosted Windows in run `45498633502` with exit code 0 and no timeout; the raw
+per-test log has not yet been independently transported and read. Its recorded
+log SHA-256 is
+`03b319082c46da9a3314a4dca7356c73a0cb6df35d4400794779ef0dd6558d93`.
+Actual emitted-byte reconstruction and final image review remain separate
+gates.
 
 ## Runtime, artifact integrity and durable fallback
 
