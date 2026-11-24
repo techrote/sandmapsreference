@@ -1,120 +1,82 @@
-# GOLDMAPS OWNER-DELIVERY-001 — integration board
+# GOLDMAPS OWNER-DELIVERY-001 — final integration board
 
-Status: additive **Draft / HOLD**. Owner decisions, physical NVIDIA playfeel,
-Ready promotion and merges remain unaccepted. This delivery does not reopen the
-frozen artistic experiment.
+**Technical delivery complete. Actual Draft / HOLD. Owner decisions and
+production adoption remain unaccepted.**
 
-## Source authorities at intake, 24 November 2026
+[Playable Windows download](https://github.com/techrote/sandmapsreference/actions/runs/45500179792/artifacts/14971496709) ·
+[Canonical decision packet](OWNER-DELIVERY-DECISION-PACKET.md) ·
+[Standalone Batch Lab reference](batch-handoff/README.md)
 
-| Authority | Exact source | Disposition |
+## Authorities and tested source
+
+| Authority | Exact source |
+| --- | --- |
+| sandmapsreference accepted main | `99a166e7fcae45eb22be1740e9f33f62faccbcc7` |
+| Recovery #215 | `6c4edd3d05476848cbebb800090080ae824ad208` |
+| Finalisation #216 | `b9535405853a5cd16e4bba968ec7167222861c42` |
+| Frozen scientific/native evidence | `40f196f792e4d9e19bbd57fdafd6a90420fadf32` |
+| Frozen scientific engine | `662df51cd8409a52332fa7ef15d06d8ab8945aed` |
+| Accepted playable engine | `00cdb02f103265b6dc5224c68283e9a0c8cb449f` |
+| Qualified H package source | `8c709093672c6761d1056187399ccc487760606b` |
+| Original N native population | `b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041` |
+
+The final read-only snapshot at 2026-11-24 22:54:02 UTC confirmed accepted
+mains unchanged. #215/#216 remain open/unmerged with live draft:false despite
+written Draft/HOLD; no metadata change was made. #217 is actually draft:true.
+The later closure changes documentation and retained evidence only.
+
+## Ownership and independent reviews
+
+| Lane | Owned delivery | Independent result |
 | --- | --- | --- |
-| sandmapsreference accepted main | `99a166e7fcae45eb22be1740e9f33f62faccbcc7` | Read-only |
-| Recovery #215 | `6c4edd3d05476848cbebb800090080ae824ad208` | Open; written Draft/HOLD, actual `draft=false` |
-| Finalisation #216 | `b9535405853a5cd16e4bba968ec7167222861c42` | Open; written Draft/HOLD, actual `draft=false` |
-| Scientific/native evidence | `40f196f792e4d9e19bbd57fdafd6a90420fadf32` | Frozen; not replaced by delivery evidence |
-| Scientific engine | `662df51cd8409a52332fa7ef15d06d8ab8945aed` | Frozen research authority |
-| Contemporary accepted engine | `00cdb02f103265b6dc5224c68283e9a0c8cb449f` | Executed delivery engine; owner acceptance pending |
+| A — corpus | Roster, policy custody, feature/knowledge export, standalone reference bundle | [Final corpus review](corpus/final-delivery-corpus-review.md); C cross-review |
+| B — product | Browser, isolated ordinary Workbench, local reviews, protected saves | [Final usability review](product/FINAL-HOSTED-USABILITY-REVIEW.md); C cross-review; B independently verified A's bundle |
+| C — assurance | Native/source guards, hostile fixtures, final archive and actual rendered review | [Final independent review](qualification/FINAL-INDEPENDENT-REVIEW.md); A/B cross-review |
+| Lead — integration | Runtime custody, CI, actual publication/download, exact fallback, final packet | [Closure record](qualification/lead-final-closure-review.v1.json); specialist factual checks |
 
-The metadata discrepancy on #215/#216 grants no merge or metadata-change
-authority. Both predecessors and all original map branches remain untouched.
+These are AI roles, not separate human assessors. All original maps,
+predecessors, science locks and active engine programmes remain unchanged.
 
-## Ownership and cross-review
+## Actual completed evidence
 
-| Lane | Owner | Write set | Independent review |
-| --- | --- | --- | --- |
-| Corpus, policy descendants, knowledge export | Specialist A (`corpus`) | `tools/goldmaps_owner/corpus/`, delivery `corpus/` | Product usability/identities |
-| Browser, ordinary Workbench entry, portable product | Specialist B (`product`) | `tools/goldmaps_owner/product/`, delivery `product/` | Corpus and knowledge consumer interface |
-| Native qualification, hostile fixtures, final archive | Specialist C (`assurance`) | `tools/goldmaps_owner/qualification/`, delivery `qualification/` | Independent corpus/product/package assurance |
-| Runtime custody, CI, integration, publication, final packet | Lead | integration tools, workflow, top-level delivery docs | Specialist C final independent review |
+- N run 45481683557: full 72-Setup native population, 67 qualified, 2 refused,
+  3 bounded no-contact observations; all 14 scripted routes completed.
+- H run 45500179792: exact verified N reuse, 3 full new contact observations
+  passed, 32 product assertions, 45 pristine-launcher assertions, 18 displayed
+  captures, exact acquisition reconstruction and actual fresh extraction.
+- Final effective result: 70 qualified / 2 refused unique Setups; 79 qualified /
+  2 refused logical entries; 68 qualified / 2 refused canonical sources.
+- Actual primary ZIP: 1,640 files, 101,213,343 bytes, SHA-256
+  `ba3d75bf97943af4148ee4427fdfcb2c6df41ede2453c80ef69e3bd6577dfea9`.
+- Independent hosted downloaded-artifact audit and direct local audit produced
+  the identical report. Every immutable member, native/raw evidence join,
+  CRC and source/runtime identity passed.
+- All 18 selected original images were directly reviewed by three roles.
+  Small-window scrolling and portrait zoom remain explicit ergonomics.
+- Standalone Batch bundle: 283 files, 3,336,826 bytes; all 272 primary byte joins
+  and 6 independent offline query/replay/crop checks passed. No native module
+  approval, training or active consumer-branch change occurred.
 
-These are separate AI reviewer roles, not different human assessors. All lanes
-use disjoint worktrees. The lead alone publishes the additive branch and starts
-the consolidated hosted campaign.
+## Preserved failures and resolutions
 
-## Decisions and live gates
+| Record | Resolution without erasing the refusal |
+| --- | --- |
+| Initial CRLF bootstrap conversion | Exact LF checkout; guard unchanged |
+| N collapsed gallery / popup / small native text | Corrected additive product and independently inspected actual H images |
+| F two undeclared contact sidecars | Exact fragment declaration; all 267 original rows retained; hostile checks |
+| G pristine check after real QA userdata | Existing post-execution mode at that point; final pristine and immutable checks remain strict |
+| N three 900-tick no-contact observations | Separate unchanged-source 1800-tick full observations; original histories/receipts retained |
+| Temporary local executor loss / large-log connector failure | Actual direct ZIP and hosted audit artifact downloads; no missing run or transfer labelled a pass |
 
-- Preserve the historical evaluator's 51 aliases/42 unique Setups as historical
-  scope. The new collection has 81 logical entries and 72 unique bundled Setups:
-  53 required aliases/44 unique inputs, plus 28 disjoint optional corpus inputs.
-  All 70 source identities are indexed. Bundling does not infer qualification.
-- Recover #155's exact existing policy descendant. Do not regenerate it.
-- Investigate #183 as a separate native-default-policy integration descendant.
-  Invalid zero policy has no provable original semantics; do not assert policy
-  equivalence or add it to Gold25.
-- Keep the gallery alive beside a separate ordinary Workbench process. Require
-  the prior session to exit before opening another; warn to save before closing.
-- Use one current-delivery qualification matrix keyed by Setup bytes and engine
-  source. Historical results never silently enable a current untested map.
-- Final package manifest: `payload-manifest.v1.json`; fresh ZIP/extraction must
-  contain exactly its immutable files and the manifest itself. Only explicit
-  userdata and Godot cache roots may change during use.
-- Native qualification and owner classification are independent. Initial owner
-  decisions are pending for every entry and variant.
+## Remaining owner gates
 
-## Environment and retained failures
+Physical Windows/NVIDIA presentation and performance, actual DPI/input,
+subjective full routes and B3 high-speed readability, D1/D2 preference,
+Gold/Platinum/Pyrite classifications, policy-descendant adoption, approved
+module reuse/rights, and production integration remain owner decisions.
 
-Initial dependency reconstruction stopped on shared `/workspace` exhaustion.
-Only this mission's bulk engine/dependency files were moved to a separate
-temporary filesystem; other programmes were untouched. Partial downloads must
-be hash-verified or reacquired. This is an acquisition failure, not native
-qualification evidence.
-
-## Remaining gates
-
-The accepted contemporary engine was refreshed again at 19:59 UTC and remained
-`00cdb02f103265b6dc5224c68283e9a0c8cb449f`. Source-bound Godot 4.7 and both native
-dependencies are acquired and verified; source inputs match the accepted engine.
-The corpus, comparison cards, policy audits and architectural export are built.
-Independent source replay verifies all 72 distinct material planes. The two
-original invalid policy sources remain explicit negative fixtures.
-
-The serial Linux required campaign completed at source
-`d4eecf9ce7de759c9d8941c5c87b3e557e8e8385`: 53 aliases / 44 unique Setups,
-42 qualified and the two expected original policy refusals. Actual material
-readback, authored actors, progression, applicable movement/contact and
-authored save/fresh-process reopen are preserved per Setup. The separate
-product preflight passed 26 checks. Neither result establishes a physical GPU
-or owner preference. The first parallel attempt and later optional serial
-interruptions remain raw negative environment evidence; their missing native
-results are never promoted to passes.
-
-The initial hosted Windows run `45481057262` correctly refused converted
-bootstrap source bytes before native execution. Its original artifact and
-logs are preserved. Explicit `core.eol=lf` plus `core.autocrlf=false` fixes
-checkout bytes without changing the integrity guard. The consolidated serial Windows campaign `45481683557`, source
-`b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041`, completed. Its actual ZIP was
-downloaded and independently audited: 81 logical entries / 72 unique Setups;
-67 qualified, two expected invalid-source refusals, and three optional
-portraits unqualified only for an unobserved contact within 900 ticks. All
-14 bounded scripted routes completed. The 15 planned displayed cases were
-captured, but independent visual review found a collapsed gallery and an
-unrequested startup popup. The native map images match source identities;
-capture success does not by itself establish usable UI. The actual original
-ZIP, native summaries and all negative results remain the N authority.
-
-Independent source review then found ordinary New/Load and Water Lab scene
-replacement paths that could bypass the evaluator identity/close warning,
-plus a save-receipt attribution edge. Specialist B repaired the additive session layer; A and C reviewed it
-independently. A genuine 32-check Linux product preflight at source
-`d30566d7cb0ca4cadda62c0fce3b989e71589672` passed, with actual painted
-save/reopen and all seven replacement controls. Subsequent Windows filename
-casing and displayed gallery/readability corrections still require the final
-Windows product campaign. Current shipped engine,
-native harness, scientific sources and map bytes remain unchanged. A later
-product-only continuation may reuse actual native receipts only after exact
-old/new ZIP comparisons prove all native inputs unchanged; original native
-source/run IDs will remain explicit. Changed product, guarded lifecycle,
-graphical capture and final extraction require fresh execution.
-
-The final request retains the exact 72-Setup N evidence and adds a separate
-full native observation for the three optional portraits using the existing
-1800-tick contact window. A and C independently verified the exact hard
-floors below the original observation. Original results remain unchanged;
-only complete fresh receipts may change those three effective statuses.
-See `CONTACT-FOLLOWUP.md`.
-
-Remaining gates are corrected displayed gallery/Workbench ergonomics, the
-fresh hosted Windows product and three-map contact receipts, the final actual
-ZIP and independent archive/visual inspection, durable reconstruction pins and
-the canonical owner decision packet. The workflow runs only for an explicit qualification request or its
-own workflow change; evidence-only updates do not claim new native execution.
+Recommended integration order after explicit owner review and repository
+checks: **#215 → #216 → #217**. Preserve the stacked ancestry and exact
+scientific/custody identities. Resolve predecessor Draft/HOLD metadata only
+if the owner deliberately changes disposition. No Ready promotion, merge,
+auto-merge or production adoption has been performed.

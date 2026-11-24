@@ -1,0 +1,374 @@
+{
+  "closed_at": "2026-11-24T22:34:55Z",
+  "derivation_path": null,
+  "derived_source": null,
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "godot_version": {
+    "build": "official",
+    "hash": "5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+    "hex": 263936,
+    "major": 4,
+    "minor": 7,
+    "patch": 0,
+    "status": "stable",
+    "string": "4.7-stable (official)",
+    "timestamp": 0
+  },
+  "map_id": "trial-D2-reference",
+  "native_load": {
+    "acknowledged_epoch": 1,
+    "actors": [
+      {
+        "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+        "id": 1,
+        "model": "midge",
+        "options": {
+          "boost_multiplier": 1.8,
+          "budget": 20.0,
+          "inertia_multiplier": 1.0,
+          "mass_multiplier": 1.0,
+          "thrust_multiplier": 1.0,
+          "torque_multiplier": 1.0
+        },
+        "spawn": [
+          225.0,
+          273.0
+        ]
+      }
+    ],
+    "actors_adopted": [
+      {
+        "id": 1,
+        "model": "midge"
+      }
+    ],
+    "expected_material_plane_sha256": "f9c64051454650b49bd43f0164491a1c350938ea8cf83c6fd6fde3a1d88d5ca4",
+    "extent": [
+      1024,
+      2048
+    ],
+    "full_grid_match": true,
+    "material_plane_sha256": "f9c64051454650b49bd43f0164491a1c350938ea8cf83c6fd6fde3a1d88d5ca4",
+    "native_image_format": 3,
+    "native_image_storage_sha256": "937d00cfb7a8591b4dab2d28bb4779ea7fe2060093f5c15ad7e8f20cac62ba5d",
+    "native_tick": 0,
+    "ordinary_workbench": true,
+    "worker_failed": false
+  },
+  "native_policy": {
+    "accepted": true,
+    "receipt": {
+      "admission": "current_defaults_only",
+      "assignments": [
+        {
+          "applied_family": "freemass_v1",
+          "applied_variant": "reference",
+          "material": 3,
+          "name": "water",
+          "requested_family": "freemass_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 8,
+          "name": "lava",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 12,
+          "name": "acid",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 16,
+          "name": "oil",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 20,
+          "name": "paste",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 21,
+          "name": "slush",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 24,
+          "name": "brine",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 30,
+          "name": "cement",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 32,
+          "name": "toxic-sludge",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 33,
+          "name": "mercury",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 36,
+          "name": "molten-glass",
+          "requested_family": "cellular_yield_v1"
+        }
+      ],
+      "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+      "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+      "envelope": [
+        1279479895,
+        1,
+        1,
+        -2102023270,
+        1854385793,
+        1886533889,
+        84225930,
+        1522979054,
+        582168604,
+        -646713377,
+        -939672877,
+        868616440,
+        1977866421,
+        1930370363,
+        -2119873090,
+        -6981196,
+        870342995,
+        1443932351,
+        -1569267145,
+        11,
+        3,
+        1,
+        0,
+        8,
+        2,
+        0,
+        12,
+        2,
+        0,
+        16,
+        2,
+        0,
+        20,
+        2,
+        0,
+        21,
+        2,
+        0,
+        24,
+        2,
+        0,
+        30,
+        2,
+        0,
+        32,
+        2,
+        0,
+        33,
+        2,
+        0,
+        36,
+        2,
+        0,
+        0,
+        0
+      ],
+      "family_blocks": [],
+      "family_parameters": {},
+      "material_blocks": [],
+      "maximum_rule_radius": null,
+      "minimum_rule_radius": 2,
+      "normalization": null,
+      "physical_state_format_version": 2,
+      "physical_state_hash_version": 2,
+      "platform": "windows",
+      "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+      "refusal": null,
+      "session_generation": -1,
+      "version": 1,
+      "wire_version": 1
+    },
+    "refusal": null
+  },
+  "opened_at": "2026-11-24T22:34:27Z",
+  "original_setup_sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+  "owner_acceptance": "pending",
+  "package_root": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation",
+  "process_id": 3720,
+  "qa_completed": true,
+  "qa_lifecycle": {
+    "actor_composition_opened": true,
+    "cancel_preserved_same_world": true,
+    "close_warning_visible": true,
+    "existing_name_refused": true,
+    "flatten_guard": {
+      "authored_setup_unchanged": true,
+      "material_baseline_unchanged": true,
+      "no_flatten_pending": true,
+      "same_world_epoch": true,
+      "warning_visible": true
+    },
+    "ordinary_replacement_controls": [
+      {
+        "action": "Load start",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "New blank",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "New from generator…",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "Load / reset scene",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "Load liquid-lab",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "Load reservoir-lab",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "Mixed Actor Workshop",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      }
+    ],
+    "ordinary_save_attribution": {
+      "existing_name_button_refused": true,
+      "foreign_file_sha256_unchanged": true,
+      "foreign_label": "qa-foreign-db8f01a9975a8598",
+      "foreign_setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "foreign_source_map_id": "gold-197",
+      "keyboard_label": "qa-keyboard-5f4b5a0474e159d1",
+      "keyboard_new_label_saved": true,
+      "ordinary_button_label": "qa-button-4f1deaf12ecff04a",
+      "ordinary_button_new_label_saved": true,
+      "receipt_count_before_typing": 1,
+      "reserved_after_sha256": "",
+      "reserved_before_sha256": "",
+      "reserved_label": "GM-SOURCE-7d89a3195b5a382a4d63",
+      "scope": "Exact foreign-source bytes in an isolated developer fixture; actual ordinary Save button and dispatched Ctrl+S event; no physical keyboard claim",
+      "typing_existing_name_did_not_register": true,
+      "typing_existing_name_left_banner": true,
+      "uppercase_reserved_name_refused": true
+    },
+    "return_copy_label": "qa-return-b75aa33da04bb1ee",
+    "save_and_return_dialog_visible": true,
+    "saved_copy_sha256_unchanged": true,
+    "scope": "Programmatic execution of actual UI button handlers; no physical input or graphical acceptance inferred"
+  },
+  "returned_via_close_confirmation": true,
+  "saved_copies": [
+    {
+      "label": "eval-trial-D2-reference-20261124-223446",
+      "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-eval-trial-D2-reference-20261124-223446.json",
+      "saved_at": "2026-11-24T22:34:48Z",
+      "semantics": "authored starting layout; current dynamic state is not serialized",
+      "sha256": "375914519742dafb91354e4b02f6f8a19ec0f0aaeffe21181b9710cdb949f456"
+    },
+    {
+      "label": "qa-button-4f1deaf12ecff04a",
+      "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-button-4f1deaf12ecff04a.json",
+      "saved_at": "2026-11-24T22:34:54Z",
+      "semantics": "authored starting layout; current dynamic state is not serialized",
+      "sha256": "375914519742dafb91354e4b02f6f8a19ec0f0aaeffe21181b9710cdb949f456"
+    },
+    {
+      "label": "qa-keyboard-5f4b5a0474e159d1",
+      "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-keyboard-5f4b5a0474e159d1.json",
+      "saved_at": "2026-11-24T22:34:54Z",
+      "semantics": "authored starting layout; current dynamic state is not serialized",
+      "sha256": "375914519742dafb91354e4b02f6f8a19ec0f0aaeffe21181b9710cdb949f456"
+    },
+    {
+      "label": "qa-return-b75aa33da04bb1ee",
+      "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-return-b75aa33da04bb1ee.json",
+      "saved_at": "2026-11-24T22:34:55Z",
+      "semantics": "authored starting layout; current dynamic state is not serialized",
+      "sha256": "375914519742dafb91354e4b02f6f8a19ec0f0aaeffe21181b9710cdb949f456"
+    }
+  ],
+  "schema": "goldmaps.owner-session.v1",
+  "screenshots": [
+    {
+      "capture_size": [
+        992,
+        656
+      ],
+      "captured_at": "2026-11-24T22:34:47Z",
+      "content_scale_size": [
+        992,
+        656
+      ],
+      "display_driver": "Windows",
+      "kind": "actual rendered Workbench viewport",
+      "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/reviews/screenshots/trial-D2-reference-20261124T223426-891e51-19941.png",
+      "physical_owner_acceptance": "not_inferred",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "sha256": "b474a261c9d64fdd4b1877fa088db1a9e9b707829923153c65fa826b4aa9fcfe",
+      "viewport_size": [
+        992,
+        656
+      ],
+      "window_position": [
+        16,
+        32
+      ],
+      "window_size": [
+        992,
+        656
+      ]
+    }
+  ],
+  "session_id": "trial-D2-reference-20261124T223426-891e51",
+  "source": {
+    "commit": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+    "git_blob_sha1": "e35d3a1e1bbdb29f96ef12c54d6e3475766a77a0",
+    "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json",
+    "pr": 208.0,
+    "repo": "techrote/sandmapsreference",
+    "sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+    "url": "https://github.com/techrote/sandmapsreference/blob/94eccd23024254fbbfb02cd6cdfef8753dd89c3c/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json"
+  },
+  "source_sha256_after_load": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+  "source_sha256_on_close": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+  "status": "QA_SAVED",
+  "user_data_dir": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox",
+  "variant_role": "prior reworker reference"
+}

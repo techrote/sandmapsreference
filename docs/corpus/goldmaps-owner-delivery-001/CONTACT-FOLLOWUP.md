@@ -1,5 +1,28 @@
 # Three portrait contact observations
 
+## Executed final result
+
+At source `8c709093672c6761d1056187399ccc487760606b`, run 45500179792 separately executed all three full native
+observations with the existing 1,800-tick budget. All admission, actor,
+readback, movement/contact, authored-save and fresh-process-reopen gates passed.
+
+| Source | Probe-start native tick | First witness native tick | Elapsed probe ticks | Maximum contacts |
+| --- | ---: | ---: | ---: | ---: |
+| #188 | 25 | 1094 | 1069 | 4 |
+| #189 | 25 | 1132 | 1107 | 2 |
+| #192 | 25 | 1142 | 1117 | 4 |
+
+All original 900-tick negative receipts and N source/run identities remain
+unchanged in each entry's native history. Geometry, policies, spawn and
+acceptance gates were unchanged. No result was inferred from static floor
+proximity. The final effective library is 70 qualified + 2 refused unique
+Setups; the two original malformed policies remain refused.
+
+See [the exact final matrix](qualification/windows-final-8c709093672c/package/qualification/PER-VARIANT-MATRIX.md)
+and [independent audit](qualification/FINAL-INDEPENDENT-REVIEW.md).
+The predeclared procedure below is retained as protocol history.
+
+
 The completed Windows campaign `45481683557` at
 `b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041` qualified 67 of 72 unique
 Setups and verified the two expected malformed-policy refusals. Three optional

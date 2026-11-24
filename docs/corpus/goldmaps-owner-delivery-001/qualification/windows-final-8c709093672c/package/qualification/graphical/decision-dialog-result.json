@@ -1,0 +1,100 @@
+{
+  "name": "decision-dialog",
+  "map_id": null,
+  "purpose": "Actual pending/unclassified Gold125 review dialog; no owner decision is saved",
+  "requested_ui_action": "decision-dialog",
+  "requested_ui_map_id": "gold-125",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "delivery_source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "source": {
+    "commit": "e17996dd8a2e1044550a60e75f45780cb6ae868d",
+    "git_blob_sha1": "0d073a5713d8550efd4345979b21740e8b28890e",
+    "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-quoin-veil-split-faultwell-vertical-census-261121/setup.json",
+    "pr": 125,
+    "repo": "techrote/sandmapsreference",
+    "sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+    "url": "https://github.com/techrote/sandmapsreference/blob/e17996dd8a2e1044550a60e75f45780cb6ae868d/cybersand-canvases/2048x1024/worldgroup-xenobiome-quoin-veil-split-faultwell-vertical-census-261121/setup.json"
+  },
+  "derived_source": null,
+  "setup_sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+  "material_plane_sha256": "de56ecc67744576902ff681768932747cf291608b89adc5078730fc2bfc3f9a3",
+  "launcher": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd",
+  "command": "\"C:\\Windows\\system32\\cmd.exe\" /d /s /c \"\"D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd\"\"",
+  "headless": false,
+  "started_utc": "2026-11-24T22:36:24.706900+00:00",
+  "status": "CAPTURED",
+  "product_defect": false,
+  "captures": [
+    {
+      "active_collection": "all",
+      "decision_classification": "Unclassified",
+      "decision_map_id": "gold-125",
+      "decision_status": "Pending / not reviewed",
+      "depicted_variant_ids": [],
+      "display_driver": "Windows",
+      "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+      "initial_gallery_layout": {
+        "first_item_bounds_local": [
+          4.0,
+          4.0,
+          229.0,
+          221.0
+        ],
+        "map_count": 25,
+        "map_list_bounds": [
+          24.0,
+          244.0,
+          700.0,
+          370.0
+        ],
+        "map_list_visible": true,
+        "navigation_bounds": [
+          24.0,
+          624.0,
+          700.0,
+          39.0
+        ],
+        "viewport_size": [
+          1280.0,
+          720.0
+        ],
+        "visible_popup_titles": []
+      },
+      "mounted_variant_ids": [],
+      "native_world_opened": false,
+      "neutral_label_legend": "",
+      "owner_decision_written": false,
+      "path": "decision-dialog-popup.png",
+      "popup": {
+        "title": "Your local review — explicit human choice",
+        "visible": true,
+        "window_size": [
+          760,
+          660
+        ]
+      },
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "review_file_sha256_after": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+      "review_file_sha256_before": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+      "review_file_unchanged": true,
+      "schema": "goldmaps.browser-graphical.v1",
+      "scope": "actual hosted rendered UI; physical owner GPU acceptance not inferred",
+      "selected_id": "gold-125",
+      "selected_setup_sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+      "sha256": "c24b3f08cb0e0eab8a418ce2f5a92f38329e617b336543e738b78b1769a15399",
+      "view_kind": "decision-dialog",
+      "viewport": "(760.0, 660.0)",
+      "visible_maps": 81,
+      "original_portable_path": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\userdata\\qa\\browser.png",
+      "bytes": 45101,
+      "width": 760,
+      "height": 660
+    }
+  ],
+  "launcher_process_id": 2016,
+  "exit_code": 0,
+  "timeout": false,
+  "seconds": 8.641,
+  "new_session_count": 0,
+  "scope": "Actual hosted rendered viewport and source-bound execution; no physical NVIDIA, subjective flight-speed or owner classification acceptance"
+}

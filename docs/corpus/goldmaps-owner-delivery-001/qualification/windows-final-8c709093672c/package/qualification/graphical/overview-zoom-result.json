@@ -1,0 +1,101 @@
+{
+  "name": "overview-zoom",
+  "map_id": null,
+  "purpose": "Actual full-resolution Gold197 portrait preview popup; archived material visualization, not a native World",
+  "requested_ui_action": "overview-zoom",
+  "requested_ui_map_id": "gold-197",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "delivery_source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "source": {
+    "commit": "3b0253d387578bda3af00a6edc97833219df64a9",
+    "git_blob_sha1": "280b63cf36c58df9f2c22e2c25142204cc48f004",
+    "path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+    "pr": 197,
+    "repo": "techrote/sandmapsreference",
+    "sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+    "url": "https://github.com/techrote/sandmapsreference/blob/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json"
+  },
+  "derived_source": null,
+  "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+  "material_plane_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+  "launcher": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd",
+  "command": "\"C:\\Windows\\system32\\cmd.exe\" /d /s /c \"\"D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd\"\"",
+  "headless": false,
+  "started_utc": "2026-11-24T22:36:33.353300+00:00",
+  "status": "CAPTURED",
+  "product_defect": false,
+  "captures": [
+    {
+      "active_collection": "all",
+      "depicted_variant_ids": [],
+      "display_driver": "Windows",
+      "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+      "image_scope": "Full-resolution archived material-plane visualization inside actual rendered UI; not a native World screenshot",
+      "initial_gallery_layout": {
+        "first_item_bounds_local": [
+          4.0,
+          4.0,
+          229.0,
+          221.0
+        ],
+        "map_count": 25,
+        "map_list_bounds": [
+          24.0,
+          244.0,
+          700.0,
+          370.0
+        ],
+        "map_list_visible": true,
+        "navigation_bounds": [
+          24.0,
+          624.0,
+          700.0,
+          39.0
+        ],
+        "viewport_size": [
+          1280.0,
+          720.0
+        ],
+        "visible_popup_titles": []
+      },
+      "mounted_variant_ids": [],
+      "native_world_opened": false,
+      "neutral_label_legend": "",
+      "owner_decision_written": false,
+      "path": "overview-zoom-popup.png",
+      "popup": {
+        "title": "Silt Meridian Hingevault — full-resolution source preview",
+        "visible": true,
+        "window_size": [
+          1024,
+          648
+        ]
+      },
+      "preview_kind": "material_plane_visualization",
+      "preview_path": "collection/previews/2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7.png",
+      "preview_sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "review_file_sha256_after": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+      "review_file_sha256_before": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+      "review_file_unchanged": true,
+      "schema": "goldmaps.browser-graphical.v1",
+      "scope": "actual hosted rendered UI; physical owner GPU acceptance not inferred",
+      "selected_id": "gold-197",
+      "selected_setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "sha256": "f6552bca86fd4bf8dc01870f5322b3719ec03dc16beadbae64cc3f24927b2142",
+      "view_kind": "overview-zoom",
+      "viewport": "(1024.0, 648.0)",
+      "visible_maps": 81,
+      "original_portable_path": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\userdata\\qa\\browser.png",
+      "bytes": 7611,
+      "width": 1024,
+      "height": 648
+    }
+  ],
+  "launcher_process_id": 5520,
+  "exit_code": 0,
+  "timeout": false,
+  "seconds": 8.734,
+  "new_session_count": 0,
+  "scope": "Actual hosted rendered viewport and source-bound execution; no physical NVIDIA, subjective flight-speed or owner classification acceptance"
+}

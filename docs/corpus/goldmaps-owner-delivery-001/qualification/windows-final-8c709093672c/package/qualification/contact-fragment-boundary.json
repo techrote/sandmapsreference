@@ -1,0 +1,64 @@
+{
+  "schema": "goldmaps.owner-contact-fragment-boundary.v1",
+  "pass": true,
+  "source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "source_files": {
+    "tools/goldmaps_owner/integration/test_contact_manifest_extension.py": "0f47554a7f495f7aa3d4469a4c583c5cf6975b61d9f1dc60ab9c2edcc28b4248",
+    "tools/goldmaps_owner/integration/contact_followup.py": "117ddfdb82d01bead324b7aca6b51bcf123cdc95fdcd96a77f7813970458cb19",
+    "tools/goldmaps_owner/corpus/query.py": "9ab8818d2951f82d9b9bd2ad6d08d31bd29fcc82cc9ae4058397427e9befd11e"
+  },
+  "github_run_id": "45500179792",
+  "prepared_fragment": {
+    "status": "PASS",
+    "scope": "Exact collection fragment custody/roster; does not qualify executable runtime",
+    "files": 269,
+    "bytes": 64190599,
+    "logical_aliases": 81,
+    "source_maps": 70,
+    "unique_setup_payloads": 72,
+    "owner_accepted": 0,
+    "external_overlay_present": true
+  },
+  "prior_fragment_newlines": "CRLF",
+  "checks": [
+    {
+      "name": "actual prepared fragment validates all 269 declared members",
+      "pass": true
+    },
+    {
+      "name": "missing collection/native-contact-followup-inputs.v1.json is refused",
+      "pass": true,
+      "refusal": "[Errno 2] No such file or directory: 'D:\\\\a\\\\_temp\\\\goldmaps-owner-delivery\\\\work\\\\goldmaps-contact-fixtures-hkspx931\\\\collection\\\\native-contact-followup-inputs.v1.json'"
+    },
+    {
+      "name": "corrupted collection/native-contact-followup-inputs.v1.json bytes are refused",
+      "pass": true,
+      "refusal": "Payload differs: collection/native-contact-followup-inputs.v1.json"
+    },
+    {
+      "name": "missing collection/contact-followup-source-static-audit.v1.json is refused",
+      "pass": true,
+      "refusal": "[Errno 2] No such file or directory: 'D:\\\\a\\\\_temp\\\\goldmaps-owner-delivery\\\\work\\\\goldmaps-contact-fixtures-hkspx931\\\\collection\\\\contact-followup-source-static-audit.v1.json'"
+    },
+    {
+      "name": "corrupted collection/contact-followup-source-static-audit.v1.json bytes are refused",
+      "pass": true,
+      "refusal": "Payload differs: collection/contact-followup-source-static-audit.v1.json"
+    },
+    {
+      "name": "undeclared extra file is refused",
+      "pass": true,
+      "refusal": "Unlisted collection payloads: collection/unlisted-contact-extra.json"
+    },
+    {
+      "name": "altered fragment count is refused",
+      "pass": true,
+      "refusal": "Manifest counts differ"
+    },
+    {
+      "name": "actual prepared kit remains unchanged after hostile fixtures",
+      "pass": true
+    }
+  ],
+  "scope": "Actual strict offline corpus validation and isolated hostile fixtures. No native execution or owner acceptance."
+}

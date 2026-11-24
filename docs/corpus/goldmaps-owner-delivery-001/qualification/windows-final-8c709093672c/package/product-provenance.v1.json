@@ -1,0 +1,76 @@
+{
+  "schema": "goldmaps.owner-product.v1",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "delivery_source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "entrypoint": "Open GOLDMAPS.cmd",
+  "browser_project": "browser",
+  "runtime_project": "runtime/project",
+  "runtime_entry_script": "res://goldmaps/session.gd",
+  "source_changes": "additive delivery files only; accepted engine files remain byte-identical",
+  "mutable_roots": [
+    "userdata/",
+    "browser/.godot/",
+    "runtime/project/.godot/"
+  ],
+  "owner_classifications": "pending until explicit local human decision",
+  "files": {
+    "browser/browser.gd": "87af2ad91e70499f31f5402bcd70afa5d436ad7c6fb86b57ce417a75c8cb0d33",
+    "browser/browser.tscn": "3465de38d61450914b0c44ac534fa455aa9ae95254269ed8564ee6f6a90cea16",
+    "browser/package_io.gd": "c87d2a1165a8e18303a40bd685accc11d1eec4161d545de43dcd2265b1df99f7",
+    "browser/project.godot": "57f8690238cee7947114b0273e9fa93ddae26858999a6237432e066fdb0457e3",
+    "Open GOLDMAPS.cmd": "16696ecbb0e9dc411e092bdc753223cfdfa10f1e0f9b702547b753cd1ad71dcc",
+    "runtime/project/goldmaps/package_io.gd": "c87d2a1165a8e18303a40bd685accc11d1eec4161d545de43dcd2265b1df99f7",
+    "runtime/project/goldmaps/session.gd": "a9a134c28ba5f72c8770349cb2c8f892a94b9adc2f62f4708d6a07825e5eae21",
+    "runtime/project/goldmaps/session_controls.gd": "a766a37d1df2f483392043c95e422991250cfe2f7d48f341eb3e0479ae035ad9"
+  },
+  "origins": {
+    "browser/browser.gd": {
+      "kind": "source_file",
+      "repo": "techrote/sandmapsreference",
+      "commit": "8c709093672c6761d1056187399ccc487760606b",
+      "path": "tools/goldmaps_owner/product/browser/browser.gd"
+    },
+    "browser/browser.tscn": {
+      "kind": "source_file",
+      "repo": "techrote/sandmapsreference",
+      "commit": "8c709093672c6761d1056187399ccc487760606b",
+      "path": "tools/goldmaps_owner/product/browser/browser.tscn"
+    },
+    "browser/package_io.gd": {
+      "kind": "source_file",
+      "repo": "techrote/sandmapsreference",
+      "commit": "8c709093672c6761d1056187399ccc487760606b",
+      "path": "tools/goldmaps_owner/product/package_io.gd"
+    },
+    "browser/project.godot": {
+      "kind": "source_file",
+      "repo": "techrote/sandmapsreference",
+      "commit": "8c709093672c6761d1056187399ccc487760606b",
+      "path": "tools/goldmaps_owner/product/browser/project.godot"
+    },
+    "Open GOLDMAPS.cmd": {
+      "kind": "generated_launcher",
+      "repo": "techrote/sandmapsreference",
+      "commit": "8c709093672c6761d1056187399ccc487760606b",
+      "path": "tools/goldmaps_owner/product/assemble_product.py"
+    },
+    "runtime/project/goldmaps/package_io.gd": {
+      "kind": "source_file",
+      "repo": "techrote/sandmapsreference",
+      "commit": "8c709093672c6761d1056187399ccc487760606b",
+      "path": "tools/goldmaps_owner/product/package_io.gd"
+    },
+    "runtime/project/goldmaps/session.gd": {
+      "kind": "source_file",
+      "repo": "techrote/sandmapsreference",
+      "commit": "8c709093672c6761d1056187399ccc487760606b",
+      "path": "tools/goldmaps_owner/product/session/session.gd"
+    },
+    "runtime/project/goldmaps/session_controls.gd": {
+      "kind": "source_file",
+      "repo": "techrote/sandmapsreference",
+      "commit": "8c709093672c6761d1056187399ccc487760606b",
+      "path": "tools/goldmaps_owner/product/session/session_controls.gd"
+    }
+  }
+}

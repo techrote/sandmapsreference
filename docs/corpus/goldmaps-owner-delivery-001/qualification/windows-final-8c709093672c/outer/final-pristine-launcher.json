@@ -1,0 +1,1050 @@
+{
+  "schema": "goldmaps.fresh-windows-launcher.v1",
+  "pass": true,
+  "executed_source": {
+    "checkout_head": "8c709093672c6761d1056187399ccc487760606b",
+    "files_match_commit": true,
+    "files": {
+      "tools/goldmaps_owner/qualification/product_source_identity.py": "68a0cab8000806ed230dd8211d17a59d17a501b2634458fb516da12529114a55",
+      "tools/goldmaps_owner/qualification/run_fresh_launcher.py": "7a299920d270ec317341143a05db07a83dcc9a5c6d3b7d92f1436ae698ca4314",
+      "tools/goldmaps_owner/qualification/run_native_collection.py": "9aae33a44d638f8f1c16aa329c433f947c6aab3a19fcb04896a1f20b7873b85f",
+      "tools/goldmaps_owner/qualification/verify_payload.py": "41a4fc85fe52a43e63a8d19092852163d1f8d9e75a916e2a20c99227338fab28"
+    },
+    "scope": "Actual external product qualification driver/probe/helper bytes; delivered runtime/UI bytes are separately bound by the immutable package manifest."
+  },
+  "package_before": {
+    "schema": "goldmaps.payload-verification.v1",
+    "kind": "directory",
+    "pass": true,
+    "manifest_sha256": "229d70e8e083c0eaf1750ba9fdd347cb29e8d2dd23ed1139b845f9b742da6947",
+    "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "payload_files": 1638,
+    "total_files": 1640,
+    "payload_bytes": 282180277,
+    "total_bytes": 282944113,
+    "mutable_additions": [],
+    "post_execution": false
+  },
+  "package_after": {
+    "schema": "goldmaps.payload-verification.v1",
+    "kind": "directory",
+    "pass": true,
+    "manifest_sha256": "229d70e8e083c0eaf1750ba9fdd347cb29e8d2dd23ed1139b845f9b742da6947",
+    "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "payload_files": 1638,
+    "total_files": 1658,
+    "payload_bytes": 282180277,
+    "total_bytes": 283556727,
+    "mutable_additions": [
+      "runtime/project/.godot/.gdignore",
+      "runtime/project/.godot/extension_list.cfg",
+      "runtime/project/.godot/global_script_class_cache.cfg",
+      "userdata/browser.log",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-eval-derived-183-policy-20261124-223804.json",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-eval-gold-125-20261124-223747.json",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-button-58db74efb9f7b24d.json",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-button-a322bf8f1a4f156d.json",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-foreign-62c47804b16fe259.json",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-foreign-fd1988f24b8e340b.json",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-keyboard-141cd96db6d446d5.json",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-keyboard-2b315ef458e559d7.json",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-return-1dd87527b5fedb21.json",
+      "userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-return-afd78e26099a5214.json",
+      "userdata/sessions/derived-183-policy-20261124T223754-893039.json",
+      "userdata/sessions/derived-183-policy-20261124T223754-893039.log",
+      "userdata/sessions/gold-125-20261124T223736-552903.json",
+      "userdata/sessions/gold-125-20261124T223736-552903.log"
+    ],
+    "post_execution": true
+  },
+  "launcher_sha256": "16696ecbb0e9dc411e092bdc753223cfdfa10f1e0f9b702547b753cd1ad71dcc",
+  "godot_gui_sha256": "b2ca888d5115a6cedee564764a2ee494a625f2ec2edbabd010fe33c9a88a6bf8",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "checks": [
+    {
+      "name": "gold-125: actual one-click launcher completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: one native session created",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: browser verified and returned",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: exact original and engine identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: native Workbench material plane",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: authored actors adopted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: launcher-created portable profile",
+      "pass": true,
+      "detail": "D:\\a\\_temp\\goldmaps-owner-delivery\\Freshly Extracted Owner Kit\\userdata\\roaming\\Godot\\app_userdata\\Cyber Sand Reference Sandbox"
+    },
+    {
+      "name": "gold-125: close cancellation and save protection",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: all ordinary replacement controls warn before changing World",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: Flatten preserves World and authored history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: ordinary Save and Ctrl+S protect names and attribution",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: saved and safely returned",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: immutable original protected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: unrelated named file never attributed to this source",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: reserved source namespace never recorded as an evaluation copy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: both actual ordinary save paths recorded",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: exact authored named copy eval-gold-125-20261124-223747",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: exact authored named copy qa-button-58db74efb9f7b24d",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: exact authored named copy qa-keyboard-141cd96db6d446d5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "gold-125: exact authored named copy qa-return-afd78e26099a5214",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: actual one-click launcher completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: one native session created",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: browser verified and returned",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: exact original and engine identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: native Workbench material plane",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: authored actors adopted",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: launcher-created portable profile",
+      "pass": true,
+      "detail": "D:\\a\\_temp\\goldmaps-owner-delivery\\Freshly Extracted Owner Kit\\userdata\\roaming\\Godot\\app_userdata\\Cyber Sand Reference Sandbox"
+    },
+    {
+      "name": "derived-183-policy: close cancellation and save protection",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: all ordinary replacement controls warn before changing World",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: Flatten preserves World and authored history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: ordinary Save and Ctrl+S protect names and attribution",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: saved and safely returned",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: immutable original protected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: unrelated named file never attributed to this source",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: reserved source namespace never recorded as an evaluation copy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: both actual ordinary save paths recorded",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: exact authored named copy eval-derived-183-policy-20261124-223804",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: exact authored named copy qa-button-a322bf8f1a4f156d",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: exact authored named copy qa-keyboard-2b315ef458e559d7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "derived-183-policy: exact authored named copy qa-return-1dd87527b5fedb21",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "first-run copied exact portable bootstrap .gdignore",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "first-run copied exact portable bootstrap extension_list.cfg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "first-run copied exact portable bootstrap global_script_class_cache.cfg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "first-run launcher did not create owner decisions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all representative first-run cases executed",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "phases": [
+    {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 6888,
+      "seconds": 17.75,
+      "log_sha256": "fb02c70bbfaacf2f45366a3b2731a907a37047c61e1712aa30c85ad3d55d2f38",
+      "browser_ready": {
+        "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+        "logical_maps": 81,
+        "package_root": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit",
+        "user_data_dir": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/GOLDMAPS Owner Collection",
+        "verified_files": 1638
+      },
+      "browser_launch": {
+        "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+        "id": "gold-125",
+        "pid": 8928,
+        "session": "gold-125-20261124T223736-552903"
+      },
+      "browser_return": {
+        "data": {
+          "closed_at": "2026-11-24T22:37:49Z",
+          "derivation_path": null,
+          "derived_source": null,
+          "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+          "godot_version": {
+            "build": "official",
+            "hash": "5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+            "hex": 263936.0,
+            "major": 4.0,
+            "minor": 7.0,
+            "patch": 0.0,
+            "status": "stable",
+            "string": "4.7-stable (official)",
+            "timestamp": 0.0
+          },
+          "map_id": "gold-125",
+          "native_load": {
+            "acknowledged_epoch": 1.0,
+            "actors": [
+              {
+                "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+                "id": 1.0,
+                "model": "midge",
+                "options": {
+                  "boost_multiplier": 1.8,
+                  "budget": 20.0,
+                  "inertia_multiplier": 1.0,
+                  "mass_multiplier": 1.0,
+                  "thrust_multiplier": 1.0,
+                  "torque_multiplier": 1.0
+                },
+                "spawn": [
+                  625.0,
+                  434.0
+                ]
+              }
+            ],
+            "actors_adopted": [
+              {
+                "id": 1.0,
+                "model": "midge"
+              }
+            ],
+            "expected_material_plane_sha256": "de56ecc67744576902ff681768932747cf291608b89adc5078730fc2bfc3f9a3",
+            "extent": [
+              2048.0,
+              1024.0
+            ],
+            "full_grid_match": true,
+            "material_plane_sha256": "de56ecc67744576902ff681768932747cf291608b89adc5078730fc2bfc3f9a3",
+            "native_image_format": 3.0,
+            "native_image_storage_sha256": "6d07e324d22d8bcc297f580d0c081f0f02b2b7142ffac269b0405f9f5578fb8f",
+            "native_tick": 0.0,
+            "ordinary_workbench": true,
+            "worker_failed": false
+          },
+          "native_policy": {
+            "accepted": true,
+            "receipt": {
+              "admission": "current_defaults_only",
+              "assignments": [
+                {
+                  "applied_family": "freemass_v1",
+                  "applied_variant": "reference",
+                  "material": 3.0,
+                  "name": "water",
+                  "requested_family": "freemass_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 8.0,
+                  "name": "lava",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 12.0,
+                  "name": "acid",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 16.0,
+                  "name": "oil",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 20.0,
+                  "name": "paste",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 21.0,
+                  "name": "slush",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 24.0,
+                  "name": "brine",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 30.0,
+                  "name": "cement",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 32.0,
+                  "name": "toxic-sludge",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 33.0,
+                  "name": "mercury",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 36.0,
+                  "name": "molten-glass",
+                  "requested_family": "cellular_yield_v1"
+                }
+              ],
+              "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+              "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+              "envelope": [
+                1279479895.0,
+                1.0,
+                1.0,
+                -2102023270.0,
+                1854385793.0,
+                1886533889.0,
+                84225930.0,
+                1522979054.0,
+                582168604.0,
+                -646713377.0,
+                -939672877.0,
+                868616440.0,
+                1977866421.0,
+                1930370363.0,
+                -2119873090.0,
+                -6981196.0,
+                870342995.0,
+                1443932351.0,
+                -1569267145.0,
+                11.0,
+                3.0,
+                1.0,
+                0.0,
+                8.0,
+                2.0,
+                0.0,
+                12.0,
+                2.0,
+                0.0,
+                16.0,
+                2.0,
+                0.0,
+                20.0,
+                2.0,
+                0.0,
+                21.0,
+                2.0,
+                0.0,
+                24.0,
+                2.0,
+                0.0,
+                30.0,
+                2.0,
+                0.0,
+                32.0,
+                2.0,
+                0.0,
+                33.0,
+                2.0,
+                0.0,
+                36.0,
+                2.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "family_blocks": [],
+              "family_parameters": {},
+              "material_blocks": [],
+              "maximum_rule_radius": null,
+              "minimum_rule_radius": 2.0,
+              "normalization": null,
+              "physical_state_format_version": 2.0,
+              "physical_state_hash_version": 2.0,
+              "platform": "windows",
+              "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+              "refusal": null,
+              "session_generation": -1.0,
+              "version": 1.0,
+              "wire_version": 1.0
+            },
+            "refusal": null
+          },
+          "opened_at": "2026-11-24T22:37:37Z",
+          "original_setup_sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+          "owner_acceptance": "pending",
+          "package_root": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit",
+          "process_id": 8928.0,
+          "qa_completed": true,
+          "qa_lifecycle": {
+            "actor_composition_opened": true,
+            "cancel_preserved_same_world": true,
+            "close_warning_visible": true,
+            "existing_name_refused": true,
+            "flatten_guard": {
+              "authored_setup_unchanged": true,
+              "material_baseline_unchanged": true,
+              "no_flatten_pending": true,
+              "same_world_epoch": true,
+              "warning_visible": true
+            },
+            "ordinary_replacement_controls": [
+              {
+                "action": "Load start",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "New blank",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "New from generator\u2026",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "Load / reset scene",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "Load liquid-lab",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "Load reservoir-lab",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "Mixed Actor Workshop",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              }
+            ],
+            "ordinary_save_attribution": {
+              "existing_name_button_refused": true,
+              "foreign_file_sha256_unchanged": true,
+              "foreign_label": "qa-foreign-fd1988f24b8e340b",
+              "foreign_setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+              "foreign_source_map_id": "gold-197",
+              "keyboard_label": "qa-keyboard-141cd96db6d446d5",
+              "keyboard_new_label_saved": true,
+              "ordinary_button_label": "qa-button-58db74efb9f7b24d",
+              "ordinary_button_new_label_saved": true,
+              "receipt_count_before_typing": 1.0,
+              "reserved_after_sha256": "",
+              "reserved_before_sha256": "",
+              "reserved_label": "GM-SOURCE-e87c376aa71e6f232d88",
+              "scope": "Exact foreign-source bytes in an isolated developer fixture; actual ordinary Save button and dispatched Ctrl+S event; no physical keyboard claim",
+              "typing_existing_name_did_not_register": true,
+              "typing_existing_name_left_banner": true,
+              "uppercase_reserved_name_refused": true
+            },
+            "return_copy_label": "qa-return-afd78e26099a5214",
+            "save_and_return_dialog_visible": true,
+            "saved_copy_sha256_unchanged": true,
+            "scope": "Programmatic execution of actual UI button handlers; no physical input or graphical acceptance inferred"
+          },
+          "returned_via_close_confirmation": true,
+          "saved_copies": [
+            {
+              "label": "eval-gold-125-20261124-223747",
+              "path": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-eval-gold-125-20261124-223747.json",
+              "saved_at": "2026-11-24T22:37:47Z",
+              "semantics": "authored starting layout; current dynamic state is not serialized",
+              "sha256": "cd97d975bef099e4faf9dcbd503b447535069a18eccb522e761caaaf53d7c12b"
+            },
+            {
+              "label": "qa-button-58db74efb9f7b24d",
+              "path": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-button-58db74efb9f7b24d.json",
+              "saved_at": "2026-11-24T22:37:49Z",
+              "semantics": "authored starting layout; current dynamic state is not serialized",
+              "sha256": "cd97d975bef099e4faf9dcbd503b447535069a18eccb522e761caaaf53d7c12b"
+            },
+            {
+              "label": "qa-keyboard-141cd96db6d446d5",
+              "path": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-keyboard-141cd96db6d446d5.json",
+              "saved_at": "2026-11-24T22:37:49Z",
+              "semantics": "authored starting layout; current dynamic state is not serialized",
+              "sha256": "cd97d975bef099e4faf9dcbd503b447535069a18eccb522e761caaaf53d7c12b"
+            },
+            {
+              "label": "qa-return-afd78e26099a5214",
+              "path": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-return-afd78e26099a5214.json",
+              "saved_at": "2026-11-24T22:37:49Z",
+              "semantics": "authored starting layout; current dynamic state is not serialized",
+              "sha256": "cd97d975bef099e4faf9dcbd503b447535069a18eccb522e761caaaf53d7c12b"
+            }
+          ],
+          "schema": "goldmaps.owner-session.v1",
+          "screenshots": [],
+          "session_id": "gold-125-20261124T223736-552903",
+          "source": {
+            "commit": "e17996dd8a2e1044550a60e75f45780cb6ae868d",
+            "git_blob_sha1": "0d073a5713d8550efd4345979b21740e8b28890e",
+            "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-quoin-veil-split-faultwell-vertical-census-261121/setup.json",
+            "pr": 125.0,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+            "url": "https://github.com/techrote/sandmapsreference/blob/e17996dd8a2e1044550a60e75f45780cb6ae868d/cybersand-canvases/2048x1024/worldgroup-xenobiome-quoin-veil-split-faultwell-vertical-census-261121/setup.json"
+          },
+          "source_sha256_after_load": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+          "source_sha256_on_close": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+          "status": "QA_SAVED",
+          "user_data_dir": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox",
+          "variant_role": "original"
+        }
+      },
+      "map_id": "gold-125"
+    },
+    {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 5372,
+      "seconds": 17.203,
+      "log_sha256": "50cb120c470a88698ca0a0f02f53da6b36be719c343cb3762f975afa5daf56e0",
+      "browser_ready": {
+        "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+        "logical_maps": 81,
+        "package_root": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit",
+        "user_data_dir": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/GOLDMAPS Owner Collection",
+        "verified_files": 1638
+      },
+      "browser_launch": {
+        "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+        "id": "derived-183-policy",
+        "pid": 9364,
+        "session": "derived-183-policy-20261124T223754-893039"
+      },
+      "browser_return": {
+        "data": {
+          "closed_at": "2026-11-24T22:38:06Z",
+          "derivation_path": "collection/derivations/pr183.json",
+          "derived_source": {
+            "artifact_path": "collection/setups/4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e.json",
+            "commit": "8c709093672c6761d1056187399ccc487760606b",
+            "function": "make_183",
+            "generator_source": {
+              "commit": "8c709093672c6761d1056187399ccc487760606b",
+              "commit_bytes_verified": true,
+              "function": "make_183",
+              "kind": "deterministic_generator_source",
+              "path": "tools/goldmaps_owner/corpus/build_collection.py",
+              "repo": "techrote/sandmapsreference",
+              "sha256": "35dbbc213f653560ead085f929d01de515a777130212f8a10f5bdda03108b6e1",
+              "url": "https://github.com/techrote/sandmapsreference/blob/8c709093672c6761d1056187399ccc487760606b/tools/goldmaps_owner/corpus/build_collection.py"
+            },
+            "kind": "deterministic_policy_only_derivation",
+            "path": "tools/goldmaps_owner/corpus/build_collection.py",
+            "path_role": "generator source; generated Setup is identified separately by artifact path and SHA-256",
+            "repo": "techrote/sandmapsreference",
+            "sha256": "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e"
+          },
+          "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+          "godot_version": {
+            "build": "official",
+            "hash": "5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+            "hex": 263936.0,
+            "major": 4.0,
+            "minor": 7.0,
+            "patch": 0.0,
+            "status": "stable",
+            "string": "4.7-stable (official)",
+            "timestamp": 0.0
+          },
+          "map_id": "derived-183-policy",
+          "native_load": {
+            "acknowledged_epoch": 1.0,
+            "actors": [
+              {
+                "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+                "id": 1.0,
+                "model": "midge",
+                "options": {
+                  "boost_multiplier": 2.0,
+                  "budget": 20.0,
+                  "inertia_multiplier": 1.0,
+                  "mass_multiplier": 1.0,
+                  "thrust_multiplier": 1.0,
+                  "torque_multiplier": 1.0
+                },
+                "spawn": [
+                  78.0,
+                  780.0
+                ]
+              }
+            ],
+            "actors_adopted": [
+              {
+                "id": 1.0,
+                "model": "midge"
+              }
+            ],
+            "expected_material_plane_sha256": "e33499bc4b8e6779e28aa04b2fe30f0670cefc8fe3d7574d80740dcaf2a17b2d",
+            "extent": [
+              2048.0,
+              1024.0
+            ],
+            "full_grid_match": true,
+            "material_plane_sha256": "e33499bc4b8e6779e28aa04b2fe30f0670cefc8fe3d7574d80740dcaf2a17b2d",
+            "native_image_format": 3.0,
+            "native_image_storage_sha256": "a6e46d096d4ef9e3af2283453766a1a14e6a919c79d5e46d3e6954e79dd4842f",
+            "native_tick": 0.0,
+            "ordinary_workbench": true,
+            "worker_failed": false
+          },
+          "native_policy": {
+            "accepted": true,
+            "receipt": {
+              "admission": "current_defaults_only",
+              "assignments": [
+                {
+                  "applied_family": "freemass_v1",
+                  "applied_variant": "reference",
+                  "material": 3.0,
+                  "name": "water",
+                  "requested_family": "freemass_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 8.0,
+                  "name": "lava",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 12.0,
+                  "name": "acid",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 16.0,
+                  "name": "oil",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 20.0,
+                  "name": "paste",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 21.0,
+                  "name": "slush",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 24.0,
+                  "name": "brine",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 30.0,
+                  "name": "cement",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 32.0,
+                  "name": "toxic-sludge",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 33.0,
+                  "name": "mercury",
+                  "requested_family": "cellular_yield_v1"
+                },
+                {
+                  "applied_family": "cellular_yield_v1",
+                  "applied_variant": "reference",
+                  "material": 36.0,
+                  "name": "molten-glass",
+                  "requested_family": "cellular_yield_v1"
+                }
+              ],
+              "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+              "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+              "envelope": [
+                1279479895.0,
+                1.0,
+                1.0,
+                -2102023270.0,
+                1854385793.0,
+                1886533889.0,
+                84225930.0,
+                1522979054.0,
+                582168604.0,
+                -646713377.0,
+                -939672877.0,
+                868616440.0,
+                1977866421.0,
+                1930370363.0,
+                -2119873090.0,
+                -6981196.0,
+                870342995.0,
+                1443932351.0,
+                -1569267145.0,
+                11.0,
+                3.0,
+                1.0,
+                0.0,
+                8.0,
+                2.0,
+                0.0,
+                12.0,
+                2.0,
+                0.0,
+                16.0,
+                2.0,
+                0.0,
+                20.0,
+                2.0,
+                0.0,
+                21.0,
+                2.0,
+                0.0,
+                24.0,
+                2.0,
+                0.0,
+                30.0,
+                2.0,
+                0.0,
+                32.0,
+                2.0,
+                0.0,
+                33.0,
+                2.0,
+                0.0,
+                36.0,
+                2.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "family_blocks": [],
+              "family_parameters": {},
+              "material_blocks": [],
+              "maximum_rule_radius": null,
+              "minimum_rule_radius": 2.0,
+              "normalization": null,
+              "physical_state_format_version": 2.0,
+              "physical_state_hash_version": 2.0,
+              "platform": "windows",
+              "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+              "refusal": null,
+              "session_generation": -1.0,
+              "version": 1.0,
+              "wire_version": 1.0
+            },
+            "refusal": null
+          },
+          "opened_at": "2026-11-24T22:37:54Z",
+          "original_setup_sha256": "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e",
+          "owner_acceptance": "pending",
+          "package_root": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit",
+          "process_id": 9364.0,
+          "qa_completed": true,
+          "qa_lifecycle": {
+            "actor_composition_opened": true,
+            "cancel_preserved_same_world": true,
+            "close_warning_visible": true,
+            "existing_name_refused": true,
+            "flatten_guard": {
+              "authored_setup_unchanged": true,
+              "material_baseline_unchanged": true,
+              "no_flatten_pending": true,
+              "same_world_epoch": true,
+              "warning_visible": true
+            },
+            "ordinary_replacement_controls": [
+              {
+                "action": "Load start",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "New blank",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "New from generator\u2026",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "Load / reset scene",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "Load liquid-lab",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "Load reservoir-lab",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              },
+              {
+                "action": "Mixed Actor Workshop",
+                "cancel_preserved_same_world": true,
+                "warning_before_replacement": true
+              }
+            ],
+            "ordinary_save_attribution": {
+              "existing_name_button_refused": true,
+              "foreign_file_sha256_unchanged": true,
+              "foreign_label": "qa-foreign-62c47804b16fe259",
+              "foreign_setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+              "foreign_source_map_id": "gold-197",
+              "keyboard_label": "qa-keyboard-2b315ef458e559d7",
+              "keyboard_new_label_saved": true,
+              "ordinary_button_label": "qa-button-a322bf8f1a4f156d",
+              "ordinary_button_new_label_saved": true,
+              "receipt_count_before_typing": 1.0,
+              "reserved_after_sha256": "",
+              "reserved_before_sha256": "",
+              "reserved_label": "GM-SOURCE-4aa581b4984bdd5c8b1d",
+              "scope": "Exact foreign-source bytes in an isolated developer fixture; actual ordinary Save button and dispatched Ctrl+S event; no physical keyboard claim",
+              "typing_existing_name_did_not_register": true,
+              "typing_existing_name_left_banner": true,
+              "uppercase_reserved_name_refused": true
+            },
+            "return_copy_label": "qa-return-1dd87527b5fedb21",
+            "save_and_return_dialog_visible": true,
+            "saved_copy_sha256_unchanged": true,
+            "scope": "Programmatic execution of actual UI button handlers; no physical input or graphical acceptance inferred"
+          },
+          "returned_via_close_confirmation": true,
+          "saved_copies": [
+            {
+              "label": "eval-derived-183-policy-20261124-223804",
+              "path": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-eval-derived-183-policy-20261124-223804.json",
+              "saved_at": "2026-11-24T22:38:04Z",
+              "semantics": "authored starting layout; current dynamic state is not serialized",
+              "sha256": "c09e1c89b91f8c9df3fbc3dba41f304741a8cc618ebc700540592ed3406a1658"
+            },
+            {
+              "label": "qa-button-a322bf8f1a4f156d",
+              "path": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-button-a322bf8f1a4f156d.json",
+              "saved_at": "2026-11-24T22:38:06Z",
+              "semantics": "authored starting layout; current dynamic state is not serialized",
+              "sha256": "c09e1c89b91f8c9df3fbc3dba41f304741a8cc618ebc700540592ed3406a1658"
+            },
+            {
+              "label": "qa-keyboard-2b315ef458e559d7",
+              "path": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-keyboard-2b315ef458e559d7.json",
+              "saved_at": "2026-11-24T22:38:06Z",
+              "semantics": "authored starting layout; current dynamic state is not serialized",
+              "sha256": "c09e1c89b91f8c9df3fbc3dba41f304741a8cc618ebc700540592ed3406a1658"
+            },
+            {
+              "label": "qa-return-1dd87527b5fedb21",
+              "path": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-return-1dd87527b5fedb21.json",
+              "saved_at": "2026-11-24T22:38:06Z",
+              "semantics": "authored starting layout; current dynamic state is not serialized",
+              "sha256": "c09e1c89b91f8c9df3fbc3dba41f304741a8cc618ebc700540592ed3406a1658"
+            }
+          ],
+          "schema": "goldmaps.owner-session.v1",
+          "screenshots": [],
+          "session_id": "derived-183-policy-20261124T223754-893039",
+          "source": {
+            "commit": "c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b",
+            "git_blob_sha1": "6b3632d9ebbc84889affca869758f9e6a2d9528b",
+            "path": "cybersand-canvases/2048x1024/original-megastructure-wide-keel-ossuary-brokenback-261121/setup.json",
+            "pr": 183.0,
+            "repo": "techrote/sandmapsreference",
+            "role": "original_parent; descendant custody is separately identified",
+            "sha256": "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+            "url": "https://github.com/techrote/sandmapsreference/blob/c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b/cybersand-canvases/2048x1024/original-megastructure-wide-keel-ossuary-brokenback-261121/setup.json"
+          },
+          "source_sha256_after_load": "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e",
+          "source_sha256_on_close": "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e",
+          "status": "QA_SAVED",
+          "user_data_dir": "D:/a/_temp/goldmaps-owner-delivery/Freshly Extracted Owner Kit/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox",
+          "variant_role": "policy-only descendant"
+        }
+      },
+      "map_id": "derived-183-policy"
+    }
+  ],
+  "caller_created_userdata": false,
+  "initial_userdata_absent": true,
+  "scope": "Actual freshly extracted Windows .cmd established profile/cache, opened a source original and the separate #183 policy descendant, used ordinary native Workbench and named authored saves, and returned safely. Headless representative first-run scope; no physical GPU, full-route or owner acceptance.",
+  "owner_accepted": false
+}

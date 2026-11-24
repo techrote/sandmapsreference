@@ -2,9 +2,41 @@
   "schema": "goldmaps.owner-delivery-decision.v1",
   "status": "DRAFT_HOLD",
   "owner_accepted": false,
-  "packet_scope": "Source-pinned delivery draft; final artifact and displayed review remain pending",
-  "reviewed_product_source_head": "2d984a981da99348bbf9b44612b058cd048f3474",
+  "packet_scope": "Completed published technical delivery with source-bound native reuse, targeted full observations, actual product/display/extraction and independent actual-archive reviews. Owner classifications and production adoption pending.",
+  "reviewed_product_source_head": "8c709093672c6761d1056187399ccc487760606b",
   "latest_attempt": {
+    "run_id": 45500179792,
+    "source_head": "8c709093672c6761d1056187399ccc487760606b",
+    "url": "https://github.com/techrote/sandmapsreference/actions/runs/45500179792",
+    "conclusion": "SUCCESS",
+    "windows_job_id": 138821060663,
+    "published_audit_job_id": 138830656635,
+    "native_population_reused_after_exact_verification": true,
+    "new_unique_native_observations": 3,
+    "new_product_checks": 32,
+    "actual_fresh_pristine_checks": 45,
+    "displayed_cases": 18,
+    "exact_reconstruction_passed": true,
+    "fresh_extraction_passed": true,
+    "independent_actual_published_archive_passed": true,
+    "owner_accepted": false,
+    "qualification_evidence_artifact": {
+      "id": 14971591453,
+      "url": "https://github.com/techrote/sandmapsreference/actions/runs/45500179792/artifacts/14971591453",
+      "bytes": 5214999,
+      "sha256": "9cace9eaadb658426c52a73803f040df6b3752352eb123f1c4ea4133f92d3b1c",
+      "expires_at": "2027-02-22T22:21:36Z",
+      "scope": "Qualification evidence; primary playable download is separately artifact14971496709"
+    },
+    "published_archive_audit_artifact": {
+      "id": 14971279186,
+      "bytes": 6484,
+      "sha256": "23f1bcf227a15c9b8e1f38e59e91aefa25a5a06ccf8b3e152b4ffd6fa032f488",
+      "report_sha256": "fb4571fc44d8a2550e655cfb08ef7e0efa849b6392f8fe7ca85cdd4f282c6235",
+      "local_report_identical": true
+    }
+  },
+  "previous_attempt": {
     "run_id": 45498633502,
     "source_head": "3975deeb8b1c2664cdb988dd4e393bc7f7630c7d",
     "url": "https://github.com/techrote/sandmapsreference/actions/runs/45498633502",
@@ -16,8 +48,9 @@
       "source_defined_tests": 19,
       "command_exit_code": 0,
       "timeout": false,
-      "raw_per_test_log_independently_read": false,
-      "log_sha256": "03b319082c46da9a3314a4dca7356c73a0cb6df35d4400794779ef0dd6558d93"
+      "raw_per_test_log_independently_read": true,
+      "log_sha256": "03b319082c46da9a3314a4dca7356c73a0cb6df35d4400794779ef0dd6558d93",
+      "actual_tests_passed": 19
     },
     "new_native_population_executed": false,
     "new_product_executed": false,
@@ -29,32 +62,33 @@
       "source-defined 19-test evidence transfer command"
     ]
   },
-  "previous_attempt": {
-    "run_id": 45494755605,
-    "source_head": "2d984a981da99348bbf9b44612b058cd048f3474",
-    "conclusion": "REFUSED_BEFORE_NATIVE_REUSE_PRODUCT_GRAPHICS",
-    "gate": "Strict architectural manifest validation",
-    "reason": "Two contact-follow-up evidence files were not declared in the corpus fragment inventory.",
-    "correction_scope": "Declare the existing evidence files; no engine, map or product change"
-  },
   "final_delivery": {
-    "status": "PENDING_COMPLETED_CAMPAIGN_AND_INDEPENDENT_REVIEW",
-    "source_head": null,
-    "run_id": null,
-    "artifact_id": null,
-    "artifact_url": null,
-    "archive_filename": null,
-    "archive_sha256": null,
-    "archive_bytes": null,
-    "total_files": null,
-    "payload_files": null,
-    "payload_manifest_sha256": null,
-    "actual_retention_days": null,
-    "expires_at": null,
-    "independent_audit_sha256": null,
-    "displayed_review": "PENDING",
-    "acquisition_manifest_path": null,
-    "acquisition_manifest_sha256": null,
+    "status": "PUBLISHED_VERIFIED_OWNER_PENDING",
+    "source_head": "8c709093672c6761d1056187399ccc487760606b",
+    "run_id": 45500179792,
+    "artifact_id": 14971496709,
+    "artifact_url": "https://github.com/techrote/sandmapsreference/actions/runs/45500179792/artifacts/14971496709",
+    "archive_filename": "CyberSand-GOLDMAPS-Owner-Evaluator-8c709093672c.zip",
+    "archive_sha256": "ba3d75bf97943af4148ee4427fdfcb2c6df41ede2453c80ef69e3bd6577dfea9",
+    "archive_bytes": 101213343,
+    "total_files": 1640,
+    "payload_files": 1638,
+    "total_uncompressed_bytes": 282944113,
+    "payload_bytes": 282180277,
+    "payload_manifest_sha256": "229d70e8e083c0eaf1750ba9fdd347cb29e8d2dd23ed1139b845f9b742da6947",
+    "outer_bytes": 109789280,
+    "outer_sha256": "a6125c761854d3bf7b9a54bedff411b78ce4453bbe0d97ba10cf7eda16793636",
+    "actual_retention_days": 90,
+    "expires_at": "2027-02-22T22:21:36Z",
+    "independent_audit_sha256": "fb4571fc44d8a2550e655cfb08ef7e0efa849b6392f8fe7ca85cdd4f282c6235",
+    "displayed_review": "PASS_FOR_18_ACTUAL_HOSTED_CAPTURES",
+    "acquisition_manifest_path": "download/owner-package-acquisition.v1.json.gz",
+    "acquisition_manifest_sha256": "c4add1023f38415c2052cdd8bcb22db5e77b2c5335d9a116a1129e8e5f4535da",
+    "acquisition_manifest_bytes": 8215440,
+    "acquisition_gzip_sha256": "eb06df233879d3705a4dc5e497466ce0e2bb706e28c1285b5f57c0d81a70a3e4",
+    "acquisition_gzip_bytes": 5840428,
+    "contains_expiring_actions_urls": false,
+    "local_and_hosted_audits_byte_identical": true,
     "owner_accepted": false
   },
   "source_lineage": {
@@ -74,7 +108,10 @@
     "predecessors_merged": false,
     "predecessor_metadata_discrepancy": "Live draft:false flags on #215/#216 conflict with written Draft/HOLD; no metadata or source changes were made.",
     "engine_branch_modified": false,
-    "original_maps_or_locks_modified": false
+    "original_maps_or_locks_modified": false,
+    "final_qualified_delivery_source_head": "8c709093672c6761d1056187399ccc487760606b",
+    "final_live_refresh": "2026-11-24 22:54:02 UTC",
+    "final_live_state_path": "final-live-state.v1.json"
   },
   "collection": {
     "manifest_path": "collection/collection.v1.json",
@@ -172,7 +209,30 @@
     "original_pr183_refused": true,
     "pr125_note": "Exact-source specialist support completed the final Gold25 recommendation; retain the earlier conditional history separately.",
     "pr207_note": "Gold25 includes an already repaired baseline; repaired status is explicit.",
-    "pr183_gold_member": false
+    "pr183_gold_member": false,
+    "effective_unique": {
+      "qualified_headless": 70,
+      "refused_invalid_source": 2,
+      "unqualified": 0,
+      "owner_accepted": 0
+    },
+    "effective_logical": {
+      "qualified_headless": 79,
+      "refused_invalid_source": 2,
+      "unqualified": 0,
+      "owner_accepted": 0
+    },
+    "effective_original_corpus": {
+      "qualified_headless": 68,
+      "refused_invalid_source": 2,
+      "owner_accepted": 0
+    },
+    "gold25_originals": {
+      "qualified_headless": 24,
+      "refused_invalid_source": 1,
+      "owner_accepted": 0
+    },
+    "qualification_matrix_sha256": "711da71b929f923f630403431e5af7e47387803fe0b045b811120c0d7d71b289"
   },
   "native_population_authority": {
     "run_id": 45481683557,
@@ -253,7 +313,7 @@
     "no_frozen_science_rerun_claim": true
   },
   "contact_followup": {
-    "status": "PENDING_NEW_EXECUTION",
+    "status": "THREE_SEPARATE_FULL_NATIVE_OBSERVATIONS_PASSED",
     "source_prs": [
       188,
       189,
@@ -273,9 +333,102 @@
       "save",
       "fresh-process reopen"
     ],
-    "effective_counts": null,
+    "effective_counts": {
+      "qualified_headless": 70,
+      "refused_invalid_source": 2,
+      "unqualified": 0,
+      "owner_accepted": 0
+    },
     "failed_complete_observation_status": "UNQUALIFIED",
-    "missing_observation": "Blocks a completed-campaign claim"
+    "missing_observation": "Blocks a completed-campaign claim",
+    "source_head": "8c709093672c6761d1056187399ccc487760606b",
+    "run_id": "45500179792",
+    "authority": {
+      "source_head": "8c709093672c6761d1056187399ccc487760606b",
+      "github_run_id": "45500179792",
+      "summary": "qualification/windows-contact-followup/summary.json",
+      "summary_sha256": "c47f3d9568e59b83005b8c1d9ab172e5def8c6750dadbc11258c5ce8b673a4fe",
+      "inputs": "collection/native-contact-followup-inputs.v1.json",
+      "inputs_sha256": "082eb843b6cac0763db100b7fc91e5a20000bec48ae491d1bf9e391ecff3cba5",
+      "targets": [
+        "corpus-188",
+        "corpus-189",
+        "corpus-192"
+      ],
+      "transitions": [
+        {
+          "id": "corpus-188",
+          "setup_sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+          "prior_status": "UNQUALIFIED",
+          "prior_receipt": "qualification/windows-optional/corpus-188.receipt.json",
+          "prior_receipt_sha256": "60a200586ec77781d8b8eb8123dc1bf60c188fd67231758be38d286a45dd3fc6",
+          "current_status": "QUALIFIED_HEADLESS",
+          "current_receipt": "qualification/windows-contact-followup/corpus-188.receipt.json",
+          "current_receipt_sha256": "6c1811f3f109577c572ce5f29e062853c7e4232e138cd766ee2144044877ca63"
+        },
+        {
+          "id": "corpus-189",
+          "setup_sha256": "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+          "prior_status": "UNQUALIFIED",
+          "prior_receipt": "qualification/windows-optional/corpus-189.receipt.json",
+          "prior_receipt_sha256": "9c943dac7451439d04308c2ab781e45e4f5d5fa322ce31d893402ae73b3652ce",
+          "current_status": "QUALIFIED_HEADLESS",
+          "current_receipt": "qualification/windows-contact-followup/corpus-189.receipt.json",
+          "current_receipt_sha256": "0cf3f6300ad7c172fc996ce40a3a9ef69c25164967e4d101f79de05ace42e80c"
+        },
+        {
+          "id": "corpus-192",
+          "setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+          "prior_status": "UNQUALIFIED",
+          "prior_receipt": "qualification/windows-optional/corpus-192.receipt.json",
+          "prior_receipt_sha256": "599bbbd42cc1969d4f2feb25ba2d406a05de8bac550784dbf84e8dd1b4445ba7",
+          "current_status": "QUALIFIED_HEADLESS",
+          "current_receipt": "qualification/windows-contact-followup/corpus-192.receipt.json",
+          "current_receipt_sha256": "bcc428899e8a9a01d9f59e4d99ae29d257b5a9731c4f7f7324bf959677be6d21"
+        }
+      ]
+    },
+    "observations": [
+      {
+        "id": "corpus-188",
+        "prior_status": "UNQUALIFIED",
+        "current_status": "QUALIFIED_HEADLESS",
+        "tick_budget": 1800,
+        "max_contacts": 4,
+        "native_execution_source_head": "8c709093672c6761d1056187399ccc487760606b",
+        "native_execution_run_id": "45500179792"
+      },
+      {
+        "id": "corpus-189",
+        "prior_status": "UNQUALIFIED",
+        "current_status": "QUALIFIED_HEADLESS",
+        "tick_budget": 1800,
+        "max_contacts": 2,
+        "native_execution_source_head": "8c709093672c6761d1056187399ccc487760606b",
+        "native_execution_run_id": "45500179792"
+      },
+      {
+        "id": "corpus-192",
+        "prior_status": "UNQUALIFIED",
+        "current_status": "QUALIFIED_HEADLESS",
+        "tick_budget": 1800,
+        "max_contacts": 4,
+        "native_execution_source_head": "8c709093672c6761d1056187399ccc487760606b",
+        "native_execution_run_id": "45500179792"
+      }
+    ],
+    "all_original_negative_receipts_preserved": true,
+    "first_contact_ticks_from_probe_start": {
+      "corpus-188": 1069,
+      "corpus-189": 1107,
+      "corpus-192": 1117
+    },
+    "contact_probe_start_tick": 25,
+    "first_contact_native_ticks": {
+      "corpus-188": 1094,
+      "corpus-189": 1132,
+      "corpus-192": 1142
+    }
   },
   "policy_descendants": [
     {
@@ -331,7 +484,21 @@
     ],
     "screenshot_export_scope": "Separate files linked in session records; decision exports do not embed screenshot bytes",
     "classifiers_start": "Pending / unclassified",
-    "actual_owner_classification_required": true
+    "actual_owner_classification_required": true,
+    "actual_final_product_checks": 32,
+    "actual_fresh_pristine_checks": 45,
+    "actual_hosted_rendered_cases": 18,
+    "small_window_limit": "Scrollable detail pane; dense ordinary Workbench controls leave less overview space. Enter/arrow navigation and zoom/pan/focus remain available.",
+    "capture_payload_files": 1525,
+    "final_payload_files": 1638,
+    "capture_vs_final_count_note": "Original captures precede sealing of their own evidence; exact final product/runtime/map identities separately verified.",
+    "product_and_pristine_execution_mode": "Headless through real Windows .cmd, actual UI handlers and native Worlds",
+    "graphical_execution_scope": "18 separate display-backed Windows capture cases",
+    "profile_data_root": "userdata/",
+    "project_cache_roots": [
+      "browser/.godot/",
+      "runtime/project/.godot/"
+    ]
   },
   "frozen_comparisons": [
     {
@@ -435,6 +602,30 @@
       "original_pr720": "https://github.com/techrote/cybersand/pull/720",
       "successor_pr770": "https://github.com/techrote/cybersand/pull/770",
       "issue579": "https://github.com/techrote/cybersand/issues/579"
+    },
+    "standalone_bundle": {
+      "schema": "goldmaps.batch-reference-package-result.v1",
+      "pass": true,
+      "archive": "Goldmaps-Batch-Lab-Reference-8c709093672c.zip",
+      "archive_sha256": "7dea665e251b647b5d54aaeb2f6a4cc5978e2e03d211808c89e6ef8755723d05",
+      "archive_bytes": 3336826,
+      "archive_files": 283,
+      "uncompressed_bytes": 64664876,
+      "inventory_sha256": "4d321d9ccea0336729421ba999e42cbb47947f73a0e3ded169af5c00102c99f2",
+      "declared_inventory": {
+        "files": 281,
+        "bytes": 64501487
+      },
+      "query_checks_passed": 6,
+      "native_worlds_executed": 0,
+      "primary_kit_sha256": "ba3d75bf97943af4148ee4427fdfcb2c6df41ede2453c80ef69e3bd6577dfea9",
+      "owner_accepted": false,
+      "path": "batch-handoff/Goldmaps-Batch-Lab-Reference-8c709093672c.zip",
+      "independent_product_review": "PASS",
+      "runtime_included": false,
+      "primary_source_members_byte_exact": 272,
+      "query_uses_immutable_static_annotations": true,
+      "contemporary_native_status_source": "collection/delivery-qualification.v1.json joined by Setup SHA-256 and engine"
     }
   },
   "runtime": {
@@ -453,24 +644,28 @@
       "role": "Specialist A / corpus",
       "scope": "Source/plane/variant/policy/export custody and rendered identity",
       "source_review": "PASS",
-      "final_artifact_review": "PENDING"
+      "final_artifact_review": "PASS_WITH_EXPLICIT_OWNER_LIMITS",
+      "record": "corpus/final-delivery-corpus-review.v1.json"
     },
     {
       "role": "Specialist B / product",
       "scope": "Corpus/consumer interface, product evidence, integration/sealing and displayed usability",
       "source_review": "PASS",
-      "final_artifact_review": "PENDING"
+      "final_artifact_review": "PASS_WITH_EXPLICIT_OWNER_LIMITS",
+      "record": "product/final-hosted-usability-review.v1.json"
     },
     {
       "role": "Specialist C / assurance",
       "scope": "Native receipts, hostile inputs, final ZIP and source-separated product/graphical audit",
       "native_n_custody": "PASS",
-      "final_artifact_review": "PENDING"
+      "final_artifact_review": "PASS_WITH_EXPLICIT_OWNER_LIMITS",
+      "record": "qualification/final-independent-review.v1.json"
     },
     {
       "role": "Lead / integration",
       "scope": "Source/runtime custody, actual artifact publication, acquisition and final joins",
-      "final_artifact_review": "PENDING"
+      "final_artifact_review": "PASS_WITH_EXPLICIT_OWNER_LIMITS",
+      "record": "qualification/lead-final-closure-review.v1.json"
     }
   ],
   "reviewers_are_independent_humans": false,
@@ -532,5 +727,30 @@
     "retracted_file_count": 1532,
     "retracted_claim_revived": false,
     "artifact_14837494421": "Qualification evidence only; not the playable collection"
+  },
+  "earlier_fragment_attempt": {
+    "run_id": 45494755605,
+    "source_head": "2d984a981da99348bbf9b44612b058cd048f3474",
+    "conclusion": "REFUSED_BEFORE_NATIVE_REUSE_PRODUCT_GRAPHICS",
+    "gate": "Strict architectural manifest validation",
+    "reason": "Two contact-follow-up evidence files were not declared in the corpus fragment inventory.",
+    "correction_scope": "Declare the existing evidence files; no engine, map or product change"
+  },
+  "optional_evidence_log_transport": {
+    "hosted_emitter_completed": true,
+    "large_decoded_log_consumed": false,
+    "connector_error": "Transport closed",
+    "resolved_by": "Direct original ZIP and small hosted audit artifact download; local/hosted reports byte-identical"
+  },
+  "technical_completion": true,
+  "production_acceptance": false,
+  "documentation_closure_changes_runtime": false,
+  "closure_link_audit": {
+    "finding": "qualification/closure-link-finding.v1.json",
+    "resolution": "qualification/closure-link-resolution.v1.json",
+    "exact_receipts_copied": 69,
+    "matrix_unchanged": true,
+    "package_unchanged": true,
+    "resolved": true
   }
 }

@@ -26,5 +26,22 @@
     "final archive publication"
   ],
   "owner_accepted": false,
-  "environment_limit": "The original evidence ZIP was downloaded and SHA/CRC checked locally before executor loss; its local copy became unavailable. Complete decoded job log and exact remote artifact identity are preserved here. No claim that unavailable local bytes were recovered."
+  "environment_limit": "Resolved for this archive: the exact original GitHub artifact was reacquired after local inspection became available; historical interruption retained in environment_history.",
+  "environment_history": [
+    {
+      "phase": "local executor unavailable",
+      "record": "The original evidence ZIP was downloaded and SHA/CRC checked locally before executor loss; its local copy became unavailable. Complete decoded job log and exact remote artifact identity are preserved here. No claim that unavailable local bytes were recovered."
+    }
+  ],
+  "preserved_archive": {
+    "path": "original-artifact.zip",
+    "artifact_id": 14966154756,
+    "bytes": 36779,
+    "sha256": "9533a17139dc4753c969ceed5cd9bbaf430db6a3adc8daa36ee68a565d45a7dd",
+    "git_blob_sha1": "29d75636af9067774fb284f7ede57ccba6e72fa0",
+    "zip_crc": "PASS",
+    "members": 68,
+    "recovered_date_utc": "2026-11-24",
+    "scope": "Exact original GitHub Actions evidence artifact, downloaded again and byte/hash/CRC checked; not a new execution."
+  }
 }

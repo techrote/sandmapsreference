@@ -1,0 +1,73 @@
+{
+  "name": "gallery-1380x880",
+  "map_id": null,
+  "purpose": "Default Gold25 collection at an explicit larger 1380x880 viewport",
+  "requested_ui_action": null,
+  "requested_ui_map_id": null,
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "delivery_source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "source": null,
+  "derived_source": null,
+  "setup_sha256": null,
+  "material_plane_sha256": null,
+  "launcher": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd",
+  "command": "\"C:\\Windows\\system32\\cmd.exe\" /d /s /c \"\"D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd\"\"",
+  "headless": false,
+  "started_utc": "2026-11-24T22:27:09.522479+00:00",
+  "status": "CAPTURED",
+  "product_defect": false,
+  "captures": [
+    {
+      "active_collection": "gold25",
+      "display_driver": "Windows",
+      "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+      "initial_gallery_layout": {
+        "first_item_bounds_local": [
+          4.0,
+          4.0,
+          229.0,
+          221.0
+        ],
+        "map_count": 25,
+        "map_list_bounds": [
+          24.0,
+          244.0,
+          800.0,
+          530.0
+        ],
+        "map_list_visible": true,
+        "navigation_bounds": [
+          24.0,
+          784.0,
+          800.0,
+          39.0
+        ],
+        "viewport_size": [
+          1380.0,
+          880.0
+        ],
+        "visible_popup_titles": []
+      },
+      "path": "gallery-1380x880-gallery.png",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "schema": "goldmaps.browser-graphical.v1",
+      "scope": "actual hosted rendered UI; physical owner GPU acceptance not inferred",
+      "selected_id": "gold-197",
+      "selected_setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "sha256": "a4530bc868b5b281b9a36ecfcadeb491c560dc1061c4b7ef6bf7596bf5951707",
+      "view_kind": "gallery",
+      "viewport": "(1380.0, 880.0)",
+      "visible_maps": 25,
+      "original_portable_path": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\userdata\\qa\\browser.png",
+      "bytes": 184573,
+      "width": 1380,
+      "height": 880
+    }
+  ],
+  "launcher_process_id": 8704,
+  "exit_code": 0,
+  "timeout": false,
+  "seconds": 8.454,
+  "new_session_count": 0,
+  "scope": "Actual hosted rendered viewport and source-bound execution; no physical NVIDIA, subjective flight-speed or owner classification acceptance"
+}

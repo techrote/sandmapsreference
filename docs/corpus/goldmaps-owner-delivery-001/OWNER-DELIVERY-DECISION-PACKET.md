@@ -7,38 +7,52 @@ stacked on preserved finalisation #216. The delivery converts the existing
 curated corpus into a portable Windows collection browser and ordinary native
 Workbench experience. It preserves the completed scientific adjudication.
 
-**Final artifact status at this draft: pending a completed corrected campaign
-and independent review.** The latest attempted [run 45498633502](https://github.com/techrote/sandmapsreference/actions/runs/45498633502),
-at source `3975deeb8b1c2664cdb988dd4e393bc7f7630c7d`, completed the source-defined 19-test evidence
-emitter command successfully and passed the runtime, fragment and static
-preflights, then
-stopped at the strict pristine-payload check. Earlier hostile-input and I/O
-probes had created three files under the declared mutable `userdata/` root;
-the later reuse entry requested a pristine check after those probes. The
-lead is correcting that lifecycle boundary while retaining every immutable
-file check. The run did not reach new native reuse, contact observations,
-product qualification or displayed captures.
+**Technical delivery is complete and published; owner review and adoption remain pending.**
+The actual package was qualified at source `8c709093672c6761d1056187399ccc487760606b` in
+[run 45500179792](https://github.com/techrote/sandmapsreference/actions/runs/45500179792). Both the Windows campaign and the separate job that
+downloaded and audited the published artifact succeeded. A local audit of the
+actual downloaded ZIP produced the byte-identical 43,313-byte report,
+SHA-256 `fb4571fc44d8a2550e655cfb08ef7e0efa849b6392f8fe7ca85cdd4f282c6235`.
 
-The preceding [run 45494755605](https://github.com/techrote/sandmapsreference/actions/runs/45494755605)
-at source `2d984a981da99348bbf9b44612b058cd048f3474` had stopped at the strict
-architectural manifest check because two existing contact-follow-up evidence
-files were absent from the collection inventory. Their declaration was
-corrected without changing maps, the engine or the product. No skipped or
-missing gate is a pass.
+The final collection has **70 qualified unique Setups and two preserved invalid
+originals**, represented by 81 logical identities. Three specialist roles
+independently reviewed the actual final bytes and all 18 selected original
+rendered images. No blocking delivery defect remains within the tested scope.
+All owner classifications, physical Windows/NVIDIA acceptance and production
+adoption remain unaccepted.
 
-The next actual completed run, final ZIP inspection, displayed-image review
-and exact acquisition manifest must be recorded before the download section
-is finalized. The versioned JSON packet retains null final-download fields
-until those facts exist.
+The earlier complete N native campaign remains unchanged. The final run
+verified exact evidence reuse, separately executed three justified longer
+contact observations, and freshly exercised the corrected browser, ordinary
+Workbench, launcher, display, reconstruction and final extraction. This does
+not replace the frozen artistic experiment. Original CRLF, fragment-manifest
+and post-probe profile refusals remain preserved with their exact original
+artifact ZIPs and complete logs.
 
 ## Download and start
 
-**Final recommended artifact, SHA-256, size, file count, source/run and actual
-retention: pending the completed run and independent inspection.** The earlier
-N package is retained as an evidence authority. Its displayed gallery defects
-make it an intermediate kit, not the recommended final owner download.
+**[Download the actual playable Windows artifact](https://github.com/techrote/sandmapsreference/actions/runs/45500179792/artifacts/14971496709).**
 
-The intended final interaction is:
+| Item | Verified identity |
+| --- | --- |
+| Inner ZIP | `CyberSand-GOLDMAPS-Owner-Evaluator-8c709093672c.zip` |
+| Inner ZIP SHA-256 | `ba3d75bf97943af4148ee4427fdfcb2c6df41ede2453c80ef69e3bd6577dfea9` |
+| ZIP size | 101,213,343 bytes |
+| Complete archive | 1,640 files; 282,944,113 uncompressed bytes |
+| Immutable payload | 1,638 files; 282,180,277 bytes, plus manifest and checksum |
+| Payload manifest SHA-256 | `229d70e8e083c0eaf1750ba9fdd347cb29e8d2dd23ed1139b845f9b742da6947` |
+| GitHub outer artifact | 14971496709; 109,789,280 bytes |
+| Outer artifact SHA-256 | `a6125c761854d3bf7b9a54bedff411b78ce4453bbe0d97ba10cf7eda16793636` |
+| Tested source / run | `8c709093672c6761d1056187399ccc487760606b` / 45500179792 |
+| Retention | 90 days; currently expires **2027-02-22 22:21:36 UTC** |
+
+GitHub supplies an outer artifact envelope. Extract the named inner evaluator
+ZIP, then extract its entire contents into a writable local folder. Paths
+containing spaces were actually tested. The original N kit remains an
+intermediate native evidence authority; this linked H kit is the final
+recommended owner download.
+
+To open the collection:
 
 1. Download the GitHub playable artifact. If GitHub provides an outer artifact
    ZIP, open it and extract the named `CyberSand-GOLDMAPS-Owner-Evaluator-*.zip`
@@ -54,9 +68,11 @@ The intended final interaction is:
 
 The complete controls and save semantics are in the bundled `START-HERE.md`.
 The package includes files for offline browsing, native execution and local
-review; source web links are optional. Runtime data stays below the extracted
-kit's `userdata/`. Reviews and screenshots are not uploaded, and the ordinary
-installed CyberSand profile is not used.
+review; source web links are optional. Saves, reviews, screenshots and Godot profile data stay below the extracted
+kit's `userdata/`. Project caches use the declared `browser/.godot/` and
+`runtime/project/.godot/` directories inside the same kit. Reviews and
+screenshots are not uploaded; the ordinary installed CyberSand profile is not
+used.
 
 ## Source lineage and engine authorities
 
@@ -73,16 +89,18 @@ installed CyberSand profile is not used.
 | Playable delivery engine | `00cdb02f103265b6dc5224c68283e9a0c8cb449f` | Accepted contemporary main, refreshed before the product freeze |
 | N native population source | `b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041` | Actual 72-Setup Windows campaign and 14 bounded routes |
 | Corrected product review snapshot | `2d984a981da99348bbf9b44612b058cd048f3474` | Gallery/lifecycle corrections; attempted campaign refused before new execution |
-| Latest attempted qualification source | `3975deeb8b1c2664cdb988dd4e393bc7f7630c7d` | Runtime/fragment/static preflights and the 19-test emitter command succeeded; later pristine-profile boundary refused before new map/contact/product/display execution |
-| Final qualified delivery source | Pending | Must bind the actual final artifact and fresh product/displayed execution |
+| Preserved post-probe refusal source | `3975deeb8b1c2664cdb988dd4e393bc7f7630c7d` | Runtime/fragment/static preflights and the 19-test emitter command succeeded; later pristine-profile boundary refused before new map/contact/product/display execution |
+| Final qualified delivery source | `8c709093672c6761d1056187399ccc487760606b` | Actual published archive, verified native reuse, three new contact observations and fresh product/display/extraction evidence |
 
 Both accepted main heads and #215/#216 were refreshed read-only before the
 corrected attempt. The two predecessor PRs remain open and unmerged. Their
 live `draft:false` flags disagree with their written Draft/HOLD disposition.
 That discrepancy is recorded; neither predecessor metadata nor branch was
 changed. PR #217 is an actual draft. No engine branch, original map, frozen
-lock or active parallel programme was modified. The current repository state
-must be refreshed again when the final artifact is recorded.
+lock or active parallel programme was modified. A final read-only refresh at **2026-11-24 22:54:02 UTC** confirmed both
+accepted mains and all three PR heads/dispositions. The tested engine remains
+accepted main; [final-live-state.v1.json](final-live-state.v1.json) records the
+exact snapshot. The later documentation closure changes no packaged runtime.
 
 Old and new engines are not interchangeable evidence labels. The final
 product may retain actual N native receipts only after proving the accepted
@@ -166,9 +184,29 @@ with the original unqualified receipt and a separately pinned new
 observation. Geometry, spawn, policy and acceptance gates remain unchanged.
 See [CONTACT-FOLLOWUP.md](CONTACT-FOLLOWUP.md).
 
-**Final effective counts and the three contact outcomes remain pending.** A
-complete failed follow-up stays reference-only. An incomplete campaign cannot
-yield a partial success claim. The unique population remains 72.
+**All three separate final observations passed every required native gate.**
+The first contact witnesses occurred after 1069, 1107 and 1117 ticks from probe start for
+#188/#189/#192; maximum contact counts were 4, 2 and 4. Full admission,
+actors, exact material readback, progression/movement, authored save and
+fresh-process reopen passed again for these unchanged Setups. Floor proximity
+alone did not qualify them.
+
+| Final effective scope | Qualified | Refused | Unqualified |
+| --- | ---: | ---: | ---: |
+| Unique Setups (72) | 70 | 2 | 0 |
+| Logical entries (81) | 79 | 2 | 0 |
+| Canonical source index (70) | 68 | 2 | 0 |
+| Gold25 originals | 24 | 1 | 0 |
+| Seven repaired portraits | 7 | 0 | 0 |
+| Astra roles (18 aliases / 15 unique) | 18 aliases | 0 | 0 |
+| Separate policy descendants | 2 | 0 | 0 |
+
+Views overlap. All N summaries, raw receipts, failed 900-tick observations and
+source/run identities remain intact. Each affected entry retains its complete
+`native_history`. The final [readable per-variant matrix](qualification/windows-final-8c709093672c/package/qualification/PER-VARIANT-MATRIX.md)
+and [JSON matrix](qualification/windows-final-8c709093672c/package/qualification/per-variant-matrix.v1.json)
+are exact files from the actual ZIP. The matrix SHA-256 is
+`711da71b929f923f630403431e5af7e47387803fe0b045b811120c0d7d71b289`.
 
 Frozen historical scientific/native evidence is preserved separately.
 The historical 67/67 schemas, 65/67 native policies, 51 hosted aliases / 42
@@ -277,6 +315,26 @@ is bundled. Final classifications require explicit owner choice.
 
 ## Architectural knowledge / Batch Lab handoff
 
+**[Download the standalone Batch Lab reference bundle](batch-handoff/Goldmaps-Batch-Lab-Reference-8c709093672c.zip).**
+It is **3,336,826 bytes**, SHA-256
+`7dea665e251b647b5d54aaeb2f6a4cc5978e2e03d211808c89e6ef8755723d05`, with **283 files / 64,664,876 uncompressed bytes**.
+This small supplemental artifact contains exact native Setups, previews,
+features, knowledge records, the shipped query tool, source/rights notes and
+the current qualification overlay; it includes no engine runtime.
+
+All 272 members copied from the primary kit were independently matched
+byte-for-byte. All 281 inventory records plus the inventory/checksum self-files
+were verified, including CRC and path safety. Specialist B independently
+re-executed six offline validate/search/replay/feature/crop commands on the
+extracted bundle; every command passed and all source bytes stayed unchanged.
+No new World, native qualification or consumer branch change was introduced.
+
+Assembly/static native annotations remain frozen in the knowledge records.
+Resolve contemporary native eligibility by Setup SHA-256 and engine identity
+through the included exact delivery overlay. The bundle's start guide and
+primary-kit authority note explain that join. All native evidence authority
+continues to point to the primary qualified kit and its original runs.
+
 The read-only versioned export is `corpus-export/knowledge.v1.json`
 (`schema_version: goldmaps.architectural-knowledge.v1`), with exact native Setups in the collection, frozen custody records and adapter
 notes under `corpus-export/`. It includes 70 map identities, 27 protected
@@ -319,48 +377,70 @@ evaluation populations should acquire leaked authority from those records.
 
 ## Independent review and resolved delivery findings
 
-Reviewers are distinct AI specialist roles, not separate human assessors.
-No implementer exclusively certified their own lane.
+Reviewers are separate AI specialist roles, not separate human assessors.
+No implementer exclusively certified their own lane. Each final record pins
+the actual source, archive, run, images and scope.
 
-| Reviewer / role | Independent scope | Draft status |
+| Reviewer / role | Independent final scope | Result |
 | --- | --- | --- |
-| Specialist A — corpus | Exact planes, source/variant identities, policies, actual source images, knowledge/rights labels and C contact joins | Source/custody review passed; final bytes/images pending |
-| Specialist B — product | Corpus/consumer interface, actual saved-copy evidence, integration/contact/sealing, C layout assertions and owner instructions | Source review passed; final displayed usability pending |
-| Specialist C — assurance | Actual N ZIP/raw receipts, 14 routes/counts, hostile data, actual 32-check Linux preflight and source-separated final auditor | N custody passed; N gallery defect preserved; final audit pending |
-| Lead — integration | Source/runtime custody, policy/CI scope, publication, artifact acquisition, packet and final joins | Final closure pending |
+| [A — corpus](corpus/final-delivery-corpus-review.md) | All 269 fragment members, 72 Setups, policies, source/geometry/export joins, retained negatives, all 18 images | PASS; C cross-review |
+| [B — product](product/FINAL-HOSTED-USABILITY-REVIEW.md) | Actual 32 product and 45 pristine-launcher assertions, all 18 original images, comparison/decision usability and consumer labels | PASS; C cross-review |
+| [C — assurance](qualification/FINAL-INDEPENDENT-REVIEW.md) | Actual H/N ZIPs, every immutable byte and CRC, raw native evidence, runtime/source guards, routes, final extraction and images | PASS; A/B cross-review |
+| Lead — integration | Actual publication/download identities, identical hosted/local audits, five representative original images, final source refresh and durable handoff | Technical closure PASS; owner gates retained |
 
-First Windows run `45481057262` refused CRLF-converted bootstrap source before
-native execution. Explicit LF checkout restored exact bytes; the integrity
-guard was not weakened. Original logs and artifact bytes are retained.
+The final Windows run passed its fresh 32-check product suite, all 18 displayed
+capture cases, exact reconstruction and actual freshly extracted launcher
+execution. The separate pristine-launcher receipt has 45 successful assertions
+across an original and the #183 descendant; userdata was initially absent and
+not pre-created by the caller. The product suite covers actual ordinary paint,
+protected named save, seven replacement controls, local reviews/exports and
+browser-led fresh-process reopen. The 32-check product and 45-check pristine suites ran headlessly through
+the real `.cmd`, actual UI handlers and native Worlds. The 18 display-backed
+Windows capture cases are separate evidence. The representative product
+cases do not claim per-map edited saves; the native matrix separately covers
+every qualified Setup's authored save and reopen.
 
-Source review then identified replacement/save attribution gaps. The
-corrected additive layer passed an actual 32-check Linux product preflight at
-`d30566d7cb0ca4cadda62c0fce3b989e71589672`, including edited saves and
-fresh-process reopen. Later Windows casing and displayed corrections require
-their own final execution; that earlier receipt does not cover them.
+The initial CRLF checkout refusal in run 45481057262 was corrected by preserving
+exact LF bytes. Run 45494755605 refused two undeclared contact sidecars at the
+strict fragment manifest; their exact declaration retained all 267 original
+records and passed real missing/corrupt/extra/count fixtures. Run 45498633502
+then refused a pristine validation after real QA probes had created three
+isolated userdata files. The existing post-execution verifier mode now handles
+that lifecycle point. Immutable guards and final pristine/extraction checks
+remain strict. Original F/G ZIPs and complete logs are retained. Their actual
+G logs independently confirm 18 rendered-receipt, 13 contact and 19 named
+evidence-transfer contract tests passed before the preserved refusal.
 
-Actual N images exposed the collapsed grid, unrequested review popup and
-shrunken Workbench text. The corrected product adjusts gallery sizing,
-initial popup visibility and only its own session's logical canvas.
-Comparison cards fit the popup, with full original/candidate/reference
-identity labels and the archived neutral legend required by the displayed
-gate. Headless layout fixtures are preparation evidence. Actual final PNGs
-and independent visual inspection are still required.
+The final original images show the former collapsed gallery, unwanted popup
+and shrunken native text resolved at 992×656, 1280×720 and 1380×880. The D1 popup
+shows three distinct source roles and the full archived A/B/C legend; the
+fourth byte-identical #203 alias is horizontally scrollable. Gold #125 visibly
+starts Pending/Unclassified, and Gold #197's enlarged image is a labelled
+material-plane preview. Small windows need detail scrolling; fine portrait
+geometry needs zoom/pan. Maximise the ordinary Workbench for detailed
+inspection. These are explicit usability limits, not physical owner acceptance.
 
-The three failed N gallery images and exact receipts are durably retained in
-`qualification/windows-native-gallery-defect.v1.zip`. Linux resource
-interruptions and a local static preflight interruption are retained without
-reclassifying missing execution as success. The local executor later became
-unavailable; source recovery and final artifact audit moved to source-pinned
-GitHub and hosted workflows. The bounded evidence emitter transfers original
-audited PNG and handoff bytes only; it makes no rendering or visual-quality
-claim. Its source-defined 19-test bounded transport/custody command completed on
-hosted Windows in run `45498633502` with exit code 0 and no timeout; the raw
-per-test log has not yet been independently transported and read. Its recorded
-log SHA-256 is
-`03b319082c46da9a3314a4dca7356c73a0cb6df35d4400794779ef0dd6558d93`.
-Actual emitted-byte reconstruction and final image review remain separate
-gates.
+The capture footer's 1,525 verified files describes its pre-evidence-seal stage.
+The final package has 1,638 immutable payload files. Captured product, engine,
+map and native bytes remain bound to the tested source. No original image was
+fabricated or substituted. The original defective N gallery PNGs and receipts
+remain in `qualification/windows-native-gallery-defect.v1.zip`.
+
+The local executor temporarily became unavailable and later recovered. The
+hosted audit and bounded emitter completed, but the connector could not return
+the large decoded log (Transport closed). Review instead used the actual
+directly downloaded ZIP and small hosted audit artifact. Hosted/local audit
+reports are byte-identical at SHA-256
+`fb4571fc44d8a2550e655cfb08ef7e0efa849b6392f8fe7ca85cdd4f282c6235`.
+No successful consumption of that optional large log transfer is claimed.
+[The retained evidence inventory](qualification/windows-final-8c709093672c/retained-files.v1.json) separates exact
+payload/envelope bytes from generated local audit records.
+
+The final repository link audit found 69 matrix receipt links whose exact files
+were present in the actual kit but absent from the retained excerpt. Those
+original receipt bytes were copied and added to the retained inventory; the
+matrix itself is unchanged. The [finding and resolution](qualification/closure-link-resolution.v1.json)
+are retained. This changed no package or native result.
 
 ## Runtime, artifact integrity and durable fallback
 
@@ -378,18 +458,25 @@ Rapier build source is `96dcb2ab6e35c9104726b2a541d1c2fbb298eecb`.
 Their recorded source inputs match the accepted engine. No dependency pin
 was substituted and no rebuild was used to evade provenance.
 
-The final ZIP must pass every-member manifest/path/hash validation, duplicate
-and extra-member rejection, CRC, exact acquisition reconstruction and actual
-fresh-extracted `.cmd` execution from a path containing spaces. Immutable
-manifests exclude userdata and runtime caches. Local saves are routed to the
-explicit isolated profile.
+The final actual ZIP passed every-member manifest/path/hash validation,
+duplicate/extra-member rejection, CRC, exact reconstruction and fresh-extracted
+`.cmd` execution from a path containing spaces. It contains zero userdata
+members. Only declared isolated userdata/cache roots may change during use;
+every immutable payload file remains checked.
 
-The exact acquisition manifest and standard-library helper must be preserved
-with this PR independently of Actions retention. They reconstruct original
-qualified file bytes, including original evidence, from pinned URLs/archive
-members or embedded compressed evidence. Reconstruction remains a fallback;
-the actual playable ZIP is the primary download. Compressed ZIP identity and
-payload identity are recorded separately.
+The exact **8,215,440-byte** acquisition manifest is durably retained as
+[owner-package-acquisition.v1.json.gz](download/owner-package-acquisition.v1.json.gz).
+Its uncompressed SHA-256 is `c4add1023f38415c2052cdd8bcb22db5e77b2c5335d9a116a1129e8e5f4535da`.
+The deterministic gzip is **5,840,428 bytes**, SHA-256
+`eb06df233879d3705a4dc5e497466ce0e2bb706e28c1285b5f57c0d81a70a3e4`. The exact source helper and checksum
+are included. See [the restoration procedure](download/RESTORE-EXACT-PAYLOAD.md).
+
+The manifest uses pinned source URLs/archive members and embedded compressed
+evidence, with no expiring Actions download URLs. Actual hosted reconstruction
+proved the entire qualified inventory. Upstream source access remains needed.
+This restores original file bytes, including native evidence; recompressing
+those files need not reproduce the original ZIP's compression identity.
+The actual playable artifact remains the primary owner download.
 
 The frozen historical owner manifest remains exactly 586 files /
 200,610,152 bytes. Its retracted 1,532-file claim is not revived. Artifact
