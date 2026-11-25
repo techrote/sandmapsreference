@@ -1,0 +1,1021 @@
+{
+  "schema": "goldmaps.independent-owner-delivery-review.v1",
+  "reviewed_utc": "2026-11-24T22:46:44.343961+00:00",
+  "reviewer": {
+    "role": "Specialist C — independent product/corpus and actual-package assurance",
+    "identity": "OpenAI assistant agent /root/assurance",
+    "independence": "Did not implement the corpus or browser. Authored assurance tools were separately reviewed by Specialists A/B and the lead; agent roles do not represent separate human assessors."
+  },
+  "disposition": "TECHNICAL_DELIVERY_READY_FOR_OWNER_REVIEW; DRAFT/HOLD; NO_OWNER_ADOPTION",
+  "blocking_findings": [],
+  "delivery_source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "delivery_run_id": "45500179792",
+  "accepted_engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "frozen_scientific_engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "actual_download": {
+    "artifact_id": 14971496709,
+    "url": "https://github.com/techrote/sandmapsreference/actions/runs/45500179792/artifacts/14971496709",
+    "outer_bytes": 109789280,
+    "outer_sha256": "a6125c761854d3bf7b9a54bedff411b78ce4453bbe0d97ba10cf7eda16793636",
+    "inner_name": "CyberSand-GOLDMAPS-Owner-Evaluator-8c709093672c.zip",
+    "expires_at": "2027-02-22T22:21:36Z",
+    "inner": {
+      "schema": "goldmaps.payload-verification.v1",
+      "kind": "zip",
+      "pass": true,
+      "archive_sha256": "ba3d75bf97943af4148ee4427fdfcb2c6df41ede2453c80ef69e3bd6577dfea9",
+      "archive_bytes": 101213343,
+      "manifest_sha256": "229d70e8e083c0eaf1750ba9fdd347cb29e8d2dd23ed1139b845f9b742da6947",
+      "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+      "envelope_directory": "",
+      "payload_files": 1638,
+      "total_files": 1640,
+      "payload_bytes": 282180277,
+      "total_uncompressed_bytes": 282944113,
+      "zip_crc": "PASS"
+    }
+  },
+  "local_actual_archive_audit": {
+    "path": "final-actual-archive-audit.v1.json",
+    "sha256": "fb4571fc44d8a2550e655cfb08ef7e0efa849b6392f8fe7ca85cdd4f282c6235",
+    "exit_code": 0,
+    "pass": true,
+    "source_repo_head": "8c709093672c6761d1056187399ccc487760606b",
+    "source_tree": "a05391984916c4ea70a3cbcfc74c1d8ebcbcb160",
+    "new_native_worlds_executed": 0,
+    "read_only": true
+  },
+  "hosted_published_archive_review": {
+    "job_id": 138830656635,
+    "conclusion": "success",
+    "artifact_id": 14971279186,
+    "artifact_bytes": 6484,
+    "artifact_outer_sha256": "23f1bcf227a15c9b8e1f38e59e91aefa25a5a06ccf8b3e152b4ffd6fa032f488",
+    "exact_report_compared_locally": true,
+    "report_bytes": 43313,
+    "report_sha256": "fb4571fc44d8a2550e655cfb08ef7e0efa849b6392f8fe7ca85cdd4f282c6235",
+    "byte_identical_to_local_report": true
+  },
+  "corpus": {
+    "logical_entries": 81,
+    "unique_setups": 72,
+    "canonical_source_index": 70,
+    "effective_qualified_unique_setups": 70,
+    "effective_qualified_logical_entries": 79,
+    "refused_unique_setups": 2,
+    "refused_logical_entries": 2,
+    "unqualified_unique_setups": 0,
+    "owner_accepted": 0,
+    "views_overlap": true,
+    "views": [
+      {
+        "view": "gold25",
+        "logical_entries": 25,
+        "unique_setups": 25,
+        "logical_native_status_counts": {
+          "QUALIFIED_HEADLESS": 24,
+          "REFUSED_INVALID_SOURCE": 1
+        }
+      },
+      {
+        "view": "portraits",
+        "logical_entries": 7,
+        "unique_setups": 7,
+        "logical_native_status_counts": {
+          "QUALIFIED_HEADLESS": 7
+        }
+      },
+      {
+        "view": "astra",
+        "logical_entries": 18,
+        "unique_setups": 15,
+        "logical_native_status_counts": {
+          "QUALIFIED_HEADLESS": 18
+        }
+      },
+      {
+        "view": "corpus",
+        "logical_entries": 70,
+        "unique_setups": 70,
+        "logical_native_status_counts": {
+          "QUALIFIED_HEADLESS": 68,
+          "REFUSED_INVALID_SOURCE": 2
+        }
+      },
+      {
+        "view": "policy",
+        "logical_entries": 2,
+        "unique_setups": 2,
+        "logical_native_status_counts": {
+          "QUALIFIED_HEADLESS": 2
+        }
+      }
+    ],
+    "fragment": {
+      "files": 269,
+      "bytes": 64190599,
+      "exact_inventory": true,
+      "manifest_sha256": "67a3adafa09b985b8c16091cbcfc3c6cf06f46ea80182facc71be4d44f644f3d"
+    }
+  },
+  "native_evidence_reuse": {
+    "native_evidence_authority": {
+      "source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+      "github_run_id": "45481683557",
+      "archive_sha256": "d132711302440a50780d7fb04a2a40c11d1986ae48c624b995745e8b13c47a30",
+      "payload_manifest_sha256": "c56d0074721bae63a924d01661aade1cb022329704268b53d713f3f9f2c4d48b"
+    },
+    "reuse_receipt_sha256": "b81e295ffa36778d83244ac129d5debb1875ac9bf256e52b3463ce24415cfb5d",
+    "predecessor_archive": {
+      "schema": "goldmaps.payload-verification.v1",
+      "kind": "zip",
+      "pass": true,
+      "archive_sha256": "d132711302440a50780d7fb04a2a40c11d1986ae48c624b995745e8b13c47a30",
+      "archive_bytes": 101218031,
+      "manifest_sha256": "c56d0074721bae63a924d01661aade1cb022329704268b53d713f3f9f2c4d48b",
+      "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+      "envelope_directory": "",
+      "payload_files": 1605,
+      "total_files": 1607,
+      "payload_bytes": 281494182,
+      "total_uncompressed_bytes": 282242747,
+      "zip_crc": "PASS"
+    },
+    "unchanged_native_payload_files": 1015,
+    "raw_native_files_retained_exactly": 262,
+    "unchanged_native_harness_files": 4,
+    "route_contract": {
+      "path": "scripts/goldmaps_finalisation/native_routes.v1.json",
+      "sha256": "e4c95fe28a680e9f4362f41ba4d833c6e34e0337b43833be1e393ad89cfb1b9e"
+    },
+    "independent_old_new_byte_comparison": "PASS",
+    "scope": "Actual predecessor and final ZIPs compared directly; old native receipts and run/source remain unchanged. New product evidence is separate."
+  },
+  "native_campaigns": [
+    {
+      "kind": "windows-required",
+      "summary_sha256": "505dec8241110f0171b7dee1e2efafce15a16156a9052fabdacc8b603fb7163d",
+      "native_execution_source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+      "native_execution_run_id": "45481683557",
+      "unique_setups": 44,
+      "qualified_unique_setups": 42,
+      "verified_refused_unique_setups": 2,
+      "validation_pass": true
+    },
+    {
+      "kind": "windows-optional",
+      "summary_sha256": "0f11e289bc7e8e4455283bea45f070ce10aa452e6784e692f068925a6545b300",
+      "native_execution_source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+      "native_execution_run_id": "45481683557",
+      "unique_setups": 28,
+      "qualified_unique_setups": 25,
+      "verified_refused_unique_setups": 0,
+      "validation_pass": false
+    },
+    {
+      "kind": "windows-contact-followup",
+      "summary_sha256": "c47f3d9568e59b83005b8c1d9ab172e5def8c6750dadbc11258c5ce8b673a4fe",
+      "native_execution_source_head": "8c709093672c6761d1056187399ccc487760606b",
+      "native_execution_run_id": "45500179792",
+      "unique_setups": 3,
+      "qualified_unique_setups": 3,
+      "verified_refused_unique_setups": 0,
+      "validation_pass": true
+    }
+  ],
+  "separate_contact_followup": {
+    "pass": true,
+    "authority": {
+      "source_head": "8c709093672c6761d1056187399ccc487760606b",
+      "github_run_id": "45500179792",
+      "summary": "qualification/windows-contact-followup/summary.json",
+      "summary_sha256": "c47f3d9568e59b83005b8c1d9ab172e5def8c6750dadbc11258c5ce8b673a4fe",
+      "inputs": "collection/native-contact-followup-inputs.v1.json",
+      "inputs_sha256": "082eb843b6cac0763db100b7fc91e5a20000bec48ae491d1bf9e391ecff3cba5",
+      "targets": [
+        "corpus-188",
+        "corpus-189",
+        "corpus-192"
+      ],
+      "transitions": [
+        {
+          "id": "corpus-188",
+          "setup_sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+          "prior_status": "UNQUALIFIED",
+          "prior_receipt": "qualification/windows-optional/corpus-188.receipt.json",
+          "prior_receipt_sha256": "60a200586ec77781d8b8eb8123dc1bf60c188fd67231758be38d286a45dd3fc6",
+          "current_status": "QUALIFIED_HEADLESS",
+          "current_receipt": "qualification/windows-contact-followup/corpus-188.receipt.json",
+          "current_receipt_sha256": "6c1811f3f109577c572ce5f29e062853c7e4232e138cd766ee2144044877ca63"
+        },
+        {
+          "id": "corpus-189",
+          "setup_sha256": "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+          "prior_status": "UNQUALIFIED",
+          "prior_receipt": "qualification/windows-optional/corpus-189.receipt.json",
+          "prior_receipt_sha256": "9c943dac7451439d04308c2ab781e45e4f5d5fa322ce31d893402ae73b3652ce",
+          "current_status": "QUALIFIED_HEADLESS",
+          "current_receipt": "qualification/windows-contact-followup/corpus-189.receipt.json",
+          "current_receipt_sha256": "0cf3f6300ad7c172fc996ce40a3a9ef69c25164967e4d101f79de05ace42e80c"
+        },
+        {
+          "id": "corpus-192",
+          "setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+          "prior_status": "UNQUALIFIED",
+          "prior_receipt": "qualification/windows-optional/corpus-192.receipt.json",
+          "prior_receipt_sha256": "599bbbd42cc1969d4f2feb25ba2d406a05de8bac550784dbf84e8dd1b4445ba7",
+          "current_status": "QUALIFIED_HEADLESS",
+          "current_receipt": "qualification/windows-contact-followup/corpus-192.receipt.json",
+          "current_receipt_sha256": "bcc428899e8a9a01d9f59e4d99ae29d257b5a9731c4f7f7324bf959677be6d21"
+        }
+      ]
+    },
+    "observations": [
+      {
+        "id": "corpus-188",
+        "prior_status": "UNQUALIFIED",
+        "current_status": "QUALIFIED_HEADLESS",
+        "tick_budget": 1800,
+        "max_contacts": 4,
+        "native_execution_source_head": "8c709093672c6761d1056187399ccc487760606b",
+        "native_execution_run_id": "45500179792"
+      },
+      {
+        "id": "corpus-189",
+        "prior_status": "UNQUALIFIED",
+        "current_status": "QUALIFIED_HEADLESS",
+        "tick_budget": 1800,
+        "max_contacts": 2,
+        "native_execution_source_head": "8c709093672c6761d1056187399ccc487760606b",
+        "native_execution_run_id": "45500179792"
+      },
+      {
+        "id": "corpus-192",
+        "prior_status": "UNQUALIFIED",
+        "current_status": "QUALIFIED_HEADLESS",
+        "tick_budget": 1800,
+        "max_contacts": 4,
+        "native_execution_source_head": "8c709093672c6761d1056187399ccc487760606b",
+        "native_execution_run_id": "45500179792"
+      }
+    ],
+    "additional_distinct_setups": 0,
+    "unchanged_source_records": 3,
+    "original_no_contact_results_retained": 3,
+    "scope": "Separate full native observations of three unchanged Setups; original 900-tick failures remain intact. No result inferred from static floor proximity."
+  },
+  "bounded_routes": {
+    "executed": 14,
+    "completed": 14,
+    "results": [
+      {
+        "id": "b1-receiver-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 13,
+        "waypoints_total": 13
+      },
+      {
+        "id": "b1-receiver-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 13,
+        "waypoints_total": 13
+      },
+      {
+        "id": "b2-apparatus-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 11,
+        "waypoints_total": 11
+      },
+      {
+        "id": "b2-apparatus-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 11,
+        "waypoints_total": 11
+      },
+      {
+        "id": "b3-north-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 22,
+        "waypoints_total": 22
+      },
+      {
+        "id": "b3-north-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 22,
+        "waypoints_total": 22
+      },
+      {
+        "id": "b3-south-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 16,
+        "waypoints_total": 16
+      },
+      {
+        "id": "b3-south-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 16,
+        "waypoints_total": 16
+      },
+      {
+        "id": "d1-gallery-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 14,
+        "waypoints_total": 14
+      },
+      {
+        "id": "d1-gallery-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 14,
+        "waypoints_total": 14
+      },
+      {
+        "id": "d1-gallery-reference",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 14,
+        "waypoints_total": 14
+      },
+      {
+        "id": "d2-press-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 19,
+        "waypoints_total": 19
+      },
+      {
+        "id": "d2-press-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 19,
+        "waypoints_total": 19
+      },
+      {
+        "id": "d2-press-reference",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 19,
+        "waypoints_total": 19
+      }
+    ],
+    "scope": "Actual bounded scripted outcomes retained; no subjective/full-route acceptance inferred"
+  },
+  "original_refusals": {
+    "gold-155": "malformed_policy / bad magic",
+    "corpus-183": "malformed_policy / bad magic",
+    "original_bytes_retained": true,
+    "descendants_separate_and_qualified": true,
+    "equivalent_invalid_policy_intent_claimed": false
+  },
+  "product_verification": {
+    "fresh_final_product_checks": {
+      "pass": true,
+      "passed": 32,
+      "total": 32,
+      "receipt": "final-extracted-product.json",
+      "sha256": "8a6a08cebb4e64496bf0930ccb75aafe611998ef5ec8eb293cd6f39075a2001e"
+    },
+    "pristine_final_launcher_checks": {
+      "pass": true,
+      "passed": 45,
+      "total": 45,
+      "receipt": "final-pristine-launcher.json",
+      "sha256": "ab7e04dcd0185a015ac646cb56282568b7a73b3c81ad249b44fb922b50d4a491",
+      "initial_userdata_absent": true,
+      "caller_created_userdata": false,
+      "maps": [
+        "gold-125",
+        "derived-183-policy"
+      ]
+    },
+    "raw_shipped_edited_session": {
+      "path": "qualification/product/native-edited-session.json",
+      "sha256": "2d0f9c2a0a39dc9e51b27fe7efbf715638f7c628041cfca069fe544ca6c28a02",
+      "process_id": 5576
+    },
+    "raw_shipped_reopened_session": {
+      "path": "qualification/product/native-reopened-session.json",
+      "sha256": "0fe1cffaf7b76d58c700d5f815628953c15066672e062ac0be1a85108128b297",
+      "process_id": 8528,
+      "edited_native_plane_sha256": "9b5b6bbee48043f346d0eb405759ec89b5e6d3a355492ad9f57cc949a477ce68",
+      "painted_cell": [
+        32,
+        32
+      ],
+      "painted_material": 28
+    },
+    "replacement_controls_tested": 7,
+    "lazy_actor_panel_exercised": true,
+    "flatten_guard_exercised": true,
+    "ordinary_save_button_and_ctrl_s_exercised": true,
+    "foreign_existing_file_preserved": true,
+    "uppercase_reserved_name_refused": true,
+    "uppercase_fixture_scope": "Refusal, no saved-copy receipt and no reserved target file creation; original source immutability is separately checked. No existing reserved-file overwrite witness is claimed.",
+    "owner_local_review_and_export_reopened": true,
+    "no_userdata_members_in_final_zip": true,
+    "source_preservation": true,
+    "profile_isolation": true,
+    "physical_input_claimed": false
+  },
+  "reconstruction": {
+    "exact_payload_inventory_replayed": true,
+    "receipt_sha256": "ba0ae2d3125ac2c6a9c865392915d7875e66b672c1613d1aa6f41d12c7e17c0e",
+    "acquisition_manifest_sha256": "c4add1023f38415c2052cdd8bcb22db5e77b2c5335d9a116a1129e8e5f4535da",
+    "acquisition_manifest_bytes": 8215440,
+    "scope": "Exact original file bytes and manifest inventory restored; archive container bit-for-bit recreation is not inferred."
+  },
+  "rendered_review": {
+    "planned_cases": 18,
+    "captured_cases": 18,
+    "all_capture_files_in_audit": 30,
+    "selected_pngs": [
+      {
+        "case": "gallery",
+        "requested_case_map_id": null,
+        "requested_ui_map_id": null,
+        "depicted_map_id": "gold-197",
+        "kind": "browser gallery",
+        "view_kind": "gallery",
+        "initial_gallery_layout": {
+          "first_item_bounds_local": [
+            4.0,
+            4.0,
+            396.0,
+            221.0
+          ],
+          "map_count": 25,
+          "map_list_bounds": [
+            24.0,
+            289.0,
+            412.0,
+            261.0
+          ],
+          "map_list_visible": true,
+          "navigation_bounds": [
+            24.0,
+            560.0,
+            412.0,
+            39.0
+          ],
+          "viewport_size": [
+            992.0,
+            656.0
+          ],
+          "visible_popup_titles": []
+        },
+        "path": "qualification/graphical/gallery-gallery.png",
+        "sha256": "8c0fbfc229d8635918b9c649b6a904b561ce785bbe26ade15207262a4e7474dc",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "At 992×656, the Gold25 count, at least one complete map card, filters, navigation and source identity are readable. No unsolicited popup. The right detail pane requires vertical scrolling to reach actions; Enter remains visibly documented."
+      },
+      {
+        "case": "gallery-1280x720",
+        "requested_case_map_id": null,
+        "requested_ui_map_id": null,
+        "depicted_map_id": "gold-197",
+        "kind": "browser gallery",
+        "view_kind": "gallery",
+        "initial_gallery_layout": {
+          "first_item_bounds_local": [
+            4.0,
+            4.0,
+            229.0,
+            221.0
+          ],
+          "map_count": 25,
+          "map_list_bounds": [
+            24.0,
+            244.0,
+            700.0,
+            370.0
+          ],
+          "map_list_visible": true,
+          "navigation_bounds": [
+            24.0,
+            624.0,
+            700.0,
+            39.0
+          ],
+          "viewport_size": [
+            1280.0,
+            720.0
+          ],
+          "visible_popup_titles": []
+        },
+        "path": "qualification/graphical/gallery-1280x720-gallery.png",
+        "sha256": "1ff4d01820eb9a162ae21d91358b1215a677c921c009477b5abc72481b0b6c59",
+        "width": 1280,
+        "height": 720,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "At 1280×720, several native-plane cards, search, all collection tabs, filters and Open/Compare buttons are visible and legible. Right metadata and review actions remain scrollable."
+      },
+      {
+        "case": "gallery-1380x880",
+        "requested_case_map_id": null,
+        "requested_ui_map_id": null,
+        "depicted_map_id": "gold-197",
+        "kind": "browser gallery",
+        "view_kind": "gallery",
+        "initial_gallery_layout": {
+          "first_item_bounds_local": [
+            4.0,
+            4.0,
+            229.0,
+            221.0
+          ],
+          "map_count": 25,
+          "map_list_bounds": [
+            24.0,
+            244.0,
+            800.0,
+            530.0
+          ],
+          "map_list_visible": true,
+          "navigation_bounds": [
+            24.0,
+            784.0,
+            800.0,
+            39.0
+          ],
+          "viewport_size": [
+            1380.0,
+            880.0
+          ],
+          "visible_popup_titles": []
+        },
+        "path": "qualification/graphical/gallery-1380x880-gallery.png",
+        "sha256": "a4530bc868b5b281b9a36ecfcadeb491c560dc1061c4b7ef6bf7596bf5951707",
+        "width": 1380,
+        "height": 880,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "At 1380×880, the map grid and source preview are clear, Open/Compare/Record/My copies are visible, and separate native/frozen-Art/owner-pending labels are readable."
+      },
+      {
+        "case": "landscape",
+        "requested_case_map_id": "gold-125",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "gold-125",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/landscape-workbench.png",
+        "sha256": "2df9cd1f5df2ccf384e62a27379ad63c5b185fad8b459c639a3f3cf75c0eb27b",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native gold-125 landscape is visible with readable ordinary Workbench controls, source ID, accepted engine pin and owner-pending banner."
+      },
+      {
+        "case": "portrait",
+        "requested_case_map_id": "gold-197",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "gold-197",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/portrait-workbench.png",
+        "sha256": "54b2de3ed1361c1dbda40c5e535a101995659d1698aa0bf6b5a51a294def7b2d",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native gold-197 preserves portrait orientation and displays the Midge, readable controls and distinct source/engine identity."
+      },
+      {
+        "case": "B3-original",
+        "requested_case_map_id": "trial-B3-original",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "trial-B3-original",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/B3-original-workbench.png",
+        "sha256": "90d3b27ac11bd92b89c0d62d9f2a4935d3faa58b4d4874d4e793ba65b8e140ab",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native B3 original shows the three-vault geometry and original identity. No high-speed readability preference is inferred."
+      },
+      {
+        "case": "B3-candidate",
+        "requested_case_map_id": "trial-B3-candidate",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "trial-B3-candidate",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/B3-candidate-workbench.png",
+        "sha256": "4ab3c82752851cba28774b6bfa9b642fdfba6c1872e1ce739de82f7a832e29f4",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native B3 candidate is separately labelled and visibly distinct. The capture is not a synchronized comparison or a gameplay-preference verdict."
+      },
+      {
+        "case": "D1-original",
+        "requested_case_map_id": "trial-D1-original",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "trial-D1-original",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/D1-original-workbench.png",
+        "sha256": "6b18706e3b96e46db761650d441c1f748e12cb281a8232a12b80f8f4de94cf1d",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native D1 original retains the narrow portrait shaft and original identity. The Midge label is close to the upper canvas boundary at this small viewport; source and controls remain readable."
+      },
+      {
+        "case": "D1-candidate",
+        "requested_case_map_id": "trial-D1-candidate",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "trial-D1-candidate",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/D1-candidate-workbench.png",
+        "sha256": "0ba723666fdbed5fc98776e7ef6541c8bf9d6871f71ce1aec773743d2bac6947",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native D1 Astra candidate is clearly labelled and its geometry is visibly distinct from the original. No assessor-disagreement resolution is inferred."
+      },
+      {
+        "case": "D1-reference",
+        "requested_case_map_id": "trial-D1-reference",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "trial-D1-reference",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/D1-reference-workbench.png",
+        "sha256": "5f34fd257c8e69c442f1a1e69ce1cf88190b612c2a547e83535e8d3947209d0c",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native D1 prior reference is clearly labelled and retains its independent repaired geometry; no individual human authorship or owner adoption is implied."
+      },
+      {
+        "case": "D2-original",
+        "requested_case_map_id": "trial-D2-original",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "trial-D2-original",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/D2-original-workbench.png",
+        "sha256": "0acbb31945f92af271854c013fd1e960761a4731501ad543ae951f2ea680fc6e",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native D2 original shows the portrait shaft and original identity with readable controls."
+      },
+      {
+        "case": "D2-candidate",
+        "requested_case_map_id": "trial-D2-candidate",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "trial-D2-candidate",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/D2-candidate-workbench.png",
+        "sha256": "3a2e7f1058687c1aef423f694e3f50dfe2920e560b0f08fefa7d076c849b431b",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native D2 Astra candidate is separately identified; visible structural differences are preserved without changing the frozen comparative preference."
+      },
+      {
+        "case": "D2-reference",
+        "requested_case_map_id": "trial-D2-reference",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "trial-D2-reference",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/D2-reference-workbench.png",
+        "sha256": "b474a261c9d64fdd4b1877fa088db1a9e9b707829923153c65fa826b4aa9fcfe",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native D2 prior reference is separately identified and visibly distinct; prior preference remains historical, not owner acceptance."
+      },
+      {
+        "case": "policy-155",
+        "requested_case_map_id": "derived-155-policy",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "derived-155-policy",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/policy-155-workbench.png",
+        "sha256": "85de8ebb42b77c70e0852b14943791cdc49cb3917ece603f607b70c33f3c1bf9",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native #155 default-policy descendant is visibly labelled as a variant; landscape material geometry is preserved and ordinary Workbench controls are readable."
+      },
+      {
+        "case": "policy-183",
+        "requested_case_map_id": "derived-183-policy",
+        "requested_ui_map_id": null,
+        "depicted_map_id": "derived-183-policy",
+        "kind": "actual native Workbench",
+        "path": "qualification/graphical/policy-183-workbench.png",
+        "sha256": "52b11e6fc53927fb9b483fae66a11af3282135fe4d74aeb835d99bf78bc76e0e",
+        "width": 992,
+        "height": 656,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Actual native #183 default-policy descendant is separately labelled; its landscape geometry and actor are visible. It is not presented as a Gold25 nominee."
+      },
+      {
+        "case": "comparison-popup",
+        "requested_case_map_id": null,
+        "requested_ui_map_id": "trial-D1-original",
+        "depicted_map_id": "trial-D1-original",
+        "kind": "rendered comparison-popup",
+        "view_kind": "comparison-popup",
+        "popup": {
+          "title": "Compare source identities — independent play sessions",
+          "visible": true,
+          "window_size": [
+            1024,
+            680
+          ]
+        },
+        "owner_decision_written": false,
+        "native_world_opened": false,
+        "initial_gallery_layout": {
+          "first_item_bounds_local": [
+            4.0,
+            4.0,
+            229.0,
+            221.0
+          ],
+          "map_count": 25,
+          "map_list_bounds": [
+            24.0,
+            244.0,
+            700.0,
+            370.0
+          ],
+          "map_list_visible": true,
+          "navigation_bounds": [
+            24.0,
+            624.0,
+            700.0,
+            39.0
+          ],
+          "viewport_size": [
+            1280.0,
+            720.0
+          ],
+          "visible_popup_titles": []
+        },
+        "review_file_sha256_before": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+        "review_file_sha256_after": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+        "mounted_variant_ids": [
+          "repair-203",
+          "trial-D1-original",
+          "trial-D1-candidate",
+          "trial-D1-reference"
+        ],
+        "depicted_variant_ids": [
+          "repair-203",
+          "trial-D1-original",
+          "trial-D1-candidate",
+          "trial-D1-reference"
+        ],
+        "neutral_label_legend": "Archived crop legend · A = trial-D1-reference (PR #203) · B = trial-D1-candidate (PR #214) · C = trial-D1-original (PR #186)",
+        "fully_visible_variant_ids": [
+          "repair-203",
+          "trial-D1-candidate",
+          "trial-D1-original"
+        ],
+        "image_scope": "Archived source visualizations displayed side by side; no native World or synchronized simulation",
+        "path": "qualification/graphical/comparison-popup-popup.png",
+        "sha256": "2d972e5147c7642beffce168fd5b8116ba9e8ea7aa7906ca288cbc44626b0cf8",
+        "width": 1024,
+        "height": 680,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "Three distinct D1 roles fit visibly with fully legible original/candidate/repair identities and the complete archived A=#203, B=#214, C=#186 legend. A fourth source-identical #203 alias is partially clipped and horizontally scrollable. Text explicitly separates independent native sessions from synchronized simulation."
+      },
+      {
+        "case": "decision-dialog",
+        "requested_case_map_id": null,
+        "requested_ui_map_id": "gold-125",
+        "depicted_map_id": "gold-125",
+        "kind": "rendered decision-dialog",
+        "view_kind": "decision-dialog",
+        "popup": {
+          "title": "Your local review — explicit human choice",
+          "visible": true,
+          "window_size": [
+            760,
+            660
+          ]
+        },
+        "owner_decision_written": false,
+        "native_world_opened": false,
+        "initial_gallery_layout": {
+          "first_item_bounds_local": [
+            4.0,
+            4.0,
+            229.0,
+            221.0
+          ],
+          "map_count": 25,
+          "map_list_bounds": [
+            24.0,
+            244.0,
+            700.0,
+            370.0
+          ],
+          "map_list_visible": true,
+          "navigation_bounds": [
+            24.0,
+            624.0,
+            700.0,
+            39.0
+          ],
+          "viewport_size": [
+            1280.0,
+            720.0
+          ],
+          "visible_popup_titles": []
+        },
+        "review_file_sha256_before": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+        "review_file_sha256_after": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+        "decision_status": "Pending / not reviewed",
+        "decision_classification": "Unclassified",
+        "path": "qualification/graphical/decision-dialog-popup.png",
+        "sha256": "c24b3f08cb0e0eab8a418ce2f5a92f38329e617b336543e738b78b1769a15399",
+        "width": 760,
+        "height": 660,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "gold-125 is visibly Pending / not reviewed and Unclassified. Notes, preferred-variant and explicit save controls are legible; screenshot text correctly describes separate files linked through session records."
+      },
+      {
+        "case": "overview-zoom",
+        "requested_case_map_id": null,
+        "requested_ui_map_id": "gold-197",
+        "depicted_map_id": "gold-197",
+        "kind": "rendered overview-zoom",
+        "view_kind": "overview-zoom",
+        "popup": {
+          "title": "Silt Meridian Hingevault — full-resolution source preview",
+          "visible": true,
+          "window_size": [
+            1024,
+            648
+          ]
+        },
+        "owner_decision_written": false,
+        "native_world_opened": false,
+        "initial_gallery_layout": {
+          "first_item_bounds_local": [
+            4.0,
+            4.0,
+            229.0,
+            221.0
+          ],
+          "map_count": 25,
+          "map_list_bounds": [
+            24.0,
+            244.0,
+            700.0,
+            370.0
+          ],
+          "map_list_visible": true,
+          "navigation_bounds": [
+            24.0,
+            624.0,
+            700.0,
+            39.0
+          ],
+          "viewport_size": [
+            1280.0,
+            720.0
+          ],
+          "visible_popup_titles": []
+        },
+        "review_file_sha256_before": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+        "review_file_sha256_after": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+        "preview_path": "collection/previews/2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7.png",
+        "preview_sha256": "2b134e390a0d6cf5ae2c725e4cef0aad378b80873ccf966eecce2b96153557b7",
+        "image_scope": "Full-resolution archived material-plane visualization inside actual rendered UI; not a native World screenshot",
+        "path": "qualification/graphical/overview-zoom-popup.png",
+        "sha256": "f6552bca86fd4bf8dc01870f5322b3719ec03dc16beadbae64cc3f24927b2142",
+        "width": 1024,
+        "height": 648,
+        "display_driver": "Windows",
+        "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+        "independent_manual_visual_review": "PASS_WITH_STATED_SCOPE",
+        "observation": "The gold-197 full-resolution material-plane preview is displayed at pixel detail with scrolling. It is an archived visualization in the rendered browser, not a native World capture."
+      }
+    ],
+    "native_capture_count": 12,
+    "browser_capture_count": 6,
+    "renderer": "ANGLE Microsoft Basic Render Driver, hosted Windows software rendering",
+    "native_worlds_from_browser_previews_claimed": false,
+    "physical_nvidia_evidence": false,
+    "prior_N_gallery_usability_failure_retained": true,
+    "capture_seal_note": "Gallery footer1525 is the source-bound intermediate capture-time seal before evidence append. The delivered final immutable payload has1638 files; the capture is not relabelled as showing that final count.",
+    "original_selected_pngs_directly_viewed": 18
+  },
+  "nonblocking_limits": [
+    "At 992×656 the right-hand details/actions need vertical scrolling; Enter and arrow navigation remain visible.",
+    "The ordinary Workbench UI is dense at the smallest hosted viewport. Pan, zoom and Focus pilot are available; overview captures do not establish full-route readability.",
+    "The fourth D1 #203 logical alias is partly clipped at the right edge and reachable by horizontal scrolling; three distinct geometry roles and the full legend are visible.",
+    "Optional large GitHub job-log transport could not be consumed: connector returned Transport closed. The successful transfer steps are recorded, but C used original locally downloaded ZIP bytes and their exact manifest hashes for visual review."
+  ],
+  "preserved_negative_scope": [
+    "Original #155/#183 native refusals",
+    "N optional188/189/192 no-contact-in900-ticks results and validation_pass=false",
+    "Prior N gallery usability failure and actual images",
+    "Initial Windows CRLF/bootstrap refusal",
+    "F static fragment-manifest refusal",
+    "G post-preflight pristine-state boundary refusal",
+    "Interrupted Linux environment/OOM evidence",
+    "Frozen scientific comparative verdicts and missing28 failed-bundle hash-only occurrences"
+  ],
+  "knowledge_scope": "Versioned source-pinned reference export remains unaccepted. Reusable module candidates are inferred hints, not approved native parts, training labels or general reuse licences. Separate A corpus/adapter review supplies exact import/query evidence.",
+  "owner_gates": [
+    "Physical Windows/NVIDIA presentation",
+    "Subjective full-route flight and B3 high-speed readability",
+    "D1/D2 variant preference",
+    "Gold/Platinum/Pyrite classification and production adoption"
+  ],
+  "owner_accepted": false,
+  "merges_or_adoption_authorized": false,
+  "cross_reviews": [
+    {
+      "role": "Specialist A",
+      "scope": "Corpus/contact/source wording and actual final ZIP facts in this review",
+      "result": "PASS; no overclaim found"
+    },
+    {
+      "role": "Specialist B",
+      "scope": "Product/rendered scope and actual32/45, raw-session, image and seal chronology in this review",
+      "result": "PASS; no overclaim found"
+    },
+    {
+      "role": "Specialist C reviewing A",
+      "scope": "Final corpus review;7H/N metadata pairs,2policy-only pairs,69N/3H native authorities,3contact receipts and observed images",
+      "result": "PASS",
+      "reviewed_markdown_sha256": "60a496fc47948b703f352ce8a64cdf1f9611cf6b42b436997334eea9af12cfb9",
+      "reviewed_json_sha256": "0341b4ea5266cf4b106f7541085053aebc553546facfff74e72fc1b07acab598"
+    }
+  ]
+}

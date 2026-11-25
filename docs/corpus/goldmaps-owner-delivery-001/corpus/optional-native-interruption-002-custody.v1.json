@@ -1,0 +1,82 @@
+{
+  "schema": "goldmaps.owner-evidence-archive.v1",
+  "scope": "Second optional Linux campaign serial environment interruption; all observed raw logs and partial receipts. Native evidence is absent; no map defect or native verdict is inferred.",
+  "source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+  "package_manifest_sha256": "4044f86bdc43fe4a2032e5d7ee6382fb5a0edd45da9f672ed8d4a092f1eeb78a",
+  "archive": "optional-native-interruption-002.zip",
+  "archive_sha256": "dab88a6316ba8c0ba147a3fab1c751e99a2e0c0fd3e392fd89ec3141fe87daf6",
+  "archive_bytes": 9440,
+  "file_count": 13,
+  "uncompressed_bytes": 19024,
+  "zip_crc_verified": true,
+  "member_bytes_verified": true,
+  "files": [
+    {
+      "path": "corpus-105.load.log",
+      "bytes": 221,
+      "sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8"
+    },
+    {
+      "path": "corpus-105.receipt.json",
+      "bytes": 1798,
+      "sha256": "732a557da2e5c6a357b06c0d75583357d7664d54053aaa4fc0e5476a970cd7fd"
+    },
+    {
+      "path": "corpus-108.load.log",
+      "bytes": 221,
+      "sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8"
+    },
+    {
+      "path": "corpus-108.receipt.json",
+      "bytes": 1774,
+      "sha256": "0ec1519c9ad1ecb6b9d1baba72addb742aa069bd445cee131822170fc4347382"
+    },
+    {
+      "path": "corpus-115.load.log",
+      "bytes": 221,
+      "sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8"
+    },
+    {
+      "path": "corpus-115.receipt.json",
+      "bytes": 1802,
+      "sha256": "fe9697e28f3895cfa33cc02a4576909e5e27f441c6b10b82a2f61df325186646"
+    },
+    {
+      "path": "corpus-116.load.log",
+      "bytes": 221,
+      "sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8"
+    },
+    {
+      "path": "corpus-116.receipt.json",
+      "bytes": 1788,
+      "sha256": "054f4af7af1c01dcc0c93cca32a0d9170472e68033ec6f166237874481ce50eb"
+    },
+    {
+      "path": "corpus-120.load.log",
+      "bytes": 221,
+      "sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8"
+    },
+    {
+      "path": "corpus-37.load.log",
+      "bytes": 221,
+      "sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8"
+    },
+    {
+      "path": "corpus-37.receipt.json",
+      "bytes": 1812,
+      "sha256": "33f458696f34617904f3ca3262150ec2397246f47d8676fdc5303d79b537f60d"
+    },
+    {
+      "path": "interruption.v1.json",
+      "bytes": 4913,
+      "sha256": "6a96a4d9e14802a2e9a9a4a845cbe98945cb693bc04f9d4ba79fc88fa0386130"
+    },
+    {
+      "path": "profile.log",
+      "bytes": 3811,
+      "sha256": "0063f1c76e6b607d40dd92aeec85ed0707070bbe60dbd2cd9acaba3ab2b11ab0"
+    }
+  ],
+  "completed_sigkill_load_receipts": 5,
+  "additional_load_interrupted_before_case_receipt": "corpus-120"
+}

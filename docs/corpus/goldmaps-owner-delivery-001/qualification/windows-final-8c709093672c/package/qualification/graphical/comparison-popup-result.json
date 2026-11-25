@@ -1,0 +1,414 @@
+{
+  "name": "comparison-popup",
+  "map_id": null,
+  "purpose": "Actual D1 comparison popup with its displayed variant identities and archived neutral legend",
+  "requested_ui_action": "comparison-popup",
+  "requested_ui_map_id": "trial-D1-original",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "delivery_source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "source": {
+    "commit": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+    "git_blob_sha1": "32cc2ec5a4ed9fd3c423afb6332edfeadcc70310",
+    "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json",
+    "pr": 186,
+    "repo": "techrote/sandmapsreference",
+    "sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+    "url": "https://github.com/techrote/sandmapsreference/blob/598e8792b32a4922008b6d3dcb9208d21f03e477/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json"
+  },
+  "derived_source": null,
+  "setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+  "material_plane_sha256": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
+  "launcher": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd",
+  "command": "\"C:\\Windows\\system32\\cmd.exe\" /d /s /c \"\"D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd\"\"",
+  "headless": false,
+  "started_utc": "2026-11-24T22:36:15.856854+00:00",
+  "status": "CAPTURED",
+  "product_defect": false,
+  "captures": [
+    {
+      "active_collection": "all",
+      "depicted_variant_ids": [
+        "repair-203",
+        "trial-D1-original",
+        "trial-D1-candidate",
+        "trial-D1-reference"
+      ],
+      "display_driver": "Windows",
+      "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+      "identity_visibility_scope": "Depicted IDs have card labels intersecting the popup and clipping ancestors; visible_bounds and fully_visible distinguish clipping. Mounted IDs also include horizontally scrollable aliases.",
+      "initial_gallery_layout": {
+        "first_item_bounds_local": [
+          4.0,
+          4.0,
+          229.0,
+          221.0
+        ],
+        "map_count": 25,
+        "map_list_bounds": [
+          24.0,
+          244.0,
+          700.0,
+          370.0
+        ],
+        "map_list_visible": true,
+        "navigation_bounds": [
+          24.0,
+          624.0,
+          700.0,
+          39.0
+        ],
+        "viewport_size": [
+          1280.0,
+          720.0
+        ],
+        "visible_popup_titles": []
+      },
+      "mounted_variant_ids": [
+        "repair-203",
+        "trial-D1-original",
+        "trial-D1-candidate",
+        "trial-D1-reference"
+      ],
+      "native_world_opened": false,
+      "neutral_label_legend": "Archived crop legend · A = trial-D1-reference (PR #203) · B = trial-D1-candidate (PR #214) · C = trial-D1-original (PR #186)",
+      "owner_decision_written": false,
+      "path": "comparison-popup-popup.png",
+      "popup": {
+        "title": "Compare source identities — independent play sessions",
+        "visible": true,
+        "window_size": [
+          1024,
+          680
+        ]
+      },
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "review_file_sha256_after": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+      "review_file_sha256_before": "3759d977c933ef1be76f7557c59937b710de4d41d3ec988f7b7e5a3ce03a55aa",
+      "review_file_unchanged": true,
+      "schema": "goldmaps.browser-graphical.v1",
+      "scope": "actual hosted rendered UI; physical owner GPU acceptance not inferred",
+      "selected_id": "trial-D1-original",
+      "selected_setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+      "sha256": "2d972e5147c7642beffce168fd5b8116ba9e8ea7aa7906ca288cbc44626b0cf8",
+      "view_kind": "comparison-popup",
+      "viewport": "(1024.0, 680.0)",
+      "visible_label_records": [
+        {
+          "bounds": [
+            16.0,
+            16.0,
+            992.0,
+            23.0
+          ],
+          "fully_visible": true,
+          "text": "Reference images side by side. Each Open starts its own ordinary native World; the simulations are not synchronized.",
+          "visible_bounds": [
+            16.0,
+            16.0,
+            992.0,
+            23.0
+          ]
+        },
+        {
+          "bounds": [
+            16.0,
+            49.0,
+            992.0,
+            20.0
+          ],
+          "fully_visible": true,
+          "text": "Archived crop legend · A = trial-D1-reference (PR #203) · B = trial-D1-candidate (PR #214) · C = trial-D1-original (PR #186)",
+          "visible_bounds": [
+            16.0,
+            49.0,
+            992.0,
+            20.0
+          ]
+        },
+        {
+          "bounds": [
+            16.0,
+            79.0,
+            992.0,
+            18.0
+          ],
+          "fully_visible": true,
+          "text": "Frozen sites · x right, y down · bounds are [x, y, width, height]",
+          "visible_bounds": [
+            16.0,
+            79.0,
+            992.0,
+            18.0
+          ]
+        },
+        {
+          "bounds": [
+            16.0,
+            199.0,
+            317.0,
+            59.0
+          ],
+          "fully_visible": true,
+          "text": "Orthant Rift Needle — prior repair",
+          "visible_bounds": [
+            16.0,
+            199.0,
+            317.0,
+            59.0
+          ]
+        },
+        {
+          "bounds": [
+            16.0,
+            268.0,
+            317.0,
+            20.0
+          ],
+          "fully_visible": true,
+          "text": "repair-203 · repaired portrait",
+          "visible_bounds": [
+            16.0,
+            268.0,
+            317.0,
+            20.0
+          ]
+        },
+        {
+          "bounds": [
+            16.0,
+            628.0,
+            317.0,
+            18.0
+          ],
+          "fully_visible": true,
+          "text": "material_plane_visualization",
+          "visible_bounds": [
+            16.0,
+            628.0,
+            317.0,
+            18.0
+          ]
+        },
+        {
+          "bounds": [
+            16.0,
+            656.0,
+            317.0,
+            47.0
+          ],
+          "fully_visible": false,
+          "text": "\n",
+          "visible_bounds": [
+            16.0,
+            656.0,
+            317.0,
+            8.0
+          ]
+        },
+        {
+          "bounds": [
+            343.0,
+            199.0,
+            317.0,
+            28.0
+          ],
+          "fully_visible": true,
+          "text": "Orthant Rift Needle",
+          "visible_bounds": [
+            343.0,
+            199.0,
+            317.0,
+            28.0
+          ]
+        },
+        {
+          "bounds": [
+            343.0,
+            237.0,
+            317.0,
+            20.0
+          ],
+          "fully_visible": true,
+          "text": "trial-D1-original · original",
+          "visible_bounds": [
+            343.0,
+            237.0,
+            317.0,
+            20.0
+          ]
+        },
+        {
+          "bounds": [
+            343.0,
+            597.0,
+            317.0,
+            18.0
+          ],
+          "fully_visible": true,
+          "text": "material_plane_visualization",
+          "visible_bounds": [
+            343.0,
+            597.0,
+            317.0,
+            18.0
+          ]
+        },
+        {
+          "bounds": [
+            343.0,
+            625.0,
+            317.0,
+            122.0
+          ],
+          "fully_visible": false,
+          "text": "Assessor disagreement retained\nFresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+          "visible_bounds": [
+            343.0,
+            625.0,
+            317.0,
+            39.0
+          ]
+        },
+        {
+          "bounds": [
+            670.0,
+            199.0,
+            317.0,
+            59.0
+          ],
+          "fully_visible": true,
+          "text": "Orthant Rift Needle — Astra candidate",
+          "visible_bounds": [
+            670.0,
+            199.0,
+            317.0,
+            59.0
+          ]
+        },
+        {
+          "bounds": [
+            670.0,
+            268.0,
+            317.0,
+            20.0
+          ],
+          "fully_visible": true,
+          "text": "trial-D1-candidate · Astra candidate",
+          "visible_bounds": [
+            670.0,
+            268.0,
+            317.0,
+            20.0
+          ]
+        },
+        {
+          "bounds": [
+            670.0,
+            628.0,
+            317.0,
+            18.0
+          ],
+          "fully_visible": true,
+          "text": "material_plane_visualization",
+          "visible_bounds": [
+            670.0,
+            628.0,
+            317.0,
+            18.0
+          ]
+        },
+        {
+          "bounds": [
+            670.0,
+            656.0,
+            317.0,
+            122.0
+          ],
+          "fully_visible": false,
+          "text": "Assessor disagreement retained\nFresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+          "visible_bounds": [
+            670.0,
+            656.0,
+            317.0,
+            8.0
+          ]
+        },
+        {
+          "bounds": [
+            997.0,
+            199.0,
+            317.0,
+            59.0
+          ],
+          "fully_visible": false,
+          "text": "Orthant Rift Needle — prior repair",
+          "visible_bounds": [
+            997.0,
+            199.0,
+            11.0,
+            59.0
+          ]
+        },
+        {
+          "bounds": [
+            997.0,
+            268.0,
+            317.0,
+            20.0
+          ],
+          "fully_visible": false,
+          "text": "trial-D1-reference · prior reworker reference",
+          "visible_bounds": [
+            997.0,
+            268.0,
+            11.0,
+            20.0
+          ]
+        },
+        {
+          "bounds": [
+            997.0,
+            628.0,
+            317.0,
+            18.0
+          ],
+          "fully_visible": false,
+          "text": "material_plane_visualization",
+          "visible_bounds": [
+            997.0,
+            628.0,
+            11.0,
+            18.0
+          ]
+        },
+        {
+          "bounds": [
+            997.0,
+            656.0,
+            317.0,
+            122.0
+          ],
+          "fully_visible": false,
+          "text": "Assessor disagreement retained\nFresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+          "visible_bounds": [
+            997.0,
+            656.0,
+            11.0,
+            8.0
+          ]
+        }
+      ],
+      "visible_maps": 81,
+      "original_portable_path": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\userdata\\qa\\browser.png",
+      "bytes": 85939,
+      "width": 1024,
+      "height": 680
+    }
+  ],
+  "launcher_process_id": 9040,
+  "exit_code": 0,
+  "timeout": false,
+  "seconds": 8.843,
+  "new_session_count": 0,
+  "scope": "Actual hosted rendered viewport and source-bound execution; no physical NVIDIA, subjective flight-speed or owner classification acceptance"
+}

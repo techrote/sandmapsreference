@@ -1,0 +1,202 @@
+{
+  "schema": "goldmaps.preserved-displayed-defect.v1",
+  "reviewer": "Specialist C, independent assurance agent; not a separate human owner",
+  "delivery_source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+  "github_run_id": "45481683557",
+  "playable_artifact_id": 14966411591,
+  "inner_archive_sha256": "d132711302440a50780d7fb04a2a40c11d1986ae48c624b995745e8b13c47a30",
+  "manifest_sha256": "c56d0074721bae63a924d01661aade1cb022329704268b53d713f3f9f2c4d48b",
+  "scope": "Exact raw first-Windows gallery captures, per-case results, graphical summary and qualified manifest. Evidence only, no executable runtime. CAPTURED records execution, not layout acceptance.",
+  "owner_ready": false,
+  "status": "PRODUCT_CORRECTION_REQUIRED",
+  "custody_native_audit": "windows-native-authority-review.v1.json",
+  "custody_native_audit_sha256": "a6c4fdd08ab87ea4c5fda925b5b78f48ba7892465082dea2b97cc96f57604034",
+  "images_inspected": [
+    {
+      "case": "gallery",
+      "path": "qualification/graphical/gallery-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "bytes": 76285,
+      "width": 992,
+      "height": 656,
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "display_driver": "Windows",
+      "depicted_map_id": "gold-197",
+      "category": "actual rendered browser",
+      "finding": "FAIL: catalogue collapsed or severely clipped; navigation hint wraps vertically; unexpected review Window at startup"
+    },
+    {
+      "case": "gallery-1280x720",
+      "path": "qualification/graphical/gallery-1280x720-gallery.png",
+      "sha256": "2225c26d1e68fa56bf6997583fb04a80849673ab30de18193f3f38714a5fc3e8",
+      "bytes": 106294,
+      "width": 1280,
+      "height": 720,
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "display_driver": "Windows",
+      "depicted_map_id": "gold-197",
+      "category": "actual rendered browser",
+      "finding": "FAIL: catalogue collapsed or severely clipped; navigation hint wraps vertically; unexpected review Window at startup"
+    },
+    {
+      "case": "gallery-1380x880",
+      "path": "qualification/graphical/gallery-1380x880-gallery.png",
+      "sha256": "4a6205dc16c559d98762cd7edfe328620ac29838bc65a58aec3d995394f73c98",
+      "bytes": 144536,
+      "width": 1380,
+      "height": 880,
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "display_driver": "Windows",
+      "depicted_map_id": "gold-197",
+      "category": "actual rendered browser",
+      "finding": "FAIL: catalogue collapsed or severely clipped; navigation hint wraps vertically; unexpected review Window at startup"
+    },
+    {
+      "case": "landscape",
+      "path": "qualification/graphical/landscape-workbench.png",
+      "sha256": "c2c7e4767dc3c0015587ef31800f29ea572a170c03655bdf1925d28762d06231",
+      "bytes": 319954,
+      "width": 992,
+      "height": 558,
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "display_driver": "Windows",
+      "depicted_map_id": "gold-125",
+      "category": "actual native Workbench viewport",
+      "finding": "Source-labelled orthographic native material geometry and actor marker visibly rendered; no artistic preference or physical GPU acceptance inferred"
+    },
+    {
+      "case": "portrait",
+      "path": "qualification/graphical/portrait-workbench.png",
+      "sha256": "0ae8d7c6df4d59d12c9f71a2fff4f90bff25eb65ac3be3b6b3003c41e213efdd",
+      "bytes": 113615,
+      "width": 992,
+      "height": 558,
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "display_driver": "Windows",
+      "depicted_map_id": "gold-197",
+      "category": "actual native Workbench viewport",
+      "finding": "Source-labelled orthographic native material geometry and actor marker visibly rendered; no artistic preference or physical GPU acceptance inferred"
+    },
+    {
+      "case": "B3-candidate",
+      "path": "qualification/graphical/B3-candidate-workbench.png",
+      "sha256": "d76366cddb565cad615ff51c9723962a30f9f721b81ca74d07cd3f98e4a6eb0f",
+      "bytes": 424849,
+      "width": 992,
+      "height": 558,
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "display_driver": "Windows",
+      "depicted_map_id": "trial-B3-candidate",
+      "category": "actual native Workbench viewport",
+      "finding": "Source-labelled orthographic native material geometry and actor marker visibly rendered; no artistic preference or physical GPU acceptance inferred"
+    },
+    {
+      "case": "D1-candidate",
+      "path": "qualification/graphical/D1-candidate-workbench.png",
+      "sha256": "33b7b5876c40447a4c1b5f81096247b6ad179bbad95ff774ce153a58dfdf6072",
+      "bytes": 135770,
+      "width": 992,
+      "height": 558,
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "display_driver": "Windows",
+      "depicted_map_id": "trial-D1-candidate",
+      "category": "actual native Workbench viewport",
+      "finding": "Source-labelled orthographic native material geometry and actor marker visibly rendered; no artistic preference or physical GPU acceptance inferred"
+    },
+    {
+      "case": "D2-reference",
+      "path": "qualification/graphical/D2-reference-workbench.png",
+      "sha256": "cb512cf96e2e2555c19308d6e2bcb08b57f95d0c4c833f8cb3ac0982475b6cce",
+      "bytes": 105375,
+      "width": 992,
+      "height": 558,
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "display_driver": "Windows",
+      "depicted_map_id": "trial-D2-reference",
+      "category": "actual native Workbench viewport",
+      "finding": "Source-labelled orthographic native material geometry and actor marker visibly rendered; no artistic preference or physical GPU acceptance inferred"
+    },
+    {
+      "case": "policy-183",
+      "path": "qualification/graphical/policy-183-workbench.png",
+      "sha256": "ee0eb6327b5684cade86a8f6b18f54f4bb72c0981b11133b956c99b1aeb45923",
+      "bytes": 250640,
+      "width": 992,
+      "height": 558,
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "display_driver": "Windows",
+      "depicted_map_id": "derived-183-policy",
+      "category": "actual native Workbench viewport",
+      "finding": "Source-labelled orthographic native material geometry and actor marker visibly rendered; no artistic preference or physical GPU acceptance inferred"
+    }
+  ],
+  "retained_contact_failures": [
+    {
+      "id": "corpus-188",
+      "setup_sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+      "receipt": "qualification/windows-optional/corpus-188.receipt.json",
+      "receipt_sha256": "60a200586ec77781d8b8eb8123dc1bf60c188fd67231758be38d286a45dd3fc6",
+      "status": "UNQUALIFIED",
+      "load_policy_full_plane_all_actors_movement_save_fresh_reopen": "PASS",
+      "contact_pass": false,
+      "contact_tick_budget": 900,
+      "observed_contacts": 0,
+      "end_position": [
+        505.0,
+        1590.01989746094
+      ],
+      "limitation": "No contact witness within the actual 900-tick gravity-only check. This is an incomplete contact gate, not a native-policy refusal or proof of a map defect."
+    },
+    {
+      "id": "corpus-189",
+      "setup_sha256": "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+      "receipt": "qualification/windows-optional/corpus-189.receipt.json",
+      "receipt_sha256": "9c943dac7451439d04308c2ab781e45e4f5d5fa322ce31d893402ae73b3652ce",
+      "status": "UNQUALIFIED",
+      "load_policy_full_plane_all_actors_movement_save_fresh_reopen": "PASS",
+      "contact_pass": false,
+      "contact_tick_budget": 900,
+      "observed_contacts": 0,
+      "end_position": [
+        528.0,
+        1551.01879882813
+      ],
+      "limitation": "No contact witness within the actual 900-tick gravity-only check. This is an incomplete contact gate, not a native-policy refusal or proof of a map defect."
+    },
+    {
+      "id": "corpus-192",
+      "setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+      "receipt": "qualification/windows-optional/corpus-192.receipt.json",
+      "receipt_sha256": "599bbbd42cc1969d4f2feb25ba2d406a05de8bac550784dbf84e8dd1b4445ba7",
+      "status": "UNQUALIFIED",
+      "load_policy_full_plane_all_actors_movement_save_fresh_reopen": "PASS",
+      "contact_pass": false,
+      "contact_tick_budget": 900,
+      "observed_contacts": 0,
+      "end_position": [
+        495.0,
+        1553.01892089844
+      ],
+      "limitation": "No contact witness within the actual 900-tick gravity-only check. This is an incomplete contact gate, not a native-policy refusal or proof of a map defect."
+    }
+  ],
+  "raw_negative_archive": {
+    "path": "windows-native-gallery-defect.v1.zip",
+    "sha256": "38eda5f8a031cbc9a2d3e569c1bf48ffa5df642fa27593ed885cc2895f75d42f",
+    "bytes": 439628,
+    "files": 11,
+    "uncompressed_bytes": 1220499,
+    "crc": "PASS",
+    "every_member_exact_readback": true
+  },
+  "required_resolution": [
+    "Hide all optional Windows until explicit owner action.",
+    "Bound the navigation hint and restore visible selectable catalogue space at normal desktop sizes.",
+    "Rerun actual Windows displayed capture and independent visual inspection under the corrected product source."
+  ],
+  "remaining_scope": [
+    "This predecessor remains an exact native-evidence authority; product readiness is blocked.",
+    "Hosted ANGLE Microsoft Basic Render Driver is not physical Windows/NVIDIA acceptance.",
+    "No broad scientific adjudication or owner classification is changed."
+  ]
+}

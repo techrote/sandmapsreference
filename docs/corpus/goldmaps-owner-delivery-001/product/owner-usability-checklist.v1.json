@@ -1,0 +1,97 @@
+{
+  "schema": "goldmaps.owner-usability-checklist.v1",
+  "reviewed_product_source_head": "2d984a981da99348bbf9b44612b058cd048f3474",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "godot": "4.7.stable.official.5b4e0cb0f",
+  "reviewer": {
+    "role": "Specialist B / product engineering AI agent",
+    "independence": "Independent instruction/integration review; product implementer, not sole visual certifier or a human assessor"
+  },
+  "source_review": {
+    "tools/goldmaps_owner/integration/START-HERE.md": "1d4124a83a9bdca90fa8f7a39ff5765c9f16698f469616eb3a208de2b4ebe0cc",
+    "tools/goldmaps_owner/product/browser/browser.gd": "87af2ad91e70499f31f5402bcd70afa5d436ad7c6fb86b57ce417a75c8cb0d33",
+    "tools/goldmaps_owner/product/session/session.gd": "a9a134c28ba5f72c8770349cb2c8f892a94b9adc2f62f4708d6a07825e5eae21",
+    "tools/goldmaps_owner/product/session/session_controls.gd": "a766a37d1df2f483392043c95e422991250cfe2f7d48f341eb3e0479ae035ad9"
+  },
+  "instructions_status": "SOURCE_REVIEW_PASS",
+  "final_artifact_status": "PENDING_FINAL_F_EXECUTION_AND_INDEPENDENT_REVIEW",
+  "owner_accepted": false,
+  "owner_checks": [
+    {
+      "id": "U01",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U02",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U03",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U04",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U05",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U06",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U07",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U08",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U09",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U10",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U11",
+      "status": "Pending",
+      "accepted": false
+    },
+    {
+      "id": "U12",
+      "status": "Pending",
+      "accepted": false
+    }
+  ],
+  "scope_limits": [
+    "Button callbacks and Godot-dispatched keys are not physical human input",
+    "Hosted software rendering does not qualify physical NVIDIA presentation or latency",
+    "Native contact and bounded routes do not establish every route or B3 high-speed readability",
+    "No classification, production adoption or merge follows automatically"
+  ],
+  "reviewed_doc_paths": [
+    "collection/DECISION-GUIDE.md",
+    "collection/COMPARISON-GUIDE.md",
+    "collection/POLICY-DESCENDANTS.md",
+    "corpus-export/frozen/FINAL-DECISION-PACKET.md",
+    "qualification/PER-VARIANT-MATRIX.md",
+    "qualification/per-variant-matrix.v1.json"
+  ],
+  "source_link_normalization": "Integer source PR used in caption and target URL",
+  "recovery_note": "Reconstructed from the completed product-lane review after the local executor became unavailable; source-file hashes independently re-read from the published review commit."
+}

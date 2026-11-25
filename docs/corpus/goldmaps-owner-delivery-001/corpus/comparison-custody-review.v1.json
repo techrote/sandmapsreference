@@ -1,0 +1,1041 @@
+{
+  "schema": "goldmaps.owner-comparison-custody-review.v1",
+  "status": "PASS_SOURCE_CUSTODY_ONLY",
+  "review_scope": "Delivery completeness and independent full-plane difference replay; no artistic reassessment, native execution or owner preference inferred",
+  "authoritative_packet": {
+    "commit": "b9535405853a5cd16e4bba968ec7167222861c42",
+    "path": "docs/corpus/goldmaps-finalisation-001/FINAL-DECISION-PACKET.json",
+    "sha256": "4844b0569cd6e8346e453218d12df3f32fd8924cf26beaf1284bb13dc709f29b"
+  },
+  "cards_sha256": "b4bb3fbf5964308bf79b5ffece10d5e8f8b4409cc894460a639c045349b36831",
+  "logical_trial_aliases": 18,
+  "comparison_arms": [
+    {
+      "arm": "B1",
+      "frozen_decision": "POSITIVE_UPLIFT",
+      "owner_card_result": "Positive uplift",
+      "owner_prompt": "Inspect the bounded local architectural intervention and its preserved routing.",
+      "variants": [
+        {
+          "logical_id": "trial-B1-original",
+          "neutral_label": "A",
+          "source": {
+            "commit": "eb00a9a55864dfb6d3e076e60ba4684b397228fc",
+            "git_blob_sha1": "d1c257d6fae14d78291145eae8074d6f262a08f3",
+            "path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-switchback-recovery-tenements-261121/setup.json",
+            "pr": 152,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+            "url": "https://github.com/techrote/sandmapsreference/blob/eb00a9a55864dfb6d3e076e60ba4684b397228fc/cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-switchback-recovery-tenements-261121/setup.json"
+          },
+          "setup_sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4",
+          "plane_sha256": "6c53fdc6c69489cfed0ed06c00adae2ca23f184be7cd2725618392688584a6d5"
+        },
+        {
+          "logical_id": "trial-B1-candidate",
+          "neutral_label": "B",
+          "source": {
+            "commit": "c242f3c267c6bd8d3a0d9d23642409ac0584a484",
+            "git_blob_sha1": "d3cff816f1822064a507ba52eb96093b658d84d4",
+            "path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-switchback-recovery-tenements-261121/astra-trial-001/setup.json",
+            "pr": 212,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+            "url": "https://github.com/techrote/sandmapsreference/blob/c242f3c267c6bd8d3a0d9d23642409ac0584a484/cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-switchback-recovery-tenements-261121/astra-trial-001/setup.json"
+          },
+          "setup_sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c",
+          "plane_sha256": "b19ebd0f044e1a2ddc96e4e4b735b31811573c8832e0c37034c636e27da6923c"
+        }
+      ],
+      "changed_cells": 3283,
+      "exact_unchanged_control": false,
+      "site_count": 6,
+      "sites": [
+        {
+          "site": "01-ledger-tenements",
+          "world_xywh": [
+            110,
+            315,
+            420,
+            477
+          ],
+          "image": "collection/comparisons/case-01/detail-01.png",
+          "sha256": "6fc039409891fa2731e57b9eebd38f42c4366b640c8e672413369ff3d06dafb7"
+        },
+        {
+          "site": "02-rinse-sorting",
+          "world_xywh": [
+            465,
+            329,
+            365,
+            482
+          ],
+          "image": "collection/comparisons/case-01/detail-02.png",
+          "sha256": "872f0ea72bcac8fdc22ad2e44ab820c6763e80776566b3004adb980e469104e5"
+        },
+        {
+          "site": "03-central-reclaim",
+          "world_xywh": [
+            817,
+            240,
+            560,
+            620
+          ],
+          "image": "collection/comparisons/case-01/detail-03.png",
+          "sha256": "cdbbd3cae304bc30c194fc1a54cedf0e4db7d228070486a0006b73404bada99b"
+        },
+        {
+          "site": "04-repair-atelier",
+          "world_xywh": [
+            1160,
+            310,
+            410,
+            506
+          ],
+          "image": "collection/comparisons/case-01/detail-04.png",
+          "sha256": "206999520d7c7b7374a991f6fb4fe79495f034664619e9cc71c1174a14e204d7"
+        },
+        {
+          "site": "05-east-tenements",
+          "world_xywh": [
+            1510,
+            312,
+            500,
+            519
+          ],
+          "image": "collection/comparisons/case-01/detail-05.png",
+          "sha256": "d482acadfba8c6d2a26e4bb46ac18015ab4339170220f12cb337154094d709b6"
+        },
+        {
+          "site": "10-hoist-receiving-detail",
+          "world_xywh": [
+            990,
+            430,
+            300,
+            340
+          ],
+          "image": "collection/comparisons/case-01/detail-06.png",
+          "sha256": "44c82fe82366eb42b9dd5ac3a192f624437e705d75be311c4c96179dfb5ddffc"
+        }
+      ],
+      "status": "PASS_SOURCE_CUSTODY_ONLY"
+    },
+    {
+      "arm": "B2",
+      "frozen_decision": "POSITIVE_UPLIFT",
+      "owner_card_result": "Positive uplift",
+      "owner_prompt": "Inspect the bounded local architectural intervention and its protected open volume.",
+      "variants": [
+        {
+          "logical_id": "trial-B2-candidate",
+          "neutral_label": "A",
+          "source": {
+            "commit": "65d461c9b1d7444813ca8362d7e3425314e8f277",
+            "git_blob_sha1": "e0af45e27e538a1a7d94c5f40ce7165e3ca8bebd",
+            "path": "cybersand-canvases/2048x1024/original-scifi-biomech-wide-umbra-rotor-islet-works-261121-0902/astra-trial-001/setup.json",
+            "pr": 210,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+            "url": "https://github.com/techrote/sandmapsreference/blob/65d461c9b1d7444813ca8362d7e3425314e8f277/cybersand-canvases/2048x1024/original-scifi-biomech-wide-umbra-rotor-islet-works-261121-0902/astra-trial-001/setup.json"
+          },
+          "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+          "plane_sha256": "3095f91035621491318bf49a6249ade49756a3e389453906e3eec5f6a4456cd5"
+        },
+        {
+          "logical_id": "trial-B2-original",
+          "neutral_label": "B",
+          "source": {
+            "commit": "49cdac502d861a8c70e95a1773f5053c321a04c2",
+            "git_blob_sha1": "704a1dc5870661f2d7d68857ecef971c27dae70f",
+            "path": "cybersand-canvases/2048x1024/original-scifi-biomech-wide-umbra-rotor-islet-works-261121-0902/setup-umbra-rotor-islet-works.json",
+            "pr": 167,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+            "url": "https://github.com/techrote/sandmapsreference/blob/49cdac502d861a8c70e95a1773f5053c321a04c2/cybersand-canvases/2048x1024/original-scifi-biomech-wide-umbra-rotor-islet-works-261121-0902/setup-umbra-rotor-islet-works.json"
+          },
+          "setup_sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450",
+          "plane_sha256": "1c159bf70e15309ec0a1d3ed578bad328fe6be414e2fac30bcc685dbbb7532fd"
+        }
+      ],
+      "changed_cells": 5195,
+      "exact_unchanged_control": false,
+      "site_count": 8,
+      "sites": [
+        {
+          "site": "01-quarantine-jetty",
+          "world_xywh": [
+            25,
+            453,
+            396,
+            520
+          ],
+          "image": "collection/comparisons/case-06/detail-01.png",
+          "sha256": "add7eb4a3e295abb6355cc38780970bc24332ff630c1daa17d968cd8040293d4"
+        },
+        {
+          "site": "02-stamping-islets",
+          "world_xywh": [
+            395,
+            418,
+            363,
+            555
+          ],
+          "image": "collection/comparisons/case-06/detail-02.png",
+          "sha256": "3a7803711906c3123bd99e338a5e1b7037d57361b55abdecfc960b1823675734"
+        },
+        {
+          "site": "03-twin-salvage-rotors",
+          "world_xywh": [
+            740,
+            95,
+            612,
+            650
+          ],
+          "image": "collection/comparisons/case-06/detail-03.png",
+          "sha256": "f6d96b23989a5c599bee4722227a0b95f74e68f04b2c2ea26a66473f588dfbd5"
+        },
+        {
+          "site": "04-central-examination",
+          "world_xywh": [
+            850,
+            725,
+            453,
+            288
+          ],
+          "image": "collection/comparisons/case-06/detail-04.png",
+          "sha256": "a57ddc4e513852d8b36e5ca4a7f9bdca877f69a9e9a549ecffb382a223d55375"
+        },
+        {
+          "site": "05-arterial-comb",
+          "world_xywh": [
+            1312,
+            376,
+            412,
+            597
+          ],
+          "image": "collection/comparisons/case-06/detail-05.png",
+          "sha256": "acacf5dce6acec6c139e6a1e7cf5271397285c04a9e71f8d26d8778784b1dc49"
+        },
+        {
+          "site": "06-broken-freight-gantry",
+          "world_xywh": [
+            1671,
+            396,
+            356,
+            577
+          ],
+          "image": "collection/comparisons/case-06/detail-06.png",
+          "sha256": "4323acdf134029b4c8c1cee744f3539f3b69cec072173614800339fe39185433"
+        },
+        {
+          "site": "07-buried-archive",
+          "world_xywh": [
+            422,
+            887,
+            263,
+            133
+          ],
+          "image": "collection/comparisons/case-06/detail-07.png",
+          "sha256": "5f14588f414c5fda148442491c1968f36f2bd036768d4d9db02d4ff96840e611"
+        },
+        {
+          "site": "10-diagnostic-detail",
+          "world_xywh": [
+            930,
+            850,
+            270,
+            115
+          ],
+          "image": "collection/comparisons/case-06/detail-08.png",
+          "sha256": "30934c0f894d46b3f8f93f5718cf36e43e4e1b95ed875534695b2c5d96016e04"
+        }
+      ],
+      "status": "PASS_SOURCE_CUSTODY_ONLY"
+    },
+    {
+      "arm": "B3",
+      "frozen_decision": "INCONCLUSIVE_GAMEPLAY_RACING",
+      "owner_card_result": "Intended racing/gameplay benefit inconclusive",
+      "owner_prompt": "Compare at actual flight speed. Headless route probes cannot decide readability or playfeel.",
+      "variants": [
+        {
+          "logical_id": "trial-B3-original",
+          "neutral_label": "A",
+          "source": {
+            "commit": "3a2057dd56804f87d2fec701007ecc277601894f",
+            "git_blob_sha1": "f231a8b72c0408b407deef9d5da1de6a5d341acc",
+            "path": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/setup-brackenfold-trivault-boreworks.json",
+            "pr": 170,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+            "url": "https://github.com/techrote/sandmapsreference/blob/3a2057dd56804f87d2fec701007ecc277601894f/cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/setup-brackenfold-trivault-boreworks.json"
+          },
+          "setup_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+          "plane_sha256": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9"
+        },
+        {
+          "logical_id": "trial-B3-candidate",
+          "neutral_label": "B",
+          "source": {
+            "commit": "7c13fbde3664047311b483463ece0e36f3d42e17",
+            "git_blob_sha1": "4443b54d18e0c36bbcd27f96c35a1c251d84cc8d",
+            "path": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/astra-trial-001/setup.json",
+            "pr": 213,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+            "url": "https://github.com/techrote/sandmapsreference/blob/7c13fbde3664047311b483463ece0e36f3d42e17/cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121/astra-trial-001/setup.json"
+          },
+          "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+          "plane_sha256": "3a4c5ead526338cd548fd499c7f22aeca307a9a3c06324eaef46df4694c0f856"
+        }
+      ],
+      "changed_cells": 2376,
+      "exact_unchanged_control": false,
+      "site_count": 7,
+      "sites": [
+        {
+          "site": "01-west-ignition-nest",
+          "world_xywh": [
+            50,
+            150,
+            390,
+            635
+          ],
+          "image": "collection/comparisons/case-05/detail-01.png",
+          "sha256": "2df22c19dc648a18f1d147e712c1f36a8edd63b4b93779cfe3f035b8e46c26ed"
+        },
+        {
+          "site": "02-first-vault-hoists",
+          "world_xywh": [
+            316,
+            115,
+            500,
+            680
+          ],
+          "image": "collection/comparisons/case-05/detail-02.png",
+          "sha256": "ada8b84f849bb04958d365c35a90f7f1232bb1001c0eb82f08db1b9d4b03a924"
+        },
+        {
+          "site": "03-central-saltfold-hub",
+          "world_xywh": [
+            757,
+            115,
+            515,
+            760
+          ],
+          "image": "collection/comparisons/case-05/detail-03.png",
+          "sha256": "f65595bcbf2a595e8e17631b3dd6e03e172cc65341e9ac5cdb9a2761f92d51e4"
+        },
+        {
+          "site": "04-east-condenser-bore",
+          "world_xywh": [
+            1240,
+            145,
+            510,
+            680
+          ],
+          "image": "collection/comparisons/case-05/detail-04.png",
+          "sha256": "8c0ab0d6f3ef0137925fe8c430a8433aa893f2f1aa5159cfcbb345674771de0d"
+        },
+        {
+          "site": "05-east-catcher-switch",
+          "world_xywh": [
+            1630,
+            230,
+            413,
+            620
+          ],
+          "image": "collection/comparisons/case-05/detail-05.png",
+          "sha256": "bd137b093101f52af7d9cf01a5c75684ce4a636a754bbc30ac0d7668a2ca8ba9"
+        },
+        {
+          "site": "06-deep-service-pockets",
+          "world_xywh": [
+            590,
+            650,
+            875,
+            365
+          ],
+          "image": "collection/comparisons/case-05/detail-06.png",
+          "sha256": "5a405d11d00ad0a44f4fb335ad3d7acbd167c218b023aa2f867fbdfb0c041984"
+        },
+        {
+          "site": "10-first-diaphragm-decision",
+          "world_xywh": [
+            680,
+            225,
+            220,
+            400
+          ],
+          "image": "collection/comparisons/case-05/detail-07.png",
+          "sha256": "384f471255851bc5e2cbd98ad2705137761084e644d6f1b4fdf6baf621aa2f7a"
+        }
+      ],
+      "status": "PASS_SOURCE_CUSTODY_ONLY"
+    },
+    {
+      "arm": "C1",
+      "frozen_decision": "CORRECT_ABSTENTION",
+      "owner_card_result": "Correct abstention; unchanged material plane",
+      "owner_prompt": "The original and candidate are intentional logical aliases of exact unchanged source bytes.",
+      "variants": [
+        {
+          "logical_id": "trial-C1-candidate",
+          "neutral_label": "A",
+          "source": {
+            "commit": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+            "git_blob_sha1": "f78bcc811174a9c580df47f77349f4b6346c880d",
+            "path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json",
+            "pr": 159,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+            "url": "https://github.com/techrote/sandmapsreference/blob/1266ca2265db3dc574566a8047ac8170c58ae95c/cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json"
+          },
+          "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+          "plane_sha256": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c"
+        },
+        {
+          "logical_id": "trial-C1-original",
+          "neutral_label": "B",
+          "source": {
+            "commit": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+            "git_blob_sha1": "f78bcc811174a9c580df47f77349f4b6346c880d",
+            "path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json",
+            "pr": 159,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+            "url": "https://github.com/techrote/sandmapsreference/blob/1266ca2265db3dc574566a8047ac8170c58ae95c/cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json"
+          },
+          "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+          "plane_sha256": "76b668760422189ef79051576fc60e0b55bc3c9d348a1f739b3ba2142e7a488c"
+        }
+      ],
+      "changed_cells": 0,
+      "exact_unchanged_control": true,
+      "site_count": 5,
+      "sites": [
+        {
+          "site": "01-wet-strip",
+          "world_xywh": [
+            95,
+            320,
+            420,
+            481
+          ],
+          "image": "collection/comparisons/case-03/detail-01.png",
+          "sha256": "a3b9681e19c5a342b80cf501a210e2eb533de14109f811dcc8be32d6fac9e8dd"
+        },
+        {
+          "site": "02-magnet-sort",
+          "world_xywh": [
+            480,
+            323,
+            365,
+            477
+          ],
+          "image": "collection/comparisons/case-03/detail-02.png",
+          "sha256": "609ef8c448e90abc5cfc89acbf3a7169add0c69019e0564c58f47dcbe4327460"
+        },
+        {
+          "site": "03-torque-spine",
+          "world_xywh": [
+            814,
+            294,
+            445,
+            544
+          ],
+          "image": "collection/comparisons/case-03/detail-03.png",
+          "sha256": "f33d318b4edd56df2a4ff26ab4230febd66facc08b21aabf84dc7af507b29006"
+        },
+        {
+          "site": "04-ledger-custody",
+          "world_xywh": [
+            1221,
+            300,
+            372,
+            530
+          ],
+          "image": "collection/comparisons/case-03/detail-04.png",
+          "sha256": "a960404bf1608ccfc39dc85e4d25f90a130654b1f6efb2e92003606c71766d83"
+        },
+        {
+          "site": "05-crew-emergency",
+          "world_xywh": [
+            1544,
+            271,
+            504,
+            608
+          ],
+          "image": "collection/comparisons/case-03/detail-05.png",
+          "sha256": "afbc7fd7df64d04c279636c760b02d839d5768e65ced71010e2d5132ca80fc99"
+        }
+      ],
+      "status": "PASS_SOURCE_CUSTODY_ONLY"
+    },
+    {
+      "arm": "C2",
+      "frozen_decision": "CORRECT_ABSTENTION",
+      "owner_card_result": "Correct abstention; unchanged material plane",
+      "owner_prompt": "The original and candidate are intentional logical aliases of exact unchanged source bytes.",
+      "variants": [
+        {
+          "logical_id": "trial-C2-candidate",
+          "neutral_label": "A",
+          "source": {
+            "commit": "c797722c9788263cb157d48d30eefd613a832efd",
+            "git_blob_sha1": "a11796c9e052bbf0fa18226a5279c8841ac0effd",
+            "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json",
+            "pr": 150,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+            "url": "https://github.com/techrote/sandmapsreference/blob/c797722c9788263cb157d48d30eefd613a832efd/cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json"
+          },
+          "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+          "plane_sha256": "0d958f92a1f578702056d72363622e2de204c6267f204485585b59096574cff4"
+        },
+        {
+          "logical_id": "trial-C2-original",
+          "neutral_label": "B",
+          "source": {
+            "commit": "c797722c9788263cb157d48d30eefd613a832efd",
+            "git_blob_sha1": "a11796c9e052bbf0fa18226a5279c8841ac0effd",
+            "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json",
+            "pr": 150,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+            "url": "https://github.com/techrote/sandmapsreference/blob/c797722c9788263cb157d48d30eefd613a832efd/cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json"
+          },
+          "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+          "plane_sha256": "0d958f92a1f578702056d72363622e2de204c6267f204485585b59096574cff4"
+        }
+      ],
+      "changed_cells": 0,
+      "exact_unchanged_control": true,
+      "site_count": 5,
+      "sites": [
+        {
+          "site": "01-west-registry.png",
+          "world_xywh": [
+            30,
+            400,
+            510,
+            460
+          ],
+          "image": "collection/comparisons/case-04/detail-01.png",
+          "sha256": "fcff1d9f618f3af9de1331a55455e49796e4b8fccd33e500833d33ee13d56980"
+        },
+        {
+          "site": "02-annular-north.png",
+          "world_xywh": [
+            610,
+            180,
+            790,
+            430
+          ],
+          "image": "collection/comparisons/case-04/detail-02.png",
+          "sha256": "ad680f0b88756674ab8e51dc8432071c242eb2cd6beaf99717b1d2323bf550d1"
+        },
+        {
+          "site": "03-censer-culture.png",
+          "world_xywh": [
+            660,
+            420,
+            730,
+            415
+          ],
+          "image": "collection/comparisons/case-04/detail-03.png",
+          "sha256": "c1f70194019c749672cdc595fc4442727dc438bd4cc179ca4256affed7d9b3fd"
+        },
+        {
+          "site": "04-east-purge.png",
+          "world_xywh": [
+            1510,
+            360,
+            538,
+            495
+          ],
+          "image": "collection/comparisons/case-04/detail-04.png",
+          "sha256": "25eedb549e6de41accf23886722fe57efa39e08534ba4c28735ffef6b69b421a"
+        },
+        {
+          "site": "05-dry-return.png",
+          "world_xywh": [
+            190,
+            855,
+            1690,
+            169
+          ],
+          "image": "collection/comparisons/case-04/detail-05.png",
+          "sha256": "b35915e5bf26393f5a4f462a9bb528b7c750b257e2c93620f75ada6a578938b5"
+        }
+      ],
+      "status": "PASS_SOURCE_CUSTODY_ONLY"
+    },
+    {
+      "arm": "C3",
+      "frozen_decision": "CORRECT_ABSTENTION",
+      "owner_card_result": "Correct abstention; unchanged material plane",
+      "owner_prompt": "The original and candidate are intentional logical aliases of exact unchanged source bytes.",
+      "variants": [
+        {
+          "logical_id": "trial-C3-candidate",
+          "neutral_label": "A",
+          "source": {
+            "commit": "3b0253d387578bda3af00a6edc97833219df64a9",
+            "git_blob_sha1": "280b63cf36c58df9f2c22e2c25142204cc48f004",
+            "path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+            "pr": 197,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+            "url": "https://github.com/techrote/sandmapsreference/blob/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json"
+          },
+          "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+          "plane_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a"
+        },
+        {
+          "logical_id": "trial-C3-original",
+          "neutral_label": "B",
+          "source": {
+            "commit": "3b0253d387578bda3af00a6edc97833219df64a9",
+            "git_blob_sha1": "280b63cf36c58df9f2c22e2c25142204cc48f004",
+            "path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+            "pr": 197,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+            "url": "https://github.com/techrote/sandmapsreference/blob/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json"
+          },
+          "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+          "plane_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a"
+        }
+      ],
+      "changed_cells": 0,
+      "exact_unchanged_control": true,
+      "site_count": 6,
+      "sites": [
+        {
+          "site": "01-ferry-and-crane.png",
+          "world_xywh": [
+            95,
+            270,
+            480,
+            420
+          ],
+          "image": "collection/comparisons/case-08/detail-01.png",
+          "sha256": "36b05d311f14b1f53f673e5bd90a588d4a86604cad672f015192a3d9d56c4ca8"
+        },
+        {
+          "site": "02-lift-cage.png",
+          "world_xywh": [
+            640,
+            405,
+            295,
+            385
+          ],
+          "image": "collection/comparisons/case-08/detail-02.png",
+          "sha256": "40f359a31c64266b64845bba6606bb9591f5bbd9894abeba57843a8d60f91f75"
+        },
+        {
+          "site": "03-opposed-bascule-throat.png",
+          "world_xywh": [
+            250,
+            700,
+            620,
+            440
+          ],
+          "image": "collection/comparisons/case-08/detail-03.png",
+          "sha256": "e9dd268a5e4a5eaeb2d01bf1b15c74713865f6ba693bfab5b0be40ac6fe35be7"
+        },
+        {
+          "site": "04-rotary-indexer.png",
+          "world_xywh": [
+            645,
+            1160,
+            284,
+            385
+          ],
+          "image": "collection/comparisons/case-08/detail-04.png",
+          "sha256": "6d5a198c019e66fb548a8b0d0bbf1547bed8f8db7f8930b1f8f8fd79ca3da34d"
+        },
+        {
+          "site": "05-customs-and-dispatch.png",
+          "world_xywh": [
+            650,
+            1510,
+            284,
+            465
+          ],
+          "image": "collection/comparisons/case-08/detail-05.png",
+          "sha256": "80b79924bf78000a4082e871fface437ff493320586442c93e5aebeb0d8ba8b4"
+        },
+        {
+          "site": "06-underinvert-return.png",
+          "world_xywh": [
+            90,
+            1520,
+            555,
+            470
+          ],
+          "image": "collection/comparisons/case-08/detail-06.png",
+          "sha256": "d8824b5934e6543c0f885ef80431404204039e0a3c5be92d29169a664632ab0d"
+        }
+      ],
+      "status": "PASS_SOURCE_CUSTODY_ONLY"
+    },
+    {
+      "arm": "D1",
+      "frozen_decision": "ASSESSOR_DISAGREEMENT",
+      "owner_card_result": "Assessor disagreement retained",
+      "owner_prompt": "Fresh randomized assessment preferred Astra; reference-aware assessment preferred the prior repair/reference. Choose after your own comparison.",
+      "variants": [
+        {
+          "logical_id": "trial-D1-reference",
+          "neutral_label": "A",
+          "source": {
+            "commit": "922a27926ea7338e9a1ce09fc64222b1094a9737",
+            "git_blob_sha1": "0b3fc7168b0163b1320559e8dcee75ba6f3c711d",
+            "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json",
+            "pr": 203,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+            "url": "https://github.com/techrote/sandmapsreference/blob/922a27926ea7338e9a1ce09fc64222b1094a9737/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json"
+          },
+          "setup_sha256": "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013",
+          "plane_sha256": "b86a0dfbe75f87b887642f8e90c8a5d9d43dadafcec24379076d2c000bb6a3da"
+        },
+        {
+          "logical_id": "trial-D1-candidate",
+          "neutral_label": "B",
+          "source": {
+            "commit": "693574b7afce437a4cb008bd2fa200f6256dcc87",
+            "git_blob_sha1": "b51a8b4138f8cd347804ac2e83fa22c17d753de4",
+            "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/astra-trial-001/setup.json",
+            "pr": 214,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+            "url": "https://github.com/techrote/sandmapsreference/blob/693574b7afce437a4cb008bd2fa200f6256dcc87/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/astra-trial-001/setup.json"
+          },
+          "setup_sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab",
+          "plane_sha256": "ed459770f09de635d095bee5b4d3c41f9cef9005449efdbb6bef5126217a7ac3"
+        },
+        {
+          "logical_id": "trial-D1-original",
+          "neutral_label": "C",
+          "source": {
+            "commit": "598e8792b32a4922008b6d3dcb9208d21f03e477",
+            "git_blob_sha1": "32cc2ec5a4ed9fd3c423afb6332edfeadcc70310",
+            "path": "cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json",
+            "pr": 186,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+            "url": "https://github.com/techrote/sandmapsreference/blob/598e8792b32a4922008b6d3dcb9208d21f03e477/cybersand-canvases/1024x2048/portrait-obvious-orthant-rift-needle-261121/setup.json"
+          },
+          "setup_sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30",
+          "plane_sha256": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df"
+        }
+      ],
+      "changed_cells": 15807,
+      "exact_unchanged_control": false,
+      "site_count": 10,
+      "sites": [
+        {
+          "site": "01-west-clinic",
+          "world_xywh": [
+            58,
+            161,
+            402,
+            402
+          ],
+          "image": "collection/comparisons/case-07/detail-01.png",
+          "sha256": "3fd4cba891766453e22f82f58536b62a7ef37e960eb8347b7b67790891aba10f"
+        },
+        {
+          "site": "02-seismic-fork",
+          "world_xywh": [
+            578,
+            218,
+            375,
+            452
+          ],
+          "image": "collection/comparisons/case-07/detail-02.png",
+          "sha256": "b687e1750e972b73057d32a4433c354f09b7d804940726f8e9ba62092991819e"
+        },
+        {
+          "site": "03-ore-transfer",
+          "world_xywh": [
+            72,
+            752,
+            414,
+            447
+          ],
+          "image": "collection/comparisons/case-07/detail-03.png",
+          "sha256": "c95cc18b7853b7e68fad9569d5668083f41f1328b7bb1745b13704e36c03f711"
+        },
+        {
+          "site": "04-east-drill-bypass",
+          "world_xywh": [
+            574,
+            893,
+            377,
+            468
+          ],
+          "image": "collection/comparisons/case-07/detail-04.png",
+          "sha256": "9105ee776519229539e5bac67d0472d2f20d0b81c3db40d8b8444f9b31af455d"
+        },
+        {
+          "site": "05-quarantine",
+          "world_xywh": [
+            582,
+            1312,
+            370,
+            367
+          ],
+          "image": "collection/comparisons/case-07/detail-05.png",
+          "sha256": "96e287c992345d9397932c34e9b3b4b041c97cf3f133c9289fb6854824bb794c"
+        },
+        {
+          "site": "06-buried-archives",
+          "world_xywh": [
+            60,
+            1639,
+            888,
+            333
+          ],
+          "image": "collection/comparisons/case-07/detail-06.png",
+          "sha256": "deaddfeb524c84e928ac15439d3089333d802bb1323b0fa4f8fb98e446ce72d0"
+        },
+        {
+          "site": "10-high-crossing",
+          "world_xywh": [
+            330,
+            610,
+            370,
+            120
+          ],
+          "image": "collection/comparisons/case-07/detail-07.png",
+          "sha256": "e12e2c7f4f93cfe0145d048c24864d73d60134b262b8c2f2f65bb287c5870cba"
+        },
+        {
+          "site": "11-ore-stage",
+          "world_xywh": [
+            340,
+            1080,
+            350,
+            150
+          ],
+          "image": "collection/comparisons/case-07/detail-08.png",
+          "sha256": "1049faa98b502171dde1a05ecf95fcfaa41f2fb76b82e0d37cea94a14ee9b273"
+        },
+        {
+          "site": "12-low-broken-joint",
+          "world_xywh": [
+            330,
+            1600,
+            400,
+            180
+          ],
+          "image": "collection/comparisons/case-07/detail-09.png",
+          "sha256": "b8fbacbe3dc2431e076688348bfe1ee08190fcfb5e24ffbf22cd8832e1ff5f4a"
+        },
+        {
+          "site": "13-entered-drill-workface",
+          "world_xywh": [
+            650,
+            950,
+            310,
+            390
+          ],
+          "image": "collection/comparisons/case-07/detail-10.png",
+          "sha256": "6755a4e79e55be75a341b895f1d2bb9bee19615932212b25930904750324dbab"
+        }
+      ],
+      "status": "PASS_SOURCE_CUSTODY_ONLY"
+    },
+    {
+      "arm": "D2",
+      "frozen_decision": "REFERENCE_PREFERRED_OVERALL",
+      "owner_card_result": "Prior reworker reference preferred overall",
+      "owner_prompt": "Prior reference preference is a research result, not owner adoption. Compare all three native variants.",
+      "variants": [
+        {
+          "logical_id": "trial-D2-candidate",
+          "neutral_label": "A",
+          "source": {
+            "commit": "cd1e0192a709e54dc63681e00b0802716398ec1f",
+            "git_blob_sha1": "4bf7bfe69af74c6c945ee0f42fa0bce9072e34f9",
+            "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/astra-trial-001/setup.json",
+            "pr": 211,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+            "url": "https://github.com/techrote/sandmapsreference/blob/cd1e0192a709e54dc63681e00b0802716398ec1f/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/astra-trial-001/setup.json"
+          },
+          "setup_sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+          "plane_sha256": "f9fcc3c98c595c10a763a7319bf30edd0842de6f80033c46a55a97709deacd63"
+        },
+        {
+          "logical_id": "trial-D2-original",
+          "neutral_label": "B",
+          "source": {
+            "commit": "64fd7061385fd96e5673484e1a12a70e11333386",
+            "git_blob_sha1": "451b27d95e5f94620468628f81f1e9af58b51845",
+            "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json",
+            "pr": 196,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+            "url": "https://github.com/techrote/sandmapsreference/blob/64fd7061385fd96e5673484e1a12a70e11333386/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json"
+          },
+          "setup_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+          "plane_sha256": "ab4c2caa9ad05eb507197685c3cad25a47a7cd2d0068fe62ae6824956601de81"
+        },
+        {
+          "logical_id": "trial-D2-reference",
+          "neutral_label": "C",
+          "source": {
+            "commit": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+            "git_blob_sha1": "e35d3a1e1bbdb29f96ef12c54d6e3475766a77a0",
+            "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json",
+            "pr": 208,
+            "repo": "techrote/sandmapsreference",
+            "sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+            "url": "https://github.com/techrote/sandmapsreference/blob/94eccd23024254fbbfb02cd6cdfef8753dd89c3c/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json"
+          },
+          "setup_sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+          "plane_sha256": "f9c64051454650b49bd43f0164491a1c350938ea8cf83c6fd6fde3a1d88d5ca4"
+        }
+      ],
+      "changed_cells": 7692,
+      "exact_unchanged_control": false,
+      "site_count": 9,
+      "sites": [
+        {
+          "site": "01-entered-breached-ship",
+          "world_xywh": [
+            82,
+            308,
+            395,
+            362
+          ],
+          "image": "collection/comparisons/case-02/detail-01.png",
+          "sha256": "408cb2fc7182e9277fa3376ef85bb340ed294ac229d37494e24c6913df002492"
+        },
+        {
+          "site": "02-crane-magnet",
+          "world_xywh": [
+            528,
+            193,
+            418,
+            470
+          ],
+          "image": "collection/comparisons/case-02/detail-02.png",
+          "sha256": "5ad158b5920a7a0522bff417df0243723ee0df1f4c734c456b0d13119efb3445"
+        },
+        {
+          "site": "03-fractured-trestle-relay",
+          "world_xywh": [
+            80,
+            668,
+            864,
+            440
+          ],
+          "image": "collection/comparisons/case-02/detail-03.png",
+          "sha256": "c7f5415d5c604263131b90f70bfe374d98848a4423156e5da9425b7f6d4cd42a"
+        },
+        {
+          "site": "04-salvage-press",
+          "world_xywh": [
+            600,
+            1033,
+            344,
+            322
+          ],
+          "image": "collection/comparisons/case-02/detail-04.png",
+          "sha256": "4f653ea46d6c81e57709ce997116700af074170626ec58df2aa4056b7331aa7f"
+        },
+        {
+          "site": "05-customs-rail-grades",
+          "world_xywh": [
+            629,
+            1420,
+            315,
+            520
+          ],
+          "image": "collection/comparisons/case-02/detail-05.png",
+          "sha256": "57d7df910cbabb33aed35da01b5f709cf8c6bce652038cee64b8f03b637ecf34"
+        },
+        {
+          "site": "06-west-lower-return",
+          "world_xywh": [
+            82,
+            1665,
+            562,
+            310
+          ],
+          "image": "collection/comparisons/case-02/detail-06.png",
+          "sha256": "fb37ffbcae64aac602e5459aa9e3fe80f034473ac6f5b4531136390f0ccb83e5"
+        },
+        {
+          "site": "10-magnet-head",
+          "world_xywh": [
+            550,
+            530,
+            130,
+            125
+          ],
+          "image": "collection/comparisons/case-02/detail-07.png",
+          "sha256": "94a799efc48e98de0db0f02b8fbc17c696b9c71e92526fae920acd4c16fc5ca1"
+        },
+        {
+          "site": "11-compression-workface",
+          "world_xywh": [
+            750,
+            1080,
+            205,
+            235
+          ],
+          "image": "collection/comparisons/case-02/detail-08.png",
+          "sha256": "a5653c16fc066dd469f6da7a8fd596c6f9fba2d8156f55533cfe2b4a5610a1fb"
+        },
+        {
+          "site": "12-lower-fractures",
+          "world_xywh": [
+            310,
+            1325,
+            410,
+            215
+          ],
+          "image": "collection/comparisons/case-02/detail-09.png",
+          "sha256": "f5e733a118bfccd728866dc7dc239a08aa2f49c506b00ebeb86698e18a6d2539"
+        }
+      ],
+      "status": "PASS_SOURCE_CUSTODY_ONLY"
+    }
+  ],
+  "changed_cells_total": 34353,
+  "changed_cell_count_is_quality_score": false,
+  "exact_unchanged_controls": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "negative_evidence": {
+    "five_records_equal_frozen_corpus": true,
+    "all_explicitly_not_positive_examples": true,
+    "failed_attempt_custody_sha256": "aac1376d3efe8ba18868da29f5457e21c0cb3e5e8317e40f0411185be8aa8075",
+    "file_occurrences": 182,
+    "recovered_file_occurrences": 154,
+    "hash_only_missing_occurrences": 28,
+    "failed_setups_recovered": 3,
+    "failed_setups_unavailable": 2,
+    "limits": [
+      "B1 attempt 1 and B3 attempt 1 unique geometry has no surviving recovered bytes or fully specified inverse; no substitute invented",
+      "Derived B1/B3 operations metadata is not the author's original operations.json, although resulting Setup bytes match its frozen hash",
+      "Historical input-access and attempt-history logs are hash records only unless separately recovered",
+      "Reexecuted source-static failures do not claim native gameplay"
+    ]
+  },
+  "owner_dependent": [
+    "B3 high-speed flight readability and racing benefit",
+    "D1 preference with retained assessor disagreement",
+    "D2 owner preference despite historical reference preference",
+    "All final classifications and production adoption"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "goldmaps.linux-evidence-checkpoint.v1",
+  "archive": "linux-qualification-evidence.v1.zip",
+  "sha256": "48315c43022fa46580b7d2529f92420388ee980633daae3e046e83ec2ed65b88",
+  "archive_bytes": 804674,
+  "files": 207,
+  "uncompressed_bytes": 4591563,
+  "inventory_sha256": "c25a5bde897f4cddc34fc36c30e55b1882e64a9dbe7290d69fc01d92f67dc88a",
+  "zip_crc_pass": true,
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "godot_sha256": "f85bbc6b15e22416c7d797cd60b63286dd67b9cb13498847056c18520ae55a75",
+  "required_native_summary_sha256": "d82db7c288ede1b25a632192cb88fae638452b2c1de4f607fcac5fb962025c7a",
+  "required_native": {
+    "aliases_checked": 53,
+    "unique_setups_checked": 44,
+    "qualified_unique_setups": 42,
+    "verified_refused_unique_setups": 2,
+    "validation_pass": true,
+    "executed_source": {
+      "checkout_head": "d4eecf9ce7de759c9d8941c5c87b3e557e8e8385",
+      "files_match_commit": true,
+      "files": {
+        "tools/goldmaps_owner/qualification/run_native_collection.py": "9aae33a44d638f8f1c16aa329c433f947c6aab3a19fcb04896a1f20b7873b85f",
+        "tools/goldmaps_owner/qualification/native_probe.gd": "8e5af505f5ac7b04d62d6aa0a0155cd8fe470d5480dde116c294d6072edd7ee6",
+        "tools/goldmaps_owner/qualification/profile_probe.gd": "e9f6a5cd349d0c603fa043ea8a73f6a513abf22b0c06b5083545104ff75cdfbc",
+        "tools/goldmaps_owner/qualification/verify_payload.py": "41a4fc85fe52a43e63a8d19092852163d1f8d9e75a916e2a20c99227338fab28"
+      }
+    }
+  },
+  "product_summary_sha256": "7c2e4f55a8936ee96d68dd6c7effdafcf1326809f6f13e9260e9fb97812c3090",
+  "product_checks": 26,
+  "product_manifest_sha256": "4044f86bdc43fe4a2032e5d7ee6382fb5a0edd45da9f672ed8d4a092f1eeb78a",
+  "interrupted_evidence_preserved": true,
+  "owner_accepted": false,
+  "scope": "Linux headless custody/native/product evidence only; actual Windows package qualification and owner acceptance are separate."
+}

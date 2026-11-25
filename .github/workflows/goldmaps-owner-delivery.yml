@@ -1,0 +1,233 @@
+name: GOLDMAPS owner playable Windows delivery
+
+on:
+  push:
+    branches:
+      - delivery/goldmaps-owner-001-20261124
+    paths:
+      - .github/workflows/goldmaps-owner-delivery.yml
+      - tools/goldmaps_owner/integration/qualification-request.v1.json
+
+permissions:
+  contents: read
+  actions: read # Read only a source/hash-pinned prior qualification artifact when explicitly requested.
+
+# One explicitly requested campaign at a time. Documentation/source-only
+# follow-ups do not rerun the native population or cancel another programme.
+concurrency:
+  group: goldmaps-owner-delivery-001
+  cancel-in-progress: false
+
+jobs:
+  windows-owner-kit:
+    runs-on: windows-latest
+    timeout-minutes: 150
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Preserve exact committed map and source bytes
+        shell: pwsh
+        run: |
+          git config --global core.autocrlf false
+          git config --global core.eol lf
+
+      - name: Check out the exact additive delivery source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            .github/
+            tools/goldmaps_owner/
+            scripts/goldmaps_finalisation/
+            docs/corpus/goldmaps-recovery-001/
+            docs/corpus/goldmaps-finalisation-001/
+            docs/corpus/goldmaps-owner-delivery-001/
+
+      - name: Read only the accepted contemporary engine
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: techrote/cybersand
+          ref: 00cdb02f103265b6dc5224c68283e9a0c8cb449f
+          path: accepted-engine
+          persist-credentials: false
+          lfs: false
+          sparse-checkout: |
+            godot/
+            native/
+            tools/
+            third_party/
+            .github/
+
+      - name: Select Python for deterministic corpus and package tools
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+
+      - name: Install pinned static analysis dependencies
+        shell: pwsh
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 pillow==13.0.0 pyyaml==6.0.3
+          if ($LASTEXITCODE -ne 0) { throw 'Pinned corpus dependencies unavailable' }
+
+      - name: Verify hosted provider and bounded scheduling policy
+        shell: pwsh
+        run: |
+          python accepted-engine/tools/ci/check_ci_provider_policy.py --root .
+          if ($LASTEXITCODE -ne 0) { throw 'CI provider policy failed' }
+          python accepted-engine/tools/ci/check_ci_scheduling_policy.py --root . --output "$env:RUNNER_TEMP/goldmaps-ci-scheduling.json"
+          if ($LASTEXITCODE -ne 0) { throw 'CI scheduling policy failed' }
+          $inventory = Get-Content "$env:RUNNER_TEMP/goldmaps-ci-scheduling.json" -Raw | ConvertFrom-Json
+          if ($inventory.workflow_count -lt 1 -or -not ($inventory.workflows.file -contains '.github/workflows/goldmaps-owner-delivery.yml')) { throw 'Workflow policy scan did not inspect the actual delivery workflow' }
+
+      - name: Read explicit native evidence authority
+        id: native-authority
+        shell: pwsh
+        run: |
+          $request = Get-Content tools/goldmaps_owner/integration/qualification-request.v1.json -Raw | ConvertFrom-Json
+          if ($request.native_reuse) {
+            if ($request.native_reuse.source_head -notmatch '^[0-9a-f]{40}$') { throw 'Native source must be an exact commit' }
+            git fetch --no-tags --depth=1 origin $request.native_reuse.source_head
+            if ($LASTEXITCODE -ne 0) { throw 'Exact native source unavailable for independent committed-byte comparison' }
+            "enabled=true" >> $env:GITHUB_OUTPUT
+            "run_id=$($request.native_reuse.github_run_id)" >> $env:GITHUB_OUTPUT
+            "artifact_name=$($request.native_reuse.artifact_name)" >> $env:GITHUB_OUTPUT
+          } else {
+            "enabled=false" >> $env:GITHUB_OUTPUT
+          }
+
+      - name: Read the pinned actual predecessor kit for product-only continuation
+        if: steps.native-authority.outputs.enabled == 'true'
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.native-authority.outputs.run_id }}
+          name: ${{ steps.native-authority.outputs.artifact_name }}
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/goldmaps-native-predecessor
+
+      - name: Build qualify archive and freshly extract the actual owner kit
+        shell: pwsh
+        env:
+          GOLDMAPS_TEST_SOURCE_HEAD: ${{ github.sha }}
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          $reuseArguments = @()
+          if (Test-Path "$env:RUNNER_TEMP/goldmaps-native-predecessor/campaign.json") {
+            $reuseArguments = @('--reuse-native-artifact', "$env:RUNNER_TEMP/goldmaps-native-predecessor")
+          }
+          python tools/goldmaps_owner/integration/run_campaign.py --engine accepted-engine --out "$env:RUNNER_TEMP/goldmaps-owner-delivery" --source-head $env:GITHUB_SHA @reuseArguments
+          if ($LASTEXITCODE -ne 0) { throw 'Owner delivery did not complete; preserve actual negative receipts' }
+
+      - name: Publish actual playable ZIP and exact reconstruction fallback
+        if: success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: GOLDMAPS-Owner-Playable-Windows-${{ github.sha }}
+          path: ${{ runner.temp }}/goldmaps-owner-delivery/artifacts/*
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 90
+
+      - name: Preserve all executed evidence including any failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: GOLDMAPS-Owner-Windows-Evidence-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/goldmaps-owner-delivery/evidence/**
+            ${{ runner.temp }}/goldmaps-ci-scheduling.json
+          if-no-files-found: warn
+          compression-level: 6
+          retention-days: 90
+
+
+  independent-published-artifact-review:
+    needs: windows-owner-kit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Read exact reviewer and source inputs
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            tools/goldmaps_owner/
+            scripts/goldmaps_finalisation/
+            docs/corpus/goldmaps-owner-delivery-001/
+      - name: Select Python for independent archive inspection
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Read the explicit predecessor authority
+        id: predecessor
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          request = json.loads(Path("tools/goldmaps_owner/integration/qualification-request.v1.json").read_text())
+          prior = request["native_reuse"]
+          subprocess.run(["git", "fetch", "--no-tags", "--depth=1", "origin", prior["source_head"]], check=True)
+          with open(os.environ["GITHUB_OUTPUT"], "a") as stream:
+              stream.write("run_id=" + str(prior["github_run_id"]) + "\n")
+              stream.write("artifact_name=" + prior["artifact_name"] + "\n")
+          PY
+      - name: Download the actual newly published playable artifact
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: GOLDMAPS-Owner-Playable-Windows-${{ github.sha }}
+          path: ${{ runner.temp }}/published-owner-kit
+      - name: Download the pinned actual native predecessor
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          repository: ${{ github.repository }}
+          run-id: ${{ steps.predecessor.outputs.run_id }}
+          name: ${{ steps.predecessor.outputs.artifact_name }}
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/published-native-predecessor
+      - name: Audit both actual downloaded archives and executed receipt authorities
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, subprocess, sys
+          from pathlib import Path
+          root = Path.cwd()
+          temp = Path(os.environ["RUNNER_TEMP"])
+          request = json.loads((root / "tools/goldmaps_owner/integration/qualification-request.v1.json").read_text())
+          prior = request["native_reuse"]
+          report = temp / "published-owner-review" / "independent-published-artifact-review.v1.json"
+          report.parent.mkdir()
+          subprocess.run([sys.executable, str(root / "tools/goldmaps_owner/qualification/review_final_artifact.py"),
+              "--artifact-dir", str(temp / "published-owner-kit"),
+              "--source-head", os.environ["GITHUB_SHA"], "--run-id", os.environ["GITHUB_RUN_ID"],
+              "--native-artifact-dir", str(temp / "published-native-predecessor"),
+              "--native-source-head", prior["source_head"], "--native-run-id", str(prior["github_run_id"]),
+              "--native-archive-sha256", prior["archive_sha256"], "--source-repo", str(root),
+              "--out", str(report)], check=True)
+          PY
+      - name: Expose exact captured pixels for independent remote visual inspection
+        shell: bash
+        run: |
+          python tools/goldmaps_owner/integration/emit_review_artifacts.py --artifact-dir "$RUNNER_TEMP/published-owner-kit" --report "$RUNNER_TEMP/published-owner-review/independent-published-artifact-review.v1.json" --mode images
+      - name: Expose exact durable reconstruction and decision packet inputs
+        shell: bash
+        run: |
+          python tools/goldmaps_owner/integration/emit_review_artifacts.py --artifact-dir "$RUNNER_TEMP/published-owner-kit" --report "$RUNNER_TEMP/published-owner-review/independent-published-artifact-review.v1.json" --mode handoff
+      - name: Preserve the independent published artifact review
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: GOLDMAPS-Owner-Published-Artifact-Review-${{ github.sha }}
+          path: ${{ runner.temp }}/published-owner-review/*
+          if-no-files-found: warn
+          compression-level: 6
+          retention-days: 90

@@ -1,0 +1,65 @@
+{
+  "schema": "goldmaps.windows-first-refusal-custody.v1",
+  "status": "SOURCE_BYTE_INTEGRITY_REFUSAL_BEFORE_NATIVE",
+  "repository": "techrote/sandmapsreference",
+  "run_id": "45481057262",
+  "run_url": "https://github.com/techrote/sandmapsreference/actions/runs/45481057262",
+  "source_head": "0d896cb6ffc48cd8ba0bdc272428dc4db07048ba",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "downloaded_artifact": {
+    "path": "original-artifact.zip",
+    "bytes": 2701,
+    "sha256": "fd47afa07d5457e4fbe9203c2cd1c87188030d1287c1c50509f507a1952da8fc",
+    "crc_verified": true,
+    "files": 5,
+    "acquisition": "Lead downloaded the original GitHub evidence artifact; Specialist C independently verified and preserved its exact archive and all five member bytes."
+  },
+  "files": [
+    {
+      "archive_path": "goldmaps-owner-delivery/evidence/runtime-acquisition.log",
+      "repository_path": "docs/corpus/goldmaps-owner-delivery-001/qualification/windows-initial-refusal/raw/goldmaps-owner-delivery/evidence/runtime-acquisition.log",
+      "bytes": 175,
+      "sha256": "ffbd6862bc9691f26be7a306af7ed0ad97b466dc911b438b7439448be13d3676",
+      "original_bytes_preserved": true
+    },
+    {
+      "archive_path": "goldmaps-owner-delivery/evidence/runtime-acquisition.process.json",
+      "repository_path": "docs/corpus/goldmaps-owner-delivery-001/qualification/windows-initial-refusal/raw/goldmaps-owner-delivery/evidence/runtime-acquisition.process.json",
+      "bytes": 158,
+      "sha256": "566b80c901d852daab00052a56f0589ec7e866da82fc026b21c14dcf36806409",
+      "original_bytes_preserved": true
+    },
+    {
+      "archive_path": "goldmaps-owner-delivery/evidence/stage-engine.log",
+      "repository_path": "docs/corpus/goldmaps-owner-delivery-001/qualification/windows-initial-refusal/raw/goldmaps-owner-delivery/evidence/stage-engine.log",
+      "bytes": 448,
+      "sha256": "8f6a68b8072a69f22fd7946485f799e02205bbef82e9fe37b0f4a6aecfe1bae3",
+      "original_bytes_preserved": true
+    },
+    {
+      "archive_path": "goldmaps-owner-delivery/evidence/stage-engine.process.json",
+      "repository_path": "docs/corpus/goldmaps-owner-delivery-001/qualification/windows-initial-refusal/raw/goldmaps-owner-delivery/evidence/stage-engine.process.json",
+      "bytes": 151,
+      "sha256": "6045851117866b93d0ebdbf5bc465ffaf2c6123a5341c17fd252bde5c00ea877",
+      "original_bytes_preserved": true
+    },
+    {
+      "archive_path": "goldmaps-ci-scheduling.json",
+      "repository_path": "docs/corpus/goldmaps-owner-delivery-001/qualification/windows-initial-refusal/raw/goldmaps-ci-scheduling.json",
+      "bytes": 6594,
+      "sha256": "3ebc572468e16374e46d1df94b8e716b6d63a90d42e2eb09c573f3b5de84f4aa",
+      "original_bytes_preserved": true
+    }
+  ],
+  "observed": {
+    "runtime_acquisition_exit_code": 0,
+    "runtime_acquisition_scope": "Nine source-bound Windows dependency files acquired and hash-verified; no native map execution inferred",
+    "stage_engine_exit_code": 1,
+    "refused_path": "godot/.godot/.gdignore",
+    "error": "Engine file differs from committed source: godot/.godot/.gdignore",
+    "native_maps_executed": 0
+  },
+  "correction_review": "../windows-eol-review.v1.json",
+  "correction": "Set core.eol=lf as well as core.autocrlf=false before both source checkouts; retain exact Git blob comparisons. No native, map, scientific or verifier semantics changed.",
+  "owner_accepted": false
+}

@@ -1,0 +1,273 @@
+{
+  "name": "portrait",
+  "map_id": "gold-197",
+  "purpose": "Portrait Gold nominee and unchanged Astra control source",
+  "requested_ui_action": null,
+  "requested_ui_map_id": null,
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "delivery_source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "source": {
+    "commit": "3b0253d387578bda3af00a6edc97833219df64a9",
+    "git_blob_sha1": "280b63cf36c58df9f2c22e2c25142204cc48f004",
+    "path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+    "pr": 197,
+    "repo": "techrote/sandmapsreference",
+    "sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+    "url": "https://github.com/techrote/sandmapsreference/blob/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json"
+  },
+  "derived_source": null,
+  "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+  "material_plane_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+  "launcher": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd",
+  "command": "\"C:\\Windows\\system32\\cmd.exe\" /d /s /c \"\"D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\Open GOLDMAPS.cmd\"\"",
+  "headless": false,
+  "started_utc": "2026-11-24T22:29:06.530471+00:00",
+  "status": "CAPTURED",
+  "product_defect": false,
+  "captures": [
+    {
+      "active_collection": "gold25",
+      "display_driver": "Windows",
+      "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+      "initial_gallery_layout": {
+        "first_item_bounds_local": [
+          4.0,
+          4.0,
+          396.0,
+          221.0
+        ],
+        "map_count": 25,
+        "map_list_bounds": [
+          24.0,
+          289.0,
+          412.0,
+          261.0
+        ],
+        "map_list_visible": true,
+        "navigation_bounds": [
+          24.0,
+          560.0,
+          412.0,
+          39.0
+        ],
+        "viewport_size": [
+          992.0,
+          656.0
+        ],
+        "visible_popup_titles": []
+      },
+      "path": "portrait-gallery.png",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "schema": "goldmaps.browser-graphical.v1",
+      "scope": "actual hosted rendered UI; physical owner GPU acceptance not inferred",
+      "selected_id": "gold-197",
+      "selected_setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "sha256": "8c0fbfc229d8635918b9c649b6a904b561ce785bbe26ade15207262a4e7474dc",
+      "view_kind": "gallery",
+      "viewport": "(992.0, 656.0)",
+      "visible_maps": 25,
+      "original_portable_path": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\userdata\\qa\\browser.png",
+      "bytes": 96831,
+      "width": 992,
+      "height": 656
+    },
+    {
+      "capture_size": [
+        992,
+        656
+      ],
+      "captured_at": "2026-11-24T22:29:37Z",
+      "content_scale_size": [
+        992,
+        656
+      ],
+      "display_driver": "Windows",
+      "kind": "actual rendered Workbench viewport",
+      "path": "portrait-workbench.png",
+      "physical_owner_acceptance": "not_inferred",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)",
+      "sha256": "54b2de3ed1361c1dbda40c5e535a101995659d1698aa0bf6b5a51a294def7b2d",
+      "viewport_size": [
+        992,
+        656
+      ],
+      "window_position": [
+        16,
+        32
+      ],
+      "window_size": [
+        992,
+        656
+      ],
+      "original_portable_path": "D:\\a\\_temp\\goldmaps-owner-delivery\\work\\Goldmaps Owner Evaluation\\userdata\\reviews\\screenshots\\gold-197-20261124T222914-90ba00-21381.png",
+      "bytes": 128502,
+      "width": 992,
+      "height": 656
+    }
+  ],
+  "launcher_process_id": 8832,
+  "exit_code": 0,
+  "timeout": false,
+  "seconds": 39.781,
+  "new_session_count": 1,
+  "native_session": {
+    "session_id": "gold-197-20261124T222914-90ba00",
+    "process_id": 6428,
+    "native_load": {
+      "acknowledged_epoch": 1,
+      "actors": [
+        {
+          "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+          "id": 1,
+          "model": "midge",
+          "options": {
+            "boost_multiplier": 1.8,
+            "budget": 20.0,
+            "inertia_multiplier": 1.0,
+            "mass_multiplier": 1.0,
+            "thrust_multiplier": 1.0,
+            "torque_multiplier": 1.0
+          },
+          "spawn": [
+            132.0,
+            350.0
+          ]
+        }
+      ],
+      "actors_adopted": [
+        {
+          "id": 1,
+          "model": "midge"
+        }
+      ],
+      "expected_material_plane_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+      "extent": [
+        1024,
+        2048
+      ],
+      "full_grid_match": true,
+      "material_plane_sha256": "1beba906b4087df0ba337d8efeda561b32bfcddc6b6b65bec6c36ac8f8edc58a",
+      "native_image_format": 3,
+      "native_image_storage_sha256": "72208ad9c7979fa5b8a21ea9a65156b9581f09380f7b096d8c017c0f4967f2e9",
+      "native_tick": 0,
+      "ordinary_workbench": true,
+      "worker_failed": false
+    },
+    "qa_lifecycle": {
+      "actor_composition_opened": true,
+      "cancel_preserved_same_world": true,
+      "close_warning_visible": true,
+      "existing_name_refused": true,
+      "flatten_guard": {
+        "authored_setup_unchanged": true,
+        "material_baseline_unchanged": true,
+        "no_flatten_pending": true,
+        "same_world_epoch": true,
+        "warning_visible": true
+      },
+      "ordinary_replacement_controls": [
+        {
+          "action": "Load start",
+          "cancel_preserved_same_world": true,
+          "warning_before_replacement": true
+        },
+        {
+          "action": "New blank",
+          "cancel_preserved_same_world": true,
+          "warning_before_replacement": true
+        },
+        {
+          "action": "New from generator…",
+          "cancel_preserved_same_world": true,
+          "warning_before_replacement": true
+        },
+        {
+          "action": "Load / reset scene",
+          "cancel_preserved_same_world": true,
+          "warning_before_replacement": true
+        },
+        {
+          "action": "Load liquid-lab",
+          "cancel_preserved_same_world": true,
+          "warning_before_replacement": true
+        },
+        {
+          "action": "Load reservoir-lab",
+          "cancel_preserved_same_world": true,
+          "warning_before_replacement": true
+        },
+        {
+          "action": "Mixed Actor Workshop",
+          "cancel_preserved_same_world": true,
+          "warning_before_replacement": true
+        }
+      ],
+      "ordinary_save_attribution": {
+        "existing_name_button_refused": true,
+        "foreign_file_sha256_unchanged": true,
+        "foreign_label": "qa-foreign-db84816d002330af",
+        "foreign_setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "foreign_source_map_id": "gold-150",
+        "keyboard_label": "qa-keyboard-c0d675c25b7ab98f",
+        "keyboard_new_label_saved": true,
+        "ordinary_button_label": "qa-button-4668a7e37c7acef8",
+        "ordinary_button_new_label_saved": true,
+        "receipt_count_before_typing": 1,
+        "reserved_after_sha256": "",
+        "reserved_before_sha256": "",
+        "reserved_label": "GM-SOURCE-7ec7f34816e66bb1f384",
+        "scope": "Exact foreign-source bytes in an isolated developer fixture; actual ordinary Save button and dispatched Ctrl+S event; no physical keyboard claim",
+        "typing_existing_name_did_not_register": true,
+        "typing_existing_name_left_banner": true,
+        "uppercase_reserved_name_refused": true
+      },
+      "return_copy_label": "qa-return-bd375dd3d7493663",
+      "save_and_return_dialog_visible": true,
+      "saved_copy_sha256_unchanged": true,
+      "scope": "Programmatic execution of actual UI button handlers; no physical input or graphical acceptance inferred"
+    },
+    "saved_copies": [
+      {
+        "label": "eval-gold-197-20261124-222935",
+        "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-eval-gold-197-20261124-222935.json",
+        "saved_at": "2026-11-24T22:29:37Z",
+        "semantics": "authored starting layout; current dynamic state is not serialized",
+        "sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0"
+      },
+      {
+        "label": "qa-button-4668a7e37c7acef8",
+        "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-button-4668a7e37c7acef8.json",
+        "saved_at": "2026-11-24T22:29:44Z",
+        "semantics": "authored starting layout; current dynamic state is not serialized",
+        "sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0"
+      },
+      {
+        "label": "qa-keyboard-c0d675c25b7ab98f",
+        "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-keyboard-c0d675c25b7ab98f.json",
+        "saved_at": "2026-11-24T22:29:44Z",
+        "semantics": "authored starting layout; current dynamic state is not serialized",
+        "sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0"
+      },
+      {
+        "label": "qa-return-bd375dd3d7493663",
+        "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-return-bd375dd3d7493663.json",
+        "saved_at": "2026-11-24T22:29:45Z",
+        "semantics": "authored starting layout; current dynamic state is not serialized",
+        "sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0"
+      }
+    ],
+    "godot_version": {
+      "build": "official",
+      "hash": "5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+      "hex": 263936,
+      "major": 4,
+      "minor": 7,
+      "patch": 0,
+      "status": "stable",
+      "string": "4.7-stable (official)",
+      "timestamp": 0
+    },
+    "user_data_dir": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox"
+  },
+  "scope": "Actual hosted rendered viewport and source-bound execution; no physical NVIDIA, subjective flight-speed or owner classification acceptance"
+}

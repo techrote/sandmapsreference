@@ -1,0 +1,124 @@
+{
+  "schema": "goldmaps.independent-synthetic-controls.v1",
+  "source_head": "8f5d6f8774601180fc520e68191fff59a6d40415",
+  "executed_by": "Specialist C independent assurance",
+  "process_exit_code": 0,
+  "godot_sha256": "f85bbc6b15e22416c7d797cd60b63286dd67b9cb13498847056c18520ae55a75",
+  "source_files": {
+    "tools/goldmaps_owner/product/session/session.gd": "7bee9de8aa89097dc24444da689c833ca458941fb4f0859f5cb9022a5f9d4ae4",
+    "tools/goldmaps_owner/product/session/session_controls.gd": "a766a37d1df2f483392043c95e422991250cfe2f7d48f341eb3e0479ae035ad9",
+    "tools/goldmaps_owner/product/test_session_controls.gd": "6a60a1af5d6957c07d3654271df0d9b6fdfd1e0ca13d877d29b2a923ed15adf4",
+    "tools/goldmaps_owner/product/package_io.gd": "c87d2a1165a8e18303a40bd685accc11d1eec4161d545de43dcd2265b1df99f7"
+  },
+  "adaptation": "Only three res://goldmaps preload/extends paths were redirected to these exact temporary source copies. Accepted Workbench Setup and native dependencies unchanged.",
+  "adapted_files": {
+    "package_io.gd": "c87d2a1165a8e18303a40bd685accc11d1eec4161d545de43dcd2265b1df99f7",
+    "test_session_controls.gd": "454a885aecca0c5e5dac2caaa230a1f3c9a4fcb602ef700393e0d1d99f6dd686",
+    "session_controls.gd": "a766a37d1df2f483392043c95e422991250cfe2f7d48f341eb3e0479ae035ad9",
+    "session.gd": "f4be5341879a9d17af7aa4c491605d442ca7b4a83b8014c174bed67f34f12b82"
+  },
+  "log_sha256": "027681489691a72ee1ba9f0aa0e59759132e41433f155b9b1803dce4b61d6fc4",
+  "summary": {
+    "checks": [
+      {
+        "name": "lazy Actor Composition replacement is guarded",
+        "pass": true
+      },
+      {
+        "name": "Load start warns before replacement",
+        "pass": true
+      },
+      {
+        "name": "Load start Cancel retains the synthetic owner",
+        "pass": true
+      },
+      {
+        "name": "New blank warns before replacement",
+        "pass": true
+      },
+      {
+        "name": "New blank Cancel retains the synthetic owner",
+        "pass": true
+      },
+      {
+        "name": "New from generator\u2026 warns before replacement",
+        "pass": true
+      },
+      {
+        "name": "New from generator\u2026 Cancel retains the synthetic owner",
+        "pass": true
+      },
+      {
+        "name": "Load / reset scene warns before replacement",
+        "pass": true
+      },
+      {
+        "name": "Load / reset scene Cancel retains the synthetic owner",
+        "pass": true
+      },
+      {
+        "name": "Load liquid-lab warns before replacement",
+        "pass": true
+      },
+      {
+        "name": "Load liquid-lab Cancel retains the synthetic owner",
+        "pass": true
+      },
+      {
+        "name": "Load reservoir-lab warns before replacement",
+        "pass": true
+      },
+      {
+        "name": "Load reservoir-lab Cancel retains the synthetic owner",
+        "pass": true
+      },
+      {
+        "name": "Mixed Actor Workshop warns before replacement",
+        "pass": true
+      },
+      {
+        "name": "Mixed Actor Workshop Cancel retains the synthetic owner",
+        "pass": true
+      },
+      {
+        "name": "Flatten is a visible non-mutating limitation",
+        "pass": true
+      },
+      {
+        "name": "typing an existing foreign label creates no receipt",
+        "pass": true
+      },
+      {
+        "name": "ordinary Save protects a pre-existing name",
+        "pass": true
+      },
+      {
+        "name": "ordinary Save invokes the save implementation once",
+        "pass": true
+      },
+      {
+        "name": "Ctrl+S invokes protected save once",
+        "pass": true
+      },
+      {
+        "name": "Ctrl+S retains Paint Editor eligibility",
+        "pass": true
+      },
+      {
+        "name": "unsuccessful ordinary save creates no receipt",
+        "pass": true
+      },
+      {
+        "name": "closing with a foreign label creates no receipt",
+        "pass": true
+      }
+    ],
+    "passed": 23,
+    "schema": "goldmaps.synthetic-control-review.v1",
+    "scope": "Actual additive callbacks with synthetic Workbench; no native World, map admission or graphical claim",
+    "total": 23,
+    "validation": true
+  },
+  "scope": "Actual additive callbacks with a synthetic Workbench; native extensions initialize, but no native World/map admission/movement or graphical acceptance is claimed.",
+  "owner_accepted": false
+}

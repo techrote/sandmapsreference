@@ -1,0 +1,118 @@
+{
+  "schema": "goldmaps.independent-consumer-review.v1",
+  "reviewer": {
+    "role": "Specialist B / product engineering",
+    "identity": "/root/product",
+    "independence": "Reviewed Specialist A corpus/export lane; not a different human assessor"
+  },
+  "reviewed_collection_manifest_sha256": "6b1ee6ba8c51f123bb75c7b822752adbe79bfb9e1e5667db7137d20ab08cc71e",
+  "reviewed_knowledge_sha256": "a49c8959f852015333b4a367e6b732a8fedfc7d01737118668758b14a01d21e4",
+  "reviewed_source_fix_commit": "301f1991e6d91c26df6599e66c0c6054ce0d319a",
+  "lineage_preview_sha256": "e371f9c9d60b4a2d0de0f40e53f714d352c90c152aa98818717661c1c1d68eb1",
+  "checks": [
+    {
+      "check": "offline strict fragment validation",
+      "result": "PASS",
+      "files": 263,
+      "bytes": 63802215,
+      "logical_aliases": 81,
+      "source_maps": 70,
+      "unique_setup_payloads": 72,
+      "owner_accepted": 0
+    },
+    {
+      "check": "literal metadata query fault",
+      "result": "PASS",
+      "matches": 32,
+      "meaning": "reference retrieval only; no quality score"
+    },
+    {
+      "check": "independent source-static replay gold-125",
+      "result": "PASS",
+      "cells": 2097152,
+      "plane_sha256": "de56ecc67744576902ff681768932747cf291608b89adc5078730fc2bfc3f9a3",
+      "native_execution": false
+    },
+    {
+      "check": "exact P185-CROSSBANK-ASSAY crop retrieval",
+      "result": "PASS",
+      "sha256": "cb9fad4fe4171f5bebc7940f11f7d9b3c1b8676d915da9b380248a149c26a569",
+      "coordinate_window_xywh": [
+        240,
+        739,
+        563,
+        446
+      ],
+      "verified_feature_bbox_xyxy": null,
+      "edit_mask": false
+    },
+    {
+      "check": "all eight additive Astra lineage source and material identities",
+      "result": "PASS",
+      "cases": 8,
+      "all_variant_collection_sources_match": true
+    },
+    {
+      "check": "existing visual-family labels retained for all source maps",
+      "result": "PASS",
+      "maps": 70
+    },
+    {
+      "check": "D1 ancestry closure 177/186/203/214",
+      "result": "PASS"
+    },
+    {
+      "check": "D2 ancestry closure 124/196/208/211",
+      "result": "PASS"
+    },
+    {
+      "check": "uint8 corpus vs uint16 module boundary",
+      "result": "PASS_DOCUMENTED",
+      "native_module_admission_claim": false
+    },
+    {
+      "check": "negative evidence and owner authority",
+      "result": "PASS_DOCUMENTED",
+      "negative_interventions": 5,
+      "missing_failed_occurrences": 28,
+      "automatic_owner_adoption": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "material",
+      "finding": "The prior v3 export gave Astra candidates standalone visual-family groups and no experiment relationships, allowing parent/derivative split in future holdouts.",
+      "resolution": "Source fix301f199 adds eight immutable-source experiment relationships and conservative ancestry closure, preserves old groups, propagates groups to semantic module hints, and validates all variant source/plane identities.",
+      "status": "SOURCE_FIX_INDEPENDENTLY_VERIFIED"
+    }
+  ],
+  "disposition": "PASS_REVIEWED_SOURCE_AND_GENERATED_FRAGMENT; final published artifact remains a separate gate",
+  "limits": [
+    "This is a machine specialist cross-review, not a distinct human assessment.",
+    "No artistic preference or frozen adjudication is changed.",
+    "No source-static replay is counted as native gameplay.",
+    "Final rendered UI, Windows executable archive, actual downstream consumer import and physical owner acceptance are separate evidence gates."
+  ],
+  "final_generated_fragment_review": {
+    "result": "PASS",
+    "manifest_sha256": "f51f8bdb47f1588a490a86677300bba56ec66f66cf804eaa385580455f29d9f1",
+    "knowledge_sha256": "1d325cc4586a8a413f9f2a91773330375a54f8e38e8b6c0d6ee97f7d43bb8a73",
+    "files": 267,
+    "bytes": 64102781,
+    "logical_aliases": 81,
+    "source_maps": 70,
+    "unique_setup_payloads": 72,
+    "owner_accepted": 0,
+    "eight_lineage_source_and_plane_joins": true,
+    "D1_D2_closed_groups": true,
+    "failed_custody_frozen_bytes_exact": true,
+    "failed_custody_sha256": "aac1376d3efe8ba18868da29f5457e21c0cb3e5e8317e40f0411185be8aa8075",
+    "failed_occurrence_states": {
+      "RECOVERED_BYTE_IDENTICAL_SHARED": 123,
+      "RECONSTRUCTED_EXACT_FROZEN_BYTES": 31,
+      "UNRECOVERED_HASH_RECORD_ONLY": 28
+    },
+    "comparison_guide_sha256": "b111be39256d5a49e39b7a28416aa344d4c83881e99bbf3ccae68c26e9adf2f3",
+    "scope": "Actual final source-review fragment; final published archive remains separate"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "goldmaps.owner-native-inputs.v1",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "scientific_engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "counts": {
+    "logical_aliases": 3,
+    "unique_setups": 3
+  },
+  "records": [
+    {
+      "extent": [
+        1024,
+        2048
+      ],
+      "head": "e0742d30dec30cf48d002abdbc1973928dcc9388",
+      "id": "corpus-188",
+      "material_plane_sha256": "d839766373ef4e7a964ede02298118ff4c0de2b4a0d96fcde4c0ec8e73d3b6fd",
+      "package_path": "collection/setups/2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420.json",
+      "path": "cybersand-canvases/1024x2048/portrait-obvious-mireward-lanternwell-261121/setup.json",
+      "pr": 188,
+      "roles": [
+        "corpus-reference"
+      ],
+      "setup_bytes": 6526,
+      "setup_sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/e0742d30dec30cf48d002abdbc1973928dcc9388/cybersand-canvases/1024x2048/portrait-obvious-mireward-lanternwell-261121/setup.json",
+      "contact_probe_tick_limit": 1800
+    },
+    {
+      "extent": [
+        1024,
+        2048
+      ],
+      "head": "54be92a43375f1089508dd610bbfdce0f6af74d2",
+      "id": "corpus-189",
+      "material_plane_sha256": "b19c8c358dd33e7a6aac284eedbea0503dbe54f62bae67953681684ad2c6bc1d",
+      "package_path": "collection/setups/32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b.json",
+      "path": "cybersand-canvases/1024x2048/portrait-obvious-nadirspan-deep-hanger-furnace-shaft-261121/setup.json",
+      "pr": 189,
+      "roles": [
+        "corpus-reference"
+      ],
+      "setup_bytes": 20818,
+      "setup_sha256": "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/54be92a43375f1089508dd610bbfdce0f6af74d2/cybersand-canvases/1024x2048/portrait-obvious-nadirspan-deep-hanger-furnace-shaft-261121/setup.json",
+      "contact_probe_tick_limit": 1800
+    },
+    {
+      "extent": [
+        1024,
+        2048
+      ],
+      "head": "101203a124f0ee3ac5613d38956e72f0faae8685",
+      "id": "corpus-192",
+      "material_plane_sha256": "30c6668a34341b172d231e4d257175a76b35b314e15dfb468a218d4970c56397",
+      "package_path": "collection/setups/752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08.json",
+      "path": "cybersand-canvases/1024x2048/portrait-moderate-spindlebreak-switchback-trestleworks-261121/setup.json",
+      "pr": 192,
+      "roles": [
+        "corpus-reference"
+      ],
+      "setup_bytes": 21244,
+      "setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/101203a124f0ee3ac5613d38956e72f0faae8685/cybersand-canvases/1024x2048/portrait-moderate-spindlebreak-switchback-trestleworks-261121/setup.json",
+      "contact_probe_tick_limit": 1800
+    }
+  ],
+  "source_static_contact_targets": {
+    "corpus-188": {
+      "setup_sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420",
+      "material_plane_sha256": "d839766373ef4e7a964ede02298118ff4c0de2b4a0d96fcde4c0ec8e73d3b6fd",
+      "x": 505,
+      "first_hard_y": 1923,
+      "material_id": 68
+    },
+    "corpus-189": {
+      "setup_sha256": "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b",
+      "material_plane_sha256": "b19c8c358dd33e7a6aac284eedbea0503dbe54f62bae67953681684ad2c6bc1d",
+      "x": 528,
+      "first_hard_y": 1958,
+      "material_id": 100
+    },
+    "corpus-192": {
+      "setup_sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08",
+      "material_plane_sha256": "30c6668a34341b172d231e4d257175a76b35b314e15dfb468a218d4970c56397",
+      "x": 495,
+      "first_hard_y": 1980,
+      "material_id": 100
+    }
+  },
+  "source_static_audit": {
+    "path": "docs/corpus/goldmaps-owner-delivery-001/corpus/optional-contact-static-assessment.v1.json",
+    "sha256": "be2e6a3e663a209b076660c955bf9986e04d185e6a9e18ae3b34ff40e4b6b79e"
+  },
+  "prior_input": {
+    "path": "collection/native-inputs-optional.v1.json",
+    "sha256": "f7878d26fad25946d63f1c046c01d2674fdadd6594eae56bd123360500067a86"
+  },
+  "scope": "Separate full load/movement/contact/save/reopen observation for exactly three unchanged portraits. Only the supported gravity contact budget changes from 900 to 1800 ticks. Original no-contact receipts remain immutable; geometry, actors, policy, probes and acceptance gates do not change."
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "goldmaps.owner-native-environment-interruption.v1",
+  "status": "ENVIRONMENT_INTERRUPTED",
+  "recorded_utc": "2026-11-24T20:33:31.028968+00:00",
+  "source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "manifest_sha256": "4044f86bdc43fe4a2032e5d7ee6382fb5a0edd45da9f672ed8d4a092f1eeb78a",
+  "inputs": "collection/native-inputs-optional.v1.json",
+  "jobs": 1,
+  "runner_interrupted_exit_code": 130,
+  "observed": "Serial native child processes exited SIGKILL(-9) shortly after Godot/Rapier initialization, without native probe receipts. The owner campaign was interrupted rather than repeating all28 under this condition.",
+  "cause": "External resource termination suspected from shared memory pressure; no kernel OOM event log was available in this environment.",
+  "map_defect_established": false,
+  "native_pass_established": false,
+  "native_policy_refusal_established": false,
+  "static_stage_modified": false,
+  "prior_interrupted_campaign_preserved": true,
+  "records": [
+    {
+      "id": "corpus-105",
+      "setup_sha256": "920cc181645fe2069fc12dc94bba431afd7b71da6a11a2ccd983b7ecbef5894f",
+      "receipt_file": "corpus-105.receipt.json",
+      "receipt_sha256": "732a557da2e5c6a357b06c0d75583357d7664d54053aaa4fc0e5476a970cd7fd",
+      "load_exit_code": -9,
+      "load_timeout": false,
+      "seconds": 5.587,
+      "log_sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8",
+      "native_receipt_present": false
+    },
+    {
+      "id": "corpus-108",
+      "setup_sha256": "2d3cea1e31caf4733b3d716c8cd3daab498d201a98b0b19c8dc221bac7c37400",
+      "receipt_file": "corpus-108.receipt.json",
+      "receipt_sha256": "0ec1519c9ad1ecb6b9d1baba72addb742aa069bd445cee131822170fc4347382",
+      "load_exit_code": -9,
+      "load_timeout": false,
+      "seconds": 4.631,
+      "log_sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8",
+      "native_receipt_present": false
+    },
+    {
+      "id": "corpus-115",
+      "setup_sha256": "03fe485c3b44c350da03855f83d397937f170408213863f1b69dc98a2d09a672",
+      "receipt_file": "corpus-115.receipt.json",
+      "receipt_sha256": "fe9697e28f3895cfa33cc02a4576909e5e27f441c6b10b82a2f61df325186646",
+      "load_exit_code": -9,
+      "load_timeout": false,
+      "seconds": 5.059,
+      "log_sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8",
+      "native_receipt_present": false
+    },
+    {
+      "id": "corpus-116",
+      "setup_sha256": "98c5b49c0006e0a89d30271e9b53ef8071a740b83403fc97b7293e15a76800cc",
+      "receipt_file": "corpus-116.receipt.json",
+      "receipt_sha256": "054f4af7af1c01dcc0c93cca32a0d9170472e68033ec6f166237874481ce50eb",
+      "load_exit_code": -9,
+      "load_timeout": false,
+      "seconds": 5.282,
+      "log_sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8",
+      "native_receipt_present": false
+    },
+    {
+      "id": "corpus-37",
+      "setup_sha256": "9f1ac2833afaeb7093d1ab6ae4bcb0b390d2beb7be480f575cf6c37c6a178d91",
+      "receipt_file": "corpus-37.receipt.json",
+      "receipt_sha256": "33f458696f34617904f3ca3262150ec2397246f47d8676fdc5303d79b537f60d",
+      "load_exit_code": -9,
+      "load_timeout": false,
+      "seconds": 7.827,
+      "log_sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8",
+      "native_receipt_present": false
+    }
+  ],
+  "remaining_action": "No further local optional native attempts are planned. The already-running source-matched hosted Windows all72 campaign will determine optional eligibility; required42 positive Setups retain their separately completed Linux evidence.",
+  "observed_resource_facts": {
+    "prelaunch_free_mib": {
+      "total": 9967,
+      "used": 8526,
+      "free": 1311,
+      "shared": 7339,
+      "buff_cache": 7909,
+      "available": 1440,
+      "swap_total": 0
+    },
+    "sample_scope": "Output of free -m observed immediately before the released serial campaign; a host snapshot, not per-process attribution",
+    "native_concurrency_requested": 1,
+    "kernel_oom_event_log_available": false,
+    "kernel_event_probe": "/sys/fs/cgroup/memory.events, memory.current and memory.max were not present",
+    "remaining_owned_native_processes_after_interrupt": 0,
+    "cause_proved": false
+  },
+  "evidence_directory": "/tmp/goldmaps-owner-ffab86/qa/optional28-linux-serial",
+  "previous_interruption_directory": "/tmp/goldmaps-owner-ffab86/qa/linux-optional",
+  "loads_started_without_completed_case_receipt": [
+    {
+      "id": "corpus-120",
+      "log_file": "corpus-120.load.log",
+      "log_sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8",
+      "status": "RUNNER_INTERRUPTED_BEFORE_FINAL_CASE_RECEIPT",
+      "native_probe_marker_present": false
+    }
+  ],
+  "started_loads": 6,
+  "completed_partial_case_receipts": 5
+}

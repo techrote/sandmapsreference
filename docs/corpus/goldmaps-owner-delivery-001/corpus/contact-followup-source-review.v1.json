@@ -1,0 +1,33 @@
+{
+  "schema": "goldmaps.owner-contact-followup-source-review.v1",
+  "reviewer": {
+    "role": "Specialist A independent corpus/source review of Specialist C final artifact auditor",
+    "identity": "AI specialist role within the same mission; not an independent human assessor"
+  },
+  "status": "PASS_SOURCE_AND_SYNTHETIC_CONTRACT",
+  "reviewed_files": {
+    "review_final_artifact.py": "sha256:b4921c398e9ac37683340d76fba9a7ad3236fde5c1aa6b200d77a5e16c2f9469",
+    "test_contact_followup_contract.py": "sha256:42e609e01e594b74ce3666822a661c7553a9ae1720d30b065117c475a542ea5f"
+  },
+  "source_scope": "Exact working-tree file bytes, before the assurance lane commits its final auditor changes. This review does not claim actual native contact or final archive acceptance.",
+  "contract_checks": [
+    "Only the three exact original optional source records are selected; the only per-record change is contact_probe_tick_limit=1800.",
+    "Source-static justification is bound to its actual committed bytes and the supplemental input carries the original input digest.",
+    "N original UNQUALIFIED 900-tick contact observations and complete original eligibility entries remain in native_history, with original source and run authority.",
+    "The effective entry exactly projects the fresh follow-up overlay, with separate F source/run/summary authority.",
+    "A positive contact result requires collision_observed=true, max_contacts>0 and a native witness; all common native load/policy/material/actor/movement/save/fresh-reopen gates still apply.",
+    "The supplemental campaign is separately joined to exact raw summary, receipts, source records, aliases, input hashes and committed harness files.",
+    "Per-variant matrix status, receipt hash, execution authority, history, artistic/static source verdicts and owner-pending fields are joined to the effective overlay without replacing original science.",
+    "Effective counts remain 72 distinct Setups despite 75 native observations. No static floor target produces an automatic native PASS."
+  ],
+  "executed_contract_fixtures": {
+    "command": "python3 -m unittest -v test_contact_followup_contract.py",
+    "tests": 8,
+    "passed": 8,
+    "native_worlds_opened": 0,
+    "scope": "Synthetic receipt-contract fixtures only"
+  },
+  "remaining_gate": "Inspect the actual final downloaded F archive and its fresh native receipts; confirm each positive contact witness and retained N negative history.",
+  "owner_accepted": false,
+  "new_native_result_claimed": false
+}

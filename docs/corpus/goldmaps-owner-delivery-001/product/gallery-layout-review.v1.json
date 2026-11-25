@@ -1,0 +1,141 @@
+{
+  "schema": "goldmaps.gallery-layout-review.v1",
+  "scope": "Headless actual browser container bounds/startup visibility and source-only session parse; no rendered acceptance or native population execution",
+  "baseline_windows_source": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+  "baseline_windows_run": 45481683557,
+  "observed_defects": [
+    "Navigation autowrap consumed map-grid height",
+    "Plain decision Window visible at startup",
+    "1920x1080 logical Workbench canvas shrank 13px controls to about 6.7px at the fitted client size"
+  ],
+  "changes": [
+    "Single-line clipped navigation hint with useful map-list minimum",
+    "All popups hidden before attachment",
+    "Opt-in logical Workbench canvas matches fitted native client size; engine settings/files unchanged",
+    "Source PR URL and visible label share the same integer normalization"
+  ],
+  "godot": "4.7.stable.official.5b4e0cb0f",
+  "checks": [
+    {
+      "layout": {
+        "first_item_bounds_local": [
+          4.0,
+          4.0,
+          396.0,
+          244.0
+        ],
+        "map_count": 25,
+        "map_list_bounds": [
+          24.0,
+          289.0,
+          412.0,
+          261.0
+        ],
+        "map_list_visible": true,
+        "navigation_bounds": [
+          24.0,
+          560.0,
+          412.0,
+          39.0
+        ],
+        "viewport_size": [
+          992.0,
+          656.0
+        ],
+        "visible_popup_titles": []
+      },
+      "pass": true,
+      "requested_viewport": [
+        992,
+        656
+      ],
+      "source_link_is_integer": true
+    },
+    {
+      "layout": {
+        "first_item_bounds_local": [
+          4.0,
+          4.0,
+          229.0,
+          244.0
+        ],
+        "map_count": 25,
+        "map_list_bounds": [
+          24.0,
+          244.0,
+          700.0,
+          370.0
+        ],
+        "map_list_visible": true,
+        "navigation_bounds": [
+          24.0,
+          624.0,
+          700.0,
+          39.0
+        ],
+        "viewport_size": [
+          1280.0,
+          720.0
+        ],
+        "visible_popup_titles": []
+      },
+      "pass": true,
+      "requested_viewport": [
+        1280,
+        720
+      ],
+      "source_link_is_integer": true
+    },
+    {
+      "layout": {
+        "first_item_bounds_local": [
+          4.0,
+          4.0,
+          229.0,
+          244.0
+        ],
+        "map_count": 25,
+        "map_list_bounds": [
+          24.0,
+          244.0,
+          800.0,
+          530.0
+        ],
+        "map_list_visible": true,
+        "navigation_bounds": [
+          24.0,
+          784.0,
+          800.0,
+          39.0
+        ],
+        "viewport_size": [
+          1380.0,
+          880.0
+        ],
+        "visible_popup_titles": []
+      },
+      "pass": true,
+      "requested_viewport": [
+        1380,
+        880
+      ],
+      "source_link_is_integer": true
+    }
+  ],
+  "passed": 3,
+  "total": 3,
+  "validation": true,
+  "raw_log_sha256": "0389e528ffcc31b9e0a02d1483006a0db900caab4dce9fe79d0085fd1ed55be2",
+  "session_parse": {
+    "passed": true,
+    "redirects": "Only the two product preload paths point at exact current source; ordinary Setup preload uses exact accepted runtime project",
+    "log_sha256": "b6354f16b8459dc19d5193c3f40a595a1e52931f8a415b10b2ef42cc1ba6c3a8"
+  },
+  "sources": {
+    "tools/goldmaps_owner/product/browser/browser.gd": "87af2ad91e70499f31f5402bcd70afa5d436ad7c6fb86b57ce417a75c8cb0d33",
+    "tools/goldmaps_owner/product/session/session.gd": "a9a134c28ba5f72c8770349cb2c8f892a94b9adc2f62f4708d6a07825e5eae21",
+    "tools/goldmaps_owner/product/run_graphical_capture.py": "6d1f6d1004e6266caca6acabd2b827ccb90e6236881d7e15f7a12b618ea7a26d",
+    "tools/goldmaps_owner/product/test_gallery_layout.gd": "41a87520d4b5d6e2aeca0ce7c46a087933f2ac950317f467f7f05225c79d0bc9"
+  },
+  "remaining_gate": "Actual final Windows displayed gallery/native/popup screenshots; D1 fully visible role labels and neutral legend plus independent readability/usability review"
+}

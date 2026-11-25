@@ -1,0 +1,362 @@
+{
+  "closed_at": "2026-11-24T22:26:22Z",
+  "derivation_path": "collection/derivations/pr155.json",
+  "derived_source": {
+    "commit": "b9535405853a5cd16e4bba968ec7167222861c42",
+    "kind": "recovered_original_descendant",
+    "path": "docs/corpus/goldmaps-finalisation-001/native/descendants/pr155-policy-repair/setup.json",
+    "repo": "techrote/sandmapsreference",
+    "sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0"
+  },
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "godot_version": {
+    "build": "official",
+    "hash": "5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+    "hex": 263936,
+    "major": 4,
+    "minor": 7,
+    "patch": 0,
+    "status": "stable",
+    "string": "4.7-stable (official)",
+    "timestamp": 0
+  },
+  "map_id": "derived-155-policy",
+  "native_load": {
+    "acknowledged_epoch": 1,
+    "actors": [
+      {
+        "hash": "c226d73ae56a426820d2ef842a4856bf79ac23efabe64e66569dff8de62a7a96",
+        "id": 1,
+        "model": "midge",
+        "options": {
+          "boost_multiplier": 2.0,
+          "budget": 20.0,
+          "inertia_multiplier": 1.0,
+          "mass_multiplier": 1.0,
+          "thrust_multiplier": 1.0,
+          "torque_multiplier": 1.0
+        },
+        "spawn": [
+          70.0,
+          583.0
+        ]
+      }
+    ],
+    "actors_adopted": [
+      {
+        "id": 1,
+        "model": "midge"
+      }
+    ],
+    "expected_material_plane_sha256": "e76f280ee631d604c037f307bfafedbd2dad23d198133f4a7084c9848a2ee803",
+    "extent": [
+      2048,
+      1024
+    ],
+    "full_grid_match": true,
+    "material_plane_sha256": "e76f280ee631d604c037f307bfafedbd2dad23d198133f4a7084c9848a2ee803",
+    "native_image_format": 3,
+    "native_image_storage_sha256": "f6661c288c288e924a7aaa82d7ed60a9b5c1bda9d929218ea0f236c266745e5f",
+    "native_tick": 0,
+    "ordinary_workbench": true,
+    "worker_failed": false
+  },
+  "native_policy": {
+    "accepted": true,
+    "receipt": {
+      "admission": "current_defaults_only",
+      "assignments": [
+        {
+          "applied_family": "freemass_v1",
+          "applied_variant": "reference",
+          "material": 3,
+          "name": "water",
+          "requested_family": "freemass_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 8,
+          "name": "lava",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 12,
+          "name": "acid",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 16,
+          "name": "oil",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 20,
+          "name": "paste",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 21,
+          "name": "slush",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 24,
+          "name": "brine",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 30,
+          "name": "cement",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 32,
+          "name": "toxic-sludge",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 33,
+          "name": "mercury",
+          "requested_family": "cellular_yield_v1"
+        },
+        {
+          "applied_family": "cellular_yield_v1",
+          "applied_variant": "reference",
+          "material": 36,
+          "name": "molten-glass",
+          "requested_family": "cellular_yield_v1"
+        }
+      ],
+      "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+      "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+      "envelope": [
+        1279479895,
+        1,
+        1,
+        -2102023270,
+        1854385793,
+        1886533889,
+        84225930,
+        1522979054,
+        582168604,
+        -646713377,
+        -939672877,
+        868616440,
+        1977866421,
+        1930370363,
+        -2119873090,
+        -6981196,
+        870342995,
+        1443932351,
+        -1569267145,
+        11,
+        3,
+        1,
+        0,
+        8,
+        2,
+        0,
+        12,
+        2,
+        0,
+        16,
+        2,
+        0,
+        20,
+        2,
+        0,
+        21,
+        2,
+        0,
+        24,
+        2,
+        0,
+        30,
+        2,
+        0,
+        32,
+        2,
+        0,
+        33,
+        2,
+        0,
+        36,
+        2,
+        0,
+        0,
+        0
+      ],
+      "family_blocks": [],
+      "family_parameters": {},
+      "material_blocks": [],
+      "maximum_rule_radius": null,
+      "minimum_rule_radius": 2,
+      "normalization": null,
+      "physical_state_format_version": 2,
+      "physical_state_hash_version": 2,
+      "platform": "windows",
+      "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+      "refusal": null,
+      "session_generation": -1,
+      "version": 1,
+      "wire_version": 1
+    },
+    "refusal": null
+  },
+  "opened_at": "2026-11-24T22:26:11Z",
+  "original_setup_sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+  "owner_acceptance": "pending",
+  "package_root": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation",
+  "process_id": 5576,
+  "qa_completed": true,
+  "qa_edit": {
+    "after": 28,
+    "before": 0,
+    "center": [
+      32,
+      32
+    ],
+    "native_seen": true,
+    "ordinary_workbench_paint": true,
+    "radius": 8
+  },
+  "qa_lifecycle": {
+    "actor_composition_opened": true,
+    "cancel_preserved_same_world": true,
+    "close_warning_visible": true,
+    "existing_name_refused": true,
+    "flatten_guard": {
+      "authored_setup_unchanged": true,
+      "material_baseline_unchanged": true,
+      "no_flatten_pending": true,
+      "same_world_epoch": true,
+      "warning_visible": true
+    },
+    "ordinary_replacement_controls": [
+      {
+        "action": "Load start",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "New blank",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "New from generator…",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "Load / reset scene",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "Load liquid-lab",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "Load reservoir-lab",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      },
+      {
+        "action": "Mixed Actor Workshop",
+        "cancel_preserved_same_world": true,
+        "warning_before_replacement": true
+      }
+    ],
+    "ordinary_save_attribution": {
+      "existing_name_button_refused": true,
+      "foreign_file_sha256_unchanged": true,
+      "foreign_label": "qa-foreign-51d1bf4b8907f7f9",
+      "foreign_setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "foreign_source_map_id": "gold-197",
+      "keyboard_label": "qa-keyboard-2491c5fdda62c663",
+      "keyboard_new_label_saved": true,
+      "ordinary_button_label": "qa-button-4e3e571fc6be5ada",
+      "ordinary_button_new_label_saved": true,
+      "receipt_count_before_typing": 1,
+      "reserved_after_sha256": "",
+      "reserved_before_sha256": "",
+      "reserved_label": "GM-SOURCE-3d0f9c9efd293eed5a38",
+      "scope": "Exact foreign-source bytes in an isolated developer fixture; actual ordinary Save button and dispatched Ctrl+S event; no physical keyboard claim",
+      "typing_existing_name_did_not_register": true,
+      "typing_existing_name_left_banner": true,
+      "uppercase_reserved_name_refused": true
+    },
+    "return_copy_label": "qa-return-2b735f2e85b4fa28",
+    "save_and_return_dialog_visible": true,
+    "saved_copy_sha256_unchanged": true,
+    "scope": "Programmatic execution of actual UI button handlers; no physical input or graphical acceptance inferred"
+  },
+  "returned_via_close_confirmation": true,
+  "saved_copies": [
+    {
+      "label": "eval-derived-155-policy-20261124-222621",
+      "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-eval-derived-155-policy-20261124-222621.json",
+      "saved_at": "2026-11-24T22:26:21Z",
+      "semantics": "authored starting layout; current dynamic state is not serialized",
+      "sha256": "61a7d35acb66fd0414936bcca4321cd843b58a1a947c8d9545b3f6c48d18fbea"
+    },
+    {
+      "label": "qa-button-4e3e571fc6be5ada",
+      "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-button-4e3e571fc6be5ada.json",
+      "saved_at": "2026-11-24T22:26:22Z",
+      "semantics": "authored starting layout; current dynamic state is not serialized",
+      "sha256": "61a7d35acb66fd0414936bcca4321cd843b58a1a947c8d9545b3f6c48d18fbea"
+    },
+    {
+      "label": "qa-keyboard-2491c5fdda62c663",
+      "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-keyboard-2491c5fdda62c663.json",
+      "saved_at": "2026-11-24T22:26:22Z",
+      "semantics": "authored starting layout; current dynamic state is not serialized",
+      "sha256": "61a7d35acb66fd0414936bcca4321cd843b58a1a947c8d9545b3f6c48d18fbea"
+    },
+    {
+      "label": "qa-return-2b735f2e85b4fa28",
+      "path": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox/workbench/setup-qa-return-2b735f2e85b4fa28.json",
+      "saved_at": "2026-11-24T22:26:22Z",
+      "semantics": "authored starting layout; current dynamic state is not serialized",
+      "sha256": "61a7d35acb66fd0414936bcca4321cd843b58a1a947c8d9545b3f6c48d18fbea"
+    }
+  ],
+  "schema": "goldmaps.owner-session.v1",
+  "screenshots": [],
+  "session_id": "derived-155-policy-20261124T222610-5509d1",
+  "source": {
+    "commit": "7ff90c11a3839e42371f0fef5ac3c783ab2a8d05",
+    "git_blob_sha1": "4d982dcf76875787624a34b8aba6467f305aba1f",
+    "path": "cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json",
+    "pr": 155.0,
+    "repo": "techrote/sandmapsreference",
+    "role": "original_parent; descendant custody is separately identified",
+    "sha256": "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+    "url": "https://github.com/techrote/sandmapsreference/blob/7ff90c11a3839e42371f0fef5ac3c783ab2a8d05/cybersand-canvases/2048x1024/original-megastructure-wide-cobalt-ventricle-split-barrage-261121/setup.json"
+  },
+  "source_sha256_after_load": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+  "source_sha256_on_close": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0",
+  "status": "QA_SAVED",
+  "user_data_dir": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox",
+  "variant_role": "policy-only descendant"
+}

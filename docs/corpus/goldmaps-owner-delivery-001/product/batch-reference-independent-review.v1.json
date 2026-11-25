@@ -1,0 +1,380 @@
+{
+  "schema": "goldmaps.batch-reference-independent-product-review.v1",
+  "pass": true,
+  "reviewer": "Specialist B / product and consumer-interface cross-review; AI role",
+  "source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "source_kit_sha256": "ba3d75bf97943af4148ee4427fdfcb2c6df41ede2453c80ef69e3bd6577dfea9",
+  "archive": {
+    "filename": "Goldmaps-Batch-Lab-Reference-8c709093672c.zip",
+    "bytes": 3336826,
+    "sha256": "7dea665e251b647b5d54aaeb2f6a4cc5978e2e03d211808c89e6ef8755723d05",
+    "zip_crc": "PASS",
+    "members": 283,
+    "path_case_duplicate_symlink_checks": "PASS"
+  },
+  "inventory": {
+    "sha256": "4d321d9ccea0336729421ba999e42cbb47947f73a0e3ded169af5c00102c99f2",
+    "files_excluding_self": 281,
+    "complete_members": 283,
+    "all_hashes_and_sizes_match": true,
+    "original_fragment_files": 269,
+    "primary_byte_exact_members": 272,
+    "bundle_unchanged_after_queries": true
+  },
+  "consumer_schema": {
+    "knowledge": "goldmaps.architectural-knowledge.v1",
+    "knowledge_maps": 70,
+    "cards": "cybersand.architectural-design-cards.v1",
+    "card_count": 25,
+    "inferred_module_hints": 27,
+    "native_module_import_eligible_hints": 0,
+    "owner_accepted": 0,
+    "rights_and_holdouts_preserved": true,
+    "hash_only_missing_occurrences": 28,
+    "runtime_status_requires_exact_primary_overlay_join": true,
+    "qualified_unique_setups": 70,
+    "refused_unique_setups": 2
+  },
+  "actual_offline_queries": [
+    {
+      "name": "validate",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "corpus-export/tools/query.py",
+        "--package",
+        ".",
+        "validate"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "c4e31699c2d0a4fce69c625fd4105e641c6e5cd6eada554c1321ba1f2ea915a8",
+      "stdout_bytes": 288,
+      "result": {
+        "status": "PASS",
+        "scope": "Exact collection fragment custody/roster; does not qualify executable runtime",
+        "files": 269,
+        "bytes": 64190599,
+        "logical_aliases": 81,
+        "source_maps": 70,
+        "unique_setup_payloads": 72,
+        "owner_accepted": 0,
+        "external_overlay_present": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "search",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "corpus-export/tools/query.py",
+        "--package",
+        ".",
+        "search",
+        "opposed banks",
+        "--limit",
+        "5"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "9612ee539294926183b84203c8e4aa743b2c4c730da13f62188fcc9dd7eb0cae",
+      "stdout_bytes": 5030,
+      "result": {
+        "authority": "reference_knowledge_only",
+        "query": "opposed banks",
+        "results": [
+          {
+            "id": "repair-202",
+            "title": "Quoin Braided Census Faultwell — repaired portrait",
+            "source": {
+              "commit": "d139f2a2868daa4b09d5e39c71d3638190dda705",
+              "git_blob_sha1": "70ba97517e8db8a4953501ae777f746898add33e",
+              "path": "cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/setup.json",
+              "pr": 202,
+              "repo": "techrote/sandmapsreference",
+              "sha256": "dc36e2e20d9a16cce4adb1ab09d1dcd1048ac9b01ad8b6f8403e8f88a126decd",
+              "url": "https://github.com/techrote/sandmapsreference/blob/d139f2a2868daa4b09d5e39c71d3638190dda705/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/setup.json"
+            },
+            "family": "portrait/obvious",
+            "visual_family_groups": [
+              "portrait-donor-125"
+            ],
+            "match_occurrences": 5,
+            "native": "PENDING_DELIVERY_QUALIFICATION",
+            "owner_accepted": false
+          },
+          {
+            "id": "corpus-185",
+            "title": "Quoin Braided Census Faultwell",
+            "source": {
+              "commit": "9e3e80d5f6dbe1e307e0d4afc1460402328e9cd3",
+              "git_blob_sha1": "bec178d92f59e7343033492bb6e697a87b2f946b",
+              "path": "cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/setup.json",
+              "pr": 185,
+              "repo": "techrote/sandmapsreference",
+              "sha256": "92a2396e2c8e8f116b7c5508a6f1264479ec48971ccb8cebdc30eeb74fffaa14",
+              "url": "https://github.com/techrote/sandmapsreference/blob/9e3e80d5f6dbe1e307e0d4afc1460402328e9cd3/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/setup.json"
+            },
+            "family": "portrait/obvious",
+            "visual_family_groups": [
+              "portrait-donor-125"
+            ],
+            "match_occurrences": 4,
+            "native": "NOT_IN_REQUIRED_PLAYABLE_MATRIX",
+            "owner_accepted": false
+          },
+          {
+            "id": "repair-208",
+            "title": "Warden Gashlift — prior repair",
+            "source": {
+              "commit": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c",
+              "git_blob_sha1": "e35d3a1e1bbdb29f96ef12c54d6e3475766a77a0",
+              "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json",
+              "pr": 208,
+              "repo": "techrote/sandmapsreference",
+              "sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+              "url": "https://github.com/techrote/sandmapsreference/blob/94eccd23024254fbbfb02cd6cdfef8753dd89c3c/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/setup.json"
+            },
+            "family": "portrait/difficult",
+            "visual_family_groups": [
+              "astra-case-d2",
+              "portrait-donor-124",
+              "source-pr-211"
+            ],
+            "match_occurrences": 4,
+            "native": "PENDING_DELIVERY_QUALIFICATION",
+            "owner_accepted": false
+          },
+          {
+            "id": "gold-130",
+            "title": "Sundered Escarpment Nested City",
+            "source": {
+              "commit": "29f58a4ecd2405305094638b8647164f51092866",
+              "git_blob_sha1": "0e77d9c6ce6ca44e33a25556a6cd58061111cef6",
+              "path": "cybersand-canvases/2048x1024/original-megastructure-wide-sundered-escarpment-fault-bore-261121/setup.json",
+              "pr": 130,
+              "repo": "techrote/sandmapsreference",
+              "sha256": "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b",
+              "url": "https://github.com/techrote/sandmapsreference/blob/29f58a4ecd2405305094638b8647164f51092866/cybersand-canvases/2048x1024/original-megastructure-wide-sundered-escarpment-fault-bore-261121/setup.json"
+            },
+            "family": "original/megastructure-wide",
+            "visual_family_groups": [
+              "source-pr-130"
+            ],
+            "match_occurrences": 3,
+            "native": "PENDING_DELIVERY_QUALIFICATION",
+            "owner_accepted": false
+          },
+          {
+            "id": "trial-D2-candidate",
+            "title": "Warden Gashlift — Astra candidate",
+            "source": {
+              "commit": "cd1e0192a709e54dc63681e00b0802716398ec1f",
+              "git_blob_sha1": "4bf7bfe69af74c6c945ee0f42fa0bce9072e34f9",
+              "path": "cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/astra-trial-001/setup.json",
+              "pr": 211,
+              "repo": "techrote/sandmapsreference",
+              "sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc",
+              "url": "https://github.com/techrote/sandmapsreference/blob/cd1e0192a709e54dc63681e00b0802716398ec1f/cybersand-canvases/1024x2048/portrait-difficult-warden-gashlift-261121/astra-trial-001/setup.json"
+            },
+            "family": "portrait/difficult",
+            "visual_family_groups": [
+              "astra-case-d2",
+              "portrait-donor-124",
+              "source-pr-211"
+            ],
+            "match_occurrences": 3,
+            "native": "PENDING_DELIVERY_QUALIFICATION",
+            "owner_accepted": false
+          }
+        ],
+        "total_matches": 6,
+        "scope": "Literal metadata search; match counts are neither artistic scores nor retrieval-quality evidence"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "replay-gold125",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "corpus-export/tools/query.py",
+        "--package",
+        ".",
+        "replay",
+        "gold-125"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "f6cd5080ff7d329ac8f972954aa5b2be4d17e205e9eec54183b1d96f8ea5c6e3",
+      "stdout_bytes": 357,
+      "result": {
+        "status": "PASS",
+        "id": "gold-125",
+        "setup_sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e",
+        "plane_sha256": "de56ecc67744576902ff681768932747cf291608b89adc5078730fc2bfc3f9a3",
+        "extent": [
+          2048,
+          1024
+        ],
+        "cells": 2097152,
+        "scope": "Independent source-static ordered replay; no native or gameplay claim"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "replay-policy183",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "corpus-export/tools/query.py",
+        "--package",
+        ".",
+        "replay",
+        "derived-183-policy"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "dd0a770d17cb38341dcc1b604e7792b8c27efae042ad66dc50017c93fbafd815",
+      "stdout_bytes": 367,
+      "result": {
+        "status": "PASS",
+        "id": "derived-183-policy",
+        "setup_sha256": "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e",
+        "plane_sha256": "e33499bc4b8e6779e28aa04b2fe30f0670cefc8fe3d7574d80740dcaf2a17b2d",
+        "extent": [
+          2048,
+          1024
+        ],
+        "cells": 2097152,
+        "scope": "Independent source-static ordered replay; no native or gameplay claim"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "feature",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "corpus-export/tools/query.py",
+        "--package",
+        ".",
+        "feature",
+        "P185-CROSSBANK-ASSAY"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "593d8d7f77dc30a06b3f240fd49cc4504a7fc9891425cf3c90d0f14f1ad7af45",
+      "stdout_bytes": 2890,
+      "result": {
+        "bounded_action": "DO-PRESERVE on this Art-reviewed HEAD: Opposing banks and mid-height assay link. No further compulsory Art repair to this feature; do not claim functional animated machinery.",
+        "bundled_image_path": "corpus-export/crops/cb9fad4fe4171f5bebc7940f11f7d9b3c1b8676d915da9b380248a149c26a569.png",
+        "child_head": "d139f2a2868daa4b09d5e39c71d3638190dda705",
+        "child_pr": 202,
+        "classification": "GOOD",
+        "crop_rect_xywh": [
+          240,
+          739,
+          563,
+          446
+        ],
+        "crop_url": "https://raw.githubusercontent.com/techrote/sandmapsreference/d139f2a2868daa4b09d5e39c71d3638190dda705/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+        "do_not_fill": [
+          "Main open flight atrium and thin editable sockets"
+        ],
+        "evidence_crop_is_edit_mask": false,
+        "feature_bbox_xyxy": null,
+        "feature_id": "P185-CROSSBANK-ASSAY",
+        "geometry_edits_authorized": false,
+        "image": {
+          "archive_path": "PR-0202-d139f2a2868d/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+          "bytes": 252035,
+          "dimensions": [
+            563,
+            446
+          ],
+          "git_blob_sha1": "5010daf68018f9eaf2ee613a98a5e9baf6c1b52c",
+          "head": "d139f2a2868daa4b09d5e39c71d3638190dda705",
+          "path": "cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+          "pr": 202,
+          "raw_url": "https://raw.githubusercontent.com/techrote/sandmapsreference/d139f2a2868daa4b09d5e39c71d3638190dda705/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+          "repository": "techrote/sandmapsreference",
+          "sha256": "cb9fad4fe4171f5bebc7940f11f7d9b3c1b8676d915da9b380248a149c26a569",
+          "url": "https://github.com/techrote/sandmapsreference/blob/d139f2a2868daa4b09d5e39c71d3638190dda705/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png"
+        },
+        "kind": "evidence_crop; not module geometry or edit mask",
+        "must_preserve": [
+          "Opposing banks and mid-height assay link"
+        ],
+        "native": "NATIVE-UNTESTED",
+        "observed": "Two visibly unlike opposed bank-rooted optical/copper sender and assay receiving pairs replace isolated shelves; a measurement handoff, NOT physical freight bridge or active signal.",
+        "owner_acceptance": "PENDING",
+        "review_url": "https://github.com/techrote/sandmapsreference/pull/202#issuecomment-7070529467",
+        "safe_to_change": [
+          "Short receiver/docking or cable/gantry ends inside reviewed mid-assay window"
+        ],
+        "simulation_function": "NOT_DEMONSTRATED",
+        "state_id": "P185-CROSSBANK-ASSAY@d139f2a2868daa4b09d5e39c71d3638190dda705",
+        "technical_current_head": "SOURCE_STATIC_PASS",
+        "technical_review_url": "https://github.com/techrote/sandmapsreference/pull/202#issuecomment-7070611840",
+        "treatment": "DO-PRESERVE"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "crop",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "corpus-export/tools/query.py",
+        "--package",
+        ".",
+        "crop",
+        "P185-CROSSBANK-ASSAY",
+        "--out",
+        "/tmp/goldmaps-final-H/product-batch-review/independent-exact-crop.png"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "1e9e6698a9e657a720dd6210d5d10fb26c658e241e79e75914fe6d87650c845c",
+      "stdout_bytes": 1550,
+      "result": {
+        "feature_id": "P185-CROSSBANK-ASSAY",
+        "source_state_id": "P185-CROSSBANK-ASSAY@d139f2a2868daa4b09d5e39c71d3638190dda705",
+        "source_image": {
+          "archive_path": "PR-0202-d139f2a2868d/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+          "bytes": 252035,
+          "dimensions": [
+            563,
+            446
+          ],
+          "git_blob_sha1": "5010daf68018f9eaf2ee613a98a5e9baf6c1b52c",
+          "head": "d139f2a2868daa4b09d5e39c71d3638190dda705",
+          "path": "cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+          "pr": 202,
+          "raw_url": "https://raw.githubusercontent.com/techrote/sandmapsreference/d139f2a2868daa4b09d5e39c71d3638190dda705/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png",
+          "repository": "techrote/sandmapsreference",
+          "sha256": "cb9fad4fe4171f5bebc7940f11f7d9b3c1b8676d915da9b380248a149c26a569",
+          "url": "https://github.com/techrote/sandmapsreference/blob/d139f2a2868daa4b09d5e39c71d3638190dda705/cybersand-canvases/1024x2048/portrait-obvious-quoin-braided-census-faultwell-261121/03-mid-assay.png"
+        },
+        "coordinate_window_xywh": [
+          240,
+          739,
+          563,
+          446
+        ],
+        "verified_feature_bbox_xyxy": null,
+        "evidence_crop_is_edit_mask": false,
+        "geometry_edits_authorized": false,
+        "byte_identity_preserved": true,
+        "must_preserve": [
+          "Opposing banks and mid-height assay link"
+        ],
+        "do_not_fill": [
+          "Main open flight atrium and thin editable sockets"
+        ]
+      },
+      "stderr": ""
+    }
+  ],
+  "query_tool_sha256": "9ab8818d2951f82d9b9bd2ad6d08d31bd29fcc82cc9ae4058397427e9befd11e",
+  "python_version": "3.12.14",
+  "native_worlds_executed": 0,
+  "consumer_branch_modified": false,
+  "owner_accepted": false,
+  "limits": [
+    "Offline source-static replay and exact archived crop copying do not execute a native World.",
+    "Query display strings preserve assembly/historical statuses; current runtime status requires the separate exact-engine/Setup overlay join.",
+    "Raw native receipts and runtime remain in the primary owner kit.",
+    "No model training, geometry harvesting, socket validation, owner module approval or broad rights grant is asserted."
+  ]
+}

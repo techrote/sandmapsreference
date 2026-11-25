@@ -1,0 +1,608 @@
+{
+  "schema": "goldmaps.independent-final-artifact-review.v1",
+  "pass": true,
+  "reviewer": "Specialist C, independent assurance agent; not a separate human owner",
+  "review_tool_sha256": "b38cf0991cebcde219d6afed7721c467431eefdc7bba8585a06e2458b76a6a6f",
+  "delivery_source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+  "github_run_id": "45481683557",
+  "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+  "scientific_engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "archive": {
+    "schema": "goldmaps.payload-verification.v1",
+    "kind": "zip",
+    "pass": true,
+    "archive_sha256": "d132711302440a50780d7fb04a2a40c11d1986ae48c624b995745e8b13c47a30",
+    "archive_bytes": 101218031,
+    "manifest_sha256": "c56d0074721bae63a924d01661aade1cb022329704268b53d713f3f9f2c4d48b",
+    "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "envelope_directory": "",
+    "payload_files": 1605,
+    "total_files": 1607,
+    "payload_bytes": 281494182,
+    "total_uncompressed_bytes": 282242747,
+    "zip_crc": "PASS"
+  },
+  "logical_maps": 81,
+  "unique_setups": 72,
+  "native_status_counts": {
+    "QUALIFIED_HEADLESS": 67,
+    "REFUSED_INVALID_SOURCE": 2,
+    "UNQUALIFIED": 3
+  },
+  "native_campaigns": [
+    {
+      "kind": "windows-required",
+      "summary_sha256": "505dec8241110f0171b7dee1e2efafce15a16156a9052fabdacc8b603fb7163d",
+      "native_execution_source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+      "native_execution_run_id": "45481683557",
+      "unique_setups": 44,
+      "qualified_unique_setups": 42,
+      "verified_refused_unique_setups": 2,
+      "validation_pass": true
+    },
+    {
+      "kind": "windows-optional",
+      "summary_sha256": "0f11e289bc7e8e4455283bea45f070ce10aa452e6784e692f068925a6545b300",
+      "native_execution_source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+      "native_execution_run_id": "45481683557",
+      "unique_setups": 28,
+      "qualified_unique_setups": 25,
+      "verified_refused_unique_setups": 0,
+      "validation_pass": false
+    }
+  ],
+  "native_dependency_sha256": {
+    "runtime/project/addons/cybersand_native/bin/cybersand_native.windows.x86_64.dll": "668f2dd094fca611a97c2b6aa38c4cd072179fe9cf591e53578ef57c7db1625e",
+    "runtime/project/addons/godot-rapier2d/bin/libgodot_rapier.windows.x86_64-pc-windows-msvc.dll": "b54e54bd1a03ae9094b788bf869212b5405b4a04793792d5a7cd81632cb10dd7"
+  },
+  "native_evidence_reuse_review": null,
+  "bounded_routes": {
+    "executed": 14,
+    "completed": 14,
+    "results": [
+      {
+        "id": "b1-receiver-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 13,
+        "waypoints_total": 13
+      },
+      {
+        "id": "b1-receiver-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 13,
+        "waypoints_total": 13
+      },
+      {
+        "id": "b2-apparatus-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 11,
+        "waypoints_total": 11
+      },
+      {
+        "id": "b2-apparatus-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 11,
+        "waypoints_total": 11
+      },
+      {
+        "id": "b3-north-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 22,
+        "waypoints_total": 22
+      },
+      {
+        "id": "b3-north-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 22,
+        "waypoints_total": 22
+      },
+      {
+        "id": "b3-south-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 16,
+        "waypoints_total": 16
+      },
+      {
+        "id": "b3-south-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 16,
+        "waypoints_total": 16
+      },
+      {
+        "id": "d1-gallery-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 14,
+        "waypoints_total": 14
+      },
+      {
+        "id": "d1-gallery-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 14,
+        "waypoints_total": 14
+      },
+      {
+        "id": "d1-gallery-reference",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 14,
+        "waypoints_total": 14
+      },
+      {
+        "id": "d2-press-original",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 19,
+        "waypoints_total": 19
+      },
+      {
+        "id": "d2-press-candidate",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 19,
+        "waypoints_total": 19
+      },
+      {
+        "id": "d2-press-reference",
+        "exit_code": 0,
+        "timeout": false,
+        "completed": true,
+        "failure": "",
+        "waypoints_reached": 19,
+        "waypoints_total": 19
+      }
+    ],
+    "scope": "Actual bounded scripted outcomes retained; no subjective/full-route acceptance inferred"
+  },
+  "gold_nominees": 25,
+  "portrait_repair_aliases": 7,
+  "astra_aliases": 18,
+  "all_corpus_index": 70,
+  "per_variant_matrix_sha256": "48cfd1e07f9f52dc7473adb9e735fe62d32ed16cc53f29380ac1c5eae2eee8b4",
+  "actual_launcher_and_reconstruction_receipts": {
+    "archive-verification.json": {
+      "bytes": 737,
+      "sha256": "03feda15a7bab24a288b05e561e21173ff13a75736297ae650f84ec0b5acc791"
+    },
+    "campaign.json": {
+      "bytes": 146323,
+      "sha256": "a362a121c9ef2170f5283cec6c321421aa35b8c009dce4ac90d54bfb8b27705e"
+    },
+    "fresh-extraction-integrity.json": {
+      "bytes": 400,
+      "sha256": "cd6720b0d075e98b86fcc35840f5503fee7cb4efe1db718849c4623dc69737ce"
+    },
+    "final-extracted-after.json": {
+      "bytes": 2647,
+      "sha256": "03099524eb472674e5c29ecfcfbf7319658309cdb6823f1b8d29bafefc35b7ba"
+    },
+    "reconstruction-integrity.json": {
+      "bytes": 400,
+      "sha256": "cd6720b0d075e98b86fcc35840f5503fee7cb4efe1db718849c4623dc69737ce"
+    },
+    "final-pristine-launcher.json": {
+      "bytes": 31721,
+      "sha256": "67715ec85627be5be47d2ae3d3453eb407dcfb88c2de3c76025fe8cadedea624"
+    },
+    "final-extracted-product.json": {
+      "bytes": 28350,
+      "sha256": "c797d1f67db51707051402fc711c8e8921acaea9b222dc4c8ef342439ad2c80f"
+    },
+    "owner-package-acquisition.v1.json": {
+      "bytes": 8235510,
+      "sha256": "a815f61a9b9bc5bf9c38151a0b2f3ac529b0412ea611da06c944dec41962dd66"
+    }
+  },
+  "graphical_status": "CAPTURED_ALL_PLANNED",
+  "rendered_capture_inventory": [
+    {
+      "case": "gallery",
+      "requested_case_map_id": null,
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/gallery-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "gallery-1280x720",
+      "requested_case_map_id": null,
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/gallery-1280x720-gallery.png",
+      "sha256": "2225c26d1e68fa56bf6997583fb04a80849673ab30de18193f3f38714a5fc3e8",
+      "width": 1280,
+      "height": 720,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "gallery-1380x880",
+      "requested_case_map_id": null,
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/gallery-1380x880-gallery.png",
+      "sha256": "4a6205dc16c559d98762cd7edfe328620ac29838bc65a58aec3d995394f73c98",
+      "width": 1380,
+      "height": 880,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "landscape",
+      "requested_case_map_id": "gold-125",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/landscape-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "landscape",
+      "requested_case_map_id": "gold-125",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-125",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/landscape-workbench.png",
+      "sha256": "c2c7e4767dc3c0015587ef31800f29ea572a170c03655bdf1925d28762d06231",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "portrait",
+      "requested_case_map_id": "gold-197",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/portrait-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "portrait",
+      "requested_case_map_id": "gold-197",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/portrait-workbench.png",
+      "sha256": "0ae8d7c6df4d59d12c9f71a2fff4f90bff25eb65ac3be3b6b3003c41e213efdd",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "B3-original",
+      "requested_case_map_id": "trial-B3-original",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/B3-original-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "B3-original",
+      "requested_case_map_id": "trial-B3-original",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "trial-B3-original",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/B3-original-workbench.png",
+      "sha256": "e818ab5810f7e27d61c407f1baec3a9bd310c437f049c23d60166eeb03cf7772",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "B3-candidate",
+      "requested_case_map_id": "trial-B3-candidate",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/B3-candidate-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "B3-candidate",
+      "requested_case_map_id": "trial-B3-candidate",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "trial-B3-candidate",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/B3-candidate-workbench.png",
+      "sha256": "d76366cddb565cad615ff51c9723962a30f9f721b81ca74d07cd3f98e4a6eb0f",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D1-original",
+      "requested_case_map_id": "trial-D1-original",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/D1-original-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D1-original",
+      "requested_case_map_id": "trial-D1-original",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "trial-D1-original",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/D1-original-workbench.png",
+      "sha256": "defce81aad1f4c025623283871d9bceabfab258f8db8150df06e5d4938b621d6",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D1-candidate",
+      "requested_case_map_id": "trial-D1-candidate",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/D1-candidate-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D1-candidate",
+      "requested_case_map_id": "trial-D1-candidate",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "trial-D1-candidate",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/D1-candidate-workbench.png",
+      "sha256": "33b7b5876c40447a4c1b5f81096247b6ad179bbad95ff774ce153a58dfdf6072",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D1-reference",
+      "requested_case_map_id": "trial-D1-reference",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/D1-reference-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D1-reference",
+      "requested_case_map_id": "trial-D1-reference",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "trial-D1-reference",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/D1-reference-workbench.png",
+      "sha256": "a11c87952591b15af13c6344d4b98ecdaa99eafd4f5fb0c2760d46549bdde138",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D2-original",
+      "requested_case_map_id": "trial-D2-original",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/D2-original-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D2-original",
+      "requested_case_map_id": "trial-D2-original",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "trial-D2-original",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/D2-original-workbench.png",
+      "sha256": "8447f61d6d263a906037a1978730f220c1fd2f8364e2f2f147055400b4cf644e",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D2-candidate",
+      "requested_case_map_id": "trial-D2-candidate",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/D2-candidate-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D2-candidate",
+      "requested_case_map_id": "trial-D2-candidate",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "trial-D2-candidate",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/D2-candidate-workbench.png",
+      "sha256": "941c0928a258b3cfcca2559e6046dbb6a4faa91ed71d5d4255305c5f42eca354",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D2-reference",
+      "requested_case_map_id": "trial-D2-reference",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/D2-reference-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "D2-reference",
+      "requested_case_map_id": "trial-D2-reference",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "trial-D2-reference",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/D2-reference-workbench.png",
+      "sha256": "cb512cf96e2e2555c19308d6e2bcb08b57f95d0c4c833f8cb3ac0982475b6cce",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "policy-155",
+      "requested_case_map_id": "derived-155-policy",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/policy-155-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "policy-155",
+      "requested_case_map_id": "derived-155-policy",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "derived-155-policy",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/policy-155-workbench.png",
+      "sha256": "9b9d3b603c86b8e0f7b8ed18335982bbeabb1bbdd84f500ca700315d1a6e3fca",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "policy-183",
+      "requested_case_map_id": "derived-183-policy",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "gold-197",
+      "kind": "browser gallery",
+      "view_kind": "gallery",
+      "path": "qualification/graphical/policy-183-gallery.png",
+      "sha256": "e7176e50ffb237dcf21b9f3330b2bcaa2c730431777dd07e3a41519f6f20abf1",
+      "width": 992,
+      "height": 656,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    },
+    {
+      "case": "policy-183",
+      "requested_case_map_id": "derived-183-policy",
+      "requested_ui_map_id": null,
+      "depicted_map_id": "derived-183-policy",
+      "kind": "actual native Workbench",
+      "path": "qualification/graphical/policy-183-workbench.png",
+      "sha256": "ee0eb6327b5684cade86a8f6b18f54f4bb72c0981b11133b956c99b1aeb45923",
+      "width": 992,
+      "height": 558,
+      "display_driver": "Windows",
+      "renderer": "ANGLE (Microsoft, Microsoft Basic Render Driver (0x0000008C) Direct3D11 vs_5_0 ps_5_0, D3D11-10.0.26100.33648)"
+    }
+  ],
+  "owner_accepted": false,
+  "scope": "Read-only audit of the actual downloaded inner ZIP, every immutable file and CRC, raw native receipts/logs, logical status joins, actual freshly extracted Windows launcher/product records and exact reconstruction inventory. No new native execution is claimed by this audit; rendered image quality is reviewed separately.",
+  "remaining_owner_gates": [
+    "Physical Windows/NVIDIA presentation",
+    "Subjective full-route flight and B3 high-speed readability",
+    "D1/D2 variant preference",
+    "Gold/Platinum/Pyrite classification and production adoption"
+  ]
+}

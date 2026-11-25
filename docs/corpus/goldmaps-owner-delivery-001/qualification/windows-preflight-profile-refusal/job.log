@@ -1,0 +1,709 @@
+﻿2026-11-24T22:12:04.5877567Z Current runner version: '2.338.2'
+2026-11-24T22:12:04.5909325Z ##[group]Runner Image Provisioner
+2026-11-24T22:12:04.5910186Z Hosted Compute Agent
+2026-11-24T22:12:04.5911303Z Version: 20261111.635
+2026-11-24T22:12:04.5911922Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-24T22:12:04.5912860Z Build Date: 2026-11-11T01:49:01Z
+2026-11-24T22:12:04.5913545Z Worker ID: {37495cc3-529f-40a2-bfb9-6f4a6067d122}
+2026-11-24T22:12:04.5914224Z Region: eastus
+2026-11-24T22:12:04.5914746Z Cloud: Azure
+2026-11-24T22:12:04.5915240Z ##[endgroup]
+2026-11-24T22:12:04.5916663Z ##[group]Operating System
+2026-11-24T22:12:04.5917348Z Microsoft Windows Server 2025
+2026-11-24T22:12:04.5917936Z 10.0.26100
+2026-11-24T22:12:04.5918430Z Datacenter
+2026-11-24T22:12:04.5918931Z ##[endgroup]
+2026-11-24T22:12:04.5919491Z ##[group]Runner Image
+2026-11-24T22:12:04.5920035Z Image: windows-2025-vs2026
+2026-11-24T22:12:04.5920616Z Version: 20261116.315.1
+2026-11-24T22:12:04.5922145Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261116.315/images/windows/Windows2025-VS2026-Readme.md
+2026-11-24T22:12:04.5923807Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261116.315
+2026-11-24T22:12:04.5924736Z ##[endgroup]
+2026-11-24T22:12:04.5925911Z ##[group]GITHUB_TOKEN Permissions
+2026-11-24T22:12:04.5929384Z Actions: read
+2026-11-24T22:12:04.5930016Z Contents: read
+2026-11-24T22:12:04.5930538Z Metadata: read
+2026-11-24T22:12:04.5931227Z ##[endgroup]
+2026-11-24T22:12:04.5933509Z Secret source: Actions
+2026-11-24T22:12:04.5934399Z Cache mode: write
+2026-11-24T22:12:04.5935099Z Prepare workflow directory
+2026-11-24T22:12:04.6320668Z Prepare all required actions
+2026-11-24T22:12:04.6370345Z Getting action download info
+2026-11-24T22:12:04.8093512Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-24T22:12:04.9466862Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-24T22:12:05.1020288Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-11-24T22:12:05.3646291Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-24T22:12:05.7219468Z Complete job name: windows-owner-kit
+2026-11-24T22:12:05.8712529Z ##[group]Run git config --global core.autocrlf false
+2026-11-24T22:12:05.8713512Z [36;1mgit config --global core.autocrlf false[0m
+2026-11-24T22:12:05.8714180Z [36;1mgit config --global core.eol lf[0m
+2026-11-24T22:12:05.9437277Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-24T22:12:05.9439032Z env:
+2026-11-24T22:12:05.9439878Z   PYTHONUTF8: 1
+2026-11-24T22:12:05.9440767Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:12:05.9441644Z ##[endgroup]
+2026-11-24T22:12:06.8789976Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-24T22:12:06.8791596Z with:
+2026-11-24T22:12:06.8792541Z   ref: 3975deeb8b1c2664cdb988dd4e393bc7f7630c7d
+2026-11-24T22:12:06.8793796Z   persist-credentials: false
+2026-11-24T22:12:06.8797005Z   sparse-checkout: .github/
+tools/goldmaps_owner/
+scripts/goldmaps_finalisation/
+docs/corpus/goldmaps-recovery-001/
+docs/corpus/goldmaps-finalisation-001/
+docs/corpus/goldmaps-owner-delivery-001/
+
+2026-11-24T22:12:06.8800797Z   repository: techrote/sandmapsreference
+2026-11-24T22:12:06.8810098Z   token: ***
+2026-11-24T22:12:06.8810940Z   ssh-strict: true
+2026-11-24T22:12:06.8811795Z   ssh-user: git
+2026-11-24T22:12:06.8812644Z   clean: true
+2026-11-24T22:12:06.8813518Z   sparse-checkout-cone-mode: true
+2026-11-24T22:12:06.8814562Z   fetch-depth: 1
+2026-11-24T22:12:06.8815405Z   fetch-tags: false
+2026-11-24T22:12:06.8816286Z   show-progress: true
+2026-11-24T22:12:06.8817177Z   lfs: false
+2026-11-24T22:12:06.8820410Z   submodules: false
+2026-11-24T22:12:06.8821330Z   set-safe-directory: true
+2026-11-24T22:12:06.8822351Z   allow-unsafe-pr-checkout: false
+2026-11-24T22:12:06.8823387Z env:
+2026-11-24T22:12:06.8824149Z   PYTHONUTF8: 1
+2026-11-24T22:12:06.8825034Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:12:06.8826041Z ##[endgroup]
+2026-11-24T22:12:07.0299293Z Syncing repository: techrote/sandmapsreference
+2026-11-24T22:12:07.0302115Z ##[group]Getting Git version info
+2026-11-24T22:12:07.0303562Z Working directory is 'D:\a\sandmapsreference\sandmapsreference'
+2026-11-24T22:12:07.1135897Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-24T22:12:07.1493576Z git version 2.56.1.windows.1
+2026-11-24T22:12:07.1539951Z ##[endgroup]
+2026-11-24T22:12:07.1555128Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\32aad48e-43cd-4df4-b21e-ca5fdcc03a3d\.gitconfig'
+2026-11-24T22:12:07.1577479Z Temporarily overriding HOME='D:\a\_temp\32aad48e-43cd-4df4-b21e-ca5fdcc03a3d' before making global git config changes
+2026-11-24T22:12:07.1580362Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T22:12:07.1589320Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\sandmapsreference\sandmapsreference
+2026-11-24T22:12:07.1982675Z Deleting the contents of 'D:\a\sandmapsreference\sandmapsreference'
+2026-11-24T22:12:07.1989690Z ##[group]Initializing the repository
+2026-11-24T22:12:07.1999007Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\sandmapsreference\sandmapsreference
+2026-11-24T22:12:07.2997217Z Initialized empty Git repository in D:/a/sandmapsreference/sandmapsreference/.git/
+2026-11-24T22:12:07.3059153Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/techrote/sandmapsreference
+2026-11-24T22:12:07.3826562Z ##[endgroup]
+2026-11-24T22:12:07.3829585Z ##[group]Disabling automatic garbage collection
+2026-11-24T22:12:07.3832088Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-24T22:12:07.4213432Z ##[endgroup]
+2026-11-24T22:12:07.4214836Z ##[group]Setting up auth
+2026-11-24T22:12:07.4226739Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T22:12:07.4633504Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-24T22:12:08.9661270Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T22:12:09.0070737Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-24T22:12:09.5678875Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T22:12:09.6077423Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-24T22:12:10.1811316Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-24T22:12:10.2228046Z ##[endgroup]
+2026-11-24T22:12:10.2228732Z ##[group]Fetching the repository
+2026-11-24T22:12:10.2247417Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin 3975deeb8b1c2664cdb988dd4e393bc7f7630c7d
+2026-11-24T22:12:11.0964549Z From https://github.com/techrote/sandmapsreference
+2026-11-24T22:12:11.0965476Z  * branch            3975deeb8b1c2664cdb988dd4e393bc7f7630c7d -> FETCH_HEAD
+2026-11-24T22:12:11.1009966Z ##[endgroup]
+2026-11-24T22:12:11.1010600Z ##[group]Determining the checkout info
+2026-11-24T22:12:11.1013125Z ##[endgroup]
+2026-11-24T22:12:11.1028595Z ##[group]Setting up sparse checkout
+2026-11-24T22:12:11.1029658Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout set .github/ tools/goldmaps_owner/ scripts/goldmaps_finalisation/ docs/corpus/goldmaps-recovery-001/ docs/corpus/goldmaps-finalisation-001/ docs/corpus/goldmaps-owner-delivery-001/
+2026-11-24T22:12:11.1544155Z ##[endgroup]
+2026-11-24T22:12:11.1544761Z ##[group]Checking out the ref
+2026-11-24T22:12:11.1555716Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force 3975deeb8b1c2664cdb988dd4e393bc7f7630c7d
+2026-11-24T22:12:12.9122123Z Updating files:   0% (1/669)
+2026-11-24T22:12:12.9221170Z Updating files:   1% (7/669)
+2026-11-24T22:12:12.9248262Z Updating files:   2% (14/669)
+2026-11-24T22:12:12.9263141Z Updating files:   3% (21/669)
+2026-11-24T22:12:12.9289698Z Updating files:   4% (27/669)
+2026-11-24T22:12:12.9320376Z Updating files:   5% (34/669)
+2026-11-24T22:12:12.9343839Z Updating files:   6% (41/669)
+2026-11-24T22:12:12.9381395Z Updating files:   7% (47/669)
+2026-11-24T22:12:12.9479787Z Updating files:   8% (54/669)
+2026-11-24T22:12:12.9519407Z Updating files:   9% (61/669)
+2026-11-24T22:12:12.9564651Z Updating files:  10% (67/669)
+2026-11-24T22:12:12.9600152Z Updating files:  11% (74/669)
+2026-11-24T22:12:12.9619888Z Updating files:  12% (81/669)
+2026-11-24T22:12:12.9717624Z Updating files:  13% (87/669)
+2026-11-24T22:12:12.9743594Z Updating files:  14% (94/669)
+2026-11-24T22:12:12.9770717Z Updating files:  15% (101/669)
+2026-11-24T22:12:12.9789360Z Updating files:  16% (108/669)
+2026-11-24T22:12:12.9818303Z Updating files:  17% (114/669)
+2026-11-24T22:12:12.9842025Z Updating files:  18% (121/669)
+2026-11-24T22:12:12.9859534Z Updating files:  19% (128/669)
+2026-11-24T22:12:12.9889401Z Updating files:  20% (134/669)
+2026-11-24T22:12:12.9919589Z Updating files:  21% (141/669)
+2026-11-24T22:12:12.9943879Z Updating files:  22% (148/669)
+2026-11-24T22:12:12.9969613Z Updating files:  23% (154/669)
+2026-11-24T22:12:13.0000093Z Updating files:  24% (161/669)
+2026-11-24T22:12:13.0018145Z Updating files:  25% (168/669)
+2026-11-24T22:12:13.0037914Z Updating files:  26% (174/669)
+2026-11-24T22:12:13.0054578Z Updating files:  27% (181/669)
+2026-11-24T22:12:13.0075776Z Updating files:  28% (188/669)
+2026-11-24T22:12:13.0091307Z Updating files:  29% (195/669)
+2026-11-24T22:12:13.0108181Z Updating files:  30% (201/669)
+2026-11-24T22:12:13.0130922Z Updating files:  31% (208/669)
+2026-11-24T22:12:13.0146774Z Updating files:  32% (215/669)
+2026-11-24T22:12:13.0166284Z Updating files:  33% (221/669)
+2026-11-24T22:12:13.0183248Z Updating files:  34% (228/669)
+2026-11-24T22:12:13.0197554Z Updating files:  35% (235/669)
+2026-11-24T22:12:13.0217649Z Updating files:  36% (241/669)
+2026-11-24T22:12:13.0235093Z Updating files:  37% (248/669)
+2026-11-24T22:12:13.0252656Z Updating files:  38% (255/669)
+2026-11-24T22:12:13.0269113Z Updating files:  39% (261/669)
+2026-11-24T22:12:13.0303421Z Updating files:  40% (268/669)
+2026-11-24T22:12:13.0318281Z Updating files:  41% (275/669)
+2026-11-24T22:12:13.0334228Z Updating files:  42% (281/669)
+2026-11-24T22:12:13.0353940Z Updating files:  43% (288/669)
+2026-11-24T22:12:13.0372027Z Updating files:  44% (295/669)
+2026-11-24T22:12:13.0391011Z Updating files:  45% (302/669)
+2026-11-24T22:12:13.0408916Z Updating files:  46% (308/669)
+2026-11-24T22:12:13.0425328Z Updating files:  47% (315/669)
+2026-11-24T22:12:13.0457424Z Updating files:  48% (322/669)
+2026-11-24T22:12:13.0490423Z Updating files:  49% (328/669)
+2026-11-24T22:12:13.0636656Z Updating files:  50% (335/669)
+2026-11-24T22:12:13.0650354Z Updating files:  51% (342/669)
+2026-11-24T22:12:13.0671745Z Updating files:  52% (348/669)
+2026-11-24T22:12:13.0691596Z Updating files:  53% (355/669)
+2026-11-24T22:12:13.0708101Z Updating files:  54% (362/669)
+2026-11-24T22:12:13.0731769Z Updating files:  55% (368/669)
+2026-11-24T22:12:13.0758505Z Updating files:  56% (375/669)
+2026-11-24T22:12:13.0790507Z Updating files:  57% (382/669)
+2026-11-24T22:12:13.0807953Z Updating files:  58% (389/669)
+2026-11-24T22:12:13.0848458Z Updating files:  59% (395/669)
+2026-11-24T22:12:13.0871066Z Updating files:  60% (402/669)
+2026-11-24T22:12:13.0889785Z Updating files:  61% (409/669)
+2026-11-24T22:12:13.0912609Z Updating files:  62% (415/669)
+2026-11-24T22:12:13.0934114Z Updating files:  63% (422/669)
+2026-11-24T22:12:13.0957549Z Updating files:  64% (429/669)
+2026-11-24T22:12:13.0983222Z Updating files:  65% (435/669)
+2026-11-24T22:12:13.1008373Z Updating files:  66% (442/669)
+2026-11-24T22:12:13.1027864Z Updating files:  67% (449/669)
+2026-11-24T22:12:13.1049591Z Updating files:  68% (455/669)
+2026-11-24T22:12:13.1108645Z Updating files:  69% (462/669)
+2026-11-24T22:12:13.1124722Z Updating files:  70% (469/669)
+2026-11-24T22:12:13.1153326Z Updating files:  71% (475/669)
+2026-11-24T22:12:13.1174554Z Updating files:  72% (482/669)
+2026-11-24T22:12:13.1201880Z Updating files:  73% (489/669)
+2026-11-24T22:12:13.1226126Z Updating files:  74% (496/669)
+2026-11-24T22:12:13.1246572Z Updating files:  75% (502/669)
+2026-11-24T22:12:13.1266162Z Updating files:  76% (509/669)
+2026-11-24T22:12:13.1292513Z Updating files:  77% (516/669)
+2026-11-24T22:12:13.1313143Z Updating files:  78% (522/669)
+2026-11-24T22:12:13.1333580Z Updating files:  79% (529/669)
+2026-11-24T22:12:13.1353451Z Updating files:  80% (536/669)
+2026-11-24T22:12:13.1373294Z Updating files:  81% (542/669)
+2026-11-24T22:12:13.1432744Z Updating files:  82% (549/669)
+2026-11-24T22:12:13.1452596Z Updating files:  83% (556/669)
+2026-11-24T22:12:13.1472812Z Updating files:  84% (562/669)
+2026-11-24T22:12:13.1502476Z Updating files:  85% (569/669)
+2026-11-24T22:12:13.1539753Z Updating files:  86% (576/669)
+2026-11-24T22:12:13.1570581Z Updating files:  87% (583/669)
+2026-11-24T22:12:13.1642110Z Updating files:  88% (589/669)
+2026-11-24T22:12:13.1664120Z Updating files:  89% (596/669)
+2026-11-24T22:12:13.1682733Z Updating files:  90% (603/669)
+2026-11-24T22:12:13.1711786Z Updating files:  91% (609/669)
+2026-11-24T22:12:13.1737797Z Updating files:  92% (616/669)
+2026-11-24T22:12:13.1760880Z Updating files:  93% (623/669)
+2026-11-24T22:12:13.1783644Z Updating files:  94% (629/669)
+2026-11-24T22:12:13.1805602Z Updating files:  95% (636/669)
+2026-11-24T22:12:13.1827205Z Updating files:  96% (643/669)
+2026-11-24T22:12:13.1847014Z Updating files:  97% (649/669)
+2026-11-24T22:12:13.1871702Z Updating files:  98% (656/669)
+2026-11-24T22:12:13.1887750Z Updating files:  99% (663/669)
+2026-11-24T22:12:13.1888468Z Updating files: 100% (669/669)
+2026-11-24T22:12:13.1888746Z Updating files: 100% (669/669), done.
+2026-11-24T22:12:13.2005721Z Note: switching to '3975deeb8b1c2664cdb988dd4e393bc7f7630c7d'.
+2026-11-24T22:12:13.2006215Z 
+2026-11-24T22:12:13.2006587Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-24T22:12:13.2007476Z changes and commit them, and you can discard any commits you make in this
+2026-11-24T22:12:13.2008604Z state without impacting any branches by switching back to a branch.
+2026-11-24T22:12:13.2009125Z 
+2026-11-24T22:12:13.2009402Z If you want to create a new branch to retain commits you create, you may
+2026-11-24T22:12:13.2010232Z do so (now or later) by using -c with the switch command. Example:
+2026-11-24T22:12:13.2010699Z 
+2026-11-24T22:12:13.2010893Z   git switch -c <new-branch-name>
+2026-11-24T22:12:13.2011188Z 
+2026-11-24T22:12:13.2011342Z Or undo this operation with:
+2026-11-24T22:12:13.2011667Z 
+2026-11-24T22:12:13.2011794Z   git switch -
+2026-11-24T22:12:13.2011998Z 
+2026-11-24T22:12:13.2012368Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-24T22:12:13.2012900Z 
+2026-11-24T22:12:13.2013481Z HEAD is now at 3975dee Verify exact generated manifest line endings and transport audited published evidence
+2026-11-24T22:12:13.2087324Z ##[endgroup]
+2026-11-24T22:12:13.2548478Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-24T22:12:13.2912340Z 3975deeb8b1c2664cdb988dd4e393bc7f7630c7d
+2026-11-24T22:12:13.2957464Z ##[group]Removing auth
+2026-11-24T22:12:13.2966021Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T22:12:13.3355005Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-24T22:12:13.9103244Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T22:12:13.9448262Z http.https://github.com/.extraheader
+2026-11-24T22:12:13.9494134Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-24T22:12:13.9900609Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-24T22:12:14.5692664Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T22:12:14.6096101Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-24T22:12:15.1738998Z ##[endgroup]
+2026-11-24T22:12:15.2112198Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-24T22:12:15.2112618Z with:
+2026-11-24T22:12:15.2112808Z   repository: techrote/cybersand
+2026-11-24T22:12:15.2113078Z   ref: 00cdb02f103265b6dc5224c68283e9a0c8cb449f
+2026-11-24T22:12:15.2113359Z   path: accepted-engine
+2026-11-24T22:12:15.2113574Z   persist-credentials: false
+2026-11-24T22:12:15.2113785Z   lfs: false
+2026-11-24T22:12:15.2114433Z   sparse-checkout: godot/
+native/
+tools/
+third_party/
+.github/
+
+2026-11-24T22:12:15.2117405Z   token: ***
+2026-11-24T22:12:15.2117608Z   ssh-strict: true
+2026-11-24T22:12:15.2117797Z   ssh-user: git
+2026-11-24T22:12:15.2117966Z   clean: true
+2026-11-24T22:12:15.2118151Z   sparse-checkout-cone-mode: true
+2026-11-24T22:12:15.2118385Z   fetch-depth: 1
+2026-11-24T22:12:15.2118567Z   fetch-tags: false
+2026-11-24T22:12:15.2118758Z   show-progress: true
+2026-11-24T22:12:15.2118954Z   submodules: false
+2026-11-24T22:12:15.2119179Z   set-safe-directory: true
+2026-11-24T22:12:15.2119408Z   allow-unsafe-pr-checkout: false
+2026-11-24T22:12:15.2119651Z env:
+2026-11-24T22:12:15.2119802Z   PYTHONUTF8: 1
+2026-11-24T22:12:15.2119984Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:12:15.2120181Z ##[endgroup]
+2026-11-24T22:12:15.3238244Z Syncing repository: techrote/cybersand
+2026-11-24T22:12:15.3246477Z ##[group]Getting Git version info
+2026-11-24T22:12:15.3247159Z Working directory is 'D:\a\sandmapsreference\sandmapsreference\accepted-engine'
+2026-11-24T22:12:15.4101460Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-24T22:12:15.4456750Z git version 2.56.1.windows.1
+2026-11-24T22:12:15.4501673Z ##[endgroup]
+2026-11-24T22:12:15.4513716Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\0b186e22-24d3-4233-a633-a4e24b2fba9e\.gitconfig'
+2026-11-24T22:12:15.4536203Z Temporarily overriding HOME='D:\a\_temp\0b186e22-24d3-4233-a633-a4e24b2fba9e' before making global git config changes
+2026-11-24T22:12:15.4537119Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T22:12:15.4547823Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\sandmapsreference\sandmapsreference\accepted-engine
+2026-11-24T22:12:15.4967192Z ##[group]Initializing the repository
+2026-11-24T22:12:15.4978308Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\sandmapsreference\sandmapsreference\accepted-engine
+2026-11-24T22:12:15.5619092Z Initialized empty Git repository in D:/a/sandmapsreference/sandmapsreference/accepted-engine/.git/
+2026-11-24T22:12:15.5679281Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/techrote/cybersand
+2026-11-24T22:12:15.6116349Z ##[endgroup]
+2026-11-24T22:12:15.6116851Z ##[group]Disabling automatic garbage collection
+2026-11-24T22:12:15.6126598Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-24T22:12:15.6534103Z ##[endgroup]
+2026-11-24T22:12:15.6534466Z ##[group]Setting up auth
+2026-11-24T22:12:15.6554191Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T22:12:15.6982558Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-24T22:12:16.2932508Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T22:12:16.3345917Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-24T22:12:16.9202229Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T22:12:16.9592238Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-24T22:12:17.5533986Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-24T22:12:17.5947097Z ##[endgroup]
+2026-11-24T22:12:17.5948175Z ##[group]Fetching the repository
+2026-11-24T22:12:17.5959920Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin 00cdb02f103265b6dc5224c68283e9a0c8cb449f
+2026-11-24T22:12:17.8782226Z From https://github.com/techrote/cybersand
+2026-11-24T22:12:17.8783006Z  * branch            00cdb02f103265b6dc5224c68283e9a0c8cb449f -> FETCH_HEAD
+2026-11-24T22:12:17.8821088Z ##[endgroup]
+2026-11-24T22:12:17.8821550Z ##[group]Determining the checkout info
+2026-11-24T22:12:17.8823938Z ##[endgroup]
+2026-11-24T22:12:17.8824368Z ##[group]Setting up sparse checkout
+2026-11-24T22:12:17.8833152Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout set godot/ native/ tools/ third_party/ .github/
+2026-11-24T22:12:17.9248477Z ##[endgroup]
+2026-11-24T22:12:17.9249211Z ##[group]Checking out the ref
+2026-11-24T22:12:17.9261926Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force 00cdb02f103265b6dc5224c68283e9a0c8cb449f
+2026-11-24T22:12:19.4420316Z Updating files:   0% (1/1691)
+2026-11-24T22:12:19.4469233Z Updating files:   1% (17/1691)
+2026-11-24T22:12:19.4517320Z Updating files:   2% (34/1691)
+2026-11-24T22:12:19.4566221Z Updating files:   3% (51/1691)
+2026-11-24T22:12:19.4615659Z Updating files:   4% (68/1691)
+2026-11-24T22:12:19.4668684Z Updating files:   5% (85/1691)
+2026-11-24T22:12:20.9742622Z Updating files:   6% (102/1691)
+2026-11-24T22:12:20.9794489Z Updating files:   6% (109/1691)
+2026-11-24T22:12:20.9906397Z Updating files:   7% (119/1691)
+2026-11-24T22:12:20.9953621Z Updating files:   8% (136/1691)
+2026-11-24T22:12:20.9987801Z Updating files:   9% (153/1691)
+2026-11-24T22:12:21.0028507Z Updating files:  10% (170/1691)
+2026-11-24T22:12:21.0070396Z Updating files:  11% (187/1691)
+2026-11-24T22:12:21.0109020Z Updating files:  12% (203/1691)
+2026-11-24T22:12:21.0151671Z Updating files:  13% (220/1691)
+2026-11-24T22:12:21.0205228Z Updating files:  14% (237/1691)
+2026-11-24T22:12:21.0255080Z Updating files:  15% (254/1691)
+2026-11-24T22:12:21.0309341Z Updating files:  16% (271/1691)
+2026-11-24T22:12:21.0362271Z Updating files:  17% (288/1691)
+2026-11-24T22:12:21.0435665Z Updating files:  18% (305/1691)
+2026-11-24T22:12:21.0491717Z Updating files:  19% (322/1691)
+2026-11-24T22:12:21.0547837Z Updating files:  20% (339/1691)
+2026-11-24T22:12:21.0594034Z Updating files:  21% (356/1691)
+2026-11-24T22:12:21.0645709Z Updating files:  22% (373/1691)
+2026-11-24T22:12:21.0695012Z Updating files:  23% (389/1691)
+2026-11-24T22:12:21.0739810Z Updating files:  24% (406/1691)
+2026-11-24T22:12:21.0790679Z Updating files:  25% (423/1691)
+2026-11-24T22:12:21.0833858Z Updating files:  26% (440/1691)
+2026-11-24T22:12:21.0878586Z Updating files:  27% (457/1691)
+2026-11-24T22:12:21.0930474Z Updating files:  28% (474/1691)
+2026-11-24T22:12:21.0989116Z Updating files:  29% (491/1691)
+2026-11-24T22:12:21.1034905Z Updating files:  30% (508/1691)
+2026-11-24T22:12:21.1084020Z Updating files:  31% (525/1691)
+2026-11-24T22:12:21.1135458Z Updating files:  32% (542/1691)
+2026-11-24T22:12:21.1172689Z Updating files:  33% (559/1691)
+2026-11-24T22:12:21.1220674Z Updating files:  34% (575/1691)
+2026-11-24T22:12:21.1267504Z Updating files:  35% (592/1691)
+2026-11-24T22:12:21.1318387Z Updating files:  36% (609/1691)
+2026-11-24T22:12:21.1362934Z Updating files:  37% (626/1691)
+2026-11-24T22:12:21.1415619Z Updating files:  38% (643/1691)
+2026-11-24T22:12:21.1471101Z Updating files:  39% (660/1691)
+2026-11-24T22:12:21.1528231Z Updating files:  40% (677/1691)
+2026-11-24T22:12:21.1572339Z Updating files:  41% (694/1691)
+2026-11-24T22:12:21.1620022Z Updating files:  42% (711/1691)
+2026-11-24T22:12:21.1667884Z Updating files:  43% (728/1691)
+2026-11-24T22:12:21.1723247Z Updating files:  44% (745/1691)
+2026-11-24T22:12:21.1776445Z Updating files:  45% (761/1691)
+2026-11-24T22:12:21.1818556Z Updating files:  46% (778/1691)
+2026-11-24T22:12:21.1870637Z Updating files:  47% (795/1691)
+2026-11-24T22:12:21.1919476Z Updating files:  48% (812/1691)
+2026-11-24T22:12:21.1968679Z Updating files:  49% (829/1691)
+2026-11-24T22:12:21.2005663Z Updating files:  50% (846/1691)
+2026-11-24T22:12:21.2044375Z Updating files:  51% (863/1691)
+2026-11-24T22:12:21.2079866Z Updating files:  52% (880/1691)
+2026-11-24T22:12:21.2117814Z Updating files:  53% (897/1691)
+2026-11-24T22:12:21.2162617Z Updating files:  54% (914/1691)
+2026-11-24T22:12:21.2201304Z Updating files:  55% (931/1691)
+2026-11-24T22:12:21.2245473Z Updating files:  56% (947/1691)
+2026-11-24T22:12:21.2303180Z Updating files:  57% (964/1691)
+2026-11-24T22:12:21.2365275Z Updating files:  58% (981/1691)
+2026-11-24T22:12:21.2428375Z Updating files:  59% (998/1691)
+2026-11-24T22:12:21.2480150Z Updating files:  60% (1015/1691)
+2026-11-24T22:12:21.2524804Z Updating files:  61% (1032/1691)
+2026-11-24T22:12:21.2574772Z Updating files:  62% (1049/1691)
+2026-11-24T22:12:21.2626062Z Updating files:  63% (1066/1691)
+2026-11-24T22:12:21.2686252Z Updating files:  64% (1083/1691)
+2026-11-24T22:12:21.2737093Z Updating files:  65% (1100/1691)
+2026-11-24T22:12:21.2789991Z Updating files:  66% (1117/1691)
+2026-11-24T22:12:21.2848630Z Updating files:  67% (1133/1691)
+2026-11-24T22:12:21.2935287Z Updating files:  68% (1150/1691)
+2026-11-24T22:12:21.2993398Z Updating files:  69% (1167/1691)
+2026-11-24T22:12:21.3051559Z Updating files:  70% (1184/1691)
+2026-11-24T22:12:21.3109260Z Updating files:  71% (1201/1691)
+2026-11-24T22:12:21.3560491Z Updating files:  72% (1218/1691)
+2026-11-24T22:12:21.3609185Z Updating files:  73% (1235/1691)
+2026-11-24T22:12:21.3654756Z Updating files:  74% (1252/1691)
+2026-11-24T22:12:21.3698511Z Updating files:  75% (1269/1691)
+2026-11-24T22:12:21.3748240Z Updating files:  76% (1286/1691)
+2026-11-24T22:12:21.3794642Z Updating files:  77% (1303/1691)
+2026-11-24T22:12:21.3845697Z Updating files:  78% (1319/1691)
+2026-11-24T22:12:21.3888574Z Updating files:  79% (1336/1691)
+2026-11-24T22:12:21.3937930Z Updating files:  80% (1353/1691)
+2026-11-24T22:12:21.3984237Z Updating files:  81% (1370/1691)
+2026-11-24T22:12:21.4028029Z Updating files:  82% (1387/1691)
+2026-11-24T22:12:21.4078849Z Updating files:  83% (1404/1691)
+2026-11-24T22:12:21.4124322Z Updating files:  84% (1421/1691)
+2026-11-24T22:12:21.4178040Z Updating files:  85% (1438/1691)
+2026-11-24T22:12:21.4227709Z Updating files:  86% (1455/1691)
+2026-11-24T22:12:21.4272126Z Updating files:  87% (1472/1691)
+2026-11-24T22:12:21.4322031Z Updating files:  88% (1489/1691)
+2026-11-24T22:12:21.4361366Z Updating files:  89% (1505/1691)
+2026-11-24T22:12:21.4415504Z Updating files:  90% (1522/1691)
+2026-11-24T22:12:21.4471071Z Updating files:  91% (1539/1691)
+2026-11-24T22:12:21.4528610Z Updating files:  92% (1556/1691)
+2026-11-24T22:12:21.4582405Z Updating files:  93% (1573/1691)
+2026-11-24T22:12:21.4636896Z Updating files:  94% (1590/1691)
+2026-11-24T22:12:21.4680507Z Updating files:  95% (1607/1691)
+2026-11-24T22:12:21.4744921Z Updating files:  96% (1624/1691)
+2026-11-24T22:12:21.4808179Z Updating files:  97% (1641/1691)
+2026-11-24T22:12:21.4857318Z Updating files:  98% (1658/1691)
+2026-11-24T22:12:21.4908902Z Updating files:  99% (1675/1691)
+2026-11-24T22:12:21.4909852Z Updating files: 100% (1691/1691)
+2026-11-24T22:12:21.4910318Z Updating files: 100% (1691/1691), done.
+2026-11-24T22:12:21.5046834Z Note: switching to '00cdb02f103265b6dc5224c68283e9a0c8cb449f'.
+2026-11-24T22:12:21.5047233Z 
+2026-11-24T22:12:21.5047471Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-24T22:12:21.5048042Z changes and commit them, and you can discard any commits you make in this
+2026-11-24T22:12:21.5048883Z state without impacting any branches by switching back to a branch.
+2026-11-24T22:12:21.5049230Z 
+2026-11-24T22:12:21.5049444Z If you want to create a new branch to retain commits you create, you may
+2026-11-24T22:12:21.5049962Z do so (now or later) by using -c with the switch command. Example:
+2026-11-24T22:12:21.5050267Z 
+2026-11-24T22:12:21.5050377Z   git switch -c <new-branch-name>
+2026-11-24T22:12:21.5050568Z 
+2026-11-24T22:12:21.5050671Z Or undo this operation with:
+2026-11-24T22:12:21.5050854Z 
+2026-11-24T22:12:21.5050939Z   git switch -
+2026-11-24T22:12:21.5051070Z 
+2026-11-24T22:12:21.5051306Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-24T22:12:21.5051686Z 
+2026-11-24T22:12:21.5051883Z HEAD is now at 00cdb02 Merge PR #727: session-only Art audit logging
+2026-11-24T22:12:21.8542012Z ##[endgroup]
+2026-11-24T22:12:21.8951187Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-24T22:12:21.9299885Z 00cdb02f103265b6dc5224c68283e9a0c8cb449f
+2026-11-24T22:12:21.9339657Z ##[group]Removing auth
+2026-11-24T22:12:21.9348268Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T22:12:21.9726903Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-24T22:12:22.5377185Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T22:12:22.5715052Z http.https://github.com/.extraheader
+2026-11-24T22:12:22.5760329Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-24T22:12:22.6147326Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-24T22:12:23.1794892Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T22:12:23.2188047Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-24T22:12:23.7910650Z ##[endgroup]
+2026-11-24T22:12:23.8293069Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-11-24T22:12:23.8293508Z with:
+2026-11-24T22:12:23.8293695Z   python-version: 3.12
+2026-11-24T22:12:23.8293909Z   check-latest: false
+2026-11-24T22:12:23.8296973Z   token: ***
+2026-11-24T22:12:23.8297169Z   update-environment: true
+2026-11-24T22:12:23.8297387Z   allow-prereleases: false
+2026-11-24T22:12:23.8297590Z   freethreaded: false
+2026-11-24T22:12:23.8297767Z env:
+2026-11-24T22:12:23.8297918Z   PYTHONUTF8: 1
+2026-11-24T22:12:23.8298106Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:12:23.8298303Z ##[endgroup]
+2026-11-24T22:12:23.9903028Z ##[group]Installed versions
+2026-11-24T22:12:24.0106681Z (node:9472) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-24T22:12:24.0107860Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-24T22:12:24.0108547Z Successfully set up CPython (3.12.10)
+2026-11-24T22:12:24.0109320Z ##[endgroup]
+2026-11-24T22:12:24.0395594Z ##[group]Run python -m pip install numpy==2.3.5 scipy==1.17.0 pillow==13.0.0 pyyaml==6.0.3
+2026-11-24T22:12:24.0396307Z [36;1mpython -m pip install numpy==2.3.5 scipy==1.17.0 pillow==13.0.0 pyyaml==6.0.3[0m
+2026-11-24T22:12:24.0396879Z [36;1mif ($LASTEXITCODE -ne 0) { throw 'Pinned corpus dependencies unavailable' }[0m
+2026-11-24T22:12:24.0472095Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-24T22:12:24.0472437Z env:
+2026-11-24T22:12:24.0472610Z   PYTHONUTF8: 1
+2026-11-24T22:12:24.0472804Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:12:24.0473104Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:24.0473568Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-24T22:12:24.0474017Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:24.0474412Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:24.0474860Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:24.0475172Z ##[endgroup]
+2026-11-24T22:12:29.9403339Z Collecting numpy==2.3.5
+2026-11-24T22:12:30.1770792Z   Downloading numpy-2.3.5-cp312-cp312-win_amd64.whl.metadata (60 kB)
+2026-11-24T22:12:30.4523244Z Collecting scipy==1.17.0
+2026-11-24T22:12:30.4661773Z   Downloading scipy-1.17.0-cp312-cp312-win_amd64.whl.metadata (60 kB)
+2026-11-24T22:12:30.7333418Z Collecting pillow==13.0.0
+2026-11-24T22:12:30.7438986Z   Downloading pillow-13.0.0-cp312-cp312-win_amd64.whl.metadata (9.3 kB)
+2026-11-24T22:12:30.8414962Z Collecting pyyaml==6.0.3
+2026-11-24T22:12:30.8530440Z   Downloading pyyaml-6.0.3-cp312-cp312-win_amd64.whl.metadata (2.4 kB)
+2026-11-24T22:12:30.8934559Z Downloading numpy-2.3.5-cp312-cp312-win_amd64.whl (12.8 MB)
+2026-11-24T22:12:31.1684188Z    ---------------------------------------- 12.8/12.8 MB 50.1 MB/s  0:00:00
+2026-11-24T22:12:31.2147936Z Downloading scipy-1.17.0-cp312-cp312-win_amd64.whl (36.3 MB)
+2026-11-24T22:12:31.7923699Z    ---------------------------------------- 36.3/36.3 MB 62.4 MB/s  0:00:00
+2026-11-24T22:12:31.8057785Z Downloading pillow-13.0.0-cp312-cp312-win_amd64.whl (7.3 MB)
+2026-11-24T22:12:31.8803940Z    ---------------------------------------- 7.3/7.3 MB 111.3 MB/s  0:00:00
+2026-11-24T22:12:31.8909975Z Downloading pyyaml-6.0.3-cp312-cp312-win_amd64.whl (154 kB)
+2026-11-24T22:12:32.3630751Z Installing collected packages: pyyaml, pillow, numpy, scipy
+2026-11-24T22:12:47.3848412Z 
+2026-11-24T22:12:47.3867535Z Successfully installed numpy-2.3.5 pillow-13.0.0 pyyaml-6.0.3 scipy-1.17.0
+2026-11-24T22:12:47.5671380Z ##[group]Run python accepted-engine/tools/ci/check_ci_provider_policy.py --root .
+2026-11-24T22:12:47.5672031Z [36;1mpython accepted-engine/tools/ci/check_ci_provider_policy.py --root .[0m
+2026-11-24T22:12:47.5672945Z [36;1mif ($LASTEXITCODE -ne 0) { throw 'CI provider policy failed' }[0m
+2026-11-24T22:12:47.5673652Z [36;1mpython accepted-engine/tools/ci/check_ci_scheduling_policy.py --root . --output "$env:RUNNER_TEMP/goldmaps-ci-scheduling.json"[0m
+2026-11-24T22:12:47.5674339Z [36;1mif ($LASTEXITCODE -ne 0) { throw 'CI scheduling policy failed' }[0m
+2026-11-24T22:12:47.5675758Z [36;1m$inventory = Get-Content "$env:RUNNER_TEMP/goldmaps-ci-scheduling.json" -Raw | ConvertFrom-Json[0m
+2026-11-24T22:12:47.5676844Z [36;1mif ($inventory.workflow_count -lt 1 -or -not ($inventory.workflows.file -contains '.github/workflows/goldmaps-owner-delivery.yml')) { throw 'Workflow policy scan did not inspect the actual delivery workflow' }[0m
+2026-11-24T22:12:47.5749473Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-24T22:12:47.5749828Z env:
+2026-11-24T22:12:47.5750071Z   PYTHONUTF8: 1
+2026-11-24T22:12:47.5750408Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:12:47.5750731Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:47.5751233Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-24T22:12:47.5751700Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:47.5752107Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:47.5752520Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:47.5752836Z ##[endgroup]
+2026-11-24T22:12:47.9262570Z {
+2026-11-24T22:12:47.9262895Z   "status": "passed",
+2026-11-24T22:12:47.9263306Z   "scope": "active CI provider and runner routing",
+2026-11-24T22:12:47.9263764Z   "errors": [],
+2026-11-24T22:12:47.9264039Z   "policy": {
+2026-11-24T22:12:47.9264403Z     "routine_provider": "GitHub-hosted Actions",
+2026-11-24T22:12:47.9265065Z     "external_provider_config": "forbidden unless policy is explicitly changed",
+2026-11-24T22:12:47.9265727Z     "runner_indirection": "forbidden"
+2026-11-24T22:12:47.9266189Z   }
+2026-11-24T22:12:47.9266536Z }
+2026-11-24T22:12:48.0426403Z {"status": "passed", "workflows": 5, "errors": [], "output": "D:\\a\\_temp\\goldmaps-ci-scheduling.json"}
+2026-11-24T22:12:48.2533137Z ##[group]Run $request = Get-Content tools/goldmaps_owner/integration/qualification-request.v1.json -Raw | ConvertFrom-Json
+2026-11-24T22:12:48.2534175Z [36;1m$request = Get-Content tools/goldmaps_owner/integration/qualification-request.v1.json -Raw | ConvertFrom-Json[0m
+2026-11-24T22:12:48.2534800Z [36;1mif ($request.native_reuse) {[0m
+2026-11-24T22:12:48.2535315Z [36;1m  if ($request.native_reuse.source_head -notmatch '^[0-9a-f]{40}$') { throw 'Native source must be an exact commit' }[0m
+2026-11-24T22:12:48.2535941Z [36;1m  git fetch --no-tags --depth=1 origin $request.native_reuse.source_head[0m
+2026-11-24T22:12:48.2536603Z [36;1m  if ($LASTEXITCODE -ne 0) { throw 'Exact native source unavailable for independent committed-byte comparison' }[0m
+2026-11-24T22:12:48.2537136Z [36;1m  "enabled=true" >> $env:GITHUB_OUTPUT[0m
+2026-11-24T22:12:48.2537512Z [36;1m  "run_id=$($request.native_reuse.github_run_id)" >> $env:GITHUB_OUTPUT[0m
+2026-11-24T22:12:48.2538047Z [36;1m  "artifact_name=$($request.native_reuse.artifact_name)" >> $env:GITHUB_OUTPUT[0m
+2026-11-24T22:12:48.2538433Z [36;1m} else {[0m
+2026-11-24T22:12:48.2538644Z [36;1m  "enabled=false" >> $env:GITHUB_OUTPUT[0m
+2026-11-24T22:12:48.2538916Z [36;1m}[0m
+2026-11-24T22:12:48.2611666Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-24T22:12:48.2612005Z env:
+2026-11-24T22:12:48.2612178Z   PYTHONUTF8: 1
+2026-11-24T22:12:48.2612377Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:12:48.2612681Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:48.2613167Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-24T22:12:48.2613621Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:48.2614015Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:48.2614409Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:48.2614729Z ##[endgroup]
+2026-11-24T22:12:48.8260276Z From https://github.com/techrote/sandmapsreference
+2026-11-24T22:12:48.8261075Z  * branch            b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041 -> FETCH_HEAD
+2026-11-24T22:12:48.9131393Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+2026-11-24T22:12:48.9131877Z with:
+2026-11-24T22:12:48.9132091Z   repository: techrote/sandmapsreference
+2026-11-24T22:12:48.9132359Z   run-id: 45481683557
+2026-11-24T22:12:48.9132750Z   name: GOLDMAPS-Owner-Playable-Windows-b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041
+2026-11-24T22:12:48.9136221Z   github-token: ***
+2026-11-24T22:12:48.9136491Z   path: D:\a\_temp/goldmaps-native-predecessor
+2026-11-24T22:12:48.9136794Z   merge-multiple: false
+2026-11-24T22:12:48.9136984Z env:
+2026-11-24T22:12:48.9137144Z   PYTHONUTF8: 1
+2026-11-24T22:12:48.9137334Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:12:48.9137657Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:48.9138127Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-24T22:12:48.9138561Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:48.9139021Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:48.9139425Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:48.9139748Z ##[endgroup]
+2026-11-24T22:12:49.0977310Z Downloading single artifact
+2026-11-24T22:12:49.1084644Z (node:10040) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-24T22:12:49.1086000Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-24T22:12:49.1469377Z (node:10040) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-24T22:12:49.4016176Z Preparing to download the following artifacts:
+2026-11-24T22:12:49.4018295Z - GOLDMAPS-Owner-Playable-Windows-b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041 (ID: 14966411591, Size: 109675127, Expected Digest: sha256:410e77118e7fdf55f8bd8ea8afc8cb9362abd350cf627ede8a5d0ba5ec71d2d3)
+2026-11-24T22:12:49.4058218Z Downloading artifact '14966411591' from 'techrote/sandmapsreference'
+2026-11-24T22:12:49.6959590Z Redirecting to blob download url: https://productionresultssa14.blob.core.windows.net/actions-results/b67ca55b-bac1-886d-a750-344305434d42/workflow-job-run-8bec00da-9d61-53f6-9d0f-f60e338b7532/artifacts/7e3f8564dd4104dc4e6eb835216c4a37ec024b56ed21c5ba28d6de20857e3a8a.zip
+2026-11-24T22:12:49.6961676Z Starting download of artifact to: D:\a\_temp\goldmaps-native-predecessor
+2026-11-24T22:12:49.7795089Z (node:10040) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-24T22:12:51.0550356Z SHA256 digest of downloaded artifact is 410e77118e7fdf55f8bd8ea8afc8cb9362abd350cf627ede8a5d0ba5ec71d2d3
+2026-11-24T22:12:51.0551395Z Artifact download completed successfully.
+2026-11-24T22:12:51.0551925Z Total of 1 artifact(s) downloaded
+2026-11-24T22:12:51.0561751Z Download artifact has finished successfully
+2026-11-24T22:12:51.0923077Z ##[group]Run $reuseArguments = @()
+2026-11-24T22:12:51.0923464Z [36;1m$reuseArguments = @()[0m
+2026-11-24T22:12:51.0923873Z [36;1mif (Test-Path "$env:RUNNER_TEMP/goldmaps-native-predecessor/campaign.json") {[0m
+2026-11-24T22:12:51.0924914Z [36;1m  $reuseArguments = @('--reuse-native-artifact', "$env:RUNNER_TEMP/goldmaps-native-predecessor")[0m
+2026-11-24T22:12:51.0925394Z [36;1m}[0m
+2026-11-24T22:12:51.0926093Z [36;1mpython tools/goldmaps_owner/integration/run_campaign.py --engine accepted-engine --out "$env:RUNNER_TEMP/goldmaps-owner-delivery" --source-head $env:GITHUB_SHA @reuseArguments[0m
+2026-11-24T22:12:51.0927081Z [36;1mif ($LASTEXITCODE -ne 0) { throw 'Owner delivery did not complete; preserve actual negative receipts' }[0m
+2026-11-24T22:12:51.1001191Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-24T22:12:51.1001536Z env:
+2026-11-24T22:12:51.1001895Z   PYTHONUTF8: 1
+2026-11-24T22:12:51.1002092Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:12:51.1002451Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:51.1002908Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-24T22:12:51.1003521Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:51.1004098Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:51.1004566Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:12:51.1004987Z   GOLDMAPS_TEST_SOURCE_HEAD: 3975deeb8b1c2664cdb988dd4e393bc7f7630c7d
+2026-11-24T22:12:51.1005332Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-24T22:12:51.1005968Z ##[endgroup]
+2026-11-24T22:12:51.7109541Z GOLDMAPS_CAMPAIGN_START runtime-acquisition
+2026-11-24T22:12:59.8906955Z GOLDMAPS_CAMPAIGN_RESULT {"name": "runtime-acquisition", "exit_code": 0, "timeout": false, "log_sha256": "ffbd6862bc9691f26be7a306af7ed0ad97b466dc911b438b7439448be13d3676"}
+2026-11-24T22:12:59.8908409Z GOLDMAPS_CAMPAIGN_START stage-engine
+2026-11-24T22:13:38.9999778Z GOLDMAPS_CAMPAIGN_RESULT {"name": "stage-engine", "exit_code": 0, "timeout": false, "log_sha256": "a9327ffecfef05db41726a6fb438c7198bb6f084151c68363ff019564d5c63aa"}
+2026-11-24T22:13:39.0001127Z GOLDMAPS_CAMPAIGN_START build-corpus
+2026-11-24T22:13:49.1333670Z GOLDMAPS_CAMPAIGN_RESULT {"name": "build-corpus", "exit_code": 0, "timeout": false, "log_sha256": "8e15a13b4fe766474b046c61a8c803590fcd429349981a455200c34e61b0c753"}
+2026-11-24T22:13:49.2607242Z GOLDMAPS_CAMPAIGN_START assemble-product
+2026-11-24T22:13:49.3294104Z GOLDMAPS_CAMPAIGN_RESULT {"name": "assemble-product", "exit_code": 0, "timeout": false, "log_sha256": "51a580c4f50a0a78ca5be8abb3e48625b056e6714d0ea52393fe3b871d38bb6b"}
+2026-11-24T22:13:52.2315763Z GOLDMAPS_CAMPAIGN_START independent-corpus-audit
+2026-11-24T22:13:53.5627832Z GOLDMAPS_CAMPAIGN_RESULT {"name": "independent-corpus-audit", "exit_code": 0, "timeout": false, "log_sha256": "df746b401fbed1eafcce1dc5ae24a259cfa654eb58c4f726b8fab11e52c55c29"}
+2026-11-24T22:13:53.5629383Z GOLDMAPS_CAMPAIGN_START payload-contracts
+2026-11-24T22:13:53.9498799Z GOLDMAPS_CAMPAIGN_RESULT {"name": "payload-contracts", "exit_code": 0, "timeout": false, "log_sha256": "ede27af220f0ff8bfa6f64b4d13d7f9e97640cd99c9d7f9b88988f1c13e9111d"}
+2026-11-24T22:13:53.9500253Z GOLDMAPS_CAMPAIGN_START acquisition-contracts
+2026-11-24T22:13:54.4701511Z GOLDMAPS_CAMPAIGN_RESULT {"name": "acquisition-contracts", "exit_code": 0, "timeout": false, "log_sha256": "cf63388829373390b789b8679310a32335b88cffe69af361d8516e9145941b8d"}
+2026-11-24T22:13:54.4703035Z GOLDMAPS_CAMPAIGN_START rendered-receipt-contracts
+2026-11-24T22:13:54.6229712Z GOLDMAPS_CAMPAIGN_RESULT {"name": "rendered-receipt-contracts", "exit_code": 0, "timeout": false, "log_sha256": "69c181d74a5194a84dfeee65ed30c28a286c27ee7cb1f4e5569381afb0dbd923"}
+2026-11-24T22:13:54.6231347Z GOLDMAPS_CAMPAIGN_START contact-followup-contracts
+2026-11-24T22:13:54.9216328Z GOLDMAPS_CAMPAIGN_RESULT {"name": "contact-followup-contracts", "exit_code": 0, "timeout": false, "log_sha256": "e0f83757f57a133b015b535b404a664cce7b96cf39f339aa91eadf9f7b900be6"}
+2026-11-24T22:13:54.9217294Z GOLDMAPS_CAMPAIGN_START evidence-transfer-contracts
+2026-11-24T22:13:55.0923170Z GOLDMAPS_CAMPAIGN_RESULT {"name": "evidence-transfer-contracts", "exit_code": 0, "timeout": false, "log_sha256": "03b319082c46da9a3314a4dca7356c73a0cb6df35d4400794779ef0dd6558d93"}
+2026-11-24T22:13:55.0924383Z GOLDMAPS_CAMPAIGN_START runtime-package-boundary
+2026-11-24T22:13:57.6938629Z GOLDMAPS_CAMPAIGN_RESULT {"name": "runtime-package-boundary", "exit_code": 0, "timeout": false, "log_sha256": "0ce8ffd5fb8f71fb9a23d30b8d8c419fbedac4bc196fa684295bf6ab3b58d5bd"}
+2026-11-24T22:13:57.6952858Z GOLDMAPS_CAMPAIGN_START runtime-collection-boundary
+2026-11-24T22:13:58.0855898Z GOLDMAPS_CAMPAIGN_RESULT {"name": "runtime-collection-boundary", "exit_code": 0, "timeout": false, "log_sha256": "b0067d401035baa365af60edcccfad063d62a049c4a1ec961d2c0c680466e40c"}
+2026-11-24T22:13:58.0857337Z GOLDMAPS_CAMPAIGN_START architectural-manifest
+2026-11-24T22:13:58.6067794Z GOLDMAPS_CAMPAIGN_RESULT {"name": "architectural-manifest", "exit_code": 0, "timeout": false, "log_sha256": "e5850246d612559cb126a5294ea0a51ede783912650676cf3c9e334b5a9afb16"}
+2026-11-24T22:13:58.6069097Z GOLDMAPS_CAMPAIGN_START contact-fragment-boundary
+2026-11-24T22:14:01.7769955Z GOLDMAPS_CAMPAIGN_RESULT {"name": "contact-fragment-boundary", "exit_code": 0, "timeout": false, "log_sha256": "5944e047387f7fe5d0c5fcb19115807855fcc44ad82849ca99963005bcf261d4"}
+2026-11-24T22:14:04.5719597Z Traceback (most recent call last):
+2026-11-24T22:14:04.5735705Z   File "D:\a\sandmapsreference\sandmapsreference\tools\goldmaps_owner\integration\run_campaign.py", line 390, in <module>
+2026-11-24T22:14:04.5736997Z     raise SystemExit(main())
+2026-11-24T22:14:04.5737455Z                      ^^^^^^
+2026-11-24T22:14:04.5738573Z   File "D:\a\sandmapsreference\sandmapsreference\tools\goldmaps_owner\integration\run_campaign.py", line 265, in main
+2026-11-24T22:14:04.5740275Z     reuse_receipt, reuse_path = reuse(args.reuse_native_artifact.resolve(), reuse_request, kit, evidence, head)
+2026-11-24T22:14:04.5741380Z                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-24T22:14:04.5742837Z   File "D:\a\sandmapsreference\sandmapsreference\tools\goldmaps_owner\integration\reuse_native_evidence.py", line 91, in reuse
+2026-11-24T22:14:04.5743933Z     verify_directory(kit)
+2026-11-24T22:14:04.5744960Z   File "D:\a\sandmapsreference\sandmapsreference\tools\goldmaps_owner\qualification\verify_payload.py", line 141, in verify_directory
+2026-11-24T22:14:04.5746089Z     mutable = _inventory(index, actual, post_execution)
+2026-11-24T22:14:04.5746587Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-24T22:14:04.5747641Z   File "D:\a\sandmapsreference\sandmapsreference\tools\goldmaps_owner\qualification\verify_payload.py", line 117, in _inventory
+2026-11-24T22:14:04.5749090Z     raise ValueError("payload inventory mismatch: " + json.dumps({"missing": missing, "extra": extra}))
+2026-11-24T22:14:04.5751983Z ValueError: payload inventory mismatch: {"missing": [], "extra": ["userdata/boundary-fixtures/roaming/Godot/app_userdata/GOLDMAPS Owner Collection/logs/godot.log", "userdata/io-contract/roaming/Godot/app_userdata/GOLDMAPS Owner Collection/goldmaps-io-contract/replace.json", "userdata/io-contract/roaming/Godot/app_userdata/GOLDMAPS Owner Collection/logs/godot.log"]}
+2026-11-24T22:14:04.8038111Z [31;1mException: [0mD:\a\_temp\11dc7f0b-c52d-478d-ac2f-5069c1194b02.ps1:7[0m
+2026-11-24T22:14:04.8039199Z [31;1m[0m[36;1mLine |[0m
+2026-11-24T22:14:04.8040259Z [31;1m[0m[36;1m[36;1m   7 | [0m … DE -ne 0) { [36;1mthrow 'Owner delivery did not complete; preserve actual n[0m …[0m
+2026-11-24T22:14:04.8041368Z [31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+2026-11-24T22:14:04.8043271Z [31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mOwner delivery did not complete; preserve actual negative receipts[0m
+2026-11-24T22:14:04.8238543Z ##[error]Process completed with exit code 1.
+2026-11-24T22:14:04.8438221Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-11-24T22:14:04.8438674Z with:
+2026-11-24T22:14:04.8439034Z   name: GOLDMAPS-Owner-Windows-Evidence-3975deeb8b1c2664cdb988dd4e393bc7f7630c7d
+2026-11-24T22:14:04.8439689Z   path: D:\a\_temp/goldmaps-owner-delivery/evidence/**
+D:\a\_temp/goldmaps-ci-scheduling.json
+
+2026-11-24T22:14:04.8440151Z   if-no-files-found: warn
+2026-11-24T22:14:04.8440369Z   compression-level: 6
+2026-11-24T22:14:04.8440572Z   retention-days: 90
+2026-11-24T22:14:04.8440762Z   overwrite: false
+2026-11-24T22:14:04.8440964Z   include-hidden-files: false
+2026-11-24T22:14:04.8441181Z env:
+2026-11-24T22:14:04.8441564Z   PYTHONUTF8: 1
+2026-11-24T22:14:04.8441758Z   PYTHONIOENCODING: utf-8
+2026-11-24T22:14:04.8442056Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:14:04.8442519Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-24T22:14:04.8442985Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:14:04.8443392Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:14:04.8443803Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-24T22:14:04.8444115Z ##[endgroup]
+2026-11-24T22:14:05.0388385Z (node:7664) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-24T22:14:05.0389731Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-24T22:14:05.0809091Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-24T22:14:05.0812840Z The least common ancestor is D:\a\_temp. This will be the root directory of the artifact
+2026-11-24T22:14:05.0814257Z With the provided path, there will be 77 files uploaded
+2026-11-24T22:14:05.0821898Z Artifact name is valid!
+2026-11-24T22:14:05.0823392Z Root directory input is valid!
+2026-11-24T22:14:05.3072856Z Beginning upload of artifact content to blob storage
+2026-11-24T22:14:05.4106179Z (node:7664) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-24T22:14:05.4473437Z Uploaded bytes 41746
+2026-11-24T22:14:05.4661896Z Finished uploading artifact content to blob storage!
+2026-11-24T22:14:05.4663353Z SHA256 digest of uploaded artifact zip is d1b92aaa6694374966f80f5a80b4be0aa0e47e950770e7ba6cda057c71544e13
+2026-11-24T22:14:05.4665535Z Finalizing artifact upload
+2026-11-24T22:14:05.7854787Z Artifact GOLDMAPS-Owner-Windows-Evidence-3975deeb8b1c2664cdb988dd4e393bc7f7630c7d.zip successfully finalized. Artifact ID 14970786081
+2026-11-24T22:14:05.7857333Z Artifact GOLDMAPS-Owner-Windows-Evidence-3975deeb8b1c2664cdb988dd4e393bc7f7630c7d has been successfully uploaded! Final size is 41746 bytes. Artifact ID is 14970786081
+2026-11-24T22:14:05.7868183Z Artifact download URL: https://github.com/techrote/sandmapsreference/actions/runs/45498633502/artifacts/14970786081
+2026-11-24T22:14:05.8276030Z Post job cleanup.
+2026-11-24T22:14:06.0246673Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-24T22:14:06.0642394Z git version 2.56.1.windows.1
+2026-11-24T22:14:06.0723699Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\df9586df-0b72-4bdf-8d9f-9ff6aa54ff55\.gitconfig'
+2026-11-24T22:14:06.0748957Z Temporarily overriding HOME='D:\a\_temp\df9586df-0b72-4bdf-8d9f-9ff6aa54ff55' before making global git config changes
+2026-11-24T22:14:06.0750581Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T22:14:06.0761868Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\sandmapsreference\sandmapsreference\accepted-engine
+2026-11-24T22:14:06.1190775Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T22:14:06.1616723Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-24T22:14:06.7581394Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T22:14:06.7998758Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-24T22:14:07.4010110Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T22:14:07.4397746Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-24T22:14:08.0684359Z Post job cleanup.
+2026-11-24T22:14:08.2770983Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-24T22:14:08.3124104Z git version 2.56.1.windows.1
+2026-11-24T22:14:08.3188056Z Copying 'C:\Users\runneradmin\.gitconfig' to 'D:\a\_temp\dffee956-9b63-489b-9cbe-8d8cfabab55f\.gitconfig'
+2026-11-24T22:14:08.3210041Z Temporarily overriding HOME='D:\a\_temp\dffee956-9b63-489b-9cbe-8d8cfabab55f' before making global git config changes
+2026-11-24T22:14:08.3211577Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-24T22:14:08.3222252Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\sandmapsreference\sandmapsreference
+2026-11-24T22:14:08.3643439Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-24T22:14:08.4051049Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-24T22:14:08.9719724Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-24T22:14:09.0123082Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-24T22:14:09.5961792Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-24T22:14:09.6363457Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-24T22:14:10.2264655Z Cleaning up orphan processes
+2026-11-24T22:14:10.2574550Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

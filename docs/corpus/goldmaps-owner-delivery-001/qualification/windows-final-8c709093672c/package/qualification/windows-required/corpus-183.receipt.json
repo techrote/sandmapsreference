@@ -1,0 +1,95 @@
+{
+  "id": "corpus-183",
+  "aliases": [
+    "corpus-183"
+  ],
+  "setup_sha256": "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+  "source_records": [
+    {
+      "expected_native_refusal": {
+        "code": "malformed_policy",
+        "detail": "bad magic"
+      },
+      "extent": [
+        2048,
+        1024
+      ],
+      "head": "c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b",
+      "id": "corpus-183",
+      "material_plane_sha256": "e33499bc4b8e6779e28aa04b2fe30f0670cefc8fe3d7574d80740dcaf2a17b2d",
+      "package_path": "collection/setups/2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0.json",
+      "path": "cybersand-canvases/2048x1024/original-megastructure-wide-keel-ossuary-brokenback-261121/setup.json",
+      "pr": 183,
+      "roles": [
+        "corpus-reference"
+      ],
+      "setup_bytes": 69866,
+      "setup_sha256": "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b/cybersand-canvases/2048x1024/original-megastructure-wide-keel-ossuary-brokenback-261121/setup.json"
+    }
+  ],
+  "phases": {
+    "load": {
+      "exit_code": 1,
+      "timeout": false,
+      "process_id": 1392,
+      "seconds": 5.047,
+      "log_sha256": "5b6ec7a707be5b3dc9cbb9f8ce431c5698ad74aa62d9bd89a39bef7948fba435",
+      "evidence": {
+        "active_label": "gm-10747f5b80-2b402fed48fd",
+        "actor_adopted": false,
+        "collision_observed": false,
+        "display_server": "headless",
+        "errors": [
+          "native liquid policy refused: { \"code\": \"malformed_policy\", \"material\": <null>, \"detail\": \"bad magic\" }"
+        ],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": false,
+        "full_grid": false,
+        "label": "gm-10747f5b80-2b402fed48fd",
+        "load": false,
+        "midge_drive": false,
+        "native_bridge": false,
+        "native_policy": {
+          "accepted": false,
+          "receipt": null,
+          "refusal": {
+            "code": "malformed_policy",
+            "detail": "bad magic",
+            "material": null
+          }
+        },
+        "phase": "load",
+        "physics_tick": false,
+        "process_id": 3836,
+        "rectangles": 3770,
+        "saved_label": "gm-10747f5b80-2b402fed48fd-saved",
+        "setup_sha256": "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0",
+        "source_parse": true,
+        "user_data_dir": "D:/a/_temp/goldmaps-owner-delivery/work/Goldmaps Owner Evaluation/userdata/qualification-10747f5b80/roaming/Godot/app_userdata/Cyber Sand Reference Sandbox",
+        "version": "4.7-stable (official)"
+      }
+    }
+  },
+  "saved_setup_semantic_equal": false,
+  "saved_setup_sha256": null,
+  "source_unchanged": true,
+  "separate_processes": false,
+  "movement_applicable": false,
+  "contact_applicable": false,
+  "movement_pass": null,
+  "contact_pass": null,
+  "plane_matches_corpus": false,
+  "actual_native_plane_sha256": null,
+  "profile_isolated": true,
+  "pass": false,
+  "expected_native_refusal": {
+    "code": "malformed_policy",
+    "detail": "bad magic"
+  },
+  "negative_fixture_pass": true,
+  "qualification_status": "REFUSED_INVALID_SOURCE"
+}

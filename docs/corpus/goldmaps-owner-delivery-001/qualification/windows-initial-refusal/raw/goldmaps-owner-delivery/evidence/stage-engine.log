@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "D:\a\sandmapsreference\sandmapsreference\tools\goldmaps_owner\integration\stage_engine.py", line 100, in <module>
+    main()
+  File "D:\a\sandmapsreference\sandmapsreference\tools\goldmaps_owner\integration\stage_engine.py", line 60, in main
+    raise ValueError("Engine file differs from committed source: " + relative)
+ValueError: Engine file differs from committed source: godot/.godot/.gdignore

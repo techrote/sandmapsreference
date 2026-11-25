@@ -1,0 +1,65 @@
+{
+  "schema": "goldmaps.owner-post-preflight-refusal-custody.v1",
+  "source_head": "3975deeb8b1c2664cdb988dd4e393bc7f7630c7d",
+  "run_id": "45498633502",
+  "job_id": "138815683969",
+  "run_url": "https://github.com/techrote/sandmapsreference/actions/runs/45498633502",
+  "artifact": {
+    "id": 14970786081,
+    "bytes": 41746,
+    "sha256": "d1b92aaa6694374966f80f5a80b4be0aa0e47e950770e7ba6cda057c71544e13",
+    "identity_source": "GitHub artifact metadata and exact downloaded original ZIP bytes"
+  },
+  "preserved_log": {
+    "path": "job.log",
+    "bytes": 60092,
+    "sha256": "7b71561fdb4bd5b02d9e8a4f9156a62420a068f4a7e199c94517e2962c280888",
+    "git_blob_sha1": "bbf4019758ef503d19881a83d14c9944fb53a6c0",
+    "scope": "Complete exact UTF-8 decoded authenticated GitHub job log"
+  },
+  "passed_before_refusal": [
+    "18 rendered receipt fixtures",
+    "13 contact/fragment contract fixtures",
+    "19 evidence transport fixtures",
+    "runtime package and collection boundaries",
+    "architectural manifest validation",
+    "actual isolated missing/corrupt/extra/count contact sidecar fixtures"
+  ],
+  "observed_failure": "Native evidence reuse called pristine verify_directory after boundary probes. It refused exactly three generated QA files under existing declared userdata roots.",
+  "not_executed": [
+    "native evidence reuse completion",
+    "new three-map native contact observations",
+    "corrected Windows product/launcher",
+    "new graphical captures",
+    "final archive publication"
+  ],
+  "correction": "Use existing post_execution=True at the post-probe reuse boundary and retain that integrity receipt; final archive checks remain pristine.",
+  "owner_accepted": false,
+  "preserved_archive": {
+    "path": "original-artifact.zip",
+    "artifact_id": 14970786081,
+    "bytes": 41746,
+    "sha256": "d1b92aaa6694374966f80f5a80b4be0aa0e47e950770e7ba6cda057c71544e13",
+    "git_blob_sha1": "9a66e23c7bab2bcf9cca464558dbf01f2d4cccbb",
+    "zip_crc": "PASS",
+    "members": 77,
+    "recovered_date_utc": "2026-11-24",
+    "scope": "Exact original GitHub Actions evidence artifact, downloaded again and byte/hash/CRC checked; not a new execution."
+  },
+  "independent_log_read": {
+    "roles": [
+      "Lead / integration",
+      "Specialist A / corpus",
+      "Specialist B / product"
+    ],
+    "rendered_receipt_tests": 18,
+    "contact_fragment_tests": 13,
+    "evidence_transfer_tests": 19,
+    "all_passed": true,
+    "evidence_transfer_log_sha256": "03b319082c46da9a3314a4dca7356c73a0cb6df35d4400794779ef0dd6558d93",
+    "contact_fragment_report_sha256": "0a42677296de7776ab390f969b2c1375a2d8caa4cd125d2d399be6c060414f47",
+    "contact_fragment_checks": 8,
+    "prior_fragment_newlines": "CRLF",
+    "native_execution_added": false
+  }
+}

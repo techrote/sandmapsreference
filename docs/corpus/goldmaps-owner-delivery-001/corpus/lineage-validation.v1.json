@@ -1,0 +1,56 @@
+{
+  "schema": "goldmaps.owner-lineage-validation.v1",
+  "status": "PASS",
+  "scope": "Additive source ancestry and generator pin guards; no native or artistic verdict",
+  "experiment_cases": 8,
+  "all_original_family_labels_retained": true,
+  "representative_closure_checks": [
+    {
+      "sources": [
+        177,
+        186,
+        203,
+        214
+      ],
+      "required_group": "portrait-donor-177",
+      "groups": [
+        "astra-case-d1",
+        "portrait-donor-177",
+        "source-pr-214"
+      ],
+      "pass": true
+    },
+    {
+      "sources": [
+        124,
+        196,
+        208,
+        211
+      ],
+      "required_group": "portrait-donor-124",
+      "groups": [
+        "astra-case-d2",
+        "portrait-donor-124",
+        "source-pr-211"
+      ],
+      "pass": true
+    },
+    {
+      "sources": [
+        170,
+        213
+      ],
+      "required_group": "astra-case-b3",
+      "groups": [
+        "astra-case-b3",
+        "source-pr-170",
+        "source-pr-213"
+      ],
+      "pass": true
+    }
+  ],
+  "stale_generator_refusal": {
+    "status": "PASS",
+    "observed": "Delivery generator source does not match the requested commit"
+  }
+}

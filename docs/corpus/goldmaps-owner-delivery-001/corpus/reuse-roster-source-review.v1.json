@@ -1,0 +1,456 @@
+{
+  "schema": "goldmaps.owner-native-reuse-roster-review.v1",
+  "reviewer": "Specialist A corpus/source custody; independent of integration implementer",
+  "reviewed_integration_source": "ac3628bf688bf655e438074cbdefe6ba0c5a2d2e",
+  "reviewed_integration_file_sha256": "a1a27399215bd7464ec7f3557cacd75029515ac6751cef9627818742e11b086f",
+  "pass": true,
+  "scope": "Two actual generator executions at exact Git source heads, full roster normalization and generator-pin refusal fixtures, plus exact72Setup and2native-input byte comparisons. No native World executed; actual predecessor/final ZIP reuse remains a separate independent gate.",
+  "builds": [
+    {
+      "source_head": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+      "collection_sha256": "3da88e5ed698b5203d7b3bc78517489af6e57e76e526c7242daafcc70e9b8ac0",
+      "generator_sha256": "35dbbc213f653560ead085f929d01de515a777130212f8a10f5bdda03108b6e1",
+      "exit_code": 0,
+      "strict_generator_pin_check": true
+    },
+    {
+      "source_head": "ac3628bf688bf655e438074cbdefe6ba0c5a2d2e",
+      "collection_sha256": "9d6bebe4435895a8d8075b7ed017f4098d3ad484e7f27d9ed79c9ad056cfadd7",
+      "generator_sha256": "35dbbc213f653560ead085f929d01de515a777130212f8a10f5bdda03108b6e1",
+      "exit_code": 0,
+      "strict_generator_pin_check": true
+    }
+  ],
+  "normalized_rosters_equal": true,
+  "unchanged_setup_count": 72,
+  "unchanged_native_input_count": 2,
+  "unchanged_inputs": [
+    {
+      "path": "collection/native-inputs-optional.v1.json",
+      "bytes": 25850,
+      "sha256": "e0a241b94d725708fb96a008fe7a8d3cdae49eee317d5bb44df9d0a022857002"
+    },
+    {
+      "path": "collection/native-inputs.v1.json",
+      "bytes": 50876,
+      "sha256": "1c70c9ffdf245c124a41bfc5035520799dbdc178ae9d6fa08324852a7a06284c"
+    },
+    {
+      "path": "collection/setups/03fe485c3b44c350da03855f83d397937f170408213863f1b69dc98a2d09a672.json",
+      "bytes": 26911,
+      "sha256": "03fe485c3b44c350da03855f83d397937f170408213863f1b69dc98a2d09a672"
+    },
+    {
+      "path": "collection/setups/0c78bdd6296c55399d113341848a3fa60bf534f128c01f6c5148b187433cd75c.json",
+      "bytes": 12907,
+      "sha256": "0c78bdd6296c55399d113341848a3fa60bf534f128c01f6c5148b187433cd75c"
+    },
+    {
+      "path": "collection/setups/0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc.json",
+      "bytes": 24261,
+      "sha256": "0d4c0ad6181b3c99c89f05063e69e2afc27074f4c373566be63c10122b0394bc"
+    },
+    {
+      "path": "collection/setups/1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b.json",
+      "bytes": 94178,
+      "sha256": "1006eebf59e78a87bc94d1429969ec6102ef048762c756412c4112d124c8990b"
+    },
+    {
+      "path": "collection/setups/11944e7542af554fcd81c28a4818e2e84c73d1aedb9054874d7150ae337e2c63.json",
+      "bytes": 22413,
+      "sha256": "11944e7542af554fcd81c28a4818e2e84c73d1aedb9054874d7150ae337e2c63"
+    },
+    {
+      "path": "collection/setups/144774127919808eb028d8cf8b81ce7387c612ce5d02457757fe583ca140f05f.json",
+      "bytes": 40162,
+      "sha256": "144774127919808eb028d8cf8b81ce7387c612ce5d02457757fe583ca140f05f"
+    },
+    {
+      "path": "collection/setups/183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4.json",
+      "bytes": 4083,
+      "sha256": "183f1240e51250ea03afa02db3e89b3f4c8e2fe2957c0d73dbc2624f83b542a4"
+    },
+    {
+      "path": "collection/setups/1914243942a72c2aab2e43683974973999b578c23d4130fdd174a0699f6ad73c.json",
+      "bytes": 32363,
+      "sha256": "1914243942a72c2aab2e43683974973999b578c23d4130fdd174a0699f6ad73c"
+    },
+    {
+      "path": "collection/setups/195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30.json",
+      "bytes": 7690,
+      "sha256": "195393bfca4cdb3f3bf35c6647eb0bdfd48ce5a06ad4ddba823c8a45316e3b30"
+    },
+    {
+      "path": "collection/setups/1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86.json",
+      "bytes": 15103,
+      "sha256": "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86"
+    },
+    {
+      "path": "collection/setups/2af2c569df0ece15b594b74ad48b0ed6abe7692230364495afeeabb8a8699c7c.json",
+      "bytes": 26130,
+      "sha256": "2af2c569df0ece15b594b74ad48b0ed6abe7692230364495afeeabb8a8699c7c"
+    },
+    {
+      "path": "collection/setups/2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0.json",
+      "bytes": 69866,
+      "sha256": "2b402fed48fd3ce0370de527a2038e91f090297d008dd7133fc730c83897dde0"
+    },
+    {
+      "path": "collection/setups/2c45f8a039addbd387c43dd0ebf2511baa6db9213b10d76b5b217e3a67b78779.json",
+      "bytes": 44865,
+      "sha256": "2c45f8a039addbd387c43dd0ebf2511baa6db9213b10d76b5b217e3a67b78779"
+    },
+    {
+      "path": "collection/setups/2d3cea1e31caf4733b3d716c8cd3daab498d201a98b0b19c8dc221bac7c37400.json",
+      "bytes": 81089,
+      "sha256": "2d3cea1e31caf4733b3d716c8cd3daab498d201a98b0b19c8dc221bac7c37400"
+    },
+    {
+      "path": "collection/setups/2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420.json",
+      "bytes": 6526,
+      "sha256": "2e0dda555e841a3d13a4cf7b84dea6f0036aaa22b012cb58246edaf4c6edf420"
+    },
+    {
+      "path": "collection/setups/32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b.json",
+      "bytes": 20818,
+      "sha256": "32639654b818580f4c55dcb2439f0d44e03d59b906cd84956af32c5d38420a0b"
+    },
+    {
+      "path": "collection/setups/35cb217fbad8ea53198c52e02a9bb2a41dda242c478e44626a0ece27ec3c39b3.json",
+      "bytes": 4238,
+      "sha256": "35cb217fbad8ea53198c52e02a9bb2a41dda242c478e44626a0ece27ec3c39b3"
+    },
+    {
+      "path": "collection/setups/3a6aa7e6282ebaa78f374d33bcb0683d468d596437338da284bb95877e7d6224.json",
+      "bytes": 68995,
+      "sha256": "3a6aa7e6282ebaa78f374d33bcb0683d468d596437338da284bb95877e7d6224"
+    },
+    {
+      "path": "collection/setups/3ce3551da2b27d8551cbeec70178ba32f4a551cef7740490407c46e1dd912a6d.json",
+      "bytes": 25880,
+      "sha256": "3ce3551da2b27d8551cbeec70178ba32f4a551cef7740490407c46e1dd912a6d"
+    },
+    {
+      "path": "collection/setups/3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0.json",
+      "bytes": 60064,
+      "sha256": "3d0f9c9efd293eed5a38b59c89fd0754a0a202a730bcd0fbe011237fb58772f0"
+    },
+    {
+      "path": "collection/setups/40393e8d36cad166cebf11987ef6d06b1c2a7f567588a60534491fbae5195e7f.json",
+      "bytes": 36639,
+      "sha256": "40393e8d36cad166cebf11987ef6d06b1c2a7f567588a60534491fbae5195e7f"
+    },
+    {
+      "path": "collection/setups/417c35256f87e6e58c2c875db33afe88df6622f7e160c31194f7a39c8caf0229.json",
+      "bytes": 52173,
+      "sha256": "417c35256f87e6e58c2c875db33afe88df6622f7e160c31194f7a39c8caf0229"
+    },
+    {
+      "path": "collection/setups/4a43f7e5bd8c1c70fef65661f6b312181d5b68524ee59f945e47919be8188499.json",
+      "bytes": 32657,
+      "sha256": "4a43f7e5bd8c1c70fef65661f6b312181d5b68524ee59f945e47919be8188499"
+    },
+    {
+      "path": "collection/setups/4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e.json",
+      "bytes": 70040,
+      "sha256": "4aa581b4984bdd5c8b1d2853f438abdddb9beb19b99aa7b40da06e440f79cc8e"
+    },
+    {
+      "path": "collection/setups/4be9d710bac772769a4eb86bb4eebfe33500042a6dfd5212dd46c2650227d8fa.json",
+      "bytes": 23709,
+      "sha256": "4be9d710bac772769a4eb86bb4eebfe33500042a6dfd5212dd46c2650227d8fa"
+    },
+    {
+      "path": "collection/setups/4c4c0b2665c4fca23999ae89290feeeb2b1fa004cdc60bba50139f8b1a8d610e.json",
+      "bytes": 39988,
+      "sha256": "4c4c0b2665c4fca23999ae89290feeeb2b1fa004cdc60bba50139f8b1a8d610e"
+    },
+    {
+      "path": "collection/setups/529949b9151bb5044eebd2800d4e319609436ebac7c67fa383cfe03948a1dacf.json",
+      "bytes": 6011,
+      "sha256": "529949b9151bb5044eebd2800d4e319609436ebac7c67fa383cfe03948a1dacf"
+    },
+    {
+      "path": "collection/setups/53640683c247e6fa560e94e2ee4854872d6110ea566cd8217700c11f4dffbbe4.json",
+      "bytes": 23416,
+      "sha256": "53640683c247e6fa560e94e2ee4854872d6110ea566cd8217700c11f4dffbbe4"
+    },
+    {
+      "path": "collection/setups/564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450.json",
+      "bytes": 36794,
+      "sha256": "564b2f3cfdbfac42ea47e881f026c858ccdd0f1566d9e4f605bb4e0004490450"
+    },
+    {
+      "path": "collection/setups/5938892f744c91a32e0152e51a877a96379105c143a1d172768db20bff11670d.json",
+      "bytes": 60348,
+      "sha256": "5938892f744c91a32e0152e51a877a96379105c143a1d172768db20bff11670d"
+    },
+    {
+      "path": "collection/setups/5b15563239d43437c11f1e60d135d705f02feebc7b8d5fd949b2f1bbce2e744a.json",
+      "bytes": 16914,
+      "sha256": "5b15563239d43437c11f1e60d135d705f02feebc7b8d5fd949b2f1bbce2e744a"
+    },
+    {
+      "path": "collection/setups/60d561e6619b0bcc781c755d5726eb56e496bdccd62ffa2d0affc4b5cc23f62a.json",
+      "bytes": 48216,
+      "sha256": "60d561e6619b0bcc781c755d5726eb56e496bdccd62ffa2d0affc4b5cc23f62a"
+    },
+    {
+      "path": "collection/setups/6a7d5851a297d3e1036ad70ac62f0e3fc00728c118b5190202cd37f0beb6e950.json",
+      "bytes": 34295,
+      "sha256": "6a7d5851a297d3e1036ad70ac62f0e3fc00728c118b5190202cd37f0beb6e950"
+    },
+    {
+      "path": "collection/setups/6ba97d5ab0efad111e9f7e63d7f6162e7eca6513bd0091ca358ff093d4a94d0f.json",
+      "bytes": 33968,
+      "sha256": "6ba97d5ab0efad111e9f7e63d7f6162e7eca6513bd0091ca358ff093d4a94d0f"
+    },
+    {
+      "path": "collection/setups/71a860ff7f2c17c1f4e23bafd56425926e426282860dcb71120ba58fe984791f.json",
+      "bytes": 30568,
+      "sha256": "71a860ff7f2c17c1f4e23bafd56425926e426282860dcb71120ba58fe984791f"
+    },
+    {
+      "path": "collection/setups/7287a270ceb52c1017ac1a0452859f7cddfadba1d610dc09d62bccdac8a9669c.json",
+      "bytes": 57395,
+      "sha256": "7287a270ceb52c1017ac1a0452859f7cddfadba1d610dc09d62bccdac8a9669c"
+    },
+    {
+      "path": "collection/setups/73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62.json",
+      "bytes": 39123,
+      "sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62"
+    },
+    {
+      "path": "collection/setups/752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08.json",
+      "bytes": 21244,
+      "sha256": "752c423fa011f98ebbf4fc9c5a49c9a8cb416881c1a852c2e8fdd26f732eae08"
+    },
+    {
+      "path": "collection/setups/7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab.json",
+      "bytes": 18123,
+      "sha256": "7c1d155a7f647709f0a7fade25ef6981c26fb1fdcfacb492ae1c60b4407a6aab"
+    },
+    {
+      "path": "collection/setups/7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9.json",
+      "bytes": 23743,
+      "sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9"
+    },
+    {
+      "path": "collection/setups/7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e.json",
+      "bytes": 65411,
+      "sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e"
+    },
+    {
+      "path": "collection/setups/80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76.json",
+      "bytes": 18694,
+      "sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76"
+    },
+    {
+      "path": "collection/setups/8129ba54cb336759d498b64a207b3db03e72fceb21d842504bce8a1d5a9a295d.json",
+      "bytes": 67675,
+      "sha256": "8129ba54cb336759d498b64a207b3db03e72fceb21d842504bce8a1d5a9a295d"
+    },
+    {
+      "path": "collection/setups/81630b82106d42ae9966530f2c7927c2e96f67a68e5824d98229387e57ad15a5.json",
+      "bytes": 74008,
+      "sha256": "81630b82106d42ae9966530f2c7927c2e96f67a68e5824d98229387e57ad15a5"
+    },
+    {
+      "path": "collection/setups/920cc181645fe2069fc12dc94bba431afd7b71da6a11a2ccd983b7ecbef5894f.json",
+      "bytes": 82155,
+      "sha256": "920cc181645fe2069fc12dc94bba431afd7b71da6a11a2ccd983b7ecbef5894f"
+    },
+    {
+      "path": "collection/setups/92a2396e2c8e8f116b7c5508a6f1264479ec48971ccb8cebdc30eeb74fffaa14.json",
+      "bytes": 20597,
+      "sha256": "92a2396e2c8e8f116b7c5508a6f1264479ec48971ccb8cebdc30eeb74fffaa14"
+    },
+    {
+      "path": "collection/setups/93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4.json",
+      "bytes": 72574,
+      "sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4"
+    },
+    {
+      "path": "collection/setups/9704a2aab58c6ea1eb550910615e2e889b250753834413e975f63ad975dbbf23.json",
+      "bytes": 60060,
+      "sha256": "9704a2aab58c6ea1eb550910615e2e889b250753834413e975f63ad975dbbf23"
+    },
+    {
+      "path": "collection/setups/9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013.json",
+      "bytes": 15099,
+      "sha256": "9750f1d3e93b85f588c1c02e0e3cbd9485246dfa1e81c05d45b2403a856a2013"
+    },
+    {
+      "path": "collection/setups/977919a1bba6b16ab4c0908010baeca8f7b167c3f4078ec1619d2c18179582f2.json",
+      "bytes": 39096,
+      "sha256": "977919a1bba6b16ab4c0908010baeca8f7b167c3f4078ec1619d2c18179582f2"
+    },
+    {
+      "path": "collection/setups/98c5b49c0006e0a89d30271e9b53ef8071a740b83403fc97b7293e15a76800cc.json",
+      "bytes": 10449,
+      "sha256": "98c5b49c0006e0a89d30271e9b53ef8071a740b83403fc97b7293e15a76800cc"
+    },
+    {
+      "path": "collection/setups/99dc9608bdd4c271050b2b8f5126a52f82e1b6e36ca3d3af0e62301cccc397a9.json",
+      "bytes": 8052,
+      "sha256": "99dc9608bdd4c271050b2b8f5126a52f82e1b6e36ca3d3af0e62301cccc397a9"
+    },
+    {
+      "path": "collection/setups/9bc54ca2e4c6437642af77e7e67653feec33d7aa3d8899e631014dc26ad041f8.json",
+      "bytes": 62308,
+      "sha256": "9bc54ca2e4c6437642af77e7e67653feec33d7aa3d8899e631014dc26ad041f8"
+    },
+    {
+      "path": "collection/setups/9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9.json",
+      "bytes": 78808,
+      "sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9"
+    },
+    {
+      "path": "collection/setups/9f1ac2833afaeb7093d1ab6ae4bcb0b390d2beb7be480f575cf6c37c6a178d91.json",
+      "bytes": 129581,
+      "sha256": "9f1ac2833afaeb7093d1ab6ae4bcb0b390d2beb7be480f575cf6c37c6a178d91"
+    },
+    {
+      "path": "collection/setups/a6b1659809dc25f432aad39326a948852d740f0be7dc7d0734358528b17b2166.json",
+      "bytes": 110561,
+      "sha256": "a6b1659809dc25f432aad39326a948852d740f0be7dc7d0734358528b17b2166"
+    },
+    {
+      "path": "collection/setups/a6e6db8d5a85b9a449d40bfb1fc9c218e72cff39a9c1426fa356ae99a19d4720.json",
+      "bytes": 17486,
+      "sha256": "a6e6db8d5a85b9a449d40bfb1fc9c218e72cff39a9c1426fa356ae99a19d4720"
+    },
+    {
+      "path": "collection/setups/ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789.json",
+      "bytes": 37016,
+      "sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789"
+    },
+    {
+      "path": "collection/setups/b1c07849fe6cefbe08a3049155764ef76bcf4882677c20f7410b46c493b5413b.json",
+      "bytes": 34905,
+      "sha256": "b1c07849fe6cefbe08a3049155764ef76bcf4882677c20f7410b46c493b5413b"
+    },
+    {
+      "path": "collection/setups/ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315.json",
+      "bytes": 80429,
+      "sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315"
+    },
+    {
+      "path": "collection/setups/c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c.json",
+      "bytes": 8536,
+      "sha256": "c232c64806a78be32ec5ce86285a7f22ddf703c50a123762d59812e0233e6a4c"
+    },
+    {
+      "path": "collection/setups/c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf.json",
+      "bytes": 104511,
+      "sha256": "c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf"
+    },
+    {
+      "path": "collection/setups/d6316aa4c8788103dca5fe84453068c73174d3c5bafb418f54d71d973b0cd80b.json",
+      "bytes": 26440,
+      "sha256": "d6316aa4c8788103dca5fe84453068c73174d3c5bafb418f54d71d973b0cd80b"
+    },
+    {
+      "path": "collection/setups/dc36e2e20d9a16cce4adb1ab09d1dcd1048ac9b01ad8b6f8403e8f88a126decd.json",
+      "bytes": 21862,
+      "sha256": "dc36e2e20d9a16cce4adb1ab09d1dcd1048ac9b01ad8b6f8403e8f88a126decd"
+    },
+    {
+      "path": "collection/setups/e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12.json",
+      "bytes": 59904,
+      "sha256": "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12"
+    },
+    {
+      "path": "collection/setups/e3d5c86f59bb510374152b41fb12950929f08adb276441ffa3aa10147c04dd7b.json",
+      "bytes": 42059,
+      "sha256": "e3d5c86f59bb510374152b41fb12950929f08adb276441ffa3aa10147c04dd7b"
+    },
+    {
+      "path": "collection/setups/e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e.json",
+      "bytes": 32953,
+      "sha256": "e87c376aa71e6f232d887646d2a5b8172a65f6566f63c72b16c4f95c1661191e"
+    },
+    {
+      "path": "collection/setups/e8e6a2c7773d955e361b61f05b71f9bfc3ec9887ed4c523bfb1f40e532e203f9.json",
+      "bytes": 7905,
+      "sha256": "e8e6a2c7773d955e361b61f05b71f9bfc3ec9887ed4c523bfb1f40e532e203f9"
+    },
+    {
+      "path": "collection/setups/eb8af8768b85b6f28b34f598622582c5cc0fcc39a7a26ec3a93e883fa3d860f3.json",
+      "bytes": 15634,
+      "sha256": "eb8af8768b85b6f28b34f598622582c5cc0fcc39a7a26ec3a93e883fa3d860f3"
+    },
+    {
+      "path": "collection/setups/f6cebcd073147f315f17e1266f03aa53c133c1d4e500ffca063653133b5a2853.json",
+      "bytes": 62689,
+      "sha256": "f6cebcd073147f315f17e1266f03aa53c133c1d4e500ffca063653133b5a2853"
+    },
+    {
+      "path": "collection/setups/f82e4715d60851d0aff0c3b76b951f7f308a0a71c95337da7675bcb1262ec307.json",
+      "bytes": 5008,
+      "sha256": "f82e4715d60851d0aff0c3b76b951f7f308a0a71c95337da7675bcb1262ec307"
+    },
+    {
+      "path": "collection/setups/fecf590815dd7495cf4e624a1ef5ad70e3109b3403bc99f9333171fd21d0fe3a.json",
+      "bytes": 58549,
+      "sha256": "fecf590815dd7495cf4e624a1ef5ad70e3109b3403bc99f9333171fd21d0fe3a"
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "case": "invalid_top_generator_commit",
+      "refused": true
+    },
+    {
+      "case": "invalid_top_generator_url",
+      "refused": true
+    },
+    {
+      "case": "invalid_top_generator_sha256",
+      "refused": true
+    },
+    {
+      "case": "invalid_top_generator_commit_bytes_verified",
+      "refused": true
+    },
+    {
+      "case": "invalid_183_commit",
+      "refused": true
+    },
+    {
+      "case": "invalid_183_generator_source",
+      "refused": true
+    },
+    {
+      "case": "changed_nonexception_setup_digest",
+      "refused_by_roster_comparison": true
+    },
+    {
+      "case": "changed_nonexception_native_status",
+      "refused_by_roster_comparison": true
+    },
+    {
+      "case": "changed_nonexception_owner_acceptance",
+      "refused_by_roster_comparison": true
+    },
+    {
+      "case": "changed_nonexception_variant_role",
+      "refused_by_roster_comparison": true
+    },
+    {
+      "case": "changed_nonexception_source_commit",
+      "refused_by_roster_comparison": true
+    }
+  ],
+  "limits": [
+    "Final predecessor artifact hashes/run/source pins were not invented; actual ZIP comparison is still required.",
+    "This source review does not establish fresh product/lifecycle/graphical or owner acceptance."
+  ],
+  "raw_roster_changed_json_paths": [
+    "/authority/delivery_generator_source/commit",
+    "/authority/delivery_generator_source/url",
+    "/maps/80/derived_source/commit",
+    "/maps/80/derived_source/generator_source/commit",
+    "/maps/80/derived_source/generator_source/url"
+  ]
+}

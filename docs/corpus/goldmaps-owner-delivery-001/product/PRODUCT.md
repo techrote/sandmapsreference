@@ -1,0 +1,176 @@
+# GOLDMAPS portable collection — product contract
+
+Status: additive delivery candidate; owner classifications and physical graphical
+acceptance remain pending. The source preparation and qualification records in
+the principal delivery packet determine which exact engine and Setups ship.
+
+## Ordinary native boundary
+
+`Open GOLDMAPS.cmd` starts the bundled Godot 4.7 executable with a small standalone
+collection browser. The browser verifies every immutable payload against
+`payload-manifest.v1.json` and its checksum before enabling map opening. It reads
+the independent current-runtime `collection/delivery-qualification.v1.json` gate;
+historical scientific PASS, artistic nomination and a bundled Setup do not enable
+an unqualified map.
+
+The browser starts one ordinary CyberSand Workbench process at a time, using the
+exact accepted engine project plus the additive `goldmaps/session.gd` adapter.
+That adapter uses `Setup.read_named`, native policy validation, the actual
+`main.tscn`/SharedWorkbench, ordinary `load_setup`, and native acknowledgment and
+material publication. It verifies full native material-plane SHA-256 and authored
+actor adoption before reporting the source as loaded. No simulation or graphical
+result is substituted for the engine. The original authored actor configuration
+and geometry remain unchanged.
+
+The engine is prepared using its three source-exact portable bootstrap files,
+copied from immutable `runtime/bootstrap/` into mutable `.godot/`. The kit never
+runs a first-use editor import, which would generate source-adjacent UID sidecars.
+No accepted engine script is edited. The session-only Menu/F2 adapter displays
+the same explicit save/discard/cancel return dialog as closing the game window.
+The ordinary **Load start**, **New blank**, **New from generator…**, Water Lab
+**Load / reset scene**, **Load liquid-lab**, **Load reservoir-lab**, and Actor
+Composition **Mixed Actor Workshop** buttons also route through that warning.
+They do not replace the active evaluation World. Choose another source in the
+collection browser, or reopen **My saved copies**, so every new World starts
+with an explicit logical source identity. The normal paint, play, actor editing,
+Restore start and direct initial `ui.load_setup()` admission paths remain
+available. The lazily constructed Actor Composition window is guarded when its
+ordinary buttons enter the scene tree.
+
+## Isolated owner data and lifecycle
+
+The launcher scopes APPDATA, LOCALAPPDATA, XDG data/config/cache and temporary
+locations to `userdata/` inside the extracted kit. Both browser and game verify
+the actual `OS.get_user_data_dir()` is beneath that folder, refusing to proceed
+otherwise. Environment changes are process-local; the installed game profile
+and system configuration are not modified.
+
+Map inputs are copied byte-exact into the isolated Workbench input directory and
+read through the ordinary named Setup boundary. After acknowledgment, that
+temporary input copy is removed and the ordinary save name becomes a distinct
+`eval-…` label. The immutable collection copy is never the save destination.
+`Save evaluation copy`, ordinary **Save start**, and **Ctrl+S** all require a new
+name in this evaluator, protecting previously saved copies. They use the ordinary
+Workbench `save_setup()` implementation. A receipt is added only after that call
+returns success; typing an existing filename alone never registers another map's
+file as a copy of the current source. Saves are authored starting layouts; they
+do not serialize current simulation state.
+
+**Flatten / Bake History…** displays a limitation notice and preserves the
+current World and history. Its engine binary save format is outside this kit's
+qualified JSON saved-copy boundary. Ordinary painting, Undo, Play, Restore start
+and saving a new named authored copy remain available.
+
+The gallery cannot replace or terminate an active World. It waits for that
+process to exit before allowing another map, and closing the game requires a
+visible save/discard/cancel decision. Saved-copy receipts include the label,
+SHA-256, exact source/runtime and time; `My saved copies` reopens that exact local
+copy in a fresh Workbench process. Historical receipt versions are retained;
+the list displays current recorded bytes once per name. An unrecorded external
+change is refused by the shortcut instead of being presented under an old
+native/source identity.
+
+## Browse, compare and decide
+
+The collection views are Gold25, seven repaired portraits, Astra comparisons,
+the 70-source corpus index, policy-only descendants and all logical variants.
+Search, family/orientation/native/review filters, arrow-key selection, Enter,
+previous/next, Ctrl+F and full-resolution source previews are provided. Preview
+labels distinguish material-plane visualizations from native graphical captures.
+Original/refused states remain visible; policy descendants retain separate IDs.
+
+Comparison panels show independent source images and identities. Their Open
+actions create separate ordinary native sessions; no synchronized-world claim
+is made. Frozen experimental verdicts remain separate from owner-local review.
+
+Review forms start pending and unclassified. Choosing a status/classification
+and pressing Save is an explicit local action. Closing an edited review asks
+before discarding it. The kit writes no GitHub data. JSON, CSV and Markdown
+exports include source/runtime hashes and timestamps under `userdata/reviews/`.
+Screenshots captured in the ordinary rendered Workbench are recorded separately
+from archived corpus visualizations.
+
+## Reproducible product assembly
+
+The integration staging script acquires the exact engine project, Godot,
+native/Rapier libraries and notices. Corpus assembly supplies `collection/` and
+`corpus-export/`. Then run:
+
+```sh
+python tools/goldmaps_owner/product/assemble_product.py \
+  --output /absolute/staged-kit \
+  --engine-head EXACT_ACCEPTED_ENGINE_SHA \
+  --source-head EXACT_DELIVERY_SOURCE_SHA
+```
+
+This adds the browser, session adapter, launcher and product provenance only.
+The caller runs qualification, inserts its per-Setup overlay, creates the final
+payload manifest, and independently validates the actual extracted archive.
+Owners need neither Python nor PowerShell to browse/open the shipped kit.
+
+## Validation boundary
+
+`--self-test` checks browser startup, package custody, collection counts and
+profile routing without accepting any map. A qualification driver may set
+`GOLDMAPS_QA_MAP`, `GOLDMAPS_QA_SMOKE=1` and `GOLDMAPS_QA_EDIT=1` in an isolated
+test extraction to drive the real browser/session opening path, native paint,
+save and separate-process reopen. These are explicit developer fixtures;
+normal owner launch never sets them. Native campaign evidence and product
+fixtures are complementary, and neither establishes physical NVIDIA playfeel
+or final Gold/Platinum/Pyrite adoption.
+
+The lifecycle fixture presses each of the seven guarded ordinary replacement
+buttons, observes the warning before any replacement, presses Cancel, and
+requires the same live World epoch. It opens the actual lazy Actor Composition
+panel first. A separate check presses Flatten and requires an unchanged authored
+Setup/material baseline and no pending flatten transaction. A foreign-source
+saved-file fixture proves that typing an existing name cannot create a receipt;
+actual Save-button and Ctrl+S dispatch prove protected new-name saving. These
+supplement close/cancel, duplicate save protection and Save-and-return checks.
+Button-handler and dispatched-key execution are labelled as such; they are not
+claims of physical desktop input or owner acceptance. The bounded source audit is
+recorded in [REPLACEMENT-SAVE-AUDIT.md](REPLACEMENT-SAVE-AUDIT.md).
+
+The graphical driver plans 18 displayed cases: the existing 15 gallery/native
+cases plus actual comparison, pending decision and full-resolution overview
+popups. These three extra cases invoke ordinary browser controls without
+opening a native World or saving a decision. Popup receipts distinguish the
+actual selected Setup, mounted aliases, viewport-intersecting card labels,
+archived neutral legend, and unchanged local review-file bytes. The overview
+remains a material-plane visualization inside a rendered interface.
+
+`test_graphical_ui.gd` checks the three popup handlers and their mounted source
+identities in headless mode. The local headless DisplayServer reports a 1×1
+desktop, so this preparation check cannot certify viewport layout or screenshots.
+Those remain explicit gates of the displayed Windows campaign.
+
+The predecessor Windows screenshots exposed an actual gallery layout failure:
+an autowrapped keyboard hint enlarged the navigation row until it displaced the
+map list, and plain popup Windows were visible before an owner action. The
+additive correction keeps that hint on one clipped line, reserves a useful map
+grid, and explicitly hides every popup before attaching it. The normal source
+PR label also formats JSON numbers as integer PR identities.
+
+`test_gallery_layout.gd` checks the real browser containers at 992×656,
+1280×720 and 1380×880. All three have a visible map grid, a 39-pixel navigation
+row, and no unrequested popup. These headless bounds are regression evidence;
+the final displayed campaign must also capture and independently inspect them.
+Every new graphical receipt records the grid, first item and navigation bounds
+plus initial popup visibility. The driver refuses a collapsed or offscreen grid
+even when the underlying collection count is correct.
+
+The predecessor native captures also showed ordinary 13-pixel Workbench text
+shrinking to about 6.7 pixels when a 1920×1080 logical canvas was fitted into a
+992-pixel-wide window. The opt-in evaluator now sets its own logical canvas to
+the fitted client dimensions. Accepted Workbench flow containers and font sizes
+remain unchanged; no engine file or global project setting is edited. Native
+capture receipts expose client, logical canvas, viewport and image dimensions
+so the final Windows review can judge actual readability.
+
+The comparison popup fits its first three source-role cards to the actual
+clamped client width. A fourth source-identical logical alias remains available
+through horizontal scrolling. Captured label evidence includes the original
+rectangle, its intersection with the popup and all clipping ancestors, and an
+explicit fully-visible flag. The final displayed D1 gate requires fully visible
+original/candidate/reference identity labels and the complete archived neutral
+legend; a partially intersecting label alone cannot satisfy that gate.

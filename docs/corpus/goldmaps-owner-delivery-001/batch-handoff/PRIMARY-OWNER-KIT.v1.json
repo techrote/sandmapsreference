@@ -1,0 +1,57 @@
+{
+  "schema": "goldmaps.batch-reference-authority.v1",
+  "role": "Read-only corpus/reference handoff; no runtime, native module program or owner-approved training label",
+  "primary_kit": {
+    "file": "CyberSand-GOLDMAPS-Owner-Evaluator-8c709093672c.zip",
+    "archive_sha256": "ba3d75bf97943af4148ee4427fdfcb2c6df41ede2453c80ef69e3bd6577dfea9",
+    "bytes": 101213343,
+    "source_head": "8c709093672c6761d1056187399ccc487760606b",
+    "run_id": "45500179792",
+    "artifact_url": "https://github.com/techrote/sandmapsreference/actions/runs/45500179792/artifacts/14971496709",
+    "payload_manifest_sha256": "229d70e8e083c0eaf1750ba9fdd347cb29e8d2dd23ed1139b845f9b742da6947"
+  },
+  "fragment": {
+    "manifest": "collection/collection-files.v1.json",
+    "manifest_sha256": "67a3adafa09b985b8c16091cbcfc3c6cf06f46ea80182facc71be4d44f644f3d",
+    "files": 269,
+    "bytes": 64190599
+  },
+  "qualification_overlay": {
+    "path": "collection/delivery-qualification.v1.json",
+    "sha256": "b4ac7fb50dd5d13d3fa505408f7a3299c5168b3d4c16ed53bc6289e1d7da5242",
+    "engine_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+    "unique_setups": 72,
+    "qualified_unique_setups": 70,
+    "refused_originals": 2,
+    "qualified_canonical_source_maps": 68,
+    "refused_canonical_sources": 2,
+    "qualified_logical_entries": 79,
+    "refused_logical_entries": 2,
+    "owner_accepted": false,
+    "receipt_resolution": "Every receipt path refers to the primary owner kit; native logs/runtime are intentionally absent from this reference bundle. Require exact engine/Setup identity, and inspect primary raw receipts for proof."
+  },
+  "native_authorities": {
+    "baseline_source": "b4ed0fc462a5e10f3d502b4b5593ef9b4ce70041",
+    "baseline_run": "45481683557",
+    "new_contact_source": "8c709093672c6761d1056187399ccc487760606b",
+    "new_contact_run": "45500179792",
+    "new_contact_targets": [
+      "corpus-188",
+      "corpus-189",
+      "corpus-192"
+    ],
+    "frozen_scientific_engine": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+    "accepted_playable_engine": "00cdb02f103265b6dc5224c68283e9a0c8cb449f"
+  },
+  "consumer": {
+    "knowledge_schema": "goldmaps.architectural-knowledge.v1",
+    "knowledge_version": 1,
+    "cards_schema": "cybersand.architectural-design-cards.v1",
+    "tested_adapter_source": "fe2395c7060dae736dc2e5dc8d1e4e050b2d2e52",
+    "successor_pr": 770,
+    "consumer_branch_modified": false
+  },
+  "rights": "Source repository/PR/commit attribution retained. Individual human authorship unverified. Map-specific licensing unknown; no general redistribution or training permission inferred.",
+  "owner_accepted": false,
+  "no_native_world_executed_by_bundle_builder": true
+}

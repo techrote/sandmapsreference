@@ -1,0 +1,25 @@
+{
+  "schema": "goldmaps.independent-campaign-source-review.v1",
+  "reviewer": {
+    "identity": "/root/product",
+    "role": "Specialist B",
+    "scope": "Integration lead assembly/publication source; not exclusive certification of own product",
+    "human_independence_claim": false
+  },
+  "reviewed_files": {
+    "tools/goldmaps_owner/integration/run_campaign.py": "5cfad23ab239efd657d273b39bcfb6442419fa4779d123e139b374d554feefda",
+    ".github/workflows/goldmaps-owner-delivery.yml": "d349aebe65189634b050ff6926ecbb18d50f0fd03d626324893b08841af5bf96",
+    "tools/goldmaps_owner/integration/seal_payload.py": "989a3fd2c1a9063edf78d881f3d9917caa5370e9e61954b6a8c2d58ec72de3b2"
+  },
+  "ci_provider_check": "PASS",
+  "ci_scheduling_check": {
+    "status": "PASS",
+    "workflows": 5,
+    "actual_delivery_workflow_seen": true
+  },
+  "resolved_finding": "Nonzero graphical process now requires explicit known native Windows display limitation; missing defect field, timeout or incomplete success fails",
+  "disposition": "PASS_SOURCE_REVIEW_ONLY",
+  "hosted_windows_execution_claim": false,
+  "final_archive_or_download_claim": false,
+  "owner_accepted": false
+}

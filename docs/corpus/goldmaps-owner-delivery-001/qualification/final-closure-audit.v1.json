@@ -1,0 +1,54 @@
+{
+  "schema": "goldmaps.c-final-closure-audit.v1",
+  "pass": true,
+  "delivery_source_head": "8c709093672c6761d1056187399ccc487760606b",
+  "delivery_run_id": 45500179792,
+  "owner_accepted": false,
+  "new_native_worlds_executed": 0,
+  "exact_acquisition_round_trip": {
+    "compressed_bytes": 5840428,
+    "compressed_sha256": "eb06df233879d3705a4dc5e497466ce0e2bb706e28c1285b5f57c0d81a70a3e4",
+    "original_bytes": 8215440,
+    "original_sha256": "c4add1023f38415c2052cdd8bcb22db5e77b2c5335d9a116a1129e8e5f4535da"
+  },
+  "acquisition_helper": {
+    "exact_H_and_original_outer": true,
+    "sha256": "c262ed5306a64d3c65a2e149e578a109bd3932529f0270b3325a1583f818973d"
+  },
+  "retained_evidence": {
+    "files": 170,
+    "bytes": 10731242,
+    "all_declared_hashes_and_source_bytes_verified": true,
+    "inner_source_members": 157,
+    "new_matrix_link_receipts_compared_to_actual_zip": 69
+  },
+  "standalone_batch_bundle": {
+    "archive_sha256": "7dea665e251b647b5d54aaeb2f6a4cc5978e2e03d211808c89e6ef8755723d05",
+    "archive_files": 283,
+    "inventory_records": 281,
+    "exact_primary_members": 272,
+    "CRC_paths_complete_inventory_and_hashes": "PASS",
+    "new_query_campaign_by_C": false
+  },
+  "documentation_diff_guard": {
+    "changed_or_added_paths": 213,
+    "all_confined_to_additive_delivery_docs": true,
+    "packaged_runtime_engine_Setups_native_harness_changed": false
+  },
+  "relative_links": {
+    "checked": 121,
+    "missing": []
+  },
+  "resolved_finding": {
+    "initial_missing_receipt_targets": 69,
+    "exact_original_receipts_copied": 69,
+    "matrix_bytes_unchanged": true,
+    "resolution_record": "qualification/closure-link-resolution.v1.json"
+  },
+  "canonical_packet": {
+    "md_sha256": "4ce649543f18b5e390dd48eb0bcf46438d063aea852382e061d79676799483c8",
+    "json_sha256": "b83a5651652c4672ece6834cde05b6eb0b32129eac6e2692e76f860af56aa167",
+    "all_final_artifact_counts_source_authorities_and_owner_limits_checked": true,
+    "native_tick_origin_explicit": true
+  }
+}

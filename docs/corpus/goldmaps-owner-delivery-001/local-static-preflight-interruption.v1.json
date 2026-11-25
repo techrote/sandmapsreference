@@ -1,0 +1,22 @@
+{
+  "schema": "goldmaps.owner-local-static-preflight-interruption.v1",
+  "observed_at_utc": "2026-11-24T21:47:18.620573+00:00",
+  "source_head": "283d09e4b0821ff263778baae8bc645be822ad61",
+  "exit_code": 137,
+  "signal": "SIGKILL reported by shell",
+  "phase": "Local predecessor extraction/static reuse preparation; no first staged result printed",
+  "created_file_inventory": [
+    {
+      "path": "kit/Godot-LICENSE.txt",
+      "bytes": 1149
+    },
+    {
+      "path": "kit/Godot-COPYRIGHT.txt",
+      "bytes": 100108
+    }
+  ],
+  "native_execution": false,
+  "qualification_result": "NOT_EXECUTED",
+  "inference": "Shared local resource pressure is plausible, but the kill source was not established. No map/runtime defect or successful reuse is inferred.",
+  "remaining_gate": "The final hosted Windows campaign must execute the exact old/new native-input comparison and preserve its receipt."
+}
