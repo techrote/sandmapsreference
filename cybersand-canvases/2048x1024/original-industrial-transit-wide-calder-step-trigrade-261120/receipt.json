@@ -1,0 +1,310 @@
+{
+  "concept": "Calder Step — Tri-Grade Ship-to-Rail Incline",
+  "original": true,
+  "seed": 211931936,
+  "engine_sha": "de109d0131641d6adc8d25bb9ced7ca3d4991105",
+  "source_reference_head": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "material_catalogue_blob": "dcf05895da3015a2e999e3d1cbbae0fdc7fe32b3",
+  "setup_loader_blob": "70dd964bc2d5bff9ca030edd57d7fc7aa5068fc9",
+  "extent": [
+    2048,
+    1024
+  ],
+  "route_graph": {
+    "main": [
+      "West slip ingress",
+      "Quay tally loft",
+      "Jackyard cargo handoff",
+      "First incline switch",
+      "Second inclined handoff",
+      "Middle grade-control",
+      "Traverse rolling cradle",
+      "Consolidation outer yard",
+      "East dispatch beacon"
+    ],
+    "upper": [
+      "Lift crown inspection",
+      "West flight summit",
+      "Skyline return gap",
+      "Counterweight crown"
+    ],
+    "lower": [
+      "Slip basin pump",
+      "Lift gearbox lower",
+      "Ridge drainage winch",
+      "Traverse switch service",
+      "Outbound recovery"
+    ]
+  },
+  "material_ids": {
+    "0": "Empty",
+    "58": "ReinforcedConcrete Solid immovable None",
+    "62": "SteelPlate Solid immovable None",
+    "100": "BasaltColumns Solid immovable None"
+  },
+  "midge_authored_hull": [
+    4,
+    3
+  ],
+  "hull_envelopes": [
+    [
+      19,
+      15
+    ],
+    [
+      23,
+      19
+    ],
+    [
+      31,
+      27
+    ]
+  ],
+  "exact_sites": {
+    "West slip ingress": [
+      111,
+      415
+    ],
+    "Quay tally loft": [
+      317,
+      418
+    ],
+    "Serviced hull interior": [
+      330,
+      676
+    ],
+    "Jackyard cargo handoff": [
+      624,
+      414
+    ],
+    "Lift crown inspection": [
+      628,
+      126
+    ],
+    "West flight summit": [
+      815,
+      146
+    ],
+    "First incline switch": [
+      806,
+      405
+    ],
+    "Second inclined handoff": [
+      1050,
+      381
+    ],
+    "Skyline return gap": [
+      1075,
+      166
+    ],
+    "Middle grade-control": [
+      1236,
+      467
+    ],
+    "Counterweight crown": [
+      1385,
+      166
+    ],
+    "Counterweight repair bay": [
+      1411,
+      452
+    ],
+    "Traverse rolling cradle": [
+      1540,
+      438
+    ],
+    "Consolidation outer yard": [
+      1710,
+      435
+    ],
+    "Warehouse freight assay": [
+      1790,
+      614
+    ],
+    "East dispatch beacon": [
+      1920,
+      408
+    ],
+    "Slip basin pump": [
+      258,
+      833
+    ],
+    "Lift gearbox lower": [
+      681,
+      833
+    ],
+    "Ridge drainage winch": [
+      1100,
+      833
+    ],
+    "Traverse switch service": [
+      1485,
+      833
+    ],
+    "Outbound recovery": [
+      1860,
+      833
+    ]
+  },
+  "material_histogram": {
+    "0": 1579657,
+    "58": 269200,
+    "62": 125396,
+    "100": 122899
+  },
+  "stable_occupied_cells": 517495,
+  "grounded": 517495,
+  "detached_cells": 0,
+  "pruned_disconnected_decor_cells": 23477,
+  "rectangles": 4669,
+  "rectangle_work": 517495,
+  "setup_bytes": 85356,
+  "material_plane_sha256": "83e8bfe9cc2b0ae91cc296f9515e0e26d12e7482bb499c2cf9349d8a95ccc70e",
+  "setup_sha256": "4f63a89bc2093e7496564a4eee2aefc29800d3dcd5569da7dd184874c42a6f3d",
+  "clearance": [
+    {
+      "size": [
+        19,
+        15
+      ],
+      "reached": 21,
+      "total": 21,
+      "free_centres": 1274894,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        23,
+        19
+      ],
+      "reached": 21,
+      "total": 21,
+      "free_centres": 1233716,
+      "bad": [],
+      "error": null
+    },
+    {
+      "size": [
+        31,
+        27
+      ],
+      "reached": 21,
+      "total": 21,
+      "free_centres": 1154797,
+      "bad": [],
+      "error": null
+    }
+  ],
+  "obstruction": {
+    "material": 58,
+    "rect": [
+      169,
+      363,
+      75,
+      111
+    ],
+    "from": "West slip ingress",
+    "to": "Quay tally loft",
+    "size": [
+      31,
+      27
+    ],
+    "sites_reached": 21,
+    "unreachable": [],
+    "distance_before_after": [
+      209,
+      341
+    ]
+  },
+  "images": [
+    {
+      "name": "overview",
+      "rect": [
+        0,
+        0,
+        2048,
+        1024
+      ],
+      "bytes": 525537,
+      "sha256": "841fcc1f6e495cdfb132c9d433191a1b7a382be9f6c44e3c601484504acc862d",
+      "pixel_parity": 2097152
+    },
+    {
+      "name": "01-drydock-vessel",
+      "rect": [
+        105,
+        430,
+        423,
+        400
+      ],
+      "bytes": 42985,
+      "sha256": "adf96ee19cdc928a15e69c67394befc80dca8b6310bb6d31ccdeadd90deb0d12",
+      "pixel_parity": 169200
+    },
+    {
+      "name": "02-jacklift",
+      "rect": [
+        480,
+        115,
+        312,
+        680
+      ],
+      "bytes": 53905,
+      "sha256": "07d837aff3c525b4579647c0009bd2bf732c6a15a151eb99e9f1725fcc92b167",
+      "pixel_parity": 212160
+    },
+    {
+      "name": "03-trigrade-rail",
+      "rect": [
+        745,
+        229,
+        582,
+        565
+      ],
+      "bytes": 83245,
+      "sha256": "969ab0d7bc6b89f6e465f57d8c29bd6babd30ef0f4477573d7d34243b7b87d05",
+      "pixel_parity": 328830
+    },
+    {
+      "name": "04-counterpoise",
+      "rect": [
+        1284,
+        134,
+        295,
+        662
+      ],
+      "bytes": 49835,
+      "sha256": "78280f3ce0f35b18bcfb1ac5bf19aab24fa3755f8abe9703758ab38c016e93ba",
+      "pixel_parity": 195290
+    },
+    {
+      "name": "05-consolidation",
+      "rect": [
+        1674,
+        299,
+        374,
+        493
+      ],
+      "bytes": 47020,
+      "sha256": "4324787b28baa2b64b43ca5d15325b10316c869d8e296366e3ec32c94fb9e6f5",
+      "pixel_parity": 184382
+    },
+    {
+      "name": "06-underground-return",
+      "rect": [
+        890,
+        780,
+        464,
+        244
+      ],
+      "bytes": 28733,
+      "sha256": "af4c7dc236ca71c6e5206f89191f799a9fb245d8359f68bac91048af50982cac",
+      "pixel_parity": 113216
+    }
+  ],
+  "native_status": "NATIVE-UNTESTED",
+  "bridge_source_max_rectangles": 32768,
+  "installed_fallback_risk": 4096,
+  "proof": "Exhaustive material-ID grid, disjoint ordered rectangle replay, full in-bounds three-envelope 4-BFS, obstacle return, verified indexed PNG CRC/zlib/Adler/pixel parity"
+}
