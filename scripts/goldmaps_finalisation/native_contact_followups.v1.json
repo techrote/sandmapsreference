@@ -1,0 +1,26 @@
+{
+  "schema": "goldmaps.native-inputs.v1",
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "basis_inputs_sha256": "f661308c68b59fbdb99f75a5a72cc77bbb5f66c2a7bebdbde200e6ed6adb57f9",
+  "scope": "Exact-source contact continuation after preserved900-tick negative; no change to native collision assertions or source map.",
+  "records": [
+    {
+      "id": "repair-204",
+      "roles": [
+        "portrait-repair"
+      ],
+      "pr": 204,
+      "head": "d5c37d371e004e84d5c8cd77b2ae29b25a3cc0c9",
+      "path": "cybersand-canvases/1024x2048/portrait-obvious-mireward-lanternwell-261121/setup.json",
+      "setup_sha256": "a6e6db8d5a85b9a449d40bfb1fc9c218e72cff39a9c1426fa356ae99a19d4720",
+      "setup_bytes": 17486,
+      "extent": [
+        1024,
+        2048
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/d5c37d371e004e84d5c8cd77b2ae29b25a3cc0c9/cybersand-canvases/1024x2048/portrait-obvious-mireward-lanternwell-261121/setup.json",
+      "contact_probe_tick_limit": 1800,
+      "contact_probe_reason": "Original 900-tick contact trial ended at (505,1590.01989746094) without contact. Exact repaired portrait spawn (505,185), first occupied floor below at y1923. Retain initial900-tick negative and require actual contact during a separate bounded continuation to1800ticks. No geometry/spawn/actor change."
+    }
+  ]
+}

@@ -1,0 +1,2492 @@
+{
+  "schema_version": 1,
+  "arm": "B3",
+  "status": "FAIL",
+  "qualification_scope": "SOURCE-STATIC AUTHOR CHECK; independent ART and native qualification separate",
+  "issues": [
+    "31x27 normal sites unreachable.",
+    "31x27 obstruction exception set changed: ['Central basal workshop', 'Central bypass wicket', 'Central low relay', 'Central roof control', 'Central saltfold beacon', 'Central sub-bore', 'East basal workshop', 'East bypass wicket', 'East ceiling laboratory', 'East collector', 'East condenser arm', 'East foundry return', 'East low catch', 'East lower approach', 'East return elbow', 'East upper throat', 'Mid seam low', 'North tri-vault throat', 'Third vault low', 'Third vault overflight', 'Triple vault skylane']",
+    "31x27 frozen route unreachable: original-blocked-alternate-sequence"
+  ],
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "frozen_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "difference": {
+    "changed_cells": 2699,
+    "bounds_xywh": [
+      726,
+      250,
+      122,
+      339
+    ],
+    "before_material_plane_sha256_uint8": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+    "after_material_plane_sha256_uint8": "185ea8af2053aafcb7ea3460dee1329bbed667cff5cda7923ab8c35fb9ada372",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 58,
+        "cells": 247
+      },
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 1219
+      },
+      {
+        "from": 62,
+        "to": 58,
+        "cells": 77
+      },
+      {
+        "from": 100,
+        "to": 58,
+        "cells": 300
+      },
+      {
+        "from": 100,
+        "to": 62,
+        "cells": 656
+      },
+      {
+        "from": 117,
+        "to": 58,
+        "cells": 96
+      },
+      {
+        "from": 117,
+        "to": 62,
+        "cells": 77
+      },
+      {
+        "from": 122,
+        "to": 58,
+        "cells": 27
+      }
+    ]
+  },
+  "changed_cell_cap": 5000,
+  "outside_approved_regions_changed_cells": 0,
+  "protected_named_31x27_footprint_changes": [],
+  "regions": [
+    {
+      "id": "north_throat_approach",
+      "xywh": [
+        714,
+        246,
+        151,
+        146
+      ],
+      "changed_cells": 1602,
+      "before_material_plane_sha256_uint8": "932f8f47329a6d9421bc17205dbebd4e5b632fac8bdda18a0f43cb9080a2757d",
+      "after_material_plane_sha256_uint8": "4b16f5727182c4545303044c39332785173e0e1d9042b37079a3272d4f2da07e"
+    },
+    {
+      "id": "south_bypass_approach",
+      "xywh": [
+        707,
+        464,
+        157,
+        133
+      ],
+      "changed_cells": 1097,
+      "before_material_plane_sha256_uint8": "c738a0b906195f64165a90e96dec6d3b6869b256e3f8d1768fe55677449927fb",
+      "after_material_plane_sha256_uint8": "5472587fedf171d5bb0d95868828ea51b2114bbe278261d0b536135fdd9b2069"
+    }
+  ],
+  "structure": {
+    "width": 2048,
+    "height": 1024,
+    "rectangle_count": 4184,
+    "rectangle_capacity": 32768,
+    "overlap_count": 0,
+    "out_of_bounds_count": 0,
+    "histogram": {
+      "0": 1106738,
+      "58": 148944,
+      "62": 18982,
+      "72": 1152,
+      "100": 418374,
+      "101": 372373,
+      "113": 7949,
+      "117": 21436,
+      "122": 1204
+    },
+    "material_plane_sha256_uint8": "185ea8af2053aafcb7ea3460dee1329bbed667cff5cda7923ab8c35fb9ada372",
+    "diagnostic_dimension_prefixed_uint16_sha256": "d45a0610496421d89c4796c8800dda74d99dff44e007006d07594e74c5ea2f0b"
+  },
+  "setup_bytes": 80786,
+  "original_settings_preserved": true,
+  "used_material_ids": [
+    58,
+    62,
+    72,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "newly_restored_original_source_ids": [],
+  "invalid_permanent_material_ids": [],
+  "present_pair_reaction_rules": [],
+  "material_scope": "Hard, immovable, kernel-none cells; no active fluid/hot/acid drivers present. This is initial static permanence, not immunity under future authored hazards.",
+  "rooting": {
+    "solid_cells": 990414,
+    "bottom_grounded_cells": 990414,
+    "not_bottom_rooted_cells": 0,
+    "boundary_rooted_cells": 990414,
+    "not_boundary_rooted_cells": 0,
+    "solid_components": 1
+  },
+  "rooting_policy": "Bottom-boundary four-neighbour component; no inferred anchors.",
+  "sites": {
+    "19x15": {
+      "normal": {
+        "spawn": [
+          125,
+          312
+        ],
+        "spawn_clear": true,
+        "components": 10,
+        "sites_total": 34,
+        "sites_reached": 34,
+        "sites": [
+          {
+            "name": "West ignition nest",
+            "centre": [
+              125,
+              312
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West pressure latch",
+            "centre": [
+              257,
+              317
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West bearing",
+            "centre": [
+              406,
+              303
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Vault one crown",
+            "centre": [
+              567,
+              295
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Vault one switch",
+            "centre": [
+              679,
+              321
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "North tri-vault throat",
+            "centre": [
+              809,
+              317
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Triple vault skylane",
+            "centre": [
+              988,
+              281
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central saltfold beacon",
+            "centre": [
+              1115,
+              279
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East upper throat",
+            "centre": [
+              1298,
+              319
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East condenser arm",
+            "centre": [
+              1443,
+              338
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Third vault overflight",
+            "centre": [
+              1615,
+              329
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East collector",
+            "centre": [
+              1770,
+              352
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East return elbow",
+            "centre": [
+              1892,
+              487
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East low catch",
+            "centre": [
+              1889,
+              715
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East foundry return",
+            "centre": [
+              1717,
+              739
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Third vault low",
+            "centre": [
+              1550,
+              746
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Mid seam low",
+            "centre": [
+              1338,
+              760
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central low relay",
+            "centre": [
+              1120,
+              780
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central sub-bore",
+            "centre": [
+              951,
+              788
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Vault one return",
+            "centre": [
+              610,
+              761
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West repair return",
+            "centre": [
+              533,
+              748
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West lower approach",
+            "centre": [
+              364,
+              740
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West finish",
+            "centre": [
+              154,
+              735
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West recovery shaft",
+            "centre": [
+              151,
+              526
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "South tri-vault bypass",
+            "centre": [
+              791,
+              532
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central bypass wicket",
+            "centre": [
+              976,
+              539
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East bypass wicket",
+            "centre": [
+              1174,
+              540
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East lower approach",
+            "centre": [
+              1415,
+              529
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West upper control",
+            "centre": [
+              509,
+              176
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central roof control",
+            "centre": [
+              1087,
+              165
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East ceiling laboratory",
+            "centre": [
+              1571,
+              191
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West basal workshop",
+            "centre": [
+              497,
+              853
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central basal workshop",
+            "centre": [
+              1080,
+              883
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East basal workshop",
+            "centre": [
+              1604,
+              855
+            ],
+            "centre_clear": true,
+            "reachable": true
+          }
+        ]
+      },
+      "obstructed": [
+        {
+          "case": "original-solid-block",
+          "expected_covered_sites": [
+            "North tri-vault throat"
+          ],
+          "observed_unreachable_sites": [
+            "North tri-vault throat"
+          ],
+          "result": {
+            "spawn": [
+              125,
+              312
+            ],
+            "spawn_clear": true,
+            "components": 10,
+            "sites_total": 34,
+            "sites_reached": 33,
+            "sites": [
+              {
+                "name": "West ignition nest",
+                "centre": [
+                  125,
+                  312
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West pressure latch",
+                "centre": [
+                  257,
+                  317
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West bearing",
+                "centre": [
+                  406,
+                  303
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Vault one crown",
+                "centre": [
+                  567,
+                  295
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Vault one switch",
+                "centre": [
+                  679,
+                  321
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "North tri-vault throat",
+                "centre": [
+                  809,
+                  317
+                ],
+                "centre_clear": false,
+                "reachable": false
+              },
+              {
+                "name": "Triple vault skylane",
+                "centre": [
+                  988,
+                  281
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central saltfold beacon",
+                "centre": [
+                  1115,
+                  279
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East upper throat",
+                "centre": [
+                  1298,
+                  319
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East condenser arm",
+                "centre": [
+                  1443,
+                  338
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Third vault overflight",
+                "centre": [
+                  1615,
+                  329
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East collector",
+                "centre": [
+                  1770,
+                  352
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East return elbow",
+                "centre": [
+                  1892,
+                  487
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East low catch",
+                "centre": [
+                  1889,
+                  715
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East foundry return",
+                "centre": [
+                  1717,
+                  739
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Third vault low",
+                "centre": [
+                  1550,
+                  746
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Mid seam low",
+                "centre": [
+                  1338,
+                  760
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central low relay",
+                "centre": [
+                  1120,
+                  780
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central sub-bore",
+                "centre": [
+                  951,
+                  788
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Vault one return",
+                "centre": [
+                  610,
+                  761
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West repair return",
+                "centre": [
+                  533,
+                  748
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West lower approach",
+                "centre": [
+                  364,
+                  740
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West finish",
+                "centre": [
+                  154,
+                  735
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West recovery shaft",
+                "centre": [
+                  151,
+                  526
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "South tri-vault bypass",
+                "centre": [
+                  791,
+                  532
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central bypass wicket",
+                "centre": [
+                  976,
+                  539
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East bypass wicket",
+                "centre": [
+                  1174,
+                  540
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East lower approach",
+                "centre": [
+                  1415,
+                  529
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West upper control",
+                "centre": [
+                  509,
+                  176
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central roof control",
+                "centre": [
+                  1087,
+                  165
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East ceiling laboratory",
+                "centre": [
+                  1571,
+                  191
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West basal workshop",
+                "centre": [
+                  497,
+                  853
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central basal workshop",
+                "centre": [
+                  1080,
+                  883
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East basal workshop",
+                "centre": [
+                  1604,
+                  855
+                ],
+                "centre_clear": true,
+                "reachable": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "23x19": {
+      "normal": {
+        "spawn": [
+          125,
+          312
+        ],
+        "spawn_clear": true,
+        "components": 7,
+        "sites_total": 34,
+        "sites_reached": 34,
+        "sites": [
+          {
+            "name": "West ignition nest",
+            "centre": [
+              125,
+              312
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West pressure latch",
+            "centre": [
+              257,
+              317
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West bearing",
+            "centre": [
+              406,
+              303
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Vault one crown",
+            "centre": [
+              567,
+              295
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Vault one switch",
+            "centre": [
+              679,
+              321
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "North tri-vault throat",
+            "centre": [
+              809,
+              317
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Triple vault skylane",
+            "centre": [
+              988,
+              281
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central saltfold beacon",
+            "centre": [
+              1115,
+              279
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East upper throat",
+            "centre": [
+              1298,
+              319
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East condenser arm",
+            "centre": [
+              1443,
+              338
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Third vault overflight",
+            "centre": [
+              1615,
+              329
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East collector",
+            "centre": [
+              1770,
+              352
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East return elbow",
+            "centre": [
+              1892,
+              487
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East low catch",
+            "centre": [
+              1889,
+              715
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East foundry return",
+            "centre": [
+              1717,
+              739
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Third vault low",
+            "centre": [
+              1550,
+              746
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Mid seam low",
+            "centre": [
+              1338,
+              760
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central low relay",
+            "centre": [
+              1120,
+              780
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central sub-bore",
+            "centre": [
+              951,
+              788
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Vault one return",
+            "centre": [
+              610,
+              761
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West repair return",
+            "centre": [
+              533,
+              748
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West lower approach",
+            "centre": [
+              364,
+              740
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West finish",
+            "centre": [
+              154,
+              735
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West recovery shaft",
+            "centre": [
+              151,
+              526
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "South tri-vault bypass",
+            "centre": [
+              791,
+              532
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central bypass wicket",
+            "centre": [
+              976,
+              539
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East bypass wicket",
+            "centre": [
+              1174,
+              540
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East lower approach",
+            "centre": [
+              1415,
+              529
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West upper control",
+            "centre": [
+              509,
+              176
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central roof control",
+            "centre": [
+              1087,
+              165
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East ceiling laboratory",
+            "centre": [
+              1571,
+              191
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West basal workshop",
+            "centre": [
+              497,
+              853
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central basal workshop",
+            "centre": [
+              1080,
+              883
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East basal workshop",
+            "centre": [
+              1604,
+              855
+            ],
+            "centre_clear": true,
+            "reachable": true
+          }
+        ]
+      },
+      "obstructed": [
+        {
+          "case": "original-solid-block",
+          "expected_covered_sites": [
+            "North tri-vault throat"
+          ],
+          "observed_unreachable_sites": [
+            "North tri-vault throat"
+          ],
+          "result": {
+            "spawn": [
+              125,
+              312
+            ],
+            "spawn_clear": true,
+            "components": 7,
+            "sites_total": 34,
+            "sites_reached": 33,
+            "sites": [
+              {
+                "name": "West ignition nest",
+                "centre": [
+                  125,
+                  312
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West pressure latch",
+                "centre": [
+                  257,
+                  317
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West bearing",
+                "centre": [
+                  406,
+                  303
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Vault one crown",
+                "centre": [
+                  567,
+                  295
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Vault one switch",
+                "centre": [
+                  679,
+                  321
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "North tri-vault throat",
+                "centre": [
+                  809,
+                  317
+                ],
+                "centre_clear": false,
+                "reachable": false
+              },
+              {
+                "name": "Triple vault skylane",
+                "centre": [
+                  988,
+                  281
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central saltfold beacon",
+                "centre": [
+                  1115,
+                  279
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East upper throat",
+                "centre": [
+                  1298,
+                  319
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East condenser arm",
+                "centre": [
+                  1443,
+                  338
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Third vault overflight",
+                "centre": [
+                  1615,
+                  329
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East collector",
+                "centre": [
+                  1770,
+                  352
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East return elbow",
+                "centre": [
+                  1892,
+                  487
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East low catch",
+                "centre": [
+                  1889,
+                  715
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East foundry return",
+                "centre": [
+                  1717,
+                  739
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Third vault low",
+                "centre": [
+                  1550,
+                  746
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Mid seam low",
+                "centre": [
+                  1338,
+                  760
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central low relay",
+                "centre": [
+                  1120,
+                  780
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central sub-bore",
+                "centre": [
+                  951,
+                  788
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Vault one return",
+                "centre": [
+                  610,
+                  761
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West repair return",
+                "centre": [
+                  533,
+                  748
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West lower approach",
+                "centre": [
+                  364,
+                  740
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West finish",
+                "centre": [
+                  154,
+                  735
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West recovery shaft",
+                "centre": [
+                  151,
+                  526
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "South tri-vault bypass",
+                "centre": [
+                  791,
+                  532
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central bypass wicket",
+                "centre": [
+                  976,
+                  539
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East bypass wicket",
+                "centre": [
+                  1174,
+                  540
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East lower approach",
+                "centre": [
+                  1415,
+                  529
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West upper control",
+                "centre": [
+                  509,
+                  176
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central roof control",
+                "centre": [
+                  1087,
+                  165
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East ceiling laboratory",
+                "centre": [
+                  1571,
+                  191
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West basal workshop",
+                "centre": [
+                  497,
+                  853
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central basal workshop",
+                "centre": [
+                  1080,
+                  883
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East basal workshop",
+                "centre": [
+                  1604,
+                  855
+                ],
+                "centre_clear": true,
+                "reachable": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "31x27": {
+      "normal": {
+        "spawn": [
+          125,
+          312
+        ],
+        "spawn_clear": true,
+        "components": 8,
+        "sites_total": 34,
+        "sites_reached": 13,
+        "sites": [
+          {
+            "name": "West ignition nest",
+            "centre": [
+              125,
+              312
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West pressure latch",
+            "centre": [
+              257,
+              317
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West bearing",
+            "centre": [
+              406,
+              303
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Vault one crown",
+            "centre": [
+              567,
+              295
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Vault one switch",
+            "centre": [
+              679,
+              321
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "North tri-vault throat",
+            "centre": [
+              809,
+              317
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "Triple vault skylane",
+            "centre": [
+              988,
+              281
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "Central saltfold beacon",
+            "centre": [
+              1115,
+              279
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East upper throat",
+            "centre": [
+              1298,
+              319
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East condenser arm",
+            "centre": [
+              1443,
+              338
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "Third vault overflight",
+            "centre": [
+              1615,
+              329
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East collector",
+            "centre": [
+              1770,
+              352
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East return elbow",
+            "centre": [
+              1892,
+              487
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East low catch",
+            "centre": [
+              1889,
+              715
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East foundry return",
+            "centre": [
+              1717,
+              739
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "Third vault low",
+            "centre": [
+              1550,
+              746
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "Mid seam low",
+            "centre": [
+              1338,
+              760
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "Central low relay",
+            "centre": [
+              1120,
+              780
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "Central sub-bore",
+            "centre": [
+              951,
+              788
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "Vault one return",
+            "centre": [
+              610,
+              761
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West repair return",
+            "centre": [
+              533,
+              748
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West lower approach",
+            "centre": [
+              364,
+              740
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West finish",
+            "centre": [
+              154,
+              735
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West recovery shaft",
+            "centre": [
+              151,
+              526
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "South tri-vault bypass",
+            "centre": [
+              791,
+              532
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central bypass wicket",
+            "centre": [
+              976,
+              539
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East bypass wicket",
+            "centre": [
+              1174,
+              540
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East lower approach",
+            "centre": [
+              1415,
+              529
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "West upper control",
+            "centre": [
+              509,
+              176
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central roof control",
+            "centre": [
+              1087,
+              165
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East ceiling laboratory",
+            "centre": [
+              1571,
+              191
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "West basal workshop",
+            "centre": [
+              497,
+              853
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Central basal workshop",
+            "centre": [
+              1080,
+              883
+            ],
+            "centre_clear": true,
+            "reachable": false
+          },
+          {
+            "name": "East basal workshop",
+            "centre": [
+              1604,
+              855
+            ],
+            "centre_clear": true,
+            "reachable": false
+          }
+        ]
+      },
+      "obstructed": [
+        {
+          "case": "original-solid-block",
+          "expected_covered_sites": [
+            "North tri-vault throat"
+          ],
+          "observed_unreachable_sites": [
+            "Central basal workshop",
+            "Central bypass wicket",
+            "Central low relay",
+            "Central roof control",
+            "Central saltfold beacon",
+            "Central sub-bore",
+            "East basal workshop",
+            "East bypass wicket",
+            "East ceiling laboratory",
+            "East collector",
+            "East condenser arm",
+            "East foundry return",
+            "East low catch",
+            "East lower approach",
+            "East return elbow",
+            "East upper throat",
+            "Mid seam low",
+            "North tri-vault throat",
+            "Third vault low",
+            "Third vault overflight",
+            "Triple vault skylane"
+          ],
+          "result": {
+            "spawn": [
+              125,
+              312
+            ],
+            "spawn_clear": true,
+            "components": 8,
+            "sites_total": 34,
+            "sites_reached": 13,
+            "sites": [
+              {
+                "name": "West ignition nest",
+                "centre": [
+                  125,
+                  312
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West pressure latch",
+                "centre": [
+                  257,
+                  317
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West bearing",
+                "centre": [
+                  406,
+                  303
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Vault one crown",
+                "centre": [
+                  567,
+                  295
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Vault one switch",
+                "centre": [
+                  679,
+                  321
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "North tri-vault throat",
+                "centre": [
+                  809,
+                  317
+                ],
+                "centre_clear": false,
+                "reachable": false
+              },
+              {
+                "name": "Triple vault skylane",
+                "centre": [
+                  988,
+                  281
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Central saltfold beacon",
+                "centre": [
+                  1115,
+                  279
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East upper throat",
+                "centre": [
+                  1298,
+                  319
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East condenser arm",
+                "centre": [
+                  1443,
+                  338
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Third vault overflight",
+                "centre": [
+                  1615,
+                  329
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East collector",
+                "centre": [
+                  1770,
+                  352
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East return elbow",
+                "centre": [
+                  1892,
+                  487
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East low catch",
+                "centre": [
+                  1889,
+                  715
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East foundry return",
+                "centre": [
+                  1717,
+                  739
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Third vault low",
+                "centre": [
+                  1550,
+                  746
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Mid seam low",
+                "centre": [
+                  1338,
+                  760
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Central low relay",
+                "centre": [
+                  1120,
+                  780
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Central sub-bore",
+                "centre": [
+                  951,
+                  788
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "Vault one return",
+                "centre": [
+                  610,
+                  761
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West repair return",
+                "centre": [
+                  533,
+                  748
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West lower approach",
+                "centre": [
+                  364,
+                  740
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West finish",
+                "centre": [
+                  154,
+                  735
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West recovery shaft",
+                "centre": [
+                  151,
+                  526
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "South tri-vault bypass",
+                "centre": [
+                  791,
+                  532
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central bypass wicket",
+                "centre": [
+                  976,
+                  539
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East bypass wicket",
+                "centre": [
+                  1174,
+                  540
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East lower approach",
+                "centre": [
+                  1415,
+                  529
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "West upper control",
+                "centre": [
+                  509,
+                  176
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central roof control",
+                "centre": [
+                  1087,
+                  165
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East ceiling laboratory",
+                "centre": [
+                  1571,
+                  191
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "West basal workshop",
+                "centre": [
+                  497,
+                  853
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Central basal workshop",
+                "centre": [
+                  1080,
+                  883
+                ],
+                "centre_clear": true,
+                "reachable": false
+              },
+              {
+                "name": "East basal workshop",
+                "centre": [
+                  1604,
+                  855
+                ],
+                "centre_clear": true,
+                "reachable": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "routes": {
+    "19x15": [
+      {
+        "id": "original-start-finish-shortest",
+        "via": [
+          [
+            125,
+            312
+          ],
+          [
+            154,
+            735
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [],
+        "forbidden_centres": []
+      },
+      {
+        "id": "original-blocked-alternate-sequence",
+        "via": [
+          [
+            125,
+            312
+          ],
+          [
+            257,
+            317
+          ],
+          [
+            406,
+            303
+          ],
+          [
+            567,
+            295
+          ],
+          [
+            679,
+            321
+          ],
+          [
+            791,
+            532
+          ],
+          [
+            976,
+            539
+          ],
+          [
+            1174,
+            540
+          ],
+          [
+            1415,
+            529
+          ],
+          [
+            1615,
+            329
+          ],
+          [
+            1770,
+            352
+          ],
+          [
+            1892,
+            487
+          ],
+          [
+            1889,
+            715
+          ],
+          [
+            1717,
+            739
+          ],
+          [
+            1550,
+            746
+          ],
+          [
+            1338,
+            760
+          ],
+          [
+            1120,
+            780
+          ],
+          [
+            951,
+            788
+          ],
+          [
+            610,
+            761
+          ],
+          [
+            533,
+            748
+          ],
+          [
+            364,
+            740
+          ],
+          [
+            154,
+            735
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [
+          [
+            758,
+            267,
+            86,
+            105
+          ]
+        ],
+        "forbidden_centres": []
+      }
+    ],
+    "23x19": [
+      {
+        "id": "original-start-finish-shortest",
+        "via": [
+          [
+            125,
+            312
+          ],
+          [
+            154,
+            735
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [],
+        "forbidden_centres": []
+      },
+      {
+        "id": "original-blocked-alternate-sequence",
+        "via": [
+          [
+            125,
+            312
+          ],
+          [
+            257,
+            317
+          ],
+          [
+            406,
+            303
+          ],
+          [
+            567,
+            295
+          ],
+          [
+            679,
+            321
+          ],
+          [
+            791,
+            532
+          ],
+          [
+            976,
+            539
+          ],
+          [
+            1174,
+            540
+          ],
+          [
+            1415,
+            529
+          ],
+          [
+            1615,
+            329
+          ],
+          [
+            1770,
+            352
+          ],
+          [
+            1892,
+            487
+          ],
+          [
+            1889,
+            715
+          ],
+          [
+            1717,
+            739
+          ],
+          [
+            1550,
+            746
+          ],
+          [
+            1338,
+            760
+          ],
+          [
+            1120,
+            780
+          ],
+          [
+            951,
+            788
+          ],
+          [
+            610,
+            761
+          ],
+          [
+            533,
+            748
+          ],
+          [
+            364,
+            740
+          ],
+          [
+            154,
+            735
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [
+          [
+            758,
+            267,
+            86,
+            105
+          ]
+        ],
+        "forbidden_centres": []
+      }
+    ],
+    "31x27": [
+      {
+        "id": "original-start-finish-shortest",
+        "via": [
+          [
+            125,
+            312
+          ],
+          [
+            154,
+            735
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [],
+        "forbidden_centres": [],
+        "length_steps": 452,
+        "path_sha256": "6603eb1f3fd05c6a11ed09ddcfad79765f779cd1a8276f44619789de6382e26d",
+        "region_visits": {}
+      },
+      {
+        "id": "original-blocked-alternate-sequence",
+        "via": [
+          [
+            125,
+            312
+          ],
+          [
+            257,
+            317
+          ],
+          [
+            406,
+            303
+          ],
+          [
+            567,
+            295
+          ],
+          [
+            679,
+            321
+          ],
+          [
+            791,
+            532
+          ],
+          [
+            976,
+            539
+          ],
+          [
+            1174,
+            540
+          ],
+          [
+            1415,
+            529
+          ],
+          [
+            1615,
+            329
+          ],
+          [
+            1770,
+            352
+          ],
+          [
+            1892,
+            487
+          ],
+          [
+            1889,
+            715
+          ],
+          [
+            1717,
+            739
+          ],
+          [
+            1550,
+            746
+          ],
+          [
+            1338,
+            760
+          ],
+          [
+            1120,
+            780
+          ],
+          [
+            951,
+            788
+          ],
+          [
+            610,
+            761
+          ],
+          [
+            533,
+            748
+          ],
+          [
+            364,
+            740
+          ],
+          [
+            154,
+            735
+          ]
+        ],
+        "reachable": false,
+        "obstructions": [
+          [
+            758,
+            267,
+            86,
+            105
+          ]
+        ],
+        "forbidden_centres": []
+      }
+    ]
+  },
+  "actual_midge": {
+    "size": [
+      4,
+      3
+    ],
+    "continuous_COM_bounds": [
+      -2,
+      -1.5,
+      4,
+      3
+    ],
+    "native_collision_test": "NOT_PERFORMED_BY_AUTHOR"
+  },
+  "native_status": "NATIVE-UNTESTED"
+}

@@ -1,0 +1,1670 @@
+{
+  "schema_version": 1,
+  "arm": "D1",
+  "status": "FAIL",
+  "qualification_scope": "SOURCE-STATIC AUTHOR CHECK; independent ART and native qualification separate",
+  "issues": [
+    "Changed-cell cap exceeded."
+  ],
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "frozen_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "difference": {
+    "changed_cells": 17472,
+    "bounds_xywh": [
+      362,
+      634,
+      576,
+      1107
+    ],
+    "before_material_plane_sha256_uint8": "8727b7d3b3130d9ed5fe5894e6c770134b05bde89a206b2c14cbb1a8cd4aa3df",
+    "after_material_plane_sha256_uint8": "9379d532f273ae4d2f6a72f46f02a683d841fd824fad12054b880e564fcf0c45",
+    "material_transitions": [
+      {
+        "from": 0,
+        "to": 49,
+        "cells": 4897
+      },
+      {
+        "from": 0,
+        "to": 62,
+        "cells": 6264
+      },
+      {
+        "from": 0,
+        "to": 63,
+        "cells": 144
+      },
+      {
+        "from": 0,
+        "to": 68,
+        "cells": 3280
+      },
+      {
+        "from": 0,
+        "to": 77,
+        "cells": 126
+      },
+      {
+        "from": 0,
+        "to": 129,
+        "cells": 546
+      },
+      {
+        "from": 0,
+        "to": 130,
+        "cells": 505
+      },
+      {
+        "from": 0,
+        "to": 131,
+        "cells": 685
+      },
+      {
+        "from": 68,
+        "to": 49,
+        "cells": 11
+      },
+      {
+        "from": 68,
+        "to": 62,
+        "cells": 96
+      },
+      {
+        "from": 100,
+        "to": 49,
+        "cells": 559
+      },
+      {
+        "from": 100,
+        "to": 62,
+        "cells": 77
+      },
+      {
+        "from": 100,
+        "to": 68,
+        "cells": 116
+      },
+      {
+        "from": 101,
+        "to": 62,
+        "cells": 165
+      },
+      {
+        "from": 101,
+        "to": 131,
+        "cells": 1
+      }
+    ]
+  },
+  "changed_cell_cap": 16000,
+  "outside_approved_regions_changed_cells": 0,
+  "protected_named_31x27_footprint_changes": [],
+  "regions": [
+    {
+      "id": "high_crossing_fragment",
+      "xywh": [
+        353,
+        630,
+        316,
+        68
+      ],
+      "changed_cells": 1996,
+      "before_material_plane_sha256_uint8": "6f2e1f5e4534fe81f3921f6543a9cb9025985b8036a3e8918a0c4c1c8ada0029",
+      "after_material_plane_sha256_uint8": "09c4c25f995f21e29a396da85d885e8a4441e58446dd220785c0bcecd472bf73"
+    },
+    {
+      "id": "ore_stage_crossing",
+      "xywh": [
+        361,
+        1090,
+        307,
+        97
+      ],
+      "changed_cells": 1388,
+      "before_material_plane_sha256_uint8": "991ebef647f266ec8798423d8aa8aae8467ba573f1f85b625a678a0fe04576d1",
+      "after_material_plane_sha256_uint8": "909489c25f2c20bde22504ac0e1480b33c7806a2685b858c216810a578801d10"
+    },
+    {
+      "id": "broken_low_joint",
+      "xywh": [
+        353,
+        1638,
+        338,
+        112
+      ],
+      "changed_cells": 3341,
+      "before_material_plane_sha256_uint8": "1633d66a5a6bf4a778981f0d1d9c197c1312664ff32dfbd088653612452dfa64",
+      "after_material_plane_sha256_uint8": "4f2f432372b70fcdfd6360c313a78e6ee9b2b9b179da8491ea1ff4c68e4142cb"
+    },
+    {
+      "id": "entered_drill_workface",
+      "xywh": [
+        676,
+        995,
+        271,
+        322
+      ],
+      "changed_cells": 10747,
+      "before_material_plane_sha256_uint8": "093fd653137f2322a570748f5426009142cbbd0a9fae7be8a88748010ca23263",
+      "after_material_plane_sha256_uint8": "1df753922fad1802617839b6b5ce291f72cbb1efc516fac7cdaa99edc5b16670"
+    }
+  ],
+  "structure": {
+    "width": 1024,
+    "height": 2048,
+    "rectangle_count": 923,
+    "rectangle_capacity": 32768,
+    "overlap_count": 0,
+    "out_of_bounds_count": 0,
+    "histogram": {
+      "0": 1232674,
+      "49": 27886,
+      "62": 38563,
+      "63": 2731,
+      "68": 24584,
+      "77": 2133,
+      "79": 1475,
+      "100": 423784,
+      "101": 290359,
+      "121": 4316,
+      "129": 24033,
+      "130": 22030,
+      "131": 2584
+    },
+    "material_plane_sha256_uint8": "9379d532f273ae4d2f6a72f46f02a683d841fd824fad12054b880e564fcf0c45",
+    "diagnostic_dimension_prefixed_uint16_sha256": "87dec38ea8993ef3b478b13e13047b6a09c0b1016b11396691d8857da658894b"
+  },
+  "setup_bytes": 18124,
+  "original_settings_preserved": true,
+  "used_material_ids": [
+    49,
+    62,
+    63,
+    68,
+    77,
+    79,
+    100,
+    101,
+    121,
+    129,
+    130,
+    131
+  ],
+  "newly_restored_original_source_ids": [],
+  "invalid_permanent_material_ids": [],
+  "present_pair_reaction_rules": [],
+  "material_scope": "Hard, immovable, kernel-none cells; no active fluid/hot/acid drivers present. This is initial static permanence, not immunity under future authored hazards.",
+  "rooting": {
+    "solid_cells": 864478,
+    "bottom_grounded_cells": 864478,
+    "not_bottom_rooted_cells": 0,
+    "boundary_rooted_cells": 864478,
+    "not_boundary_rooted_cells": 0,
+    "solid_components": 1
+  },
+  "rooting_policy": "Bottom-boundary four-neighbour component; no inferred anchors.",
+  "sites": {
+    "19x15": {
+      "normal": {
+        "spawn": [
+          509,
+          137
+        ],
+        "spawn_clear": true,
+        "components": 8,
+        "sites_total": 22,
+        "sites_reached": 22,
+        "sites": [
+          {
+            "name": "Upper fault spawn",
+            "centre": [
+              509,
+              137
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West rover clinic",
+            "centre": [
+              235,
+              312
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West med analysis",
+            "centre": [
+              340,
+              425
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East seismic dispatch",
+            "centre": [
+              766,
+              450
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Fork receiver station",
+            "centre": [
+              818,
+              568
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Upper bridge landing",
+            "centre": [
+              521,
+              710
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West ore triage",
+            "centre": [
+              248,
+              855
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Western crusher",
+            "centre": [
+              293,
+              1008
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Mid fault exchange",
+            "centre": [
+              503,
+              915
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East drill bypass upper",
+            "centre": [
+              756,
+              902
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East drill bypass middle",
+            "centre": [
+              780,
+              1072
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East drill bypass lower",
+            "centre": [
+              757,
+              1218
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Lower fault rejoin",
+            "centre": [
+              513,
+              1250
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West bore rescue",
+            "centre": [
+              249,
+              1454
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West lower survey",
+            "centre": [
+              337,
+              1550
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East quarantine intake",
+            "centre": [
+              757,
+              1467
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East biosieve",
+            "centre": [
+              839,
+              1584
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Fault archive overlook",
+            "centre": [
+              516,
+              1648
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West buried archives",
+            "centre": [
+              240,
+              1810
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East recorder vault",
+            "centre": [
+              790,
+              1826
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Lower recovery dock",
+            "centre": [
+              511,
+              1850
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Deep fault exit",
+            "centre": [
+              514,
+              1920
+            ],
+            "centre_clear": true,
+            "reachable": true
+          }
+        ]
+      },
+      "obstructed": [
+        {
+          "case": "original-solid-block",
+          "expected_covered_sites": [],
+          "observed_unreachable_sites": [],
+          "result": {
+            "spawn": [
+              509,
+              137
+            ],
+            "spawn_clear": true,
+            "components": 9,
+            "sites_total": 22,
+            "sites_reached": 22,
+            "sites": [
+              {
+                "name": "Upper fault spawn",
+                "centre": [
+                  509,
+                  137
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West rover clinic",
+                "centre": [
+                  235,
+                  312
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West med analysis",
+                "centre": [
+                  340,
+                  425
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East seismic dispatch",
+                "centre": [
+                  766,
+                  450
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Fork receiver station",
+                "centre": [
+                  818,
+                  568
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Upper bridge landing",
+                "centre": [
+                  521,
+                  710
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West ore triage",
+                "centre": [
+                  248,
+                  855
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Western crusher",
+                "centre": [
+                  293,
+                  1008
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Mid fault exchange",
+                "centre": [
+                  503,
+                  915
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East drill bypass upper",
+                "centre": [
+                  756,
+                  902
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East drill bypass middle",
+                "centre": [
+                  780,
+                  1072
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East drill bypass lower",
+                "centre": [
+                  757,
+                  1218
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Lower fault rejoin",
+                "centre": [
+                  513,
+                  1250
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West bore rescue",
+                "centre": [
+                  249,
+                  1454
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West lower survey",
+                "centre": [
+                  337,
+                  1550
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East quarantine intake",
+                "centre": [
+                  757,
+                  1467
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East biosieve",
+                "centre": [
+                  839,
+                  1584
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Fault archive overlook",
+                "centre": [
+                  516,
+                  1648
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West buried archives",
+                "centre": [
+                  240,
+                  1810
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East recorder vault",
+                "centre": [
+                  790,
+                  1826
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Lower recovery dock",
+                "centre": [
+                  511,
+                  1850
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Deep fault exit",
+                "centre": [
+                  514,
+                  1920
+                ],
+                "centre_clear": true,
+                "reachable": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "23x19": {
+      "normal": {
+        "spawn": [
+          509,
+          137
+        ],
+        "spawn_clear": true,
+        "components": 9,
+        "sites_total": 22,
+        "sites_reached": 22,
+        "sites": [
+          {
+            "name": "Upper fault spawn",
+            "centre": [
+              509,
+              137
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West rover clinic",
+            "centre": [
+              235,
+              312
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West med analysis",
+            "centre": [
+              340,
+              425
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East seismic dispatch",
+            "centre": [
+              766,
+              450
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Fork receiver station",
+            "centre": [
+              818,
+              568
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Upper bridge landing",
+            "centre": [
+              521,
+              710
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West ore triage",
+            "centre": [
+              248,
+              855
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Western crusher",
+            "centre": [
+              293,
+              1008
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Mid fault exchange",
+            "centre": [
+              503,
+              915
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East drill bypass upper",
+            "centre": [
+              756,
+              902
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East drill bypass middle",
+            "centre": [
+              780,
+              1072
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East drill bypass lower",
+            "centre": [
+              757,
+              1218
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Lower fault rejoin",
+            "centre": [
+              513,
+              1250
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West bore rescue",
+            "centre": [
+              249,
+              1454
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West lower survey",
+            "centre": [
+              337,
+              1550
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East quarantine intake",
+            "centre": [
+              757,
+              1467
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East biosieve",
+            "centre": [
+              839,
+              1584
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Fault archive overlook",
+            "centre": [
+              516,
+              1648
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West buried archives",
+            "centre": [
+              240,
+              1810
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East recorder vault",
+            "centre": [
+              790,
+              1826
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Lower recovery dock",
+            "centre": [
+              511,
+              1850
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Deep fault exit",
+            "centre": [
+              514,
+              1920
+            ],
+            "centre_clear": true,
+            "reachable": true
+          }
+        ]
+      },
+      "obstructed": [
+        {
+          "case": "original-solid-block",
+          "expected_covered_sites": [],
+          "observed_unreachable_sites": [],
+          "result": {
+            "spawn": [
+              509,
+              137
+            ],
+            "spawn_clear": true,
+            "components": 9,
+            "sites_total": 22,
+            "sites_reached": 22,
+            "sites": [
+              {
+                "name": "Upper fault spawn",
+                "centre": [
+                  509,
+                  137
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West rover clinic",
+                "centre": [
+                  235,
+                  312
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West med analysis",
+                "centre": [
+                  340,
+                  425
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East seismic dispatch",
+                "centre": [
+                  766,
+                  450
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Fork receiver station",
+                "centre": [
+                  818,
+                  568
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Upper bridge landing",
+                "centre": [
+                  521,
+                  710
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West ore triage",
+                "centre": [
+                  248,
+                  855
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Western crusher",
+                "centre": [
+                  293,
+                  1008
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Mid fault exchange",
+                "centre": [
+                  503,
+                  915
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East drill bypass upper",
+                "centre": [
+                  756,
+                  902
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East drill bypass middle",
+                "centre": [
+                  780,
+                  1072
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East drill bypass lower",
+                "centre": [
+                  757,
+                  1218
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Lower fault rejoin",
+                "centre": [
+                  513,
+                  1250
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West bore rescue",
+                "centre": [
+                  249,
+                  1454
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West lower survey",
+                "centre": [
+                  337,
+                  1550
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East quarantine intake",
+                "centre": [
+                  757,
+                  1467
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East biosieve",
+                "centre": [
+                  839,
+                  1584
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Fault archive overlook",
+                "centre": [
+                  516,
+                  1648
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West buried archives",
+                "centre": [
+                  240,
+                  1810
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East recorder vault",
+                "centre": [
+                  790,
+                  1826
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Lower recovery dock",
+                "centre": [
+                  511,
+                  1850
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Deep fault exit",
+                "centre": [
+                  514,
+                  1920
+                ],
+                "centre_clear": true,
+                "reachable": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "31x27": {
+      "normal": {
+        "spawn": [
+          509,
+          137
+        ],
+        "spawn_clear": true,
+        "components": 9,
+        "sites_total": 22,
+        "sites_reached": 22,
+        "sites": [
+          {
+            "name": "Upper fault spawn",
+            "centre": [
+              509,
+              137
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West rover clinic",
+            "centre": [
+              235,
+              312
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West med analysis",
+            "centre": [
+              340,
+              425
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East seismic dispatch",
+            "centre": [
+              766,
+              450
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Fork receiver station",
+            "centre": [
+              818,
+              568
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Upper bridge landing",
+            "centre": [
+              521,
+              710
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West ore triage",
+            "centre": [
+              248,
+              855
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Western crusher",
+            "centre": [
+              293,
+              1008
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Mid fault exchange",
+            "centre": [
+              503,
+              915
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East drill bypass upper",
+            "centre": [
+              756,
+              902
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East drill bypass middle",
+            "centre": [
+              780,
+              1072
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East drill bypass lower",
+            "centre": [
+              757,
+              1218
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Lower fault rejoin",
+            "centre": [
+              513,
+              1250
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West bore rescue",
+            "centre": [
+              249,
+              1454
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West lower survey",
+            "centre": [
+              337,
+              1550
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East quarantine intake",
+            "centre": [
+              757,
+              1467
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East biosieve",
+            "centre": [
+              839,
+              1584
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Fault archive overlook",
+            "centre": [
+              516,
+              1648
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "West buried archives",
+            "centre": [
+              240,
+              1810
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "East recorder vault",
+            "centre": [
+              790,
+              1826
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Lower recovery dock",
+            "centre": [
+              511,
+              1850
+            ],
+            "centre_clear": true,
+            "reachable": true
+          },
+          {
+            "name": "Deep fault exit",
+            "centre": [
+              514,
+              1920
+            ],
+            "centre_clear": true,
+            "reachable": true
+          }
+        ]
+      },
+      "obstructed": [
+        {
+          "case": "original-solid-block",
+          "expected_covered_sites": [],
+          "observed_unreachable_sites": [],
+          "result": {
+            "spawn": [
+              509,
+              137
+            ],
+            "spawn_clear": true,
+            "components": 9,
+            "sites_total": 22,
+            "sites_reached": 22,
+            "sites": [
+              {
+                "name": "Upper fault spawn",
+                "centre": [
+                  509,
+                  137
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West rover clinic",
+                "centre": [
+                  235,
+                  312
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West med analysis",
+                "centre": [
+                  340,
+                  425
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East seismic dispatch",
+                "centre": [
+                  766,
+                  450
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Fork receiver station",
+                "centre": [
+                  818,
+                  568
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Upper bridge landing",
+                "centre": [
+                  521,
+                  710
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West ore triage",
+                "centre": [
+                  248,
+                  855
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Western crusher",
+                "centre": [
+                  293,
+                  1008
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Mid fault exchange",
+                "centre": [
+                  503,
+                  915
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East drill bypass upper",
+                "centre": [
+                  756,
+                  902
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East drill bypass middle",
+                "centre": [
+                  780,
+                  1072
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East drill bypass lower",
+                "centre": [
+                  757,
+                  1218
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Lower fault rejoin",
+                "centre": [
+                  513,
+                  1250
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West bore rescue",
+                "centre": [
+                  249,
+                  1454
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West lower survey",
+                "centre": [
+                  337,
+                  1550
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East quarantine intake",
+                "centre": [
+                  757,
+                  1467
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East biosieve",
+                "centre": [
+                  839,
+                  1584
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Fault archive overlook",
+                "centre": [
+                  516,
+                  1648
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "West buried archives",
+                "centre": [
+                  240,
+                  1810
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "East recorder vault",
+                "centre": [
+                  790,
+                  1826
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Lower recovery dock",
+                "centre": [
+                  511,
+                  1850
+                ],
+                "centre_clear": true,
+                "reachable": true
+              },
+              {
+                "name": "Deep fault exit",
+                "centre": [
+                  514,
+                  1920
+                ],
+                "centre_clear": true,
+                "reachable": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "routes": {
+    "19x15": [
+      {
+        "id": "original-unblocked-shortest",
+        "via": [
+          [
+            509,
+            137
+          ],
+          [
+            514,
+            1920
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [],
+        "forbidden_centres": []
+      },
+      {
+        "id": "original-blocked-shortest",
+        "via": [
+          [
+            509,
+            137
+          ],
+          [
+            514,
+            1920
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [
+          [
+            389,
+            980,
+            252,
+            79
+          ]
+        ],
+        "forbidden_centres": [],
+        "forced_region_test": {
+          "region": [
+            700,
+            850,
+            200,
+            450
+          ],
+          "endpoints_connected_with_gallery_forbidden": true,
+          "necessity_proved": false
+        }
+      }
+    ],
+    "23x19": [
+      {
+        "id": "original-unblocked-shortest",
+        "via": [
+          [
+            509,
+            137
+          ],
+          [
+            514,
+            1920
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [],
+        "forbidden_centres": []
+      },
+      {
+        "id": "original-blocked-shortest",
+        "via": [
+          [
+            509,
+            137
+          ],
+          [
+            514,
+            1920
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [
+          [
+            389,
+            980,
+            252,
+            79
+          ]
+        ],
+        "forbidden_centres": [],
+        "forced_region_test": {
+          "region": [
+            700,
+            850,
+            200,
+            450
+          ],
+          "endpoints_connected_with_gallery_forbidden": true,
+          "necessity_proved": false
+        }
+      }
+    ],
+    "31x27": [
+      {
+        "id": "original-unblocked-shortest",
+        "via": [
+          [
+            509,
+            137
+          ],
+          [
+            514,
+            1920
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [],
+        "forbidden_centres": [],
+        "length_steps": 1916,
+        "path_sha256": "22cf6bee188e59439575a217d31e325a21e639aba7d0548729c8e2312caf93f7",
+        "region_visits": {}
+      },
+      {
+        "id": "original-blocked-shortest",
+        "via": [
+          [
+            509,
+            137
+          ],
+          [
+            514,
+            1920
+          ]
+        ],
+        "reachable": true,
+        "obstructions": [
+          [
+            389,
+            980,
+            252,
+            79
+          ]
+        ],
+        "forbidden_centres": [],
+        "length_steps": 2072,
+        "path_sha256": "db99ee055519b7461a2778f3734981c97ebd23d0ef03d48193c234f8d7762055",
+        "region_visits": {},
+        "forced_region_test": {
+          "region": [
+            700,
+            850,
+            200,
+            450
+          ],
+          "endpoints_connected_with_gallery_forbidden": true,
+          "necessity_proved": false
+        }
+      }
+    ]
+  },
+  "actual_midge": {
+    "size": [
+      4,
+      3
+    ],
+    "continuous_COM_bounds": [
+      -2,
+      -1.5,
+      4,
+      3
+    ],
+    "native_collision_test": "NOT_PERFORMED_BY_AUTHOR"
+  },
+  "native_status": "NATIVE-UNTESTED"
+}

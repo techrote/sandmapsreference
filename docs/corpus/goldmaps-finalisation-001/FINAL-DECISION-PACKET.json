@@ -1,0 +1,311 @@
+{
+  "schema_version": "goldmaps-final-decision-packet.v1",
+  "programme": "GOLDMAPS-FINALISATION-001",
+  "status": "DRAFT_HOLD_ARCHIVAL_CLOSURE",
+  "evidence_authority": {
+    "finalisation_head": "40f196f792e4d9e19bbd57fdafd6a90420fadf32",
+    "finalisation_subtree_git_tree": "2cf21156729f5821d7e7744eb6cb37720ad329d1",
+    "recovery_head": "6c4edd3d05476848cbebb800090080ae824ad208",
+    "ledger_head": "5982fa553bc6356742cfea0911c848c372dcdb97",
+    "preregistration": "241029a2de59b412e1475ef7f46094d71033ad6e",
+    "output_lock": "0bdbf3fc524e85c30c7095b7e1dad53159fd7d9c",
+    "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+    "accepted_corpus_main_at_recovery": "99a166e7fcae45eb22be1740e9f33f62faccbcc7"
+  },
+  "corpus": {
+    "final_map_count": 70,
+    "primary_policy_scan_population": 67,
+    "supplementary_portrait_donors": [
+      {
+        "pr": 37,
+        "head": "e2b53fb95ea93576afdc15c114e29b853c4b2c05",
+        "portrait_pr": 197
+      },
+      {
+        "pr": 124,
+        "head": "99616a8c8d2475ad4145a8489c0cc8850b1bd783",
+        "portrait_pr": 196
+      },
+      {
+        "pr": 135,
+        "head": "a3f9962a0107d07bca1116940fde1c825ac76a4f",
+        "portrait_pr": 192
+      }
+    ],
+    "current_features": 27,
+    "immutable_feature_states": 76,
+    "comparative_families": 12,
+    "negative_interventions": 5,
+    "frozen_gold_nominees": 25,
+    "owner_accepted": 0
+  },
+  "trial": {
+    "changed_cells_total": 34353,
+    "arms": [
+      {
+        "arm": "B1",
+        "name": "Keelbone Switchback Recovery Tenements",
+        "changed_cells": 3283,
+        "decision": "POSITIVE_UPLIFT",
+        "original": {
+          "pr": 152,
+          "head": "eb00a9a55864dfb6d3e076e60ba4684b397228fc"
+        },
+        "candidate": {
+          "pr": 212,
+          "head": "c242f3c267c6bd8d3a0d9d23642409ac0584a484"
+        }
+      },
+      {
+        "arm": "B2",
+        "name": "Umbra Rotor Islet Works",
+        "changed_cells": 5195,
+        "decision": "POSITIVE_UPLIFT",
+        "original": {
+          "pr": 167,
+          "head": "49cdac502d861a8c70e95a1773f5053c321a04c2"
+        },
+        "candidate": {
+          "pr": 210,
+          "head": "65d461c9b1d7444813ca8362d7e3425314e8f277"
+        }
+      },
+      {
+        "arm": "B3",
+        "name": "Brackenfold Tri-Vault Boreworks",
+        "changed_cells": 2376,
+        "decision": "INCONCLUSIVE_GAMEPLAY_RACING",
+        "original": {
+          "pr": 170,
+          "head": "3a2057dd56804f87d2fec701007ecc277601894f"
+        },
+        "candidate": {
+          "pr": 213,
+          "head": "7c13fbde3664047311b483463ece0e36f3d42e17"
+        }
+      },
+      {
+        "arm": "C1",
+        "name": "Keelbone Covered Spine",
+        "changed_cells": 0,
+        "decision": "CORRECT_ABSTENTION",
+        "original": {
+          "pr": 159,
+          "head": "1266ca2265db3dc574566a8047ac8170c58ae95c"
+        },
+        "candidate": {
+          "pr": 159,
+          "head": "1266ca2265db3dc574566a8047ac8170c58ae95c"
+        }
+      },
+      {
+        "arm": "C2",
+        "name": "Mireward Censer Loop",
+        "changed_cells": 0,
+        "decision": "CORRECT_ABSTENTION",
+        "original": {
+          "pr": 150,
+          "head": "c797722c9788263cb157d48d30eefd613a832efd"
+        },
+        "candidate": {
+          "pr": 150,
+          "head": "c797722c9788263cb157d48d30eefd613a832efd"
+        }
+      },
+      {
+        "arm": "C3",
+        "name": "Silt Meridian Hingevault",
+        "changed_cells": 0,
+        "decision": "CORRECT_ABSTENTION",
+        "original": {
+          "pr": 197,
+          "head": "3b0253d387578bda3af00a6edc97833219df64a9"
+        },
+        "candidate": {
+          "pr": 197,
+          "head": "3b0253d387578bda3af00a6edc97833219df64a9"
+        }
+      },
+      {
+        "arm": "D1",
+        "name": "Orthant Rift Needle",
+        "changed_cells": 15807,
+        "decision": "ASSESSOR_DISAGREEMENT",
+        "original": {
+          "pr": 186,
+          "head": "598e8792b32a4922008b6d3dcb9208d21f03e477"
+        },
+        "candidate": {
+          "pr": 214,
+          "head": "693574b7afce437a4cb008bd2fa200f6256dcc87"
+        },
+        "reference": {
+          "pr": 203,
+          "head": "922a27926ea7338e9a1ce09fc64222b1094a9737"
+        }
+      },
+      {
+        "arm": "D2",
+        "name": "Warden Gashlift",
+        "changed_cells": 7692,
+        "decision": "REFERENCE_PREFERRED_OVERALL",
+        "original": {
+          "pr": 196,
+          "head": "64fd7061385fd96e5673484e1a12a70e11333386"
+        },
+        "candidate": {
+          "pr": 211,
+          "head": "cd1e0192a709e54dc63681e00b0802716398ec1f"
+        },
+        "reference": {
+          "pr": 208,
+          "head": "94eccd23024254fbbfb02cd6cdfef8753dd89c3c"
+        }
+      }
+    ]
+  },
+  "gold_recommendation": {
+    "decision": "RETAIN_25_MAP_FROZEN_RECOMMENDATION",
+    "rationale": "Retain the prior 24 original-source selections and include exact-source specialist-supported PR #125 Quoin to complete the 25. Recommendation is not owner acceptance.",
+    "pr125": {
+      "pr": 125,
+      "title": "Quoin Veil Split Faultwell / Vertical Census Escarpment",
+      "head": "e17996dd8a2e1044550a60e75f45780cb6ae868d"
+    },
+    "recommended_source_prs": [
+      106,
+      109,
+      125,
+      130,
+      131,
+      136,
+      143,
+      146,
+      147,
+      148,
+      150,
+      153,
+      155,
+      159,
+      163,
+      168,
+      174,
+      175,
+      176,
+      179,
+      182,
+      184,
+      193,
+      197,
+      207
+    ],
+    "owner_accepted": 0,
+    "caveat_pr155": "Original #155 remains natively refused; its policy-only descendant is separate and does not retroactively accept the source."
+  },
+  "native": {
+    "static_contracts": {
+      "tests_passed": 29,
+      "tests_total": 29,
+      "run_id": 45223287503,
+      "head": "40f196f792e4d9e19bbd57fdafd6a90420fadf32"
+    },
+    "policy_schema_scan": {
+      "sources_checked": 67,
+      "workbench_schema_accepted": 67,
+      "native_policy_accepted": 65,
+      "native_policy_refused": 2,
+      "refusals": [
+        {
+          "pr": 155,
+          "head": "7ff90c11a3839e42371f0fef5ac3c783ab2a8d05",
+          "code": "malformed_policy",
+          "detail": "bad magic"
+        },
+        {
+          "pr": 183,
+          "head": "c1bd6fcf2cb4c002aa7906a13543a0a5e4af8f2b",
+          "code": "malformed_policy",
+          "detail": "bad magic"
+        }
+      ]
+    },
+    "windows_full_matrix": {
+      "run_id": 45217389899,
+      "executed_checkout_head": "54aff877714e2ddb0119ed135cd41436683e4b06",
+      "aliases_checked": 51,
+      "unique_setups_checked": 42,
+      "qualified_headless": 41,
+      "refused_invalid_source": 1,
+      "qualification_status": "QUALIFIED_WITH_EXPLICIT_REFUSED_ORIGINAL",
+      "refused_original": {
+        "pr": 155,
+        "code": "malformed_policy",
+        "detail": "bad magic"
+      },
+      "derived_pr155_policy_only_qualified": true,
+      "helper_tests": {
+        "passed": 21,
+        "total": 21
+      },
+      "frozen_package": {
+        "files": 586,
+        "bytes": 200610152,
+        "manifest_sha256": "d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0"
+      },
+      "actions_artifact_id": 14837494421
+    },
+    "initial_integrity_refusal": {
+      "run_id": 45211474354,
+      "cause": "Windows checkout line-ending conversion changed manifest bytes",
+      "native_executed": false,
+      "correction": "core.autocrlf=false on ephemeral runner; hash assertions retained"
+    },
+    "evidence_head_native_gate": {
+      "run_id": 45223287506,
+      "head": "40f196f792e4d9e19bbd57fdafd6a90420fadf32",
+      "result": "PASS_SOURCE_CHANGE_GATE",
+      "windows_native_job": "SKIPPED_EVIDENCE_ONLY_UPDATE",
+      "authority": "Full Windows run remains 45217389899 at 54aff877..."
+    },
+    "b3_route_probes": {
+      "route_pilot": "PASS_QUALIFIED_HEADLESS",
+      "obstruction_diagnostic": "PASS_QUALIFIED_HEADLESS",
+      "claim_limit": "Does not establish racing-speed readability, playfeel or owner graphical acceptance."
+    },
+    "current_engine_compatibility": {
+      "current_accepted_head": "00cdb02f103265b6dc5224c68283e9a0c8cb449f",
+      "result": "PASS_TARGETED_COMPATIBILITY",
+      "frozen_engine_remains_scientific_authority": true
+    }
+  },
+  "deliverable_standard": {
+    "prior_1532_file_claim": {
+      "status": "RETRACTED_AS_UNVERIFIED_CANONICAL_DELIVERABLE",
+      "reason": "No immutable 1,532-file manifest/reference is preserved on PR #216 at the frozen evidence authority."
+    },
+    "frozen_windows_evaluator": {
+      "manifest_path": "docs/corpus/goldmaps-recovery-001/snapshot/owner-package-files.v2.json",
+      "manifest_git_blob": "29d0aea57ca7253062acdefaa1724571fdd1df75",
+      "manifest_sha256": "d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0",
+      "files": 586,
+      "bytes": 200610152,
+      "reconstruction_script": "docs/corpus/goldmaps-recovery-001/snapshot/acquire_package.py"
+    },
+    "finalisation_evidence_bundle": {
+      "commit": "40f196f792e4d9e19bbd57fdafd6a90420fadf32",
+      "subtree_path": "docs/corpus/goldmaps-finalisation-001/",
+      "subtree_git_tree": "2cf21156729f5821d7e7744eb6cb37720ad329d1"
+    }
+  },
+  "owner_pending": [
+    "Final Gold adoption of any/all 25 recommendations",
+    "Final Platinum/Pyrite classification",
+    "Physical Windows/NVIDIA graphical playtest and presentation acceptance",
+    "Subjective playfeel and full-route judgement, especially B3 at racing speed",
+    "Final disposition of D1 assessor disagreement",
+    "Final disposition of D2 versus prior reference/original",
+    "Whether the policy-only #155 descendant should be adopted anywhere; original #155 remains refused",
+    "Merge/Ready/production adoption of PR #216 and recovery baseline"
+  ],
+  "conclusion": "Technically complete frozen research/evidence programme; no owner acceptance asserted."
+}

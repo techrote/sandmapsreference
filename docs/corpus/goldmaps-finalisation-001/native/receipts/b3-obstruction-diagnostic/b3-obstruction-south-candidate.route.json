@@ -1,0 +1,89 @@
+{
+  "id": "b3-obstruction-south-candidate",
+  "setup_id": "diagnostic-B3-obstruction-candidate",
+  "setup_sha256": "7c52fb207fac7a3669d37d2c395ee02cb635853b5cf2f68eb4dc01b9be493422",
+  "planner_source_sha256": "c44d1414ede23008860c02ed65022960c9413e989f98defff94dd9fc48be3d8a",
+  "route_fixture_sha256": "17fecc15d1f200d37d85972d773dd9613597b0eb16980ffadd7fad7e0a5128b4",
+  "named_sites": [
+    "West ignition nest",
+    "West pressure latch",
+    "West bearing",
+    "Vault one crown",
+    "Vault one switch",
+    "South tri-vault bypass",
+    "Central bypass wicket"
+  ],
+  "waypoints": [
+    [
+      125,
+      312
+    ],
+    [
+      257,
+      317
+    ],
+    [
+      406,
+      303
+    ],
+    [
+      344,
+      440
+    ],
+    [
+      344,
+      452
+    ],
+    [
+      348,
+      472
+    ],
+    [
+      456,
+      476
+    ],
+    [
+      516,
+      412
+    ],
+    [
+      567,
+      295
+    ],
+    [
+      679,
+      321
+    ],
+    [
+      732,
+      468
+    ],
+    [
+      732,
+      472
+    ],
+    [
+      791,
+      532
+    ],
+    [
+      872,
+      552
+    ],
+    [
+      952,
+      552
+    ],
+    [
+      976,
+      539
+    ]
+  ],
+  "waypoint_radius": 7.0,
+  "speed_limit": 55.0,
+  "max_ticks": 9000,
+  "max_wall_ms": 240000,
+  "stuck_ticks": 900,
+  "scope": "Paired actual southern detour with frozen declared north-throat obstruction; isolated diagnostic descendant, not experiment output.",
+  "expected_outcome": "completed"
+}

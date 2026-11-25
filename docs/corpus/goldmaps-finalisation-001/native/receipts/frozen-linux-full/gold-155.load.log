@@ -1,0 +1,11 @@
+Initialize godot-rust (API v4.7.stable.official, runtime v4.7.stable.official, safeguards balanced)
+Godot Engine v4.7.stable.official.5b4e0cb0f - https://godotengine.org
+
+[92mPHYSICS ENGINE 2D: Rapier2D v0.35.2[39m[0m
+ERROR: CANVAS_NATIVE_FAIL native liquid policy refused: { "code": "malformed_policy", "material": <null>, "detail": "bad magic" }
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _need (res://goldmaps-native-probe.gd:54)
+       [1] _run (res://goldmaps-native-probe.gd:146)
+       [2] _wait (res://goldmaps-native-probe.gd:63)
+CANVAS_NATIVE_EVIDENCE {"active_label":"gm-afcdaef23e-e374e462","actor_adopted":false,"collision_observed":false,"errors":["native liquid policy refused: { \"code\": \"malformed_policy\", \"material\": <null>, \"detail\": \"bad magic\" }"],"extent":[2048,1024],"fresh_reopen":false,"full_grid":false,"label":"gm-afcdaef23e-e374e462","load":false,"midge_drive":false,"native_bridge":false,"native_policy":{"accepted":false,"receipt":null,"refusal":{"code":"malformed_policy","detail":"bad magic","material":null}},"phase":"load","physics_tick":false,"process_id":1451,"rectangles":3229,"saved_label":"gm-afcdaef23e-e374e462-saved","setup_sha256":"e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12","source_parse":true,"version":"4.7-stable (official)"}

@@ -1,0 +1,98 @@
+{
+  "id": "d2-press-reference",
+  "setup_id": "trial-D2-reference",
+  "setup_sha256": "7d89a3195b5a382a4d63499845455493a33274df5ec52a28617d4f60fb4749b9",
+  "planner_source_sha256": "80ae9ff8e5bda7b8fa812a1e58a97e5c9638a93ddfe0ff80ae1eb261e37cfc76",
+  "route_fixture_sha256": "7c3e54aa25abee128619007f3283b819982fcc05097e0e663bf8d9eb1c52dbcc",
+  "named_sites": [
+    "Arrival Mooring",
+    "Entered Salvage Hold",
+    "Lift Seam",
+    "Press Threshold",
+    "Press Chamber"
+  ],
+  "waypoints": [
+    [
+      225,
+      273
+    ],
+    [
+      262,
+      418
+    ],
+    [
+      288,
+      376
+    ],
+    [
+      312,
+      376
+    ],
+    [
+      424,
+      440
+    ],
+    [
+      428,
+      596
+    ],
+    [
+      496,
+      740
+    ],
+    [
+      500,
+      843
+    ],
+    [
+      572,
+      980
+    ],
+    [
+      612,
+      1024
+    ],
+    [
+      640,
+      1032
+    ],
+    [
+      713,
+      1050
+    ],
+    [
+      640,
+      1064
+    ],
+    [
+      636,
+      1072
+    ],
+    [
+      612,
+      1136
+    ],
+    [
+      616,
+      1156
+    ],
+    [
+      628,
+      1160
+    ],
+    [
+      788,
+      1160
+    ],
+    [
+      856,
+      1190
+    ]
+  ],
+  "waypoint_radius": 7.0,
+  "speed_limit": 40.0,
+  "max_ticks": 9000,
+  "max_wall_ms": 240000,
+  "stuck_ticks": 900,
+  "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "programme": "GOLD-ASTRA-001",
+  "arm": "B3",
+  "attempt": 2,
+  "frozen_commit": "241029a2de59b412e1475ef7f46094d71033ad6e",
+  "source_head": "3a2057dd56804f87d2fec701007ecc277601894f",
+  "original_map_directory": "cybersand-canvases/2048x1024/original-racing-wide-brackenfold-trivault-boreworks-261121",
+  "original_setup_filename": "setup-brackenfold-trivault-boreworks.json",
+  "original_builder_filename": "build.py",
+  "baseline_setup_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+  "baseline_material_plane_sha256_uint8": "cb6a4c76e1a7b536808d9841fa978790d1c50dead1a952a1ad236fdeeb4f53d9",
+  "original_builder_inputs": {
+    "setup-brackenfold-trivault-boreworks.json": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+    "build.py": "48cb4e7488b92b106e2fd52b173f57be6c8fb0ea90028b6010986f572bf9b95d"
+  },
+  "original_used_material_vocabulary": [
+    58,
+    62,
+    72,
+    100,
+    101,
+    113,
+    117,
+    122
+  ],
+  "crops": [
+    [
+      "01-west-ignition-nest",
+      [
+        50,
+        150,
+        390,
+        635
+      ]
+    ],
+    [
+      "02-first-vault-hoists",
+      [
+        316,
+        115,
+        500,
+        680
+      ]
+    ],
+    [
+      "03-central-saltfold-hub",
+      [
+        757,
+        115,
+        515,
+        760
+      ]
+    ],
+    [
+      "04-east-condenser-bore",
+      [
+        1240,
+        145,
+        510,
+        680
+      ]
+    ],
+    [
+      "05-east-catcher-switch",
+      [
+        1630,
+        230,
+        413,
+        620
+      ]
+    ],
+    [
+      "06-deep-service-pockets",
+      [
+        590,
+        650,
+        875,
+        365
+      ]
+    ],
+    [
+      "10-first-diaphragm-decision",
+      [
+        680,
+        225,
+        220,
+        400
+      ]
+    ]
+  ],
+  "expected_candidate_material_plane_sha256_uint8": "185ea8af2053aafcb7ea3460dee1329bbed667cff5cda7923ab8c35fb9ada372"
+}

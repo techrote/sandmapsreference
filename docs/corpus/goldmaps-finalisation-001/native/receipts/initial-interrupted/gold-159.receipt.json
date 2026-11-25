@@ -1,0 +1,205 @@
+{
+  "id": "gold-159",
+  "aliases": [
+    "gold-159",
+    "trial-C1-original",
+    "trial-C1-candidate"
+  ],
+  "source_records": [
+    {
+      "id": "gold-159",
+      "roles": [
+        "gold-core"
+      ],
+      "pr": 159,
+      "head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json",
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "setup_bytes": 37016,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/1266ca2265db3dc574566a8047ac8170c58ae95c/cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json"
+    },
+    {
+      "id": "trial-C1-original",
+      "roles": [
+        "trial-original"
+      ],
+      "pr": 159,
+      "head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json",
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "setup_bytes": 37016,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/1266ca2265db3dc574566a8047ac8170c58ae95c/cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json",
+      "source_head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "role_parent_pr": 159
+    },
+    {
+      "id": "trial-C1-candidate",
+      "roles": [
+        "trial-candidate"
+      ],
+      "pr": 159,
+      "head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "path": "cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json",
+      "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+      "setup_bytes": 37016,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/1266ca2265db3dc574566a8047ac8170c58ae95c/cybersand-canvases/2048x1024/worldgroup-freight-keelbone-reclamation-continuous-press-spine-261121/setup.json",
+      "source_head": "1266ca2265db3dc574566a8047ac8170c58ae95c",
+      "role_parent_pr": 159
+    }
+  ],
+  "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+  "phases": {
+    "load": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 1065,
+      "seconds": 23.505,
+      "log_sha256": "a8d172a780d4bf63451316cb5ecf179eb7062835f90f037cd2c18aa77b06eedd",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-ad9e041f",
+        "actor_adopted": true,
+        "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+        "collision_observed": true,
+        "collision_probe": {
+          "end_tick": 292,
+          "max_contacts": 2,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                -1.0,
+                0.0
+              ],
+              "point": [
+                118.0,
+                668.0
+              ],
+              "tick": 292
+            }
+          ],
+          "worker_failed": false
+        },
+        "directed_up_displacement_cells": 4.29287719726562,
+        "drive_end": [
+          115.0,
+          484.845062255859
+        ],
+        "drive_key": "W",
+        "drive_start": [
+          115.0,
+          489.137939453125
+        ],
+        "drive_ticks_elapsed": 20,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": false,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          115.0,
+          489.0
+        ],
+        "label": "gm-24cbdd2ae1-ad9e041f",
+        "load": true,
+        "midge_displacement_cells": 4.16152954101562,
+        "midge_drive": true,
+        "midge_end": [
+          115.0,
+          484.845062255859
+        ],
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "load",
+        "physics_tick": true,
+        "process_id": 1065,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 1974,
+        "save_readback": true,
+        "saved_label": "gm-24cbdd2ae1-ad9e041f-saved",
+        "setup_sha256": "ad9e041f0eb35bbfd2a97a74ba55cd65925fbeeef79b9ef39b2dfd55a3494789",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    },
+    "reopen": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 1261,
+      "seconds": 9.011,
+      "log_sha256": "40e0453a14ab1809aff430309cdcdbe109ee11ac53b9a5e1d338b7f087ae80dc",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-ad9e041f-saved",
+        "actor_adopted": true,
+        "collision_observed": false,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": true,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          115.0,
+          489.0
+        ],
+        "label": "gm-24cbdd2ae1-ad9e041f",
+        "load": true,
+        "midge_drive": false,
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "reopen",
+        "physics_tick": false,
+        "process_id": 1261,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 1974,
+        "saved_label": "gm-24cbdd2ae1-ad9e041f-saved",
+        "setup_sha256": "983e405c690bbce43f4eefaa54c492d5127aaed11116a13f6b27fd4a2405173e",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    }
+  },
+  "saved_setup_semantic_equal": true,
+  "saved_setup_sha256": "983e405c690bbce43f4eefaa54c492d5127aaed11116a13f6b27fd4a2405173e",
+  "source_unchanged": true,
+  "separate_processes": true,
+  "basic_native_pass": true,
+  "collision_observed": true,
+  "pass": true
+}

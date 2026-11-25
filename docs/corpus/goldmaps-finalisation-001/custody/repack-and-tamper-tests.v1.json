@@ -1,0 +1,10 @@
+{
+  "schema_version": "goldmaps-custody-repack-tests.v1",
+  "result": "PASS",
+  "checks": {
+    "repacked_zip_all_original_contents_pass": true,
+    "repacked_container_is_distinct": true,
+    "exact_original_container_gate_refuses_repack": true,
+    "single_setup_byte_tamper_refused": true
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "id": "gold-197",
+  "aliases": [
+    "gold-197",
+    "trial-C3-original",
+    "trial-C3-candidate"
+  ],
+  "source_records": [
+    {
+      "id": "gold-197",
+      "roles": [
+        "gold-core"
+      ],
+      "pr": 197,
+      "head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+      "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "setup_bytes": 65411,
+      "extent": [
+        1024,
+        2048
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json"
+    },
+    {
+      "id": "trial-C3-original",
+      "roles": [
+        "trial-original"
+      ],
+      "pr": 197,
+      "head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+      "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "setup_bytes": 65411,
+      "extent": [
+        1024,
+        2048
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+      "source_head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "role_parent_pr": 197
+    },
+    {
+      "id": "trial-C3-candidate",
+      "roles": [
+        "trial-candidate"
+      ],
+      "pr": 197,
+      "head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "path": "cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+      "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+      "setup_bytes": 65411,
+      "extent": [
+        1024,
+        2048
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/3b0253d387578bda3af00a6edc97833219df64a9/cybersand-canvases/1024x2048/portrait-difficult-silt-meridian-hingevault-261121/setup.json",
+      "source_head": "3b0253d387578bda3af00a6edc97833219df64a9",
+      "role_parent_pr": 197
+    }
+  ],
+  "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+  "phases": {
+    "load": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 267,
+      "seconds": 22.546,
+      "log_sha256": "daa5910319756b2637c11d0dde7e55bebeae5a3af882428d008cbf789fd17b4f",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-7ec7f348",
+        "actor_adopted": true,
+        "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+        "collision_observed": true,
+        "collision_probe": {
+          "end_tick": 265,
+          "max_contacts": 2,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                -2.38418579101562e-07,
+                -1.0
+              ],
+              "point": [
+                134.0,
+                490.0
+              ],
+              "tick": 265
+            }
+          ],
+          "worker_failed": false
+        },
+        "directed_up_displacement_cells": 4.29287719726562,
+        "drive_end": [
+          132.0,
+          345.845062255859
+        ],
+        "drive_key": "W",
+        "drive_start": [
+          132.0,
+          350.137939453125
+        ],
+        "drive_ticks_elapsed": 20,
+        "errors": [],
+        "extent": [
+          1024,
+          2048
+        ],
+        "fresh_reopen": false,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          132.0,
+          350.0
+        ],
+        "label": "gm-24cbdd2ae1-7ec7f348",
+        "load": true,
+        "midge_displacement_cells": 4.16152954101562,
+        "midge_drive": true,
+        "midge_end": [
+          132.0,
+          345.845062255859
+        ],
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "load",
+        "physics_tick": true,
+        "process_id": 267,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 3528,
+        "save_readback": true,
+        "saved_label": "gm-24cbdd2ae1-7ec7f348-saved",
+        "setup_sha256": "7ec7f34816e66bb1f384e198bce6ec41c5ef8b89e601b1daadcf219ff393a67e",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    },
+    "reopen": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 436,
+      "seconds": 11.013,
+      "log_sha256": "61d0288ebe9fb481fa337bae739ccd7d078f252ad9dab7f0d93d0d82b54817fe",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-7ec7f348-saved",
+        "actor_adopted": true,
+        "collision_observed": false,
+        "errors": [],
+        "extent": [
+          1024,
+          2048
+        ],
+        "fresh_reopen": true,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          132.0,
+          350.0
+        ],
+        "label": "gm-24cbdd2ae1-7ec7f348",
+        "load": true,
+        "midge_drive": false,
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "reopen",
+        "physics_tick": false,
+        "process_id": 436,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 3528,
+        "saved_label": "gm-24cbdd2ae1-7ec7f348-saved",
+        "setup_sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    }
+  },
+  "saved_setup_semantic_equal": true,
+  "saved_setup_sha256": "2630832979a37923ee78ac107d85787ecf5f48de62214ac60a1be7fb197b3fc0",
+  "source_unchanged": true,
+  "separate_processes": true,
+  "basic_native_pass": true,
+  "collision_observed": true,
+  "pass": true
+}

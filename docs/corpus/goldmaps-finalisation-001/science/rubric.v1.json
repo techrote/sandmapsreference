@@ -1,0 +1,158 @@
+{
+  "schema_version": "goldmaps.post-lock-art-rubric.v1",
+  "mission": "GOLDMAPS-FINALISATION-001",
+  "written_utc": "2026-11-23",
+  "source_authorities": {
+    "recovery": "6c4edd3d05476848cbebb800090080ae824ad208",
+    "experiment": "5982fa553bc6356742cfea0911c848c372dcdb97",
+    "preregistration": "241029a2de59b412e1475ef7f46094d71033ad6e",
+    "output_lock": "0bdbf3fc524e85c30c7095b7e1dad53159fd7d9c"
+  },
+  "design": "New post-lock adjudication protocol; not a replacement for historical preregistration.",
+  "assessor_provenance": {
+    "assessor": "architectural_science",
+    "role": "independent of original map authors and finalisation engineering; current curator",
+    "model": "inherited GPT-6 Astra Pro",
+    "knowledge_before_commit": [
+      "User mission exposes arm/author mapping, edit counts and historical verdicts.",
+      "Recovery README and prior D1/D2 comparison read.",
+      "PR125 body and curator comment read.",
+      "No source PNGs inspected for this new assessment before rubric commit."
+    ],
+    "fully_blinded": false,
+    "independence_limits": "Reviewers share an inherited mission and model family. Independent execution is not independent training, authorship ignorance, or multiple human assessors."
+  },
+  "scale": {
+    "0": "Absent, incoherent or harmful for the intended architectural role.",
+    "1": "Weak or ambiguous; important relationship is missing.",
+    "2": "Coherent and legible with material limitations.",
+    "3": "Strong, distinctive and supported by source geometry.",
+    "4": "Exceptional exemplar for the specified relation; no material unresolved concern in this criterion.",
+    "null": "Not assessable from supplied evidence; never substitute zero."
+  },
+  "criteria": [
+    {
+      "id": "silhouette",
+      "weight": 8,
+      "label": "Overall silhouette and legibility"
+    },
+    {
+      "id": "support",
+      "weight": 10,
+      "label": "Support grammar and apparent structural causality"
+    },
+    {
+      "id": "identity",
+      "weight": 8,
+      "label": "Distinctive architectural identity"
+    },
+    {
+      "id": "mechanism_workspace",
+      "weight": 10,
+      "label": "Relationships between mechanisms and workspaces"
+    },
+    {
+      "id": "entered_space",
+      "weight": 8,
+      "label": "Entered, traversable and functional-looking spaces"
+    },
+    {
+      "id": "world_logic",
+      "weight": 10,
+      "label": "Preservation of original world logic"
+    },
+    {
+      "id": "negative_space",
+      "weight": 8,
+      "label": "Usefulness and quality of negative space"
+    },
+    {
+      "id": "materials",
+      "weight": 7,
+      "label": "Material differentiation and visual hierarchy"
+    },
+    {
+      "id": "traversal_affordance",
+      "weight": 7,
+      "label": "Traversal affordance clarity at Midge scale"
+    },
+    {
+      "id": "unusual_features",
+      "weight": 6,
+      "label": "Preservation of unusual or damaged features"
+    },
+    {
+      "id": "nonhomogenisation",
+      "weight": 5,
+      "label": "Avoidance of homogenisation and generic filler"
+    },
+    {
+      "id": "derivation_value",
+      "weight": 5,
+      "label": "Exemplar usefulness for future rule derivation"
+    },
+    {
+      "id": "regression_absence",
+      "weight": 4,
+      "label": "Absence of observed regression"
+    },
+    {
+      "id": "function_honesty",
+      "weight": 4,
+      "label": "Distinction between actual function and visual suggestion"
+    }
+  ],
+  "scoring": {
+    "unit": "Ordinal 0..4 scores with criterion-specific evidence; half-points prohibited.",
+    "summary": "Sum(weight*score/4) over assessable criteria, divided by assessed weight then multiplied by 100. Always publish assessed weight and unscored criteria.",
+    "comparison": "Compute paired weighted score difference using only criteria assessed on all compared variants. A score is an auditable judgement, not a calibrated measurement or statistical effect estimate.",
+    "confidence": [
+      "high: direct repeatable cell/identity observation",
+      "moderate: clear static spatial interpretation",
+      "low: partial evidence or subjective ambiguity"
+    ],
+    "candidate_rule": "Recommend an architectural uplift candidate only if paired weighted difference >=5 points, at least one predeclared target criterion rises >=1, and no confirmed preservation, source-integrity or material native regression. This is a decision aid, not owner Platinum acceptance.",
+    "inconclusive_rule": "If intended gain requires speed, physics or player decisions not executed, mark that intended gain inconclusive regardless of static score.",
+    "no_change_rule": "Identical material planes/nongeometry and justified protected spatial logic are positive restraint controls; do not score them as failed authoring.",
+    "regression_rule": "Any confirmed loss of protected geometry/negative space, misleading functional claim, lost required route or new severe obstruction is a veto until scoped and resolved. Never rescue a locked candidate by editing it."
+  },
+  "targets": {
+    "B1": [
+      "mechanism_workspace",
+      "entered_space",
+      "derivation_value"
+    ],
+    "B2": [
+      "mechanism_workspace",
+      "support",
+      "identity"
+    ],
+    "B3": [
+      "traversal_affordance"
+    ],
+    "D1": [
+      "mechanism_workspace",
+      "entered_space",
+      "support"
+    ],
+    "D2": [
+      "mechanism_workspace",
+      "unusual_features",
+      "identity"
+    ]
+  },
+  "presentation": {
+    "views": "Full world overview plus identical-coordinate native-resolution crops per arm. Uniform material palette/coordinate frame. No crop is an edit mask.",
+    "randomisation": "One reproducible seed; independent permutation per arm; labels A/B/C only. Commit answer-key digest before viewing randomized images. Keep exact source identities in separate key.",
+    "prohibited": "No image generation, beautification, arbitrary recropping to favour an arm, density-as-quality scoring, reconstructed-original substitution or hidden skipped comparison.",
+    "controls": "Include all three duplicate no-change pairs; disclose identical pairs only after scoring where a genuinely uninformed assessor is available.",
+    "blinding": "This team's scores remain unblinded because the mission exposes author mapping. Anonymized images support a later unfamiliar assessor; their production does not establish a blind study."
+  },
+  "gold_policy": {
+    "owner_acceptance": "pending for every map unless explicit exact-source owner acceptance appears.",
+    "native": "Native evidence must name source, engine, execution and scope; all-map/static evidence cannot stand in for native qualification.",
+    "conditional_125": "A new exact-source specialist visual assessment may close the historical Art-evidence gap, but cannot supply missing Technical/native/owner gates by declaration.",
+    "selection": "Assess unique relational teaching value and nearest neighbours. A numeric 25 target never overrides evidence gaps. Keep frozen Gold25 separate from versioned recommendation.",
+    "unknown": "Missing metadata remains unknown, never absent/failed."
+  }
+}

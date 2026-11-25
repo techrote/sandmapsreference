@@ -1,0 +1,167 @@
+{
+  "id": "gold-182",
+  "aliases": [
+    "gold-182"
+  ],
+  "source_records": [
+    {
+      "id": "gold-182",
+      "roles": [
+        "gold-core"
+      ],
+      "pr": 182,
+      "head": "db7b0fe72c8f75451fd483d7297c0f3d30d5174a",
+      "path": "cybersand-canvases/2048x1024/worldgroup-transit-shearline-split-lane-knuckle-bend-rally-261121/setup.json",
+      "setup_sha256": "c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf",
+      "setup_bytes": 104511,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/db7b0fe72c8f75451fd483d7297c0f3d30d5174a/cybersand-canvases/2048x1024/worldgroup-transit-shearline-split-lane-knuckle-bend-rally-261121/setup.json"
+    }
+  ],
+  "setup_sha256": "c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf",
+  "phases": {
+    "load": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 1913,
+      "seconds": 54.256,
+      "log_sha256": "4097da90209c9f2a60fb9b00ae3ea42ec2abdf2768cd601fc31387fbf944961f",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-c4d1a003",
+        "actor_adopted": true,
+        "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+        "collision_observed": true,
+        "collision_probe": {
+          "end_tick": 199,
+          "max_contacts": 8,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                0.0,
+                -1.0
+              ],
+              "point": [
+                112.0,
+                383.0
+              ],
+              "tick": 199
+            }
+          ],
+          "worker_failed": false
+        },
+        "directed_up_displacement_cells": 4.29287719726562,
+        "drive_end": [
+          110.0,
+          321.845062255859
+        ],
+        "drive_key": "W",
+        "drive_start": [
+          110.0,
+          326.137939453125
+        ],
+        "drive_ticks_elapsed": 20,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": false,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          110.0,
+          326.0
+        ],
+        "label": "gm-24cbdd2ae1-c4d1a003",
+        "load": true,
+        "midge_displacement_cells": 4.16152954101562,
+        "midge_drive": true,
+        "midge_end": [
+          110.0,
+          321.845062255859
+        ],
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "load",
+        "physics_tick": true,
+        "process_id": 1913,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 5488,
+        "save_readback": true,
+        "saved_label": "gm-24cbdd2ae1-c4d1a003-saved",
+        "setup_sha256": "c4d1a0032bba6dec4e6410cf2e95a05a8a755ea4da79a63f0611a759b316d3bf",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    },
+    "reopen": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 2011,
+      "seconds": 11.597,
+      "log_sha256": "d398732fdaeaf3d7ccf72eb5fbabb174dbede6c146e466bb6a31e2e52fc9d0ab",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-c4d1a003-saved",
+        "actor_adopted": true,
+        "collision_observed": false,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": true,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          110.0,
+          326.0
+        ],
+        "label": "gm-24cbdd2ae1-c4d1a003",
+        "load": true,
+        "midge_drive": false,
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "reopen",
+        "physics_tick": false,
+        "process_id": 2011,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 5488,
+        "saved_label": "gm-24cbdd2ae1-c4d1a003-saved",
+        "setup_sha256": "6d965c8617d499af17941414a50e4acc7d8d62f00445335b3956d0d458030c93",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    }
+  },
+  "saved_setup_semantic_equal": true,
+  "saved_setup_sha256": "6d965c8617d499af17941414a50e4acc7d8d62f00445335b3956d0d458030c93",
+  "source_unchanged": true,
+  "separate_processes": true,
+  "basic_native_pass": true,
+  "collision_observed": true,
+  "pass": true
+}

@@ -1,0 +1,167 @@
+{
+  "id": "gold-143",
+  "aliases": [
+    "gold-143"
+  ],
+  "source_records": [
+    {
+      "id": "gold-143",
+      "roles": [
+        "gold-core"
+      ],
+      "pr": 143,
+      "head": "cfbeddaccdc81a8e1dcfa924b4c089dbbe65cf41",
+      "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-vesper-inverted-root-orchard-261121/setup.json",
+      "setup_sha256": "a6b1659809dc25f432aad39326a948852d740f0be7dc7d0734358528b17b2166",
+      "setup_bytes": 110561,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/cfbeddaccdc81a8e1dcfa924b4c089dbbe65cf41/cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-vesper-inverted-root-orchard-261121/setup.json"
+    }
+  ],
+  "setup_sha256": "a6b1659809dc25f432aad39326a948852d740f0be7dc7d0734358528b17b2166",
+  "phases": {
+    "load": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 3639,
+      "seconds": 21.712,
+      "log_sha256": "1041407a133534a4290962e5ebc015987f4697bef1e6f437e8c9fae2b429fd33",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-a6b16598",
+        "actor_adopted": true,
+        "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+        "collision_observed": true,
+        "collision_probe": {
+          "end_tick": 191,
+          "max_contacts": 6,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                -1.0,
+                0.0
+              ],
+              "point": [
+                75.0,
+                234.0
+              ],
+              "tick": 191
+            }
+          ],
+          "worker_failed": false
+        },
+        "directed_up_displacement_cells": 4.29286193847656,
+        "drive_end": [
+          72.0,
+          183.845062255859
+        ],
+        "drive_key": "W",
+        "drive_start": [
+          72.0,
+          188.137924194336
+        ],
+        "drive_ticks_elapsed": 20,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": false,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          72.0,
+          188.0
+        ],
+        "label": "gm-24cbdd2ae1-a6b16598",
+        "load": true,
+        "midge_displacement_cells": 4.16152954101562,
+        "midge_drive": true,
+        "midge_end": [
+          72.0,
+          183.845062255859
+        ],
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "load",
+        "physics_tick": true,
+        "process_id": 3639,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 5901,
+        "save_readback": true,
+        "saved_label": "gm-24cbdd2ae1-a6b16598-saved",
+        "setup_sha256": "a6b1659809dc25f432aad39326a948852d740f0be7dc7d0734358528b17b2166",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    },
+    "reopen": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 3846,
+      "seconds": 10.685,
+      "log_sha256": "8edc85261701dd1fff9123ea026f90c2ebf79a20b9fea238bf457979c981e14a",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-a6b16598-saved",
+        "actor_adopted": true,
+        "collision_observed": false,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": true,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          72.0,
+          188.0
+        ],
+        "label": "gm-24cbdd2ae1-a6b16598",
+        "load": true,
+        "midge_drive": false,
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "reopen",
+        "physics_tick": false,
+        "process_id": 3846,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 5901,
+        "saved_label": "gm-24cbdd2ae1-a6b16598-saved",
+        "setup_sha256": "a47d63718b4f44b440978f1609ba00ae32eae93f0dedef6aadac7975d65d7334",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    }
+  },
+  "saved_setup_semantic_equal": true,
+  "saved_setup_sha256": "a47d63718b4f44b440978f1609ba00ae32eae93f0dedef6aadac7975d65d7334",
+  "source_unchanged": true,
+  "separate_processes": true,
+  "basic_native_pass": true,
+  "collision_observed": true,
+  "pass": true
+}

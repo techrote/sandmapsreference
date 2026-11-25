@@ -1,0 +1,37 @@
+{
+  "schema_version": "goldmaps-custody-verification.v1",
+  "result": "PASS",
+  "recovery_head": "6c4edd3d05476848cbebb800090080ae824ad208",
+  "accepted_main": "99a166e7fcae45eb22be1740e9f33f62faccbcc7",
+  "source_archive_sha256": "ea32029b77983e8d2b12f3ee485629347239f11537e77f8e21f1ced3e0953419",
+  "matches_historical_container": true,
+  "distinct_source_prs": 71,
+  "verified_file_occurrences": 1343,
+  "verified_unique_git_blobs": 1124,
+  "artifact_type_counts": {
+    "workflow": 5,
+    "narrative-evidence": 98,
+    "structured-evidence": 379,
+    "builder-or-verifier": 174,
+    "png": 604,
+    "setup-v2": 77,
+    "other": 5,
+    "native-binary": 1
+  },
+  "extracted_bytes_verified": true,
+  "live_pr_checked": true,
+  "live_deviations": [],
+  "historical_source_preserved": true,
+  "scope": [
+    "Exact Git-tree delta comparison",
+    "Every archive member Git-SHA1 and SHA-256",
+    "Extracted bytes when --extracted is supplied",
+    "No author code executed"
+  ],
+  "limitations": [
+    "Custody is not artistic or native acceptance",
+    "Source archive contains PR deltas, not unchanged accepted-main assets",
+    "Current PR drift, if any, is reported without replacing frozen authorities"
+  ],
+  "master_inventory_sha256": "3ac9b8d9ff0578e09e18cec13b302b9313453ff36a54e55d45755075d42e09c0"
+}

@@ -1,0 +1,2463 @@
+{
+  "exit_code": 0,
+  "timeout": false,
+  "process_id": 8674,
+  "seconds": 49.729,
+  "log_sha256": "6382b24fd4795f5dc821d670e6e32c99f4c371a9511e703824fdd2a0f729142f",
+  "id": "b2-apparatus-candidate",
+  "setup_id": "trial-B2-candidate",
+  "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+  "evidence": {
+    "acknowledged_epoch": 1,
+    "active_label": "gm-afcdaef23e-73870c68",
+    "actor_adopted": true,
+    "collision_observed": false,
+    "errors": [],
+    "extent": [
+      2048,
+      1024
+    ],
+    "fresh_reopen": false,
+    "full_grid": true,
+    "grid_check": {
+      "first_mismatch": [],
+      "format": 3,
+      "mismatches": 0,
+      "ok": true,
+      "pixels": 2097152
+    },
+    "initial_actor_position": [
+      78.0,
+      695.0
+    ],
+    "label": "gm-afcdaef23e-73870c68",
+    "load": true,
+    "midge_drive": false,
+    "midge_id": 1,
+    "native_bridge": true,
+    "native_policy": {
+      "accepted": true,
+      "receipt": {
+        "admission": "current_defaults_only",
+        "assignments": [
+          {
+            "applied_family": "freemass_v1",
+            "applied_variant": "reference",
+            "material": 3,
+            "name": "water",
+            "requested_family": "freemass_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 8,
+            "name": "lava",
+            "requested_family": "cellular_yield_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 12,
+            "name": "acid",
+            "requested_family": "cellular_yield_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 16,
+            "name": "oil",
+            "requested_family": "cellular_yield_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 20,
+            "name": "paste",
+            "requested_family": "cellular_yield_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 21,
+            "name": "slush",
+            "requested_family": "cellular_yield_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 24,
+            "name": "brine",
+            "requested_family": "cellular_yield_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 30,
+            "name": "cement",
+            "requested_family": "cellular_yield_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 32,
+            "name": "toxic-sludge",
+            "requested_family": "cellular_yield_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 33,
+            "name": "mercury",
+            "requested_family": "cellular_yield_v1"
+          },
+          {
+            "applied_family": "cellular_yield_v1",
+            "applied_variant": "reference",
+            "material": 36,
+            "name": "molten-glass",
+            "requested_family": "cellular_yield_v1"
+          }
+        ],
+        "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+        "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+        "envelope": [
+          1279479895,
+          1,
+          1,
+          -2102023270,
+          1854385793,
+          1886533889,
+          84225930,
+          1522979054,
+          582168604,
+          -646713377,
+          -939672877,
+          868616440,
+          1977866421,
+          1930370363,
+          -2119873090,
+          -6981196,
+          870342995,
+          1443932351,
+          -1569267145,
+          11,
+          3,
+          1,
+          0,
+          8,
+          2,
+          0,
+          12,
+          2,
+          0,
+          16,
+          2,
+          0,
+          20,
+          2,
+          0,
+          21,
+          2,
+          0,
+          24,
+          2,
+          0,
+          30,
+          2,
+          0,
+          32,
+          2,
+          0,
+          33,
+          2,
+          0,
+          36,
+          2,
+          0,
+          0,
+          0
+        ],
+        "family_blocks": [],
+        "family_parameters": {},
+        "material_blocks": [],
+        "maximum_rule_radius": null,
+        "minimum_rule_radius": 2,
+        "normalization": null,
+        "physical_state_format_version": 2,
+        "physical_state_hash_version": 2,
+        "platform": "linux",
+        "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+        "refusal": null,
+        "session_generation": -1,
+        "version": 1,
+        "wire_version": 1
+      },
+      "refusal": null
+    },
+    "phase": "load",
+    "physics_tick": false,
+    "process_id": 8674,
+    "published_image": true,
+    "rapier_space_valid": true,
+    "rectangles": 2038,
+    "route": {
+      "authored_spawn_unchanged": true,
+      "claim_limit": "One bounded scripted pilot and precomputed route; completion is not human racing legibility, complete map acceptance, or operational machinery.",
+      "completed": true,
+      "contacts": [],
+      "controller": "bounded observation-to-thrust and angular-rate feedback; actual human action lease API",
+      "controller_refusals": 0,
+      "controller_submissions": 2530,
+      "end_tick": 1866,
+      "failure": "",
+      "final_position": [
+        1064.52478027344,
+        845.45166015625
+      ],
+      "fixture_sha256": "65fd39c08c3ac28775c7da4685337cc1a02c2f39de1a185e0412a4ca65d311d5",
+      "geometry_edits": false,
+      "id": "b2-apparatus-candidate",
+      "observed_max_speed": 44.5077476501465,
+      "position_or_velocity_setters": false,
+      "setup_id": "trial-B2-candidate",
+      "speed_limit": 40.0,
+      "start_tick": 0,
+      "trace": [
+        {
+          "distance": 77.0281982421875,
+          "next_waypoint": 1,
+          "position": [
+            78.0309753417969,
+            694.981262207031
+          ],
+          "rotation": 0.213406503200531,
+          "tick": 11,
+          "velocity": [
+            0.581928849220276,
+            -0.351690828800201
+          ]
+        },
+        {
+          "distance": 76.515739440918,
+          "next_waypoint": 1,
+          "position": [
+            78.5641174316406,
+            694.505126953125
+          ],
+          "rotation": 0.618519961833954,
+          "tick": 23,
+          "velocity": [
+            5.29178905487061,
+            -3.81892108917236
+          ]
+        },
+        {
+          "distance": 74.5824737548828,
+          "next_waypoint": 1,
+          "position": [
+            80.5565185546875,
+            693.44873046875
+          ],
+          "rotation": 0.94213455915451,
+          "tick": 35,
+          "velocity": [
+            14.2276563644409,
+            -5.49422407150269
+          ]
+        },
+        {
+          "distance": 70.8222427368164,
+          "next_waypoint": 1,
+          "position": [
+            84.39404296875,
+            692.469299316406
+          ],
+          "rotation": 1.1252189874649,
+          "tick": 47,
+          "velocity": [
+            23.1473617553711,
+            -3.47273778915405
+          ]
+        },
+        {
+          "distance": 65.4546508789062,
+          "next_waypoint": 1,
+          "position": [
+            89.8073425292969,
+            692.149475097656
+          ],
+          "rotation": 1.14635229110718,
+          "tick": 59,
+          "velocity": [
+            30.0590763092041,
+            0.56823718547821
+          ]
+        },
+        {
+          "distance": 58.8386993408203,
+          "next_waypoint": 1,
+          "position": [
+            96.4034729003906,
+            692.667114257812
+          ],
+          "rotation": 0.98850804567337,
+          "tick": 71,
+          "velocity": [
+            35.2613143920898,
+            4.59363698959351
+          ]
+        },
+        {
+          "distance": 51.2474708557129,
+          "next_waypoint": 1,
+          "position": [
+            103.92236328125,
+            693.831298828125
+          ],
+          "rotation": 0.69613254070282,
+          "tick": 83,
+          "velocity": [
+            39.4069633483887,
+            6.94556188583374
+          ]
+        },
+        {
+          "distance": 42.9689292907715,
+          "next_waypoint": 1,
+          "position": [
+            112.121887207031,
+            695.207824707031
+          ],
+          "rotation": 0.377918630838394,
+          "tick": 95,
+          "velocity": [
+            42.0356483459473,
+            6.93967008590698
+          ]
+        },
+        {
+          "distance": 34.4262008666992,
+          "next_waypoint": 1,
+          "position": [
+            120.610778808594,
+            696.40478515625
+          ],
+          "rotation": 0.131181955337524,
+          "tick": 107,
+          "velocity": [
+            42.4554443359375,
+            5.52456140518188
+          ]
+        },
+        {
+          "distance": 26.0369720458984,
+          "next_waypoint": 1,
+          "position": [
+            128.972549438477,
+            697.2958984375
+          ],
+          "rotation": -0.0576285608112812,
+          "tick": 119,
+          "velocity": [
+            41.0156288146973,
+            3.97252702713013
+          ]
+        },
+        {
+          "distance": 18.1412944793701,
+          "next_waypoint": 1,
+          "position": [
+            136.859329223633,
+            697.849426269531
+          ],
+          "rotation": -0.283775061368942,
+          "tick": 131,
+          "velocity": [
+            37.7764930725098,
+            2.13085150718689
+          ]
+        },
+        {
+          "distance": 11.1461153030396,
+          "next_waypoint": 1,
+          "position": [
+            143.853897094727,
+            698.016906738281
+          ],
+          "rotation": -0.531462728977203,
+          "tick": 143,
+          "velocity": [
+            32.2355537414551,
+            0.243824303150177
+          ]
+        },
+        {
+          "distance": 6.75990152359009,
+          "next_waypoint": 2,
+          "position": [
+            148.240371704102,
+            697.939208984375
+          ],
+          "rotation": -0.693194985389709,
+          "tick": 152,
+          "velocity": [
+            26.717924118042,
+            -0.584237396717072
+          ]
+        },
+        {
+          "distance": 119.700912475586,
+          "next_waypoint": 2,
+          "position": [
+            153.307327270508,
+            698.404541015625
+          ],
+          "rotation": -0.544858515262604,
+          "tick": 164,
+          "velocity": [
+            24.1511821746826,
+            5.05341863632202
+          ]
+        },
+        {
+          "distance": 115.239028930664,
+          "next_waypoint": 2,
+          "position": [
+            157.789566040039,
+            699.566955566406
+          ],
+          "rotation": -0.0455080568790436,
+          "tick": 176,
+          "velocity": [
+            21.1648635864258,
+            5.86386728286743
+          ]
+        },
+        {
+          "distance": 110.971496582031,
+          "next_waypoint": 2,
+          "position": [
+            162.07795715332,
+            700.312866210938
+          ],
+          "rotation": 0.480397582054138,
+          "tick": 188,
+          "velocity": [
+            22.6353645324707,
+            2.21911144256592
+          ]
+        },
+        {
+          "distance": 105.847122192383,
+          "next_waypoint": 2,
+          "position": [
+            167.20979309082,
+            700.470581054688
+          ],
+          "rotation": 0.821417510509491,
+          "tick": 200,
+          "velocity": [
+            28.5176658630371,
+            0.597886264324188
+          ]
+        },
+        {
+          "distance": 99.4827728271484,
+          "next_waypoint": 2,
+          "position": [
+            173.58479309082,
+            700.665832519531
+          ],
+          "rotation": 0.897232472896576,
+          "tick": 212,
+          "velocity": [
+            34.5477905273438,
+            2.00194835662842
+          ]
+        },
+        {
+          "distance": 92.0608520507812,
+          "next_waypoint": 2,
+          "position": [
+            181.035781860352,
+            701.217041015625
+          ],
+          "rotation": 0.730208516120911,
+          "tick": 224,
+          "velocity": [
+            39.356372833252,
+            3.67152166366577
+          ]
+        },
+        {
+          "distance": 83.8474273681641,
+          "next_waypoint": 2,
+          "position": [
+            189.2978515625,
+            701.933715820312
+          ],
+          "rotation": 0.444356739521027,
+          "tick": 236,
+          "velocity": [
+            42.6765823364258,
+            3.63177680969238
+          ]
+        },
+        {
+          "distance": 75.2100296020508,
+          "next_waypoint": 2,
+          "position": [
+            197.987670898438,
+            702.44970703125
+          ],
+          "rotation": 0.170573860406876,
+          "tick": 248,
+          "velocity": [
+            43.7191619873047,
+            1.98171758651733
+          ]
+        },
+        {
+          "distance": 66.599494934082,
+          "next_waypoint": 2,
+          "position": [
+            206.635498046875,
+            702.589782714844
+          ],
+          "rotation": -0.00997636374086142,
+          "tick": 260,
+          "velocity": [
+            42.5690727233887,
+            0.113909855484962
+          ]
+        },
+        {
+          "distance": 58.3370780944824,
+          "next_waypoint": 2,
+          "position": [
+            214.914672851562,
+            702.413818359375
+          ],
+          "rotation": -0.0580567643046379,
+          "tick": 272,
+          "velocity": [
+            40.3474540710449,
+            -1.19437873363495
+          ]
+        },
+        {
+          "distance": 50.4953384399414,
+          "next_waypoint": 2,
+          "position": [
+            222.755065917969,
+            702.022521972656
+          ],
+          "rotation": 0.0168527159839869,
+          "tick": 284,
+          "velocity": [
+            38.3425445556641,
+            -2.13832449913025
+          ]
+        },
+        {
+          "distance": 42.9369659423828,
+          "next_waypoint": 2,
+          "position": [
+            230.294677734375,
+            701.454040527344
+          ],
+          "rotation": 0.150352329015732,
+          "tick": 296,
+          "velocity": [
+            37.333423614502,
+            -2.98259329795837
+          ]
+        },
+        {
+          "distance": 35.4380149841309,
+          "next_waypoint": 2,
+          "position": [
+            237.759643554688,
+            700.737670898438
+          ],
+          "rotation": 0.274792522192001,
+          "tick": 308,
+          "velocity": [
+            37.4749412536621,
+            -3.59061813354492
+          ]
+        },
+        {
+          "distance": 27.8395709991455,
+          "next_waypoint": 2,
+          "position": [
+            245.322692871094,
+            700.001403808594
+          ],
+          "rotation": 0.298376590013504,
+          "tick": 320,
+          "velocity": [
+            38.0732574462891,
+            -3.10195374488831
+          ]
+        },
+        {
+          "distance": 20.2068653106689,
+          "next_waypoint": 2,
+          "position": [
+            252.941772460938,
+            699.446411132812
+          ],
+          "rotation": 0.0879385769367218,
+          "tick": 332,
+          "velocity": [
+            37.913688659668,
+            -2.16648030281067
+          ]
+        },
+        {
+          "distance": 12.8225755691528,
+          "next_waypoint": 2,
+          "position": [
+            260.324340820312,
+            698.935485839844
+          ],
+          "rotation": -0.286275655031204,
+          "tick": 344,
+          "velocity": [
+            35.5822601318359,
+            -2.72382569313049
+          ]
+        },
+        {
+          "distance": 6.76435470581055,
+          "next_waypoint": 3,
+          "position": [
+            266.354125976562,
+            698.260498046875
+          ],
+          "rotation": -0.639827609062195,
+          "tick": 355,
+          "velocity": [
+            30.1472282409668,
+            -3.98296689987183
+          ]
+        },
+        {
+          "distance": 119.922950744629,
+          "next_waypoint": 3,
+          "position": [
+            272.0947265625,
+            698.059204101562
+          ],
+          "rotation": -0.597512245178223,
+          "tick": 367,
+          "velocity": [
+            27.5303268432617,
+            1.94848251342773
+          ]
+        },
+        {
+          "distance": 114.784683227539,
+          "next_waypoint": 3,
+          "position": [
+            277.248046875,
+            698.740844726562
+          ],
+          "rotation": -0.139538988471031,
+          "tick": 379,
+          "velocity": [
+            24.3464698791504,
+            4.17612075805664
+          ]
+        },
+        {
+          "distance": 110.005668640137,
+          "next_waypoint": 3,
+          "position": [
+            282.043579101562,
+            699.291320800781
+          ],
+          "rotation": 0.389532417058945,
+          "tick": 391,
+          "velocity": [
+            24.5248336791992,
+            1.64986228942871
+          ]
+        },
+        {
+          "distance": 104.634834289551,
+          "next_waypoint": 3,
+          "position": [
+            287.418701171875,
+            699.346801757812
+          ],
+          "rotation": 0.754799783229828,
+          "tick": 403,
+          "velocity": [
+            29.2742176055908,
+            0.0321113765239716
+          ]
+        },
+        {
+          "distance": 98.1753768920898,
+          "next_waypoint": 3,
+          "position": [
+            293.883666992188,
+            699.404418945312
+          ],
+          "rotation": 0.865025281906128,
+          "tick": 415,
+          "velocity": [
+            34.8024749755859,
+            1.23631000518799
+          ]
+        },
+        {
+          "distance": 90.7241897583008,
+          "next_waypoint": 3,
+          "position": [
+            301.355590820312,
+            699.803894042969
+          ],
+          "rotation": 0.727255403995514,
+          "tick": 427,
+          "velocity": [
+            39.3539695739746,
+            2.96319627761841
+          ]
+        },
+        {
+          "distance": 82.5154800415039,
+          "next_waypoint": 3,
+          "position": [
+            309.602294921875,
+            700.407104492188
+          ],
+          "rotation": 0.45794814825058,
+          "tick": 439,
+          "velocity": [
+            42.5653877258301,
+            3.20392847061157
+          ]
+        },
+        {
+          "distance": 73.8854446411133,
+          "next_waypoint": 3,
+          "position": [
+            318.275268554688,
+            700.87060546875
+          ],
+          "rotation": 0.188270315527916,
+          "tick": 451,
+          "velocity": [
+            43.6799087524414,
+            1.8467892408371
+          ]
+        },
+        {
+          "distance": 65.2619400024414,
+          "next_waypoint": 3,
+          "position": [
+            326.93017578125,
+            701.00390625
+          ],
+          "rotation": 0.00482235196977854,
+          "tick": 463,
+          "velocity": [
+            42.6697463989258,
+            0.148025706410408
+          ]
+        },
+        {
+          "distance": 56.9655342102051,
+          "next_waypoint": 3,
+          "position": [
+            335.240844726562,
+            700.844604492188
+          ],
+          "rotation": -0.0525045804679394,
+          "tick": 475,
+          "velocity": [
+            40.5400581359863,
+            -1.07611441612244
+          ]
+        },
+        {
+          "distance": 49.0834808349609,
+          "next_waypoint": 3,
+          "position": [
+            343.121826171875,
+            700.484680175781
+          ],
+          "rotation": 0.014086963608861,
+          "tick": 487,
+          "velocity": [
+            38.541633605957,
+            -1.94962501525879
+          ]
+        },
+        {
+          "distance": 41.4938087463379,
+          "next_waypoint": 3,
+          "position": [
+            350.695678710938,
+            699.9609375
+          ],
+          "rotation": 0.143142268061638,
+          "tick": 499,
+          "velocity": [
+            37.4753532409668,
+            -2.73384070396423
+          ]
+        },
+        {
+          "distance": 33.9802665710449,
+          "next_waypoint": 3,
+          "position": [
+            358.180297851562,
+            699.299438476562
+          ],
+          "rotation": 0.26741024851799,
+          "tick": 511,
+          "velocity": [
+            37.5271644592285,
+            -3.27064871788025
+          ]
+        },
+        {
+          "distance": 26.3964958190918,
+          "next_waypoint": 3,
+          "position": [
+            365.736450195312,
+            698.645935058594
+          ],
+          "rotation": 0.266426801681519,
+          "tick": 523,
+          "velocity": [
+            37.9528923034668,
+            -2.64954900741577
+          ]
+        },
+        {
+          "distance": 18.8214492797852,
+          "next_waypoint": 3,
+          "position": [
+            373.303466796875,
+            698.164855957031
+          ],
+          "rotation": 0.0286671295762062,
+          "tick": 535,
+          "velocity": [
+            37.5064239501953,
+            -1.91868329048157
+          ]
+        },
+        {
+          "distance": 11.57102394104,
+          "next_waypoint": 3,
+          "position": [
+            380.550048828125,
+            697.669494628906
+          ],
+          "rotation": -0.350931346416473,
+          "tick": 547,
+          "velocity": [
+            34.629451751709,
+            -2.75481462478638
+          ]
+        },
+        {
+          "distance": 6.71286153793335,
+          "next_waypoint": 4,
+          "position": [
+            385.383056640625,
+            697.130737304688
+          ],
+          "rotation": -0.634610891342163,
+          "tick": 556,
+          "velocity": [
+            29.9759941101074,
+            -3.77352094650269
+          ]
+        },
+        {
+          "distance": 72.2783432006836,
+          "next_waypoint": 4,
+          "position": [
+            390.26318359375,
+            695.966979980469
+          ],
+          "rotation": -0.671714901924133,
+          "tick": 568,
+          "velocity": [
+            19.9737091064453,
+            -6.63253116607666
+          ]
+        },
+        {
+          "distance": 68.9941787719727,
+          "next_waypoint": 4,
+          "position": [
+            393.381469726562,
+            694.25732421875
+          ],
+          "rotation": -0.344693243503571,
+          "tick": 580,
+          "velocity": [
+            12.3742389678955,
+            -10.2861366271973
+          ]
+        },
+        {
+          "distance": 65.5018615722656,
+          "next_waypoint": 4,
+          "position": [
+            395.4560546875,
+            691.445922851562
+          ],
+          "rotation": 0.0689899176359177,
+          "tick": 592,
+          "velocity": [
+            9.62751483917236,
+            -17.0476760864258
+          ]
+        },
+        {
+          "distance": 60.9121131896973,
+          "next_waypoint": 4,
+          "position": [
+            397.621337890625,
+            687.30078125
+          ],
+          "rotation": 0.398021072149277,
+          "tick": 604,
+          "velocity": [
+            12.5060968399048,
+            -22.9585075378418
+          ]
+        },
+        {
+          "distance": 55.1189613342285,
+          "next_waypoint": 4,
+          "position": [
+            400.691528320312,
+            682.325073242188
+          ],
+          "rotation": 0.578395545482635,
+          "tick": 616,
+          "velocity": [
+            17.891960144043,
+            -25.570743560791
+          ]
+        },
+        {
+          "distance": 48.4462471008301,
+          "next_waypoint": 4,
+          "position": [
+            404.849853515625,
+            677.10400390625
+          ],
+          "rotation": 0.569868743419647,
+          "tick": 628,
+          "velocity": [
+            23.0938701629639,
+            -25.9487609863281
+          ]
+        },
+        {
+          "distance": 41.1735725402832,
+          "next_waypoint": 4,
+          "position": [
+            409.914428710938,
+            671.856018066406
+          ],
+          "rotation": 0.414042323827744,
+          "tick": 640,
+          "velocity": [
+            26.9613857269287,
+            -26.1380310058594
+          ]
+        },
+        {
+          "distance": 33.4623184204102,
+          "next_waypoint": 4,
+          "position": [
+            415.553588867188,
+            666.489074707031
+          ],
+          "rotation": 0.195029646158218,
+          "tick": 652,
+          "velocity": [
+            28.8824844360352,
+            -26.9969100952148
+          ]
+        },
+        {
+          "distance": 25.6883964538574,
+          "next_waypoint": 4,
+          "position": [
+            421.308227539062,
+            661.072387695312
+          ],
+          "rotation": -0.0580541677772999,
+          "tick": 664,
+          "velocity": [
+            28.3425674438477,
+            -26.4683418273926
+          ]
+        },
+        {
+          "distance": 18.4037952423096,
+          "next_waypoint": 4,
+          "position": [
+            426.729125976562,
+            655.898132324219
+          ],
+          "rotation": -0.365972369909286,
+          "tick": 676,
+          "velocity": [
+            25.7502479553223,
+            -24.8133602142334
+          ]
+        },
+        {
+          "distance": 12.0439510345459,
+          "next_waypoint": 4,
+          "position": [
+            431.415161132812,
+            651.137145996094
+          ],
+          "rotation": -0.691102981567383,
+          "tick": 688,
+          "velocity": [
+            21.1825180053711,
+            -22.3624382019043
+          ]
+        },
+        {
+          "distance": 7.06445407867432,
+          "next_waypoint": 4,
+          "position": [
+            435.022216796875,
+            646.996459960938
+          ],
+          "rotation": -0.947734475135803,
+          "tick": 700,
+          "velocity": [
+            15.2626094818115,
+            -18.6394329071045
+          ]
+        },
+        {
+          "distance": 6.72798109054565,
+          "next_waypoint": 5,
+          "position": [
+            435.26806640625,
+            646.688049316406
+          ],
+          "rotation": -0.963471353054047,
+          "tick": 701,
+          "velocity": [
+            14.7511730194092,
+            -18.2650337219238
+          ]
+        },
+        {
+          "distance": 157.92431640625,
+          "next_waypoint": 5,
+          "position": [
+            438.123046875,
+            643.867797851562
+          ],
+          "rotation": -0.813474178314209,
+          "tick": 713,
+          "velocity": [
+            13.9881896972656,
+            -10.1169452667236
+          ]
+        },
+        {
+          "distance": 155.169647216797,
+          "next_waypoint": 5,
+          "position": [
+            440.85302734375,
+            642.652221679688
+          ],
+          "rotation": -0.30608931183815,
+          "tick": 725,
+          "velocity": [
+            13.3029623031616,
+            -2.44218873977661
+          ]
+        },
+        {
+          "distance": 152.597030639648,
+          "next_waypoint": 5,
+          "position": [
+            443.4208984375,
+            642.338928222656
+          ],
+          "rotation": 0.339067786931992,
+          "tick": 737,
+          "velocity": [
+            13.107177734375,
+            -1.69870209693909
+          ]
+        },
+        {
+          "distance": 149.397537231445,
+          "next_waypoint": 5,
+          "position": [
+            446.611938476562,
+            641.682556152344
+          ],
+          "rotation": 0.873860836029053,
+          "tick": 749,
+          "velocity": [
+            19.2287197113037,
+            -3.75185775756836
+          ]
+        },
+        {
+          "distance": 144.647079467773,
+          "next_waypoint": 5,
+          "position": [
+            451.356689453125,
+            641.045227050781
+          ],
+          "rotation": 1.15126347541809,
+          "tick": 761,
+          "velocity": [
+            27.3701686859131,
+            -1.65318489074707
+          ]
+        },
+        {
+          "distance": 138.454727172852,
+          "next_waypoint": 5,
+          "position": [
+            457.5498046875,
+            641.120788574219
+          ],
+          "rotation": 1.11174952983856,
+          "tick": 773,
+          "velocity": [
+            33.7316017150879,
+            2.57154989242554
+          ]
+        },
+        {
+          "distance": 131.149368286133,
+          "next_waypoint": 5,
+          "position": [
+            464.865234375,
+            641.957763671875
+          ],
+          "rotation": 0.828490734100342,
+          "tick": 785,
+          "velocity": [
+            38.8509750366211,
+            5.62038326263428
+          ]
+        },
+        {
+          "distance": 122.963661193848,
+          "next_waypoint": 5,
+          "position": [
+            473.075439453125,
+            643.100769042969
+          ],
+          "rotation": 0.460873812437057,
+          "tick": 797,
+          "velocity": [
+            42.5922470092773,
+            5.77653121948242
+          ]
+        },
+        {
+          "distance": 114.312873840332,
+          "next_waypoint": 5,
+          "position": [
+            481.757690429688,
+            644.015808105469
+          ],
+          "rotation": 0.148075073957443,
+          "tick": 809,
+          "velocity": [
+            43.6518440246582,
+            3.84470462799072
+          ]
+        },
+        {
+          "distance": 105.730163574219,
+          "next_waypoint": 5,
+          "position": [
+            490.366088867188,
+            644.510559082031
+          ],
+          "rotation": -0.0407534465193748,
+          "tick": 821,
+          "velocity": [
+            42.2458724975586,
+            1.85038650035858
+          ]
+        },
+        {
+          "distance": 97.5552139282227,
+          "next_waypoint": 5,
+          "position": [
+            498.557373046875,
+            644.685668945312
+          ],
+          "rotation": -0.0702797919511795,
+          "tick": 833,
+          "velocity": [
+            39.8399047851562,
+            0.58657044172287
+          ]
+        },
+        {
+          "distance": 89.8254013061523,
+          "next_waypoint": 5,
+          "position": [
+            506.295288085938,
+            644.654846191406
+          ],
+          "rotation": 0.0297629032284021,
+          "tick": 845,
+          "velocity": [
+            37.8561859130859,
+            -0.324855804443359
+          ]
+        },
+        {
+          "distance": 82.3633575439453,
+          "next_waypoint": 5,
+          "position": [
+            513.756958007812,
+            644.4501953125
+          ],
+          "rotation": 0.181585893034935,
+          "tick": 857,
+          "velocity": [
+            37.0475578308105,
+            -1.15486454963684
+          ]
+        },
+        {
+          "distance": 74.9176483154297,
+          "next_waypoint": 5,
+          "position": [
+            521.194946289062,
+            644.105834960938
+          ],
+          "rotation": 0.311499178409576,
+          "tick": 869,
+          "velocity": [
+            37.4660224914551,
+            -1.69773554801941
+          ]
+        },
+        {
+          "distance": 67.2939376831055,
+          "next_waypoint": 5,
+          "position": [
+            528.807983398438,
+            643.702209472656
+          ],
+          "rotation": 0.389155000448227,
+          "tick": 881,
+          "velocity": [
+            38.6520690917969,
+            -1.78105998039246
+          ]
+        },
+        {
+          "distance": 59.404426574707,
+          "next_waypoint": 5,
+          "position": [
+            536.688354492188,
+            643.318786621094
+          ],
+          "rotation": 0.379864305257797,
+          "tick": 893,
+          "velocity": [
+            40.0112609863281,
+            -1.58108758926392
+          ]
+        },
+        {
+          "distance": 51.2803192138672,
+          "next_waypoint": 5,
+          "position": [
+            544.805786132812,
+            642.970458984375
+          ],
+          "rotation": 0.308067470788956,
+          "tick": 905,
+          "velocity": [
+            40.990550994873,
+            -1.47383832931519
+          ]
+        },
+        {
+          "distance": 43.0297241210938,
+          "next_waypoint": 5,
+          "position": [
+            553.049926757812,
+            642.616943359375
+          ],
+          "rotation": 0.219545722007751,
+          "tick": 917,
+          "velocity": [
+            41.3128471374512,
+            -1.61275458335876
+          ]
+        },
+        {
+          "distance": 34.7832641601562,
+          "next_waypoint": 5,
+          "position": [
+            561.287475585938,
+            642.217224121094
+          ],
+          "rotation": 0.151155352592468,
+          "tick": 929,
+          "velocity": [
+            40.9976119995117,
+            -1.89036846160889
+          ]
+        },
+        {
+          "distance": 26.6596412658691,
+          "next_waypoint": 5,
+          "position": [
+            569.400756835938,
+            641.793518066406
+          ],
+          "rotation": 0.0554531626403332,
+          "tick": 941,
+          "velocity": [
+            40.0969085693359,
+            -1.82146024703979
+          ]
+        },
+        {
+          "distance": 18.8227710723877,
+          "next_waypoint": 5,
+          "position": [
+            577.227661132812,
+            641.376953125
+          ],
+          "rotation": -0.170679375529289,
+          "tick": 953,
+          "velocity": [
+            38.0593566894531,
+            -1.98171758651733
+          ]
+        },
+        {
+          "distance": 11.6192474365234,
+          "next_waypoint": 5,
+          "position": [
+            584.411254882812,
+            640.841369628906
+          ],
+          "rotation": -0.481474220752716,
+          "tick": 965,
+          "velocity": [
+            33.6587562561035,
+            -2.89479422569275
+          ]
+        },
+        {
+          "distance": 6.96271896362305,
+          "next_waypoint": 6,
+          "position": [
+            589.044799804688,
+            640.323486328125
+          ],
+          "rotation": -0.704274654388428,
+          "tick": 974,
+          "velocity": [
+            28.4641666412354,
+            -3.37457180023193
+          ]
+        },
+        {
+          "distance": 158.497955322266,
+          "next_waypoint": 6,
+          "position": [
+            594.540405273438,
+            640.354614257812
+          ],
+          "rotation": -0.608459174633026,
+          "tick": 986,
+          "velocity": [
+            26.9221057891846,
+            3.85057067871094
+          ]
+        },
+        {
+          "distance": 153.134567260742,
+          "next_waypoint": 6,
+          "position": [
+            599.730834960938,
+            641.705749511719
+          ],
+          "rotation": -0.124072253704071,
+          "tick": 998,
+          "velocity": [
+            24.9810543060303,
+            8.75042724609375
+          ]
+        },
+        {
+          "distance": 147.92366027832,
+          "next_waypoint": 6,
+          "position": [
+            604.667358398438,
+            643.432739257812
+          ],
+          "rotation": 0.450731366872787,
+          "tick": 1010,
+          "velocity": [
+            25.1658744812012,
+            8.52614212036133
+          ]
+        },
+        {
+          "distance": 142.235046386719,
+          "next_waypoint": 6,
+          "position": [
+            610.125366210938,
+            645.051574707031
+          ],
+          "rotation": 0.847318410873413,
+          "tick": 1022,
+          "velocity": [
+            29.4581756591797,
+            8.56579875946045
+          ]
+        },
+        {
+          "distance": 135.531005859375,
+          "next_waypoint": 6,
+          "position": [
+            616.559936523438,
+            646.952087402344
+          ],
+          "rotation": 0.954011797904968,
+          "tick": 1034,
+          "velocity": [
+            34.3658142089844,
+            10.9556579589844
+          ]
+        },
+        {
+          "distance": 127.830795288086,
+          "next_waypoint": 6,
+          "position": [
+            623.889526367188,
+            649.384582519531
+          ],
+          "rotation": 0.784696400165558,
+          "tick": 1046,
+          "velocity": [
+            38.4573211669922,
+            13.4478149414062
+          ]
+        },
+        {
+          "distance": 119.365249633789,
+          "next_waypoint": 6,
+          "position": [
+            631.932739257812,
+            652.135070800781
+          ],
+          "rotation": 0.480339795351028,
+          "tick": 1058,
+          "velocity": [
+            41.4753494262695,
+            14.1097030639648
+          ]
+        },
+        {
+          "distance": 110.533142089844,
+          "next_waypoint": 6,
+          "position": [
+            640.376098632812,
+            654.807312011719
+          ],
+          "rotation": 0.188098356127739,
+          "tick": 1070,
+          "velocity": [
+            42.4859733581543,
+            12.998740196228
+          ]
+        },
+        {
+          "distance": 101.801544189453,
+          "next_waypoint": 6,
+          "position": [
+            648.784790039062,
+            657.198791503906
+          ],
+          "rotation": -0.00330572808161378,
+          "tick": 1082,
+          "velocity": [
+            41.4165344238281,
+            11.5630407333374
+          ]
+        },
+        {
+          "distance": 93.4615859985352,
+          "next_waypoint": 6,
+          "position": [
+            656.847534179688,
+            659.353088378906
+          ],
+          "rotation": -0.0523045994341373,
+          "tick": 1094,
+          "velocity": [
+            39.325008392334,
+            10.618127822876
+          ]
+        },
+        {
+          "distance": 85.5574722290039,
+          "next_waypoint": 6,
+          "position": [
+            664.498413085938,
+            661.356872558594
+          ],
+          "rotation": 0.0297016594558954,
+          "tick": 1106,
+          "velocity": [
+            37.4553489685059,
+            9.96291255950928
+          ]
+        },
+        {
+          "distance": 77.9514007568359,
+          "next_waypoint": 6,
+          "position": [
+            671.873168945312,
+            663.233154296875
+          ],
+          "rotation": 0.172420710325241,
+          "tick": 1118,
+          "velocity": [
+            36.5611305236816,
+            9.33340549468994
+          ]
+        },
+        {
+          "distance": 70.4229888916016,
+          "next_waypoint": 6,
+          "position": [
+            679.193481445312,
+            664.997985839844
+          ],
+          "rotation": 0.303042441606522,
+          "tick": 1130,
+          "velocity": [
+            36.789924621582,
+            8.87870407104492
+          ]
+        },
+        {
+          "distance": 62.7732391357422,
+          "next_waypoint": 6,
+          "position": [
+            686.649780273438,
+            666.709777832031
+          ],
+          "rotation": 0.382704555988312,
+          "tick": 1142,
+          "velocity": [
+            37.7731895446777,
+            8.78494358062744
+          ]
+        },
+        {
+          "distance": 54.8965873718262,
+          "next_waypoint": 6,
+          "position": [
+            694.335327148438,
+            668.435485839844
+          ],
+          "rotation": 0.383537471294403,
+          "tick": 1154,
+          "velocity": [
+            38.9793014526367,
+            8.95055484771729
+          ]
+        },
+        {
+          "distance": 46.7999839782715,
+          "next_waypoint": 6,
+          "position": [
+            702.238891601562,
+            670.193908691406
+          ],
+          "rotation": 0.322583258152008,
+          "tick": 1166,
+          "velocity": [
+            39.9020156860352,
+            9.07243251800537
+          ]
+        },
+        {
+          "distance": 38.5785140991211,
+          "next_waypoint": 6,
+          "position": [
+            710.269409179688,
+            671.956115722656
+          ],
+          "rotation": 0.24108824133873,
+          "tick": 1178,
+          "velocity": [
+            40.2691307067871,
+            8.99992656707764
+          ]
+        },
+        {
+          "distance": 30.354549407959,
+          "next_waypoint": 6,
+          "position": [
+            718.309204101562,
+            673.686889648438
+          ],
+          "rotation": 0.15844139456749,
+          "tick": 1190,
+          "velocity": [
+            40.0551643371582,
+            8.77259349822998
+          ]
+        },
+        {
+          "distance": 22.2709674835205,
+          "next_waypoint": 6,
+          "position": [
+            726.225219726562,
+            675.325073242188
+          ],
+          "rotation": -0.027193920686841,
+          "tick": 1202,
+          "velocity": [
+            38.9755363464355,
+            7.97927188873291
+          ]
+        },
+        {
+          "distance": 14.6574678421021,
+          "next_waypoint": 6,
+          "position": [
+            733.724975585938,
+            676.673583984375
+          ],
+          "rotation": -0.315825223922729,
+          "tick": 1214,
+          "velocity": [
+            35.821460723877,
+            5.95648193359375
+          ]
+        },
+        {
+          "distance": 8.11458873748779,
+          "next_waypoint": 6,
+          "position": [
+            740.263549804688,
+            677.5517578125
+          ],
+          "rotation": -0.607776761054993,
+          "tick": 1226,
+          "velocity": [
+            29.5856781005859,
+            3.60559296607971
+          ]
+        },
+        {
+          "distance": 6.72567987442017,
+          "next_waypoint": 7,
+          "position": [
+            741.677612304688,
+            677.7060546875
+          ],
+          "rotation": -0.669724881649017,
+          "tick": 1229,
+          "velocity": [
+            27.6132736206055,
+            3.19362449645996
+          ]
+        },
+        {
+          "distance": 41.7992401123047,
+          "next_waypoint": 7,
+          "position": [
+            746.988159179688,
+            678.991577148438
+          ],
+          "rotation": -0.552311480045319,
+          "tick": 1241,
+          "velocity": [
+            25.9778022766113,
+            9.93630218505859
+          ]
+        },
+        {
+          "distance": 36.2836532592773,
+          "next_waypoint": 7,
+          "position": [
+            751.961791992188,
+            681.434020996094
+          ],
+          "rotation": -0.0603040046989918,
+          "tick": 1253,
+          "velocity": [
+            23.915843963623,
+            13.6831378936768
+          ]
+        },
+        {
+          "distance": 30.9074935913086,
+          "next_waypoint": 7,
+          "position": [
+            756.738647460938,
+            684.047790527344
+          ],
+          "rotation": 0.46780726313591,
+          "tick": 1265,
+          "velocity": [
+            24.5832500457764,
+            12.7007694244385
+          ]
+        },
+        {
+          "distance": 25.1064376831055,
+          "next_waypoint": 7,
+          "position": [
+            762.033081054688,
+            686.522033691406
+          ],
+          "rotation": 0.710555016994476,
+          "tick": 1277,
+          "velocity": [
+            28.156795501709,
+            12.9586772918701
+          ]
+        },
+        {
+          "distance": 18.6104202270508,
+          "next_waypoint": 7,
+          "position": [
+            768.009887695312,
+            689.235168457031
+          ],
+          "rotation": 0.538826942443848,
+          "tick": 1289,
+          "velocity": [
+            31.1978950500488,
+            14.3791456222534
+          ]
+        },
+        {
+          "distance": 11.7125730514526,
+          "next_waypoint": 7,
+          "position": [
+            774.463500976562,
+            691.976745605469
+          ],
+          "rotation": 0.112497836351395,
+          "tick": 1301,
+          "velocity": [
+            32.7877616882324,
+            12.9030380249023
+          ]
+        },
+        {
+          "distance": 6.71809244155884,
+          "next_waypoint": 8,
+          "position": [
+            779.294555664062,
+            693.587951660156
+          ],
+          "rotation": -0.238643020391464,
+          "tick": 1310,
+          "velocity": [
+            31.2614402770996,
+            9.22733116149902
+          ]
+        },
+        {
+          "distance": 157.155899047852,
+          "next_waypoint": 8,
+          "position": [
+            785.238647460938,
+            695.626708984375
+          ],
+          "rotation": -0.280622065067291,
+          "tick": 1322,
+          "velocity": [
+            28.434289932251,
+            11.6219482421875
+          ]
+        },
+        {
+          "distance": 151.265991210938,
+          "next_waypoint": 8,
+          "position": [
+            790.678100585938,
+            698.012573242188
+          ],
+          "rotation": 0.0876287519931793,
+          "tick": 1334,
+          "velocity": [
+            26.4782447814941,
+            12.1519031524658
+          ]
+        },
+        {
+          "distance": 145.481887817383,
+          "next_waypoint": 8,
+          "position": [
+            796.052124023438,
+            700.256164550781
+          ],
+          "rotation": 0.496500104665756,
+          "tick": 1346,
+          "velocity": [
+            27.7725677490234,
+            10.8581647872925
+          ]
+        },
+        {
+          "distance": 139.182342529297,
+          "next_waypoint": 8,
+          "position": [
+            802.007934570312,
+            702.345642089844
+          ],
+          "rotation": 0.755743443965912,
+          "tick": 1358,
+          "velocity": [
+            31.6680583953857,
+            10.85573387146
+          ]
+        },
+        {
+          "distance": 132.03173828125,
+          "next_waypoint": 8,
+          "position": [
+            808.795776367188,
+            704.623962402344
+          ],
+          "rotation": 0.78549987077713,
+          "tick": 1370,
+          "velocity": [
+            35.7811241149902,
+            12.3946914672852
+          ]
+        },
+        {
+          "distance": 124.078559875488,
+          "next_waypoint": 8,
+          "position": [
+            816.330444335938,
+            707.217590332031
+          ],
+          "rotation": 0.61858069896698,
+          "tick": 1382,
+          "velocity": [
+            39.1256065368652,
+            13.7379550933838
+          ]
+        },
+        {
+          "distance": 115.570053100586,
+          "next_waypoint": 8,
+          "position": [
+            824.406616210938,
+            709.944152832031
+          ],
+          "rotation": 0.367991894483566,
+          "tick": 1394,
+          "velocity": [
+            41.1968116760254,
+            13.7694225311279
+          ]
+        },
+        {
+          "distance": 106.876113891602,
+          "next_waypoint": 8,
+          "position": [
+            832.707397460938,
+            712.556579589844
+          ],
+          "rotation": 0.145896419882774,
+          "tick": 1406,
+          "velocity": [
+            41.487133026123,
+            12.8313360214233
+          ]
+        },
+        {
+          "distance": 98.3451156616211,
+          "next_waypoint": 8,
+          "position": [
+            840.894653320312,
+            714.96533203125
+          ],
+          "rotation": 0.013752456754446,
+          "tick": 1418,
+          "velocity": [
+            40.3044891357422,
+            11.8609886169434
+          ]
+        },
+        {
+          "distance": 90.1594009399414,
+          "next_waypoint": 8,
+          "position": [
+            848.766967773438,
+            717.215881347656
+          ],
+          "rotation": 0.00460218638181686,
+          "tick": 1430,
+          "velocity": [
+            38.5624542236328,
+            11.2206754684448
+          ]
+        },
+        {
+          "distance": 82.3105010986328,
+          "next_waypoint": 8,
+          "position": [
+            856.319702148438,
+            719.358581542969
+          ],
+          "rotation": 0.0918282642960548,
+          "tick": 1442,
+          "velocity": [
+            37.1928062438965,
+            10.7299566268921
+          ]
+        },
+        {
+          "distance": 74.663703918457,
+          "next_waypoint": 8,
+          "position": [
+            863.688110351562,
+            721.408081054688
+          ],
+          "rotation": 0.213788062334061,
+          "tick": 1454,
+          "velocity": [
+            36.6952629089355,
+            10.2956686019897
+          ]
+        },
+        {
+          "distance": 67.0350570678711,
+          "next_waypoint": 8,
+          "position": [
+            871.055541992188,
+            723.389282226562
+          ],
+          "rotation": 0.313353627920151,
+          "tick": 1466,
+          "velocity": [
+            37.0649490356445,
+            10.0575971603394
+          ]
+        },
+        {
+          "distance": 59.2770309448242,
+          "next_waypoint": 8,
+          "position": [
+            878.560913085938,
+            725.353576660156
+          ],
+          "rotation": 0.368786782026291,
+          "tick": 1478,
+          "velocity": [
+            37.9711303710938,
+            10.099268913269
+          ]
+        },
+        {
+          "distance": 51.3203582763672,
+          "next_waypoint": 8,
+          "position": [
+            886.264282226562,
+            727.345458984375
+          ],
+          "rotation": 0.352725356817245,
+          "tick": 1490,
+          "velocity": [
+            38.9572868347168,
+            10.278769493103
+          ]
+        },
+        {
+          "distance": 43.1945495605469,
+          "next_waypoint": 8,
+          "position": [
+            894.134887695312,
+            729.366027832031
+          ],
+          "rotation": 0.291235685348511,
+          "tick": 1502,
+          "velocity": [
+            39.6196784973145,
+            10.3675107955933
+          ]
+        },
+        {
+          "distance": 34.9918098449707,
+          "next_waypoint": 8,
+          "position": [
+            902.084838867188,
+            731.38671875
+          ],
+          "rotation": 0.221351534128189,
+          "tick": 1514,
+          "velocity": [
+            39.7789077758789,
+            10.2983846664429
+          ]
+        },
+        {
+          "distance": 26.822301864624,
+          "next_waypoint": 8,
+          "position": [
+            910.010131835938,
+            733.369567871094
+          ],
+          "rotation": 0.107800722122192,
+          "tick": 1526,
+          "velocity": [
+            39.3886260986328,
+            9.94037818908691
+          ]
+        },
+        {
+          "distance": 18.8869647979736,
+          "next_waypoint": 8,
+          "position": [
+            917.737915039062,
+            735.181945800781
+          ],
+          "rotation": -0.134705051779747,
+          "tick": 1538,
+          "velocity": [
+            37.7050514221191,
+            8.5372486114502
+          ]
+        },
+        {
+          "distance": 11.6580610275269,
+          "next_waypoint": 8,
+          "position": [
+            924.857055664062,
+            736.572875976562
+          ],
+          "rotation": -0.439694702625275,
+          "tick": 1550,
+          "velocity": [
+            33.3139572143555,
+            5.9645881652832
+          ]
+        },
+        {
+          "distance": 6.66834449768066,
+          "next_waypoint": 9,
+          "position": [
+            929.883666992188,
+            737.343444824219
+          ],
+          "rotation": -0.664963245391846,
+          "tick": 1560,
+          "velocity": [
+            27.3114032745361,
+            4.09693288803101
+          ]
+        },
+        {
+          "distance": 157.636581420898,
+          "next_waypoint": 9,
+          "position": [
+            935.134399414062,
+            738.803161621094
+          ],
+          "rotation": -0.545677423477173,
+          "tick": 1572,
+          "velocity": [
+            25.7187557220459,
+            10.8429412841797
+          ]
+        },
+        {
+          "distance": 151.96369934082,
+          "next_waypoint": 9,
+          "position": [
+            940.150268554688,
+            741.654663085938
+          ],
+          "rotation": -0.0512372963130474,
+          "tick": 1584,
+          "velocity": [
+            24.4849071502686,
+            17.1481266021729
+          ]
+        },
+        {
+          "distance": 145.858322143555,
+          "next_waypoint": 9,
+          "position": [
+            944.994995117188,
+            745.382141113281
+          ],
+          "rotation": 0.518403351306915,
+          "tick": 1596,
+          "velocity": [
+            24.4426689147949,
+            19.9733409881592
+          ]
+        },
+        {
+          "distance": 139.233337402344,
+          "next_waypoint": 9,
+          "position": [
+            950.120971679688,
+            749.581237792969
+          ],
+          "rotation": 0.86037814617157,
+          "tick": 1608,
+          "velocity": [
+            26.8507995605469,
+            22.4652919769287
+          ]
+        },
+        {
+          "distance": 131.798233032227,
+          "next_waypoint": 9,
+          "position": [
+            955.804565429688,
+            754.374938964844
+          ],
+          "rotation": 0.863183200359344,
+          "tick": 1620,
+          "velocity": [
+            29.7179870605469,
+            25.6767082214355
+          ]
+        },
+        {
+          "distance": 123.577247619629,
+          "next_waypoint": 9,
+          "position": [
+            962.034790039062,
+            759.738708496094
+          ],
+          "rotation": 0.616053819656372,
+          "tick": 1632,
+          "velocity": [
+            32.2876052856445,
+            27.9595909118652
+          ]
+        },
+        {
+          "distance": 114.87279510498,
+          "next_waypoint": 9,
+          "position": [
+            968.685424804688,
+            765.354675292969
+          ],
+          "rotation": 0.294842690229416,
+          "tick": 1644,
+          "velocity": [
+            33.820484161377,
+            28.3505401611328
+          ]
+        },
+        {
+          "distance": 106.123672485352,
+          "next_waypoint": 9,
+          "position": [
+            975.447631835938,
+            770.909118652344
+          ],
+          "rotation": 0.0393054448068142,
+          "tick": 1656,
+          "velocity": [
+            33.5271377563477,
+            27.6694068908691
+          ]
+        },
+        {
+          "distance": 97.6330184936523,
+          "next_waypoint": 9,
+          "position": [
+            981.986450195312,
+            776.327392578125
+          ],
+          "rotation": -0.092571385204792,
+          "tick": 1668,
+          "velocity": [
+            31.8502330780029,
+            27.1036052703857
+          ]
+        },
+        {
+          "distance": 89.4848098754883,
+          "next_waypoint": 9,
+          "position": [
+            988.137817382812,
+            781.671142578125
+          ],
+          "rotation": -0.0677841901779175,
+          "tick": 1680,
+          "velocity": [
+            29.8693733215332,
+            26.8517646789551
+          ]
+        },
+        {
+          "distance": 81.6288528442383,
+          "next_waypoint": 9,
+          "position": [
+            993.946899414062,
+            786.965270996094
+          ],
+          "rotation": 0.0606034807860851,
+          "tick": 1692,
+          "velocity": [
+            28.4919948577881,
+            26.5631332397461
+          ]
+        },
+        {
+          "distance": 73.9451599121094,
+          "next_waypoint": 9,
+          "position": [
+            999.590698242188,
+            792.189147949219
+          ],
+          "rotation": 0.213840514421463,
+          "tick": 1704,
+          "velocity": [
+            28.1552352905273,
+            26.1849880218506
+          ]
+        },
+        {
+          "distance": 66.2725830078125,
+          "next_waypoint": 9,
+          "position": [
+            1005.27453613281,
+            797.350463867188
+          ],
+          "rotation": 0.329396426677704,
+          "tick": 1716,
+          "velocity": [
+            28.7600231170654,
+            25.9647789001465
+          ]
+        },
+        {
+          "distance": 58.46630859375,
+          "next_waypoint": 9,
+          "position": [
+            1011.14514160156,
+            802.498657226562
+          ],
+          "rotation": 0.382613748311996,
+          "tick": 1728,
+          "velocity": [
+            29.8925685882568,
+            26.0285358428955
+          ]
+        },
+        {
+          "distance": 50.4623222351074,
+          "next_waypoint": 9,
+          "position": [
+            1017.24963378906,
+            807.67578125
+          ],
+          "rotation": 0.34917825460434,
+          "tick": 1740,
+          "velocity": [
+            31.0129318237305,
+            26.1989593505859
+          ]
+        },
+        {
+          "distance": 42.3037910461426,
+          "next_waypoint": 9,
+          "position": [
+            1023.53625488281,
+            812.875915527344
+          ],
+          "rotation": 0.266874879598618,
+          "tick": 1752,
+          "velocity": [
+            31.7071685791016,
+            26.2462253570557
+          ]
+        },
+        {
+          "distance": 34.0922050476074,
+          "next_waypoint": 9,
+          "position": [
+            1029.89929199219,
+            818.067565917969
+          ],
+          "rotation": 0.179742038249969,
+          "tick": 1764,
+          "velocity": [
+            31.8226547241211,
+            26.0975971221924
+          ]
+        },
+        {
+          "distance": 26.0009727478027,
+          "next_waypoint": 9,
+          "position": [
+            1036.23669433594,
+            823.104370117188
+          ],
+          "rotation": 0.0552915595471859,
+          "tick": 1776,
+          "velocity": [
+            31.4558753967285,
+            24.5626640319824
+          ]
+        },
+        {
+          "distance": 18.399808883667,
+          "next_waypoint": 9,
+          "position": [
+            1042.37390136719,
+            827.635437011719
+          ],
+          "rotation": -0.150121361017227,
+          "tick": 1788,
+          "velocity": [
+            29.7316417694092,
+            21.2354698181152
+          ]
+        },
+        {
+          "distance": 11.824049949646,
+          "next_waypoint": 9,
+          "position": [
+            1047.91540527344,
+            831.371704101562
+          ],
+          "rotation": -0.374524682760239,
+          "tick": 1800,
+          "velocity": [
+            25.5935878753662,
+            16.9192790985107
+          ]
+        },
+        {
+          "distance": 6.7755274772644,
+          "next_waypoint": 10,
+          "position": [
+            1052.37487792969,
+            834.275817871094
+          ],
+          "rotation": -0.544786870479584,
+          "tick": 1812,
+          "velocity": [
+            19.2712574005127,
+            13.1010847091675
+          ]
+        },
+        {
+          "distance": 18.6844940185547,
+          "next_waypoint": 10,
+          "position": [
+            1055.83239746094,
+            837.088806152344
+          ],
+          "rotation": -0.444019258022308,
+          "tick": 1824,
+          "velocity": [
+            15.6034240722656,
+            15.0781946182251
+          ]
+        },
+        {
+          "distance": 14.7553195953369,
+          "next_waypoint": 10,
+          "position": [
+            1058.58972167969,
+            840.018493652344
+          ],
+          "rotation": -0.166307985782623,
+          "tick": 1836,
+          "velocity": [
+            12.4852685928345,
+            14.2956676483154
+          ]
+        },
+        {
+          "distance": 11.4333095550537,
+          "next_waypoint": 10,
+          "position": [
+            1060.93981933594,
+            842.5673828125
+          ],
+          "rotation": 0.0624174438416958,
+          "tick": 1848,
+          "velocity": [
+            11.4714336395264,
+            11.7784652709961
+          ]
+        },
+        {
+          "distance": 8.42641639709473,
+          "next_waypoint": 10,
+          "position": [
+            1063.28845214844,
+            844.603454589844
+          ],
+          "rotation": 0.153897598385811,
+          "tick": 1860,
+          "velocity": [
+            12.1027173995972,
+            9.34397125244141
+          ]
+        },
+        {
+          "distance": 6.95862817764282,
+          "next_waypoint": 11,
+          "position": [
+            1064.52478027344,
+            845.45166015625
+          ],
+          "rotation": 0.134409070014954,
+          "tick": 1866,
+          "velocity": [
+            12.5329637527466,
+            8.28049087524414
+          ]
+        }
+      ],
+      "wall_ms": 42061,
+      "waypoints_reached": 11,
+      "waypoints_total": 11
+    },
+    "saved_label": "gm-afcdaef23e-73870c68-route",
+    "setup_sha256": "73870c681bb793573fa6bc1e400f97ddcece22e2a90ca4cbddfcdda9ad043f62",
+    "source_parse": true,
+    "version": "4.7-stable (official)",
+    "worker_failed": false
+  }
+}

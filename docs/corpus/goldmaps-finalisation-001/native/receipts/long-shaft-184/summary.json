@@ -1,0 +1,669 @@
+{
+  "schema": "goldmaps.native-matrix.v1",
+  "created_utc": "2026-11-23T16:14:17.037361+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "engine_head": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+  "godot_sha256": "f85bbc6b15e22416c7d797cd60b63286dd67b9cb13498847056c18520ae55a75",
+  "godot_version": {
+    "build": "official",
+    "hash": "5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+    "hex": 263936,
+    "major": 4,
+    "minor": 7,
+    "patch": 0,
+    "status": "stable",
+    "string": "4.7-stable (official)",
+    "timestamp": 0
+  },
+  "probe_sha256": "1e548392a725c4e8db08e682856b47d53b5a3eb2f3c7b8e3737667c42446a05c",
+  "runner_sha256": "e1f057940db4b30d1f30e0c81564f09fe16a286dab30cf3095c6c2845c61d99c",
+  "inputs_sha256": "f661308c68b59fbdb99f75a5a72cc77bbb5f66c2a7bebdbde200e6ed6adb57f9",
+  "github_run_id": null,
+  "github_sha": null,
+  "executed_source": {
+    "event_github_sha": null,
+    "requested_checkout_head": null,
+    "executed_checkout_head": "fae2d11e9d4796628d9abbc4e37f50caa4ff0171",
+    "files_match_commit": true,
+    "files": {
+      "scripts/goldmaps_finalisation/native_matrix.py": "e1f057940db4b30d1f30e0c81564f09fe16a286dab30cf3095c6c2845c61d99c",
+      "scripts/goldmaps_finalisation/native_probe.gd": "1e548392a725c4e8db08e682856b47d53b5a3eb2f3c7b8e3737667c42446a05c",
+      "scripts/goldmaps_finalisation/native_inputs.v1.json": "f661308c68b59fbdb99f75a5a72cc77bbb5f66c2a7bebdbde200e6ed6adb57f9",
+      "scripts/goldmaps_finalisation/native_helper_tests.ps1": "cd0334e15e6c188c809ce7372b1ed113223d88a58526369bf2493ae54b988814"
+    }
+  },
+  "runner_image": null,
+  "linux_identity": {
+    "source_files_compared": 270,
+    "source_mismatches": [],
+    "native_sha256": "a15fc422313eb01e79bc904f44cc8879816484ae4fc98c63ac4b815afdb6a5e7",
+    "rapier_sha256": "566e68ae53bfb2eb7018c8e7d0dd3727121bf696462039b780a33d6b8369c66a",
+    "rapier_provenance": {
+      "schema_version": 1,
+      "status": "source-matched-cooperative-bvh-backport",
+      "artifact": "godot/addons/godot-rapier2d/bin/libgodot_rapier.linux.x86_64-unknown-linux-gnu.so",
+      "sha256": "566e68ae53bfb2eb7018c8e7d0dd3727121bf696462039b780a33d6b8369c66a",
+      "size": 117275416,
+      "build_commit": "96dcb2ab6e35c9104726b2a541d1c2fbb298eecb",
+      "workflow_run": "https://github.com/techrote/cybersand/actions/runs/40056501226",
+      "build_artifact": "rapier-bvh-linux-patched-40056501226",
+      "build_record": {
+        "schema_version": 1,
+        "source_sha": "96dcb2ab6e35c9104726b2a541d1c2fbb298eecb",
+        "variant": "patched",
+        "platform": "linux",
+        "build_inputs": {
+          "status": "candidate; runtime publication requires paired control and patched evidence",
+          "addon_repository": "https://github.com/appsinacup/godot-rapier-physics.git",
+          "addon_tag": "v0.35.2",
+          "addon_commit": "172c66f5a88bf1164c2b8cf2d775ed889edefd75",
+          "crate": "rapier2d",
+          "crate_version": "0.35.1",
+          "crate_url": "https://static.crates.io/crates/rapier2d/rapier2d-0.35.1.crate",
+          "crate_sha256": "74bfd393193e08a812ba0c83c7c844dff29979fd30f96de2854cdea507350065",
+          "base_join_source_sha256": "b5fffdf4bd0c8e359d1aa52d9ddc95b04e21c11a8438b2ac8c31bebc57c32963",
+          "patch": "third_party/patches/rapier-0.35.1-cooperative-bvh-join.patch",
+          "patch_sha256": "6eda9ecd071925af35b7bfc92a2c3c01ac2b87831591947d79925cc92588975e",
+          "rust_toolchain": "1.98.0",
+          "features": [
+            "serde-serialize",
+            "parallel",
+            "register-docs",
+            "single-dim2",
+            "api-custom"
+          ],
+          "release_overrides": {
+            "CARGO_PROFILE_RELEASE_DEBUG": "1",
+            "CARGO_PROFILE_RELEASE_STRIP": "none"
+          },
+          "upstream_reports": [
+            "https://github.com/dimforge/rapier/issues/1008",
+            "https://github.com/appsinacup/godot-rapier-physics/issues/640"
+          ],
+          "upstream_cargo_lock_sha256": "63cb5170bd78cec10a46ecc912bfd56e101f7d30ed9bfd97789146f9b682d4dc",
+          "patched_join_source_sha256": "0a63cf10ae1111c4fa3c22d945d505918f36d1165b8176e130573d5259f9a973"
+        },
+        "build_lock_sha256": "0951b69d1b59c70c915f59bcae8390291ad9b89b4eb976ac8f3dfbed0fa7c46b",
+        "upstream_cargo_lock_sha256": "63cb5170bd78cec10a46ecc912bfd56e101f7d30ed9bfd97789146f9b682d4dc",
+        "resolved_cargo_lock_sha256": "6711ce94ea78d86e20cdd5b3eb4f5ff5c38499811afe3627f883d26fc370f6eb",
+        "join_source_sha256": "0a63cf10ae1111c4fa3c22d945d505918f36d1165b8176e130573d5259f9a973",
+        "godot_version": "4.7.stable.official.5b4e0cb0f",
+        "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+        "join_regression_exit": 0,
+        "artifacts": {
+          "Cargo.lock": "6711ce94ea78d86e20cdd5b3eb4f5ff5c38499811afe3627f883d26fc370f6eb",
+          "libgodot_rapier.linux.x86_64-unknown-linux-gnu.so": "566e68ae53bfb2eb7018c8e7d0dd3727121bf696462039b780a33d6b8369c66a",
+          "join-regression.log": "49e2c95c803d961ba9419f8b90ad50a3b96d3b0099e387cf79894f36098c8d24"
+        }
+      },
+      "source_inputs": {
+        "third_party/rapier-bvh-build.lock.json": "0951b69d1b59c70c915f59bcae8390291ad9b89b4eb976ac8f3dfbed0fa7c46b",
+        "third_party/patches/rapier-0.35.1-cooperative-bvh-join.patch": "6eda9ecd071925af35b7bfc92a2c3c01ac2b87831591947d79925cc92588975e",
+        "tools/ci/build_rapier_bvh_candidate.py": "f849f5175eded2cd296dd4e0feda2632ffee91714406f0f595834dbda9a482a5",
+        ".github/workflows/rapier-bvh-build.yml": "4a0e145c473f2cdef64263ee1e5b64d0c974e68c15d505944ee22364776d831d"
+      },
+      "validated_platform": "linux x86_64 Godot 4.7",
+      "validation_scope": "Exact artifact in same-host alternating physical-actor stress; final full-suite/exact-head results are recorded in PR #236.",
+      "evidence": "docs/audits/2026-10-24-physical-actor-bvh-validation.md",
+      "scope": "v0.35.2 addon / rapier2d 0.35.1; cooperative deferred-BVH receive only; other architectures and Web retain original release artifacts"
+    }
+  },
+  "package_before": {
+    "files_checked": 586,
+    "bytes_checked": 200610152,
+    "manifest_sha256": "d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0",
+    "mismatches": [],
+    "pass": true
+  },
+  "package_after": {
+    "files_checked": 586,
+    "bytes_checked": 200610152,
+    "manifest_sha256": "d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0",
+    "mismatches": [],
+    "pass": true
+  },
+  "import": {
+    "exit_code": 0,
+    "timeout": false,
+    "process_id": 14,
+    "seconds": 7.745,
+    "log_sha256": "37cc6b6862caf690e4c16129680533d1bdbdb59e63886f571d1b798d64a7e2f8"
+  },
+  "preflight": {
+    "engine_source": "662df51cd8409a52332fa7ef15d06d8ab8945aed",
+    "godot_version": {
+      "build": "official",
+      "hash": "5b4e0cb0fd279832bbdd69fed5354d4e5ad26f88",
+      "hex": 263936,
+      "major": 4,
+      "minor": 7,
+      "patch": 0,
+      "status": "stable",
+      "string": "4.7-stable (official)",
+      "timestamp": 0
+    },
+    "native_bridge_class_registered": true,
+    "programme": "GOLD-ASTRA-001",
+    "scope": "Path discovery and class registration only; no map load, gameplay or owner acceptance.",
+    "user_data_dir": "/home/agent/.local/share/godot/app_userdata/GOLDMAPS Qualification fad9de54d7",
+    "workbench_dir": "/home/agent/.local/share/godot/app_userdata/GOLDMAPS Qualification fad9de54d7/workbench",
+    "workbench_directory_error": 0
+  },
+  "runtime_source_files": 368,
+  "runtime_source_changes": [],
+  "project_configuration_sha256": "088f9143fad42b055dfd8c96072ebd1744e5d30734f5457b9f5cb0de346b7ab9",
+  "results": [
+    {
+      "id": "gold-184",
+      "aliases": [
+        "gold-184"
+      ],
+      "source_records": [
+        {
+          "id": "gold-184",
+          "roles": [
+            "gold-core"
+          ],
+          "pr": 184,
+          "head": "e45f9794f318761db02fbe82ad623c2b1da96196",
+          "path": "cybersand-canvases/1024x2048/portrait-difficult-keelglass-vertical-twin-keels-261121/setup.json",
+          "setup_sha256": "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+          "setup_bytes": 15103,
+          "extent": [
+            1024,
+            2048
+          ],
+          "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/e45f9794f318761db02fbe82ad623c2b1da96196/cybersand-canvases/1024x2048/portrait-difficult-keelglass-vertical-twin-keels-261121/setup.json",
+          "contact_probe_tick_limit": 1800,
+          "contact_probe_reason": "Original 900-tick probe completes without contact in the intentional clear shaft: authored spawn (517,132), first solid below at y1938. Preserve initial900-tick negative and require actual contact during a separate bounded continuation to1800ticks. No geometry/spawn/actor change."
+        }
+      ],
+      "setup_sha256": "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+      "phases": {
+        "load": {
+          "exit_code": 0,
+          "timeout": false,
+          "process_id": 274,
+          "seconds": 38.381,
+          "log_sha256": "fbb83ad96f33a53e2d1994fdb4fa0470dafca3cb8c678ee7ac35d457dd3a6d64",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gm-fad9de54d7-1b8a3bf5",
+            "actor_adopted": true,
+            "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+            "collision_observed": true,
+            "collision_probe": {
+              "end_position": [
+                517.0,
+                1936.5
+              ],
+              "end_tick": 1129,
+              "initial_900_tick_observation": {
+                "collision_observed": false,
+                "position": [
+                  517.0,
+                  1537.0185546875
+                ],
+                "tick": 925
+              },
+              "max_contacts": 2,
+              "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+              "start_tick": 25,
+              "tick_budget": 1800,
+              "wall_budget_ms": 90000,
+              "witnesses": [
+                {
+                  "collider_rid_valid": true,
+                  "normal": [
+                    0.0,
+                    -1.0
+                  ],
+                  "point": [
+                    519.0,
+                    1938.0
+                  ],
+                  "tick": 1129
+                }
+              ],
+              "worker_failed": false
+            },
+            "directed_up_displacement_cells": 4.29285430908203,
+            "drive_end": [
+              517.0,
+              127.845069885254
+            ],
+            "drive_key": "W",
+            "drive_start": [
+              517.0,
+              132.137924194336
+            ],
+            "drive_ticks_elapsed": 20,
+            "errors": [],
+            "extent": [
+              1024,
+              2048
+            ],
+            "fresh_reopen": false,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              517.0,
+              132.0
+            ],
+            "label": "gm-fad9de54d7-1b8a3bf5",
+            "load": true,
+            "midge_displacement_cells": 4.16152191162109,
+            "midge_drive": true,
+            "midge_end": [
+              517.0,
+              127.845069885254
+            ],
+            "midge_id": 1,
+            "native_bridge": true,
+            "native_policy": {
+              "accepted": true,
+              "receipt": {
+                "admission": "current_defaults_only",
+                "assignments": [
+                  {
+                    "applied_family": "freemass_v1",
+                    "applied_variant": "reference",
+                    "material": 3,
+                    "name": "water",
+                    "requested_family": "freemass_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 8,
+                    "name": "lava",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 12,
+                    "name": "acid",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 16,
+                    "name": "oil",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 20,
+                    "name": "paste",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 21,
+                    "name": "slush",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 24,
+                    "name": "brine",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 30,
+                    "name": "cement",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 32,
+                    "name": "toxic-sludge",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 33,
+                    "name": "mercury",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 36,
+                    "name": "molten-glass",
+                    "requested_family": "cellular_yield_v1"
+                  }
+                ],
+                "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+                "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+                "envelope": [
+                  1279479895,
+                  1,
+                  1,
+                  -2102023270,
+                  1854385793,
+                  1886533889,
+                  84225930,
+                  1522979054,
+                  582168604,
+                  -646713377,
+                  -939672877,
+                  868616440,
+                  1977866421,
+                  1930370363,
+                  -2119873090,
+                  -6981196,
+                  870342995,
+                  1443932351,
+                  -1569267145,
+                  11,
+                  3,
+                  1,
+                  0,
+                  8,
+                  2,
+                  0,
+                  12,
+                  2,
+                  0,
+                  16,
+                  2,
+                  0,
+                  20,
+                  2,
+                  0,
+                  21,
+                  2,
+                  0,
+                  24,
+                  2,
+                  0,
+                  30,
+                  2,
+                  0,
+                  32,
+                  2,
+                  0,
+                  33,
+                  2,
+                  0,
+                  36,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "family_blocks": [],
+                "family_parameters": {},
+                "material_blocks": [],
+                "maximum_rule_radius": null,
+                "minimum_rule_radius": 2,
+                "normalization": null,
+                "physical_state_format_version": 2,
+                "physical_state_hash_version": 2,
+                "platform": "linux",
+                "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+                "refusal": null,
+                "session_generation": -1,
+                "version": 1,
+                "wire_version": 1
+              },
+              "refusal": null
+            },
+            "phase": "load",
+            "physics_tick": true,
+            "process_id": 274,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 750,
+            "save_readback": true,
+            "saved_label": "gm-fad9de54d7-1b8a3bf5-saved",
+            "setup_sha256": "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        },
+        "reopen": {
+          "exit_code": 0,
+          "timeout": false,
+          "process_id": 372,
+          "seconds": 9.328,
+          "log_sha256": "2af971d5aae5e23bff40962b39867cbb2ed7a9c6a58d10e1a1ccf2c4c4a4dd8e",
+          "evidence": {
+            "acknowledged_epoch": 1,
+            "active_label": "gm-fad9de54d7-1b8a3bf5-saved",
+            "actor_adopted": true,
+            "collision_observed": false,
+            "errors": [],
+            "extent": [
+              1024,
+              2048
+            ],
+            "fresh_reopen": true,
+            "full_grid": true,
+            "grid_check": {
+              "first_mismatch": [],
+              "format": 3,
+              "mismatches": 0,
+              "ok": true,
+              "pixels": 2097152
+            },
+            "initial_actor_position": [
+              517.0,
+              132.0
+            ],
+            "label": "gm-fad9de54d7-1b8a3bf5",
+            "load": true,
+            "midge_drive": false,
+            "midge_id": 1,
+            "native_bridge": true,
+            "native_policy": {
+              "accepted": true,
+              "receipt": {
+                "admission": "current_defaults_only",
+                "assignments": [
+                  {
+                    "applied_family": "freemass_v1",
+                    "applied_variant": "reference",
+                    "material": 3,
+                    "name": "water",
+                    "requested_family": "freemass_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 8,
+                    "name": "lava",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 12,
+                    "name": "acid",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 16,
+                    "name": "oil",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 20,
+                    "name": "paste",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 21,
+                    "name": "slush",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 24,
+                    "name": "brine",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 30,
+                    "name": "cement",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 32,
+                    "name": "toxic-sludge",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 33,
+                    "name": "mercury",
+                    "requested_family": "cellular_yield_v1"
+                  },
+                  {
+                    "applied_family": "cellular_yield_v1",
+                    "applied_variant": "reference",
+                    "material": 36,
+                    "name": "molten-glass",
+                    "requested_family": "cellular_yield_v1"
+                  }
+                ],
+                "capability_matrix_digest": "33c608f875e3d8b5730f1d3b81a54dbeff9579b433e061535610a8bfa276e237",
+                "catalogue_digest": "82b5ab9a6e87ae817072390105052f8a5ac6d0ee22b3301cd973efdfc7fdbad3",
+                "envelope": [
+                  1279479895,
+                  1,
+                  1,
+                  -2102023270,
+                  1854385793,
+                  1886533889,
+                  84225930,
+                  1522979054,
+                  582168604,
+                  -646713377,
+                  -939672877,
+                  868616440,
+                  1977866421,
+                  1930370363,
+                  -2119873090,
+                  -6981196,
+                  870342995,
+                  1443932351,
+                  -1569267145,
+                  11,
+                  3,
+                  1,
+                  0,
+                  8,
+                  2,
+                  0,
+                  12,
+                  2,
+                  0,
+                  16,
+                  2,
+                  0,
+                  20,
+                  2,
+                  0,
+                  21,
+                  2,
+                  0,
+                  24,
+                  2,
+                  0,
+                  30,
+                  2,
+                  0,
+                  32,
+                  2,
+                  0,
+                  33,
+                  2,
+                  0,
+                  36,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                "family_blocks": [],
+                "family_parameters": {},
+                "material_blocks": [],
+                "maximum_rule_radius": null,
+                "minimum_rule_radius": 2,
+                "normalization": null,
+                "physical_state_format_version": 2,
+                "physical_state_hash_version": 2,
+                "platform": "linux",
+                "policy_hash": "4b7922ad7badb443556d82ea0c624c259da7b75e85f92f87cdab216f95cab53a",
+                "refusal": null,
+                "session_generation": -1,
+                "version": 1,
+                "wire_version": 1
+              },
+              "refusal": null
+            },
+            "phase": "reopen",
+            "physics_tick": false,
+            "process_id": 372,
+            "published_image": true,
+            "rapier_space_valid": true,
+            "rectangles": 750,
+            "saved_label": "gm-fad9de54d7-1b8a3bf5-saved",
+            "setup_sha256": "7a5b6d84625b4ec3668bc705d515fa262ce4e779a6142d2a1303da1b6d7c7264",
+            "source_parse": true,
+            "version": "4.7-stable (official)",
+            "worker_failed": false
+          }
+        }
+      },
+      "saved_setup_semantic_equal": true,
+      "saved_setup_sha256": "7a5b6d84625b4ec3668bc705d515fa262ce4e779a6142d2a1303da1b6d7c7264",
+      "source_unchanged": true,
+      "separate_processes": true,
+      "basic_native_pass": true,
+      "collision_observed": true,
+      "pass": true,
+      "expected_native_refusal": null,
+      "negative_fixture_pass": false,
+      "qualification_status": "QUALIFIED_HEADLESS"
+    }
+  ],
+  "aliases_checked": 1,
+  "unique_setups_checked": 1,
+  "route_results": [],
+  "scope": "Actual hosted headless Workbench/GDExtension/Rapier load, complete material plane, Midge adoption, controlled upward movement, contact, authored-start save and separate-process reopen. Route results are separately bounded; no human/GPU/visual acceptance.",
+  "pass": true,
+  "negative_fixtures_verified": 0,
+  "validation_pass": true,
+  "qualification_status": "QUALIFIED_HEADLESS"
+}

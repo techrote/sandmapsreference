@@ -1,0 +1,154 @@
+{
+  "id": "gold-184",
+  "aliases": [
+    "gold-184"
+  ],
+  "source_records": [
+    {
+      "id": "gold-184",
+      "roles": [
+        "gold-core"
+      ],
+      "pr": 184,
+      "head": "e45f9794f318761db02fbe82ad623c2b1da96196",
+      "path": "cybersand-canvases/1024x2048/portrait-difficult-keelglass-vertical-twin-keels-261121/setup.json",
+      "setup_sha256": "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+      "setup_bytes": 15103,
+      "extent": [
+        1024,
+        2048
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/e45f9794f318761db02fbe82ad623c2b1da96196/cybersand-canvases/1024x2048/portrait-difficult-keelglass-vertical-twin-keels-261121/setup.json"
+    }
+  ],
+  "setup_sha256": "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+  "phases": {
+    "load": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 3160,
+      "seconds": 35.984,
+      "log_sha256": "abbce452bd132ba3e289954aaae241f284fc0485964c9bad2fdd1e449a66d109",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-1b8a3bf5",
+        "actor_adopted": true,
+        "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+        "collision_observed": false,
+        "collision_probe": {
+          "end_tick": 925,
+          "max_contacts": 0,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [],
+          "worker_failed": false
+        },
+        "directed_up_displacement_cells": 4.29285430908203,
+        "drive_end": [
+          517.0,
+          127.845069885254
+        ],
+        "drive_key": "W",
+        "drive_start": [
+          517.0,
+          132.137924194336
+        ],
+        "drive_ticks_elapsed": 20,
+        "errors": [],
+        "extent": [
+          1024,
+          2048
+        ],
+        "fresh_reopen": false,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          517.0,
+          132.0
+        ],
+        "label": "gm-24cbdd2ae1-1b8a3bf5",
+        "load": true,
+        "midge_displacement_cells": 4.16152191162109,
+        "midge_drive": true,
+        "midge_end": [
+          517.0,
+          127.845069885254
+        ],
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "load",
+        "physics_tick": true,
+        "process_id": 3160,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 750,
+        "save_readback": true,
+        "saved_label": "gm-24cbdd2ae1-1b8a3bf5-saved",
+        "setup_sha256": "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    },
+    "reopen": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 3454,
+      "seconds": 8.262,
+      "log_sha256": "36cc0941aacbcb306b18ffe03210df398a79e3c7a72d4b629387acd37f685e8c",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-1b8a3bf5-saved",
+        "actor_adopted": true,
+        "collision_observed": false,
+        "errors": [],
+        "extent": [
+          1024,
+          2048
+        ],
+        "fresh_reopen": true,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          517.0,
+          132.0
+        ],
+        "label": "gm-24cbdd2ae1-1b8a3bf5",
+        "load": true,
+        "midge_drive": false,
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "reopen",
+        "physics_tick": false,
+        "process_id": 3454,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 750,
+        "saved_label": "gm-24cbdd2ae1-1b8a3bf5-saved",
+        "setup_sha256": "7a5b6d84625b4ec3668bc705d515fa262ce4e779a6142d2a1303da1b6d7c7264",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    }
+  },
+  "saved_setup_semantic_equal": true,
+  "saved_setup_sha256": "7a5b6d84625b4ec3668bc705d515fa262ce4e779a6142d2a1303da1b6d7c7264",
+  "source_unchanged": true,
+  "separate_processes": true,
+  "basic_native_pass": true,
+  "collision_observed": false,
+  "pass": false
+}

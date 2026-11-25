@@ -1,0 +1,88 @@
+{
+  "id": "b3-south-candidate",
+  "setup_id": "trial-B3-candidate",
+  "setup_sha256": "ba648b6d3b187d1d85c796993e9c1eb8122bb629f97bf41200ac82779619f315",
+  "planner_source_sha256": "9cef66aeb8c512016a3a7cd628531a464887841683ff5b19cfc75df52de69cf9",
+  "route_fixture_sha256": "17fecc15d1f200d37d85972d773dd9613597b0eb16980ffadd7fad7e0a5128b4",
+  "named_sites": [
+    "West ignition nest",
+    "West pressure latch",
+    "West bearing",
+    "Vault one crown",
+    "Vault one switch",
+    "South tri-vault bypass",
+    "Central bypass wicket"
+  ],
+  "waypoints": [
+    [
+      125,
+      312
+    ],
+    [
+      257,
+      317
+    ],
+    [
+      406,
+      303
+    ],
+    [
+      344,
+      440
+    ],
+    [
+      344,
+      452
+    ],
+    [
+      348,
+      472
+    ],
+    [
+      456,
+      476
+    ],
+    [
+      516,
+      412
+    ],
+    [
+      567,
+      295
+    ],
+    [
+      679,
+      321
+    ],
+    [
+      732,
+      468
+    ],
+    [
+      732,
+      472
+    ],
+    [
+      791,
+      532
+    ],
+    [
+      872,
+      552
+    ],
+    [
+      952,
+      552
+    ],
+    [
+      976,
+      539
+    ]
+  ],
+  "waypoint_radius": 7.0,
+  "speed_limit": 55.0,
+  "max_ticks": 9000,
+  "max_wall_ms": 240000,
+  "stuck_ticks": 900,
+  "scope": "Same frozen original-derived path for all variants; actual route result must come from native probe."
+}

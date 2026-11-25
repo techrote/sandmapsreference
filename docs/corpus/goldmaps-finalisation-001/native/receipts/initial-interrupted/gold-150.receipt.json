@@ -1,0 +1,205 @@
+{
+  "id": "gold-150",
+  "aliases": [
+    "gold-150",
+    "trial-C2-original",
+    "trial-C2-candidate"
+  ],
+  "source_records": [
+    {
+      "id": "gold-150",
+      "roles": [
+        "gold-core"
+      ],
+      "pr": 150,
+      "head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json",
+      "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "setup_bytes": 72574,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/c797722c9788263cb157d48d30eefd613a832efd/cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json"
+    },
+    {
+      "id": "trial-C2-original",
+      "roles": [
+        "trial-original"
+      ],
+      "pr": 150,
+      "head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json",
+      "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "setup_bytes": 72574,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/c797722c9788263cb157d48d30eefd613a832efd/cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json",
+      "source_head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "role_parent_pr": 150
+    },
+    {
+      "id": "trial-C2-candidate",
+      "roles": [
+        "trial-candidate"
+      ],
+      "pr": 150,
+      "head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "path": "cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json",
+      "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+      "setup_bytes": 72574,
+      "extent": [
+        2048,
+        1024
+      ],
+      "url": "https://raw.githubusercontent.com/techrote/sandmapsreference/c797722c9788263cb157d48d30eefd613a832efd/cybersand-canvases/2048x1024/worldgroup-xenobiome-mireward-levee-censer-loop-radial-biofilter-261121/setup.json",
+      "source_head": "c797722c9788263cb157d48d30eefd613a832efd",
+      "role_parent_pr": 150
+    }
+  ],
+  "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+  "phases": {
+    "load": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 268,
+      "seconds": 24.706,
+      "log_sha256": "6953c97ca9537ea6511fe6f3956bf23f911f446e851aebce3a13320753f43d94",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-93157e70",
+        "actor_adopted": true,
+        "collision_claim_limit": "Observed contact on this local fixture; not route completion or playfeel qualification.",
+        "collision_observed": true,
+        "collision_probe": {
+          "end_tick": 386,
+          "max_contacts": 6,
+          "method": "gravity-only after controlled W release; unchanged spawn and map; real PhysicsDirectBodyState2D contacts",
+          "start_tick": 25,
+          "witnesses": [
+            {
+              "collider_rid_valid": true,
+              "normal": [
+                0.0,
+                -1.0
+              ],
+              "point": [
+                77.0,
+                713.0
+              ],
+              "tick": 386
+            }
+          ],
+          "worker_failed": false
+        },
+        "directed_up_displacement_cells": 4.29287719726562,
+        "drive_end": [
+          75.0,
+          360.845062255859
+        ],
+        "drive_key": "W",
+        "drive_start": [
+          75.0,
+          365.137939453125
+        ],
+        "drive_ticks_elapsed": 20,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": false,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          75.0,
+          365.0
+        ],
+        "label": "gm-24cbdd2ae1-93157e70",
+        "load": true,
+        "midge_displacement_cells": 4.16152954101562,
+        "midge_drive": true,
+        "midge_end": [
+          75.0,
+          360.845062255859
+        ],
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "load",
+        "physics_tick": true,
+        "process_id": 268,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 3881,
+        "save_readback": true,
+        "saved_label": "gm-24cbdd2ae1-93157e70-saved",
+        "setup_sha256": "93157e701976742f1d249bae47b729d4204784e0b380dfb295b0dc053b863ed4",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    },
+    "reopen": {
+      "exit_code": 0,
+      "timeout": false,
+      "process_id": 477,
+      "seconds": 9.631,
+      "log_sha256": "e5f988f85322811e567c2613e5b491a0428806adacbf58e5e721c211bd8f2027",
+      "evidence": {
+        "acknowledged_epoch": 1,
+        "active_label": "gm-24cbdd2ae1-93157e70-saved",
+        "actor_adopted": true,
+        "collision_observed": false,
+        "errors": [],
+        "extent": [
+          2048,
+          1024
+        ],
+        "fresh_reopen": true,
+        "full_grid": true,
+        "grid_check": {
+          "first_mismatch": [],
+          "format": 3,
+          "mismatches": 0,
+          "ok": true,
+          "pixels": 2097152
+        },
+        "initial_actor_position": [
+          75.0,
+          365.0
+        ],
+        "label": "gm-24cbdd2ae1-93157e70",
+        "load": true,
+        "midge_drive": false,
+        "midge_id": 1,
+        "native_bridge": true,
+        "phase": "reopen",
+        "physics_tick": false,
+        "process_id": 477,
+        "published_image": true,
+        "rapier_space_valid": true,
+        "rectangles": 3881,
+        "saved_label": "gm-24cbdd2ae1-93157e70-saved",
+        "setup_sha256": "fd4c8d4acd8ac87c666bcbd2e29de6b6547e88ee6d5b4b4bca59225a357a3130",
+        "source_parse": true,
+        "version": "4.7-stable (official)",
+        "worker_failed": false
+      }
+    }
+  },
+  "saved_setup_semantic_equal": true,
+  "saved_setup_sha256": "fd4c8d4acd8ac87c666bcbd2e29de6b6547e88ee6d5b4b4bca59225a357a3130",
+  "source_unchanged": true,
+  "separate_processes": true,
+  "basic_native_pass": true,
+  "collision_observed": true,
+  "pass": true
+}

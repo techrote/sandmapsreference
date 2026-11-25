@@ -1,0 +1,106 @@
+name: GOLDMAPS finalisation source-pinned Windows qualification
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/goldmaps-finalisation-native.yml'
+      - 'scripts/goldmaps_finalisation/native_matrix.py'
+      - 'scripts/goldmaps_finalisation/native_probe.gd'
+      - 'scripts/goldmaps_finalisation/native_inputs.v1.json'
+      - 'scripts/goldmaps_finalisation/native_helper_tests.ps1'
+      - 'docs/corpus/goldmaps-finalisation-001/native/descendants/**'
+permissions:
+  contents: read
+concurrency:
+  group: goldmaps-native-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+jobs:
+  source-change:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    outputs:
+      run_native: ${{ steps.check.outputs.run_native }}
+    steps:
+      - name: Avoid repeating native qualification for evidence-only updates
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.event.pull_request.head.sha }}
+          ACTION: ${{ github.event.action }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          before, after = os.environ['BEFORE'], os.environ['AFTER']
+          run = True
+          watched = {'.github/workflows/goldmaps-finalisation-native.yml'} | {
+            'scripts/goldmaps_finalisation/' + name for name in (
+              'native_matrix.py', 'native_probe.gd', 'native_inputs.v1.json', 'native_helper_tests.ps1')}
+          if os.environ['ACTION'] == 'synchronize' and len(before) == 40:
+            url = 'https://api.github.com/repos/' + os.environ['REPOSITORY'] + '/compare/' + before + '...' + after
+            request = urllib.request.Request(url, headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'], 'Accept':'application/vnd.github+json'})
+            try:
+              with urllib.request.urlopen(request, timeout=30) as response:
+                comparison = json.load(response)
+              files = comparison.get('files')
+              if isinstance(files, list) and len(files) < 300 and comparison.get('status') in ('ahead','identical'):
+                prefix = 'docs/corpus/goldmaps-finalisation-001/native/descendants/'
+                run = any(f['filename'] in watched or f.get('previous_filename') in watched or f['filename'].startswith(prefix) or f.get('previous_filename','').startswith(prefix) for f in files)
+            except Exception as error:
+              print('Comparison unavailable; execute qualification:', type(error).__name__)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+            output.write('run_native=' + str(run).lower() + '\n')
+          print('Native implementation changed or initial run:', run)
+          PY
+  windows-native:
+    needs: source-change
+    if: needs.source-change.outputs.run_native == 'true'
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Preserve committed scientific bytes on this ephemeral runner
+        shell: pwsh
+        run: git config --global core.autocrlf false
+      - name: Check out exact proposed source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/goldmaps_finalisation/
+            docs/corpus/goldmaps-recovery-001/snapshot/
+            docs/corpus/goldmaps-finalisation-001/native/descendants/
+      - name: Reconstruct and verify all 586 frozen evaluator files
+        shell: pwsh
+        run: |
+          python docs/corpus/goldmaps-recovery-001/snapshot/acquire_package.py --manifest docs/corpus/goldmaps-recovery-001/snapshot/owner-package-files.v2.json --manifest-sha256 d26829e44ef697966ffde81424d8c22d9ae154b75e42122b4ac172e5c707dae0 --workspace "$env:RUNNER_TEMP/goldmaps-frozen"
+          if ($LASTEXITCODE -ne 0) { throw 'Frozen evaluator reconstruction failed' }
+      - name: Execute original 21-case Windows PowerShell helper suite
+        shell: pwsh
+        run: |
+          $env:PSModulePath = $null
+          $kit = "$env:RUNNER_TEMP/goldmaps-frozen/extracted"
+          & "$env:WINDIR/System32/WindowsPowerShell/v1.0/powershell.exe" -NoProfile -NonInteractive -File scripts/goldmaps_finalisation/native_helper_tests.ps1 -HelperPath "$kit/Install-GoldAstraSetup.ps1" -TestsPath "$kit/Test-InstallGoldAstraSetup.ps1" -OutputPath "$env:RUNNER_TEMP/goldmaps-frozen/helper-tests.json"
+          if ($LASTEXITCODE -ne 0) { throw 'Original helper refusal/integrity suite failed' }
+          Get-Content "$env:RUNNER_TEMP/goldmaps-frozen/helper-tests.json"
+      - name: Execute Gold25, seven repair children and frozen trial variants
+        shell: pwsh
+        env:
+          GOLDMAPS_TEST_SOURCE_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          $kit = "$env:RUNNER_TEMP/goldmaps-frozen/extracted"
+          python scripts/goldmaps_finalisation/native_matrix.py --package $kit --godot "$kit/Godot_v4.7-stable_win64_console.exe" --out "$env:RUNNER_TEMP/goldmaps-native" --jobs 2
+          if ($LASTEXITCODE -ne 0) { throw 'Actual native corpus matrix did not qualify; retain negative receipts' }
+      - name: Preserve exact executed receipts and logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: GOLDMAPS-finalisation-Windows-native-${{ github.event.pull_request.head.sha }}
+          path: |
+            ${{ runner.temp }}/goldmaps-native/*.json
+            ${{ runner.temp }}/goldmaps-native/*.log
+            ${{ runner.temp }}/goldmaps-frozen/acquisition-receipt.json
+            ${{ runner.temp }}/goldmaps-frozen/helper-tests.json
+          compression-level: 6
+          retention-days: 90
+          if-no-files-found: warn

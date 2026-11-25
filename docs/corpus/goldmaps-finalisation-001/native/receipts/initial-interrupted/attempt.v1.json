@@ -1,0 +1,24 @@
+{
+  "schema": "goldmaps.native-interrupted-attempt.v1",
+  "status": "INTERRUPTED_FOR_FAILURE_INVESTIGATION",
+  "completed_receipts": 20,
+  "observed_passes": 17,
+  "observed_failures": [
+    {
+      "id": "gold-155",
+      "setup_sha256": "e374e46204efa1bef3d6f0c87cfad87a538aaff0c313c2ed30abf8283d8a3c12",
+      "pass": false
+    },
+    {
+      "id": "gold-184",
+      "setup_sha256": "1b8a3bf5f06082589c6321285b5971a8996a76970352d5cb2892cc7773aa7f86",
+      "pass": false
+    },
+    {
+      "id": "gold-174",
+      "setup_sha256": "fecf590815dd7495cf4e624a1ef5ad70e3109b3403bc99f9333171fd21d0fe3a",
+      "pass": false
+    }
+  ],
+  "scope": "First campaign used 30 second wall contact budget; interrupted after invalid source policy timeout and contact budget evidence. Original raw receipts/logs retained; no total-matrix success claimed. Subsequent correction kept collision assertions and 900 tick budget, increased wall allowance to90s; separate184fixture allowed1800ticks while preserving900tick negative."
+}
