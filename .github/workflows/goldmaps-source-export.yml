@@ -1,0 +1,47 @@
+# One-shot evidence-only recovery of source/art/PNG deltas from 71 frozen PRs.
+# No schedule, PR trigger, write token, creator code execution, or production changes.
+name: GOLDMAPS-RECOVERY-001 all source PRs and images
+on:
+  push:
+    branches:
+      - recovery/goldmaps-001-20261122
+    paths:
+      - .github/workflows/goldmaps-source-export.yml
+permissions:
+  contents: read
+concurrency:
+  group: goldmaps-recovery-001-all-sources
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Checkout recovery inventory and code
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            docs/corpus/goldmaps-recovery-001/
+          ref: ${{ github.sha }}
+      - name: Verify syntax and capture source artifacts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 -m py_compile docs/corpus/goldmaps-recovery-001/archive_goldmaps_sources.py
+          python3 docs/corpus/goldmaps-recovery-001/archive_goldmaps_sources.py \
+            --inventory docs/corpus/goldmaps-recovery-001/inventory.v1.json \
+            --out "$RUNNER_TEMP/goldmaps-all-sources"
+          test -s "$RUNNER_TEMP/goldmaps-all-sources/GOLDMAPS-all-71-source-PR-deltas.zip"
+          test -s "$RUNNER_TEMP/goldmaps-all-sources/source-recovery-receipt.json"
+      - name: Upload source snapshots and receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: GOLDMAPS-RECOVERY-001-all-71-source-PRs
+          path: |
+            ${{ runner.temp }}/goldmaps-all-sources/GOLDMAPS-all-71-source-PR-deltas.zip
+            ${{ runner.temp }}/goldmaps-all-sources/source-recovery-receipt.json
+          compression-level: 0
+          retention-days: 90
+          if-no-files-found: error
